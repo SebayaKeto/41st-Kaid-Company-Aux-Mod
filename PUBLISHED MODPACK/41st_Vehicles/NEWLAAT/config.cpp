@@ -1,0 +1,4390 @@
+class CfgPatches
+{
+	class FST_LAAT
+	{
+		requiredAddons[]=
+		{
+			"A3_Armor_F_Beta",
+			"A3_weapons_F",
+			"A3_Data_F",
+			"A3_Air_F"
+		};
+		units[]=
+		{
+			"FST_laati_Turret",
+			"FST_laati_mk2",
+			"FST_laati_mk2Lights",
+			"FST_laati_mk2Lights",
+			"FST_laati_Turret_Daara",
+			"FST_laati_Turret_Spade",
+			"FST_laati_Turret_Shockcap",
+			"FST_laati_Turret_Grim",
+			"FST_laati_Turret_Qball",
+			"FST_laati_Turret_Ripper",
+			"FST_laati_mk2_Daara",
+			"FST_laati_mk2_Shockcap",
+			"FST_laati_mk2_Spade",
+			"FST_laati_mk2_Grim",
+			"FST_laati_mk2_Qball",
+			"FST_laati_mk2_Ripper",
+			"FST_laati_mk1Lights",
+			"FST_laati_mk1Lights_Shockcap",
+			"FST_laati_mk1Lights_Spade",
+			"FST_laati_mk1Lights_Grim",
+			"FST_laati_mk1Lights_Qball",
+			"FST_laati_mk1Lights_Daara",
+			"FST_laati_mk1Lights_Ripper",			
+			"FST_laati_mk2Lights_Shockcap",
+			"FST_laati_mk2Lights_Spade",
+			"FST_laati_mk2Lights_Grim",
+			"FST_laati_mk2Lights_Qball",
+			"FST_laati_mk2Lights_Daara",	
+			"FST_laati_mk2Lights_Ripper",
+		};
+		weapons[]={};
+ 		magazines[]=
+		{
+		};
+		ammo[]=
+		{
+		}; 
+	};
+};
+class Optics_Armored;
+class Optics_Gunner_APC_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class Extended_init_EventHandlers
+{
+	class FST_laati_Turret
+	{
+		class laat_init_eh
+		{
+			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+	class FST_laati_mk1Lights
+	{
+		class laat_init_eh
+		{
+			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+	class FST_laati_mk2
+	{
+		class laat_init_eh
+		{
+			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+	class FST_laati_mk2Lights
+	{
+		class laat_init_eh
+		{
+			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+}; 
+class CfgVehicles
+{
+	class House;
+	class House_F: House
+	{
+		class DestructionEffects;
+	};
+	class Air;
+	class Helicopter: Air
+	{
+		class Turrets;
+		class HitPoints;
+	};
+	class Helicopter_Base_F: Helicopter
+	{
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitAvionics;
+			class HitMissiles;
+			class HitEngine;
+			class HitHRotor;
+			class HitVRotor;
+			class HitGlass1;
+			class HitGlass2;
+			class HitGlass3;
+			class HitGlass4;
+			class HitGlass5;
+			class HitGlass6;
+			class HitWinch;
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret;
+		};
+		class AnimationSources;
+		class EventHandlers;
+		class ViewOptics;
+		class ViewPilot;
+		class Components;
+	};
+	class Helicopter_Base_H: Helicopter_Base_F
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+			};
+			class CopilotTurret: MainTurret
+			{
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+		};
+	};
+	class 3AS_laat_Base: Helicopter_Base_H
+	{
+		class AnimationSources;
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitHRotor;
+			class HitVRotor;
+			class HitAvionics;
+		};
+	};
+	class FST_laat_Base: 3AS_laat_Base
+	{
+		_generalmacro="FST_LAAT_i";
+		accuracy=5;
+		author="$STR_3AS_Studio";
+		availableforsupporttypes[]=
+		{
+			"CAS_Heli",
+			"Transport",
+			"Drop"
+		};
+		cost="3e+006";
+		crew="FST_Pilot_P1";
+		displayname="[41st] LAAT Base";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		vehicleclass="Helicopter";
+		scope=0;
+		side=1;
+		fuelCapacity=8000;
+		dustEffect="";
+		waterEffect="";
+		ls_impulsor_fuelDrain_1=9.9999997e-005;
+		ls_impulsor_fuelDrain_2=9.9999997e-005;
+		ls_impulsor_boostSpeed_1=300;
+		ls_impulsor_boostSpeed_2=800;
+		tas_impulse_break=100;
+		ls_hasImpulse=1;
+		tas_can_impulse=0;
+		tas_canBlift=1;
+		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+		altFullForce=10000;
+		altNoForce=15000;
+		maxSpeed=900;
+		acceleration=600;
+		maxFordingDepth=5;
+		incomingMissileDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
+		LockDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
+		getInRadius=5;
+		mainBladeRadius=0;
+		liftForceCoef=3;
+		bodyFrictionCoef=11;
+		cyclicAsideForceCoef=5;
+		cyclicForwardForceCoef=3;
+		backRotorForceCoef=2;
+		draconicForceXCoef=11;
+		draconicForceYCoef=2;
+		draconicForceZCoef=2;
+		draconicTorqueXCoef=0.050000001;
+		draconicTorqueYCoef=0;
+		defaultUserMFDvalues[]={0,1,0,1,0};
+		armor=400;
+		armorStructural=1;
+		tf_range=100000;
+		tf_isolatedAmount=0.40000001;
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio=1;
+		enableRadio=1;
+		ace_fastroping_enabled=1;
+		ace_fastroping_ropeOrigins[]=
+		{
+			{1.5,1,-3.5},
+			{1.5,2.5,-3.5},
+			{1.5,-1,-3.5},
+			{-1.5,1,-3.5},
+			{-1.5,2.5,-3.5},
+			{-1.5,-1,-3.5}
+		};
+		ace_fastroping_onCut="ace_fastroping_fnc_onCutCommon";
+		ace_fastroping_onPrepare="ace_fastroping_fnc_onPrepareCommon";
+		smokeLauncherAngle=360;
+		smokeLauncherGrenadeCount=18;
+		smokeLauncherVelocity=20;
+		ace_cargo_hasCargo=1;
+		ace_cargo_space=1000
+        class ace_cargo {
+            class cargo {
+                class Land_CanisterFuel_F {
+                    type = "Land_CanisterFuel_F";
+                    amount = 1;
+                };
+            };
+        };	
+		class TransportItems
+		{
+			class _xx_IDA_Cauterizer
+			{
+				name="IDA_Cauterizer";
+				count=1;
+			};
+			class _xx_ACE_plasmaIV
+			{
+				name="ACE_plasmaIV";
+				count=2;
+			};
+			class _xx_FST_Bacta_Tank
+			{
+				name="FST_Bacta_Tank";
+				count=1;
+			};
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		class HitPoints
+		{
+			class HitHull
+			{
+				armor=999;
+				convexComponent="hull_hit";
+				depends="Total";
+				explosionShielding=1;
+				material=51;
+				name="hull_hit";
+				passThrough=1;
+				visual="zbytek";
+				radius=0.0099999998;
+			};
+			class HitFuel
+			{
+				convexcomponent="engine_hit";
+				hitpoint="engine_hit";
+				name="engine_hit";
+				explosionShielding=2;
+				radius=0.1;
+				visual="";
+				passthrough=0.1;
+				minimalhit=0.1;
+				material=-1;
+				armor=4;
+			};
+			class HitEngine
+			{
+				armor=1;
+				convexComponent="engine_hit";
+				explosionShielding=2;
+				material=51;
+				name="engine_hit";
+				hitpoint="engine_hit";
+				passThrough=1;
+				visual="";
+				radius=0.2;
+			};
+			class HitEngine_1: HitEngine
+			{
+				convexComponent="engine_hit_1";
+				name="engine_hit_1";
+				hitpoint="engine_hit_1";
+			};
+			class HitEngine_2: HitEngine
+			{
+				convexComponent="engine_hit_2";
+				name="engine_hit_2";
+				hitpoint="engine_hit_2";
+			};
+			class HitHRotor
+			{
+				armor=3;
+				convexComponent="main_rotor_hit";
+				explosionShielding=2.5;
+				material=51;
+				name="main_rotor_hit";
+				passThrough=0.1;
+				visual="";
+				radius=0.0099999998;
+			};
+			class HitVRotor
+			{
+				armor=3;
+				convexComponent="tail_rotor_hit";
+				explosionShielding=6;
+				material=51;
+				name="tail_rotor_hit";
+				passThrough=0.30000001;
+				visual="";
+				radius=0.0099999998;
+			};
+			class HitAvionics
+			{
+				armor=10;
+				convexComponent="avionics_hit";
+				explosionShielding=5;
+				material=51;
+				name="avionics_hit";
+				passThrough=1;
+				visual="";
+				radius=0.5;
+			};
+			class HitGlass1
+			{
+				armor=2;
+				name="HitGlass1";
+				radius=0.40000001;
+				visual="";
+				passThrough=1;
+				explosionShielding=3;
+			};
+			class HitGlass2
+			{
+				armor=2;
+				name="HitGlass2";
+				radius=0.40000001;
+				visual="";
+				passThrough=1;
+				explosionShielding=3;
+			};
+			class HitGlass3
+			{
+				armor=2;
+				name="HitGlass3";
+				radius=0.40000001;
+				visual="";
+				passThrough=1;
+				explosionShielding=3;
+			};
+		};
+		typicalcargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+		weapons[]=
+		{
+			"FST_30mm_Autocannon_LAAT",
+			"FST_Rapture_AGM_Missile",
+			"FST_Foehammer_AGM_Missile",
+			"FST_Stormfury_AA_Missile",
+			"FST_Harrower_HARM_Missile",
+			"Laserdesignator_pilotCamera",
+			"ls_weapon_CMFlareLauncher",
+			"SmokeLauncher"
+        };
+		magazines[]=
+		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+ 
+		};
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(75 / 120)";
+					minFov="(75 / 120)";
+					maxFov="(75 / 120)";
+					directionStabilized=1;
+					thermalMode[]={0,1};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					gunnerOpticsModel="A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur2"
+					};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(14.4 / 120)";
+					minFov="(14.4 / 120)";
+					maxFov="(14.4 / 120)";
+					gunnerOpticsModel="A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(4.8 / 120)";
+					minFov="(4.8 / 120)";
+					maxFov="(4.8 / 120)";
+					gunnerOpticsModel="A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics=1;
+				showUAVViewInOptics=0;
+				showSlingLoadManagerInOptics=0;
+			};
+			minTurn=-180;
+			maxTurn=360;
+			initTurn=0;
+			minElev=-5;
+			maxElev=90;
+			initElev=-10;
+			maxXRotSpeed=0.30000001;
+			maxYRotSpeed=0.30000001;
+			pilotOpticsShowCursor=1;
+			controllable=1;
+			ace_missileguidance_usePilotCameraForTargeting=0;
+		};
+		class CargoTurret;
+		class Turrets: Turrets
+		{
+			class Copilot: MainTurret
+			{
+				memoryPointGun="rear_chamber";
+				gunBeg="rear_chamber";
+				gunEnd="rear_muzzle";
+				caneject=0;
+				castgunnershadow=1;
+				commanding=-1;
+				discretedistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
+				discretedistanceinitindex=5;
+				gunneraction="LAAT_Pilot";
+				gunnerCompartments="Compartment1";
+				gunnerforceoptics=0;
+				gunnername="CoPilot";
+				usePiP=1;
+				gunnergetinaction="Heli_Attack_01_Gunner_Enter";
+				gunnergetoutaction="Heli_Attack_01_Gunner_Exit";
+				gunnerinaction="";
+				gunnerlefthandanimname="lever_copilot";
+				gunneropticseffect[]=
+				{
+					"TankCommanderOptics1",
+					"BWTV"
+				};
+				gunneropticsmodel="";
+				gunnerrighthandanimname="stick_copilot";
+				initelev=-5;
+				initturn=-180;
+				iscopilot=1;
+				maxelev=20;
+				maxturn=-170;
+				memorypointgunneroptics="backview";
+				memorypointsgetingunner="pos_driver";
+				memorypointsgetingunnerdir="pos_driver_dir";
+				minelev=-20;
+				minturn=-190;
+				outgunnermayfire=1;
+				precisegetinout=1;
+				primarygunner=0;
+				selectionfireanim="zasleh3";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.36234099,
+					1,
+					20
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.36234099,
+					1,
+					30
+				};
+				startengine=0;
+				animationSourceBody="mainTurret5";
+				animationsourcegun="Maingun5";
+				animationsourcehatch="";
+				body="mainTurret5";
+				gun="Maingun5";
+				memorypointlmissile="Rocket_1";
+				memorypointrmissile="Rocket_2";
+				memoryPointLRocket="Rocket_1";
+				memoryPointRRocket="Rocket_2";
+				turretinfotype="RscOptics_Heli_Attack_01_gunner";
+				weapons[]=
+				{
+					"FST_30mm_Autocannon_LAAT",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"Laser_Battery"
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+						initanglex=0;
+						initangley=0;
+						initfov=0.46599999;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=0.46599999;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.46599999;
+						opticsdisplayname="W";
+						thermalmode[]={0,1};
+						visionmode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+					};
+					class Medium: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+						initfov=0.093000002;
+						maxfov=0.093000002;
+						minfov=0.093000002;
+						opticsdisplayname="M";
+					};
+					class Narrow: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+						initfov=0.028999999;
+						maxfov=0.028999999;
+						minfov=0.028999999;
+						opticsdisplayname="N";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						gunneropticseffect[]={};
+						gunneropticsmodel="";
+						initanglex=0;
+						initangley=0;
+						initfov=1.1;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=1.1;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.133;
+						visionmode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+					};
+				};
+				class Hitpoints
+				{
+					class HitTurret1
+					{
+						armor=0.80000001;
+						material=-1;
+						name="gun1";
+						passthrough=0.5;
+						visual="gun1";
+					};
+					class HitGun1
+					{
+						armor=0.40000001;
+						material=-1;
+						name="gun2";
+						passthrough=0.2;
+						visual="gun2";
+					};
+				};
+			};
+			class LeftDoorgun: MainTurret
+			{
+				weapons[]=
+				{
+					"FST_30mm_Autocannon_LAAT",
+					"Laserdesignator_pilotCamera"
+				};
+				magazines[]=
+				{
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"Laser_Battery",
+					"Laser_Battery"
+				};
+				turretinfotype="RscOptics_Heli_Attack_01_gunner";
+				animationsourcebody="mainTurret";
+				animationsourcegun="mainGun";
+				animationsourcehatch="";
+				body="mainTurret";
+				gun="mainGun";
+				castgunnershadow=1;
+				commanding=-2;
+				memoryPointGun="laser_l_muzzle";
+				gunBeg="laser_l_muzzle";
+				gunEnd="laser_l_chamber";
+				gunneraction="LAAT_Gunner";
+				gunnercompartments="Compartment2";
+				gunnerdoor="";
+				gunnerforceoptics=0;
+				gunnerinaction="gunner_Heli_Transport_01";
+				gunnerlefthandanimname="";
+				gunnername="Ball Turret (Left)";
+				gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Transport_01_Optics_Gunner_F";
+				gunneropticsshowcursor=1;
+				gunneroutopticsshowcursor=1;
+				gunnerrighthandanimname="";
+				iscopilot=0;
+				lodturnedin=1000;
+				lodturnedout=1000;
+				minElev=-90;
+				maxElev=90;
+				initElev=0;
+				minTurn=0;
+				maxTurn=130;
+				initTurn=0;
+				selectionfireanim="";
+				memorypointgunneroptics="laser_l_gunnerview";
+				memorypointsgetingunner="pos_cargo_dir";
+				memorypointsgetingunnerdir="pos_cargo";
+				primarygunner=0;
+				proxyindex=3;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.36234099,
+					1,
+					20
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.36234099,
+					1,
+					30
+				};
+				stabilizedinaxes=3;
+				viewgunnershadow=1;
+				class OpticsIn
+				{
+					class Wide
+					{
+						gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+						initanglex=0;
+						initangley=0;
+						initfov=0.46599999;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=0.46599999;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.46599999;
+						opticsdisplayname="W";
+						thermalmode[]={0,1};
+						visionmode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+					};
+					class Medium: Wide
+					{
+						gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+						initfov=0.093000002;
+						maxfov=0.093000002;
+						minfov=0.093000002;
+						opticsdisplayname="M";
+					};
+					class Narrow: Wide
+					{
+						gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+						initfov=0.028999999;
+						maxfov=0.028999999;
+						minfov=0.028999999;
+						opticsdisplayname="N";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						gunneropticseffect[]={};
+						gunneropticsmodel="";
+						initanglex=0;
+						initangley=0;
+						initfov=1.1;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=1.1;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.133;
+						visionmode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+					};
+				};
+				class components
+				{
+					class SensorsManagerComponent
+					{
+						class Components
+						{
+							class IRSensorComponent: SensorTemplateIR
+							{
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=1;
+									viewDistanceLimitCoef=1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								maxTrackableSpeed=1000;
+								componentType="IRSensorComponent";
+								typeRecognitionDistance=2000;
+								maxFogSeeThrough=0.995;
+								color[]={1,0,0,1};
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class VisualSensorComponent: SensorTemplateVisual
+							{
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=1;
+									viewDistanceLimitCoef=1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								maxTrackableSpeed=1000;
+								aimDown=1;
+								animDirection="";
+								componentType="VisualSensorComponent";
+								nightRangeCoef=0;
+								maxFogSeeThrough=0.94;
+								color[]={1,1,0.5,0.80000001};
+								typeRecognitionDistance=2000;
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								minTrackableSpeed=-1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+							{
+								componentType="PassiveRadarSensorComponent";
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=20000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=20000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								typeRecognitionDistance=8000;
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								color[]={0.5,1,0.5,0.5};
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+								allowsMarking=0;
+							};
+							class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+							{
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=10000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								typeRecognitionDistance=8000;
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								groundNoiseDistanceCoef=-1;
+								componentType="ActiveRadarSensorComponent";
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								color[]={0,1,1,1};
+								allowsMarking=1;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class LaserSensorComponent: SensorTemplateLaser
+							{
+								componentType="LaserSensorComponent";
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=6000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=6000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								typeRecognitionDistance=0;
+								color[]={1,1,1,0};
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class NVSensorComponent: SensorTemplateNV
+							{
+								componentType="NVSensorComponent";
+								color[]={1,1,1,0};
+								typeRecognitionDistance=0;
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					{
+						defaultDisplay="EmptyDisplay";
+						class Components
+						{
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+								resource="RscCustomInfoMiniMap";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Driver";
+							};
+							class VehicleMissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,6000,8000,12000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					{
+						defaultDisplay="SensorDisplay";
+						class Components
+						{
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+								resource="RscCustomInfoMiniMap";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Driver";
+							};
+							class VehicleMissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,6000,8000,12000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+			};
+			class RightDoorGun: LeftDoorgun
+			{
+				isCopilot=0;
+				body="mainTurret2";
+				gun="mainGun2";
+				inGunnerMayFire=1;
+				gunnerFireAlsoInInternalCamera=1;
+				outGunnerMayFire=1;
+				animationSourceBody="MainTurret2";
+				animationSourceGun="MainGun2";
+				memoryPointGun="laser_r_muzzle";
+				gunBeg="laser_R_muzzle";
+				gunEnd="lazer_R_chamber";
+				minElev=-90;
+				maxElev=90;
+				initElev=0;
+				minTurn=-130;
+				maxTurn=0;
+				initTurn=0;
+				gunnerlefthandanimname="";
+				gunnerrighthandanimname="";
+				gunnerLeftLegAnimName="";
+				gunnerRightLegAnimName="";
+				stabilizedInAxes=3;
+				selectionFireAnim="";
+				proxyIndex=2;
+				commanding=-5;
+				primaryObserver=0;
+				primaryGunner=0;
+				turretFollowFreeLook=0;
+				isPersonTurret=0;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.36234099,
+					1,
+					20
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.36234099,
+					1,
+					30
+				};
+				gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Transport_01_Optics_Gunner_F";
+				gunnerOutOpticsShowCursor=1;
+				gunnerOpticsShowCursor=1;
+				gunnerName="Ball Turret (Right)";
+				memoryPointGunnerOptics="laser_r_gunnerview";
+				gunnerCompartments="Compartment5";
+				memorypointsgetingunner="pos_cargo_dir";
+				memorypointsgetingunnerdir="pos_cargo";
+				turretinfotype="RscOptics_Heli_Attack_01_gunner";
+				weapons[]=
+				{
+					"FST_30mm_Autocannon_LAAT",
+					"Laserdesignator_pilotCamera"
+				};
+				magazines[]=
+				{
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"Laser_Battery",
+					"Laser_Battery"
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+						initanglex=0;
+						initangley=0;
+						initfov=0.46599999;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=0.46599999;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.46599999;
+						opticsdisplayname="W";
+						thermalmode[]={0,1};
+						visionmode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+					};
+					class Medium: Wide
+					{
+						gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+						initfov=0.093000002;
+						maxfov=0.093000002;
+						minfov=0.093000002;
+						opticsdisplayname="M";
+					};
+					class Narrow: Wide
+					{
+						gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+						initfov=0.028999999;
+						maxfov=0.028999999;
+						minfov=0.028999999;
+						opticsdisplayname="N";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						gunneropticseffect[]={};
+						gunneropticsmodel="";
+						initanglex=0;
+						initangley=0;
+						initfov=1.1;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=1.1;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.133;
+						visionmode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+					};
+				};
+				class components
+				{
+					class SensorsManagerComponent
+					{
+						class Components
+						{
+							class IRSensorComponent: SensorTemplateIR
+							{
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=1;
+									viewDistanceLimitCoef=1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								maxTrackableSpeed=1000;
+								componentType="IRSensorComponent";
+								typeRecognitionDistance=2000;
+								maxFogSeeThrough=0.995;
+								color[]={1,0,0,1};
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class VisualSensorComponent: SensorTemplateVisual
+							{
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=1;
+									viewDistanceLimitCoef=1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								maxTrackableSpeed=1000;
+								aimDown=1;
+								animDirection="";
+								componentType="VisualSensorComponent";
+								nightRangeCoef=0;
+								maxFogSeeThrough=0.94;
+								color[]={1,1,0.5,0.80000001};
+								typeRecognitionDistance=2000;
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								minTrackableSpeed=-1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+							{
+								componentType="PassiveRadarSensorComponent";
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=20000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=20000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								typeRecognitionDistance=8000;
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								color[]={0.5,1,0.5,0.5};
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+								allowsMarking=0;
+							};
+							class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+							{
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=10000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								typeRecognitionDistance=8000;
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								groundNoiseDistanceCoef=-1;
+								componentType="ActiveRadarSensorComponent";
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								color[]={0,1,1,1};
+								allowsMarking=1;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class LaserSensorComponent: SensorTemplateLaser
+							{
+								componentType="LaserSensorComponent";
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=6000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=6000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								typeRecognitionDistance=0;
+								color[]={1,1,1,0};
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+							class NVSensorComponent: SensorTemplateNV
+							{
+								componentType="NVSensorComponent";
+								color[]={1,1,1,0};
+								typeRecognitionDistance=0;
+								class AirTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								class GroundTarget
+								{
+									minRange=0;
+									maxRange=8000;
+									objectDistanceLimitCoef=-1;
+									viewDistanceLimitCoef=-1;
+								};
+								angleRangeHorizontal=360;
+								angleRangeVertical=360;
+								allowsMarking=1;
+								groundNoiseDistanceCoef=-1;
+								maxGroundNoiseDistance=-1;
+								minSpeedThreshold=0;
+								maxSpeedThreshold=0;
+								animDirection="";
+								aimDown=0;
+								minTrackableSpeed=-1e+010;
+								maxTrackableSpeed=1e+010;
+								minTrackableATL=-1e+010;
+								maxTrackableATL=1e+010;
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					{
+						defaultDisplay="EmptyDisplay";
+						class Components
+						{
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+								resource="RscCustomInfoMiniMap";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Driver";
+							};
+							class VehicleMissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,6000,8000,12000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					{
+						defaultDisplay="SensorDisplay";
+						class Components
+						{
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+								resource="RscCustomInfoMiniMap";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Driver";
+							};
+							class VehicleMissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,6000,8000,12000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_5";
+				canHideGunner=0;
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInCargo[]=
+				{
+					"pos_cargo"
+				};
+				memoryPointsGetInCargoDir[]=
+				{
+					"pos_cargo_dir"
+				};
+				proxyType="CPCargo";
+				viewGunnerInExternal=1;
+				showAsCargo=1;
+				gunnerName="Ramp Gunner (Left)";
+				proxyIndex=15;
+				soundAttenuationTurret="HeliAttenuationGunner";
+				isPersonTurret=1;
+				ejectDeadGunner=1;
+				class dynamicViewLimits
+				{
+					CargoTurret_02[]={-65,95};
+				};
+				playerPosition=4;
+				gunnerGetInAction="GetInHeli_Light_01bench";
+			};
+			class CargoTurret_02: CargoTurret_01
+			{
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInCargo[]=
+				{
+					"pos_cargo"
+				};
+				memoryPointsGetInCargoDir[]=
+				{
+					"pos_cargo_dir"
+				};
+				gunnerName="Ramp Gunner (Right)";
+				proxyIndex=14;
+				class dynamicViewLimits
+				{
+					CargoTurret_01[]={-65,95};
+				};
+			};
+			class CargoTurret_03: CargoTurret
+			{
+				gunnerAction="passenger_bench_1";
+				gunnerCompartments="Compartment2";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="$STR_A3_TURRETS_BENCH_R1";
+				proxyIndex=17;
+				proxyType="CPCargo";
+				viewGunnerInExternal=1;
+				showAsCargo=1;
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{9.4394999,-94.855698},
+						{12.5849,-34.384102},
+						{14.0365,60.875801},
+						{14.1021,95}
+					};
+					limitsArrayBottom[]=
+					{
+						{-32.2276,-94.901703},
+						{-32.7616,-79.195801},
+						{-45,-75.648804},
+						{-44.965302,95}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+				class dynamicViewLimits
+				{
+					CargoTurret_06[]={-65,95};
+				};
+				playerPosition=4;
+				soundAttenuationTurret="";
+				disableSoundAttenuation=1;
+				gunnerGetInAction="GetInHeli_Light_01bench";
+			};
+			class CargoTurret_04: CargoTurret_03
+			{
+				gunnerCompartments="Compartment2";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="$STR_A3_TURRETS_BENCH_L2";
+				proxyIndex=18;
+				class dynamicViewLimits
+				{
+					CargoTurret_05[]={-65,95};
+				};
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{10.6196,-94.8601},
+						{11.1364,-69.195396},
+						{14.0333,15.3744},
+						{11.6789,94.968201}
+					};
+					limitsArrayBottom[]=
+					{
+						{-32.208099,-94.038101},
+						{-32.368198,-78.541496},
+						{-45,-72.854202},
+						{-44.918598,94.886497}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+			};
+			class CargoTurret_05: CargoTurret_04
+			{
+				gunnerCompartments="Compartment2";
+				gunnerName="$STR_A3_TURRETS_BENCH_L1";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				proxyIndex=19;
+				class dynamicViewLimits
+				{
+					CargoTurret_04[]={-95,65};
+				};
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{14.705,-95},
+						{14.1224,-62.859001},
+						{12.3049,32.941399},
+						{9.0861998,94.947998}
+					};
+					limitsArrayBottom[]=
+					{
+						{-45,-94.965599},
+						{-45,80.990402},
+						{-31.903299,82.846497},
+						{-31.793501,95}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+			};
+			class CargoTurret_06: CargoTurret_03
+			{
+				gunnerCompartments="Compartment2";
+				gunnerName="$STR_A3_TURRETS_BENCH_R2";
+				proxyIndex=16;
+				class dynamicViewLimits
+				{
+					CargoTurret_03[]={-95,65};
+				};
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{12.1826,-95},
+						{14.4163,-16.698299},
+						{11.5046,68.829201},
+						{11.8156,94.980904}
+					};
+					limitsArrayBottom[]=
+					{
+						{-44.897598,-94.999397},
+						{-44.973999,81.190598},
+						{-32.447899,83.791603},
+						{-32.740501,95}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+			};
+		};
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						maxTrackableSpeed=1000;
+						componentType="IRSensorComponent";
+						typeRecognitionDistance=2000;
+						maxFogSeeThrough=0.995;
+						color[]={1,0,0,1};
+						allowsMarking=1;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						animDirection="";
+						aimDown=0;
+						minTrackableSpeed=-1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						maxTrackableSpeed=1000;
+						aimDown=1;
+						animDirection="";
+						componentType="VisualSensorComponent";
+						nightRangeCoef=0;
+						maxFogSeeThrough=0.94;
+						color[]={1,1,0.5,0.80000001};
+						typeRecognitionDistance=2000;
+						allowsMarking=1;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						minTrackableSpeed=-1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=8000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						groundNoiseDistanceCoef=-1;
+						componentType="ActiveRadarSensorComponent";
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						color[]={0,1,1,1};
+						allowsMarking=1;
+						animDirection="";
+						aimDown=0;
+						minTrackableSpeed=-1e+010;
+						maxTrackableSpeed=1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+						componentType="PassiveRadarSensorComponent";
+						class AirTarget
+						{
+							minRange=00;
+							maxRange=20000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=20000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=8000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						animDirection="";
+						aimDown=0;
+						color[]={0.5,1,0.5,0.5};
+						minTrackableSpeed=-1e+010;
+						maxTrackableSpeed=1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+						allowsMarking=0;
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+						componentType="LaserSensorComponent";
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=6000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=6000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						typeRecognitionDistance=0;
+						color[]={1,1,1,0};
+						allowsMarking=1;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						animDirection="";
+						aimDown=0;
+						minTrackableSpeed=-1e+010;
+						maxTrackableSpeed=1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+						componentType="NVSensorComponent";
+						color[]={1,1,1,0};
+						typeRecognitionDistance=0;
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						allowsMarking=1;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						animDirection="";
+						aimDown=0;
+						minTrackableSpeed=-1e+010;
+						maxTrackableSpeed=1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class TransportCounterMeasuresComponent;
+		};
+ 		class AnimationSources: AnimationSources
+		{
+			class Doors
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Lamps
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Turrets
+			{
+				source="user";
+				initPhase=1;
+				animPeriod=1;
+			};
+		}; 
+		class Library
+		{
+			libtextdesc="";
+		};
+	};
+	class FST_laati_Turret: FST_laat_Base
+	{
+		_generalmacro="FST_LAAT_i";
+		accuracy=5;
+		author="$STR_3AS_Studio";
+		availableforsupporttypes[]=
+		{
+			"CAS_Heli",
+			"Transport",
+			"Drop"
+		};
+		cost="3e+006";
+		crew="FST_Pilot_P1";
+		displayname="[41st] LAAT/i Mk I Gunship";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		vehicleclass="Helicopter";
+		scope=2;
+		side=1;
+		typicalcargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+ 		class AnimationSources: AnimationSources
+		{
+			class Doors
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Lamps
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Turrets
+			{
+				source="user";
+				initPhase=1;
+				animPeriod=1;
+			};
+		}; 
+		class Library
+		{
+			libtextdesc="";
+		};
+	};
+ 	class FST_LAAT_LampBase: FST_laat_Base
+	{
+		class Reflectors
+		{
+			class Left
+			{
+				color[]={7000,7500,10000};
+				ambient[]={70,75,100};
+				intensity=450;
+				size=15;
+				innerAngle=15;
+				outerAngle=300;
+				coneFadeCoef=5;
+				position="Light_L_Pos";
+				direction="Light_L_Dir";
+				hitpoint="Light_b_hitpoint";
+				selection="Light_L_Lamp";
+				useFlare=1;
+				flareSize=15;
+				flareMaxDistance=5000;
+				dayLight=0;
+				class Attenuation
+				{
+					start=0;
+					constant=0;
+					linear=1;
+					quadratic=1;
+					hardLimitStart=300;
+					hardLimitEnd=400;
+				};
+			};
+			class Right
+			{
+				color[]={7000,7500,10000};
+				ambient[]={70,75,100};
+				intensity=450;
+				size=15;
+				innerAngle=15;
+				outerAngle=300;
+				coneFadeCoef=5;
+				position="Light_R_Pos";
+				direction="Light_R_Dir";
+				hitpoint="Light_b_hitpoint";
+				selection="Light_R_Lamp";
+				useFlare=1;
+				flareSize=15;
+				flareMaxDistance=5000;
+				dayLight=0;
+				class Attenuation
+				{
+					start=0;
+					constant=0;
+					linear=1;
+					quadratic=1;
+					hardLimitStart=300;
+					hardLimitEnd=400;
+				};
+			};
+		};
+	};
+	class FST_laati_mk1Lights: FST_LAAT_LampBase
+	{
+		_generalmacro="TCW_LAAT_i";
+		accuracy=5;
+		author="$STR_3AS_Studio";
+		availableforsupporttypes[]=
+		{
+			"CAS_Heli"
+		};
+		cost="3e+006";
+		crew="FST_Pilot_P1";
+		displayname="[41st] LAAT/i Mk I Gunship (Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		vehicleclass="Helicopter";
+		scope=2;
+		side=1;
+		typicalcargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+		class Turrets: Turrets
+		{
+			class Copilot: MainTurret
+			{
+				memoryPointGun="rear_chamber";
+				gunBeg="rear_chamber";
+				gunEnd="rear_muzzle";
+				caneject=0;
+				castgunnershadow=1;
+				commanding=-1;
+				discretedistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
+				discretedistanceinitindex=5;
+				gunneraction="LAAT_Pilot";
+				gunnerforceoptics=0;
+				gunnername="CoPilot";
+				usePiP=1;
+				gunnergetinaction="Heli_Attack_01_Gunner_Enter";
+				gunnergetoutaction="Heli_Attack_01_Gunner_Exit";
+				gunnerinaction="";
+				gunnerlefthandanimname="lever_copilot";
+				gunneropticseffect[]=
+				{
+					"TankCommanderOptics1",
+					"BWTV"
+				};
+				gunneropticsmodel="";
+				gunnerrighthandanimname="stick_copilot";
+				initelev=-5;
+				initturn=-180;
+				iscopilot=1;
+				maxelev=20;
+				maxturn=-170;
+				memorypointgunneroptics="backview";
+				memorypointsgetingunner="pos_driver";
+				memorypointsgetingunnerdir="pos_driver_dir";
+				minelev=-20;
+				minturn=-190;
+				outgunnermayfire=1;
+				precisegetinout=1;
+				primarygunner=0;
+				selectionfireanim="zasleh3";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.36234099,
+					1,
+					20
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.36234099,
+					1,
+					30
+				};
+				startengine=0;
+				animationSourceBody="mainTurret5";
+				animationsourcegun="Maingun5";
+				animationsourcehatch="";
+				body="mainTurret5";
+				gun="Maingun5";
+				memorypointlmissile="Rocket_1";
+				memorypointrmissile="Rocket_2";
+				memoryPointLRocket="Rocket_1";
+				memoryPointRRocket="Rocket_2";
+				turretinfotype="RscOptics_Heli_Attack_01_gunner";
+				weapons[]=
+				{
+					"FST_30mm_Autocannon_LAAT",
+				};
+				magazines[]=
+				{
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"Laser_Battery"
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+						initanglex=0;
+						initangley=0;
+						initfov=0.46599999;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=0.46599999;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.46599999;
+						opticsdisplayname="W";
+						thermalmode[]={0,1};
+						visionmode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+					};
+					class Medium: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+						initfov=0.093000002;
+						maxfov=0.093000002;
+						minfov=0.093000002;
+						opticsdisplayname="M";
+					};
+					class Narrow: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+						initfov=0.028999999;
+						maxfov=0.028999999;
+						minfov=0.028999999;
+						opticsdisplayname="N";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						gunneropticseffect[]={};
+						gunneropticsmodel="";
+						initanglex=0;
+						initangley=0;
+						initfov=1.1;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=1.1;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.133;
+						visionmode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+					};
+				};
+				class HitTurret
+				{
+					armor=0.80000001;
+					material=-1;
+					name="gun1";
+					passthrough=0.5;
+					visual="gun1";
+				};
+				class HitGun
+				{
+					armor=0.40000001;
+					material=-1;
+					name="gun2";
+					passthrough=0.2;
+					visual="gun2";
+				};
+			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_5";
+				canHideGunner=0;
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="Ramp Gunner (Left)";
+				proxyType="CPCargo";
+				viewGunnerInExternal=1;
+				proxyIndex=15;
+				showAsCargo=1;
+				soundAttenuationTurret="HeliAttenuationGunner";
+				isPersonTurret=1;
+				ejectDeadGunner=1;
+				class dynamicViewLimits
+				{
+					CargoTurret_02[]={-65,95};
+				};
+				playerPosition=4;
+				gunnerGetInAction="GetInHeli_Light_01bench";
+			};
+			class CargoTurret_02: CargoTurret_01
+			{
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="Ramp Gunner (Right)";
+				proxyIndex=14;
+				class dynamicViewLimits
+				{
+					CargoTurret_01[]={-65,95};
+				};
+			};
+			class CargoTurret_03: CargoTurret
+			{
+				gunnerAction="passenger_bench_1";
+				gunnerCompartments="Compartment2";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="$STR_A3_TURRETS_BENCH_R1";
+				proxyIndex=17;
+				proxyType="CPCargo";
+				viewGunnerInExternal=1;
+				showAsCargo=1;
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				maxElev=15;
+				minElev=-35;
+				maxTurn=30;
+				minTurn=-30;
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{9.4394999,-94.855698},
+						{12.5849,-34.384102},
+						{14.0365,60.875801},
+						{14.1021,95}
+					};
+					limitsArrayBottom[]=
+					{
+						{-32.2276,-94.901703},
+						{-32.7616,-79.195801},
+						{-45,-75.648804},
+						{-44.965302,95}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+				class dynamicViewLimits
+				{
+					CargoTurret_06[]={-65,95};
+				};
+				playerPosition=4;
+				soundAttenuationTurret="";
+				disableSoundAttenuation=1;
+				gunnerGetInAction="GetInHeli_Light_01bench";
+			};
+			class CargoTurret_04: CargoTurret_03
+			{
+				gunnerCompartments="Compartment2";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="$STR_A3_TURRETS_BENCH_L2";
+				proxyIndex=18;
+				class dynamicViewLimits
+				{
+					CargoTurret_05[]={-65,95};
+				};
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{10.6196,-94.8601},
+						{11.1364,-69.195396},
+						{14.0333,15.3744},
+						{11.6789,94.968201}
+					};
+					limitsArrayBottom[]=
+					{
+						{-32.208099,-94.038101},
+						{-32.368198,-78.541496},
+						{-45,-72.854202},
+						{-44.918598,94.886497}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+			};
+			class CargoTurret_05: CargoTurret_04
+			{
+				gunnerCompartments="Compartment2";
+				gunnerName="$STR_A3_TURRETS_BENCH_L1";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				proxyIndex=19;
+				class dynamicViewLimits
+				{
+					CargoTurret_04[]={-95,65};
+				};
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{14.705,-95},
+						{14.1224,-62.859001},
+						{12.3049,32.941399},
+						{9.0861998,94.947998}
+					};
+					limitsArrayBottom[]=
+					{
+						{-45,-94.965599},
+						{-45,80.990402},
+						{-31.903299,82.846497},
+						{-31.793501,95}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+			};
+			class CargoTurret_06: CargoTurret_03
+			{
+				gunnerCompartments="Compartment2";
+				gunnerName="$STR_A3_TURRETS_BENCH_R2";
+				proxyIndex=16;
+				class dynamicViewLimits
+				{
+					CargoTurret_03[]={-95,65};
+				};
+				class TurnOut
+				{
+					limitsArrayTop[]=
+					{
+						{12.1826,-95},
+						{14.4163,-16.698299},
+						{11.5046,68.829201},
+						{11.8156,94.980904}
+					};
+					limitsArrayBottom[]=
+					{
+						{-44.897598,-94.999397},
+						{-44.973999,81.190598},
+						{-32.447899,83.791603},
+						{-32.740501,95}
+					};
+				};
+				class TurnIn: TurnOut
+				{
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class Doors
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Lamps
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=1;
+			};
+			class Turrets
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+		};
+		class Library
+		{
+			libtextdesc="";
+		};
+	};
+	class FST_laati_mk2: FST_laat_Base
+	{
+		_generalmacro="TCW_LAAT_i";
+		accuracy=5;
+		author="$STR_3AS_Studio";
+		availableforsupporttypes[]=
+		{
+			"CAS_Heli"
+		};
+		cost="3e+006";
+		crew="FST_Pilot_P1";
+		displayname="[41st] LAAT/i Mk II Gunship";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		vehicleclass="Helicopter";
+		scope=2;
+		side=1;
+		typicalcargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+		class Turrets: Turrets
+		{
+			class Copilot: MainTurret
+			{
+				memoryPointGun="rear_chamber";
+				gunBeg="rear_chamber";
+				gunEnd="rear_muzzle";
+				caneject=0;
+				castgunnershadow=1;
+				commanding=-1;
+				discretedistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
+				discretedistanceinitindex=5;
+				gunneraction="LAAT_Pilot";
+				gunnerforceoptics=0;
+				gunnername="CoPilot";
+				usePiP=1;
+				gunnergetinaction="Heli_Attack_01_Gunner_Enter";
+				gunnergetoutaction="Heli_Attack_01_Gunner_Exit";
+				gunnerinaction="";
+				gunnerlefthandanimname="lever_copilot";
+				gunneropticseffect[]=
+				{
+					"TankCommanderOptics1",
+					"BWTV"
+				};
+				gunneropticsmodel="";
+				gunnerrighthandanimname="stick_copilot";
+				initelev=-5;
+				initturn=-180;
+				iscopilot=1;
+				maxelev=20;
+				maxturn=-170;
+				memorypointgunneroptics="backview";
+				memorypointsgetingunner="pos_driver";
+				memorypointsgetingunnerdir="pos_driver_dir";
+				minelev=-20;
+				minturn=-190;
+				outgunnermayfire=1;
+				precisegetinout=1;
+				primarygunner=0;
+				selectionfireanim="zasleh3";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.36234099,
+					1,
+					20
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.36234099,
+					1,
+					30
+				};
+				startengine=0;
+				animationSourceBody="mainTurret5";
+				animationsourcegun="Maingun5";
+				animationsourcehatch="";
+				body="mainTurret5";
+				gun="Maingun5";
+				memorypointlmissile="Rocket_1";
+				memorypointrmissile="Rocket_2";
+				memoryPointLRocket="Rocket_1";
+				memoryPointRRocket="Rocket_2";
+				turretinfotype="RscOptics_Heli_Attack_01_gunner";
+				weapons[]=
+				{
+					"FST_30mm_Autocannon_LAAT",
+				};
+				magazines[]=
+				{
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"Laser_Battery"
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+						initanglex=0;
+						initangley=0;
+						initfov=0.46599999;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=0.46599999;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.46599999;
+						opticsdisplayname="W";
+						thermalmode[]={0,1};
+						visionmode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+					};
+					class Medium: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+						initfov=0.093000002;
+						maxfov=0.093000002;
+						minfov=0.093000002;
+						opticsdisplayname="M";
+					};
+					class Narrow: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+						initfov=0.028999999;
+						maxfov=0.028999999;
+						minfov=0.028999999;
+						opticsdisplayname="N";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						gunneropticseffect[]={};
+						gunneropticsmodel="";
+						initanglex=0;
+						initangley=0;
+						initfov=1.1;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=1.1;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.133;
+						visionmode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+					};
+				};
+				class HitTurret
+				{
+					armor=0.80000001;
+					material=-1;
+					name="gun1";
+					passthrough=0.5;
+					visual="gun1";
+				};
+				class HitGun
+				{
+					armor=0.40000001;
+					material=-1;
+					name="gun2";
+					passthrough=0.2;
+					visual="gun2";
+				};
+			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_5";
+				canHideGunner=0;
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="Ramp Gunner (Left)";
+				proxyType="CPCargo";
+				viewGunnerInExternal=1;
+				proxyIndex=15;
+				showAsCargo=1;
+				soundAttenuationTurret="HeliAttenuationGunner";
+				isPersonTurret=1;
+				ejectDeadGunner=1;
+				maxElev=15;
+				minElev=-35;
+				maxTurn=30;
+				minTurn=-30;
+				class dynamicViewLimits
+				{
+					CargoTurret_02[]={-65,95};
+				};
+				playerPosition=4;
+				gunnerGetInAction="GetInHeli_Light_01bench";
+			};
+			class CargoTurret_02: CargoTurret_01
+			{
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="Ramp Gunner (Right)";
+				proxyIndex=14;
+				class dynamicViewLimits
+				{
+					CargoTurret_01[]={-65,95};
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class Doors
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=1;
+			};
+			class Lamps
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Turrets
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.001;
+			};
+		};
+		class Library
+		{
+			libtextdesc="";
+		};
+	};
+	class FST_laati_mk2Lights: FST_LAAT_LampBase
+	{
+		_generalmacro="TCW_LAAT_i";
+		accuracy=5;
+		author="$STR_3AS_Studio";
+		availableforsupporttypes[]=
+		{
+			"CAS_Heli"
+		};
+		cost="3e+006";
+		crew="FST_Pilot_P1";
+		displayname="[41st] LAAT/i Mk II Gunship (Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		vehicleclass="Helicopter";
+		scope=2;
+		side=1;
+		typicalcargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+		class Turrets: Turrets
+		{
+			class Copilot: MainTurret
+			{
+				memoryPointGun="rear_chamber";
+				gunBeg="rear_chamber";
+				gunEnd="rear_muzzle";
+				caneject=0;
+				castgunnershadow=1;
+				commanding=-1;
+				discretedistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
+				discretedistanceinitindex=5;
+				gunneraction="LAAT_Pilot";
+				gunnerforceoptics=0;
+				gunnername="CoPilot";
+				usePiP=1;
+				gunnergetinaction="Heli_Attack_01_Gunner_Enter";
+				gunnergetoutaction="Heli_Attack_01_Gunner_Exit";
+				gunnerinaction="";
+				gunnerlefthandanimname="lever_copilot";
+				gunneropticseffect[]=
+				{
+					"TankCommanderOptics1",
+					"BWTV"
+				};
+				gunneropticsmodel="";
+				gunnerrighthandanimname="stick_copilot";
+				initelev=-5;
+				initturn=-180;
+				iscopilot=1;
+				maxelev=20;
+				maxturn=-170;
+				memorypointgunneroptics="backview";
+				memorypointsgetingunner="pos_driver";
+				memorypointsgetingunnerdir="pos_driver_dir";
+				minelev=-20;
+				minturn=-190;
+				outgunnermayfire=1;
+				precisegetinout=1;
+				primarygunner=0;
+				selectionfireanim="zasleh3";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.36234099,
+					1,
+					20
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.36234099,
+					1,
+					30
+				};
+				startengine=0;
+				animationSourceBody="mainTurret5";
+				animationsourcegun="Maingun5";
+				animationsourcehatch="";
+				body="mainTurret5";
+				gun="Maingun5";
+				memorypointlmissile="Rocket_1";
+				memorypointrmissile="Rocket_2";
+				memoryPointLRocket="Rocket_1";
+				memoryPointRRocket="Rocket_2";
+				turretinfotype="RscOptics_Heli_Attack_01_gunner";
+				weapons[]=
+				{
+					"FST_30mm_Autocannon_LAAT",
+				};
+				magazines[]=
+				{
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"Laser_Battery"
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+						initanglex=0;
+						initangley=0;
+						initfov=0.46599999;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=0.46599999;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.46599999;
+						opticsdisplayname="W";
+						thermalmode[]={0,1};
+						visionmode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+					};
+					class Medium: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+						initfov=0.093000002;
+						maxfov=0.093000002;
+						minfov=0.093000002;
+						opticsdisplayname="M";
+					};
+					class Narrow: Wide
+					{
+						gunneropticsmodel="\A3\weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+						initfov=0.028999999;
+						maxfov=0.028999999;
+						minfov=0.028999999;
+						opticsdisplayname="N";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						gunneropticseffect[]={};
+						gunneropticsmodel="";
+						initanglex=0;
+						initangley=0;
+						initfov=1.1;
+						maxanglex=30;
+						maxangley=100;
+						maxfov=1.1;
+						minanglex=-30;
+						minangley=-100;
+						minfov=0.133;
+						visionmode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+					};
+				};
+				class HitTurret
+				{
+					armor=0.80000001;
+					material=-1;
+					name="gun1";
+					passthrough=0.5;
+					visual="gun1";
+				};
+				class HitGun
+				{
+					armor=0.40000001;
+					material=-1;
+					name="gun2";
+					passthrough=0.2;
+					visual="gun2";
+				};
+			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_5";
+				canHideGunner=0;
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="Ramp Gunner (Left)";
+				proxyType="CPCargo";
+				viewGunnerInExternal=1;
+				proxyIndex=15;
+				showAsCargo=1;
+				soundAttenuationTurret="HeliAttenuationGunner";
+				isPersonTurret=1;
+				ejectDeadGunner=1;
+				maxElev=15;
+				minElev=-35;
+				maxTurn=30;
+				minTurn=-30;
+				class dynamicViewLimits
+				{
+					CargoTurret_02[]={-65,95};
+				};
+				playerPosition=4;
+				gunnerGetInAction="GetInHeli_Light_01bench";
+			};
+			class CargoTurret_02: CargoTurret_01
+			{
+				gunnerCompartments="Compartment2";
+				getOutAction="GetOutLow";
+				memoryPointsGetInGunner="pos_cargo";
+				memoryPointsGetInGunnerDir="pos_cargo_dir";
+				gunnerName="Ramp Gunner (Right)";
+				proxyIndex=14;
+				class dynamicViewLimits
+				{
+					CargoTurret_01[]={-65,95};
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class Doors
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=1;
+			};
+			class Lamps
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=1;
+			};
+			class Turrets
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.001;
+			};
+		};
+		class Library
+		{
+			libtextdesc="";
+		};
+	};
+	class FST_laati_Turret_Daara: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Daara)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_Daara.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_Turret_Shockcap: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Shockcap)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Shockcap.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_Turret_Spade: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Spade)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Spade.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_Turret_Grim: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Grim)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Grim.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Grim.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_Turret_Qball: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Q-Ball)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Qball.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_Turret_Ripper: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Ripper)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ripper.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ripper.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2_Daara: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Daara)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_Daara.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2_Shockcap: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Shockcap)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Shockcap.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2_Spade: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Spade)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Spade.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2_Grim: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Grim)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Grim.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Grim.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2_Qball: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Q-Ball)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Qball.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2_Ripper: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Ripper)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ripper.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ripper.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	// Start Lamps Customs
+	class FST_laati_mk1Lights_Daara: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Daara/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_Daara.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk1Lights_Shockcap: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Shockcap/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Shockcap.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk1Lights_Spade: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Spadel/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Spade.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk1Lights_Grim: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Grim/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Grim.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Grim.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk1Lights_Qball: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Q-Ball/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Qball.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk1Lights_Ripper: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Ripper/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ripper.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ripper.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2Lights_Daara: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Daara/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_Daara.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2Lights_Shockcap: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Shockcap/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Shockcap.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2Lights_Spade: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Spadel/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Spade.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2Lights_Grim: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Grim/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Grim.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Grim.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	
+	class FST_laati_mk2Lights_Qball: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Q-Ball/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Qball.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	 
+	class FST_laati_mk2Lights_Ripper: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Ripper/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ripper.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ripper.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};	 
+};
+class CfgAmmo
+{
+	class 3AS_Sabre_HE;
+	class M_Scalpel_AT;
+	class laserAmmo: 3AS_Sabre_HE
+	{
+		airFriction=0;
+		maxSpeed=10000;
+		indirecthit=30;
+		indirectHitRange=3;
+		hit=100;
+		explosionEffects="ExploAmmoExplosion";
+		craterEffects="ExploAmmoCrater";
+		cartridge="";
+		model="a3\weapons_f\data\bullettracer\tracer_green";
+		simulation="shotbullet";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
+	};
+	class laserAmmo_F: 3AS_Sabre_HE
+	{
+		hit=130;
+		indirectHit=8;
+		indirectHitRange=3;
+		explosive=0.80000001;
+		caliber=5.4000001;
+		airlock=1;
+		aiAmmoUsageFlags="64 + 128 + 256 + 512";
+		tracerScale=2.5;
+		tracerStartTime=0.1;
+		tracerEndTime=4.6999998;
+		explosionEffects="ExploAmmoExplosion";
+		craterEffects="ExploAmmoCrater";
+		model="a3\weapons_f\data\bullettracer\tracer_green";
+		simulation="shotbullet";
+		effectFly="3AS_Laser_effect_Green_fly";
+		cartridge="";
+	};
+	class OPTRE_M_ASGM2_AA;
+	class FST_Rapture_Anti_Tank_Missile: M_Scalpel_AT
+	{
+		displayname="High Explosive AT";
+		warheadName="AT";
+		hit=1000;
+		model="OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
+		indirecthit=500;
+		indirecthitrange=3;
+		caliber=50;
+		allowAgainstInfantry=1;
+		airLock=1;
+		irLock=1;
+		missileLockCone=120;
+		missileKeepLockedCone=120;
+		maneuvrability=25;
+		airFriction=0.079999998;
+		sideAirFriction=0.16;
+		weaponLockSystem="2+8+16";
+		thrust=240;
+		cmImmunity=0.85;
+		missileLockMaxDistance=10000;
+		missileLockMinDistance=50;
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+	};
+	class M_Air_AA;
+	class FST_Foehammer_Anti_Tank_Missile : M_Air_AA
+	{
+		model = "\FIR_AirWeaponSystem_US\data\Brimstone\brimstone_dm_fly";
+		proxyShape = "\FIR_AirWeaponSystem_US\data\Brimstone\brimstone_dm";
+		warheadName = "HEAT";		
+		submunitionAmmo = "FIR_HF_Tandem";
+		submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitSpeed = 1000;
+		submunitionParentSpeedCoef = 0.0;
+		submunitionInitialOffset[] = {0,0,-0.2};
+		triggerOnImpact = 1;
+		deleteParentWhenTriggered = 0;		
+		hit = 2000;
+		indirectHit = 500;
+		indirectHitRange = 3;
+		caliber=50;
+		timetoLive = 60;
+		maneuvrability = 25;
+		airLock = 0;
+		irLock = 1;
+		laserLock = 0;
+		nvLock = 0;
+		initTime = 0.100000;
+		thrustTime = 10;
+		maxspeed = 500;
+		maxControlRange = 2800;
+		trackOversteer = 1;
+		trackLead = 1;
+		thrust = 300;
+		effectsMissileInit = "MissileDAR1";
+		effectsMissile = "3AS_Rocket_effect_Blue_fly";
+		soundHit[] = { "A3\Sounds_F\weapons\Rockets\explosion_missile_01", 3.1622777, 1, 1800 };
+		missileLockCone = 120;
+		missileKeepLockedCone = 120;
+		missileLockMaxDistance = 5500;
+		missileLockMinDistance = 50;
+		missileLockMaxSpeed = 550;	
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class SomeRadarSensorComponent
+					{
+						componentType = "ActiveRadarSensorComponent";
+						class AirTarget      // ranges for targets with sky background
+						{
+							minRange = 0;         //minimum possible range in meters  
+							maxRange = 0;       //maximum possible range in meters                 
+							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
+							viewDistanceLimitCoef = -1;      //range not limited by view distance           
+						};
+						class GroundTarget      // ranges for targets with ground background                           
+						{
+							minRange = 50;
+							maxRange = 5500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};
+					class SomeLaserSensorComponent
+					{
+						componentType = "LaserSensorComponent";
+						class AirTarget      // ranges for targets with sky background
+						{
+							minRange = 0;         //minimum possible range in meters  
+							maxRange = 0;       //maximum possible range in meters                 
+							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
+							viewDistanceLimitCoef = -1;      //range not limited by view distance           
+						};
+						class GroundTarget      // ranges for targets with ground background                           
+						{
+							minRange = 50;
+							maxRange = 5500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};					
+				};
+			};
+		};			
+	};
+	class FST_Stormfury_High_Velocity_Missile: OPTRE_M_ASGM2_AA
+	{
+		model="OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
+		hit=150;
+		missileLockCone=120;
+		missileKeepLockedCone=120;
+		indirectHit=125;
+		indirectHitRange=13;
+		airLock=2;
+		irLock=1;
+		trackLead=1;
+		trackOversteer=1;
+		maneuvrability=35;
+		airFriction=0.050000001;
+		sideAirFriction=0.16;
+		thrust=400;
+		weaponLockSystem="2+8+16";
+		cmImmunity=0.85;
+		missileLockMaxDistance=10000;
+		missileLockMinDistance=50;
+		effectsMissile="3AS_Rocket_effect_Purple_fly";
+	};
+	class MissileCore;
+	class MissileBase : MissileCore
+	{
+		class Components;
+	};
+	class FST_AGM88 : MissileBase
+	{
+		model = "\FIR_AirWeaponSystem_US\data\AGM88\AGM88_fly";
+		proxyShape = "\FIR_AirWeaponSystem_US\data\AGM88\AGM88";
+		hit = 4000;
+		indirectHit = 4000;
+		indirectHitRange = 10;
+		timetoLive = 60;
+		maneuvrability = 100;
+		initTime = 0.100000;
+		thrustTime = 15;
+		maxspeed = 800;
+		maxControlRange = 15000;
+		trackOversteer = 1;
+		trackLead = 1;
+		thrust = 800;
+		effectsMissile = "FIR_MissileEffect2";
+		soundHit[] = { "A3\Sounds_F\weapons\Rockets\explosion_missile_01", 3.1622777, 1, 1800 };
+		sideAirFriction = 1;
+		autoSeekTarget = 1;
+		lockSeekRadius = 15000;		
+		flightProfiles[] = { "Direct","LoalDistance"};		
+		class Direct{};
+		class LoalDistance : Direct
+		{
+			lockSeekDistanceFromParent = 1000;
+		};		 
+		missileLockCone = 360;
+		missileKeepLockedCone = 360;
+		missileLockMaxDistance = 15000;	
+		missileLockMinDistance = 100;
+		missileLockMaxSpeed = 800;	
+		class Components : Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class SomeRadarSensorComponent
+					{
+						componentType = "PassiveRadarSensorComponent";
+						class AirTarget      // ranges for targets with sky background
+						{
+							minRange = 1;         //minimum possible range in meters  
+							maxRange = 15000;       //maximum possible range in meters                 
+							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
+							viewDistanceLimitCoef = -1;      //range not limited by view distance           
+						};
+						class GroundTarget      // ranges for targets with ground background                           
+						{
+							minRange = 1;
+							maxRange = 15000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						typeRecognitionDistance = 15000; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 160;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};
+				};
+			};
+		};
+	};
+/* 	class F_40mm_White;
+	class FST_AWS_SUU25 : F_40mm_White
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {
+			1.000000, 0.700000, 0.000000, 0.800000
+		};
+		intensity = 10000000;
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {
+			1, 1, 1, 0.500000
+		};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 100000;
+		size = 3;
+		triggerTime = 0;
+		triggerSpeedCoef = 1;
+		timeToLive = 120;
+	};
+	class FST_SUU25_Rocket : MissileBase
+	{
+		model = "\FIR_AirWeaponSystem_US\Data\Rocket\suu25_rocket.p3d";
+		proxyShape = "\FIR_AirWeaponSystem_US\Data\Rocket\suu25_rocket.p3d";
+		maverickWeaponIndexOffset = 12;
+		maverickweapon = 1;
+		cost = 500;
+		hit = 0;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		manualControl = 0;
+		maxControlRange = 0;
+		airLock = 0;
+		irLock = 0;
+		laserLock = 0;
+		nvLock = 0;
+		weaponLockSystem = 0;
+		cmimmunity = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		initTime = 0.002;
+		thrustTime = 1.1;
+		thrust = 10;
+		airFriction = 0.09;
+		sideAirFriction = 0.005;
+		maxSpeed = 1;
+		maneuvrability = 0;
+		fuseDistance = 40;
+		timeToLive = 20;
+		effectsMissileInit = "MissileDAR1";
+		whistleDist = 30;
+		submunitionAmmo = "FST_AWS_SUU25";
+		submunitionConeAngle = 1;
+		submunitionConeType[] = {"randomcenter",1};
+ 		triggerTime = 0.05;
+		triggerSpeedCoef[] = {0.0,0.1};
+
+		// FIR_AWS_FLARE = 1;		
+		class CamShakeExplode
+		{
+			power = 16;
+			duration = 1.8;
+			frequency = 20;
+			distance = 191.554;
+		};
+		class CamShakeHit
+		{
+			power = 80;
+			duration = 0.6;
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = 2.9907;
+			duration = 1.8;
+			frequency = 20;
+			distance = 71.5542;
+		};
+		class CamShakePlayerFire
+		{
+			power = 2;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};		
+	};	 */
+};
+class CfgMagazines
+{
+	class 200Rnd_65x39_Belt;
+	class VehicleMagazine;
+/* 	class Laser_Battery: 200Rnd_65x39_Belt
+	{
+		ammo="laserAmmo";
+		count=5000;
+		tracersEvery=1;
+		model="a3\weapons_f\data\bullettracer\tracer_green";
+	};
+	class Laser_Battery_F: VehicleMagazine
+	{
+		ammo="laserAmmo_F";
+		model="a3\weapons_f\data\bullettracer\tracer_green";
+		scope=2;
+		displayName="Particle Laser";
+		displayNameShort="HE";
+		count=5000;
+		tracersEvery=0;
+		lastRoundsTracer=0;
+		initSpeed=1035;
+		maxLeadSpeed=83.333298;
+		nameSound="mg";
+		muzzleImpulseFactor[]={0.0099999998,0.0099999998};
+	}; */
+	class OPTRE_8Rnd_C2GMLS_missiles;
+	class FST_Rapture_12Rnd_AGM_Missile: OPTRE_8Rnd_C2GMLS_missiles
+	{
+		displayName="[41st] Rapture ATGM";
+		displayNameShort="ATGM";
+		count=12;
+		initSpeed=200;
+		maxLeadSpeed=650;
+		ammo="FST_Rapture_Anti_Tank_Missile";
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+	};
+	class FST_Rapture_4Rnd_AGM_Missile: OPTRE_8Rnd_C2GMLS_missiles
+	{
+		displayName="[41st] Rapture ATGM";
+		displayNameShort="ATGM";
+		count=4;
+		initSpeed=200;
+		maxLeadSpeed=650;
+		ammo="FST_Rapture_Anti_Tank_Missile";
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+	};
+	class FST_Foehammer_4Rnd_AGM_Missile: VehicleMagazine
+	{
+		displayName="[41st] Rapture ATGM";
+		displayNameShort="ATGM";
+		count=4;
+		initSpeed=200;
+		maxLeadSpeed=650;
+		ammo="FST_Foehammer_Anti_Tank_Missile";
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+	};
+	class FST_Stormfury_12Rnd_AA_Missile: OPTRE_8Rnd_C2GMLS_missiles
+	{
+		displayName="[41st] Stormfury HVAA";
+		displayNameShort="HVAA";
+		count=12;
+		initSpeed=300;
+		maxLeadSpeed=1000;
+		ammo="FST_Stormfury_High_Velocity_Missile";
+		effectsMissile="3AS_PlasmaBolt_Large_Purple_Fly";
+	};
+	class FST_Stormfury_4Rnd_AA_Missile: OPTRE_8Rnd_C2GMLS_missiles
+	{
+		displayName="[41st] Stormfury HVAA";
+		displayNameShort="HVAA";
+		count=4;
+		initSpeed=300;
+		maxLeadSpeed=1000;
+		ammo="FST_Stormfury_High_Velocity_Missile";
+		effectsMissile="3AS_PlasmaBolt_Large_Purple_Fly";
+	};
+	class FST_Harrower_2Rnd_HARM_Missile: OPTRE_8Rnd_C2GMLS_missiles
+	{
+		displayName="[41st] Harrower ARM";
+		displayNameShort="HARM";
+		count=2;
+		initSpeed=300;
+		maxLeadSpeed=1000;
+		ammo="FST_AGM88";
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+	};
+/* 	class FST_SUU25_P_8rnd_M : VehicleMagazine
+	{
+		scope = 2;
+		displayName = "Flare x 1";
+		displayNameShort = "VALIANCE FLARE";
+		ammo = "FST_SUU25_Rocket";
+		descriptionShort = "Parachute Flare";				
+		initSpeed = 0;
+		count = 8;
+		maxLeadSpeed = 0;
+	}; */
+};
+class Cfgweapons
+{
+	class CannonCore;
+	class autocannon_Base_F: CannonCore
+	{
+		class player;
+	};
+	class mortar_155mm_AMOS: CannonCore
+	{
+	};
+	class cannon_120mm: CannonCore
+	{
+	};
+	class MGun;
+	class GMG_F: MGun
+	{
+	};
+	class GMG_20mm: GMG_F
+	{
+	};
+	class GMG_40mm: GMG_F
+	{
+		class manual;
+	};
+	class LMG_RCWS: MGun
+	{
+	};
+	class LMG_M200: LMG_RCWS
+	{
+	};
+	class weapon_AGM_65Launcher;
+	class missiles_ASRAAM;
+	class FST_Rapture_AGM_Missile: weapon_AGM_65Launcher
+	{
+		displayName="[41st] Rapture Anti-Tank Missile";
+		magazines[]=
+		{
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+		};
+		maxRange=6000;
+		mminRange=50;
+		canlock=2;
+		airLock=1;
+		weaponLockDelay=2;
+		reloadTime = 0.001;
+		magazineReloadTime=1;
+	};
+	class FST_Foehammer_AGM_Missile: weapon_AGM_65Launcher
+	{
+		displayName="[41st] Foehammer Dual-Mode ATGM";
+		magazines[]=
+		{
+			"FST_Foehammer_4Rnd_AGM_Missile",
+		};
+		maxRange=6000;
+		mminRange=50;
+		canlock=2;
+		airLock=1;
+		weaponLockDelay=2;
+		reloadTime = 0.001;
+		magazineReloadTime=1;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 500;
+		minRangeProbab = 0.04;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRangeProbab = 0.55;
+		maxLeadSpeed = 2500;
+		sounds[] = { "StandardSound" };
+		class StandardSound
+		{
+			begin1[] = { "A3\Sounds_F\weapons\Rockets\titan_1", 2.5118864, 1, 1100 };
+			soundBegin[] = { "begin1", 1 };
+			weaponSoundEffect = "DefaultRifle";
+		};
+	};
+	class FST_Stormfury_AA_Missile: missiles_ASRAAM
+	{
+		displayName="[41st] Stormfury High Velocity Missile";
+		magazines[]=
+		{
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile"
+			
+		};
+		maxRange=6000;
+		mminRange=50;
+		canlock=2;
+		airLock=1;
+		aiAmmoUsageFlags="128 + 256";
+		weaponLockDelay=2;
+		reloadTime = 0.001;
+		magazineReloadTime=1;
+	};
+	class MissileLauncher;
+	class FST_Harrower_HARM_Missile : MissileLauncher
+	{
+		scope = 2;
+		holdsterAnimValue = 1;
+		displayName = "[41st] Harrower HARM Missile";
+		displayNameMagazine = "HARM";
+		shortNameMagazine = "HARM";
+
+		modes[] = {"LoalDistance"};
+		class LoalDistance: MissileLauncher
+		{
+			textureType = "LOAL";
+			displayName = "PB";
+			minRange = 300;
+			minRangeProbab = 0.4;
+			midRange = 1000;
+			midRangeProbab = 0.95;
+			maxRange = 20000;
+			maxRangeProbab = 0.9;
+		};			
+		sounds[] = { "StandardSound" };
+		class StandardSound
+		{
+			begin1[] = { "A3\Sounds_F\weapons\Rockets\titan_1", 2.5118864, 1, 1100 };
+			soundBegin[] = { "begin1", 1 };
+			weaponSoundEffect = "DefaultRifle";
+		};
+		initspeed = 10;
+		magazineReloadTime = 0.5;
+		reloadTime = 0.001;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 200;
+		// minRange = 100;
+		// minRangeProbab = 0.04;
+		// midRange = 1000;
+		// midRangeProbab = 0.85;
+		// maxRange = 4000;
+		// maxRangeProbab = 0.55;
+		maxLeadSpeed = 2500;
+		magazines[] = { "FST_Harrower_2Rnd_HARM_Missile" };
+	};
+/* 	class RocketPods;
+	class FST_Flares : RocketPods
+	{
+		ballisticsComputer = 8;
+		holdsterAnimValue = 1;
+		magazines[] = { "FST_SUU25_P_8rnd_M" };
+		displayName = "Valiance Flare Dispenser";
+		modes[] = { "Far_AI", "Burst" };
+		cursor = "EmptyCursor";
+		cursorAim = "rocket";
+		class Far_AI : RocketPods
+		{
+			minRange = 50;
+			minRangeProbab = 0.041;
+			midRange = 600;
+			midRangeProbab = 0.21;
+			maxRange = 2500;
+			maxRangeProbab = 0.11;
+			displayName = "HYDRA-SINGLE";
+
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";
+
+			burst = 1;
+			reloadTime = 1;
+			autoFire = 0;
+			showToPlayer = 0;
+		};
+		class Burst : RocketPods
+		{
+			minRange = 1;
+			minRangeProbab = 0.001;
+			midRange = 2;
+			midRangeProbab = 0.001;
+			maxRange = 3;
+			maxRangeProbab = 0.001;
+			displayName = "FLR DPS";
+			burst = 1;
+			reloadTime = 1;
+			soundContinuous = 0;
+			autoFire = 1;
+
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";
+		};
+			FIR_AWS_SMS_A10C_CODE = "FIR_AirWeaponSystem_US\ui\sms\a10\wep_suu25.paa";		
+	}; */
+};
