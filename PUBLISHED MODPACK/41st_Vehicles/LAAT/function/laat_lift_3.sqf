@@ -9,7 +9,7 @@ if(isNull _this) exitWith {
 _this addAction ["<t color='#f4e541'>Load Vehicle</t>",{
 
 	params["_vic"];
-	_objects= nearestObjects [player, ["Car","Tank","Air","Ship"], 20];
+	_objects= nearestObjects [player, ["Car","Tank","Air","Ship", "LandVehicle"], 20];
 	_vex= _objects select 1;
 	_vex attachTo [_vic, [0,1,-3]]; 
 	removeAllActions _vic;
@@ -17,7 +17,7 @@ _this addAction ["<t color='#f4e541'>Load Vehicle</t>",{
 	_vic addAction ["<t color='#f44167'>Unload Vehicles</t>",	{
 
 		params["_vic"];
-		_objects= nearestObjects [player, ["Car","Tank","Air","Ship"], 20];
+		_objects= nearestObjects [player, ["Car","Tank","Air","Ship", "LandVehicle"], 20];
 		removeAllActions _vic;
 		_vex= _objects select 1;
 		detach _vex;
