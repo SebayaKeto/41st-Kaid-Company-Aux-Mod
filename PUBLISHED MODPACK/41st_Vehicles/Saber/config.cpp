@@ -747,12 +747,22 @@ class cfgvehicles
 			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_co.paa",
 		};
 		class TransportItems
-		{
-			class _transport_ToolKit
 			{
-				name="ToolKit";
-				count=2;
-			};
+				class _xx_IDA_Cauterizer
+				{
+					name="IDA_Cauterizer";
+					count=1;
+				};
+				class _xx_FST_Bacta_Tank
+				{
+					name="FST_Bacta_Tank";
+					count=1;
+				};
+		};
+		class _transport_ToolKit
+		{
+			name="ToolKit";
+			count=2'
 		};
 	};
 	class FST_SuperSaber: FST_Saber
