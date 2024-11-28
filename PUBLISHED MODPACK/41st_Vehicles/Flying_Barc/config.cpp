@@ -235,6 +235,8 @@ class CfgVehicles
 				statement="this setposATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 4]; this setVectorUp surfaceNormal getposATL this;";
 			};
 		};
+		ace_cargo_hasCargo=1;
+		ace_cargo_space=1000;
 		class TransportMagazines{};
 		class TransportItems{};
 		class TransportWeapons{};
