@@ -3376,6 +3376,26 @@ class CfgVehicles
 				};
 			};
 		};
+		class TransportItems
+			{
+				class _xx_IDA_Cauterizer
+				{
+					name="IDA_Cauterizer";
+					count=1;
+				};
+				class _xx_FST_Bacta_Tank
+				{
+					name="FST_Bacta_Tank";
+					count=1;
+				};
+			};
+			class TransportWeapons
+			{
+				
+			}
+			class TransportMagazines
+			{	
+			}
 		class Turrets: Turrets
 		{
 			class MainTurretTop: MainTurret
@@ -3713,6 +3733,7 @@ class CfgVehicles
 				{
 				};
 			};
+			
 			class MainTurretBack: MainTurretFront
 			{
 				body="mainturret3";
