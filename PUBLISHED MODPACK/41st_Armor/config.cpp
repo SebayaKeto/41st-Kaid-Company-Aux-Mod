@@ -5561,6 +5561,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tally2.paa",
 		};
 	};	
+	class FST_P2_Helmet_Oil: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Oil]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Oil.paa",
+		};
+	};	
 	class FST_P2_Helmet_Annex: FST_P2_Helmet_Base
 	{
 		author="Daara";
