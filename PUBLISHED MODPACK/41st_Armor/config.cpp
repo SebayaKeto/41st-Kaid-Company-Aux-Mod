@@ -94,6 +94,7 @@ class CfgPatches
 			"FST_P2_Mrogg",
 			"FST_P2_Rumble",
 			"FST_P2_Sunny",
+			"FST_P2_Business",
 			"FST_P2_Dobie",
 			"FST_P2_Bigs",
 			"FST_P2_Parsec",
@@ -14039,7 +14040,7 @@ class CfgVehicles
  	class FST_P2_James: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1861 'James'";
+		displayName="[41st] CT-2009 'James'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14204,7 +14205,7 @@ class CfgVehicles
  	class FST_P2_Tally: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-4586 'Tally'";
+		displayName="[41st] CT-0515 'Tally'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14314,7 +14315,7 @@ class CfgVehicles
  	class FST_P2_Brutal: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-4586 'Brutal'";
+		displayName="[41st] CT-3972 'Brutal'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14369,7 +14370,7 @@ class CfgVehicles
  	class FST_P2_Burns: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-4586 'Burns'";
+		displayName="[41st] CT-7067 'Burns'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14479,7 +14480,7 @@ class CfgVehicles
  	class FST_P2_Ropey: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-0000 'Ropey'";
+		displayName="[41st] CT-4079 'Ropey'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14644,7 +14645,7 @@ class CfgVehicles
  	class FST_P2_Argo: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1326 'Argo'";
+		displayName="[41st] CT-0626 'Argo'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14699,7 +14700,7 @@ class CfgVehicles
  	class FST_P2_ArgoV2: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1326 'Argo' [V2]";
+		displayName="[41st] CT-0626 'Argo' [V2]";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14809,7 +14810,7 @@ class CfgVehicles
  	class FST_P2_Cardinal: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1326 'Cardinal'";
+		displayName="[41st] CT-1227 'Cardinal'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -14919,7 +14920,7 @@ class CfgVehicles
  	class FST_P2_NotSkilled: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1326 'NotSkilled'";
+		displayName="[41st] CT-XXXX 'NotSkilled'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15084,7 +15085,7 @@ class CfgVehicles
  	class FST_P2_Deacon: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
-		displayName="[41st] CT-1362 'Deacon'";
+		displayName="[41st] CT-3063 'Deacon'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15139,7 +15140,7 @@ class CfgVehicles
  	class FST_P2_Hotshot: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
-		displayName="[41st] CT-1362 'Hotshot'";
+		displayName="[41st] CT-0133 'Hotshot'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15194,7 +15195,7 @@ class CfgVehicles
 	class FST_P2_Vengence: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
-		displayName="[41st] CT-1362 'Vengence'";
+		displayName="[41st] CT-2325 'Vengence'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15249,7 +15250,7 @@ class CfgVehicles
 	class FST_P2_Rook: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
-		displayName="[41st] CT-1362 'Rook'";
+		displayName="[41st] CT-1830 'Rook'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15521,10 +15522,65 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Business: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-8282 'Business'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Business";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Business.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Business.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Business",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Business",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Dobie: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
-		displayName="[41st] CT-2213 'Dobie'";
+		displayName="[41st] CT-5025 'Dobie'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15579,7 +15635,7 @@ class CfgVehicles
  	class FST_P2_Vector: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
-		displayName="[41st] CT-2213 'Vector'";
+		displayName="[41st] CT-1157 'Vector'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15634,7 +15690,7 @@ class CfgVehicles
  	class FST_P2_Parsec: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
-		displayName="[41st] CT-2213 'Parsec'";
+		displayName="[41st] CT-1030 'Parsec'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -15689,7 +15745,7 @@ class CfgVehicles
  	class FST_P2_Bigs: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
-		displayName="[41st] CT-2213 'Bigs'";
+		displayName="[41st] CT-0377 'Bigs'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -16184,7 +16240,7 @@ class CfgVehicles
  	class FST_P2_NCO: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'NCO'";
+		displayName="[41st] CT-XXXX 'NCO'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -16239,7 +16295,7 @@ class CfgVehicles
  	class FST_P2_Officer: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'Officer'";
+		displayName="[41st] CT-XXXX 'Officer'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -16459,7 +16515,7 @@ class CfgVehicles
  	class FST_P2_Grif: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'Grif'";
+		displayName="[41st] CT-7994 'Grif'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -16734,7 +16790,7 @@ class CfgVehicles
  	class FST_P2_Sly: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'Sly'";
+		displayName="[41st] CT-7662 'Sly'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -16789,7 +16845,7 @@ class CfgVehicles
  	class FST_P2_Sly_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'Sly' (Dirty)";
+		displayName="[41st] CT-7662 'Sly' (Dirty)";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -17559,7 +17615,7 @@ class CfgVehicles
  	class FST_P2_Charge: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-0666 'Charge'";
+		displayName="[41st] CT-XXXX 'Charge'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -17944,7 +18000,7 @@ class CfgVehicles
  	class FST_P2_Xeha: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'Xeha'";
+		displayName="[41st] CT-1837 'Xeha'";
 		scope=2;
 		Backpack="";
 		side=1;
@@ -17999,7 +18055,7 @@ class CfgVehicles
 	class FST_P2_CosmicSmith: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
-		displayName="[41st] CT-1362 'CosmicSmith'";
+		displayName="[41st] CT-2112 'CosmicSmith'";
 		scope=2;
 		Backpack="";
 		side=1;
