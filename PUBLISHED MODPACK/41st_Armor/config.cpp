@@ -97,6 +97,8 @@ class CfgPatches
 			"FST_P2_Dobie",
 			"FST_P2_Bigs",
 			"FST_P2_Parsec",
+			"FST_P2_Bookworm",
+			"FST_P2_Marek",
 			"FST_P2_Vector",
 			"FST_P2_Medusa",
 			"FST_P2_Harlequin",
@@ -7777,6 +7779,34 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Bigs";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+ 	class FST_Uniform_Bookworm: JLTS_CloneArmor
+	{
+		author="Vengence";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Bookworm]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Bookworm";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+ 	class FST_Uniform_Marek: JLTS_CloneArmor
+	{
+		author="Vengence";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Marek]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Marek";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -15669,6 +15699,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+ 	class FST_P2_Marek: FST_Trooper_P2_DC15S
+	{
+		author="Vengence";
+		displayName="[41st] CT-1226 'Marek'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Marek";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Marek.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Marek.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Marek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Marek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};	
+ 	class FST_P2_Bookworm: FST_Trooper_P2_DC15S
+	{
+		author="Vengence";
+		displayName="[41st] CT-9115 'Bookworm'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Bookworm";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Bookworm.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Bookworm.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Bookworm",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Bookworm",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};	
  	class FST_P2_Recruit: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
