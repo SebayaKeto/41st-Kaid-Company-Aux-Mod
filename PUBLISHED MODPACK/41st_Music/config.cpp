@@ -93,7 +93,7 @@ class CfgMusic
 		"FST_Destiny_MakeYourOwnFate",
 		"FST_Destiny_ParacausalMutilation",
 		"FST_Destiny_Perservate",
-		
+		"FST_Subnautica_AThousandStrings",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -772,6 +772,18 @@ class CfgMusic
 			1
 		};
 		duration="187";
+	};
+	class FST_Subnautica_AThousandStrings
+	{
+		name="(Subnautica) A Thousand Strings";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\A-Thousand-Strings.ogg",
+			1,
+			1
+		};
+		duration="280";
 	};
 	class FST_Destiny_HopeInBloom
 	{
