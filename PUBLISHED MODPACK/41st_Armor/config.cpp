@@ -97,6 +97,7 @@ class CfgPatches
 			"FST_P2_Sunny",
 			"FST_P2_Overwatch",
 			"FST_P2_Tooka",
+			"FST_P2_Pope",
 			"FST_P2_Business",
 			"FST_P2_Dobie",
 			"FST_P2_Bigs",
@@ -3590,7 +3591,7 @@ class CfgWeapons
 	};
 	class FST_P2_ARC_Helmet: JLTS_CloneHelmetP2
 	{
-		author="Gold";
+		author="Daara";
 		displayName="[41st] P2 ARC Trooper Helmet";
 		scope=2;
 		ace_hearing_protection=1;
@@ -4197,7 +4198,7 @@ class CfgWeapons
 	};
 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
 	{
-		author="Daara";
+		author="Gold";
 		displayName="[41st] P2 ARC Trooper Helmet (Major)";
 		scope=2;
 		ace_hearing_protection=1;
@@ -8018,7 +8019,7 @@ class CfgWeapons
 	}; 
 	class FST_Uniform_Viper: JLTS_CloneArmor
 	{
-		author="Daara";
+		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		displayName="[41st] P2 Armor [Viper]";
 		class ItemInfo: UniformItem
@@ -8445,6 +8446,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Major";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Pope: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Pope]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Pope";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -15837,6 +15852,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sunny",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Pope: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2213 'Pope'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Pope";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Pope.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Pope.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Pope",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Pope",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
