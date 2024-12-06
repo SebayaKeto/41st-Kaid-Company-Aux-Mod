@@ -5974,11 +5974,11 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Snoob.paa",
 		};
 	};
-	class FST_P2_Helmet_Cosair: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Corsair: FST_P2_Helmet_Base
 	{
 		author="Vengence";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Cosair]";
+		displayName="[41st] P2 Helmet [Corsair]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cosair.paa",
