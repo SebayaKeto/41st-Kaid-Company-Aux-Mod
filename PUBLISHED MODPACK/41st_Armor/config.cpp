@@ -5706,6 +5706,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik.paa",
 		};
 	};	
+	class FST_P2_Helmet_Aqua: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Aqua]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Aqua.paa",
+		};
+	};	
 	class FST_P2_Helmet_Diesel: FST_P2_Helmet_Base
 	{
 		author="Gold";

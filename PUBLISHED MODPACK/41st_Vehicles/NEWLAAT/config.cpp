@@ -257,7 +257,7 @@ class CfgVehicles
 		smokeLauncherGrenadeCount=18;
 		smokeLauncherVelocity=20;
 		ace_cargo_hasCargo=1;
-		ace_cargo_space=1000
+		ace_cargo_space=1000;
         class ace_cargo {
             class cargo {
                 class Land_CanisterFuel_F {
