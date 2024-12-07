@@ -5704,6 +5704,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik.paa",
 		};
 	};	
+	class FST_P2_Helmet_Diesel: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Diesel]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Diesel.paa",
+		};
+	};	
 	class FST_P2_Helmet_Kirby: FST_P2_Helmet_Base
 	{
 		author="Gold";
