@@ -530,7 +530,7 @@ class CfgWeapons
 				};
 			};
 		};
-	}; */
+	};
 	class FST_Vest_GM_Base: JLTS_CloneVestOfficer
 	{
 		displayName="[41st] Clonetrooper Cold Weather Vest";
@@ -4245,7 +4245,7 @@ class CfgWeapons
 				};
 			};
 		};
-	}; */
+	}; 
 	class FST_P2_ARC_Helmet_Stripes: JLTS_CloneHelmetP2
 	{
 		author="Daara";
