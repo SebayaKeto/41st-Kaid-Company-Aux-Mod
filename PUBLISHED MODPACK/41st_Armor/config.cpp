@@ -466,7 +466,7 @@ class CfgWeapons
 			};
 		};
 	};
-/* 	class FST_CloneVestARC_Major: V_PlateCarrier1_rgr
+ 	class FST_CloneVestARC_Major: V_PlateCarrier1_rgr
 	{
 		author="Gold";
 		scope=2;
@@ -4198,7 +4198,7 @@ class CfgWeapons
 			};
 		};
 	};
-/* 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
+ 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
 	{
 		author="Gold";
 		displayName="[41st] P2 ARC Trooper Helmet (Major)";
@@ -18539,7 +18539,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; */
+	}; 
  	class FST_P2_Stein: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
