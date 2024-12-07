@@ -466,7 +466,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_CloneVestARC_Major: V_PlateCarrier1_rgr
+/* 	class FST_CloneVestARC_Major: V_PlateCarrier1_rgr
 	{
 		author="Gold";
 		scope=2;
@@ -530,7 +530,7 @@ class CfgWeapons
 				};
 			};
 		};
-	};
+	}; */
 	class FST_Vest_GM_Base: JLTS_CloneVestOfficer
 	{
 		displayName="[41st] Clonetrooper Cold Weather Vest";
@@ -4198,7 +4198,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
+/* 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
 	{
 		author="Gold";
 		displayName="[41st] P2 ARC Trooper Helmet (Major)";
@@ -4245,7 +4245,7 @@ class CfgWeapons
 				};
 			};
 		};
-	};
+	}; */
 	class FST_P2_ARC_Helmet_Stripes: JLTS_CloneHelmetP2
 	{
 		author="Daara";
@@ -5704,7 +5704,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik.paa",
 		};
 	};	
-	class FST_P2_Helmet_Diesel: FST_P2_Helmet_Base
+/* 	class FST_P2_Helmet_Diesel: FST_P2_Helmet_Base
 	{
 		author="Gold";
 		scope=2; 
@@ -5713,7 +5713,7 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Diesel.paa",
 		};
-	};	
+	};	 */
 	class FST_P2_Helmet_Kirby: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -6684,7 +6684,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Man.paa",
 		};
 	};
-	class FST_P2_Helmet_Tex: FST_P2_Helmet_Base
+/* 	class FST_P2_Helmet_Tex: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -6693,7 +6693,7 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tex.paa",
 		};
-	};
+	}; */
 	class FST_P2_Helmet_Claw: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -8631,7 +8631,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
- 	class FST_Uniform_Tex: JLTS_CloneArmor
+/*  	class FST_Uniform_Tex: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -8644,7 +8644,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};  */
  	class FST_Uniform_Stein: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -18485,7 +18485,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_P2_Tex: FST_Trooper_P2_DC15S
+/*  	class FST_P2_Tex: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-9841 'Tex'";
@@ -18539,7 +18539,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; */
  	class FST_P2_Stein: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
