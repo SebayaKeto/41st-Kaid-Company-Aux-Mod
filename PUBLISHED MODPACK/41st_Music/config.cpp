@@ -94,6 +94,7 @@ class CfgMusic
 		"FST_Destiny_ParacausalMutilation",
 		"FST_Destiny_Perservate",
 		"FST_Subnautica_AThousandStrings",
+		"FST_Portal_YouCantEscapeYouKnow",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -808,6 +809,18 @@ class CfgMusic
 			1
 		};
 		duration="268";
+	};
+	class FST_Portal_YouCantEscapeYouKnow
+	{
+		name="(Portal) You Cant Escape You Know";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Portal-You-Cant-Escape-You-Know.ogg",
+			1,
+			1
+		};
+		duration="385";
 	};
 	class FST_Destiny_ParacausalMutilation
 	{
