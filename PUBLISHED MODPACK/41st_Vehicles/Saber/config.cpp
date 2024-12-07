@@ -762,7 +762,7 @@ class cfgvehicles
 		class _transport_ToolKit
 		{
 			name="ToolKit";
-			count=2'
+			count=2';
 		};
 	};
 	class FST_SuperSaber: FST_Saber
