@@ -246,6 +246,10 @@ class Extended_PostInit_EventHandlers
     {
         init="call compile preprocessFileLineNumbers '\41st_Armor\Data\Modules.sqf'";
     };
+	class FST_FPS_Monitor
+    {
+        init="call compile preprocessFileLineNumbers '\41st_Armor\Data\FPSMonitor.sqf'";
+    };
 };
 class CfgWeapons
 {
