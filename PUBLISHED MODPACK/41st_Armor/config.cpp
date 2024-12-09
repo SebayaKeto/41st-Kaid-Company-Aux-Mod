@@ -2412,71 +2412,6 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_CloneVestSuspenders_ARF_Dirty: V_rebreatherB
-	{
-		author="Daara";
-		scope=2;
-		displayName="[41st] ARF Suspenders [Dirty]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_ARF_Vest_Suspenders_Dirty.paa"
-		};
-		class ItemInfo: VestItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=40;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
-	};
 	class FST_CloneVestSuspenders_ARF_Woodland: V_rebreatherB
 	{
 		author="Daara";
@@ -10642,22 +10577,6 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Woodland.paa"
-		};
-		tf_dialog="JLTS_clone_rto_radio_dialog";
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_hasLRradio=1;
-		tf_range=50000;
-		tf_subtype="digital_lr";
-	};
-	class FST_ARF_backpack_RTO_Dirty: FST_Backpack_Antenna
-	{
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
-		displayName="[41st] ARF Camo RTO Backpack [Dirty]";
-		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa"
 		};
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
