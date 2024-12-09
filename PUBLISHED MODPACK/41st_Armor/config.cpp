@@ -10284,6 +10284,25 @@ class CfgVehicles
 		};
 		tf_range=50000;
 	};
+	class FST_Backpack_Antenna_ARF_Dirty: JLTS_Clone_RTO_pack
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Mini ARF RTO Pack [Dirty]";
+		maximumload=250;
+		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa",
+		};
+		tf_range=50000;
+	};
 	class FST_Backpack_Jumppack: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -10649,25 +10668,6 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		tf_range=50000;
 		tf_subtype="digital_lr";
-	};
-	class FST_Backpack_Antenna_ARF: JLTS_Clone_RTO_pack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		displayName="[41st] Mini ARF RTO Pack";
-		maximumload=250;
-		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa",
-		};
-		tf_range=50000;
 	};
 	class FST_ARF_backpack_RTO_Desert: FST_Backpack_Antenna
 	{
