@@ -2412,6 +2412,71 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_CloneVestSuspenders_ARF_Dirty: V_rebreatherB
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] ARF Suspenders [Dirty]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_ARF_Vest_Suspenders_Dirty.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_CloneVestSuspenders_ARF_Woodland: V_rebreatherB
 	{
 		author="Daara";
@@ -10584,6 +10649,25 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		tf_range=50000;
 		tf_subtype="digital_lr";
+	};
+	class FST_Backpack_Antenna_ARF: JLTS_Clone_RTO_pack
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Mini ARF RTO Pack";
+		maximumload=250;
+		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa",
+		};
+		tf_range=50000;
 	};
 	class FST_ARF_backpack_RTO_Desert: FST_Backpack_Antenna
 	{
