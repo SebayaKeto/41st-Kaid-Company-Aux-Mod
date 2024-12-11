@@ -2793,6 +2793,13 @@ class CfgWeapons
 					armor=6;
 					PassThrough=0.08975;
 				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
 			};
 		};
 	};
@@ -2833,6 +2840,13 @@ class CfgWeapons
 					armor=6;
 					PassThrough=0.08975;
 				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
 			};
 		};
 	};
