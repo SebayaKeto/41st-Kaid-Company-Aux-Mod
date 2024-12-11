@@ -2800,7 +2800,6 @@ class CfgWeapons
 					PassThrough=0.08975;
 				};
 			};
-			};
 		};
 	};
 	class FST_HELMET_GM_NCO: JLTS_CloneHelmetP2
@@ -2846,7 +2845,6 @@ class CfgWeapons
 					armor=6;
 					PassThrough=0.08975;
 				};
-			};
 			};
 		};
 	};
@@ -9665,6 +9663,7 @@ class CfgVehicles
 				count=10;
 				magazine="FST_grenade_emp_mag";
 			};
+		};
 	};
 	class FST_MedicalCrate: FST_AmmoCrate
 	{
@@ -11387,8 +11386,8 @@ class CfgVehicles
 				armor=8;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001;
-				radius = 0.18";
+				passThrough="0.33000001";
+				radius = 0.18;
 				explosionShielding=6;
 				visual="injury_body";
 				minimalHit=0.0099999998;
@@ -11627,51 +11626,6 @@ class CfgVehicles
 			"Laserbatteries",
 		};
 	};
-/* 	class FST_Trooper_P2_Medic: FST_Trooper_P2_DC15S
-	{
-		author="Daara";
-		displayName="[41st] Clone Medic";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Subfaction";
-		uniformclass="FST_Trooper_P2_Medic";
-		nakedUniform="";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper.paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower.paa",
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet",
-			"IDA_Vest_DC15S",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet",
-			"IDA_Vest_DC15S",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	}; */
-	
 	class FST_Pilot_P1: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
