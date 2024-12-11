@@ -275,6 +275,11 @@ class CfgVehicles
 				count=40;
 				magazine="FST_blaster_scatter_cell";
 			};
+			class _xx_FST_thermal_slugmag_DP23
+			{
+				count=40
+				magazine="FST_thermal_slugmag_DP23";
+			};
 			class _xx_FST_blaster_battery
 			{
 				count=40;
@@ -285,10 +290,10 @@ class CfgVehicles
 				count=40;
 				magazine="FST_thermal_coil_LP";
 			};
-			class _xx_FST_thermal_coil_HP
+			class _xx_FST_thermal_coil_T15
 			{
 				count=20;
-				magazine="FST_thermal_coil_HP";
+				magazine="FST_thermal_coil_T15";
 			};
 			class _xx_FST_blaster_cell_Valken
 			{

@@ -1605,7 +1605,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		hit=55;
+		hit=65;
 		caliber=2.2;
 		coefGravity=0.02;
 	};
@@ -1803,7 +1803,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.13333334;
+			reloadTime=0.15;
 			dispersion=0.00145;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -1889,7 +1889,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.13333334;
+			reloadTime=0.15;
 			dispersion=0.00073000003;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -2485,7 +2485,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.1;
+			reloadTime=0.09230769;
 			dispersion=0.00073000003;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -2571,7 +2571,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.1;
+			reloadTime=0.09230769;
 			dispersion=0.00145;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -2887,8 +2887,8 @@ class CfgWeapons
 					400
 				};
 			};
-			burst=3;
-			reloadTime=0.0923;
+			burst=4;
+			reloadTime=0.1;
 			dispersion=0.00073000003;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -2974,7 +2974,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.13333334;
+			reloadTime=0.1;
 			dispersion=0.00145;
 			minRange=2;
 			minRangeProbab=0.5;

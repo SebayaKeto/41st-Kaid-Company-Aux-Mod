@@ -385,10 +385,123 @@ class CfgVehicles
 	};
 	class JLTS_Droid_B1_E5;
 	// Testing New Model Here
-	class O_soldier_base_F;
-	class O_Soldier_F: O_soldier_base_F
+	class Man;
+	class CAManBase: Man
 	{
 		class HitPoints;
+	};
+	class SoldierWB: CAManBase
+	{
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket
+			{
+				armor=1;
+				depends="HitHead";
+				explosionShielding=1;
+				material=-1;
+				minimalHit=0;
+				name="head";
+				passThrough=0;
+				radius=1;
+				visual="";
+			};
+			class HitFace;
+			class HitNeck;
+			class HitHead;
+			class HitPelvis;
+			class HitAbdomen;
+			class HitDiaphragm;
+			class HitChest;
+			class HitBody;
+			class HitArms;
+			class HitHands;
+			class HitLegs;
+		};
+	};
+	class O_soldier_base_F: SoldierWB
+	{
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
+			class HitFace: HitFace
+			{
+			};
+			class HitNeck: HitNeck
+			{
+			};
+			class HitHead: HitHead
+			{
+			};
+			class HitPelvis: HitPelvis
+			{
+			};
+			class HitAbdomen: HitAbdomen
+			{
+			};
+			class HitDiaphragm: HitDiaphragm
+			{
+			};
+			class HitChest: HitChest
+			{
+			};
+			class HitBody: HitBody
+			{
+			};
+			class HitArms: HitArms
+			{
+			};
+			class HitHands: HitHands
+			{
+			};
+			class HitLegs: HitLegs
+			{
+			};
+		};
+	};
+	class O_Soldier_F: O_soldier_base_F
+	{
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
+			class HitFace: HitFace
+			{
+			};
+			class HitNeck: HitNeck
+			{
+			};
+			class HitHead: HitHead
+			{
+			};
+			class HitPelvis: HitPelvis
+			{
+			};
+			class HitAbdomen: HitAbdomen
+			{
+			};
+			class HitDiaphragm: HitDiaphragm
+			{
+			};
+			class HitChest: HitChest
+			{
+			};
+			class HitBody: HitBody
+			{
+			};
+			class HitArms: HitArms
+			{
+			};
+			class HitHands: HitHands
+			{
+			};
+			class HitLegs: HitLegs
+			{
+			};
+		};
 	};
 	class FST_Droid_B1_E5: JLTS_Droid_B1_E5
 	{
@@ -424,6 +537,9 @@ class CfgVehicles
 		respawnItems[]={};
 		class HitPoints: O_Soldier_F
 		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
 			class HitFace
 			{
 				armor=1;

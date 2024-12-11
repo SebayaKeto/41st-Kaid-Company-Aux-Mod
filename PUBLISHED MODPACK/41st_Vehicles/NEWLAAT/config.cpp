@@ -3890,7 +3890,7 @@ class CfgAmmo
 		maneuvrability=25;
 		airFriction=0.079999998;
 		sideAirFriction=0.16;
-		weaponLockSystem="2+8+16";
+		weaponLockSystem="1+2+4+8+16";
 		thrust=240;
 		cmImmunity=0.85;
 		missileLockMaxDistance=10000;
@@ -3935,6 +3935,7 @@ class CfgAmmo
 		missileLockMaxDistance = 5500;
 		missileLockMinDistance = 50;
 		missileLockMaxSpeed = 550;	
+		weaponLockSystem="1+2+4+8+16";
 		class Components
 		{
 			class SensorsManagerComponent
@@ -4011,7 +4012,7 @@ class CfgAmmo
 		airFriction=0.050000001;
 		sideAirFriction=0.16;
 		thrust=400;
-		weaponLockSystem="2+8+16";
+		weaponLockSystem="1+2+8+16";
 		cmImmunity=0.85;
 		missileLockMaxDistance=10000;
 		missileLockMinDistance=50;

@@ -67,7 +67,7 @@ class CfgAmmo
         manualControl=1;
         missileLockCone=60;
         lockSeekRadius=1000;
-		WeaponLockSystem=2+4;
+		weaponLockSystem="1+2+4+8+16";
 		lockType = 0;
 		missileLockMaxDistance = 5000;
 		missileLockMinDistance = 20;

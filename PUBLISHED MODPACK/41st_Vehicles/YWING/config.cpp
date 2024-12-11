@@ -183,7 +183,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_30mm_Heavy_Autocannon",
+			"FST_30mm_Autocannon_LAAT",
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"ls_weapon_CMFlareLauncher",
@@ -191,15 +191,14 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_ARC_4000Rnd_Heavy_shells",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"Laserbatteries",
-			"FST_Stormfury_12Rnd_AA_Missile",
-			"FST_Stormfury_12Rnd_AA_Missile",
-			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile"
@@ -495,13 +494,13 @@ class CfgVehicles
 				discreteDistanceInitIndex=5;
 				weapons[]=
 				{
-					"3as_ARC_Light_Canon_Rear",
-					"CMFlareLauncher"
+					"FST_30mm_Autocannon_LAAT",
 				};
 				magazines[]=
 				{
-					"3AS_ARC_500Rnd_Light_Shells",
-					"240Rnd_CMFlare_Chaff_Magazine"
+					"FST_thermal_coil",
+					"FST_thermal_coil",
+					"FST_thermal_coil",
 				};
 			};
 		};
@@ -515,7 +514,7 @@ class CfgVehicles
 			class Muzzle_Flash2
 			{
 				source="ammorandom";
-				weapon="3AS_ARC_Light_Canon_Rear";
+				weapon="FST_30mm_Autocannon_LAAT";
 			};
 		};
 		class pilotCamera

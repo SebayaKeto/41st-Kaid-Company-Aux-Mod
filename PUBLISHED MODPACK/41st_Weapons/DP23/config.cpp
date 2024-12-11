@@ -34,10 +34,21 @@ class CfgAmmo
 		submunitionConeType[]=
 		{
 			"random",
-			6
+			8
 		};
 		submunitionConeAngle=0.34999999;
 		triggerTime=9.9999997e-010;
+	};
+	class FST_thermal_slug_DP23: IDA_blasterbolt
+	{
+		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
+		ACE_damageType="plasma";
+		hit=150;
+		indirectHit=1;
+		explosive=1;
+		indirectHitRange=0.5;
+		caliber=20;
 	};
 };
 class CfgMagazines
@@ -59,6 +70,23 @@ class CfgMagazines
 		tracersEvery=1;
 		initSpeed=250;
 		mass=8;
+	};
+	class FST_thermal_slugmag_DP23: 100Rnd_65x39_caseless_mag
+	{
+		author="Adapted From The Indecisive Armoury Team";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=1;
+		displayName="[41st] High-power Slug Round";
+		displayNameShort="HP Thermal Slug";
+		descriptionShort="1 round capacity.";
+		ammo="FST_thermal_slug_DP23";
+		tracersEvery=1;
+		initSpeed=300;
+		mass=2;
 	};
 };
 class CfgWeapons
@@ -219,6 +247,46 @@ class CfgWeapons
 			midRangeProbab=0.075000003;
 			maxRange=50;
 			maxRangeProbab=0.30000001;
+		};
+		class FST_DP23_UGL: UGL_F {
+			displayName="Slug Round UGL";
+			useModelOptics = false;
+			useExternalOptic = true;
+			magazines[] = {"FST_thermal_slugmag_DP23","FST_thermal_coil_Nexu"};
+			cameraDir = "OP_look";
+			discreteDistance[] = {100, 200, 300};
+			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3"}; // Position of the camera
+			discreteDistanceInitIndex = 0;
+			
+			class Single: Mode_SemiAuto {
+				sounds[] = {
+					"StandardSound"
+				};
+				class BaseSoundModeType {
+					weaponSoundEffect = "";
+					closure1[] = {};
+					closure2[] = {};
+					soundClosure[] = {};
+				};
+				class StandardSound: BaseSoundModeType {
+					weaponSoundEffect = "";
+					begin1[] = {
+						"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
+						1.25,
+						1,
+						1800
+					};
+					soundBegin[] = {"begin1", 1};
+				};
+				reloadTime = 0.5;
+				dispersion = 0.002;
+				minRange = 2;
+				minRangeProbab = 0.5;
+				midRange = 100;
+				midRangeProbab = 0.7;
+				maxRange = 300;
+				maxRangeProbab = 0.3;
+			};
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

@@ -853,7 +853,6 @@ class cfgvehicles
 				weapons[]=
 				{
 					"3AS_Sabre_Cannons_Super",
-					"FST_Medium_twin_laser_turret",
 					"SmokeLauncher"
 				};
 				magazines[]=
@@ -861,8 +860,8 @@ class cfgvehicles
 					"3AS_25rnd_Sabre_Super_Mag",
 					"3AS_25rnd_Sabre_Super_Mag",
 					"3AS_25rnd_Sabre_Super_Mag",
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"3AS_25rnd_Sabre_Super_Mag",
+					"3AS_25rnd_Sabre_Super_Mag",
 				};
 				minTurn=-360;
 				maxTurn=360;

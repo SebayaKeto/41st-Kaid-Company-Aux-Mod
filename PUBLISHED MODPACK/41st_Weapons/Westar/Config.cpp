@@ -166,7 +166,7 @@ class CfgWeapons
 		canShootInWater=1;
 		baseWeapon="FST_Westar-M5";
 		displayName="[41st] Westar-M5 Rifle";	
-		descriptionShort="Daara Only No Tallys Allowed";
+		descriptionShort="Daara Only No Tallys or Majors Allowed";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_F.p3d";	
 		handAnim[]=
@@ -285,7 +285,7 @@ class CfgWeapons
 					1,
 				};
 			};
-			reloadTime=0.075;
+			reloadTime=0.1;
 			dispersion=0.00073000003;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -458,7 +458,7 @@ class CfgWeapons
 					1,
 				};
 			};
-			reloadTime = 0.1143
+			reloadTime = 0.1143;
 			dispersion=0.0024;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -566,7 +566,7 @@ class CfgWeapons
 			{
 				opticsID=1;
 				useModelOptics=0;
-				opticsFlare="true";
+				opticsFlare=1;
 				opticsPPEffects[]=
 				{
 					"OpticsCHAbera5",
@@ -600,7 +600,7 @@ class CfgWeapons
 					"Normal",
 					"NVG"
 				};
-				opticsFlare="true";
+				opticsFlare=1;
 				distanceZoomMin=100;
 				distanceZoomMax=100;
 				cameraDir="";

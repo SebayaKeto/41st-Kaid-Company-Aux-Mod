@@ -9446,6 +9446,11 @@ class CfgVehicles
 				count=20;
 				magazine="FST_blaster_scatter_cell";
 			};
+			class _xx_FST_thermal_slugmag_DP23
+			{
+				count=20
+				magazine="FST_thermal_slugmag_DP23";
+			};
 			class _xx_FST_blaster_cell_LE
 			{
 				count=15;
@@ -9475,31 +9480,6 @@ class CfgVehicles
 			{
 				count=10;
 				magazine="FST_blaster_cell_Overcharged";
-			};
-			class _xx_FST_RPS6_rocket
-			{
-				count=12;
-				magazine="FST_RPS6_rocket";
-			};
-			class _xx_FST_RPS6_rocket_HE
-			{
-				count=12;
-				magazine="FST_RPS6_rocket_HE";
-			};
-			class _xx_FST_PLX1_Rocket
-			{
-				count=5;
-				magazine="FST_PLX1_Rocket";
-			};
-			class _xx_FST_PLX1_AA_mag
-			{
-				count=5;
-				magazine="FST_PLX1_AA_mag";
-			};
-			class _xx_FST_grenade_Detonator_mag
-			{
-				count=20;
-				magazine="FST_grenade_Detonator_mag";
 			};
 			class _xx_IDA_grenade_Smoke_mag
 			{
@@ -9556,21 +9536,6 @@ class CfgVehicles
 				count=6;
 				magazine="ACE_40mm_Flare_White";
 			};
-			class _xx_FST_HE_LauncherGrenade
-			{
-				count=20;
-				magazine="FST_HE_LauncherGrenade";
-			};
-			class _xx_IDA_explosive_Detpack_mag
-			{
-				count=10;
-				magazine="IDA_explosive_Detpack_mag";
-			};
-			class _xx_FST_grenade_emp_mag
-			{
-				count=10;
-				magazine="FST_grenade_emp_mag";
-			};
 			class _xx_FST_blaster_battery_DC15L
 			{
 				count=20;
@@ -9621,47 +9586,46 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
+			class _xx_FST_HE_LauncherGrenade
+			{
+				count=20;
+				magazine="FST_HE_LauncherGrenade";
+			};
 			class _xx_FST_RPS6_rocket
 			{
-				count=18;
+				count=12;
 				magazine="FST_RPS6_rocket";
 			};
 			class _xx_FST_RPS6_rocket_HE
 			{
-				count=18;
+				count=12;
 				magazine="FST_RPS6_rocket_HE";
 			};
 			class _xx_FST_PLX1_Rocket
 			{
-				count=8;
+				count=5;
 				magazine="FST_PLX1_Rocket";
 			};
 			class _xx_FST_PLX1_AA_mag
 			{
-				count=8;
+				count=5;
 				magazine="FST_PLX1_AA_mag";
 			};
 			class _xx_FST_grenade_Detonator_mag
 			{
-				count=30;
+				count=20;
 				magazine="FST_grenade_Detonator_mag";
-			};
-			class _xx_FST_HE_LauncherGrenade
-			{
-				count=30;
-				magazine="FST_HE_LauncherGrenade";
 			};
 			class _xx_IDA_explosive_Detpack_mag
 			{
-				count=15;
+				count=10;
 				magazine="IDA_explosive_Detpack_mag";
 			};
 			class _xx_FST_grenade_emp_mag
 			{
-				count=15;
+				count=10;
 				magazine="FST_grenade_emp_mag";
 			};
-		};
 	};
 	class FST_MedicalCrate: FST_AmmoCrate
 	{
@@ -11384,7 +11348,8 @@ class CfgVehicles
 				armor=8;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
+				passThrough="0.33000001;
+				radius = 0.18";
 				explosionShielding=6;
 				visual="injury_body";
 				minimalHit=0.0099999998;
