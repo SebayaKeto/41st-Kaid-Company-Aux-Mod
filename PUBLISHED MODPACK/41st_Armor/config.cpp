@@ -93,7 +93,6 @@ class CfgPatches
 			"FST_P2_Viper",
 			"FST_P2_Rook",
 			"FST_P2_Mrogg",
-			"FST_P2_Lancer",
 			"FST_P2_Rumble",
 			"FST_P2_Sunny",
 			"FST_P2_Overwatch",
@@ -3896,54 +3895,6 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_Crewman_Helmet_Ace: JLTS_CloneHelmetBARC
-	{
-		scope=2;
-		author="Gold";
-		displayName="[41st] Crewman Helmet (Ace)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Ace.paa"
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
-	};
 	class FST_Crewman_Helmet_Angel: JLTS_CloneHelmetBARC
 	{
 		scope=2;
@@ -4113,18 +4064,6 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Spade.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
-		};
-	};
-	class FST_Pilot_P1_Helmet_Sierra: FST_Pilot_P1_Helmet
-	{
-		author="Gold";
-		scope=2;
-		displayName="[41st] P1 Pilot Helmet [Sierra]";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Sierra.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
@@ -5763,26 +5702,6 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik.paa",
-		};
-	};	
-	class FST_P2_Helmet_SERE: FST_P2_Helmet_Base
-	{
-		author="Gold";
-		scope=2; 
-		displayName="[41st] P2 Helmet [SERE]";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_SERE.paa",
-		};
-	};	
-	class FST_P2_Helmet_plop: FST_P2_Helmet_Base
-	{
-		author="Gold";
-		scope=2; 
-		displayName="[41st] P2 Helmet [plop]";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_plop.paa",
 		};
 	};	
 	class FST_P2_Helmet_Aqua: FST_P2_Helmet_Base
@@ -8143,34 +8062,6 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Sunny";
-			uniformType="Neopren";
-			containerClass="Supply150";
-			mass=15;
-		};
-	}; 
-	class FST_Uniform_SERE: JLTS_CloneArmor
-	{
-		author="Gold";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [SERE]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_SERE";
-			uniformType="Neopren";
-			containerClass="Supply150";
-			mass=15;
-		};
-	}; 
-	class FST_Uniform_Lancer: JLTS_CloneArmor
-	{
-		author="Gold";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Lancer]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Lancer";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -10656,23 +10547,6 @@ class CfgVehicles
 		class TransportItems
 		{
 		};
-	};
-	class FST_Radio_Backpack_Dirty: FST_Backpack_Antenna
-	{
-		author="Gold";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
-		displayName="[41st] Radio Backpack [Dirty]";
-		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa"
-		};
-		tf_dialog="JLTS_clone_rto_radio_dialog";
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_hasLRradio=1;
-		tf_range=50000;
-		tf_subtype="digital_lr";
 	};
 	class FST_ARF_backpack_RTO_Woodland: FST_Backpack_Antenna
 	{
@@ -16028,116 +15902,6 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sunny",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	};
-	class FST_P2_SERE: FST_Trooper_P2_DC15S
-	{
-		author="Gold";
-		displayName="[41st] CT-2213 'SERE'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_SERE";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.Paa",
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet_SERE",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet_SERE",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	};
-	class FST_P2_Lancer: FST_Trooper_P2_DC15S
-	{
-		author="Gold";
-		displayName="[41st] CT-2213 'Lancer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Lancer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lancer.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lancer.Paa",
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet_Lancer",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet_Lancer",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
