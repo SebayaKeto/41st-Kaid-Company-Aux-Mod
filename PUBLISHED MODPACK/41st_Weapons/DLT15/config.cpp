@@ -56,7 +56,9 @@ class CfgWeapons
 		ace_overheating_closedBolt=0;
 		ace_overheating_barrelMass=1;
 		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
+		scope=0;
+		scopecurator=0;
+		scopearsenal=0;
 		inertia=0;
 		canShootInWater=1;
 		baseWeapon="FST_DLT15";
