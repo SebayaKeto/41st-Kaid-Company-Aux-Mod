@@ -144,6 +144,9 @@ class CfgPatches
 			"FST_P2_Stein",
 			"FST_P2_Stein_Dirty",
 			"FST_P2_Delta",
+			"FST_P2_Vulpes",
+			"FST_P2_Bulwark",
+			"FST_P2_Rint",
 			"FST_P2_CosmicSmith",
 			"FST_P2_Tally",
 			"FST_P2_Church",
@@ -4541,6 +4544,58 @@ class CfgWeapons
 			};
 		};
 	}; 
+	class FST_Airborne_Helmet_Sepie: JLTS_CloneHelmetAB
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Sepie)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Sepie.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"JLTS_CloneNVG_spec"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	}; 
  	class FST_Airborne_Helmet_Viz: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -5927,6 +5982,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Church.paa",
+		};
+	};	
+	class FST_P2_Helmet_Harm: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Harm]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Harm.paa",
 		};
 	};	
 	class FST_P2_Helmet_Church2: FST_P2_Helmet_Base
@@ -8409,6 +8474,48 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Joko";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Vulpes: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Vulpes]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Vulpes";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Rint: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Rint]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Rint";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Bulwark: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Bulwark]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Bulwark";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -19090,7 +19197,172 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
+	};
+	class FST_P2_Vulpes: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-6174 'Vulpes'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Vulpes";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Vulpes.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Vulpes.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Vulpes",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Vulpes",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
 	}; 
+	class FST_P2_Rint: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2724 'Rint'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Rint";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rint.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Rint.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Rint",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Rint",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+	class FST_P2_Bulwark: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-5445 'Bulwark'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Bulwark";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Bulwark.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Bulwark.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Bulwark",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Bulwark",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};     
  	class FST_P2_Delta: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
