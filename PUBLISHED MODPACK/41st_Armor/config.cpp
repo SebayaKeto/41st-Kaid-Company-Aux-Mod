@@ -11493,8 +11493,7 @@ class CfgVehicles
 				armor=8;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001";
-				radius = 0.18;
+				passThrough="0.33000001radius = 0.18";
 				explosionShielding=6;
 				visual="injury_body";
 				minimalHit=0.0099999998;

@@ -424,7 +424,7 @@ class CfgVehicles
 		respawnItems[]={};
 		class HitPoints: O_Soldier_F
 		{
-/* 			class HitFace
+ 			class HitFace
 			{
 				armor=1;
 				explosionShielding	= 100;	
@@ -503,7 +503,7 @@ class CfgVehicles
 				passthrough=1;
 				explosionShielding	= 100;	
 				minimalHit			= 0.01;	
-			}; */
+			}; 
 		};
 		linkedItems[]=
 		{

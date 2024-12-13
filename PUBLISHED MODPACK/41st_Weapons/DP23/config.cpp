@@ -137,7 +137,8 @@ class CfgWeapons
 		magazineWell[]={};
 		muzzles[]=
 		{
-			"this"
+			"this",
+			"FST_DP23_UGL"
 		};
 		modes[]=
 		{
