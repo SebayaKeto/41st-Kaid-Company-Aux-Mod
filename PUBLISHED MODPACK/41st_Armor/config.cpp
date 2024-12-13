@@ -11917,8 +11917,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
 		};
 		weapons[]=
 		{
