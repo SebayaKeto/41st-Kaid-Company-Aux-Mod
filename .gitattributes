@@ -1,0 +1,2 @@
+*.paa filter=lfs diff=lfs merge=lfs -text
+*.pbo filter=lfs diff=lfs merge=lfs -text
