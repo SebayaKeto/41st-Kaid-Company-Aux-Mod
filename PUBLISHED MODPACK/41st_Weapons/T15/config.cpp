@@ -290,8 +290,8 @@ class CfgMagazines
 };
 class CfgAmmo
 {
-	class IDA_blasterbolt;
-	class FST_thermal_shell_LP: IDA_blasterbolt {
+	class FST_blasterbolt;
+	class FST_thermal_shell_LP: FST_blasterbolt {
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Medium_Blue_Fly";
 		ACE_damageType="plasma";
@@ -300,7 +300,7 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=0.5;
 		caliber=5;
-		submunitionAmmo="IDA_blasterbolt"; // Submunition ammo class
+		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
 		submunitionConeType[]=
 		{
 			"random",
@@ -309,7 +309,7 @@ class CfgAmmo
 		submunitionConeAngle=0.05;
 		triggerDistance = 50;
 	};
-	class FST_thermal_shell_T15: IDA_blasterbolt
+	class FST_thermal_shell_T15: FST_blasterbolt
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";

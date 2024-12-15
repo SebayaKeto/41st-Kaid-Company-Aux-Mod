@@ -88,6 +88,7 @@ class CfgPatches
 			"FST_P2_Brutal",
 			"FST_P2_Burns",
 			"FST_P2_Sigs",
+			"FST_P2_Jorge",
 			"FST_P2_Lancer",
 			"FST_P2_Deacon",
 			"FST_P2_Hotshot",
@@ -6054,6 +6055,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
 		};
 	};	
+	class FST_P2_Helmet_Jorge: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Jorge]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Jorge.paa",
+		};
+	};	
 	class FST_P2_Helmet_Zipper: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -8040,6 +8051,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Sigs";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+ 	class FST_Uniform_Jorge: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Jorge]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Jorge";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -15724,6 +15749,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sigs",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Jorge: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1362 'Jorge'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Jorge";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
