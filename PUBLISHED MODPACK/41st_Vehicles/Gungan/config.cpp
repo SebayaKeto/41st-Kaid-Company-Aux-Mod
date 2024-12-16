@@ -146,9 +146,10 @@ class CfgVehicles
 			"SlingLoadCargo3",
 			"SlingLoadCargo4"
 		};
-		armor=100;
-		armorStructural=4;
-		damageResistance=0.050000001;
+		armor=125;
+		armorStructural=6;
+		damageResistance=0.02;
+		impactDamageCoef=0;
 		class CargoTurret;
 		class Turrets: Turrets
 		{

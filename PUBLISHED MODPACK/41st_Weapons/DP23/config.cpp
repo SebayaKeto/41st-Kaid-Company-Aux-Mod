@@ -49,11 +49,11 @@ class CfgAmmo
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
 		ACE_damageType="plasma";
-		hit=250;
+		hit=200;
 		indirectHit=1;
 		explosive=1;
 		indirectHitRange=0.5;
-		caliber=20;
+		caliber=10;
 		coefGravity=1;
 	};
 };
@@ -88,7 +88,7 @@ class CfgMagazines
 		count=3;
 		displayName="[41st] High-power Thermal Slug";
 		displayNameShort="Thermal Slug";
-		descriptionShort="2 round capacity.";
+		descriptionShort="3 round capacity.";
 		ammo="FST_thermal_slug_DP23";
 		tracersEvery=1;
 		initSpeed=300;

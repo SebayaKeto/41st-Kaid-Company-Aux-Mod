@@ -295,7 +295,7 @@ class CfgVehicles
 		cost=1500000;
 		crewCrashProtection=9.9999997e-005;
 		damageResistance=0.02;
-		crewVulnerable=1;
+		crewVulnerable=0;
 		armor=350;
 		armorStructural=8.5;
 		class HitPoints: HitPoints
@@ -463,10 +463,10 @@ class CfgVehicles
 				};
 				selectionFireAnim="Zasleh";
 				minElev=-5;
-				maxElev=45;
+				maxElev=60;
 				initElev=5;
-				minturn=-45;
-				maxturn=45;
+				minturn=-75;
+				maxturn=75;
 				soundServo[]=
 				{
 					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
