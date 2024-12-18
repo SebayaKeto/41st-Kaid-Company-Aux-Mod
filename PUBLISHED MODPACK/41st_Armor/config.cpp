@@ -154,6 +154,8 @@ class CfgPatches
 			"FST_P2_Xeha",
 			"FST_P2_Xeha_Dirty",
 			"FST_P2_Ace",
+			"FST_P2_Samurai",
+			"FST_P2_Sonic",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -4722,6 +4724,58 @@ class CfgWeapons
 			};
 		};
 	}; 
+ 	class FST_Airborne_Helmet_Stein: JLTS_CloneHelmetAB
+	{
+		author="Viz";
+		displayName="[41st] Airborne Helmet (Stein)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Stein.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"JLTS_CloneNVG_spec"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	}; 
  	class FST_Airborne_Helmet_Elk: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -6488,6 +6542,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Minno.paa",
 		};
 	};	
+    class FST_P2_Helmet_Sonic: FST_P2_Helmet_Base
+    {
+        author="Viz";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Sonic]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Sonic.paa",
+        };
+    };
 	class FST_P2_Helmet_Vulpes: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -9245,6 +9309,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+     class FST_Uniform_Samurai: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Samurai]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Samurai";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    }; 
 	class lsd_blueforUniform_Base;
 	class lsd_gar_jediCommander_uniform: lsd_blueforUniform_Base
 	{
@@ -9344,6 +9422,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Burns.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Tooka: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Tooka)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Tooka.paa",
 		};
 		visionMode[]=
 		{
@@ -19594,6 +19694,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};     
+    class FST_P2_Samurai: FST_Trooper_P2_DC15S
+    {
+        author="Viz";
+        displayName="[41st] CT-5151 'Samurai'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Samurai";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Samurai.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Samurai.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Samurai",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Samurai",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
  	class FST_P2_Delta: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
