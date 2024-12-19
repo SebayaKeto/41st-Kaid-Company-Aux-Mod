@@ -96,15 +96,15 @@ class CfgVehicles
 		enableGPS=1;
 		radartype=2;
 		radarTarget=1;
-		radarTargetSize=0.89999998;
+		radarTargetSize=2;
 		visualTarget=1;
-		visualTargetSize=1.2;
+		visualTargetSize=2;
 		irTarget=1;
-		irTargetSize=0.5;
+		irTargetSize=2;
 		reportRemoteTargets=1;
 		receiveRemoteTargets=1;
 		reportOwnPosition=1;
-		lockDetectionSystem=0;
+		lockDetectionSystem=1+8;
 		incomingMissileDetectionSystem=16;
 		class AttributeValues
 		{

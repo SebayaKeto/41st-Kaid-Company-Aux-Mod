@@ -3915,7 +3915,7 @@ class CfgAmmo
 		hit=1000;
 		model="OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
 		indirecthit=500;
-		indirecthitrange=3;
+		indirecthitrange=10;
 		caliber=50;
 		allowAgainstInfantry=1;
 		airLock=1;
@@ -3927,50 +3927,13 @@ class CfgAmmo
 		sideAirFriction=0.16;
 		weaponLockSystem="1+2+4+8+16";
 		thrust=240;
+		trackOversteer = 1;
+		flightProfiles[] = {TopDown};
+		trackLead = 1;
 		cmImmunity=0.85;
 		missileLockMaxDistance=10000;
 		missileLockMinDistance=50;
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
-	};
-	class M_Air_AA;
-	class FST_Foehammer_Anti_Tank_Missile : M_Air_AA
-	{
-		model = "\FIR_AirWeaponSystem_US\data\Brimstone\brimstone_dm_fly";
-		proxyShape = "\FIR_AirWeaponSystem_US\data\Brimstone\brimstone_dm";
-		warheadName = "HEAT";		
-		submunitionAmmo = "FIR_HF_Tandem";
-		submunitionDirectionType = "SubmunitionModelDirection";
-		submunitionInitSpeed = 1000;
-		submunitionParentSpeedCoef = 0.0;
-		submunitionInitialOffset[] = {0,0,-0.2};
-		triggerOnImpact = 1;
-		deleteParentWhenTriggered = 0;		
-		hit = 2000;
-		indirectHit = 500;
-		indirectHitRange = 3;
-		caliber=50;
-		timetoLive = 60;
-		maneuvrability = 25;
-		airLock = 0;
-		irLock = 1;
-		laserLock = 0;
-		nvLock = 0;
-		initTime = 0.100000;
-		thrustTime = 10;
-		maxspeed = 500;
-		maxControlRange = 2800;
-		trackOversteer = 1;
-		trackLead = 1;
-		thrust = 300;
-		effectsMissileInit = "MissileDAR1";
-		effectsMissile = "3AS_Rocket_effect_Blue_fly";
-		soundHit[] = { "A3\Sounds_F\weapons\Rockets\explosion_missile_01", 3.1622777, 1, 1800 };
-		missileLockCone = 120;
-		missileKeepLockedCone = 120;
-		missileLockMaxDistance = 5500;
-		missileLockMinDistance = 50;
-		missileLockMaxSpeed = 550;	
-		weaponLockSystem="1+2+4+8+16";
 		class Components
 		{
 			class SensorsManagerComponent
@@ -4031,6 +3994,91 @@ class CfgAmmo
 			};
 		};			
 	};
+	class M_Air_AA;
+	class FST_Foehammer_Anti_Tank_Missile : M_Air_AA
+	{
+		model = "\FIR_AirWeaponSystem_US\data\Brimstone\brimstone_dm_fly";
+		proxyShape = "\FIR_AirWeaponSystem_US\data\Brimstone\brimstone_dm";
+		warheadName = "HEAT";		
+		submunitionAmmo = "FIR_HF_Tandem";
+		submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitSpeed = 1000;
+		submunitionParentSpeedCoef = 0.0;
+		submunitionInitialOffset[] = {0,0,-0.2};
+		triggerOnImpact = 1;
+		deleteParentWhenTriggered = 0;		
+		hit = 2000;
+		indirectHit = 500;
+		indirectHitRange = 3;
+		caliber=50;
+		timetoLive = 60;
+		maneuvrability = 25;
+		airLock = 0;
+		irLock = 1;
+		laserLock = 0;
+		nvLock = 0;
+		initTime = 0.100000;
+		thrustTime = 10;
+		maxspeed = 500;
+		maxControlRange = 2800;
+		trackOversteer = 1;
+		trackLead = 1;
+		thrust = 300;
+		effectsMissileInit = "MissileDAR1";
+		effectsMissile = "3AS_Rocket_effect_Blue_fly";
+		soundHit[] = { "A3\Sounds_F\weapons\Rockets\explosion_missile_01", 3.1622777, 1, 1800 };
+		missileLockCone = 120;
+		missileKeepLockedCone = 120;
+		missileLockMaxDistance = 5500;
+		missileLockMinDistance = 50;
+		missileLockMaxSpeed = 550;	
+		weaponLockSystem="1+2+4+8+16";
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class SomeRadarSensorComponent
+					{
+						componentType = "ActiveRadarSensorComponent";
+						class GroundTarget      // ranges for targets with ground background                           
+						{
+							minRange = 50;
+							maxRange = 5500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};
+					class SomeLaserSensorComponent
+					{
+						componentType = "LaserSensorComponent";
+						class GroundTarget      // ranges for targets with ground background                           
+						{
+							minRange = 50;
+							maxRange = 5500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};					
+				};
+			};
+		};			
+	};
 	class FST_Stormfury_High_Velocity_Missile: OPTRE_M_ASGM2_AA
 	{
 		model="OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
@@ -4052,6 +4100,51 @@ class CfgAmmo
 		missileLockMaxDistance=10000;
 		missileLockMinDistance=50;
 		effectsMissile="3AS_Rocket_effect_Purple_fly";
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class SomeRadarSensorComponent
+					{
+						componentType = "ActiveRadarSensorComponent";
+						class AirTarget      // ranges for targets with sky background
+						{
+							minRange = 0;         //minimum possible range in meters  
+							maxRange = 0;       //maximum possible range in meters                 
+							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
+							viewDistanceLimitCoef = -1;      //range not limited by view distance           
+						};
+						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};
+					class SomeLaserSensorComponent
+					{
+						componentType = "LaserSensorComponent";
+						class AirTarget      // ranges for targets with sky background
+						{
+							minRange = 0;         //minimum possible range in meters  
+							maxRange = 0;       //maximum possible range in meters                 
+							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
+							viewDistanceLimitCoef = -1;      //range not limited by view distance           
+						};
+						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};					
+				};
+			};
+		};
 	};
 	class MissileCore;
 	class MissileBase : MissileCore
