@@ -45,12 +45,17 @@ class CfgPatches
 			"FST_laati_mk2Lights_Ripper",
 			"FST_laati_mk2Lights_Medusa",
 		};
-		weapons[]={};
+		weapons[]=
+		{
+			"FST_SmokeLauncher"
+		};
  		magazines[]=
 		{
+			"FST_SmokeLauncherMag"
 		};
 		ammo[]=
 		{
+			"FST_SmokeLauncherAmmo"
 		}; 
 	};
 };
@@ -117,6 +122,7 @@ class Extended_init_EventHandlers
 		};
 	};
 }; 
+class DefaultEventhandlers;
 class CfgVehicles
 {
 	class House;
@@ -260,6 +266,10 @@ class CfgVehicles
 		smokeLauncherAngle=360;
 		smokeLauncherGrenadeCount=18;
 		smokeLauncherVelocity=20;
+ 		class EventHandlers: DefaultEventhandlers
+		{
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+		}; 
 		ace_cargo_hasCargo=1;
 		ace_cargo_space=1000
         class ace_cargo {
@@ -421,7 +431,7 @@ class CfgVehicles
 			"FST_Harrower_HARM_Missile",
 			"Laserdesignator_pilotCamera",
 			"ls_weapon_CMFlareLauncher",
-			"SmokeLauncher"
+			"FST_SmokeLauncher"
         };
 		magazines[]=
 		{
@@ -435,11 +445,11 @@ class CfgVehicles
 			"FST_thermal_coil",
 			"FST_thermal_coil",
 			"FST_thermal_coil",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
 			"FST_Stormfury_4Rnd_AA_Missile",
 			"FST_Stormfury_4Rnd_AA_Missile",
 			"FST_Stormfury_4Rnd_AA_Missile",
@@ -2006,6 +2016,10 @@ class CfgVehicles
 		vehicleclass="Helicopter";
 		scope=2;
 		side=1;
+ 		class EventHandlers: DefaultEventhandlers
+		{
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+		}; 
 		typicalcargo[]=
 		{
 			"FST_Pilot_P1"
@@ -2493,6 +2507,10 @@ class CfgVehicles
 		vehicleclass="Helicopter";
 		scope=2;
 		side=1;
+ 		class EventHandlers: DefaultEventhandlers
+		{
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+		}; 
 		typicalcargo[]=
 		{
 			"FST_Pilot_P1"
@@ -3838,6 +3856,24 @@ class CfgAmmo
 {
 	class 3AS_Sabre_HE;
 	class M_Scalpel_AT;
+	class BulletBase;
+	class FST_SmokeLauncherAmmo: BulletBase
+	{
+		muzzleEffect="BIS_fnc_effectFiredSmokeLauncher";
+		effectsSmoke="EmptyEffect";
+		weaponLockSystem="1 + 2 + 4";
+		hit=1;
+		indirectHit=0;
+		indirectHitRange=0;
+		timeToLive=15;
+		thrustTime=10;
+		airFriction=-0.1;
+		simulation="shotCM";
+		model="\A3\weapons_f\empty";
+		maxControlRange=50;
+		initTime=2;
+		aiAmmoUsageFlags="4 + 8";
+	};
 	class laserAmmo: 3AS_Sabre_HE
 	{
 		airFriction=0;
@@ -4180,6 +4216,15 @@ class CfgMagazines
 {
 	class 200Rnd_65x39_Belt;
 	class VehicleMagazine;
+	class FST_SmokeLauncherMag: VehicleMagazine
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		scope=2;
+		ammo="FST_SmokeLauncherAmmo";
+		count=6;
+		nameSound="smokeshell";
+		initSpeed=14;
+	};
 /* 	class Laser_Battery: 200Rnd_65x39_Belt
 	{
 		ammo="laserAmmo";
@@ -4307,6 +4352,37 @@ class Cfgweapons
 	};
 	class weapon_AGM_65Launcher;
 	class missiles_ASRAAM;
+	class FST_SmokeLauncher: MGun
+	{
+		scope=2;
+		displayName="$STR_A3_SmokeLauncher0";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			soundSetShot[]=
+			{
+				"UGL_shot_SoundSet",
+				"UGL_Tail_SoundSet",
+				"UGL_InteriorTail_SoundSet"
+			};
+		};
+		magazines[]=
+		{
+			"FST_SmokeLauncherMag"
+		};
+		reloadTime=3;
+		magazineReloadTime=60;
+		canLock=0;
+		autoFire=0;
+		simulation="cmlauncher";
+		showToPlayer=1;
+		minRange=0;
+		maxRange=10000;
+		textureType="semi";
+	};
 	class FST_Rapture_AGM_Missile: weapon_AGM_65Launcher
 	{
 		displayName="[41st] Rapture Anti-Tank Missile";
