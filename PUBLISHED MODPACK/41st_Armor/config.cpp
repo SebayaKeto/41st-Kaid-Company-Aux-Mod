@@ -158,6 +158,7 @@ class CfgPatches
 			"FST_P2_Sonic",
 			"FST_P2_Claw",
 			"FST_P2_Kelj",
+			"FST_P2_Fury",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -6066,6 +6067,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Diesel.paa",
 		};
 	};	
+    class FST_P2_Helmet_Fury: FST_P2_Helmet_Base
+    {
+        author="Viz";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Fury]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Fury.paa",
+        };
+    };
 	class FST_P2_Helmet_Kirby: FST_P2_Helmet_Base
 	{
 		author="Gold";
