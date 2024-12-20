@@ -160,6 +160,7 @@ class CfgPatches
 			"FST_P2_Kelj",
 			"FST_P2_Fury",
 			"FST_P2_Tombstone",
+			"FST_P2_Stant",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -6648,6 +6649,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lawman.paa",
 		};
 	};
+    class FST_P2_Helmet_Stant: FST_P2_Helmet_Base
+    {
+        author="Viz";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Stant]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Stant.paa",
+        };
+    };
  	class FST_P2_Helmet_Jammer: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -9556,6 +9567,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Tooka.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Squatch: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Squatch)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Squatch.paa",
 		};
 		visionMode[]=
 		{
