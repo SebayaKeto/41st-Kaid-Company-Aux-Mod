@@ -4595,7 +4595,7 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"JLTS_CloneNVG_spec"
+			"k_nvg"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -4647,7 +4647,7 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"JLTS_CloneNVG_spec"
+			"k_nvg"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -4699,7 +4699,7 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"JLTS_CloneNVG_spec"
+			"k_nvg"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -4751,7 +4751,7 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"JLTS_CloneNVG_spec"
+			"k_nvg"
 		};
 		class Iteminfo: HeadgearItem
 		{
