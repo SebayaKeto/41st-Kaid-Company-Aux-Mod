@@ -494,13 +494,14 @@ class CfgVehicles
 				discreteDistanceInitIndex=5;
 				weapons[]=
 				{
-					"FST_30mm_Autocannon_LAAT",
+					"FST_30mm_Autocannon_LAAT"
 				};
 				magazines[]=
 				{
 					"FST_thermal_coil",
 					"FST_thermal_coil",
 					"FST_thermal_coil",
+					"FST_thermal_coil"
 				};
 			};
 		};

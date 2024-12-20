@@ -159,6 +159,7 @@ class CfgPatches
 			"FST_P2_Claw",
 			"FST_P2_Kelj",
 			"FST_P2_Fury",
+			"FST_P2_Tombstone",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -7057,6 +7058,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Blossom.paa",
 		};
 	};
+    class FST_P2_Helmet_Tombstone: FST_P2_Helmet_Base
+    {
+        author="Viz";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Tombstone]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Tombstone.paa",
+        };
+    };
 	class FST_P2_Helmet_Ryx: FST_P2_Helmet_Base
 	{
 		author="Daara";
