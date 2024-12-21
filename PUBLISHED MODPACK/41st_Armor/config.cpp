@@ -62,6 +62,7 @@ class CfgPatches
 			"FST_Trooper_P1_41st",		
 			"FST_ARF_Desert",
 			"FST_ARF_Woodland",
+			"FST_Jedi",
 			"FST_DarkJedi",
 			"FST_P2_Officer",
 			"FST_P2_NCO",
@@ -9438,12 +9439,24 @@ class CfgWeapons
 	class lsd_blueforUniform_Base;
 	class lsd_gar_jediCommander_uniform: lsd_blueforUniform_Base
 	{
-    class ItemInfo;
+		class ItemInfo;
 	};
 	class FST_Jedi_uniform: lsd_gar_jediCommander_uniform
 	{
 		scope=2;
 		displayName="[41st] Jedi Armor";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_Jedi";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+	class FST_Dark_Jedi_uniform: lsd_gar_jediCommander_uniform
+	{
+		scope=2;
+		displayName="[41st] Dark Jedi Armor";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
@@ -20069,7 +20082,7 @@ class CfgVehicles
 		};
 	}; 
 	class lsd_gar_jediCommander_base;
-	class FST_DarkJedi: lsd_gar_jediCommander_base
+	class FST_Jedi: lsd_gar_jediCommander_base
 	{
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
@@ -20086,6 +20099,26 @@ class CfgVehicles
 			"41st_Armor\Data\Uniforms\armor_co_J_Daara.paa",
 			"41st_Armor\Data\Uniforms\robes_co_J_Daara.paa",
 			"41st_Armor\Data\Uniforms\belt_co_J_Daara.paa",
+			"\lsd_armor_bluefor\uniform\gar\jediCommander\data\undersuit_co.paa"
+		};
+	};
+	class FST_DarkJedi: lsd_gar_jediCommander_base
+	{
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformClass="FST_Dark_Jedi_uniform";
+		hiddenSelections[]=
+		{
+			"armor_camo",
+			"robes_camo",
+			"belt_camo",
+			"under_camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\armor_co_DJ.paa",
+			"41st_Armor\Data\Uniforms\robes_co_DJ.paa",
+			"41st_Armor\Data\Uniforms\belt_co_DJ.paa",
 			"\lsd_armor_bluefor\uniform\gar\jediCommander\data\undersuit_co.paa"
 		};
 	};

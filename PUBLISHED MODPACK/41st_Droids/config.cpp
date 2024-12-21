@@ -273,6 +273,96 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_Jorgetrooper_Uniform: FST_Uniform_CIS_Heavy_Base
+	{
+		author="$STR_3AS_Studio";
+		scope=2;
+		displayName="[41st] Brainwashed Clone Armor";
+		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat",
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_Jorgetrooper";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+	class FST_Jorgetrooper_Uniform_AT: FST_Uniform_CIS_Heavy_Base
+	{
+		author="$STR_3AS_Studio";
+		scope=2;
+		displayName="[41st] Brainwashed Clone Armor (AT)";
+		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat",
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_Jorgetrooper_AT";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+	class FST_Jorgetrooper_Uniform_AR: FST_Uniform_CIS_Heavy_Base
+	{
+		author="$STR_3AS_Studio";
+		scope=2;
+		displayName="[41st] Brainwashed Clone Armor (AR)";
+		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat",
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_Jorgetrooper_AR";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
 };
 class CfgVehicles
 {
@@ -1593,6 +1683,451 @@ class CfgVehicles
 			"JLTS_NVG_droid_chip_1",
 			"3AS_CIS_Light_helmet"
 		};
+		magazines[]=
+		{
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+	};
+	class FST_Jorgetrooper: FST_CIS_Heavy_Base_F
+	{
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopecurator=2;
+		displayName="[41st] Brainwashed Clone Trooper";
+		author="Daara";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		backpack="";
+		uniformclass="FST_Jorgetrooper_Uniform";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat",
+		};
+		weapons[]=
+		{
+			"FST_DC15A",
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_DC15A",
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High"
+		};
+		class HitPoints: HitPoints
+		{
+			class HitFace: HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=8;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=6;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=6;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=8;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=6;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=6;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=6;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class FST_Jorgetrooper_AT: FST_Jorgetrooper
+	{
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopecurator=2;
+		displayName="[41st] Brainwashed Clone Trooper (AT)";
+		author="Daara";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		backpack="";
+		uniformclass="FST_Jorgetrooper_Uniform_AT";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat",
+		};
+		weapons[]=
+		{
+			"FST_DC15A",
+			"FST_RPS6HP",
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_DC15A",
+			"FST_RPS6HP",
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"FST_blaster_cell_High",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+	};
+	class FST_Jorgetrooper_AR: FST_Jorgetrooper
+	{
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopecurator=2;
+		displayName="[41st] Brainwashed Clone Trooper (AR)";
+		author="Daara";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		backpack="";
+		uniformclass="FST_Jorgetrooper_Uniform_AR";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jorge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jorge.Paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat",
+		};
+		weapons[]=
+		{
+			"FST_Z6",
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_Z6",
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		magazines[]=
+		{
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+			"FST_blaster_battery",
+		};
 	};
  };
 
@@ -1790,98 +2325,6 @@ class cfgGroups
 						position[]={0,-5,0};
 					};
 				};
-				//Begin Test Squad
-				class FST_Droid_B1_E5_Squad_Test
-				{
-					name="[41st] B1 Test Squad";
-					faction="FST_BattleDroids_Faction";
-					side=0;
-					class Unit0
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="SERGEANT";
-						position[]={1,-0,0};
-					};
-					class Unit1
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={1,-1,0};
-					};
-					class Unit2
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={1,-2,0};
-					};
-					class Unit3
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={1,-3,0};
-					};
-					class Unit4
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={1,-4,0};
-					};
-					class Unit5
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={1,-5,0};
-					};
-					class Unit6
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={0,-0,0};
-					};
-					class Unit7
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={0,-1,0};
-					};
-					class Unit8
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={0,-2,0};
-					};
-					class Unit9
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={0,-3,0};
-					};
-					class Unit10
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={0,-4,0};
-					};
-					class Unit11
-					{
-						side=0;
-						vehicle="FST_Droid_B1_E5_Test";
-						rank="PRIVATE";
-						position[]={0,-5,0};
-					};
-				};
-				//End Test Squad
 				class FST_Droid_B1_E5_Squad_AT
 				{
 					name="[41st] B1 Squad (w/ AT)";
@@ -2476,6 +2919,96 @@ class cfgGroups
 					{
 						side=0;
 						vehicle="FST_U_CIS_Heavy";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+				class FST_Jorgetrooper_Squad
+				{
+					name="[41st] Brainwashed Clonetrooper Squad";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper_AT";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper_AR";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper_AT";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper_AR";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_Jorgetrooper";
 						rank="PRIVATE";
 						position[]={0,-5,0};
 					};
