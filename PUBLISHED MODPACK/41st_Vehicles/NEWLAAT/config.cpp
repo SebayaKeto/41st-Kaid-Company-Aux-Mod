@@ -4100,51 +4100,6 @@ class CfgAmmo
 		missileLockMaxDistance=10000;
 		missileLockMinDistance=50;
 		effectsMissile="3AS_Rocket_effect_Purple_fly";
-		class Components
-		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
-					class SomeRadarSensorComponent
-					{
-						componentType = "ActiveRadarSensorComponent";
-						class AirTarget      // ranges for targets with sky background
-						{
-							minRange = 0;         //minimum possible range in meters  
-							maxRange = 0;       //maximum possible range in meters                 
-							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
-							viewDistanceLimitCoef = -1;      //range not limited by view distance           
-						};
-						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
-						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
-						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
-						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
-						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
-						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
-						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
-					};
-					class SomeLaserSensorComponent
-					{
-						componentType = "LaserSensorComponent";
-						class AirTarget      // ranges for targets with sky background
-						{
-							minRange = 0;         //minimum possible range in meters  
-							maxRange = 0;       //maximum possible range in meters                 
-							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
-							viewDistanceLimitCoef = -1;      //range not limited by view distance           
-						};
-						typeRecognitionDistance = 5500; // distance how far the target type gets recognized                                          
-						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
-						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
-						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
-						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
-						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
-						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
-					};					
-				};
-			};
-		};
 	};
 	class MissileCore;
 	class MissileBase : MissileCore
