@@ -2779,7 +2779,7 @@ class CfgWeapons
                     "FST_Attachment_Light_Normal_White",
                     "FST_Attachment_Light_Beam_White",
                     "FST_Attachment_Module_Light_Normal_White",
-                    "FST_Attachment_Module_Light_Beam_White",
+                    "FST_Attachment_Module_Light_Beam_White"
                 };
             };
 			class UnderBarrelSlot: UnderBarrelSlot
