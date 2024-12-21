@@ -345,8 +345,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3as\3as_republic_static\keeradak\data\rep_aa_base_co.paa",
-			"3as\3as_republic_static\keeradak\data\rep_aa_Gun_co.paa"
+			"\41st_Vehicles\Keedrak\Data\Rep_AA_Base_co.paa",
+			"\41st_Vehicles\Keedrak\Data\Rep_AA_Gun_co.paa"
 		};
 		class TextureSources
 		{
