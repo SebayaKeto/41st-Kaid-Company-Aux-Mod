@@ -161,6 +161,7 @@ class CfgPatches
 			"FST_P2_Fury",
 			"FST_P2_Tombstone",
 			"FST_P2_Stant",
+			"FST_P2_Connor",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -6728,7 +6729,17 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mood.paa",
 		};
-	};	
+	};
+    class FST_P2_Helmet_Connor: FST_P2_Helmet_Base
+    {
+        author="Viz";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Connor]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Connor.paa",
+        };
+    };
 	class FST_P2_Helmet_Edge: FST_P2_Helmet_Base
 	{
 		author="Daara";
