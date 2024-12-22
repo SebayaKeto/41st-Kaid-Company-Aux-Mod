@@ -744,7 +744,7 @@ class CfgWeapons
 	class FST_Vest_HeavyBag: JLTS_CloneVestAirborne
 	{
 		scope=2;
-		displayName="[41st] Heavy Gunner Bag";
+		displayName="[41st] Airborne Fire Team Leader Sash";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
 		hiddenSelections[]=
@@ -2175,7 +2175,7 @@ class CfgWeapons
 			};
 		};
 	}; */
-	class FST_CloneVestAirborne: JLTS_CloneVestOfficer
+/* 	class FST_CloneVestAirborne: JLTS_CloneVestOfficer
 	{
 		displayName="[41st] Airborne Vest";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
@@ -2240,10 +2240,10 @@ class CfgWeapons
 				};
 			};
 		};
-	};
+	}; */
 	class FST_CloneVestAirborneNCO: JLTS_CloneVestAirborne
 	{
-		displayName="[41st] Airborne NCO Vest";
+		displayName="[41st] Airborne Squad Leader Sash";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
 		class ItemInfo: VestItem
@@ -20179,7 +20179,7 @@ class CfgGlasses
 	};
 	class FST_FTL_Face: FST_Base_Glasses
 	{
-		displayname="[41st] FTL Sash (Face)";
+		displayname="[41st] Fire Team Leader Sash (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
 		hiddenSelections[]=
 		{
@@ -20225,7 +20225,7 @@ class CfgGlasses
 	};
 	class FST_SL_Face: FST_Base_Glasses
 	{
-		displayname="[41st] SL Sash (Face)";
+		displayname="[41st] Squad Leader Sash (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
 		hiddenSelections[]=
 		{
@@ -20247,8 +20247,32 @@ class CfgGlasses
 	};
 	class FST_Heavy_Face: FST_Base_Glasses
 	{
-		displayname="[41st] Heavy Gunner Sash (Face)";
+		displayname="[41st] Airborne Fire Team Leader Sash (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"",
+			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_AirborneSLSash: FST_Base_Glasses
+	{
+		displayname="[41st] Airborne Squad Leader Sash (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",

@@ -18,7 +18,10 @@ class CfgPatches
 			"FST_B2",
 			"FST_B2_Flame",
 			"FST_U_CIS_Heavy",
-			"FST_U_CIS_Heavy_AT"
+			"FST_U_CIS_Heavy_AT",
+			"FST_Jorgetrooper",
+			"FST_Jorgetrooper_AT",
+			"FST_Jorgetrooper_AR"
 		};
 		weapons[]={};
 	};
@@ -1788,6 +1791,9 @@ class CfgVehicles
 			"FST_blaster_cell_High",
 			"FST_blaster_cell_High"
 		};
+		armor=4; 
+		armorStructural=1;
+		explosionshielding=6;
 		class HitPoints: HitPoints
 		{
 			class HitFace: HitFace
