@@ -9439,7 +9439,7 @@ class CfgWeapons
     }; 
 	class FST_Uniform_Ruby: JLTS_CloneArmor
     {
-        author="Viz";
+        author="Ruby";
         picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
         displayName="[41st] P2 Armor [Ruby]";
         class ItemInfo: UniformItem
@@ -19990,7 +19990,7 @@ class CfgVehicles
     };
 	class FST_P2_Ruby: FST_Trooper_P2_DC15S
     {
-        author="Viz";
+        author="Ruby";
         displayName="[41st] CT-1112 'Ruby'";
         scope=2;
         Backpack="";
