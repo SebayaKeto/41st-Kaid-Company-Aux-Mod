@@ -164,6 +164,7 @@ class CfgPatches
 			"FST_P2_Tombstone",
 			"FST_P2_Stant",
 			"FST_P2_Connor",
+			"FST_P2_Paymos",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -7422,6 +7423,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Zik.paa",
 		};
 	};
+    class FST_P2_Helmet_Paymos: FST_P2_Helmet_Base
+    {
+        author="Viz";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Paymos]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Paymos.paa",
+        };
+    };
 	class FST_P2_Helmet_Hotshot: FST_P2_Helmet_Base
 	{
 		author="Daara";
