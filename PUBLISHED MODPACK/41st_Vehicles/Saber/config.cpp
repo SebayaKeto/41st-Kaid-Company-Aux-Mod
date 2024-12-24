@@ -768,7 +768,7 @@ class cfgvehicles
 	class FST_Saber_Rancor: FST_Saber
 	{	
 		author="Gold";
-		displayName="[41st] Saber (Rancor)";
+		displayName="[41st] TX-130 Saber Tank (Rancor)";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -921,7 +921,7 @@ class cfgvehicles
 	class FST_SuperSaber_Rancor: FST_SuperSaber
 	{	
 		author="Gold";
-		displayName="[41st] Super Saber (Rancor)";
+		displayName="[41st] TX-130 Super Saber Tank (Rancor)";
 		hiddenSelections[]=
 		{
 			"camo1",
