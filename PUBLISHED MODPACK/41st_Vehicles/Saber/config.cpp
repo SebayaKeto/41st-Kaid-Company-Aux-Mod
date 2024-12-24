@@ -765,6 +765,21 @@ class cfgvehicles
 			count=2';
 		};
 	};
+	class FST_Saber_Rancor: FST_Saber
+	{	
+		author="Gold";
+		displayName="[41st] Saber (Rancor)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\41st_Saber_Hull_Rancor_co.paa",
+			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_Rancor_co.paa",
+		};
+	};	
 	class FST_SuperSaber: FST_Saber
 	{
 		scope=2;
@@ -903,6 +918,21 @@ class cfgvehicles
 			};
 		};
 	};
+	class FST_SuperSaber_Rancor: FST_SuperSaber
+	{	
+		author="Gold";
+		displayName="[41st] Super Saber (Rancor)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\41st_Saber_Hull_Rancor_co.paa",
+			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_Rancor_co.paa",
+		};
+	};	
 	class FST_Saber_Fly: FST_LAAT
 	{
 		scope=2;
