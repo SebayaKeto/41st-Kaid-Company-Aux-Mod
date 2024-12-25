@@ -100,6 +100,7 @@ class CfgWeapons
 		magazines[]=
 		{
 			"FST_blaster_battery",
+			"FST_blaster_battery_Red"
 		};
 		recoil="FST_recoil_Z6";
 		maxZeroing=1200;
@@ -215,6 +216,7 @@ class CfgWeapons
 			magazines[]=
 			{
 				"FST_blaster_battery",
+				"FST_blaster_battery_Red"
 			};
 			dispersion=0.003;
 			burst=1;
