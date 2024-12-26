@@ -1748,7 +1748,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FTS_CloneVestKama: JLTS_CloneVestOfficer
+	class FST_CloneVestKama: JLTS_CloneVestOfficer
 	{
 		displayName="[41st] Kama";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
@@ -2175,9 +2175,9 @@ class CfgWeapons
 			};
 		};
 	}; */
-/* 	class FST_CloneVestAirborne: JLTS_CloneVestOfficer
+ 	class FST_CloneVestMerrik: JLTS_CloneVestOfficer
 	{
-		displayName="[41st] Airborne Vest";
+		displayName="[41st] Merrik's Vest and Kama";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
 		hiddenSelections[]=
@@ -2187,8 +2187,13 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_Merrik.paa",
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"",
+			""
 		};
 		class ItemInfo: VestItem
 		{
@@ -2240,7 +2245,7 @@ class CfgWeapons
 				};
 			};
 		};
-	}; */
+	}; 
 	class FST_CloneVestAirborneNCO: JLTS_CloneVestAirborne
 	{
 		displayName="[41st] Airborne Squad Leader Sash";
