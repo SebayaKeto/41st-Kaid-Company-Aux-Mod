@@ -165,6 +165,7 @@ class CfgPatches
 			"FST_P2_Stant",
 			"FST_P2_Connor",
 			"FST_P2_Paymos",
+			"FST_P2_Laer",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -9499,7 +9500,22 @@ class CfgWeapons
             containerClass="Supply150";
             mass=15;
         };
-    }; 
+    };
+     class FST_Uniform_Laer: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Laer]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Laer";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+
 	class FST_Uniform_Ruby: JLTS_CloneArmor
     {
         author="Ruby";
@@ -20161,6 +20177,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
+    class FST_P2_Laer: FST_Trooper_P2_DC15S
+    {
+        author="Viz";
+        displayName="[41st] CT-2137 'Laer'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Laer";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Laer.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Laer.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Laer",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Laer",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
   	class FST_P2_Daara: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
