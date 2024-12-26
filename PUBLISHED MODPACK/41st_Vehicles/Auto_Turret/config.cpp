@@ -2,7 +2,7 @@ class CfgPatches
 {
     class FST_AutoTurret
 	{
-		author = "Viz"
+		author = "Viz";
         units[] = 
 		{
 			"FST_AutoDefenseTurret", 
@@ -75,7 +75,7 @@ class CfgVehicles {
 
     class FST_AutoDefenseTurretCQC: ls_turret_autoturret_base 
 	{
-		author = "Viz"
+		author = "Viz";
         displayName = "Auto Defense Turret CQC (41st)";
         armor = 2000;
 		scope = 2;
