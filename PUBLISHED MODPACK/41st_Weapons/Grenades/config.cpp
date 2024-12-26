@@ -150,8 +150,8 @@ class CfgMagazines
 	{
 		scope=2;
 		author="Adapted from the Indecisive Armoury Team";
-		picture="Indecisive_Armoury_Ammos\Data\Thermal_Detonator\Thermal_Detonator_ui.paa";
-		model="Indecisive_Armoury_Ammos\Data\Thermal_Detonator\IDA_Thermal_Detonator.p3d";
+		picture="\Indecisive_Armoury_Ammos\Data\Thermal_Detonator\Thermal_Detonator_ui.paa";
+		model="\Indecisive_Armoury_Ammos\Data\Thermal_Detonator\IDA_Thermal_Detonator.p3d";
 		displayName="[41st] Thermal Detonator";
 		displayNameShort="Thermal Detonator";
 		descriptionShort="Thermal Detonator";

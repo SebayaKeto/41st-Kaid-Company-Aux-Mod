@@ -98,7 +98,6 @@ class CfgMagazines
 class CfgWeapons
 {
 	class Rifle_Base_F;
-	class UGL_F;
 	class arifle_MX_Base_F: Rifle_Base_F
 	{
 		class GunParticles;
@@ -144,8 +143,7 @@ class CfgWeapons
 		magazineWell[]={};
 		muzzles[]=
 		{
-			"this",
-			"FST_DP23_UGL"
+			"this" // Da fuck is this
 		};
 		modes[]=
 		{
