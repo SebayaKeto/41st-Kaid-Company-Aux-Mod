@@ -5,8 +5,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"A3_Static_F_Jets"
-			
+			"A3_Static_F_Jets",
+			"41st_Addon"
 		};
 		units[]=
 		{
@@ -151,12 +151,37 @@ class CfgVehicles
 				};
 				weapons[]=
 				{
-					"DBA_65mw_Tonnerre_LC"
+					"FST_AAT_Cannon"
 				};
 				magazines[]=
 				{
-					"DBA_65mm_Fulmine_x800_mag",
-					"DBA_65mm_Fulmine_x800_mag"
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red",
+					"FST_thermal_coil_LP_Red"
 				};
 			};
 		};
