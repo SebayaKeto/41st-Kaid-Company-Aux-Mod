@@ -9,6 +9,7 @@ class CfgPatches
 			"A3_anims_F",
 			"A3_weapons_F",
 			"A3_characters_F",
+			"ls_weapons",
 			"A3_Characters_F_Proxies"
 		};
 		units[]={};
@@ -67,17 +68,47 @@ class CfgAmmo
         manualControl=1;
         missileLockCone=60;
         lockSeekRadius=1000;
-		weaponLockSystem="1+2+4+8+16";
 		lockType = 0;
 		missileLockMaxDistance = 5000;
 		missileLockMinDistance = 20;
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
+		class ace_missileguidance
+		{
+			enabled=1;
+			minDeflection=4.9999999e-005;
+			maxDeflection=0.025;
+			incDeflection=4.9999999e-005;
+			canVanillaLock=0;
+			defaultSeekerType="Optic";
+			seekerTypes[]=
+			{
+				"Optic"
+			};
+			defaultSeekerLockMode="LOAL"; //LOAL for TOP Down and LOBL for Direct
+			seekerLockModes[]=
+			{
+				"LOAL",
+				"LOBL"
+			};
+			seekerAngle=180;
+			seekerAccuracy=0.7;
+			seekerMinRange=0;
+			seekerMaxRange=2500;
+			seekLastTargetPos=1;
+			defaultAttackProfile="JAV_TOP";
+			attackProfiles[]=
+			{
+				"JAV_TOP",
+				"JAV_DIR"
+			};
+			useModeForAttackProfile=1;
+		};
 	};
 };
 class CfgMagazines
 {
 	class RPG32_F;
-	class SWLW_plx1_at_mag;
+	class ls_mag_at_plx;
 	class Titan_AA;
 	class FST_RPS6_rocket: RPG32_F
 	{
@@ -112,7 +143,7 @@ class CfgMagazines
 		mass=40;
 		initSpeed=165;
 	};
-	class FST_PLX1_Rocket: SWLW_plx1_at_mag
+	class FST_PLX1_Rocket: ls_mag_at_plx
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		scope=2;
@@ -161,11 +192,11 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo;
 	};
-	class SWLW_PLX1;
+	class ls_weapon_at_plx1;
 	class JLTS_PLX1_AT;
 	class JLTS_RPS6;
 	class 3AS_RPS6_Base;
-	class FST_PLX1: SWLW_PLX1
+	class FST_PLX1: ls_weapon_at_plx1
 	{
 		ace_overpressure_angle=45;
 		ace_overpressure_damage=0.69999999;
@@ -173,8 +204,7 @@ class CfgWeapons
 		ace_overpressure_range=10;
 		ace_reloadlaunchers_enabled=1;
 		ace_javelin_enabled=1;
-		canLock=2;
-		weaponLockSystem = 12;
+		canLock=0;
 		lockingTargetSound[]=
 		{
 			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\locking_Titan",
@@ -188,7 +218,7 @@ class CfgWeapons
 			2.5
 		};
 		scope=2;
-		author="Adapted from the Indecisive Armoury Team";
+		author="Adapted from the Legion Studios Base";
 		displayName="[41st] PLX-1 Rocket launcher";
 		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
 		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
