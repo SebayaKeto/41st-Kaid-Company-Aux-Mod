@@ -13,6 +13,7 @@ class CfgPatches
 		units[]=
 		{
 			"FST_ATTE_Base",
+			"FST_ATTE_Jorge",
 		};
 		weapons[]={};
 		ammo[]=
