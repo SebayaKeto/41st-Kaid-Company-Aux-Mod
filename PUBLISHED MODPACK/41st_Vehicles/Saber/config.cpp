@@ -10,7 +10,9 @@ class CfgPatches
 		units[]=
 		{
 			"FST_Saber",
+			"FST_Saber_Rancor",
 			"FST_SuperSaber",
+			"FST_SuperSaber_Rancor"
 			"FST_Saber_Fly"
 		};
 		weapons[]={};
