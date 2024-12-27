@@ -1349,7 +1349,7 @@ class CfgVehicles
 		{
 			"41st_Vehicles\ATTE\Data\Shell\FST_ATTE_Shell_Base_co.paa",
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Cockpit_co.paa",
-			"41st_Vehicles\ATTE\Data\Shell\FST_ATTE_Shell_Base_co.paa",
+			"41st_Vehicles\ATTE\Data\Shell\FST_ATTE_Detail_Base_co.paa",
 			"41st_Vehicles\ATTE\Data\Legs\FST_ATTE_Legs_Base_co.paa",
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Glass_ca.paa",
 			"3as\3as_atte\data\textures\3as_atte_armor_co.paa"
@@ -3497,7 +3497,7 @@ class CfgVehicles
 				gunnerInAction="ATAP_Commander";
 				gunnerGetInAction="GetInHigh";
 				gunnerGetOutAction="GetOutHigh";
-				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_02_F";
+				gunnerOpticsModel="A3\weapons_f\reticle\Optics_Gunner_02_F";
 				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				discreteDistanceInitIndex=2;
 				selectionFireAnim="-";
@@ -3545,7 +3545,7 @@ class CfgVehicles
 					};
 					class Narrow: Wide
 					{
-						gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+						gunnerOpticsModel="A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
 						initFov=0.046999998;
 						minFov=0.046999998;
 						maxFov=0.046999998;
@@ -3693,7 +3693,7 @@ class CfgVehicles
 					};
 					class Narrow: Wide
 					{
-						gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+						gunnerOpticsModel="A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
 						initFov=0.046999998;
 						minFov=0.046999998;
 						maxFov=0.046999998;
