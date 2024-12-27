@@ -496,12 +496,13 @@ FST_SW_CIS_HMP_GV_list_insert = [
 "FST_AAT_Tan", 
 "FST_Advanced_DSD", 
 "FST_GAT", 
-"3AS_Hailfire_AT", 
-"3AS_Hailfire_Barrage", 
-"3AS_Hailfire_SAM", 
+"FST_Hailfire_AT", 
+"FST_Hailfire_Rocket", 
+"FST_Hailfire_SAM", 
 "FST_King_AAT", 
 "FST_N99", 
-"FST_Raptor",
+"FST_Raptor", 
+"FST_Droideka", 
 "3AS_SAC_F"
 ];
 
