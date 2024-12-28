@@ -47,7 +47,9 @@ class CfgVehicles {
         armor = 2000;
 		scope = 2;
 		scopeCurator = 2;
-		editorCategory = "FST_BattleDroids_Faction";
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
 		model="\ls_vehicles_turrets\AutoTurret\AutoTurret.p3d";
 		class Turrets: Turrets
 		{
@@ -80,7 +82,9 @@ class CfgVehicles {
         armor = 2000;
 		scope = 2;
 		scopeCurator = 2;
-		editorCategory = "FST_BattleDroids_Faction";
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
 		model="\ls_vehicles_turrets\AutoTurret\AutoTurret.p3d";
         class Turrets: Turrets
 		{
