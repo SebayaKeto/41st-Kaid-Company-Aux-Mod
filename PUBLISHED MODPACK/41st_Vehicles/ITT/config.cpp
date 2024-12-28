@@ -2011,13 +2011,13 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\ITT\data\ITT_co_41.paa",
+			"41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
 			"3as\3as_ITT\data\glass_co.paa",
 			"3as\3as_ITT\data\itt_int_back_co.paa",
-			"41st_Vehicles\ITT\data\ITT_door_co_41.paa",
+			"41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
 			"3as\3as_ITT\data\itt_int_front_co.paa",
 			"3as\3as_ITT\data\itt_emiss_co.paa",
-			"41st_Vehicles\ITT\data\ITT_turret_co_41.paa",
+			"41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa",
 		};
 		editorPreview="3AS\3AS_rtt\images\3AS_RTT.jpg";
 	};
@@ -2286,13 +2286,13 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\ITT\data\ITT_co_41.paa",
+			"41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
 			"3as\3as_ITT\data\glass_co.paa",
 			"3as\3as_ITT\data\itt_int_back_co.paa",
-			"41st_Vehicles\ITT\data\ITT_door_co_41.paa",
+			"41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
 			"3as\3as_ITT\data\itt_int_front_co.paa",
 			"3as\3as_ITT\data\itt_emiss_co.paa",
-			"41st_Vehicles\ITT\data\ITT_turret_co_41.paa",
+			"41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa",
 		};
 		class AnimationSources
 		{
@@ -2482,13 +2482,13 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\ITT\data\ITT_co_41.paa",
+			"41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
 			"3as\3as_ITT\data\glass_co.paa",
 			"3as\3as_ITT\data\itt_int_back_co.paa",
-			"41st_Vehicles\ITT\data\ITT_door_co_41.paa",
+			"41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
 			"3as\3as_ITT\data\itt_int_front_co.paa",
 			"3as\3as_ITT\data\itt_emiss_co.paa",
-			"41st_Vehicles\ITT\data\ITT_turret_co_41.paa",
+			"41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa",
 		};
 		class AnimationSources
 		{

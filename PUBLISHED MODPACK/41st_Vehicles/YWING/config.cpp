@@ -929,4 +929,21 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_Ywing_Bomber_Green: FST_SHB_Bomber
+	{
+		author="Gold";
+		displayName="[41st] FST-Y Wing Strategic Bomber";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\YWING\Data\Chassis\FST_YWing_Chasis_CO.paa",
+			"41st_Vehicles\YWING\Data\Detail\FST_YWing_Detail_CO.paa",
+			"3as\3AS_btlb\data\interior_co.paa"
+		};
+	};
 };

@@ -745,8 +745,8 @@ class cfgvehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\Saber\Data\41st_Saber_Hull_Co.paa",
-			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_co.paa",
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_co.paa",
 		};
 		class TransportItems
 			{
@@ -778,8 +778,23 @@ class cfgvehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\Saber\Data\41st_Saber_Hull_Rancor_co.paa",
-			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_Rancor_co.paa",
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Rancor_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Rancor_co.paa",
+		};
+	};	
+	class FST_Saber_Jorge: FST_Saber
+	{	
+		author="Gold";
+		displayName="[41st] TX-130 Saber Tank (Jorge)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Jorge_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
 		};
 	};	
 	class FST_SuperSaber: FST_Saber
@@ -931,8 +946,23 @@ class cfgvehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\Saber\Data\41st_Saber_Hull_Rancor_co.paa",
-			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_Rancor_co.paa",
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Rancor_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Rancor_co.paa",
+		};
+	};	
+	class FST_SuperSaber_Jorge: FST_SuperSaber
+	{	
+		author="Gold";
+		displayName="[41st] TX-130 Super Saber Tank (Jorge)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Jorge_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
 		};
 	};	
 	class FST_Saber_Fly: FST_LAAT
@@ -1483,8 +1513,8 @@ class cfgvehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\Saber\Data\41st_Saber_Hull_Co.paa",
-			"41st_Vehicles\Saber\Data\41st_Saber_Weapons_co.paa",
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_co.paa",
 		};
 		class TransportItems
 		{
