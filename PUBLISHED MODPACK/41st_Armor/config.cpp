@@ -85,10 +85,12 @@ class CfgPatches
 			"FST_P2_Freezer",
 			"FST_P2_Ropey",
 			"FST_P2_Merrik",
+			"FST_P2_Merrik_BC",
 			"FST_P2_Zen",
 			"FST_P2_Brutal",
 			"FST_P2_Burns",
 			"FST_P2_Sigs",
+			"FST_P2_Snoob",
 			"FST_P2_Jorge",
 			"FST_P2_Lancer",
 			"FST_P2_Deacon",
@@ -6101,6 +6103,49 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik.paa",
 		};
 	};	
+	class JLTS_CloneHelmetP2MC;
+	class FST_BC_Helmet_Merrik: JLTS_CloneHelmetP2MC
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] BC Helmet [Merrik]";
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_MC_Helmet_Merrik.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat";
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};	
 	class FST_P2_Helmet_Plop: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -8372,6 +8417,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+ 	class FST_Uniform_Snoob: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Snoob]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Snoob";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
  	class FST_Uniform_Jorge: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -9492,6 +9551,23 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class JLTS_CloneArmorMC;
+	class FST_Uniform_Merrik_BC: JLTS_CloneArmorMC
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Battalion Commander Armor (Merrik)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_P2_Merrik_BC";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
      class FST_Uniform_Samurai: JLTS_CloneArmor
     {
         author="Viz";
@@ -16229,6 +16305,26 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
+	class FST_P2_Merrik_BC: FST_P2_Merrik
+	{
+		displayName="[41st] BC-4973 'Merrik'";
+		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_marshalcommander.jpg";
+		icon="JLTS_iconManMarshalCMDR";
+		uniformClass="FST_Uniform_Merrik_BC";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_MC_BodyUpper_Merrik.Paa",
+			"41st_Armor\Data\Uniforms\FST_MC_BodyLower_Merrik.Paa",
+			"41st_Armor\Data\Uniforms\FST_Clone_Rank_Merrik.Paa",
+		};
+	};
  	class FST_P2_Sigs: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -16276,6 +16372,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sigs",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Snoob: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2505 'Snoob'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Snoob";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Snoob.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Snoob.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Snoob",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Snoob",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

@@ -26,6 +26,10 @@ class CfgMusicClasses
 	{
 		displayName="41st - Misc Tracks";
 	};
+	class FST_Christmas
+	{
+		displayName="41st - Christmas Tracks";
+	};
 	class FST_Mission_Music
 	{
 		displayName="41st - Mission Tracks (Daara Only)";
@@ -109,6 +113,18 @@ class CfgMusic
 		"FST_Gloryhammer",
 		"FST_Hill3234",
 		"FST_BuddyHollyHatsuneMiku",
+		
+		//Mission Tracks
+		"FST_WhiteChristmas",
+		"FST_JingleBellRock",
+		"FST_AHollyJollyChristmas",
+		"FST_LetItSnow",
+		"FST_HaveYourselfAMerryLittleChristmas",
+		"FST_SantaClausIsComingToTown",
+		"FST_RudolphTheRedNosedReindeer",
+		"FST_FelizNavidad",
+		"FST_YoureAMeanOneMrGrinch",
+		"FST_LastChristmas",
 		
 		//Mission Tracks
 		"FST_Totharvis_Moon_1",
@@ -1008,5 +1024,129 @@ class CfgMusic
 		};
 		duration="160";
 	};
+	
+	// Christmas
+		
+	class FST_WhiteChristmas
+	{
+		name="Bing Crosby - White Christmas";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\BingCrosby-WhiteChristmas.ogg",
+			1,
+			1
+		};
+		duration="151";
+	};
+	class FST_JingleBellRock
+	{
+		name="Bobby Helms - Jingle Bell Rock";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\BobbyHelms-JingleBellRock.ogg",
+			1,
+			1
+		};
+		duration="130";
+	};
+	class FST_AHollyJollyChristmas
+	{
+		name="Burl Ives - A Holly Jolly Christmas";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\BurlIves-AHollyJollyChristmas.ogg",
+			1,
+			1
+		};
+		duration="142";
+	};
+	class FST_LetItSnow
+	{
+		name="Dean Martin - Let It Snow";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\DeanMartin-LetItSnow.ogg",
+			1,
+			1
+		};
+		duration="118";
+	};
+	class FST_HaveYourselfAMerryLittleChristmas
+	{
+		name="Frank Sinatra - Have Yourself A Merry Little Christmas";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\FrankSinatra-HaveYourselfAMerryLittleChristmas.ogg",
+			1,
+			1
+		};
+		duration="215";
+	};
+	class FST_SantaClausIsComingToTown
+	{
+		name="Frank Sinatra - Santa Claus is Coming to Town";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\FrankSinatra-SantaClausIsComingToTown.ogg",
+			1,
+			1
+		};
+		duration="195";
+	};
+	class FST_RudolphTheRedNosedReindeer
+	{
+		name="Gene Autry - Rudolph the Red Nose Reindeer";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\GeneAutry-RudolphTheRedNosedReindeer.ogg",
+			1,
+			1
+		};
+		duration="188";
+	};
+	class FST_FelizNavidad
+	{
+		name="Jose Feliciano - Feliz Navidad";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\JoseFeliciano-FelizNavidad.ogg",
+			1,
+			1
+		};
+		duration="183";
+	};
+	class FST_YoureAMeanOneMrGrinch
+	{
+		name="Thurl Ravenscroft - You're a Mean One Mr Grinch";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\ThurlRavenscroft-YoureAMeanOneMrGrinch.ogg",
+			1,
+			1
+		};
+		duration="176";
+	};
+	class FST_LastChristmas
+	{
+		name="Wham - Last Christmas";
+		musicClass="FST_Christmas";
+		sound[]=
+		{
+			"41st_Music\ChristmasTracks\Wham-LastChristmas.ogg",
+			1,
+			1
+		};
+		duration="264";
+	};
+		
 };
 
