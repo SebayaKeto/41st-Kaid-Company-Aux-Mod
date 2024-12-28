@@ -4,7 +4,7 @@
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];      
         
-        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos"];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
 
         ["Quick Reaction Force Deployment (Munificent)", [
             ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
@@ -293,7 +293,10 @@ FST_Droid_Dispenser =  {
             "FST_Droid_B1_Commander"],
             ["FST_BX",
             "FST_BX",
-            "FST_BX"]
+            "FST_BX"],
+			["FST_Jorgetrooper",
+			"FST_Jorgetrooper_AT",
+			"FST_Jorgetrooper_AR"]
         ] # _selection;
                                             
         _listout = [];
@@ -341,7 +344,7 @@ FST_Droid_Dispenser =  {
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
         
-        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos"];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
         
         ["spawn Droid Dispenser", [
             ["sideS", ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
