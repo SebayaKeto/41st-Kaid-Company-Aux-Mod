@@ -5,11 +5,13 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"A3_Static_F_Jets"
+			"A3_Armor_F_Beta",
+			"3AS_Main"
 		};
 		units[]=
 		{
 			"FST_Droideka",
+			"FST_Deka_Wreck",
 			"FST_Sniper_Deka"
 		};
 		weapons[]={};
@@ -218,14 +220,16 @@ class CfgWeapons
         };
     };
 };
+class RCWSOptics;
 class CfgVehicles
 {
-	class Land;
-	class LandVehicle: Land
+	class LandVehicle;
+	class Tank: LandVehicle
 	{
-		class ViewPilot;
-		class ViewGunner;
 		class NewTurret;
+		class Sounds;
+		class HitPoints;
+		class CommanderOptics;
 	};
 	class StaticWeapon: LandVehicle
 	{
@@ -233,7 +237,6 @@ class CfgVehicles
 		{
 			class MainTurret;
 		};
-		class HitPoints;
 	};
 	class StaticMGWeapon: StaticWeapon
 	{
@@ -244,50 +247,81 @@ class CfgVehicles
 				class ViewOptics;
 			};
 		};
-		class Components;
 	};
-	class HitPoints;
-	class DBA_Droideka_Base: StaticMGWeapon {};
-	class FST_Droideka_Base: DBA_Droideka_Base
+	class 3AS_Deka_Static_Base: StaticMGWeapon {};
+	class FST_Droideka_Base: 3AS_Deka_Static_Base
 	{
 		author="Viz";
 		scope=0;
 		scopeCurator=0;
 		faction="FST_BattleDroids_Faction";
-		model="DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_Droideka\DBA_Droideka.p3d";
-		armor=30;
+        editorSubcategory="FST_Ground_Vehicle";
+		model="3AS\3AS_Deka\Deka.p3d";
+		armor=25;
 		accuracy=1;
-		class animationsources
+		class Hitpoints
 		{
-			class DroidekaShieldHide
+			class HitHull
 			{
-				animPeriod=0.001;
-				initPhase=0;
-				source="user";
+				armor=1000;
+				material=-1;
+				name="hull_hit";
+				visual="zbytek";
+				passthrough=0.029999999;
+				minimalhit=0.14;
+				explosionshielding=2;
+				radius=0.25;
+			};
+			class HitEngine
+			{
+				armor=300;
+				material=-1;
+				name="engine_hit";
+				passThrough=0.079999998;
+				minimalHit=0.23999999;
+				explosionShielding=1;
+				radius=0.33000001;
+			};
+			class HitShield
+			{
+				armorComponent="Deka_Shield_Component";
+				armor=10;
+				material=-1;
+				name="Shield_hit";
+				passThrough=0;
+				minimalHit=0;
+				explosionShielding=1;
+				radius=0.33000001;
+			};
+			class hitammo_l: HitEngine
+			{
+				name="ammo_l_hit";
+			};
+			class hitammo_r: hitammo_l
+			{
+				name="ammo_r_hit";
 			};
 		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
-				memoryPointsGetInGunner="GunnerIn";
-				memoryPointsGetInGunnerDir="GunnerIn_dir";
-				turretinfotype="RscOptics_APC_Tracked_01_gunner";
-				animationSourceBody="MainTurret";
-				Body="MainTurret";
-				animationSourceGun="MainGun";
-				Gun="MainGun";
-				optics=1;
-				minElev=-15;
-				maxElev=55;
-				minTurn=-360;
-				maxTurn=360;
-				hasgunner=1;
-				gunnerName="Droideka AI";
+				memoryPointGunnerOptics="gunner_view";
+				gunBeg="Usti hlavne";
+				gunEnd="Konec hlavne";
+				memoryPointGun[]=
+				{
+					"Usti hlavne",
+					"Usti hlavne2"
+				};
 				primary=1;
 				primaryGunner=1;
-				startEngine=0;
 				enableManualFire=1;
+				optics=0;
+				minElev=-15;
+				maxElev=35;
+				minTurn=-360;
+				maxTurn=360;
 				selectionFireAnim="zasleh";
 				soundServo[]=
 				{
@@ -303,64 +337,6 @@ class CfgVehicles
 					1,
 					30
 				};
-				gunnerForceOptics=1;
-				memoryPointGun[]=
-				{
-					"gun_left_Low_Pos",
-					"gun_left_Up_Pos",
-					"gun_Right_Low_Pos",
-					"Gun_left_Up_Pos"
-				};
-				uavCameraGunnerPos="camera_pos";
-				uavCameraGunnerDir="camera_dir";
-				memoryPointGunnerOptics="camera_pos";
-				forceHideGunner=1;
-				gunnerOutForceOptics=1;
-				viewgunnerinExternal=0;
-				outGunnerMayFire=1;
-				inGunnerMayFire=1;
-				castGunnerShadow=0;
-				showAllTargets=2;
-				class OpticsIn
-				{
-					class Wide
-					{
-						opticsDisplayName="W";
-						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
-						initAngleY=0;
-						minAngleY=-100;
-						maxAngleY=100;
-						initFov=0.46599999;
-						minFov=0.46599999;
-						maxFov=0.46599999;
-						visionMode[]=
-						{
-							"Normal",
-							"NVG",
-							"Ti"
-						};
-						thermalMode[]={0,1};
-						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_w_F";
-					};
-					class Medium: Wide
-					{
-						opticsDisplayName="M";
-						initFov=0.093000002;
-						minFov=0.093000002;
-						maxFov=0.093000002;
-						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_m_F";
-					};
-					class Narrow: Wide
-					{
-						opticsDisplayName="N";
-						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_n_F";
-						initFov=0.028999999;
-						minFov=0.028999999;
-						maxFov=0.028999999;
-					};
-				};
 				weapons[]=
 				{
 					"FST_Droideka_Cannon"
@@ -369,34 +345,101 @@ class CfgVehicles
 				{
 					"FST_blaster_battery_Droideka",
 					"FST_blaster_battery_Droideka",
-					"DBA_30mm_HVN_x2400_mag"
+					"FST_blaster_battery_Droideka"
+				};
+				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";
+				gunnerForceOptics=1;
+				turretInfoType="RscOptics_UAV_gunner";
+				LODTurnedIn=-1;
+				LODTurnedOut=-1;
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				gunnergetInAction="";
+				gunnergetOutAction="";
+				displayName="";
+				gunnerOutOpticsModel="";
+				gunnerOutOpticsEffect[]={};
+				gunnerOpticsEffect[]={};
+				gunnerInAction="Disabled";
+				gunnerAction="Disabled";
+				forceHideGunner=1;
+				inGunnerMayFire=1;
+				viewGunnerInExternal=1;
+				class Turrets
+				{
+				};
+				class ViewOptics: RCWSOptics
+				{
+					visionMode[]=
+					{
+						"Normal",
+						"TI"
+					};
+				};
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor=0.80000001;
+						material=-1;
+						name="main_turret_hit";
+						visual="vez";
+						passThrough=0;
+						minimalHit=0.02;
+						explosionShielding=0.30000001;
+						radius=0.25;
+					};
+					class HitGun
+					{
+						armor=0.30000001;
+						material=-1;
+						name="main_gun_hit";
+						visual="";
+						passThrough=0;
+						minimalHit=0;
+						explosionShielding=1;
+						radius=0.25;
+					};
 				};
 			};
 		};
-		class AttributeValues
+		class AnimationSources
 		{
-			RadarUsageAI=1;
+			class Muzzle_Flash
+			{
+				source="ammorandom";
+				weapon="FST_Droideka_Cannon";
+			};
+			class recoil_source
+			{
+				source="reload";
+				weapon="FST_Droideka_Cannon";
+			};
+		};
+		hiddenselections[]=
+		{
+			"camo"
+		};
+		hiddenselectionstextures[]=
+		{
+			"\3AS\3AS_deka\data\deka_co.paa"
 		};
 	};
 	class FST_Droideka: FST_Droideka_Base
 	{
-		class SimpleObject
-		{
-			eden=1;
-			verticalOffset=2.467;
-			verticalOffsetWorld=-0.039000001;
-			init="''";
-		};
+		_generalMacro="B_HMG_01_F";
+		TAS_DekaShieldRegen=0.02;
 		author="Viz";
 		displayName="[41st] Droideka";
 		scope=2;
 		scopeCurator=2;
+		scopearsenal=2;
 		side=0;
-		crew="B_UAV_AI";
-		typicalCargo[]=
-		{
-			"B_UAV_AI"
-		};
+		crew="O_UAV_AI";
 	};
 	class FST_Droideka_Christmas: FST_Droideka
 	{
@@ -404,26 +447,107 @@ class CfgVehicles
 		displayName="[41st] Jack Frostdeka";
 		model="\Christmas_Snowmans\objects\ClothesSnowman.p3d";
 	};
-	class DBA_Sniper_Deka;
-	class FST_Sniper_Deka: DBA_Sniper_Deka
+	class FST_Deka_Static_Sniper_Base: FST_Droideka_Base
 	{
-		Author = "Viz";
-		faction="FST_BattleDroids_Faction";
-		displayName="Sniper Droideka (Still in progress)";
-		class Armory
+		icon="3AS\3AS_Deka\data\ui\Deka_Sniper_top_ca.paa";
+		picture="3AS\3AS_Deka\data\ui\Deka_Sniper_side_ca.paa";
+		model="\3AS\3AS_deka\deka_Sniper.p3d";
+		hiddenselections[]=
 		{
-			description="";
+			"camo"
 		};
-		
+		hiddenselectionstextures[]=
+		{
+			"\3AS\3AS_deka\data\sniperdroideka_co.paa"
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]=
+			{
+				"3AS\3AS_deka\data\dekaSniper.rvmat",
+				"3AS\3AS_deka\data\dekaSniper.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat"
+			};
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				gunBeg="Usti hlavne";
+				gunEnd="Konec hlavne";
+				memoryPointGun[]=
+				{
+					"usti hlavne"
+				};
+				gunnerForceOptics=1;
+				optics=1;
+				minElev=-15;
+				maxElev=35;
+				minTurn=-360;
+				maxTurn=360;
+				weapons[]=
+				{
+					"3AS_Deka_Sniper"
+				};
+				magazines[]=
+				{
+					"3AS_10Rnd_EM100_AP_Mag",
+					"3AS_10Rnd_EM100_AP_Mag",
+					"3AS_10Rnd_EM100_AP_Mag",
+					"3AS_10Rnd_EM100_AP_Mag",
+					"3AS_10Rnd_EM100_AP_Mag"
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class Muzzle_Flash
+			{
+				source="ammorandom";
+				weapon="3AS_Deka_Sniper";
+			};
+			class recoil_source
+			{
+				source="reload";
+				weapon="3AS_Deka_Sniper";
+			};
+		};
+	};
+	class FST_Sniper_Deka: FST_Deka_Static_Sniper_Base
+	{
+		displayname="[41st] Droideka Sniper";
+		_generalMacro="B_HMG_01_F";
+		TAS_DekaShieldRegen=0.02;
+		scope=2;
+		scopearsenal=2;
+		scopecurator=2;
+		side=0;
+		Author = "Viz";
+		crew="O_UAV_AI";
+	};
+};
+class Extended_PreInit_EventHandlers
+{
+	class FST_DroidekaShield_pre_init_event
+	{
+		init="call compile preprocessFileLineNumbers '3AS\3AS_deka\XEH_preInit.sqf'";
 	};
 };
 class Extended_Init_EventHandlers
 {
 	class FST_Droideka
 	{
-		class FST_Droideka_Init_Eh
+		class FST_Deka_Init_Eh
 		{
-			init="_this execVM 'DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_Droideka\DroidekaShieldRegen.sqf'";
+			init="_this execVM '3AS\3AS_deka\DroidekaShieldRegen.sqf'";
+		};
+	};
+	class FST_Sniper_Deka
+	{
+		class FST_DekaSniper_Init_Eh
+		{
+			init="_this execVM '3AS\3AS_deka\DroidekaShieldRegen.sqf'";
 		};
 	};
 };
@@ -431,9 +555,33 @@ class Extended_HitPart_EventHandlers
 {
 	class FST_Droideka
 	{
-		class FST_Droideka_HitPart_Eh
+		class FST_Deka_HitPart_Eh
 		{
-			hitpart="_this select 0 execVM 'DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_Droideka\DroidekaShieldHit.sqf'";
+			hitpart="_this select 0 execVM '3AS\3AS_deka\DroidekaShieldHit.sqf'";
+		};
+	};
+	class FST_Sniper_Deka
+	{
+		class FST_Deka_HitPart_Eh
+		{
+			hitpart="_this select 0 execVM '3AS\3AS_deka\DroidekaShieldHit.sqf'";
+		};
+	};
+};
+class Extended_Killed_EventHandlers
+{
+	class FST_Droideka
+	{
+		class TAS_Deka_deleteShield
+		{
+			killed="_this select 0 execVM '3AS\3AS_deka\fnc_deleteDekaShield.sqf'";
+		};
+	};
+	class FST_Sniper_Deka
+	{
+		class TAS_Deka_deleteShield
+		{
+			killed="_this select 0 execVM '3AS\3AS_deka\fnc_deleteDekaShield.sqf'";
 		};
 	};
 };
