@@ -503,6 +503,7 @@ FST_SW_CIS_HMP_GV_list_insert = [
 "FST_N99", 
 "FST_Raptor", 
 "FST_Droideka", 
+"FST_Sniper_Deka", 
 "3AS_SAC_F"
 ];
 
