@@ -68,6 +68,7 @@ class CfgWeapons
 		magazines[]=
 		{
 			"m2_Fuel_Tank",
+			"IDA_FuelTank"
 		};
 		recoil="";
 		handAnim[]=
