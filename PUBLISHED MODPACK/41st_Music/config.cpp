@@ -113,6 +113,7 @@ class CfgMusic
 		"FST_Gloryhammer",
 		"FST_Hill3234",
 		"FST_BuddyHollyHatsuneMiku",
+		"FST_Pelinal",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -1023,6 +1024,18 @@ class CfgMusic
 			1
 		};
 		duration="160";
+	};
+	class FST_Pelinal
+	{
+		name="Allinall - Pelinal Whitestrake";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\PELINAL (ANIMATED OPERA).ogg",
+			1,
+			1
+		};
+		duration="260";
 	};
 	
 	// Christmas
