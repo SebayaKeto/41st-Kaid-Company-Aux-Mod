@@ -1911,7 +1911,10 @@ class CfgWeapons
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"FST_Knife",
+				};
 			};
             class PointerSlot: PointerSlot
             {
@@ -2035,7 +2038,10 @@ class CfgWeapons
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"FST_Knife",
+				};
 			};
             class PointerSlot: PointerSlot
             {
@@ -2592,7 +2598,10 @@ class CfgWeapons
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"FST_Knife",
+				};
 			};
             class PointerSlot: PointerSlot
             {
@@ -2720,7 +2729,10 @@ class CfgWeapons
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"FST_Knife",
+				};
 			};
             class PointerSlot: PointerSlot
             {
@@ -2770,6 +2782,13 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 					"3AS_optic_reflex_DC15C"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]=
+				{
+					"FST_Knife",
 				};
 			};
             class PointerSlot: PointerSlot
