@@ -267,7 +267,10 @@ class CfgWeapons
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"FST_Knife",
+				};
 			};
 			class PointerSlot: PointerSlot
 			{
