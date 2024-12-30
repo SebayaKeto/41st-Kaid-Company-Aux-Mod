@@ -11142,14 +11142,14 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Invisible: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Grinch: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		maximumload=250;
-		displayName="[41st] Jump Pack (Daara Exclusive)";
+		displayName="[41st] Jump Pack (Grinch)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
 		hiddenSelections[]=
@@ -11160,12 +11160,12 @@ class CfgVehicles
 		{
 			""
 		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+ 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
+		tf_range=50000;
+		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
 		DBA_jumppack_spam_delay=0;
@@ -11227,12 +11227,12 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
 		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
+		tf_range=50000;
+		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
 		DBA_jumppack_spam_delay=0;

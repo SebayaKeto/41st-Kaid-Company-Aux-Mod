@@ -136,19 +136,62 @@ class CfgWeapons
             };
             class StandardSound
             {
-                begin1[]=
-                {
-					"kobra\442_a_vehicle\laat\sounds\dc-15r.wss",
+				closure1[]=
+				{
+					"A3\sounds_f\weapons\closure\sfx7",
+					0.56234133,
+					1,
+					40
+				};
+				closure2[]=
+				{
+					"A3\sounds_f\weapons\closure\sfx8",
+					0.56234133,
+					1,
+					40
+				};
+				soundClosure[]=
+				{
+					"closure1",
+					0.5,
+					"closure2",
+					0.5
+				};
+				begin1[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\LMG_65mm\LMG_65mm_turret_01",
 					1,
 					1,
-					500
+					2100
+				};
+				begin2[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\LMG_65mm\LMG_65mm_turret_02",
+					1,
+					1,
+					2100
+				};
+				begin3[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\LMG_65mm\LMG_65mm_turret_03",
+					1,
+					1,
+					2100
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					1
+					0.34,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
 				};
-            };
+				soundsetshot[]=
+				{
+					"3AS_Droideka_Shot_SoundSet"
+				};
+			};
             recoil="empty";
             reloadTime=0.1000001;
             reloadmagazinetime=4;
