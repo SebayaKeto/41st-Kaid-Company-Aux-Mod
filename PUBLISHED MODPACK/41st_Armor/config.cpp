@@ -172,6 +172,7 @@ class CfgPatches
 			"FST_P2_Laer",
 			"FST_P2_Ajax",
 			"FST_P2_Vixen",
+			"FST_P2_Cosmic",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -6201,6 +6202,16 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_P2_Helmet_Fizz: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Fizz]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
+		};
+	};	
 	class FST_P2_Helmet_Merrik: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -9660,6 +9671,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Ropey";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Cosmic: JLTS_CloneArmor 
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cosmic]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cosmic";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -16559,6 +16584,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Merrik",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+	class FST_P2_Cosmic: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-2112 'Cosmic'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cosmic";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cosmic.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cosmic.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Cosmic",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Cosmic",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
