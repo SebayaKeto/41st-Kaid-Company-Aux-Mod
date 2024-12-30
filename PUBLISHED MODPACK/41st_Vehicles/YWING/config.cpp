@@ -183,7 +183,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_30mm_Autocannon_LAAT",
+			"FST_30mm_Autocannon_YWing",
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"ls_weapon_CMFlareLauncher",
@@ -191,9 +191,9 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil",
-			"FST_thermal_coil",
-			"FST_thermal_coil",
+			"FST_thermal_Y_Wing",
+			"FST_thermal_Y_Wing",
+			"FST_thermal_Y_Wing",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -494,14 +494,14 @@ class CfgVehicles
 				discreteDistanceInitIndex=5;
 				weapons[]=
 				{
-					"FST_30mm_Autocannon_LAAT"
+					"FST_30mm_Autocannon_YWing"
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil",
-					"FST_thermal_coil",
-					"FST_thermal_coil",
-					"FST_thermal_coil"
+					"FST_thermal_Y_Wing",
+					"FST_thermal_Y_Wing",
+					"FST_thermal_Y_Wing",
+					"FST_thermal_Y_Wing"
 				};
 			};
 		};
