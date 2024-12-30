@@ -898,7 +898,7 @@ class CfgWeapons
 		displayName="Medium LAAT Blaster Cannon";
 		author="Daara";
 		cursor="EmptyCursor";
-		reloadTime=0.2;
+		reloadTime=0.03;
 		fireLightDiffuse[]={0,1,0};
 		class GunParticles
 		{
@@ -973,7 +973,7 @@ class CfgWeapons
 						1
 					};
 					dispersion=0.0018;
-					reloadTime=0.04;
+					reloadTime=0.03;
 				};
 			};
 		};
