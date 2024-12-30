@@ -11,10 +11,10 @@ class CfgPatches
 		{
 			//"FST_Saber",
 			"FST_Saber_Rancor",
-			"FST_Saber_Jorge"
+			"FST_Saber_Jorge",
 			//"FST_SuperSaber",
 			"FST_SuperSaber_Rancor",
-			"FST_SuperSaber_Jorge"
+			"FST_SuperSaber_Jorge",
 			//"FST_Saber_Fly"
 		};
 		weapons[]={};
