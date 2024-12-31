@@ -6,6 +6,8 @@ class CfgPatches
 		{
 			"FST_Republic_Mortar",
 			"FST_Republic_Mortar_Bag",
+			"FST_Training_Mortar",
+			"FST_Training_Mortar_Bag",
 		};
 		weapons[]={};
 		requiredAddons[]=
@@ -128,6 +130,41 @@ class CfgVehicles
 		scopeCurator=2;
 		scope=2;
 	};
+	class FST_Training_Mortar: FST_Republic_Mortar
+	{
+		author="Gold";
+		displayname="[41st] Training Mortar";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				initelev=0;
+				maxelev=40;
+				minelev=-15;
+				initturn=0;
+				maxturn=360;
+				minturn=-360;
+				weapons[]=
+				{
+					"FST_Training_mortar_82mm",
+					"FST_Training_mortar_82mm"
+				};
+				magazines[]=
+				{
+					"FST_32Rnd_155mm_HAGM_Mortar_shells_Cinematic",
+				};
+				elevationMode=3;
+				gunnerforceoptics=1;
+			};
+		};
+		class assembleInfo: assembleInfo
+		{
+			dissasembleTo[]=
+			{
+				"FST_Training_Mortar_Bag"
+			};
+		};
+	};		
 	class Bag_Base;
 	class Weapon_Bag_Base: Bag_Base
 	{
@@ -173,6 +210,11 @@ class CfgVehicles
 			assembleTo="FST_Republic_Mortar";
 		};
 	};
+	class FST_Training_Mortar_Bag: FST_Republic_Mortar_Bag
+	{
+		author="Gold";
+		displayName="[41st] Folded Training Mortar";
+	};	
 };
 class Mode_Burst;
 class Mode_SemiAuto;
@@ -376,6 +418,15 @@ class CfgWeapons
 			maxRangeProbab=0.30000001;
 		};
 	};
+	class FST_Training_mortar_82mm: FST_mortar_82mm
+	{	
+		author="Gold";
+		displayname="[41st] Training Mortar 82mm";
+		magazines[]=
+		{
+			"FST_32Rnd_155mm_HAGM_Mortar_shells_Cinematic",
+		};
+	};
 };
 class CfgMagazines
 {
@@ -426,6 +477,20 @@ class CfgMagazines
 		displayName="[41st] Laser Guided Mortar Shells";
 		displayNameShort="Laser Guided";
 		count=6;
+	};
+	class FST_32Rnd_155mm_HAGM_Mortar_shells_Cinematic: VehicleMagazine
+	{
+		author="Gold";
+		displayNameShort="HE";
+		scope=2;
+		displayName="(Cinematic) 155 mm HE Shells";
+		ammo="FST_HAGM_155mm_AMOS_Mortar_Ammo_Cinematic";
+		count=32;
+		nameSound="heat";
+		muzzleImpulseFactor[]={0,0};
+		initSpeed=200;
+		ace_arsenal_hide=-1;
+		ace_artillerytables_airFriction=-9.9999997e-005;
 	};
 };
 class CfgAmmo
@@ -532,5 +597,13 @@ class CfgAmmo
 		laserLock=1;
 		irLock=0;
 		muzzleEffect="";
+	};
+	class FST_HAGM_155mm_AMOS_Mortar_Ammo_Cinematic: Sh_155mm_AMOS
+	{
+		author="Gold";
+		displayname="[41st] Republic HE Mortar Shell Cinematic";
+		hit=0;
+		indirectHit=0;
+		indirectHitRange=30;
 	};
 };

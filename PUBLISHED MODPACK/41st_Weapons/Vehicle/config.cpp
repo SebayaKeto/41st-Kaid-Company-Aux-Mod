@@ -143,6 +143,76 @@ class CfgAmmo
 			0.15000001
 		};
 	};
+	class FST_thermal_laser_YWing: IDA_blasterbolt
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
+		ACE_damageType="plasmashell";
+		hit=100;
+		indirectHit=75;
+		explosive=1;
+		indirectHitRange=4;
+		caliber=2;
+		explosionEffects="ExploAmmoExplosion";
+		craterEffects="ExploAmmoCrater";
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
+	};
 	class FST_thermal_shell_blue: IDA_blasterbolt
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
@@ -364,6 +434,23 @@ class CfgMagazines
 		displayNameShort="Thermal Coil";
 		descriptionShort="Fires Thermal Shells.";
 		ammo="FST_thermal_shell";
+		tracersEvery=1;
+		initSpeed=800;
+		mass=20;
+	};
+	class FST_thermal_Y_Wing: 1Rnd_HE_Grenade_shell
+	{
+		author="Indecisive Armoury Team";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\EPL2\data\ui\EPL2_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\EPL2\EPL2_mag.p3d";
+		count=150;
+		displayName="[41st] 150 Rnd Y Wing Laser ";
+		displayNameShort="Y Wing Laser Rounds";
+		descriptionShort="Fires Laser Rounds for the Y Wing.";
+		ammo="FST_thermal_laser_YWing";
 		tracersEvery=1;
 		initSpeed=800;
 		mass=20;
@@ -974,6 +1061,91 @@ class CfgWeapons
 					};
 					dispersion=0.0018;
 					reloadTime=0.03;
+				};
+			};
+		};
+	};
+	class FST_30mm_Autocannon_YWing: Cannon_30mm_Plane_CAS_02_F
+	{
+		displayName="Medium Y Wing Blaster Cannon";
+		author="Daara";
+		cursor="EmptyCursor";
+		reloadTime=0.2;
+		fireLightDiffuse[]={0,1,0};
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName="";
+				positionName="";
+				directionName="";
+			};
+			class Shell
+			{
+				positionName="";
+				directionName="";
+				effectName="";
+			};
+		};
+		muzzles[]=
+		{
+			"HE",
+		};
+		class HE: autocannon_Base_F
+		{
+			displayName="30mm Y Wing Blaster Cannon";
+			cursor="EmptyCursor";
+			magazines[]=
+			{
+				"FST_thermal_Y_Wing"
+			};
+			magazineReloadTime=10;
+			class player: player
+			{
+				class StandardSound
+				{
+					begin1[]=
+					{
+						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+						2.5118864,
+						1,
+						1500
+					};
+					begin2[]=
+					{
+						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+						2.5118864,
+						1.015,
+						1500
+					};
+					begin3[]=
+					{
+						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+						2.5118864,
+						0.985,
+						1500
+					};
+					begin4[]=
+					{
+						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+						2.5118864,
+						1.01,
+						1500
+					};
+					begin5[]=
+					{
+						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+						2.5118864,
+						0.995,
+						1500
+					};
+					soundBegin[]=
+					{
+						"begin1",
+						1
+					};
+					dispersion=0.0018;
+					reloadTime=0.04;
 				};
 			};
 		};
