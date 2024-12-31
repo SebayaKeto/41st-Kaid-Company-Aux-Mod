@@ -191,7 +191,7 @@ class CfgVehicles
 	{
 		_generalmacro="FST_Nu_Attack_S";
 		accuracy=5;
-		author="Ruby";
+		author="Ruby and Gold";
 		availableforsupporttypes[]=
 		{
 			"CAS_Heli",
@@ -204,8 +204,8 @@ class CfgVehicles
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		vehicleclass="Helicopter";
-		scope=0;
-		side=1;
+		scope=2;
+		side=0;
 		fuelCapacity=8000;
 		dustEffect="";
 		waterEffect="";
@@ -266,7 +266,7 @@ class CfgVehicles
 			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
 		}; 
 		ace_cargo_hasCargo=1;
-		ace_cargo_space=1000
+		ace_cargo_space=1000;
         class ace_cargo
 		{
             class cargo
@@ -308,11 +308,11 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-           "3as\3as_republic_heli\nu_class\data\hull_co.paa",
-			"3as\3as_republic_heli\nu_class\data\hull_front_co.paa",
-			"3as\3as_republic_heli\nu_class\data\wings_co.paa",
+          "41st_Vehicles\Nu\Data\FST_NU_HullExterior.paa",
+			"41st_Vehicles\Nu\Data\FST_NU_Hullfront.paa",
+			"41st_Vehicles\Nu\Data\FST_Nu_Wings.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
-			"3as\3as_republic_heli\rho_class\data\cockpit_interfaces_co.paa",
+			"41st_Vehicles\Nu\Data\FST_Nu_Cockpit_Interface.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_co.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
 		};
@@ -807,7 +807,7 @@ class CfgVehicles
 	{
 		_generalmacro="FST_Nu_Attack_S";
 		accuracy=5;
-		author="Ruby";
+		author="Ruby and Gold";
 		availableforsupporttypes[]=
 		{
 			"CAS_Heli",
@@ -843,11 +843,11 @@ class CfgVehicles
 		editorPreview="3as\3AS_nu\images\3AS_nuclass.jpg";
 		hiddenSelectionsTextures[]=
 		{
-			"3as\3as_republic_heli\nu_class\data\hull_co.paa",
-			"3as\3as_republic_heli\nu_class\data\hull_front_co.paa",
-			"3as\3as_republic_heli\nu_class\data\wings_co.paa",
+			"41st_Vehicles\Nu\Data\FST_NU_HullExterior.paa",
+			"41st_Vehicles\Nu\Data\FST_NU_Hullfront.paa",
+			"41st_Vehicles\Nu\Data\FST_Nu_Wings.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
-			"3as\3as_republic_heli\rho_class\data\cockpit_interfaces_co.paa",
+			"41st_Vehicles\Nu\Data\FST_Nu_Cockpit_Interface.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_co.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
 		};
