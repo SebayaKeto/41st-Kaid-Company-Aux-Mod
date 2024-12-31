@@ -204,7 +204,7 @@ class CfgVehicles
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		vehicleclass="Helicopter";
-		scope=2;
+		scope=0;
 		side=1;
 		fuelCapacity=8000;
 		dustEffect="";
