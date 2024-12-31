@@ -9070,6 +9070,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Deso_Dirty: JLTS_CloneArmor
+	{
+		author="Viz";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Deso/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Deso_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
  	class FST_Uniform_Joko: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -9861,6 +9875,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Dobie: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Dobie)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Dobie.paa",
 		};
 		visionMode[]=
 		{
@@ -12018,6 +12054,68 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="DBA_jumppack_effect_fnc_jt_21";
+		DBA_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Deso_Dirty: FST_Backpack_Jumppack
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (Deso/Dirty)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso_Dirty.paa"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -18691,6 +18789,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Xeha_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Deso_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-2324 'Deso (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Deso_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Deso_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Deso_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Deso_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Deso_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
