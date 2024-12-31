@@ -1999,6 +1999,7 @@ class CfgWeapons
 				"ACE_40mm_Flare_Red",
 				"ACE_40mm_Flare_green",
 				"ACE_40mm_Flare_White",
+				"ACE_40mm_Flare_ir",
 				"ACE_HuntIR_M203"
 			};
 			recoil="FST_recoil_DP23";
@@ -2679,6 +2680,7 @@ class CfgWeapons
 				"ACE_40mm_Flare_Red",
 				"ACE_40mm_Flare_green",
 				"ACE_40mm_Flare_White",
+				"ACE_40mm_Flare_ir",
 				"ACE_HuntIR_M203"
 			};
 			recoil="FST_recoil_DP23";
