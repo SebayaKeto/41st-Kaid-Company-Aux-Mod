@@ -11,10 +11,11 @@ class CfgPatches
 		units[]=
 		{
 			"FST_Technical",
-			"FST_Technical_Base",
 			"FST_Technical_Twin_Laser",
-			"FST_Technical_Twin_Laser_Base",
+			"FST_Technical_Twin_Laser_White",
+			"FST_Technical_Twin_Laser_Snow",
 			"FST_Technical_Transport",
+			"FST_Technical_Transport_White",
 		};
 		addonRootClass="OPTRE_Vehicles";
 		weapons[]={};
@@ -995,10 +996,10 @@ class CfgVehicles
 		class TransportWeapons{};
 		class TransportBackpacks{};
 	};
-	class FST_Technical_Twin_Laser: FST_Technical_Twin_Laser_Base
+	class FST_Technical_Twin_Laser_Snow: FST_Technical_Twin_Laser_Base
 	{	
 		author="Gold";
-		displayName="[41st] Militia Technical (Twin laser)";
+		displayName="[41st] Militia Technical Snow (Twin laser)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelections[]=
@@ -1013,6 +1014,36 @@ class CfgVehicles
 			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_ext_upper_snow_co.paa",
 			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_ext_under_snow_co.paa",
 			"41st_Vehicles\Warthog\Data\Turret\M12_turret_snow_co.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
+        };	
+		weapons[]=
+		{
+			"FST_Medium_twin_laser_turret",
+		};
+		magazines[]=
+		{
+			"FST_500Rnd_High_Capacity_Plasma_Cell",
+			"FST_500Rnd_High_Capacity_Plasma_Cell",
+		};
+	};	
+	class FST_Technical_Twin_Laser_White: FST_Technical_Twin_Laser_Base
+	{	
+		author="Gold";
+		displayName="[41st] Militia Technical White (Twin laser)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		hiddenSelections[]=
+        {
+            "camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+        };
+        hiddenSelectionsTextures[]=
+        {
+			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_extupper_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Turret\M39_turret_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
         };	
 		weapons[]=
@@ -1313,6 +1344,25 @@ class CfgVehicles
 		class TransportWeapons{};
 		class TransportBackpacks{};
 	};
+	class FST_Technical_Transport_White: FST_Technical_Transport
+	{	
+		author="Gold";
+		displayName="[41st] Militia Technical Transport (White)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_extupper_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Rear Transport compartment\Transp_lopo_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
+		};
+	};	
 };
 class Mode_FullAuto;
 class CfgWeapons
