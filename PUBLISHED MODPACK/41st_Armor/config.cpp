@@ -5601,7 +5601,7 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"k_nvg"
+			"Integrated_NVG_TI_1_F"
 		};
 		class Iteminfo: HeadgearItem
 		{

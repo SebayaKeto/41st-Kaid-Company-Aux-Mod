@@ -398,8 +398,8 @@ class CfgVehicles
 		getOutAction="GetOutLow";
 		attenuationEffectType="CarAttenuation";
 		cost=20000;
-		altFullForce=2000;
-		altNoForce=4000;
+		altFullForce=14;
+		altNoForce=20;
 		selectionHRotorMove="Rotor_1_blur";
 		selectionHRotorStill="Rotor_1_static";
 		selectionVRotorMove="Rotor_2_blur";

@@ -976,6 +976,8 @@ class cfgvehicles
 		maximumLoad=5000;
 		ace_cargo_space=30;
 		ace_cargo_hasCargo=1;
+		altFullForce=14;
+		altNoForce=20;
 		displayName="[41st] TX-130 Saber Tank (Fly)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
