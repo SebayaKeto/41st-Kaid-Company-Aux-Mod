@@ -308,12 +308,12 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-          "41st_Vehicles\Nu\Data\FST_NU_HullExterior.paa",
+        "41st_Vehicles\Nu\Data\FST_NU_HullExterior.paa",
 			"41st_Vehicles\Nu\Data\FST_NU_Hullfront.paa",
 			"41st_Vehicles\Nu\Data\FST_Nu_Wings.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"41st_Vehicles\Nu\Data\FST_Nu_Cockpit_Interface.paa",
-			"3as\3as_republic_heli\rho_class\data\interior_co.paa",
+			"41st_Vehicles\Nu\Data\FST_Nu_Interior.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
 		};
         class HitPoints
@@ -848,7 +848,7 @@ class CfgVehicles
 			"41st_Vehicles\Nu\Data\FST_Nu_Wings.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"41st_Vehicles\Nu\Data\FST_Nu_Cockpit_Interface.paa",
-			"3as\3as_republic_heli\rho_class\data\interior_co.paa",
+			"41st_Vehicles\Nu\Data\FST_Nu_Interior.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
 		};
 		class UserActions
