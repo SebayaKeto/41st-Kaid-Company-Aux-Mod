@@ -331,9 +331,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-         	"3as\3as_republic_heli\rho_class\data\hull_rho_co.paa",
+         	"41st_Vehicles\Rho\Data\Hull\Hull_Rho_co.paa",
 			"3as\3as_republic_heli\nu_class\data\hull_front_co.paa",
-			"3as\3as_republic_heli\rho_class\data\wings_rho_co.paa",
+			"41st_Vehicles\Rho\Data\Wings\Wings_Rho_co.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"41st_Vehicles\Rho\Data\FST_Rho_Cockpit_Interface.paa",
 			"41st_Vehicles\Rho\Data\FST_Rho_Interior.paa",
@@ -866,9 +866,9 @@ class CfgVehicles
 		editorPreview="3as\3AS_nu\images\3AS_nuclass.jpg";
 		hiddenSelectionsTextures[]=
 		{
-				"3as\3as_republic_heli\rho_class\data\hull_rho_co.paa",
-			"3as\3as_republic_heli\nu_class\data\hull_front_co.paa",
-			"3as\3as_republic_heli\rho_class\data\wings_rho_co.paa",
+			"41st_Vehicles\Rho\Data\Hull\Hull_Rho_co.paa",
+			"41st_Vehicles\Nu\Data\FST_NU_Hullfront.paa",
+			"41st_Vehicles\Rho\Data\Wings\Wings_Rho_co.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"41st_Vehicles\Rho\Data\FST_Rho_Cockpit_Interface.paa",
 			"41st_Vehicles\Rho\Data\FST_Rho_Interior.paa",
