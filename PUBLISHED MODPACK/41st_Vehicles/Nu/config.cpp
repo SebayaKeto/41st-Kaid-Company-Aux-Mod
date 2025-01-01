@@ -464,11 +464,11 @@ class CfgVehicles
 			"FST_Stormfury_4Rnd_AA_Missile",
 			"FST_Stormfury_4Rnd_AA_Missile",
 			"FST_Stormfury_4Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile",
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile", 
 		};
 		class pilotCamera
 		{
