@@ -258,6 +258,8 @@ class CfgVehicles
 		Icon="\ls_vehicles_ground\_ui\icons\barc_icon.paa";
 		editorpreview="\ls_vehicles_ground\_ui\editorPreviews\image_barc.jpg";
 		author="Ghostly";
+		ace_cargo_hasCargo=1;
+		ace_cargo_space=1000;
 		fuelCapacity=8000;
 		maxSpeed=200;
 		fuelConsumptionRate=0.2;
