@@ -4229,6 +4229,18 @@ class CfgWeapons
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
 	};
+  	class FST_Pilot_P1_Helmet_Raz: FST_Pilot_P1_Helmet
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Raz]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Raz.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	};
   	class FST_Pilot_P1_Helmet_Spade: FST_Pilot_P1_Helmet
 	{
 		author="Daara";
