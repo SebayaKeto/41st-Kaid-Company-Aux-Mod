@@ -21313,6 +21313,367 @@ class CfgGlasses
 		ACE_Resistance=1;
 		ACE_Protection=1;
 		ACE_TintAmount=0;
+	};	
+	class FST_Vest_NCO_Kama_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest.paa",
+			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Vest_NCO_Kama_Khaki_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Khaki/Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Khaki.paa",
+			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Vest_NCO_Kama_Veteran_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Veteran/Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Veteran",
+			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Face)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_khaki_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Khaki/Face)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Khaki.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_veteran_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Veteran/Face)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Veteran_Officer.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Commander_pauldron_kama_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Commander's Pauldron w/ Kama (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Commander_pauldron_kama_khaki_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Commander's Pauldron w/ Kama (Khaki/Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Commander_pauldron_kama_veteran_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Commander's Pauldron w/ Kama (Veteran/Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_reversed_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Reversed.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_reversed_khaki_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama (Khaki/Face)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Khaki.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_reversed_veteran_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama (Veteran/Face)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_CloneVestKama_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Kama (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			""
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"",
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FTS_CloneVestKama_Khaki_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Kama (Khaki/Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Khaki.paa",
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FTS_CloneVestKama_Veteran_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Kama (Veteran/Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_CloneVestMerrik_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Merrik's Vest and Kama (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_Merrik.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_CloneVestOfficer2_Face: FST_Base_Glasses
+	{
+		displayName="[41st] Reversed Pauldron w/ Kama (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			""
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
 	};
 	class FST_Pauldron_Reversed_Face: FST_Base_Glasses
 	{
