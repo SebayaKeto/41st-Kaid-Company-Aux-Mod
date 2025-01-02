@@ -6378,6 +6378,16 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Plop.paa",
 		};
+	};
+	class FST_P2_Helmet_Odin: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Odin]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Odin.paa",
+		};
 	};	
 	class FST_P2_Helmet_Aqua: FST_P2_Helmet_Base
 	{
