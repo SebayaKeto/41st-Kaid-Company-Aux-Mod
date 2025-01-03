@@ -316,13 +316,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"camo3",
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_co.paa",
-			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_Barrel_co.paa",
-			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_Mag_co.paa"
+			"41st_Weapons\Z6\Data\Body\FST_Z6_Weathered_co.paa",
+			"41st_Weapons\Z6\Data\Barrel\FST_Z6_Barrel_Weathered_co.paa",
+			"41st_Weapons\Z6\Data\Mag\FST_Z6_Mag_Weathered_co.paa",
 		};
 		magazines[]=
 		{
