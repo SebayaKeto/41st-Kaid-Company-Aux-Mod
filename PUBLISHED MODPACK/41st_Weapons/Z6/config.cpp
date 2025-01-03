@@ -4,13 +4,15 @@ class CfgPatches
 	{
 		requiredAddons[]=
 		{
-			"3AS_Weapons"
+			"3AS_Weapons",
+			"A3_Weapons_F",
 		};
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]=
 		{
 			"FST_Z6",
+			"FST_Z6_Jorge",
 		};
 	};
 };
@@ -49,6 +51,23 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
 		displayName="[41st] Low-Power Energy Battery (Red)";
 		ammo="FST_blasterbolt_Red";
+	};
+	class FST_EWEB_cell: 100Rnd_65x39_caseless_mag
+	{
+		author="Adapted from the Indecisive Armoury Team";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=150;
+		displayName="[41st] Overcharged E-Web Energy Cell";
+		displayNameShort="O/HP Energy Cell";
+		descriptionShort="150 round capacity.";
+		ammo="FST_blasterbolt_Overcharged";
+		tracersEvery=1;
+		initSpeed=800;
+		mass=10;
 	};
 };
 class CfgWeapons
@@ -231,6 +250,208 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=100;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"3AS_optic_holo_DC15S"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={
+					"FST_Attachment_Light_Normal_White",
+                    "FST_Attachment_Light_Beam_White",
+                    "FST_Attachment_Module_Light_Normal_White",
+                    "FST_Attachment_Module_Light_Beam_White"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
+			};
+		};
+	};
+	class FST_Z6_Jorge: arifle_MX_Base_F
+	{
+		author="Gold";
+		displayName="[41st] Jorge's vengeance";
+		baseWeapon="FST_Z6_Jorge";
+		ace_overheating_mrbs=40000;
+		ace_overheating_slowdownFactor=0;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=1;
+		ace_overheating_closedBolt=0;
+		ace_overheating_barrelMass=1;
+		ace_overheating_jamTypesAllowed[]=
+		{
+			"Fire",
+			"Dud"
+		};
+		inertia=0;
+		canShootInWater=1;
+		scope=2;
+		autoReload="true";
+		displayNameShort="Z-6 rotary cannon";
+		descriptionShort="Rapid Fire. Reloads automatically.";
+		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
+		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_co.paa",
+			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_Barrel_co.paa",
+			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_Mag_co.paa"
+		};
+		magazines[]=
+		{
+			"FST_EWEB_cell",
+		};
+		recoil="FST_recoil_Z6";
+		maxZeroing=1200;
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
+		};
+		reloadAction="";
+		ace_clearJamAction="";
+		magazineWell[]={};
+		fireLightDiffuse[]={0,0,1};
+		drySound[]=
+		{
+			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
+			5,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Republic\Z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		muzzles[]=
+		{
+			"this"
+		};
+		modes[]=
+		{
+			"Auto"
+		};
+		class Auto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\41st_weapons\Z6\Data\z6 -3-965 (1).ogg",
+					1.5,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\41st_weapons\Z6\Data\z6 -3-965 (2).ogg",
+					1.5,
+					1.015,
+					1800
+				};
+				begin3[]=
+				{
+					"\41st_weapons\Z6\Data\z6 -3-965 (3).ogg",
+					1.5,
+					0.98500001,
+					1800
+				};
+				begin4[]=
+				{
+					"\41st_weapons\Z6\Data\z6 -3-965 (4).ogg",
+					1.5,
+					1.01,
+					1800
+				};
+				begin5[]=
+				{
+					"\41st_weapons\Z6\Data\z6 -3-965 (5).ogg",
+					1.5,
+					0.995,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\41st_weapons\Z6\Data\z6 -3-965.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			reloadTime=0.059999999;
+			dispersion=0.003;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		aiDispersionCoefY=48; //was originally 24
+		aiDispersionCoefX=42; //was originally 21
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=100;
