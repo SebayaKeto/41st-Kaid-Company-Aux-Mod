@@ -30,4 +30,27 @@ class CfgWeapons
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
 		modelOptics="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\2dScope\IDA_Electrobinoculars_Rep_Scope.p3d";
 	};
+	class FST_Black_Electrobinoculars: FST_Electrobinoculars
+	{
+		scope=2;
+		displayName="[41st] Kaid Company Electrobinoculars (Black)";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
+	};
+	class FST_ARF_Electrobinoculars: FST_Electrobinoculars
+	{
+		scope=2;
+		displayName="[41st] ARF Electrobinoculars";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
+		modelOptics="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\2dScope\IDA_Electrobinoculars_Rep_Scope.p3d";
+		visionMode[] = 
+		{
+			"Normal",
+			"NVG",
+			"Ti"
+		};
+		thermalMode[] = {0, 1};
+		//opticsZoomMin = 0.1;
+		//opticsZoomMax = 1.2;
+		//opticsZoomInit = 0.5;
+	};
 };

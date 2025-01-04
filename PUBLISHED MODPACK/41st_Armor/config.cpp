@@ -177,6 +177,7 @@ class CfgPatches
 			"FST_P2_Warlock",
 			"FST_P2_Vishy",
 			"FST_P2_Nys",
+			"FST_P2_Wuffer",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -2709,6 +2710,46 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet.paa",
+		};
+	};
+	class FST_P2_Invisible_Helmet: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Invisible Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			""
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"";
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
 		};
 	};
 	class FST_P2_Helmet_EOD: FST_P2_Helmet_Base
@@ -7823,6 +7864,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pope.paa",
+		};
+	};
+	class FST_P2_Helmet_Wuffer: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Wuffer]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Wuffer.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
