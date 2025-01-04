@@ -126,6 +126,7 @@ class CfgMusic
 		"FST_FelizNavidad",
 		"FST_YoureAMeanOneMrGrinch",
 		"FST_LastChristmas",
+		"FST_Jorge",
 		
 		//Mission Tracks
 		"FST_Totharvis_Moon_1",
@@ -210,6 +211,21 @@ class CfgMusic
 		};
 		duration="60";
 	};
+	class FST_Jorge
+	{
+		name="Jorge Boss Music";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\VengeanceUnbound.ogg",
+			2,
+			1
+		};
+		duration="132";
+	};
+	
+	
+	
 	// Star Wars
 	class FST_GeneralGrevious
 	{
