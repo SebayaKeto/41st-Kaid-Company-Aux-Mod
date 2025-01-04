@@ -10927,6 +10927,28 @@ class CfgVehicles
 			"41st_Armor\Data\Equipment\FST_ARF_backpack_co.paa"
 		};
 	};
+	class FST_Clone_Backpack_ARC: FST_Clone_backpack
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] ARC Camo Backpack";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
+		};
+		tf_dialog="JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=50000;
+		tf_subtype="digital_lr";
+	};
 	class FST_ARF_backpack_s: FST_Clone_Backpack_ARF
 	{
 		displayName="[41st] ARF Camo Backpack (Straps)";
