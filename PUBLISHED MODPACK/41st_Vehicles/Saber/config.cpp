@@ -985,6 +985,7 @@ class cfgvehicles
 		editorPreview="\3as\3as_saber\images\3as_saber_m1.jpg";
 		author="Daara";
 		tas_canBlift=1;
+		tas_can_impulse=0;
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
 		model="3as\3as_saber\model\tcw_tx130";
 		steerAheadSimul=0.5;
