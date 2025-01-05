@@ -123,8 +123,8 @@ class CfgVehicles
         tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]"; 
 		displayName="[41st] Militia Technical";
 		author="Daara";
-		scope=0;
-		side=0;
+		scope=2;
+		side=1;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
@@ -1065,8 +1065,8 @@ class CfgVehicles
 	};	
 	class FST_Technical_Transport: OPTRE_M813_TT
 	{
-		scope=0;
-		side=0;
+		scope=2;
+		side=1;
 		scopeCurator=2;
 		tas_canBlift=1;
         tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]"; 
