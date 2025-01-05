@@ -213,12 +213,36 @@ class CfgMusic
 	};
 	class FST_Jorge
 	{
-		name="Jorge Boss Music";
+		name="[Boss] Jorge's Vengeance";
 		musicClass="FST_Mission_Music";
 		sound[]=
 		{
 			"41st_Music\MissionTracks\VengeanceUnbound.ogg",
-			2,
+			8,
+			1
+		};
+		duration="132";
+	};
+	class FST_Jorge2
+	{
+		name="[Action] Descent Into Madness";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\DescentIntoMadness.ogg",
+			8,
+			1
+		};
+		duration="132";
+	};
+	class FST_Jorge3
+	{
+		name="[Vibes] Those Who Were Left Behind";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\ThoseWhoWereLeftBehind.ogg",
+			8,
 			1
 		};
 		duration="132";
