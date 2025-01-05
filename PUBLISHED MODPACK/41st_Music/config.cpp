@@ -127,6 +127,8 @@ class CfgMusic
 		"FST_YoureAMeanOneMrGrinch",
 		"FST_LastChristmas",
 		"FST_Jorge",
+		"FST_Jorge2",
+		"FST_Jorge3",
 		
 		//Mission Tracks
 		"FST_Totharvis_Moon_1",
@@ -218,7 +220,7 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\MissionTracks\VengeanceUnbound.ogg",
-			8,
+			10,
 			1
 		};
 		duration="132";
@@ -230,7 +232,7 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\MissionTracks\DescentIntoMadness.ogg",
-			8,
+			6,
 			1
 		};
 		duration="132";
@@ -242,7 +244,7 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\MissionTracks\ThoseWhoWereLeftBehind.ogg",
-			8,
+			6,
 			1
 		};
 		duration="132";
