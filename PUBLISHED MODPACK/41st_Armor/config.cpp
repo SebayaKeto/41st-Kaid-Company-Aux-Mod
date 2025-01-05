@@ -179,6 +179,7 @@ class CfgPatches
 			"FST_P2_Vishy",
 			"FST_P2_Nys",
 			"FST_P2_Wuffer",
+			"FST_P2_Stec",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -7875,6 +7876,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Wuffer.paa",
+		};
+	};
+	class FST_P2_Helmet_Stec: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Stec]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Stec.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
