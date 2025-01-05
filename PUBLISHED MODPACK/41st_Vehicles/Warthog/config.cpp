@@ -10,11 +10,11 @@ class CfgPatches
 		requiredversion=1;
 		units[]=
 		{
-			"FST_Technical",
-			"FST_Technical_Twin_Laser",
+			//"FST_Technical",
+			//"FST_Technical_Twin_Laser",
 			"FST_Technical_Twin_Laser_White",
-			"FST_Technical_Twin_Laser_Snow",
-			"FST_Technical_Transport",
+			//"FST_Technical_Twin_Laser_Snow",
+			//"FST_Technical_Transport",
 			"FST_Technical_Transport_White",
 		};
 		addonRootClass="OPTRE_Vehicles";
@@ -123,6 +123,7 @@ class CfgVehicles
         tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]"; 
 		displayName="[41st] Militia Technical";
 		author="Daara";
+		scope=2;
 		side=1;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
@@ -411,7 +412,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] Militia Technical Base";
-		side=1;
+		scope=0;
+		side=0;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
@@ -710,7 +712,8 @@ class CfgVehicles
 	{
 		displayName="[41st] Militia Technical Base (Twin laser)";
 		author="Gold";
-		side=1;
+		scope=0;
+		side=0;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
@@ -1000,6 +1003,8 @@ class CfgVehicles
 	{	
 		author="Gold";
 		displayName="[41st] Militia Technical Snow (Twin laser)";
+		scope=0;
+		side=0;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelections[]=
@@ -1030,6 +1035,8 @@ class CfgVehicles
 	{	
 		author="Gold";
 		displayName="[41st] Militia Technical White (Twin laser)";
+		scope=2;
+		side=1;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelections[]=
@@ -1043,7 +1050,7 @@ class CfgVehicles
         {
 			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_extupper_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
-			"41st_Vehicles\Warthog\Data\Turret\M39_turret_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
         };	
 		weapons[]=
@@ -1059,6 +1066,7 @@ class CfgVehicles
 	class FST_Technical_Transport: OPTRE_M813_TT
 	{
 		scope=2;
+		side=1;
 		scopeCurator=2;
 		tas_canBlift=1;
         tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]"; 
@@ -1066,7 +1074,6 @@ class CfgVehicles
 		author="Daara";
 		model="\OPTRE_Vehicles\Warthog\M12_MAAV_TT.p3d";
 		transportSoldier=0;
-		side=1;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
@@ -1348,6 +1355,8 @@ class CfgVehicles
 	{	
 		author="Gold";
 		displayName="[41st] Militia Technical Transport (White)";
+		scope=2;
+		side=1;
 		hiddenSelections[]=
 		{
 			"camo1",
