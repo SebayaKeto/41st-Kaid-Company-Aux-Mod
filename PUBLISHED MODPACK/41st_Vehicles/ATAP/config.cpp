@@ -4168,7 +4168,6 @@ class CfgVehicles
 				weapons[]=
 				{
 					"3AS_ATAP_Siege_Cannon",
-					"FST_30mm_Autocannon_LAAT",
 					"3AS_ATAP_mortar"
 				};
 				magazines[]=
@@ -4176,9 +4175,7 @@ class CfgVehicles
 					"3AS_10Rnd_Siege_Cannon_HHE_shells",
 					"3AS_10Rnd_Siege_Cannon_HHE_shells",
 					"3AS_32Rnd_155mm_ATAP_Mortar_shells",
-					"3AS_32Rnd_155mm_ATAP_Mortar_shells",
-					"FST_thermal_coil",
-					"FST_thermal_coil"					
+					"3AS_32Rnd_155mm_ATAP_Mortar_shells",				
 				};
 				gunnerAction="mbt1_slot2_out";
 				gunnerInAction="ATAP_Gunner2";
