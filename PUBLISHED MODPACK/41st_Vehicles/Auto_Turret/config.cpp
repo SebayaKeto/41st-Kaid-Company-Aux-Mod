@@ -67,6 +67,8 @@ class CfgVehicles {
 					"FST_blaster_battery_Red",
 					"FST_blaster_battery_Red"
 				};
+				minElev = -20;
+				maxElev = 60;
 			};
 		};
         hiddenSelectionsTextures[] = 
@@ -102,6 +104,8 @@ class CfgVehicles {
 					"FST_blaster_scatter_cell",
 					"FST_blaster_scatter_cell"
 				};
+				minElev = -20;
+				maxElev = 60;
 			};
 		};
         hiddenSelectionsTextures[] = 
