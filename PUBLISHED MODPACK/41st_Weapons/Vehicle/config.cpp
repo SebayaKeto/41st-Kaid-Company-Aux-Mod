@@ -816,7 +816,7 @@ class CfgWeapons
 		descriptionShort="E-Web";
 		magazines[]=
 		{
-			"FST_blaster_battery_high",
+			"FST_EWEB_cell",
 		};
 		muzzleEnd="konec hlavne3";
 		muzzlePos="usti hlavne3";

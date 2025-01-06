@@ -3633,7 +3633,7 @@ class CfgVehicles
 				weapons[]=
 				{
 					"FST_ATTE_Turret",
-					"FST_EWEB_RemoteTurret",
+					"FST_EWEB_RemoteTurret"
 				};
 				magazines[]=
 				{
@@ -3647,17 +3647,17 @@ class CfgVehicles
 					"FST_thermal_coil_blue",
 					"FST_thermal_coil_blue",
 					"FST_thermal_coil_blue",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
-					"FST_blaster_battery_high",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell",
+					"FST_EWEB_cell"
 				};
 				minElev=-10;
 				maxElev=20;
