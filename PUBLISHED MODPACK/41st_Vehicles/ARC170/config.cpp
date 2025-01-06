@@ -64,6 +64,19 @@ class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
 {
 	class components;
 };
+class Optics_Armored;
+class Optics_Commander_02: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_MBT_03: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class CfgVehicles
 {
 	class thingX;
@@ -135,14 +148,14 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_Arc_170: 3as_arc_170_base
+	class FST_Arc_170: 3AS_ARC_170_Base
 	{
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		side=1;
 		vtol=4;
-		author="Ghostly";
+		author="Ghostly Updated by Viz";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Pilot_P1";
@@ -189,7 +202,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_ARC_Heavy_Chaingun",
+			"FST_ARC_Light_Canon",
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
@@ -231,6 +244,182 @@ class CfgVehicles
 		memoryPointDriverOptics="PilotCamera_1";
 		unitInfoType="RscOptics_CAS_Pilot";
 		driverWeaponsInfoType="RscOptics_CAS_01_TGP";
+		soundEngineOnInt[]=
+		{
+			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Start.ogg",
+			"db-2",
+			1,
+			300
+		};
+		soundEngineOnExt[]=
+		{
+			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Start.ogg",
+			"db5",
+			1,
+			500
+		};
+		soundEngineOffInt[]=
+		{
+			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_End.ogg",
+			"db-2",
+			1,
+			300
+		};
+		soundEngineOffExt[]=
+		{
+			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_End.ogg",
+			"db5",
+			1,
+			500
+		};
+		soundLocked[]=
+		{
+			"\A3\Sounds_F\weapons\Rockets\locked_1",
+			"db-20",
+			1
+		};
+		soundIncommingMissile[]=
+		{
+			"\A3\Sounds_F\weapons\Rockets\locked_3",
+			"db-20",
+			1.5
+		};
+		soundGearUp[]=
+		{
+			"A3\Sounds_F_EPC\CAS_02\gear_up",
+			"db-2",
+			1,
+			150
+		};
+		soundGearDown[]=
+		{
+			"A3\Sounds_F_EPC\CAS_02\gear_down",
+			"db-2",
+			1,
+			150
+		};
+		soundFlapsUp[]=
+		{
+			"A3\Sounds_F_EPC\CAS_02\Flaps_Up",
+			"db-4",
+			1,
+			100
+		};
+		soundFlapsDown[]=
+		{
+			"A3\Sounds_F_EPC\CAS_02\Flaps_Down",
+			"db-4",
+			1,
+			100
+		};
+		class scrubLandInt
+		{
+			sound[]=
+			{
+				"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+				"db0",
+				1,
+				100
+			};
+			frequency=1;
+			volume="(scrubLand factor[0.01, 0.20])";
+		};
+		class Sounds
+		{
+			class EngineLowOut
+			{
+				sound[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
+					1.2,
+					1,
+					4000
+				};
+				frequency="1.0 min (rpm + 0.5)";
+				volume="camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			class EngineHighOut
+			{
+				sound[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
+					1.2,
+					1.2,
+					5000
+				};
+				frequency="1";
+				volume="camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class ForsageOut
+			{
+				sound[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
+					"db5",
+					0.99000001,
+					4200
+				};
+				frequency="1";
+				volume="engineOn*camPos*(thrust factor[0.6, 1.0])";
+				cone[]={3.1400001,3.9200001,2,0.5};
+			};
+			class WindNoiseOut
+			{
+				sound[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
+					"db-5",
+					1,
+					800
+				};
+				frequency="(0.1+(1.2*(speed factor[1, 150])))";
+				volume="camPos*(speed factor[1, 150])";
+			};
+			class EngineLowIn
+			{
+				sound[]=
+				{
+					"3AS\3as_arc170\Sounds\FighterInt.ogg",
+					0.80000001,
+					1
+				};
+				frequency="1.0 min (rpm + 0.5)";
+				volume="(1-camPos)*((rpm factor[0.7, 0.1])*(rpm factor[0.1, 0.7]))";
+			};
+			class EngineHighIn
+			{
+				sound[]=
+				{
+					"3AS\3as_arc170\Sounds\FighterInt.ogg",
+					0.80000001,
+					1.2
+				};
+				frequency="1";
+				volume="(1-camPos)*(rpm factor[0.85, 1.0])";
+			};
+			class ForsageIn
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Plane_Fighter_03\Plane_Fighter_03-fors_int",
+					"db0",
+					1
+				};
+				frequency="1";
+				volume="(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
+			};
+			class WindNoiseIn
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Plane_Fighter_03\noise",
+					"db-6",
+					1
+				};
+				frequency="(0.1+(1.2*(speed factor[1, 150])))";
+				volume="(1-camPos)*(speed factor[1, 150])";
+			};
+		};
 		class pilotCamera
 		{
 			class OpticsIn
@@ -799,6 +988,7 @@ class CfgAmmo
 	class Cannon_30mm_HE_Plane_CAS_02_F;
 	class FST_ARC_Heavy_Energy_shell: Cannon_30mm_HE_Plane_CAS_02_F
 	{
+		author="Viz";
 		displayname="Heavy Energy";
 		warheadName="HEnergy";
 		hit=600;
@@ -808,8 +998,8 @@ class CfgAmmo
 		explosive=1;
 		allowAgainstInfantry=1;
 		airlock=1;
-		model="\Indecisive_Armoury_SW\Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		aiAmmoUsageFlags="128 + 512";
 	};
 };
@@ -833,41 +1023,62 @@ class CfgWeapons
 	class CannonCore;
 	class Cannon_30mm_Plane_CAS_02_F: CannonCore
 	{
+		class LowROF;
 	};
-	class FST_ARC_Heavy_Chaingun: CannonCore
+	class FST_ARC_Light_Canon: Cannon_30mm_Plane_CAS_02_F
 	{
-		displayName="[41st] GAU-41 Avenger";
-		canLock=2;
-		burst=2;
+		displayName="[41st] Blastech LEC170 Low Energy Cannon";
+		canLock=0;
 		ballisticsComputer="4 + 2 + 8";
 		magazines[]=
 		{
-			"FST_ARC_4000Rnd_Heavy_shells",
+			"FST_ARC_4000Rnd_Heavy_shells"
 		};
-		reloadTime=0.029999999;
+		reloadTime=0.059999999;
 		dispersion=0.0094999997;
 		magazineReloadTime=10;
-		sounds[]=
+		class LowROF: LowROF
 		{
-			"StandardSound"
-		};
-		class StandardSound
-		{
-			begin1[]=
+			reloadTime=0.079999998;
+			displayName="Blastech LEC170 Low Energy Cannon";
+			canLock=2;
+			burst=2;
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
 			{
-				"A3\Sounds_F\arsenal\weapons_vehicles\gatling_30mm\30mm_01_burst",
-				5.6234136,
-				1,
-				1500,
-				{25704,32159}
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
+				begin1[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					1,
+					1500
+				};
+				begin2[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					1.015,
+					1500
+				};
+				begin3[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					0.985,
+					1500
+				};
+				begin4[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					1.01,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1", 1
+				};
 			};
 		};
-		soundContinuous=1;
-		autoFire=1;
 	};
 };

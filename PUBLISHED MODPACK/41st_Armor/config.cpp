@@ -10974,14 +10974,14 @@ class CfgVehicles
 		scopearsenal=2;
 		displayName="[41st] ARC Backpack";
 		maximumload=250;
-		model="\3AS\3AS_Characters\Commando\3AS_Katarn_BackPack.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackARC.p3d";
 		hiddenSelections[]=
 		{
 			"Camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\3AS\3AS_Characters\Commando\data\Katarn_Backpack_Fixer_CO.paa"
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_backpack_arc_co.paa"
 		};
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";

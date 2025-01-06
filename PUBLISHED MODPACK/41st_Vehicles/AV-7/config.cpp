@@ -48,10 +48,9 @@ class CfgWeapons
 		{
 			"StandardSound"
 		};
-		class StandardSound {
-			soundSetShot[]= {
-				"3AS_HeavyTurboLaser_SoundSet"
-			};
+		class StandardSound: StandardSound
+		{
+			soundSetShot[] = { "3AS_HeavyTurboLaser_SoundSet" };
 		};
 		reloadSound[]=
 		{
@@ -103,11 +102,9 @@ class CfgWeapons
 			{
 				"StandardSound"
 			};
-			class StandardSound
+			class StandardSound: StandardSound
 			{
-				soundSetShot[]= {
-					"3AS_HeavyTurboLaser_SoundSet"
-				};
+				soundSetShot[] = { "3AS_HeavyTurboLaser_SoundSet" };
 			};
 			reloadTime=4;
 			artilleryDispersion=3.2;
@@ -150,11 +147,9 @@ class CfgWeapons
 			{
 				"StandardSound"
 			};
-			class StandardSound
+			class StandardSound: StandardSound
 			{
-				soundSetShot[]= {
-					"3AS_HeavyTurboLaser_SoundSet"
-				};
+				soundSetShot[] = { "3AS_HeavyTurboLaser_SoundSet" };
 			};
 			soundBurst=0;
 			reloadTime=6;
