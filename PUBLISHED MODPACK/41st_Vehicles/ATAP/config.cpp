@@ -1220,7 +1220,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		displayname="[41st] AT-AP Siege Walker";
-		artilleryScanner=0;
+		artilleryScanner=1;
 		faction="FST_Faction";
 		side=1;
 		class RenderTargets
