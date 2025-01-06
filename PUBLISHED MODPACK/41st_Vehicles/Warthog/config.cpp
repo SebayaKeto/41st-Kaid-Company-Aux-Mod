@@ -1363,6 +1363,7 @@ class CfgVehicles
 			"camo2",
 			"camo3",
 			"camo_details",
+			"camo_transport_decal",
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -1370,6 +1371,7 @@ class CfgVehicles
 			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Rear Transport compartment\Transp_lopo_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Transport_Decals.paa",
 		};
 	};	
 };
