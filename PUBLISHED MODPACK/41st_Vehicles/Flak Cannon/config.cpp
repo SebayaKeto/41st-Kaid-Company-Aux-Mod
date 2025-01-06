@@ -276,7 +276,7 @@ class CfgVehicles
 				minTurn=-360;
 				initelev=28;
 				maxVerticalRotSpeed=0.90000001;
-				maxHorizontalRotSpeed = 0.90000001;
+				maxHorizontalRotSpeed = 1.20000001;
 				animationSourceBody="Mainturret";
 				Body="Mainturret";
 				animationSourceGun="Maingun";
@@ -364,7 +364,7 @@ class CfgVehicles
 							viewDistanceLimitCoef=1;
 						};
 						typeRecognitionDistance=4000;
-						maxTrackableSpeed=700;
+						maxTrackableSpeed=1000;
 						angleRangeHorizontal=90;
 						angleRangeVertical=60;
 						animDirection="mainGun";

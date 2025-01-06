@@ -41,17 +41,10 @@ class Mode_Burst;
 class CfgWeapons
 {
 	class 3AS_AV7_300mm_AMOS;
+	class BaseSoundModeType;
 	class AV7_Cannon: 3AS_AV7_300mm_AMOS{
 		scope=1;
 		displayName="[41st] AV7_300mm_Cannon";
-		sounds[]=
-		{
-			"StandardSound"
-		};
-		class StandardSound: StandardSound
-		{
-			soundSetShot[] = { "3AS_HeavyTurboLaser_SoundSet" };
-		};
 		reloadSound[]=
 		{
 			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
@@ -102,7 +95,7 @@ class CfgWeapons
 			{
 				"StandardSound"
 			};
-			class StandardSound: StandardSound
+			class StandardSound: BaseSoundModeType
 			{
 				soundSetShot[] = { "3AS_HeavyTurboLaser_SoundSet" };
 			};
@@ -147,7 +140,7 @@ class CfgWeapons
 			{
 				"StandardSound"
 			};
-			class StandardSound: StandardSound
+			class StandardSound: BaseSoundModeType
 			{
 				soundSetShot[] = { "3AS_HeavyTurboLaser_SoundSet" };
 			};
