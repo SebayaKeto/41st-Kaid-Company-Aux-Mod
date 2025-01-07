@@ -1074,9 +1074,12 @@ class CfgWeapons
 					1.01,
 					1500
 				};
-				soundBegin[]=
+				soundBegin[] = 
 				{
-					"begin1", 1
+					"begin1", 0.25,
+					"begin2", 0.25,
+					"begin3", 0.25,
+					"begin4", 0.25
 				};
 			};
 		};
