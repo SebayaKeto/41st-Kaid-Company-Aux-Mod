@@ -154,6 +154,52 @@ class Optics_Gunner_MBT_03: Optics_Armored
 	class Medium;
 	class Narrow;
 };
+class Mode_SemiAuto;
+class CfgWeapons
+{
+	class CannonCore;
+	class mortar_155mm_AMOS: CannonCore{};
+	class FST_ATAP_mortar: mortar_155mm_AMOS
+	{
+		scope=2;
+		displayName="Mass-Driver Cannon";
+		nameSound="cannon";
+		cursor="mortar";
+		cursorAim="EmptyCursor";
+		magazines[]=
+		{
+			"3AS_32Rnd_155mm_ATAP_Mortar_shells",
+			"3AS_32Rnd_300mm_Mo_shells",
+			"3AS_12Rnd_300mm_Mo_smoke",
+			"3AS_4Rnd_300mm_Mo_guided",
+			"3AS_4Rnd_300mm_Mo_LG",
+			"3AS_12Rnd_300mm_Mo_mine",
+			"3AS_4Rnd_300mm_Mo_Cluster",
+			"3AS_12Rnd_300mm_Mo_AT_mine",
+			"3AS_32Rnd_155mm_ATAP_Mortar_shells_AT"
+		};
+		modes[] = {"Single1", "Single2", "Single3"};
+		class Single1: Mode_SemiAuto {
+			artilleryCharge = 0.19;
+			displayName = "$STR_A3_mortar_120mm_AMOS_Single10";
+			maxRange = 500;
+			minRange = 200;
+		};
+		class Single2: Single1 {
+			artilleryCharge = 0.3;
+			displayName = "$STR_A3_mortar_120mm_AMOS_Single20";
+			maxRange = 2450;
+		};
+		class Single3: Single1 {
+			artilleryCharge = 0.48;
+			displayName = "$STR_A3_mortar_120mm_AMOS_Single30";
+			maxRange = 3760;
+		};
+		class GunParticles
+		{
+		};
+	};
+};
 class CfgVehicles
 {
 	class Car;
@@ -4168,7 +4214,7 @@ class CfgVehicles
 				weapons[]=
 				{
 					"3AS_ATAP_Siege_Cannon",
-					"3AS_ATAP_mortar"
+					"FST_ATAP_mortar"
 				};
 				magazines[]=
 				{
