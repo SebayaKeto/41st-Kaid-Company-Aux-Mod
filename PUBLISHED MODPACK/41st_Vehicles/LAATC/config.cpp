@@ -330,11 +330,11 @@ class CfgVehicles
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
+			"FST_SmokeLauncherMag",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile"
 		};
