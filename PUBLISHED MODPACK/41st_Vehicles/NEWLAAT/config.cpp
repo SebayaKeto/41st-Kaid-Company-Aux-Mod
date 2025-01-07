@@ -593,7 +593,8 @@ class CfgVehicles
 				turretinfotype="RscOptics_Heli_Attack_01_gunner";
 				weapons[]=
 				{
-					"FST_30mm_Autocannon_LAAT",
+					//"FST_30mm_Autocannon_LAAT",
+					"FST_ParticleBeamCannon_B",
 					"SmokeLauncher"
 				};
 				magazines[]=
@@ -690,7 +691,8 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
-					"FST_30mm_Autocannon_LAAT",
+					//"FST_30mm_Autocannon_LAAT",
+					"FST_ParticleBeamCannon",
 					"Laserdesignator_pilotCamera"
 				};
 				magazines[]=
@@ -700,6 +702,7 @@ class CfgVehicles
 					"FST_thermal_coil",
 					"Laser_Battery_F",
 					"Laser_Battery_F",
+					"Laserbatteries",
 					"Laser_Battery"
 				};
 				turretinfotype="RscOptics_Heli_Attack_01_gunner";
@@ -1148,7 +1151,8 @@ class CfgVehicles
 				turretinfotype="RscOptics_Heli_Attack_01_gunner";
 				weapons[]=
 				{
-					"FST_30mm_Autocannon_LAAT",
+					//"FST_30mm_Autocannon_LAAT",
+					"FST_ParticleBeamCannon_R",
 					"Laserdesignator_pilotCamera"
 				};
 				magazines[]=
@@ -1158,6 +1162,7 @@ class CfgVehicles
 					"FST_thermal_coil",
 					"Laser_Battery_F",
 					"Laser_Battery_F",
+					"Laserbatteries",
 					"Laser_Battery"
 				};
 				class OpticsIn
@@ -3819,7 +3824,6 @@ class CfgVehicles
 			"FST_thermal_coil",
 			"FST_thermal_coil",
 			"FST_thermal_coil",
-			"Laser_Battery",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4037,7 +4041,6 @@ class CfgVehicles
 			"FST_thermal_coil",
 			"FST_thermal_coil",
 			"FST_thermal_coil",
-			"Laser_Battery",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4256,7 +4259,6 @@ class CfgVehicles
 			"FST_thermal_coil",
 			"FST_thermal_coil",
 			"FST_thermal_coil",
-			"Laser_Battery",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4474,7 +4476,6 @@ class CfgVehicles
 			"FST_thermal_coil",
 			"FST_thermal_coil",
 			"FST_thermal_coil",
-			"Laser_Battery",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -5191,6 +5192,232 @@ class Cfgweapons
 		maxRange=10000;
 		textureType="semi";
 	};
+	class 3AS_LAAT_autocannon_30mm: LMG_M200
+	{
+		class HE: autocannon_Base_F{};
+	};
+	class FST_ParticleBeamCannon_F: 3AS_LAAT_autocannon_30mm
+	{
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName="";
+				positionName="z_gunl_chamber";
+				directionName="z_gunl_muzzle";
+			};
+			class Effect1
+			{
+				effectName="";
+				positionName="z_gunR_chamber";
+				directionName="z_gunR_muzzle";
+			};
+		};
+		class HE: HE
+		{
+			displayName="[41st] Particle Beam Cannon";
+			magazines[]=
+			{
+				"Laser_Battery"
+			};
+			magazineReloadTime=10;
+			class player: player
+			{
+				reloadTime=0.079999998;
+				dispersion=0.0018;
+				magazineReloadTime=10;
+				sounds[]=
+				{
+					"StandardSound"
+				};
+				class StandardSound
+				{
+					begin1[]=
+					{
+						"3AS\3AS_Laat\sounds\LAAT_Cannon.wav",
+						1.99526,
+						1,
+						1500
+					};
+					soundBegin[]=
+					{
+						"begin1",
+						0.33000001
+					};
+					soundsetshot[]=
+					{
+						"3AS_HeavyBlaster_soundset"
+					};
+				};
+			};
+		};
+	};
+	class FST_ParticleBeamCannon: LMG_RCWS
+	{
+		displayName="[41st] Particle Cannon";
+		magazineReloadTime=10;
+		ballisticsComputer=2;
+		aiDispersionCoefY=0.5;
+		aiDispersionCoefX=0.5;
+		scope=1;
+		class GunParticles
+		{
+		};
+		class manual: MGun
+		{
+			displayName="[41st] Heavy Repeater";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"A3\sounds_f\weapons\gatling\gatling_rotation_short_2",
+					0.316228,
+					1,
+					20
+				};
+				closure2[]=
+				{
+					"A3\sounds_f\weapons\gatling\gatling_rotation_short_3",
+					0.316228,
+					1,
+					20
+				};
+				soundClosure[]=
+				{
+					"closure1",
+					0.5,
+					"closure2",
+					0.5
+				};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[]=
+				{
+					"3AS\3AS_Laat\sounds\LAAT_Cannon.wav",
+					1.99526,
+					1,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001
+				};
+				soundsetshot[]=
+				{
+					"3AS_LAAT_SoundSet"
+				};
+			};
+			soundContinuous=1;
+			soundBurst=0;
+			multiplier=1;
+			reloadTime=0.033333302;
+			dispersion=0;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};
+		class close: manual
+		{
+			soundBurst=0;
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=12;
+			burstRangeMax=42;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.69999999;
+			midRange=100;
+			midRangeProbab=0.75;
+			maxRange=300;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=8;
+			burstRangeMax=36;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=150;
+			minRange=100;
+			minRangeProbab=0.75;
+			midRange=300;
+			midRangeProbab=0.75;
+			maxRange=600;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=8;
+			burstRangeMax=30;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=300;
+			minRange=300;
+			minRangeProbab=0.75;
+			midRange=600;
+			midRangeProbab=0.64999998;
+			maxRange=800;
+			maxRangeProbab=0.1;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=8;
+			burstRangeMax=12;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=800;
+			minRange=800;
+			minRangeProbab=0.64999998;
+			midRange=1000;
+			midRangeProbab=0.30000001;
+			maxRange=1500;
+			maxRangeProbab=0.050000001;
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons_vehicles\LMG_Minigun_65mm\LMGMinigun65mm_dry.wss",
+			1,
+			1,
+			10
+		};
+		magazines[]=
+		{
+			"Laser_Battery_F"
+		};
+	};
+	class FST_ParticleBeamCannon_B: FST_ParticleBeamCannon_F
+	{
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName="";
+				positionName="b_start";
+				directionName="b_end";
+			};
+		};
+	};
+	class FST_ParticleBeamCannon_R: FST_ParticleBeamCannon{};
+	
 	class FST_Rapture_AGM_Missile: weapon_AGM_65Launcher
 	{
 		displayName="[41st] Rapture Anti-Tank Missile";
