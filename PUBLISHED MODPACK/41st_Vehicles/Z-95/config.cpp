@@ -62,28 +62,28 @@ class CfgWeapons
 				begin1[]=
 				{
 					"41st_Vehicles\Z-95\Data\Sounds\Z95_cannons_1_657.ogg",
-					3.5,
+					1.5,
 					1,
 					1500
 				};
 				begin2[]=
 				{
 					"41st_Vehicles\Z-95\Data\Sounds\Z95_cannons_1_657.ogg",
-					3.5,
+					1.5,
 					1.015,
 					1500
 				};
 				begin3[]=
 				{
 					"41st_Vehicles\Z-95\Data\Sounds\Z95_cannons_1_657.ogg",
-					3.5,
+					1.5,
 					0.985,
 					1500
 				};
 				begin4[]=
 				{
 					"41st_Vehicles\Z-95\Data\Sounds\Z95_cannons_1_657.ogg",
-					3.5,
+					1.5,
 					1.01,
 					1500
 				};
@@ -135,9 +135,28 @@ class CfgVehicles
 		vehicleClass="Air";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
+		ls_impulsor_fuelDrain_1=9.9999997e-005;
+		ls_impulsor_fuelDrain_2=9.9999997e-005;
+		ls_impulsor_boostSpeed_1=600;
+		ls_impulsor_boostSpeed_2=1200;
+		tas_impulse_break=100;
+		ls_hasImpulse=1;
+		tas_can_impulse=0;
+		ace_cargo_space=1000;
+		ace_cargo_hasCargo=1;
+		selectionFireAnim="zasleh";
+		simulation="airplaneX";
 		accuracy=0.5;
 		driverForceOptics=0;
-		armor=125;
+		armor=500;
+		acceleration=900;
+		maxSpeed=1200;
+		airBrake=60;
+		airBrakeFrictionCoef=40;
+		fuelConsumptionRate=0.2;
+		fuelCapacity=8000;
+		laserScanner=1;
+		driverCanEject=1;
 		armorStructured=1;
 		explosionShielding=5;
 		lockDetectionSystem="2 + 8 + 4 + 16";
@@ -148,6 +167,9 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_Z95_Light_Cannon",
+			"FST_Rapture_AGM_Missile",
+			"FST_Stormfury_AA_Missile",
+			"FST_Harrower_HARM_Missile",
 			"CMFlareLauncher",
 			"Laserdesignator_pilotCamera"
 		};
@@ -155,29 +177,29 @@ class CfgVehicles
 		{
 			"3AS_Z95_750Rnd_Light_shells",
 			"3AS_Z95_750Rnd_Light_shells",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
 			"120Rnd_CMFlare_Chaff_Magazine",
-			"Laserbatteries",
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"120Rnd_CMFlare_Chaff_Magazine",
-			"120Rnd_CMFlare_Chaff_Magazine"
+			"120Rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
 		};
-		maxSpeed=680;
 		landingAoa=0.113446;
 		landingSpeed=215;
 		engineMOI=16;
-		stallSpeed=190;
 		stallWarningTreshold=0.1;
 		wheelSteeringSensitivity=1.5;
-		airBrake=55;
-		airBrakeFrictionCoef=60;
 		flaps=1;
 		vtol=4;
-		VTOLPitchInfluence=1;
+		VTOLPitchInfluence=10;
 		VTOLRollInfluence=10;
-		VTOLYawInfluence=12;
-		acceleration=200;
-		fuelCapacity=2000;
+		VTOLYawInfluence=10;
 		irScanRangeMin=10;
 		irScanRangeMax=10000;
 		irScanToEyeFactor=8;
@@ -234,94 +256,12 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
-							"B_BIM9X_RAIL"
+							""
 						};
-						attachment="PylonRack_Missile_BIM9X_x1";
+						attachment="";
 						priority=10;
 						maxweight=300;
 						UIposition[]={0.60000002,0.44999999};
-					};
-					class pylons2: pylons1
-					{
-						UIposition[]={0.050000001,0.44999999};
-						mirroredMissilePos=1;
-					};
-					class pylons3: pylons1
-					{
-						hardpoints[]=
-						{
-							"B_BIM9X_RAIL",
-							"B_BIM9X_DUAL_RAIL",
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"ARC_AGM_PYLON"
-						};
-						attachment="3AS_PylonRack_ARC_6Rnd_Missile_AGM";
-						priority=9;
-						maxweight=2500;
-						UIposition[]={0.55000001,0.34999999};
-					};
-					class pylons4: pylons3
-					{
-						UIposition[]={0.1,0.34999999};
-						mirroredMissilePos=3;
-					};
-					class pylons5: pylons1
-					{
-						hardpoints[]=
-						{
-							"B_BIM9X_RAIL",
-							"B_BIM9X_DUAL_RAIL",
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"B_AGM65_DUAL_RAIL",
-							"B_HARM_RAIL",
-							"ARC_AGM_PYLON"
-						};
-						attachment="PylonRack_Missile_AMRAAM_D_x1";
-						priority=7;
-						maxweight=5000;
-						UIposition[]={0.5,0.25};
-					};
-					class pylons6: pylons5
-					{
-						UIposition[]={0.15000001,0.25};
-						mirroredMissilePos=5;
-					};
-					class Pylons7
-					{
-						hardpoints[]=
-						{
-							"z95_CANON_PYLON"
-						};
-						priority=5;
-						attachment="3AS_PylonWeapon_Z95_240Rnd_Heavy_Shells";
-						maxweight=4000;
-						UIposition[]={0.32499999,0.15000001};
-					};
-				};
-				class presets
-				{
-					class empty
-					{
-						displayName="$STR_empty";
-						attachment[]={};
-					};
-					class AA
-					{
-						displayName="$STR_A3_cfgmagazines_titan_aa_dns";
-						attachment[]=
-						{
-							"PylonRack_Missile_BIM9X_x1",
-							"PylonRack_Missile_BIM9X_x1",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"3AS_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
 					};
 				};
 			};
@@ -360,10 +300,10 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="[41st] Z-95 HeadHunter";
 		side=1;
-		crew="JLTS_Clone_P2_DC15S";
+		crew="FST_Pilot_P1";
 		typicalCargo[]=
 		{
-			"JLTS_Clone_P2_DC15S"
+			"FST_Pilot_P1"
 		};
 		faction="FST_Faction";
 		availableForSupportTypes[]=

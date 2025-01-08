@@ -26,8 +26,8 @@ class CfgAmmo
         effectfly="IDA_BlasterBoltGlow_Medium_Red_Fly";
         lightcolor[]={1,0,0};
         ACE_damageType="plasma";
-        hit=32;
-        indirectHit=15;
+        hit=40;
+        indirectHit=20;
         explosive=1;
         indirectHitRange=0.5;
         caliber=2;
@@ -300,7 +300,7 @@ class CfgVehicles
 		faction="FST_BattleDroids_Faction";
         editorSubcategory="FST_Ground_Vehicle";
 		model="3AS\3AS_Deka\Deka.p3d";
-		armor=25;
+		armor=50;
 		accuracy=1;
 		class Hitpoints
 		{

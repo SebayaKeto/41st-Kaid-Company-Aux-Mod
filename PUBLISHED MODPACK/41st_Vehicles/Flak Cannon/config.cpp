@@ -20,8 +20,8 @@ class CfgAmmo
 	class 3AS_FlakCannon_AA:BulletBase{};
 	class FST_FlakCannon_AA: 3AS_FlakCannon_AA
 	{
-		hit=90;
-		indirectHit=30;
+		hit=50;
+		indirectHit=60;
 		indirectHitRange=2.4000001;
 		warheadName="HE";
 		visibleFire=38;

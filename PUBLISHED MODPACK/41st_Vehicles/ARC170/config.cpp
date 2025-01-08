@@ -211,7 +211,9 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_ARC_4000Rnd_Heavy_shells",
+			"FST_ARC_1000Rnd_Heavy_shells",
+			"FST_ARC_1000Rnd_Heavy_shells",
+			"FST_ARC_1000Rnd_Heavy_shells",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -247,28 +249,28 @@ class CfgVehicles
 		soundEngineOnInt[]=
 		{
 			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Start.ogg",
-			"db-2",
+			"db-4",
 			1,
 			300
 		};
 		soundEngineOnExt[]=
 		{
 			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Start.ogg",
-			"db5",
+			"db2",
 			1,
 			500
 		};
 		soundEngineOffInt[]=
 		{
 			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_End.ogg",
-			"db-2",
+			"db-4",
 			1,
 			300
 		};
 		soundEngineOffExt[]=
 		{
 			"41st_Vehicles\ARC170\Data\Sounds\ARC_170_End.ogg",
-			"db5",
+			"db2",
 			1,
 			500
 		};
@@ -331,7 +333,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
-					1.2,
+					0.9,
 					1,
 					4000
 				};
@@ -343,7 +345,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
-					1.2,
+					0.9,
 					1.2,
 					5000
 				};
@@ -355,7 +357,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
-					"db5",
+					"db2",
 					0.99000001,
 					4200
 				};
@@ -992,9 +994,9 @@ class CfgAmmo
 		displayname="Heavy Energy";
 		warheadName="HEnergy";
 		hit=600;
-		indirectHit=12;
-		indirectHitRange=3;
-		caliber=14;
+		indirectHit=30;
+		indirectHitRange=15;
+		caliber=20;
 		explosive=1;
 		allowAgainstInfantry=1;
 		airlock=1;
@@ -1007,11 +1009,11 @@ class CfgMagazines
 {
 	class CA_Magazine;
 	class VehicleMagazine;
-	class FST_ARC_4000Rnd_Heavy_shells: VehicleMagazine
+	class FST_ARC_1000Rnd_Heavy_shells: VehicleMagazine
 	{
 		displayName="30mm Autocannon (HEDP)";
 		displayNameShort="BRRRRRRT";
-		count=4000;
+		count=1000;
 		model="a3\weapons_f\empty.p3d";
 		muzzleImpulseFactor[]={0.0000001,0.022};
 		nameSound="mgun";
@@ -1032,7 +1034,7 @@ class CfgWeapons
 		ballisticsComputer="4 + 2 + 8";
 		magazines[]=
 		{
-			"FST_ARC_4000Rnd_Heavy_shells"
+			"FST_ARC_1000Rnd_Heavy_shells"
 		};
 		reloadTime=0.059999999;
 		dispersion=0.0094999997;

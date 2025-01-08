@@ -2007,26 +2007,26 @@ class CfgVehicles
 		soundEngineOnInt[]=
 		{
 			"41st_Vehicles\LAAT\Sounds\LAAT_Startup_9_467.ogg",
-			0.44668359,
+			0.5,
 			1
 		};
 		soundEngineOnExt[]=
 		{
 			"41st_Vehicles\LAAT\Sounds\LAAT_Startup_9_467.ogg",
-			1.5848932,
+			1.5,
 			1,
 			600
 		};
 		soundEngineOffInt[]=
 		{
 			"41st_Vehicles\LAAT\Sounds\LAAT_Shutdown_4_744.ogg",
-			0.44668359,
+			0.5,
 			1
 		};
 		soundEngineOffExt[]=
 		{
 			"41st_Vehicles\LAAT\Sounds\LAAT_Shutdown_4_744.ogg",
-			1.5848932,
+			1.5,
 			1,
 			600
 		};
@@ -2037,7 +2037,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-					1.891251,
+					1.2,
 					1,
 					1500
 				};
@@ -2085,7 +2085,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"3as\3as_laat\sounds\LAAT_Idle2.ogg",
-					1.2589254,
+					1.1,
 					1,
 					2000
 				};
@@ -2098,7 +2098,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\LAAT\Sounds\LAAT_impulse_4_757.ogg",
-					1.5079458,
+					1.2,
 					1,
 					4000
 				};
@@ -2426,7 +2426,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-						1.891251,
+						1.3,
 						1,
 						1500
 					};
@@ -2438,7 +2438,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-						1.2589254,
+						1.2,
 						1,
 						2000
 					};
@@ -2451,7 +2451,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_impulse_4_757.ogg",
-						0.70794576,
+						0.7,
 						1,
 						2000
 					};
