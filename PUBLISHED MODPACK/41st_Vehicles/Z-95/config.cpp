@@ -167,7 +167,6 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_Z95_Light_Cannon",
-			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
 			"CMFlareLauncher",
@@ -177,8 +176,8 @@ class CfgVehicles
 		{
 			"3AS_Z95_750Rnd_Light_shells",
 			"3AS_Z95_750Rnd_Light_shells",
-			"FST_Rapture_12Rnd_AGM_Missile",
-			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
