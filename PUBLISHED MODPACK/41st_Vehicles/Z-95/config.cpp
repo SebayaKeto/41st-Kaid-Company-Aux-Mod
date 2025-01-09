@@ -135,13 +135,6 @@ class CfgVehicles
 		vehicleClass="Air";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		ls_impulsor_fuelDrain_1=9.9999997e-005;
-		ls_impulsor_fuelDrain_2=9.9999997e-005;
-		ls_impulsor_boostSpeed_1=600;
-		ls_impulsor_boostSpeed_2=1200;
-		tas_impulse_break=100;
-		ls_hasImpulse=1;
-		tas_can_impulse=0;
 		ace_cargo_space=1000;
 		ace_cargo_hasCargo=1;
 		selectionFireAnim="zasleh";
@@ -150,7 +143,7 @@ class CfgVehicles
 		driverForceOptics=0;
 		armor=500;
 		acceleration=900;
-		maxSpeed=1200;
+		maxSpeed=1400;
 		airBrake=60;
 		airBrakeFrictionCoef=40;
 		fuelConsumptionRate=0.2;
