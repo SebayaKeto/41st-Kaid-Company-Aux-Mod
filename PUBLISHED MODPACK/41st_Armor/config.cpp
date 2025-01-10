@@ -126,6 +126,7 @@ class CfgPatches
 			"FST_P2_Deso_Dirty",
 			"FST_P2_Tiger",
 			"FST_P2_Jammer",
+			"FST_P2_Jammer_Dirty",
 			"FST_P2_Hayes",
 			"FST_P2_Puma",
 			"FST_P2_Sly",
@@ -9537,7 +9538,21 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
+	class FST_Uniform_Jammer_Dirty: JLTS_CloneArmor
+	{
+		author="Viz";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Jammer/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Jammer_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Puma: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -20169,6 +20184,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+ 	class FST_P2_Jammer_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-1668 'Jammer' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Jammer_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jammer_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jammer_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jammer_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jammer_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Germ: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -22591,4 +22661,50 @@ class CfgGlasses
 		ACE_TintAmount=0;
 	};
 };
-	
+class CfgHeads
+{
+	class Default_A3;
+	class m_clone: Default_A3
+	{
+		model="lsd_identities\data\models\lsd_identities_clone_head.p3d";
+	};
+	class m_clone_hair: Default_A3
+	{
+		model="lsd_identities\data\models\lsd_identities_cloneHair_head.p3d";
+	};
+};
+class CfgFaces
+{
+	class Default;
+	class Man_A3: Default
+	{
+		class Default;
+		class FST_clone_Default_head: Default
+		{
+			name="Clone Trooper";
+			author="Adapted from Legion Studios by Viz";
+			displayname="[41st] Clone Trooper";
+			identityTypes[]=
+			{
+				"Head_LSD_CLONE"
+			};
+			head="m_clone_hair";
+			material="\lsd_identities\data\models\data\clone_a.rvmat";
+			texture="\lsd_identities\data\models\data\clone_a_co.paa";
+			disabled=0;
+			materialWounded1="\A3\Characters_F_EPA\Heads\Data\m_kerry_A_injury.rvmat";
+			materialWounded2="\A3\Characters_F_EPA\Heads\Data\m_kerry_A_injury.rvmat";
+			textureHL="\A3\Characters_F\Heads\Data\hl_White_hairy_1_co.paa";
+			materialHL="\A3\Characters_F\Heads\Data\hl_White_hairy_muscular.rvmat";
+			textureHL2="\A3\Characters_F\Heads\Data\hl_White_hairy_1_co.paa";
+			materialHL2="\A3\Characters_F\Heads\Data\hl_White_hairy_muscular.rvmat";
+		};
+		class FST_Clone_Head_Burns: FST_clone_Default_head
+		{
+			name="Clone Trooper Burns";
+			displayName="[41st] Clone Trooper - Burns";
+			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Burnz.paa";
+		};
+	};
+};
