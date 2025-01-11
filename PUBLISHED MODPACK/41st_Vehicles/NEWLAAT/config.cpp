@@ -593,8 +593,8 @@ class CfgVehicles
 				turretinfotype="RscOptics_Heli_Attack_01_gunner";
 				weapons[]=
 				{
-					//"FST_30mm_Autocannon_LAAT",
-					"FST_ParticleBeamCannon_B",
+					"FST_30mm_Autocannon_LAAT",
+					//"FST_ParticleBeamCannon_B",
 					"SmokeLauncher"
 				};
 				magazines[]=
@@ -691,8 +691,8 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
-					//"FST_30mm_Autocannon_LAAT",
-					"FST_ParticleBeamCannon",
+					"FST_30mm_Autocannon_LAAT",
+					//"FST_ParticleBeamCannon",
 					"Laserdesignator_pilotCamera"
 				};
 				magazines[]=
@@ -1151,8 +1151,8 @@ class CfgVehicles
 				turretinfotype="RscOptics_Heli_Attack_01_gunner";
 				weapons[]=
 				{
-					//"FST_30mm_Autocannon_LAAT",
-					"FST_ParticleBeamCannon_R",
+					"FST_30mm_Autocannon_LAAT",
+					//"FST_ParticleBeamCannon_R",
 					"Laserdesignator_pilotCamera"
 				};
 				magazines[]=
