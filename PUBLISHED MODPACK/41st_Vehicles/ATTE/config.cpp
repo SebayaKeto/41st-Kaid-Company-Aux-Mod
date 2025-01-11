@@ -14,7 +14,8 @@ class CfgPatches
 		{
 			"FST_ATTE_Base",
 			"FST_ATTE_Jorge",
-			"FST_ATTE_gwenn"
+			"FST_ATTE_gwenn",
+			"FST_ATTE_Rancor"
 		};
 		weapons[]={};
 		ammo[]=
