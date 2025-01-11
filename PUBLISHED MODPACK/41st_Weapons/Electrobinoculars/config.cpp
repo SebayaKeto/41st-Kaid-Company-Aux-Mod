@@ -36,6 +36,20 @@ class CfgWeapons
 		displayName="[41st] Kaid Company Electrobinoculars (Black)";
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
 	};
+	class FST_Woodland_Electrobinoculars: FST_Electrobinoculars
+	{
+		scope=2;
+		displayName="[41st] Kaid Company Electrobinoculars (Woodland)";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Woodland.paa",
+		};
+	};
 	class FST_ARF_Electrobinoculars: FST_Electrobinoculars
 	{
 		scope=2;
