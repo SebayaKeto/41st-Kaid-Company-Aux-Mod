@@ -1021,15 +1021,6 @@ class CfgVehicles
 			"41st_Vehicles\Warthog\Data\Turret\M12_turret_snow_co.paa",
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
         };	
-		weapons[]=
-		{
-			"FST_Medium_twin_laser_turret",
-		};
-		magazines[]=
-		{
-			"FST_500Rnd_High_Capacity_Plasma_Cell",
-			"FST_500Rnd_High_Capacity_Plasma_Cell",
-		};
 	};	
 	class FST_Technical_Twin_Laser_White: FST_Technical_Twin_Laser_Base
 	{	
@@ -1053,15 +1044,6 @@ class CfgVehicles
 			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
         };	
-		weapons[]=
-		{
-			"FST_Medium_twin_laser_turret",
-		};
-		magazines[]=
-		{
-			"FST_500Rnd_High_Capacity_Plasma_Cell",
-			"FST_500Rnd_High_Capacity_Plasma_Cell",
-		};
 	};	
 	class FST_Technical_Transport: OPTRE_M813_TT
 	{
