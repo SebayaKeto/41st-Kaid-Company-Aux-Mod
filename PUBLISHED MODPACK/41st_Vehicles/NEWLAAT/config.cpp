@@ -692,6 +692,7 @@ class CfgVehicles
 				weapons[]=
 				{
 					"FST_30mm_Autocannon_LAAT",
+					"FST_LAAT_Ball_Turret",
 					//"FST_ParticleBeamCannon",
 					"Laserdesignator_pilotCamera"
 				};
@@ -700,6 +701,9 @@ class CfgVehicles
 					"FST_thermal_coil",
 					"FST_thermal_coil",
 					"FST_thermal_coil",
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round",
 					"Laser_Battery_F",
 					"Laser_Battery_F",
 					"Laserbatteries",
@@ -1152,6 +1156,7 @@ class CfgVehicles
 				weapons[]=
 				{
 					"FST_30mm_Autocannon_LAAT",
+					"FST_LAAT_Ball_Turret",
 					//"FST_ParticleBeamCannon_R",
 					"Laserdesignator_pilotCamera"
 				};
@@ -1160,6 +1165,9 @@ class CfgVehicles
 					"FST_thermal_coil",
 					"FST_thermal_coil",
 					"FST_thermal_coil",
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round",
 					"Laser_Battery_F",
 					"Laser_Battery_F",
 					"Laserbatteries",
