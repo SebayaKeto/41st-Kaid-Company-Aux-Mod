@@ -4570,6 +4570,18 @@ class CfgWeapons
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
 	}; 
+	class FST_Pilot_P1_Helmet_Jan: FST_Pilot_P1_Helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Jan]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Jan.paa",
+			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Jan.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	}; 
 	class FST_BARC_Helmet_Ghostly: FST_BARC_Helmet
 	{
 		author="Daara";
@@ -12987,7 +12999,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta.paa" //this is a placeholder until they fix the texture
+			"41st_Armor\Data\Equipment\FST_Jumppack_Woodland.paa"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
