@@ -143,6 +143,23 @@ class CfgAmmo
 			0.15000001
 		};
 	};
+	class Cannon_30mm_HE_Plane_CAS_02_F;
+	class FST_LAAT_Ball_Laser_Ammo: Cannon_30mm_HE_Plane_CAS_02_F
+	{
+		author="Ruby, Code Inherted From Viz.";
+		displayname="LAAT Ball Turret";
+		warheadName="LAAT Ball Turret";
+		hit=75;
+		indirectHit=30;
+		indirectHitRange=10;
+		caliber=20;
+		explosive=1;
+		allowAgainstInfantry=1;
+		airlock=1;
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
+		aiAmmoUsageFlags="128 + 512";
+	};
 	class FST_thermal_laser_YWing: IDA_blasterbolt
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
@@ -437,6 +454,16 @@ class CfgMagazines
 		tracersEvery=1;
 		initSpeed=800;
 		mass=20;
+	};
+	class FST_LAAT_350_Laser_Round: VehicleMagazine
+	{
+		displayName="30mm LAAT Ball Cannon";
+		displayNameShort="LAAT BRR Mode";
+		count=350;
+		model="a3\weapons_f\empty.p3d";
+		muzzleImpulseFactor[]={0.0000001,0.022};
+		nameSound="mgun";
+		ammo="FST_LAAT_Ball_Laser_Ammo";
 	};
 	class FST_thermal_Y_Wing: 1Rnd_HE_Grenade_shell
 	{
@@ -1065,7 +1092,59 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_30mm_Autocannon_YWing: Cannon_30mm_Plane_CAS_02_F
+	class FST_LAAT_Ball_Turret: Cannon_30mm_Plane_CAS_02_F
+	{
+		displayName="[41st] Ball Turret Cannon";
+		canLock=0;
+		ballisticsComputer="4 + 2 + 8";
+		magazines[]=
+		{
+			"FST_LAAT_350_Laser_Round"
+		};
+		reloadTime=0.059999999;
+		dispersion=0.0094999997;
+		magazineReloadTime=10;
+		class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					1,
+					1500
+				};
+				begin2[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					1.015,
+					1500
+				};
+				begin3[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					0.985,
+					1500
+				};
+				begin4[]=
+				{
+					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+					4.5,
+					1.01,
+					1500
+				};
+				soundBegin[] = 
+				{
+					"begin1", 0.25,
+					"begin2", 0.25,
+					"begin3", 0.25,
+					"begin4", 0.25
+				};
+			};
+		};
+		class FST_30mm_Autocannon_YWing: Cannon_30mm_Plane_CAS_02_F
 	{
 		displayName="Medium Y Wing Blaster Cannon";
 		author="Daara";
