@@ -16,6 +16,7 @@ class CfgPatches
 		weapons[]=
 		{
 			"FST_PLX1",
+			"FST_PLX1_Guided",
 			"FST_RPS6HP",
 			"FST_RPS6_Disposable",
 			"FST_RPS6_Used"
@@ -56,59 +57,67 @@ class CfgAmmo
 	}; 
 	class FST_Missile: ACE_Javelin_FGM148
 	{
-		hit=1000;
-		indirectHit=300;
-		indirectHitRange=4;
-		caliber=60;
-		ace_frag_enabled=0;
-		maxSpeed=125;
-		thrust=125;
+		author = "Viz";
 		airLock=1;
-        laserLock=1;
-        manualControl=1;
-        missileLockCone=60;
-        lockSeekRadius=1000;
-		lockType = 0;
-		missileLockMaxDistance = 5000;
-		missileLockMinDistance = 20;
-		effectsMissile="3AS_Rocket_effect_Blue_fly";
+		ace_frag_enabled=0;
 		class ace_missileguidance
 		{
-			enabled=1;
-			minDeflection=4.9999999e-005;
-			maxDeflection=0.025;
-			incDeflection=4.9999999e-005;
-			canVanillaLock=0;
-			defaultSeekerType="Optic";
-			seekerTypes[]=
-			{
-				"Optic"
-			};
-			defaultSeekerLockMode="LOAL"; //LOAL for TOP Down and LOBL for Direct
-			seekerLockModes[]=
-			{
-				"LOAL",
-				"LOBL"
-			};
-			seekerAngle=180;
-			seekerAccuracy=0.7;
-			seekerMinRange=0;
-			seekerMaxRange=2500;
-			seekLastTargetPos=1;
-			defaultAttackProfile="JAV_TOP";
 			attackProfiles[]=
 			{
 				"JAV_TOP",
 				"JAV_DIR"
 			};
+			canVanillaLock=0;
+			defaultAttackProfile="JAV_TOP";
+			defaultSeekerLockMode="LOBL";
+			defaultSeekerType="Optic";
+			defaultNavigationType = "Direct";
+			navigationTypes[] = 
+			{
+				"Direct"
+			};
+			enabled=1;
+			pitchRate = 60;
+            yawRate = 60;
+			seekerAccuracy=1;
+			seekerAngle=180;
+			seekerLockModes[]=
+			{
+				"LOBL",
+				"LOAL"
+			};
+			seekerMinRange=0;
+			seekerMaxRange=3000;
+			seekerTypes[]=
+			{
+				"Optic",
+				"IR"
+			};
+			seekLastTargetPos=1;
 			useModeForAttackProfile=1;
 		};
+		caliber=60;
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+		hit=1000;
+		indirectHit=300;
+		indirectHitRange=4;
+		irLock = 1;
+        laserLock = 1;
+        lockSeekRadius= 75;
+		maxSpeed=180;
+        manualControl=1;
+        missileLockCone = 45;
+		missileLockMaxSpeed = 40;
+		missileLockMaxDistance = 3000;
+		missileLockMinDistance = 0;
+		thrust = 50;
+		weaponLockSystem = "2 + 8 + 16";
 	};
 };
 class CfgMagazines
 {
 	class RPG32_F;
-	class ls_mag_at_plx;
+	class Titan_AT;
 	class Titan_AA;
 	class FST_RPS6_rocket: RPG32_F
 	{
@@ -143,9 +152,9 @@ class CfgMagazines
 		mass=40;
 		initSpeed=165;
 	};
-	class FST_PLX1_Rocket: ls_mag_at_plx
+	class FST_PLX1_Rocket: Titan_AT
 	{
-		author="Adapted from the Indecisive Armoury Team";
+		author="Viz";
 		scope=2;
 		displayName="[41st] PLX-1 Guided Missile [AT]";
 		displayNameShort="PLX-1 AT Missile";
@@ -153,9 +162,9 @@ class CfgMagazines
 		model="SWLW_clones\launchers\rps6\rps6_mag.p3d";
 		picture="\SWLW_clones\launchers\rps6\data\ui\rps6_mag_ui.paa";
 		ammo="FST_Missile";
-		initSpeed=125;
-		maxLeadSpeed=57.7778;
-		type=256;
+		initSpeed=30;
+		maxLeadSpeed=30;
+		type="6 * 256";
 		mass=50;
 	};
 	class FST_PLX1_AA_mag: Titan_AA
@@ -192,19 +201,105 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo;
 	};
-	class ls_weapon_at_plx1;
-	class JLTS_PLX1_AT;
-	class JLTS_RPS6;
-	class 3AS_RPS6_Base;
-	class FST_PLX1: ls_weapon_at_plx1
+	class launch_B_Titan_Short_F;
+	class FST_PLX1_Base: launch_B_Titan_Short_F
 	{
+		class WeaponSlotsInfo;
+		class Single;
+		class TopDown;
+		scope=1;
+		author="Viz";
+	};
+	class FST_PLX1: FST_PLX1_Base
+	{
+		author = "Viz"
+		displayName="[41st] PLX-1 Rocket launcher [Mk.V]";
+		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
+		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
+		uiPicture="MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
+		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
+		scope=2;
+		scopecurator=2;
 		ace_overpressure_angle=45;
 		ace_overpressure_damage=0.69999999;
 		ace_overpresssure_priority=1;
 		ace_overpressure_range=10;
 		ace_reloadlaunchers_enabled=1;
 		ace_javelin_enabled=1;
-		canLock=0;
+		canLock= 0;
+		reloadAction="ReloadRPG";
+		recoil="recoil_titan_short";
+		maxZeroing=3000;
+		shotPos="muzzlePos2";
+		shotEnd="muzzleEnd2";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\PLX1\anims\PLX1_handanim.rtm"
+		};
+		magazines[]=
+		{
+			"FST_PLX1_Rocket",
+			"FST_PLX1_AA_mag"
+		};
+		magazineWell[]={};
+		cameraDir="look";
+		class Single: Single
+		{
+			class BaseSoundModeType
+			{
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[]=
+				{
+					"ls_sounds\weapons\launcher\PLX_shot.wss",
+					10,
+					1,
+					2000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class TopDown: TopDown
+		{
+			class BaseSoundModeType
+			{
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[]=
+				{
+					"ls_sounds\weapons\launcher\PLX_shot.wss",
+					10,
+					1,
+					2000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\Dry_Titan",
+			0.15848932,
+			1,
+			18
+		};
+		reloadMagazineSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\reload_Titan",
+			1,
+			1,
+			20
+		};
 		lockingTargetSound[]=
 		{
 			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\locking_Titan",
@@ -217,16 +312,14 @@ class CfgWeapons
 			0.31622776,
 			2.5
 		};
-		scope=2;
-		author="Adapted from the Legion Studios Base";
-		displayName="[41st] PLX-1 Rocket launcher";
-		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
-		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
-		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
-		handAnim[]=
+		class GunParticles
 		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\PLX1\anims\PLX1_handanim.rtm"
+			class effect1
+			{
+				positionName="muzzleEnd2";
+				directionName="muzzlePos2";
+				effectName="RocketBackEffectsNLAWNT";
+			};
 		};
 		hiddenSelections[]=
 		{
@@ -240,26 +333,189 @@ class CfgWeapons
 			"\MRC\JLTS\weapons\PLX1\data\PLX1_tube_co.paa",
 			"\MRC\JLTS\weapons\PLX1\data\PLX1_mag_co.paa"
 		};
-		cameraDir="look";
+		class Library
+		{
+			libTextDesc="";
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=200;
+		};
+		inertia=1.1;
+		initSpeed=30;
+	};
+	class FST_PLX1_Guided: Launcher_Base_F
+	{
+		author = "Viz"
+		displayName="[41st] PLX-1 Rocket launcher [Mk.A]";
+		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
+		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
+		uiPicture="MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
+		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
+		scope=2;
+		scopecurator=2;
+		ace_overpressure_angle=45;
+		ace_overpressure_damage=0.69999999;
+		ace_overpresssure_priority=1;
+		ace_overpressure_range=10;
+		ace_reloadlaunchers_enabled=1;
+		ace_javelin_enabled=1;
+		canLock= 0;
+		reloadAction="ReloadRPG";
+		recoil="recoil_titan_short";
+		maxZeroing=3000;
+		shotPos="muzzlePos2";
+		shotEnd="muzzleEnd2";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\PLX1\anims\PLX1_handanim.rtm"
+		};
 		magazines[]=
 		{
 			"FST_PLX1_Rocket",
 			"FST_PLX1_AA_mag"
 		};
 		magazineWell[]={};
+		cameraDir="look";
+		modes[]=
+		{
+			"Single",
+			"TopDown"
+		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[]=
+				{
+					"3AS\3AS_Weapons\PLX1\Sounds\PLX_Fire.ogg",
+					3.1622777,
+					1,
+					2000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			recoil="recoil_single_titan";
+			aiRateOfFire=7;
+			aiRateOfFireDistance=1500;
+			minRange=70;
+			minRangeProbab=0.89999998;
+			midRange=300;
+			midRangeProbab=0.80000001;
+			maxRange=2000;
+			maxRangeProbab=0.80000001;
+		};
+		class TopDown: Single
+		{
+			textureType="topDown";
+			displayName="Top-down Attack";
+			aiRateOfFire=7;
+			aiRateOfFireDistance=1500;
+			minRange=150;
+			minRangeProbab=0.80000001;
+			midRange=500;
+			midRangeProbab=0.94999999;
+			maxRange=2000;
+			maxRangeProbab=0.94999999;
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\Dry_Titan",
+			0.15848932,
+			1,
+			18
+		};
+		reloadMagazineSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\reload_Titan",
+			1,
+			1,
+			20
+		};
+		lockingTargetSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\locking_Titan",
+			0.31622776,
+			1
+		};
+		lockedTargetSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Launchers\Titan\locked_Titan",
+			0.31622776,
+			2.5
+		};
+		class GunParticles
+		{
+			class effect1
+			{
+				positionName="muzzleEnd2";
+				directionName="muzzlePos2";
+				effectName="RocketBackEffectsNLAWNT";
+			};
+		};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\weapons\PLX1\data\PLX1_body_co.paa",
+			"\MRC\JLTS\weapons\PLX1\data\PLX1_tube_co.paa",
+			"\MRC\JLTS\weapons\PLX1\data\PLX1_mag_co.paa"
+		};
 		class Library
 		{
-			libtextdesc="";
+			libTextDesc="";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=200;
 		};
-		inertia=1.2;
-		initSpeed=40;
-		class ItemInfo
+		inertia=1.1;
+		initSpeed=30;
+		class OpticsModes
 		{
-			priority=3;
+			class StepScope
+			{
+				opticsID=1;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera1",
+					"OpticsBlur1"
+				};
+				opticsFlare=0;
+				opticsZoomMin=0.083329998;
+				opticsZoomMax=0.041669998;
+				opticsZoomInit=0.083329998;
+				distanceZoomMin=300;
+				distanceZoomMax=300;
+				memoryPointCamera="eye";
+				cameraDir="look";
+				visionMode[]=
+				{
+					"Normal",
+					"Ti"
+				};
+				thermalMode[]={0,1};
+				opticsDisablePeripherialVision=1;
+				discretefov[]={0.083329998,0.041669998};
+				discreteInitIndex=0;
+			};
 		};
 	};
 	class FST_RPS6_Base: launch_RPG32_F
