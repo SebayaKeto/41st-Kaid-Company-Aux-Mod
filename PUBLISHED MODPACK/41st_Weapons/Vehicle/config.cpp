@@ -151,7 +151,7 @@ class CfgAmmo
 		warheadName="LAAT Ball Turret";
 		hit=75;
 		indirectHit=30;
-		indirectHitRange=10;
+		indirectHitRange=6;
 		caliber=20;
 		explosive=1;
 		allowAgainstInfantry=1;
