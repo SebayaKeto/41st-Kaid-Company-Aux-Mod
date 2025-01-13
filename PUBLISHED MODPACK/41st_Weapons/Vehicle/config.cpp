@@ -592,6 +592,11 @@ class CfgWeapons
 	class autocannon_Base_F;
 	class player;
 	class OPTRE_M247T_Coax;
+	class CannonCore;
+	class Cannon_30mm_Plane_CAS_02_F: CannonCore
+	{
+		class LowROF;
+	};
 	class ls_laat_gun;
 	
 	//AAT------------------------------------------------
@@ -1006,14 +1011,19 @@ class CfgWeapons
 			};
 		};
 	};
-	class Cannon_30mm_Plane_CAS_02_F;
 	class FST_30mm_Autocannon_LAAT: Cannon_30mm_Plane_CAS_02_F
 	{
 		displayName="Medium LAAT Blaster Cannon";
 		author="Daara";
 		cursor="EmptyCursor";
-		reloadTime=0.03;
-		fireLightDiffuse[]={0,1,0};
+		magazines[]=
+		{
+			"FST_thermal_coil",
+		};
+		reloadTime=0.175;
+		magazineReloadTime=10;
+		burst=1;
+		fireLightDiffuse[]={1,0,0};
 		class GunParticles
 		{
 			class Effect
@@ -1029,65 +1039,54 @@ class CfgWeapons
 				effectName="";
 			};
 		};
-		muzzles[]=
+		class LowROF: LowROF
 		{
-			"HE",
-		};
-		class HE: autocannon_Base_F
-		{
-			displayName="30mm LAAT Blaster Cannon";
-			cursor="EmptyCursor";
-			magazines[]=
-			{
-				"FST_thermal_coil"
-			};
+			reloadtime=0.175;
 			magazineReloadTime=10;
-			class player: player
+			burst=1;
+			displayname="";
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
 			{
-				class StandardSound
+				begin1[]=
 				{
-					begin1[]=
-					{
-						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
-						2.5118864,
-						1,
-						1500
-					};
-					begin2[]=
-					{
-						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
-						2.5118864,
-						1.015,
-						1500
-					};
-					begin3[]=
-					{
-						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
-						2.5118864,
-						0.985,
-						1500
-					};
-					begin4[]=
-					{
-						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
-						2.5118864,
-						1.01,
-						1500
-					};
-					begin5[]=
-					{
-						"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
-						2.5118864,
-						0.995,
-						1500
-					};
-					soundBegin[]=
-					{
-						"begin1",
-						1
-					};
-					dispersion=0.0018;
-					reloadTime=0.03;
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1,
+					1500
+				};
+				begin2[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1.015,
+					1500
+				};
+				begin3[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					0.985,
+					1500
+				};
+				begin4[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1.01,
+					1500
+				};
+				begin5[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					0.995,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
 				};
 			};
 		};
@@ -1105,46 +1104,46 @@ class CfgWeapons
 		dispersion=0.0094999997;
 		magazineReloadTime=10;
 		class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
+		class StandardSound: BaseSoundModeType
+		{
+			begin1[]=
 			{
-				begin1[]=
-				{
-					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
-					1,
-					1500
-				};
-				begin2[]=
-				{
-					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
-					1.015,
-					1500
-				};
-				begin3[]=
-				{
-					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
-					0.985,
-					1500
-				};
-				begin4[]=
-				{
-					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
-					1.01,
-					1500
-				};
-				soundBegin[] = 
-				{
-					"begin1", 0.25,
-					"begin2", 0.25,
-					"begin3", 0.25,
-					"begin4", 0.25
-				};
+				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+				4.5,
+				1,
+				1500
+			};
+			begin2[]=
+			{
+				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+				4.5,
+				1.015,
+				1500
+			};
+			begin3[]=
+			{
+				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+				4.5,
+				0.985,
+				1500
+			};
+			begin4[]=
+			{
+				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
+				4.5,
+				1.01,
+				1500
+			};
+			soundBegin[] = 
+			{
+				"begin1", 0.25,
+				"begin2", 0.25,
+				"begin3", 0.25,
+				"begin4", 0.25
 			};
 		};
-		class FST_30mm_Autocannon_YWing: Cannon_30mm_Plane_CAS_02_F
+	};
+	class FST_30mm_Autocannon_YWing: Cannon_30mm_Plane_CAS_02_F
 	{
 		displayName="Medium Y Wing Blaster Cannon";
 		author="Daara";
@@ -1229,7 +1228,6 @@ class CfgWeapons
 			};
 		};
 	};
-	class CannonCore;
 	class FST_Mass_Driver_Cannon: CannonCore
 	{
 		scope=1;
