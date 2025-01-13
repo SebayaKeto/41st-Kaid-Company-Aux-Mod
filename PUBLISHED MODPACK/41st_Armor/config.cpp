@@ -190,6 +190,7 @@ class CfgPatches
 			"FST_P2_Nahlens",
 			"FST_P2_Woodland",
 			"FST_P2_Silhouette",
+			"FST_P2_Lucky",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -10583,7 +10584,7 @@ class CfgWeapons
 			mass=15;
 		};
 	};
-     class FST_Uniform_Samurai: JLTS_CloneArmor
+    class FST_Uniform_Samurai: JLTS_CloneArmor
     {
         author="Viz";
         picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10597,7 +10598,7 @@ class CfgWeapons
             mass=15;
         };
     };
-     class FST_Uniform_Laer: JLTS_CloneArmor
+    class FST_Uniform_Laer: JLTS_CloneArmor
     {
         author="Viz";
         picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10611,7 +10612,21 @@ class CfgWeapons
             mass=15;
         };
     };
-     class FST_Uniform_Viz: JLTS_CloneArmor
+    class FST_Uniform_Lucky: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Lucky]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Lucky";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+    class FST_Uniform_Viz: JLTS_CloneArmor
     {
         author="Viz";
         picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -22844,7 +22859,62 @@ class CfgVehicles
             "JLTS_clone_comlink"
         };
     };
-    class FST_P2_Viz: FST_Trooper_P2_DC15S
+    class FST_P2_Lucky: FST_Trooper_P2_DC15S
+    {
+        author="Viz";
+        displayName="[41st] CT-0033 'Lucky'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Lucky";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lucky.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lucky.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Lucky",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Lucky",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+	class FST_P2_Viz: FST_Trooper_P2_DC15S
     {
         author="Viz";
         displayName="[41st] CT-4848 'Viz'";
