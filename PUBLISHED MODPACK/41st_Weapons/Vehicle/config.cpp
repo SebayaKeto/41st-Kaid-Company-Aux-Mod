@@ -1100,46 +1100,59 @@ class CfgWeapons
 		{
 			"FST_LAAT_350_Laser_Round"
 		};
-		reloadTime=0.059999999;
+		reloadTime=0.074999998;
 		dispersion=0.0094999997;
 		magazineReloadTime=10;
-		class BaseSoundModeType;
-		class StandardSound: BaseSoundModeType
+		burst=1;
+		class LowROF: LowROF
 		{
-			begin1[]=
+			reloadtime=0.074999998;
+			magazineReloadTime=10;
+			burst=1;
+			displayname="";
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
 			{
-				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-				4.5,
-				1,
-				1500
-			};
-			begin2[]=
-			{
-				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-				4.5,
-				1.015,
-				1500
-			};
-			begin3[]=
-			{
-				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-				4.5,
-				0.985,
-				1500
-			};
-			begin4[]=
-			{
-				"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-				4.5,
-				1.01,
-				1500
-			};
-			soundBegin[] = 
-			{
-				"begin1", 0.25,
-				"begin2", 0.25,
-				"begin3", 0.25,
-				"begin4", 0.25
+				begin1[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1,
+					1500
+				};
+				begin2[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1.015,
+					1500
+				};
+				begin3[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					0.985,
+					1500
+				};
+				begin4[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1.01,
+					1500
+				};
+				begin5[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					0.995,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
 			};
 		};
 	};
