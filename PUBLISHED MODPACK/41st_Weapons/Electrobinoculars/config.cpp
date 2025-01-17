@@ -21,26 +21,39 @@ class CfgWeapons
 	class Laserdesignator;
 	class FST_Electrobinoculars: Laserdesignator
 	{
-		author="Adapted from Indecisive Armoury Team by Viz";
+		author="Adapted from JLTS Team by Viz";
 		scope=2;
-		baseWeapon="IDA_Laserdesignator_Rep";
+		scopecurator=2;
 		displayName="[41st] Kaid Company Electrobinoculars";
 		descriptionShort="Republic Electrobinoculars";
-		picture="\Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Electrobinoculars_Rep_UI.paa";
-		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
-		modelOptics="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\2dScope\IDA_Electrobinoculars_Rep_Scope.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_binocular_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBinocular.p3d";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneBinocular_optics.p3d";
+		opticsPPEffects[]=
+		{
+			"OpticsCHAbera1",
+			"OpticsBlur1"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_binocular_co.paa"
+		};
 	};
 	class FST_Black_Electrobinoculars: FST_Electrobinoculars
 	{
-		scope=2;
 		displayName="[41st] Kaid Company Electrobinoculars (Black)";
-		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_binocular_black_co.paa"
+		};
 	};
 	class FST_Woodland_Electrobinoculars: FST_Electrobinoculars
 	{
-		scope=2;
 		displayName="[41st] Kaid Company Electrobinoculars (Woodland)";
-		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -52,10 +65,15 @@ class CfgWeapons
 	};
 	class FST_ARF_Electrobinoculars: FST_Electrobinoculars
 	{
-		scope=2;
 		displayName="[41st] ARF Electrobinoculars";
-		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\Model\IDA_Electrobinoculars_Rep.p3d";
-		modelOptics="Indecisive_Armoury_Weapons_REPUBLIC\Data\Electrobinoculars\2dScope\IDA_Electrobinoculars_Rep_Scope.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Woodland.paa",
+		};
 		visionMode[] = 
 		{
 			"Normal",

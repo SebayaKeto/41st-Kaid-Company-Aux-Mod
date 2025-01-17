@@ -131,6 +131,48 @@ class CfgAmmo
 			90
 		};
 	};
+	class FST_grenade_Penetrator_ammo: GrenadeHand_stone
+	{
+		hit=1;
+		indirectHit=2000;
+		indirectHitRange=0.5;
+		dangerRadiusHit=120;
+		suppressionRadiusHit=120;
+		explosionEffectsRadius=100;
+		explosionEffects="VehicleExplosionEffects";
+		CraterEffects="MineNondirectionalCraterSmall";
+		explosive=1;
+		ace_frag_enabled=0;
+		ace_frag_skip=1;
+		ace_frag_force=0;
+		model="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\IDA_Thermal_Penetrator.p3d";
+		explosionTime=-1;
+		timeToLive=16;
+		visibleFire=0.5;
+		audibleFire=0.050000001;
+		visibleFireTime=1;
+		fuseDistance=0;
+		ace_grenades_pullPinSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Detonator_Pin.ogg",
+			6,
+			1,
+			10
+		};
+		SoundSetExplosion[]=
+		{
+			"Mortar_Exp_SoundSet",
+			"Mortar_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		soundFly[]=
+		{
+			"\Indecisive_Armoury_Sounds\Detonator_Timer.ogg",
+			6,
+			1,
+			100
+		};
+	};
 };
 class CfgMagazines
 {
@@ -158,6 +200,18 @@ class CfgMagazines
 		ammo="FST_grenade_Detonator_ammo";
 		mass=12;
 	};
+	class FST_grenade_Penetrator_mag: HandGrenade
+	{
+		scope=2;
+		author="Adapted from the Indecisive Armoury Team by Viz";
+		picture="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\Thermal_Penetrator_UI.paa";
+		model="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\IDA_Thermal_Penetrator.p3d";
+		displayName="[41st] Thermal Penetrator";
+		displayNameShort="Thermal Penetrator";
+		descriptionShort="Thermal Penetrator";
+		ammo="FST_grenade_Penetrator_ammo";
+		mass=12;
+	};
 };
 class CfgWeapons
 {
@@ -167,7 +221,8 @@ class CfgWeapons
 		muzzles[]+=
 		{
 			"FST_grenade_emp_muzzle",
-			"FST_grenade_Detonator_muzzle"
+			"FST_grenade_Detonator_muzzle",
+			"FST_grenade_Penetrator_muzzle"
 		};
 		class ThrowMuzzle;
 		class FST_grenade_emp_muzzle: ThrowMuzzle
@@ -182,6 +237,13 @@ class CfgWeapons
 			magazines[]=
 			{
 				"FST_grenade_Detonator_mag"
+			};
+		};
+		class FST_grenade_Penetrator_muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"FST_grenade_Penetrator_mag"
 			};
 		};
 	};

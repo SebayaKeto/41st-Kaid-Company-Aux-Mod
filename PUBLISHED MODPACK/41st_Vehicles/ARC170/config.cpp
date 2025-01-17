@@ -976,6 +976,33 @@ class CfgVehicles
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Pilot_P1";
 		author="Ghostly";
+		weapons[]=
+		{
+			"FST_ARC_Heavy_Chaingun",
+			"FST_Rapture_AGM_Missile",
+			"FST_Stormfury_AA_Missile",
+			"FST_Harrower_HARM_Missile",
+			"ls_weapon_CMFlareLauncher",
+			"Laserdesignator_pilotCamera"
+		};
+		magazines[]=
+		{
+			"FST_ARC_4000Rnd_Heavy_shells",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"Laserbatteries",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile"
+		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Vehicles\ARC170\Data\FST_Ghostly_Main_Frame_CO.paa",
@@ -1014,6 +1041,16 @@ class CfgMagazines
 		displayName="30mm Autocannon (HEDP)";
 		displayNameShort="BRRRRRRT";
 		count=1000;
+		model="a3\weapons_f\empty.p3d";
+		muzzleImpulseFactor[]={0.0000001,0.022};
+		nameSound="mgun";
+		ammo="FST_Arc_Heavy_Energy_shell";
+	};
+	class FST_ARC_4000Rnd_Heavy_shells: VehicleMagazine
+	{
+		displayName="30mm Autocannon (HEDP)";
+		displayNameShort="BRRRRRRT";
+		count=4000;
 		model="a3\weapons_f\empty.p3d";
 		muzzleImpulseFactor[]={0.0000001,0.022};
 		nameSound="mgun";
@@ -1085,5 +1122,41 @@ class CfgWeapons
 				};
 			};
 		};
+	};
+	class FST_ARC_Heavy_Chaingun: CannonCore
+	{
+		displayName="[41st] GAU-41 Avenger";
+		canLock=2;
+		burst=2;
+		ballisticsComputer="4 + 2 + 8";
+		magazines[]=
+		{
+			"FST_ARC_4000Rnd_Heavy_shells",
+		};
+		reloadTime=0.029999999;
+		dispersion=0.0094999997;
+		magazineReloadTime=10;
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"A3\Sounds_F\arsenal\weapons_vehicles\gatling_30mm\30mm_01_burst",
+				5.6234136,
+				1,
+				1500,
+				{25704,32159}
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+		};
+		soundContinuous=1;
+		autoFire=1;
 	};
 };

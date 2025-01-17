@@ -494,14 +494,14 @@ class CfgVehicles
 				discreteDistanceInitIndex=5;
 				weapons[]=
 				{
-					"FST_30mm_Autocannon_YWing"
+					"FST_LAAT_Ball_Turret"
 				};
 				magazines[]=
 				{
-					"FST_thermal_Y_Wing",
-					"FST_thermal_Y_Wing",
-					"FST_thermal_Y_Wing",
-					"FST_thermal_Y_Wing"
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round",
+					"FST_LAAT_350_Laser_Round"
 				};
 			};
 		};
@@ -510,12 +510,12 @@ class CfgVehicles
 			class Muzzle_Flash
 			{
 				source="ammorandom";
-				weapon="FST_30mm_Heavy_Autocannon";
+				weapon="FST_30mm_Autocannon_YWing";
 			};
 			class Muzzle_Flash2
 			{
 				source="ammorandom";
-				weapon="FST_30mm_Autocannon_LAAT";
+				weapon="FST_30mm_Autocannon_YWing";
 			};
 		};
 		class pilotCamera
