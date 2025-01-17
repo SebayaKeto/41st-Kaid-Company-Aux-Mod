@@ -7058,13 +7058,23 @@ class CfgWeapons
 	class FST_P2_Helmet_Bulwark: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2; 
+		scope=2;
 		displayName="[41st] P2 Helmet [Bulwark]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bulwark.paa",
 		};
-	};	
+	};
+	class FST_P2_Helmet_Bulwark_v2: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Bulwark_v2]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bulwark2.paa",
+		};
+	};
 	class FST_P2_Helmet_Lucky: FST_P2_Helmet_Base
 	{
 		author="Daara";
