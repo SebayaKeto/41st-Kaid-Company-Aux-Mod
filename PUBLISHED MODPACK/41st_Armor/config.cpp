@@ -120,6 +120,7 @@ class CfgPatches
 			"FST_P2_Lawman",
 			"FST_P2_Ampersand_Dirty",
 			"FST_P2_Joko",
+			"FST_P2_Joko_Dirty",
 			"FST_P2_Coda",
 			"FST_P2_Grif",
 			"FST_P2_Deso",
@@ -4242,6 +4243,54 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_Crewman_Helmet_Harlequin: JLTS_CloneHelmetBARC
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] Crewman Helmet (Harlequin)";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
+		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Harlequin.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Crewman_Helmet_Ace: JLTS_CloneHelmetBARC
 	{
 		scope=2;
@@ -7106,6 +7155,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
 		};
 	};	
+	class FST_P2_Helmet_Mox: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Mox]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mox.paa",
+		};
+	};	
 	class FST_P2_Helmet_Jorge: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -7654,6 +7713,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Joko.paa",
+		};
+	};
+	class FST_P2_Helmet_Joko_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Joko/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Joko_Dirty.paa",
 		};
 	};
 	class FST_P2_Helmet_Preacher: FST_P2_Helmet_Base
@@ -9830,6 +9899,20 @@ class CfgWeapons
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		displayName="[41st] P2 Armor [Joko]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Joko";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Joko_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Joko/Dirty]";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="";
@@ -20549,6 +20632,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Joko_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-8140 'Joko (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Joko";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Joko_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Joko_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Joko_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Joko_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Coda: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -23730,6 +23868,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Burns";
 			material="\lsd_identities\data\models\data\clone_b.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Burnz.paa";
+		};
+		class FST_Clone_Head_Sigs: FST_clone_Default_head
+		{
+			author="Gold"
+			name="Clone Trooper Sigs";
+			displayName="[41st] Clone Trooper - Sigs";
+			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Sigs.paa";
 		};
 	};
 };
