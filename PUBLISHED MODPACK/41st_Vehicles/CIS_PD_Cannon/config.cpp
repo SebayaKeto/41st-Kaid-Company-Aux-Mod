@@ -138,8 +138,8 @@ class CfgVehicles
 				minTurn=-360;
 				maxTurn=360;
 				initTurn=0;
-				maxHorizontalRotSpeed=3;
-				maxVerticalRotSpeed=3;
+				maxHorizontalRotSpeed=5;
+				maxVerticalRotSpeed=5;
 				gunnerAction="driver_boat01";
 				gunnerInAction="driver_boat01";
 				gunnerGetInAction="GetInMRAP_01";
@@ -164,12 +164,15 @@ class CfgVehicles
 				memoryPointsGetInGunnerDir="Pos Gunner dir";
 				weapons[]=
 				{
-					"3AS_Flak_Cannon"
+					"FST_Flak_Cannon"
 				};
 				magazines[]=
 				{
-					"3AS_FlakCannon_1000Rnd_AA_shells",
-					"3AS_FlakCannon_1000Rnd_AA_shells"
+					"FST_FlakCannon_1000Rnd_AA_shells",
+					"FST_FlakCannon_1000Rnd_AA_shells",
+					"FST_FlakCannon_1000Rnd_AA_shells",
+					"FST_FlakCannon_1000Rnd_AA_shells",
+					"FST_FlakCannon_1000Rnd_AA_shells"
 				};
 				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
 				gunnerOpticsShowCursor=1;

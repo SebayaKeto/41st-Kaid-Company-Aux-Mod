@@ -388,6 +388,8 @@ class CfgVehicles
 				{
 					"FST_blaster_battery_Droideka",
 					"FST_blaster_battery_Droideka",
+					"FST_blaster_battery_Droideka",
+					"FST_blaster_battery_Droideka",
 					"FST_blaster_battery_Droideka"
 				};
 				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";

@@ -65,7 +65,7 @@ class CfgMagazines
 		ammo="FST_FlakCannon_AA";
 		count=1000;
 		initSpeed=1440;
-		maxLeadSpeed=800;
+		maxLeadSpeed=1200;
 		tracersEvery=1;
 		nameSound="cannon";
 		muzzleImpulseFactor[]={1,4};
@@ -271,12 +271,12 @@ class CfgVehicles
 				turretInfoType="RscOptics_APC_Tracked_01_gunner";
 				memoryPointGunnerOptics="gunnerview";
 				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_w_F";
-				minElev=-5;
-				maxElev=75;
+				minElev=-10;
+				maxElev=80;
 				minTurn=-360;
 				initelev=28;
-				maxVerticalRotSpeed=0.90000001;
-				maxHorizontalRotSpeed = 1.20000001;
+				maxVerticalRotSpeed=1.50000001;
+				maxHorizontalRotSpeed = 1.50000001;
 				animationSourceBody="Mainturret";
 				Body="Mainturret";
 				animationSourceGun="Maingun";
@@ -302,6 +302,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
+					"FST_FlakCannon_1000Rnd_AA_shells",
+					"FST_FlakCannon_1000Rnd_AA_shells",
+					"FST_FlakCannon_1000Rnd_AA_shells",
 					"FST_FlakCannon_1000Rnd_AA_shells",
 					"FST_FlakCannon_1000Rnd_AA_shells"
 				};

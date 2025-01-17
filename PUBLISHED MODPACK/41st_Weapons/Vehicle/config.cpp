@@ -1015,6 +1015,7 @@ class CfgWeapons
 				"FST_thermal_coil"
 			};
 			magazineReloadTime=10;
+			reloadTime=0.03;
 			class player: player
 			{
 				class StandardSound
