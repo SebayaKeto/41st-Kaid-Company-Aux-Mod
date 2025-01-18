@@ -336,7 +336,7 @@ class CfgVehicles
 			"41st_Vehicles\Rho\Data\Wings\Wings_Rho_co.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"41st_Vehicles\Rho\Data\FST_Rho_Cockpit_Interface.paa",
-			"41st_Vehicles\Rho\Data\FST_Rho_Interior.paa",
+			"41st_Vehicles\Rho\Data\Interior\FST_Rho_Interior.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
 		};
         class HitPoints
@@ -871,7 +871,7 @@ class CfgVehicles
 			"41st_Vehicles\Rho\Data\Wings\Wings_Rho_co.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"41st_Vehicles\Rho\Data\FST_Rho_Cockpit_Interface.paa",
-			"41st_Vehicles\Rho\Data\FST_Rho_Interior.paa",
+			"41st_Vehicles\Rho\Data\Interior\FST_Rho_Interior.paa",
 			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
 		};
 		class UserActions
