@@ -1014,16 +1014,16 @@ class CfgVehicles
 };
 class CfgAmmo
 {
-	class Cannon_30mm_HE_Plane_CAS_02_F;
-	class FST_ARC_Heavy_Energy_shell: Cannon_30mm_HE_Plane_CAS_02_F
+	class IDA_blasterbolt;
+	class FST_ARC_Heavy_Energy_shell: IDA_blasterbolt
 	{
 		author="Viz";
 		displayname="Heavy Energy";
 		warheadName="HEnergy";
-		hit=600;
+		hit=100;
 		indirectHit=30;
 		indirectHitRange=15;
-		caliber=20;
+		caliber=5;
 		explosive=1;
 		allowAgainstInfantry=1;
 		airlock=1;
