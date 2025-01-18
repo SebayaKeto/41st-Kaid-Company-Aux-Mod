@@ -213,7 +213,7 @@ class CfgWeapons
 	class FST_PLX1: FST_PLX1_Base
 	{
 		author = "Viz"
-		displayName="[41st] PLX-1 Rocket launcher [Mk.V]";
+		displayName="[41st] PLX-1 Rocket launcher [Mk.A]";
 		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
 		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
@@ -347,7 +347,7 @@ class CfgWeapons
 	class FST_PLX1_Guided: Launcher_Base_F
 	{
 		author = "Viz"
-		displayName="[41st] PLX-1 Rocket launcher [Mk.A]";
+		displayName="[41st] PLX-1 Rocket launcher [Mk.V]";
 		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
 		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
