@@ -162,7 +162,7 @@ class CfgWeapons
 	class FST_ATAP_mortar: mortar_155mm_AMOS
 	{
 		scope=2;
-		displayName="Mass-Driver Cannon";
+		displayName="Mass-Driver Mortar Cannon";
 		nameSound="cannon";
 		cursor="mortar";
 		cursorAim="EmptyCursor";

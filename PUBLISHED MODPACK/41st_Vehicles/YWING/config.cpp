@@ -4,7 +4,8 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"FST_SHB_Bomber"
+			"FST_SHB_Bomber",
+			"FST_Ywing_Bomber_Green"
 		};
 		weapons[]={};
 		requiredVersion=0.1;

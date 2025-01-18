@@ -311,7 +311,7 @@ class CfgVehicles
 		};
 		hiddenselectionstextures[]=
 		{
-			"3AS\3AS_Z95\Data\body_co.paa",
+			"41st_Vehicles\Z-95\Data\green_co.paa",
 			"3AS\3AS_Z95\Data\cockpit_co.paa",
 			"3AS\3AS_Z95\data\glass\glass_ca"
 		};
