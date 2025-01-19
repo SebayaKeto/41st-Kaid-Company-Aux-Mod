@@ -185,12 +185,13 @@ class CfgVehicles
 		weapons[]=
 		{
 			"Laserdesignator_pilotCamera",
-			"ParticleBeamCannon_F",
+			"FST_30mm_Autocannon_LAAT",
 			"ls_weapon_CMFlareLauncher",
 			"FST_Stormfury_AA_Missile",
         };
 		magazines[]=
 		{
+			"FST_thermal_coil",
 			"Laser_Battery",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",

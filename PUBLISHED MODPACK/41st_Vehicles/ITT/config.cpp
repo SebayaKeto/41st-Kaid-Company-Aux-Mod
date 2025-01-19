@@ -118,8 +118,12 @@ class CfgVehicles
 		redRpm=2200;
 		maxOmega=275;
 		minOmega=50;
-		ace_cargo_hasCargo=1;
-		ace_cargo_space=1000;
+        ace_cargo_hasCargo   = 1;
+        ace_cargo_space      = 1000;
+        tf_range             = 100000;
+        tf_isolatedAmount    = 0.4;
+        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio        = 1;
 		torqueCurve[]=
 		{
 			
@@ -201,10 +205,6 @@ class CfgVehicles
 			neutralString="N";
 			reverseString="R";
 		};
-		tf_range=100000;
-		tf_isolatedAmount=0.40000001;
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio=1;
 		simulation="carx";
 		damperSize=0.2;
 		damperForce=1;
@@ -346,12 +346,12 @@ class CfgVehicles
 		memoryPointsRightEngineEffect="EngineEffectR";
 		numberPhysicalWheels=8;
 		displayName="[41st] ITT";
-		model="3AS\3as_ITT\model\3as_ITT.p3d";
+		model="3AS\3AS_Itt\model\3AS_ITT.p3d";
 		author="$STR_3AS_Studio";
 		destrType="DestructWreck";
 		editorSubcategory="FST_Ground_Vehicle";
-		picture="3AS\3as_ITT\data\ui\ITT_Side_ca.paa";
-		icon="3AS\3as_ITT\data\ui\ITT_top_ca.paa";
+		picture="3AS\3AS_Itt\data\ui\ITT_Side_ca.paa";
+		icon="3AS\3AS_Itt\data\ui\ITT_top_ca.paa";
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-4,-6.5]]], [-0.001], [-0.4]]";
 		weapons[]=
@@ -366,7 +366,7 @@ class CfgVehicles
 		crewCrashProtection=9.9999997e-005;
 		damageResistance=0.02;
 		crewVulnerable=1;
-		armor=700;
+		armor=800;
 		armorStructural=8.5;
 		class HitPoints: HitPoints
 		{
@@ -459,22 +459,22 @@ class CfgVehicles
 				memoryPointsGetInGunner="pos driver";
 				memoryPointsGetInGunnerDir="pos driver dir";
 				gunnerCompartments="Compartment3";
-				weapons[]=
-				{
-					"FST_30mm_Autocannon",
-					"Laserdesignator_pilotCamera",
-					"SmokeLauncher"
-				};
-				magazines[]=
-				{
-					"FST_thermal_coil",
-					"FST_thermal_coil",
-					"Laserbatteries",
-					"SmokeLauncherMag",
-					"SmokeLauncherMag",
-					"SmokeLauncherMag",
-					"SmokeLauncherMag"
-				};
+                weapons[]=
+                {
+                    "FST_30mm_Autocannon",
+                    "Laserdesignator_pilotCamera",
+                    "SmokeLauncher"
+                };
+                magazines[]=
+                {
+                    "FST_thermal_coil",
+                    "FST_thermal_coil",
+                    "Laserbatteries",
+                    "SmokeLauncherMag",
+                    "SmokeLauncherMag",
+                    "SmokeLauncherMag",
+                    "SmokeLauncherMag"
+                };
 				selectionFireAnim="Zasleh_Top";
 				minElev=-5;
 				maxElev=45;
@@ -561,15 +561,15 @@ class CfgVehicles
 				};
 				gunEnd="konec hlavne2";
 				gunBeg="usti hlavne2";
-				weapons[]=
-				{
-					"FST_30mm_Autocannon"
-				};
-				magazines[]=
-				{
-					"FST_thermal_coil",
-					"FST_thermal_coil",
-				};
+                weapons[]=
+                {
+                    "FST_30mm_Autocannon"
+                };
+                magazines[]=
+                {
+                    "FST_thermal_coil",
+                    "FST_thermal_coil"
+                };
 				minElev=-12.5;
 				maxElev=12.5;
 				initElev=0;
@@ -800,26 +800,26 @@ class CfgVehicles
 			tex[]={};
 			mat[]=
 			{
-				"3as\3as_ITT\data\ITT.rvmat",
-				"3as\3as_ITT\data\ITT.rvmat",
+				"3as\3AS_Itt\data\ITT.rvmat",
+				"3as\3AS_Itt\data\ITT.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
-				"3as\3as_ITT\data\Glass.rvmat",
-				"3as\3as_ITT\data\Glass.rvmat",
+				"3as\3AS_Itt\data\Glass.rvmat",
+				"3as\3AS_Itt\data\Glass.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
-				"3as\3as_ITT\data\Back_Interior.rvmat",
-				"3as\3as_ITT\data\Back_Interior.rvmat",
+				"3as\3AS_Itt\data\Back_Interior.rvmat",
+				"3as\3AS_Itt\data\Back_Interior.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
-				"3as\3as_ITT\data\Door.rvmat",
-				"3as\3as_ITT\data\Door.rvmat",
+				"3as\3AS_Itt\data\Door.rvmat",
+				"3as\3AS_Itt\data\Door.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
-				"3as\3as_ITT\data\Front_Interior.rvmat",
-				"3as\3as_ITT\data\Front_Interior.rvmat",
+				"3as\3AS_Itt\data\Front_Interior.rvmat",
+				"3as\3AS_Itt\data\Front_Interior.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
-				"3as\3as_ITT\data\Emissive.rvmat",
-				"3as\3as_ITT\data\Emissive.rvmat",
+				"3as\3AS_Itt\data\Emissive.rvmat",
+				"3as\3AS_Itt\data\Emissive.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
-				"3as\3as_ITT\data\Turret.rvmat",
-				"3as\3as_ITT\data\Turret.rvmat",
+				"3as\3AS_Itt\data\Turret.rvmat",
+				"3as\3AS_Itt\data\Turret.rvmat",
 				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat"
 			};
 		};
@@ -1002,12 +1002,26 @@ class CfgVehicles
 			class Muzzle_Flash
 			{
 				source="ammorandom";
-				weapon="3as_ITT_Front_20mm";
+				weapon="FST_ITT_Front_20mm";
 			};
 			class Muzzle_Flash2
 			{
 				source="ammorandom";
-				weapon="3as_ITT_Turret_MG";
+				weapon="FST_ITT_Turret_MG";
+			};
+		};
+		class VehicleTransport
+		{
+			class Cargo
+			{
+				parachuteClass="B_Parachute_02_F";
+				parachuteHeightLimit=5;
+				canBeTransported=1;
+				dimensions[]=
+				{
+					"BBox_1_1_pos",
+					"BBox_1_2_pos"
+				};
 			};
 		};
 		soundGetIn[]=
@@ -1993,11 +2007,11 @@ class CfgVehicles
 		scopeCurator=2;
 		forceingarage=1;
 		side=1;
-		displayname="[41st] ITT Transport";
+		displayname="[41st] ITT";
 		crew="FST_Trooper_P2_DC15S";
 		typicalCargo[]=
 		{
-			"FST_Trooper_P2_DC15S"
+			"JLTS_Clone_P2_DC15S"
 		};
 		hiddenSelections[]=
 		{
@@ -2009,17 +2023,17 @@ class CfgVehicles
 			"camo6",
 			"camo7"
 		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
-			"3as\3as_ITT\data\glass_co.paa",
-			"3as\3as_ITT\data\itt_int_back_co.paa",
-			"41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
-			"3as\3as_ITT\data\itt_int_front_co.paa",
-			"3as\3as_ITT\data\itt_emiss_co.paa",
-			"41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa",
-		};
-		editorPreview="3AS\3AS_rtt\images\3AS_RTT.jpg";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
+            "3as\3as_ITT\data\glass_co.paa",
+            "3as\3as_ITT\data\itt_int_back_co.paa",
+            "41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
+            "3as\3as_ITT\data\itt_int_front_co.paa",
+            "3as\3as_ITT\data\itt_emiss_co.paa",
+            "41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa"
+        };
+		editorPreview="3AS\3as_rtt\images\3as_rtt.jpg";
 	};
 	class FST_ITT_Medical: FST_ITT_Base
 	{
@@ -2027,13 +2041,13 @@ class CfgVehicles
 		scopeCurator=2;
 		forceingarage=1;
 		side=1;
-		displayname="[41st] ITT (Medical)";
+		displayname="[41st] ITT Transport (Medical)";
 		crew="FST_Trooper_P2_DC15S";
 		typicalCargo[]=
 		{
-			"FST_Trooper_P2_DC15S"
+			"JLTS_Clone_P2_DC15S"
 		};
-		editorPreview="3AS\3AS_rtt\images\3AS_RTT.jpg";
+		editorPreview="3AS\3as_rtt\images\3as_rtt.jpg";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -2284,16 +2298,16 @@ class CfgVehicles
 			"camo6",
 			"camo7"
 		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
-			"3as\3as_ITT\data\glass_co.paa",
-			"3as\3as_ITT\data\itt_int_back_co.paa",
-			"41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
-			"3as\3as_ITT\data\itt_int_front_co.paa",
-			"3as\3as_ITT\data\itt_emiss_co.paa",
-			"41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa",
-		};
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
+            "3as\3as_ITT\data\glass_co.paa",
+            "3as\3as_ITT\data\itt_int_back_co.paa",
+            "41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
+            "3as\3as_ITT\data\itt_int_front_co.paa",
+            "3as\3as_ITT\data\itt_emiss_co.paa",
+            ""
+        };
 		class AnimationSources
 		{
 			class open_door
@@ -2319,7 +2333,7 @@ class CfgVehicles
 	class FST_ITT_Logistic: FST_ITT_Medical
 	{
 		displayname="[41st] ITT (Logistics)";
-		editorPreview="3AS\3AS_rtt\images\3AS_RTT.jpg";
+		editorPreview="3AS\3as_rtt\images\3as_rtt.jpg";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -2482,13 +2496,13 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
-			"3as\3as_ITT\data\glass_co.paa",
-			"3as\3as_ITT\data\itt_int_back_co.paa",
-			"41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
-			"3as\3as_ITT\data\itt_int_front_co.paa",
-			"3as\3as_ITT\data\itt_emiss_co.paa",
-			"41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa",
+            "41st_Vehicles\ITT\Data\Body\ITT_Body_co.paa",
+            "3as\3as_ITT\data\glass_co.paa",
+            "3as\3as_ITT\data\itt_int_back_co.paa",
+            "41st_Vehicles\ITT\Data\Door\ITT_door_co.paa",
+            "3as\3as_ITT\data\itt_int_front_co.paa",
+            "3as\3as_ITT\data\itt_emiss_co.paa",
+            ""
 		};
 		class AnimationSources
 		{
@@ -2524,111 +2538,85 @@ class CfgVehicles
 class Mode_FullAuto;
 class CfgWeapons
 {
-	class CannonCore;
-	class LMG_RCWS;
-	class FST_Light_Defence_Coax: LMG_RCWS
-	{
-		displayName="[41st] Light Defence Coax";
-		author="Daara";
-		descriptionShort="LDC";
-		magazines[]=
-		{
-			"FST_500Rnd_High_Capacity_Plasma_Cell"
-		};
-		muzzleEnd="konec hlavne3";
-		muzzlePos="usti hlavne3";
-		selectionFireAnim="zasleh3";
-		modes[]=
-		{
-			"FullAuto",
-		};
-		cursor="EmptyCursor";
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class StandardSound
-			{
-				soundsetshot[]=
-				{
-					"3AS_Z6_SoundSet"
-				};
-			};
-			soundContinuous=0;
-			soundBurst=0;
-			reloadTime=0.0795;
-			aiRateOfFire=1;
-			aiRateOfFireDistance=10;
-			minRange=0;
-			minRangeProbab=0.0099999998;
-			midRange=1;
-			midRangeProbab=0.0099999998;
-			maxRange=2;
-			maxRangeProbab=0.0099999998;
-		};
-		class GunParticles
-		{
-			class effect1
-			{
-				positionName="konec hlavne3";
-				directionName="Usti hlavne3";
-				effectName="MachineGunCloud";
-			};
-		};
-	};
-	class FST_Medium_Defence_Gun: CannonCore
-	{
-		displayName="[41st] Medium Defence Gun";
-		author="Daara";
-		descriptionShort="MDC";
-		magazines[]=
-		{
-			"FST_200Rnd_30mm_shells"
-		};
-		muzzleEnd="konec hlavne3";
-		muzzlePos="usti hlavne3";
-		selectionFireAnim="zasleh3";
-		modes[]=
-		{
-			"FullAuto",
-		};
-		cursor="EmptyCursor";
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					"3AS_saber30_Shot_SoundSet"
-				};
-			};
-			soundContinuous=0;
-			soundBurst=0;
-			reloadTime=0.4;
-			aiRateOfFire=1;
-			aiRateOfFireDistance=10;
-			minRange=0;
-			minRangeProbab=0.0099999998;
-			midRange=1;
-			midRangeProbab=0.0099999998;
-			maxRange=2;
-			maxRangeProbab=0.0099999998;
-		};
-		class GunParticles
-		{
-			class effect1
-			{
-				positionName="konec hlavne3";
-				directionName="Usti hlavne3";
-				effectName="MachineGunCloud";
-			};
-		};
-	};
+    class CannonCore;
+    class LMG_RCWS;
+
+    class FST_Light_Defence_Coax: LMG_RCWS
+    {
+        displayName="[41st] Light Defence Coax";
+        author="Daara";
+        descriptionShort="LDC";
+        magazines[]={"FST_500Rnd_High_Capacity_Plasma_Cell"};
+        muzzleEnd="konec hlavne3";
+        muzzlePos="usti hlavne3";
+        selectionFireAnim="zasleh3";
+        modes[]={"FullAuto"};
+        cursor="EmptyCursor";
+
+        class FullAuto: Mode_FullAuto
+        {
+            sounds[]={"StandardSound"};
+            class StandardSound
+            {
+                soundsetshot[]={"3AS_Z6_SoundSet"};
+            };
+            soundContinuous=0;
+            soundBurst=0;
+            reloadTime=0.0795;
+            aiRateOfFire=1;
+            aiRateOfFireDistance=10;
+            minRange=0; minRangeProbab=0.01;
+            midRange=1; midRangeProbab=0.01;
+            maxRange=2; maxRangeProbab=0.01;
+        };
+        class GunParticles
+        {
+            class effect1
+            {
+                positionName="konec hlavne3";
+                directionName="Usti hlavne3";
+                effectName="MachineGunCloud";
+            };
+        };
+    };
+
+    class FST_Medium_Defence_Gun: CannonCore
+    {
+        displayName="[41st] Medium Defence Gun";
+        author="Daara";
+        descriptionShort="MDC";
+        magazines[]={"FST_200Rnd_30mm_shells"};
+        muzzleEnd="konec hlavne3";
+        muzzlePos="usti hlavne3";
+        selectionFireAnim="zasleh3";
+        modes[]={"FullAuto"};
+        cursor="EmptyCursor";
+
+        class FullAuto: Mode_FullAuto
+        {
+            sounds[]={"StandardSound"};
+            class BaseSoundModeType;
+            class StandardSound: BaseSoundModeType
+            {
+                soundSetShot[]={"3AS_saber30_Shot_SoundSet"};
+            };
+            soundContinuous=0;
+            soundBurst=0;
+            reloadTime=0.4;
+            aiRateOfFire=1;
+            aiRateOfFireDistance=10;
+            minRange=0; minRangeProbab=0.01;
+            midRange=1; midRangeProbab=0.01;
+            maxRange=2; maxRangeProbab=0.01;
+        };
+        class GunParticles
+        {
+            class effect1
+            {
+                positionName="konec hlavne3";
+                directionName="Usti hlavne3";
+                effectName="MachineGunCloud";
+            };
+        };
+    };
 };

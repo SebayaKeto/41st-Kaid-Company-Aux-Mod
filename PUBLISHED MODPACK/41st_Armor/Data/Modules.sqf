@@ -1,5 +1,42 @@
 // All Credit for this Script goes to Viper/MatthewL. Used with Permission. 
 
+["[41st] Droid Modules", "Munificent QRF Deployment",
+    {
+        params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos"];
+
+        ["Quick Reaction Force Deployment (Munificent)", [
+            ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
+            ["sideS", ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
+            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 2, 3, _options, nil]],
+            ["SLIDER", ["Drop pod Amount", "How many drop pods will be Deployed"], [0, 24, 8, 0]],
+            ["CHECKBOX", ["Linger", "Stays at the landing zone and spawns Droids unless destroyed."], [true]],
+            ["SLIDER", ["Amount of Vultures", "How many Vultures will be Deployed"], [0, 16, 2, 0]],
+            ["TOOLBOX", ["Vulture Type", "Select the type of Vultures to deploy."], [0, ["Standard", "AA Mixed"]]],
+            ["TOOLBOX", ["Vulture Skill", "Select the skill level of the Vultures' crew."], [0, ["Default", "Maximum"]]],
+            ["TOOLBOX", ["Armed Ship?", "Should the Munificent have turrets spawned?"], [0, ["No", "Yes"]]],
+            ["CHECKBOX", ["Jump Ship Out Afterwards?", "The ship will leave after it has deployed the troops"], [true]]
+            ], {
+                params ["_values", "_arguments"];
+                _direction = _values # 0;
+                _Ship_direction = [0, 45, 90, 135, 180, 225, 270, 315] # _direction;
+                _dropside = _values select 1;
+                _LightPodSelection = _values select 2;
+                _AmountofLightPods = _values select 3;
+                _linger = _values select 4;
+                _AmountofBanshees = _values select 5;
+                _VultureType = _values select 6;
+                _VultureSkill = _values select 7;
+                _ArmedShip = _values select 8;
+                _EndWithJumpOut = _values select 9;
+
+                _position = _arguments select 0;
+
+                [_position, _Ship_direction, _dropside, _LightPodSelection, _AmountofLightPods, _linger, _AmountofBanshees, _VultureType, _VultureSkill, _ArmedShip, _EndWithJumpOut] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Munificent_QRF", 2];
+            }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
+    }, "\PHAN_ScifiSupportPlus\data\Droid.paa"] call zen_custom_modules_fnc_register;
+
+
 FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = { 
     params ["_position", "_Ship_direction", "_dropside", "_LightPodSelection", "_AmountofLightPods", "_linger", "_AmountofBanshees", "_VultureType", "_VultureSkill", "_EndWithJumpOut"]; 
  
@@ -136,6 +173,7 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         }; 
     }; 
 };
+
 
 FST_Droid_Dispenser =  {
     params ["_position", "_dropside", "_selection", "_linger"];
