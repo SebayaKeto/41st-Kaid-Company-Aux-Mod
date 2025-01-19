@@ -404,7 +404,7 @@ class CfgAmmo
 		indirectHitRange=8;
 		caliber=2;
 	};
-	class FST_LAAT_Ball_Laser_Ammo: Cannon_30mm_HE_Plane_CAS_02_F
+	class FST_LAAT_Ball_Laser_Ammo: IDA_thermal_shell
 	{
 		author="Ruby, Code Inherted From Viz.";
 		displayname="LAAT Ball Turret";
