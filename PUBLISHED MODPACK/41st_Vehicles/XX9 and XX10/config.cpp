@@ -132,7 +132,7 @@ class CfgVehicles
 		author="Adapted from 3as_Studio by Viz";
 		_generalMacro="HMG_01_base_F";
 		scope=0;
-		displayName="[41st] XX10";
+		displayName="[41st] XX10 Turbolaser";
 		armor=500;
 		model="3AS\3as_static\XX10\XX10_Turbolaser.p3d";
 		editorSubcategory="EdSubcat_Turrets";
@@ -195,7 +195,7 @@ class CfgVehicles
 	class FST_XX9: FST_Turbolaser_Base
 	{
 		author="Adapted from 3as_Studio by Viz";
-		displayName="XX9 Turbolaser";
+		displayName="[41st] XX9 Turbolaser";
 		model="3as\3as_static\XX10\XX9_Turbolaser.p3d";
 		_generalMacro="B_HMG_01_F";
 		icon="3AS\3as_static\XX10\Data\ui\XX9_top_ca.paa";

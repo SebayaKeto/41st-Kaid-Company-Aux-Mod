@@ -145,7 +145,7 @@ class CfgVehicles
 		picture="3as\3AS_CIS_Static\J10s\data\ui\J10_side_ca.paa";
 		threat[]={1,0.30000001,0.30000001};
 		cost=150000;
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
@@ -276,7 +276,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="[41st] J10s Blaster Turret";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		side=0;
 		forceingarage=1;
 	};

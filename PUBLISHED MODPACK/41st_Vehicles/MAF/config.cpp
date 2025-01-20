@@ -89,7 +89,7 @@ class CfgVehicles
 		driverOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		displayName="[41st] MAF";
 		model="3as\3AS_CIS_Heli\MAF\model\3AS_MAF.p3d";
 		icon="3as\3AS_CIS_Heli\MAF\data\ui\MAF_top_ca.paa";

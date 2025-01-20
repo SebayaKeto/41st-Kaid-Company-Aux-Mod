@@ -418,6 +418,6 @@ class CfgVehicles
 		scopeCurator=2;
 		side=0;
 		faction="FST_BattleDroids_Faction";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 	};
 };

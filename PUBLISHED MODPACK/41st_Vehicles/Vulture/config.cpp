@@ -90,7 +90,7 @@ class CfgVehicles
 		scopeCurator=2;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		displayName="[41st] Elite Vulture Droid";
 		type="VAir";
 		cost=10000000;

@@ -98,10 +98,10 @@ class CfgVehicles
 		editorSubcategory="FST_Air_Vehicle";
 		displayName="[41st] Vulture Droid";
 		vtol=4;
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		typicalCargo[]=
 		{
-			"FST_Droid_B1_E5"
+			"FST_Droid_B1_OOM"
 		};
 		driverForceOptics=1;
 		viewDriverInExternal=0;

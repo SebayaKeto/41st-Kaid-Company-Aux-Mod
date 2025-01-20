@@ -256,7 +256,7 @@ class CfgVehicles
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		crewVulnerable=0;
 		class Turrets: Turrets
 		{

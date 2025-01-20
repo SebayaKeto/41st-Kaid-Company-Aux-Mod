@@ -79,7 +79,7 @@ class CfgVehicles
 		displayName="[41st] AAT Main Battle Tank";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		crewVulnerable=0;
 		author="Daara";
 		class Turrets: Turrets
@@ -385,7 +385,7 @@ class CfgVehicles
 		displayName="[41st] AAT Main Battle Tank (Tan)";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		author="Daara";
 		hiddenSelections[]=
 		{
@@ -406,7 +406,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] King AAT Heavy Tank";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		author="Daara";
 		armor=1000;
 		hiddenSelections[]=
@@ -424,7 +424,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Civilian Looted AAT";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		author="Daara";
 		armor=1000;
 		hiddenSelections[]=
@@ -442,7 +442,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Shockcap Looted AAT";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		author="Daara";
 		armor=1000;
 		hiddenSelections[]=
@@ -460,7 +460,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Light AAT Infantry Support Tank";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		author="Daara";
 		armor=400;
 		hiddenSelections[]=
@@ -735,7 +735,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Blaze AAT Flame Tank";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		author="Daara";
 		armor=400;
 		hiddenSelections[]=

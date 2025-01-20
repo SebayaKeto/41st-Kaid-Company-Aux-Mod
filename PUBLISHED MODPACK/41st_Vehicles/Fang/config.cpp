@@ -417,7 +417,7 @@ class CfgVehicles
 		scopecurator=0;
 		model="DBA_CIS\Addons\DBA_Vehicles\DBA_AirVehicles\Fang\Fang_Fighter.p3d";
 		displayName="[41st] Fang-Class Starfighter";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		forceHideDriver=0;
 		forceHideGunner=1;
 		forceHideCommander=1;
@@ -542,7 +542,7 @@ class CfgVehicles
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		icon="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Map_Plane_Fighter_03_CA.paa";
 		forceingarage=1;
 		gunBeg[]=
@@ -589,7 +589,7 @@ class CfgVehicles
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		icon="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Map_Plane_Fighter_03_CA.paa";
 		armor=100;
 		armorStructural=8;

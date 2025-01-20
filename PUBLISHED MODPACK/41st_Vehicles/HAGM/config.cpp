@@ -1384,7 +1384,7 @@ class CfgVehicles
 		memorypointgun="";
 		weapons[]={};
 		magazines[]={};
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		artilleryScanner=1;
 		availableForSupportTypes[]=
 		{

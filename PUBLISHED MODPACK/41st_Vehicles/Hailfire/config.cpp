@@ -74,7 +74,7 @@ class CfgVehicles
         displayName = "[41st] Hailfire Droid Base";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-        crew = "FST_Droid_B1_E5";
+        crew="FST_Droid_B1_OOM";
 		hiddenSelections[] = 
 		{
 			"Camo1",

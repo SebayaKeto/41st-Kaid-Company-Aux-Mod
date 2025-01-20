@@ -52,7 +52,7 @@ class CfgVehicles
 		scopearsenal=2;
 		side=0;
 		faction="FST_BattleDroids_Faction";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		displayName="[41st] OG-9";
 		model="3AS\3as_static\OG9\3AS_OG9.p3d";
 		editorSubcategory="EdSubcat_Turrets";

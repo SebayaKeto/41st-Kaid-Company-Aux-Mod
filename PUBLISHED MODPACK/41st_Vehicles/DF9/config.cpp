@@ -80,7 +80,7 @@ class CfgVehicles
 		side=0;
 		armor=1250;
 		faction="FST_BattleDroids_Faction";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		memoryPointsGetInGunner="pos_gunner";
 		memoryPointsGetInGunnerDir="pos_gunner_dir";
 		displayName="[41st] DF9 Turret Base";

@@ -190,7 +190,7 @@ class CfgVehicles
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		icon="3AS\3AS_HMP\data\ui\hmp_top_ca.paa";
 		availableForSupportTypes[]=
 		{

@@ -72,7 +72,7 @@ class CfgVehicles
 	{
 		vehicleClass="Armored";
 		displayName="";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		scope=0;
 		accuracy=0.30000001;
 		author="Daara";
@@ -1644,10 +1644,10 @@ class CfgVehicles
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		crew="FST_Droid_B1_E5";
+		crew="FST_Droid_B1_OOM";
 		typicalCargo[]=
 		{
-			"FST_Droid_B1_E5"
+			"FST_Droid_B1_OOM"
 		};
 	};
 	class FST_MTT: FST_MTT_01_Base
