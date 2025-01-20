@@ -2021,7 +2021,7 @@ class CfgVehicles
 		soundEngineOnExt[]=
 		{
 			"41st_Vehicles\LAAT\Sounds\LAAT_Startup_9_467.ogg",
-			1.5,
+			1.1,
 			1,
 			600
 		};
@@ -2034,7 +2034,7 @@ class CfgVehicles
 		soundEngineOffExt[]=
 		{
 			"41st_Vehicles\LAAT\Sounds\LAAT_Shutdown_4_744.ogg",
-			1.5,
+			1.1,
 			1,
 			600
 		};
@@ -2045,7 +2045,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-					1.2,
+					0.8,
 					1,
 					1500
 				};
@@ -2081,7 +2081,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-					1,
+					0.7,
 					1,
 					500
 				};
@@ -2106,7 +2106,7 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\LAAT\Sounds\LAAT_impulse_4_757.ogg",
-					1.2,
+					0.8,
 					1,
 					4000
 				};
@@ -2434,7 +2434,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-						1.3,
+						0.8,
 						1,
 						1500
 					};
@@ -2446,7 +2446,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-						1.2,
+						0.8,
 						1,
 						2000
 					};
@@ -2472,7 +2472,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-						1,
+						0.8,
 						1
 					};
 					frequency="rotorSpeed";
@@ -2483,7 +2483,7 @@ class CfgVehicles
 					sound[]=
 					{
 						"41st_Vehicles\LAAT\Sounds\LAAT_Idle_50_027.ogg",
-						1,
+						0.8,
 						1
 					};
 					frequency="rotorSpeed * (1-rotorThrust/5)";

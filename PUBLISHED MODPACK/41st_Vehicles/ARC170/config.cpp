@@ -333,24 +333,24 @@ class CfgVehicles
 				sound[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
-					0.9,
+					0.8,
 					1,
 					4000
 				};
 				frequency="1.0 min (rpm + 0.5)";
-				volume="camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+				volume="camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95]) * 0.9";
 			};
 			class EngineHighOut
 			{
 				sound[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
-					0.9,
+					0.8,
 					1.2,
 					5000
 				};
 				frequency="1";
-				volume="camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+				volume="camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])  * 0.9";
 			};
 			class ForsageOut
 			{
@@ -358,11 +358,11 @@ class CfgVehicles
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Idle.ogg",
 					"db2",
-					0.99000001,
+					0.8,
 					4200
 				};
 				frequency="1";
-				volume="engineOn*camPos*(thrust factor[0.6, 1.0])";
+				volume="engineOn*camPos*(thrust factor[0.6, 1.0]) * 0.9";
 				cone[]={3.1400001,3.9200001,2,0.5};
 			};
 			class WindNoiseOut
@@ -375,7 +375,7 @@ class CfgVehicles
 					800
 				};
 				frequency="(0.1+(1.2*(speed factor[1, 150])))";
-				volume="camPos*(speed factor[1, 150])";
+				volume="camPos*(speed factor[1, 150]) * 0.9";
 			};
 			class EngineLowIn
 			{
@@ -419,7 +419,7 @@ class CfgVehicles
 					1
 				};
 				frequency="(0.1+(1.2*(speed factor[1, 150])))";
-				volume="(1-camPos)*(speed factor[1, 150])";
+				volume="(1-camPos)*(speed factor[1, 150]) * 0.8";
 			};
 		};
 		class pilotCamera
@@ -1088,28 +1088,28 @@ class CfgWeapons
 				begin1[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
+					1.5,
 					1,
 					1500
 				};
 				begin2[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
+					1.5,
 					1.015,
 					1500
 				};
 				begin3[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
+					1.5,
 					0.985,
 					1500
 				};
 				begin4[]=
 				{
 					"41st_Vehicles\ARC170\Data\Sounds\ARC_170_Cannons.ogg",
-					4.5,
+					1.5,
 					1.01,
 					1500
 				};

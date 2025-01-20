@@ -13,6 +13,8 @@ class CfgPatches
 			"FST_Droid_B1_GAT",
 			"FST_Droid_B1_AR",
 			"FST_Droid_B1_AA",
+			"FST_Droid_B1_OOM",
+			"FST_CIS_TS_F",
 			"FST_BX",
 			"FST_BX_Sniper",
 			"FST_B2",
@@ -204,6 +206,51 @@ class CfgWeapons
 			containerClass="Supply200";
 			uniformType="Neopren";
 			mass=40;
+		};
+	};
+	class FST_DroidB1_OOM: FST_DroidB1
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] B1 Combat Uniform (OOM)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_OOM";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class Uniform_Base;
+	class FST_U_CIS_TS: Uniform_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Tactical Battledroid";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_Characters\Droids\TSeries\data\3AS_TS_CO.paa"
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_CIS_TS_F";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+			hiddenSelections[]=
+			{
+				"camo"
+			};
 		};
 	};
 	class FST_DroidBX: FST_DroidB1
@@ -1140,6 +1187,165 @@ class CfgVehicles
 			"IDA_FuelTank",
 			"IDA_FuelTank",
 			"IDA_FuelTank",
+		};
+	};
+	class FST_Droid_B1_OOM: FST_Droid_B1_E5
+	{
+		scope=2;
+		author="Viz";
+		displayName="[41st] B1 Battledroid (OOM)";
+		armor=4;
+		armorStructural=100;
+		Backpack="FST_B1_Antenna";
+		uniformClass="FST_DroidB1_OOM";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\DroidArmor\data\b1_crew_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_2",
+			"JLTS_NVG_droid_chip_2"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_2",
+			"JLTS_NVG_droid_chip_2"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag"
+		};
+	};
+	class FST_CIS_TS_F: FST_Droid_B1_E5
+	{
+		scope=2;
+		author="Viz";
+		displayName="[41st] T-Series Droid";
+		model="\3AS\3AS_Characters\Droids\TSeries\3AS_TS.p3d";
+		armor=4;
+		armorStructural=100;
+		Backpack="";
+		uniformClass="FST_U_CIS_TS";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		identityTypes[]=
+		{
+			"LanguageENGVR_F",
+			"O_3AS_head_F"
+		};
+		speaker="Male01ENGVR";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_Characters\Droids\TSeries\data\3AS_TS_CO.paa"
+		};
+		hideProxySelections[]=
+		{
+			"ghillie_hide"
+		};
+		weapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag"
 		};
 	};
 	class WBK_BX_Assasin_1;
@@ -2136,7 +2342,6 @@ class CfgVehicles
 		};
 	};
  };
-
 class cfgGroups
 {
 	class EAST
