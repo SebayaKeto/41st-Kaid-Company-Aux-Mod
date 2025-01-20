@@ -456,15 +456,22 @@ class CfgMagazines
 		initSpeed=800;
 		mass=20;
 	};
-	class FST_LAAT_350_Laser_Round: VehicleMagazine
+	class FST_thermal_coil_Ball: 1Rnd_HE_Grenade_shell
 	{
-		displayName="30mm LAAT Ball Cannon";
-		displayNameShort="LAAT BRR Mode";
+		author="Indecisive Armoury Team";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\EPL2\data\ui\EPL2_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\EPL2\EPL2_mag.p3d";
 		count=350;
-		model="a3\weapons_f\empty.p3d";
-		muzzleImpulseFactor[]={0.0000001,0.022};
-		nameSound="mgun";
-		ammo="FST_LAAT_Ball_Laser_Ammo";
+		displayName="[41st] 1LAAT Ball Cannon";
+		displayNameShort="LAAT BRR Mode";
+		descriptionShort="Fires Thermal Shells.";
+		ammo="FST_thermal_shell";
+		tracersEvery=1;
+		initSpeed=800;
+		mass=20;
 	};
 	class FST_thermal_Y_Wing: 1Rnd_HE_Grenade_shell
 	{
