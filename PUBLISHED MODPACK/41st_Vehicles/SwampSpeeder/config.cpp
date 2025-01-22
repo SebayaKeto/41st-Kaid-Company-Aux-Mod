@@ -1789,7 +1789,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3as\3AS_LightVics\3AS_ISP\textures\ISP_Base_co.paa",
+			"41st_Vehicles\SwampSpeeder\Data\FST_SwampSpeeder_Base_co.paa",
 			"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa"
 		};
 		faction="FST_Faction";
@@ -1807,7 +1807,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3as\3AS_LightVics\3AS_ISP\textures\ISP_Base_co.paa",
+			"41st_Vehicles\SwampSpeeder\Data\FST_SwampSpeeder_Base_co.paa",
 			"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa"
 		};
 		faction="FST_Faction";
