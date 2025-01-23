@@ -12341,7 +12341,7 @@ class CfgVehicles
 		DBA_jumppack_spam_delay=1;
 		DBA_jumppack_energy_capacity=100;
 		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
 			
