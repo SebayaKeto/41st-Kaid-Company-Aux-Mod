@@ -465,10 +465,10 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\EPL2\data\ui\EPL2_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\EPL2\EPL2_mag.p3d";
 		count=350;
-		displayName="[41st] 1LAAT Ball Cannon";
+		displayName="[41st] LAAT Ball Cannon";
 		displayNameShort="LAAT BRR Mode";
 		descriptionShort="Fires Thermal Shells.";
-		ammo="FST_thermal_shell";
+		ammo="FST_LAAT_Ball_Laser_Ammo";
 		tracersEvery=1;
 		initSpeed=800;
 		mass=20;
