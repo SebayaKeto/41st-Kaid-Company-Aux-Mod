@@ -1106,7 +1106,7 @@ class CfgWeapons
 		ballisticsComputer="4 + 2 + 8";
 		magazines[]=
 		{
-			"FST_LAAT_350_Laser_Round"
+			"FST_thermal_coil_Ball"
 		};
 		reloadTime=0.074999999;
 		dispersion=0.0094999997;
