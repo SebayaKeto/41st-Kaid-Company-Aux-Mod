@@ -193,6 +193,8 @@ class CfgPatches
 			"FST_P2_Silhouette",
 			"FST_P2_Lucky",
 			"FST_P2_Sledge",
+			"FST_P2_Sierra",
+			"FST_P2_Tar"
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -6925,6 +6927,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Blood: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Blood]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Blood.paa",
+		};
+	};
 	class FST_P2_Helmet_Border: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -9655,6 +9667,34 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Sierra: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Sierra]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Sierra";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Tar: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Tar]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Tar";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Silhouette: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -18969,6 +19009,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Sierra: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1170 'Sierra'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Sierra";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Sierra.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Sierra.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Sierra",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Sierra",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Tar: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-5411 'Tar'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Tar";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Tar.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Tar.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Tar",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Tar",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Silhouette: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -24092,6 +24242,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Cardinal";
 			material="\lsd_identities\data\models\data\clone_b.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Cardinal.paa";
+		};
+		class FST_Clone_Head_ampersand: FST_clone_Default_head
+		{
+			author="Gold"
+			name="Clone Trooper ampersand";
+			displayName="[41st] Clone Trooper - ampersand";
+			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_ampersand.paa";
 		};
 	};
 };
