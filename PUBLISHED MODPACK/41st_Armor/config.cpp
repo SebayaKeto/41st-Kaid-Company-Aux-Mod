@@ -196,6 +196,7 @@ class CfgPatches
 			"FST_P2_Sierra",
 			"FST_P2_Tar",
 			"FST_P2_Gold",
+			"FST_P2_House",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -2480,6 +2481,10 @@ class CfgWeapons
 		{
 			"\41st_Armor\Data\Equipment\FST_ARF_Vest_Suspenders.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
@@ -2544,6 +2549,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_ARF_Vest_Suspenders_Dirty.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
 		};
 		class ItemInfo: VestItem
 		{
@@ -2610,6 +2619,10 @@ class CfgWeapons
 		{
 			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Woodland.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
@@ -2674,6 +2687,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
 		};
 		class ItemInfo: VestItem
 		{
@@ -3024,6 +3041,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Blank.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3075,6 +3096,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite.paa",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite.paa",
 			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
 		};
 		subItems[]=
 		{
@@ -3128,6 +3153,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Desert.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3180,6 +3209,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Woodland.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3213,7 +3246,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_P2_Helmet_Sere: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Sere: SWLB_clone_ARF_P1_helmet
 	{
 		author="Daara";
 		scope=2; 
@@ -3241,6 +3274,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sigs.paa",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sigs.paa",
 			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
 		};
 		subItems[]=
 		{
@@ -3294,6 +3331,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3345,6 +3386,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer_Dirty.paa",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer_Dirty.paa",
 			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
 		};
 		subItems[]=
 		{
@@ -3398,6 +3443,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3449,6 +3498,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly_Dirty.paa",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly_Dirty.paa",
 			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
 		};
 		subItems[]=
 		{
@@ -3502,6 +3555,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3554,6 +3611,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand_Dirty.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3605,6 +3666,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Diesel.paa",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Diesel.paa",
 			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
 		};
 		subItems[]=
 		{
@@ -3710,6 +3775,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Annex.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3762,6 +3831,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Hayes.paa",
 			"",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -3813,6 +3886,10 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet.paa",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet.paa",
 			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
 		};
 		subItems[]=
 		{
@@ -3905,7 +3982,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat";
+			"41st_Armor\Data\Other\Clone_helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -3953,7 +4030,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat";
+			"41st_Armor\Data\Other\Clone_helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -4704,7 +4781,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat";
+			"41st_Armor\Data\Other\Clone_helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -4752,7 +4829,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat";
+			"41st_Armor\Data\Other\Clone_helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -4800,7 +4877,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat";
+			"41st_Armor\Data\Other\Clone_helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -8593,6 +8670,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sledge.paa",
 		};
 	};
+	class FST_P2_Helmet_House: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [House]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_House.paa",
+		};
+	};
 	//////////////UNIFORMS//////////////
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
@@ -10959,6 +11046,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Equipment\FST_NVG.paa",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
+		};
 		visionMode[]=
 		{
 			"Normal",
@@ -10980,6 +11071,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11004,6 +11099,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dobie.paa",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
+		};
 		visionMode[]=
 		{
 			"Normal",
@@ -11025,6 +11124,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Xeha.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11048,6 +11151,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Xeha_Dirty.paa",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
+		};
 		visionMode[]=
 		{
 			"Normal",
@@ -11069,6 +11176,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Burns.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11092,6 +11203,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Rumble.paa",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
+		};
 		visionMode[]=
 		{
 			"Normal",
@@ -11113,6 +11228,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Tooka.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11136,6 +11255,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Squatch.paa",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
+		};
 		visionMode[]=
 		{
 			"Normal",
@@ -11157,6 +11280,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazard.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11180,6 +11307,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazard_Dirty.paa",
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
+		};
 		visionMode[]=
 		{
 			"Normal",
@@ -11201,6 +11332,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Desert.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11224,6 +11359,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_nvg.rvmat"
 		};
 		visionMode[]=
 		{
@@ -11801,6 +11940,10 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_backpack.rvmat"
+		};
 	};
 	class FST_Clone_Backpack_Dirty: JLTS_Clone_Backpack
 	{
@@ -11818,6 +11961,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_Backpack_Dirty.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_backpack.rvmat"
 		};
 	};
 	class FST_Clone_Backpack_Invisible: JLTS_Clone_Backpack
@@ -12124,6 +12271,10 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
 /* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
@@ -12423,6 +12574,10 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
 /* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
@@ -12552,6 +12707,10 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
@@ -12618,6 +12777,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
  		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -12686,6 +12849,10 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Desert.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
  		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
@@ -12752,6 +12919,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
@@ -12854,6 +13025,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
 /* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -12979,6 +13154,10 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
@@ -13040,6 +13219,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
