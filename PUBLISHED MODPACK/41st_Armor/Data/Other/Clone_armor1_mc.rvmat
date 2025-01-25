@@ -1,3 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: C:\Users\Miran\Downloads\Clone_armor1_mc.rvmat
+//Produced from mikero's Dos Tools Dll version 9.93
+//https://mikero.bytex.digital/Downloads
+//'now' is Wed Jan 08 02:01:50 2025 : 'file' last modified on Wed Jan 08 02:01:41 2025
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
 class StageTI
 {
 	texture = "MRC\JLTS\characters\CloneArmor\data\Clone_armor1_mc_ti.paa";
