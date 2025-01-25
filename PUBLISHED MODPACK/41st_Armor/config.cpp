@@ -8360,7 +8360,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sly.paa",
 		};
 	};
- 	class FST_P2_Helmet_Sly_Dirty: FST_P2_Helmet_Base
+ 	/*class FST_P2_Helmet_Sly_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -8369,7 +8369,7 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sly_Dirty.paa",
 		};
-	};
+	};*/
  	class FST_P2_Helmet_Martyr: FST_P2_Helmet_Base
 	{
 		author="Daara";
