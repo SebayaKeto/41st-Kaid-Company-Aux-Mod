@@ -74,7 +74,7 @@ class CfgPatches
 			"FST_P2_Argo",
 			"FST_P2_ArgoV2",
 			"FST_P2_Spade",
-			"FST_P2_Ripper",
+			//"FST_P2_Ripper",
 			"FST_P2_Ticktock",
 			"FST_P2_NotSkilled",
 			"FST_P2_Cardinal",
@@ -140,7 +140,7 @@ class CfgPatches
 			"FST_P2_Doogle",			
 			"FST_P2_Man",			
 			"FST_P2_Major",
-			"FST_P2_Major_Dirty",		
+			//"FST_P2_Major_Dirty",		
 			"FST_P2_Seraph",
 			"FST_P2_Zik",
 			"FST_P2_Qball",
@@ -154,7 +154,7 @@ class CfgPatches
 			"FST_P2_Hazard",
 			"FST_P2_Hazard_Dirty",
 			"FST_P2_Stein",
-			"FST_P2_Stein_Dirty",
+			//"FST_P2_Stein_Dirty",
 			"FST_P2_Delta",
 			"FST_P2_Vulpes",
 			"FST_P2_Bulwark",
@@ -4771,7 +4771,7 @@ class CfgWeapons
 			};
 		};
 	};
- 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
+/*  	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
 	{
 		author="Gold";
 		displayName="[41st] P2 ARC Trooper Helmet (Major)";
@@ -4818,7 +4818,7 @@ class CfgWeapons
 				};
 			};
 		};
-	}; 
+	};  */
 	class FST_P2_ARC_Helmet_Stripes: JLTS_CloneHelmetP2
 	{
 		author="Daara";
@@ -8080,7 +8080,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Stein.paa",
 		};
 	};	
-	class FST_P2_Helmet_Stein_Dirty: FST_P2_Helmet_Base
+/* 	class FST_P2_Helmet_Stein_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -8089,7 +8089,7 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_SteinDirty.paa",
 		};
-	};
+	}; */
 	class FST_P2_Helmet_Hex: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -8500,7 +8500,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Freezer.paa",
 		};
 	};
-	class FST_P2_Helmet_Ampersand: FST_P2_Helmet_Base
+/* 	class FST_P2_Helmet_Ampersand: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2;
@@ -8509,7 +8509,7 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ampersand.paa",
 		};
-	};
+	}; */
 	class FST_P2_Helmet_NotSkilled: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -10073,7 +10073,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
- 	class FST_Uniform_Ripper: JLTS_CloneArmor
+/*  	class FST_Uniform_Ripper: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10086,7 +10086,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};  */
  	class FST_Uniform_Nic: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -10493,7 +10493,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
- 	class FST_Uniform_Major_Dirty: JLTS_CloneArmor
+/*  	class FST_Uniform_Major_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10506,7 +10506,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};  */
  	class FST_Uniform_Seraph: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -10661,7 +10661,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
- 	class FST_Uniform_Stein_Dirty: JLTS_CloneArmor
+/*  	class FST_Uniform_Stein_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10674,7 +10674,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};  */
     class FST_Uniform_Claw: JLTS_CloneArmor
     {
         author="Viz";
@@ -18077,7 +18077,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
- 	class FST_P2_Ripper: FST_Trooper_P2_DC15S
+/*  	class FST_P2_Ripper: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-0666 'Ripper'";
@@ -18131,7 +18131,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; 
+	};  */
  	class FST_P2_Argo: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -22320,7 +22320,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_P2_Major_Dirty: FST_Trooper_P2_DC15S
+/*  	class FST_P2_Major_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-2217 'Major' (Dirty)";
@@ -22374,7 +22374,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; */
     class FST_P2_Claw: FST_Trooper_P2_DC15S
     {
         author="Viz";
@@ -23035,7 +23035,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_P2_Stein_Dirty: FST_Trooper_P2_DC15S
+/*  	class FST_P2_Stein_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-3615 'Stein' (Dirty)";
@@ -23089,7 +23089,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; */
 /*  	class FST_P2_Jaws: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
