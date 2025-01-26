@@ -198,6 +198,7 @@ class CfgPatches
 			"FST_P2_Gold",
 			"FST_P2_House",
 			"FST_P2_Evox",
+			"FST_P2_Hazzo",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -8691,6 +8692,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_House.paa",
+		};
+	};
+	class FST_P2_Helmet_Hazzo: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Hazzo]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hazzo.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
