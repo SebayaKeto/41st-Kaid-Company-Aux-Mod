@@ -23,61 +23,6 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_cell_low: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=30;
-		displayName="[41st] Low-Power Energy Cell";
-		displayNameShort="LP Energy Cell";
-		descriptionShort="30 Rnds Low Power Pistol Ammo";
-		ammo="FST_blasterbolt";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=4;
-	};
-	class FST_blaster_cell_low_green: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=30;
-		displayName="[41st] Low-Power Energy Cell (Green)";
-		displayNameShort="LP Energy Cell";
-		descriptionShort="30 Rnds Low Power Pistol Ammo";
-		ammo="FST_blasterbolt_green";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=4;
-	};
-	class FST_blaster_cell_low_yellow: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=30;
-		displayName="[41st] Low-Power Energy Cell (Yellow)";
-		displayNameShort="LP Energy Cell";
-		descriptionShort="30 Rnds Low Power Pistol Ammo";
-		ammo="FST_blasterbolt_yellow";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=4;
-	};
-};
 class CfgWeapons
 {
 	class NVGoggles;
@@ -114,9 +59,10 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_low",
-			"FST_blaster_cell_low_green",
-			"FST_blaster_cell_low_yellow"
+			"FST_blaster_cell_low_Blue",
+			"FST_blaster_cell_low_Green",
+			"FST_blaster_cell_low_Yellow",
+			"FST_blaster_cell_low_Red"
 		};
 		ace_clearJamAction="";
 		reloadAction="GestureReloadPistolHeavy02";
@@ -306,9 +252,10 @@ class CfgWeapons
 		ls_akimboAlternate="FST_twinDC17Left_dummy";
 		magazines[]=
 		{
-			"FST_blaster_cell_low",
-			"FST_blaster_cell_low_green",
-			"FST_blaster_cell_low_yellow"
+			"FST_blaster_cell_low_Blue",
+			"FST_blaster_cell_low_Green",
+			"FST_blaster_cell_low_Yellow",
+			"FST_blaster_cell_low_Red"
 		};
 		muzzles[]=
 		{

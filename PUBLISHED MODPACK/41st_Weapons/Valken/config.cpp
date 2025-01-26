@@ -22,29 +22,6 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_cell_Valken: 100Rnd_65x39_caseless_mag
-	{
-		author="Daara";
-		JLTS_hasElectronics=0;
-		JLTS_hasEMPProtection=1;
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
-		count=60;
-		displayName="[41st] High-Power Extended Capacity Magazine (Valken)";
-		displayNameShort="HP Energy Battery";
-		descriptionShort="60 round capacity.";
-		ammo="FST_blasterbolt_High";
-		tracersEvery=1;
-		initSpeed=340;
-		mass=20;
-	};
-};
 class CfgWeapons
 {
 	class Rifle_Base_F;
@@ -152,8 +129,14 @@ class CfgWeapons
 		recoil="FST_recoil_DC15A";
 		magazines[]=
 		{
-			"FST_blaster_cell_Valken",
-			"IDA_blaster_cell_High",
+			"FST_blaster_cell_Valken_Blue",
+			"FST_blaster_cell_Valken_Green",
+			"FST_blaster_cell_Valken_Yellow",
+			"FST_blaster_cell_Valken_Red",
+			"FST_blaster_cell_High_Blue",		//"IDA_blaster_cell_High",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Yellow",
+			"FST_blaster_cell_High_Red"
 		};
 		magazineWell[]={};
 		modes[]=

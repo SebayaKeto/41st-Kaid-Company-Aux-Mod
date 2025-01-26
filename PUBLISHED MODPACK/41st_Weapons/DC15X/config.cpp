@@ -22,77 +22,6 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
-class CfgAmmo
-{
-	class FST_blasterbolt;
-	class FST_blasterbolt_Overcharged: FST_blasterbolt
-	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		hit=100;
-		caliber=2.2;
-		coefGravity=1;
-		ACE_ammoTempMuzzleVelocityShifts="[-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19]";
-		ACE_ballisticCoefficients="[0.317]";
-		ACE_barrelLengths="[254,406.4,508,609.6,660.4]";
-		ACE_bulletLength=36.220001;
-		ACE_bulletMass=9.0719995;
-		ACE_caliber=6.7059999;
-		ACE_dragModel=7;
-		ACE_muzzleVelocities="[500]";
-		ACE_muzzleVelocityVariationSD=0;
-		ACE_standardAtmosphere="ICAO";
-		ACE_velocityBoundaries="[]";
-	};
-	class FST_blasterbolt_Overcharged_red: FST_blasterbolt
-	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
-		hit=100;
-		caliber=2;
-		coefGravity=1;
-		ACE_ammoTempMuzzleVelocityShifts="[-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19]";
-		ACE_ballisticCoefficients="[0.317]";
-		ACE_barrelLengths="[254,406.4,508,609.6,660.4]";
-		ACE_bulletLength=36.220001;
-		ACE_bulletMass=9.0719995;
-		ACE_caliber=6.7059999;
-		ACE_dragModel=7;
-		ACE_muzzleVelocities="[500]";
-		ACE_muzzleVelocityVariationSD=0;
-		ACE_standardAtmosphere="ICAO";
-		ACE_velocityBoundaries="[]";
-	};
-};
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_cell_Overcharged: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=10;
-		displayName="[41st] Overcharged High-Power Energy Cell";
-		displayNameShort="O/HP Energy Cell";
-		descriptionShort="10 round capacity.";
-		ammo="FST_blasterbolt_Overcharged";
-		tracersEvery=1;
-		initSpeed=800;
-		mass=10;
-	};
-	class FST_blaster_cell_Overcharged_Red: FST_blaster_cell_Overcharged
-	{
-		author="Indecisive Armoury Team";
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		displayName="[41st] Overcharged High-Power Energy Cell (Red)";
-		ammo="FST_blasterbolt_Overcharged_Red";
-	};
-};
 class CfgWeapons
 {
 	class Rifle_Base_F;
@@ -137,7 +66,10 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Overcharged",
+			"FST_blaster_cell_Overcharged_Blue",
+			"FST_blaster_cell_Overcharged_Green",
+			"FST_blaster_cell_Overcharged_Yellow",
+			"FST_blaster_cell_Overcharged_Red"
 		};
 		magazineWell[]={};
 		ace_clearJamAction="";

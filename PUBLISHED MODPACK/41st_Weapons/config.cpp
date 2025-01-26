@@ -98,5 +98,17 @@ class CfgRecoils
 		kickBack[]={0.059999999,0.090000004};
 		temporary=0.0060000001;
 	};
+	class FST_Scope_Westar_M5: recoil_default
+	{
+		muzzleOuter[]={0,0.35,0.2,0.05};
+		kickBack[]={0.04,0.06};
+		temporary=0.008;
+	};
+	class FST_recoil_LV13: recoil_default
+	{
+		muzzleOuter[]={0,2,0.80000001,0.80000001};
+		kickBack[]={0.0099999998,0.12};
+		temporary=0.029999999;
+	};
 };
 

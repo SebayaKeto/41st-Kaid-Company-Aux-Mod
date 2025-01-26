@@ -20,41 +20,10 @@ class CfgPatches
 		{
 			"FST_Scope_WM5",
 			"FST_Westar_M5",
+			"FST_Westar_M5_A",
+			"FST_Westar_M5_S",
 			"FST_Westar_M5_UGL",
 		};
-	};
-};
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_cell_Westar: 100Rnd_65x39_caseless_mag
-	{
-		author="Daara";
-		JLTS_hasElectronics=0;
-		JLTS_hasEMPProtection=1;
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=60;
-		displayName="[41st] High-Power Energy Cell (Westar)";
-		displayNameShort="HP Energy Cell Westar";
-		descriptionShort="60 round capacity.";
-		ammo="FST_blasterbolt_high";
-		tracersEvery=1;
-		initSpeed=340;
-		mass=8;
-	};
-};
-class CfgRecoils
-{
-	class recoil_default;
-	class FST_Scope_Westar_M5: recoil_default
-	{
-		muzzleOuter[]={0,0.35,0.2,0.05};
-		kickBack[]={0.04,0.06};
-		temporary=0.008;
 	};
 };
 class CowsSlot;
@@ -65,7 +34,7 @@ class Single;
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
-
+class InventoryMuzzleItem_Base_F;
 class CfgWeapons
 {
 	class 3AS_Scope_Optics;
@@ -186,8 +155,14 @@ class CfgWeapons
 		recoil="FST_recoil_DC15S";
 		magazines[]=
 		{
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_Westar",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Yellow",
+			"FST_blaster_cell_High_Red",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Green",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Red"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -547,6 +522,173 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_Westar_M5_A: FST_Westar_M5
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] Westar-M5A Rifle";
+		model="SWLW_merc_mando\rifles\westar35S\westar35s.p3d";
+		baseWeapon="FST_Westar_M5_A";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\A3\Weapons_F_epa\LongRangeRifles\DMR_01\Data\Anim\dmr_01.rtm"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=130;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"SWLW_Westar35S_scope"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]=
+				{
+					"SWLW_Westar35S_suppressor"
+				};
+			};
+		};
+	};	
+	class FST_Westar_M5_S : FST_Westar_M5
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] Westar-M5S Rifle";
+		model="SWLW_merc_mando\rifles\westar35S\westar35s.p3d";
+		baseWeapon="FST_Westar_M5_S";
+		muzzles[]=
+		{
+			"this",
+			"Scatter"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\A3\Weapons_F_epa\LongRangeRifles\DMR_01\Data\Anim\dmr_01.rtm"
+		};
+		class Scatter: UGL_F
+		{
+			displayName="Scattergun mode";
+			descriptionShort="41st MASS";
+			cursor="";
+			scope=2;
+			useModelOptics=0;
+			useExternalOptic=1;
+			cameraDir="eye";
+			memoryPointCamera="";
+			discreteDistance[]={100};
+			discreteDistanceCameraPoint[]=
+			{
+				"eye"
+			};
+			discreteDistanceInitIndex=0;
+			initSpeed=-1;
+			muzzleEnd="shotgun pos";
+			muzzlePos="shotgun dir";
+			magazines[]=
+			{
+				"FST_underbarrel_scatter_cell_Blue",
+				"FST_underbarrel_scatter_cell_Green",
+				"FST_underbarrel_scatter_cell_Yellow",
+				"FST_underbarrel_scatter_cell_Red"
+			};
+			reloadMagazineSound[]=
+			{
+				"\SWLW_main\sounds\scatter_reload",
+				0.56234133,
+				1,
+				30
+			};
+			recoil="FST_recoil_DP23";
+			reloadAction="GestureReloadMk20UGL";
+			magazineWell[]={};
+			class Single: Mode_SemiAuto
+			{
+				sounds[]=
+				{
+					"StandardSound"
+				};
+				class BaseSoundModeType
+				{
+					closure1[]=
+					{
+						"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",
+						1,
+						1,
+						10
+					};
+					soundClosure[]=
+					{
+						"closure1",
+						1
+					};
+				};
+				class StandardSound: BaseSoundModeType
+				{
+					begin1[]=
+					{
+						"\SWLW_main\sounds\scatter",
+						0.70794576,
+						1,
+						200
+					};
+					begin2[]=
+					{
+						"\SWLW_main\sounds\scatter",
+						0.70794576,
+						1,
+						200
+					};
+					soundBegin[]=
+					{
+						"begin1",
+						0.5,
+						"begin2",
+						0.5
+					};
+				};
+				minRange=30;
+				minRangeProbab=0.1;
+				midRange=200;
+				midRangeProbab=0.69999999;
+				maxRange=400;
+				maxRangeProbab=0.050000001;
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=130;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"SWLW_Westar35S_scope"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]=
+				{
+					"SWLW_Westar35S_suppressor"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";  //\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL
+				compatibleItems[]=
+				{
+				    "FST_Attachment_Light_Normal_White",
+                    "FST_Attachment_Light_Beam_White",
+                    "FST_Attachment_Module_Light_Normal_White",
+                    "FST_Attachment_Module_Light_Beam_White"
+				};	
+			};
+		};
+	};	
 	class FST_Westar_M5_UGL: FST_Westar_M5
 	{
 		scope=2;
@@ -629,5 +771,19 @@ class CfgWeapons
 		ace_overheating_slowdownFactor=1;
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
+	};
+	class SWLW_Westar35S_suppressor: ItemCore
+	{
+		scope=1;
+		author="SW Legion Studios";
+		displayName="Westar-35S flash suppressor";
+		picture="\SWLW_merc_mando\rifles\westar35s\data\ui\swlw_westar35s_suppressor_ui.paa";
+		model="SWLW_merc_mando\rifles\westar35s\westar35s_suppressor.p3d";
+		class ItemInfo: InventoryMuzzleItem_Base_F
+		{
+			mass=8;
+			muzzleEnd="zaslehPoint";
+			alternativeFire="Zasleh2";
+		};
 	};
 };

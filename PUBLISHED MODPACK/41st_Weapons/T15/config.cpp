@@ -66,7 +66,10 @@ class CfgWeapons
 		};
 		recoil="FST_recoil_T15";
 		magazines[] = {
-			"FST_thermal_coil_LP"
+			"FST_thermal_coil_LP_Blue",
+			"FST_thermal_coil_LP_Green",
+			"FST_thermal_coil_LP_Yellow",
+			"FST_thermal_coil_LP_Red"
 		};
 		magazineWell[]={};
 		fireLightDiffuse[]={0,0,1};
@@ -163,7 +166,17 @@ class CfgWeapons
 			displayName="High Power UGL";
 			useModelOptics = false;
 			useExternalOptic = true;
-			magazines[] = {"FST_thermal_coil_T15","FST_thermal_coil_Nexu"};
+			magazines[] =
+			{
+				"FST_thermal_coil_T15_Blue",
+				"FST_thermal_coil_T15_Green",
+				"FST_thermal_coil_T15_Yellow",
+				"FST_thermal_coil_T15_Red",
+				"FST_thermal_coil_Nexu_Blue",
+				"FST_thermal_coil_Nexu_Green",
+				"FST_thermal_coil_Nexu_Yellow",
+				"FST_thermal_coil_Nexu_Red"
+			};
 			cameraDir = "OP_look";
 			discreteDistance[] = {100, 200, 300};
 			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3"}; // Position of the camera
@@ -386,93 +399,5 @@ class CfgWeapons
 				};
 			};
 		};
-	};
-};
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_thermal_coil_LP: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted From The Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=20;
-		displayName="[41st] Low-power Thermal coil";
-		displayNameShort="LP Thermal coil";
-		descriptionShort="20 round capacity.";
-		ammo="FST_thermal_shell_LP";
-		tracersEvery=1;
-		initSpeed=300;
-		mass=35;
-	};
-	class FST_thermal_coil_T15: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted From The Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=5;
-		displayName="[41st] High-power Thermal Coil";
-		displayNameShort="HP Thermal coil";
-		descriptionShort="5 round capacity.";
-		ammo="FST_thermal_shell_T15";
-		tracersEvery=1;
-		initSpeed=300;
-		mass=35;
-	};
-	class FST_thermal_coil_Nexu: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted From The Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=1;
-		displayName="[41st] High-power Thermal Coil Nexu Edition";
-		displayNameShort="HP Thermal coil";
-		descriptionShort="5 round capacity.";
-		ammo="FST_thermal_shell_HP";
-		tracersEvery=1;
-		initSpeed=300;
-		mass=35;
-	};
-};
-class CfgAmmo
-{
-	class FST_blasterbolt;
-	class FST_thermal_shell_LP: FST_blasterbolt {
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Medium_Blue_Fly";
-		ACE_damageType="plasma";
-		hit=120; // Initial hit before submunitions trigger
-		indirectHit=1;
-		explosive=1;
-		indirectHitRange=0.5;
-		caliber=5;
-		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
-		submunitionConeType[]=
-		{
-			"random",
-			12
-		};
-		submunitionConeAngle=0.05;
-		triggerDistance = 50;
-	};
-	class FST_thermal_shell_T15: FST_blasterbolt
-	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
-		ACE_damageType="plasma";
-		hit=400;
-		indirectHit=1;
-		explosive=1;
-		indirectHitRange=0.5;
-		caliber=20;
 	};
 };

@@ -24,29 +24,6 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_battery_DC15L: 100Rnd_65x39_caseless_mag
-	{
-		author="Daara";
-		JLTS_hasElectronics=0;
-		JLTS_hasEMPProtection=1;
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
-		count=120;
-		displayName="[41st] Low-Power Extended Capacity Magazine (DC-15L)";
-		displayNameShort="LP Energy Battery";
-		descriptionShort="150 round capacity.";
-		ammo="FST_blasterbolt";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=20;
-	};
-};
 class CfgWeapons
 {
 	class Rifle;
@@ -58,8 +35,14 @@ class CfgWeapons
 	class FST_DC15L_Base_F: Rifle_Base_F {
 		author="Daara";
 		magazines[] = {
-			"FST_blaster_battery_DC15L",
-			"FST_blaster_cell",
+			"FST_blaster_battery_DC15L_Blue",
+			"FST_blaster_battery_DC15L_Green",
+			"FST_blaster_battery_DC15L_Yellow",
+			"FST_blaster_battery_DC15L_Red",
+			"FST_blaster_cell_Blue",
+			"FST_blaster_cell_Green",
+			"FST_blaster_cell_Yellow",
+			"FST_blaster_cell_Red",
 		};
 		magazineWell[]={};
 		reloadAction="GestureReloadMX";

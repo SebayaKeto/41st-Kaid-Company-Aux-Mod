@@ -21,19 +21,6 @@ class CfgPatches
 		magazines[]={};
 	};
 };
-class CfgMagazines
-{
-	class Titan_AA;
-	class FST_E60R_AA_mag: Titan_AA
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		author="Daara";
-		displayName="[41st] E60 AA Magazine";
-		descriptionShort="E60 AA Missile";
-		ammo="FST_Stormfury_High_Velocity_Missile";
-	};
-};
 class CfgWeapons
 {
 	class launch_Titan_base;

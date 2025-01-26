@@ -23,78 +23,6 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
-class CfgAmmo
-{
-	class FST_blasterbolt;
-	class FST_blasterbolt_scatter_flechette: FST_Blasterbolt
-	{
-		coefGravity=1.25;
-	};
-	class FST_blasterbolt_scatter: FST_blasterbolt
-	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		hit=25;
-		submunitionAmmo="FST_blasterbolt_scatter_flechette";
-		submunitionConeType[]=
-		{
-			"random",
-			8
-		};
-		submunitionConeAngle=0.34999999;
-		triggerTime=9.9999997e-010;
-	};
-	class FST_thermal_slug_DP23: FST_blasterbolt
-	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
-		ACE_damageType="plasma";
-		hit=200;
-		indirectHit=1;
-		explosive=1;
-		indirectHitRange=0.5;
-		caliber=10;
-		coefGravity=1;
-	};
-};
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_scatter_cell: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=8;
-		displayName="[41st] High-Power Scatter Cell";
-		displayNameShort="HP Scatter Cell";
-		descriptionShort="8 round capacity";
-		ammo="FST_blasterbolt_scatter";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=8;
-	};
-	class FST_thermal_slug_mag: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted From The Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=3;
-		displayName="[41st] High-power Thermal Slug";
-		displayNameShort="Thermal Slug";
-		descriptionShort="3 round capacity.";
-		ammo="FST_thermal_slug_DP23";
-		tracersEvery=1;
-		initSpeed=300;
-		mass=8;
-	};
-};
 class CfgWeapons
 {
 	class Rifle_Base_F;
@@ -137,8 +65,14 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_blaster_scatter_cell",
-			"FST_thermal_slug_mag"
+			"FST_blaster_scatter_cell_DP23_Blue",
+			"FST_blaster_scatter_cell_DP23_Green",
+			"FST_blaster_scatter_cell_DP23_Yellow",
+			"FST_blaster_scatter_cell_DP23_Red",
+			"FST_thermal_slug_mag_Blue",
+			"FST_thermal_slug_mag_Green",
+			"FST_thermal_slug_mag_Yellow",
+			"FST_thermal_slug_mag_Red"
 		};
 		magazineWell[]={};
 		muzzles[]=

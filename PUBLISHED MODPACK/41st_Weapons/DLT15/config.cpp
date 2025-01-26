@@ -83,7 +83,10 @@ class CfgWeapons
 		recoil="FST_recoil_DLT15";
 		magazines[]=
 		{
-			"FST_blaster_battery"
+			"FST_blaster_battery_Blue",
+			"FST_blaster_battery_Green",
+			"FST_blaster_battery_Yellow",
+			"FST_blaster_battery_Red"
 		};
 		magazineWell[]={};
 		modes[]=

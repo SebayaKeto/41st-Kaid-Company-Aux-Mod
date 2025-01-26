@@ -23,27 +23,6 @@ class UnderBarrelSlot;
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_EWEB_cell: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=150;
-		displayName="[41st] Overcharged E-Web Energy Cell";
-		displayNameShort="O/HP Energy Cell";
-		descriptionShort="150 round capacity.";
-		ammo="FST_blasterbolt_Overcharged";
-		tracersEvery=1;
-		initSpeed=800;
-		mass=10;
-	};
-};
 class CfgWeapons
 {
 	class FST_EWEB_RemoteTurret;
@@ -53,7 +32,10 @@ class CfgWeapons
 		author="Daara";
 		magazines[]=
 		{
-			"FST_EWEB_cell"
+			"FST_EWEB_cell_Blue",
+			"FST_EWEB_cell_Green",
+			"FST_EWEB_cell_Yellow",
+			"FST_EWEB_cell_Red"
 		};
 		modes[]=
 		{
@@ -210,13 +192,13 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell"
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red"
 				};
 				gunnerAction="RepeaterGunner";
 				gunnergetInAction="";
@@ -308,13 +290,13 @@ class CfgVehicles
 			{
 				magazines[]=
 				{
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell"
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red",
+					"FST_EWEB_cell_Red"
 				};
 			};
 		};

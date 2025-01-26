@@ -52,7 +52,10 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_high",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Yellow",
+			"FST_blaster_cell_High_Red"
 		};
 		magazineWell[]={};
 		fireLightDiffuse[]={0,0,1};

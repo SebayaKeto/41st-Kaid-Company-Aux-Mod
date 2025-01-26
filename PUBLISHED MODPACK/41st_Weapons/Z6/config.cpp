@@ -24,52 +24,6 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
-class CfgMagazines
-{
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_battery: 100Rnd_65x39_caseless_mag
-	{
-		author="Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
-		count=300;
-		displayName="[41st] High-Power Energy Battery";
-		displayNameShort="HP Energy Battery";
-		descriptionShort="300 round capacity.";
-		ammo="FST_blasterbolt_high";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=35;
-	};
-	class FST_blaster_battery_Red: FST_blaster_battery
-	{
-		author="Indecisive Armoury Team";
-		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
-		displayName="[41st] Low-Power Energy Battery (Red)";
-		ammo="FST_blasterbolt_Red";
-	};
-	class FST_EWEB_cell: 100Rnd_65x39_caseless_mag
-	{
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=150;
-		displayName="[41st] Overcharged E-Web Energy Cell";
-		displayNameShort="O/HP Energy Cell";
-		descriptionShort="150 round capacity.";
-		ammo="FST_blasterbolt_Overcharged";
-		tracersEvery=1;
-		initSpeed=800;
-		mass=10;
-	};
-};
 class CfgWeapons
 {
 	class Rifle_Base_F;
@@ -118,7 +72,9 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_blaster_battery",
+			"FST_blaster_battery_Blue",
+			"FST_blaster_battery_Green",
+			"FST_blaster_battery_Yellow",
 			"FST_blaster_battery_Red"
 		};
 		recoil="FST_recoil_Z6";
@@ -326,7 +282,10 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_EWEB_cell",
+			"FST_EWEB_cell_Blue",
+			"FST_EWEB_cell_Green",
+			"FST_EWEB_cell_Yellow",
+			"FST_EWEB_cell_Red"
 		};
 		recoil="FST_recoil_Z6";
 		maxZeroing=1200;
