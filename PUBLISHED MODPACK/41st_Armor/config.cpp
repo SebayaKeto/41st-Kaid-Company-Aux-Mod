@@ -74,7 +74,7 @@ class CfgPatches
 			"FST_P2_Argo",
 			"FST_P2_ArgoV2",
 			"FST_P2_Spade",
-			//"FST_P2_Ripper",
+			"FST_P2_Ripper",
 			"FST_P2_Ticktock",
 			"FST_P2_NotSkilled",
 			"FST_P2_Cardinal",
@@ -154,7 +154,7 @@ class CfgPatches
 			"FST_P2_Hazard",
 			"FST_P2_Hazard_Dirty",
 			"FST_P2_Stein",
-			//"FST_P2_Stein_Dirty",
+			"FST_P2_Stein_Dirty",
 			"FST_P2_Delta",
 			"FST_P2_Vulpes",
 			"FST_P2_Bulwark",
@@ -197,6 +197,7 @@ class CfgPatches
 			"FST_P2_Tar",
 			"FST_P2_Gold",
 			"FST_P2_House",
+			"FST_P2_Evox",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -8092,7 +8093,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Stein.paa",
 		};
 	};	
-/*	class FST_P2_Helmet_Stein_Dirty: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Stein_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -8101,7 +8102,7 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_SteinDirty.paa",
 		};
-	}; */
+	};
 	class FST_P2_Helmet_Hex: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -10085,7 +10086,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
-/* 	class FST_Uniform_Ripper: JLTS_CloneArmor
+ 	class FST_Uniform_Ripper: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10098,7 +10099,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; */
+	};
  	class FST_Uniform_Nic: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -10673,7 +10674,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
-/* 	class FST_Uniform_Stein_Dirty: JLTS_CloneArmor
+ 	class FST_Uniform_Stein_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10686,7 +10687,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; */
+	};
     class FST_Uniform_Claw: JLTS_CloneArmor
     {
         author="Viz";
@@ -11011,7 +11012,21 @@ class CfgWeapons
             containerClass="Supply150";
             mass=15;
         };
-    }; 
+    };
+	class FST_Uniform_Evox: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Evox]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Evox";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
 	class lsd_blueforUniform_Base;
 	class lsd_gar_jediCommander_uniform: lsd_blueforUniform_Base
 	{
@@ -18052,7 +18067,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
-/* 	class FST_P2_Ripper: FST_Trooper_P2_DC15S
+ 	class FST_P2_Ripper: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-0666 'Ripper'";
@@ -18106,7 +18121,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; */
+	};
  	class FST_P2_Argo: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -22976,7 +22991,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
-/* 	class FST_P2_Stein_Dirty: FST_Trooper_P2_DC15S
+ 	class FST_P2_Stein_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-3615 'Stein' (Dirty)";
@@ -22995,8 +23010,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SteinDirty.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_SteinDirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Stein_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Stein_Dirty.Paa",
 		};
 		weapons[]=
 		{
@@ -23030,7 +23045,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};*/
+	};
 /*  	class FST_P2_Jaws: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -23792,6 +23807,59 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Daara",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+  	class FST_P2_Evox: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-4364 'Evox'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Evox";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Evox.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Evox.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Evox",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Evox",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
