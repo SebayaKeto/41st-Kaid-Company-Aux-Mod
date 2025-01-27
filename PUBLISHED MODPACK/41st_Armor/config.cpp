@@ -101,6 +101,7 @@ class CfgPatches
 			"FST_P2_Rook",
 			"FST_P2_Mrogg",
 			"FST_P2_Rumble",
+			"FST_P2_Rumble_Dirty",
 			"FST_P2_Sunny",
 			"FST_P2_Overwatch",
 			"FST_P2_Tooka",
@@ -199,6 +200,7 @@ class CfgPatches
 			"FST_P2_House",
 			"FST_P2_Evox",
 			"FST_P2_Hazzo",
+			"FST_P2_Crab",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -8204,6 +8206,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rumble.paa",
 		};
 	};
+	class FST_P2_Helmet_Rumble_Dirty: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rumble/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rumble_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Vixen: FST_P2_Helmet_Base
 	{
 		author="Viz";
@@ -9719,6 +9731,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+ 	class FST_Uniform_Rumble_Dirty: JLTS_CloneArmor
+	{
+		author="Viz";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Rumble/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Rumble_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Poly: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -11033,6 +11059,20 @@ class CfgWeapons
         {
             uniformModel="";
             uniformClass="FST_P2_Evox";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Crab: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Crab]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Crab";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -19202,6 +19242,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+ 	class FST_P2_Rumble_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1917 'Rumble/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Rumble_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rumble_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Rumble_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Rumble_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Rumble_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Poly: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -23877,7 +23972,60 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; 
+	};
+  	class FST_P2_Crab: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-2105 'Crab'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Crab";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Crab.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Crab.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Crab",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Crab",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class lsd_gar_jediCommander_base;
 	class FST_Jedi: lsd_gar_jediCommander_base
 	{

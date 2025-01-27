@@ -23,7 +23,9 @@ class CfgPatches
 			"FST_U_CIS_Heavy_AT",
 			"FST_Jorgetrooper",
 			"FST_Jorgetrooper_AT",
-			"FST_Jorgetrooper_AR"
+			"FST_Jorgetrooper_AR",
+			"FST_Droid_B1_BMO",
+			"FST_Droid_B1_Rodger"
 		};
 		weapons[]={};
 	};
@@ -219,6 +221,38 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_Droid_B1_OOM";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class FST_DroidB1_BMO: JLTS_DroidB1
+	{
+		author="Viz";
+		scope=2;
+		displayname="[41st] B1 BMO";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_BMO";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class FST_DroidB1_Rodger: JLTS_DroidB1
+	{
+		author="Viz";
+		scope=2;
+		displayname="[41st] B1 Rodger";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_Rodger";
 			containerClass="Supply200";
 			uniformType="Neopren";
 			mass=40;
@@ -440,6 +474,19 @@ class CfgVehicles
 		tf_range=15000;
 		tf_subtype="digital_lr";
 	};
+	class FST_B1_Backpack_Kaid: FST_B1_Backpack
+	{
+		author="Viz";
+		displayName="[41st] B1 Backpack";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Backpack.paa"
+		};
+	};
 	class FST_B1_Antenna: JLTS_B1_antenna
 	{
 		author="Daara";
@@ -461,6 +508,19 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		tf_range=15000;
 		tf_subtype="digital_lr";
+	};
+	class FST_B1_Antenna_Kaid: FST_B1_Antenna
+	{
+		author="Viz";
+		displayName="[41st] B1 Kaid Antenna";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Antenna.paa"
+		};
 	};
 	class FST_B1_backpack_at_predef: FST_B1_backpack
 	{
@@ -1259,6 +1319,91 @@ class CfgVehicles
 			"FST_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
+		};
+	};
+	class FST_Droid_B1_BMO: FST_Droid_B1_E5
+	{
+		scope=2;
+		author="Viz";
+		displayName="[41st] B1 Battledroid BMO";
+		armor=4;
+		armorStructural=100;
+		side=1;
+		Backpack="FST_B1_Antenna_Kaid";
+		uniformClass="FST_DroidB1_BMO";
+		faction="FST_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_BMO.paa"
+		};
+		weapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red",
+			"FST_blaster_cell_red"
+		};
+	};
+	class FST_Droid_B1_Rodger: FST_Droid_B1_BMO
+	{
+		scope=2;
+		author="Viz";
+		displayName="[41st] B1 Battledroid Rodger";
+		armor=4;
+		armorStructural=100;
+		Backpack="FST_B1_Antenna_Kaid";
+		uniformClass="FST_DroidB1_Rodger";
+		faction="FST_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Rodger.paa"
 		};
 	};
 	class FST_CIS_TS_F: FST_Droid_B1_E5
