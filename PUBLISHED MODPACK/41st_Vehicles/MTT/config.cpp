@@ -838,10 +838,10 @@ class CfgVehicles
 			};
 		};
 		simulation="tankX";
-		enginePower=12000;
+		enginePower=20000;
 		maxOmega=25;
 		maxSpeed=30;
-		peakTorque=10832;
+		peakTorque=17500;
 		torqueCurve[]=
 		{
 			{0,0},

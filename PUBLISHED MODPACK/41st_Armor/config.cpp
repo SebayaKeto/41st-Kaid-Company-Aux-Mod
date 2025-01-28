@@ -141,7 +141,7 @@ class CfgPatches
 			"FST_P2_Doogle",			
 			"FST_P2_Man",			
 			"FST_P2_Major",
-			//"FST_P2_Major_Dirty",		
+			"FST_P2_Major_Dirty",		
 			"FST_P2_Seraph",
 			"FST_P2_Zik",
 			"FST_P2_Qball",
@@ -201,6 +201,7 @@ class CfgPatches
 			"FST_P2_Evox",
 			"FST_P2_Hazzo",
 			"FST_P2_Crab",
+			"FST_P2_Chip",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -4787,7 +4788,7 @@ class CfgWeapons
 			};
 		};
 	};
-/* 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
+ 	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
 	{
 		author="Gold";
 		displayName="[41st] P2 ARC Trooper Helmet (Major)";
@@ -4834,7 +4835,55 @@ class CfgWeapons
 				};
 			};
 		};
-	}; */
+	};
+ 	class FST_P2_ARC_Helmet_Major_Dirty: JLTS_CloneHelmetP2
+	{
+		author="Viz";
+		displayName="[41st] P2 ARC Trooper Helmet (Major/Dirty)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Major_Dirty.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_P2_ARC_Helmet_Stripes: JLTS_CloneHelmetP2
 	{
 		author="Daara";
@@ -8716,6 +8765,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hazzo.paa",
 		};
 	};
+	class FST_P2_Helmet_Chip: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Chip]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chip.paa",
+		};
+	};
 	//////////////UNIFORMS//////////////
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
@@ -10543,7 +10602,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
-/* 	class FST_Uniform_Major_Dirty: JLTS_CloneArmor
+ 	class FST_Uniform_Major_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -10556,7 +10615,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; */
+	};
  	class FST_Uniform_Seraph: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -11348,6 +11407,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazard_Dirty.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Vector: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Vector)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Vector.paa",
 		};
 		visionMode[]=
 		{
@@ -22382,7 +22463,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
-/* 	class FST_P2_Major_Dirty: FST_Trooper_P2_DC15S
+ 	class FST_P2_Major_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-2217 'Major' (Dirty)";
@@ -22436,7 +22517,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};*/
+	};
     class FST_P2_Claw: FST_Trooper_P2_DC15S
     {
         author="Viz";

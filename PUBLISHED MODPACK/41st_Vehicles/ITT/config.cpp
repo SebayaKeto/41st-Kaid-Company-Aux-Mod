@@ -590,7 +590,7 @@ class CfgVehicles
 				{
 					class HitGun
 					{
-						armor=0.40000001;
+						armor=0.60000001;
 						material=-1;
 						name="commandergun";
 						passthrough=0.2;
