@@ -253,7 +253,6 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio=1;
 		enableRadio=1;
-		//TFAR Macro
 		TFAR_hasIntercom=1;
 		class ACE_SelfActions: ACE_SelfActions
 		{
