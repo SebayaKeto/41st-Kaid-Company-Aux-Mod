@@ -17,7 +17,6 @@ class CfgPatches
 			"FST_DC15S_UGL",
 			"FST_DC15C_F",
 			"FST_DC15LE",
-			"FST_Mercenary_DC15S_Wood",
 			"FST_Mercenary_DC15S_UGL_Wood"
 		};
 	};
@@ -1175,23 +1174,6 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_Mercenary_DC15S_Wood: FST_DC15S
-	{
-		displayName="[41st] Mercenary DC-15S Carbine";
-		baseWeapon= "FST_Mercenary_DC15S_Wood";
-		recoil="FST_recoil_dc15s";
-		picture="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15S\DC15S_UGL_ui.paa";
-		model="DBA_Republic\Addons\DBA_Weapons\DBA_DC15C\DC15SGL.p3d";
-		scope=2;
-		scopeArsenal=2;
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\A3\Weapons_F_beta\Rifles\MK20\Data\Anim\mk20G.rtm"
-		};
-	};	
 	class FST_Mercenary_DC15S_UGL_Wood: FST_DC15S_UGL
 	{
 		displayName="[41st] Mercenary DC-15S Carbine w/ UGL";
@@ -1211,11 +1193,53 @@ class CfgWeapons
 		muzzles[]=
 		{
 			"This",
+			"EGLM_DC15S_WOOD"
 		};
 		modes[]=
 		{
 			"FullAuto",
 			"Single",
+		};
+		class EGLM_DC15S_WOOD: UGL_F
+		{
+			displayName="[41st] DC15S-GL";
+			descriptionShort="GL for the DC15S Wood Platform";
+			useModelOptics=0;
+			useExternalOptic=0;
+			magazines[]=
+			{
+				"IDA_HE_LauncherGrenade",
+				"FST_HE_LauncherGrenade",
+				"IDA_Smoke_LauncherGrenade",
+				"IDA_SmokeRed_LauncherGrenade",
+				"IDA_SmokeGreen_LauncherGrenade",
+				"IDA_SmokeBlue_LauncherGrenade",
+				"IDA_SmokePurple_LauncherGrenade",
+				"ACE_40mm_Flare_Red",
+				"ACE_40mm_Flare_green",
+				"ACE_40mm_Flare_White",
+				"ACE_40mm_Flare_ir",
+				"ACE_HuntIR_M203"
+			};
+			cameraDir="OP_look";
+			discreteDistance[]={50,100,150,200};
+			discreteDistanceCameraPoint[]=
+			{
+				"OP_eye_50",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200"
+			};
+			discreteDistanceInitIndex=1;
+			reloadAction="GestureReloadMXUGL";
+			reloadMagazineSound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				1,
+				1,
+				10
+			};
+			magazineWell[]={};
 		};
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
@@ -1233,60 +1257,6 @@ class CfgWeapons
 			1,
 			100
 		};
-		class EGLM: UGL_F
-		{
-			displayName="[41st] UGL";
-			descriptionShort="41st UGL";
-			useModelOptics=0;
-			useExternalOptic=0;
-			cameraDir="OP_look";
-			discreteDistance[]={50,100,150,200};
-			discreteDistanceCameraPoint[]=
-			{
-				"OP_eye",
-				"OP_eye2",
-				"OP_eye3",
-				"OP_eye4"
-			};
-			discreteDistanceInitIndex=0;
-			magazines[]=
-			{
-				"IDA_HE_LauncherGrenade",
-				"FST_HE_LauncherGrenade",
-				"IDA_Smoke_LauncherGrenade",
-				"IDA_SmokeRed_LauncherGrenade",
-				"IDA_SmokeGreen_LauncherGrenade",
-				"IDA_SmokeBlue_LauncherGrenade",
-				"IDA_SmokePurple_LauncherGrenade",
-				"ACE_40mm_Flare_Red",
-				"ACE_40mm_Flare_green",
-				"ACE_40mm_Flare_White",
-				"ACE_40mm_Flare_ir",
-				"ACE_HuntIR_M203"
-			};
-			recoil="FST_recoil_DP23";
-			reloadAction="GestureReloadMk20UGL";
-			magazineWell[]={};
-			class Single: Mode_SemiAuto
-			{
-				sounds[] = {"StandardSound"};
-				class StandardSound
-				{
-					weaponSoundEffect = "";
-					begin1[] = {"\41st_Weapons\DC-15AS\Data\41st GL New 2-343.ogg", 4, 1, 1800};
-					begin2[] = {"\41st_Weapons\DC-15AS\Data\41st GL New 2-343.ogg", 4, 1, 1800};
-					soundBegin[] = {"begin1", 0.5, "begin2", 0.5};
-				};
-				reloadTime=2;
-				dispersion=0.001;
-				minRange=2;
-				minRangeProbab=0.5;
-				midRange=100;
-				midRangeProbab=0.7;
-				maxRange=200;
-				maxRangeProbab=0.3;
-			};
-		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=50;
@@ -1295,7 +1265,7 @@ class CfgWeapons
 				access=1;
 				compatibleItems[]=
 				{
-					"optic_MRCO",
+				//	"optic_MRCO",
 					"DBA_MRCO_A",
 					"DBA_MRCO_B"
 				};

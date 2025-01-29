@@ -1,7 +1,7 @@
 //Adapted from Indecisive Armoury Team
 class CfgPatches
 {
-	class FST_FST_773Firepuncher
+	class FST_773Firepuncher
 	{
 		requiredAddons[]=
 		{
@@ -37,7 +37,7 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] 773 Firepuncher marksman rifle";
-		baseWeapon="FST_773CX";
+		baseWeapon="FST_773Firepuncher";
 		descriptionShort="Long range, high power.";
 		picture="Indecisive_Armoury_Weapons_IMPERIAL\Data\774CX\774CX_ui.paa";
 		model="\Indecisive_Armoury_Weapons_REPUBLIC\Data\773Firepuncher\Model\IDA_773Firepuncher.p3d";

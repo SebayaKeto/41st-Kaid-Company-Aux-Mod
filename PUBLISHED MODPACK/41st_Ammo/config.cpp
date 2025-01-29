@@ -1633,18 +1633,33 @@ class CfgAmmo
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
 		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		submunitionAmmo="FST_blasterbolt_Green";
 	};
 	class FST_blasterbolt_scatter_Yellow: FST_blasterbolt_scatter_Blue
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		submunitionAmmo="FST_blasterbolt_Yellow";
 	};
 	class FST_blasterbolt_scatter_Red: FST_blasterbolt_scatter_Blue
 	{
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
+		submunitionAmmo="FST_blasterbolt_Red";
 	};
-	class FST_blasterbolt_scatter_flechette: FST_Blasterbolt
+	class FST_blasterbolt_scatter_flechette_Blue: FST_Blasterbolt
+	{
+		coefGravity=1.25;
+	};
+	class FST_blasterbolt_scatter_flechette_Green: FST_Blasterbolt_Green
+	{
+		coefGravity=1.25;
+	};
+	class FST_blasterbolt_scatter_flechette_Yellow: FST_Blasterbolt_Yellow
+	{
+		coefGravity=1.25;
+	};
+	class FST_blasterbolt_scatter_flechette_Red: FST_Blasterbolt_Red
 	{
 		coefGravity=1.25;
 	};
@@ -1653,7 +1668,7 @@ class CfgAmmo
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
 		hit=25;
-		submunitionAmmo="FST_blasterbolt_scatter_flechette";
+		submunitionAmmo="FST_blasterbolt_scatter_flechette_Blue";
 		submunitionConeType[]=
 		{
 			"random",
@@ -1662,12 +1677,12 @@ class CfgAmmo
 		submunitionConeAngle=0.34999999;
 		triggerTime=9.9999997e-010;
 	};
-	class FST_blasterbolt_scatter_DP23_Green: FST_blasterbolt_scatter_DP23_Blue
+	class FST_blasterbolt_scatter_DP23_Green: FST_blasterbolt_Green
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
 		effectfly="IDA_BlasterBoltGlow_Green_Fly";
 		hit=25;
-		submunitionAmmo="FST_blasterbolt_scatter_flechette";
+		submunitionAmmo="FST_blasterbolt_scatter_flechette_Green";
 		submunitionConeType[]=
 		{
 			"random",
@@ -1676,12 +1691,12 @@ class CfgAmmo
 		submunitionConeAngle=0.34999999;
 		triggerTime=9.9999997e-010;
 	};
-	class FST_blasterbolt_scatter_DP23_Yellow: FST_blasterbolt_scatter_DP23_Blue
+	class FST_blasterbolt_scatter_DP23_Yellow: FST_blasterbolt_Yellow
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
 		hit=25;
-		submunitionAmmo="FST_blasterbolt_scatter_flechette";
+		submunitionAmmo="FST_blasterbolt_scatter_flechette_Yellow";
 		submunitionConeType[]=
 		{
 			"random",
@@ -1690,12 +1705,12 @@ class CfgAmmo
 		submunitionConeAngle=0.34999999;
 		triggerTime=9.9999997e-010;
 	};
-	class FST_blasterbolt_scatter_DP23_Red: FST_blasterbolt_scatter_DP23_Blue
+	class FST_blasterbolt_scatter_DP23_Red: FST_blasterbolt_Red
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
 		hit=25;
-		submunitionAmmo="FST_blasterbolt_scatter_flechette";
+		submunitionAmmo="FST_blasterbolt_scatter_flechette_Red";
 		submunitionConeType[]=
 		{
 			"random",
@@ -2709,7 +2724,7 @@ class CfgMagazines
 		descriptionShort="5 round capacity.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		ammo="FST_thermal_shell_T15";
+		ammo="FST_thermal_shell_T15_Blue";
 		scope=2;
 		modelSpecial="";
 		modelSpecialIsProxy=0;
@@ -2736,7 +2751,8 @@ class CfgMagazines
 		displayName="[41st] High-power Thermal Coil (Red)";
 		ammo="FST_thermal_shell_T15_Red";
 	};
-	class FST_thermal_coil_Nexu_Blue: 100Rnd_65x39_caseless_mag
+	//IS THIS EVEN USED? AMMO ISNT CALLING ANYTHING THAT WORKS
+	/*class FST_thermal_coil_Nexu_Blue: 100Rnd_65x39_caseless_mag
 	{
 		author="Adapted From The Indecisive Armoury Team";
 		displayName="[41st] High-power Thermal Coil Nexu Edition";
@@ -2748,7 +2764,7 @@ class CfgMagazines
 		scope=2;
 		modelSpecial="";
 		modelSpecialIsProxy=0;
-		count=1;
+		count=5;
 		tracersEvery=1;
 		initSpeed=300;
 		mass=35;
@@ -2770,7 +2786,7 @@ class CfgMagazines
 		author="Gold";
 		displayName="[41st] High-power Thermal Coil Nexu Edition (Red)";
 		ammo="FST_thermal_shell_HP_Red";
-	};
+	};*/
 	class FST_blaster_scatter_cell_DP23_Blue: 100Rnd_65x39_caseless_mag
 	{
 		author="Adapted from the Indecisive Armoury Team";

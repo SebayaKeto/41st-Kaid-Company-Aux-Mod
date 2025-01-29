@@ -172,10 +172,10 @@ class CfgWeapons
 				"FST_thermal_coil_T15_Green",
 				"FST_thermal_coil_T15_Yellow",
 				"FST_thermal_coil_T15_Red",
-				"FST_thermal_coil_Nexu_Blue",
+			/*	"FST_thermal_coil_Nexu_Blue",
 				"FST_thermal_coil_Nexu_Green",
 				"FST_thermal_coil_Nexu_Yellow",
-				"FST_thermal_coil_Nexu_Red"
+				"FST_thermal_coil_Nexu_Red"		*/
 			};
 			cameraDir = "OP_look";
 			discreteDistance[] = {100, 200, 300};
@@ -233,8 +233,10 @@ class CfgWeapons
                     "acc_pointer_IR"
                 };
             };
-            class UnderBarrelSlot: UnderBarrelSlot {
-                compatibleItems[] = {
+            class UnderBarrelSlot: UnderBarrelSlot 
+			{
+                compatibleItems[]= 
+				{
                     "3AS_Bipod_VK38X_F"
                 };
             };

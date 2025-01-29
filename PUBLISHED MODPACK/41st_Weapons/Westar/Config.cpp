@@ -551,6 +551,17 @@ class CfgWeapons
 					"SWLW_Westar35S_suppressor"
 				};
 			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";  //\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL
+				compatibleItems[]=
+				{
+				    "FST_Attachment_Light_Normal_White",
+                    "FST_Attachment_Light_Beam_White",
+                    "FST_Attachment_Module_Light_Normal_White",
+                    "FST_Attachment_Module_Light_Beam_White"
+				};	
+			};
 		};
 	};	
 	class FST_Westar_M5_S : FST_Westar_M5

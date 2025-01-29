@@ -203,7 +203,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"FST_Knife",
+		//			"FST_Knife",			Causing error warning for some reason
 				};
 			};
 			class PointerSlot: PointerSlot

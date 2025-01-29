@@ -300,7 +300,10 @@ class CfgWeapons
 			displayName="Right Hand";
 			magazines[]=
 			{
-				"FST_blaster_cell_low",
+				"FST_blaster_cell_low_Blue",
+				"FST_blaster_cell_low_Green",
+				"FST_blaster_cell_low_Yellow",
+				"FST_blaster_cell_low_Red"
 			};
 			reloadAction="";
 			reloadMagazineSound[]=
