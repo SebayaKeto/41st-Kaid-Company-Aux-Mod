@@ -19,7 +19,8 @@ class CfgPatches
 			"FST_PLX1_Guided",
 			"FST_RPS6HP",
 			"FST_RPS6_Disposable",
-			"FST_RPS6_Used"
+			"FST_RPS6_Used",
+			"FST_RPS6_SR"
 		};
 		magazines[]=
 		{
@@ -493,6 +494,35 @@ class CfgWeapons
 			"\MRC\JLTS\weapons\RPS6\data\rps6_co.paa"
 		};
 		reloadAction="GestureReloadRPG7";
+		recoil="recoil_rpg";
+		magazineReloadSwitchPhase=0.30000001;
+		magazineWell[]={};
+		magazines[]=
+		{
+			"FST_RPS6_rocket",
+			"FST_RPS6_rocket_HE",
+		};
+		ace_overpressure_angle=30;
+		ace_overpressure_range=3;
+		ace_overpressure_damage=20;
+	};
+	class FST_RPS6_SR: FST_RPS6_Base
+	{
+		author="Adapted from the Indecisive Armoury Team";
+		_generalMacro="launch_RPG32_F";
+		scope=2;
+		baseWeapon="FST_RPS6_SR";
+		autoReload="false";
+		displayName="[41st] RPS-6HP Rocket launcher (SR)";
+		model="\3AS\3AS_Weapons\RPS6HP\3AS_RPS6_HP.p3d";
+		picture="\MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
+		uiPicture="MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3as_weapons\data\anim\RPS6_HP_Temp.rtm"
+		};
+		reloadAction="ReloadRPG";
 		recoil="recoil_rpg";
 		magazineReloadSwitchPhase=0.30000001;
 		magazineWell[]={};
