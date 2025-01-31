@@ -98,11 +98,11 @@ class CfgVehicles {
 				};
 				magazines[]=
 				{
-					"FST_blaster_scatter_cell",
-					"FST_blaster_scatter_cell",
-					"FST_blaster_scatter_cell",
-					"FST_blaster_scatter_cell",
-					"FST_blaster_scatter_cell"
+					"FST_blaster_scatter_cell_Blue",
+					"FST_blaster_scatter_cell_Blue",
+					"FST_blaster_scatter_cell_Blue",
+					"FST_blaster_scatter_cell_Blue",
+					"FST_blaster_scatter_cell_Blue"
 				};
 				minElev = -20;
 				maxElev = 60;

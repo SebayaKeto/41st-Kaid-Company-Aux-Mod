@@ -1437,7 +1437,7 @@ class CfgMagazines
 		displaynameshort="HC Plasma Cell";
 		scope=2;
 		count=500;
-		ammo="FST_blasterbolt_Overcharged";
+		ammo="FST_blasterbolt_Overcharged_Blue";
 		initSpeed=910;
 		maxLeadSpeed=36.111099;
 		tracersEvery=1;

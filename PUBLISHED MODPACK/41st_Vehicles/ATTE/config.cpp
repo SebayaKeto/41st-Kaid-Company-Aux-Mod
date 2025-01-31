@@ -3696,17 +3696,17 @@ class CfgVehicles
 					"FST_thermal_coil_blue",
 					"FST_thermal_coil_blue",
 					"FST_thermal_coil_blue",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell"
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue"
 				};
 				minElev=-10;
 				maxElev=20;

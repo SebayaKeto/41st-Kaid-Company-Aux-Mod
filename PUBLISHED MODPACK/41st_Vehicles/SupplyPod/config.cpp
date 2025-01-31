@@ -258,57 +258,57 @@ class CfgVehicles
 			class _xx_FST_blaster_cell_High
 			{
 				count=160;
-				magazine="FST_blaster_cell_High";
+				magazine="FST_blaster_cell_High_Blue";
 			};
 			class _xx_FST_blaster_cell
 			{
 				count=160;
-				magazine="FST_blaster_cell";
+				magazine="FST_blaster_cell_Blue";
 			};
 			class _xx_FST_blaster_cell_low
 			{
 				count=20;
-				magazine="FST_blaster_cell_low";
+				magazine="FST_blaster_cell_low_Blue";
 			};
 			class _xx_FST_blaster_scatter_cell
 			{
 				count=40;
-				magazine="FST_blaster_scatter_cell";
+				magazine="FST_blaster_scatter_cell_Blue";
 			};
 			class _xx_FST_thermal_slugmag_DP23
 			{
 				count=40
-				magazine="FST_thermal_slugmag_DP23";
+				magazine="FST_thermal_slugmag_DP23_Blue";
 			};
 			class _xx_FST_blaster_battery
 			{
 				count=40;
-				magazine="FST_blaster_battery";
+				magazine="FST_blaster_battery_Blue";
 			};
 			class _xx_FST_thermal_coil_LP
 			{
 				count=40;
-				magazine="FST_thermal_coil_LP";
+				magazine="FST_thermal_coil_LP_Blue";
 			};
 			class _xx_FST_thermal_coil_T15
 			{
 				count=20;
-				magazine="FST_thermal_coil_T15";
+				magazine="FST_thermal_coil_T15_Blue";
 			};
 			class _xx_FST_blaster_cell_Valken
 			{
 				count=40;
-				magazine="FST_blaster_cell_Valken";
+				magazine="FST_blaster_cell_Valken_Blue";
 			};
 			class _xx_FST_blaster_cell_Overcharged
 			{
 				count=10;
-				magazine="FST_blaster_cell_Overcharged";
+				magazine="FST_blaster_cell_Overcharged_Blue";
 			};
 			class _xx_FST_blaster_cell_LE
 			{
 				count=16;
-				magazine="FST_blaster_cell_LE";
+				magazine="FST_blaster_cell_LE_Blue";
 			};
 			class _xx_FST_RPS6_rocket
 			{
@@ -398,7 +398,7 @@ class CfgVehicles
 			class _xx_FST_blaster_battery_DC15L
 			{
 				count=40;
-				magazine="FST_blaster_battery_DC15L";
+				magazine="FST_blaster_battery_DC15L_Blue";
 			};
 		};
 		class TransportBackpacks

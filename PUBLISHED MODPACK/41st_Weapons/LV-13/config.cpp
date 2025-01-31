@@ -54,7 +54,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Weapons\LV-13\Data\optre_comet_Base_co.paa"
+			"41st_Weapons\LV-13\Data\optre_comet_Base_co_Blossom.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Weapons\LV-13\Data\optre_comet_Blank_Details.rvmat",
 		};
 		magazines[]=
 		{
