@@ -254,7 +254,7 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		enableRadio=1;
 		TFAR_hasIntercom=1;
-		class ACE_SelfActions: ACE_SelfActions
+		class ACE_SelfAction: ACE_SelfActions
 		{
 			class TFAR_IntercomChannel
 			{
