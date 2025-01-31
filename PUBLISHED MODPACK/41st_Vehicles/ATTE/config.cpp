@@ -1175,7 +1175,7 @@ class CfgVehicles
 		icon="3AS\3AS_ATTE\data\UI\ATTE_top_ca.paa";
 		picture="3AS\3AS_ATTE\data\UI\ATTE_side_ca.paa";
 		TFAR_hasIntercom=1;
-		class ACE_SelfActions: ACE_SelfActions
+		class ACE_SelfAction: ACE_SelfActions
 		{
 			class TFAR_IntercomChannel
 			{
