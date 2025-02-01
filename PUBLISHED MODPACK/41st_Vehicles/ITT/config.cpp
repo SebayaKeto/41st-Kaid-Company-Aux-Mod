@@ -68,6 +68,7 @@ class CfgVehicles
 	class Car;
 	class Car_F: Car
 	{
+		class ACE_SelfActions;
 		class NewTurret;
 		class Sounds;
 		class HitPoints
@@ -80,51 +81,6 @@ class CfgVehicles
 	};
 	class Wheeled_APC_F: Car_F
 	{
-		class ViewOptics;
-		class ViewCargo;
-		class Sounds: Sounds
-		{
-			class Engine;
-			class Movement;
-		};
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
-	};
-	class APC_Wheeled_01_base_F: Wheeled_APC_F
-	{
-		class ACE_SelfActions;
-	};
-	class FST_ITT_Base: APC_Wheeled_01_base_F
-	{
-		thrustDelay=0.1;
-		brakeIdleSpeed=1.78;
-		maxSpeed=110;
-		fuelCapacity=50;
-		wheelCircumference=2.8365002;
-		normalSpeedForwardCoef=0.89999998;
-		antiRollbarForceCoef=24;
-		antiRollbarForceLimit=30;
-		antiRollbarSpeedMin=15;
-		antiRollbarSpeedMax=70;
-		idleRpm=500;
-		redRpm=2200;
-		maxOmega=275;
-		minOmega=50;
-        ace_cargo_hasCargo   = 1;
-        ace_cargo_space      = 1000;
-        tf_range             = 100000;
-        tf_isolatedAmount    = 0.4;
-        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
-        tf_hasLRradio        = 1;
 		TFAR_hasIntercom=1;
 		class ACE_SelfActions: ACE_SelfActions
 		{
@@ -172,6 +128,50 @@ class CfgVehicles
 				};
 			};
 		};
+		class ViewOptics;
+		class ViewCargo;
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class APC_Wheeled_01_base_F: Wheeled_APC_F
+	{
+	};
+	class FST_ITT_Base: APC_Wheeled_01_base_F
+	{
+		thrustDelay=0.1;
+		brakeIdleSpeed=1.78;
+		maxSpeed=110;
+		fuelCapacity=50;
+		wheelCircumference=2.8365002;
+		normalSpeedForwardCoef=0.89999998;
+		antiRollbarForceCoef=24;
+		antiRollbarForceLimit=30;
+		antiRollbarSpeedMin=15;
+		antiRollbarSpeedMax=70;
+		idleRpm=500;
+		redRpm=2200;
+		maxOmega=275;
+		minOmega=50;
+        ace_cargo_hasCargo   = 1;
+        ace_cargo_space      = 1000;
+        tf_range             = 100000;
+        tf_isolatedAmount    = 0.4;
+        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio        = 1;
 		torqueCurve[]=
 		{
 			
