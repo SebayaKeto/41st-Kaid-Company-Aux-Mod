@@ -483,6 +483,7 @@ class CfgVehicles
 			"FST_Harrower_HARM_Missile",
 			"Laserdesignator_pilotCamera",
 			"ls_weapon_CMFlareLauncher",
+			"FST_SUU25",
 			"FST_SmokeLauncher"
         };
 		magazines[]=
@@ -494,6 +495,9 @@ class CfgVehicles
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",

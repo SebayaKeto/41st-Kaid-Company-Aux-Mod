@@ -3012,8 +3012,8 @@ class CfgMagazines
 	class FST_grenade_Detonator_mag: HandGrenade
 	{
 		author="Adapted from the Indecisive Armoury Team";
-		picture="Indecisive_Armoury_Ammos\Data\Thermal_Detonator\Thermal_Detonator_ui.paa";
-		model="Indecisive_Armoury_Ammos\Data\Thermal_Detonator\IDA_Thermal_Detonator.p3d";
+		picture="\Indecisive_Armoury_Ammos\Data\Thermal_Detonator\Thermal_Detonator_UI.paa";
+		model="\Indecisive_Armoury_Ammos\Data\Thermal_Detonator\IDA_Thermal_Detonator.p3d";
 		displayName="[41st] Thermal Detonator";
 		displayNameShort="Thermal Detonator";
 		descriptionShort="Thermal Detonator";

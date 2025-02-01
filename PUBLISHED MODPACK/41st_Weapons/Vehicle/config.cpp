@@ -421,6 +421,97 @@ class CfgAmmo
 		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		aiAmmoUsageFlags="128 + 512";
 	};
+	class F_40mm_White; //Laat Parachute Flares
+	class FST_AWS_SUU25_type1 : F_40mm_White  //Laat Parachute Flares
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {
+			1.000000, 1.000000, 1.000000, 0.800000
+		};
+		intensity = 10000000;
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {
+			1, 1, 1, 0.500000
+		};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 100000;
+		size = 3;
+		triggerTime = 0;
+		triggerSpeedCoef = 1;
+		timeToLive = 60;
+	};
+	class MissileCore;
+	class MissileBase : MissileCore
+	{
+		class Components;
+	};
+	class FST_SUU25_Rocket : MissileBase  //Laat Parachute Flares
+	{
+		model = "\FIR_AirWeaponSystem_US\Data\Rocket\suu25_rocket.p3d";
+		proxyShape = "\FIR_AirWeaponSystem_US\Data\Rocket\suu25_rocket.p3d";
+		maverickWeaponIndexOffset = 12;
+		maverickweapon = 1;
+		cost = 500;
+		hit = 0;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		manualControl = 0;
+		maxControlRange = 0;
+		airLock = 0;
+		irLock = 0;
+		laserLock = 0;
+		nvLock = 0;
+		weaponLockSystem = 0;
+		cmimmunity = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		initTime = 0.002;
+		thrustTime = 1.1;
+		thrust = 10;
+		airFriction = 0.09;
+		sideAirFriction = 0.005;
+		maxSpeed = 1;
+		maneuvrability = 0;
+		fuseDistance = 40;
+		timeToLive = 20;
+		effectsMissileInit = "MissileDAR1";
+		whistleDist = 30;
+		submunitionAmmo = "FST_AWS_SUU25_type1";
+		submunitionConeAngle = 1;
+		submunitionConeType[] = {"randomcenter",1};
+ 		triggerTime = 0.05;
+		triggerSpeedCoef[] = {0.0,0.1};
+
+		// FIR_AWS_FLARE = 1;		
+		class CamShakeExplode
+		{
+			power = 16;
+			duration = 1.8;
+			frequency = 20;
+			distance = 191.554;
+		};
+		class CamShakeHit
+		{
+			power = 80;
+			duration = 0.6;
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = 2.9907;
+			duration = 1.8;
+			frequency = 20;
+			distance = 71.5542;
+		};
+		class CamShakePlayerFire
+		{
+			power = 2;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
+	};
 };
 class CfgMagazines
 {
@@ -592,7 +683,20 @@ class CfgMagazines
 		initSpeed=800;
 		mass=20;
 	};
+	class FST_SUU25_P_12rnd_M : VehicleMagazine  //Laat Parachute Flares
+	{
+		scope = 2;
+		displayName = "LAAT FLARE x 1";
+		displayNameShort = "LAAT FLARE";
+		ammo = "FST_SUU25_Rocket";
+		descriptionShort = "Parachute Flare";
+		initSpeed = 0;
+		count = 12;
+		maxLeadSpeed = 0;
+		model = "\FIR_AirWeaponSystem_US\data\proxies\pod_8x_SUU25.p3d";
+		mass = 125;
 };
+	};
 class CfgWeapons
 {
 	class MGun;
@@ -1640,6 +1744,68 @@ class CfgWeapons
 			midRangeProbab=0.40000001;
 			maxRange=1200;
 			maxRangeProbab=0.1;
+		};
+	};
+	class RocketPods;
+	class FST_SUU25 : RocketPods //Laat Parachute Flares
+	{
+		ballisticsComputer = 8;
+		holdsterAnimValue = 1;
+		magazines[] = { "FST_SUU25_P_12rnd_M" };
+		displayName = "[41st] LAAT Flare Dispenser";
+		modes[] = { "Far_AI", "Burst" };
+		cursor = "EmptyCursor";
+		cursorAim = "rocket";
+		class Far_AI : RocketPods
+		{
+			minRange = 50;
+			minRangeProbab = 0.041;
+			midRange = 600;
+			midRangeProbab = 0.21;
+			maxRange = 2500;
+			maxRangeProbab = 0.11;
+			displayName = "HYDRA-SINGLE";
+
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";
+
+			burst = 1;
+			reloadTime = 1;
+			autoFire = 0;
+			showToPlayer = 0;
+		};
+		class Burst : RocketPods
+		{
+			minRange = 1;
+			minRangeProbab = 0.001;
+			midRange = 2;
+			midRangeProbab = 0.001;
+			maxRange = 3;
+			maxRangeProbab = 0.001;
+			displayName = "FLR DPS";
+			burst = 1;
+			reloadTime = 1;
+			soundContinuous = 0;
+			autoFire = 1;
+
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";
 		};
 	};
 };
