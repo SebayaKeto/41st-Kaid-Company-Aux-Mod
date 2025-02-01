@@ -491,9 +491,9 @@ class CfgVehicles
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -648,9 +648,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
 					"Laser_Battery",
 					"Laser_Battery"
 				};
@@ -747,9 +747,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
 					"FST_thermal_coil_Ball",
 					"FST_thermal_coil_Ball",
 					"FST_thermal_coil_Ball",
@@ -1211,9 +1211,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
 					"FST_thermal_coil_Ball",
 					"FST_thermal_coil_Ball",
 					"FST_thermal_coil_Ball",
@@ -3021,9 +3021,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
 					"Laser_Battery"
 				};
 				class OpticsIn
@@ -3405,9 +3405,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
+					"FST_thermal_coil_LP_Blue",
+					"FST_thermal_coil_LP_Blue",
+					"FST_thermal_coil_LP_Blue",
 					"Laser_Battery"
 				};
 				class OpticsIn
@@ -3649,9 +3649,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
-					"FST_thermal_coil_LP",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
 					"Laser_Battery"
 				};
 				class OpticsIn
@@ -3821,10 +3821,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -3877,10 +3877,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4038,10 +4038,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4094,10 +4094,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4256,10 +4256,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4312,10 +4312,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4473,10 +4473,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
@@ -4529,10 +4529,10 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
-			"FST_thermal_coil_LP",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
+			"FST_Thermal_Coil",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
