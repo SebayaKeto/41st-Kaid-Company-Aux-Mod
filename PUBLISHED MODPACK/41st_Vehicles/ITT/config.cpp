@@ -515,8 +515,8 @@ class CfgVehicles
                 };
                 magazines[]=
                 {
-                    "FST_thermal_coil_LP_Blue",
-                    "FST_thermal_coil_LP_Blue",
+                    "FST_thermal_coil_LP",
+                    "FST_thermal_coil_LP",
                     "Laserbatteries",
                     "SmokeLauncherMag",
                     "SmokeLauncherMag",
@@ -615,8 +615,8 @@ class CfgVehicles
                 };
                 magazines[]=
                 {
-                    "FST_thermal_coil_LP_Blue",
-                    "FST_thermal_coil_LP_Blue"
+                    "FST_thermal_coil_LP",
+                    "FST_thermal_coil_LP"
                 };
 				minElev=-12.5;
 				maxElev=12.5;
