@@ -3829,6 +3829,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3860,7 +3865,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -3885,6 +3890,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4046,6 +4056,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4077,7 +4092,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4102,6 +4117,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4264,6 +4284,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4295,7 +4320,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4320,6 +4345,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4481,6 +4511,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4512,7 +4547,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4537,6 +4572,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
