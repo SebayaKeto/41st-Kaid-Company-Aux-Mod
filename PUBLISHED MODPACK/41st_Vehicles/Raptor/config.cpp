@@ -1503,20 +1503,20 @@ class CfgVehicles
 				turretInfoType="RscOptics_UGV_gunner";
 				weapons[]=
 				{
-					"IDA_BTX42"
+					"FST_BTX42"
 				};
 				magazines[]=
 				{
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank"
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank"
 				};
 				soundServo[]=
 				{
