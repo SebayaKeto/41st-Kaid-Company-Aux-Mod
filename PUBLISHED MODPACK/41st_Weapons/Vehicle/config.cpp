@@ -439,7 +439,8 @@ class CfgAmmo
 		size = 3;
 		triggerTime = 0;
 		triggerSpeedCoef = 1;
-		timeToLive = 60;
+		timeToLive = 120;
+		airFriction = 1;
 	};
 	class MissileCore;
 	class MissileBase : MissileCore
