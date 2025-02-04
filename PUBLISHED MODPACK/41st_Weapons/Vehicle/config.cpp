@@ -15,6 +15,33 @@ class CfgPatches
 };
 class Mode_SemiAuto;
 class Mode_FullAuto;
+
+class FST_AWS_SmokeShellWhiteEffect
+{
+
+	class FIR_AWS_SmokeShellWhite
+	{
+		simulation = "particles";
+		type = "FIR_AWS_SmokeShellWhite";
+		position[] = {
+			0, 0, 0
+		};
+		intensity = 3;
+		interval = 1;
+	};
+
+	class FIR_AWS_SmokeShellWhite2
+	{
+		simulation = "particles";
+		type = "FIR_AWS_SmokeShellWhite2";
+		position[] = {
+			0, 0, 0
+		};
+		intensity = 3;
+		interval = 1;
+	};
+};
+
 class CfgAmmo
 {
 	class Cannon_30mm_HE_Plane_CAS_02_F;
@@ -512,7 +539,100 @@ class CfgAmmo
 			distance = 1;
 		};
 	};
+	class SmokeShell; //LaaT Smoke Rocket
+	class FST_AWS_SmokeShell : SmokeShell //LaaT Smoke Rocket
+	{
+		author = "Adapted from FIR Team by Viz"
+		smokeColor[] = {
+			1, 1, 1, 1
+		};
+		effectsSmoke = "FST_AWS_SmokeShellWhiteEffect";
+	};
+	class ShotDeployBase; //LaaT Smoke Rocket
+	class FST_Hydra_Rocket_Smoke_Deploy : ShotDeployBase //LaaT Smoke Rocket
+	{
+		author = "Adapted from FIR Team by Viz"
+		model = "\FIR_AirWeaponSystem_US\Data\Rocket\hydra_rocket_fly.p3d";
+		proxyShape = "\FIR_AirWeaponSystem_US\Data\Rocket\hydra_rocket.p3d";
+		hit = 1;
+		indirectHit = 1;
+		indirectHitRange = 0.1;
+		initTime = 0;
+		cost = 400;
+		//effectFly = "clustereffectfly";
+		CraterEffects = "GrenadeCrater";
+		explosionEffects = "GrenadeExplosion";
+		submunitionAmmo = "FST_AWS_SmokeShell";
+	};
+	class FST_Hydra_Rocket_Smoke : MissileBase //LaaT Smoke Rocket
+	{
+		author = "Adapted from FIR Team by Viz"
+		model = "\FIR_AirWeaponSystem_US\Data\Rocket\hydra_rocket_fly.p3d";
+		proxyShape = "\FIR_AirWeaponSystem_US\Data\Rocket\hydra_rocket.p3d";
+		maverickWeaponIndexOffset = 12;
+		maverickweapon = 1;
+		cost = 500;
+		hit = 1;
+		indirectHit = 1;
+		indirectHitRange = 1;
+		manualControl = 0;
+		maxControlRange = 0;
+		airLock = 0;
+		irLock = 0;
+		laserLock = 0;
+		nvLock = 0;
+		weaponLockSystem = 0;
+		cmimmunity = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		initTime = 0.002;
+		thrust = 1060;
+		thrustTime = 0.69;
+		airFriction = 0.09;
+		sideAirFriction = 0.005;
+		maxSpeed = 590;
+		maneuvrability = 0;
+		fuseDistance = 50;
+		timeToLive = 60;
+		effectsMissileInit = "MissileDAR1";
+		whistleDist = 30;
+
+		submunitionAmmo = "FST_Hydra_Rocket_Smoke_Deploy";
+		submunitionConeAngle = 5;
+		submunitionConeType[] = {"randomcenter",1};
+		triggerDistance = 5;
+		triggerSpeedCoef[] = {0.8,1};
+
+		class CamShakeExplode
+		{
+			power = 16;
+			duration = 1.8;
+			frequency = 20;
+			distance = 191.554;
+		};
+		class CamShakeHit
+		{
+			power = 80;
+			duration = 0.6;
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = 2.9907;
+			duration = 1.8;
+			frequency = 20;
+			distance = 71.5542;
+		};
+		class CamShakePlayerFire
+		{
+			power = 2;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
+	};
 };
+
 class CfgMagazines
 {
 	class VehicleMagazine;
@@ -683,8 +803,9 @@ class CfgMagazines
 		initSpeed=800;
 		mass=20;
 	};
-	class FST_SUU25_P_12rnd_M : VehicleMagazine  //Laat Parachute Flares
+	class FST_LAAT_P_12rnd_M : VehicleMagazine  //Laat Parachute Flares
 	{
+		author = "Adapted from FIR Team by Viz"
 		scope = 2;
 		displayName = "LAAT FLARE x 1";
 		displayNameShort = "LAAT FLARE";
@@ -695,8 +816,22 @@ class CfgMagazines
 		maxLeadSpeed = 0;
 		model = "\FIR_AirWeaponSystem_US\data\proxies\pod_8x_SUU25.p3d";
 		mass = 125;
-};
 	};
+	class FST_LAAT_Smoke_P_16rnd_M : VehicleMagazine //Laat Smoke Rockets
+	{
+		author = "Adapted from FIR Team by Viz"
+		scope = 2;
+		displayName = "LAAT RP Smoke x 1";
+		displayNameShort = "LAAT RP Smoke";
+		ammo = "FST_Hydra_Rocket_Smoke";
+		descriptionShort = "unguided rocket, 2.75-inch, RP Smoke";				
+		initSpeed = 0;
+		count = 16;
+		maxLeadSpeed = 300;
+		model = "\FIR_AirWeaponSystem_US\data\proxies\pod_7x_Hydra.p3d";
+		mass = 125;
+	};
+};
 class CfgWeapons
 {
 	class MGun;
@@ -1749,9 +1884,10 @@ class CfgWeapons
 	class RocketPods;
 	class FST_SUU25 : RocketPods //Laat Parachute Flares
 	{
+		author = "Adapted from FIR Team by Viz"
 		ballisticsComputer = 8;
 		holdsterAnimValue = 1;
-		magazines[] = { "FST_SUU25_P_12rnd_M" };
+		magazines[] = { "FST_LAAT_P_12rnd_M" };
 		displayName = "[41st] LAAT Flare Dispenser";
 		modes[] = { "Far_AI", "Burst" };
 		cursor = "EmptyCursor";
@@ -1808,4 +1944,101 @@ class CfgWeapons
 			weaponSoundEffect = "DefaultRifle";
 		};
 	};
+	class FIR_RKT_Base : RocketPods
+	{	
+		class EventHandlers 
+		{
+			fired = "[_this] execVM '\FIR_AirWeaponSystem_US\Script\TGTSystem\FCS\ROCKET_EH.sqf';";
+		};	
+	};
+	class FST_RKT_Launcher : FIR_RKT_Base //Laat Smoke Rocket
+	{
+		author = "Adapted from FIR Team by Viz"
+		ballisticsComputer = 8;
+		holdsterAnimValue = 1;
+		magazines[] = {"FST_LAAT_Smoke_P_16rnd_M"};
+		displayName = "LAAT Rocket Launcher";
+		modes[] = { "Far_AI", "Single","Burst" };
+		cursor = "EmptyCursor";
+		cursorAim = "rocket";
+		class Far_AI : FIR_RKT_Base
+		{
+			minRange = 50;
+			minRangeProbab = 0.041;
+			midRange = 600;
+			midRangeProbab = 0.21;
+			maxRange = 2500;
+			maxRangeProbab = 0.11;
+			displayName = "HYDRA-SINGLE";
+
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";
+
+			burst = 1;
+			reloadTime = 0.08;
+			autoFire = 0;
+			showToPlayer = 0;
+		};
+		class Single : FIR_RKT_Base
+		{
+			minRange = 1;
+			minRangeProbab = 0.001;
+			midRange = 2;
+			midRangeProbab = 0.001;
+			maxRange = 3;
+			maxRangeProbab = 0.001;
+			displayName = "SINGLE";
+			burst = 1;
+			reloadTime = 0.1;
+			soundContinuous = 0;
+			autoFire = 0;
+
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";		
+		};		
+		class Burst : FIR_RKT_Base
+		{
+			minRange = 1;
+			minRangeProbab = 0.001;
+			midRange = 2;
+			midRangeProbab = 0.001;
+			maxRange = 3;
+			maxRangeProbab = 0.001;
+			displayName = "FULLAUTO";
+			burst = 1;
+			reloadTime = 0.1;
+			soundContinuous = 0;
+			autoFire = 1;
+			textureType = "fullAuto";
+			sounds[] = { "StandardSound" };
+
+			class StandardSound
+			{
+				begin1[] = { "A3\Sounds_F\weapons\Rockets\new_rocket_7", 1.7782794, 1.2, 1600 };
+				soundBegin[] = { "begin1", 1 };
+				weaponSoundEffect = "DefaultRifle";
+			};
+			soundFly[] = { "\A3\Sounds_F\weapons\Rockets\rocket_fly_2", 1.0, 1.2, 700 };
+			weaponSoundEffect = "DefaultRifle";		
+			
+			dispersion = 0.006000;
+		};		
+	};
 };
+
