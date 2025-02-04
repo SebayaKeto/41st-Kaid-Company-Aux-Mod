@@ -320,10 +320,10 @@ class CfgVehicles
         };
 		magazines[]=
 		{
-			"FST_thermal_coil_LP_Blue",
-			"FST_thermal_coil_LP_Blue",
-			"FST_thermal_coil_LP_Blue",
-			"FST_thermal_coil_LP_Blue",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
+			"FST_thermal_coil",
 			"Laserbatteries",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",

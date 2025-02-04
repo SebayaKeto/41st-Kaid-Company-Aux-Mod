@@ -139,6 +139,7 @@ class CfgVehicles
 	class Helicopter: Air
 	{
 		TFAR_hasIntercom=1;
+		TFAR_defaultIntercomSlot = -1;
 		class ACE_SelfActions: ACE_SelfActions
 		{
 			class TFAR_IntercomChannel
@@ -149,15 +150,15 @@ class CfgVehicles
 				icon="";
 				class TFAR_IntercomChannel_disabled
 				{
-					displayName="Disabled";
-					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 0";
-					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];";
+					displayName = "Disabled";
+					condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2]; if (_intercom == -2) then { _vehicle setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -1, true]; _intercom = -1 }; _intercom != -1";
+					statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -1, true];";
 				};
 				class TFAR_IntercomChannel_1
 				{
 					displayName="$STR_tfar_core_Intercom_ACESelfAction_Channel1";
-					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != -1";
-					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 0";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];";
 				};
 				class TFAR_IntercomChannel_2
 				{
@@ -484,6 +485,7 @@ class CfgVehicles
 			"Laserdesignator_pilotCamera",
 			"ls_weapon_CMFlareLauncher",
 			"FST_SUU25",
+			"FST_RKT_Launcher",
 			"FST_SmokeLauncher"
         };
 		magazines[]=
@@ -495,9 +497,12 @@ class CfgVehicles
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"FST_SUU25_P_12rnd_M",
-			"FST_SUU25_P_12rnd_M",
-			"FST_SUU25_P_12rnd_M",
+			"FST_LAAT_P_12rnd_M",
+			"FST_LAAT_P_12rnd_M",
+			"FST_LAAT_P_12rnd_M",
+			"FST_LAAT_Smoke_P_16rnd_M",
+			"FST_LAAT_Smoke_P_16rnd_M",
+			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3828,6 +3833,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3859,7 +3869,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -3884,6 +3894,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4045,6 +4060,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4076,7 +4096,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4101,6 +4121,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4263,6 +4288,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4294,7 +4324,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4319,6 +4349,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4480,6 +4515,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4511,7 +4551,7 @@ class CfgVehicles
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
 			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
+			"FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4536,6 +4576,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
+			"Laser_Battery",
+			"Laserbatteries",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
+			"FST_SUU25_P_12rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
