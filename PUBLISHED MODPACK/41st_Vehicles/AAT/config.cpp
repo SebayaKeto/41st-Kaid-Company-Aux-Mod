@@ -879,21 +879,21 @@ class CfgVehicles
 				gunEnd="konec hlavne";
 				weapons[]=
 				{
-					"IDA_BTX42",
+					"FST_BTX42",
 					"SmokeLauncher"
 				};
 				magazines[]=
 				{
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
-					"IDA_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
 					"SmokeLauncherMag"
 				};
 				turretInfoType="RscWeaponRangeZeroing";
