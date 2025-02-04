@@ -11706,6 +11706,28 @@ class CfgWeapons
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Business: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Business)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Business.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Desert: JLTS_CloneNVG
 	{
 		author="Daara";
