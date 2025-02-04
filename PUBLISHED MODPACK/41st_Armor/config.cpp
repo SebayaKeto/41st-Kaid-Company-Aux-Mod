@@ -207,6 +207,7 @@ class CfgPatches
 			"FST_P2_Hazzo",
 			"FST_P2_Crab",
 			"FST_P2_Chip",
+			"FST_P2_Steel",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -416,6 +417,71 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_co.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply120";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestARC_Camo: V_PlateCarrier1_rgr
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Camo]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Camo.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4707,7 +4773,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Medusa.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
+			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Medusa.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
 	}; 
@@ -8860,6 +8926,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chip.paa",
+		};
+	};
+	class FST_P2_Helmet_Steel: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Steel]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Steel.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
