@@ -16,32 +16,6 @@ class CfgPatches
 class Mode_SemiAuto;
 class Mode_FullAuto;
 
-class FST_AWS_SmokeShellWhiteEffect
-{
-
-	class FIR_AWS_SmokeShellWhite
-	{
-		simulation = "particles";
-		type = "FIR_AWS_SmokeShellWhite";
-		position[] = {
-			0, 0, 0
-		};
-		intensity = 3;
-		interval = 1;
-	};
-
-	class FIR_AWS_SmokeShellWhite2
-	{
-		simulation = "particles";
-		type = "FIR_AWS_SmokeShellWhite2";
-		position[] = {
-			0, 0, 0
-		};
-		intensity = 3;
-		interval = 1;
-	};
-};
-
 class CfgAmmo
 {
 	class Cannon_30mm_HE_Plane_CAS_02_F;
@@ -505,7 +479,7 @@ class CfgAmmo
 		effectsMissileInit = "MissileDAR1";
 		whistleDist = 30;
 		submunitionAmmo = "FST_AWS_SUU25_type1";
-		submunitionConeAngle = 1;
+		submunitionConeAngle = 5;
 		submunitionConeType[] = {"randomcenter",1};
  		triggerTime = 0.05;
 		triggerSpeedCoef[] = {0.0,0.1};
@@ -547,7 +521,7 @@ class CfgAmmo
 		smokeColor[] = {
 			1, 1, 1, 1
 		};
-		effectsSmoke = "FST_AWS_SmokeShellWhiteEffect";
+		effectsSmoke = "IDA_SmokeEffect";
 	};
 	class ShotDeployBase; //LaaT Smoke Rocket
 	class FST_Hydra_Rocket_Smoke_Deploy : ShotDeployBase //LaaT Smoke Rocket
@@ -564,6 +538,8 @@ class CfgAmmo
 		CraterEffects = "GrenadeCrater";
 		explosionEffects = "GrenadeExplosion";
 		submunitionAmmo = "FST_AWS_SmokeShell";
+		submunitionConeAngle = 10;
+		submunitionConeType[] = {"randomcenter", 3};
 	};
 	class FST_Hydra_Rocket_Smoke : MissileBase //LaaT Smoke Rocket
 	{
