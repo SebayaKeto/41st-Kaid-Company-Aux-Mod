@@ -273,12 +273,12 @@ class CfgVehicles
 			class _xx_FST_blaster_scatter_cell
 			{
 				count=40;
-				magazine="FST_blaster_scatter_cell_Blue";
+				magazine="FST_blaster_scatter_cell_DP23_Blue";
 			};
 			class _xx_FST_thermal_slugmag_DP23
 			{
 				count=40
-				magazine="FST_thermal_slugmag_DP23_Blue";
+				magazine="FST_thermal_slug_mag_Blue";
 			};
 			class _xx_FST_blaster_battery
 			{
