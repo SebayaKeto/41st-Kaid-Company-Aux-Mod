@@ -208,6 +208,7 @@ class CfgPatches
 			"FST_P2_Crab",
 			"FST_P2_Chip",
 			"FST_P2_Steel",
+			"FST_P2_Trenny",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -7245,6 +7246,26 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Felix: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Felix]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Felix.paa",
+		};
+	};	
+	class FST_P2_Helmet_Seraph: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Seraph]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Seraph.paa",
+		};
+	};	
 	class FST_P2_Helmet_Blood: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -10093,6 +10114,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Trenny: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Trenny]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Trenny";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Sierra: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -11544,6 +11579,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Burns.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Rint: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Rint)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Rint.paa",
 		};
 		visionMode[]=
 		{
@@ -19999,6 +20056,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Trenny: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-2213 'Trenny'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Trenny";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Trenny.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Trenny.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Trenny",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Trenny",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Sierra: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -25459,6 +25571,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - ampersand";
 			material="\lsd_identities\data\models\data\clone_b.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_ampersand.paa";
+		};
+		class FST_Clone_Head_Delta: FST_clone_Default_head
+		{
+			author="Gold"
+			name="Clone Trooper Delta";
+			displayName="[41st] Clone Trooper - Delta";
+			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Delta.paa";
 		};
 	};
 };
