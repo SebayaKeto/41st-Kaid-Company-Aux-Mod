@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Alternity -- Framework Project">
+    <Package name="String Language">
+		<Key ID="STR_ATNT_MM_SkipIntroNewText">
+			<English>&lt;t size='1.2' align='right' shadow='0' color='#FFFFFF' font='PuristaLight'&gt;PRESS &lt;t font='PuristaBold'&gt;SPACE&lt;t font='PuristaLight'&gt; TO SKIP&lt;/t&gt;</English>
+            <French>&lt;t size='1.2' align='right' shadow='0' color='#FFFFFF' font='PuristaLight'&gt;APPUYEZ SUR &lt;t font='PuristaBold'&gt;ESPACE&lt;t font='PuristaLight'&gt; POUR PASSER&lt;/t&gt;</French>
+		</Key>
+		
+		<Key ID="STR_ATNT_MM_IntroText">
+			<English>&lt;t font='PuristaBold' align='center' shadow='0' size='1.6' color='#191919'&gt;WARNING&lt;br/&gt;&lt;br/&gt;&lt;t size='1' font='PuristaBold' align='center' color='#CC0000'&gt;ALTERNITY &lt;t color='#191919' font='PuristaLight'&gt;- AN INTELLECTUAL PROPERTY OF &lt;t font='PuristaBold'&gt;XELYOS ET ELYVION | HOLDING&lt;t font='PuristaLight'&gt;. ALL RIGHTS RESERVED.&lt;br/&gt;&lt;br/&gt;WHEN YOU CONNECT TO &lt;t font='PuristaBold'&gt;ALTERNITY&lt;t font='PuristaLight'&gt;, YOU ACCEPT THE RULES OF IT.&lt;br/&gt;IN CASE OF IN-GAME PROBLEM OR IN CONNECTION WITH OUR SERVICES, CONTACT A MEMBER OF STAFF.&lt;/t&gt;</English>
+			<French>&lt;t font='PuristaBold' align='center' shadow='0' size='1.6' color='#191919'&gt;AVERTISSEMENTS&lt;br/&gt;&lt;br/&gt;&lt;t size='1' font='PuristaBold' align='center' color='#CC0000'&gt;ALTERNITY &lt;t color='#191919' font='PuristaLight'&gt;- UNE PROPRIÉTÉ INTELECTUELLE DE &lt;t font='PuristaBold'&gt;XELYOS ET ELYVION | HOLDING&lt;t font='PuristaLight'&gt;. TOUS DROITS RÉSERVÉS.&lt;br/&gt;&lt;br/&gt;LORS DE VOTRE CONNEXION SUR &lt;t font='PuristaBold'&gt;ALTERNITY&lt;t font='PuristaLight'&gt;, VOUS ACCEPTEZ LES RÈGLES DE CELUI-CI.&lt;br/&gt;EN CAS DE PROBLÈME EN JEU OU EN RAPPORT AVEC NOS SERVICES, CONTACTEZ UN MEMBRE DU STAFF.&lt;/t&gt;</French>
+        </Key>
+		
+		<Key ID="STR_ATNT_MM_StartBeginText">
+			<English>&lt;t size='1.2' shadow='0' font='PuristaLight' color='#ffffff' align='center'&gt;PRESS &lt;t font='PuristaBold' color='#cc0000'&gt;[ SPACE ] &lt;t font='PuristaLight' color='#ffffff'&gt;TO BEGIN&lt;/t&gt;</English>
+			<French>&lt;t size='1.2' shadow='0' font='PuristaLight' color='#ffffff' align='center'&gt;APPUYEZ SUR &lt;t font='PuristaBold' color='#cc0000'&gt;[ ESPACE ] &lt;t font='PuristaLight' color='#ffffff'&gt;POUR COMMENCER&lt;/t&gt;</French>
+		</Key>
+		
+		<Key ID="STR_ATNT_MM_StartSubText">
+			<English>&lt;t size='0.7' shadow='0' font='PuristaLight' color='#aaaaaa' align='center'&gt;FRAMEWORK STILL IN PROGRESS. IF YOU SEE ANY BUGS, PREVENT US.&lt;/t&gt;</English>
+			<French>&lt;t size='0.7' shadow='0' font='PuristaLight' color='#aaaaaa' align='center'&gt;FRAMEWORK TOUJOURS EN PROGRESSION. SI VOUS RENCONTREZ UN BUG, AVERTISSEZ NOUS.&lt;/t&gt;</French>
+		</Key>
+	
+	
+		<Key ID="STR_KC_addAction">
+      <English>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt; Access to Computer&lt;/t&gt;</English>
+			<French>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt; Accéder à l'ordinateur&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt; Получить доступ компьютеру&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_LoadingBar">
+      <English>&lt;t size="0.8" font="PuristaLight" align="center" shadow="0"&gt;LOADING&lt;/t&gt;</English>
+			<French>&lt;t size="0.8" font="PuristaLight" align="center" shadow="0"&gt;CHARGEMENT&lt;/t&gt;</French>
+      <Russian>&lt;t size="0.8" font="PuristaLight" align="center" shadow="0"&gt;скачивание&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_LoadingBarFinished">
+      <English>&lt;t size="0.8" font="PuristaLight" align="center" shadow="0"&gt;LAUNCHING&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" font="PuristaLight" align="center" shadow="0"&gt;LANCEMENT&lt;/t&gt;</French>
+      <Russian>&lt;t size="0.8" font="PuristaLight" align="center" shadow="0"&gt;метание&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_TitleSetupOptions">
+      <English>&lt;t size="4" font="PuristaBold" shadow="0"&gt;SETUP&lt;/t&gt;&lt;br/&gt;&lt;t size="0.8" font="PuristaLight" shadow="0"&gt;Choose different parameters to setup our PC.&lt;br/&gt;You can modify it later with our administrator account.&lt;/t&gt;</English>
+      <French>&lt;t size="4" font="PuristaBold" shadow="0"&gt;INSTALLATION&lt;/t&gt;&lt;br/&gt;&lt;t size="0.8" font="PuristaLight" shadow="0"&gt;Choisissez les différents paramètres pour votre PC.&lt;br/&gt;Vous pourrez toujours les modifier plus tard avec votre compte administrateur.&lt;/t&gt;</French>
+      <Russian>&lt;t size="4" font="PuristaBold" shadow="0"&gt; BLAZBLA   &lt;/t&gt;&lt;br/&gt;&lt;t size="0.8" font="PuristaLight" shadow="0"&gt;Выберите различные настройки для компьютера&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitle01SetupOptions">
+      <English>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;PC Name&lt;/t&gt;</English>
+      <French>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Nom du PC&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitlePH01SetupOptions">
+      <English>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Ex: Public PC - Kavala&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Ex : PC Public - Kavala&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitle02SetupOptions">
+      <English>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Admin Account Name&lt;/t&gt;</English>
+      <French>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Nom du Compte Admin&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitlePH02SetupOptions">
+      <English>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Ex: My Admin Account&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Ex : Mon Compte Admin&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitle03SetupOptions">
+      <English>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Password&lt;/t&gt;</English>
+      <French>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Mot de passe&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitlePH03SetupOptions">
+      <English>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Type a password&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Écrivez un mot de passe&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitle04SetupOptions">
+      <English>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Confirm Password&lt;/t&gt;</English>
+      <French>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Confirmez le Mot de Passe&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitlePH04SetupOptions">
+      <English>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Re-Type password&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#191919" font="PuristaLight" shadow="0"&gt;Réecrivez le mot de passe&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubTitle05SetupOptions">
+      <English>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Public Computer&lt;/t&gt;</English>
+      <French>&lt;t size="1" font="PuristaMedium" shadow="0"&gt;Ordinateur Public&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_PasswordPowerNone">
+      <English>&lt;t size="0.8" color="#a6b9c4" font="PuristaLight" shadow="0"&gt;VERY WEAK&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#a6b9c4" font="PuristaLight" shadow="0"&gt;TRÈS FAIBLE&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_PasswordPowerWeak">
+      <English>&lt;t size="0.8" color="#FF0000" font="PuristaLight" shadow="0"&gt;WEAK&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#FF0000" font="PuristaLight" shadow="0"&gt;FAIBLE&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_PasswordPowerMedium">
+      <English>&lt;t size="0.8" color="#FF8000" font="PuristaLight" shadow="0"&gt;MEDIUM&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#FF8000" font="PuristaLight" shadow="0"&gt;MOYEN&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_PasswordPowerStrong">
+      <English>&lt;t size="0.8" color="#FFFF00" font="PuristaLight" shadow="0"&gt;STRONG&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#FFFF00" font="PuristaLight" shadow="0"&gt;FORT&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_PasswordPowerVeryStrong">
+      <English>&lt;t size="0.8" color="#80FF00" font="PuristaLight" shadow="0"&gt;VERY STRONG&lt;/t&gt;</English>
+      <French>&lt;t size="0.8" color="#80FF00" font="PuristaLight" shadow="0"&gt;TRÈS FORT&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Общественный компьютер - Москва&lt;/t&gt;</Russian>
+    </Key>
+
+    <Key ID="STR_KC_SubNextButtonAASetupOptions">
+      <English>&lt;t size="1" color="#ffffff" font="PuristaBold" align="center" shadow="0"&gt;NEXT&lt;/t&gt;</English>
+      <French>&lt;t size="1" color="#ffffff" font="PuristaBold" align="center" shadow="0"&gt;SUIVANT&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+    <Key ID="STR_KC_SubNextButtonABSetupOptions">
+      <English>&lt;t size="1" color="#15435e" font="PuristaBold" align="center" shadow="0"&gt;NEXT&lt;/t&gt;</English>
+      <French>&lt;t size="1" color="#15435e" font="PuristaBold" align="center" shadow="0"&gt;SUIVANT&lt;/t&gt;</French>
+      <Russian>&lt;img image="kreygers\computer\images\icon_addAction.paa"/&gt;&lt;t size="1" font="PuristaBold" shadow="1"&gt;Имя компьютера&lt;/t&gt;</Russian>
+    </Key>
+	<Key ID="STR_KMM_intro_text">
+            <English>&lt;t font='PuristaBold' align='center' shadow='0' size='1.6' color='#000000'&gt;WARNING&lt;br/&gt;&lt;br/&gt;&lt;t size='1' font='PuristaBold' align='center' color='#045FB4'&gt;OXYLUM &lt;t color='#000000' font='PuristaLight'&gt;- AN INTELLECTUAL PROPERTY OF &lt;t font='PuristaBold'&gt;KREYGERS | GROUP&lt;t font='PuristaLight'&gt;. ALL RIGHTS RESERVED.&lt;br/&gt;&lt;br/&gt;WHEN YOU CONNECT TO &lt;t font='PuristaBold'&gt;OXYLUM&lt;t font='PuristaLight'&gt;, YOU ACCEPT THE RULES OF IT.&lt;br/&gt;IN CASE OF IN-GAME PROBLEM OR IN CONNECTION WITH OUR SERVICES, CONTACT A MEMBER OF STAFF.&lt;/t&gt;</English>
+			<French>&lt;t font='PuristaBold' align='center' shadow='0' size='1.6' color='#000000'&gt;AVERTISSEMENTS&lt;br/&gt;&lt;br/&gt;&lt;t size='1' font='PuristaBold' align='center' color='#045FB4'&gt;OXYLUM &lt;t color='#000000' font='PuristaLight'&gt;- UNE PROPRIÉTÉ INTELECTUELLE DE &lt;t font='PuristaBold'&gt;KREYGERS | GROUP&lt;t font='PuristaLight'&gt;. TOUS DROITS RÉSERVÉS.&lt;br/&gt;&lt;br/&gt;LORS DE VOTRE CONNEXION SUR &lt;t font='PuristaBold'&gt;OXYLUM&lt;t font='PuristaLight'&gt;, VOUS ACCEPTEZ LES RÉGLES DE CELUI-CI.&lt;br/&gt;EN CAS DE PROBLÈME EN JEU OU EN RAPPORT AVEC NOS SERVICES, CONTACTEZ UN MEMBRE DU STAFF.&lt;/t&gt;</French>
+        </Key>
+	
+		<Key ID="STR_KMM_press_start_text">
+            <English>&lt;t font='PuristaBold' shadow='0' size='1.6' color='#000000'&gt;INTRODUCTION&lt;/t&gt;</English>
+			<French>&lt;br/&gt;&lt;t size='1.3' shadow='0' font='PuristaBold' color='#000000' align='center'&gt;APPUYEZ SUR &lt;t shadow='0' color='#a6a6a6'&gt;[ &lt;img size='0.7' color='#a6a6a6'/&gt; ENTRÉE ] &lt;t shadow='0' color='#000000'&gt;POUR CONTINUER&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='0.7' shadow='0' font='PuristaLight' color='#535353' align='center'&gt;VOUS ÊTES SUR UNE BÊTA. LE SERVEUR EST EN CONSTANTE ÉVOLUTION.&lt;br/&gt;VOUS POUVEZ TROUVER DES BUGS, GLITCHS OU FONCTIONNALITÉS NON-FINI POUVANT ALTÉRER VOTRE EXPÉRIENCE DE JEU.&lt;br/&gt;&lt;br/&gt;&lt;t color='#535353' size='0.6'&gt;COPYRIGHT - KREYGERS | GROUP [2018]&lt;/t&gt;</French>
+        </Key>  
+		
+		<Key ID="STR_KMM_title_new_settings_01">
+            <English>&lt;t font='PuristaBold' shadow='0' size='1.6' color='#000000'&gt;INTRODUCTION&lt;/t&gt;</English>
+			<French>&lt;t font='PuristaBold' shadow='0' size='1.6' color='#000000'&gt;INTRODUCTION&lt;/t&gt;</French>
+        </Key>
+		
+		<Key ID="STR_KMM_skip_intro_new_text">
+            <English>&lt;t size='1.2' align='right' shadow='0' color='#FFFFFF' font='PuristaLight'&gt;PRESS &lt;t font='PuristaBold'&gt;SPACE&lt;t font='PuristaLight'&gt; TO SKIP&lt;/t&gt;</English>
+            <French>&lt;t size='1.2' align='right' shadow='0' color='#FFFFFF' font='PuristaLight'&gt;APPUYEZ SUR &lt;t font='PuristaBold'&gt;ESPACE&lt;t font='PuristaLight'&gt; POUR PASSER&lt;/t&gt;</French>
+        </Key>
+	</Package>
+</Project>
+
+<!--
+меню = menu
+ноутбук = ordinateur portable
+операционная система = system d'exploi
+по́мощь = Guide/assistance
+программное обеспечение = logiciel
+скачивание = téléchargement
+счёт = compte d'utilisateur
+часто задаваемые вопросы = Foire aux questions
+экран = écran d'ordi
+соединение = connexion
+отключение  = déconnexion
+Папка = un dossier
+Файл = un fichier
+
+-->
