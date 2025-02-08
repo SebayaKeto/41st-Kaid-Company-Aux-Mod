@@ -221,6 +221,40 @@ class CfgVehicles
 			"Transport",
 			"Drop"
 		};
+		class RotorLibHelicopterProperties
+		{
+			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			autoHoverCorrection[]={3.2,0,0};
+			defaultCollective=0.80500001;
+			retreatBladeStallWarningSpeed=83;
+			maxTorque=5800;
+			stressDamagePerSec=0.0099999998;
+			maxHorizontalStabilizerLeftStress=8000;
+			maxHorizontalStabilizerRightStress=8000;
+			maxVerticalStabilizerStress=4000;
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=225000;
+			maxTailRotorStress=225000;
+		};
+		mainBladeRadius=0.1;
+		liftForceCoef=3;
+		bodyFrictionCoef=1.9845001;
+		cyclicAsideForceCoef=1;
+		backRotorForceCoef=1.8;
+		cyclicForwardForceCoef=1;
+		acceleration=450;
+		maxSpeed=600;
+		getInRadius=5;
+		altFullForce=10000;
+		altNoForce=15000;
+	
+		brakeDistance=200;
+		mainRotorSpeed=-1;
+		backRotorSpeed=1;
+		maxMainRotorDive=7;
+		minMainRotorDive=-7;
+		neutralMainRotorDive=0;
         cost="3e+006";
 		crew="FST_Pilot_P1";
 		displayname="[41st] FST Transport Shuttle Base";
@@ -242,27 +276,16 @@ class CfgVehicles
 		tas_can_impulse=0;
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
-		altFullForce=10000;
-		altNoForce=15000;
-		maxSpeed=900;
-		acceleration=600;
 		maxFordingDepth=5;
 		incomingMissileDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
 		LockDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
-		getInRadius=5;
-		mainBladeRadius=0;
-		liftForceCoef=3;
-		bodyFrictionCoef=11;
-		cyclicAsideForceCoef=5;
-		cyclicForwardForceCoef=3;
-		backRotorForceCoef=2;
-		draconicForceXCoef=11;
+/* 		draconicForceXCoef=11;
 		draconicForceYCoef=2;
 		draconicForceZCoef=2;
 		draconicTorqueXCoef=0.050000001;
-		draconicTorqueYCoef=0;
+		draconicTorqueYCoef=0; */
 		defaultUserMFDvalues[]={0,1,0,1,0};
-		armor=400;
+		armor=600;
 		armorStructural=1;
 		tf_range=100000;
 		tf_isolatedAmount=0.40000001;

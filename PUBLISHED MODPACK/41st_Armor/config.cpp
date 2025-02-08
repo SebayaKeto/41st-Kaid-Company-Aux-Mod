@@ -12736,7 +12736,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"
 		};
 /* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -13385,7 +13385,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"
 		};
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
