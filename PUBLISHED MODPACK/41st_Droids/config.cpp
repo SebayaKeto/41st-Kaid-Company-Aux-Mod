@@ -2386,7 +2386,7 @@ class CfgVehicles
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Blue",
-			"FST_blaster_cell_High_Blue"
+			"FST_blaster_cell_High_Blue",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
@@ -2398,7 +2398,7 @@ class CfgVehicles
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Blue",
-			"FST_blaster_cell_High_Blue"
+			"FST_blaster_cell_High_Blue",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};

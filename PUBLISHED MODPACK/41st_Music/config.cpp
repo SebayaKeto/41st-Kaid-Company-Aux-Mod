@@ -129,8 +129,7 @@ class CfgMusic
 		"FST_Jorge",
 		"FST_Jorge2",
 		"FST_Jorge3",
-		
-		//Mission Tracks
+		"FST_Jorge4",
 		"FST_Totharvis_Moon_1",
 		"FST_Totharvis_Moon_2",
 		"FST_Totharvis_Moon_3",
@@ -138,8 +137,6 @@ class CfgMusic
 		"FST_Horn_of_Plenty",
 		"FST_ShipAlert",
 	};
-	
-	//Mission Tracks
 	
 	class FST_Totharvis_Moon_1
 	{
@@ -244,6 +241,18 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\MissionTracks\ThoseWhoWereLeftBehind.ogg",
+			6,
+			1
+		};
+		duration="132";
+	};
+	class FST_Jorge4
+	{
+		name="[Action] Will You Remember Us";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Will_You_Remember_us.ogg",
 			6,
 			1
 		};
