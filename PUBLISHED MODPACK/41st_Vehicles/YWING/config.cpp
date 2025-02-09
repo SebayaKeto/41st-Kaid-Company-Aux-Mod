@@ -499,10 +499,10 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_LAAT_350_Laser_Round",
-					"FST_LAAT_350_Laser_Round",
-					"FST_LAAT_350_Laser_Round",
-					"FST_LAAT_350_Laser_Round"
+					"FST_thermal_coil_Ball",
+					"FST_thermal_coil_Ball",
+					"FST_thermal_coil_Ball",
+					"FST_thermal_coil_Ball"
 				};
 			};
 		};
