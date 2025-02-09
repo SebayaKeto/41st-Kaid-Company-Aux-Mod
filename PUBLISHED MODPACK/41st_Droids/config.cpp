@@ -2124,23 +2124,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High"
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High"
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue"
 		};
 		armor=4; 
 		armorStructural=1;
@@ -2380,25 +2380,25 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue"
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
-			"FST_blaster_cell_High",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue",
+			"FST_blaster_cell_High_Blue"
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
@@ -2467,23 +2467,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
-			"FST_blaster_battery",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
+			"FST_blaster_battery_blue",
 		};
 	};
  };
