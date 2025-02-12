@@ -324,6 +324,7 @@ class CfgWeapons
 	class JLTS_CloneNVG;
 	class JLTS_CloneNVG_spec;
 	class JLTS_CloneNVGCC;
+	class JLTS_CloneNVGMC;
 	class JLTS_CloneNVGRange;
 	/////////////////////////
 	////////HELMETS//////////
@@ -4733,6 +4734,18 @@ class CfgWeapons
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Ruby: FST_Pilot_P1_Helmet
+	{
+		author="Ruby";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Ruby]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ruby.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	};
   	class FST_Pilot_P1_Helmet_Spade: FST_Pilot_P1_Helmet
 	{
 		author="Daara";
@@ -7722,6 +7735,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lupus.paa",
+		};
+	};	
+	class FST_P2_Helmet_Dark: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Dark]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dark.paa",
 		};
 	};	
 	class FST_P2_Helmet_Sigs: FST_P2_Helmet_Base
@@ -11750,6 +11773,28 @@ class CfgWeapons
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Snoob: JLTS_CloneNVG
+	{
+		author="Daara";
+		displayName="[41st] NCO Macrobinoculars (Snoob)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Snoob.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Xeha: JLTS_CloneNVG
 	{
 		author="Daara";
@@ -12060,6 +12105,29 @@ class CfgWeapons
 		{
 			"Normal",
 			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Marshal_Commander_Visor: JLTS_CloneNVGMC
+	{
+		author="Daara";
+		displayName="[41st] Marshal Commander Visor";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_mc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
 		};
 		thermalMode[]={0,1};
 	};
