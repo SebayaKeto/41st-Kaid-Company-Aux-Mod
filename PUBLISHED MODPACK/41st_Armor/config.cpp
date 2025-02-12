@@ -12121,7 +12121,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_Visor.paa",
+			"41st_Armor\Data\Equipment\Clone_visor_Merrik.paa",
 		};
 		visionMode[]=
 		{
