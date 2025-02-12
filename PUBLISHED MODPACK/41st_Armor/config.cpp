@@ -12111,7 +12111,7 @@ class CfgWeapons
 	class FST_Marshal_Commander_Visor: JLTS_CloneNVGMC
 	{
 		author="Daara";
-		displayName="[41st] Marshal Commander Visor";
+		displayName="[41st] Battalion Commander Visor";
 		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_mc_visor_ui_ca.paa";
