@@ -93,6 +93,7 @@ class CfgPatches
 			"FST_P2_Burns",
 			"FST_P2_Sigs",
 			"FST_P2_Vix",
+			"FST_P2_Huntress",
 			"FST_P2_Pole",
 			"FST_P2_Angel",
 			"FST_P2_Snoob",
@@ -8825,6 +8826,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cardinal.paa",
+		};
+	};
+	class FST_P2_Helmet_Huntress: FST_P2_Helmet_Base
+	{
+		author="Tanuki";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Huntress]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Huntress.paa",
 		};
 	};
  	class FST_P2_Helmet_Cardinal2: FST_P2_Helmet_Base
