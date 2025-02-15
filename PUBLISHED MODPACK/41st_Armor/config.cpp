@@ -10758,7 +10758,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="";
-			uniformClass="FST_P2_Joko";
+			uniformClass="FST_P2_Joko_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -22608,7 +22608,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Joko";
+		uniformclass="FST_Uniform_Joko_Dirty";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
