@@ -4854,7 +4854,7 @@ class CfgWeapons
 			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Vix.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
-	}; 
+	};
 	class FST_Pilot_P1_Helmet_Jan: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
@@ -4866,7 +4866,19 @@ class CfgWeapons
 			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Jan.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
-	}; 
+	};
+	class FST_Pilot_P1_Helmet_Overwatch: FST_Pilot_P1_Helmet
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Overwatch]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Overwatch.paa",
+			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Overwatch.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_BARC_Helmet_Ghostly: FST_BARC_Helmet
 	{
 		author="Daara";
@@ -7421,6 +7433,58 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Red.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Airborne_Helmet_Vix: JLTS_CloneHelmetAB
+	{
+		author="Viz";
+		displayName="[41st] Airborne Helmet (Vix)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Vix.paa",
 		};
 		hiddenSelectionsMaterials[]=
 		{
