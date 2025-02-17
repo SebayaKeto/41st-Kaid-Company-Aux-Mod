@@ -16,6 +16,23 @@ class CfgPatches
 		addonRootClass="OPTRE_Corvette";
 	};
 };
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft;
+class Optics_Armored;
+class Optics_Gunner_APC_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class CfgVehicles
 {
 	class Land;
@@ -44,6 +61,7 @@ class CfgVehicles
 				};
 			};
 		};
+		class Components;
 		class Wounds;
 		class HitPoints
 		{
@@ -71,6 +89,7 @@ class CfgVehicles
 		isUav=1;
 		crew="B_UAV_AI";
 		armor=600;
+		armorStructured=1;
 		vehicleClass="OPTRE_UNSC_corvette_class";
 		displayName="[41st] Ship Defense Cannon";
 		model="\OPTRE_Corvette\weapons\pointdefense\turret.p3d";
@@ -131,6 +150,7 @@ class CfgVehicles
 					"z_gunL_chamber",
 					"z_gunR_chamber"
 				};
+				radartype = 8;
 				gunAxis="gun_axis";
 				turretAxis="turret_axis";
 				minElev=-12;
@@ -176,7 +196,7 @@ class CfgVehicles
 				};
 				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
 				gunnerOpticsShowCursor=1;
-				turretInfoType="RscWeaponZeroing";
+				turretInfoType="RscOptics_UAV_gunner";
 				visionMode[]=
 				{
 					"Normal",
@@ -195,6 +215,93 @@ class CfgVehicles
 					initFov=0.69999999;
 					minFov=0.0099999998;
 					maxFov=1;
+				};
+			};
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3500;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						typeRecognitionDistance=4000;
+						maxTrackableSpeed=1000;
+						angleRangeHorizontal=90;
+						angleRangeVertical=60;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=7000;
+							maxRange=7000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=7000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=100;
+						aimDown=-45;
+						maxTrackableSpeed=1388.89;
+					};
+					class DataLinkSensorComponent: SensorTemplateDataLink {};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft
+			{
+				class Components
+				{
+					class UAVDisplay
+					{
+						componentType = "UAVFeedDisplayComponent";
+						range[] = {4000, 10000};
+					};
+					class SensorDisplay
+					{
+						componentType = "SensorsDisplayComponent";
+						range[] = {4000, 10000};
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight
+			{
+				class Components
+				{
+					class UAVDisplay
+					{
+						componentType = "UAVFeedDisplayComponent";
+						range[] = {4000, 10000};
+					};
+					class SensorDisplay
+					{
+						componentType = "SensorsDisplayComponent";
+						range[] = {4000, 10000};
+					};
 				};
 			};
 		};
