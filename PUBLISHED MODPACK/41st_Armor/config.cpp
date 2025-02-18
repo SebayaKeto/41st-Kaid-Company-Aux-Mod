@@ -61,7 +61,7 @@ class CfgPatches
 			"FST_Trooper_P1_SGT",	
 			"FST_Trooper_P1_41st",		
 			"FST_ARF_Desert",
-			"FST_ARF_Woodland",
+			// "FST_ARF_Woodland", 
 			"FST_Jedi",
 			"FST_DarkJedi",
 			"FST_P2_Officer",
@@ -2690,7 +2690,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_CloneVestSuspenders_ARF_Woodland: V_rebreatherB
+	/* class FST_CloneVestSuspenders_ARF_Woodland: V_rebreatherB
 	{
 		author="Daara";
 		scope=2;
@@ -2758,7 +2758,7 @@ class CfgWeapons
 				};
 			};
 		};
-	};
+	}; */
 	class FST_CloneVestSuspenders_ARF_Desert: V_rebreatherB
 	{
 		author="Daara";
@@ -9531,7 +9531,7 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
-	class FST_Arf_Uniform_Woodland: JLTS_CloneArmor
+	/* class FST_Arf_Uniform_Woodland: JLTS_CloneArmor
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -9544,7 +9544,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	}; */
 	class FST_Uniform_Woodland: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -12920,7 +12920,7 @@ class CfgVehicles
 		displayName="[41st] ARF Camo Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackStraps.p3d";
 	};
-	class FST_ARF_backpack_Woodland: FST_Clone_backpack
+	 class FST_ARF_backpack_Woodland: FST_Clone_backpack
 	{
 		author="Daara";
 		scope=2;
@@ -13432,7 +13432,7 @@ class CfgVehicles
 		};
 		tf_range=50000;
 	};
-	class FST_Backpack_Antenna_ARF_Woodland: JLTS_Clone_RTO_pack
+	/* class FST_Backpack_Antenna_ARF_Woodland: JLTS_Clone_RTO_pack
 	{
 		author="Daara";
 		scope=2;
@@ -13454,7 +13454,7 @@ class CfgVehicles
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
 		tf_range=50000;
-	};
+	}; */
 	class FST_Backpack_Jumppack: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -13651,7 +13651,7 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_ARF_Woodland: JLTS_Clone_jumppack_mc
+	/* class FST_Backpack_Jumppack_ARF_Woodland: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
 		scope=2;
@@ -13721,7 +13721,7 @@ class CfgVehicles
 		class TransportItems
 		{
 		};
-	};
+	}; */
 	class FST_Backpack_Jumppack_ARF_Desert: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
@@ -14143,7 +14143,7 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_ARF_backpack_RTO_Woodland: FST_Backpack_Antenna
+	/* class FST_ARF_backpack_RTO_Woodland: FST_Backpack_Antenna
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
 		displayName="[41st] ARF Camo RTO Backpack [Woodland]";
@@ -14158,7 +14158,7 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		tf_range=50000;
 		tf_subtype="digital_lr";
-	};
+	}; */
 	class FST_ARF_backpack_RTO_Desert: FST_Backpack_Antenna
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
@@ -16322,7 +16322,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_ARF_Woodland: FST_Trooper_P2_DC15S
+ /*	class FST_ARF_Woodland: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] ARF Trooper (Woodland)";
@@ -16381,7 +16381,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; */
  	class FST_ARF_Desert: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
