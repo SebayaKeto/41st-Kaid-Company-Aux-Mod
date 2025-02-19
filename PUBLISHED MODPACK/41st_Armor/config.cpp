@@ -2828,6 +2828,75 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_CloneVestSuspenders_ARF_Black: V_rebreatherB
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARF Suspenders (Black)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Black.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	//////////////////////////
 	////////UNIFORMS/////////
 	/////////////////////////
