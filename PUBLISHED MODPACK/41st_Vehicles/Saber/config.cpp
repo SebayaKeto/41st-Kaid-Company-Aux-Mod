@@ -966,7 +966,345 @@ class cfgvehicles
 			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Jorge_co.paa",
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
 		};
-	};	
+	};
+	class FST_Recon_Saber: FST_Saber
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		maximumLoad=5000;
+		author="Viz";
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_Trooper_P2_DC15S";
+		displayName="[41st] TX-130 Recon Saber Tank";
+		model="3AS\3AS_Saber\model\tcw_tx130_recon";
+		icon="3AS\3AS_Saber\data\ui\Saber_Recon_top_ca.paa";
+		picture="3AS\3AS_Saber\data\ui\Saber_Recon_side_ca.paa";
+		tas_liftVars="[[[[0,-4,-6.5]]], [0.1], [-0.5]]";
+		enginePower=1350;
+		peakTorque=6000;
+		armor=650;
+		maxSpeed=120;
+		acceleration=30;
+		class AnimationSources: AnimationSources
+		{
+			class Select_Rockets
+			{
+				source="user";
+				animPeriod=1e-007;
+				initPhase=0;
+			};
+			class Revolving
+			{
+				source="revolving";
+				weapon="FST_Rapture_AGM_Missile";
+			};
+			class muzzle_rot_cannon
+			{
+				source="ammorandom";
+				weapon="cannon_120mm";
+			};
+			class muzzle_rot_coax
+			{
+				source="ammorandom";
+				weapon="LMG_M200";
+			};
+			class muzzle_rot_HMG
+			{
+				source="ammorandom";
+				weapon="HMG_NSVT";
+			};
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret_top: Mainturret_top
+			{
+				body="MainTurret_observation";
+				gun="maingun_observation";
+				animationSourceBody="MainTurret_observation";
+				animationSourceGun="maingun_observation";
+				animationSourceElevation="obsElevation";
+				minOutElev=-10;
+				maxOutElev=15;
+				initOutElev=0;
+				minOutTurn=-45;
+				maxOutTurn=45;
+				initOutTurn=0;
+				minTurn=-360;
+				maxTurn=360;
+				initTurn=0;
+				minElev=-15;
+				maxElev=20;
+				initElev=0;
+				gunnerAction="Saber_Gunner";
+				outGunnerMayFire=0;
+				inGunnerMayFire=1;
+				gunnerRightHandAnimName="konec hlavne3";
+				gunnerLeftHandAnimName="konec hlavne3";
+				personTurretAction="vehicle_turnout_1";
+				gunBeg="cam_end";
+				gunEnd="cam_start";
+				memoryPointGun[]=
+				{
+					"cam_end"
+				};
+				weapons[]=
+				{
+					"Laserdesignator_vehicle",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					"SmokeLauncherMag"
+				};
+				memoryPointGunnerOptics="obsview";
+				memoryPointGunnerOutOptics="obsview";
+				gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F.p3d";
+				usepip=2;
+				stabilizedInAxes=3;
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftCommander
+					{
+						class Components: components
+						{
+							class VehicleMissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+								resource="RscTransportCameraComponentMissile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={800,400,200,1600};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightCommander
+					{
+						defaultDisplay="SensorDisplay";
+						class Components: components
+						{
+							class VehicleMissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={800,400,200,1600};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						opticsDisplayName="W";
+						initAngleX=10;
+						minAngleX=-45;
+						maxAngleX=25;
+						initAngleY=0;
+						minAngleY=-90;
+						maxAngleY=90;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F.p3d";
+					};
+					class Medium: Wide
+					{
+						opticsDisplayName="M";
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F.p3d";
+					};
+					class Narrow: Wide
+					{
+						opticsDisplayName="N";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F.p3d";
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+					};
+				};
+			};
+			class MainTurret_bottom: MainTurret_bottom
+			{
+				weapons[]=
+				{
+					"FST_Medium_twin_laser_turret",
+					"FST_Rapture_AGM_Missile",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_Rapture_12Rnd_AGM_Missile",
+					"SmokeLauncherMag"
+				};
+				gunnerAction="Saber_Driver";
+				commanding=1;
+				inGunnerMayFire=1;
+				minElev=-5;
+				memoryPointGun[]=
+				{
+					"z_gunL_Muzzle",
+					"z_gunR_Muzzle",
+					"z_gunRB_Muzzle",
+					"z_gunLB_Muzzle"
+				};
+				missileBeg="missleEnd";
+				missileEnd="missleBeg";
+				usepip=2;
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					{
+						class Components: components
+						{
+							class MissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+								resource="RscTransportCameraComponentMissile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,2000,1000,8000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					{
+						defaultDisplay="SensorDisplay";
+						class Components: components
+						{
+							class MissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+								resource="RscTransportCameraComponentMissile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={800,400,200,1600};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+			};
+			class CargoTurret_01: CargoTurret_01
+			{
+			};
+			class CargoTurret_02: CargoTurret_02
+			{
+			};
+			class CargoTurret_03: CargoTurret_03
+			{
+			};
+			class CargoTurret_04: CargoTurret_04
+			{
+			};
+		};
+		class RenderTargets
+		{
+			class Gunnercam
+			{
+				renderTarget="rendertarget0";
+				class CameraView1
+				{
+					pointPosition="obsview";
+					pointDirection="pip0_dir";
+					renderQuality=2;
+					renderVisionMode=0;
+					fov=1;
+				};
+			};
+		};
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=8000;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=4000;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=3000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=100;
+						aimDown=-45;
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+						animDirection="maingun_observation";
+					};
+					class ManSensorComponent: SensorTemplateMan
+					{
+						animDirection="maingun_observation";
+					};
+					class IRSensorComponent: SensorTemplateIR
+					{
+						animDirection="maingun_observation";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						animDirection="maingun_observation";
+					};
+				};
+			};
+		};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_Saber\data\Saber_hull_co.paa",
+			"3AS\3AS_Saber\data\Saber_weapons_scout_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"3AS\3AS_Saber\data\Saberhull.rvmat",
+			"3AS\3AS_Saber\data\Saberweapons_scout.rvmat"
+		};
+	};
 	class FST_Saber_Fly: FST_LAAT
 	{
 		scope=2;
