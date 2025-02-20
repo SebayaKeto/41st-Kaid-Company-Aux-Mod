@@ -14,8 +14,9 @@ class CfgPatches
 			"FST_Saber_Jorge",
 			//"FST_SuperSaber",
 			"FST_SuperSaber_Rancor",
-			"FST_SuperSaber_Jorge"
+			"FST_SuperSaber_Jorge",
 			//"FST_Saber_Fly"
+			"FST_Recon_Saber"
 		};
 		weapons[]={};
 	};
