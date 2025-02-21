@@ -1072,7 +1072,7 @@ class CfgWeapons
 		descriptionShort="E-Web";
 		magazines[]=
 		{
-			"FST_EWEB_cell",
+			"FST_EWEB_cell_Blue",
 		};
 		muzzleEnd="konec hlavne3";
 		muzzlePos="usti hlavne3";
