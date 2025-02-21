@@ -214,6 +214,8 @@ class CfgPatches
 			"FST_P2_Trenny",
 			"FST_P2_Red",
 			"FST_P2_Riley",
+			"FST_P2_Appa",
+			"FST_P2_Selene",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -7591,6 +7593,58 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_Airborne_Helmet_Appa: JLTS_CloneHelmetAB
+	{
+		author="Viz";
+		displayName="[41st] Airborne Helmet (Appa)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Appa.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_P2_Helmet_Fizz: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -9181,7 +9235,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Bigs]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bigs.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bigs.paa"
 		};
 	};
 	class FST_P2_Helmet_Argo: FST_P2_Helmet_Base
@@ -9211,7 +9265,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Hoyo]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hoyo.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hoyo.paa"
 		};
 	};
 	class FST_P2_Helmet_Euchre: FST_P2_Helmet_Base
@@ -9221,7 +9275,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Euchre]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Euchre.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Euchre.paa"
 		};
 	};
 	class FST_P2_Helmet_Zik: FST_P2_Helmet_Base
@@ -9231,7 +9285,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Zik]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Zik.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Zik.paa"
 		};
 	};
     class FST_P2_Helmet_Paymos: FST_P2_Helmet_Base
@@ -9241,7 +9295,7 @@ class CfgWeapons
         displayName="[41st] P2 Helmet [Paymos]";
         hiddenSelectionsTextures[]=
         {
-            "41st_Armor\Data\Helmets\FST_P2_Helmet_Paymos.paa",
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Paymos.paa"
         };
     };
 	class FST_P2_Helmet_Hotshot: FST_P2_Helmet_Base
@@ -9251,7 +9305,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Hotshot]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hotshot.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hotshot.paa"
 		};
 	};
 	class FST_P2_Helmet_Pope: FST_P2_Helmet_Base
@@ -9261,7 +9315,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Pope]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pope.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pope.paa"
 		};
 	};
 	class FST_P2_Helmet_Wuffer: FST_P2_Helmet_Base
@@ -9271,7 +9325,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Wuffer]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Wuffer.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Wuffer.paa"
 		};
 	};
 	class FST_P2_Helmet_Stec: FST_P2_Helmet_Base
@@ -9281,7 +9335,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Stec]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Stec.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Stec.paa"
 		};
 	};
 	class FST_P2_Helmet_Cooker: FST_P2_Helmet_Base
@@ -9291,7 +9345,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Cooker]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cooker.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cooker.paa"
 		};
 	};
 	class FST_P2_Helmet_Sledge: FST_P2_Helmet_Base
@@ -9301,7 +9355,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Sledge]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sledge.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sledge.paa"
 		};
 	};
 	class FST_P2_Helmet_House: FST_P2_Helmet_Base
@@ -9311,7 +9365,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [House]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_House.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_House.paa"
 		};
 	};
 	class FST_P2_Helmet_Hazzo: FST_P2_Helmet_Base
@@ -9321,7 +9375,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Hazzo]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hazzo.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hazzo.paa"
 		};
 	};
 	class FST_P2_Helmet_Chip: FST_P2_Helmet_Base
@@ -9331,7 +9385,7 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Chip]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chip.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chip.paa"
 		};
 	};
 	class FST_P2_Helmet_Steel: FST_P2_Helmet_Base
@@ -9341,7 +9395,17 @@ class CfgWeapons
 		displayName="[41st] P2 Helmet [Steel]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Steel.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Steel.paa"
+		};
+	};
+	class FST_P2_Helmet_Selene: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Selene]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Selene.paa"
 		};
 	};
 	//////////////UNIFORMS//////////////
@@ -11855,6 +11919,20 @@ class CfgWeapons
         {
             uniformModel="";
             uniformClass="FST_P2_Crab";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Selene: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Selene]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Selene";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -25606,6 +25684,59 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+  	class FST_P2_Selene: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-2606 'Selene'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Selene";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Selene.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Selene.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Selene",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Selene",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class lsd_gar_jediCommander_base;
 	class FST_Jedi: lsd_gar_jediCommander_base
 	{
@@ -26203,15 +26334,151 @@ class CfgGlasses
 	};
 	class FST_Suspenders_Face: FST_Base_Glasses
 	{
+		author="Viz";
 		displayname="[41st] Suspenders (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
 		{
-			"camo1",
+			"camo1"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\CloneArmor\data\Clone_vest_suspender_co.paa"
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Suspenders_Woodland_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		displayname="[41st] Suspenders [Woodland] (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_Suspenders_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Suspenders_ARF_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		displayname="[41st] ARF Suspenders (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_ARF_Vest_Suspenders.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Suspenders_ARF_Dirty_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		displayname="[41st] ARF Suspenders [Dirty] (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_ARF_Vest_Suspenders_Dirty.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Suspenders_ARF_Desert_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		displayname="[41st] ARF Suspenders [Desert] (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Suspenders_ARF_Black_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		displayname="[41st] ARF Suspenders [Black] (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Black.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
