@@ -1,0 +1,22 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "Officer Uniform"
+        },
+        {
+            "name": "Mikero",
+            "value": "DePbo.dll.9.98"
+        },
+        {
+            "name": "version",
+            "value": "25021516"
+        }
+    ]
+}
