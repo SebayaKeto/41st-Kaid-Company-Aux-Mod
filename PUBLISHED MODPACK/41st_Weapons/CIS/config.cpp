@@ -88,6 +88,9 @@ class CfgWeapons
 		magazines[]=
 		{
 			"FST_blaster_cell_Red",
+			"FST_blaster_cell_Blue",
+			"FST_blaster_cell_Green",
+			"FST_blaster_cell_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -361,7 +364,10 @@ class CfgWeapons
 		recoil="recoil_spar";
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_Blue",
+			"FST_blaster_cell_Green",
+			"FST_blaster_cell_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -534,6 +540,9 @@ class CfgWeapons
 		magazines[]=
 		{
 			"FST_blaster_cell_overcharged_Red",
+			"FST_blaster_cell_Overcharged_Blue",
+			"FST_blaster_cell_Overcharged_Green",
+			"FST_blaster_cell_Overcharged_Yellow"
 		};
 		magazineWell[]={};
 		ace_clearJamAction="";
@@ -735,6 +744,9 @@ class CfgWeapons
 		magazines[]=
 		{
 			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Blue",
+			"FST_blaster_battery_Green",
+			"FST_blaster_battery_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
