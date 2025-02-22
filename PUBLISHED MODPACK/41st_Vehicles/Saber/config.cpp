@@ -968,7 +968,7 @@ class cfgvehicles
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
 		};
 	};
-	class FST_Recon_Saber: FST_Saber
+		class FST_Recon_Saber: FST_Saber
 	{
 		scope=2;
 		scopecurator=2;
@@ -1021,6 +1021,77 @@ class cfgvehicles
 		class Turrets: Turrets
 		{
 			class MainTurret_top: Mainturret_top
+			{
+				weapons[]=
+				{
+					"FST_Medium_twin_laser_turret",
+					"SmokeLauncher",
+					"FST_Rapture_AGM_Missile"
+				};
+				magazines[]=
+				{
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"SmokeLauncherMag",
+					"FST_Rapture_12Rnd_AGM_Missile"
+					
+				};
+				gunnerAction="Saber_Driver";
+				commanding=1;
+				inGunnerMayFire=1;
+				minElev=-5;
+				memoryPointGun[]=
+				{
+					"z_gunL_Muzzle",
+					"z_gunR_Muzzle",
+					"z_gunRB_Muzzle",
+					"z_gunLB_Muzzle"
+				};
+				missileBeg="missleEnd";
+				missileEnd="missleBeg";
+				usepip=2;
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					{
+						class Components: components
+						{
+							class MissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+								resource="RscTransportCameraComponentMissile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,2000,1000,8000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					{
+						defaultDisplay="SensorDisplay";
+						class Components: components
+						{
+							class MissileDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Missile";
+								resource="RscTransportCameraComponentMissile";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={800,400,200,1600};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+			};
+			class MainTurret_bottom: MainTurret_bottom
 			{
 				body="MainTurret_observation";
 				gun="maingun_observation";
@@ -1145,76 +1216,7 @@ class cfgvehicles
 						maxFov=0.028999999;
 					};
 				};
-			};
-			class MainTurret_bottom: MainTurret_bottom
-			{
-				weapons[]=
-				{
-					"FST_Medium_twin_laser_turret",
-					"FST_Rapture_AGM_Missile",
-					"SmokeLauncher"
-				};
-				magazines[]=
-				{
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_Rapture_12Rnd_AGM_Missile",
-					"SmokeLauncherMag"
-				};
-				gunnerAction="Saber_Driver";
-				commanding=1;
-				inGunnerMayFire=1;
-				minElev=-5;
-				memoryPointGun[]=
-				{
-					"z_gunL_Muzzle",
-					"z_gunR_Muzzle",
-					"z_gunRB_Muzzle",
-					"z_gunLB_Muzzle"
-				};
-				missileBeg="missleEnd";
-				missileEnd="missleBeg";
-				usepip=2;
-				class Components
-				{
-					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
-					{
-						class Components: components
-						{
-							class MissileDisplay
-							{
-								componentType="TransportFeedDisplayComponent";
-								source="Missile";
-								resource="RscTransportCameraComponentMissile";
-							};
-							class SensorDisplay
-							{
-								componentType="SensorsDisplayComponent";
-								range[]={4000,2000,1000,8000};
-								resource="RscCustomInfoSensors";
-							};
-						};
-					};
-					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
-					{
-						defaultDisplay="SensorDisplay";
-						class Components: components
-						{
-							class MissileDisplay
-							{
-								componentType="TransportFeedDisplayComponent";
-								source="Missile";
-								resource="RscTransportCameraComponentMissile";
-							};
-							class SensorDisplay
-							{
-								componentType="SensorsDisplayComponent";
-								range[]={800,400,200,1600};
-								resource="RscCustomInfoSensors";
-							};
-						};
-					};
-				};
+				
 			};
 			class CargoTurret_01: CargoTurret_01
 			{
@@ -1277,15 +1279,55 @@ class cfgvehicles
 					};
 					class ManSensorComponent: SensorTemplateMan
 					{
+						maxTrackableSpeed=15;
+						angleRangeHorizontal=51;
+						angleRangeVertical=37;
 						animDirection="maingun_observation";
+						aimDown=-0.5;
 					};
 					class IRSensorComponent: SensorTemplateIR
 					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=500;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=250;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=35;
+						angleRangeHorizontal=51;
+						angleRangeVertical=37;
 						animDirection="maingun_observation";
+						aimDown=-0.5;
 					};
 					class VisualSensorComponent: SensorTemplateVisual
 					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=1000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=500;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=35;
+						angleRangeHorizontal=90;
+						angleRangeVertical=90;
 						animDirection="maingun_observation";
+						aimDown=-0.5;
 					};
 				};
 			};
@@ -1304,6 +1346,18 @@ class cfgvehicles
 		{
 			"3AS\3AS_Saber\data\Saberhull.rvmat",
 			"3AS\3AS_Saber\data\Saberweapons_scout.rvmat"
+		};
+		smokeLeuncherGrenadeCount=8;
+		smokeLauncherVelocity=14;
+		smokeLauncherOnTurret=1;
+		smokeLauncherAngle=120;
+		class ViewOptics: ViewOptics
+		{
+			visionMode[]=
+			{
+				"Normal",
+				"NVG"
+			};
 		};
 	};
 	class FST_Saber_Fly: FST_LAAT
