@@ -215,6 +215,7 @@ class CfgPatches
 			"FST_P2_Red",
 			"FST_P2_Riley",
 			"FST_P2_Appa",
+			"FST_P2_Primus",
 			"FST_P2_Selene",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
@@ -7655,6 +7656,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Ginger: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Ginger]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ginger.paa",
+		};
+	};	
 	class FST_P2_Helmet_Felix: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -10227,6 +10238,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Cardinal_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cardinal/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cardinal_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Hayes: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -10572,6 +10597,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Sunny";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Primus: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Primus]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Primus";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -19613,6 +19652,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
+	class FST_P2_Cardinal_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1227 'Cardinal/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cardinal_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cardinal_Dirty.paa"
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cardinal.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Cardinal",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Cardinal",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
  	class FST_P2_Diesel: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -20729,6 +20823,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sunny",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Primus: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1008 'Primus'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Primus";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Primus.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Primus.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Primus",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Primus",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
