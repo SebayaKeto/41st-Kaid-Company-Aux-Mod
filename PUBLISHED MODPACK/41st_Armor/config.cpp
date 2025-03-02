@@ -19671,7 +19671,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cardinal_Dirty.paa"
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cardinal_Dirty.paa",
 			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cardinal.paa",
 		};
 		weapons[]=
