@@ -3421,9 +3421,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_thermal_coil_LP_Blue",
-					"FST_thermal_coil_LP_Blue",
-					"FST_thermal_coil_LP_Blue",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
+					"FST_Thermal_Coil",
 					"Laser_Battery"
 				};
 				class OpticsIn
