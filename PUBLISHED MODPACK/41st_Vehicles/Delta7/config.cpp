@@ -5868,7 +5868,7 @@ class CfgVehicles
 		VTOLRollInfluence=5;
 		VTOLYawInfluence=12;
 		airBrake=55;
-		airBrakeFrictionCoef=2.5;
+		airBrakeFrictionCoef=50;
 		flaps=0;
 		flapsFrictionCoef=0.30000001;
 		brakeDistance=500;
