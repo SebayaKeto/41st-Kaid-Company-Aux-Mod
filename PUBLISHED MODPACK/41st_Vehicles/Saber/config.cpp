@@ -399,7 +399,8 @@ class cfgvehicles
 				};
 				startEngine=0;
 				hideWeaponsGunner=1;
-				stabilizedInAxes=3;
+				stabilizedInAxisX = 1;
+				stabilizedInAxisY = 1;
 				turretInfoType="RscWeaponRangeZeroing";
 				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim="zasleh2";
@@ -569,6 +570,8 @@ class cfgvehicles
 				};
 				magazines[]=
 				{
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"SmokeLauncherMag",
@@ -1732,6 +1735,8 @@ class cfgvehicles
 				};
 				magazines[]=
 				{
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"SmokeLauncherMag",
