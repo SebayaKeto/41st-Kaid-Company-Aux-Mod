@@ -404,12 +404,18 @@ class CfgVehicles
 		tas_liftVars="[[[[0,-4,-6.5]]], [-0.001], [-0.4]]";
 		weapons[]=
 		{
-			"TruckHorn2"
+			"TruckHorn2",
+            "SmokeLauncher"
+		};		magazines[]=
+		{
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag",
+			"SmokeLauncherMag"
 		};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		driverOpticsModel="\a3\weapons_f\reticle\Optics_Driver_01_F";
-		magazines[]={};
 		cost=1500000;
 		crewCrashProtection=9.9999997e-005;
 		damageResistance=0.02;
@@ -510,18 +516,13 @@ class CfgVehicles
                 weapons[]=
                 {
                     "FST_30mm_Autocannon",
-                    "Laserdesignator_pilotCamera",
-                    "SmokeLauncher"
+                    "Laserdesignator_pilotCamera"
                 };
                 magazines[]=
                 {
                     "FST_thermal_coil",
                     "FST_thermal_coil",
-                    "Laserbatteries",
-                    "SmokeLauncherMag",
-                    "SmokeLauncherMag",
-                    "SmokeLauncherMag",
-                    "SmokeLauncherMag"
+                    "Laserbatteries"
                 };
 				selectionFireAnim="Zasleh_Top";
 				minElev=-5;
@@ -1050,7 +1051,7 @@ class CfgVehicles
 			class Muzzle_Flash
 			{
 				source="ammorandom";
-				weapon="FST_ITT_Front_20mm";
+				weapon="FST_30mm_Autocannon";
 			};
 			class Muzzle_Flash2
 			{
