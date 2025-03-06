@@ -11,6 +11,7 @@ class CfgPatches
 		units[]=
 		{
 			"FST_GAT",
+			"FST_AA_GAT"
 		};
 		weapons[]={};
 	};
@@ -1912,5 +1913,290 @@ class CfgVehicles
 			};
 		};
 		accuracy=1000;
+	};
+	class FST_AA_GAT: FST_CIS_GAT_base_F
+	{
+		author="Viz";
+		scope=2;
+		scopeCurator=2;
+		forceingarage=1;
+		displayname="[41st] GAT Medium Tank [SPAA]";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionstextures[]=
+		{
+			"3AS\3AS_GAT\data\hull_CO.paa",
+			"3AS\3AS_GAT\data\weapons_CO.paa"
+		};
+		editorPreview="3as\3as_gat\images\3AS_GAT.jpg";
+		class TextureSources
+		{
+			class CIS
+			{
+				displayName="Trade Federation";
+				author="3AS Mod Team";
+				textures[]=
+				{
+					"3AS\3AS_GAT\data\hull_CO.paa",
+					"3AS\3AS_GAT\data\weapons_CO.paa"
+				};
+				factions[]=
+				{
+					"3AS_CIS"
+				};
+			};
+			class Olive
+			{
+				displayName="Olive";
+				author="3AS Mod Team";
+				textures[]=
+				{
+					"3AS\3AS_GAT\data\Olive\hull_CO.paa",
+					"3AS\3AS_GAT\data\Olive\weapons_CO.paa"
+				};
+				factions[]=
+				{
+					"3AS_CIS"
+				};
+			};
+		};
+		accuracy=1000;
+		allowTabLock=1;
+		radarType=2;
+		gunnerCanSee="1 + 2 + 4 + 8 + 32";
+		commanderCanSee="1 + 2 + 4 + 8 + 32";
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent
+					{
+						class AirTarget
+						{
+							minRange=5000;
+							maxRange=5000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=5000;
+							maxRange=5000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						typeRecognitionDistance=5000;
+						maxTrackableSpeed=1600;
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class ActiveRadarSensorComponent
+					{
+						class AirTarget
+						{
+							minRange=7000;
+							maxRange=7000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=7000;
+							maxRange=7000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=7000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=360;
+						groundNoiseDistanceCoef=1;
+						componentType="ActiveRadarSensorComponent";
+						maxGroundNoiseDistance=20000;
+						minSpeedThreshold=5;
+						maxSpeedThreshold=1900;
+						color[]={0,1,1,1};
+						allowsMarking=1;
+						animDirection="";
+						aimDown=0;
+						minTrackableSpeed=-1e+010;
+						maxTrackableSpeed=1e+010;
+						minTrackableATL=-1e+010;
+						maxTrackableATL=1e+010;
+					};
+					class DataLinkSensorComponent
+					{
+					};
+				};
+			};
+			class TransportCountermeasuresComponent
+			{
+			};
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets
+				{
+				};
+				weapons[]=
+				{
+					"DBA_40mw_HH9P_AC",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"SmokeLauncherMag"
+				};
+				minElev=-9;
+				maxElev=75;
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft
+					{
+						class Components
+						{
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={7000,4000,2000};
+								resource="RscCustomInfoSensors";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Driver";
+							};
+							class VehicleCommanderDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Commander";
+							};
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+							};
+							class MineDetectorDisplay
+							{
+								componentType="MineDetectorDisplayComponent";
+							};
+							class CrewDisplay
+							{
+								componentType="CrewDisplayComponent";
+							};
+							class UAVDisplay
+							{
+								componentType="UAVFeedDisplayComponent";
+							};
+							class SlingLoadDisplay
+							{
+								componentType="SlingLoadDisplayComponent";
+							};
+						};
+						componentType="VehicleSystemsDisplayManager";
+						left=1;
+						defaultDisplay="EmptyDisplay";
+						x="(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_X"",	(safezoneX + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40))])";
+						y="(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+					};
+					class VehicleSystemsDisplayManagerComponentRight
+					{
+						defaultDisplay="SensorDisplay";
+						class Components
+						{
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={16000,8000,4000,2000};
+								resource="RscCustomInfoSensors";
+							};
+							class VehicleDriverDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Driver";
+							};
+							class VehicleCommanderDisplay
+							{
+								componentType="TransportFeedDisplayComponent";
+								source="Commander";
+							};
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+							};
+							class MineDetectorDisplay
+							{
+								componentType="MineDetectorDisplayComponent";
+							};
+							class CrewDisplay
+							{
+								componentType="CrewDisplayComponent";
+							};
+							class UAVDisplay
+							{
+								componentType="UAVFeedDisplayComponent";
+							};
+							class SlingLoadDisplay
+							{
+								componentType="SlingLoadDisplayComponent";
+							};
+						};
+						componentType="VehicleSystemsDisplayManager";
+						right=1;
+						x="(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_X"",	((safezoneX + safezoneW) - (		(10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)) + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)))])";
+						y="(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+					};
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class muzzle_hide_cannon
+			{
+				source="reload";
+				weapon="DBA_40mw_HH9P_AC";
+			};
+			class muzzle_rot_cannon
+			{
+				source="ammorandom";
+				weapon="DBA_40mw_HH9P_AC";
+			};
+			class HitComTurret_src
+			{
+				source="Hit";
+				hitpoint="HitComTurret";
+				raw=1;
+			};
+			class showBags
+			{
+				displayName="Show Bags";
+				author="$STR_A3_Bohemia_Interactive";
+				source="user";
+				animPeriod=0.001;
+				initPhase=0;
+				mass=-50;
+			};
+		};
 	};
 };
