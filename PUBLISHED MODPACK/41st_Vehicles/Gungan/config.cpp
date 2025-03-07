@@ -5,6 +5,7 @@ class CfgPatches
 		units[]=
 		{
 			"FST_Boat_Gungan_Z6_F",
+			"FST_Boat_Gungan_Z6_Yellow",
 		};
 		weapons[]={};
 		requiredVersion=0.1;
@@ -962,6 +963,38 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Vehicles\Gungan\Data\optre_catfish_boat_FST.paa",
+			"\OPTRE_Vehicles\catfish\data\optre_catfish_interior_co.paa",
+			"\OPTRE_Vehicles\catfish\data\optre_catfish_seats_co.paa",
+			"\OPTRE_Vehicles\catfish\data\optre_catfish_windscreen_ca.paa",
+			"\OPTRE_Vehicles\Warthog\data\snow\m12_turret_snow_co.paa",
+			"\optre_vehicles\warthog\data\turrets\sight_co.paa",
+			""
+		};
+	};
+	class FST_Boat_Gungan_Z6_Yellow: FST_Boat_Gungan_Z6_F
+	{
+		author="Gold";
+		displayName="MC-112 Gungan Patrolcraft Z6 (Yellow)";
+		scope=2;
+		scopeCurator=2;
+		scopearsenal=2;
+		side=2;
+		faction="FST_Independent_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camoInterior",
+			"camoSeat",
+			"camoWindow",
+			"Camo3",
+			"camo_sight",
+			"camo_turret_decal"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Gungan\Data\optre_catfish_boat_FST_Yellow.paa",
 			"\OPTRE_Vehicles\catfish\data\optre_catfish_interior_co.paa",
 			"\OPTRE_Vehicles\catfish\data\optre_catfish_seats_co.paa",
 			"\OPTRE_Vehicles\catfish\data\optre_catfish_windscreen_ca.paa",

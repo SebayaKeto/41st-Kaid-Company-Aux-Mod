@@ -754,4 +754,23 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_LAATC_Jan: FST_LAATC
+	{
+		author="Gold";
+		displayName="[41st] LAAT/C (Jan)";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\LAATC\Data\LAAT_C_Hull_CO_41st_Jan.paa",
+			"41st_Vehicles\LAATC\Data\LAAT_C_Wings_CO_41st_Jan.paa",
+			"\41st_Vehicles\LAATC\Data\LAAT_C_Top.paa",
+			"3AS\3AS_LAATC\data\Textures\LAAT_C_Detail_Front_co.paa"
+		};
+	};
 };

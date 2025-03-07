@@ -2084,6 +2084,43 @@ class CfgVehicles
         };
 		editorPreview="3AS\3as_rtt\images\3as_rtt.jpg";
 	};
+	class FST_ITT_Blue: FST_ITT
+	{
+		author="Gold";
+		displayname="[41st] ITT (Blue)";
+		scope=2;
+		scopeCurator=2;
+		forceingarage=1;
+		side=2;
+		faction="FST_Independent_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="";
+		typicalCargo[]=
+		{
+			"JLTS_Clone_P2_DC15S"
+		};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"camo5",
+			"camo6",
+			"camo7"
+		};
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Vehicles\ITT\Data\Body\ITT_Body_Blue_co.paa",
+            "3as\3as_ITT\data\glass_co.paa",
+            "3as\3as_ITT\data\itt_int_back_co.paa",
+            "41st_Vehicles\ITT\Data\Door\ITT_door_Blue_co.paa",
+            "3as\3as_ITT\data\itt_int_front_co.paa",
+            "3as\3as_ITT\data\itt_emiss_co.paa",
+            "41st_Vehicles\ITT\Data\Turret\ITT_turret_co.paa"
+        };
+		editorPreview="3AS\3as_rtt\images\3as_rtt.jpg";
+	};
 	class FST_ITT_Medical: FST_ITT_Base
 	{
 		scope=2;

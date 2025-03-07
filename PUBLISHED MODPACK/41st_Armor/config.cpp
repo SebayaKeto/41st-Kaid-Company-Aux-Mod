@@ -217,6 +217,7 @@ class CfgPatches
 			"FST_P2_Appa",
 			"FST_P2_Primus",
 			"FST_P2_Selene",
+			"FST_P2_Mav",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -277,6 +278,13 @@ class CfgFactionClasses
 		displayName="41st Battledroids";
 		priority=1;
 		side=2;
+		icon="";
+	};
+	class FST_Independent_Faction
+	{
+		displayName="41st Elite Corps (Indep)";
+		priority=1;
+		side=3;
 		icon="";
 	};
 };
@@ -10612,6 +10620,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Mav: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Mav]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Mav";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Kirby: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -20847,6 +20869,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sunny",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Mav: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1297 'Mav'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Mav";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Mav.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Mav.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Mav",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Mav",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

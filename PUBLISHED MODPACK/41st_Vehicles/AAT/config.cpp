@@ -12,6 +12,7 @@ class CfgPatches
 		{
 			"FST_AAT",
 			"FST_AAT_Tan",
+			"FST_AAT_Yellow_Civ",
 			"FST_King_AAT",
 			"FST_ISV_AAT",
 			"FST_Blaze_AAT",
@@ -394,6 +395,30 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"3AS\3AS_AAT\data\Tan_AAT_CO.paa"
+		};
+		class TransportMagazines{};
+		class TransportItems{};
+		class TransportWeapons{};
+		class TransportBackpacks{};
+	}
+	class FST_AAT_Yellow_Civ: FST_AAT
+	{
+		author="Gold";
+		displayName="[41st] AAT Main Battle Tank (Yellow)";
+		scope=2;
+		scopeCurator=2;
+		scopearsenal=2;
+		side=2;
+		faction="FST_Independent_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\AAT\Data\CIS_AAT_Yellow_civ_CO.paa"
 		};
 		class TransportMagazines{};
 		class TransportItems{};

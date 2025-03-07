@@ -4,9 +4,7 @@ class CfgPatches
 	{
 		author="Gold";
 		name="FST Ammo";
-		requiRedAddons[]=
-		{
-		};
+		requiRedAddons[]={};
 		units[]={};
 		magazines[]={};
 		weapons[]={};
@@ -1535,6 +1533,29 @@ class CfgAmmo
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
 	};
+	class FST_B54_blasterbolt_Blue: FST_blasterbolt
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		hit=60;
+		caliber=2.2;
+		coefGravity=0;
+	};
+	class FST_B54_blasterbolt_Green: FST_B54_blasterbolt_Blue
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+	};
+	class FST_B54_blasterbolt_Yellow: FST_B54_blasterbolt_Blue
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
+		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+	};
+	class FST_B54_blasterbolt_Red: FST_B54_blasterbolt_Blue
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
+		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+	};
 	class FST_blasterbolt_High_Blue: FST_blasterbolt
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
@@ -2651,6 +2672,38 @@ class CfgMagazines
 	{
 		displayName="[41st] LV-13 Energy Cell (Red)";
 		ammo="FST_LV13_blasterbolt_Red";
+	};
+	class FST_blaster_cell_B54_Blue: 100Rnd_65x39_caseless_mag
+	{
+		author="Gold";
+		displayName="[41st] B54 Energy Cell (Blue)";
+		displayNameShort="B54 Energy Cell";
+		descriptionShort="8 Rnds Pistol Ammo";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		ammo="FST_B54_blasterbolt_Blue";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		count=8;
+		tracersEvery=0.00001;
+		initSpeed=2250;
+		mass=1;
+	};
+	class FST_blaster_cell_B54_Green: FST_blaster_cell_B54_Blue
+	{
+		displayName="[41st] B54 Energy Cell (Green)";
+		ammo="FST_B54_blasterbolt_Green";
+	};
+	class FST_blaster_cell_B54_Yellow: FST_blaster_cell_B54_Blue
+	{
+		displayName="[41st] B54 Energy Cell (Yellow)";
+		ammo="FST_B54_blasterbolt_Yellow";
+	};
+	class FST_blaster_cell_B54_Red: FST_blaster_cell_B54_Blue
+	{
+		displayName="[41st] B54 Energy Cell (Red)";
+		ammo="FST_B54_blasterbolt_Red";
 	};
 	class FST_pistol_westar35sa_Mag_Blue: 100Rnd_65x39_caseless_mag
 	{
