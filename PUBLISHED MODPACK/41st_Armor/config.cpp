@@ -166,6 +166,7 @@ class CfgPatches
 			"FST_P2_Delta",
 			"FST_P2_Vulpes",
 			"FST_P2_Bulwark",
+			"FST_P2_Bulwark_Dirty",
 			"FST_P2_Rint",
 			"FST_P2_CosmicSmith",
 			"FST_P2_Tally",
@@ -7921,10 +7922,20 @@ class CfgWeapons
 	{
 		author="Viz";
 		scope=2;
-		displayName="[41st] P2 Helmet [Bulwark_v2]";
+		displayName="[41st] P2 Helmet [Bulwark V2]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bulwark2.paa",
+		};
+	};
+	class FST_P2_Helmet_Bulwark_v2_Dirty: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Bulwark V2/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bulwark2_Dirty.paa",
 		};
 	};
 	class FST_P2_Helmet_Lucky: FST_P2_Helmet_Base
@@ -8025,6 +8036,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
+		};
+	};	
+	class FST_P2_Helmet_Nys: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Nys]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nys.paa",
 		};
 	};	
 	class FST_P2_Helmet_Mox: FST_P2_Helmet_Base
@@ -11161,6 +11182,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Bulwark";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Bulwark_Dirty: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Bulwark/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Bulwark_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -25413,6 +25448,61 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Bulwark.Paa",
 			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Bulwark.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Bulwark",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Bulwark",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};     
+	class FST_P2_Bulwark_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-5445 'Bulwark' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Bulwark_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Bulwark_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Bulwark_Dirty.Paa",
 		};
 		weapons[]=
 		{
