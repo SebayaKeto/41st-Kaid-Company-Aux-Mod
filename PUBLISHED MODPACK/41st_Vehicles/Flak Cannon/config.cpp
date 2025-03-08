@@ -9,7 +9,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"FST_FlakCannon"
+			"FST_FlakCannon",
+			"FST_FlakCannon_Test"
 		};
 		weapons[]={};
 	};
@@ -65,7 +66,7 @@ class CfgMagazines
 		ammo="FST_FlakCannon_AA";
 		count=1000;
 		initSpeed=1440;
-		maxLeadSpeed=1200;
+		maxLeadSpeed=2000;
 		tracersEvery=1;
 		nameSound="cannon";
 		muzzleImpulseFactor[]={1,4};
@@ -419,5 +420,108 @@ class CfgVehicles
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		crew="FST_Droid_B1_OOM";
+	};
+	class FST_FlakCannon_Test: FST_FlakCannon_Base
+	{
+		displayName="[41st] Flak Cannon (Test)";
+		editorPreview="";
+		_generalMacro="B_HMG_01_F";
+		scope=2;
+		scopeCurator=2;
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		crew="FST_Droid_B1_OOM";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				optics=1;
+				discreteDistance[]={100,200,300,400,600,800,1000,1200,1500,1600,1700,1800,1900,2000};
+				discreteDistanceInitIndex=2;
+				turretInfoType="RscOptics_APC_Tracked_01_gunner";
+				memoryPointGunnerOptics="gunnerview";
+				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_w_F";
+				minElev=-10;
+				maxElev=80;
+				minTurn=-360;
+				initelev=28;
+				maxVerticalRotSpeed=1.50000001;
+				maxHorizontalRotSpeed = 1.50000001;
+				animationSourceBody="Mainturret";
+				Body="Mainturret";
+				animationSourceGun="Maingun";
+				Gun="Maingun";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm",
+					1.4125376,
+					1,
+					30
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm_vertical",
+					1.4125376,
+					1,
+					30
+				};
+				maxTurn=360;
+				weapons[]=
+				{
+					"FST_40mw_HH9P_AC",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"SmokeLauncherMag"
+				};
+				gunnerAction="ParticleCannon_Gunner";
+				gunnergetInAction="";
+				gunnergetOutAction="";
+				memoryPointsGetInGunner="pos_gunner";
+				memoryPointsGetInGunnerDir="pos_gunner_dir";
+				memoryPointGun[]=
+				{
+					"usti hlavne 1",
+					"usti hlavne 2",
+					"usti hlavne 3",
+					"usti hlavne 4"
+				};
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				class OpticsIn: Optics_Gunner_APC_01
+				{
+					class Wide: Wide
+					{
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_w_F";
+						gunnerOpticsEffect[]={};
+					};
+					class Medium: Medium
+					{
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_M_F";
+					};
+					class Narrow: Narrow
+					{
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_AAA_01_N_F";
+					};
+				};
+				gunnerRightHandAnimName="OtocHlaven_shake";
+				gunnerLeftHandAnimName="OtocHlaven_shake";
+				selectionFireAnim="zasleh";
+				ejectDeadGunner=1;
+			};
+		};
 	};
 };

@@ -447,7 +447,7 @@ class CfgAmmo
 		cost=10;
 		airFriction=-0.00036000001;
 		timeToLive=10;
-		initSpeed=732;
+		initSpeed=1440;
 		fuseDistance=10;
 		aiAmmoUsageFlags="64 + 256";
 		model="3as\3AS_Weapons\Data\tracer_shell_red.p3d";
@@ -459,7 +459,7 @@ class CfgAmmo
 		muzzleEffect="";
 		typicalSpeed=50;
 		allowAgainstInfantry=1;
-		coefGravity=1;
+		coefGravity=0;
 		waterFriction=0;
 		SoundSetExplosion[]={};
 		class CamShakeExplode
@@ -924,8 +924,8 @@ class CfgMagazines
 		shortnamemagazine="UB-9HV HEI";
 		displayNameMFDFormat="UB-9HV HEI";
 		displayNameShort="UB-9HV HEI";
-		count=140;
-		initspeed=732;
+		count=500;
+		initSpeed=1440;
 		maxLeadSpeed=2000;
 		tracersevery=1;
 	};
@@ -1085,7 +1085,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"DBA_40mm_UB9HV_HEI_x140_mag"
+			"FST_40mm_UB9HV_HEI_x140_mag"
 		};
 		modes[]=
 		{
