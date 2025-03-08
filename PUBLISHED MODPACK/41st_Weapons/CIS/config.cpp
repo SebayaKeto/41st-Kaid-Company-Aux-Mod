@@ -364,10 +364,10 @@ class CfgWeapons
 		recoil="recoil_spar";
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
-			"FST_blaster_cell_Blue",
-			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow"
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Blue",
+			"FST_blaster_battery_Green",
+			"FST_blaster_battery_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -471,8 +471,8 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
-			aiRateOfFire=0.25;
-			aiRateOfFireDistance=200;
+			aiRateOfFire=0.2;
+			aiRateOfFireDistance=300;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
