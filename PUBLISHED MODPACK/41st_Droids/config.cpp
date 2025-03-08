@@ -1991,7 +1991,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
-		backpack="";
+		backpack="FST_HD_backpack_at_predef";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -2324,7 +2324,7 @@ class CfgVehicles
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		backpack="";
+		backpack="FST_HD_backpack_at_predef";
 		uniformclass="FST_Jorgetrooper_Uniform_AT";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
