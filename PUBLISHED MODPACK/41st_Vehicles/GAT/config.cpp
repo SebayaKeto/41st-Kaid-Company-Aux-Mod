@@ -2048,17 +2048,23 @@ class CfgVehicles
 				};
 				weapons[]=
 				{
-					"DBA_40mw_HH9P_AC",
+					"FST_40mw_HH9P_AC",
 					"SmokeLauncher"
 				};
 				magazines[]=
 				{
-					"DBA_40mm_UB9HV_HEI_x140_mag",
-					"DBA_40mm_UB9HV_HEI_x140_mag",
-					"DBA_40mm_UB9HV_HEI_x140_mag",
-					"DBA_40mm_UB9HV_HEI_x140_mag",
-					"DBA_40mm_UB9HV_HEI_x140_mag",
-					"DBA_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
 					"SmokeLauncherMag"
 				};
 				minElev=-9;

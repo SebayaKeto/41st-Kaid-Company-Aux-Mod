@@ -422,6 +422,114 @@ class CfgAmmo
 		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		aiAmmoUsageFlags="128 + 512";
 	};
+	class B_40mm_GPR;
+	class FST_40mm_UB9HV_HEI: B_40mm_GPR
+	{
+		ace_frag_enabled=0;
+		ace_frag_metal=20;
+		ace_frag_charge=30;
+		ace_frag_gurney_c=2440;
+		ace_frag_gurney_k="1/2";
+		ace_frag_classes[]=
+		{
+			"ACE_frag_large"
+		};
+		ace_frag_skip=1;
+		ace_frag_force=0;
+		hit=80;
+		indirectHit=50;
+		indirectHitRange=4;
+		explosive=0.80000001;
+		airLock=1;
+		warheadName="HE";
+		caliber=0.28530669;
+		deflecting=3;
+		cost=10;
+		airFriction=-0.00036000001;
+		timeToLive=10;
+		initSpeed=732;
+		fuseDistance=10;
+		aiAmmoUsageFlags="64 + 256";
+		model="3as\3AS_Weapons\Data\tracer_shell_red.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Red_Fly";
+		tracerScale=1.25;
+		tracerStartTime=0.1;
+		tracerEndTime=20;
+		brightness=100000;
+		muzzleEffect="";
+		typicalSpeed=50;
+		allowAgainstInfantry=1;
+		coefGravity=1;
+		waterFriction=0;
+		SoundSetExplosion[]={};
+		class CamShakeExplode
+		{
+			power=50;
+			duration=2.5;
+			frequency=20;
+			distance=10;
+		};
+		class CamShakeHit
+		{
+			power=200;
+			duration=1.5;
+			frequency=20;
+			distance=5;
+		};
+		class CamShakeFire
+		{
+			power=1;
+			duration=0.2;
+			frequency=20;
+			distance=1;
+		};
+		class CamShakePlayerFire
+		{
+			power=0.0099999998;
+			duration=0.1;
+			frequency=20;
+			distance=0.25;
+		};
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			5.1622777,
+			0.85000002,
+			2000
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			5.1622777,
+			0.85000002,
+			2000
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			5.1622777,
+			0.85000002,
+			2000
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			5.1622777,
+			0.85000002,
+			2000
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+	};
 	class F_40mm_White; //Laat Parachute Flares
 	class FST_AWS_SUU25_type1 : F_40mm_White  //Laat Parachute Flares
 	{
@@ -808,6 +916,19 @@ class CfgMagazines
 		model = "\FIR_AirWeaponSystem_US\data\proxies\pod_7x_Hydra.p3d";
 		mass = 125;
 	};
+	class FST_40mm_UB9HV_HEI_x140_mag: VehicleMagazine
+	{
+		displayname="40mw UB-9HV High-Explosive Incendiary";
+		ammo="FST_40mm_UB9HV_HEI";
+		displaynamemagazine="UB-9HV HEI";
+		shortnamemagazine="UB-9HV HEI";
+		displayNameMFDFormat="UB-9HV HEI";
+		displayNameShort="UB-9HV HEI";
+		count=140;
+		initspeed=732;
+		maxLeadSpeed=2000;
+		tracersevery=1;
+	};
 };
 class CfgWeapons
 {
@@ -935,6 +1056,152 @@ class CfgWeapons
 		};
 	};
 	class LMG_RCWS;
+	class FST_40mw_HH9P_AC: LMG_RCWS
+	{
+		// Credit to the DBA Team
+		displayName="[41st] HH-9P 40mw Anti-Aircraft Gun";
+		ballisticsComputer="2 + 4";
+		FCSMaxLeadSpeed=2000;
+		FCSZeroingDelay=0.1;
+		canLock=1;
+		airlock=1;
+		scope=2;
+		aiDispersionCoefX=0.1;
+		aiDispersionCoefY=0.1;
+		class GunParticles
+		{
+			class effect1
+			{
+				positionName="z_gunl_chamber";
+				directionName="z_gunl_muzzle";
+				effectName="MachineGunCloud";
+			};
+			class effect2
+			{
+				positionName="z_gunr_chamber";
+				directionName="z_gunr_muzzle";
+				effectName="MachineGunCloud";
+			};
+		};
+		magazines[]=
+		{
+			"DBA_40mm_UB9HV_HEI_x140_mag"
+		};
+		modes[]=
+		{
+			"manual",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		magazineReloadTime=2;
+		class manual: Mode_SemiAuto
+		{
+			displayName="[41st] HH-9P 40mw Anti-Aircraft Gun";
+			textureType="fullAuto";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			reloadTime=0.10714286;
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
+					2.8499999,
+					0.75,
+					2500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			autoFire=1;
+			soundContinuous=0;
+			burst=1;
+			soundBurst=0;
+			multiplier=1;
+			dispersion=0.0029088799;
+			aiRateOfFire=1;
+			showToPlayer=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};
+		class close: manual
+		{
+			soundBurst=0;
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=10;
+			burstRangeMax=20;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.69999999;
+			midRange=100;
+			midRangeProbab=0.94999999;
+			maxRange=300;
+			maxRangeProbab=0.89999998;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=10;
+			burstRangeMax=30;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=150;
+			minRange=100;
+			minRangeProbab=0.94999999;
+			midRange=300;
+			midRangeProbab=0.94999999;
+			maxRange=600;
+			maxRangeProbab=0.89999998;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=10;
+			burstRangeMax=30;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=350;
+			minRange=300;
+			minRangeProbab=0.97500002;
+			midRange=600;
+			midRangeProbab=0.94999999;
+			maxRange=800;
+			maxRangeProbab=0.89999998;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=10;
+			burstRangeMax=40;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=850;
+			minRange=800;
+			minRangeProbab=0.94999999;
+			midRange=1000;
+			midRangeProbab=0.90000004;
+			maxRange=2500;
+			maxRangeProbab=0.90000004;
+		};
+	};
 	class FST_AAT_Side_base: LMG_RCWS
 	{
 		class GunParticles;
