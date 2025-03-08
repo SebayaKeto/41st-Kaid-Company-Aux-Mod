@@ -11,11 +11,12 @@ class CfgPatches
 		units[]=
 		{
 			"FST_AA5",
-			"FST_AA5_Yellow"
+			"FST_AA5_MK2"
 		};
 		weapons[]={};
 	};
 };
+class RCWSOptics;
 class CfgVehicles
 {
 	class LandVehicle;
@@ -47,7 +48,7 @@ class CfgVehicles
 		class AnimationSources;
 		class EventHandlers;
 	};
-	class FST_veh_AA5_base: Car_F
+	class FST_AA5_Base: Car_F
 	{
 		author="Inspired from JMax";
 		model="\JMSLLTE_veh_gr_m\AA5\AA5";
@@ -1366,10 +1367,155 @@ class CfgVehicles
 		};
 		class AnimationSources: AnimationSources{};
 	};
-	class FST_AA5: FST_veh_AA5_base
+	class FST_AA5_MK2_Base: FST_AA5_Base
+	{
+		author="Inspred from JMax";
+		model="\JMSLLTE_veh_gr_m\AA5\AA5_mk2";
+		picture="\JMSLLTE_veh_gr\AA5\data\pic_AA5mk2.paa";
+		Icon="\JMSLLTE_veh_gr\AA5\data\ico_AA5.paa";
+		_generalMacro="JMSLLTE_veh_AA5mk2_base";
+		displayName="A-A5 speeder truck (MkII)";
+		transportSoldier=21;
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				body="mainTurret";
+				gun="mainGun";
+				memoryPointGun[]=
+				{
+					"usti hlavne"
+				};
+				selectionFireAnim="zasleh1";
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				weapons[]=
+				{
+					"JMSLLTE_vg_mk2turret_gun"
+				};
+				magazines[]=
+				{
+					"JMSLLTE_100Rnd_mk2turret_mag",
+					"JMSLLTE_100Rnd_mk2turret_mag",
+					"JMSLLTE_100Rnd_mk2turret_mag",
+					"JMSLLTE_100Rnd_mk2turret_mag",
+					"JMSLLTE_100Rnd_mk2turret_mag"
+				};
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
+					0.17782794,
+					1,
+					10
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
+					0.17782794,
+					1,
+					10
+				};
+				gunnerAction="driver_low01";
+				gunnerInAction="driver_low01";
+				gunnerGetInAction="GetInHigh";
+				gunnerGetOutAction="GetOutHigh";
+				memoryPointsGetInGunner="pos driver";
+				memoryPointsGetInGunnerDir="pos driver dir";
+				forceHideGunner=0;
+				viewGunnerInExternal=1;
+				castGunnerShadow=1;
+				stabilizedInAxes=3;
+				memoryPointGunnerOptics="gunnerview";
+				memoryPointGunnerOutOptics="gunnereye";
+				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_02_F";
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				discreteDistanceInitIndex=2;
+				turretInfoType="RscOptics_crows";
+				usePip=0;
+				minElev=-10;
+				maxElev=10;
+				initElev=0;
+				minTurn=-100;
+				maxTurn=100;
+				initTurn=0;
+				gunnerForceOptics=0;
+				class ViewOptics: RCWSOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
+					initFov=0.31;
+					minFov=0.034000002;
+					maxFov=0.31;
+					visionMode[]=
+					{
+						"Normal",
+						"TI"
+					};
+					thermalMode[]={2,3};
+				};
+				class ViewGunner: ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=15;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
+					minFov=0.25;
+					maxFov=1.25;
+					initFov=0.75;
+					visionMode[]={};
+				};
+				class HitPoints: HitPoints
+				{
+					class HitTurret
+					{
+						armor=1;
+						material=-1;
+						armorComponent="hit_main_turret";
+						name="hit_main_turret_point";
+						visual="vez";
+						passThrough=0;
+						minimalHit=0.1;
+						explosionShielding=0.30000001;
+						radius=0.25;
+						isTurret=1;
+					};
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class muzzle_source_rot
+			{
+				source="ammorandom";
+				weapon="JMSLLTE_vg_mk2turret_gun";
+			};
+			class ReloadAnim
+			{
+				source="reload";
+				weapon="JMSLLTE_vg_mk2turret_gun";
+			};
+			class ReloadMagazine
+			{
+				source="reloadmagazine";
+				weapon="JMSLLTE_vg_mk2turret_gun";
+			};
+			class Revolving
+			{
+				source="revolving";
+				weapon="JMSLLTE_vg_mk2turret_gun";
+			};
+		};
+	};
+	class FST_AA5_Yellow: FST_AA5_Base
 	{
 		author="Gold";
-		displayName="[41st] A-A5 speeder truck";
+		displayName="[41st] A-A5 speeder truck (Yellow)";
 		scope=2;
 		scopeCurator=2;
 		side=2;
@@ -1385,23 +1531,23 @@ class CfgVehicles
 			"41st_Vehicles\A-A5\Data\FST_AA5_co.paa"
 		};
 	};
-	class FST_AA5_Yellow: FST_veh_AA5_base
+	class FST_AA5_MK2_Yellow: FST_AA5_MK2_Base
 	{
 		author="Gold";
-		displayName="[41st] A-A5 speeder truck (Yellow)";
+		displayName="[41st] A-A5 speeder truck MkII (Yellow)";
 		scope=2;
 		scopeCurator=2;
 		side=2;
 		faction="FST_Independent_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		crew=""; //To be determined
+		crew="";
 		hiddenSelections[]=
 		{
 			"Camo1"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\A-A5\Data\FST_AA5_Yellow_co.paa"
+			"41st_Vehicles\A-A5\Data\FST_AA5_co.paa"
 		};
 	};
 };

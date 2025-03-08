@@ -14,8 +14,9 @@ class CfgPatches
 			//"FST_Technical_Twin_Laser",
 			"FST_Technical_Twin_Laser_White",
 			//"FST_Technical_Twin_Laser_Snow",
-			//"FST_Technical_Transport",
+			"FST_Technical_Transport",
 			"FST_Technical_Transport_White",
+			"FST_Technical_Transport_Indep"
 		};
 		addonRootClass="OPTRE_Vehicles";
 		weapons[]={};
@@ -1059,6 +1060,22 @@ class CfgVehicles
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+			"camo_transport_decal",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_extupper_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Rear Transport compartment\Transp_lopo_White_co.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Transport_Decals.paa",
+		};
 		maxSpeed=202;
 		fuelCapacity=50;
 		normalSpeedForwardCoef=0.5;
@@ -1333,28 +1350,13 @@ class CfgVehicles
 		class TransportWeapons{};
 		class TransportBackpacks{};
 	};
-	class FST_Technical_Transport_White: FST_Technical_Transport
+	class FST_Technical_Transport_Indep: FST_Technical_Transport
 	{	
 		author="Gold";
-		displayName="[41st] Militia Technical Transport (White)";
-		scope=2;
-		side=1;
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"camo3",
-			"camo_details",
-			"camo_transport_decal",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_extupper_White_co.paa",
-			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
-			"41st_Vehicles\Warthog\Data\Rear Transport compartment\Transp_lopo_White_co.paa",
-			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
-			"41st_Vehicles\Warthog\Data\Decals\Transport_Decals.paa",
-		};
+		displayName="[41st] Militia Technical Transport (Indep)";
+		faction="FST_Independent_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		side=3;
 	};	
 };
 class Mode_FullAuto;
@@ -1364,25 +1366,13 @@ class CfgWeapons
 	class MGun;
 	class LMG_RCWS: MGun
 	{
-		class manual: MGun
-		{
-		};
-		class close: manual
-		{
-		};
-		class short: close
-		{
-		};
-		class medium: close
-		{
-		};
-		class far: close
-		{
-		};
+		class manual: MGun{};
+		class close: manual{};
+		class short: close{};
+		class medium: close{};
+		class far: close{};
 	};
-	class LMG_M200: LMG_RCWS
-	{
-	};
+	class LMG_M200: LMG_RCWS{};
 	class FST_Medium_twin_laser_turret: LMG_RCWS
 	{
 		displayName="[41st] Medium Twin Laser Turret";
