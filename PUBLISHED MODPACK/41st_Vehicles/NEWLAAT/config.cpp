@@ -3089,6 +3089,88 @@ class CfgVehicles
 					};
 				};
 			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class TransportCounterMeasuresComponent;
 		};
 	};
  	class FST_LAAT_LampBase: FST_laat_Base
