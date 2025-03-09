@@ -5030,7 +5030,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat";
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -5078,7 +5078,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat"
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -5126,7 +5126,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat"
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -5174,7 +5174,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat"
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -5222,7 +5222,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
 		hiddenSelectionsMaterials[]=
 		{
-			"MRC\JLTS\characters\CloneArmor2\data\Clone_helmet_ARC.rvmat"
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
 		};
 		hiddenSelections[]=
 		{
@@ -13922,6 +13922,10 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
 /* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
@@ -14260,6 +14264,10 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -14361,6 +14369,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
 /* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -14485,6 +14497,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -20256,7 +20272,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_armor1_mc.rvmat"
+			"41st_Armor\Data\Other\Clone_armor1_mc.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat"
 		};
 	};
  	class FST_P2_Sigs: FST_Trooper_P2_DC15S
