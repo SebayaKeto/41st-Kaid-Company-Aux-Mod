@@ -52,6 +52,7 @@ class CfgPatches
 			"FST_laati_mk2Lights_Medusa",
 			"FST_laati_mk2Lights_Sierra",
 			"FST_laati_mk2Lights_Pole",
+			"FST_laati_Turret_RadarTestbed"
 		};
 		weapons[]=
 		{
@@ -123,6 +124,13 @@ class Extended_init_EventHandlers
 		};
 	};
 	class FST_laati_mk2Lights
+	{
+		class laat_init_eh
+		{
+			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+	class FST_laati_Turret_RadarTestbed
 	{
 		class laat_init_eh
 		{
@@ -2886,6 +2894,201 @@ class CfgVehicles
 		class Library
 		{
 			libtextdesc="";
+		};
+	};
+	class FST_laati_Turret_RadarTestbed: FST_laat_Base
+	{
+		_generalmacro="FST_LAAT_i";
+		accuracy=5;
+		author="$STR_3AS_Studio";
+		availableforsupporttypes[]=
+		{
+			"CAS_Heli",
+			"Transport",
+			"Drop"
+		};
+		cost="3e+006";
+		crew="FST_Pilot_P1";
+		displayname="[41st] LAAT/i Radar Testbed";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		vehicleclass="Helicopter";
+		scope=2;
+		side=1;
+ 		class EventHandlers: DefaultEventhandlers
+		{
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+		}; 
+		typicalcargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+ 		class AnimationSources: AnimationSources
+		{
+			class Doors
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Lamps
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+			class Turrets
+			{
+				source="user";
+				initPhase=1;
+				animPeriod=1;
+			};
+		}; 
+		class Library
+		{
+			libtextdesc="";
+		};
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					// --- IR Sensor ---
+					class IRSensorComponent: SensorTemplateIR
+					{
+						componentType = "IRSensorComponent";
+
+						class AirTarget
+						{
+							minRange = 0;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef    = 1;
+						};
+						class GroundTarget
+						{
+							minRange = 0;
+							maxRange = 8000;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef    = 1;
+						};
+
+						// Full spherical coverage; reduce if desired (e.g., 180).
+						angleRangeHorizontal = 360;
+						angleRangeVertical   = 360;
+						
+						// Reasonable trackable speeds prevent unnecessary checks 
+						// for extremely fast objects.
+						maxTrackableSpeed = 1000;
+						minTrackableSpeed = 0;
+
+						// Shorter recognition distance reduces classification load.
+						typeRecognitionDistance = 1000;
+
+						// Turn off automatic target marking on HUD, reduces overhead.
+						allowsMarking = 0;
+
+						// Keep other values minimal or at defaults.
+						maxFogSeeThrough        = 0.995;
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance  = -1;
+						minSpeedThreshold       = 0;
+						maxSpeedThreshold       = 0;
+						animDirection           = "";
+						aimDown                 = 0;
+						minTrackableATL         = -1e+010;
+						maxTrackableATL         =  1e+010;
+						color[] = {1, 0, 0, 1};
+					};
+
+					// --- Active Radar Sensor ---
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						componentType = "ActiveRadarSensorComponent";
+
+						class AirTarget
+						{
+							minRange = 0;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef    = -1;
+						};
+						class GroundTarget
+						{
+							minRange = 0;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef    = -1;
+						};
+
+						angleRangeHorizontal = 360;
+						angleRangeVertical   = 360;
+
+						maxTrackableSpeed    = 1000;
+						minTrackableSpeed    = 0;
+						typeRecognitionDistance = 1000;
+						
+						allowsMarking = 0;
+
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance  = -1;
+						minSpeedThreshold       = 0;
+						maxSpeedThreshold       = 0;
+						animDirection           = "";
+						aimDown                 = 0;
+						minTrackableATL         = -1e+010;
+						maxTrackableATL         =  1e+010;
+						color[] = {0, 1, 1, 1};
+					};
+
+					// --- Laser Sensor ---
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+						componentType = "LaserSensorComponent";
+
+						class AirTarget
+						{
+							minRange = 0;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef    = -1;
+						};
+						class GroundTarget
+						{
+							minRange = 0;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef    = -1;
+						};
+
+						angleRangeHorizontal = 360;
+						angleRangeVertical   = 360;
+
+						// Laser sensors usually just detect 'lased' targets,
+						// so speeds/tracking are less critical, but we'll
+						// set them for consistency.
+						maxTrackableSpeed = 1000;
+						minTrackableSpeed = 0;
+
+						// Typically, type recognition for a laser is minimal.
+						typeRecognitionDistance = 0;
+
+						// Turn off marking if you don't want it automatically.
+						allowsMarking = 0;
+
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance  = -1;
+						minSpeedThreshold       = 0;
+						maxSpeedThreshold       = 0;
+						animDirection           = "";
+						aimDown                 = 0;
+						minTrackableATL         = -1e+010;
+						maxTrackableATL         =  1e+010;
+						color[] = {1, 1, 1, 0};
+					};
+				};
+			};
 		};
 	};
  	class FST_LAAT_LampBase: FST_laat_Base
