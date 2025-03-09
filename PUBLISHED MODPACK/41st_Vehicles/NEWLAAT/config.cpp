@@ -896,48 +896,44 @@ class CfgVehicles
 						};
 					};
 				};
-				class components
+				class Components
 				{
 					class SensorsManagerComponent
 					{
 						class Components
 						{
-							// --- IR Sensor ---
+							// --- IR Sensor (Ground Only) ---
 							class IRSensorComponent: SensorTemplateIR
 							{
 								componentType = "IRSensorComponent";
 
+								// *** AirTarget set to 0 to prune IR detection for aircraft. ***
 								class AirTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 0;          // IR will NOT detect air
 									objectDistanceLimitCoef = -1;
 									viewDistanceLimitCoef    = 1;
 								};
 								class GroundTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 8000;       // IR still works vs ground
 									objectDistanceLimitCoef = 1;
-									viewDistanceLimitCoef    = 1;
+									viewDistanceLimitCoef   = 1;
 								};
 
-								// Full spherical coverage; reduce if desired (e.g., 180).
+								// You can keep 360 here if you want full spherical IR coverage for ground
+								// or reduce it if you want a narrower IR arc, too:
 								angleRangeHorizontal = 360;
 								angleRangeVertical   = 360;
-								
-								// Reasonable trackable speeds prevent unnecessary checks 
-								// for extremely fast objects.
+
+								// Speeds, recognition, etc.
 								maxTrackableSpeed = 1000;
 								minTrackableSpeed = 0;
-
-								// Shorter recognition distance reduces classification load.
 								typeRecognitionDistance = 4000;
-
-								// Turn off automatic target marking on HUD, reduces overhead.
 								allowsMarking = 0;
 
-								// Keep other values minimal or at defaults.
 								maxFogSeeThrough        = 0.995;
 								groundNoiseDistanceCoef = -1;
 								maxGroundNoiseDistance  = -1;
@@ -950,7 +946,7 @@ class CfgVehicles
 								color[] = {1, 0, 0, 1};
 							};
 
-							// --- Active Radar Sensor ---
+							// --- Active Radar (Air & Ground) ---
 							class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 							{
 								componentType = "ActiveRadarSensorComponent";
@@ -960,23 +956,23 @@ class CfgVehicles
 									minRange = 0;
 									maxRange = 8000;
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 								class GroundTarget
 								{
 									minRange = 0;
 									maxRange = 8000;
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 
-								angleRangeHorizontal = 360;
+								// *** Reduced from 360 to 270 degrees horizontally. ***
+								angleRangeHorizontal = 180;
 								angleRangeVertical   = 360;
 
-								maxTrackableSpeed    = 1000;
-								minTrackableSpeed    = 0;
+								maxTrackableSpeed = 1000;
+								minTrackableSpeed = 0;
 								typeRecognitionDistance = 4000;
-								
 								allowsMarking = 0;
 
 								groundNoiseDistanceCoef = -1;
@@ -990,39 +986,35 @@ class CfgVehicles
 								color[] = {0, 1, 1, 1};
 							};
 
-							// --- Laser Sensor ---
+							// --- Laser Sensor (Ground Only) ---
 							class LaserSensorComponent: SensorTemplateLaser
 							{
 								componentType = "LaserSensorComponent";
 
+								// *** AirTarget set to 0. Laser won't detect air targets. ***
 								class AirTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 0;          // Laser will NOT detect air
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 								class GroundTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 8000;       // Laser works on ground
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 
+								// You can keep 360 or reduce – but the main request was about radar,
+								// so let's leave it at 360 for laser if desired.
 								angleRangeHorizontal = 360;
 								angleRangeVertical   = 360;
 
-								// Laser sensors usually just detect 'lased' targets,
-								// so speeds/tracking are less critical, but we'll
-								// set them for consistency.
-								maxTrackableSpeed = 1000;
-								minTrackableSpeed = 0;
-
-								// Typically, type recognition for a laser is minimal.
+								maxTrackableSpeed    = 1000;
+								minTrackableSpeed    = 0;
 								typeRecognitionDistance = 0;
-
-								// Turn off marking if you don't want it automatically.
 								allowsMarking = 0;
 
 								groundNoiseDistanceCoef = -1;
@@ -1239,48 +1231,44 @@ class CfgVehicles
 						};
 					};
 				};
-				class components
+				class Components
 				{
 					class SensorsManagerComponent
 					{
 						class Components
 						{
-							// --- IR Sensor ---
+							// --- IR Sensor (Ground Only) ---
 							class IRSensorComponent: SensorTemplateIR
 							{
 								componentType = "IRSensorComponent";
 
+								// *** AirTarget set to 0 to prune IR detection for aircraft. ***
 								class AirTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 0;          // IR will NOT detect air
 									objectDistanceLimitCoef = -1;
 									viewDistanceLimitCoef    = 1;
 								};
 								class GroundTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 8000;       // IR still works vs ground
 									objectDistanceLimitCoef = 1;
-									viewDistanceLimitCoef    = 1;
+									viewDistanceLimitCoef   = 1;
 								};
 
-								// Full spherical coverage; reduce if desired (e.g., 180).
+								// You can keep 360 here if you want full spherical IR coverage for ground
+								// or reduce it if you want a narrower IR arc, too:
 								angleRangeHorizontal = 360;
 								angleRangeVertical   = 360;
-								
-								// Reasonable trackable speeds prevent unnecessary checks 
-								// for extremely fast objects.
+
+								// Speeds, recognition, etc.
 								maxTrackableSpeed = 1000;
 								minTrackableSpeed = 0;
-
-								// Shorter recognition distance reduces classification load.
 								typeRecognitionDistance = 4000;
-
-								// Turn off automatic target marking on HUD, reduces overhead.
 								allowsMarking = 0;
 
-								// Keep other values minimal or at defaults.
 								maxFogSeeThrough        = 0.995;
 								groundNoiseDistanceCoef = -1;
 								maxGroundNoiseDistance  = -1;
@@ -1293,7 +1281,7 @@ class CfgVehicles
 								color[] = {1, 0, 0, 1};
 							};
 
-							// --- Active Radar Sensor ---
+							// --- Active Radar (Air & Ground) ---
 							class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 							{
 								componentType = "ActiveRadarSensorComponent";
@@ -1303,23 +1291,23 @@ class CfgVehicles
 									minRange = 0;
 									maxRange = 8000;
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 								class GroundTarget
 								{
 									minRange = 0;
 									maxRange = 8000;
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 
-								angleRangeHorizontal = 360;
+								// *** Reduced from 360 to 270 degrees horizontally. ***
+								angleRangeHorizontal = 180;
 								angleRangeVertical   = 360;
 
-								maxTrackableSpeed    = 1000;
-								minTrackableSpeed    = 0;
+								maxTrackableSpeed = 1000;
+								minTrackableSpeed = 0;
 								typeRecognitionDistance = 4000;
-								
 								allowsMarking = 0;
 
 								groundNoiseDistanceCoef = -1;
@@ -1333,39 +1321,35 @@ class CfgVehicles
 								color[] = {0, 1, 1, 1};
 							};
 
-							// --- Laser Sensor ---
+							// --- Laser Sensor (Ground Only) ---
 							class LaserSensorComponent: SensorTemplateLaser
 							{
 								componentType = "LaserSensorComponent";
 
+								// *** AirTarget set to 0. Laser won't detect air targets. ***
 								class AirTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 0;          // Laser will NOT detect air
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 								class GroundTarget
 								{
 									minRange = 0;
-									maxRange = 8000;
+									maxRange = 8000;       // Laser works on ground
 									objectDistanceLimitCoef = -1;
-									viewDistanceLimitCoef    = -1;
+									viewDistanceLimitCoef   = -1;
 								};
 
+								// You can keep 360 or reduce – but the main request was about radar,
+								// so let's leave it at 360 for laser if desired.
 								angleRangeHorizontal = 360;
 								angleRangeVertical   = 360;
 
-								// Laser sensors usually just detect 'lased' targets,
-								// so speeds/tracking are less critical, but we'll
-								// set them for consistency.
-								maxTrackableSpeed = 1000;
-								minTrackableSpeed = 0;
-
-								// Typically, type recognition for a laser is minimal.
+								maxTrackableSpeed    = 1000;
+								minTrackableSpeed    = 0;
 								typeRecognitionDistance = 0;
-
-								// Turn off marking if you don't want it automatically.
 								allowsMarking = 0;
 
 								groundNoiseDistanceCoef = -1;
@@ -1637,42 +1621,38 @@ class CfgVehicles
 			{
 				class Components
 				{
-					// --- IR Sensor ---
+					// --- IR Sensor (Ground Only) ---
 					class IRSensorComponent: SensorTemplateIR
 					{
 						componentType = "IRSensorComponent";
 
+						// *** AirTarget set to 0 to prune IR detection for aircraft. ***
 						class AirTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 0;          // IR will NOT detect air
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef    = 1;
 						};
 						class GroundTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 8000;       // IR still works vs ground
 							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef    = 1;
+							viewDistanceLimitCoef   = 1;
 						};
 
-						// Full spherical coverage; reduce if desired (e.g., 180).
+						// You can keep 360 here if you want full spherical IR coverage for ground
+						// or reduce it if you want a narrower IR arc, too:
 						angleRangeHorizontal = 360;
 						angleRangeVertical   = 360;
-						
-						// Reasonable trackable speeds prevent unnecessary checks 
-						// for extremely fast objects.
+
+						// Speeds, recognition, etc.
 						maxTrackableSpeed = 1000;
 						minTrackableSpeed = 0;
-
-						// Shorter recognition distance reduces classification load.
 						typeRecognitionDistance = 4000;
-
-						// Turn off automatic target marking on HUD, reduces overhead.
 						allowsMarking = 0;
 
-						// Keep other values minimal or at defaults.
 						maxFogSeeThrough        = 0.995;
 						groundNoiseDistanceCoef = -1;
 						maxGroundNoiseDistance  = -1;
@@ -1685,7 +1665,7 @@ class CfgVehicles
 						color[] = {1, 0, 0, 1};
 					};
 
-					// --- Active Radar Sensor ---
+					// --- Active Radar (Air & Ground) ---
 					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 					{
 						componentType = "ActiveRadarSensorComponent";
@@ -1695,23 +1675,23 @@ class CfgVehicles
 							minRange = 0;
 							maxRange = 8000;
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 						class GroundTarget
 						{
 							minRange = 0;
 							maxRange = 8000;
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 
-						angleRangeHorizontal = 360;
+						// *** Reduced from 360 to 270 degrees horizontally. ***
+						angleRangeHorizontal = 270;
 						angleRangeVertical   = 360;
 
-						maxTrackableSpeed    = 1000;
-						minTrackableSpeed    = 0;
+						maxTrackableSpeed = 1000;
+						minTrackableSpeed = 0;
 						typeRecognitionDistance = 4000;
-						
 						allowsMarking = 0;
 
 						groundNoiseDistanceCoef = -1;
@@ -1725,39 +1705,35 @@ class CfgVehicles
 						color[] = {0, 1, 1, 1};
 					};
 
-					// --- Laser Sensor ---
+					// --- Laser Sensor (Ground Only) ---
 					class LaserSensorComponent: SensorTemplateLaser
 					{
 						componentType = "LaserSensorComponent";
 
+						// *** AirTarget set to 0. Laser won't detect air targets. ***
 						class AirTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 0;          // Laser will NOT detect air
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 						class GroundTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 8000;       // Laser works on ground
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 
+						// You can keep 360 or reduce – but the main request was about radar,
+						// so let's leave it at 360 for laser if desired.
 						angleRangeHorizontal = 360;
 						angleRangeVertical   = 360;
 
-						// Laser sensors usually just detect 'lased' targets,
-						// so speeds/tracking are less critical, but we'll
-						// set them for consistency.
-						maxTrackableSpeed = 1000;
-						minTrackableSpeed = 0;
-
-						// Typically, type recognition for a laser is minimal.
+						maxTrackableSpeed    = 1000;
+						minTrackableSpeed    = 0;
 						typeRecognitionDistance = 0;
-
-						// Turn off marking if you don't want it automatically.
 						allowsMarking = 0;
 
 						groundNoiseDistanceCoef = -1;
@@ -2745,42 +2721,38 @@ class CfgVehicles
 			{
 				class Components
 				{
-					// --- IR Sensor ---
+					// --- IR Sensor (Ground Only) ---
 					class IRSensorComponent: SensorTemplateIR
 					{
 						componentType = "IRSensorComponent";
 
+						// *** AirTarget set to 0 to prune IR detection for aircraft. ***
 						class AirTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 0;          // IR will NOT detect air
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef    = 1;
 						};
 						class GroundTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 8000;       // IR still works vs ground
 							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef    = 1;
+							viewDistanceLimitCoef   = 1;
 						};
 
-						// Full spherical coverage; reduce if desired (e.g., 180).
+						// You can keep 360 here if you want full spherical IR coverage for ground
+						// or reduce it if you want a narrower IR arc, too:
 						angleRangeHorizontal = 360;
 						angleRangeVertical   = 360;
-						
-						// Reasonable trackable speeds prevent unnecessary checks 
-						// for extremely fast objects.
+
+						// Speeds, recognition, etc.
 						maxTrackableSpeed = 1000;
 						minTrackableSpeed = 0;
-
-						// Shorter recognition distance reduces classification load.
 						typeRecognitionDistance = 4000;
-
-						// Turn off automatic target marking on HUD, reduces overhead.
 						allowsMarking = 0;
 
-						// Keep other values minimal or at defaults.
 						maxFogSeeThrough        = 0.995;
 						groundNoiseDistanceCoef = -1;
 						maxGroundNoiseDistance  = -1;
@@ -2793,7 +2765,7 @@ class CfgVehicles
 						color[] = {1, 0, 0, 1};
 					};
 
-					// --- Active Radar Sensor ---
+					// --- Active Radar (Air & Ground) ---
 					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 					{
 						componentType = "ActiveRadarSensorComponent";
@@ -2803,23 +2775,23 @@ class CfgVehicles
 							minRange = 0;
 							maxRange = 8000;
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 						class GroundTarget
 						{
 							minRange = 0;
 							maxRange = 8000;
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 
-						angleRangeHorizontal = 360;
+						// *** Reduced from 360 to 270 degrees horizontally. ***
+						angleRangeHorizontal = 270;
 						angleRangeVertical   = 360;
 
-						maxTrackableSpeed    = 1000;
-						minTrackableSpeed    = 0;
+						maxTrackableSpeed = 1000;
+						minTrackableSpeed = 0;
 						typeRecognitionDistance = 4000;
-						
 						allowsMarking = 0;
 
 						groundNoiseDistanceCoef = -1;
@@ -2833,39 +2805,35 @@ class CfgVehicles
 						color[] = {0, 1, 1, 1};
 					};
 
-					// --- Laser Sensor ---
+					// --- Laser Sensor (Ground Only) ---
 					class LaserSensorComponent: SensorTemplateLaser
 					{
 						componentType = "LaserSensorComponent";
 
+						// *** AirTarget set to 0. Laser won't detect air targets. ***
 						class AirTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 0;          // Laser will NOT detect air
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 						class GroundTarget
 						{
 							minRange = 0;
-							maxRange = 8000;
+							maxRange = 8000;       // Laser works on ground
 							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef    = -1;
+							viewDistanceLimitCoef   = -1;
 						};
 
+						// You can keep 360 or reduce – but the main request was about radar,
+						// so let's leave it at 360 for laser if desired.
 						angleRangeHorizontal = 360;
 						angleRangeVertical   = 360;
 
-						// Laser sensors usually just detect 'lased' targets,
-						// so speeds/tracking are less critical, but we'll
-						// set them for consistency.
-						maxTrackableSpeed = 1000;
-						minTrackableSpeed = 0;
-
-						// Typically, type recognition for a laser is minimal.
+						maxTrackableSpeed    = 1000;
+						minTrackableSpeed    = 0;
 						typeRecognitionDistance = 0;
-
-						// Turn off marking if you don't want it automatically.
 						allowsMarking = 0;
 
 						groundNoiseDistanceCoef = -1;
@@ -5225,28 +5193,32 @@ class CfgAmmo
 			};
 		};			
 	};
-	class FST_Stormfury_High_Velocity_Missile: OPTRE_M_ASGM2_AA
-	{
-		model="OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
-		hit=150;
-		missileLockCone=120;
-		missileKeepLockedCone=120;
-		indirectHit=125;
-		indirectHitRange=13;
-		airLock=2;
-		irLock=1;
-		trackLead=1;
-		trackOversteer=1;
-		maneuvrability=35;
-		airFriction=0.050000001;
-		sideAirFriction=0.16;
-		thrust=400;
-		weaponLockSystem="1+2+8+16";
-		cmImmunity=0.85;
-		missileLockMaxDistance=10000;
-		missileLockMinDistance=50;
-		effectsMissile="3AS_Rocket_effect_Purple_fly";
-	};
+class FST_Stormfury_High_Velocity_Missile: OPTRE_M_ASGM2_AA
+{
+    model = "OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
+    hit = 150;
+    indirectHit = 125;
+    indirectHitRange = 13;
+    irLock = 0; 
+    airLock = 2;
+    weaponLockSystem = "1 + 2 + 16"; 
+
+    missileLockCone       = 120;
+    missileKeepLockedCone = 120;
+    missileLockMaxDistance= 10000;
+    missileLockMinDistance= 50;
+
+    trackLead        = 1;
+    trackOversteer   = 1;
+    maneuvrability   = 35;
+    thrust           = 400;
+    cmImmunity       = 0.85;
+
+    airFriction      = 0.05;
+    sideAirFriction  = 0.16;
+    
+    effectsMissile   = "3AS_Rocket_effect_Purple_fly";
+};
 	class MissileCore;
 	class MissileBase : MissileCore
 	{

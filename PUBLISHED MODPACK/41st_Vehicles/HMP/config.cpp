@@ -1372,10 +1372,6 @@ class CfgVehicles
 		gearMinAlt=0;
 		gearsUpFrictionCoef=0.001;
 		maximumLoad=50000;
-		class EventHandlers: EventHandlers
-		{
-			init="[_this select 0] execVM '41st_Vehicles\LAAT\function\laat_lift_3.sqf';";
-		};
 		class VehicleTransport
 		{
 			class Carrier
