@@ -1496,8 +1496,6 @@ class CfgVehicles
 				};
 			};
 		};
-		
-		};
  		class AnimationSources: AnimationSources
 		{
 			class Doors
