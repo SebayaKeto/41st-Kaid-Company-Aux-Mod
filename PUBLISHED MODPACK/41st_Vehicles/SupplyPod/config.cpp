@@ -106,9 +106,13 @@ class CfgVehicles
 		picture="\A3\Air_F_Heli\Heli_Transport_04\Data\UI\Pod_Heli_Transport_04_covered_CA.paa";
 		icon="iconObject_1x2";
 		accuracy=1000;
+		ace_cargo_space=100;
+		ace_cargo_hasCargo=1;
 		ace_refuel_fuelCargo=999999999999;
 		ace_rearm_defaultSupply=999999999999;
 		ace_repair_canRepair=1;
+		ace_rearm_isSupplyVehicle=true;
+		ace_repair_fnc_isRepairVehicle=true;
 		ace_refuel_hooks[]=
 		{
 			{0.38,-3.1700001,-0.69999999},
@@ -125,7 +129,7 @@ class CfgVehicles
 		"\41st_Vehicles\SupplyPod\Data\Taru_Pod_02.paa"
 		};
 		textureList[] = {};
-				supplyRadius=10;
+		supplyRadius=10;
 		transportSoldier=14;
 		hideWeaponsCargo=1;
 		cargoProxyIndexes[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14};
@@ -483,6 +487,8 @@ class CfgVehicles
 			{0.38,-3.1700001,-0.69999999},
 			{-0.41,-3.1700001,-0.69999999}
 		};
+		ace_rearm_isSupplyVehicle=true;
+		ace_repair_fnc_isRepairVehicle=true;
 		armor=900;
 		hiddenSelections[]=
 		{
