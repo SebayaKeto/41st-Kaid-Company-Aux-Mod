@@ -200,38 +200,17 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo;
 	};
-	class FST_twinDC17Left_dummy: NVGoggles
+	class FST_weapon_dualDC17Left_dummy: NVGoggles
 	{
 		scope=1;
-		author="Adapted from the Indecisive Armoury Team";
+		author="Legion Studios";
 		model="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
 		thermalMode[]={2,3};
-		canShootInWater=1;
 		visionMode[]=
 		{
 			"Normal"
 		};
 		modelOptics="-";
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=20;
-			class CowsSlot: CowsSlot
-			{
-				compatibleItems[]={};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleItems[]={};
-			};
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleItems[]={};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				compatibleItems[]={};
-			};
-		};
 		class ItemInfo
 		{
 			type=616;
@@ -249,14 +228,8 @@ class CfgWeapons
 		model="\ls_weapons\secondary\dual\ls_weapon_dualDC17_secondary.p3d";
 		canShootInWater=1;
 		ls_isWeaponType=1;
-		ls_akimboAlternate="FST_twinDC17Left_dummy";
-		magazines[]=
-		{
-			"FST_blaster_cell_low_Blue",
-			"FST_blaster_cell_low_Green",
-			"FST_blaster_cell_low_Yellow",
-			"FST_blaster_cell_low_Red"
-		};
+		ls_akimboAlternate="FST_weapon_dualDC17Left_dummy";
+
 		muzzles[]=
 		{
 			"Right",
@@ -306,12 +279,63 @@ class CfgWeapons
 				"FST_blaster_cell_low_Red"
 			};
 			reloadAction="";
+		};
+		class Left: Right
+		{
+			displayName="Left Hand";
+			muzzlePos="usti hlavne left";
+			muzzleEnd="konec hlavne left";
+		};
+	};
+	class FST_weapon_dualDC17_secondary: SWLW_DC17_ARC
+	{
+		scope=2;
+		displayName="[41st] Twin DC-17 Blaster Pistols";
+		model="\ls_weapons\secondary\dual\ls_weapon_dualDC17_secondary.p3d";
+		ls_isWeaponType=1;
+		ls_akimboAlternate="ls_weapon_dualDC17Left_dummy";
+		magazines[]=
+		{
+			"FST_blaster_cell_low_Blue",
+			"FST_blaster_cell_low_Green",
+			"FST_blaster_cell_low_Yellow",
+			"FST_blaster_cell_low_Red"
+		};
+		muzzles[]=
+		{
+			"Right",
+			"Left"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\ls_weapons\secondary\dual\data\handAnim\dual_handAnim.rtm"
+		};
+		reloadAction="ls_dualPistol_reload";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\auto_reload.wss",
+			1.5,
+			1,
+			100
+		};
+		class Right: SWLW_DC17_ARC
+		{
+			displayName="Right Hand";
+			magazines[]=
+			{
+				"FST_blaster_cell_low_Blue",
+				"FST_blaster_cell_low_Green",
+				"FST_blaster_cell_low_Yellow",
+				"FST_blaster_cell_low_Red"
+			};
+			reloadAction="ls_dualPistol_reload";
 			reloadMagazineSound[]=
 			{
-				"\Indecisive_Armoury_Sounds\auto_reload.wss",
-				1.5,
+				"\swlb_core\data\sounds\weapons\_reload\dual_reload.ogg",
+				3.5481339,
 				1,
-				100
+				10
 			};
 		};
 		class Left: Right
