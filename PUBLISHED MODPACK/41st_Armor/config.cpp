@@ -179,6 +179,7 @@ class CfgPatches
 			"FST_P2_Ruby",
 			"FST_P2_Sonic",
 			"FST_P2_Claw",
+			"FST_P2_Claw_Dirty",
 			"FST_P2_Kelj",
 			"FST_P2_Fury",
 			"FST_P2_Tombstone",
@@ -9238,6 +9239,15 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Claw.paa",
 		};
+	};	class FST_P2_Helmet_Claw_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Claw/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Claw_Dirty.paa",
+		};
 	};
 	class FST_P2_Helmet_Hazard: FST_P2_Helmet_Base
 	{
@@ -11888,20 +11898,20 @@ class CfgWeapons
             mass=15;
         };
     };
-/*  	class FST_Uniform_Jaws: JLTS_CloneArmor
-	{
-		author="Daara";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Jaws]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Jaws";
-			uniformType="Neopren";
-			containerClass="Supply150";
-			mass=15;
-		};
-	};  */
+    class FST_Uniform_Claw_Dirty: JLTS_CloneArmor
+    {
+        author="Daara";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Claw/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Claw_Dirty";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
  	class FST_Uniform_Raven: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -24731,6 +24741,61 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Claw",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+    class FST_P2_Claw_Dirty: FST_Trooper_P2_DC15S
+    {
+        author="Daara";
+        displayName="[41st] CT-6969 'Claw' (Dirty)";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Claw_Dirty";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Claw_Dirty.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Claw_Dirty.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Claw_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Claw_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
