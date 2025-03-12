@@ -25,7 +25,8 @@ class CfgPatches
 			"FST_Jorgetrooper_AT",
 			"FST_Jorgetrooper_AR",
 			"FST_Droid_B1_BMO",
-			"FST_Droid_B1_Rodger"
+			"FST_Droid_B1_Rodger",
+			"FST_Droid_B1_Tumble"
 		};
 		weapons[]={};
 	};
@@ -253,6 +254,22 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_Droid_B1_Rodger";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class FST_DroidB1_Tumble: JLTS_DroidB1
+	{
+		author="Gold";
+		scope=2;
+		displayname="[41st] B1 Tumble";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_Tumble";
 			containerClass="Supply200";
 			uniformType="Neopren";
 			mass=40;
@@ -1404,6 +1421,22 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Rodger.paa"
+		};
+	};
+	class FST_Droid_B1_Tumble: FST_Droid_B1_BMO
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] B1 Battledroid Tumble";
+		armor=4;
+		armorStructural=100;
+		Backpack="FST_B1_Antenna_Kaid";
+		uniformClass="FST_DroidB1_Tumble";
+		faction="FST_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Tumble.paa"
 		};
 	};
 	class FST_CIS_TS_F: FST_Droid_B1_E5
