@@ -68,6 +68,7 @@ class CfgVehicles
 	class LandVehicle;
 	class Tank: LandVehicle
 	{
+		class ACE_SelfActions;
 		class NewTurret;
 		class Sounds;
 		class HitPoints;
@@ -75,6 +76,54 @@ class CfgVehicles
 	};
 	class Tank_F: Tank
 	{
+		TFAR_hasIntercom=1;
+		TFAR_defaultIntercomSlot = -1;
+		class ACE_SelfActions: ACE_SelfActions
+		{
+			class TFAR_IntercomChannel
+			{
+				displayName="$STR_tfar_core_Intercom_ACESelfAction_Name";
+				condition="true";
+				statement="";
+				icon="";
+				class TFAR_IntercomChannel_disabled
+				{
+					displayName = "Disabled";
+					condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2]; if (_intercom == -2) then { _vehicle setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -1, true]; _intercom = -1 }; _intercom != -1";
+					statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -1, true];";
+				};
+				class TFAR_IntercomChannel_1
+				{
+					displayName="$STR_tfar_core_Intercom_ACESelfAction_Channel1";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 0";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];";
+				};
+				class TFAR_IntercomChannel_2
+				{
+					displayName="$STR_tfar_core_Intercom_ACESelfAction_Channel2";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 1";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];";
+				};
+				class TFAR_IntercomChannel_Misc_1
+				{
+					displayName="Misc channel 1";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 2";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];";
+				};
+				class TFAR_IntercomChannel_Misc_2
+				{
+					displayName="Misc channel 2";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 3";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],3,true];";
+				};
+				class TFAR_IntercomChannel_Misc_3
+				{
+					displayName="Misc channel 3";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 4";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],4,true];";
+				};
+			};
+		};
 		class Turrets
 		{
 			class MainTurret: NewTurret
@@ -150,6 +199,11 @@ class CfgVehicles
 		crewExplosionProtection=0.99989998;
 		damageResistance=0.0054700002;
 		crewVulnerable=0;
+		tf_range=100000;
+		tf_isolatedAmount=0.40000001;
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio=1;
+		enableRadio=1;
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull

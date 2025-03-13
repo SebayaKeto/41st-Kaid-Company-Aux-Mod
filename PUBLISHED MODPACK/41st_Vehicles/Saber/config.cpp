@@ -971,7 +971,7 @@ class cfgvehicles
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
 		};
 	};
-		class FST_Recon_Saber: FST_Saber
+	class FST_Recon_Saber: FST_Saber
 	{
 		scope=2;
 		scopecurator=2;
