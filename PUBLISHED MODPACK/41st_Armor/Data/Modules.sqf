@@ -14,7 +14,7 @@
             ["SLIDER", ["Amount of Vultures", "How many Vultures will be Deployed"], [0, 16, 2, 0]],
             ["TOOLBOX", ["Vulture Type", "Select the type of Vultures to deploy."], [0, ["Standard", "AA Mixed"]]],
             ["TOOLBOX", ["Vulture Skill", "Select the skill level of the Vultures' crew."], [0, ["Default", "Maximum"]]],
-            ["TOOLBOX", ["Armed Ship?", "Should the Munificent have turrets spawned?"], [0, ["No", "Yes"]]],
+            ["CHECKBOX", ["Armed Ship?", "Should the Munificent have turrets spawned?"], [true]],
             ["CHECKBOX", ["Jump Ship Out Afterwards?", "The ship will leave after it has deployed the troops"], [true]]
             ], {
                 params ["_values", "_arguments"];
@@ -38,7 +38,8 @@
 
 
 FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = { 
-    params ["_position", "_Ship_direction", "_dropside", "_LightPodSelection", "_AmountofLightPods", "_linger", "_AmountofBanshees", "_VultureType", "_VultureSkill", "_EndWithJumpOut"]; 
+	params ["_position", "_Ship_direction", "_dropside", "_LightPodSelection", "_AmountofLightPods", "_linger", "_AmountofBanshees", "_VultureType", "_VultureSkill", "_ArmedShip", "_EndWithJumpOut"];
+
  
     _position = ASLtoATL _position; 
  
@@ -49,6 +50,10 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
     { 
         _x addCuratorEditableObjects [[_ReturnShip], true]; 
     } count allCurators; 
+	
+    if (_ArmedShip) then {
+        [_ReturnShip,false,true,true,false,0] call ScifiSupportPLUS_FTL_SupportShip;
+    };
  
     [_ReturnShip, _position, _Ship_direction, _dropside, _LightPodSelection, _AmountofLightPods, _linger, _AmountofBanshees, _VultureType, _VultureSkill, _EndWithJumpOut] spawn { 
         params ["_ReturnShip", "_position", "_Ship_direction", "_dropside", "_LightPodSelection", "_AmountofLightPods", "_linger", "_AmountofBanshees", "_VultureType", "_VultureSkill", "_EndWithJumpOut"]; 
@@ -166,14 +171,13 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         sleep ((_AmountofLightPods * 1) + (_AmountofBanshees * 5) + 1); 
  
         if (_EndWithJumpOut) then { 
-            [objNull, "CIS Troops have been dropped, the ship is leaving!"] call BIS_fnc_showCuratorFeedbackMessage; 
-            [_ReturnShip] remoteExecCall ["ScifiSupportPLUS_fnc_JumpOut", 2]; 
+            [objNull, "Serenity Actual: Munificent overhead, they've dropped droids and are retreating!"] call BIS_fnc_showCuratorFeedbackMessage; 
+            [_ReturnShip] call SciFiSupportPLUS_fnc_JumpOut; 
         } else { 
-            [objNull, "CIS Troops have been dropped!"] call BIS_fnc_showCuratorFeedbackMessage; 
+            [objNull, "Serenity Actual: Munificent overhead, they've dropped droid pods!"] call BIS_fnc_showCuratorFeedbackMessage; 
         }; 
     }; 
 };
-
 
 FST_Droid_Dispenser =  {
     params ["_position", "_dropside", "_selection", "_linger"];
