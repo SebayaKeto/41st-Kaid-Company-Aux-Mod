@@ -785,7 +785,7 @@ class CfgWeapons
 			discreteDistanceInitIndex=0;
 			magazines[]=
 			{
-				"IDA_wrist_rocket"
+				"FST_HE_LauncherWristRocket"
 			};
 			modes[]=
 			{
@@ -824,11 +824,12 @@ class CfgWeapons
 				reloadTime=0.1;
 				dispersion=0;
 				minRange=2;
-				minRangeProbab=0.5;
-				midRange=100;
-				midRangeProbab=0.69999999;
-				maxRange=10000;
-				maxRangeProbab=0.30000001;
+				minRangeProbab=0.6;
+				midRange=300;
+				midRangeProbab=0.8;
+				maxRange=600;
+				maxRangeProbab=0.3;
+				aiRateOfFire=10; 
 			};
 		};
 		class FullAuto: Mode_FullAuto
@@ -916,6 +917,7 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
+			aiRateOfFire=0.1; 
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

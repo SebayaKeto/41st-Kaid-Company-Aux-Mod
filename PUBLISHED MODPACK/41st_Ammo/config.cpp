@@ -877,6 +877,18 @@ class CfgAmmo
 		CraterEffects="SWLW_plasma_he_impact";
 		lightcolor[]={0,0,1};
 	};
+	class FST_HE_WristRocket: G_40mm_HE
+	{
+		ace_frag_enabled=1;
+		indirectHitRange=7;
+		indirectHit=30;
+		effectflare="FlareShell";
+		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		fuseDistance=7;
+		ExplosionEffects="SWLW_plasma_he_impact";
+		CraterEffects="SWLW_plasma_he_impact";
+		lightcolor[]={0,0,1};
+	};
 	class FST_grenade_emp_ammo: GrenadeHand_stone
 	{
 		JLTS_isEMPAmmo=1;
@@ -2096,6 +2108,15 @@ class CfgMagazines
 		displayName="[41st] Impact Rifle Grenade";
 		descriptionShort="Impact Grenade";
 		ammo="FST_HE_RifleGrenade";
+		count=1;
+		mass=8;
+	};
+	class FST_HE_LauncherWristRocket: 1Rnd_HE_Grenade_shell
+	{
+		author="Adapted from the Indecisive Armoury Team";
+		displayName="[41st] Wrist Rocket Grenade";
+		descriptionShort="Impact Grenade";
+		ammo="FST_HE_WristRocket";
 		count=1;
 		mass=8;
 	};

@@ -1689,15 +1689,21 @@ class CfgVehicles
 		{
 			"FST_blaster_battery_Red",
 			"FST_blaster_battery_Red",
-			"IDA_wrist_rocket",
-			"IDA_wrist_rocket",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_HE_LauncherWristRocket",
+			"FST_HE_LauncherWristRocket",
+			"FST_HE_LauncherWristRocket"
 		};
 		respawnMagazines[]=
 		{
 			"FST_blaster_battery_Red",
 			"FST_blaster_battery_Red",
-			"IDA_wrist_rocket",
-			"IDA_wrist_rocket",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_HE_LauncherWristRocket",
+			"FST_HE_LauncherWristRocket",
+			"FST_HE_LauncherWristRocket"
 		};
 		armor=1000;
 	};
