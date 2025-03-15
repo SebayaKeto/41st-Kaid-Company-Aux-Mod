@@ -192,13 +192,13 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red"
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue"
 				};
 				gunnerAction="RepeaterGunner";
 				gunnergetInAction="";
@@ -290,13 +290,13 @@ class CfgVehicles
 			{
 				magazines[]=
 				{
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red",
-					"FST_EWEB_cell_Red"
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue"
 				};
 			};
 		};
