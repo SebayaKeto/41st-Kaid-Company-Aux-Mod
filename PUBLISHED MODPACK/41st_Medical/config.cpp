@@ -75,5 +75,6 @@ class ACE_medical_treatment_actions
 			"FST_Bacta_Tank"
 		};
 		litter[]={};
+        condition = "speed (_this select 0) < 1";
 	};
 };
