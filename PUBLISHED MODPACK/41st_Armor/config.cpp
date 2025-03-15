@@ -12908,6 +12908,28 @@ class CfgWeapons
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Claw: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Claw)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Claw.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Desert: JLTS_CloneNVG
 	{
 		author="Daara";
@@ -12971,6 +12993,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Tiger.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Fixed_Claw: JLTS_CloneNVG_spec
+	{
+		author="Daara";
+		displayName="[41st] NCO Macrobinoculars (Claw/Fixed On)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Claw.paa",
 		};
 		visionMode[]=
 		{
