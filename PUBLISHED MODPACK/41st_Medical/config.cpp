@@ -75,6 +75,14 @@ class ACE_medical_treatment_actions
 			"FST_Bacta_Tank"
 		};
 		litter[]={};
-        condition = "speed (_this select 0) < 1";
+		condition = QUOTE(
+			(
+				(_this select 1) call EFUNC(medical_status,isInStableCondition)
+			)
+			&&
+			(
+				speed (_this select 0) < 1
+			)
+		);
 	};
 };
