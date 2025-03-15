@@ -13014,7 +13014,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Claw.paa",
+			"41st_Armor\Data\Equipment\FST_NVG_Claw.paa",
 		};
 		visionMode[]=
 		{
