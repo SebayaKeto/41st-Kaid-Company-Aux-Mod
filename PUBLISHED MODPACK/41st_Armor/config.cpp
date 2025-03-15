@@ -7972,6 +7972,26 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Pecan: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Pecan]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pecan.paa",
+		};
+	};	
+	class FST_P2_Helmet_Dilham: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Dilham]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham.paa",
+		};
+	};	
 	class FST_P2_Helmet_Derp: FST_P2_Helmet_Base
 	{
 		author="Gold";

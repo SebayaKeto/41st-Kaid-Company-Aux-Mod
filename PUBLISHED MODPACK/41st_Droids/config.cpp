@@ -26,7 +26,8 @@ class CfgPatches
 			"FST_Jorgetrooper_AR",
 			"FST_Droid_B1_BMO",
 			"FST_Droid_B1_Rodger",
-			"FST_Droid_B1_Tumble"
+			"FST_Droid_B1_Tumble",
+			"FST_Droid_B1_PLAD"
 		};
 		weapons[]={};
 	};
@@ -275,6 +276,22 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_DroidB1_PLAD: JLTS_DroidB1
+	{
+		author="Gold";
+		scope=2;
+		displayname="[41st] B1 (PLAD)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_PLAD";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
 	class Uniform_Base;
 	class FST_U_CIS_TS: Uniform_Base
 	{
@@ -483,6 +500,28 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\DroidArmor\data\b1_Backpack_co.paa"
+		};
+		tf_dialog="JLTS_droid_lr_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_east_radio_code";
+		tf_hasLRradio=1;
+		tf_range=15000;
+		tf_subtype="digital_lr";
+	};
+	class FST_B1_Backpack_PLAD: JLTS_B1_Backpack
+	{
+		author="Gold";
+		scope=2;
+		picture="\MRC\JLTS\characters\DroidArmor\data\ui\b1_Backpack_ui_ca.paa";
+		displayName="[41st] B1 Backpack (PLAD)";
+		model="\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Backpack_PLAD.paa"
 		};
 		tf_dialog="JLTS_droid_lr_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -1437,6 +1476,22 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Tumble.paa"
+		};
+	};
+	class FST_Droid_B1_PLAD: FST_Droid_B1_E5
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] B1 Battledroid (PLAD)";
+		armor=4;
+		armorStructural=100;
+		Backpack="FST_B1_Backpack_PLAD";
+		uniformClass="FST_DroidB1_PLAD";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_PLAD.paa"
 		};
 	};
 	class FST_CIS_TS_F: FST_Droid_B1_E5
