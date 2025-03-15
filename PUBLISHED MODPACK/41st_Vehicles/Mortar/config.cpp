@@ -81,6 +81,7 @@ class CfgVehicles
 				magazines[]=
 				{
 					"FST_8Rnd_82mm_Mo_shells",
+					"FST_8Rnd_82mm_Mo_shells",
 					"FST_8Rnd_82mm_Mo_Flare_white",
 					"FST_8Rnd_82mm_Mo_Smoke_white",
 					"FST_8Rnd_82mm_Mo_guided",
@@ -286,10 +287,8 @@ class CfgWeapons
 		{
 			"Single1",
 			"Single2",
-			"Single3",
 			"Burst1",
 			"Burst2",
-			"Burst3"
 		};
 		class Single1: Mode_SemiAuto
 		{
@@ -314,7 +313,7 @@ class CfgWeapons
 				20
 			};
 			reloadTime=1.8;
-			artilleryDispersion=1.9;
+			artilleryDispersion=2.2;
 			artilleryCharge=0.34999999;
 			aiRateOfFire=1;
 			aiRateOfFireDistance=10;
@@ -329,11 +328,7 @@ class CfgWeapons
 		{
 			displayName="$STR_A3_mortar_82mm_Single20";
 			artilleryCharge=0.69999999;
-		};
-		class Single3: Single1
-		{
-			displayName="$STR_A3_mortar_82mm_Single30";
-			artilleryCharge=1;
+			artilleryDispersion=4;
 		};
 		class Burst1: Mode_Burst
 		{
@@ -404,18 +399,7 @@ class CfgWeapons
 			midRangeProbab=0.60000002;
 			maxRange=2660;
 			maxRangeProbab=0.40000001;
-		};
-		class Burst3: Burst1
-		{
-			showToPlayer=0;
-			displayName="$STR_A3_mortar_82mm_Burst30";
-			artilleryCharge=1;
-			minRange=540;
-			minRangeProbab=0.30000001;
-			midRange=2355;
-			midRangeProbab=0.40000001;
-			maxRange=5500;
-			maxRangeProbab=0.30000001;
+			artilleryDispersion=4;
 		};
 	};
 	class FST_Training_mortar_82mm: FST_mortar_82mm
