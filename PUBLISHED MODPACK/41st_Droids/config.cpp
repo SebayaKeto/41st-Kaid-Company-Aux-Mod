@@ -2,8 +2,7 @@ class CfgPatches
 {
 	class 41st_Droids
 	{
-		requiredAddons[]=
-		{"A3_Soft_F"};
+		requiredAddons[]={"A3_Soft_F"};
 		units[]=
 		{
 			"FST_Droid_B1_E5",
@@ -1481,13 +1480,14 @@ class CfgVehicles
 	class FST_Droid_B1_PLAD: FST_Droid_B1_E5
 	{
 		scope=2;
+		side=2;
 		author="Gold";
 		displayName="[41st] B1 Battledroid (PLAD)";
 		armor=4;
 		armorStructural=100;
 		Backpack="FST_B1_Backpack_PLAD";
 		uniformClass="FST_DroidB1_PLAD";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_Independent_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
 		hiddenSelectionsTextures[]=
 		{
