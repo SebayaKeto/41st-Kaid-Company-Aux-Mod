@@ -114,6 +114,7 @@ class CfgMusic
 		"FST_Hill3234",
 		"FST_BuddyHollyHatsuneMiku",
 		"FST_Pelinal",
+		"FST_LA_ATer_Saints_Ofthe41st",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -1039,6 +1040,18 @@ class CfgMusic
 			1
 		};
 		duration="206";
+	};
+	class FST_LA_ATer_Saints_Ofthe41st
+	{
+		name="LA-ATer-day-saints-of-the-41st";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\LA_ATer_day_saints_of_the_41st.ogg",
+			1,
+			1
+		};
+		duration="235";
 	};
 	class FST_Gloryhammer
 	{
