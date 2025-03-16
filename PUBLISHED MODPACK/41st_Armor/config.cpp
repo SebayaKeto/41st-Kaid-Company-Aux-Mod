@@ -173,6 +173,7 @@ class CfgPatches
 			"FST_P2_Bulwark",
 			"FST_P2_Bulwark_Dirty",
 			"FST_P2_Rint",
+			"FST_P2_Rint_Dirty",
 			"FST_P2_CosmicSmith",
 			"FST_P2_Tally",
 			"FST_P2_Church",
@@ -8365,6 +8366,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
 		};
 	};	
+	class FST_P2_Helmet_Spinel: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Spinel]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Spinel.paa",
+		};
+	};	
 	class FST_P2_Helmet_Cryptid: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -8713,6 +8724,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint.paa",
+		};
+	};	
+	class FST_P2_Helmet_Rint_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rint_Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_Dirty.paa",
 		};
 	};	
 	class FST_P2_Helmet_Jax: FST_P2_Helmet_Base
@@ -11571,6 +11592,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Rint_Dirty: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Rint/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Rint_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Bulwark: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -13014,7 +13049,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_NVG_Claw.paa",
+			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Claw_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -26391,6 +26426,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Rint",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+	class FST_P2_Rint_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2724 'Rint' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Rint_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rint_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Rint_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Rint_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Rint_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
