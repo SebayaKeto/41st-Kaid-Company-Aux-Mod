@@ -1013,14 +1013,14 @@ class CfgVehicles
             "camo1",
 			"camo2",
 			"camo3",
-			"camo_details",
+			"camo_details"
         };
         hiddenSelectionsTextures[]=
         {
 			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_ext_upper_snow_co.paa",
 			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_ext_under_snow_co.paa",
 			"41st_Vehicles\Warthog\Data\Turret\M12_turret_snow_co.paa",
-			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa"
         };	
 	};	
 	class FST_Technical_Twin_Laser_White: FST_Technical_Twin_Laser_Base
@@ -1036,14 +1036,14 @@ class CfgVehicles
             "camo1",
 			"camo2",
 			"camo3",
-			"camo_details",
+			"camo_details"
         };
         hiddenSelectionsTextures[]=
         {
 			"41st_Vehicles\Warthog\Data\Exterior upper\M12HogMaav_extupper_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
-			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa"
         };	
 	};	
 	class FST_Technical_Transport: OPTRE_M813_TT
@@ -1066,7 +1066,7 @@ class CfgVehicles
 			"camo2",
 			"camo3",
 			"camo_details",
-			"camo_transport_decal",
+			"camo_transport_decal"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -1074,7 +1074,7 @@ class CfgVehicles
 			"41st_Vehicles\Warthog\Data\Exterior under\M12HogMaav_extunder_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Rear Transport compartment\Transp_lopo_White_co.paa",
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa",
-			"41st_Vehicles\Warthog\Data\Decals\Transport_Decals.paa",
+			"41st_Vehicles\Warthog\Data\Decals\Transport_Decals.paa"
 		};
 		maxSpeed=202;
 		fuelCapacity=50;
