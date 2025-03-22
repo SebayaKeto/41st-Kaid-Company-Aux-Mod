@@ -137,6 +137,7 @@ class CfgMusic
 		"FST_Totharvis_Moon_4",	
 		"FST_Horn_of_Plenty",
 		"FST_ShipAlert",
+		"FST_Rakghoul",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -254,6 +255,18 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\MissionTracks\Will_You_Remember_us.ogg",
+			6,
+			1
+		};
+		duration="132";
+	};
+	class FST_Rakghoul
+	{
+		name="[Other] Rakghoul News Report";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Rakghoul_News.ogg",
 			6,
 			1
 		};
