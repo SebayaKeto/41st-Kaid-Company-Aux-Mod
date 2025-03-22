@@ -1019,8 +1019,8 @@ class CfgAmmo
 	class FST_grenade_Penetrator_ammo: GrenadeHand_stone
 	{
 		hit=1;
-		indirectHit=2000;
-		indirectHitRange=0.5;
+		indirectHit=4000;
+		indirectHitRange=1;
 		dangerRadiusHit=120;
 		suppressionRadiusHit=120;
 		explosionEffectsRadius=100;
