@@ -12615,6 +12615,20 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Fizz: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Fizz]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Fizz";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
 	class lsd_blueforUniform_Base;
 	class lsd_gar_jediCommander_uniform: lsd_blueforUniform_Base
 	{
@@ -27348,12 +27362,12 @@ class CfgVehicles
 		hiddenSelections[]=
 		{
 			"camo1",
-			"camo2",
+			"camo2"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Selene.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Selene.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Selene.Paa"
 		};
 		weapons[]=
 		{
@@ -27379,6 +27393,59 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Selene",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+  	class FST_P2_Fizz: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-1592 'Fizz'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Fizz";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Fizz.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Fizz.Paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Fizz",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Fizz",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
