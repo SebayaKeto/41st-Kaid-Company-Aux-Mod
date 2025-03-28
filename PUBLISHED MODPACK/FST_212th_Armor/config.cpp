@@ -4824,7 +4824,7 @@ class CfgVehicles
 			};			
 		};
 	};
-	class FST_Clone_backpack_EOD: FST_Clone_Backpack212
+	class FST_Clone_backpack_EOD212: FST_Clone_Backpack212
 	{
 		displayName="[41st] Clone EOD Backpack (212th)";
 		maximumload=400;
