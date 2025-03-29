@@ -1020,7 +1020,7 @@ class CfgAmmo
 	{
 		hit=1;
 		indirectHit=4000;
-		indirectHitRange=1;
+		indirectHitRange=3;
 		dangerRadiusHit=120;
 		suppressionRadiusHit=120;
 		explosionEffectsRadius=100;
