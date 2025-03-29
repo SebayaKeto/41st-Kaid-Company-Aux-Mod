@@ -822,14 +822,14 @@ class CfgWeapons
 					};
 				};
 				reloadTime=0.1;
-				dispersion=0;
+				dispersion=0.00290;
 				minRange=2;
 				minRangeProbab=0.6;
 				midRange=300;
 				midRangeProbab=0.8;
 				maxRange=600;
 				maxRangeProbab=0.3;
-				aiRateOfFire=10; 
+				aiRateOfFire=5; 
 			};
 		};
 		class FullAuto: Mode_FullAuto
