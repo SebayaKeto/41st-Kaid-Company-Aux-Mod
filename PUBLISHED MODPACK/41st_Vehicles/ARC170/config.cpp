@@ -94,6 +94,7 @@ class CfgVehicles
 	class Plane_Base_F: Plane
 	{
 		class AnimationSources;
+		class ACE_selfActions;
 		class Components;
 	};
 	class Plane_Fighter_03_base_F: Plane_Base_F
@@ -876,7 +877,94 @@ class CfgVehicles
 			"flare_launcher1_dir",
 			"flare_launcher2_dir"
 		};
-		
+		class ACE_selfActions: ACE_selfActions
+		{
+			class LS_HUD_Changer
+			{
+				displayName="Change HUD Color :)";
+				exceptions[]=
+				{
+					"isNotInside",
+					"isNotSwimming",
+					"isNotSitting"
+				};
+				condition="!(isNull objectParent player) && (driver (vehicle player)==player)";
+				showDisabled=0;
+				priority=2.5;
+				icon="ls_data\icons\hud\colorWheel.paa";
+				class LS_Red_HUD
+				{
+					displayName="Red HUD Color";
+					exceptions[]=
+					{
+						"isNotInside",
+						"isNotSwimming",
+						"isNotSitting"
+					};
+					condition="!(isNull objectParent player)";
+					statement="[1,0,0,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					showDisabled=0;
+					runOnHover=1;
+					priority=2.5;
+					icon="ls_data\icons\hud\red.paa";
+				};
+				class LS_Orange_HUD: LS_Red_HUD
+				{
+					displayName="Orange HUD Color";
+					statement="[1,.05,0,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\orange.paa";
+				};
+				class LS_Yellow_HUD: LS_Red_HUD
+				{
+					displayName="Yellow HUD Color";
+					statement="[1,1,0,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\yellow.paa";
+				};
+				class LS_Green_HUD: LS_Red_HUD
+				{
+					displayName="Green HUD Color";
+					statement="[0,1,0,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\green.paa";
+				};
+				class LS_Cyan_HUD: LS_Red_HUD
+				{
+					displayName="Cyan HUD Color";
+					statement="[0,1,1,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\cyan.paa";
+				};
+				class LS_Blue_HUD: LS_Red_HUD
+				{
+					displayName="Blue HUD Color";
+					statement="[0,0,1,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\blue.paa";
+				};
+				class LS_Purple_HUD: LS_Red_HUD
+				{
+					displayName="Purple HUD Color";
+					statement="[.5,0,.5,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\purple.paa";
+				};
+				class LS_White_HUD: LS_Red_HUD
+				{
+					displayName="White HUD Color";
+					statement="[1,1,1,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\white.paa";
+				};
+				class LS_Black_HUD: LS_Red_HUD
+				{
+					displayName="Black HUD Color";
+					statement="[0,0,0,1,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\black.paa";
+				};
+				class LS_Clear_HUD: LS_Red_HUD
+				{
+					displayName="No HUD Color";
+					statement="[1,1,1,0,vehicle player] spawn ls_utility_fnc_hudColorChange";
+					icon="ls_data\icons\hud\noHud.paa";
+				};
+			};
+		};
+	};
 	class FST_ARC_170_Ghostly: FST_ARC_170
 	{
 		scope=2;
