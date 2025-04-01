@@ -29,6 +29,7 @@ _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
 _plyer addItemToUniform "ACE_DefusalKit";
 _plyer addItemToUniform "MineDetector";
+_plyer addItemToUniform "ItemcTab";
 for "_i" from 1 to 12 do {_plyer addItemToVest "FST_blaster_cell_Blue";};
 for "_i" from 1 to 3 do {_plyer addItemToUniform "FST_grenade_Detonator_mag";};
 for "_i" from 1 to 3 do {_plyer addItemToUniform "IDA_grenade_Smoke_mag";};
