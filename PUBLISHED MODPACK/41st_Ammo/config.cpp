@@ -1348,8 +1348,16 @@ class CfgAmmo
 };	
 class CfgMagazines
 {
-	class 100Rnd_65x39_caseless_mag;
-	class FST_blaster_cell_High_Blue: 100Rnd_65x39_caseless_mag
+	class IDA_Blaster_Cell_Power1_300Rnd_Blue;
+	class IDA_Blaster_Cell_Power2_20Rnd_Blue;
+	class IDA_Blaster_Cell_Power3_40Rnd_Blue;
+	class IDA_Blaster_Cell_Power3_80Rnd_Blue;
+	class IDA_Blaster_Cell_Power4_10Rnd_Blue;
+
+	class IDA_Blaster_Cell_Scatter_6Rnd_Blue;
+	
+	
+	class FST_blaster_cell_High_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -1358,13 +1366,7 @@ class CfgMagazines
 		displayNameShort="HP Energy Cell";
 		descriptionShort="40 round capacity.";
 		ammo="FST_blasterbolt_High_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		count=40;
-		tracersEvery=1;
 		initSpeed=340;
-		mass=8;
 	};
 	class FST_blaster_cell_High_Green: FST_blaster_cell_High_Blue
 	{
@@ -1381,7 +1383,7 @@ class CfgMagazines
 		ammo="FST_blasterbolt_High_Red";
 		displayName="[41st] High-Power Energy Cell (Red)";
 	};
-	class FST_blaster_cell_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_cell_Blue: IDA_Blaster_Cell_Power2_20Rnd_Blue
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -1390,11 +1392,7 @@ class CfgMagazines
 		displayNameShort="Energy Cell";
 		descriptionShort="60 round capacity.";
 		ammo="FST_blasterbolt";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=60;
-		tracersEvery=1;
 		initSpeed=250;
 		mass=8;
 	};
@@ -1413,7 +1411,7 @@ class CfgMagazines
 		displayName="[41st] Standard Energy Cell (Red)";
 		ammo="FST_blasterbolt_Red";
 	};
-	class FST_blaster_cell_Westar_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_cell_Westar_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -1424,11 +1422,7 @@ class CfgMagazines
 		ammo="FST_blasterbolt_high_Blue";
 		JLTS_hasElectronics=0;
 		JLTS_hasEMPProtection=1;
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=60;
-		tracersEvery=1;
 		initSpeed=340;
 		mass=8;
 	};
@@ -1450,7 +1444,7 @@ class CfgMagazines
 		displayName="[41st] High-Power Westar Energy Cell (Red)";
 		ammo="FST_blasterbolt_high_Red";
 	};
-	class FST_blaster_cell_LE_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_cell_LE_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -1459,9 +1453,6 @@ class CfgMagazines
 		displayNameShort="HP Energy Cell";
 		descriptionShort="10 round capacity.";
 		ammo="FST_blasterbolt_DMR_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=10;
 		tracersEvery=1;
 		initSpeed=410;
@@ -1482,7 +1473,7 @@ class CfgMagazines
 		displayName="[41st] High-Power DMR Blaster Cell (Red)";
 		ammo="FST_blasterbolt_DMR_Red";
 	};
-	class FST_blaster_cell_Valken_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_cell_Valken_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
@@ -1493,9 +1484,6 @@ class CfgMagazines
 		ammo="FST_blasterbolt_High_Blue";
 		JLTS_hasElectronics=0;
 		JLTS_hasEMPProtection=1;
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=60;
 		tracersEvery=1;
 		initSpeed=340;
@@ -1519,7 +1507,7 @@ class CfgMagazines
 		displayName="[41st] HP Valken Extended Capacity Magazine (Red)";
 		ammo="FST_blasterbolt_High_Red";
 	};
-	class FST_blaster_battery_DC15L_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_battery_DC15L_Blue: IDA_Blaster_Cell_Power1_300Rnd_Blue
 	{
 		author="Daara";
 		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
@@ -1530,11 +1518,7 @@ class CfgMagazines
 		ammo="FST_blasterbolt";
 		JLTS_hasElectronics=0;
 		JLTS_hasEMPProtection=1;
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=120;
-		tracersEvery=1;
 		initSpeed=250;
 		mass=20;
 	};
@@ -1553,7 +1537,7 @@ class CfgMagazines
 		displayName="[41st] Low-Power DC-15L Extended Capacity Magazine (Red)";
 		ammo="FST_blasterbolt_Red";
 	};
-	class FST_blaster_battery_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_battery_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{
 		author="Indecisive Armoury Team";
 		displayName="[41st] High-Power Energy Battery (Blue)";
@@ -1562,11 +1546,7 @@ class CfgMagazines
 		displayNameShort="HP Energy Battery";
 		descriptionShort="300 round capacity.";
 		ammo="FST_blasterbolt_high_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=300;
-		tracersEvery=1;
 		initSpeed=250;
 		mass=35;
 	};
@@ -1588,7 +1568,7 @@ class CfgMagazines
 		displayName="[41st] High-Power Energy Battery (Red)";
 		ammo="FST_blasterbolt_high_Red";
 	};
-	class FST_DC1A_Prototype_120Rnd_Blue: 100Rnd_65x39_caseless_mag
+	class FST_DC1A_Prototype_120Rnd_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{
 		displayname="[41st] DC1A Battery (Blue)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -1624,7 +1604,7 @@ class CfgMagazines
 		displayname="[41st] DC1A Battery (Red)";
 		ammo="FST_blasterbolt_high_Red";
 	};
-	class FST_blaster_cell_low_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_cell_low_Blue: IDA_Blaster_Cell_Power1_300Rnd_Blue
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] Low-Power Energy Cell (Blue)";
@@ -1749,7 +1729,7 @@ class CfgMagazines
 		displayName="Westar-35SA energy cell (Red)";
 		ammo="FST_blasterbolt_Red";
 	};
-	class FST_thermal_coil_LP_Blue: 100Rnd_65x39_caseless_mag
+	class FST_thermal_coil_LP_Blue: IDA_Blaster_Cell_Power1_300Rnd_Blue
 	{
 		author="Adapted From The Indecisive Armoury Team";
 		displayName="[41st] Low-power Thermal coil (Blue)";
@@ -1758,11 +1738,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_thermal_shell_LP_BLue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=20;
-		tracersEvery=1;
 		initSpeed=300;
 		mass=35;
 	};
@@ -1784,7 +1760,7 @@ class CfgMagazines
 		displayName="[41st] Low-power Thermal coil (Red)";
 		ammo="FST_thermal_shell_LP_Red";
 	};
-	class FST_thermal_coil_T15_Blue: 100Rnd_65x39_caseless_mag
+	class FST_thermal_coil_T15_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{
 		author="Adapted From The Indecisive Armoury Team";
 		displayName="[41st] High-power Thermal Coil";
@@ -1793,11 +1769,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_thermal_shell_T15_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=5;
-		tracersEvery=1;
 		initSpeed=300;
 		mass=35;
 	};
@@ -1855,7 +1827,7 @@ class CfgMagazines
 		displayName="[41st] High-power Thermal Coil Nexu Edition (Red)";
 		ammo="FST_thermal_shell_HP_Red";
 	};*/
-	class FST_blaster_scatter_cell_DP23_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_scatter_cell_DP23_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] High-Power DP23 Scatter Cell (Blue)";
@@ -1864,12 +1836,8 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_blasterbolt_scatter_DP23_Blue";
-		scope=2;
 		scopeArsenal=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=8;
-		tracersEvery=1;
 		initSpeed=250;
 		mass=8;
 	};
@@ -1891,7 +1859,7 @@ class CfgMagazines
 		displayName="[41st] High-Power DP23 Scatter Cell (Red)";
 		ammo="FST_blasterbolt_scatter_DP23_Red";
 	};
-	class FST_blaster_scatter_cell_SBB3_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_scatter_cell_SBB3_Blue: IDA_Blaster_Cell_Scatter_6Rnd_Blue
 	{
 		author="Gold";
 		displayName="[41st] High-Power SBB3 Scatter Cell (Blue)";
@@ -1927,7 +1895,7 @@ class CfgMagazines
 		displayName="[41st] High-Power SBB3 Scatter Cell (Red)";
 		ammo="FST_blasterbolt_scatter_Red";
 	};
-	class FST_underbarrel_scatter_cell_Blue: 100Rnd_65x39_caseless_mag
+	class FST_underbarrel_scatter_cell_Blue: IDA_Blaster_Cell_Power3_80Rnd_Blue
 	{
 		author="Gold";
 		displayName="[41st] High-Power Underbarrel Scatter Cell (Blue)";
@@ -1936,12 +1904,8 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";	
 		ammo="FST_blasterbolt_Underbarel_scatter_Blue";
-		scope=2;
 		scopeArsenal=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=5;
-		tracersEvery=1;
 		initSpeed=250;
 		mass=8;
 	};
@@ -1963,7 +1927,7 @@ class CfgMagazines
 		displayName="[41st] High-Power Underbarrel Scatter Cell (Red)";
 		ammo="FST_blasterbolt_Underbarel_scatter_Red";
 	};
-	class FST_thermal_slug_mag_Blue: 100Rnd_65x39_caseless_mag
+	class FST_thermal_slug_mag_Blue: IDA_Blaster_Cell_Power3_80Rnd_Blue
 	{
 		author="Adapted From The Indecisive Armoury Team";
 		displayName="[41st] High-power Thermal Slug (Blue)";
@@ -1972,11 +1936,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_thermal_slug_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=3;
-		tracersEvery=1;
 		initSpeed=300;
 		mass=8;
 	};
@@ -1998,7 +1958,7 @@ class CfgMagazines
 		displayName="[41st] High-power Thermal Slug (Red)";
 		ammo="FST_thermal_slug_Red";
 	};
-	class FST_EWEB_cell_Blue: 100Rnd_65x39_caseless_mag
+	class FST_EWEB_cell_Blue: IDA_Blaster_Cell_Power4_10Rnd_Blue
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] Overcharged E-Web Energy Cell (Blue)";
@@ -2007,11 +1967,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_blasterbolt_Overcharged_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=150;
-		tracersEvery=1;
 		initSpeed=800;
 		mass=10;
 	};
@@ -2033,7 +1989,7 @@ class CfgMagazines
 		ammo="FST_blasterbolt_Overcharged_Red";
 		displayName="[41st] Overcharged E-Web Energy Cell (Red)";
 	};
-	class FST_blaster_cell_Overcharged_Blue: 100Rnd_65x39_caseless_mag
+	class FST_blaster_cell_Overcharged_Blue: IDA_Blaster_Cell_Power4_10Rnd_Blue
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -2042,11 +1998,7 @@ class CfgMagazines
 		displayNameShort="O/HP Energy Cell";
 		descriptionShort="10 round capacity.";
 		ammo="FST_blasterbolt_Overcharged_Blue";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		count=10;
-		tracersEvery=1;
 		initSpeed=800;
 		mass=10;
 	};
@@ -2101,8 +2053,8 @@ class CfgMagazines
 		ammo="FST_grenade_Penetrator_ammo";
 		mass=12;
 	};
-	class 1Rnd_HE_Grenade_shell;
-	class FST_HE_LauncherGrenade: 1Rnd_HE_Grenade_shell
+	class IDA_HE_LauncherGrenade;
+	class FST_HE_LauncherGrenade: IDA_HE_LauncherGrenade
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] Impact Rifle Grenade";
@@ -2111,7 +2063,7 @@ class CfgMagazines
 		count=1;
 		mass=8;
 	};
-	class FST_HE_LauncherWristRocket: 1Rnd_HE_Grenade_shell
+	class FST_HE_LauncherWristRocket: IDA_HE_LauncherGrenade
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] Wrist Rocket Grenade";
@@ -2191,7 +2143,8 @@ class CfgMagazines
 		JLTS_hasEMPProtection=1;
 		mass=50;
 	};
-	class FST_FuelTank: 100Rnd_65x39_caseless_mag
+	class IDA_FuelTank;
+	class FST_FuelTank: IDA_FuelTank
 	{
 		author="Indecisive Armoury Team";
 		picture="\MRC\JLTS\weapons\z6\data\ui\z6_mag_ui_ca.paa";
@@ -2200,12 +2153,5 @@ class CfgMagazines
 		displayNameShort="Fuel Tank";
 		descriptionShort="Liquid destruction.";
 		ammo="FST_Fire";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		count=100;
-		tracersEvery=1;
-		initSpeed=25;
-		mass=35;
 	};
-};	
+};
