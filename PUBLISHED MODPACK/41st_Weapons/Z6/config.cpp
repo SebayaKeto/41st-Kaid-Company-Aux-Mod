@@ -12,7 +12,7 @@ class CfgPatches
 		weapons[]=
 		{
 			"FST_Z6",
-			"FST_Z6_Jorge",
+			"FST_Z6_Jorge"
 		};
 	};
 };
@@ -26,50 +26,17 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class arifle_MX_Base_F: Rifle_Base_F
-	{
-		class GunParticles;
-		class GunClouds;
-		class WeaponSlotsInfo;
-	};
-	class FST_Z6: arifle_MX_Base_F
+	class WeaponSlotsInfo;
+	class IDA_Z6;
+	class FST_Z6: IDA_Z6
 	{
 		WBK_UseHeavyWeaponFramework = true;
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		ace_overheating_jamTypesAllowed[]=
-		{
-			"Fire",
-			"Dud"
-		};
-		author="Adapted From the Indecisive Armoury Team";
-		inertia=0;
-		canShootInWater=1;
-		scope=2;
+		author="Gold";
 		autoReload="true";
 		baseWeapon="FST_Z6";
 		displayName="[41st] Z-6 rotary cannon";
 		displayNameShort="Z-6 rotary cannon";
 		descriptionShort="Rapid Fire. Reloads automatically.";
-		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
-		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_co.paa",
-			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_Barrel_co.paa",
-			"Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6_Mag_co.paa"
-		};
 		magazines[]=
 		{
 			"FST_blaster_battery_Blue",
@@ -78,23 +45,9 @@ class CfgWeapons
 			"FST_blaster_battery_Red"
 		};
 		recoil="FST_recoil_Z6";
-		maxZeroing=1200;
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
-		};
 		reloadAction="";
-		ace_clearJamAction="";
 		magazineWell[]={};
 		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		reloadMagazineSound[]=
 		{
 			"\Indecisive_Armoury_Sounds\Republic\Z-6\Z6_reload.ogg",
@@ -222,7 +175,8 @@ class CfgWeapons
 			};
 			class PointerSlot: PointerSlot
 			{
-				compatibleItems[]={
+				compatibleItems[]=
+				{
 					"FST_Attachment_Light_Normal_White",
                     "FST_Attachment_Light_Beam_White",
                     "FST_Attachment_Module_Light_Normal_White",
@@ -234,36 +188,12 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
 	};
-	class FST_Z6_Jorge: arifle_MX_Base_F
+	class FST_Z6_Jorge: FST_Z6
 	{
 		author="Gold";
 		displayName="[41st] Jorge's vengeance";
 		baseWeapon="FST_Z6_Jorge";
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		ace_overheating_jamTypesAllowed[]=
-		{
-			"Fire",
-			"Dud"
-		};
-		inertia=0;
-		canShootInWater=1;
-		scope=2;
-		autoReload="true";
 		displayNameShort="Z-6 rotary cannon";
 		descriptionShort="Rapid Fire. Reloads automatically.";
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
@@ -288,23 +218,9 @@ class CfgWeapons
 			"FST_EWEB_cell_Red"
 		};
 		recoil="FST_recoil_Z6";
-		maxZeroing=1200;
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
-		};
 		reloadAction="";
-		ace_clearJamAction="";
 		magazineWell[]={};
 		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		reloadMagazineSound[]=
 		{
 			"\Indecisive_Armoury_Sounds\Republic\Z-6\Z6_reload.ogg",
@@ -437,15 +353,6 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
 			};
 		};
 	};

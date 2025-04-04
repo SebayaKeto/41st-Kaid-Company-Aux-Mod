@@ -32,30 +32,13 @@ class UnderBarrelSlot;
 class CfgWeapons
 {
 	class JLTS_stun_muzzle;
-	class Rifle_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
 	class UGL_F;
-	class arifle_MX_Base_F: Rifle_Base_F
+	class WeaponSlotsInfo;
+	class Rifle_Base_F;
+	class IDA_DC15A;
+	class FST_DC15A: IDA_DC15A
 	{
-		class GunParticles;
-		class GunClouds;
-		class WeaponSlotsInfo;
-	};
-	class FST_DC15A: arifle_MX_Base_F
-	{
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		inertia=0;
-		canShootInWater=1;
+		author="Gold";
 		displayName="[41st] DC-15A Rifle";
 		descriptionShort="Long range, slow rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
@@ -82,7 +65,6 @@ class CfgWeapons
 			"OFP2_ManSkeleton",
 			"\MRC\JLTS\weapons\DC15A\anims\DC15A_handanim.rtm"
 		};
-		ace_clearJamAction="";
 		reloadAction="GestureReload_JLTS_DC15A";
 		reloadMagazineSound[]=
 		{
@@ -104,14 +86,6 @@ class CfgWeapons
 		{
 			"Single",
 			"FullAuto"
-		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
 		};
 		muzzles[]=
 		{
@@ -324,15 +298,6 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
 	};
 	class FST_DC15A_Wood: FST_DC15A
 	{
@@ -476,18 +441,9 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_DC15LE: arifle_MX_Base_F
+	class FST_DC15LE: IDA_DC15A
 	{
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		inertia=0;
-		canShootInWater=1;
+		author="Gold";
 		displayName="[41st] DC-15LE Designated Marksman Rifle";
 		descriptionShort="Long range, slow rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
@@ -497,7 +453,6 @@ class CfgWeapons
 			"OFP2_ManSkeleton",
 			"3AS\3AS_Weapons\DC15A\Data\Anim\DC15A_handanim.rtm"
 		};
-		ace_clearJamAction="";
 		reloadAction="GestureReload_JLTS_DC15A";
 		reloadMagazineSound[]=
 		{
@@ -518,14 +473,6 @@ class CfgWeapons
 		modes[]=
 		{
 			"Single"
-		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_SW\Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
 		};
 		muzzles[]=
 		{
@@ -700,15 +647,6 @@ class CfgWeapons
                 compatibleItems[]={};
             };
         };
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
 	};
     class 3AS_Optic_LEScope_DC15A;
     class FST_Optic_LEScope_DC15LE: 3AS_Optic_LEScope_DC15A
@@ -762,27 +700,19 @@ class CfgWeapons
             };
         };
     };
-	class FST_DC15S: arifle_MX_Base_F
+	class IDA_DC15S;
+	class FST_DC15S: IDA_DC15S
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
 		JLTS_repairTime=5;
-		ace_overheating_mrbs=40000;
-        ace_overheating_slowdownFactor=0;
-        ace_overheating_allowSwapBarrel=0;
-        ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-        ace_overheating_barrelMass=1;
 		IDA_plasmabolt=1;
 		IDA_heatpershot=1;
 		IDA_maxheat=1;		
 		IDA_cooldownTime=15;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="IDA_DC15S_shield";
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		inertia=0;
-		canShootInWater=1;
+		author="Gold";
 		baseWeapon="FST_DC15S";
 		displayName="[41st] DC-15S carbine";
 		descriptionShort="Close range, fast rate of fire.";
@@ -801,7 +731,6 @@ class CfgWeapons
 			"OFP2_ManSkeleton",
 			"\MRC\JLTS\weapons\DC15S\anims\DC15S_handanim.rtm"
 		};
-		ace_clearJamAction="";
 		reloadAction="GestureReload_JLTS_DC15S";
 		reloadMagazineSound[]=
 		{
@@ -823,14 +752,6 @@ class CfgWeapons
 		{
 			"Single",
 			"FullAuto"
-		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"MRC\JLTS\weapons\Core\sounds\weapon_dry.wss",
-			5,
-			1,
-			10
 		};
 		muzzles[]=
 		{
@@ -1039,15 +960,6 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
 			};
 		};
 	};

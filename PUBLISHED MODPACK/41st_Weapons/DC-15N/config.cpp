@@ -108,49 +108,31 @@ class CfgWeapons
 			"this",
 			//"ACE_muzzle_mzls_338"
 		};
+		modelOptics="\A3\Weapons_F\acc\reticle_lrps_F";
 		class OpticsModes
 		{
-			class Ironsights
+			class IDA_773Firepuncher_Scope
 			{
 				opticsID=1;
-				useModelOptics=0;
-				opticsFlare="true";
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.5;
-				opticsZoomMax=1.1;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-			};
-			class Scope: Ironsights
-			{
-				opticsID=2;
 				useModelOptics=1;
 				opticsPPEffects[]=
 				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
 				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.125;
+				opticsZoomMin=0.0285;
 				opticsZoomMax=0.125;
 				opticsZoomInit=0.125;
-				memoryPointCamera="opticView";
-				visionMode[]=
-				{
-					"Normal",
-					"NVG"
-				};
-				opticsFlare="true";
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				discreteInitIndex=0;
+				discretefov[]={0.125,0.0285};
 				distanceZoomMin=100;
-				distanceZoomMax=100;
+				distanceZoomMax=1000;
+				memoryPointCamera="opticView";
+				visionMode[]={};
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
 				cameraDir="";
 			};
 		};
@@ -245,10 +227,7 @@ class CfgWeapons
             mass=80;
             class CowsSlot: CowsSlot
             {
-                compatibleItems[]=
-                {
-					"FST_773_scope";
-                };
+                compatibleItems[]={};
             };
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -278,11 +257,6 @@ class CfgWeapons
 			{
 				slot="MuzzleSlot";
 				item="ACE_muzzle_mzls_338";
-			};
-			class LinkedItemsOptic
-			{
-				slot="CowsSlot";
-				item="FST_773_scope";
 			};
 		};
 		class GunParticles

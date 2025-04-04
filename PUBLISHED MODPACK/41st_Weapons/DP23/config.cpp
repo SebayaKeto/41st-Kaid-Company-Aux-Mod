@@ -25,44 +25,25 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class arifle_MX_Base_F: Rifle_Base_F
+	class WeaponSlotsInfo;
+	class JLTS_DP23;
+	class FST_DP23: JLTS_DP23
 	{
-		class GunParticles;
-		class GunClouds;
-		class WeaponSlotsInfo;
-	};
-	class FST_DP23: arifle_MX_Base_F
-	{
+		author="Gold";
+		displayName="[41st] DP-23 Scatterblaster";
 		ace_overheating_mrbs=40000;
 		ace_overheating_slowdownFactor=0;
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=1;
 		ace_overheating_closedBolt=0;
 		ace_overheating_barrelMass=1;
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
 		inertia=0;
 		canShootInWater=1;
 		fireSpreadAngle=2;
 		discreteDistance[]={50,100,200,300};
-		displayName="[41st] DP-23 Scatterblaster";
 		descriptionShort="Space Shotgun";
 		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DP23\DP23.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\DP23\data\DP23_co.paa"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\DP23\anims\DP23_handanim.rtm"
-		};
 		magazines[]=
 		{
 			"FST_blaster_scatter_cell_DP23_Blue",
@@ -93,14 +74,6 @@ class CfgWeapons
 			100
 		};
 		recoil="FST_recoil_DP23";
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		class Fire: Mode_Burst
 		{
 			sounds[]=
@@ -219,15 +192,6 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
 			};
 		};
 	};

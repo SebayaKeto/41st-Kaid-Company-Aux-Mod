@@ -24,14 +24,9 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class arifle_MX_Base_F: Rifle_Base_F
-	{
-		class GunParticles;
-		class WeaponSlotsInfo;
-	};
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
+	class WeaponSlotsInfo;
 	class FST_Scope_VK38X: ItemCore
 	{
 		scope=2;
@@ -95,37 +90,26 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_Valken38x: arifle_MX_Base_F
+	class 3AS_Valken38X_F;
+	class FST_Valken38x: 3AS_Valken38X_F
 	{
+		author="Gold";
+		displayName="[41st] Valken-38X rifle";
+		baseWeapon="FST_Valken38x";
+		descriptionShort="Multi-Role Elite Rifle.";
+		model="3AS\3AS_Weapons\Valken38X\3AS_Valken38X.p3d";
+		picture="\3AS\3AS_Weapons\Valken38X\Data\UI\3as_valken.paa";
 		ace_overheating_mrbs=40000;
 		ace_overheating_slowdownFactor=0;
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=1;
 		ace_overheating_closedBolt=0;
 		ace_overheating_barrelMass=1;
-		author="Adapted from the Indecisive Armoury Team";
 		scope=2;
 		inertia=0;
 		canShootInWater=1;
-		baseWeapon="FST_Valken38x";
-		displayName="[41st] Valken-38X rifle";
-		descriptionShort="Multi-Role Elite Rifle.";
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
-		model="3AS\3AS_Weapons\Valken38X\3AS_Valken38X.p3d";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\data\Anim\DMR_02.rtm"
-		};
 		ace_clearJamAction="";
 		reloadAction="3AS_GestureReload_DC17M";
-		reloadMagazineSound[]=
-		{
-			"\41st_Weapons\DC-15AS\Data\reload.ogg",
-			1.5,
-			1,
-			100
-		};
 		recoil="FST_recoil_DC15A";
 		magazines[]=
 		{
@@ -144,7 +128,6 @@ class CfgWeapons
 			"Single",
 			"FullAuto"
 		};
-		fireLightDiffuse[]={0,0,1};
 		drySound[]=
 		{
 			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",

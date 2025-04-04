@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class FST_Weapons_Valken
+	class FST_Weapons_DC17
 	{
 		requiredAddons[]=
 		{

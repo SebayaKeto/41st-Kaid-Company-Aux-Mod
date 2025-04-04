@@ -1,7 +1,7 @@
 //Inspired by Indecisive Armoury Team (IDA)
 class CfgPatches
 {
-	class FST_SPA_K15
+	class FST_SPAK12
 	{
 		requiredAddons[]=
 		{
@@ -14,7 +14,7 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"FST_SPAK15_Wood",
+			"FST_SPAK12"
 		};
 	};
 };
@@ -26,42 +26,15 @@ class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
-{	
-	class arifle_MX_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
-	class FST_SPAK15_Wood_Base: arifle_MX_Base_F
+{
+	class WeaponSlotsInfo;
+	class IDA_SPK12;
+	class FST_SPAK12: IDA_SPK12
 	{
 		author="Gold";
-		displayName="[41st] SPA-K15 Wood";
+		displayName="[41st] SPA-K12";
 		descriptionShort="Medium range, slow rate of fire.";
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		scope=0;
-		inertia=0;
-		canShootInWater=1;
-		picture="Indecisive_Armoury_Weapons_INDEP\Data\SPAK\SPAK_ui.paa";
-		model="Indecisive_Armoury_Weapons_INDEP\Data\SPAK\Models\IDA_SPAK.p3d";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\A3\Weapons_F_Exp\Rifles\AKS\Data\Anim\aks.rtm"
-		};
-		ace_clearJamAction="";
 		reloadAction="GestureReloadAKM";
-		reloadMagazineSound[]=
-		{
-			"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15_reload.ogg",
-			1.5,
-			1,
-			100
-		};
 		recoil="FST_recoil_dc15a";
 		magazines[]=
 		{
@@ -75,14 +48,6 @@ class CfgWeapons
 		{
 			"Single",
 			"FullAuto"
-		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
 		};
 		muzzles[]=
 		{
@@ -106,35 +71,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					0.995,
 					1800
@@ -154,7 +119,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1,
 					1,
 					400
@@ -290,31 +255,5 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
 	};
-	class FST_SPAK15_Wood: FST_SPAK15_Wood_Base
-	{
-		author="Gold";
-		displayName="[41st] SPA-K15 (Wood)";
-		scope=2;
-        scopeArsenal=2;
-		baseWeapon="FST_SPAK15_Wood";
-		model="Indecisive_Armoury_Weapons_INDEP\Data\SPAK\Models\IDA_SPAK_Stock.p3d"
-		magazines[]=
-		{
-			"FST_blaster_cell_High_Blue",
-			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red",
-		};
-		magazineWell[]={};
-	};	
 };

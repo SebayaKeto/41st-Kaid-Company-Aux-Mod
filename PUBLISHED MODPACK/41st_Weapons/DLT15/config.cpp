@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class FST_DC15AS
+	class FST_Weapon_DLT15
 	{
 		requiredAddons[]=
 		{

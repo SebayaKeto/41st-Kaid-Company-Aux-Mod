@@ -21,6 +21,7 @@ class MuzzleSlot;
 class PointerSlot;
 class CfgWeapons
 {
+	class WeaponSlotsInfo;
 	class Rifle_Base_F;
 	class arifle_MX_Base_F: Rifle_Base_F
 	{
@@ -29,108 +30,104 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 	};
 	class UGL_F;
-	class FST_T15: arifle_MX_Base_F {
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		author="Adapted From The Indecisive Armoury Team";
-		scope=2;
-		inertia=0;
-		canShootInWater=1;
+	class IDA_T15;
+	class FST_T15: IDA_T15
+	{
+		author="Gold";
 		displayName="[41st] T-15 Heavy Blaster";
 		descriptionShort="Long range dedicated anti-material blaster.";
 		picture="\MRC\JLTS\weapons\EPL2\data\ui\EPL2_ui_ca.paa";
 		model="\MRC\JLTS\weapons\EPL2\EPL2.p3d";
-		hiddenSelections[] = {
+		hiddenSelections[]= 
+		{
 			"camo1",
 			"camo2"
 		};
-		hiddenSelectionsTextures[] = {
+		hiddenSelectionsTextures[]= 
+		{
 			"\MRC\JLTS\weapons\EPL2\data\EPL2_co.paa",
 			"\MRC\JLTS\weapons\EPL2\data\EPL2_mag_co.paa"
 		};
-		handAnim[] = {
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\EPL2\anims\EPL2_handanim.rtm"
-		};
-		ace_clearJamAction="";
 		reloadAction="GestureReloadSPARUGL";
-		reloadMagazineSound[] = {
+		reloadMagazineSound[]= 
+		{
 			"\41st_Weapons\DC-15AS\Data\reload.ogg",
 			1.5,
 			1,
 			100
 		};
 		recoil="FST_recoil_T15";
-		magazines[] = {
+		magazines[]= 
+		{
 			"FST_thermal_coil_LP_Blue",
 			"FST_thermal_coil_LP_Green",
 			"FST_thermal_coil_LP_Yellow",
 			"FST_thermal_coil_LP_Red"
 		};
 		magazineWell[]={};
-		fireLightDiffuse[]={0,0,1};
-		drySound[] = {
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
-		muzzles[] = {
+		muzzles[]= 
+		{
 			"this",
 			"FST_T15_UGL"
 		};
-		modes[] = {
+		modes[]= 
+		{
 			"Single"
 		};
-		
-		class Single: Mode_SemiAuto {
+		class Single: Mode_SemiAuto 
+		{
 			displayName = "Low Power";
-			sounds[] = {
+			sounds[]= 
+			{
 				"StandardSound"
 			};
-			class BaseSoundModeType {
+			class BaseSoundModeType 
+			{
 				weaponSoundEffect="";
 				closure1[]={};
 				closure2[]={};
 				soundClosure[]={};
 			};
-			class StandardSound: BaseSoundModeType {
+			class StandardSound: BaseSoundModeType 
+			{
 				weaponSoundEffect="";
-				begin1[] = {
+				begin1[]= 
+				{
 					"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 					1,
 					1,
 					1800
 				};
-				begin2[] = {
+				begin2[]= 
+				{
 					"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 					1.25,
 					1.015,
 					1800
 				};
-				begin3[] = {
+				begin3[]= 
+				{
 					"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 					1.25,
 					0.98500001,
 					1800
 				};
-				begin4[] = {
+				begin4[]= 
+				{
 					"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 					1.25,
 					1.01,
 					1800
 				};
-				begin5[] = {
+				begin5[]=
+				{
 					"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 					1.25,
 					0.995,
 					1800
 				};
-				soundBegin[] = {
+				soundBegin[]= 
+				{
 					"begin1",
 					0.2,
 					"begin2",
@@ -142,13 +139,15 @@ class CfgWeapons
 					"begin5",
 					0.2
 				};
-				beginwater1[] = {
+				beginwater1[]= 
+				{
 					"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 					1,
 					1,
 					400
 				};
-				soundBeginWater[] = {
+				soundBeginWater[]= 
+				{
 					"beginwater1",
 					1
 				};
@@ -162,7 +161,8 @@ class CfgWeapons
 			maxRange=10000;
 			maxRangeProbab=0.3;
 		};
-		class FST_T15_UGL: UGL_F {
+		class FST_T15_UGL: UGL_F 
+		{
 			displayName="High Power UGL";
 			useModelOptics = false;
 			useExternalOptic = true;
@@ -182,19 +182,24 @@ class CfgWeapons
 			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3"}; // Position of the camera
 			discreteDistanceInitIndex = 0;
 			
-			class Single: Mode_SemiAuto {
-				sounds[] = {
+			class Single: Mode_SemiAuto 
+			{
+				sounds[]= 
+				{
 					"StandardSound"
 				};
-				class BaseSoundModeType {
+				class BaseSoundModeType
+				{
 					weaponSoundEffect = "";
 					closure1[] = {};
 					closure2[] = {};
 					soundClosure[] = {};
 				};
-				class StandardSound: BaseSoundModeType {
+				class StandardSound: BaseSoundModeType 
+				{
 					weaponSoundEffect = "";
-					begin1[] = {
+					begin1[] = 
+					{
 						"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
 						1.25,
 						1,
@@ -212,20 +217,26 @@ class CfgWeapons
 				maxRangeProbab = 0.3;
 			};
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo {
+		class WeaponSlotsInfo: WeaponSlotsInfo 
+		{
             mass=80;
-            class CowsSlot: CowsSlot {
-                compatibleItems[] = {
+            class CowsSlot: CowsSlot 
+			{
+                compatibleItems[]= 
+				{
                     "3AS_optic_holo_DC15S",
                     "Optic_MRCO",
                     "3AS_optic_reflex_DC15C"
                 };
             };
-            class MuzzleSlot: MuzzleSlot {
+            class MuzzleSlot: MuzzleSlot 
+			{
                 compatibleItems[]={};
             };
-            class PointerSlot: PointerSlot {
-                compatibleItems[] = {
+            class PointerSlot: PointerSlot 
+			{
+                compatibleItems[]= 
+				{
                     "FST_Attachment_Light_Normal_White",
                     "FST_Attachment_Light_Beam_White",
                     "FST_Attachment_Module_Light_Normal_White",
@@ -241,14 +252,6 @@ class CfgWeapons
                 };
             };
         };
-
-		class GunParticles {
-			class FirstEffect {
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
 	};
 	class acc_flashlight;
 	class FST_Base_Flashlight: acc_flashlight

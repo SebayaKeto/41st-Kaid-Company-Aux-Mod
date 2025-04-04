@@ -10,12 +10,11 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"FST_SBB3",
+			"FST_SBB3"
 		};
 	};
 };
 class Mode_SemiAuto;
-class Mode_FullAuto;
 class SlotInfo;
 class CowsSlot;
 class MuzzleSlot;
@@ -23,52 +22,14 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class arifle_MX_Base_F: Rifle_Base_F
+	class WeaponSlotsInfo;
+	class IDA_SBB3;
+	class FST_SBB3: IDA_SBB3
 	{
-		class GunParticles;
-		class GunClouds;
-		class WeaponSlotsInfo;
-	};
-	class FST_SBB3: arifle_MX_Base_F
-	{
-		author="Indecisive Armoury Team";
+		author="Gold";
 		displayName="[41st] SB-B3 Scatterblaster";
 		baseWeapon="FST_SBB3";
 		descriptionShort="Close range spread";
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		scope=2;
-		scopeArsenal=2;
-		inertia=0;
-		canShootInWater=1;
-		fireSpreadAngle=2;
-		discreteDistance[]={50,100,200,300};
-		picture="\MRC\JLTS\weapons\SBB3\data\ui\SBB3_ui_ca.paa";
-		model="\MRC\JLTS\weapons\SBB3\SBB3.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"illum"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\SBB3\data\SBB3_co.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"\a3\characters_f_bootcamp\common\data\vrarmoremmisive.rvmat"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\SBB3\anims\SBB3_handanim.rtm"
-		};
 		magazines[]=
 		{
 			"FST_blaster_scatter_cell_SBB3_Blue",
@@ -76,33 +37,8 @@ class CfgWeapons
 			"FST_blaster_scatter_cell_SBB3_Yellow",
 			"FST_blaster_scatter_cell_SBB3_Red",
 		};
-		magazineWell[]={};
-		muzzles[]=
-		{
-			"this"
-		};
-		modes[]=
-		{
-			"Fire"
-		};
-		ace_clearJamAction="";
 		reloadAction="";
-		reloadMagazineSound[]=
-		{
-			"\Indecisive_Armoury_Sounds\blaster_reload_3.ogg",
-			1.5,
-			1,
-			100
-		};
 		recoil="FST_recoil_DP23";
-		fireLightDiffuse[]={1,0,0};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		class Fire: Mode_SemiAuto
 		{
 			sounds[]=
@@ -121,35 +57,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\Indecisive_Armoury_Sounds\CIS\SB-B3\SBB3.ogg",
+					"\Indecisive_Armoury_Sounds\CIS\SBB3.ogg",
 					1,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"\Indecisive_Armoury_Sounds\CIS\SB-B3\SBB3.ogg",
+					"\Indecisive_Armoury_Sounds\CIS\SBB3.ogg",
 					1,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"\Indecisive_Armoury_Sounds\CIS\SB-B3\SBB3.ogg",
+					"\Indecisive_Armoury_Sounds\CIS\SBB3.ogg",
 					1,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"\Indecisive_Armoury_Sounds\CIS\SB-B3\SBB3.ogg",
+					"\Indecisive_Armoury_Sounds\CIS\SBB3.ogg",
 					1,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"\Indecisive_Armoury_Sounds\CIS\SB-B3\SBB3.ogg",
+					"\Indecisive_Armoury_Sounds\CIS\SBB3.ogg",
 					1,
 					0.995,
 					1800
@@ -169,7 +105,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"\Indecisive_Armoury_Sounds\CIS\SB-B3\SBB3.ogg",
+					"\Indecisive_Armoury_Sounds\CIS\SBB3.ogg",
 					1,
 					1,
 					400
@@ -215,15 +151,6 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
 			};
 		};
 	};

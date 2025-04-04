@@ -368,15 +368,12 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_RPS6_Base: launch_RPG32_F
+	class IDA_RPS6_Base;
+	class FST_RPS6_Base: IDA_RPS6_Base
 	{
-		author="Adapted from the Indecisive Armoury Team";
-		_generalMacro="launch_RPG32_F";
-		scope=1;
+		author="Gold";
 		baseWeapon="FST_RPS6_Disposable";
-		autoReload="false";
 		displayName="[41st] RPS-6 Disposable launcher";
-		modelOptics="\A3\Weapons_F\acc\reticle_RPG_F";
 		model="\3AS\3AS_Weapons\RPS6\3AS_RPS6_F.p3d";
 		picture="\MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
@@ -417,23 +414,10 @@ class CfgWeapons
 			"3as\3as_weapons\data\anim\rps6_hold.rtm"
 		};
 		recoil="recoil_rpg";
-		magazineReloadSwitchPhase=0.30000001;
 		magazineWell[]={};
 		magazines[]=
 		{
 			"FST_RPS6_rocket_Disposable"
-		};
-		ace_overpressure_angle=30;
-		ace_overpressure_range=3;
-		ace_overpressure_damage=20;
-		ace_nlaw_enabled=0;
-		class EventHandlers
-		{
-			fired="_this call CBA_fnc_firedDisposable";
-		};
-		class Library
-		{
-			libTextDesc="$STR_A3_CfgWeapons_launch_LAW_Library0";
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -445,38 +429,54 @@ class CfgWeapons
 				begin2[] = {"\41st_weapons\Launchers\Data\Launcher 3-130.ogg", 4, 1, 1800};
 				soundBegin[] = {"begin1", 0.5, "begin2", 0.5};
 			};
+		};	
     };
-	};
-	class FST_RPS6_Disposable: FST_RPS6_Base
+	class IDA_RPS6_Disposable;
+	class FST_RPS6_Disposable: IDA_RPS6_Disposable
 	{
-		author="Adapted from the Indecisive Armoury Team";
-		Scope=2;
+		author="Gold";
 		displayName="[41st] RPS-6 Disposable launcher";
 		baseWeapon="FST_RPS6_Disposable";
 		magazines[]=
 		{
 			"CBA_FakeLauncherMagazine"
 		};
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			""
+		};
 	};
-	class FST_RPS6_Used: FST_RPS6_Disposable
+	class IDA_RPS6_Used;
+	class FST_RPS6_Used: IDA_RPS6_Used
 	{
-		scope=1;
-		author="Adapted from the Indecisive Armoury Team";
+		author="Gold";
 		displayName="[41st] RPS-6 Disposable launcher (USED)";
 		baseWeapon="FST_RPS6_Used";
 		magazines[]=
 		{
 			"CBA_FakeLauncherMagazine"
 		};
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			""
+		};
 	};
-	class FST_RPS6HP: FST_RPS6_Base
+	class IDA_RPS6HP;
+	class FST_RPS6HP: IDA_RPS6HP
 	{
-		author="Adapted from the Indecisive Armoury Team";
+		author="Gold";
+		displayName="[41st] RPS-6HP Rocket launcher";
 		_generalMacro="launch_RPG32_F";
-		scope=2;
 		baseWeapon="FST_RPS6HP";
 		autoReload="false";
-		displayName="[41st] RPS-6HP Rocket launcher";
 		model="\MRC\JLTS\weapons\RPS6\rps6.p3d";
 		picture="\MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
@@ -493,30 +493,24 @@ class CfgWeapons
 		{
 			"\MRC\JLTS\weapons\RPS6\data\rps6_co.paa"
 		};
-		reloadAction="GestureReloadRPG7";
 		recoil="recoil_rpg";
-		magazineReloadSwitchPhase=0.30000001;
 		magazineWell[]={};
 		magazines[]=
 		{
 			"FST_RPS6_rocket",
 			"FST_RPS6_rocket_HE",
 		};
-		ace_overpressure_angle=30;
-		ace_overpressure_range=3;
-		ace_overpressure_damage=20;
 	};
 	class FST_RPS6_SR: FST_RPS6_Base
 	{
-		author="Adapted from the Indecisive Armoury Team";
-		_generalMacro="launch_RPG32_F";
-		scope=2;
-		baseWeapon="FST_RPS6_SR";
-		autoReload="false";
+		author="Gold";
 		displayName="[41st] RPS-6HP Rocket launcher (SR)";
 		model="\3AS\3AS_Weapons\RPS6HP\3AS_RPS6_HP.p3d";
 		picture="\MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
+		scope=2;
+		baseWeapon="FST_RPS6_SR";
+		autoReload="false";
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
@@ -531,8 +525,5 @@ class CfgWeapons
 			"FST_RPS6_rocket",
 			"FST_RPS6_rocket_HE",
 		};
-		ace_overpressure_angle=30;
-		ace_overpressure_range=3;
-		ace_overpressure_damage=20;
 	};
 };

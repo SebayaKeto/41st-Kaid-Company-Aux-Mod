@@ -32,9 +32,11 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class FST_DC15L_Base_F: Rifle_Base_F {
+	class FST_DC15L_Base_F: Rifle_Base_F 
+	{
 		author="Daara";
-		magazines[] = {
+		magazines[]= 
+		{
 			"FST_blaster_battery_DC15L_Blue",
 			"FST_blaster_battery_DC15L_Green",
 			"FST_blaster_battery_DC15L_Yellow",
@@ -48,26 +50,33 @@ class CfgWeapons
 		reloadAction="GestureReloadMX";
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="IDA_recoil_dc15a";
+		recoil="3AS_recoil_DC15L";
 		initSpeed=-1;
 		maxZeroing=100;
-		class GunParticles: GunParticles {
-			class SecondEffect {
+		class GunParticles: GunParticles 
+		{
+			class SecondEffect 
+			{
 				positionName="Nabojnicestart";
 				directionName="Nabojniceend";
 				effectName="CaselessAmmoCloud";
 			};
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo {
-			class CowsSlot: CowsSlot {
+		class WeaponSlotsInfo: WeaponSlotsInfo 
+		{
+			class CowsSlot: CowsSlot 
+			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[] = {
+				compatibleItems[]= 
+				{
 					"FST_Optic_DC15L",
 				};
 			};
-			class PointerSlot: PointerSlot {
+			class PointerSlot: PointerSlot
+			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[] = {
+				compatibleItems[]= 
+				{
 					"FST_Attachment_Light_Normal_White",
                     "FST_Attachment_Light_Beam_White",
                     "FST_Attachment_Module_Light_Normal_White",
@@ -75,9 +84,11 @@ class CfgWeapons
 					"acc_pointer_IR"
 				};
 			};
-			class UnderBarrelSlot: UnderBarrelSlot {
+			class UnderBarrelSlot: UnderBarrelSlot 
+			{
 				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {
+				compatibleItems[]= 
+				{
 					"FST_Bipod_DC15L_f"
 				};
 			};
@@ -88,61 +99,73 @@ class CfgWeapons
 		distanceZoomMin=400;
 		distanceZoomMax=400;
 		descriptionShort="DC-15L, 41st Variant";
-		handAnim[] = {
+		handAnim[]= 
+		{
 			"OFP2_ManSkeleton",
 			"\3AS\3AS_Weapons\DC15L\Data\Anim\DC15L_handanim.rtm"
 		};
 		selectionFireAnim="zasleh";
 		flash="gunfire";
 		flashSize=3;
-		modes[] = {
+		modes[]= 
+		{
 			"FullAuto",
 			"SlowAuto"
 		};
 		
-		class FullAuto: Mode_FullAuto {
-			sounds[] = {
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]= 
+			{
 				"StandardSound"
 			};
-			class BaseSoundModeType {
+			class BaseSoundModeType 
+			{
 				weaponSoundEffect="";
 				closure1[]={};
 				closure2[]={};
 				soundClosure[]={};
 			};
-			class StandardSound: BaseSoundModeType {
+			class StandardSound: BaseSoundModeType 
+			{
 				weaponSoundEffect="";
-				begin1[] = {
+				begin1[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326.ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin2[] = {
+				begin2[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326 (1).ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin3[] = {
+				begin3[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326 (2).ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin4[] = {
+				begin4[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326.ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin5[] = {
+				begin5[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326 (1).ogg",
 					1.5,
 					1,
 					1800
 				};
-				soundBegin[] = {
+				soundBegin[]= 
+				{
 					"begin1",
 					0.2,
 					"begin2",
@@ -154,13 +177,15 @@ class CfgWeapons
 					"begin5",
 					0.2
 				};
-				beginwater1[] = {
+				beginwater1[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326.ogg",
 					1,
 					1,
 					400
 				};
-				soundBeginWater[] = {
+				soundBeginWater[]= 
+				{
 					"beginwater1",
 					1
 				};
@@ -176,50 +201,59 @@ class CfgWeapons
             maxRangeProbab=0.30000001;
             displayNameShort = "Full Auto";
 		};
-
-		class SlowAuto: Mode_FullAuto {
-			sounds[] = {
+		class SlowAuto: Mode_FullAuto 
+		{
+			sounds[]= 
+			{
 				"StandardSound"
 			};
-			class BaseSoundModeType {
+			class BaseSoundModeType 
+			{
 				weaponSoundEffect="";
 				closure1[]={};
 				closure2[]={};
 				soundClosure[]={};
 			};
-			class StandardSound: BaseSoundModeType {
+			class StandardSound: BaseSoundModeType 
+			{
 				weaponSoundEffect="";
-				begin1[] = {
+				begin1[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326.ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin2[] = {
+				begin2[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326 (1).ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin3[] = {
+				begin3[] =
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326 (2).ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin4[] = {
+				begin4[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326.ogg",
 					1.5,
 					1,
 					1800
 				};
-				begin5[] = {
+				begin5[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326 (1).ogg",
 					1.5,
 					1,
 					1800
 				};
-				soundBegin[] = {
+				soundBegin[]= 
+				{
 					"begin1",
 					0.2,
 					"begin2",
@@ -231,13 +265,15 @@ class CfgWeapons
 					"begin5",
 					0.2
 				};
-				beginwater1[] = {
+				beginwater1[]= 
+				{
 					"\41st_Weapons\DC15L\Data\dc15lv1 2-326.ogg",
 					1,
 					1,
 					400
 				};
-				soundBeginWater[] = {
+				soundBeginWater[]= 
+				{
 					"beginwater1",
 					1
 				};
@@ -253,16 +289,17 @@ class CfgWeapons
             maxRangeProbab=0.30000001;
             displayNameShort = "Slow Auto";
 		};
-
 		aiDispersionCoefY=10;
 		aiDispersionCoefX=8;
-		caseless[] = {
+		caseless[]= 
+		{
 			"",
 			1,
 			1,
 			1
 		};
-		soundBullet[] = {
+		soundBullet[]= 
+		{
 			"caseless",
 			1
 		};
@@ -273,7 +310,8 @@ class CfgWeapons
 			1,
 			10
 		};
-		reloadMagazineSound[] = {
+		reloadMagazineSound[]= 
+		{
 			"\41st_Weapons\DC-15AS\Data\reload.ogg",
 			1.5,
 			1,

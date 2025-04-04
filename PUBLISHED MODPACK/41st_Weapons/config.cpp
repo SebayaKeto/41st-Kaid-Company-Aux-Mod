@@ -12,12 +12,8 @@ class CfgPatches
 			"A3_Characters_F_Proxies"
 		};
 		units[]={};
-		weapons[]=
-		{
-		};
-		magazines[]=
-		{
-		};
+		weapons[]={};
+		magazines[]={};
 	};
 };
 class CfgRecoils

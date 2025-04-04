@@ -27,89 +27,18 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {	
-	class arifle_MX_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
-	class FST_DL63: arifle_MX_Base_F
+	class WeaponSlotsInfo;
+	class IDA_DL63;
+	class FST_DL63: IDA_DL63
 	{
 		author="Gold";
-		displayName="[41st] DL-63 Blaster rifle Base";
+		displayName="[41st] DL-63 Blaster rifle";
 		baseWeapon="FST_DL63";
 		descriptionShort="Long range, high power.";
 		picture="Indecisive_Armoury_Weapons_IMPERIAL\Data\DL63\DL63_ui.paa";
 		model="\Indecisive_Armoury_Weapons_IMPERIAL\Data\DL63\Model\IDA_DL63.p3d";
 		scope=2;
         scopeArsenal = 2;
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=1;
-		ace_overheating_barrelMass=1;
-		ACE_barrelLength=457.20001;
-		ACE_barrelTwist=228.60001;
-		initSpeed=-1;
-		inertia=0;
-		canShootInWater=1;
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"Indecisive_Armoury_Anims\Republic\DL63.rtm"
-		};
-		modelOptics="\Indecisive_Armoury_Weapons_IMPERIAL\Data\LowPower_Scope\IDA_LowPower_Scope_Red.p3d";
-		class OpticsModes
-		{
-			class optic
-			{
-				cameraDir="";
-				distanceZoomMax=200;
-				distanceZoomMin=200;
-				discreteDistance[]={100,200,300,400,500};
-				discretefov[]={0.25};
-				discreteDistanceInitIndex=0;
-				discreteInitIndex=0;
-				memoryPointCamera="opticView";
-				modelOptics[]=
-				{
-					"\Indecisive_Armoury_Weapons_IMPERIAL\Data\LowPower_Scope\IDA_LowPower_Scope_Red.p3d"
-				};
-				opticsDisablePeripherialVision=1;
-				opticsDisplayName="WFOV";
-				opticsFlare=1;
-				opticsID=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera2",
-					"OpticsBlur3"
-				};
-				opticsZoomInit=0.25;
-				opticsZoomMax=0.25;
-				opticsZoomMin=0.25;
-				useModelOptics=1;
-				visionMode[]=
-				{
-					"Normal",
-					"NVG"
-				};
-			};
-			class Iron
-			{
-				distanceZoomMax=200;
-				distanceZoomMin=200;
-				memoryPointCamera="eye";
-				opticsDisablePeripherialVision=0;
-				opticsFlare=0;
-				opticsID=2;
-				opticsPPEffects="[""Default""]";
-				opticsZoomInit=0.75;
-				opticsZoomMax=1.25;
-				opticsZoomMin=0.25;
-				useModelOptics=0;
-				visionMode="[]";
-			};
-		};
 		magazines[]=
 		{
 			"FST_blaster_cell_High_Blue",
@@ -118,8 +47,6 @@ class CfgWeapons
 			"FST_blaster_cell_High_Red",
 		};
 		magazineWell[]={};
-		ace_clearJamAction="";
-		reloadAction="GestureReload_IDAReload1";
 		reloadMagazineSound[]=
 		{
 			"\Indecisive_Armoury_Sounds\blaster_reload_1.ogg",
@@ -138,13 +65,6 @@ class CfgWeapons
 			"Auto"
 		};
 		fireLightDiffuse[]={1,0,0};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		class Single: Mode_SemiAuto
 		{
 			sounds[]=
@@ -163,35 +83,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					0.995,
 					1800
@@ -211,7 +131,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1,
 					1,
 					400
@@ -249,35 +169,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1.25,
 					0.995,
 					1800
@@ -297,7 +217,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-15a\DC15a.wss",
+					"\Indecisive_Armoury_Sounds\Imperial\E11.ogg",
 					1,
 					1,
 					400
@@ -342,15 +262,6 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]={};
-			};
-		};
-		class GunParticles: GunParticles
-		{
-			class SecondEffect
-			{
-				positionName="Nabojnicestart";
-				directionName="Nabojniceend";
-				effectName="CaselessAmmoCloud";
 			};
 		};
 	};

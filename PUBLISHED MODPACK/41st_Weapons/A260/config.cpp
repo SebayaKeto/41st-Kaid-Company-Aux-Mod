@@ -24,39 +24,12 @@ class PointerSlot;
 class WeaponSlotsInfo;
 class CfgWeapons
 {
-	class Rifle_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
-	class arifle_MX_Base_F: Rifle_Base_F
-	{
-		class GunParticles;
-		class GunClouds;
-		class WeaponSlotsInfo;
-	};
-	class FST_A260: arifle_MX_Base_F
+	class IDA_A260;
+	class FST_A260: IDA_A260
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] A260 carbine";
-		scope=2;
-		scopeArsenal=2;
 		descriptionShort="Close range, fast rate of fire.";
-		picture="Indecisive_Armoury_Weapons_INDEP\Data\A260\A260_ui.paa";
-		model="Indecisive_Armoury_Weapons_INDEP\Data\A260\Models\IDA_A260.p3d";
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		canShootInWater=1;
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\Anim\SPAR_01.rtm"
-		};
-		ace_clearJamAction="";
 		reloadAction="GestureReloadSMG_01";
 		reloadMagazineSound[]=
 		{
@@ -79,24 +52,8 @@ class CfgWeapons
 			"Single",
 			"FullAuto"
 		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"MRC\JLTS\weapons\Core\sounds\weapon_dry.wss",
-			5,
-			1,
-			10
-		};
-		muzzles[]=
-		{
-			"this",
-		};
 		class Single: Mode_SemiAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
 			class BaseSoundModeType
 			{
 				weaponSoundEffect="";
@@ -178,10 +135,6 @@ class CfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
 			class BaseSoundModeType
 			{
 				weaponSoundEffect="";
@@ -267,11 +220,7 @@ class CfgWeapons
 			mass=50;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]=
-				{
-					/*"optic_Arco_AK_blk_F",
-					"optic_MRCO"*/
-				};
+				compatibleItems[]={};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -290,15 +239,6 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
 			};
 		};
 	};

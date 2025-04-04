@@ -28,12 +28,9 @@ class CfgWeapons
 	class optic_lrps;
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class arifle_MX_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
-	class FST_774CX: arifle_MX_Base_F
+	class WeaponSlotsInfo;
+	class FST_773Firepuncher;
+	class FST_774CX: FST_773Firepuncher
 	{
 		author="Gold";
 		displayName="[41st] 774-CX marksman rifle";
@@ -41,30 +38,7 @@ class CfgWeapons
 		descriptionShort="Long range, high power.";
 		picture="Indecisive_Armoury_Weapons_IMPERIAL\Data\774CX\774CX_ui.paa";
 		model="\Indecisive_Armoury_Weapons_IMPERIAL\Data\774CX\Model\IDA_774CX.p3d";
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		scope=2;
-		scopeArsenal=2;
-		inertia=0;
-		canShootInWater=1;
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\A3\Weapons_F\Rifles\TRG20\Data\Anim\TRG_21G.rtm"
-		};
-		ace_clearJamAction="";
 		reloadAction="GestureReloadTrgUGL";
-		reloadMagazineSound[]=
-		{
-			"\Indecisive_Armoury_Sounds\blaster_reload_6.ogg",
-			1.5,
-			1,
-			100
-		};
 		recoil="FST_recoil_dc15a";
 		magazines[]=
 		{
@@ -78,162 +52,13 @@ class CfgWeapons
 		{
 			"Single",
 		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		muzzles[]=
 		{
 			"this",
 		};
-		class OpticsModes
-		{
-			class Ironsights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsFlare="true";
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.5;
-				opticsZoomMax=1.1;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-			};
-			class Scope: Ironsights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.125;
-				opticsZoomMax=0.125;
-				opticsZoomInit=0.125;
-				memoryPointCamera="opticView";
-				visionMode[]=
-				{
-					"Normal",
-					"NVG"
-				};
-				opticsFlare="true";
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-				cameraDir="";
-			};
-		};	
-		class Single: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
-					1.25,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
-					1.25,
-					1.015,
-					1800
-				};
-				begin3[]=
-				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
-					1.25,
-					0.98500001,
-					1800
-				};
-				begin4[]=
-				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
-					1.25,
-					1.01,
-					1800
-				};
-				begin5[]=
-				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
-					1.25,
-					0.995,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.2,
-					"begin2",
-					0.2,
-					"begin3",
-					0.2,
-					"begin4",
-					0.2,
-					"begin5",
-					0.2
-				};
-				beginwater1[]=
-				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
-					1,
-					1,
-					400
-				};
-				soundBeginWater[]=
-				{
-					"beginwater1",
-					1
-				};
-			};
-			reloadTime=0.13333334;
-			dispersion=0.0007;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
-		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=80;
-			class CowsSlot: CowsSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[]=
-				{
-					"FST_773_scope"
-				};
-				iconPicture="";
-			};
 			class MuzzleSlot: MuzzleSlot
 			{
 				compatibleItems[]=
@@ -256,76 +81,12 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
 		class LinkedItems
 		{
-			class LinkedItemsOptic
-			{
-				slot="CowsSlot";
-				item="FST_773_scope";
-			};
 			class LinkedItemsMuzzle
 			{
 				slot="MuzzleSlot";
 				item="FST_Muzzle_774CX";
-			};
-		};
-	};
-	class FST_773_scope: optic_lrps
-	{
-		author="Inspired from the Indecisive Armoury Team";
-		scope=2;
-		displayname="773-FP Scope";
-		picture="\Indecisive_Armoury_Weapons_REPUBLIC\Data\773Scope\773Scope_ui.paa";
-		model="\Indecisive_Armoury_Weapons_REPUBLIC\Data\773Scope\Model\IDA_773_Scope.p3d";
-		memoryPointCamera="eye";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=10;
-			optics=1;
-			modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\773Scope\2dScope\IDA_DMR_Scope.p3d";
-			allowedSlots[]={801,701,901};
-			class OpticsModes
-			{
-				class IronSights
-                {
-                    distanceZoomMax = 100;
-                    distanceZoomMin = 100;
-                    memoryPointCamera = "eye";
-                    opticsDisablePeripherialVision = 0.67;
-                    opticsFlare = "true";
-                    opticsID = 1;
-                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5"};
-                    opticsZoomInit = 0.75;
-                    opticsZoomMax = 1.1;
-                    opticsZoomMin = 0.375;
-                    useModelOptics = 0;
-                    visionMode[] = {};
-                };
-                class Scope
-                {
-                    cameraDir = "";
-                    distanceZoomMax = 100;
-                    distanceZoomMin = 100;
-                    memoryPointCamera = "opticView";
-                    opticsDisablePeripherialVision = 0.67;
-                    opticsFlare = "true";
-                    opticsID = 2;
-                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5"};
-                    opticsZoomInit = 0.0625;
-                    opticsZoomMax = 0.0625;
-                    opticsZoomMin = 0.03125;
-                    useModelOptics = 1;
-                    visionMode[] = {"Normal","NVG"};
-				};
 			};
 		};
 	};

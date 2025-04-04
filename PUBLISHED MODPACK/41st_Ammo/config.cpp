@@ -941,7 +941,8 @@ class CfgAmmo
 			power=0;
 		};
 	};
-	class FST_grenade_Detonator_ammo: GrenadeHand_stone
+	class IDA_grenade_Detonator_ammo;
+	class FST_grenade_Detonator_ammo: IDA_grenade_Detonator_ammo
 	{
 		hit=40;
 		indirectHit=30;
@@ -950,45 +951,7 @@ class CfgAmmo
 		suppressionRadiusHit=40;
 		explosionEffectsRadius=30;
 		explosionEffects="VehicleExplosionEffects";
-		CraterEffects="MineNondirectionalCraterSmall";
 		effectsSmoke="ACE_Incendiary";
-		explosive=1;
-		ace_frag_enabled=1;
-		ace_frag_skip=0;
-		ace_frag_force=1;
-		ace_frag_classes[]=
-		{
-			"ace_frag_tiny_HD"
-		};
-		ace_frag_metal=210;
-		ace_frag_charge=185;
-		ace_frag_gurney_c=2843;
-		ace_frag_gurney_k="3/5";
-		model="Indecisive_Armoury_Ammos\Data\Thermal_Detonator\IDA_Thermal_Detonator.p3d";
-		visibleFire=0.5;
-		audibleFire=0.050000001;
-		visibleFireTime=1;
-		fuseDistance=0;
-		ace_grenades_pullPinSound[]=
-		{
-			"Indecisive_Armoury_Sounds\Detonator_Pin.ogg",
-			6,
-			1,
-			10
-		};
-		SoundSetExplosion[]=
-		{
-			"Mortar_Exp_SoundSet",
-			"Mortar_Tail_SoundSet",
-			"Explosion_Debris_SoundSet"
-		};
-		soundFly[]=
-		{
-			"Indecisive_Armoury_Sounds\Detonator_Timer.ogg",
-			6,
-			1,
-			90
-		};
 	};
 	class R_PG32V_F;
 	class ACE_Javelin_FGM148;
@@ -1018,45 +981,8 @@ class CfgAmmo
 	}; 
 	class FST_grenade_Penetrator_ammo: GrenadeHand_stone
 	{
-		hit=1;
 		indirectHit=4000;
 		indirectHitRange=3;
-		dangerRadiusHit=120;
-		suppressionRadiusHit=120;
-		explosionEffectsRadius=100;
-		explosionEffects="VehicleExplosionEffects";
-		CraterEffects="MineNondirectionalCraterSmall";
-		explosive=1;
-		ace_frag_enabled=0;
-		ace_frag_skip=1;
-		ace_frag_force=0;
-		model="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\IDA_Thermal_Penetrator.p3d";
-		explosionTime=-1;
-		timeToLive=16;
-		visibleFire=0.5;
-		audibleFire=0.050000001;
-		visibleFireTime=1;
-		fuseDistance=0;
-		ace_grenades_pullPinSound[]=
-		{
-			"\Indecisive_Armoury_Sounds\Detonator_Pin.ogg",
-			6,
-			1,
-			10
-		};
-		SoundSetExplosion[]=
-		{
-			"Mortar_Exp_SoundSet",
-			"Mortar_Tail_SoundSet",
-			"Explosion_Debris_SoundSet"
-		};
-		soundFly[]=
-		{
-			"\Indecisive_Armoury_Sounds\Detonator_Timer.ogg",
-			6,
-			1,
-			100
-		};
 	};
 	class FST_Missile: ACE_Javelin_FGM148
 	{
@@ -1353,9 +1279,8 @@ class CfgMagazines
 	class IDA_Blaster_Cell_Power3_40Rnd_Blue;
 	class IDA_Blaster_Cell_Power3_80Rnd_Blue;
 	class IDA_Blaster_Cell_Power4_10Rnd_Blue;
-
 	class IDA_Blaster_Cell_Scatter_6Rnd_Blue;
-	
+	class 100Rnd_65x39_caseless_mag;
 	
 	class FST_blaster_cell_High_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
@@ -2029,27 +1954,20 @@ class CfgMagazines
 		ammo="FST_grenade_emp_ammo";
 		scope=2;
 	};
-	class FST_grenade_Detonator_mag: HandGrenade
+	class IDA_grenade_Detonator_mag;
+	class FST_grenade_Detonator_mag: IDA_grenade_Detonator_mag
 	{
-		author="Adapted from the Indecisive Armoury Team";
-		picture="\Indecisive_Armoury_Ammos\Data\Thermal_Detonator\Thermal_Detonator_UI.paa";
-		model="\Indecisive_Armoury_Ammos\Data\Thermal_Detonator\IDA_Thermal_Detonator.p3d";
+		author="Gold";
 		displayName="[41st] Thermal Detonator";
-		displayNameShort="Thermal Detonator";
-		descriptionShort="Thermal Detonator";
 		ammo="FST_grenade_Detonator_ammo";
 		scope=2;
 		mass=12;
 	};
-	class FST_grenade_Penetrator_mag: HandGrenade
+	class IDA_grenade_Penetrator_mag;
+	class FST_grenade_Penetrator_mag: IDA_grenade_Penetrator_mag
 	{
-		scope=2;
-		author="Adapted from the Indecisive Armoury Team by Viz";
-		picture="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\Thermal_Penetrator_UI.paa";
-		model="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\IDA_Thermal_Penetrator.p3d";
+		author="Gold";
 		displayName="[41st] Thermal Penetrator";
-		displayNameShort="Thermal Penetrator";
-		descriptionShort="Thermal Penetrator";
 		ammo="FST_grenade_Penetrator_ammo";
 		mass=12;
 	};
