@@ -385,7 +385,7 @@ class RscDisplayMain: RscStandardDisplay
 					colorBackgroundActive[] = {1,1,1,0.5};
 					text = "41st Main Server";
 					tooltip = "Connect to the MAIN Server";
-					onbuttonclick = "0 = connectToServer ['172.93.183.95', 2302, '41'];";
+					onbuttonclick = "0 = connectToServer ['69.67.175.24', 2302, '41'];";
 					x = 0;
 					y = "(0 *  1.5) *  (pixelH * pixelGrid * 2) +  (pixelH)";
 					w = "10 *  (pixelW * pixelGrid * 2)";
@@ -398,7 +398,7 @@ class RscDisplayMain: RscStandardDisplay
 					colorBackgroundActive[] = {1,1,1,0.5};
 					text = "41st Training Server";
 					tooltip = "Connect to the TRAINING Server";
-					onbuttonclick = "0 = connectToServer ['172.93.183.95', 2328, '41'];";
+					onbuttonclick = "0 = connectToServer ['69.67.175.24', 2328, '41'];";
 					y = "(1 *  1.5) *  (pixelH * pixelGrid * 2) +  (pixelH)";
 				};
 				class ConnectToLibServer: QuickPlay
@@ -408,13 +408,13 @@ class RscDisplayMain: RscStandardDisplay
 					colorBackgroundActive[] = {1,1,1,0.5};
 					text = "41st Liberation Server";
 					tooltip = "Connect to the LIBERATION Server";
-					onbuttonclick = "0 = connectToServer ['172.93.183.95', 2310, '41'];";
+					onbuttonclick = "0 = connectToServer ['69.67.175.24', 2310, '41'];";
 					y = "(2 *  1.5) *  (pixelH * pixelGrid * 2) +  (pixelH)";
 				};
 				class ace_arsenal_mission: QuickPlay
 				{
 					idc = -1;
-					text = "TRY ACE ARSENAL";
+					text = "ACE ARSENAL";
 					tooltip = "$STR_ace_arsenal_Mission_tooltip";
 					y = "(3 *  1.5) *  (pixelH * pixelGrid * 2) +  (pixelH)";
 					onbuttonclick = "playMission ['', '\z\ace\addons\arsenal\missions\Arsenal.VR']";
