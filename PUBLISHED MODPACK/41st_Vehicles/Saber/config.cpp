@@ -1931,8 +1931,8 @@ class cfgvehicles
 };
 class CfgAmmo
 {
-	class IDA_thermal_shell;
-	class FST_100mm_thermal_shells: IDA_thermal_shell
+	class IDA_Blasterbolt_Power6_VEHICLE;
+	class FST_100mm_thermal_shells: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";

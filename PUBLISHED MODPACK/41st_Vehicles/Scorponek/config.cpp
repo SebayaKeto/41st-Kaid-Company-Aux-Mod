@@ -15,6 +15,15 @@ class CfgPatches
 		weapons[]={};
 	};
 };
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
 class CfgVehicles
 {
 	class Land;
@@ -51,9 +60,94 @@ class CfgVehicles
 		scopeCurator=0;
 		faction="FST_BattleDroids_Faction";
 		accuracy=1;
-		armor=300;
+		class HitPoints: HitPoints
+		{
+			class Hit_Hull
+			{
+				armor=30;
+				name="Hit_Hull";
+				visual="zbytek";
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=0.2;
+				depends="Total";
+				passThrough=1;
+				material=-1;
+			};
+			class Hit_Shield
+			{
+				armorComponent="ShieldComponent";
+				armor=3;
+				name="Hit_Shield";
+				visual="zbytek";
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=0.2;
+				depends="Total";
+				passThrough=0;
+				material=-1;
+			};
+		};
+		armor=200;
 		armorStructural=2;
 		explosionshielding=1;
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=100;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=2800;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						typeRecognitionDistance=2800;
+						maxTrackableSpeed=800;
+						angleRangeHorizontal=60;
+						angleRangeVertical=40;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=8000;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=4000;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=4000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=100;
+						aimDown=-45;
+						maxTrackableSpeed=1388.89;
+					};
+					class DataLinkSensorComponent: SensorTemplateDataLink
+					{
+					};
+				};
+			};
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

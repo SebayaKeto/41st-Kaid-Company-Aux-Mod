@@ -73,7 +73,7 @@ class CfgAmmo
 			distance=1;
 		};
 	};
-	class IDA_thermal_shell;
+	class IDA_Blasterbolt_Power6_VEHICLE;
 	class IDA_blasterbolt;
 	class FST_thermal_shell: IDA_blasterbolt
 	{
@@ -355,7 +355,7 @@ class CfgAmmo
 			0.15000001
 		};
 	};
-	class FST_thermal_shell_HP_Blue: IDA_thermal_shell
+	class FST_thermal_shell_HP_Blue: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
@@ -365,7 +365,7 @@ class CfgAmmo
 		indirectHitRange=6;
 		caliber=2;
 	};
-	class FST_thermal_shell_HP: IDA_thermal_shell
+	class FST_thermal_shell_HP: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
@@ -375,7 +375,7 @@ class CfgAmmo
 		indirectHitRange=4;
 		caliber=2;
 	};
-	class FST_thermal_shell_HP_Green: IDA_thermal_shell
+	class FST_thermal_shell_HP_Green: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
@@ -385,7 +385,7 @@ class CfgAmmo
 		indirectHitRange=6;
 		caliber=2;
 	};
-	class FST_thermal_shell_LP_Red: IDA_thermal_shell
+	class FST_thermal_shell_LP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
@@ -395,7 +395,7 @@ class CfgAmmo
 		indirectHitRange=4;
 		caliber=2;
 	};
-	class FST_thermal_shell_OP_Red: IDA_thermal_shell
+	class FST_thermal_shell_OP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
@@ -405,7 +405,7 @@ class CfgAmmo
 		indirectHitRange=8;
 		caliber=2;
 	};
-	class FST_LAAT_Ball_Laser_Ammo: IDA_thermal_shell
+	class FST_LAAT_Ball_Laser_Ammo: IDA_Blasterbolt_Power6_VEHICLE
 	{
 		author="Ruby, Code Inherted From Viz.";
 		displayname="LAAT Ball Turret";

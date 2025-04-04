@@ -35,7 +35,8 @@ _plyer addItemToVest "ls_mag_glowrod_hiGreen";
 
 for "_i" from 1 to 3 do {_plyer addItemToBackpack "IDA_grenade_Smoke_mag";};
 for "_i" from 1 to 5 do {_plyer addItemToBackpack "FST_grenade_Detonator_mag";};
-for "_i" from 1 to 7 do {_plyer addItemToBackpack "FST_grenade_emp_mag";};
+for "_i" from 1 to 5 do {_plyer addItemToBackpack "IDA_grenade_Sonic_mag";};
+for "_i" from 1 to 6 do {_plyer addItemToBackpack "FST_grenade_emp_mag";};
 
 for "_i" from 1 to 2 do {_plyer addItemToUniform "ACE_CableTie";};
 _plyer addItemToVest "IDA_grenade_Smoke_Purple_mag";

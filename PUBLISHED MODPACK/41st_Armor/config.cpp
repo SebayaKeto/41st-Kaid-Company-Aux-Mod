@@ -13992,6 +13992,11 @@ class CfgVehicles
 				count=20;
 				magazine="FST_grenade_Detonator_mag";
 			};
+			class _xx_FST_grenade_Penetrator_mag
+			{
+				count=20;
+				magazine="FST_grenade_Penetrator_mag";
+			};
 			class _xx_IDA_explosive_Detpack_mag
 			{
 				count=10;
