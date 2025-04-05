@@ -979,7 +979,8 @@ class CfgAmmo
 		timeToLive=10;
 		sideAirFriction=0.075000003;
 	}; 
-	class FST_grenade_Penetrator_ammo: GrenadeHand_stone
+	class IDA_grenade_Penetrator_ammo;
+	class FST_grenade_Penetrator_ammo: IDA_grenade_Penetrator_ammo
 	{
 		indirectHit=4000;
 		indirectHitRange=3;
