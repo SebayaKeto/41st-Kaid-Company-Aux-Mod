@@ -989,6 +989,13 @@ class CfgAmmo
 	{
 		indirectHit=1;
 		indirectHitRange=1;
+		soundFly[]=
+		{
+			"\41st_Ammo\Data\itsarock.ogg",
+			6,
+			1,
+			100
+		};
 	};
 	class FST_Missile: ACE_Javelin_FGM148
 	{
@@ -1981,6 +1988,7 @@ class CfgMagazines
 	{
 		author="Daara";
 		displayName="[41st] ARC Major's Rock";
+		descriptionShort="Major's Rock";
 		ammo="FST_grenade_rock_ammo";
 		mass=12;
 	};
