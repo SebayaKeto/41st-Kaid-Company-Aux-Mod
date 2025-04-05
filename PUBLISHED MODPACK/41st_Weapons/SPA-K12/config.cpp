@@ -14,7 +14,7 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"FST_SPAK12"
+			"FST_SPA_K12"
 		};
 	};
 };
@@ -29,7 +29,7 @@ class CfgWeapons
 {
 	class WeaponSlotsInfo;
 	class IDA_SPK12;
-	class FST_SPAK12: IDA_SPK12
+	class FST_SPA_K12: IDA_SPK12
 	{
 		author="Gold";
 		displayName="[41st] SPA-K12";
