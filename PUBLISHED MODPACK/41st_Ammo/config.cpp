@@ -985,6 +985,11 @@ class CfgAmmo
 		indirectHit=4000;
 		indirectHitRange=3;
 	};
+	class FST_grenade_rock_ammo: GrenadeHand_stone
+	{
+		indirectHit=1;
+		indirectHitRange=1;
+	};
 	class FST_Missile: ACE_Javelin_FGM148
 	{
 		author = "Viz";
@@ -1970,6 +1975,13 @@ class CfgMagazines
 		author="Gold";
 		displayName="[41st] Thermal Penetrator";
 		ammo="FST_grenade_Penetrator_ammo";
+		mass=12;
+	};
+	class FST_grenade_rock_mag: IDA_grenade_Penetrator_mag
+	{
+		author="Daara";
+		displayName="[41st] ARC Major's Rock";
+		ammo="FST_grenade_rock_ammo";
 		mass=12;
 	};
 	class IDA_HE_LauncherGrenade;
