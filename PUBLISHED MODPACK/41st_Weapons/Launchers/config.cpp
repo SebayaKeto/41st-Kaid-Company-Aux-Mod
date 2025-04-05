@@ -442,12 +442,12 @@ class CfgWeapons
 			};
 		};	
     };
-	class IDA_RPS6_Disposable;
-	class FST_RPS6_Disposable: IDA_RPS6_Disposable
+	class FST_RPS6_Disposable: FST_RPS6_Base
 	{
 		author="Gold";
 		displayName="[41st] RPS-6 Disposable launcher";
 		baseWeapon="FST_RPS6_Disposable";
+		scope=2;
 		magazines[]=
 		{
 			"CBA_FakeLauncherMagazine"
@@ -461,12 +461,12 @@ class CfgWeapons
 			""
 		};
 	};
-	class IDA_RPS6_Used;
-	class FST_RPS6_Used: IDA_RPS6_Used
+	class FST_RPS6_Used: FST_RPS6_Disposable
 	{
 		author="Gold";
 		displayName="[41st] RPS-6 Disposable launcher (USED)";
 		baseWeapon="FST_RPS6_Used";
+		scope=1;
 		magazines[]=
 		{
 			"CBA_FakeLauncherMagazine"
