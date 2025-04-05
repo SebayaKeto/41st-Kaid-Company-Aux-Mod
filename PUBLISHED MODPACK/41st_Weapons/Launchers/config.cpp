@@ -381,6 +381,17 @@ class CfgWeapons
 		opticsZoomMax=0.1083;
 		opticsZoomInit=0.1083;
 		cameraDir="look";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\3AS\3AS_Weapons\RPS6\Data\Textures\RPS6_Grip_Scope_CO.paa",
+			"\3AS\3AS_Weapons\RPS6\Data\Textures\RPS6_Tube_CO.paa"
+			
+		};
 		class OpticsModes
 		{
 			class optic
