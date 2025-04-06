@@ -9831,6 +9831,26 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cardinal3.paa",
 		};
 	};
+	class FST_P2_Helmet_Alfour: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Alfour]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Alfour.paa",
+		};
+	};
+	class FST_P2_Helmet_Drifter: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Drifter]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Drifter.paa",
+		};
+	};
 	class FST_P2_Helmet_Brutal: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -10989,6 +11009,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Cardinal_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_House: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [House]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_House";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -21275,6 +21309,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Pilot_P1_Helmet_Cardinal",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+	class FST_P2_House: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2225 'House'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_House";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_House.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_House.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_House",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_House",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
