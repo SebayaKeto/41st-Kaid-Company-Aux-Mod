@@ -73,6 +73,7 @@ class CfgPatches
 			"FST_P2_Ghostly",
 			"FST_P2_Argo",
 			"FST_P2_ArgoV2",
+			"FST_P2_Argo_Dirty",
 			"FST_P2_Spade",
 			"FST_P2_Ripper",
 			"FST_P2_Ripper_Dirty",
@@ -10022,6 +10023,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_ArgoV2.paa",
 		};
 	};
+	class FST_P2_Helmet_Argo_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] P2 Helmet [Argo/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Argo_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Hoyo: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -10978,6 +10989,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Argo";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+ 	class FST_Uniform_Argo_Dirty: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Argo/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Argo_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -21088,6 +21113,61 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Argo.paa",
 			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Argo.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Argo",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Argo",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+ 	class FST_P2_Argo_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-0626 'Argo' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Argo_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Argo_Dirty.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Argo_Dirty.paa",
 		};
 		weapons[]=
 		{
