@@ -15,7 +15,8 @@ class CfgPatches
 			"FST_ATTE_Base",
 			"FST_ATTE_Jorge",
 			"FST_ATTE_gwenn",
-			"FST_ATTE_Rancor"
+			"FST_ATTE_Rancor",
+			"FST_ATTE_Klanka"
 		};
 		weapons[]={};
 		ammo[]=
@@ -3942,6 +3943,30 @@ class CfgVehicles
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Cockpit_co.paa",
 			"41st_Vehicles\ATTE\Data\Detail\FST_ATTE_Detail_Rancor_co.paa",
 			"41st_Vehicles\ATTE\Data\Legs\FST_ATTE_Legs_Rancor_co.paa",
+			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Glass_ca.paa",
+			"3as\3as_atte\data\textures\3as_atte_armor_co.paa"
+		};
+	};
+	class FST_ATTE_Klanka: FST_ATTE_Base
+	{
+		author="Daara";
+		displayname="[41st] AT-TE Heavy Walker (Klanka Killa)";
+		scope=2;
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"camo5",
+			"camo11"
+		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\ATTE\Data\Shell\FST_ATTE_Shell_Klanka_co.paa",
+			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Cockpit_co.paa",
+			"41st_Vehicles\ATTE\Data\Detail\FST_ATTE_Detail_Rancor_co.paa",
+			"41st_Vehicles\ATTE\Data\Legs\FST_ATTE_Legs_Klanka_co.paa",
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Glass_ca.paa",
 			"3as\3as_atte\data\textures\3as_atte_armor_co.paa"
 		};
