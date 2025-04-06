@@ -608,14 +608,14 @@ class CfgVehicles
 							minRange=8000;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
 							minRange=8000;
 							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
@@ -642,14 +642,14 @@ class CfgVehicles
 							minRange=8000;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
 							minRange=8000;
 							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
@@ -687,7 +687,7 @@ class CfgVehicles
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
-						typeRecognitionDistance=8000;
+						typeRecognitionDistance=4000;
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
 						groundNoiseDistanceCoef=-1;
@@ -708,26 +708,26 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=10000;
-							maxRange=10000;
+							minRange=8000;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=10000;
-							maxRange=10000;
+							minRange=8000;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
-						typeRecognitionDistance=10000;
+						typeRecognitionDistance=5000;
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						groundNoiseDistanceCoef=0.2;
+						groundNoiseDistanceCoef=-1;
 						componentType="ActiveRadarSensorComponent";
-						maxGroundNoiseDistance=200;
-						minSpeedThreshold=30;
-						maxSpeedThreshold=40;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
 						color[]={0,1,1,1};
 						allowsMarking=1;
 						animDirection="";
@@ -2326,336 +2326,6 @@ class CfgVehicles
 		class Library
 		{
 			libtextdesc="";
-		};
-	};
-	class FST_laati_Turret_RadarTestbed: FST_laat_Base
-	{
-		_generalmacro="FST_LAAT_i";
-		accuracy=5;
-		author="$STR_3AS_Studio";
-		availableforsupporttypes[]=
-		{
-			"CAS_Heli",
-			"Transport",
-			"Drop"
-		};
-		cost="3e+006";
-		crew="FST_Pilot_P1";
-		displayname="[41st] LAAT/i Radar Testbed";
-		faction="FST_Faction";
-		editorSubcategory="FST_Air_Vehicle";
-		vehicleclass="Helicopter";
-		scope=2;
-		side=1;
- 		class EventHandlers: DefaultEventhandlers
-		{
-			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
-		}; 
-		typicalcargo[]=
-		{
-			"FST_Pilot_P1"
-		};
- 		class AnimationSources: AnimationSources
-		{
-			class Doors
-			{
-				source="user";
-				animPeriod=1;
-				initPhase=0;
-			};
-			class Lamps
-			{
-				source="user";
-				animPeriod=1;
-				initPhase=0;
-			};
-			class Turrets
-			{
-				source="user";
-				initPhase=1;
-				animPeriod=1;
-			};
-		}; 
-		class Library
-		{
-			libtextdesc="";
-		};
-		class components
-		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
-					class IRSensorComponent: SensorTemplateIR
-					{
-						class AirTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
-						};
-						class GroundTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
-						};
-						angleRangeHorizontal=360;
-						angleRangeVertical=360;
-						maxTrackableSpeed=400;
-						componentType="IRSensorComponent";
-						typeRecognitionDistance=2000;
-						maxFogSeeThrough=-1;
-						color[]={1,0,0,1};
-						allowsMarking=1;
-						groundNoiseDistanceCoef=-1;
-						maxGroundNoiseDistance=-1;
-						minSpeedThreshold=0;
-						maxSpeedThreshold=0;
-						animDirection="";
-						aimDown=0;
-						minTrackableSpeed=-1e+010;
-						minTrackableATL=-1e+010;
-						maxTrackableATL=1e+010;
-					};
-					class VisualSensorComponent: SensorTemplateVisual
-					{
-						class AirTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
-						};
-						class GroundTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
-						};
-						angleRangeHorizontal=360;
-						angleRangeVertical=360;
-						maxTrackableSpeed=400;
-						aimDown=1;
-						animDirection="";
-						componentType="VisualSensorComponent";
-						nightRangeCoef=0;
-						maxFogSeeThrough=-1;
-						color[]={1,1,0.5,0.80000001};
-						typeRecognitionDistance=2000;
-						allowsMarking=1;
-						groundNoiseDistanceCoef=-1;
-						maxGroundNoiseDistance=-1;
-						minSpeedThreshold=0;
-						maxSpeedThreshold=0;
-						minTrackableSpeed=-1e+010;
-						minTrackableATL=-1e+010;
-						maxTrackableATL=1e+010;
-					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-						componentType="PassiveRadarSensorComponent";
-						class AirTarget
-						{
-							minRange=4000;
-							maxRange=4000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						class GroundTarget
-						{
-							minRange=4000;
-							maxRange=4000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						typeRecognitionDistance=8000;
-						angleRangeHorizontal=360;
-						angleRangeVertical=360;
-						groundNoiseDistanceCoef=-1;
-						maxGroundNoiseDistance=-1;
-						maxFogSeeThrough=-1;
-						minSpeedThreshold=0;
-						maxSpeedThreshold=0;
-						animDirection="";
-						aimDown=0;
-						color[]={0.5,1,0.5,0.5};
-						minTrackableSpeed=-1e+010;
-						maxTrackableSpeed=1e+010;
-						minTrackableATL=-1e+010;
-						maxTrackableATL=1e+010;
-						allowsMarking=0;
-					};
-					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
-					{
-						class AirTarget
-						{
-							minRange=10000;
-							maxRange=10000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						class GroundTarget
-						{
-							minRange=10000;
-							maxRange=10000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						typeRecognitionDistance=10000;
-						angleRangeHorizontal=360;
-						angleRangeVertical=360;
-						groundNoiseDistanceCoef=0.2;
-						componentType="ActiveRadarSensorComponent";
-						maxGroundNoiseDistance=200;
-						minSpeedThreshold=30;
-						maxSpeedThreshold=40;
-						color[]={0,1,1,1};
-						allowsMarking=1;
-						animDirection="";
-						aimDown=0;
-						minTrackableSpeed=-1e+010;
-						maxTrackableSpeed=1e+010;
-						minTrackableATL=-1e+010;
-						maxTrackableATL=1e+010;
-					};
-					class LaserSensorComponent: SensorTemplateLaser
-					{
-						componentType="LaserSensorComponent";
-						class AirTarget
-						{
-							minRange=6000;
-							maxRange=6000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						class GroundTarget
-						{
-							minRange=6000;
-							maxRange=6000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						angleRangeHorizontal=360;
-						angleRangeVertical=360;
-						typeRecognitionDistance=0;
-						color[]={1,1,1,0};
-						allowsMarking=1;
-						groundNoiseDistanceCoef=-1;
-						maxGroundNoiseDistance=-1;
-						minSpeedThreshold=0;
-						maxSpeedThreshold=0;
-						animDirection="";
-						aimDown=0;
-						minTrackableSpeed=-1e+010;
-						maxTrackableSpeed=1e+010;
-						minTrackableATL=-1e+010;
-						maxTrackableATL=1e+010;
-					};
-					class NVSensorComponent: SensorTemplateNV
-					{
-						componentType="NVSensorComponent";
-						color[]={1,1,1,0};
-						typeRecognitionDistance=0;
-						class AirTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						class GroundTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						angleRangeHorizontal=360;
-						angleRangeVertical=360;
-						allowsMarking=1;
-						groundNoiseDistanceCoef=-1;
-						maxGroundNoiseDistance=-1;
-						maxFogSeeThrough=-1;
-						minSpeedThreshold=0;
-						maxSpeedThreshold=0;
-						animDirection="";
-						aimDown=0;
-						minTrackableSpeed=-1e+010;
-						maxTrackableSpeed=1e+010;
-						minTrackableATL=-1e+010;
-						maxTrackableATL=1e+010;
-					};
-				};
-			};
-			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
-			{
-				defaultDisplay="EmptyDisplay";
-				class Components
-				{
-					class EmptyDisplay
-					{
-						componentType="EmptyDisplayComponent";
-					};
-					class MinimapDisplay
-					{
-						componentType="MinimapDisplayComponent";
-						resource="RscCustomInfoMiniMap";
-					};
-					class VehicleDriverDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="Driver";
-					};
-					class VehicleMissileDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="Missile";
-					};
-					class SensorDisplay
-					{
-						componentType="SensorsDisplayComponent";
-						range[]={4000,6000,8000,12000};
-						resource="RscCustomInfoSensors";
-					};
-				};
-			};
-			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
-			{
-				defaultDisplay="SensorDisplay";
-				class Components
-				{
-					class EmptyDisplay
-					{
-						componentType="EmptyDisplayComponent";
-					};
-					class MinimapDisplay
-					{
-						componentType="MinimapDisplayComponent";
-						resource="RscCustomInfoMiniMap";
-					};
-					class VehicleDriverDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="Driver";
-					};
-					class VehicleMissileDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="Missile";
-					};
-					class SensorDisplay
-					{
-						componentType="SensorsDisplayComponent";
-						range[]={4000,6000,8000,12000};
-						resource="RscCustomInfoSensors";
-					};
-				};
-			};
-			class TransportCounterMeasuresComponent;
 		};
 	};
  	class FST_LAAT_LampBase: FST_laat_Base
@@ -4771,7 +4441,7 @@ class CfgAmmo
 		flightProfiles[] = {TopDown};
 		trackLead = 1;
 		cmImmunity=0.85;
-		missileLockMaxDistance=10000;
+		missileLockMaxDistance=8000;
 		missileLockMinDistance=50;
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
 		class Components
@@ -5013,7 +4683,7 @@ class CfgAmmo
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef = -1;
 						};
-						typeRecognitionDistance = 15000; // distance how far the target type gets recognized                                          
+						typeRecognitionDistance = 5000; // distance how far the target type gets recognized                                          
 						angleRangeHorizontal = 160;     // sensor azimuth coverage in degrees         
 						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
 						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
