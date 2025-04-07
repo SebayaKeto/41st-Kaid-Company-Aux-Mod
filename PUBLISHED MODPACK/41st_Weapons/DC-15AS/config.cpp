@@ -368,7 +368,7 @@ class CfgWeapons
 				"OP_eye3",
 				"OP_eye4"
 			};
-			discreteDistanceInitIndex=0;
+			discreteDistanceInitIndex=1;
 			magazines[]=
 			{
 				"FST_HE_LauncherGrenade",
