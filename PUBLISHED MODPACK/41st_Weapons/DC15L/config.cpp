@@ -50,7 +50,7 @@ class CfgWeapons
 		reloadAction="GestureReloadMX";
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="3AS_recoil_DC15L";
+		recoil="FST_recoil_dc15a";
 		initSpeed=-1;
 		maxZeroing=100;
 		class GunParticles: GunParticles 
