@@ -14,23 +14,6 @@ class CfgPatches
 		};
 	};
 };
-class Extended_init_EventHandlers
-{
-	class FST_Arc_170
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_Arc_170_Ghostly
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
 class AnimationSources;
 class UserActions;
 class Eventhandlers;
@@ -162,12 +145,6 @@ class CfgVehicles
 		model="3as\3as_arc170\model\Arc_170.p3d";
 		icon="3as\3AS_ARC170\Data\ui\ARC_top_ca.paa";
 		picture="3as\3AS_ARC170\Data\ui\ARC_side_ca.paa";
-		ls_impulsor_fuelDrain_1=9.9999997e-005;
-		ls_impulsor_fuelDrain_2=9.9999997e-005;
-		ls_impulsor_boostSpeed_1=600;
-		ls_impulsor_boostSpeed_2=1200;
-		tas_impulse_break=100;
-		ls_hasImpulse=1;
 		tas_can_impulse=0;
 		ace_cargo_space=1000;
 		ace_cargo_hasCargo=1;
