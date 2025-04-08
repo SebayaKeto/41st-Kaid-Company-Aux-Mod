@@ -14669,6 +14669,92 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_Backpack_Jumppack_EOD_Test: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=400;
+		displayName="[41st] Jump Pack (Engineer/Test)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"
+		};
+/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000; */
+		tf_hasLRradio=0;
+		JLTS_isJumppack=0;
+		NSM_jumppack_is_jumppack=1;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=7.6;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+			class _xx_IDA_explosive_Detpack_mag
+			{
+				count=5;
+				name="IDA_explosive_Detpack_mag";
+			};
+			class _xx_DBA_ImploderBlock_mag
+			{
+				count=2;
+				name="DBA_ImploderBlock_mag";
+			};
+			class _xx_ACE_DefusalKit
+			{
+				count=1;
+				name="ACE_DefusalKit";
+			};
+			class _xx_ACE_M26_Clacker
+			{
+				count=1;
+				name="ACE_M26_Clacker";
+			};
+			class _xx_MineDetector
+			{
+				count=1;
+				name="MineDetector";
+			};
+		};
+	};
 	class FST_Clone_backpack_RTO: FST_Clone_backpack
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
@@ -14950,6 +15036,71 @@ class CfgVehicles
 		DBA_jumppack_jump_types[]=
 		{
 			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Test: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (Ammo Bearer/Test)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
+/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000; */
+		tf_hasLRradio=0;
+		JLTS_isJumppack=0;
+		NSM_jumppack_is_jumppack=1;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=7.6;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -15341,6 +15492,111 @@ class CfgVehicles
 			};			
 		};
 	};
+	class FST_Backpack_Jumppack_Medic_Test: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (Medic/Test)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
+		tf_hasLRradio=0;
+		JLTS_isJumppack=0;
+		NSM_jumppack_is_jumppack=1;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=7.6;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+			class _xx_IDA_BactaBandage
+			{
+				count=80;
+				name="IDA_BactaBandage";
+			};
+			class _xx_ACE_PlasmaIV
+			{
+				count=6;
+				name="ACE_PlasmaIV";
+			};
+			class _xx_ACE_PlasmaIV_500
+			{
+				count=8;
+				name="ACE_PlasmaIV_500";
+			};
+			class _xx_IDA_BattleStim
+			{
+				count=15;
+				name="IDA_BattleStim";
+			};
+			class _xx_ACE_Adenosine
+			{
+				count=6;
+				name="ACE_Adenosine";
+			};
+			class _xx_ACE_Splint
+			{
+				count=6;
+				name="ACE_Splint";
+			};
+			class _xx_ACE_tourniquet
+			{
+				count=6;
+				name="ACE_tourniquet";
+			};
+			class _xx_IDA_Cauterizer
+			{
+				count=1;
+				name="IDA_Cauterizer";
+			};
+			class _xx_FST_Bacta_Tank
+			{
+				count=1;
+				name="FST_Bacta_Tank";
+			};			
+		};
+	};
 	class FST_Backpack_Jumppack_Rifleman: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -15398,6 +15654,71 @@ class CfgVehicles
 		DBA_jumppack_jump_types[]=
 		{
 			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Rifleman_Test: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=10;
+		displayName="[41st] Jump Pack (Rifleman/Test)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
+/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000; */
+		tf_hasLRradio=0;
+		JLTS_isJumppack=0;
+		NSM_jumppack_is_jumppack=1;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=7.6;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -15526,6 +15847,71 @@ class CfgVehicles
 		DBA_jumppack_jump_types[]=
 		{
 			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_LR_Test: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (LR/Test)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		NSM_jumppack_is_jumppack=1;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=7.6;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
