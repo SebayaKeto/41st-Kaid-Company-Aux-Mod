@@ -120,7 +120,7 @@ class CfgVehicles
 	class FST_Daara_venator_base: StaticShip
 	{
 		author="kripto202";
-		model="\swlb_static\venator\FST_Daara_venator_base.p3d";
+		model="\swlb_static\venator\venator_base.p3d";
 		reversed=0;
 		scope=2;
 		scopecurator=1;
