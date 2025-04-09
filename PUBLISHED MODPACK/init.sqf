@@ -33,3 +33,8 @@ CHVD_maxObj = 6000; // Set maximimum object view distance (default: 12000)
     ["3AS_Prop_FOB_Modular_Watchtower", 1, "FOB"],
     ["3AS_Prop_FOB_Modular_wall_Watchtower", 1, "FOB"]
 ]] call acex_fortify_fnc_registerObjects;
+
+if(hasInterface) then 
+{
+  setMissionOptions createHashMapFromArray [["AIThinkOnlyLocal", true]];
+};
