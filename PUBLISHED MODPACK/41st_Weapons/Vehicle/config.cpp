@@ -364,6 +364,63 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=6;
 		caliber=2;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
 	};
 	class FST_thermal_shell_HP: IDA_Blasterbolt_Power6_VEHICLE
 	{
@@ -374,6 +431,63 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=4;
 		caliber=2;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
 	};
 	class FST_thermal_shell_HP_Green: IDA_Blasterbolt_Power6_VEHICLE
 	{
@@ -384,6 +498,63 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=6;
 		caliber=2;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
 	};
 	class FST_thermal_shell_LP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
@@ -394,6 +565,63 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=4;
 		caliber=2;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
 	};
 	class FST_thermal_shell_OP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
@@ -404,6 +632,63 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=8;
 		caliber=2;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
 	};
 	class FST_LAAT_Ball_Laser_Ammo: IDA_Blasterbolt_Power6_VEHICLE
 	{
@@ -421,6 +706,63 @@ class CfgAmmo
 		model="3as\3as_weapons\data\tracer_green.p3d";
 		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		aiAmmoUsageFlags="128 + 512";
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1400
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1400
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
 	};
 	class B_40mm_GPR;
 	class FST_40mm_UB9HV_HEI: B_40mm_GPR
