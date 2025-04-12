@@ -20,11 +20,11 @@ class CfgAmmo
 		ACE_damageType="plasma";
 		cartridge="";
 		lightcolor[]={0,0.30000001,1};
-		hit=28;
+		hit=30; //28
 		indirectHit=0;
 		explosive=1;
 		indirectHitRange=0.5;
-		caliber=1.6;
+		caliber=1.8; //1.6
 		coefGravity=0.02;
 		timetolive=6;
 		waterFriction=-0.0099999998;
