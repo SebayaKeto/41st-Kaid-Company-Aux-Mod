@@ -14802,7 +14802,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_Backpack_Jumppack_EOD_Test: JLTS_Clone_jumppack_mc
+/* 	class FST_Backpack_Jumppack_EOD_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
 		scope=2;
@@ -14819,12 +14819,11 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		}; 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000; */
+		tf_range=50000; 
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		NSM_jumppack_is_jumppack=1;
@@ -14887,7 +14886,7 @@ class CfgVehicles
 				name="MineDetector";
 			};
 		};
-	};
+	}; */
 	class FST_Clone_backpack_RTO: FST_Clone_backpack
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
@@ -15178,7 +15177,7 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Test: JLTS_Clone_jumppack_mc
+/* 	class FST_Backpack_Jumppack_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
 		scope=2;
@@ -15200,11 +15199,11 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+ 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000; */
+		tf_range=50000; 
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		NSM_jumppack_is_jumppack=1;
@@ -15242,7 +15241,7 @@ class CfgVehicles
 		class TransportItems
 		{
 		};
-	};
+	}; */
 	class FST_Backpack_Jumppack_Grinch: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
@@ -15625,7 +15624,7 @@ class CfgVehicles
 			};			
 		};
 	};
-	class FST_Backpack_Jumppack_Medic_Test: JLTS_Clone_jumppack_mc
+/* 	class FST_Backpack_Jumppack_Medic_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
 		scope=2;
@@ -15729,7 +15728,7 @@ class CfgVehicles
 				name="FST_Bacta_Tank";
 			};			
 		};
-	};
+	}; */
 	class FST_Backpack_Jumppack_Rifleman: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -15796,7 +15795,7 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Rifleman_Test: JLTS_Clone_jumppack_mc
+/* 	class FST_Backpack_Jumppack_Rifleman_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
 		scope=2;
@@ -15818,11 +15817,11 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+ 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000; */
+		tf_range=50000; 
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		NSM_jumppack_is_jumppack=1;
@@ -15860,7 +15859,7 @@ class CfgVehicles
 		class TransportItems
 		{
 		};
-	};
+	}; */
 	class FST_Backpack_Invisible_Jumppack: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
@@ -15989,7 +15988,7 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_LR_Test: JLTS_Clone_jumppack_mc
+/* 	class FST_Backpack_Jumppack_LR_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
 		scope=2;
@@ -16053,7 +16052,7 @@ class CfgVehicles
 		class TransportItems
 		{
 		};
-	};
+	}; */
 	class FST_Backpack_Descentpack: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
