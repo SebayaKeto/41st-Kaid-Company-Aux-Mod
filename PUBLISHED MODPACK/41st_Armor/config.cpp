@@ -106,6 +106,7 @@ class CfgPatches
 			"FST_P2_Snoob",
 			"FST_P2_Jorge",
 			"FST_P2_Lancer",
+			"FST_P2_Lancer_Dirty",
 			"FST_P2_Deacon",
 			"FST_P2_Hotshot",
 			"FST_P2_Vengence",
@@ -9084,6 +9085,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lancer.paa",
 		};
 	};	
+	class FST_P2_Helmet_Lancer_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Lancer/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lancer_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Rint: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -11305,6 +11316,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Lancer";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+ 	class FST_Uniform_Lancer_Dirty: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Lancer/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Lancer_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -22928,6 +22953,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Lancer",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Lancer_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2404 'Lancer/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Lancer_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lancer_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lancer_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Lancer_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Lancer_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
