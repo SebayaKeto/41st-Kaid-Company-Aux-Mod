@@ -28,7 +28,7 @@ _plyer addItemToUniform "ACE_IR_Strobe_Item";
 
 for "_i" from 1 to 8 do {_plyer addItemToVest "FST_blaster_cell_Blue";};
 for "_i" from 1 to 2 do {_plyer addItemToVest "FST_grenade_Detonator_mag";};
-for "_i" from 1 to 1 do {_plyer addItemToVest "IDA_grenade_Smoke_mag";};
+for "_i" from 1 to 2 do {_plyer addItemToVest "IDA_grenade_Smoke_mag";};
 for "_i" from 1 to 4 do {_plyer addItemToVest "ACE_PlasmaIV_500";};
 _plyer addItemToVest "IDA_grenade_Smoke_Blue_mag";
 _plyer addItemToVest "ls_mag_glowrod_hiGreen";
