@@ -1551,28 +1551,30 @@ class CfgWeapons
 		displayName="[41st] DC-15C Carbine";
 		model="3AS\3AS_Weapons\DC15C\3AS_DC15C_f";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
-		weaponInfoType="RscWeaponZeroing";
+		weaponInfoType="RscOptics_nightstalker";
 		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
 		class OpticsModes
 		{
-			class Ironsights
+			class Iron
 			{
 				opticsID=1;
 				useModelOptics=0;
-				opticsFlare="true";
 				opticsPPEffects[]=
 				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
+					"",
+					""
 				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.375;
-				opticsZoomMax=1.1;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
 				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=100;
+				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
 			};
 			class IDA_DC15A_Scope
 			{
@@ -1589,7 +1591,7 @@ class CfgWeapons
 				discreteDistance[]={200};
 				discreteDistanceInitIndex=0;
 				distanceZoomMin=100;
-				distanceZoomMax=100;
+				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
 				opticsFlare=0;
