@@ -14325,12 +14325,7 @@ class CfgVehicles
 	Scope=2;
 	ScopeCurator=2;	
 	ace_refuel_fuelCargo=3200;
-		ace_refuel_hooks[]=
-		{
-			"{{0",
-			0,
-			"0.5}}"
-		};
+	ace_refuel_hooks[] = {{0, 0, 0.5}};
 		ace_refuel_hoseLength=25;
 		eden=1;
 	};
