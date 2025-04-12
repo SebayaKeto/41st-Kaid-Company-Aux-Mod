@@ -269,7 +269,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		side=1;
-		armor=300;
+		armor=500;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
