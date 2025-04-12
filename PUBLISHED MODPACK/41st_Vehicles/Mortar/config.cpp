@@ -487,17 +487,18 @@ class CfgAmmo
 	{
 		displayname="[41st] Republic HE Mortar Shell";
 		hit=340;
-		indirectHit=125;
-		indirectHitRange=15;
+		indirectHit=150;
+		indirectHitRange=20;
 		cost=200;
 		muzzleEffect="";
 		warheadName="HE";
 		dangerRadiusHit=750;
 		suppressionRadiusHit=75;
 		typicalSpeed=800;
-		caliber=10;
+		caliber=20;
 		deflecting=0;
-		explosive=0.80000001;
+		explosive=1;
+		simulation = "shotShell";
 		effectFly="3AS_PlasmaBolt_Medium_Yellow_Fly";
 		class CamShakeExplode
 		{
