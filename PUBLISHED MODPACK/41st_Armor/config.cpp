@@ -5205,6 +5205,18 @@ class CfgWeapons
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
 	}; 
+	class JMSLLTE_EmpOfficerCap_black_helmet;
+	class FST_EmpOfficerCap_green_helmet: JMSLLTE_EmpOfficerCap_black_helmet
+	{
+		scope=2;
+		author="JMax";
+		displayName="[41st] Navy Officer's Cap (Green)";
+		picture="\JMSLLTE_empire\helmets\data\ico\ico_h_cap_green.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\New_Gweem_Officer_Cap.paa"
+		};
+	};
    	class FST_Pilot_P1_Helmet_Medusa: FST_Pilot_P1_Helmet
 	{
 		author="Medusa";
