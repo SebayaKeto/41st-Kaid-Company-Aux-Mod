@@ -17,6 +17,7 @@ class CfgPatches
 			"FST_BX",
 			"FST_BX_Sniper",
 			"FST_B2",
+			"FST_B2_TL",
 			"FST_B2_Flame",
 			"FST_U_CIS_Heavy",
 			"FST_U_CIS_Heavy_AT",
@@ -349,6 +350,23 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_B2";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class FST_DroidB2_TL: FST_DroidB1
+	{
+		author="Daara";
+		scope=2;
+		displayname="[41st] B2 Armor (TL)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+        JLTS_deathSounds="";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_B2_TL";
 			containerClass="Supply200";
 			uniformType="Neopren";
 			mass=40;
@@ -1722,6 +1740,48 @@ class CfgVehicles
 		Backpack="";
 		displayName="[41st] B2 Super Battledroid";
 		uniformClass="FST_DroidB2";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		weapons[]=
+		{
+			"FST_WristBlaster",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_WristBlaster",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]={};
+		respawnLinkedItems[]={};
+		Items[]={};
+		respawnItems[]={};
+		magazines[]=
+		{
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red",
+			"FST_blaster_battery_Red"
+		};
+		armor=1000;
+	};
+	class FST_B2_TL: WBK_B2_Mod_Standart
+	{
+		scope=2;
+		identityTypes[]={};
+		author="Daara";
+		Backpack="";
+		displayName="[41st] B2 Super Battledroid Team Leader";
+		uniformClass="FST_DroidB2_TL";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
 		weapons[]=
@@ -3187,7 +3247,7 @@ class cfgGroups
 					class Unit0
 					{
 						side=0;
-						vehicle="FST_B2";
+						vehicle="FST_B2_TL";
 						rank="SERGEANT";
 						position[]={0,-0,0};
 					};
@@ -3207,7 +3267,7 @@ class cfgGroups
 					class Unit0
 					{
 						side=0;
-						vehicle="FST_B2";
+						vehicle="FST_B2_TL";
 						rank="SERGEANT";
 						position[]={0,-0,0};
 					};
@@ -3221,7 +3281,7 @@ class cfgGroups
 					class Unit2
 					{
 						side=0;
-						vehicle="FST_B2";
+						vehicle="FST_B2_TL";
 						rank="SERGEANT";
 						position[]={0,-2,0};
 					};
