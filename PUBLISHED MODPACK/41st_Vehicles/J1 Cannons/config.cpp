@@ -242,7 +242,8 @@ class CfgWeapons
 	{
 		magazines[]=
 		{
-			"FST_10Rnd_Proton_Cinematic"
+			"FST_10Rnd_Proton_Cinematic",
+			"FST_6Rnd_Proton_Cinematic"
 		};
 	};
 };
@@ -349,6 +350,18 @@ class CfgVehicles
 				proxyIndex=1;
 				magazines[]=
 				{
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
+					"FST_6Rnd_Proton_AP",
 					"FST_6Rnd_Proton_AP",
 					"FST_6Rnd_Proton_AP",
 					"FST_6Rnd_Proton_AP",
@@ -478,6 +491,18 @@ class CfgVehicles
 					"FST_10Rnd_Proton_AP",
 					"FST_10Rnd_Proton_AP",
 					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
+					"FST_10Rnd_Proton_AP",
 					"FST_10Rnd_Proton_AP"
 				};
 			};
@@ -497,6 +522,34 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
+					"FST_6Rnd_Proton_Cinematic",
 					"FST_6Rnd_Proton_Cinematic",
 					"FST_6Rnd_Proton_Cinematic",
 					"FST_6Rnd_Proton_Cinematic",
@@ -533,6 +586,34 @@ class CfgVehicles
 			{
 				magazines[]=
 				{
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
+					"FST_10Rnd_Proton_Cinematic",
 					"FST_10Rnd_Proton_Cinematic",
 					"FST_10Rnd_Proton_Cinematic",
 					"FST_10Rnd_Proton_Cinematic",
