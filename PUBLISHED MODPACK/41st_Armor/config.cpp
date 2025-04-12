@@ -115,6 +115,8 @@ class CfgPatches
 			"FST_P2_Rumble",
 			"FST_P2_Rumble_Dirty",
 			"FST_P2_Sunny",
+			"FST_P2_Cowboy",
+			"FST_P2_Jan",
 			"FST_P2_Overwatch",
 			"FST_P2_Tooka",
 			"FST_P2_Pope",
@@ -5106,6 +5108,30 @@ class CfgWeapons
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Bees: FST_Pilot_P1_Helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Bees]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Bees.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Derp: FST_Pilot_P1_Helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Derp]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Derp.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_Pilot_P1_Helmet_Sepie: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
@@ -8188,6 +8214,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
+		};
+	};	
+	class FST_P2_Helmet_Phoenix: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Phoenix]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Phoenix.paa",
 		};
 	};	
 	class FST_P2_Helmet_Yubi: FST_P2_Helmet_Base
@@ -11480,6 +11516,34 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Stant";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Cowboy: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cowboy]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cowboy";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Jan: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Jan]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Jan";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -23325,6 +23389,116 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Salt",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Cowboy: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1411 'Cowboy'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cowboy";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cowboy.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cowboy.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Cowboy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Cowboy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Jan: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-4106 'Jan'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Jan";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jan.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jan.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jan",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jan",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
