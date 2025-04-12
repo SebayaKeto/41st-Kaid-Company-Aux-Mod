@@ -511,6 +511,17 @@ class CfgWeapons
 			"FST_RPS6_rocket",
 			"FST_RPS6_rocket_HE",
 		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class StandardSound
+			{
+				weaponSoundEffect = "";
+				begin1[] = {"\41st_weapons\Launchers\Data\Launcher 3-130.ogg", 4, 1, 1800};
+				begin2[] = {"\41st_weapons\Launchers\Data\Launcher 3-130.ogg", 4, 1, 1800};
+				soundBegin[] = {"begin1", 0.5, "begin2", 0.5};
+			};
+		};	
 	};
 	class FST_RPS6_SR: FST_RPS6_Base
 	{
@@ -536,5 +547,16 @@ class CfgWeapons
 			"FST_RPS6_rocket",
 			"FST_RPS6_rocket_HE",
 		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class StandardSound
+			{
+				weaponSoundEffect = "";
+				begin1[] = {"\41st_weapons\Launchers\Data\Launcher 3-130.ogg", 4, 1, 1800};
+				begin2[] = {"\41st_weapons\Launchers\Data\Launcher 3-130.ogg", 4, 1, 1800};
+				soundBegin[] = {"begin1", 0.5, "begin2", 0.5};
+			};
+		};	
 	};
 };
