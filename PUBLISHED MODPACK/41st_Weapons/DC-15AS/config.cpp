@@ -967,7 +967,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.09230769;
+			reloadTime=0.1;
 			dispersion=0.00145;
 			minRange=2;
 			minRangeProbab=0.5;
