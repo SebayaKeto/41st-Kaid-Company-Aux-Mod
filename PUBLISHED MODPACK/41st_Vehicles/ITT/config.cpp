@@ -2619,6 +2619,9 @@ class CfgVehicles
 		transportFuel=1e+012;
 		secondaryExplosion=10000;
 		fuelExplosionPower=1;
+		ace_refuel_fuelCargo=900000;
+		ace_refuel_hooks[] = {{0, 0, 0.5}};
+		ace_refuel_hoseLength=25;
 	};
 };
 class Mode_FullAuto;

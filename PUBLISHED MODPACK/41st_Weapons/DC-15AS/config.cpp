@@ -297,13 +297,13 @@ class CfgWeapons
 					"OpticsRadialBlur1",
 					"OpticsBlur1"
 				};
-				opticsZoomMin=1.0;
-				opticsZoomMax=1.0;
-				opticsZoomInit=1.0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
 				discreteDistance[]={200};
 				discreteDistanceInitIndex=0;
 				distanceZoomMin=100;
-				distanceZoomMax=1000;
+				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
 				opticsFlare=0;
@@ -318,7 +318,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"3AS_optic_holo_DC15S",
+					"_3AS_opticholo_DC15S",
 				//	"3AS_Optic_Red_DC15A"
 				};
 			};
@@ -1008,13 +1008,13 @@ class CfgWeapons
 					"OpticsRadialBlur1",
 					"OpticsBlur1"
 				};
-				opticsZoomMin=1.0;
-				opticsZoomMax=1.0;
-				opticsZoomInit=1.0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
 				discreteDistance[]={200};
 				discreteDistanceInitIndex=0;
-				distanceZoomMin=100;
-				distanceZoomMax=1000;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
 				opticsFlare=0;
@@ -1354,11 +1354,6 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		opticsZoomMin=0.25;
-		opticsZoomMax=1.25;
-		opticsZoomInit=0.75;
-		distanceZoomMin=400;
-		distanceZoomMax=400;
 		descriptionShort="DC-15C Carbine";
 		handAnim[]=
 		{
@@ -1556,27 +1551,52 @@ class CfgWeapons
 		displayName="[41st] DC-15C Carbine";
 		model="3AS\3AS_Weapons\DC15C\3AS_DC15C_f";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
-		weaponInfoType="RscWeaponZeroing";
+		weaponInfoType="RscOptics_nightstalker";
+		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
 		class OpticsModes
 		{
-			class Ironsights
+			class Iron
 			{
 				opticsID=1;
 				useModelOptics=0;
-				opticsFlare="true";
 				opticsPPEffects[]=
 				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
+					"",
+					""
 				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.375;
-				opticsZoomMax=1.1;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
 				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=100;
+				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+			};
+			class IDA_DC15A_Scope
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
 				distanceZoomMin=100;
-				distanceZoomMax=100;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				cameraDir="";
 			};
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo

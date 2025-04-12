@@ -338,8 +338,8 @@ class CfgVehicles
 		ace_cargo_space=1000
         class ace_cargo {
             class cargo {
-                class Land_CanisterFuel_F {
-                    type = "Land_CanisterFuel_F";
+                class FST_ExplodeFuelBarrel_1 {
+                    type = "FST_ExplodeFuelBarrel_1";
                     amount = 1;
                 };
             };

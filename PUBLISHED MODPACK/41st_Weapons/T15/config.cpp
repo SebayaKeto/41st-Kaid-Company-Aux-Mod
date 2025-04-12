@@ -161,6 +161,52 @@ class CfgWeapons
 			maxRange=10000;
 			maxRangeProbab=0.3;
 		};
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+			};
+			class IDA_DC15A_Scope
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				cameraDir="";
+			};
+		};
 		class FST_T15_UGL: UGL_F 
 		{
 			displayName="High Power UGL";
