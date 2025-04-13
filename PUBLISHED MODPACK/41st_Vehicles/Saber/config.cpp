@@ -1342,8 +1342,8 @@ class cfgvehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3AS\3AS_Saber\data\Saber_hull_co.paa",
-			"3AS\3AS_Saber\data\Saber_weapons_scout_co.paa"
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Recon.paa",
 		};
 		hiddenSelectionsMaterials[]=
 		{
