@@ -205,6 +205,7 @@ class CfgPatches
 			"FST_P2_Vixen",
 			"FST_P2_Cosmic",
 			"FST_P2_Mono",
+			"FST_P2_Mono_Dirty",
 			"FST_P2_Warlock",
 			"FST_P2_Vishy",
 			"FST_P2_Nys",
@@ -8985,6 +8986,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mono.paa",
 		};
 	};	
+	class FST_P2_Helmet_Mono_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Mono/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mono_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Nova: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -11181,6 +11192,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+ 	class FST_Uniform_Fury: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Fury]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Fury";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
  	class FST_Uniform_Edge: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -11792,6 +11817,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Mono";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Mono_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Mono/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Mono_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -22410,6 +22449,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+ 	class FST_P2_Fury: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1911 'Fury'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Fury";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Fury.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Fury.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Fury",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Fury",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Edge: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -24607,6 +24701,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Mono",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Mono_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-4563 'Mono/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Mono_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Mono_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Mono_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Mono_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Mono_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
