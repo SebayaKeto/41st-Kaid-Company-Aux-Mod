@@ -917,14 +917,14 @@ class CfgVehicles
 				memoryPointGun="machinegun";
 				weapons[]=
 				{
-					"FST_Rotary_Blaster_Coax",
+					"FST_EWEB_RemoteTurret",
 				};
 				magazines[]=
 				{
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
 				};
 				memoryPointGunnerOptics="gunnerview";
 				memoryPointGunnerOutOptics="gunnerview";

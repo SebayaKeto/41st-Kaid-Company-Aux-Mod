@@ -1343,7 +1343,7 @@ class cfgvehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Co.paa",
-			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Recon.paa",
+			"41st_Vehicles\Saber\Data\Weapons\FST_Saber_Weapons_Recon.paa",
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -1549,6 +1549,8 @@ class cfgvehicles
 				{
 					"FST_100Rnd_Plasma_shells",
 					"FST_100Rnd_Plasma_shells",
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
+					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_Stormfury_12Rnd_AA_Missile",

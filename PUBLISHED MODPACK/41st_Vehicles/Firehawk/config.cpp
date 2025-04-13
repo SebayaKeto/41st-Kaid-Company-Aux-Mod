@@ -96,7 +96,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\41st_Vehicles\Firehawk\data\FST_Firehawk_co.paa"
+			"\41st_Vehicles\Firehawk\data\FST_Firehawk.paa"
 		};
 		preferRoads=0;
 		simulation="tankX";
