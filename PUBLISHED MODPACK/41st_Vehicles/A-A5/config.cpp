@@ -11,7 +11,9 @@ class CfgPatches
 		units[]=
 		{
 			"FST_AA5",
-			"FST_AA5_MK2"
+			"FST_AA5_MK2",
+			"FST_AA5_Gweem",
+			"FST_AA5_MkII_Gweem"
 		};
 		weapons[]={};
 	};
@@ -1510,6 +1512,44 @@ class CfgVehicles
 				source="revolving";
 				weapon="JMSLLTE_vg_mk2turret_gun";
 			};
+		};
+	};
+	class FST_AA5_Gweem: FST_AA5_Base
+	{
+		author="Daara";
+		displayName="[41st] A-A5 Speeder Truck";
+		scope=2;
+		scopeCurator=2;
+		side=2;
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\A-A5\Data\FST_aa5_Standard_co.paa"
+		};
+	};
+	class FST_AA5_MK2_Gweem_AA5_MK2_Base
+	{
+		author="Daara";
+		displayName="[41st] A-A5 Speeder Truck MkII";
+		scope=2;
+		scopeCurator=2;
+		side=2;
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\A-A5\Data\FST_aa5_Standard_co.paa"
 		};
 	};
 	class FST_AA5_Yellow: FST_AA5_Base

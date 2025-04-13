@@ -1323,7 +1323,8 @@ class CfgWeapons
 				"IDA_thermal_coil_HP",
 				"FST_thermal_coil_LP_Red",
 				"FST_thermal_coil_OP_Red",
-				"FST_thermal_coil_HP"
+				"FST_thermal_coil_HP",
+				"FST_thermal_coil_LP_Blue"
 			};
 			magazineReloadTime=2.5;
 			modes[]=
@@ -1392,7 +1393,7 @@ class CfgWeapons
 						1
 					};
 					dispersion=0.0018;
-					reloadTime=0.4;
+					reloadTime=6;
 				};
 			};
 		};
