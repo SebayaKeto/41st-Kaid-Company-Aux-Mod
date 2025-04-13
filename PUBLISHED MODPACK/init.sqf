@@ -15,6 +15,7 @@ CHVD_maxObj = 6000; // Set maximimum object view distance (default: 12000)
     ["3AS_Shield_C_prop", 18, "Shields"],
     ["3as_Shield_3_prop", 3, "Shields"],
     ["3AS_Shield_5_prop", 5, "Shields"],
+	["FST_Barricade_SecurityBarrier", 25, "Barriers"],
     ["Land_lsb_fob_hBarrierwall_4", 20, "Barriers"],
     ["Land_lsb_fob_hBarrier_3", 12, "Barriers"],
     ["Land_DragonsTeeth_01_4x2_new_redwhite_F", 3, "Barriers"],
