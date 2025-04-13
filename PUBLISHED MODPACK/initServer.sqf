@@ -30,6 +30,6 @@ private _b1Types = [
 				};
 			};
 		} forEach (allUnits select {local _x});
-		sleep 0.5;
+		sleep 1;
 	};
 };
