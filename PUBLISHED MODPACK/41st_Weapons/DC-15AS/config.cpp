@@ -319,6 +319,7 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 					"_3AS_opticholo_DC15S",
+					"FST_Attachment_Optic_Holo_DC15",
 				//	"3AS_Optic_Red_DC15A"
 				};
 			};
@@ -1030,6 +1031,7 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 					"3AS_optic_holo_DC15S",
+					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -1790,4 +1792,67 @@ class CfgWeapons
             };
         };
     };
+	class 3AS_optic_holo_DC15S;
+	class InventoryOpticsItem_Base_F;
+	class FST_Attachment_Optic_Holo_DC15: 3AS_optic_holo_DC15S
+	{
+		author="Vengence" 
+		scope=2;
+		displayName="[41st] Holo Optic";
+		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
+		model="\3AS\3AS_Weapons\DC15S\3AS_DC15S_Holo_f.p3d";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=6;
+			modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
+			optics=2;
+			class OpticsModes
+			{
+				class Iron
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"",
+						""
+					};
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+				};
+				class AlternateScope
+				{
+					opticsID=2;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsRadialBlur1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					cameraDir="";
+				};
+			};
+		};
+	};
 };
