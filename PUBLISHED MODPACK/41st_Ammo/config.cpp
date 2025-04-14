@@ -989,7 +989,7 @@ class CfgAmmo
 	class FST_grenade_Penetrator_ammo: IDA_grenade_Penetrator_ammo
 	{
 		indirectHit=4000;
-		indirectHitRange=3;
+		indirectHitRange=2;
 	};
 	class FST_grenade_rock_ammo: GrenadeHand_stone
 	{
