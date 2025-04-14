@@ -1156,7 +1156,9 @@ class CfgWeapons
 			mass=50;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]={
+					"FST_Attachment_Optic_Holo_DC15"
+				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
