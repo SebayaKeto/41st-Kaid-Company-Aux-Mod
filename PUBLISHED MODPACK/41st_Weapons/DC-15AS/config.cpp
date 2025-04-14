@@ -1796,7 +1796,7 @@ class CfgWeapons
 	class InventoryOpticsItem_Base_F;
 	class FST_Attachment_Optic_Holo_DC15: 3AS_optic_holo_DC15S
 	{
-		author="Vengence" 
+		author="Vengence";
 		scope=2;
 		displayName="[41st] Holo Optic";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
