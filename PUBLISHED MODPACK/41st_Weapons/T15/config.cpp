@@ -272,7 +272,8 @@ class CfgWeapons
 				{
                     "3AS_optic_holo_DC15S",
                     "Optic_MRCO",
-                    "3AS_optic_reflex_DC15C"
+                    "3AS_optic_reflex_DC15C",
+		    "FST_Optic_MRCO_T15"
                 };
             };
             class MuzzleSlot: MuzzleSlot 
@@ -447,6 +448,70 @@ class CfgWeapons
 					linear = 0.2;
 					quadratic = 0.2;
 					start = 20;
+				};
+			};
+		};
+	};
+	class optic_MRCO;
+	class InventoryOpticsItem_Base_F;
+	class FST_Optic_MRCO_T15: optic_MRCO
+	{
+		author="Vengence";
+		scope=2;
+		displayName="[41st] T15 MRCO Optic";
+		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
+		model="\A3\weapons_f_beta\acc\acco_MRCO_F.p3d";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=8;
+			modelOptics="\A3\Weapons_f_beta\acc\reticle_MRCO_F";
+			optics=2;
+			class OpticsModes
+			{
+				class Iron
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"",
+						""
+					};
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+				};
+				class AlternateScope
+				{
+					modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
+					opticsID=2;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsRadialBlur1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					cameraDir="";
 				};
 			};
 		};
