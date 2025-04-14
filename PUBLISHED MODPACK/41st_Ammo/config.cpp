@@ -20,7 +20,7 @@ class CfgAmmo
 		ACE_damageType="plasma";
 		cartridge="";
 		lightcolor[]={0,0.30000001,1};
-		hit=30; //28
+		hit=28; //28
 		indirectHit=0;
 		explosive=1;
 		indirectHitRange=0.5;
@@ -502,16 +502,22 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
 		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		hit=28; //28
+		caliber=1.6; //1.6
 	};
 	class FST_blasterbolt_Yellow: FST_blasterbolt
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		hit=28; //28
+		caliber=1.6; //1.6
 	};
 	class FST_blasterbolt_Red: FST_blasterbolt
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		hit=28; //28
+		caliber=1.6; //1.6
 	};
 	class FST_LV13_blasterbolt_Blue: FST_blasterbolt
 	{
