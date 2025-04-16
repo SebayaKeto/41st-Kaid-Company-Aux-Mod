@@ -57,7 +57,7 @@ class CfgVehicles
 			"3AS_Vulture_Cannon",
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
-			"IDA_BTX42",
+			"FST_BTX42",
 			"CMFlareLauncher"
 		};
 		magazines[]=
@@ -69,16 +69,16 @@ class CfgVehicles
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
+			"FST_FuelTank",
 			"240Rnd_CMFlare_Chaff_Magazine"
 		};
 		author="Daara";
