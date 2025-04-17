@@ -12,13 +12,13 @@ CHVD_maxView = 6000; // Set maximum view distance (default: 12000)
 CHVD_maxObj = 6000; // Set maximimum object view distance (default: 12000)
 
 [west, 5000, [
-    ["3AS_Shield_C_prop", 18, "Shields"],
-    ["3as_Shield_3_prop", 3, "Shields"],
-    ["3AS_Shield_5_prop", 5, "Shields"],
-	["FST_Barricade_SecurityBarrier", 25, "Barriers"],
-    ["Land_lsb_fob_hBarrierwall_4", 20, "Barriers"],
-    ["Land_lsb_fob_hBarrier_3", 12, "Barriers"],
-    ["Land_DragonsTeeth_01_4x2_new_redwhite_F", 3, "Barriers"],
+    ["3AS_Shield_C_prop", 20, "Shields"],
+    ["3as_Shield_3_prop", 6, "Shields"],
+    ["3AS_Shield_5_prop", 10, "Shields"],
+	["FST_Barricade_SecurityBarrier", 20, "Barriers"],
+    ["Land_lsb_fob_hBarrierwall_4", 30, "Barriers"],
+    ["Land_lsb_fob_hBarrier_3", 20, "Barriers"],
+    ["Land_DragonsTeeth_01_4x2_new_redwhite_F", 5, "Barriers"],
     ["Land_lsb_fob_hBarrier_ramp", 5, "Bridge"],
     ["FootBridge_0_ACR", 5, "Bridge"],
     ["land_optre_bootcamp_bridge", 5, "Bridge"],
