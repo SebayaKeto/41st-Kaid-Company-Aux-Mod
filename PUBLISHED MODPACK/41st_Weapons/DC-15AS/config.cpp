@@ -78,8 +78,7 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red"
+			"FST_blaster_cell_High_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -397,8 +396,7 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red"
+			"FST_blaster_cell_High_Yellow"
 		};
 		class EGLM: UGL_F
 		{
@@ -514,8 +512,7 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_LE_Blue",
 			"FST_blaster_cell_LE_Green",
-			"FST_blaster_cell_LE_Yellow",
-			"FST_blaster_cell_LE_Red"
+			"FST_blaster_cell_LE_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -792,8 +789,7 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_Blue",
 			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow",
-			"FST_blaster_cell_Red"
+			"FST_blaster_cell_Yellow"
 		};
 		magazineWell[]={};
 		modes[]=
