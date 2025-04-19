@@ -123,6 +123,7 @@ class CfgPatches
 			"FST_P2_Pope",
 			"FST_P2_Business",
 			"FST_P2_Dobie",
+			"FST_P2_Dobie_Dirty",
 			"FST_P2_Bigs",
 			"FST_P2_Parsec",
 			"FST_P2_Bookworm",
@@ -241,6 +242,8 @@ class CfgPatches
 			"FST_P2_Mav",
 			"FST_P2_Stant",
 			"FST_P2_Salt",
+			"FST_P2_Colors",
+			"FST_P2¨Plop",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -8283,6 +8286,26 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Bale: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Bale]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bale.paa",
+		};
+	};	
+	class FST_P2_Helmet_Scrib: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Scrib]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Scrib.paa",
+		};
+	};	
 	class FST_P2_Helmet_Phoenix: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -9526,6 +9549,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dobie.paa",
+		};
+	};	
+	class FST_P2_Helmet_Dobie_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Dobie/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dobie_Dirty.paa",
 		};
 	};	
 	class FST_P2_Helmet_Sturm: FST_P2_Helmet_Base
@@ -11566,6 +11599,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Dobie_Dirty: JLTS_CloneArmor
+	{
+		author="Viz";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Dobie/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Dobie_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Bigs: JLTS_CloneArmor
 	{
 		author="Vengence";
@@ -11622,6 +11669,34 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Colors: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Colors]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Colors";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Plop: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Plop]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Plop";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Stant: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -23912,6 +23987,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Colors: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-4464 'Colors'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Colors";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Colors.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Colors.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Colors",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Colors",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Plop: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-2161 'Plop'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Plop";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Plop.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Plop.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Plop",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Plop",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Hazzo: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -25284,6 +25469,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Dobie",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Dobie_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-5025 'Dobie (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Dobie_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Dobie_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Dobie_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Crewman_Helmet_Dobie_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Crewman_Helmet_Dobie_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
