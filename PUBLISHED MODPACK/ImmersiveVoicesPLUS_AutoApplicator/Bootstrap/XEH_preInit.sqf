@@ -9,7 +9,7 @@ if (!(is3DEN)) then {
 enableRadio true;
 
 // Configuration - Set to true to enable debug logging
-PHEN_IVP_DEBUG_MODE = true;
+PHEN_IVP_DEBUG_MODE = false;
 
 PHEN_fnc_IVP_AutoAssign = {
         params ["_unit"];
