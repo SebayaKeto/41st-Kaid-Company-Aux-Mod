@@ -37,6 +37,7 @@ class CfgWeapons
 		ace_overheating_dispersion=1;
 		ace_overheating_closedBolt=0;
 		ace_overheating_barrelMass=1;
+		JLTS_hasEMPProtection=1;
 		inertia=0;
 		canShootInWater=1;
 		fireSpreadAngle=2;

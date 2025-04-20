@@ -749,7 +749,7 @@ class CfgWeapons
 	class FST_DC15S: IDA_DC15S
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
+		JLTS_hasEMPProtection=1;
 		JLTS_repairTime=5;
 		IDA_plasmabolt=1;
 		IDA_heatpershot=1;
