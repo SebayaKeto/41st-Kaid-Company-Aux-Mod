@@ -16,23 +16,6 @@ class CfgPatches
 		author="$STR_3AS_Studio";
 	};
 };
-class Extended_init_EventHandlers
-{
-	class FST_Delta7
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_Delta7_Daara
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -102,6 +85,7 @@ class CfgVehicles
 		precisegetinout=1;
 		driverCanEject=1;
 		cargoCanEject=0;
+		tas_can_impulse=0;
 		ejectDeadGunner=0;
 		ejectDeadCargo=0;
 		ejectDeadDriver=0;
@@ -124,7 +108,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3AS\3AS_Delta7\data\Delta7_Hull_co.paa",
+
+			"3AS\3AS_Delta7\data\Textures\Delta7_Hull_Green_co.paa",
 			"3AS\3AS_Delta7\data\Delta7_Landing_Gear_co.paa",
 			"3AS\3AS_Delta7\data\Delta7_Cockpit_co.paa",
 			"3as\3as_delta7\data\delta7_interfaces_ca.paa"
@@ -160,7 +145,7 @@ class CfgVehicles
 			"CAS_Bombing"
 		};
 		driveOnComponent[]={};
-		class Components: Components
+		class components
 		{
 			class SensorsManagerComponent
 			{
@@ -170,24 +155,24 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=0;
+							minRange=8000;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=0;
-							maxRange=6000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							minRange=8000;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						maxTrackableSpeed=600;
+						maxTrackableSpeed=400;
 						componentType="IRSensorComponent";
 						typeRecognitionDistance=2000;
-						maxFogSeeThrough=0.995;
+						maxFogSeeThrough=-1;
 						color[]={1,0,0,1};
 						allowsMarking=1;
 						groundNoiseDistanceCoef=-1;
@@ -204,26 +189,26 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=0;
-							maxRange=10000;
+							minRange=8000;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=0;
-							maxRange=6000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							minRange=8000;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						maxTrackableSpeed=100;
+						maxTrackableSpeed=400;
 						aimDown=1;
 						animDirection="";
 						componentType="VisualSensorComponent";
 						nightRangeCoef=0;
-						maxFogSeeThrough=0.94;
+						maxFogSeeThrough=-1;
 						color[]={1,1,0.5,0.80000001};
 						typeRecognitionDistance=2000;
 						allowsMarking=1;
@@ -240,23 +225,24 @@ class CfgVehicles
 						componentType="PassiveRadarSensorComponent";
 						class AirTarget
 						{
-							minRange=0;
-							maxRange=32000;
+							minRange=4000;
+							maxRange=4000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=0;
-							maxRange=20000;
+							minRange=4000;
+							maxRange=4000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
-						typeRecognitionDistance=8000;
+						typeRecognitionDistance=4000;
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
 						groundNoiseDistanceCoef=-1;
 						maxGroundNoiseDistance=-1;
+						maxFogSeeThrough=-1;
 						minSpeedThreshold=0;
 						maxSpeedThreshold=0;
 						animDirection="";
@@ -272,26 +258,26 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=0;
-							maxRange=14000;
+							minRange=8000;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=0;
-							maxRange=14000;
+							minRange=8000;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
-						typeRecognitionDistance=10000;
+						typeRecognitionDistance=5000;
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						groundNoiseDistanceCoef=0.2;
+						groundNoiseDistanceCoef=-1;
 						componentType="ActiveRadarSensorComponent";
-						maxGroundNoiseDistance=200;
-						minSpeedThreshold=30;
-						maxSpeedThreshold=40;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
 						color[]={0,1,1,1};
 						allowsMarking=1;
 						animDirection="";
@@ -306,14 +292,14 @@ class CfgVehicles
 						componentType="LaserSensorComponent";
 						class AirTarget
 						{
-							minRange=0;
+							minRange=6000;
 							maxRange=6000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=0;
+							minRange=6000;
 							maxRange=6000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -341,14 +327,14 @@ class CfgVehicles
 						typeRecognitionDistance=0;
 						class AirTarget
 						{
-							minRange=0;
+							minRange=8000;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=0;
+							minRange=8000;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -358,6 +344,7 @@ class CfgVehicles
 						allowsMarking=1;
 						groundNoiseDistanceCoef=-1;
 						maxGroundNoiseDistance=-1;
+						maxFogSeeThrough=-1;
 						minSpeedThreshold=0;
 						maxSpeedThreshold=0;
 						animDirection="";
@@ -460,52 +447,6 @@ class CfgVehicles
 					{
 						UIposition[]={0.15000001,0.25};
 						mirroredMissilePos=1;
-					};
-					class pylons3: pylons1
-					{
-						hardpoints[]=
-						{
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"B_AGM65_DUAL_RAIL",
-							"ARC_AGM_PYLON",
-							"B_HARM_RAIL",
-							"DAGR",
-							"B_BOMB_PYLON",
-						};
-						attachment="PylonMissile_1Rnd_Bomb_04_F";
-						priority=9;
-						maxweight=5000;
-						UIposition[]={0.55000001,0.34999999};
-					};
-					class pylons4: pylons3
-					{
-						UIposition[]={0.1,0.34999999};
-						mirroredMissilePos=3;
-					};
-					class pylons5: pylons1
-					{
-						hardpoints[]=
-						{
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"B_AGM65_DUAL_RAIL",
-							"ARC_AGM_PYLON",
-							"B_HARM_RAIL",
-							"DAGR",
-							"B_BOMB_PYLON",
-						};
-						attachment="PylonRack_Missile_AMRAAM_D_x1";
-						priority=7;
-						maxweight=5000;
-						UIposition[]={0.60000002,0.44999999};
-					};
-					class pylons6: pylons5
-					{
-						UIposition[]={0.050000001,0.44999999};
-						mirroredMissilePos=5;
 					};
 				};
 				class presets
@@ -6188,7 +6129,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_ARC_Heavy_Chaingun",
+			"FST_ARC_Light_Canon",
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
@@ -6197,15 +6138,15 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_ARC_4000Rnd_Heavy_shells",
+			"FST_ARC_1000Rnd_Heavy_shells",
+			"FST_ARC_1000Rnd_Heavy_shells",
+			"FST_ARC_1000Rnd_Heavy_shells",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"Laserbatteries",
-			"FST_Stormfury_12Rnd_AA_Missile",
-			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
