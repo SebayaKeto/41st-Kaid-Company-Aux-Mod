@@ -905,16 +905,16 @@ class cfgvehicles
 				animationSourceGun="Maingun_Super";
 				weapons[]=
 				{
-					"3AS_Sabre_Cannons_Super",
+					"FST_Sabre_Cannons_Super",
 					"SmokeLauncher"
 				};
 				magazines[]=
 				{
-					"3AS_25rnd_Sabre_Super_Mag",
-					"3AS_25rnd_Sabre_Super_Mag",
-					"3AS_25rnd_Sabre_Super_Mag",
-					"3AS_25rnd_Sabre_Super_Mag",
-					"3AS_25rnd_Sabre_Super_Mag",
+					"FST_25rnd_Sabre_Super_Mag",
+					"FST_25rnd_Sabre_Super_Mag",
+					"FST_25rnd_Sabre_Super_Mag",
+					"FST_25rnd_Sabre_Super_Mag",
+					"FST_25rnd_Sabre_Super_Mag",
 				};
 				minTurn=-360;
 				maxTurn=360;
@@ -1963,6 +1963,65 @@ class CfgAmmo
 		indirectHitRange=5;
 		caliber=2;
 	};	
+	class 3AS_Sabre_HE;
+	class FST_Sabre_AT: 3AS_Sabre_HE
+	{
+		hit=600;
+		indirecthit=4;
+		indirecthitrange=1;
+		warheadName="AT";
+		submunitionAmmo="ammo_Penetrator_120mm";
+		submunitionDirectionType="SubmunitionModelDirection";
+		caliber=35;
+		explosive=0.2;
+		effectFly="3AS_PlasmaBolt_Medium_Blue_Fly";
+		soundFly[]=
+		{
+			"",
+			1,
+			1,
+			50
+		};
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_01",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_02",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_03",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_04",
+			1.7782794,
+			1,
+			1600
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+	};
 };
 class CfgMagazines
 {
@@ -1993,6 +2052,20 @@ class CfgMagazines
 		tracersEvery=1;
 		muzzleImpulseFactor[]={0.050000001,0.050000001};
 	};
+	class FST_25rnd_Sabre_Super_Mag: VehicleMagazine
+	{
+		author="Daara";
+		scope=2;
+		displayName="25 Round Magazine";
+		displayNameShort="AT";
+		ammo="FST_Sabre_AT";
+		count=25;
+		initSpeed=1000;
+		maxLeadSpeed=83.333298;
+		nameSound="mg";
+		tracersEvery=1;
+		muzzleImpulseFactor[]={0.5,0.5};
+	};
 };
 class Mode_FullAuto;
 class CfgWeapons
@@ -2019,6 +2092,64 @@ class CfgWeapons
 	};
 	class LMG_M200: LMG_RCWS
 	{
+	};
+	class 3AS_Sabre_Cannons
+	{
+		class GunParticles;
+		class manual;
+	};
+	class FST_Sabre_Cannons_Super: 3AS_Sabre_Cannons
+	{
+		displayName="Sabre Cannons";
+		magazines[]=
+		{
+			"FST_25rnd_Sabre_Super_Mag"
+		};
+		magazineReloadTime=5;
+		reloadTime=2;
+		displayNameShort="AT";
+		class manual: manual
+		{
+			magazineReloadTime=5;
+			reloadTime=2;
+			dispersion=0.00019999999;
+			burst=1;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Maincanon_Shot_SoundSet"
+				};
+			};
+		};
+		reloadSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			2.5118864,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			2.5118864,
+			1,
+			10
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName="CannonFired";
+				positionName="Usti hlavne";
+				directionName="Konec hlavne";
+			};
+		};
 	};
 	class FST_Medium_twin_laser_turret: LMG_RCWS
 	{
