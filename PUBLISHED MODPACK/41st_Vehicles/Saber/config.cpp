@@ -15,7 +15,7 @@ class CfgPatches
 			//"FST_SuperSaber",
 			"FST_SuperSaber_Rancor",
 			"FST_SuperSaber_Jorge",
-			//"FST_Saber_Fly"
+			"FST_Saber_Fly",
 			"FST_Recon_Saber"
 		};
 		weapons[]={};
@@ -92,6 +92,21 @@ class Optics_Gunner_MBT_01: Optics_Armored
 	class Wide;
 	class Medium;
 	class Narrow;
+};
+class CfgFunctions {
+    class FST {
+        class Saber {
+            file = "\41st_Vehicles\Saber\functions";
+            class clampAltitude {};
+        };
+    };
+};
+class Extended_init_EventHandlers {
+    class FST_Saber_Fly {
+        class SaberFly_AltitudeClamp {
+            init = "[_this select 0] spawn FST_fnc_clampAltitude;";
+        };
+    };
 };
 class cfgvehicles
 {
@@ -1363,7 +1378,8 @@ class cfgvehicles
 			};
 		};
 	};
-	class FST_Saber_Fly: FST_LAAT
+	class FST_laat_Base;
+	class FST_Saber_Fly: FST_laat
 	{
 		scope=2;
 		scopecurator=2;
@@ -1401,7 +1417,9 @@ class cfgvehicles
 		waterLinearDampingCoefX=0.5;
 		maxFordingDepth=0.5;
 		waterResistance=1;
-		fuelCapacity=45;
+		weapons[] = {};
+		magazines[] = {};
+		fuelCapacity = 5000;
 		maxBrakeTorque=85000;
 		memoryPointDriverOptics[]=
 		{
