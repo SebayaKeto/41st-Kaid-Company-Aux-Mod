@@ -1099,6 +1099,8 @@ class CfgVehicles
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		generalMacro="B_MBT_01_arty_base_F";
+		tas_canBlift=1;
+		tas_liftVars="[[[[0,-4,-6.5]]], [-0.001], [-0.4]]";
 		crew="FST_Trooper_P2_DC15S";
 		typicalCargo[]=
 		{
