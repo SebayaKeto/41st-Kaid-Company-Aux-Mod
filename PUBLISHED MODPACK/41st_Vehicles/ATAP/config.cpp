@@ -166,17 +166,18 @@ class CfgWeapons
 		nameSound="cannon";
 		cursor="mortar";
 		cursorAim="EmptyCursor";
+			reloadTime=10;
 		magazines[]=
 		{
-			"3AS_32Rnd_155mm_ATAP_Mortar_shells",
-			"3AS_32Rnd_300mm_Mo_shells",
+			"FST_32Rnd_155mm_ATAP_Mortar_shells",
+/* 			"3AS_32Rnd_300mm_Mo_shells",
 			"3AS_12Rnd_300mm_Mo_smoke",
 			"3AS_4Rnd_300mm_Mo_guided",
 			"3AS_4Rnd_300mm_Mo_LG",
 			"3AS_12Rnd_300mm_Mo_mine",
 			"3AS_4Rnd_300mm_Mo_Cluster",
 			"3AS_12Rnd_300mm_Mo_AT_mine",
-			"3AS_32Rnd_155mm_ATAP_Mortar_shells_AT"
+			"3AS_32Rnd_155mm_ATAP_Mortar_shells_AT" */
 		};
 		modes[] = {"Single1", "Single2", "Single3"};
 		class Single1: Mode_SemiAuto {
@@ -184,6 +185,20 @@ class CfgWeapons
 			displayName = "$STR_A3_mortar_120mm_AMOS_Single10";
 			maxRange = 500;
 			minRange = 200;
+			reloadTime=2;
+			magazineReloadTime=10;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_HeavyTurboLaser_SoundSet"
+				};
+			};
 		};
 		class Single2: Single1 {
 			artilleryCharge = 0.3;
@@ -198,6 +213,206 @@ class CfgWeapons
 		class GunParticles
 		{
 		};
+	};
+	class 3AS_Mass_Driver_Cannon;
+	class FST_ATAP_SIEGE_Cannon: 3AS_Mass_Driver_Cannon
+	{
+		scope=1;
+		displayName="[41st] AT-AP Siege Cannon";
+		cursor="EmptyCursor";
+		cursorAim="cannon";
+		showAimCursorInternal=0;
+		nameSound="cannon";
+		reloadSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			2.5118864,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			2.5118864,
+			1,
+			10
+		};
+		magazines[]=
+		{
+			"FST_10Rnd_SIEGE_Cannon_HHE_shells"
+		};
+		reloadTime=25;
+		magazineReloadTime=30;
+		autoReload=1;
+		canLock=0;
+		ballisticsComputer="2 + 8 + 16";
+		FCSMaxLeadSpeed=250;
+		FCSZeroingDelay=1;
+		aiDispersionCoefY=2;
+		aiDispersionCoefX=2;
+		autoFire=0;
+		class player: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_HeavyTurboLaser_SoundSet"
+				};
+			};
+			soundContinuous=0;
+			reloadTime=20;
+			magazineReloadTime=25;
+			autoReload=1;
+			autoFire=0;
+			dispersion=0.00056999997;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};
+	};
+};
+class CfgMagazines
+{
+	class VehicleMagazine;
+	class FST_10Rnd_Siege_Cannon_HHE_shells: VehicleMagazine
+	{
+		author="Daara";
+		scope=2;
+		displayName="10 Round SIEGE Cannon Shells";
+		displayNameShort="Mass Driver HHE Shells";
+		ammo="FST_Siege_Cannon_HHE_Shell";
+		count=10;
+		displayNameMFDFormat="HHE";
+		initSpeed=1680;
+		maxLeadSpeed=250;
+		tracersEvery=1;
+		nameSound="cannon";
+		muzzleImpulseFactor[]={0.5,3};
+	};
+	class 32Rnd_155mm_Mo_shells;
+	class FST_32Rnd_155mm_ATAP_Mortar_shells: 32Rnd_155mm_Mo_shells
+	{
+		scope=2;
+		displayName="155mm Depleted Durasteel";
+		displayNameShort="HESH";
+		displayNameMFDFormat="HESH";
+		ammo="FST_ATAP_155mm_AMOS_Mortar_Ammo";
+		count=32;
+		initSpeed=400;
+		nameSound="heat";
+		muzzleImpulseFactor[]={0.5,0.5};
+	};
+};
+class CfgAmmo
+{
+	class ShellBase;
+	class FST_Siege_Cannon_HHE_Shell: ShellBase
+	{
+		aiAmmoUsageFlags="64 + 128 + 256 + 512";
+		allowAgainstInfantry=1;
+		hit=2500;
+		indirectHit=200;
+		indirectHitRange=30;
+		warheadName="AP";
+		dangerRadiusHit=160;
+		suppressionRadiusHit=32;
+		explosive=0.80000001;
+		cost=300;
+		airFriction=-3.96e-005;
+		CraterEffects="HeavyBombCrater";
+		explosionEffects="HeavyBombExplosion";
+		typicalSpeed=1550;
+		caliber=10;
+		deflecting=0;
+		timeToLive=15;
+		whistleOnFire=1;
+		whistleDist=14;
+		model="\3AS\3AS_Weapons\Data\tracer_shell_blue";
+		tracerScale=3;
+		tracerStartTime=0;
+		tracerEndTime=15;
+		muzzleEffect="";
+		effectFly="3AS_PlasmaBolt_Large_Blue_Fly";
+		soundSetSonicCrack[]=
+		{
+			"3AS_Cannon_Flyby_SoundSet"
+		};
+		class CamShakeExplode
+		{
+			power=24;
+			duration=2.5999999;
+			frequency=20;
+			distance=143.636;
+		};
+		class CamShakeHit
+		{
+			power=180;
+			duration=0.80000001;
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power=3.3097501;
+			duration=2.2;
+			frequency=20;
+			distance=87.635597;
+		};
+		class CamShakePlayerFire
+		{
+			power=0.02;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+		ace_frag_enabled=1;
+		ace_frag_metal=23000;
+		ace_frag_charge=3148;
+		ace_frag_gurney_c=2830;
+		ace_frag_gurney_k="1/2";
+		ace_frag_classes[]=
+		{
+			"ACE_frag_medium",
+			"ACE_frag_medium_HD"
+		};
+	};
+	class Sh_155mm_AMOS;
+	class FST_ATAP_155mm_AMOS_Mortar_Ammo: Sh_155mm_AMOS
+	{
+		model="3as\3as_weapons\data\tracer_shell_blue";
+		effectFly="3AS_PlasmaBolt_Medium_Blue_Fly";
+		hit=640;
+		indirectHit=95;
+		indirectHitRange=6.25;
+		warheadName="HESH";
+		caliber=22;
+		deflecting=5;
+		cost=300;
+		timeToLive=180;
+		aiAmmoUsageFlags="64 + 128 + 256 + 512";
+		CraterEffects="ArtyShellCrater";
+		ExplosionEffects="MortarExplosion";
+		suppressionRadiusHit=75;
+		explosive=0.80000001;
+		submunitionAmmo="3AS_ATAP_HE_Submunition";
+		submunitionConeType[]=
+		{
+			"randomcenter",
+			1
+		};
+		submunitionInitialOffset[]={0,0,0.2};
+		submunitionInitSpeed=5;
 	};
 };
 class CfgVehicles
@@ -4218,10 +4433,10 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"3AS_10Rnd_Siege_Cannon_HHE_shells",
-					"3AS_10Rnd_Siege_Cannon_HHE_shells",
-					"3AS_32Rnd_155mm_ATAP_Mortar_shells",
-					"3AS_32Rnd_155mm_ATAP_Mortar_shells",				
+					"FST_10Rnd_Siege_Cannon_HHE_shells",
+					"FST_10Rnd_Siege_Cannon_HHE_shells",
+					"FST_32Rnd_155mm_ATAP_Mortar_shells",
+					"FST_32Rnd_155mm_ATAP_Mortar_shells",				
 				};
 				gunnerAction="mbt1_slot2_out";
 				gunnerInAction="ATAP_Gunner2";

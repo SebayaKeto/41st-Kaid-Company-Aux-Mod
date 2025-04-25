@@ -183,6 +183,8 @@ class CfgPatches
 			"FST_P2_Bulwark_Dirty",
 			"FST_P2_Rint",
 			"FST_P2_Rint_Dirty",
+			"FST_P2_Rint_V2",
+			"FST_P2_Rint_Dirty_V2",
 			"FST_P2_CosmicSmith",
 			"FST_P2_Tally",
 			"FST_P2_Church",
@@ -9195,10 +9197,30 @@ class CfgWeapons
 	{
 		author="Daara";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Rint_Dirty]";
+		displayName="[41st] P2 Helmet [Rint/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_Dirty.paa",
+		};
+	};	
+	class FST_P2_Helmet_Rint_V2: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rint V2]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_V2.paa",
+		};
+	};	
+	class FST_P2_Helmet_Rint_Dirty_V2: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rint/Dirty V2]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_V2_Dirty.paa",
 		};
 	};	
 	class FST_P2_Helmet_Jax: FST_P2_Helmet_Base
@@ -12336,6 +12358,34 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Rint_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Rint_V2: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Rint V2]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Rint_V2";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Rint_Dirty_V2: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Rint/Dirty V2]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Rint_Dirty_V2";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -28989,6 +29039,116 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Rint_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+	class FST_P2_Rint_V2: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2724 'Rint' (V2)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Rint_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rint_V2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Rint_V2.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Rint_V2",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Rint_V2",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	}; 
+	class FST_P2_Rint_Dirty_V2: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2724 'Rint' (Dirty V2)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Rint_V2_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rint_V2_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Rint_V2_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Rint_V2_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Rint_V2_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

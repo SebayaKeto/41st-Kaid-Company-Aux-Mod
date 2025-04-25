@@ -546,8 +546,8 @@ class CfgMagazines
 		displayNameShort="AA";
 		ammo="FST_Keeradak_30mm_MP";
 		count=500;
-		initSpeed=1070;
-		maxLeadSpeed=416.66699;
+		initSpeed=1440;
+		maxLeadSpeed=2000;
 		tracersEvery=1;
 		nameSound="cannon";
 		muzzleImpulseFactor[]={0,0};

@@ -77,11 +77,11 @@ class CfgAmmo
 	class IDA_blasterbolt;
 	class FST_thermal_shell: IDA_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		ACE_damageType="plasmashell";
-		hit=75;
-		indirectHit=50;
+		hit=40;
+		indirectHit=40;
 		explosive=1;
 		indirectHitRange=4;
 		caliber=2;
@@ -147,8 +147,8 @@ class CfgAmmo
 	};
 	class FST_thermal_laser_YWing: IDA_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		ACE_damageType="plasmashell";
 		hit=100;
 		indirectHit=75;
@@ -217,8 +217,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_blue: IDA_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
+		model="3as\3as_weapons\data\tracer_blue.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Blue_Fly";
 		ACE_damageType="plasmashell";
 		hit=75;
 		indirectHit=50;
@@ -287,8 +287,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_red: IDA_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
+		model="3as\3as_weapons\data\tracer_red.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Red_Fly";
 		ACE_damageType="plasmashell";
 		hit=75;
 		indirectHit=50;
@@ -357,8 +357,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_HP_Blue: IDA_Blasterbolt_Power6_VEHICLE
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
+		model="3as\3as_weapons\data\tracer_blue.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Blue_Fly";
 		hit=900;
 		indirectHit=150;
 		explosive=1;
@@ -424,8 +424,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_HP: IDA_Blasterbolt_Power6_VEHICLE
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
+		model="3as\3as_weapons\data\tracer_red.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Red_Fly";
 		hit=900;
 		indirectHit=150;
 		explosive=1;
@@ -491,8 +491,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_HP_Green: IDA_Blasterbolt_Power6_VEHICLE
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 		hit=900;
 		indirectHit=150;
 		explosive=1;
@@ -558,8 +558,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_LP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
+		model="3as\3as_weapons\data\tracer_red.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_red_Fly";
 		hit=400;
 		indirectHit=75;
 		explosive=1;
@@ -625,8 +625,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_OP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
+		model="3as\3as_weapons\data\tracer_red";
+		effectFly="3AS_PlasmaBolt_Medium_Red_Fly";
 		hit=1200;
 		indirectHit=300;
 		explosive=1;
@@ -1843,6 +1843,164 @@ class CfgWeapons
 					reloadTime=0.4;
 				};
 			};
+		};
+	};
+	class FST_Autocannon_40mm: CannonCore
+	{
+		scope=1;
+		displayName="Medium Blaster Cannon";
+		nameSound="cannon";
+		cursor="EmptyCursor";
+		cursorAim="mg";
+		magazines[]=
+		{
+			"FST_thermal_coil"
+		};
+		magazineReloadTime=6;
+		modes[]=
+		{
+			"manual",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		canLock=0;
+		ballisticsComputer="2 + 16";
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName="";
+				positionName="usti hlavne1";
+				directionName="konec hlavne1";
+			};
+			class SecondEffect
+			{
+				effectName="";
+				positionName="usti hlavne2";
+				directionName="konec hlavne2";
+			};
+		};
+		class manual: CannonCore
+		{
+			displayName="Autocannon Manual";
+			textureType="fullAuto";
+			autoFire=1;
+			burst=1;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1,
+					1500
+				};
+				begin2[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					1.015,
+					1500
+				};
+				begin3[]=
+				{
+					"\41st_weapons\Vehicle\Sounds\FST_30mm_cannon.ogg",
+					2.5118864,
+					0.985,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					33,
+					"begin2",
+					33,
+					"begin3",
+					33
+				};
+			};
+			soundContinuous=0;
+			soundBurst=0;
+			dispersion=0.0018;
+			reloadTime=0.3;
+			aiRateOfFire=0.40000001;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};
+		class close: manual
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=12;
+			burstRangeMax=28;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=0.5;
+			aiRateOfFireDistance=200;
+			minRange=1;
+			minRangeProbab=0.1;
+			midRange=100;
+			midRangeProbab=0.75;
+			maxRange=400;
+			maxRangeProbab=0.85000002;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=18;
+			burstRangeMax=42;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=300;
+			minRange=200;
+			minRangeProbab=0.30000001;
+			midRange=400;
+			midRangeProbab=0.85000002;
+			maxRange=750;
+			maxRangeProbab=0.85000002;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=18;
+			burstRangeMax=42;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=800;
+			minRange=600;
+			minRangeProbab=0.60000002;
+			midRange=750;
+			midRangeProbab=0.85000002;
+			maxRange=1250;
+			maxRangeProbab=0.60000002;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=18;
+			burstRangeMax=42;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=3;
+			aiRateOfFireDistance=1200;
+			minRange=1000;
+			minRangeProbab=0.69999999;
+			midRange=1250;
+			midRangeProbab=0.60000002;
+			maxRange=2500;
+			maxRangeProbab=0.1;
 		};
 	};
 	class FST_30mm_Autocannon_LAAT: Cannon_30mm_Plane_CAS_02_F

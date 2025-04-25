@@ -891,7 +891,7 @@ class CfgWeapons
 {
 	class 3AS_AV7_300mm_AMOS;
 	class BaseSoundModeType;
-	class AV7_Cannon: 3AS_AV7_300mm_AMOS{
+	class FST_AV7_Cannon: 3AS_AV7_300mm_AMOS{
 		scope=1;
 		displayName="[41st] AV7_300mm_Cannon";
 		reloadSound[]=
@@ -1099,6 +1099,8 @@ class CfgVehicles
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		generalMacro="B_MBT_01_arty_base_F";
+		tas_canBlift=1;
+		tas_liftVars="[[[[0,-4,-6.5]]], [-0.001], [-0.4]]";
 		crew="FST_Trooper_P2_DC15S";
 		typicalCargo[]=
 		{
@@ -1160,7 +1162,7 @@ class CfgVehicles
 				};
 				weapons[]=
 				{
-					"AV7_Cannon"
+					"FST_AV7_Cannon"
 				};
 				magazines[]=
 				{
