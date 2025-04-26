@@ -3,14 +3,7 @@
 params ["_unit"];
 
 if (isPlayer _unit && {[_unit] call ace_medical_status_fnc_isUnconscious}) then {
-    // Disable speaking on TFAR
-    _unit setVariable ["TFAR_canSpeak", false, true];
-
-    // Optional: set voice volume to zero
-    if (_unit call TFAR_fnc_haveSWRadio) then {
-        _unit call TFAR_fnc_setVoiceVolumeZero;
-    };
+    [_unit, ["TFAR_canSpeak", false, true]] remoteExec ["setVariable", _unit];
 } else {
-    // Restore when conscious
-    _unit setVariable ["TFAR_canSpeak", true, true];
+    [_unit, ["TFAR_canSpeak", true, true]] remoteExec ["setVariable", _unit];
 };
