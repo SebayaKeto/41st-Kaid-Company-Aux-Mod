@@ -204,6 +204,7 @@ class CfgPatches
 			"FST_P2_Connor",
 			"FST_P2_Paymos",
 			"FST_P2_Laer",
+			"FST_P2_Laer_Dirty",
 			"FST_P2_Ajax",
 			"FST_P2_Vixen",
 			"FST_P2_Cosmic",
@@ -13229,6 +13230,20 @@ class CfgWeapons
         {
             uniformModel="";
             uniformClass="FST_P2_Laer";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+    class FST_Uniform_Laer_Dirty: JLTS_CloneArmor
+    {
+        author="Daara";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Laer/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Laer_Dirty";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -29589,6 +29604,61 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Laer",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+    class FST_P2_Laer_Dirty: FST_Trooper_P2_DC15S
+    {
+        author="Daara";
+        displayName="[41st] CT-2137 'Laer' (Dirty)";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Laer_Dirty";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Laer_Dirty.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Laer_Dirty.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Laer_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Laer_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
