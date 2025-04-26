@@ -328,7 +328,7 @@ class CfgWeapons
 		{
 			displayName="$STR_A3_mortar_82mm_Single20";
 			artilleryCharge=0.69999999;
-			artilleryDispersion=4;
+			artilleryDispersion=1.5;
 		};
 		class Burst1: Mode_Burst
 		{
@@ -399,7 +399,7 @@ class CfgWeapons
 			midRangeProbab=0.60000002;
 			maxRange=2660;
 			maxRangeProbab=0.40000001;
-			artilleryDispersion=4;
+			artilleryDispersion=1.5;
 		};
 	};
 	class FST_Training_mortar_82mm: FST_mortar_82mm
