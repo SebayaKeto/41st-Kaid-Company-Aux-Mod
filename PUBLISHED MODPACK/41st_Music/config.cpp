@@ -138,6 +138,7 @@ class CfgMusic
 		"FST_Horn_of_Plenty",
 		"FST_ShipAlert",
 		"FST_Rakghoul",
+		"FST_UnityInBattle",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -259,6 +260,18 @@ class CfgMusic
 			1
 		};
 		duration="132";
+	};
+	class FST_UnityInBattle
+	{
+		name="[Action] Unity In Battle";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Unity-in-Battle.ogg",
+			6,
+			1
+		};
+		duration="122";
 	};
 	class FST_Rakghoul
 	{
