@@ -8289,6 +8289,36 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Nemesis: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Nemesis]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nemesis.paa",
+		};
+	};
+	class FST_P2_Helmet_Redeye: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Redeye]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Redeye.paa",
+		};
+	};
+	class FST_P2_Helmet_Spitfire: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Spitfire]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Spitfire.paa",
+		};
+	};
 	class FST_P2_Helmet_Bale: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -9032,6 +9062,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Laer.paa",
+		};
+	};	
+	class FST_P2_Helmet_Laer_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Laer/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Laer_Dirty.paa",
 		};
 	};	
 	class FST_P2_Helmet_Ripper: FST_P2_Helmet_Base
@@ -11706,6 +11746,34 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Sledge: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Sledge]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Sledge";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Sledge: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Sledge]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Sledge";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Plop: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -13235,9 +13303,9 @@ class CfgWeapons
             mass=15;
         };
     };
-    class FST_Uniform_Laer_Dirty: JLTS_CloneArmor
+	class FST_Uniform_Laer_Dirty: JLTS_CloneArmor
     {
-        author="Daara";
+        author="Gold";
         picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
         displayName="[41st] P2 Armor [Laer/Dirty]";
         class ItemInfo: UniformItem
@@ -23832,6 +23900,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Sledge: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-3256 'Sledge'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Sledge";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Sledge.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Sledge.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Sledge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Sledge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Wuffer: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-4584 'Wuffer'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Wuffer";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Wuffer.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Wuffer.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Wuffer",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Wuffer",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Salt: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -29612,9 +29790,9 @@ class CfgVehicles
             "JLTS_clone_comlink"
         };
     };
-    class FST_P2_Laer_Dirty: FST_Trooper_P2_DC15S
+	class FST_P2_Laer_Dirty: FST_Trooper_P2_DC15S
     {
-        author="Daara";
+        author="Gold";
         displayName="[41st] CT-2137 'Laer' (Dirty)";
         scope=2;
         Backpack="";
