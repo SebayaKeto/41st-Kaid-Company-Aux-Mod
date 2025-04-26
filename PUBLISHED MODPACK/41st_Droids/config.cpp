@@ -697,74 +697,74 @@ class CfgVehicles
 		respawnItems[]={};
 		class HitPoints: O_Soldier_F
 		{
- 			class HitFace
+			class HitFace
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80; //Was 100
+				minimalHit=0.01;
 			};
 			class HitNeck: HitFace
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitHead: HitNeck
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitPelvis: HitHead
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitAbdomen: HitPelvis
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitChest: HitDiaphragm
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitBody: HitChest
 			{
 				armor=1;
 				passthrough=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=80;
+				minimalHit=0.01;
 			};
 			class HitArms: HitBody
 			{
 				armor=1;
 				passthrough=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=85;
+				minimalHit=0.01;
 			};
 			class HitHands: HitArms
 			{
 				armor=1;
 				passthrough=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=85;
+				minimalHit=0.01;
 			};
 			class HitLegs: HitHands
 			{
 				armor=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=85;
+				minimalHit=0.01;
 			};
 			class Incapacitated: HitLegs
 			{
@@ -774,8 +774,8 @@ class CfgVehicles
 			{
 				armor=1;
 				passthrough=1;
-				explosionShielding	= 100;	
-				minimalHit			= 0.01;	
+				explosionShielding=85;
+				minimalHit=0.01;
 			}; 
 		};
 		linkedItems[]=
