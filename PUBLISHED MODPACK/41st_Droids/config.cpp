@@ -408,6 +408,24 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_JMSLLTE_JinTrooper_armor_F_CombatUniform: Uniform_Base
+	{
+		author="JMax";
+		scope=2;
+		displayName="[41st] Tukata PMC Armor";
+		picture="\JMSLLTE_empire\data\ico\ico_u_jinT.paa";
+		nakedUniform="U_BasicBody";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		allowedSlots[]={901};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_JMSLLTE_JinTrooper_armor_F";
+			modelSides[]={6};
+			containerClass="Supply40";
+			mass=40;
+		};
+	};
 	class FST_Jorgetrooper_Uniform: FST_Uniform_CIS_Heavy_Base
 	{
 		author="$STR_3AS_Studio";
@@ -653,6 +671,62 @@ class CfgVehicles
 			{
 				count=10;
 				magazine="FST_blaster_battery_Red";
+			};
+		};
+	};
+	class B_AssaultPack_blk;
+	class FST_belt_bag_Tukata: B_AssaultPack_blk
+	{
+		author="Daara";
+		scope=2;
+		maximumload=250;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
+		displayName="[41st] Belt Bag";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_belt_bag_co.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_FST_RPS6_Rocket
+			{
+				count=2;
+				magazine="FST_RPS6_Rocket";
+			};
+			class _xx_FST_blaster_battery_Red
+			{
+				count=12;
+				magazine="FST_blaster_cell_Westar_Yellow";
+			};
+		};
+	};
+	class FST_belt_bag_Tukata_AR: B_AssaultPack_blk
+	{
+		author="Daara";
+		scope=2;
+		maximumload=250;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
+		displayName="[41st] Belt Bag";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_belt_bag_co.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_FST_blaster_battery_Red
+			{
+				count=12;
+				magazine="FST_blaster_battery_Yellow";
 			};
 		};
 	};
@@ -2212,6 +2286,323 @@ class CfgVehicles
 			"IDA_grenade_Detonator_mag",
 		};
 	};
+	class FST_JMSLLTE_JinTrooper_armor_F: FST_CIS_Heavy_Base_F
+	{
+		author="JMax";
+		scope=2;
+		scopecurator=2;
+		modelSides[]={6};
+		displayName="[41st] Tukata PMC Trooper";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		backpack="FST_belt_bag_Tukata";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"JMSLLTE_empire\data\body\jin_suit_clo.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_clo_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_clo_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"
+			};
+		};
+		weapons[]=
+		{
+			"FST_Westar_M5_A",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_Westar_M5_A",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
+			"FST_P2_Invisible_Helmet"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
+			"FST_P2_Invisible_Helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+	};
+	class FST_JMSLLTE_JinTrooper_armor_AT: FST_JMSLLTE_JinTrooper_armor_F
+	{
+		author="JMax";
+		scope=2;
+		scopecurator=2;
+		modelSides[]={6};
+		displayName="[41st] Tukata PMC Trooper (AT)";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		backpack="FST_belt_bag_Tukata";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"JMSLLTE_empire\data\body\jin_suit_clo.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_clo_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_clo_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"
+			};
+		};
+		weapons[]=
+		{
+			"FST_Westar_M5_A",
+			"FST_RPS6HP",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_Westar_M5_A",
+			"FST_RPS6HP",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
+			"FST_P2_Invisible_Helmet"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
+			"FST_P2_Invisible_Helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"FST_blaster_cell_Westar_Yellow",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+	};
+	class FST_JMSLLTE_JinTrooper_armor_AR: FST_JMSLLTE_JinTrooper_armor_F
+	{
+		author="JMax";
+		scope=2;
+		scopecurator=2;
+		modelSides[]={6};
+		displayName="[41st] Tukata PMC Trooper (AR)";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		backpack="FST_belt_bag_Tukata_AR";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"JMSLLTE_empire\data\body\jin_suit_clo.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_clo_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_clo_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_suit_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor_injury.rvmat",
+				"JMSLLTE_empire\data\body\jin_armor_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"
+			};
+		};
+		weapons[]=
+		{
+			"FST_Z6",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_Z6",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
+			"FST_P2_Invisible_Helmet"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
+			"FST_P2_Invisible_Helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_battery_Yellow",
+			"FST_blaster_battery_Yellow",
+			"FST_blaster_battery_Yellow",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_battery_Yellow",
+			"FST_blaster_battery_Yellow",
+			"FST_blaster_battery_Yellow",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+		};
+	};
 	class FST_Jorgetrooper: FST_CIS_Heavy_Base_F
 	{
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
@@ -3517,6 +3908,96 @@ class cfgGroups
 					{
 						side=0;
 						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+				class FST_Tukata_Squad
+				{
+					name="[41st] Tukata PMC Squad";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_AT";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_AR";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_AT";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_AR";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_JMSLLTE_JinTrooper_armor_F";
 						rank="PRIVATE";
 						position[]={0,-5,0};
 					};
