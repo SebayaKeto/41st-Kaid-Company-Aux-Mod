@@ -16,16 +16,6 @@ class CfgPatches
 		author="$STR_3AS_Studio";
 	};
 };
-class Extended_init_EventHandlers
-{
-	class FST_SHB_Bomber
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -134,8 +124,6 @@ class CfgVehicles
 		model="3as\3AS_BTLB\3AS_BTLB_Bomber.p3d";
 		icon="3AS\3AS_BTLB\data\ui\BTLB_top_ca.paa";
 		picture="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Plane_Fighter_03_CA.paa";
-		ls_hasImpulse=0;
-		tas_can_impulse=0;
 		ace_cargo_space=1000;
 		ace_cargo_hasCargo=1;
 		selectionFireAnim="zasleh";
