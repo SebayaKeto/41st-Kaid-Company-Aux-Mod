@@ -15,6 +15,16 @@ class CfgPatches {
 
 class Extended_PostInit_EventHandlers {
     class mymod_override {
-        init = "call compile preprocessFileLineNumbers '\41st_Unconscious\XEH_postInit.sqf'";
+        init = "";
     };
-};	
+};
+
+class CfgFunctions {
+    class acearcade_arcadeunconscious {
+        class Functions {
+            class unconsciousRadio {
+                file = "\41st_Unconscious\functions\fnc_unconsciousRadio.sqf";
+            };
+        };
+    };
+};

@@ -27,7 +27,10 @@ class CfgPatches
 			"FST_Droid_B1_BMO",
 			"FST_Droid_B1_Rodger",
 			"FST_Droid_B1_Tumble",
-			"FST_Droid_B1_PLAD"
+			"FST_Droid_B1_PLAD",
+			"FST_JMSLLTE_JinTrooper_armor_F",
+			"FST_JMSLLTE_JinTrooper_armor_AR",
+			"FST_JMSLLTE_JinTrooper_armor_AT"
 		};
 		weapons[]={};
 	};
