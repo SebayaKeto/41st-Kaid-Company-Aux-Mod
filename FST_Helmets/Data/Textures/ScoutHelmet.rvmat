@@ -74,7 +74,7 @@ class Stage5
 };
 class Stage6
 {
-	texture = "#(ai,64,64,1)fresnel(3.5,1.5)";
+	texture = "#(ai,64,64,1)fresnel(1,1)";
 	uvSource = "tex";
 	class uvTransform
 	{
