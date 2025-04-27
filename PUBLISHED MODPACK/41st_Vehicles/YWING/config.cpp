@@ -134,12 +134,7 @@ class CfgVehicles
 		model="3as\3AS_BTLB\3AS_BTLB_Bomber.p3d";
 		icon="3AS\3AS_BTLB\data\ui\BTLB_top_ca.paa";
 		picture="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Plane_Fighter_03_CA.paa";
-		ls_impulsor_fuelDrain_1=9.9999997e-005;
-		ls_impulsor_fuelDrain_2=9.9999997e-005;
-		ls_impulsor_boostSpeed_1=400;
-		ls_impulsor_boostSpeed_2=800;
-		tas_impulse_break=100;
-		ls_hasImpulse=1;
+		ls_hasImpulse=0;
 		tas_can_impulse=0;
 		ace_cargo_space=1000;
 		ace_cargo_hasCargo=1;
