@@ -6,7 +6,7 @@ class CfgPatches
 	{
 		author = "Maldova";
 		units[] = {};
-		weapons[] = {"FST_ScoutHelmet_Base","FST_ScoutHelmet_MarkedOne"};
+		weapons[] = {"FST_ScoutHelmet_Base","FST_ScoutHelmet_MarkedOne","FST_ScoutHelmet_Woodland_MarkedOne","FST_ScoutHelmet_Woodland_Unmarked"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_characters_f"};
 	};
@@ -47,6 +47,20 @@ class CfgWeapons
 		displayName = "Scout Helmet (CT)";
 		hiddenSelections[] = {"Camo1","Visor"};
 		hiddenSelectionsTextures[] = {"FST\FST_Helmets\Data\Textures\ScoutMarkedOne_co.paa","FST\FST_Helmets\Data\Textures\GreenVisor_co.paa"};
+		hiddenSelectionsMaterials[] = {"FST\FST_Helmets\Data\Textures\ScoutHelmet.rvmat","FST\FST_Helmets\Data\Textures\visor.rvmat"};
+	};
+	class FST_ScoutHelmet_Woodland_Unmarked: FST_ScoutHelmet_Base
+	{
+		displayName = "Scout Helmet (Woodland)";
+		hiddenSelections[] = {"Camo1","Visor"};
+		hiddenSelectionsTextures[] = {"FST\FST_Helmets\Data\Textures\ScoutWoodlandUnmarked_co.paa","FST\FST_Helmets\Data\Textures\GreenVisor_co.paa"};
+		hiddenSelectionsMaterials[] = {"FST\FST_Helmets\Data\Textures\ScoutHelmet.rvmat","FST\FST_Helmets\Data\Textures\visor.rvmat"};
+	};
+	class FST_ScoutHelmet_Woodland_MarkedOne: FST_ScoutHelmet_Base
+	{
+		displayName = "Scout Helmet (CT Woodland)";
+		hiddenSelections[] = {"Camo1","Visor"};
+		hiddenSelectionsTextures[] = {"FST\FST_Helmets\Data\Textures\ScoutWoodlandMarkedOne_co.paa","FST\FST_Helmets\Data\Textures\GreenVisor_co.paa"};
 		hiddenSelectionsMaterials[] = {"FST\FST_Helmets\Data\Textures\ScoutHelmet.rvmat","FST\FST_Helmets\Data\Textures\visor.rvmat"};
 	};
 };
