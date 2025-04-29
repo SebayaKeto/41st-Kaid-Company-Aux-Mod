@@ -28,6 +28,10 @@ class CfgEditorCategories
 	{
 		displayname = "[FST] GAR Barricades";
 	};
+	class FST_CatagoryVegetationKashyyyk
+	{
+		displayname = "[FST] Kashyyyk Vegetation";
+	};
 };
 class CfgEditorSubcategories
 {
@@ -35,5 +39,8 @@ class CfgEditorSubcategories
 	{
 		displayName = "Security Barricades";
 	};
-	
+	class FST_Subcategory_KashyyykVines
+	{
+		displayName = "Kashyyyk Vines";
+	};
 };
