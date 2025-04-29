@@ -223,6 +223,7 @@ class CfgWeapons
 				"FST_thermal_coil_Nexu_Yellow",
 				"FST_thermal_coil_Nexu_Red"		*/
 			};
+			magazineWell[]={};
 			cameraDir = "OP_look";
 			discreteDistance[] = {100, 200, 300};
 			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3"}; // Position of the camera
@@ -246,7 +247,7 @@ class CfgWeapons
 					weaponSoundEffect = "";
 					begin1[] = 
 					{
-						"\41st_Weapons\T15\Data\t15v1 2-177.ogg",
+						"41st_Weapons\T15\Data\t15UGL.ogg",
 						1.25,
 						1,
 						1800
@@ -320,7 +321,7 @@ class CfgWeapons
                     "3AS_optic_holo_DC15S",
                     "Optic_MRCO",
                     "3AS_optic_reflex_DC15C",
-		    "FST_Optic_MRCO_T15"
+					"FST_Optic_MRCO_T15"
                 };
             };
             class MuzzleSlot: MuzzleSlot 
