@@ -1792,15 +1792,15 @@ class CfgWeapons
             };
         };
     };
-	class 3AS_optic_holo_DC15S;
+	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class FST_Attachment_Optic_Holo_DC15: 3AS_optic_holo_DC15S
+	class FST_Attachment_Optic_Holo_DC15: ItemCore
 	{
 		author="Vengence";
 		scope=2;
 		displayName="[41st] Holo Optic";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="\3AS\3AS_Weapons\DC15S\3AS_DC15S_Holo_f.p3d";
+		model="ls_weapons\accessories\dcOptics\holosight_blue.p3d";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
