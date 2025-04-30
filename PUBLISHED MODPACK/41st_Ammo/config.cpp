@@ -883,6 +883,20 @@ class CfgAmmo
 		CraterEffects="SWLW_plasma_he_impact";
 		lightcolor[]={0,0,1};
 	};
+	class FST_TDHE_RifleGrenade: G_40mm_HE
+	{
+		ace_frag_enabled=1;
+		indirectHitRange=7;
+		indirectHit=30;
+		effectflare="FlareShell";
+		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		ExplosionEffects="SWLW_plasma_he_impact";
+		CraterEffects="SWLW_plasma_he_impact";
+		lightcolor[]={0,0,1};
+		fuseDistance=0;
+		timetolive=5;
+		simulation = "shotShell";
+	};
 	class FST_HE_WristRocket: G_40mm_HE
 	{
 		ace_frag_enabled=1;
@@ -2005,6 +2019,15 @@ class CfgMagazines
 		displayName="[41st] Impact Rifle Grenade";
 		descriptionShort="Impact Grenade";
 		ammo="FST_HE_RifleGrenade";
+		count=1;
+		mass=8;
+	};
+	class FST_TDHE_LauncherGrenade: IDA_HE_LauncherGrenade
+	{
+		author="Adapted from the Indecisive Armoury Team";
+		displayName="[41st] Time Delay Rifle Grenade";
+		descriptionShort="Time Delay Grenade";
+		ammo="FST_TDHE_RifleGrenade";
 		count=1;
 		mass=8;
 	};
