@@ -1,0 +1,43 @@
+class StageTI
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0)";
+};
+class Stage1
+{
+	texture = "41st_Weapons\DC-15U\data\DefaultMaterial_Normal.paa";
+	uvSource = "tex";
+};
+class Stage2
+{
+	texture = "41st_Weapons\DC-15U\data\DefaultMaterial_Roughness.paa";
+	uvSource = "tex";
+};
+class Stage3
+{
+	texture = "#(argb,8,8,3)color(1,1,1,1)";
+	uvSource = "tex";
+};
+class Stage4
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0)";
+	uvSource = "tex";
+};
+class Stage5
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0)";
+	uvSource = "tex";
+};
+class Stage6
+{
+	texture = "41st_Weapons\DC-15U\data\DefaultMaterial_Base_color.paa";
+	uvSource = "tex";
+};
+
+ambient[] = {1,1,1,1};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0.05,0.05,0.05,1};
+emmisive[] = {0,0,0,1};
+specular[] = {0.2,0.2,0.2,1};
+specularPower = 80;
+PixelShaderID = "NormalMapSpecularDI";
+VertexShaderID = "NormalMap";
