@@ -788,6 +788,19 @@ class CfgVehicles
 		{
 			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
 		}; 
+		ace_cargo_hasCargo=1;
+		ace_cargo_space=1000;
+        class ace_cargo
+		{
+            class cargo
+			{
+                class FST_ExplodeFuelBarrel_1
+				{
+                    type = "FST_ExplodeFuelBarrel_1";
+                    amount = 1;
+                };
+            };
+        };	
 		typicalcargo[]=
 		{
 			"JLTS_Clone_P2_DC15S"
