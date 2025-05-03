@@ -417,6 +417,7 @@ class CfgWeapons
 			magazines[]=
 			{
 				"FST_HE_LauncherGrenade",
+				"FST_HE_LauncherGrenade_Delayed_5",
 				"FST_TDHE_LauncherGrenade",
 				"IDA_Smoke_LauncherGrenade",
 				"IDA_SmokeRed_LauncherGrenade",
@@ -1086,6 +1087,7 @@ class CfgWeapons
 			{
 				"IDA_HE_LauncherGrenade",
 				"FST_HE_LauncherGrenade",
+				"FST_HE_LauncherGrenade_Delayed_5",
 				"IDA_Smoke_LauncherGrenade",
 				"IDA_SmokeRed_LauncherGrenade",
 				"IDA_SmokeGreen_LauncherGrenade",
@@ -1204,6 +1206,7 @@ class CfgWeapons
 			{
 				"IDA_HE_LauncherGrenade",
 				"FST_HE_LauncherGrenade",
+				"FST_HE_LauncherGrenade_Delayed_5",
 				"IDA_Smoke_LauncherGrenade",
 				"IDA_SmokeRed_LauncherGrenade",
 				"IDA_SmokeGreen_LauncherGrenade",

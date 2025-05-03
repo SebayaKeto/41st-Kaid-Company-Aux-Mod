@@ -451,6 +451,7 @@ class CfgWeapons
 			magazines[]=
 			{
 				"FST_HE_LauncherGrenade",
+				"FST_HE_LauncherGrenade_Delayed_5",
 				"IDA_Smoke_LauncherGrenade",
 				"IDA_SmokeRed_LauncherGrenade",
 				"IDA_SmokeGreen_LauncherGrenade",

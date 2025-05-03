@@ -897,7 +897,6 @@ class CfgAmmo
 		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
 	};
 	class GrenadeHand_stone;
-	class GrenadeHand;
 	class G_40mm_HE;
 	class FST_HE_RifleGrenade: G_40mm_HE
 	{
@@ -1000,6 +999,27 @@ class CfgAmmo
 		explosionEffects="VehicleExplosionEffects";
 		effectsSmoke="ACE_Incendiary";
 	};
+    class FST_HE_RifleGrenade_Delayed_5: FST_grenade_Detonator_ammo
+	{
+		// Basic behavior
+		simulation = "shotGrenade";
+		timeToLive = 10; 				 //Set time before the projectile is deleted. 
+		explosionTime = 5;               // Explodes after X seconds
+
+		// Bouncing
+		deflecting = 1000;         		 // Always deflect (0 = No bouncing — round always sticks or explodes) (45 = Only glancing (shallow angle) hits will bounce) (100 = Most angles will bounce) (1000 = Always tries to bounce, even on direct hits)
+		deflectionSlowDown = 0.05;       // Retain speed after bounce / lower = faster
+
+		// Movement
+		airFriction = -0.001;
+		sideAirFriction = 0.1;
+		typicalSpeed = 75;
+        initSpeed = 75;
+        maxSpeed = 100;
+		caliber = 1;
+		gravityCoef = 0.9; // Optional: makes it fall more slowly
+		friction = 0.1;    // Low friction to reduce energy loss
+    };
 	class R_PG32V_F;
 	class ACE_Javelin_FGM148;
 	class PLX_Javelin;
@@ -2046,6 +2066,15 @@ class CfgMagazines
 		displayName="[41st] Impact Rifle Grenade";
 		descriptionShort="Impact Grenade";
 		ammo="FST_HE_RifleGrenade";
+		count=1;
+		mass=8;
+	};
+	class FST_HE_LauncherGrenade_Delayed_5: IDA_HE_LauncherGrenade
+	{
+		author="Gold";
+		displayName="[41st] Delayed Rifle Grenade (5s)";
+		descriptionShort="Delayed Grenade (5s)";
+		ammo="FST_HE_RifleGrenade_Delayed_5";
 		count=1;
 		mass=8;
 	};
