@@ -97,8 +97,8 @@ class CfgWeapons
 		displayName="[41st] Valken-38X rifle";
 		baseWeapon="FST_Valken38x";
 		descriptionShort="Multi-Role Elite Rifle.";
-		model="3AS\3AS_Weapons\Valken38X\3AS_Valken38X.p3d";
-		picture="\3AS\3AS_Weapons\Valken38X\Data\UI\3as_valken.paa";
+		model="\3AS\3AS_Weapons\Republic\Valken38X\3AS_Valken38X_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\Valken38X\Data\UI\3as_valken38x.paa";
 		ace_overheating_mrbs=40000;
 		ace_overheating_slowdownFactor=0;
 		ace_overheating_allowSwapBarrel=0;
@@ -275,6 +275,54 @@ class CfgWeapons
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
+		weaponInfoType="RscOptics_nightstalker";
+		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
+		class OpticsModes
+		{
+			class Iron
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=100;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+			};
+			class IDA_DC15A_Scope
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=100;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				cameraDir="";
+			};
+		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=60;
@@ -282,7 +330,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"FST_Scope_VK38X"
+	//				"FST_Scope_VK38X"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot

@@ -24,7 +24,7 @@ class CfgPatches
 		{
 			"FST_grenade_emp_ammo",
 			"FST_grenade_Detonator_ammo",
-			"FST_grenade_rock_ammo",
+			"FST_grenade_rock_ammo"
 		};
 	};
 };

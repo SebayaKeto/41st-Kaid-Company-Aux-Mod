@@ -494,17 +494,17 @@ class CfgWeapons
 		displayName="[41st] DC-15LE Designated Marksman Rifle";
 		descriptionShort="Long range, slow rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
-		model="3AS\3AS_Weapons\DC15A\3AS_DC15A_f.p3d";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15LE\Model\IDA_DC15LE.p3d";
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"3AS\3AS_Weapons\DC15A\Data\Anim\DC15A_handanim.rtm"
+			"Indecisive_Armoury_Anims\Republic\DC15A.rtm"
 		};
-		reloadAction="GestureReload_JLTS_DC15A";
+		reloadAction="GestureReload_IDA_Reload_Blaster";
 		reloadMagazineSound[]=
 		{
-			"\41st_Weapons\DC-15AS\Data\reload.ogg",
-			1.5,
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
 			1,
 			100
 		};
@@ -526,49 +526,37 @@ class CfgWeapons
 		};
 		class OpticsModes
 		{
-			class Ironsights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsFlare="true";
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.5;
-				opticsZoomMax=1.1;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-			};
-			class Scope: Ironsights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.125;
-				opticsZoomMax=0.125;
-				opticsZoomInit=0.125;
-				memoryPointCamera="opticView";
-				visionMode[]=
-				{
-					"Normal",
-					"NVG"
-				};
-				opticsFlare="true";
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-				cameraDir="";
-			};
+			class IronSights
+            {
+                distanceZoomMax = 100;
+                distanceZoomMin = 100;
+                memoryPointCamera = "eye";
+                opticsDisablePeripherialVision = 0.67;
+                opticsFlare = "true";
+                opticsID = 1;
+                opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5"};
+                opticsZoomInit = 0.75;
+                opticsZoomMax = 1.1;
+                opticsZoomMin = 0.375;
+                useModelOptics = 0;
+                visionMode[] = {};
+            };
+            class Scope
+            {
+                cameraDir = "";
+                distanceZoomMax = 100;
+                distanceZoomMin = 100;
+                memoryPointCamera = "opticView";
+                opticsDisablePeripherialVision = 0.67;
+                opticsFlare = "true";
+                opticsID = 2;
+                opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5"};
+                opticsZoomInit = 0.0625;
+                opticsZoomMax = 0.0625;
+                opticsZoomMin = 0.03125;
+                useModelOptics = 1;
+                visionMode[] = {"Normal","NVG"};
+			};		
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -661,22 +649,22 @@ class CfgWeapons
             mass=80;
             class CowsSlot: CowsSlot
             {
-                linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+        /*      linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
                 compatibleItems[]=
                 {
-                    "3AS_Optic_Red_DC15A",
-                    "FST_Optic_LEScope_DC15LE", 
-                };
+                   "3AS_Optic_Red_DC15A",
+                    "FST_Optic_LEScope_DC15LE"
+                };*/
             };
             class MuzzleSlot: MuzzleSlot
             {
-                linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+        /*      linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
                 compatibleItems[]=
                 {
                     "3AS_Muzzle_LE_DC15A"
                 };
                 iconPosition[]={0,0.44999999};
-                iconScale=0.2;
+                iconScale=0.2;*/
             };
             class PointerSlot: PointerSlot
             {
@@ -1330,14 +1318,15 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					"3AS_optic_reflex_DC15C"
+					"3AS_optic_reflex_DC15C",
+					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
 				compatibleItems[]=
 				{
-					"FST_Knife",
+		//			"FST_Knife",
 				};
 			};
             class PointerSlot: PointerSlot
@@ -1360,7 +1349,7 @@ class CfgWeapons
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"\3AS\3AS_Weapons\DC15C\Data\Anim\DC15C_handanim.rtm"
+			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15C_Handanim.rtm"
 		};
 		selectionFireAnim="zasleh";
 		fireLightDiffuse[]={7,110,176};
@@ -1551,7 +1540,7 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="[41st] DC-15C Carbine";
-		model="3AS\3AS_Weapons\DC15C\3AS_DC15C_f";
+		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_F.p3d";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		weaponInfoType="RscOptics_nightstalker";
 		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";

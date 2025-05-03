@@ -258,5 +258,53 @@ class CfgVehicles
 				};
 			};
 		};
+		soundEngineOnInt[] = {"\41st_Vehicles\N99\Data\Sound\N99Start.ogg", 2, 1};
+		soundEngineOnExt[] = {"\41st_Vehicles\N99\Data\Sound\N99Start.ogg", 4, 1, 200};
+		soundEngineOffInt[] = {"\41st_Vehicles\N99\Data\Sound\N99Stop.ogg", 2, 1};
+		soundEngineOffExt[] = {"\41st_Vehicles\N99\Data\Sound\N99Stop.ogg", 4, 1, 200};
+		class Sounds: Sounds
+		{
+			class Idle_ext
+			{
+				sound[] = {"\41st_Vehicles\N99\Data\Sound\N99Idle.ogg", 1, 1, 480};
+				frequency = "0.95 + ((rpm/2640) factor[200/2640, 600/2640]) * 0.15";
+				volume = "engineOn * camPos * (rpm factor[100, 500])";
+			};
+
+			class Engine_ext
+			{
+				sound[] = {"41st_Vehicles\N99\Data\Sound\N99Move.ogg", 1.2, 1, 550};
+				frequency = "0.9 + ((rpm/2640) factor[500/2640, 1200/2640]) * 0.2";
+				volume = "engineOn * camPos * (rpm factor[400, 1000])";
+			};
+
+			class Engine1_ext
+			{
+				sound[] = {"41st_Vehicles\N99\Data\Sound\N99Move.ogg", 1.3, 1, 550};
+				frequency = "1.0 + ((rpm/2640) factor[1000/2640, 1700/2640]) * 0.2";
+				volume = "engineOn * camPos * (rpm factor[900, 1500])";
+			};
+
+			class Engine2_ext
+			{
+				sound[] = {"41st_Vehicles\N99\Data\Sound\N99Move.ogg", 1.4, 1, 550};
+				frequency = "1.05 + ((rpm/2640) factor[1600/2640, 2200/2640]) * 0.2";
+				volume = "engineOn * camPos * (rpm factor[1400, 2640])";
+			};
+
+			class Idle_int
+			{
+				sound[] = {"\41st_Vehicles\N99\Data\Sound\N99Idle.ogg", 1.2, 1};
+				frequency = "0.95 + ((rpm/2640) factor[200/2640, 600/2640]) * 0.15";
+				volume = "engineOn * (1 - camPos) * (rpm factor[100, 500])";
+			};
+
+			class Engine_int
+			{
+				sound[] = {"41st_Vehicles\N99\Data\Sound\N99Move.ogg", 1.0, 1};
+				frequency = "0.9 + ((rpm/2640) factor[500/2640, 1500/2640]) * 0.2";
+				volume = "engineOn * (1 - camPos) * (rpm factor[400, 1400])";
+			};
+		};	
 	};
-};
+};	

@@ -10,6 +10,34 @@ class CfgPatches
 		weapons[]={};
 	};
 };
+class CfgSoundShaders
+{
+    class FST_GrenadeEMP_Exp_SoundShader
+    {
+        samples[] = {
+			{"\41st_Weapons\Grenades\Data\droidpopper.ogg",3,0.9},
+			{"\41st_Weapons\Grenades\Data\droidpopper.ogg",3,1.0},
+			{"\41st_Weapons\Grenades\Data\droidpopper.ogg",3,1.1},
+			{"\41st_Weapons\Grenades\Data\droidpopper.ogg",3,1.2},
+		};
+        volume = 3;
+        range = 150;
+        rangeCurve = "InverseSquare2Curve";
+    };
+};
+class CfgSoundSets
+{
+    class FST_GrenadeEMP_Exp_SoundSet
+    {
+        soundShaders[] = {"FST_GrenadeEMP_Exp_SoundShader"};
+        volumeFactor = 3;
+        frequencyRandomizer = 1;
+        frequencyFactor = 1;
+        spatial = 1;
+        doppler = 0;
+        loop = 0;
+    };
+};
 class CfgAmmo
 {
 	class BulletBase;
@@ -941,13 +969,12 @@ class CfgAmmo
 		};
 		SoundSetExplosion[]=
 		{
-			"JLTS_GrenadeEMP_Exp_SoundSet",
-			"JLTS_GrenadeEMP_Tail_SoundSet",
+			"FST_GrenadeEMP_Exp_SoundSet",
 			"Explosion_Debris_SoundSet"
 		};
 		soundFly[]=
 		{
-			"\Indecisive_Armoury_Sounds\Detonator_Timer.ogg",
+			"41st_Weapons\Grenades\Data\droidpoppertimer.ogg",
 			6,
 			1,
 			90

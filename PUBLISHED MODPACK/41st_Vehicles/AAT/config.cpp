@@ -380,6 +380,12 @@ class CfgVehicles
 				};
 			};
 		};
+		soundEngineOnInt[] = {"41st_Vehicles\AAT\Data\Sound\AATStart.ogg", 2, 1};
+		soundEngineOnExt[] = {"41st_Vehicles\AAT\Data\Sound\AATStart.ogg", 5, 1, 400};
+		soundEngineOffInt[] = {"41st_Vehicles\AAT\Data\Sound\AATShutdown.ogg", 2, 1};
+		soundEngineOffExt[] = {"41st_Vehicles\AAT\Data\Sound\AATShutdown.ogg", 5, 1, 400};
+		soundSetEngineOn[] = {"FST_AAT_EngineOn_SoundSet"};
+		soundSetEngineOff[] = {"FST_AAT_EngineOff_SoundSet"};
 	}; 
 	class FST_AAT_Tan: FST_AAT
 	{
