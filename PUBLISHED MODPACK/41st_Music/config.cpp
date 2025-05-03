@@ -917,6 +917,18 @@ class CfgMusic
 		};
 		duration="385";
 	};
+	class FST_Payday_Razormind
+	{
+		name="(Payday 2) Razormind";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Payday_OST_Razormind.ogg",
+			1,
+			1
+		};
+		duration="274";
+	};
 	class FST_Destiny_ParacausalMutilation
 	{
 		name="(Destiny 2) Paracausal Mutilation";
