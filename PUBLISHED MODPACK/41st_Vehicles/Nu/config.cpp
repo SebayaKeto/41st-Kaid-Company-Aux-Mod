@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		units[]=
         {
-            "FST_Nu_Shuttle",
+            "FST_Nu_Base",
         };
         weapons[]=
 		{
@@ -67,6 +67,7 @@ class Extended_init_EventHandlers
 		{
 			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
 		};
+		
 	};
 }; 
 class DefaultEventhandlers;
@@ -189,7 +190,7 @@ class CfgVehicles
 	};
 	class FST_Nu_Base: 3AS_Nu_Base_F
 	{
-		_generalmacro="FST_Nu_Attack_S";
+		_generalmacro="FST_Nu_Transport";
 		accuracy=5;
 		author="Ruby and Gold";
 		availableforsupporttypes[]=
@@ -198,48 +199,74 @@ class CfgVehicles
 			"Transport",
 			"Drop"
 		};
+		class RotorLibHelicopterProperties
+		{
+			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			autoHoverCorrection[]={3.2,0,0};
+			defaultCollective=0.80500001;
+			retreatBladeStallWarningSpeed=83;
+			maxTorque=5800;
+			stressDamagePerSec=0.0099999998;
+			maxHorizontalStabilizerLeftStress=8000;
+			maxHorizontalStabilizerRightStress=8000;
+			maxVerticalStabilizerStress=4000;
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=225000;
+			maxTailRotorStress=225000;
+		};
+		mainBladeRadius=0.1;
+		liftForceCoef=3;
+		bodyFrictionCoef=1.9845001;
+		cyclicAsideForceCoef=1;
+		backRotorForceCoef=1.8;
+		cyclicForwardForceCoef=1;
+		acceleration=450;
+		maxSpeed=600;
+		getInRadius=5;
+		altFullForce=10000;
+		altNoForce=15000;
+		brakeDistance=200;
+		mainRotorSpeed=-1;
+		backRotorSpeed=1;
+		maxMainRotorDive=7;
+		minMainRotorDive=-7;
+		neutralMainRotorDive=0;
         cost="3e+006";
 		crew="FST_Pilot_P1";
-		displayname="[41st] Nu Attack Shuttle Base";
+		displayname="[41st] Nu Shuttle Transport";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		vehicleclass="Helicopter";
-		scope=2;
-		side=0;
+		scope=0;
+		side=1;
 		fuelCapacity=8000;
 		dustEffect="";
 		waterEffect="";
+		ls_hasImpulse=1;
 		ls_impulsor_fuelDrain_1=9.9999997e-005;
 		ls_impulsor_fuelDrain_2=9.9999997e-005;
 		ls_impulsor_boostSpeed_1=300;
 		ls_impulsor_boostSpeed_2=800;
 		tas_impulse_break=100;
-		model="3as\3AS_Republic_Heli\Nu_Class\model\3AS_NuClass.p3d";
-		ls_hasImpulse=1;
+		model="3as\3AS_nu\model\TCW_Nuaclass.p3d";
+		cargoaction[]=
+		{
+			"Nu_Cargo"
+		};
 		tas_can_impulse=0;
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
-		altFullForce=10000;
-		altNoForce=15000;
-		maxSpeed=900;
-		acceleration=600;
 		maxFordingDepth=5;
 		incomingMissileDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
 		LockDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
-		getInRadius=5;
-		mainBladeRadius=0;
-		liftForceCoef=3;
-		bodyFrictionCoef=11;
-		cyclicAsideForceCoef=5;
-		cyclicForwardForceCoef=3;
-		backRotorForceCoef=2;
-		draconicForceXCoef=11;
+/* 		draconicForceXCoef=11;
 		draconicForceYCoef=2;
 		draconicForceZCoef=2;
 		draconicTorqueXCoef=0.050000001;
-		draconicTorqueYCoef=0;
+		draconicTorqueYCoef=0; */
 		defaultUserMFDvalues[]={0,1,0,1,0};
-		armor=400;
+		armor=600;
 		armorStructural=1;
 		tf_range=100000;
 		tf_isolatedAmount=0.40000001;
@@ -298,29 +325,23 @@ class CfgVehicles
 		};
 		hiddenSelections[]=
 		{
-			"camo",
 			"camo1",
 			"camo2",
 			"camo3",
-			"camo4",
-			"camo5",
-			"camo6"
+			"camo4"
 		};
 		hiddenSelectionsTextures[]=
 		{
-        "41st_Vehicles\Nu\Data\FST_NU_HullExterior.paa",
-			"41st_Vehicles\Nu\Data\FST_NU_Hullfront.paa",
-			"41st_Vehicles\Nu\Data\FST_Nu_Wings.paa",
-			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
-			"41st_Vehicles\Nu\Data\FST_Nu_Cockpit_Interface.paa",
-			"41st_Vehicles\Nu\Data\FST_Nu_Interior.paa",
-			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
+			"3AS\3AS_nu\data\exterior_CO.paa",
+			"3AS\3AS_nu\data\wings_CO.paa",
+			"3as\3AS_Nu\data\interior_co.paa",
+			"3as\3AS_Nu\data\cockpit_doors_co.paa"
 		};
         class HitPoints
 		{
 			class HitHull
 			{
-				armor=999;
+				armor=550;
 				convexComponent="hull_hit";
 				depends="Total";
 				explosionShielding=1;
@@ -341,11 +362,11 @@ class CfgVehicles
 				passthrough=0.1;
 				minimalhit=0.1;
 				material=-1;
-				armor=4;
+				armor=0.60000002;
 			};
 			class HitEngine
 			{
-				armor=1;
+				armor=0.5;
 				convexComponent="engine_hit";
 				explosionShielding=2;
 				material=51;
@@ -355,77 +376,16 @@ class CfgVehicles
 				visual="";
 				radius=0.2;
 			};
-			class HitEngine_1: HitEngine
-			{
-				convexComponent="engine_hit_1";
-				name="engine_hit_1";
-				hitpoint="engine_hit_1";
-			};
-			class HitEngine_2: HitEngine
-			{
-				convexComponent="engine_hit_2";
-				name="engine_hit_2";
-				hitpoint="engine_hit_2";
-			};
-			class HitHRotor
-			{
-				armor=3;
-				convexComponent="main_rotor_hit";
-				explosionShielding=2.5;
-				material=51;
-				name="main_rotor_hit";
-				passThrough=0.1;
-				visual="";
-				radius=0.0099999998;
-			};
-			class HitVRotor
-			{
-				armor=3;
-				convexComponent="tail_rotor_hit";
-				explosionShielding=6;
-				material=51;
-				name="tail_rotor_hit";
-				passThrough=0.30000001;
-				visual="";
-				radius=0.0099999998;
-			};
 			class HitAvionics
 			{
-				armor=10;
+				armor=1.5;
 				convexComponent="avionics_hit";
-				explosionShielding=5;
+				explosionShielding=2;
 				material=51;
 				name="avionics_hit";
 				passThrough=1;
 				visual="";
 				radius=0.5;
-			};
-			class HitGlass1
-			{
-				armor=2;
-				name="HitGlass1";
-				radius=0.40000001;
-				visual="";
-				passThrough=1;
-				explosionShielding=3;
-			};
-			class HitGlass2
-			{
-				armor=2;
-				name="HitGlass2";
-				radius=0.40000001;
-				visual="";
-				passThrough=1;
-				explosionShielding=3;
-			};
-			class HitGlass3
-			{
-				armor=2;
-				name="HitGlass3";
-				radius=0.40000001;
-				visual="";
-				passThrough=1;
-				explosionShielding=3;
 			};
 		};
 		typicalcargo[]=
@@ -549,8 +509,8 @@ class CfgVehicles
 				gunnername="CoPilot";
 				gunnerinaction="Rho_Gunner";
 				gunneraction="Rho_Gunner";
-				selectionFireAnim="zaslehR";
 				gunnerCompartments="Compartment1";
+				selectionFireAnim="zaslehR";
 				gunneropticseffect[]=
 				{
 					"TankCommanderOptics1",
@@ -805,9 +765,9 @@ class CfgVehicles
 	};
 	class FST_Nu_Shuttle: FST_Nu_Base
 	{
-		_generalmacro="FST_Nu_Attack_S";
+		_generalmacro="FST_Nu_Transport";
 		accuracy=5;
-		author="Ruby and Gold";
+		author="Ruby And Gold";
 		availableforsupporttypes[]=
 		{
 			"CAS_Heli",
@@ -816,7 +776,7 @@ class CfgVehicles
 		};
 		cost="3e+006";
 		crew="FST_Pilot_P1";
-		displayname="[41st] Nu Attack Shuttle";
+		displayname="[41st] Nu Transport Shuttle";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		vehicleclass="Helicopter";
@@ -832,24 +792,18 @@ class CfgVehicles
 		};
 		hiddenSelections[]=
 		{
-			"camo",
 			"camo1",
 			"camo2",
 			"camo3",
-			"camo4",
-			"camo5",
-			"camo6"
+			"camo4"
 		};
 		editorPreview="3as\3AS_nu\images\3AS_nuclass.jpg";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Vehicles\Nu\Data\FST_NU_HullExterior.paa",
-			"41st_Vehicles\Nu\Data\FST_NU_Hullfront.paa",
-			"41st_Vehicles\Nu\Data\FST_Nu_Wings.paa",
-			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
-			"41st_Vehicles\Nu\Data\FST_Nu_Cockpit_Interface.paa",
-			"41st_Vehicles\Nu\Data\FST_Nu_Interior.paa",
-			"3as\3as_republic_heli\rho_class\data\interior_optional_co.paa"
+			"3AS\3AS_nu\data\exterior_CO.paa",
+			"3AS\3AS_nu\data\wings_CO.paa",
+			"3as\3AS_Nu\data\interior_co.paa",
+			"3as\3AS_Nu\data\cockpit_doors_co.paa"
 		};
 		class UserActions
 		{
@@ -872,27 +826,46 @@ class CfgVehicles
 				statement="this animateSource ['ramp',0]";
 				onlyforplayer=0;
 			};
-			class AnimationSources
+			class frontrampOpen
 			{
+				role=0;
+				displayName="Ramp Open";
+				position="frontaction";
+				radius=12;
+				condition="(this animationSourcePhase 'rampfront' ==0 AND (alive this))";
+				statement="this animateSource ['rampfront',1]";
+				onlyforplayer=0;
 			};
-			class rampfront
+			class frontrampClose: frontrampOpen
 			{
-				source="user";
-				animPeriod=1;
-				initPhase=0;
-			};
-			class ramp
-			{
-				source="user";
-				animPeriod=1;
-				initPhase=0;
+				displayName="Ramp Close";
+				position="frontaction";
+				radius=12;
+				condition="(this animationSourcePhase 'rampfront' ==1 AND (alive this))";
+				statement="this animateSource ['rampfront',0]";
+				onlyforplayer=0;
 			};
 		};
-		class Library
+		class AnimationSources
 		{
-			libtextdesc="";
-		}
+		};
+		class rampfront
+		{
+			source="user";
+			animPeriod=1;
+			initPhase=0;
+		};
+		class ramp
+		{
+			source="user";
+			animPeriod=1;
+			initPhase=0;
+		};
 	};
+	class Library
+	{
+		libtextdesc="";
+	}
 };
 class components
 {
