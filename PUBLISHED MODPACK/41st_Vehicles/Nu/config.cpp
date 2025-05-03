@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		units[]=
         {
-            "FST_Nu_Base",
+            "FST_Nu_Shuttle",
         };
         weapons[]=
 		{
@@ -190,7 +190,7 @@ class CfgVehicles
 	};
 	class FST_Nu_Base: 3AS_Nu_Base_F
 	{
-		_generalmacro="FST_Nu_Transport";
+		_generalmacro="FST_Nu_Base";
 		accuracy=5;
 		author="Ruby and Gold";
 		availableforsupporttypes[]=
@@ -332,10 +332,10 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3AS\3AS_nu\data\exterior_CO.paa",
-			"3AS\3AS_nu\data\wings_CO.paa",
-			"3as\3AS_Nu\data\interior_co.paa",
-			"3as\3AS_Nu\data\cockpit_doors_co.paa"
+			"41st_Vehicles\Nu\data\FST_Nu_exterior.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_Wings.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_Interior.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_Doors.paa",
 		};
         class HitPoints
 		{
@@ -781,6 +781,8 @@ class CfgVehicles
 		editorSubcategory="FST_Air_Vehicle";
 		vehicleclass="Helicopter";
 		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
 		side=1;
 		class EventHandlers: DefaultEventhandlers
 		{
@@ -800,10 +802,10 @@ class CfgVehicles
 		editorPreview="3as\3AS_nu\images\3AS_nuclass.jpg";
 		hiddenSelectionsTextures[]=
 		{
-			"3AS\3AS_nu\data\exterior_CO.paa",
-			"3AS\3AS_nu\data\wings_CO.paa",
-			"3as\3AS_Nu\data\interior_co.paa",
-			"3as\3AS_Nu\data\cockpit_doors_co.paa"
+			"41st_Vehicles\Nu\data\FST_Nu_exterior.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_Wings.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_Interior.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_Doors.paa",
 		};
 		class UserActions
 		{
