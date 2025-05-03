@@ -7,7 +7,7 @@ removeAllWeapons _plyer;
 comment "Add weapons";
 _plyer addWeapon "FST_DC15S";
 _plyer addPrimaryWeaponItem "FST_blaster_cell_Blue";
-_plyer addPrimaryWeaponItem "3as_optic_holo_dc15s";
+_plyer addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
 
 comment "Add binoculars";
 _plyer addMagazine "Laserbatteries";
