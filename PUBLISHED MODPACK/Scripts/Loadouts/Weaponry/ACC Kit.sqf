@@ -5,7 +5,7 @@ _LO = ((_this select 3) select 0) select 0;
 removeAllWeapons _plyer;
 
 comment "Add weapons";
-_plyer addWeapon "FST_DC15A";
+_plyer addWeapon "FST_DC15C_F";
 _plyer addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
 
 comment "Add binoculars";

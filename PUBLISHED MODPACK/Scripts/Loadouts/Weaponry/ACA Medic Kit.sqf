@@ -15,7 +15,7 @@ _plyer addHeadgear "FST_Crewman_Helmet";
 
 comment "Add containers";
 _plyer addBackpack "FST_Backpack_Antenna";
-_plyer addVest "FST_vest_base";
+_plyer addVest "FST_CloneVestSuspenders";
 
 comment "Add items to containers";
 for "_i" from 1 to 2 do {_plyer addItemToUniform "IDA_BattleStim";};
@@ -25,6 +25,7 @@ for "_i" from 1 to 5 do {_plyer addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 2 do {_plyer addItemToUniform "ACE_CableTie";};
 for "_i" from 1 to 3 do {_plyer addItemToUniform "FST_grenade_Detonator_mag";};
 for "_i" from 1 to 4 do {_plyer addItemToUniform "IDA_grenade_Smoke_mag";};
+_plyer addItemToUniform "ACE_EntrenchingTool";
 _plyer addItemToUniform "IDA_grenade_Smoke_Blue_mag";
 _plyer addItemToUniform "IDA_grenade_Smoke_Purple_mag";
 _plyer addItemToUniform "WBK_HeadLampItem";

@@ -5,8 +5,9 @@ _LO = ((_this select 3) select 0) select 0;
 removeAllWeapons _plyer;
 
 comment "Add weapons";
-_plyer addWeapon "FST_DC15A";
-_plyer addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+_plyer addWeapon "FST_DP23";
+_plyer addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
+_plyer addPrimaryWeaponItem "FST_blaster_scatter_cell_DP23_Blue";
 
 comment "Add binoculars";
 _plyer addMagazine "Laserbatteries";
@@ -33,6 +34,7 @@ _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
 _plyer addItemToUniform "ItemcTab";
 
-for "_i" from 1 to 12 do {_plyer addItemToVest "FST_blaster_cell_High_Blue";};
+for "_i" from 1 to 8 do {_plyer addItemToVest "FST_blaster_scatter_cell_DP23_Blue";};
+for "_i" from 1 to 8 do {_plyer addItemToVest "FST_thermal_slug_mag_Blue";};
 _plyer addItemToVest "ToolKit";
 _plyer addItemToVest "ls_mag_glowrod_hiGreen";
