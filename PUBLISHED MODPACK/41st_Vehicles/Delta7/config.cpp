@@ -117,16 +117,26 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_ARC_Light_Canon",
-			"Laserdesignator_pilotCamera",
-			"CMFlareLauncher"
+			"FST_Stormfury_AA_Missile",
+			"FST_Harrower_HARM_Missile",
+			"ls_weapon_CMFlareLauncher",
+			"Laserdesignator_pilotCamera"
 		};
 		magazines[]=
 		{
 			"FST_ARC_1000Rnd_Heavy_shells",
 			"FST_ARC_1000Rnd_Heavy_shells",
 			"FST_ARC_1000Rnd_Heavy_shells",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
 			"Laserbatteries",
-			"240Rnd_CMFlare_Chaff_Magazine"
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile"
 		};
 		cabinOpening=1;
 		gearRetracting=1;
@@ -484,6 +494,7 @@ class CfgVehicles
 					};
 				};
 			};
+			class TransportCounterMeasuresComponent;
 		};
 		memoryPointLDust="pos_dust_left";
 		memoryPointRDust="pos_dust_right";
@@ -6130,7 +6141,6 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_ARC_Light_Canon",
-			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
 			"ls_weapon_CMFlareLauncher",
@@ -6149,8 +6159,6 @@ class CfgVehicles
 			"Laserbatteries",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",
-			"FST_Rapture_12Rnd_AGM_Missile",
-			"FST_Rapture_12Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile"
 		};
