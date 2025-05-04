@@ -532,7 +532,7 @@ class cfgvehicles
 				forceHideGunner=0;
 				outGunnerMayFire=1;
 				ingunnerMayFire=1;
-				stabilizedInAxes=4;
+				stabilizedInAxes=3;
 				ispersonturret=0;
 				enabledByAnimationSource="HatchCommander";
 				gunnerRightHandAnimName="HandR";
