@@ -4522,9 +4522,10 @@ class CfgAmmo
 		indirectHitRange = 8;
 		timetoLive = 60;
 		maneuvrability = 35;
+		canLock = 1;
 		airLock = 0;
-		irLock = 0;
-		laserLock = 0;
+		irLock = 1;
+		laserLock = 1;
 		nvLock = 0;
 		initTime = 0.100000;
 		thrustTime = 10;
@@ -4571,6 +4572,7 @@ class CfgAmmo
 						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
 						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
 						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+						allowsMarking = 1;
 					};
 					class SomeLaserSensorComponent
 					{
@@ -4585,7 +4587,7 @@ class CfgAmmo
 						class GroundTarget      // ranges for targets with ground background                           
 						{
 							minRange = 50;
-							maxRange = 5500;
+							maxRange = 7000;
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef = -1;
 						};
@@ -4595,7 +4597,8 @@ class CfgAmmo
 						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
 						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
 						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
-						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold       
+						allowsMarking = 1;						
 					};					
 				};
 			};
