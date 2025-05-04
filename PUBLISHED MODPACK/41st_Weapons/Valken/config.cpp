@@ -42,52 +42,49 @@ class CfgWeapons
 			{
 				class 3AS_VK38X_Optic
 				{
-					opticsID=1;
-					useModelOptics=1;
-					opticsPPEffects[]=
+					opticsID = 1;
+					useModelOptics = 1;
+					opticsPPEffects[] =
 					{
 						"OpticsCHAbera1",
 						"OpticsBlur1"
 					};
-					opticsZoomMin=0.25;
-					opticsZoomMax=0.25;
-					opticsZoomInit=0.25;
-					discreteDistance[]={100,300,400,500,600,700,800,900,1000};
-					discreteDistanceInitIndex=1;
-					distanceZoomMin=100;
-					distanceZoomMax=1000;
-					discreteFov[]={0.125,0.125};
-					discreteInitIndex=0;
-					modelOptics[]=
+					// FoV values for adjustable 3x to 1x
+					opticsZoomMin = 0.25;   // 3x
+					opticsZoomMax = 0.75;   // 1x
+					opticsZoomInit = 0.375; // Start around 2x
+					discreteFov[] = {0.25, 0.375, 0.5, 0.65, 0.75};
+					discreteInitIndex = 1;
+					discreteDistance[] = {100,300,400,500,600,700,800,900,1000};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 100;
+					distanceZoomMax = 1000;
+					modelOptics[] =
 					{
 						"\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d"
 					};
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"Ti"
-					};
-					thermalMode[]={1,2};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
+					memoryPointCamera = "opticView";
+					visionMode[] = {"Normal", "NVG", "Ti"};
+					thermalMode[] = {1,2};
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 1;
+					cameraDir = "";
 				};
 				class IronOnTopOfMyOptics: 3AS_VK38X_Optic
 				{
-					opticsID=2;
-					useModelOptics=0;
-					opticsFlare=0;
-					opticsDisablePeripherialVision=0;
-					opticsZoomMin=0.375;
-					opticsZoomMax=1.1;
-					opticsZoomInit=0.75;
-					memoryPointCamera="eye";
-					visionMode[]={};
-					discretefov[]={};
+					opticsID = 2;
+					useModelOptics = 0;
+					opticsFlare = 0;
+					opticsDisablePeripherialVision = 0;
+					opticsZoomMin = 0.75;
+					opticsZoomMax = 0.75;
+					opticsZoomInit = 0.75;
+					memoryPointCamera = "eye";
+					visionMode[] = {};
+					discretefov[] = {};
 				};
 			};
+
 		};
 	};
 	class 3AS_Valken38X_F;

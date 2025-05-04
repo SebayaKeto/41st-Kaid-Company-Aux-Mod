@@ -846,7 +846,7 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=0.5;
 		caliber=5;
-		submunitionAmmo="IDA_blasterbolt"; // Submunition ammo class
+		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
 		submunitionConeType[]=
 		{
 			"random",
@@ -869,6 +869,16 @@ class CfgAmmo
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Medium_Red_Fly";
+		hit=30;
+		caliber=2;
+		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
+		submunitionConeType[]=
+		{
+			"random",
+			6
+		};
+		submunitionConeAngle=0.05;
+		triggerDistance = 50;
 	};
 	class FST_thermal_shell_T15_Blue: FST_blasterbolt
 	{

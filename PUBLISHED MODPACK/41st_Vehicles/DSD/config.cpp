@@ -71,6 +71,8 @@ class CfgVehicles
 		scope=0;
 		scopeCurator=0;
 		vehicleClass="Autonomous";
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 		picture="\A3\Static_F_Jets\AAA_system_01\Data\UI\AAA_system_01_picture_CA.paa";
 		uiPicture="\A3\Static_F_Jets\AAA_system_01\Data\UI\AAA_system_01_picture_CA.paa";
 		icon="\A3\Static_F_Jets\AAA_system_01\Data\UI\AAA_system_01_icon_CA.paa";
@@ -410,6 +412,8 @@ class CfgVehicles
 			verticalOffsetWorld=-0.039000001;
 			init="''";
 		};
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 		author="Vulgar";
 		scope=0;
 		scopeCurator=0;
@@ -430,6 +434,8 @@ class CfgVehicles
 		editorSubcategory="FST_Ground_Vehicle";
 		scopeCurator=2;
 		scope=2;
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 	};
 	class FST_DSD_OOM_FLAME: FST_DSD
 	{
@@ -439,6 +445,8 @@ class CfgVehicles
 		editorSubcategory="FST_Ground_Vehicle";
 		scopeCurator=2;
 		scope=2;
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

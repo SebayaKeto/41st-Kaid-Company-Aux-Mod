@@ -302,6 +302,8 @@ class CfgVehicles
 		model="3AS\3AS_Deka\Deka.p3d";
 		armor=50;
 		accuracy=1;
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 		class Hitpoints
 		{
 			class HitHull
@@ -485,18 +487,24 @@ class CfgVehicles
 		scopearsenal=2;
 		side=0;
 		crew="O_UAV_AI";
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 	};
 	class FST_Droideka_Christmas: FST_Droideka
 	{
 		author="Viz";
 		displayName="[41st] Jack Frostdeka";
 		model="\Christmas_Snowmans\objects\ClothesSnowman.p3d";
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 	};
 	class FST_Deka_Static_Sniper_Base: FST_Droideka_Base
 	{
 		icon="3AS\3AS_Deka\data\ui\Deka_Sniper_top_ca.paa";
 		picture="3AS\3AS_Deka\data\ui\Deka_Sniper_side_ca.paa";
 		model="\3AS\3AS_deka\deka_Sniper.p3d";
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 		hiddenselections[]=
 		{
 			"camo"
@@ -570,6 +578,8 @@ class CfgVehicles
 		side=0;
 		Author = "Viz";
 		crew="O_UAV_AI";
+		ace_dragging_canDrag = 0;
+		ace_dragging_canCarry = 0;
 	};
 };
 class Extended_PreInit_EventHandlers
