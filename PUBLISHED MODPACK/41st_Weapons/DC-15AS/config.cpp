@@ -1792,7 +1792,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] Holo Optic";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="ls_weapons\accessories\dcOptics\holosight_blue.p3d";
+		model="JLTS_EA_Scopes\SEA_Scope_One_blue.p3d";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
