@@ -31,6 +31,7 @@ _plyer addItemToUniform "IDA_grenade_Smoke_Purple_mag";
 _plyer addItemToUniform "WBK_HeadLampItem";
 _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
+_plyer addItemToUniform "ItemAndroid";
 _plyer addItemToUniform "ItemcTab";
 
 for "_i" from 1 to 12 do {_plyer addItemToVest "FST_blaster_cell_High_Blue";};
