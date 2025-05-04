@@ -49,9 +49,9 @@ class CfgWeapons
 						"OpticsCHAbera1",
 						"OpticsBlur1"
 					};
-					opticsZoomMin=0.125;
-					opticsZoomMax=0.125;
-					opticsZoomInit=0.125;
+					opticsZoomMin=0.25;
+					opticsZoomMax=0.25;
+					opticsZoomInit=0.25;
 					discreteDistance[]={100,300,400,500,600,700,800,900,1000};
 					discreteDistanceInitIndex=1;
 					distanceZoomMin=100;
@@ -330,7 +330,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-	//				"FST_Scope_VK38X"
+					"FST_Scope_VK38X"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
