@@ -605,14 +605,14 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -639,14 +639,14 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -675,14 +675,14 @@ class CfgVehicles
 						componentType="PassiveRadarSensorComponent";
 						class AirTarget
 						{
-							minRange=4000;
+							minRange=0;
 							maxRange=4000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=4000;
+							minRange=0;
 							maxRange=4000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -702,20 +702,20 @@ class CfgVehicles
 						maxTrackableSpeed=1e+010;
 						minTrackableATL=-1e+010;
 						maxTrackableATL=1e+010;
-						allowsMarking=0;
+						allowsMarking=1;
 					};
 					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 					{
 						class AirTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -742,21 +742,21 @@ class CfgVehicles
 						componentType="LaserSensorComponent";
 						class AirTarget
 						{
-							minRange=6000;
+							minRange=0;
 							maxRange=6000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=6000;
+							minRange=0;
 							maxRange=6000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						typeRecognitionDistance=0;
+						typeRecognitionDistance=2000;
 						color[]={1,1,1,0};
 						allowsMarking=1;
 						groundNoiseDistanceCoef=-1;
@@ -777,14 +777,14 @@ class CfgVehicles
 						typeRecognitionDistance=0;
 						class AirTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -4617,7 +4617,7 @@ class CfgAmmo
 		airFriction=0.050000001;
 		sideAirFriction=0.16;
 		thrust=400;
-		weaponLockSystem="1+2+8+16";
+		weaponLockSystem="1+2+4+8+16";
 		cmImmunity=0.85;
 		missileLockMaxDistance=10000;
 		missileLockMinDistance=50;
