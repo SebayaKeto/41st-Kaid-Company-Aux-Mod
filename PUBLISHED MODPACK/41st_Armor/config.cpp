@@ -11403,6 +11403,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+ 	class FST_Uniform_Wuffer: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Wuffer]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Wuffer";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
  	class FST_Uniform_Fury: JLTS_CloneArmor
 	{
 		author="Daara";
