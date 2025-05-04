@@ -29,62 +29,70 @@ class CfgWeapons
 	class WeaponSlotsInfo;
 	class FST_Scope_VK38X: ItemCore
 	{
+		author="$STR_3as_Studio";
 		scope=2;
-		displayName="[41st] VK-38X Scope";
-		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="3AS\3AS_Weapons\Valken38X\3AS_VK38X_Scope_f.p3d";
-		weaponInfoType="RscWeaponZeroing";
+		displayName="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_Display";
+		picture="\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_VK38X_Scope_F.p3d";
+		descriptionShort="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_DesShort";
+		inertia=0.2;
+
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
-			mass=7;
-			modelOptics="\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d";
+			mass=14;
+			opticType=2;
+			optics=1;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			
 			class OpticsModes
 			{
-				class 3AS_VK38X_Optic
+				// 1x – No overlay
+				class Close
 				{
-					opticsID = 1;
-					useModelOptics = 1;
-					opticsPPEffects[] =
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					// FoV values for adjustable 3x to 1x
-					opticsZoomMin = 0.25;   // 3x
-					opticsZoomMax = 0.75;   // 1x
-					opticsZoomInit = 0.375; // Start around 2x
-					discreteFov[] = {0.25, 0.375, 0.5, 0.65, 0.75};
-					discreteInitIndex = 1;
-					discreteDistance[] = {100,300,400,500,600,700,800,900,1000};
-					discreteDistanceInitIndex = 1;
-					distanceZoomMin = 100;
-					distanceZoomMax = 1000;
-					modelOptics[] =
-					{
-						"\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d"
-					};
-					memoryPointCamera = "opticView";
-					visionMode[] = {"Normal", "NVG", "Ti"};
-					thermalMode[] = {1,2};
-					opticsFlare = 1;
-					opticsDisablePeripherialVision = 1;
-					cameraDir = "";
+					opticsID=1;
+					opticsDisplayName="1x";
+					useModelOptics=0;
+					opticsPPEffects[]={"OpticsCHAbera1","OpticsBlur1"};
+					opticsZoomMin=0.75;    // Close to 1x
+					opticsZoomMax=0.75;
+					opticsZoomInit=0.75;
+					discreteDistance[]={100,200,300,400,500};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=100;
+					distanceZoomMax=500;
+					discretefov[]={};
+					discreteInitIndex=0;
+					memoryPointCamera="opticView";
+					visionMode[]={"Normal"};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=0;
+					cameraDir="";
 				};
-				class IronOnTopOfMyOptics: 3AS_VK38X_Optic
+
+				// 3x – With reticle overlay
+				class Zoom
 				{
-					opticsID = 2;
-					useModelOptics = 0;
-					opticsFlare = 0;
-					opticsDisablePeripherialVision = 0;
-					opticsZoomMin = 0.75;
-					opticsZoomMax = 0.75;
-					opticsZoomInit = 0.75;
-					memoryPointCamera = "eye";
-					visionMode[] = {};
-					discretefov[] = {};
+					opticsID=2;
+					opticsDisplayName="3x";
+					useModelOptics=1;
+					modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F";
+					opticsPPEffects[]={"OpticsCHAbera3","OpticsBlur2"};
+					opticsZoomMin=0.25;
+					opticsZoomMax=0.25;
+					opticsZoomInit=0.25;
+					discreteDistance[]={100,200,300,400,500,600,700,800,900,1000};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=100;
+					distanceZoomMax=1000;
+					discretefov[]={};
+					discreteInitIndex=0;
+					memoryPointCamera="opticView";
+					visionMode[]={"Normal"};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
 				};
 			};
-
 		};
 	};
 	class 3AS_Valken38X_F;
