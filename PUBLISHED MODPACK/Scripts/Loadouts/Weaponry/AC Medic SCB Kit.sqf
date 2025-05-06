@@ -33,7 +33,6 @@ _plyer addItemToUniform "WBK_HeadLampItem";
 _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
 _plyer addItemToUniform "ItemAndroid";
-_plyer addItemToUniform "ItemcTab";
 
 for "_i" from 1 to 8 do {_plyer addItemToVest "FST_blaster_scatter_cell_DP23_Blue";};
 for "_i" from 1 to 8 do {_plyer addItemToVest "FST_thermal_slug_mag_Blue";};
