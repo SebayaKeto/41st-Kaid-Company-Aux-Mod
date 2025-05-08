@@ -50,8 +50,8 @@ class CfgWeapons
 		fireLightDiffuse[]={0,0,1};
 		reloadMagazineSound[]=
 		{
-			"\Indecisive_Armoury_Sounds\Republic\Z-6\Z6_reload.ogg",
-			1.5,
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
 			1,
 			100
 		};

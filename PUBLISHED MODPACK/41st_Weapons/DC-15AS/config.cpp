@@ -492,6 +492,7 @@ class CfgWeapons
 	class FST_DC15LE: IDA_DC15A
 	{
 		author="Gold";
+		baseWeapon="FST_DC15LE";
 		displayName="[41st] DC-15LE Designated Marksman Rifle";
 		descriptionShort="Long range, slow rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
@@ -653,19 +654,19 @@ class CfgWeapons
         /*      linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
                 compatibleItems[]=
                 {
-                   "3AS_Optic_Red_DC15A",
+					"3AS_Optic_Red_DC15A",
                     "FST_Optic_LEScope_DC15LE"
                 };*/
             };
             class MuzzleSlot: MuzzleSlot
             {
-        /*      linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
                 compatibleItems[]=
                 {
                     "3AS_Muzzle_LE_DC15A"
                 };
                 iconPosition[]={0,0.44999999};
-                iconScale=0.2;*/
+                iconScale=0.2;
             };
             class PointerSlot: PointerSlot
             {
@@ -682,6 +683,14 @@ class CfgWeapons
                 compatibleItems[]={};
             };
         };
+		class LinkedItems
+		{
+			class LinkedItemsMuzzleSlot
+			{
+				slot="MuzzleSlot";
+				item="3AS_Muzzle_LE_DC15A";
+			};
+		};
 	};
     class 3AS_Optic_LEScope_DC15A;
     class FST_Optic_LEScope_DC15LE: 3AS_Optic_LEScope_DC15A
