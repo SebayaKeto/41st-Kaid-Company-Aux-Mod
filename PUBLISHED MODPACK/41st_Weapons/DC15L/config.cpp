@@ -78,7 +78,8 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]= 
 				{
-					"FST_Optic_DC15L",
+					"3as_Optic_DC15L_F",
+				//	"FST_Optic_DC15L",
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -282,27 +283,6 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
-		class OpticsModes
-		{
-			class Ironsights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsFlare=0;
-				opticsPPEffects[]=
-				{
-					"Default"
-				};
-				opticsDisablePeripherialVision=0;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
-				opticsZoomInit=0.75;
-				distanceZoomMin=400;
-				distanceZoomMax=400;
-			};
-		};
 		caseless[]=
 		{
 			"",
