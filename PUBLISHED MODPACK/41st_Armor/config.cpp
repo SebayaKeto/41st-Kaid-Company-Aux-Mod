@@ -30660,7 +30660,7 @@ class CfgVehicles
 		class FST_P2_Red: FST_Trooper_P2_DC15S
 	{
 		author="Adler";
-		displayName="[41st] CT-1284 'Ryx'";
+		displayName="[41st] CT-7467 'Ryx'";
 		scope=2;
 		Backpack="";
 		side=1;
