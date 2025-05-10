@@ -203,6 +203,7 @@ class CfgPatches
 			"FST_P2_Tombstone",
 			"FST_P2_Stant",
 			"FST_P2_Connor",
+			"FST_P2_Ryx",
 			"FST_P2_Paymos",
 			"FST_P2_Laer",
 			"FST_P2_Laer_Dirty",
@@ -30657,7 +30658,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
-		class FST_P2_Red: FST_Trooper_P2_DC15S
+	class FST_P2_Ryx: FST_Trooper_P2_DC15S
 	{
 		author="Adler";
 		displayName="[41st] CT-7467 'Ryx'";

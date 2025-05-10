@@ -563,32 +563,32 @@ class CfgVehicles
         {
             class TransportCountermeasuresComponent //////////// WHAT WAS ADDED
             {};                                     //////////// WHAT WAS ADDED
-            class SensorsManagerComponent
-            {
-                class Components
-                {
-                    class IRSensorComponent: SensorTemplateIR
-                    {
-                        class AirTarget
-                        {
-                            minRange=8000;
-                            maxRange=8000;
-                            objectDistanceLimitCoef=-1;
-                            viewDistanceLimitCoef=
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=0;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
 						maxTrackableSpeed=400;
 						componentType="IRSensorComponent";
 						typeRecognitionDistance=2000;
-						maxFogSeeThrough=0.995;
+						maxFogSeeThrough=-1;
 						color[]={1,0,0,1};
 						allowsMarking=1;
 						groundNoiseDistanceCoef=-1;
@@ -605,26 +605,26 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						maxTrackableSpeed=100;
+						maxTrackableSpeed=400;
 						aimDown=1;
 						animDirection="";
 						componentType="VisualSensorComponent";
 						nightRangeCoef=0;
-						maxFogSeeThrough=0.94;
+						maxFogSeeThrough=-1;
 						color[]={1,1,0.5,0.80000001};
 						typeRecognitionDistance=2000;
 						allowsMarking=1;
@@ -641,23 +641,24 @@ class CfgVehicles
 						componentType="PassiveRadarSensorComponent";
 						class AirTarget
 						{
-							minRange=20000;
-							maxRange=20000;
+							minRange=0;
+							maxRange=4000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=20000;
-							maxRange=20000;
+							minRange=0;
+							maxRange=4000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
-						typeRecognitionDistance=8000;
+						typeRecognitionDistance=4000;
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
 						groundNoiseDistanceCoef=-1;
 						maxGroundNoiseDistance=-1;
+						maxFogSeeThrough=-1;
 						minSpeedThreshold=0;
 						maxSpeedThreshold=0;
 						animDirection="";
@@ -667,32 +668,32 @@ class CfgVehicles
 						maxTrackableSpeed=1e+010;
 						minTrackableATL=-1e+010;
 						maxTrackableATL=1e+010;
-						allowsMarking=0;
+						allowsMarking=1;
 					};
 					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 					{
 						class AirTarget
 						{
-							minRange=10000;
-							maxRange=10000;
+							minRange=0;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
-						typeRecognitionDistance=8000;
+						typeRecognitionDistance=5000;
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						groundNoiseDistanceCoef=0.2;
+						groundNoiseDistanceCoef=-1;
 						componentType="ActiveRadarSensorComponent";
-						maxGroundNoiseDistance=200;
-						minSpeedThreshold=30;
-						maxSpeedThreshold=40;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
 						color[]={0,1,1,1};
 						allowsMarking=1;
 						animDirection="";
@@ -707,21 +708,21 @@ class CfgVehicles
 						componentType="LaserSensorComponent";
 						class AirTarget
 						{
-							minRange=6000;
+							minRange=0;
 							maxRange=6000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=6000;
+							minRange=0;
 							maxRange=6000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						angleRangeHorizontal=360;
 						angleRangeVertical=360;
-						typeRecognitionDistance=0;
+						typeRecognitionDistance=2000;
 						color[]={1,1,1,0};
 						allowsMarking=1;
 						groundNoiseDistanceCoef=-1;
@@ -742,14 +743,14 @@ class CfgVehicles
 						typeRecognitionDistance=0;
 						class AirTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=8000;
+							minRange=0;
 							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
@@ -759,6 +760,7 @@ class CfgVehicles
 						allowsMarking=1;
 						groundNoiseDistanceCoef=-1;
 						maxGroundNoiseDistance=-1;
+						maxFogSeeThrough=-1;
 						minSpeedThreshold=0;
 						maxSpeedThreshold=0;
 						animDirection="";
