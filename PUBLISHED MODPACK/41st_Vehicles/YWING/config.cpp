@@ -111,9 +111,9 @@ class CfgVehicles
 	};
 	class FST_SHB_Bomber: 3AS_BTLB_Bomber
 	{
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
+		scope=0;
+		scopecurator=0;
+		scopearsenal=0;
 		side=1;
 		vtol=4;
 		author="Ghostly";
@@ -918,7 +918,7 @@ class CfgVehicles
 	class FST_Ywing_Bomber_Green: FST_SHB_Bomber
 	{
 		author="Gold";
-		displayName="[41st] FST-Y Wing Strategic Bomber";
+		displayName="[41st] BTL-Y Wing Strategic Bomber";
 		hiddenselections[]=
 		{
 			"camo1",
