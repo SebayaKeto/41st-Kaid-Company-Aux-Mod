@@ -154,7 +154,7 @@ class CfgVehicles
 	{
 		thrustDelay=0.1;
 		brakeIdleSpeed=1.78;
-		maxSpeed=110;
+		maxSpeed=100;
 		fuelCapacity=50;
 		wheelCircumference=2.8365002;
 		normalSpeedForwardCoef=0.89999998;
@@ -231,12 +231,12 @@ class CfgVehicles
 				"D3",
 				1.42,
 				"D4",
-				0.89999998
+				0.65
 			};
 			TransmissionRatios[]=
 			{
 				"High",
-				10
+				7
 			};
 			AmphibiousRatios[]=
 			{
@@ -260,8 +260,8 @@ class CfgVehicles
 		dampersBumpCoef=6;
 		differentialType="all_limited";
 		frontRearSplit=0.5;
-		frontBias=1.3;
-		rearBias=1.3;
+		frontBias=1.5;
+		rearBias=1.1;
 		centreBias=1;
 		clutchStrength=180;
 		enginePower=6000;
@@ -277,6 +277,7 @@ class CfgVehicles
 			{
 				boneName="wheel_1_1_damper";
 				steering=1;
+				maxSteeringAngle = 45;
 				side="left";
 				center="wheel_1_1_axis";
 				boundary="wheel_1_1_bound";
@@ -309,6 +310,7 @@ class CfgVehicles
 			class R1: L1
 			{
 				steering=1;
+				maxSteeringAngle = 45;
 				boneName="wheel_2_1_damper";
 				center="wheel_2_1_axis";
 				boundary="wheel_2_1_bound";
@@ -329,7 +331,7 @@ class CfgVehicles
 			class L3: L1
 			{
 				boneName="wheel_1_3_damper";
-				steering=0;
+				steering = 0.2;
 				maxHandBrakeTorque=6500;
 				center="wheel_1_3_axis";
 				boundary="wheel_1_3_bound";
@@ -359,7 +361,7 @@ class CfgVehicles
 			class R3: R1
 			{
 				boneName="wheel_2_3_damper";
-				steering=0;
+				steering = 0.2;
 				maxHandBrakeTorque=6500;
 				center="wheel_2_3_axis";
 				boundary="wheel_2_3_bound";
@@ -378,7 +380,7 @@ class CfgVehicles
 			};
 		};
 		terrainCoef=1.5;
-		turnCoef=2;
+		turnCoef=0.8;
 		canFloat=1;
 		engineShiftY=1;
 		waterPPInVehicle=0;
@@ -387,8 +389,8 @@ class CfgVehicles
 		waterAngularDampingCoef=5;
 		waterLinearDampingCoefX=10;
 		waterLinearDampingCoefY=2;
-		rudderForceCoef=1;
-		rudderForceCoefAtMaxSpeed=0.15000001;
+		rudderForceCoef = 1.2;
+		rudderForceCoefAtMaxSpeed = 0.2;
 		waterSpeedFactor=2;
 		memoryPointsLeftEngineEffect="EngineEffectL";
 		memoryPointsRightEngineEffect="EngineEffectR";
@@ -420,7 +422,7 @@ class CfgVehicles
 		crewCrashProtection=9.9999997e-005;
 		damageResistance=0.02;
 		crewVulnerable=1;
-		armor=800;
+		armor=850;
 		armorStructural=8.5;
 		class HitPoints: HitPoints
 		{
