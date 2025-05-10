@@ -838,10 +838,10 @@ class CfgVehicles
 			};
 		};
 		simulation="tankX";
-		enginePower=20000;
-		maxOmega=25;
+		enginePower=22000;
+		maxOmega=26;
 		maxSpeed=30;
-		peakTorque=17500;
+		peakTorque=19000;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -881,7 +881,7 @@ class CfgVehicles
 				"(2350/2850)"
 			}
 		};
-		thrustDelay=2;
+		thrustDelay=0.3;
 		clutchStrength=180;
 		fuelCapacity=50;
 		brakeIdleSpeed=1.78;
@@ -889,35 +889,35 @@ class CfgVehicles
 		tankTurnForce=1200000;
 		idleRpm=700;
 		redRpm=2640;
-		engineLosses=25;
-		transmissionLosses=15;
+		engineLosses=15;
+		transmissionLosses=10;
 		class complexGearbox
 		{
 			GearboxRatios[]=
 			{
 				"R2",
-				-3.9000001,
+				-4,
 				"N",
 				0,
 				"D1",
-				4.6999998,
+				4.2,
 				"D2",
-				3.5,
+				2.8,
 				"D3",
-				2.5999999,
+				2.0,
 				"D4",
-				2,
-				"D5",
 				1.5,
+				"D5",
+				1.2,
 				"D6",
-				1.125,
+				1.0,
 				"D7",
-				0.85000002
+				0.8
 			};
 			TransmissionRatios[]=
 			{
 				"High",
-				15
+				9
 			};
 			gearBoxMode="auto";
 			moveOffGear=1;
@@ -1100,54 +1100,54 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
 					"SmokeLauncherMag"
 				};
 				turretInfoType="RscWeaponRangeZeroing";
@@ -1278,54 +1278,54 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
-					"IDA_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
+					"FST_thermal_coil_HP",
 					"SmokeLauncherMag"
 				};
 				primarygunner=0;
