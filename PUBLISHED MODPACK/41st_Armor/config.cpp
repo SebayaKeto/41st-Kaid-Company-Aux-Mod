@@ -13535,6 +13535,20 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Ryx: JLTS_CloneArmor
+    {
+        author="Adler";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Ryx]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Ryx";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Fizz: JLTS_CloneArmor
     {
         author="Viz";
@@ -14045,6 +14059,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Claw.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Warlock: JLTS_CloneNVG
+	{
+		author="Daara";
+		displayName="[41st] NCO Macrobinoculars (Warlock V2)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_warlock_V2.paa",
 		};
 		visionMode[]=
 		{
