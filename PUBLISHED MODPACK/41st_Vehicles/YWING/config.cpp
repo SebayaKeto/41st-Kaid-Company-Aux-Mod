@@ -918,6 +918,9 @@ class CfgVehicles
 	class FST_Ywing_Bomber_Green: FST_SHB_Bomber
 	{
 		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
 		displayName="[41st] BTL-Y Wing Strategic Bomber";
 		hiddenselections[]=
 		{

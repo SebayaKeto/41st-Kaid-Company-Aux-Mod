@@ -838,10 +838,10 @@ class CfgVehicles
 			};
 		};
 		simulation="tankX";
-		enginePower=22000;
-		maxOmega=26;
+		enginePower=30000;
+		maxOmega=30;
 		maxSpeed=30;
-		peakTorque=19000;
+		peakTorque=24000;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -886,38 +886,38 @@ class CfgVehicles
 		fuelCapacity=50;
 		brakeIdleSpeed=1.78;
 		latency=0.1;
-		tankTurnForce=1200000;
+		tankTurnForce=2000000;
 		idleRpm=700;
-		redRpm=2640;
-		engineLosses=15;
-		transmissionLosses=10;
+		redRpm=2865;
+		engineLosses=12;
+		transmissionLosses=8;
 		class complexGearbox
 		{
 			GearboxRatios[]=
 			{
 				"R2",
-				-4,
+				-4.5,
 				"N",
 				0,
 				"D1",
-				4.2,
+				6.5,
 				"D2",
-				2.8,
+				4.0,
 				"D3",
-				2.0,
+				2.5,
 				"D4",
-				1.5,
+				1.7,
 				"D5",
 				1.2,
 				"D6",
-				1.0,
+				0.9,
 				"D7",
-				0.8
+				0.7
 			};
 			TransmissionRatios[]=
 			{
 				"High",
-				9
+				11
 			};
 			gearBoxMode="auto";
 			moveOffGear=1;
