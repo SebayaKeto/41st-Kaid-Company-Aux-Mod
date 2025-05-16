@@ -96,6 +96,7 @@ class CfgPatches
 			"FST_P2_Brutal",
 			"FST_P2_Burns",
 			"FST_P2_Sigs",
+			"FST_Wookiee",
 			"FST_P2_Edge",
 			"FST_P2_Odin",
 			"FST_P2_Elk",
@@ -10748,7 +10749,7 @@ class CfgWeapons
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
 		author="Daara";
-		scope=1;
+		scope=2;
 		displayName="[41st] Undersuit";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		picture="\41st_Armor\Logo.paa";
@@ -11459,6 +11460,21 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Officer";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+ 	class FST_Uniform_Wookiee: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] Wookiee Freedom Fighter";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Wookiee";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -23142,6 +23158,114 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
+ 	class FST_Wookiee: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] Wookiee Freedom Fighter";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		nakedUniform="lsd_bodyGlove_uniform";
+		uniformclass="FST_Uniform_Wookiee";
+		model="ls_armor_bluefor\uniform\gar\phase2\lsd_gar_naked_uniform.p3d";
+		armor=8;
+		hiddenSelections[]=
+		{
+			"bodyGlove",
+			"camo_legs"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"ls_armor_bluefor\uniform\gar\phase2\data\bodyGlove_plain_co.paa",
+			"",
+			""
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"FST_SPA_K15",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"FST_SPA_K15",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green",
+			"FST_blaster_cell_High_Green"
+		};
+		linkedItems[]=
+		{
+			"FST_W_Ghillie_O1",
+			"FST_Vest_NCO",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"FST_Uniform_Bodyglove",
+			"G_Balaclava_TI_G_blk_F",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_W_Ghillie_O1",
+			"FST_Vest_NCO",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"FST_Uniform_Bodyglove",
+			"G_Balaclava_TI_G_blk_F",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Merrik_BC: FST_P2_Merrik
 	{
 		displayName="[41st] BC-4973 'Merrik'";
@@ -32228,6 +32352,114 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Delta";
 			material="\lsd_identities\data\models\data\clone_b.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Delta.paa";
+		};
+	};
+};
+class cfgGroups
+{
+	class WEST
+	{
+		name="BLUFOR";
+		
+		class FST_WOOK
+		{
+			name="41st Wookiees";
+			
+			class FST_Wookiee_Standard
+			{
+				name="Infantry";
+				
+				class FST_Wookiee_Squad
+				{
+					name="[41st] Wookiee Squad";
+					faction="FST_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_Wookiee";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+			};
 		};
 	};
 };
