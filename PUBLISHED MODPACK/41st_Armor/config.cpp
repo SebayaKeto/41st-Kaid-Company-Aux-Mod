@@ -10,7 +10,8 @@ class CfgPatches
 			"A3_Characters_F",
 			"IDA_Ammo",
 			"IDA_Republic",
-			"A3_Characters_F_Proxies"
+			"A3_Characters_F_Proxies",
+			"TAC_VESTS_W"
 		};
 		units[]=
 		{
@@ -3584,6 +3585,136 @@ class CfgWeapons
 					hitpointName="HitFace";
 					armor=6;
 					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	//class H_HelmetO_ViperSP_hex_F;
+	class FST_ScoutHelmet_Base: FST_ARF_Helmet_WhiteGreen
+	{
+		author="Maldova";
+		displayName="[41st] Scout Helmet";
+		scope=2;
+		scopeCurator=2;
+		picture="";
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\ScoutUnmarked_co.paa",
+			"41st_Armor\Data\Helmets\GreenVisor_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Helmets\ScoutHelmet.rvmat",
+			"41st_Armor\Data\Helmets\visor.rvmat"
+		};
+		subItems[]={};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d";
+			hiddenSelections[]=
+			{
+				"Camo1",
+				"Visor"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"41st_Armor\Data\Helmets\ScoutUnmarked_co.paa",
+				"41st_Armor\Data\Helmets\GreenVisor_co.paa"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=7;
+					passThrough=0.5;
+				};
+			};
+		};
+	};
+	class FST_ScoutHelmet_MarkedOne: FST_ScoutHelmet_Base
+	{
+		displayName="[41st] Scout Helmet (CT)";
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\ScoutMarkedOne_co.paa",
+			"41st_Armor\Data\Helmets\GreenVisor_co.paa"
+		};
+	};
+	class FST_ScoutHelmet_Woodland_Unmarked: FST_ScoutHelmet_Base
+	{
+		displayName="[41st] Scout Helmet (Woodland)";
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\ScoutWoodlandUnmarked_co.paa",
+			"41st_Armor\Data\Helmets\GreenVisor_co.paa"
+		};
+	};
+	class FST_ScoutHelmet_Woodland_MarkedOne: FST_ScoutHelmet_Base
+	{
+		displayName="[41st] Scout Helmet (CT Woodland)";
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\ScoutWoodlandMarkedOne_co.paa",
+			"41st_Armor\Data\Helmets\GreenVisor_co.paa"
+		};
+	};
+	class TAC_W_ghillie_GR1;
+	class FST_W_ghillie_O1: TAC_W_ghillie_GR1
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] TAC Ghillie";
+		model="\winter\data\ghillie_pod.p3d";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_wookie_ghillie.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=5;
+			uniformModel="\winter\data\Wghillie1.p3d";
+			hiddenSelections[]=
+			{
+			"Camo"
+			};
+			modelSides[]={6};
+			armor=0;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=0;
+					passThrough=0.5;
 				};
 			};
 		};

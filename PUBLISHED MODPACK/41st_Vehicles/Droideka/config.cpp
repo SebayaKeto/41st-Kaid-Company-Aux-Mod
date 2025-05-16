@@ -612,14 +612,14 @@ class Extended_HitPart_EventHandlers
 	{
 		class FST_Deka_HitPart_Eh
 		{
-			hitpart="_this select 0 execVM '3AS\3AS_deka\DroidekaShieldHit.sqf'";
+			hitpart = "_args = _this select 0; _args execVM '3AS\\3AS_deka\\DroidekaShieldHit.sqf'; _args call FST_fnc_onHit;";
 		};
 	};
 	class FST_Sniper_Deka
 	{
 		class FST_Deka_HitPart_Eh
 		{
-			hitpart="_this select 0 execVM '3AS\3AS_deka\DroidekaShieldHit.sqf'";
+			hitpart = "_args = _this select 0; _args execVM '3AS\\3AS_deka\\DroidekaShieldHit.sqf'; _args call FST_fnc_onHit;";
 		};
 	};
 };
