@@ -46,7 +46,7 @@ class CfgWeapons
 		displayName="[41st] DC-15X Sniper Rifle";
 		descriptionShort="Extreme range, high power.";
 		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15X\DC15X.p3d";
+		model="\Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15X\Model\IDA_DC15X.p3d";
 		baseWeapon="FST_DC15X";
 		ACE_barrelLength=730;
 		ACE_barrelTwist=381;
@@ -57,12 +57,12 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\weapons\DC15X\data\DC15X_co.paa"
+			"\Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15X\Textures\DC15X_co.paa"
 		};
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\DC15X\anims\DC15X_handanim.rtm"
+			"Indecisive_Armoury_Anims\Republic\DC15X.rtm"
 		};
 		magazines[]=
 		{
@@ -73,7 +73,7 @@ class CfgWeapons
 		};
 		magazineWell[]={};
 		ace_clearJamAction="";
-		reloadAction="GestureReload_JLTS_DC15S";
+		reloadAction="GestureReload_IDA_Reload_Blaster";
 		reloadMagazineSound[]=
 		{
 			"\41st_Weapons\DC-15AS\Data\reload.ogg",
@@ -148,16 +148,40 @@ class CfgWeapons
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
+		modelOptics="\A3\Weapons_F\acc\reticle_lrps_F";
+		class OpticsModes
+		{
+			class IDA_DC15X_Scope
+			{
+				opticsID=1;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.041999999;
+				opticsZoomMax=0.125;
+				opticsZoomInit=0.125;
+				discreteDistance[]={200,300,400,500,600,700,800,900,1000};
+				discreteDistanceInitIndex=0;
+				discreteInitIndex=0;
+				discretefov[]={0.125,0.041999999};
+				distanceZoomMin=100;
+				distanceZoomMax=1000;
+				memoryPointCamera="opticView";
+				visionMode[]={};
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				cameraDir="";
+			};
+		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=120;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]=
-				{
-					"JLTS_DC15x_SCOPE"
-				};
-				iconPicture="";
+				compatibleItems[]={};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -165,7 +189,8 @@ class CfgWeapons
 			};
 			class PointerSlot: PointerSlot
 			{
-				compatibleItems[]={
+				compatibleItems[]=
+				{
 					"FST_Attachment_Light_Normal_White",
                     "FST_Attachment_Light_Beam_White",
                     "FST_Attachment_Module_Light_Normal_White",
@@ -174,7 +199,10 @@ class CfgWeapons
 			};
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"bipod_01_F_blk"
+				};
 			};
 		};
 		class GunParticles
