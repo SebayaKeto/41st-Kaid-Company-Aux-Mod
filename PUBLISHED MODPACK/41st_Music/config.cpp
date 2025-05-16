@@ -115,6 +115,8 @@ class CfgMusic
 		"FST_BuddyHollyHatsuneMiku",
 		"FST_Pelinal",
 		"FST_LA_ATer_Saints_Ofthe41st",
+		"FST_IntoTheFire",
+		"FST_Screaming_Eagles",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -139,6 +141,7 @@ class CfgMusic
 		"FST_ShipAlert",
 		"FST_Rakghoul",
 		"FST_UnityInBattle",
+		"FST_Order66",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -272,6 +275,18 @@ class CfgMusic
 			1
 		};
 		duration="122";
+	};
+	class FST_Order66
+	{
+		name="[Secret] Execute Order 66";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Execute_Order_66.ogg",
+			10,
+			1
+		};
+		duration="8";
 	};
 	class FST_Rakghoul
 	{
@@ -1139,7 +1154,30 @@ class CfgMusic
 		};
 		duration="260";
 	};
-	
+	class FST_IntoTheFire
+	{
+		name="Sabaton - Into the Fire";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Into-the-Fire.ogg",
+			1,
+			1
+		};
+		duration="210";
+	};
+	class FST_Screaming_Eagles
+	{
+		name="Sabaton - Screaming Eagles";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Screaming-Eagles.ogg",
+			1,
+			1
+		};
+		duration="250";
+	};
 	// Christmas
 		
 	class FST_WhiteChristmas
