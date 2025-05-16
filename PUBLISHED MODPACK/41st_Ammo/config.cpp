@@ -1376,6 +1376,45 @@ class CfgAmmo
 		supersoniccrackfar[]={};
 		soundSetSonicCrack[]={};
 		soundSetBulletFly[]={};
+	};
+	class IDA_smoke_Impact;
+	class FST_smoke_Impact: IDA_smoke_Impact
+	{
+		model="\A3\weapons_f\Ammo\UGL_slug";
+		smokeColor[]={1,1,1,1};
+		caliber=2;
+		simulation="shotSmoke";
+		effectsSmoke="IDA_SmokeEffect";
+		explosionTime=-1;
+		deflectionSlowDown=0.1;
+		timeToLive=120;
+		ace_frag_enabled=0;
+		hit=1;
+		indirectHitRange=0;
+		indirectHit=1;
+		fuseDistance=1;
+		ExplosionEffects="";
+		CraterEffects="";
+		SoundSetExplosion[]=
+		{
+			""
+		};
+	};
+	class FST_smoke_Impact_Red: FST_smoke_Impact
+	{
+		smokeColor[]={0.5,0,0,1};
+	};
+	class FST_smoke_Impact_Green: FST_smoke_Impact
+	{
+		smokeColor[]={0,0.5,0,1};
+	};
+	class FST_smoke_Impact_blue: FST_smoke_Impact
+	{
+		smokeColor[]={0,0,0.5,1};
+	};
+	class FST_smoke_Impact_purple: FST_smoke_Impact
+	{
+		smokeColor[]={0.5,0,0.5,1};
 	};	
 };	
 class CfgMagazines
@@ -2121,6 +2160,57 @@ class CfgMagazines
 		ammo="FST_HE_WristRocket";
 		count=1;
 		mass=8;
+	};
+	class IDA_Smoke_LauncherGrenade;
+	class FST_Smoke_LauncherGrenade: IDA_Smoke_LauncherGrenade
+	{ 
+		author="Adler";
+		count=1;
+		displayName="[41st] 1Rnd Smoke grenade";
+		displayNameShort="White Smoke";
+		descriptionShort="Impact Smoke grenade";
+		ammo="FST_smoke_Impact";
+		mass=6;
+	};
+	class FST_SmokeRed_LauncherGrenade: FST_Smoke_LauncherGrenade
+	{
+		author="Adler";
+		count=1;
+		displayName="[41st] 1Rnd Smoke grenade (Red)";
+		displayNameShort="Red Smoke";
+		descriptionShort="Red Impact Smoke grenade";
+		ammo="FST_smoke_Impact_Red";
+		mass=6;
+	};
+	class FST_SmokeGreen_LauncherGrenade: FST_Smoke_LauncherGrenade
+	{
+		author="Adler";
+		count=1;
+		displayName="[41st] 1Rnd Smoke grenade (Green)";
+		displayNameShort="Green Smoke";
+		descriptionShort="Green Impact Smoke grenade";
+		ammo="FST_smoke_Impact_Green";
+		mass=6;
+	};
+	class FST_SmokeBlue_LauncherGrenade: FST_Smoke_LauncherGrenade
+	{
+		author="Adler";
+		count=1;
+		displayName="[41st] 1Rnd Smoke grenade (Blue)";
+		displayNameShort="Blue Smoke";
+		descriptionShort="Blue Impact Smoke grenade";
+		ammo="FST_smoke_Impact_Blue";
+		mass=6;
+	};
+	class FST_SmokePurple_LauncherGrenade: FST_Smoke_LauncherGrenade
+	{
+		author="Adler";
+		count=1;
+		displayName="[41st] 1Rnd Smoke grenade (Purple)";
+		displayNameShort="Purple Smoke";
+		descriptionShort="Purple Impact Smoke grenade";
+		ammo="FST_smoke_Impact_Purple";
+		mass=6;
 	};
 	class RPG32_F;
 	class Titan_AT;
