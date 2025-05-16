@@ -283,7 +283,7 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\MissionTracks\Execute_Order_66.ogg",
-			10,
+			15,
 			1
 		};
 		duration="8";
