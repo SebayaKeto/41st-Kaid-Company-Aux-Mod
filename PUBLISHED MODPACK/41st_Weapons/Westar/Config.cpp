@@ -105,13 +105,15 @@ class CfgWeapons
 				{
 					opticsID=2;
 					useModelOptics=0;
-					opticsFlare=0;
-					opticsDisablePeripherialVision=0;
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=1;
 					opticsZoomMin=0.375;
 					opticsZoomMax=1.1;
 					opticsZoomInit=0.75;
 					memoryPointCamera="eye";
-					visionMode[]={};
+					visionMode[]={"Normal"};
 					discretefov[]={};
 				};
 			};
