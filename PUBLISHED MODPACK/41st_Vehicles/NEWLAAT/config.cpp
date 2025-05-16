@@ -24,6 +24,7 @@ class CfgPatches
 			"FST_laati_Turret_Medusa",
 			"FST_laati_Turret_Sierra",
 			"FST_laati_Turret_Pole",
+			"FST_laati_Turret_Jan",
 			"FST_laati_mk2_Daara",
 			"FST_laati_mk2_Shockcap",
 			"FST_laati_mk2_Spade",
@@ -33,6 +34,7 @@ class CfgPatches
 			"FST_laati_mk2_Medusa",
 			"FST_laati_mk2_Sierra",
 			"FST_laati_mk2_Pole",
+			"FST_laati_mk2_Jan",
 			"FST_laati_mk1Lights",
 			"FST_laati_mk1Lights_Shockcap",
 			"FST_laati_mk1Lights_Spade",
@@ -43,6 +45,7 @@ class CfgPatches
 			"FST_laati_mk1Lights_Medusa",
 			"FST_laati_mk1Lights_Sierra",
 			"FST_laati_mk1Lights_Pole",
+			"FST_laati_mk1Lights_Jan",
 			"FST_laati_mk2Lights_Shockcap",
 			"FST_laati_mk2Lights_Spade",
 			"FST_laati_mk2Lights_Grim",
@@ -52,6 +55,7 @@ class CfgPatches
 			"FST_laati_mk2Lights_Medusa",
 			"FST_laati_mk2Lights_Sierra",
 			"FST_laati_mk2Lights_Pole",
+			"FST_laati_mk2Lights_Jan",
 			"FST_laati_Turret_RadarTestbed"
 		};
 		weapons[]=
@@ -3513,7 +3517,7 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};	
+	};
 	class FST_laati_Turret_Pole: FST_laati_Turret
 	{
 		scope=2;
@@ -3534,7 +3538,28 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};	
+	};
+	class FST_laati_Turret_Jan: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Jan)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Viz";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Jan.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
 	class FST_laati_mk2_Daara: FST_laati_mk2
 	{
 		scope=2;
@@ -3788,7 +3813,7 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};	
+	};
 	class FST_laati_mk2_Pole: FST_laati_mk2
 	{
 		scope=2;
@@ -3809,7 +3834,28 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};		
+	};
+	class FST_laati_mk2_Jan: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Jan)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Viz";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Jan.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
 	// Start Lamps Customs
 	class FST_laati_mk1Lights_Daara: FST_laati_mk1Lights
 	{
@@ -4064,7 +4110,7 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};	
+	};
 	class FST_laati_mk1Lights_Pole: FST_laati_mk1Lights
 	{
 		scope=2;
@@ -4085,7 +4131,28 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};		
+	};
+	class FST_laati_mk1Lights_Jan: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Jan/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Viz";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Jan.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
 	class FST_laati_mk2Lights_Daara: FST_laati_mk2Lights
 	{
 		scope=2;
@@ -4339,7 +4406,7 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};	
+	};
 	class FST_laati_mk2Lights_Pole: FST_laati_mk2Lights
 	{
 		scope=2;
@@ -4360,7 +4427,28 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
-	};	
+	};
+	class FST_laati_mk2Lights_Jan: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Jan/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Viz";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Jan.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
 };
 class CfgAmmo
 {
