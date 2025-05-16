@@ -13759,6 +13759,34 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Nova: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Nova]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Nova";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Atlas: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Atlas]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Atlas";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
 	class lsd_blueforUniform_Base;
 	class lsd_gar_jediCommander_uniform: lsd_blueforUniform_Base
 	{
@@ -31074,6 +31102,116 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Ryx",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Nova: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-9661 'Nova'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Nova";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Nova.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Nova.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Nova",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Nova",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Atlas: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-9512 'Atlas'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Atlas";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Atlas.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Atlas.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Atlas",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Atlas",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
