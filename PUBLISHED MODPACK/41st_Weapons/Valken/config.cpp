@@ -33,36 +33,36 @@ class CfgWeapons
 		scope=2;
 		displayName="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_Display";
 		picture="\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
-		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_VK38X_Scope_F.p3d";
+		model="\A3\weapons_f\acc\acco_nightstalker_F.p3d";
 		descriptionShort="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_DesShort";
+		weaponInfoType="RscWeaponRangeZeroingFOV";
 		inertia=0.2;
 
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass=14;
-			opticType=2;
-			optics=1;
-			weaponInfoType="RscWeaponRangeZeroingFOV";
-			
+			optics=2;
+			modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F";
 			class OpticsModes
 			{
 				// 1x – No overlay
-				class Close
+				class Iron
 				{
 					opticsID=1;
-					opticsDisplayName="1x";
-					useModelOptics=0;
-					opticsPPEffects[]={"OpticsCHAbera1","OpticsBlur1"};
-					opticsZoomMin=0.75;    // Close to 1x
-					opticsZoomMax=0.75;
+					useModelOptics=1;
+					opticsPPEffects[]={
+						"OpticsRadialBlur1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.25;    // Close to 1x
+					opticsZoomMax=1.25;
 					opticsZoomInit=0.75;
 					discreteDistance[]={100,200,300,400,500};
-					discreteDistanceInitIndex=0;
+					discreteDistanceInitIndex=1;
 					distanceZoomMin=100;
-					distanceZoomMax=500;
-					discretefov[]={};
+					distanceZoomMax=500; 
 					discreteInitIndex=0;
-					memoryPointCamera="opticView";
+					memoryPointCamera="eye";
 					visionMode[]={"Normal"};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=0;
@@ -77,8 +77,8 @@ class CfgWeapons
 					useModelOptics=1;
 					modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F";
 					opticsPPEffects[]={"OpticsCHAbera3","OpticsBlur2"};
-					opticsZoomMin=0.25;
-					opticsZoomMax=0.25;
+					opticsZoomMin=0.99;
+					opticsZoomMax=0.99;
 					opticsZoomInit=0.25;
 					discreteDistance[]={100,200,300,400,500,600,700,800,900,1000};
 					discreteDistanceInitIndex=0;
