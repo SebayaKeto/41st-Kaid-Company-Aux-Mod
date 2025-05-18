@@ -2623,7 +2623,15 @@ class CfgVehicles
 		fuelExplosionPower=1;
 		ace_refuel_fuelCargo=900000;
 		ace_refuel_hooks[] = {{0, 0, 0.5}};
-		ace_refuel_hoseLength=25;
+		ace_refuel_hoseLength=75;
+		 class ace_cargo {
+            class cargo {
+                class FST_ExplodeFuelBarrel_2 {
+                    type = "FST_ExplodeFuelBarrel_2";
+                    amount = 1;
+                };
+            };
+        };	
 	};
 };
 class Mode_FullAuto;

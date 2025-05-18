@@ -260,7 +260,8 @@ class CfgPatches
 			"FST_AmmoCrate",
 			"FST_MedicalCrate",
 			"FST_ExplosiveCrate",
-			"FST_ExplodeFuelBarrel_1"
+			"FST_ExplodeFuelBarrel_1",
+			"FST_ExplodeFuelBarrel_2"
 		};
 		weapons[]={};
 	};
@@ -15260,8 +15261,22 @@ class CfgVehicles
 		ace_refuel_hoseLength=25;
 		eden=1;
 	};
-	
-	
+	class FST_ExplodeFuelBarrel_2: Box_NATO_Ammo_F 
+{
+	displayName="[41st] Fuel Barrel (Logi ITT)";
+	editorCategory="FST_Crates";
+	editorSubcategory="FST_Supplies";
+	editorPreview="3as\3as_props\Crates\EditorPreviews\Land_3as_ExplodeBarrel_1.jpg";
+	model="3as\3as_props\crates\models\3as_small_fuel_barrel.p3d";
+	armor=1000;
+	maximumLoad=2;
+	Scope=2;
+	ScopeCurator=2;	
+	ace_refuel_fuelCargo=900000;
+	ace_refuel_hooks[] = {{0, 0, 0.5}};
+		ace_refuel_hoseLength=25;
+		eden=1;
+	};
 	
 	//////////////Backpacks////////////////
 	class FST_blueforWeaponBag_base: Weapon_Bag_Base
