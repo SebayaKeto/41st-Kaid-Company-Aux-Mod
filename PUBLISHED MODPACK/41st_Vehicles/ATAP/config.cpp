@@ -1588,7 +1588,7 @@ class CfgVehicles
 			};
 			class HitEngine
 			{
-				armor=1.6;
+				armor=2.5;
 				material=-1;
 				name="HitEngine";
 				passThrough=0.80000001;
@@ -1598,7 +1598,7 @@ class CfgVehicles
 			};
 			class HitLTrack
 			{
-				armor=2;
+				armor=3;
 				material=-1;
 				name="track_l_hit";
 				passThrough=0;
@@ -1608,7 +1608,7 @@ class CfgVehicles
 			};
 			class HitRTrack
 			{
-				armor=2;
+				armor=3;
 				material=-1;
 				name="track_r_hit";
 				passThrough=0;
@@ -1618,7 +1618,7 @@ class CfgVehicles
 			};
 			class HitFuel
 			{
-				armor=1.5;
+				armor=2.5;
 				material=-1;
 				name="HitFuel";
 				passThrough=1;
@@ -4428,7 +4428,7 @@ class CfgVehicles
 				memoryPointGunnerOptics="gunner_optics";
 				weapons[]=
 				{
-					"3AS_ATAP_Siege_Cannon",
+					"FST_ATAP_SIEGE_Cannon",
 					"FST_ATAP_mortar"
 				};
 				magazines[]=
@@ -4486,7 +4486,7 @@ class CfgVehicles
 					};
 					class HitGun
 					{
-						armor=0.40000001;
+						armor=0.60000001;
 						material=-1;
 						name="gun1_hit";
 						visual="commander_gun_hit";
@@ -4671,7 +4671,7 @@ class CfgVehicles
 					};
 					class HitGun
 					{
-						armor=0.40000001;
+						armor=0.60000001;
 						material=-1;
 						name="gun2_hit";
 						visual="main_gun_hit";
@@ -4717,17 +4717,17 @@ class CfgVehicles
 					"FST_thermal_coil_blue",
 					"FST_thermal_coil_blue",
 					"FST_thermal_coil_blue",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
-					"FST_EWEB_cell",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
+					"FST_EWEB_cell_Blue",
 					"SmokeLauncherMag"
 				};
 				minElev=-35;
@@ -4777,7 +4777,7 @@ class CfgVehicles
 					};
 					class HitGun
 					{
-						armor=0.40000001;
+						armor=0.60000001;
 						material=-1;
 						name="gun_3_hit";
 						visual="main_gun_hit";
