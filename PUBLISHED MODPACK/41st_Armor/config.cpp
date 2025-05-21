@@ -3615,7 +3615,10 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\ScoutHelmet.rvmat",
 			"41st_Armor\Data\Helmets\visor.rvmat"
 		};
-		subItems[]={};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
 		class ItemInfo: HeadgearItem
 		{
 			uniformModel="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d";
@@ -8644,6 +8647,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};	
+	class FST_P2_Helmet_Devo: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Devo]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Devo.paa",
+		};
+	};
 	class FST_P2_Helmet_Creed: FST_P2_Helmet_Base
 	{
 		author="Gold";

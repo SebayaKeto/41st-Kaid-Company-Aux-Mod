@@ -761,7 +761,7 @@ class CfgWeapons
 		displayName="[41st] DC-15S carbine";
 		descriptionShort="Close range, fast rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15S\DC15S.p3d";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15S\Model\IDA_DC15S.p3d";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -1026,15 +1026,15 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"3AS_optic_holo_DC15S",
-					"FST_Attachment_Optic_Holo_DC15"
+			//		"3AS_optic_holo_DC15S",
+			//		"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
 				compatibleItems[]=
 				{
-					"FST_Knife",
+			//		"FST_Knife",
 				};
 			};
             class PointerSlot: PointerSlot
@@ -1152,15 +1152,16 @@ class CfgWeapons
 			mass=50;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]={
-					"FST_Attachment_Optic_Holo_DC15"
+				compatibleItems[]=
+				{
+				//	"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
 				compatibleItems[]=
 				{
-					"FST_Knife",
+				//	"FST_Knife",
 				};
 			};
             class PointerSlot: PointerSlot
@@ -1605,6 +1606,33 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=60;
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+				//	"3AS_optic_reflex_DC15C",
+				//	"FST_Attachment_Optic_Holo_DC15"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+            class PointerSlot: PointerSlot
+            {
+                compatibleItems[]=
+                {
+                    "FST_Attachment_Light_Normal_White",
+                    "FST_Attachment_Light_Beam_White",
+                    "FST_Attachment_Module_Light_Normal_White",
+                    "FST_Attachment_Module_Light_Beam_White"
+                };
+            };
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
 		};
 	};
     class acc_flashlight;

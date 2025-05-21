@@ -4,13 +4,14 @@ class CfgPatches
 	{
 		requiredAddons[]=
 		{
-			"3AS_Weapons"
+			"3AS_Weapons",
+			"3AS_Weapons_Valken38X"
 		};
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]=
 		{
-			"FST_Valken38x",
+			"FST_Valken38x"
 		};
 	};
 };
@@ -24,76 +25,122 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class ItemCore;
 	class InventoryOpticsItem_Base_F;
 	class WeaponSlotsInfo;
-	class FST_Scope_VK38X: ItemCore
+	class 3AS_optic_VK38X_F;
+	class FST_optic_VK38X_1: 3AS_optic_VK38X_F
 	{
-		author="$STR_3as_Studio";
+		author="Gold";
 		scope=2;
-		displayName="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_Display";
-		picture="\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
-		model="\A3\weapons_f\acc\acco_nightstalker_F.p3d";
-		descriptionShort="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_DesShort";
-		weaponInfoType="RscWeaponRangeZeroingFOV";
-		inertia=0.2;
-
+		displayName="[41st] Valken-38X scope (1-3)";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_VK38X_Scope_F.p3d";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass=14;
-			optics=2;
-			modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F";
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_F";
 			class OpticsModes
 			{
-				// 1x – No overlay
-				class Iron
+				class Snip
 				{
 					opticsID=1;
+					opticsDisplayName="WFOV";
 					useModelOptics=1;
-					opticsPPEffects[]={
-						"OpticsRadialBlur1",
-						"OpticsBlur1"
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera3",
+						"OpticsBlur2"
 					};
-					opticsZoomMin=0.25;    // Close to 1x
-					opticsZoomMax=1.25;
-					opticsZoomInit=0.75;
-					discreteDistance[]={100,200,300,400,500};
-					discreteDistanceInitIndex=1;
-					distanceZoomMin=100;
-					distanceZoomMax=500; 
-					discreteInitIndex=0;
-					memoryPointCamera="eye";
-					visionMode[]={"Normal"};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=0;
-					cameraDir="";
-				};
-
-				// 3x – With reticle overlay
-				class Zoom
-				{
-					opticsID=2;
-					opticsDisplayName="3x";
-					useModelOptics=1;
-					modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F";
-					opticsPPEffects[]={"OpticsCHAbera3","OpticsBlur2"};
-					opticsZoomMin=0.99;
-					opticsZoomMax=0.99;
-					opticsZoomInit=0.25;
-					discreteDistance[]={100,200,300,400,500,600,700,800,900,1000};
+					opticsZoomMin="0.25/3";
+					opticsZoomMax="0.25/1";
+					opticsZoomInit="0.25/1";
+					discreteDistance[]={100};
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=100;
-					distanceZoomMax=1000;
-					discretefov[]={};
+					distanceZoomMax=100;
+					discretefov[]=
+					{
+						"0.25/1",
+						"0.25/3"
+					};
 					discreteInitIndex=0;
 					memoryPointCamera="opticView";
-					visionMode[]={"Normal"};
+					modelOptics[]=
+					{
+						"\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_F",
+						"\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
 					cameraDir="";
 				};
 			};
 		};
+		inertia=0.2;
+	};
+	class FST_optic_VK38X_2: 3AS_optic_VK38X_F
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] Valken-38X scope (4-12)";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_VK38X_Scope_F.p3d";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=14;
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_F";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsID=1;
+					opticsDisplayName="WFOV";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera3",
+						"OpticsBlur2"
+					};
+					opticsZoomMin="0.25/12";
+					opticsZoomMax="0.25/4";
+					opticsZoomInit="0.25/4";
+					discreteDistance[]={100};
+					discreteDistanceInitIndex=0;
+					distanceZoomMin=100;
+					distanceZoomMax=100;
+					discretefov[]=
+					{
+						"0.25/4",
+						"0.25/12"
+					};
+					discreteInitIndex=0;
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_F",
+						"\3AS\3AS_Weapons\Republic\ACC\3AS_reticle_VK38X_Z_F"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+			};
+		};
+		inertia=0.2;
 	};
 	class 3AS_Valken38X_F;
 	class FST_Valken38x: 3AS_Valken38X_F
@@ -284,28 +331,30 @@ class CfgWeapons
 		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
 		class OpticsModes
 		{
-			class Iron
+			class FST_Valken_Iron
 			{
 				opticsID=1;
 				useModelOptics=0;
 				opticsPPEffects[]=
 				{
-					"",
-					""
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
 				};
 				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
+				opticsZoomMax=3; //1.25
 				opticsZoomInit=0.75;
-				discreteDistance[]={200};
+				discreteDistance[]={};
 				discreteDistanceInitIndex=0;
-				distanceZoomMin=100;
+				discreteInitIndex=0;
+				distanceZoomMin=200;
 				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
-				opticsFlare=0;
-				opticsDisablePeripherialVision=0;
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				cameraDir="";
 			};
-			class IDA_DC15A_Scope
+			class FST_Valken_Scope
 			{
 				opticsID=2;
 				useModelOptics=1;
@@ -317,14 +366,15 @@ class CfgWeapons
 				opticsZoomMin=0.25;
 				opticsZoomMax=1.25;
 				opticsZoomInit=0.75;
-				discreteDistance[]={200};
+				discreteDistance[]={};
 				discreteDistanceInitIndex=0;
-				distanceZoomMin=100;
+				discreteInitIndex=0;
+				distanceZoomMin=200;
 				distanceZoomMax=200;
 				memoryPointCamera="eye";
 				visionMode[]={};
-				opticsFlare=0;
-				opticsDisablePeripherialVision=0;
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
 				cameraDir="";
 			};
 		};
@@ -335,7 +385,8 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"FST_Scope_VK38X"
+					"FST_optic_VK38X_1",
+					"FST_optic_VK38X_2"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -355,14 +406,6 @@ class CfgWeapons
 				};
 			};
 		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
+		class LinkedItems{};
 	};
 };

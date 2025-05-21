@@ -78,8 +78,8 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]= 
 				{
-					"3as_Optic_DC15L_F",
-				//	"FST_Optic_DC15L",
+				//	"3as_Optic_DC15L_F",
+					"FST_Optic_DC15L"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -318,7 +318,7 @@ class CfgWeapons
 	class InventoryOpticsItem_Base_F;
 	class FST_Optic_DC15L: ItemCore
 	{
-		author="$STR_3as_Studio";
+		author="Gold";
 		scope=2;
 		displayName="[41st] DC-15L Scope";
 		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
@@ -340,25 +340,14 @@ class CfgWeapons
 					opticsPPEffects[] = { "Default" };
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0;
-					opticsZoomMin = 1.0;
-					opticsZoomMax = 1.0;
-					opticsZoomInit = 1.0;
-					memoryPointCamera = "eye";
-					visionMode[] = {};
-					distanceZoomMin = 300;
-					distanceZoomMax = 300;
-				};
-				class scope
-				{
-					opticsID = 2;
-					useModelOptics = 0;
-					opticsPPEffects[] = { "OpticsRadialBlur1", "OpticsBlur1" };
-					opticsFlare = 1;
-					opticsDisablePeripherialVision = 1;
-					opticsZoomMin = 0.833;
-					opticsZoomMax = 0.833;
-					opticsZoomInit = 0.833;
-					memoryPointCamera = "opticView";
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+				/*	opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;*/
+					memoryPointCamera="opticView";
+				//	memoryPointCamera = "eye";
 					visionMode[] = {};
 					distanceZoomMin = 300;
 					distanceZoomMax = 300;
@@ -376,5 +365,53 @@ class CfgWeapons
 		model="\3AS\3AS_Weapons\Republic\DC15L\3AS_DC15L_F.p3d";
 		picture="\3AS\3AS_Weapons\Republic\DC15L\Data\UI\3as_dc15l.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		weaponInfoType="RscOptics_nightstalker";
+		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
+		class OpticsModes
+		{
+			class Iron
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+			};
+			class IDA_DC15A_Scope
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=100;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				cameraDir="";
+			};
+		};
 	};
 };

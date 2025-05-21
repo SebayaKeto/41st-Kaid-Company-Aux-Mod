@@ -4,13 +4,14 @@ class CfgPatches
 	{
 		requiredAddons[]=
 		{
-			"3AS_Weapons"
+			"3AS_Weapons",
+			"IDA_Republic"
 		};
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]=
 		{
-			"FST_DC15X",
+			"FST_DC15X"
 		};
 	};
 };
@@ -24,46 +25,20 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class arifle_MX_Base_F: Rifle_Base_F
+	class WeaponSlotsInfo;
+	class IDA_DC15X;
+	class FST_DC15X: IDA_DC15X
 	{
-		class GunParticles;
-		class GunClouds;
-		class WeaponSlotsInfo;
-	};
-	class FST_DC15X: arifle_MX_Base_F
-	{
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=1;
 		ace_overheating_closedBolt=0;
 		ace_overheating_barrelMass=1;
-		author="Adapted from the Indecisive Armoury Team";
-		scope=2;
-		inertia=0;
-		canShootInWater=1;
+		author="Gold";
 		displayName="[41st] DC-15X Sniper Rifle";
-		descriptionShort="Extreme range, high power.";
-		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_ui_ca.paa";
-		model="\Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15X\Model\IDA_DC15X.p3d";
+		scope=2;
+		canShootInWater=1;
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15X\Model\IDA_DC15X.p3d";
 		baseWeapon="FST_DC15X";
-		ACE_barrelLength=730;
-		ACE_barrelTwist=381;
 		initSpeed=-1;
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15X\Textures\DC15X_co.paa"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"Indecisive_Armoury_Anims\Republic\DC15X.rtm"
-		};
 		magazines[]=
 		{
 			"FST_blaster_cell_Overcharged_Blue",
@@ -72,15 +47,6 @@ class CfgWeapons
 			"FST_blaster_cell_Overcharged_Red"
 		};
 		magazineWell[]={};
-		ace_clearJamAction="";
-		reloadAction="GestureReload_IDA_Reload_Blaster";
-		reloadMagazineSound[]=
-		{
-			"\41st_Weapons\DC-15AS\Data\reload.ogg",
-			1.5,
-			1,
-			100
-		};
 		recoil="FST_recoil_dc15x";
 		muzzles[]=
 		{
@@ -91,13 +57,6 @@ class CfgWeapons
 			"Single"
 		};
 		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		class Single: Mode_SemiAuto
 		{
 			sounds[]=
@@ -151,7 +110,7 @@ class CfgWeapons
 		modelOptics="\A3\Weapons_F\acc\reticle_lrps_F";
 		class OpticsModes
 		{
-			class IDA_DC15X_Scope
+			class FST_DC15X_Scope
 			{
 				opticsID=1;
 				useModelOptics=1;
@@ -203,15 +162,6 @@ class CfgWeapons
 				{
 					"bipod_01_F_blk"
 				};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
 			};
 		};
 	};
