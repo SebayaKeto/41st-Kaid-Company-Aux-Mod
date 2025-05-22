@@ -71,12 +71,21 @@ class CfgVehicles
 	{
 		class NewTurret;
 		class Sounds;
+		class Eventhandelers;
 		class HitPoints
 		{
-			class HitBody;
-			class HitEngine;
-			class HitFuel;
 			class HitHull;
+			class HitLFWheel;
+			class HitLF2Wheel;
+			class HitLBWheel;
+			class HitLMWheel;
+			class HitRFWheel;
+			class HitRF2Wheel;
+			class HitRBWheel;
+			class HitRMWheel;
+			class HitBody;
+			class HitFuel;
+			class HitEngine;
 		};
 	};
 	class Wheeled_APC_F: Car_F
@@ -111,14 +120,58 @@ class CfgVehicles
 		scopecurator=2;
 		icon="iconObject_1x2";
 		displayname="[41st] HAVw A5 Juggernaut (Static)";
-		model="3as\3as_Jug\model\3as_jug_w.p3d";
-		editorCategory="3AS_EditorCategory_General_Props";
-		editorSubcategory="3as_Wrecks";
+		model="3as\3as_Jug\model\3as_jug.p3d";
+		editorCategory="3AS_EditorCategory_MiscProps";
+		editorSubcategory="3AS_EditorSubcategory_Wrecks";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"zasleh",
+			"zasleh1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3as\3as_jug\data\juggernaut_base_co.paa",
+			"3as\3as_jug\data\juggernaut_guns_co.paa",
+			"3as\3as_jug\data\juggernaut_props_co.paa",
+			"3as\3as_jug\data\juggernaut_wheels_co.paa",
+			"",
+			""
+		};
 	};
 	class FST_Jug_destroy_static: FST_Jug_static
 	{
 		displayname="[41st] HAVw A5 Juggernaut (Destroyed)";
-		model="3as\3as_Jug\model\3as_jug_d.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"zasleh",
+			"zasleh1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3as\3as_jug\data\juggernaut_base_co.paa",
+			"3as\3as_jug\data\juggernaut_guns_co.paa",
+			"3as\3as_jug\data\juggernaut_props_co.paa",
+			"3as\3as_jug\data\juggernaut_wheels_co.paa",
+			"",
+			""
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+			"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+			"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+			"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+			"",
+			""
+		};
 	};
 	class FST_Jug_base_F: Wheeled_APC_F
 	{
@@ -379,46 +432,143 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class HitBody: HitBody
+			class HitHull: HitHull
 			{
-				armor=3.5;
+				armor=9.5;
 				material=-1;
-				name="karoserie";
+				armorComponent="hit_hull";
+				name="hit_hull_point";
 				visual="zbytek";
 				passThrough=1;
 				minimalHit=0.1;
-				explosionShielding=1.2;
-				radius=0.40000001;
+				explosionShielding=0.55000001;
+				radius=0.5;
 			};
 			class HitEngine: HitEngine
 			{
-				armor=3.5;
+				armor=3;
 				material=-1;
-				name="motor";
-				passThrough=0.5;
+				armorComponent="hit_engine";
+				name="hit_engine_point";
+				visual="-";
+				passThrough=0.1;
 				minimalHit=0.1;
 				explosionShielding=0.5;
-				radius=0.30000001;
+				radius=0.5;
 			};
 			class HitFuel: HitFuel
 			{
-				armor=3.5;
+				armor=3;
 				material=-1;
-				name="palivo";
-				passThrough=0.5;
+				armorComponent="hit_fuel";
+				name="hit_fuel_point";
+				visual="-";
+				passThrough=0.30000001;
 				minimalHit=0.1;
-				explosionShielding=0.5;
-				radius=0.30000001;
+				explosionShielding=0.60000002;
+				radius=0.5;
 			};
-			class HitHull: HitHull
+			class HitLFWheel: HitLFWheel
 			{
+				visual="wheel_1_1_hide";
+				armorComponent="wheel_1_1_hide";
+				radius=0.5;
 				armor=2;
-				material=-1;
-				name="palivo";
+				minimalHit=1;
+				explosionShielding=0.33000001;
 				passThrough=0;
-				minimalHit=0.1;
-				explosionShielding=1.5;
-				radius=0.30000001;
+			};
+			class HitLF2Wheel: HitLF2Wheel
+			{
+				visual="wheel_1_2_hide";
+				armorComponent="wheel_1_2_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitLMWheel: HitLMWheel
+			{
+				visual="wheel_1_3_hide";
+				armorComponent="wheel_1_3_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitLBWheel: HitLBWheel
+			{
+				visual="wheel_1_4_hide";
+				armorComponent="wheel_1_4_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitLB2Wheel: HitLBWheel
+			{
+				visual="wheel_1_5_hide";
+				armorComponent="wheel_1_5_hide";
+				name="wheel_1_5_steering";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitRFWheel: HitRFWheel
+			{
+				visual="wheel_2_1_hide";
+				armorComponent="wheel_2_1_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitRF2Wheel: HitRF2Wheel
+			{
+				visual="wheel_2_2_hide";
+				armorComponent="wheel_2_2_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitRMWheel: HitRMWheel
+			{
+				visual="wheel_2_3_hide";
+				armorComponent="wheel_2_3_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitRBWheel: HitRBWheel
+			{
+				visual="wheel_2_4_hide";
+				armorComponent="wheel_2_4_hide";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
+			};
+			class HitRB2Wheel: HitRBWheel
+			{
+				visual="wheel_2_5_hide";
+				armorComponent="wheel_2_5_hide";
+				name="wheel_2_5_steering";
+				radius=0.5;
+				armor=2;
+				minimalHit=1;
+				explosionShielding=0.33000001;
+				passThrough=0;
 			};
 		};
 		weapons[]=
@@ -754,7 +904,7 @@ class CfgVehicles
 				maxelev=50;
 				class HitPoints
 				{
-					class HitTurret
+					class HitTurret1
 					{
 						armor=1.2;
 						material=-1;
@@ -765,7 +915,7 @@ class CfgVehicles
 						explosionShielding=0.30000001;
 						radius=0.25;
 					};
-					class HitGun
+					class HitGun1
 					{
 						armor=1.2;
 						material=-1;
@@ -986,7 +1136,7 @@ class CfgVehicles
 				maxelev=80;
 				class HitPoints
 				{
-					class HitTurret
+					class HitTurret2
 					{
 						armor=1.2;
 						material=-1;
@@ -997,7 +1147,7 @@ class CfgVehicles
 						explosionShielding=0.30000001;
 						radius=0.25;
 					};
-					class HitGun
+					class HitGun2
 					{
 						armor=1.2;
 						material=-1;
@@ -1120,7 +1270,12 @@ class CfgVehicles
 				gunnerGetOutAction="GetOutLow";
 				weapons[]=
 				{
-					""
+					"missiles_DAR"
+				};
+				magazines[]=
+				{
+					"24Rnd_missiles",
+					"24Rnd_missiles"
 				};
 				proxyType="CPGunner";
 				displayname="Missile Gunner";
@@ -1137,12 +1292,18 @@ class CfgVehicles
 				gunnerName="Missle Gunner";
 				memoryPointGun[]=
 				{
-					"rocket_2_end",
-					"rocket_1_end"
+					"pos_missile_l"
 				};
+				memorypointlmissile="pos_missile_l";
+				memorypointrmissile="pos_missile_r";
+				memoryPointLRocket="pos_missile_l";
+				memoryPointRRocket="pos_missile_r";
+				gunBeg="pos_missile_l";
+				gunEnd="rocket_1";
 				gunnerForceOptics=0;
 				inGunnerMayFire=1;
 				minTurn=-20;
+				initturn=0;
 				maxTurn=20;
 				missileBeg="";
 				missileEnd="";
@@ -1151,7 +1312,6 @@ class CfgVehicles
 				gun="maingun_rocket";
 				animationSourceBody="MainTurret_rocket";
 				body="MainTurret_rocket";
-				initTurn=0;
 				cameraDir="";
 				LODTurnedIn=1100;
 				LodOpticsIn=1;
@@ -1175,10 +1335,6 @@ class CfgVehicles
 				};
 				minelev=-50;
 				maxelev=45;
-				magazines[]=
-				{
-					"3AS_24Rnd_Jug_Missile_Mag"
-				};
 				ejectDeadGunner=1;
 				usepip=2;
 				startEngine=0;
@@ -1258,13 +1414,13 @@ class CfgVehicles
 				radius=10;
 				onlyForPlayer=0;
 				condition="(this animationSourcePhase ""rocket_move"" == 0) AND (alive this) ";
-				statement="this animateSource [""rocket_move"",1]; vehicle player addWeaponTurret [""3AS_Jug_Missiles"",[3]];";
+				statement="this animateSource [""rocket_move"",1]; vehicle player addWeaponTurret [""3AS_Sabre_Missiles"",[3]];";
 			};
 			class Open_rockets: Close_rockets
 			{
 				displayName="Close Rocket Pods";
 				condition="(this animationSourcePhase ""rocket_move"" == 1)  AND (alive this)";
-				statement="this animateSource [""rocket_move"",0]; vehicle player removeWeaponTurret [""3AS_Jug_Missiles"",[3]];";
+				statement="this animateSource [""rocket_move"",0]; vehicle player removeWeaponTurret [""3AS_Sabre_Missiles"",[3]];";
 			};
 		};
 		class EventHandlers: EventHandlers
@@ -1288,12 +1444,88 @@ class CfgVehicles
 			class Revolving
 			{
 				source="revolving";
-				weapon="3AS_Jug_Missiles";
+				weapon="missiles_DAR";
 			};
 			class Revolving_SAM
 			{
 				source="revolving";
 				weapon="3AS_Jug_SAM";
+			};
+			class HitLFWheel
+			{
+				source="Hit";
+				hitpoint="HitLFWheel";
+				raw=1;
+			};
+			class HitRFWheel: HitLFWheel
+			{
+				hitpoint="HitRFWheel";
+			};
+			class HitLF2Wheel: HitLFWheel
+			{
+				hitpoint="HitLF2Wheel";
+			};
+			class HitRF2Wheel: HitLFWheel
+			{
+				hitpoint="HitRF2Wheel";
+			};
+			class HitLBWheel: HitLFWheel
+			{
+				hitpoint="HitLBWheel";
+			};
+			class HitRBWheel: HitLFWheel
+			{
+				hitpoint="HitRBWheel";
+			};
+			class HitLMWheel: HitLFWheel
+			{
+				hitpoint="HitLMWheel";
+			};
+			class HitRMWheel: HitLFWheel
+			{
+				hitpoint="HitRMWheel";
+			};
+			class HitLB2Wheel: HitLFWheel
+			{
+				hitpoint="HitLB2Wheel";
+			};
+			class HitRB2Wheel: HitLFWheel
+			{
+				hitpoint="HitRB2Wheel";
+			};
+			class Muzzle_flash
+			{
+				source="ammorandom";
+				weapon="3AS_Jug_AT_Cannon";
+			};
+			class Muzzle_flash2
+			{
+				source="ammorandom";
+				weapon="3AS_Jug_AutoCannon";
+			};
+			class minigun
+			{
+				source="revolving";
+				weapon="3AS_Jug_AutoCannon";
+			};
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]=
+			{
+				"3as\3as_jug\data\base.rvmat",
+				"3as\3as_jug\data\damage\Jug_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"3as\3as_jug\data\guns.rvmat",
+				"3as\3as_jug\data\damage\Jug_guns_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"3as\3AS_Jug\data\props.rvmat",
+				"3as\3as_jug\data\damage\Jug_props_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"3as\3AS_Jug\data\wheels.rvmat",
+				"3as\3as_jug\data\damage\Jug_wheels_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat"
 			};
 		};
 		viewCargoShadowDiff=0.050000001;
@@ -1314,7 +1546,13 @@ class CfgVehicles
 			{
 				position="exhaust";
 				direction="exhaust_dir";
-				effect="ExhaustsEffectAMV";
+				effect="ExhaustsEffectHeliBig";
+			};
+			class Exhaust2
+			{
+				position="exhaust1";
+				direction="exhaust1_dir";
+				effect="ExhaustsEffectHeliBig";
 			};
 		};
 		engineStartSpeed=5;
@@ -1339,18 +1577,18 @@ class CfgVehicles
 			{
 				color[]={7000,7500,10000};
 				ambient[]={70,75,100};
-				intensity=50;
-				size=1;
-				innerAngle=15;
+				intensity=200;
+				size=5;
+				innerAngle=5;
 				outerAngle=65;
-				coneFadeCoef=10;
+				coneFadeCoef=5;
 				position="Light_R_pos";
 				direction="Light_R_dir";
 				hitpoint="Light_R_hitpoint";
 				selection="Light_R";
 				useFlare=1;
-				flareSize=10;
-				flareMaxDistance=250;
+				flareSize=5;
+				flareMaxDistance=275;
 				dayLight=0;
 				class Attenuation
 				{
@@ -1383,6 +1621,20 @@ class CfgVehicles
 				hitpoint="Light_R_2_hitpoint";
 				selection="Light_R_2";
 			};
+			class Left3: Right
+			{
+				position="Light_L_pos3";
+				direction="Light_L_dir3";
+				hitpoint="Light_L_3_hitpoint";
+				selection="Light_L_3";
+			};
+			class Right3: Right
+			{
+				position="Light_R_pos3";
+				direction="Light_R_dir3";
+				hitpoint="Light_R_3_hitpoint";
+				selection="Light_R_3";
+			};
 		};
 		aggregateReflectors[]=
 		{
@@ -1401,6 +1653,14 @@ class CfgVehicles
 			
 			{
 				"Right2"
+			},
+			
+			{
+				"Left3"
+			},
+			
+			{
+				"Right3"
 			}
 		};
 		selectionFireAnim="";
@@ -2459,6 +2719,53 @@ class CfgVehicles
 		{
 			"FST_Trooper_P2_DC15S"
 		};
+		class TextureSources
+		{
+			class Republic
+			{
+				displayName="Republic";
+				author="$STR_3AS_Studio";
+				textures[]=
+				{
+					"3as\3as_jug\data\juggernaut_base_co.paa",
+					"3as\3as_jug\data\juggernaut_guns_co.paa",
+					"3as\3as_jug\data\juggernaut_props_co.paa",
+					"3as\3as_jug\data\juggernaut_wheels_co.paa"
+				};
+				factions[]=
+				{
+					"3AS_Rep"
+				};
+			};
+			class Imperial
+			{
+				displayName="Imperial";
+				author="$STR_3AS_Studio";
+				textures[]=
+				{
+					"3as\3as_jug\data\juggernaut_base_Imp_co.paa",
+					"3as\3as_jug\data\juggernaut_guns_Imp_co.paa",
+					"3as\3as_jug\data\juggernaut_props_Imp_co.paa",
+					"3as\3as_jug\data\juggernaut_wheels_co.paa"
+				};
+				factions[]=
+				{
+					"3AS_Imperial"
+				};
+			};
+		};
+		textureList[]=
+		{
+			"Republic",
+			1,
+			"Imperial",
+			0
+		};
+		class EventHandlers: EventHandlers
+		{
+			fired="[_this select 0,_this select 6,'missile_move','MissileBase'] call BIS_fnc_missileLaunchPositionFix; _this call (uinamespace getvariable 'BIS_fnc_effectFired');";
+			postInit="if (local (_this select 0)) then { [(_this select 0), """", [], false] call BIS_fnc_initVehicle; };";
+		};
 	};
 	class FST_Jug: FST_B_Jug_01_base_F
 	{
@@ -2466,374 +2773,7 @@ class CfgVehicles
 		class SimpleObject
 		{
 			eden=1;
-			animate[]=
-			{
-				
-				{
-					"damagehide",
-					0
-				},
-				
-				{
-					"damagehidevez",
-					0
-				},
-				
-				{
-					"damagehidehlaven",
-					0
-				},
-				
-				{
-					"wheel_1_1_destruct",
-					0
-				},
-				
-				{
-					"wheel_1_2_destruct",
-					0
-				},
-				
-				{
-					"wheel_1_3_destruct",
-					0
-				},
-				
-				{
-					"wheel_1_4_destruct",
-					0
-				},
-				
-				{
-					"wheel_2_1_destruct",
-					0
-				},
-				
-				{
-					"wheel_2_2_destruct",
-					0
-				},
-				
-				{
-					"wheel_2_3_destruct",
-					0
-				},
-				
-				{
-					"wheel_2_4_destruct",
-					0
-				},
-				
-				{
-					"wheel_1_1_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_1_2_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_1_3_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_1_4_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_2_1_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_2_2_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_2_3_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_2_4_destruct_unhide",
-					0
-				},
-				
-				{
-					"wheel_1_1",
-					0
-				},
-				
-				{
-					"wheel_2_1",
-					0
-				},
-				
-				{
-					"wheel_1_2",
-					0
-				},
-				
-				{
-					"wheel_1_3",
-					0
-				},
-				
-				{
-					"wheel_2_2",
-					0
-				},
-				
-				{
-					"wheel_2_3",
-					0
-				},
-				
-				{
-					"wheel_1_4",
-					0
-				},
-				
-				{
-					"wheel_2_4",
-					0
-				},
-				
-				{
-					"daylights",
-					0
-				},
-				
-				{
-					"wheel_1_1_damage",
-					0
-				},
-				
-				{
-					"wheel_1_2_damage",
-					0
-				},
-				
-				{
-					"wheel_1_3_damage",
-					0
-				},
-				
-				{
-					"wheel_1_4_damage",
-					0
-				},
-				
-				{
-					"wheel_2_1_damage",
-					0
-				},
-				
-				{
-					"wheel_2_2_damage",
-					0
-				},
-				
-				{
-					"wheel_2_3_damage",
-					0
-				},
-				
-				{
-					"wheel_2_4_damage",
-					0
-				},
-				
-				{
-					"wheel_1_1_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_1_2_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_1_3_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_1_4_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_2_1_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_2_2_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_2_3_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_2_4_damper_damage_backanim",
-					0
-				},
-				
-				{
-					"wheel_1_1_damper",
-					0.47999999
-				},
-				
-				{
-					"wheel_2_1_damper",
-					0.49000001
-				},
-				
-				{
-					"wheel_1_2_damper",
-					0.49000001
-				},
-				
-				{
-					"wheel_1_3_damper",
-					0.5
-				},
-				
-				{
-					"wheel_2_2_damper",
-					0.49000001
-				},
-				
-				{
-					"wheel_2_3_damper",
-					0.5
-				},
-				
-				{
-					"wheel_1_4_damper",
-					0.50999999
-				},
-				
-				{
-					"wheel_2_4_damper",
-					0.56999999
-				},
-				
-				{
-					"steering_1_1",
-					0
-				},
-				
-				{
-					"steering_2_1",
-					0
-				},
-				
-				{
-					"steering_1_2",
-					0
-				},
-				
-				{
-					"steering_2_2",
-					0
-				},
-				
-				{
-					"hatchdriver",
-					0
-				},
-				
-				{
-					"mainturret",
-					0
-				},
-				
-				{
-					"obsturret",
-					0
-				},
-				
-				{
-					"turretbase",
-					0
-				},
-				
-				{
-					"maingun",
-					0
-				},
-				
-				{
-					"obsgun",
-					0
-				},
-				
-				{
-					"rocket_1",
-					0
-				},
-				
-				{
-					"rocket_2",
-					0
-				},
-				
-				{
-					"damagehlaven",
-					0
-				},
-				
-				{
-					"vrtulea",
-					0
-				},
-				
-				{
-					"vrtuleb",
-					0
-				},
-				
-				{
-					"poklop_gunner",
-					0
-				},
-				
-				{
-					"poklop_commander",
-					0
-				},
-				
-				{
-					"zasleh_rot",
-					0
-				},
-				
-				{
-					"zasleh2_rot",
-					81.639999
-				},
-				
-				{
-					"zasleh_hide",
-					0
-				},
-				
-				{
-					"reverse_light",
-					0
-				}
-			};
+			animate[]={};
 			hide[]=
 			{
 				"clan",
@@ -2863,16 +2803,32 @@ class CfgVehicles
 		};
 		model="3as\3as_Jug\model\3as_jug.p3d";
 		icon="3AS\3as_Jug\data\ui\Jug_top_ca.paa";
+		picture="3as\3as_Jug\data\ui\Jug_side_ca.paa";
 		unitInfoType="RscUnitInfoTank";
 		radarType=8;
 		driverCanSee="4+8+2+32+16";
 		gunnerCanSee="4+2+8+32+16";
 		threat[]={1,1,0.30000001};
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		class EventHandlers: EventHandlers
+		hiddenSelections[]=
 		{
-			fired="[_this select 0,_this select 6,'missile_move','MissileBase'] call BIS_fnc_missileLaunchPositionFix; _this call (uinamespace getvariable 'BIS_fnc_effectFired');";
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3as\3as_jug\data\juggernaut_base_co.paa",
+			"3as\3as_jug\data\juggernaut_guns_co.paa",
+			"3as\3as_jug\data\juggernaut_props_co.paa",
+			"3as\3as_jug\data\juggernaut_wheels_co.paa"
+		};
+		textureList[]=
+		{
+			"Republic",
+			1,
+			"Imperial",
+			0
 		};
 	};
 };
