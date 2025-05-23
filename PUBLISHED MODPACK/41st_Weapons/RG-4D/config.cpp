@@ -12,7 +12,7 @@ class CfgPatches
 		};
 		weapons[]=
 		{
-			"FST_RG4D",
+			"FST_RG4D"
 		};
 		units[]={};
 		magazines[]={};
@@ -24,23 +24,14 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Pistol_Base_F;
-	class hgun_P07_F: Pistol_Base_F
+	class WeaponSlotsInfo;
+	class JLTS_RG4D;
+	class FST_RG4D: JLTS_RG4D
 	{
-		class WeaponSlotsInfo;
-	};
-	class FST_RG4D: hgun_P07_F
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="JLTS_RG4D_fried";
-		JLTS_repairTime=20;
 		author="Daara";
 		displayName="[41st] RG-4D Navy Service Pistol";
-		descriptionShort="$STR_JLTS_descs_BlasterPistol";
 		scope=2;
 		baseWeapon="FST_RG4D";
-		picture="\MRC\JLTS\weapons\RG4D\data\ui\RG4D_ui_ca.paa";
 		model="\MRC\JLTS\weapons\RG4D\RG4D.p3d";
 		hiddenSelections[]=
 		{
@@ -57,21 +48,12 @@ class CfgWeapons
 			"FST_blaster_cell_High_Yellow",
 			"FST_blaster_cell_High_Red"
 		};
-		magazineWell[]={};
 		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
 		muzzles[]=
 		{
 			"this"
 		};
 		reloadAction="GestureReloadPistolHeavy02";
-		recoil="IDA_recoil_dc17";
 		class Single: Mode_SemiAuto
 		{
 			sounds[]=
@@ -90,62 +72,14 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-17\DC17.ogg",
+					"MRC\JLTS\weapons\RG4D\sounds\RG4D_fire",
+					3,
 					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-17\DC17.ogg",
-					1,
-					1.015,
-					1800
-				};
-				begin3[]=
-				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-17\DC17.ogg",
-					1,
-					0.98500001,
-					1800
-				};
-				begin4[]=
-				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-17\DC17.ogg",
-					1,
-					1.01,
-					1800
-				};
-				begin5[]=
-				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-17\DC17.ogg",
-					1,
-					0.995,
 					1800
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					0.2,
-					"begin2",
-					0.2,
-					"begin3",
-					0.2,
-					"begin4",
-					0.2,
-					"begin5",
-					0.2
-				};
-				beginwater1[]=
-				{
-					"\Indecisive_Armoury_Sounds\Republic\DC-17\DC17.ogg",
-					1,
-					1,
-					400
-				};
-				soundBeginWater[]=
-				{
-					"beginwater1",
 					1
 				};
 			};

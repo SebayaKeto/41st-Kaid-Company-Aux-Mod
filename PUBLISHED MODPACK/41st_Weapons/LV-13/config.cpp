@@ -10,7 +10,7 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"FST_LV_13",
+			"FST_LV_13"
 		};
 	};
 };
@@ -33,7 +33,7 @@ class CfgWeapons
 	};
 	class FST_LV_13: hgun_Pistol_heavy_01_F
 	{
-		author="Adapted from the Indecisive Armoury Team";
+		author="Gold";
 		displayName="[41st] LV-13 'Baihe' Heavy Blaster";
 		descriptionShort="High Powered Sidearm";
 		baseWeapon="FST_LV_13";
@@ -176,7 +176,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"3AS_optic_holo_DC15S"
+					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class PointerSlot: PointerSlot

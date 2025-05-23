@@ -1481,6 +1481,11 @@ class CfgMagazines
 		displayName="[41st] Standard Energy Cell (Red)";
 		ammo="FST_blasterbolt_Red";
 	};
+	class FST_Droid_blaster_cell_Red: FST_blaster_cell_Blue
+	{
+		displayName="[41st] Droid Standard Energy Cell (Red)";
+		ammo="FST_blasterbolt_Red";
+	};
 	class FST_blaster_cell_Westar_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
 		author="Daara";
@@ -1636,6 +1641,12 @@ class CfgMagazines
 	{
 		author="Gold";
 		displayName="[41st] High-Power Energy Battery (Red)";
+		ammo="FST_blasterbolt_high_Red";
+	};
+	class FST_Droid_blaster_battery_Red: FST_blaster_battery_Blue
+	{
+		author="Gold";
+		displayName="[41st] Droid High-Power Energy Battery (Red)";
 		ammo="FST_blasterbolt_high_Red";
 	};
 	class FST_DC1A_Prototype_120Rnd_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
@@ -2085,6 +2096,11 @@ class CfgMagazines
 	class FST_blaster_cell_Overcharged_Red: FST_blaster_cell_Overcharged_Blue
 	{
 		displayName="[41st] Overcharged High-Power Energy Cell (Red)";
+		ammo="FST_blasterbolt_Overcharged_Red";
+	};
+	class FST_Droid_blaster_cell_Overcharged_Red: FST_blaster_cell_Overcharged_Blue
+	{
+		displayName="[41st] Droid Overcharged High-Power Energy Cell (Red)";
 		ammo="FST_blasterbolt_Overcharged_Red";
 	};
 	class HandGrenade;

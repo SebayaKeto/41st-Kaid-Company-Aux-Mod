@@ -130,6 +130,7 @@ class CfgPatches
 			"FST_P2_Parsec",
 			"FST_P2_Bookworm",
 			"FST_P2_Marek",
+			"FST_P2_Marek_V2",
 			"FST_P2_Vector",
 			"FST_P2_Vector_Dirty",
 			"FST_P2_Poly",
@@ -255,6 +256,8 @@ class CfgPatches
 			"FST_P2¨Dilham",
 			"FST_P2¨Dragon",
 			"FST_P2¨Harribel",
+			"FST_P2¨Gold",
+			"FST_P2¨Gold_Dirty",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -3791,6 +3794,118 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_ARF_Helmet_WhiteGreen_Gold: SWLB_clone_ARF_P1_helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARF Helmet (Gold)";
+		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
+		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa",
+			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2",
+				"camo3"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_ARF_Helmet_WhiteGreen_Gold_Dirty: SWLB_clone_ARF_P1_helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARF Helmet (Gold/Dirty)";
+		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
+		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold_Dirty.paa",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa_Dirty",
+			"",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2",
+				"camo3"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_ARF_Helmet_WhiteGreen_Jammer: SWLB_clone_ARF_P1_helmet
 	{
 		author="Daara";
@@ -6366,6 +6481,58 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Warlord.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Airborne_Helmet_Cutlass: JLTS_CloneHelmetAB
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Cutlass)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass.paa",
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -12254,6 +12421,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Marek_V2: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Marek/V2]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Marek_V2";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Sunny: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -12277,6 +12458,34 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Colors";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Gold: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Gold]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Gold";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Gold_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Gold/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Gold_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -23398,7 +23607,117 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; 
+	};
+	class FST_P2_Gold: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-7445 'Gold'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Gold";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Gold.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Gold.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Gold",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Gold",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Gold_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-7445 'Gold/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Gold_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Gold_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Gold_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Gold_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Gold_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_Wookiee: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27056,7 +27375,62 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};	
+	};
+	class FST_P2_Marek_V2: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1226 'Marek' (V2)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Marek_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Marek_V2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Marek_V2.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Marek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Marek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Bookworm: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";

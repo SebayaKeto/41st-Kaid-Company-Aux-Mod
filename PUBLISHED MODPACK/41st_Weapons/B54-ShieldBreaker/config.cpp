@@ -38,7 +38,7 @@ class CfgWeapons
 	class FST_B54_ShielBreaker: JMSLLTE_BlasterPistol_Base
 	{
 		author="Gold";
-		displayname="B54-Shieldbreaker Pistol";
+		displayname="[41st] B54-Shieldbreaker Pistol";
 		scope=2;
 		model="\JMSLLTE_weapons\bryar\bryarpistol.p3d";
 		picture="\JMSLLTE_weapons\bryar\ico_bryar.paa";

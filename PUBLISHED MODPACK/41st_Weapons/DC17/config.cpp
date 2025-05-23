@@ -11,7 +11,9 @@ class CfgPatches
 		weapons[]=
 		{
 			"FST_DC17",
+			"FST_DC17_Primary",
 			"FST_TwinDC17_Secondary",
+			"FST_TwinDC17_Primary"
 		};
 	};
 };
@@ -220,6 +222,27 @@ class CfgWeapons
 			mass=4;
 		};
 	};
+	class FST_weapon_dualDC17Left_dummy_Primary: FST_weapon_dualDC17Left_dummy
+	{
+		scope=1;
+		type = 1;
+		author="Gold";
+		model="\JMSLLTE_weapons\dc17\dc17_dual.p3d";
+		thermalMode[]={2,3};
+		visionMode[]=
+		{
+			"Normal"
+		};
+		modelOptics="-";
+		class ItemInfo
+		{
+			type=616;
+			hmdType=0;
+			uniformModel="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
+			modelOff="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
+			mass=4;
+		};
+	};
 	class FST_TwinDC17_Secondary: SWLW_DC17_ARC
 	{
 		scope=2;
@@ -285,6 +308,73 @@ class CfgWeapons
 			displayName="Left Hand";
 			muzzlePos="usti hlavne left";
 			muzzleEnd="konec hlavne left";
+		};
+	};
+	class FST_TwinDC17_Primary: FST_TwinDC17_Secondary
+	{
+		scope=2;
+		type = 1;
+		baseWeapon="FST_TwinDC17_Secondary_Primary";
+		displayName="[41st] Twin DC-17 Blaster Pistols";
+		model="\JMSLLTE_weapons\dc17\dc17_dual.p3d";
+		canShootInWater=1;
+	//	ls_isWeaponType=1;
+		ls_akimboAlternate="FST_weapon_dualDC17Left_dummy_Primary";
+		muzzles[]=
+		{
+			"Right",
+			"Left"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\JMSLLTE_weapons\anim\A_handanim_dualPistol.rtm"
+		};
+		reloadAction="";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\auto_reload.wss",
+			1.5,
+			1,
+			100
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=20;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class Right: SWLW_DC17_ARC
+		{
+			displayName="Right Hand";
+			magazines[]=
+			{
+				"FST_blaster_cell_low_Blue",
+				"FST_blaster_cell_low_Green",
+				"FST_blaster_cell_low_Yellow",
+				"FST_blaster_cell_low_Red"
+			};
+			reloadAction="";
+		};
+		class Left: Right
+		{
+			displayName="Left Hand";
+			muzzlePos="usti_hlavne";
+			muzzleEnd="usti_hlavne1";
 		};
 	};
 	class FST_weapon_dualDC17_secondary: SWLW_DC17_ARC
