@@ -1090,6 +1090,20 @@ class CfgAmmo
 			100
 		};
 	};
+	class FST_grenade_Engineer_rock_ammo: GrenadeHand_stone
+	{
+		indirectHit=1;
+		indirectHitRange=1;
+		timeToLive = 31;
+		explosionTime = 30;
+		soundFly[]=
+		{
+			"41st_Ammo\Data\Countdown Clock 30 Seconds.ogg",
+			6,
+			1,
+			100
+		};
+	};
 	class FST_Missile: ACE_Javelin_FGM148
 	{
 		author = "Viz";
@@ -2138,6 +2152,14 @@ class CfgMagazines
 		displayName="[41st] ARC Major's Rock";
 		descriptionShort="Major's Rock";
 		ammo="FST_grenade_rock_ammo";
+		mass=12;
+	};
+	class FST_grenade_engineer_rock_mag: IDA_grenade_Penetrator_mag
+	{
+		author="Gold";
+		displayName="[41st] Engineer's Rock";
+		descriptionShort="Engineer's Rock";
+		ammo="FST_grenade_Engineer_rock_ammo";
 		mass=12;
 	};
 	class IDA_HE_LauncherGrenade;
