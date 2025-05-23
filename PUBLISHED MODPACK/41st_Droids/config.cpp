@@ -670,10 +670,10 @@ class CfgVehicles
 		scope=2;
 		class TransportMagazines
 		{
-			class _xx_FST_blaster_battery_Red
+			class _xx_FST_Droid_blaster_battery_Red
 			{
 				count=10;
-				magazine="FST_blaster_battery_Red";
+				magazine="FST_Droid_blaster_battery_Red";
 			};
 		};
 	};
@@ -701,7 +701,7 @@ class CfgVehicles
 				count=2;
 				magazine="FST_RPS6_Rocket";
 			};
-			class _xx_FST_blaster_battery_Red
+			class _xx_FST_Droid_blaster_battery_Red
 			{
 				count=12;
 				magazine="FST_blaster_cell_Westar_Yellow";
@@ -726,7 +726,7 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
-			class _xx_FST_blaster_battery_Red
+			class _xx_FST_Droid_blaster_battery_Red
 			{
 				count=12;
 				magazine="FST_blaster_battery_Yellow";
@@ -877,21 +877,21 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 	};
 	class FST_Droid_B1_Sniper: FST_Droid_B1_E5
@@ -946,11 +946,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -958,11 +958,11 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1020,23 +1020,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
 		};
@@ -1094,29 +1094,29 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 	};
 	class FST_Droid_B1_AT: FST_Droid_B1_E5
@@ -1172,29 +1172,29 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 	};
 	class FST_Droid_B1_AA: FST_Droid_B1_E5
@@ -1250,29 +1250,29 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 	};
 	class FST_Droid_B1_AR: FST_Droid_B1_E5
@@ -1326,15 +1326,15 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 		};
 	};
 	class FST_Droid_B1_Scorch: FST_Droid_B1_E5
@@ -1450,23 +1450,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
 		};
@@ -1523,21 +1523,21 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red"
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red"
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red"
 		};
 	};
 	class FST_Droid_B1_Rodger: FST_Droid_B1_BMO
@@ -1655,23 +1655,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag"
 		};
@@ -1728,20 +1728,20 @@ class CfgVehicles
 		respawnItems[]={};
 		magazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
-			"FST_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
@@ -1789,21 +1789,21 @@ class CfgVehicles
 		respawnItems[]={};
 		magazines[]=
 		{
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
-			"FST_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
+			"FST_Droid_blaster_cell_overcharged_red",
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 		};
@@ -1837,17 +1837,17 @@ class CfgVehicles
 		respawnItems[]={};
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red"
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red"
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red"
 		};
 		armor=1000;
 	};
@@ -1879,19 +1879,19 @@ class CfgVehicles
 		respawnItems[]={};
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 			"FST_HE_LauncherWristRocket",
 			"FST_HE_LauncherWristRocket"
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 			"FST_HE_LauncherWristRocket",
 			"FST_HE_LauncherWristRocket"
 		};
@@ -2145,23 +2145,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
@@ -2268,23 +2268,23 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
 		respawnMagazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
