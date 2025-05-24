@@ -1031,7 +1031,7 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 			//		"3AS_optic_holo_DC15S",
-			//		"FST_Attachment_Optic_Holo_DC15"
+					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -1158,7 +1158,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-				//	"FST_Attachment_Optic_Holo_DC15"
+					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -1616,7 +1616,7 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 				//	"3AS_optic_reflex_DC15C",
-				//	"FST_Attachment_Optic_Holo_DC15"
+					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -1858,7 +1858,7 @@ class CfgWeapons
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=200;
 					distanceZoomMax=200;
-					memoryPointCamera="eye";
+					memoryPointCamera="opticView"; //eye
 					visionMode[]={};
 					opticsFlare=0;
 					opticsDisablePeripherialVision=0;
@@ -1879,7 +1879,7 @@ class CfgWeapons
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=200;
 					distanceZoomMax=200;
-					memoryPointCamera="eye";
+					memoryPointCamera="opticView"; //eye
 					visionMode[]={};
 					opticsFlare=0;
 					opticsDisablePeripherialVision=0;
