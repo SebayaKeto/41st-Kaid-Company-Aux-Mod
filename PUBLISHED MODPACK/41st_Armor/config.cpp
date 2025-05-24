@@ -152,6 +152,8 @@ class CfgPatches
 			"FST_P2_Jammer",
 			"FST_P2_Jammer_Dirty",
 			"FST_P2_Hayes",
+			"FST_P2_Hayes_Dirty",
+			"FST_P2_Helix",
 			"FST_P2_Puma",
 			"FST_P2_Sly",
 			"FST_P2_Sly_Dirty",
@@ -11973,6 +11975,34 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Hayes_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Hayes/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Hayes_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Helix: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Helix]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Helix";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Diesel: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -23149,7 +23179,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_Pilot_P1_Helmet_Hayes",
+			"FST_ARF_Helmet_WhiteGreen_Hayes",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -23159,7 +23189,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_Pilot_P1_Helmet_Hayes",
+			"FST_ARF_Helmet_WhiteGreen_Hayes",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -23167,7 +23197,117 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; 
+	};
+	class FST_P2_Hayes_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-8818 'Hayes/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Hayes_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Hayes_Dirty.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Hayes_Dirty.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Hayes",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Hayes",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Helix: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-5732 'Helix'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Helix";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Helix.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Helix.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Helix",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Helix",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Cardinal: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
