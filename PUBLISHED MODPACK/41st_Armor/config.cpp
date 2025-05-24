@@ -33348,87 +33348,87 @@ class cfgGroups
 				{
 					name="[41st] Wookiee Squad";
 					faction="FST_Faction";
-					side=0;
+					side=1;
 					class Unit0
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="SERGEANT";
 						position[]={1,-0,0};
 					};
 					class Unit1
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={1,-1,0};
 					};
 					class Unit2
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={1,-2,0};
 					};
 					class Unit3
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={1,-3,0};
 					};
 					class Unit4
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={1,-4,0};
 					};
 					class Unit5
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={1,-5,0};
 					};
 					class Unit6
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={0,-0,0};
 					};
 					class Unit7
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={0,-1,0};
 					};
 					class Unit8
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={0,-2,0};
 					};
 					class Unit9
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={0,-3,0};
 					};
 					class Unit10
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={0,-4,0};
 					};
 					class Unit11
 					{
-						side=0;
+						side=1;
 						vehicle="FST_Wookiee";
 						rank="PRIVATE";
 						position[]={0,-5,0};
