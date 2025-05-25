@@ -157,35 +157,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1.25,
 					0.995,
 					1800
@@ -205,7 +205,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"\Indecisive_Armoury_Sounds\INDEP\SPA-K15\SPAK15.ogg",
+					"\Indecisive_Armoury_Sounds\INDEP\SPK12.ogg",
 					1,
 					1,
 					400

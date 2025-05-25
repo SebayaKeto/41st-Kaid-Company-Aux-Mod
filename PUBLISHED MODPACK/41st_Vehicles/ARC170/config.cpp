@@ -219,6 +219,7 @@ class CfgVehicles
 			"3as\3AS_ARC170\Data\units\101st_Guns_CO.paa",
 			"a3\air_f_jets\plane_fighter_01\data\fighter_01_glass_01_ca.paa"
 		};
+		textureList[]={};
 		memoryPointDriverOptics="PilotCamera_1";
 		unitInfoType="RscOptics_CAS_Pilot";
 		driverWeaponsInfoType="RscOptics_CAS_01_TGP";

@@ -18,13 +18,15 @@ class CfgPatches
 		{
 			"FST_grenade_emp_mag",
 			"FST_grenade_Detonator_mag",
-			"FST_grenade_rock_mag"
+			"FST_grenade_rock_mag",
+			"FST_grenade_Engineer_rock_mag"
 		};
 		ammo[]=
 		{
 			"FST_grenade_emp_ammo",
 			"FST_grenade_Detonator_ammo",
-			"FST_grenade_rock_ammo"
+			"FST_grenade_rock_ammo",
+			"FST_grenade_Engineer_rock_ammo"
 		};
 	};
 };
@@ -38,7 +40,8 @@ class CfgWeapons
 			"FST_grenade_emp_muzzle",
 			"FST_grenade_Detonator_muzzle",
 			"FST_grenade_Penetrator_muzzle",
-			"FST_grenade_rock_muzzle"
+			"FST_grenade_rock_muzzle",
+			"FST_grenade_Engineer_rock_muzzle"
 		};
 		class ThrowMuzzle;
 		class FST_grenade_emp_muzzle: ThrowMuzzle
@@ -67,6 +70,13 @@ class CfgWeapons
 			magazines[]=
 			{
 				"FST_grenade_rock_mag"
+			};
+		};
+		class FST_grenade_Engineer_rock_muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"FST_grenade_Engineer_rock_mag"
 			};
 		};
 	};

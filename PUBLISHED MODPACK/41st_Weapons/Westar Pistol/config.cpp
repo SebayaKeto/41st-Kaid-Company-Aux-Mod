@@ -181,7 +181,7 @@ class CfgWeapons
 	class FST_Attachment_Light_Normal_White_pistol: acc_flashlight
 	{
 		author="Inspired from SW Legion Studios";
-		displayName = "[41st] Westar SA Light (Normal)";
+		displayName = "[41st] WestarSA Light (Normal)";
 		model="SWLW_merc_mando\pistols\westar35sa\westar35sa_laser.p3d";
 		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_laser_ui.paa";
 		scope=2;

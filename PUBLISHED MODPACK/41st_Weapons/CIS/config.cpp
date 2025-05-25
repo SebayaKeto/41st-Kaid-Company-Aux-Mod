@@ -17,7 +17,7 @@ class CfgPatches
 		{
 			"FST_E5",
 			"FST_E5C_Stock",
-			"FST_E5S",
+			"FST_E5S"
 		};
 		magazines[]={};
 	};
@@ -66,10 +66,7 @@ class CfgWeapons
 		recoil="recoil_spar";
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
-			"FST_blaster_cell_Blue",
-			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow"
+			"FST_Droid_blaster_cell_Red"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -343,10 +340,7 @@ class CfgWeapons
 		recoil="recoil_spar";
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Blue",
-			"FST_blaster_battery_Green",
-			"FST_blaster_battery_Yellow"
+			"FST_Droid_blaster_battery_Red"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -524,10 +518,7 @@ class CfgWeapons
 		descriptionShort="Extreme range, high power.";
 		magazines[]=
 		{
-			"FST_blaster_cell_overcharged_Red",
-			"FST_blaster_cell_Overcharged_Blue",
-			"FST_blaster_cell_Overcharged_Green",
-			"FST_blaster_cell_Overcharged_Yellow"
+			"FST_Droid_blaster_cell_overcharged_Red"
 		};
 		magazineWell[]={};
 		reloadAction="";
@@ -604,10 +595,7 @@ class CfgWeapons
 		recoil="recoil_spar";
 		magazines[]=
 		{
-			"FST_blaster_battery_Red",
-			"FST_blaster_battery_Blue",
-			"FST_blaster_battery_Green",
-			"FST_blaster_battery_Yellow"
+			"FST_Droid_blaster_battery_Red"
 		};
 		magazineWell[]={};
 		modes[]=

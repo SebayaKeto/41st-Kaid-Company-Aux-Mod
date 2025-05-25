@@ -78,7 +78,8 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow"
+			"FST_blaster_cell_High_Yellow",
+			"FST_blaster_cell_High_Red"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -396,7 +397,8 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow"
+			"FST_blaster_cell_High_Yellow",
+			"FST_blaster_cell_High_Red"
 		};
 		class EGLM: UGL_F
 		{
@@ -515,7 +517,8 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_LE_Blue",
 			"FST_blaster_cell_LE_Green",
-			"FST_blaster_cell_LE_Yellow"
+			"FST_blaster_cell_LE_Yellow",
+			"FST_blaster_cell_LE_Red"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -761,7 +764,7 @@ class CfgWeapons
 		displayName="[41st] DC-15S carbine";
 		descriptionShort="Close range, fast rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15S\DC15S.p3d";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15S\Model\IDA_DC15S.p3d";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -788,7 +791,8 @@ class CfgWeapons
 		{
 			"FST_blaster_cell_Blue",
 			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow"
+			"FST_blaster_cell_Yellow",
+			"FST_blaster_cell_Red"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -1026,7 +1030,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"3AS_optic_holo_DC15S",
+			//		"3AS_optic_holo_DC15S",
 					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
@@ -1034,7 +1038,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"FST_Knife",
+			//		"FST_Knife",
 				};
 			};
             class PointerSlot: PointerSlot
@@ -1152,7 +1156,8 @@ class CfgWeapons
 			mass=50;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]={
+				compatibleItems[]=
+				{
 					"FST_Attachment_Optic_Holo_DC15"
 				};
 			};
@@ -1160,7 +1165,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"FST_Knife",
+				//	"FST_Knife",
 				};
 			};
             class PointerSlot: PointerSlot
@@ -1304,7 +1309,7 @@ class CfgWeapons
 			"FST_blaster_cell_High_Blue",
 			"FST_blaster_cell_High_Green",
 			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red",
+			"FST_blaster_cell_High_Red"
 		};
 		reloadAction="GestureReloadMX";
 		reloadMagazineSound[]=
@@ -1605,6 +1610,33 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=60;
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+				//	"3AS_optic_reflex_DC15C",
+					"FST_Attachment_Optic_Holo_DC15"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+            class PointerSlot: PointerSlot
+            {
+                compatibleItems[]=
+                {
+                    "FST_Attachment_Light_Normal_White",
+                    "FST_Attachment_Light_Beam_White",
+                    "FST_Attachment_Module_Light_Normal_White",
+                    "FST_Attachment_Module_Light_Beam_White"
+                };
+            };
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
 		};
 	};
     class acc_flashlight;
@@ -1826,7 +1858,7 @@ class CfgWeapons
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=200;
 					distanceZoomMax=200;
-					memoryPointCamera="eye";
+					memoryPointCamera="opticView"; //eye
 					visionMode[]={};
 					opticsFlare=0;
 					opticsDisablePeripherialVision=0;
@@ -1847,7 +1879,7 @@ class CfgWeapons
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=200;
 					distanceZoomMax=200;
-					memoryPointCamera="eye";
+					memoryPointCamera="opticView"; //eye
 					visionMode[]={};
 					opticsFlare=0;
 					opticsDisablePeripherialVision=0;

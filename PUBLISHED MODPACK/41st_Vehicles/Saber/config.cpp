@@ -184,6 +184,7 @@ class cfgvehicles
 		predictTurnSimul=0.60000002;
 		brakeDistance=5;
 		acceleration=15;
+		maxSpeed=60;
 		turnCoef=2;
 		canFloat=1;
 		waterPPInVehicle=0;
@@ -880,6 +881,8 @@ class cfgvehicles
 					"FST_25rnd_Sabre_Super_Mag",
 					"FST_25rnd_Sabre_Super_Mag",
 					"FST_25rnd_Sabre_Super_Mag",
+					"SmokeLauncherMag",
+					"SmokeLauncherMag"
 				};
 				minTurn=-360;
 				maxTurn=360;

@@ -39,6 +39,45 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\Indecisive_Armoury_Sounds\DEVGUNS\LegoGun.ogg",
+					1.5,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+				beginwater1[]=
+				{
+					"\Indecisive_Armoury_Sounds\DEVGUNS\LegoGun.ogg",
+					1.5,
+					1,
+					1800
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
 			reloadTime=0.1;
 			dispersion=0.0011;
 			minRange=2;
