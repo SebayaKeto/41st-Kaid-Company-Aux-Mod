@@ -67,8 +67,8 @@ class CfgVehicles {
 					"FST_blaster_battery_Red",
 					"FST_blaster_battery_Red"
 				};
-				minElev = -20;
-				maxElev = 60;
+				minElev = -30;
+				maxElev = 80;
 			};
 		};
         hiddenSelectionsTextures[] = 
@@ -98,14 +98,14 @@ class CfgVehicles {
 				};
 				magazines[]=
 				{
-					"FST_blaster_scatter_cell_Blue",
-					"FST_blaster_scatter_cell_Blue",
-					"FST_blaster_scatter_cell_Blue",
-					"FST_blaster_scatter_cell_Blue",
-					"FST_blaster_scatter_cell_Blue"
+					"FST_blaster_scatter_cell_DP23_Red",
+					"FST_blaster_scatter_cell_DP23_Red",
+					"FST_blaster_scatter_cell_DP23_Red",
+					"FST_blaster_scatter_cell_DP23_Red",
+					"FST_blaster_scatter_cell_DP23_Red"
 				};
-				minElev = -20;
-				maxElev = 60;
+				minElev = -30;
+				maxElev = 80;
 			};
 		};
         hiddenSelectionsTextures[] = 
