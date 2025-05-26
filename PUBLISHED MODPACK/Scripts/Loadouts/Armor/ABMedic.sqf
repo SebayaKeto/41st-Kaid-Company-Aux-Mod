@@ -13,7 +13,7 @@ removeGoggles _plyer;
 
 comment "Add containers";
 _plyer forceAddUniform "FST_Trooper_Medic";
-_plyer addVest "IDA_vest_base";
+_plyer addVest "FST_vest_base";
 
 comment "Add binoculars";
 _plyer addMagazine "Laserbatteries";
