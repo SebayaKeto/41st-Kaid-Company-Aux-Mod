@@ -303,6 +303,10 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Battledroids";
 	};
+	class FST_Zombies_Subfaction
+	{
+		displayName="41st Zombies";
+	};
 	class FST_Creatures_Subfaction
 	{
 		displayName="41st Creatures";
@@ -321,6 +325,13 @@ class CfgFactionClasses
 	{
 		displayName="41st Battledroids";
 		priority=1;
+		side=2;
+		icon="";
+	};
+	class FST_Zombies_Faction
+	{
+		displayName="41st Zombies";
+		priority=2;
 		side=2;
 		icon="";
 	};
