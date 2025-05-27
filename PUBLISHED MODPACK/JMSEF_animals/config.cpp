@@ -11,7 +11,6 @@ class CfgPatches
 			"FST_41st_Walker",
 			"FST_41st_Crawler",
 			"FST_41st_Runner",
-			"FST_41st_Shooter",
 			"FST_41st_Shambler"
 		};
 		weapons[]={};
@@ -204,33 +203,6 @@ class CfgVehicles
     {
         author=Ruby;
         displayName = "[41st] Clone Trooper Crawler Zombie";
-        scope = 2;
-        scopeCurator = 2;
-		faction="FST_Zombies_Faction";
-        editorSubcategory="FST_Zombies_Subfaction";
-        identityTypes[] = {""};
-        uniformClass = "FST_Trooper_SERE";
-        model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-        hiddenSelections[] = {"camo1", "camo2", "insignia"};
-        hiddenSelectionsTextures[] = 
-        {
-        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.paa",
-        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
-        };
-        WBK_ZombiesOriginalFactionClass = "";
-        linkedItems[]=
-        {
-            "FST_P2_Helmet_Sere",
-        };
-        respawnLinkedItems[]=
-        {
-            "FST_P2_Helmet_Sere",
-        };
-    };
-	class FST_41st_Shooter: Zombie_O_Shooter_CSAT 
-    {
-        author=Ruby;
-        displayName = "[41st] Clone Trooper Shooter Zombie";
         scope = 2;
         scopeCurator = 2;
 		faction="FST_Zombies_Faction";
