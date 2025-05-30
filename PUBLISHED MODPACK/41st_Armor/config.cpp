@@ -65,6 +65,7 @@ class CfgPatches
 			// "FST_ARF_Woodland", 
 			"FST_Jedi",
 			"FST_DarkJedi",
+			"FST_Zombie_Bloody",
 			"FST_P2_Officer",
 			"FST_P2_NCO",
 			"FST_P2_Recruit",
@@ -14609,6 +14610,20 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_Uniform_Bloddy_Zombie: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] Zombie Bloddy Armor";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Zombie_Bloody";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	//////////////NVGs/////////////
 
 	class FST_NVG: JLTS_CloneNVG
@@ -19544,7 +19559,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_ARF_Uniform";
+		uniformclass="FST_Uniform_SERE";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
@@ -19570,7 +19585,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_ARF_Helmet",
+			"FST_P2_Helmet_Sere",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -19580,7 +19595,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_ARF_Helmet",
+			"FST_P2_Helmet_Sere",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -32779,6 +32794,61 @@ class CfgVehicles
 			"41st_Armor\Data\Uniforms\robes_co_DJ.paa",
 			"41st_Armor\Data\Uniforms\belt_co_DJ.paa",
 			"\lsd_armor_bluefor\uniform\gar\jediCommander\data\undersuit_co.paa"
+		};
+	};
+	class FST_Zombie_Bloody: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] Zombie Trooper";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Bloddy_Zombie";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Sere",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Sere",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
 		};
 	};
 };

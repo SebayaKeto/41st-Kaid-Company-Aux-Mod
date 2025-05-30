@@ -154,13 +154,13 @@ class CfgVehicles
         faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-        uniformClass = "FST_Trooper_SERE";
+        uniformClass = "FST_Zombie_Bloody";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
         {
-        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.paa",
-        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
         };
         WBK_ZombiesOriginalFactionClass = "";
         linkedItems[]=
@@ -181,13 +181,13 @@ class CfgVehicles
         faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-        uniformClass = "FST_Trooper_SERE";
+		uniformClass = "FST_Zombie_Bloody";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
         {
-        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.paa",
-        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
         };
         WBK_ZombiesOriginalFactionClass = "";
         linkedItems[]=
@@ -208,13 +208,13 @@ class CfgVehicles
 		faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-        uniformClass = "FST_Trooper_SERE";
+		uniformClass = "FST_Zombie_Bloody";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
         {
-        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.paa",
-        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
         };
         WBK_ZombiesOriginalFactionClass = "";
         linkedItems[]=
@@ -235,13 +235,13 @@ class CfgVehicles
         faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-        uniformClass = "FST_Trooper_SERE";
+        uniformClass = "FST_Zombie_Bloody";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
         {
-        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE.paa",
-        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
         };
         WBK_ZombiesOriginalFactionClass = "";
         linkedItems[]=
