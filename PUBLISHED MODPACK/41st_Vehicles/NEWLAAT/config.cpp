@@ -26,6 +26,7 @@ class CfgPatches
 			"FST_laati_Turret_Pole",
 			"FST_laati_Turret_Jan",
 			"FST_laati_Turret_Bees",
+			"FST_laati_Turret_Ruby",
 			"FST_laati_Turret_Hijack",
 			"FST_laati_mk2_Daara",
 			"FST_laati_mk2_Shockcap",
@@ -38,6 +39,7 @@ class CfgPatches
 			"FST_laati_mk2_Pole",
 			"FST_laati_mk2_Jan",
 			"FST_laati_mk2_Bees",
+			"FST_laati_mk2_Ruby",
 			"FST_laati_mk2_Hijack",
 			"FST_laati_mk1Lights",
 			"FST_laati_mk1Lights_Shockcap",
@@ -51,6 +53,7 @@ class CfgPatches
 			"FST_laati_mk1Lights_Pole",
 			"FST_laati_mk1Lights_Jan",
 			"FST_laati_mk1Lights_Bees",
+			"FST_laati_mk1Lights_Ruby",
 			"FST_laati_mk1Lights_Hijack",
 			"FST_laati_mk2Lights_Shockcap",
 			"FST_laati_mk2Lights_Spade",
@@ -63,6 +66,7 @@ class CfgPatches
 			"FST_laati_mk2Lights_Pole",
 			"FST_laati_mk2Lights_Jan",
 			"FST_laati_mk2Lights_Bees",
+			"FST_laati_mk2Lights_Ruby",
 			"FST_laati_mk2Lights_Hijack",
 			"FST_laati_Turret_RadarTestbed"
 		};
@@ -3568,6 +3572,27 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
+	class FST_laati_Turret_Ruby: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Ruby)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ruby.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ruby.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Ruby.paa"
+		};
+		textureList[]={};
+	};
 	class FST_laati_Turret_Hijack: FST_laati_Turret
 	{
 		scope=2;
@@ -3903,6 +3928,27 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2_Ruby: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Ruby)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Daara";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ruby.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ruby.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Ruby.paa"
 		};
 		textureList[]={};
 	};
@@ -4245,6 +4291,27 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
+	class FST_laati_mk1Lights_Ruby: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Ruby/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Gold";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ruby.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ruby.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Ruby.paa"
+		};
+		textureList[]={};
+	};
 	class FST_laati_mk1Lights_Hijack: FST_laati_mk1Lights
 	{
 		scope=2;
@@ -4580,6 +4647,27 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2Lights_Ruby: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Ruby/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Gold";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ruby.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ruby.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Ruby.paa"
 		};
 		textureList[]={};
 	};

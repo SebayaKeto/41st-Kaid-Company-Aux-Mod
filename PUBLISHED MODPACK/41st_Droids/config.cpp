@@ -1775,8 +1775,8 @@ class CfgVehicles
 		Backpack="";
 		displayName="[41st] BX Commando Droid (Sniper)";
 		uniformClass="FST_DroidBX";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_BattleDroids_Subfaction";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		armor=25;
 		armorStructural=100;
 		weapons[]=
@@ -1834,6 +1834,8 @@ class CfgVehicles
 		displayName="[41st] BX Commando Droid (Tukata)";
 		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
 		uniformClass="FST_DroidBX_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -2350,6 +2352,8 @@ class CfgVehicles
 		nakedUniform="FST_Uniform_Bodyglove";
 		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
 		backpack="FST_belt_bag_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -2459,6 +2463,8 @@ class CfgVehicles
 		nakedUniform="FST_Uniform_Bodyglove";
 		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
 		backpack="FST_belt_bag_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -2564,6 +2570,8 @@ class CfgVehicles
 		nakedUniform="FST_Uniform_Bodyglove";
 		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
 		backpack="FST_belt_bag_Tukata_AR";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"Camo1",

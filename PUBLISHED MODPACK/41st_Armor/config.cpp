@@ -307,6 +307,10 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Battledroids";
 	};
+	class FST_Tukata_Subfaction
+	{
+		displayName="41st Tukata PMC";
+	};
 	class FST_Zombies_Subfaction
 	{
 		displayName="41st Zombies";
@@ -329,6 +333,13 @@ class CfgFactionClasses
 	{
 		displayName="41st Battledroids";
 		priority=1;
+		side=2;
+		icon="";
+	};
+	class FST_Tukata_Faction
+	{
+		displayName="41st Tukata";
+		priority=2;
 		side=2;
 		icon="";
 	};
@@ -9799,11 +9810,11 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dragon.paa",
 		};
 	};
-	class FST_P2_Helmet_Snoob: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Hugger: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Snoob]";
+		displayName="[41st] P2 Helmet [Hugger]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Snoob.paa",
