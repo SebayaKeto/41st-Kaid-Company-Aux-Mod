@@ -18,6 +18,7 @@ class CfgPatches
 			"FST_Blaze_AAT",
 			"FST_Looted_AAT",
 			"FST_Shockcap_AAT",
+			"FST_Tukata_AAT"
 		};
 		weapons[]={};
 	};
@@ -1033,6 +1034,31 @@ class CfgVehicles
 					};
 				};
 			};
+		};
+	};
+	class FST_Tukata_AAT: FST_AAT
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Tukata Uparmored AAT";
+		crew="FST_JMSLLTE_JinTrooper_armor_F";
+		author="Daara";
+		armor=1250;
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\AAT\Data\Tukata_AAT_CO.paa"
+		};
+		animationList[]=
+		{
+			"HideArmorCIS",
+			0,
+			"HideArmorRebel",
+			0
 		};
 	};
 };

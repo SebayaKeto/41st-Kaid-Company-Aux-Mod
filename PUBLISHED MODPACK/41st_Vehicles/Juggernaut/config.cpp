@@ -2818,17 +2818,11 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3as\3as_jug\data\juggernaut_base_co.paa",
-			"3as\3as_jug\data\juggernaut_guns_co.paa",
-			"3as\3as_jug\data\juggernaut_props_co.paa",
-			"3as\3as_jug\data\juggernaut_wheels_co.paa"
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Base.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Weapons.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Props.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Wheels.paa"
 		};
-		textureList[]=
-		{
-			"Republic",
-			1,
-			"Imperial",
-			0
-		};
+		textureList[]={};
 	};
 };
