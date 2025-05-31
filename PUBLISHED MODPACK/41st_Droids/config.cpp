@@ -15,7 +15,9 @@ class CfgPatches
 			"FST_Droid_B1_OOM",
 			"FST_CIS_TS_F",
 			"FST_BX",
+			"FST_BX_Tukata",
 			"FST_BX_Sniper",
+			"FST_BX_Sniper_Tukata",
 			"FST_B2",
 			"FST_B2_TL",
 			"FST_B2_Flame",
@@ -30,7 +32,8 @@ class CfgPatches
 			"FST_Droid_B1_PLAD",
 			"FST_JMSLLTE_JinTrooper_armor_F",
 			"FST_JMSLLTE_JinTrooper_armor_AR",
-			"FST_JMSLLTE_JinTrooper_armor_AT"
+			"FST_JMSLLTE_JinTrooper_armor_AT",
+			"FST_MSE_Droid"
 		};
 		weapons[]={};
 	};
@@ -336,6 +339,23 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_BX";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class FST_DroidBX_Tukata: FST_DroidB1
+	{
+		author="Gold";
+		scope=2;
+		displayname="[41st] BX Combat Uniform (Tukata)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+        JLTS_deathSounds="";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_BX_Tukata";
 			containerClass="Supply200";
 			uniformType="Neopren";
 			mass=40;
@@ -1806,6 +1826,36 @@ class CfgVehicles
 			"FST_Droid_blaster_cell_overcharged_red",
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
+		};
+	};
+	class FST_BX_Tukata: FST_BX
+	{
+		author="Gold";
+		displayName="[41st] BX Commando Droid (Tukata)";
+		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
+		uniformClass="FST_DroidBX_Tukata";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_BX_Tukata_Body.paa"
+		};
+	};
+	class FST_BX_Sniper_Tukata: FST_BX_Sniper
+	{
+		author="Gold";
+		displayName="[41st] BX Commando Droid (Sniper/Tukata)";
+		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
+		uniformClass="FST_DroidBX_Tukata";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_BX_Tukata_Body.paa"
 		};
 	};
 	class WBK_B2_Mod_Standart;
