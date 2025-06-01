@@ -9,8 +9,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"JMSLLTE_N1fighter_naboo_F",
-			"JMSLLTE_N1fighter_jinata_F"
+			"FST_JMSLLTE_N1fighter_jinata_F"
 		};
 		weapons[]={};
 	};
@@ -54,15 +53,16 @@ class CfgVehicles
 	class FST_JMSLLTE_N1fighter_base_F: VTOL_Base_F
 	{
 		author="JMax";
-		_generalMacro="JMSLLTE_N1fighter_base_F";
+		_generalMacro="FST_JMSLLTE_N1fighter_base_F";
 		scope=0;
+		side=0;
 		scopeCurator=0;
 		displayName="TIEf";
 		model="\JMSLLTE_veh_air_m\N1\n1.p3d";
 		icon="\JMSLLTE_veh_air\N1\data\ico_N1.paa";
 		picture="\JMSLLTE_veh_air\N1\data\pic_N1.paa";
 		vehicleClass="Air";
-		faction="FST_Faction";
+		faction="FST_Tukata_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		destrType="DestructWreck";
 		HeadAimDown=-12;
@@ -91,7 +91,7 @@ class CfgVehicles
 		extCameraPosition[]={0,1,-25};
 		transportSoldier=0;
 		accuracy=0.5;
-		armor=66;
+		armor=200;
 		armorStructural=3;
 		explosionShielding=1;
 		epeImpulseDamageCoef=70;
@@ -6525,7 +6525,7 @@ class CfgVehicles
 			verticalOffset=3.2279999;
 			verticalOffsetWorld=-0.034000002;
 		};
-		_generalMacro="JMSLLTE_N1fighter_jinata_F";
+		_generalMacro="FST_JMSLLTE_N1fighter_jinata_F";
 		scope=2;
 		scopeCurator=2;
 		displayName="[41st] Tukata N-1 starfighter";
