@@ -264,6 +264,7 @@ class CfgPatches
 			"FST_P2¨Gold",
 			"FST_P2¨Gold_Dirty",
 			"FST_P2¨Bright",
+			"FST_P2 ¨Jericho",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -11269,6 +11270,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Birdsley.paa"
 		};
 	};
+	class FST_P2_Helmet_Jericho: FST_P2_Helmet_Base
+	{
+		author="Adler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Jericho]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Jericho.paa",
+		};
+	};	
 	//////////////UNIFORMS//////////////
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
