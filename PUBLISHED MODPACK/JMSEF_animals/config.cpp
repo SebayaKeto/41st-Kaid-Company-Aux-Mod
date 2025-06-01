@@ -8,6 +8,10 @@ class CfgPatches
 			"JMSEF_animals_varren_o",
 			"JMSEF_animals_var_bers_o",
 			"JMSEF_animals_var_alpha_o",
+			"FST_41st_Walker",
+			"FST_41st_Crawler",
+			"FST_41st_Runner",
+			"FST_41st_Shambler"
 		};
 		weapons[]={};
 		requiredVersion=0.1;
@@ -80,6 +84,11 @@ class Extended_PreInit_EventHandlers
 class CfgVehicles
 {
 	class CAManBase;
+	class Zombie_O_Walker_CSAT;
+	class Zombie_O_RunnerAngry_CSAT;
+	class Zombie_O_Crawler_CSAT;
+	class Zombie_O_Shooter_CSAT;
+	class Zombie_O_Shambler_CSAT;
 	class dev_mutant_base: CAManBase
 	{
 		class EventHandlers;
@@ -136,6 +145,114 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_41st_Walker: Zombie_O_Walker_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Clone Trooper Walker Zombie";
+        scope = 2;
+        scopeCurator = 2;
+        faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+        uniformClass = "FST_Zombie_Bloody";
+        model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[] = {"camo1", "camo2", "insignia"};
+        hiddenSelectionsTextures[] = 
+        {
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
+        };
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+    };
+	class FST_41st_Runner: Zombie_O_RunnerAngry_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Clone Trooper Runner Zombie";
+        scope = 2;
+        scopeCurator = 2;
+        faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+		uniformClass = "FST_Zombie_Bloody";
+        model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[] = {"camo1", "camo2", "insignia"};
+        hiddenSelectionsTextures[] = 
+        {
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
+        };
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+    };
+	class FST_41st_Crawler: Zombie_O_Crawler_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Clone Trooper Crawler Zombie";
+        scope = 2;
+        scopeCurator = 2;
+		faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+		uniformClass = "FST_Zombie_Bloody";
+        model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[] = {"camo1", "camo2", "insignia"};
+        hiddenSelectionsTextures[] = 
+        {
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
+        };
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+    };
+	class FST_41st_Shambler: Zombie_O_Shambler_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Clone Trooper Shambler Zombie";
+        scope = 2;
+        scopeCurator = 2;
+        faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+        uniformClass = "FST_Zombie_Bloody";
+        model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[] = {"camo1", "camo2", "insignia"};
+        hiddenSelectionsTextures[] = 
+        {
+        "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SERE_Blood.paa",
+        "41st_Armor\Data\Uniforms\FST_P2_BodyLower_SERE.paa"
+        };
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Sere",
+        };
+    };
 	class JMSEF_animals_var_bers_o: JMSEF_animals_varren_o
 	{
 		side=0;

@@ -22,4 +22,4 @@ _plyer addWeapon "FST_Electrobinoculars";
 
 _plyer addItemToUniform "ACE_MapTools";
 
-_plyer addItemToBackpack "ItemMicroDAGR";
+_plyer addItemToBackpack "ItemAndroid";

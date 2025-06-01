@@ -15,7 +15,7 @@ removeGoggles _plyer;
 
 comment "Add containers";
 _plyer forceAddUniform "FST_Uniform_CS";
-_plyer addVest "IDA_vest_base";
+_plyer addVest "FST_vest_base";
 _plyer addBackpack "FST_Clone_LR_attachment";
 
 comment "Add binoculars";

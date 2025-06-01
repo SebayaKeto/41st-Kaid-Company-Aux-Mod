@@ -532,20 +532,76 @@ class CfgAmmo
 	class FST_82mm_Flare_White: FlareCore
 	{
 		timeToLive=90;
-		model="\A3\weapons_f\ammo\shell";
-		effectFlare="CounterMeasureFlare";
-		aimAboveTarget[]={30,60,120,180,240,300,360};
-		aimAboveDefault=8;
-		triggerTime=-1;
-		triggerSpeedCoef=1;
-		lightColor[]={0.94999999,0.94999999,1,0.5};
-		smokeColor[]={1,1,1,0.5};
-		intensity=1000000;
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		simulation = "shotIlluminating";
+		
+		effectFlare = "FlareShell";
+		effectsSmoke = "SmokeShellWhite";
+		explosionEffects = "ExplosionEffects";
+		audibleFire = 100;
+		whistleDist = 50;
+		
+		lightColor[] = {0.95, 0.95, 1, 1};
+		intensity = 1250000;
+		brightness = 42;
+		useFlare = 1;
+		flareSize = 12;
+		
+		coefGravity = 0.18;
+		airFriction = -0.0002;
+		deflecting = 25;
+		deflectionSlowDown = 0.7;
+		
+		tracerColor = [0.7,0.7,0.5,0.04];
+		tracerColorR = [0.7,0.7,0.5,0.04];
+		smokeColor[] = {1, 1, 1, 0.5};
+		
+		triggerSpeedCoef = 1;
+		triggerTime = 8;
 	};
-	class FST_82mm_Smoke_White: ShotDeployBase
+	class FST_82mm_Smoke_White: SubmunitionBase
 	{
 		model="\A3\weapons_f\ammo\shell";
 		submunitionAmmo="SmokeShellArty";
+		submunitionConeType[]=
+		{
+			"randomcenter",
+			3
+		}; 
+  		submunitionConeAngle = 45;
+		triggerDistance=50;
+		airFriction=0;
+		muzzleEffect="";
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01",
+			1.7782794,
+			1,
+			1000
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02",
+			1.7782794,
+			1,
+			1000
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03",
+			1.7782794,
+			1,
+			1000
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.125,
+			"soundHit2",
+			0.125,
+			"soundHit3",
+			0.125
+		};
 	};
 	class FST_82mm_Guided_Mortar: SubmunitionBase
 	{

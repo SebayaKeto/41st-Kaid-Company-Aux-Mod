@@ -139,6 +139,24 @@ class CfgVehicles
 			"passenger_flatground_generic04",
 			"passenger_flatground_generic05"
 		};
+	class TransportItems
+			{
+			class _xx_IDA_Cauterizer
+				{
+					name="IDA_Cauterizer";
+					count=1;
+				};
+			class _xx_FST_Bacta_Tank
+				{
+					name="FST_Bacta_Tank";
+					count=1;
+				};
+			class _xx_ToolKit
+				{
+				name="Toolkit";
+				count=1;
+		};
+	};
 		weapon[]=
 		{
 			"TruckHorn2"
