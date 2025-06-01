@@ -517,22 +517,6 @@ class CfgVehicles
 			distance=0;
 			minSpeed=1;
 		};
-		class UserActions
-		{
-			class Test_Plane_01_Eject
-			{
-				priority=0.050000001;
-				shortcut="Eject";
-				displayName="$STR_A3_action_eject";
-				condition="player in this && {speed this > 1}";
-				statement="[this] spawn bis_fnc_planeEjection";
-				position="pilotcontrol";
-				radius=10;
-				onlyforplayer=1;
-				showWindow=0;
-				hideOnUse=1;
-			};
-		};
 	};
 	class FST_Fang_Ship: FST_Fang_base
 	{
@@ -644,7 +628,7 @@ class CfgVehicles
 		crew="FST_Droid_B1_OOM";
 		icon="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Map_Plane_Fighter_03_CA.paa";
 		armor=100;
-		armorStructural=8;
+		armorStructural=4;
 		hiddenselections[]=
 		{
 			"camo1"
@@ -691,7 +675,7 @@ class CfgVehicles
 		crew="FST_Droid_B1_OOM";
 		icon="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Map_Plane_Fighter_03_CA.paa";
 		armor=100;
-		armorStructural=8;
+		armorStructural=4;
 		hiddenselections[]=
 		{
 			"camo1"
