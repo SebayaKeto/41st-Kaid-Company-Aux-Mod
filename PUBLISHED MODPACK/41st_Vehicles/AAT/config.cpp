@@ -1044,7 +1044,7 @@ class CfgVehicles
 		displayName = "[41st] Tukata Uparmored AAT";
 		crew = "FST_JMSLLTE_JinTrooper_armor_F";
 		author = "Daara";
-		armor = 1250;
+		armor = 1150;
 		hiddenSelections[] = {"Camo1"};
 		hiddenSelectionsTextures[] = {
 			"41st_Vehicles\AAT\Data\Tukata_AAT_CO.paa"
