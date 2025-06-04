@@ -488,6 +488,7 @@ class CfgWeapons
 		_generalMacro="launch_RPG32_F";
 		baseWeapon="FST_RPS6HP";
 		autoReload="false";
+		ace_reloadlaunchers_enabled=1;
 		model="\MRC\JLTS\weapons\RPS6\rps6.p3d";
 		picture="\MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
@@ -531,6 +532,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\RPS6\data\ui\rps6_ui_ca.paa";
 		scope=2;
+		ace_reloadlaunchers_enabled=1;
 		baseWeapon="FST_RPS6_SR";
 		autoReload="false";
 		handAnim[]=
