@@ -18,6 +18,7 @@ class CfgPatches
 			"FST_Blaze_AAT",
 			"FST_Looted_AAT",
 			"FST_Shockcap_AAT",
+			"FST_Tukata_AAT"
 		};
 		weapons[]={};
 	};
@@ -1032,6 +1033,78 @@ class CfgVehicles
 						radius=0.15000001;
 					};
 				};
+			};
+		};
+	};
+	class FST_Tukata_AAT: FST_AAT
+	{
+		scope = 2;
+		scopecurator = 2;
+		scopearsenal = 2;
+		displayName = "[41st] Tukata Uparmored AAT";
+		crew = "FST_JMSLLTE_JinTrooper_armor_F";
+		author = "Daara";
+		armor = 1150;
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {
+			"41st_Vehicles\AAT\Data\Tukata_AAT_CO.paa"
+		};
+		animationList[] = {
+			"HideArmorCIS",0,
+			"HideArmorRebel",0
+		};
+		class HitPoints: HitPoints
+		{
+			class HitHull
+			{
+				armor = 5; 
+				material = -1;
+				name = "hull";
+				visual = "zbytek";
+				passThrough = 0.5;
+				minimalHit = 0.1;
+				explosionShielding = 1.5;
+				radius = 0.2;
+			};
+			class HitEngine
+			{
+				armor = 3;
+				material = -1;
+				name = "engine";
+				visual = "engine";
+				passThrough = 0.2;
+				minimalHit = 0.1;
+				explosionShielding = 1.0;
+				radius = 0.2;
+				depends = "HitHull";
+			};
+			class HitFuel
+			{
+				armor = 2;
+				material = -1;
+				name = "fuel";
+				passThrough = 0.1;
+				minimalHit = 0.1;
+				explosionShielding = 0.8;
+				radius = 0.15;
+				depends = "HitHull";
+			};
+			class HitLTrack
+			{
+				armor = 2.5;
+				material = -1;
+				name = "track_l";
+				visual = "track_l";
+				passThrough = 0.1;
+				minimalHit = 0.05;
+				explosionShielding = 0.6;
+				radius = 0.15;
+				depends = "HitHull";
+			};
+			class HitRTrack: HitLTrack
+			{
+				name = "track_r";
+				visual = "track_r";
 			};
 		};
 	};

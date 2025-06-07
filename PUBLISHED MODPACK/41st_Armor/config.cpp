@@ -132,6 +132,7 @@ class CfgPatches
 			"FST_P2_Parsec",
 			"FST_P2_Bookworm",
 			"FST_P2_Marek",
+			"FST_P2_Marek_Dirty",
 			"FST_P2_Marek_V2",
 			"FST_P2_Vector",
 			"FST_P2_Vector_Dirty",
@@ -307,6 +308,10 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Battledroids";
 	};
+	class FST_Tukata_Subfaction
+	{
+		displayName="41st Tukata PMC";
+	};
 	class FST_Zombies_Subfaction
 	{
 		displayName="41st Zombies";
@@ -329,6 +334,13 @@ class CfgFactionClasses
 	{
 		displayName="41st Battledroids";
 		priority=1;
+		side=2;
+		icon="";
+	};
+	class FST_Tukata_Faction
+	{
+		displayName="41st Tukata";
+		priority=2;
 		side=2;
 		icon="";
 	};
@@ -8618,6 +8630,58 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_Airborne_Helmet_Marek_Dirty: JLTS_CloneHelmetAB
+	{
+		author="Viz";
+		displayName="[41st] Airborne Helmet (Marek/Dirty)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Marek_Dirty.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Airborne_Helmet_Kelj: JLTS_CloneHelmetAB
 	{
 		author="Viz";
@@ -9799,11 +9863,11 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dragon.paa",
 		};
 	};
-	class FST_P2_Helmet_Snoob: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Hugger: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Snoob]";
+		displayName="[41st] P2 Helmet [Hugger]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Snoob.paa",
@@ -12619,6 +12683,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Marek";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+ 	class FST_Uniform_Marek_Dirty: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Marek/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Marek_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -27887,6 +27965,61 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Marek.Paa",
 			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Marek.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Marek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Marek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Marek_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Vengence";
+		displayName="[41st] CT-1226 'Marek' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Marek_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Marek_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Marek_Dirty.Paa",
 		};
 		weapons[]=
 		{

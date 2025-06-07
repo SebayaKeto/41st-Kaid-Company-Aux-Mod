@@ -1775,8 +1775,8 @@ class CfgVehicles
 		Backpack="";
 		displayName="[41st] BX Commando Droid (Sniper)";
 		uniformClass="FST_DroidBX";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_BattleDroids_Subfaction";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		armor=25;
 		armorStructural=100;
 		weapons[]=
@@ -1834,6 +1834,8 @@ class CfgVehicles
 		displayName="[41st] BX Commando Droid (Tukata)";
 		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
 		uniformClass="FST_DroidBX_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -2350,6 +2352,8 @@ class CfgVehicles
 		nakedUniform="FST_Uniform_Bodyglove";
 		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
 		backpack="FST_belt_bag_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -2459,6 +2463,8 @@ class CfgVehicles
 		nakedUniform="FST_Uniform_Bodyglove";
 		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
 		backpack="FST_belt_bag_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -2564,6 +2570,8 @@ class CfgVehicles
 		nakedUniform="FST_Uniform_Bodyglove";
 		uniformclass="FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
 		backpack="FST_belt_bag_Tukata_AR";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -3961,6 +3969,276 @@ class cfgGroups
 					{
 						side=0;
 						vehicle="FST_Jorgetrooper";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+				class FST_Zombie_Pack_Walker
+				{
+					name="[41st] Zombie Clonetrooper Walker Pack";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+				class FST_Zombie_Pack_Runner_Walker
+				{
+					name="[41st] Zombie Clonetrooper With Runners Pack";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_41st_Walker";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+				class FST_Zombie_Pack_Runner
+				{
+					name="[41st] Zombie Clonetrooper  Runners Pack";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_41st_Runner";
 						rank="PRIVATE";
 						position[]={0,-5,0};
 					};

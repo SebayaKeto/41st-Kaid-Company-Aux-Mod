@@ -5,7 +5,9 @@ class CfgPatches
 		units[]=
 		{
 			"FST_Fang_Ship",
-			"FST_Fang_Elite_Ship"
+			"FST_Fang_Elite_Ship",
+			"FST_Fang_AA_Ship",
+			"FST_Fang_CAS_Ship"
 		};
 		requiredVersion=0.1;
 		requiredAddons[]=
@@ -515,22 +517,6 @@ class CfgVehicles
 			distance=0;
 			minSpeed=1;
 		};
-		class UserActions
-		{
-			class Test_Plane_01_Eject
-			{
-				priority=0.050000001;
-				shortcut="Eject";
-				displayName="$STR_A3_action_eject";
-				condition="player in this && {speed this > 1}";
-				statement="[this] spawn bis_fnc_planeEjection";
-				position="pilotcontrol";
-				radius=10;
-				onlyforplayer=1;
-				showWindow=0;
-				hideOnUse=1;
-			};
-		};
 	};
 	class FST_Fang_Ship: FST_Fang_base
 	{
@@ -615,9 +601,8 @@ class CfgVehicles
 		{
 			"CMFlareLauncher",
 			"DBA_30mw_G108K",
-			"FST_Stormfury_AA_Missile",
-			"FST_Rapture_AGM_Missile",
-			"IDA_BTX42"
+			"FST_Stormfury_AA_Missile_AI",
+			"FST_Rapture_AGM_Missile_AI"
 		};
 		editorPreview="";
 		magazines[]=
@@ -629,16 +614,100 @@ class CfgVehicles
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+	};
+	class FST_Fang_AA_Ship: FST_Fang_base
+	{
+		scope=2;
+		scopecurator=2;
+		Displayname="[41st] Fang-Class Starfighter (AA)";
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Droid_B1_OOM";
+		icon="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Map_Plane_Fighter_03_CA.paa";
+		armor=100;
+		armorStructural=4;
+		hiddenselections[]=
+		{
+			"camo1"
+		};
+		hiddenselectionstextures[]=
+		{
+			"DBA_CIS\Addons\DBA_Vehicles\DBA_AirVehicles\Fang\Red_CO.paa"
+		};
+		gunBeg[]=
+		{
+			"Usti hlavne1",
+			"Usti hlavne2"
+		};
+		Gunend[]=
+		{
+			"Konec hlavne1",
+			"Konec hlavne2"
+		};
+		weapons[]=
+		{
+			"CMFlareLauncher",
+			"DBA_30mw_G108K",
+			"FST_Stormfury_AA_Missile_AI"
+		};
+		editorPreview="";
+		magazines[]=
+		{
+			"DBA_30mm_STN_x800_mag",
+			"DBA_30mm_STN_x800_mag",
+			"DBA_30mm_STN_x800_mag",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+	};
+	class FST_Fang_CAS_Ship: FST_Fang_base
+	{
+		scope=2;
+		scopecurator=2;
+		Displayname="[41st] Fang-Class Starfighter (CAS)";
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Droid_B1_OOM";
+		icon="A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Map_Plane_Fighter_03_CA.paa";
+		armor=100;
+		armorStructural=4;
+		hiddenselections[]=
+		{
+			"camo1"
+		};
+		hiddenselectionstextures[]=
+		{
+			"DBA_CIS\Addons\DBA_Vehicles\DBA_AirVehicles\Fang\Red_CO.paa"
+		};
+		gunBeg[]=
+		{
+			"Usti hlavne1",
+			"Usti hlavne2"
+		};
+		Gunend[]=
+		{
+			"Konec hlavne1",
+			"Konec hlavne2"
+		};
+		weapons[]=
+		{
+			"CMFlareLauncher",
+			"DBA_30mw_G108K",
+			"FST_Rapture_AGM_Missile_AI"
+		};
+		editorPreview="";
+		magazines[]=
+		{
+			"DBA_30mm_STN_x800_mag",
+			"DBA_30mm_STN_x800_mag",
+			"DBA_30mm_STN_x800_mag",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
 			"240Rnd_CMFlare_Chaff_Magazine"
 		};
 	};
