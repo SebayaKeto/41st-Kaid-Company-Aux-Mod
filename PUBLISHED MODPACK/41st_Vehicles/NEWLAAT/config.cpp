@@ -5424,12 +5424,28 @@ class Cfgweapons
 			"FST_Rapture_4Rnd_AGM_Missile",
 		};
 		maxRange=6000;
-		mminRange=50;
+		minRange=50;
 		canlock=2;
 		airLock=1;
 		weaponLockDelay=2;
 		reloadTime = 0.001;
 		magazineReloadTime=1;
+	};
+	class FST_Rapture_AGM_Missile_AI: weapon_AGM_65Launcher
+	{
+		displayName="[41st] Rapture Anti-Tank Missile (AI)";
+		magazines[]=
+		{
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_4Rnd_AGM_Missile",
+		};
+		maxRange=6000;
+		minRange=25;
+		canlock=2;
+		airLock=1;
+		weaponLockDelay=2;
+		reloadTime = 5;
+		magazineReloadTime=5;
 	};
 	class FST_Foehammer_AGM_Missile: weapon_AGM_65Launcher
 	{
@@ -5469,13 +5485,31 @@ class Cfgweapons
 			
 		};
 		maxRange=6000;
-		mminRange=50;
+		minRange=25;
 		canlock=2;
 		airLock=1;
 		aiAmmoUsageFlags="128 + 256";
 		weaponLockDelay=2;
 		reloadTime = 0.001;
 		magazineReloadTime=1;
+	};
+	class FST_Stormfury_AA_Missile_AI: missiles_ASRAAM
+	{
+		displayName="[41st] Stormfury High Velocity Missile (AI)";
+		magazines[]=
+		{
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_4Rnd_AA_Missile"
+			
+		};
+		maxRange=6000;
+		minRange=25;
+		canlock=2;
+		airLock=1;
+		aiAmmoUsageFlags="128 + 256";
+		weaponLockDelay=2;
+		reloadTime = 5;
+		magazineReloadTime=5;
 	};
 	class MissileLauncher;
 	class FST_Harrower_HARM_Missile : MissileLauncher

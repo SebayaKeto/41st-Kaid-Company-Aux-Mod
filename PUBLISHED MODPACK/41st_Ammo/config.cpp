@@ -638,6 +638,9 @@ class CfgAmmo
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
 		hit=100;
 		caliber=2.2;
+		indirectHit=5;
+		explosive=1;
+		indirectHitRange=0.5;
 		coefGravity=1;
 		ACE_ammoTempMuzzleVelocityShifts="[-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19]";
 		ACE_ballisticCoefficients="[0.317]";
@@ -961,6 +964,45 @@ class CfgAmmo
 		ExplosionEffects="SWLW_plasma_he_impact";
 		CraterEffects="SWLW_plasma_he_impact";
 		lightcolor[]={0,0,1};
+	};
+	class FST_Popper_Grenade_Ammo: G_40mm_HE
+	{
+		JLTS_isEMPAmmo=1;
+		ace_frag_enabled=1;
+		hit=0.0099999998;
+		indirectHit=0.0099999998;
+		explosive=0.0099999998;
+		indirectHitRange=7;
+		effectflare="FlareShell";
+		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		fuseDistance=7;
+		explosionEffects="JLTS_fx_exp_EMP";
+		lightcolor[]={0,0,1};
+		grenadeBurningSound[]=
+		{
+			"EMPSoundLoop1",
+			0.5
+		};
+		EMPSoundLoop1[]=
+		{
+			"MRC\JLTS\weapons\Grenades\sounds\grenade_burning.wss",
+			0.125893,
+			1,
+			70
+		};
+		SoundSetExplosion[]=
+		{
+			"FST_GrenadeEMP_Exp_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		aiAmmoUsageFlags=0;
+		class CamShakeExplode
+		{
+			distance=10;
+			duration=1;
+			frequency=20;
+			power=0;
+		};
 	};
 	class FST_grenade_emp_ammo: GrenadeHand_stone
 	{
@@ -2199,6 +2241,7 @@ class CfgMagazines
 		count=1;
 		mass=8;
 	};
+	class 1Rnd_HE_Grenade_shell;
 	class IDA_Smoke_LauncherGrenade;
 	class FST_Smoke_LauncherGrenade: IDA_Smoke_LauncherGrenade
 	{ 
@@ -2248,6 +2291,16 @@ class CfgMagazines
 		displayNameShort="Purple Smoke";
 		descriptionShort="Purple Impact Smoke grenade";
 		ammo="FST_smoke_Impact_Purple";
+		mass=6;
+	};
+	class FST_Droid_Popper_Launcher: 1Rnd_HE_Grenade_shell
+	{
+		author="Ruby";
+		count=1;
+		displayName="[41st] 1Rnd Droid Popper (UGL)";
+		displayNameShort="Droid Popper";
+		descriptionShort="Droid Popper UGL";
+		ammo="FST_Popper_Grenade_Ammo";
 		mass=6;
 	};
 	class RPG32_F;
