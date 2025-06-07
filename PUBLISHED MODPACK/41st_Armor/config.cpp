@@ -257,6 +257,7 @@ class CfgPatches
 			"FST_P2_Stant",
 			"FST_P2_Salt",
 			"FST_P2_Colors",
+			"FST_P2_Alek",
 			"FST_P2¨Plop",
 			"FST_P2¨Bees",
 			"FST_P2¨Dilham",
@@ -5520,6 +5521,18 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Sierra.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
+			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Nys: FST_Pilot_P1_Helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Nys]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Nys.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
 			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
 		};
@@ -12739,6 +12752,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Colors";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Alek: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Alek]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Alek";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -25951,6 +25978,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Colors",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Alek: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-5419 'Alek'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Alek";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Alek.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Alek.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Alek",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Alek",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

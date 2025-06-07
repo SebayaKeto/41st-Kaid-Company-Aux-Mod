@@ -1045,6 +1045,8 @@ class CfgVehicles
 		crew = "FST_JMSLLTE_JinTrooper_armor_F";
 		author = "Daara";
 		armor = 1150;
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelections[] = {"Camo1"};
 		hiddenSelectionsTextures[] = {
 			"41st_Vehicles\AAT\Data\Tukata_AAT_CO.paa"
