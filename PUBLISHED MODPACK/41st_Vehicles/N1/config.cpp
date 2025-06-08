@@ -91,8 +91,8 @@ class CfgVehicles
 		extCameraPosition[]={0,1,-25};
 		transportSoldier=0;
 		accuracy=0.5;
-		armor=125;
-		armorStructural=3;
+		armor=100;
+		armorStructural=4;
 		explosionShielding=1;
 		epeImpulseDamageCoef=70;
 		ejectSpeed[]={0,-2,0};

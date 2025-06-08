@@ -12,6 +12,8 @@ class CfgPatches
 		units[]=
 		{
 			"FST_Jug",
+			"FST_Jug_Grey",
+			"FST_Jug_Cardinal",
 			"FST_Jug_static",
 			"FST_Jug_destroy_static"
 		};
@@ -1270,12 +1272,14 @@ class CfgVehicles
 				gunnerGetOutAction="GetOutLow";
 				weapons[]=
 				{
-					"missiles_DAR"
+					"3AS_Hailfire_Barrage_Weapon"
 				};
 				magazines[]=
 				{
-					"24Rnd_missiles",
-					"24Rnd_missiles"
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile"
 				};
 				proxyType="CPGunner";
 				displayname="Missile Gunner";
@@ -1444,7 +1448,7 @@ class CfgVehicles
 			class Revolving
 			{
 				source="revolving";
-				weapon="missiles_DAR";
+				weapon="3AS_Hailfire_Barrage_Weapon";
 			};
 			class Revolving_SAM
 			{
@@ -2821,6 +2825,122 @@ class CfgVehicles
 			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Base.paa",
 			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Weapons.paa",
 			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Props.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Wheels.paa"
+		};
+		textureList[]={};
+	};
+	class FST_Jug_Cardinal: FST_B_Jug_01_base_F
+	{
+		author="Daara";
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]=
+			{
+				"clan",
+				"zasleh2",
+				"zasleh_1",
+				"light_l",
+				"light_r",
+				"light_r2",
+				"light_l2",
+				"zadni svetlo",
+				"brzdove svetlo",
+				"podsvit pristroju",
+				"poskozeni"
+			};
+			verticalOffset=2.3859999;
+			verticalOffsetWorld=-0.075999998;
+			init="[this, '', []] call bis_fnc_initVehicle";
+		};
+		editorPreview="\3as\3as_Jug\images\3as_jug.jpg";
+		_generalMacro="B_APC_Wheeled_01_cannon_F";
+		scope=2;
+		accuracy=0.30000001;
+		displayName="[41st] HAVw A6 Juggernaut (Cardinal)";
+		class Library
+		{
+			libTextDesc="$STR_A3_CFGVEHICLES_APC_WHEELED_01_LIBRARY0";
+		};
+		model="3as\3as_Jug\model\3as_jug.p3d";
+		icon="3AS\3as_Jug\data\ui\Jug_top_ca.paa";
+		picture="3as\3as_Jug\data\ui\Jug_side_ca.paa";
+		unitInfoType="RscUnitInfoTank";
+		radarType=8;
+		driverCanSee="4+8+2+32+16";
+		gunnerCanSee="4+2+8+32+16";
+		threat[]={1,1,0.30000001};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Base_Banshee.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Weapons_Banshee.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Props_Banshee.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Wheels.paa"
+		};
+		textureList[]={};
+	};
+	class FST_Jug_Grey: FST_B_Jug_01_base_F
+	{
+		author="Daara";
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]=
+			{
+				"clan",
+				"zasleh2",
+				"zasleh_1",
+				"light_l",
+				"light_r",
+				"light_r2",
+				"light_l2",
+				"zadni svetlo",
+				"brzdove svetlo",
+				"podsvit pristroju",
+				"poskozeni"
+			};
+			verticalOffset=2.3859999;
+			verticalOffsetWorld=-0.075999998;
+			init="[this, '', []] call bis_fnc_initVehicle";
+		};
+		editorPreview="\3as\3as_Jug\images\3as_jug.jpg";
+		_generalMacro="B_APC_Wheeled_01_cannon_F";
+		scope=2;
+		accuracy=0.30000001;
+		displayName="[41st] HAVw A6 Juggernaut (Grey)";
+		class Library
+		{
+			libTextDesc="$STR_A3_CFGVEHICLES_APC_WHEELED_01_LIBRARY0";
+		};
+		model="3as\3as_Jug\model\3as_jug.p3d";
+		icon="3AS\3as_Jug\data\ui\Jug_top_ca.paa";
+		picture="3as\3as_Jug\data\ui\Jug_side_ca.paa";
+		unitInfoType="RscUnitInfoTank";
+		radarType=8;
+		driverCanSee="4+8+2+32+16";
+		gunnerCanSee="4+2+8+32+16";
+		threat[]={1,1,0.30000001};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Base_Grey.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Weapons_Grey.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Props_Grey.paa",
 			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Wheels.paa"
 		};
 		textureList[]={};
