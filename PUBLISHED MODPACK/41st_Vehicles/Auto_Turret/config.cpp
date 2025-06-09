@@ -47,10 +47,11 @@ class CfgVehicles {
         armor = 2000;
 		scope = 2;
 		scopeCurator = 2;
+		crew="O_UAV_AI";
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		model="\ls_vehicles_turrets\AutoTurret\AutoTurret.p3d";
+		model="\ls\core\addons\vehicles_mrbc\ls_turret_autoturret.p3d";
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -73,7 +74,7 @@ class CfgVehicles {
 		};
         hiddenSelectionsTextures[] = 
 		{
-            "\ls_vehicles_turrets\AutoTurret\data\RoofRepeater_co.paa"
+			"\ls\core\addons\vehicles_mrbc\data\autoturret\camo1_co.paa"
         };
     };
 
@@ -84,10 +85,11 @@ class CfgVehicles {
         armor = 2000;
 		scope = 2;
 		scopeCurator = 2;
+		crew="O_UAV_AI";
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
-		model="\ls_vehicles_turrets\AutoTurret\AutoTurret.p3d";
+		model="\ls\core\addons\vehicles_mrbc\ls_turret_autoturret.p3d";
         class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -110,7 +112,7 @@ class CfgVehicles {
 		};
         hiddenSelectionsTextures[] = 
 		{
-            "\ls_vehicles_turrets\AutoTurret\data\RoofRepeater_co.paa"
+            "\ls\core\addons\vehicles_mrbc\data\autoturret\camo1_co.paa"
         };
         class AnimationSources
 		{
