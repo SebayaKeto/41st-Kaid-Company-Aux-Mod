@@ -14,16 +14,6 @@ class CfgPatches
 		weapons[]={};
 	};
 };
-class Extended_init_EventHandlers
-{
-	class  FST_LAAT_LE
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -49,6 +39,7 @@ class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
 {
 	class components;
 };
+class ls_impulsor_base;
 class CfgVehicles
 {
 	class 3AS_Patrol_LAAT_Base;
@@ -77,11 +68,6 @@ class CfgVehicles
 		fuelCapacity=8000;
 		tas_canBlift=1;
         tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]"; 
-		ls_impulsor_fuelDrain_1=1.9999997e-005;
-		ls_impulsor_fuelDrain_2=0.00030000001;
-		ls_impulsor_boostSpeed_1=300;
-		ls_impulsor_boostSpeed_2=600;
-		ls_hasImpulse=1;
 		tas_can_impulse=0;	
 		maxFordingDepth=5;
 		incomingMissileDetectionSystem="1 + 2 + 4 + 8 + 16 + 32";
@@ -186,17 +172,17 @@ class CfgVehicles
 		{
 			"Laserdesignator_pilotCamera",
 			"FST_30mm_Autocannon_LAAT",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 			"FST_Stormfury_AA_Missile",
         };
 		magazines[]=
 		{
 			"FST_Thermal_Coil",
 			"Laser_Battery",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries",
 			"FST_Stormfury_12Rnd_AA_Missile",
 		};
@@ -220,6 +206,15 @@ class CfgVehicles
 			"RTT_Cargo_Right",
 			"RTT_Cargo_Right",
 			"RTT_Cargo_Right"
+		};
+		class ls_impulsor: ls_impulsor_base
+		{
+			enabled=1;
+			speed=300;
+			fueldrain=0.0001;
+			overchargespeed=600;
+			overchargeFuelDrain=0.0001;
+			overchargeCooldown=0
 		};
 		class components
 		{

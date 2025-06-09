@@ -170,7 +170,7 @@ class CfgVehicles
 			"FST_30mm_Autocannon_YWing",
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 			"Laserdesignator_pilotCamera"
 		};
 		magazines[]=
@@ -178,10 +178,11 @@ class CfgVehicles
 			"FST_thermal_Y_Wing",
 			"FST_thermal_Y_Wing",
 			"FST_thermal_Y_Wing",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",

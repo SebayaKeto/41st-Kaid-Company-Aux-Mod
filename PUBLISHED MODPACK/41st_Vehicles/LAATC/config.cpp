@@ -46,16 +46,6 @@ class CfgFunctions
 		};
 	};
 };
-class Extended_init_EventHandlers
-{
-	class FST_LAATC
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -79,6 +69,7 @@ class DefaultVehicleSystemsDisplayManagerRight
 		class MinimapDisplay;
 	};
 };
+class ls_impulsor_base;
 class CfgVehicles
 {
 	class Wreck_base_F;
@@ -168,11 +159,6 @@ class CfgVehicles
 		nameSound="veh_helicopter_s";
 		fuelCapacity=8000;
 		fuelConsumptionRate=0.2;
-		ls_impulsor_fuelDrain_1=9.9999997e-005;
-		ls_impulsor_fuelDrain_2=9.9999997e-005;
-		ls_impulsor_boostSpeed_1=300;
-		ls_impulsor_boostSpeed_2=600;
-		ls_hasImpulse=1;
 		tas_can_impulse=0;
 		smokeLauncherAngle=360;
 		smokeLauncherGrenadeCount=18;
@@ -190,7 +176,6 @@ class CfgVehicles
 		getInRadius=5;
 		altFullForce=10000;
 		altNoForce=15000;
-	
 		brakeDistance=200;
 		mainRotorSpeed=-1;
 		backRotorSpeed=1;
@@ -315,7 +300,7 @@ class CfgVehicles
 			"FST_Rapture_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"Laserdesignator_pilotCamera",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 			"SmokeLauncher"
         };
 		magazines[]=
@@ -325,11 +310,11 @@ class CfgVehicles
 			"FST_thermal_coil",
 			"FST_thermal_coil",
 			"Laserbatteries",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -352,6 +337,15 @@ class CfgVehicles
 		{
 			"z_gunL_chamber",
 			"z_gunR_chamber"
+		};
+		class ls_impulsor: ls_impulsor_base
+		{
+			enabled=1;
+			speed=300;
+			fueldrain=0.0001;
+			overchargespeed=600;
+			overchargeFuelDrain=0.0001;
+			overchargeCooldown=0
 		};
 		class components
 		{

@@ -119,7 +119,7 @@ class CfgVehicles
 			"FST_ARC_Light_Canon",
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 			"Laserdesignator_pilotCamera"
 		};
 		magazines[]=
@@ -127,11 +127,11 @@ class CfgVehicles
 			"FST_ARC_1000Rnd_Heavy_shells",
 			"FST_ARC_1000Rnd_Heavy_shells",
 			"FST_ARC_1000Rnd_Heavy_shells",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Stormfury_12Rnd_AA_Missile",

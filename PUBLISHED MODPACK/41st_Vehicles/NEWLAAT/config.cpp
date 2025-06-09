@@ -116,45 +116,7 @@ class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
 {
 	class components;
 };
-class Extended_init_EventHandlers
-{
-	class FST_laati_Turret
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_laati_mk1Lights
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_laati_mk2
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_laati_mk2Lights
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_laati_Turret_RadarTestbed
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
-
+class ls_impulsor_base;
 class DefaultEventhandlers;
 class CfgVehicles
 {
@@ -295,12 +257,6 @@ class CfgVehicles
 		fuelCapacity=8000;
 		dustEffect="";
 		waterEffect="";
-		ls_impulsor_fuelDrain_1=9.9999997e-005;
-		ls_impulsor_fuelDrain_2=9.9999997e-005;
-		ls_impulsor_boostSpeed_1=300;
-		ls_impulsor_boostSpeed_2=800;
-		tas_impulse_break=100;
-		ls_hasImpulse=1;
 		tas_can_impulse=0;
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
@@ -359,7 +315,7 @@ class CfgVehicles
                     amount = 1;
                 };
             };
-        };	
+        };
 		class TransportItems
 		{
 			class _xx_IDA_Cauterizer
@@ -377,6 +333,15 @@ class CfgVehicles
 				name="FST_Bacta_Tank";
 				count=1;
 			};
+		};
+		class ls_impulsor: ls_impulsor_base
+		{
+			enabled=1;
+			speed=300;
+			fueldrain=0.0001;
+			overchargespeed=800;
+			overchargeFuelDrain=0.0001;
+			overchargeCooldown=0
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -510,7 +475,7 @@ class CfgVehicles
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
 			"Laserdesignator_pilotCamera",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 			"FST_SUU25",
 			"FST_RKT_Launcher",
 			"FST_SmokeLauncher"
@@ -519,11 +484,11 @@ class CfgVehicles
 		{
 			"Laser_Battery",
 			"Laserbatteries",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
@@ -3309,11 +3274,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -3373,11 +3338,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -3668,11 +3633,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -3732,11 +3697,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -4028,11 +3993,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -4092,11 +4057,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -4387,11 +4352,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
@@ -4451,11 +4416,11 @@ class CfgVehicles
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
 			"FST_SmokeLauncherMag",
