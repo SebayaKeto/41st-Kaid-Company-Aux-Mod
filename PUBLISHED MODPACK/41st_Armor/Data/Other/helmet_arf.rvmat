@@ -12,7 +12,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "SWLB_clones\data\helmet_ARF_nohq.paa";
+	texture = "ls\core\addons\characters_clone_legacy\helmets\arf\data\helmet_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -48,7 +48,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "SWLB_clones\data\helmet_ARF_as.paa";
+	texture = "ls\core\addons\characters_clone_legacy\helmets\arf\data\helmet_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

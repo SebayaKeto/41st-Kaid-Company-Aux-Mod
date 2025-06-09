@@ -3405,8 +3405,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Blank)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3429,7 +3429,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3461,8 +3461,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (White/Green)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3485,7 +3485,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3517,8 +3517,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Desert)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3541,7 +3541,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3573,8 +3573,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Woodland)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3597,7 +3597,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3772,8 +3772,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Sigs)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3796,7 +3796,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3828,8 +3828,8 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARF Helmet (Preacher)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3852,7 +3852,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3884,8 +3884,8 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARF Helmet (Gold)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3908,7 +3908,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3940,8 +3940,8 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARF Helmet (Gold/Dirty)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3964,7 +3964,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -3996,8 +3996,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Jammer)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4020,7 +4020,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4052,8 +4052,8 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARF Helmet (Jammer/Dirty)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4076,7 +4076,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4108,8 +4108,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Sly)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4132,7 +4132,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4164,8 +4164,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Sly/Dirty)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4188,7 +4188,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4220,8 +4220,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Ampersand)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4244,7 +4244,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4276,8 +4276,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Ampersand Dirty)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4300,7 +4300,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4332,8 +4332,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Diesel)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4356,7 +4356,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4389,7 +4389,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] ARF Helmet (Jaws)";
 		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4408,7 +4408,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4440,8 +4440,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Annex)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4464,7 +4464,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4496,8 +4496,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet (Hayes)";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4520,7 +4520,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
@@ -4552,8 +4552,8 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARF Helmet";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_helmet_arf_p1_ca.paa";
-		model="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4576,7 +4576,7 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_ARF_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
 			mass=15;
 			hiddenSelections[]=
 			{
