@@ -3265,7 +3265,7 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] P1 Pilot Helmet";
-		model="ls_armor_bluefor\helmet\gar\phase1Pilot\ls_gar_phase1Pilot_helmet.p3d";
+		model="ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\ls_cloneHelmet_phase1_pilot.p3d";
 		ace_hearing_protection=1;
         ace_hearing_lowerVolume=0;
 		hiddenSelections[]=
@@ -3277,12 +3277,12 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_CO.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 		class Iteminfo: HeadgearItem
 		{
-			uniformModel="ls_armor_bluefor\helmet\gar\phase1Pilot\ls_gar_phase1Pilot_helmet.p3d";
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\ls_cloneHelmet_phase1_pilot.p3d";
 			mass=15;
 			hiddenselections[]=
 			{
@@ -5448,8 +5448,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_Pilot_P1_Helmet_Ghostly.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Raz: FST_Pilot_P1_Helmet
@@ -5460,8 +5460,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Raz.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Ruby: FST_Pilot_P1_Helmet
@@ -5472,8 +5472,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ruby.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Spade: FST_Pilot_P1_Helmet
@@ -5484,8 +5484,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Spade.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Shockcap: FST_Pilot_P1_Helmet
@@ -5496,8 +5496,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Shockcap.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Hijack: FST_Pilot_P1_Helmet
@@ -5508,8 +5508,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Hijack.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Sierra: FST_Pilot_P1_Helmet
@@ -5520,8 +5520,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Sierra.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Nys: FST_Pilot_P1_Helmet
@@ -5532,8 +5532,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Nys.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Bees: FST_Pilot_P1_Helmet
@@ -5544,8 +5544,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Bees.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Derp: FST_Pilot_P1_Helmet
@@ -5556,8 +5556,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Derp.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Derp.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Derp.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Sepie: FST_Pilot_P1_Helmet
@@ -5568,8 +5568,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Sepie.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Qball: FST_Pilot_P1_Helmet
@@ -5580,8 +5580,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Qball.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Grim: FST_Pilot_P1_Helmet
@@ -5592,8 +5592,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Grim.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Pole: FST_Pilot_P1_Helmet
@@ -5604,8 +5604,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Pole.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Pole.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Pole.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
   	class FST_Pilot_P1_Helmet_Ripper: FST_Pilot_P1_Helmet
@@ -5616,8 +5616,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ripper.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
    	class FST_Pilot_P1_Helmet_Daara: FST_Pilot_P1_Helmet
@@ -5628,8 +5628,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Daara.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\lifesupport_co.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	}; 
 	class JMSLLTE_EmpOfficerCap_black_helmet;
@@ -5652,8 +5652,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Medusa.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Medusa.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Medusa.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	}; 
    	class FST_Pilot_P1_Helmet_Vix: FST_Pilot_P1_Helmet
@@ -5664,8 +5664,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Vix.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Vix.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Vix.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Jan: FST_Pilot_P1_Helmet
@@ -5676,8 +5676,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Jan.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Jan.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Jan.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet_Overwatch: FST_Pilot_P1_Helmet
@@ -5688,8 +5688,8 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Overwatch.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Overwatch.paa",
-			"ls_armor_bluefor\helmet\gar\phase1Pilot\data\visor_co.paa"
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Overwatch.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
 	class FST_BARC_Helmet_Ghostly: FST_BARC_Helmet
