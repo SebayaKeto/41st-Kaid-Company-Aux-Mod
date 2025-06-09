@@ -3411,13 +3411,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Blank.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_Blank.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_Blank.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3435,7 +3435,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3467,13 +3467,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3491,7 +3491,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3523,13 +3523,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Desert.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_Desert.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_Desert.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3547,7 +3547,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3579,13 +3579,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Woodland.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_Woodland.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_Woodland.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3603,7 +3603,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3778,13 +3778,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sigs.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sigs.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sigs.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3802,7 +3802,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3834,13 +3834,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Preacher.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Preacher.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Preacher.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3858,7 +3858,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3890,13 +3890,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3914,7 +3914,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -3946,13 +3946,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold_Dirty.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold.paa_Dirty",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Gold_Dirty.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3970,7 +3970,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4002,13 +4002,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4026,7 +4026,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4058,13 +4058,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer_Dirty.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer_Dirty.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Jammer_Dirty.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4082,7 +4082,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4114,13 +4114,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4138,7 +4138,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4170,13 +4170,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly_Dirty.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly_Dirty.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Sly_Dirty.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4194,7 +4194,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4226,13 +4226,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4250,7 +4250,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4282,13 +4282,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand_Dirty.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand_Dirty.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Ampersand_Dirty.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4306,7 +4306,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4338,13 +4338,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Diesel.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Diesel.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Diesel.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4362,7 +4362,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4446,13 +4446,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Annex.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Annex.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Annex.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4470,7 +4470,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4502,13 +4502,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Hayes.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Hayes.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Hayes.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4526,7 +4526,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -4558,13 +4558,13 @@ class CfgWeapons
 		{
 			"camo1",
 			"camo2",
-			"camo3"
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_ARF_Helmet.paa",
-			"41st_Armor\data\Helmets\FST_ARF_Helmet.paa",
 			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4582,7 +4582,7 @@ class CfgWeapons
 			{
 				"camo1",
 				"camo2",
-				"camo3"
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -14710,6 +14710,20 @@ class CfgWeapons
         {
             uniformModel="";
             uniformClass="FST_P2_Sonic";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Volos: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Volos]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Volos";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -33071,6 +33085,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sonic",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Volos: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-1770 'Volos'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Volos";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Volos.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Volos.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Volos",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Volos",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
