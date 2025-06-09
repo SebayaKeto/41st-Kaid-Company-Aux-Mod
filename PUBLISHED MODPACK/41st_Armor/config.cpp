@@ -34008,11 +34008,11 @@ class CfgHeads
 	class Default_A3;
 	class m_clone: Default_A3
 	{
-		model="lsd_identities\data\models\lsd_identities_clone_head.p3d";
+		model="ls\core\addons\identities\clones\ls_head_clone.p3d";
 	};
 	class m_clone_hair: Default_A3
 	{
-		model="lsd_identities\data\models\lsd_identities_cloneHair_head.p3d";
+		model="ls\core\addons\identities\clones\ls_head_cloneHair.p3d";
 	};
 };
 class CfgFaces
@@ -34031,8 +34031,8 @@ class CfgFaces
 				"Head_LSD_CLONE"
 			};
 			head="m_clone_hair";
-			material="\lsd_identities\data\models\data\clone_a.rvmat";
-			texture="\lsd_identities\data\models\data\clone_a_co.paa";
+			material="ls\core\addons\identities\clones\data\cloneA.rvmat";
+			texture="ls\core\addons\identities\clones\data\cloneA_co.paa";
 			disabled=0;
 			materialWounded1="\A3\Characters_F_EPA\Heads\Data\m_kerry_A_injury.rvmat";
 			materialWounded2="\A3\Characters_F_EPA\Heads\Data\m_kerry_A_injury.rvmat";
@@ -34046,7 +34046,7 @@ class CfgFaces
 			author="Viz"
 			name="Clone Trooper Burns";
 			displayName="[41st] Clone Trooper - Burns";
-			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Burnz.paa";
 		};
 		class FST_Clone_Head_Sigs: FST_clone_Default_head
@@ -34054,7 +34054,7 @@ class CfgFaces
 			author="Gold"
 			name="Clone Trooper Sigs";
 			displayName="[41st] Clone Trooper - Sigs";
-			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Sigs.paa";
 		};
 		class FST_Clone_Head_Cardinal: FST_clone_Default_head
@@ -34062,7 +34062,7 @@ class CfgFaces
 			author="Viz"
 			name="Clone Trooper Cardinal";
 			displayName="[41st] Clone Trooper - Cardinal";
-			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Cardinal.paa";
 		};
 		class FST_Clone_Head_ampersand: FST_clone_Default_head
@@ -34070,7 +34070,7 @@ class CfgFaces
 			author="Gold"
 			name="Clone Trooper ampersand";
 			displayName="[41st] Clone Trooper - ampersand";
-			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_ampersand.paa";
 		};
 		class FST_Clone_Head_Delta: FST_clone_Default_head
@@ -34078,7 +34078,7 @@ class CfgFaces
 			author="Gold"
 			name="Clone Trooper Delta";
 			displayName="[41st] Clone Trooper - Delta";
-			material="\lsd_identities\data\models\data\clone_b.rvmat";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Delta.paa";
 		};
 	};
