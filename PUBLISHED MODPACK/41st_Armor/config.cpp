@@ -304,6 +304,14 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Supplies";
 	};
+	class FST_Venator_Category_P
+	{
+		displayName="41st Venator Parts";
+	};
+	class FST_Venator_Category_S
+	{
+		displayName="41st Venator Ships";
+	};
 	class FST_BattleDroids_Subfaction
 	{
 		displayName="41st Battledroids";
@@ -364,6 +372,12 @@ class CfgEditorCategories
 	class FST_Crates
 	{
 		displayname="[41st] Ammo + Medical Crates";
+		priority=8;
+		side=7;
+	};
+	class FST_Venator_Category
+	{
+		displayname="[41st] Venator";
 		priority=8;
 		side=7;
 	};
@@ -33764,7 +33778,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsTextures[]=
 		{
-			""
+			"\MRC\JLTS\characters\CloneArmor\data\clone_vest_officer_co.paa"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;

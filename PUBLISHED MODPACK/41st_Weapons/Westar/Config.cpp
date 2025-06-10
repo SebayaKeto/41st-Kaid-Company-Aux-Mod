@@ -530,7 +530,7 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] Westar-M5A Rifle";
-		model="SWLW_merc_mando\rifles\westar35S\westar35s.p3d";
+		model="ls\core\addons\weapons_westar\westar35s\ls_weapon_westar35s.p3d";
 		baseWeapon="FST_Westar_M5_A";
 		handAnim[]=
 		{
@@ -544,14 +544,14 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"SWLW_Westar35S_scope"
+					"ls_cows_westar35s_scope"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
 				compatibleItems[]=
 				{
-					"SWLW_Westar35S_suppressor"
+					"ls_muzzle_westar35s_suppressor"
 				};
 			};
 			class UnderBarrelSlot: UnderBarrelSlot
@@ -572,7 +572,7 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] Westar-M5S Rifle";
-		model="SWLW_merc_mando\rifles\westar35S\westar35s.p3d";
+		model="ls\core\addons\weapons_westar\westar35s\ls_weapon_westar35s.p3d";
 		baseWeapon="FST_Westar_M5_S";
 		muzzles[]=
 		{
@@ -612,7 +612,7 @@ class CfgWeapons
 			};
 			reloadMagazineSound[]=
 			{
-				"\SWLW_main\sounds\scatter_reload",
+				"ls\core\addons\sounds\weapons\reload\westar35.ogg",
 				0.56234133,
 				1,
 				30
@@ -645,17 +645,17 @@ class CfgWeapons
 				{
 					begin1[]=
 					{
-						"\SWLW_main\sounds\scatter",
-						0.70794576,
+						"ls\core\addons\sounds\weapons\westar35s\shot1.wss",
 						1,
-						200
+						1,
+						1800
 					};
 					begin2[]=
 					{
-						"\SWLW_main\sounds\scatter",
-						0.70794576,
+						"ls\core\addons\sounds\weapons\westar35s\shot1.wss",
 						1,
-						200
+						1,
+						1800
 					};
 					soundBegin[]=
 					{
@@ -680,14 +680,14 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"SWLW_Westar35S_scope"
+					"ls_cows_westar35s_scope"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
 				compatibleItems[]=
 				{
-					"SWLW_Westar35S_suppressor"
+					"ls_muzzle_westar35s_suppressor"
 				};
 			};
 			class UnderBarrelSlot: UnderBarrelSlot
@@ -786,13 +786,13 @@ class CfgWeapons
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
 	};
-	class SWLW_Westar35S_suppressor: ItemCore
+	class FST_Westar35S_suppressor: ItemCore
 	{
 		scope=1;
 		author="SW Legion Studios";
 		displayName="Westar-35S flash suppressor";
-		picture="\SWLW_merc_mando\rifles\westar35s\data\ui\swlw_westar35s_suppressor_ui.paa";
-		model="SWLW_merc_mando\rifles\westar35s\westar35s_suppressor.p3d";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35s_suppressor_ui_ca.paa";
+		model="ls\core\addons\weapons_westar\westar35s\ls_muzzle_westar_35s_suppressor.p3d";
 		class ItemInfo: InventoryMuzzleItem_Base_F
 		{
 			mass=8;

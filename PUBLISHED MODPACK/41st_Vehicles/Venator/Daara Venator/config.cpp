@@ -47,6 +47,7 @@ class CfgVehicles
 {
 	class NonStrategic;
 	class StaticShip;
+	class ls_staticShip_base;
 	class Ship;
 	class Building;
 	class House_F;
@@ -56,16 +57,15 @@ class CfgVehicles
 	class Motorcycle;
 	class FlagCarrier;
 	class Items_base_F;
-	class FST_Daara_venator_zeus: House_F
+	class FST_Daara_venator_zeus: ls_staticShip_base
 	{
 		author="kripto202 adapted by Viz";
-		model="\swlb_static\venator\venator.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_zeus.p3d";
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		editorcategory="ls_static";
-		editorsubcategory="FST_Air_Vehicle";
-		vehicleClass="Structures";
+		editorcategory="FST_Venator_Category";
+		editorsubcategory="FST_Venator_Category_S";
 		icon="iconObject_1x1";
 		displayname="[41st] Daara Venator (Zeus)";
 		hiddenselections[]=
@@ -105,29 +105,28 @@ class CfgVehicles
 			"41st_Vehicles\Venator\Daara Venator\body9_Daara_venator_co.paa",
 			"41st_Vehicles\Venator\Daara Venator\body10_Daara_venator_co.paa",
 			"41st_Vehicles\Venator\Daara Venator\door_Daara_venator_co.paa",
-			"swlb_static\venator\data\engine_co.paa",
-			"swlb_static\venator\data\interior1_co.paa",
-			"swlb_static\venator\data\interior2_co.paa",
-			"swlb_static\venator\data\interior3_co.paa",
-			"swlb_static\venator\data\interior4_co.paa",
-			"swlb_static\venator\data\interior5_co.paa",
-			"swlb_static\venator\data\interior6_co.paa",
-			"swlb_static\venator\data\interior7_co.paa",
-			"swlb_static\venator\data\interior8_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\engine_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior1_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior2_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior3_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior4_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior5_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior6_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior7_co.paa",
+			"\ls\core\addons\props_staticships\venator\data\interior8_co.paa",
 			"41st_Vehicles\Venator\Daara Venator\bridge_Daara_venator_co.paa"
 		};
 	};
 	class FST_Daara_venator_base: StaticShip
 	{
 		author="kripto202";
-		model="\swlb_static\venator\venator_base.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator.p3d";
 		reversed=0;
 		scope=2;
 		scopecurator=1;
 		editorpreview="";
-		editorcategory="ls_static";
-		editorsubcategory="ls_ships";
-		vehicleClass="Structures_Military";
+		editorcategory="FST_Venator_Category";
+		editorsubcategory="FST_Venator_Category_S";
 		icon="iconObject_1x1";
 		displayname="[41st] Daara Venator";
 		mapsize=1326;
@@ -140,7 +139,7 @@ class CfgVehicles
 				"FST_Daara_ven_body1_1",
 				"body1_1"
 			},
-			
+				
 			{
 				"FST_Daara_ven_body1_2",
 				"body1_2"
@@ -207,47 +206,47 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_engine",
+				"ls_staticShipPart_venator_engine",
 				"engine"
 			},
 			
 			{
-				"ven_interior1",
+				"ls_staticShipPart_venator_interior1",
 				"interior1"
 			},
 			
 			{
-				"ven_interior2",
+				"ls_staticShipPart_venator_interior2",
 				"interior2"
 			},
 			
 			{
-				"ven_interior3",
+				"ls_staticShipPart_venator_interior3",
 				"interior3"
 			},
 			
 			{
-				"ven_interior4",
+				"ls_staticShipPart_venator_interior4",
 				"interior4"
 			},
 			
 			{
-				"ven_interior5",
+				"ls_staticShipPart_venator_interior5",
 				"interior5"
 			},
 			
 			{
-				"ven_interior6",
+				"ls_staticShipPart_venator_interior6",
 				"interior6"
 			},
 			
 			{
-				"ven_interior7",
+				"ls_staticShipPart_venator_interior7",
 				"interior7"
 			},
 			
 			{
-				"ven_interior8",
+				"ls_staticShipPart_venator_interior8",
 				"interior8"
 			},
 			
@@ -342,47 +341,47 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_engine",
+				"ls_staticShipPart_venator_engine",
 				"engine"
 			},
 			
 			{
-				"ven_interior1",
+				"ls_staticShipPart_venator_interior1",
 				"interior1"
 			},
 			
 			{
-				"ven_interior2",
+				"ls_staticShipPart_venator_interior2",
 				"interior2"
 			},
 			
 			{
-				"ven_interior3",
+				"ls_staticShipPart_venator_interior3",
 				"interior3"
 			},
 			
 			{
-				"ven_interior4",
+				"ls_staticShipPart_venator_interior4",
 				"interior4"
 			},
 			
 			{
-				"ven_interior5",
+				"ls_staticShipPart_venator_interior5",
 				"interior5"
 			},
 			
 			{
-				"ven_interior6",
+				"ls_staticShipPart_venator_interior6",
 				"interior6"
 			},
 			
 			{
-				"ven_interior7",
+				"ls_staticShipPart_venator_interior7",
 				"interior7"
 			},
 			
 			{
-				"ven_interior8",
+				"ls_staticShipPart_venator_interior8",
 				"interior8"
 			},
 			
@@ -469,42 +468,42 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_engine",
+				"ls_staticShipPart_venator_engine",
 				"engine"
 			},
 			
 			{
-				"ven_interior1",
+				"ls_staticShipPart_venator_interior1",
 				"interior1"
 			},
 			
 			{
-				"ven_interior2",
+				"ls_staticShipPart_venator_interior2",
 				"interior2"
 			},
 			
 			{
-				"ven_interior3",
+				"ls_staticShipPart_venator_interior3",
 				"interior3"
 			},
 			
 			{
-				"ven_interior5",
+				"ls_staticShipPart_venator_interior5",
 				"interior5"
 			},
 			
 			{
-				"ven_interior6",
+				"ls_staticShipPart_venator_interior6",
 				"interior6"
 			},
 			
 			{
-				"ven_interior7",
+				"ls_staticShipPart_venator_interior7",
 				"interior7"
 			},
 			
 			{
-				"ven_interior8",
+				"ls_staticShipPart_venator_interior8",
 				"interior8"
 			},
 			
@@ -590,43 +589,43 @@ class CfgVehicles
 				"door"
 			},
 			
-			{
-				"ven_engine",
+				{
+				"ls_staticShipPart_venator_engine",
 				"engine"
 			},
 			
 			{
-				"ven_interior1",
+				"ls_staticShipPart_venator_interior1",
 				"interior1"
 			},
 			
 			{
-				"ven_interior2",
+				"ls_staticShipPart_venator_interior2",
 				"interior2"
 			},
 			
 			{
-				"ven_interior3",
+				"ls_staticShipPart_venator_interior3",
 				"interior3"
 			},
 			
 			{
-				"ven_interior5",
+				"ls_staticShipPart_venator_interior5",
 				"interior5"
 			},
 			
 			{
-				"ven_interior6",
+				"ls_staticShipPart_venator_interior6",
 				"interior6"
 			},
 			
 			{
-				"ven_interior7",
+				"ls_staticShipPart_venator_interior7",
 				"interior7"
 			},
 			
 			{
-				"ven_interior8",
+				"ls_staticShipPart_venator_interior8",
 				"interior8"
 			},
 			
@@ -708,8 +707,8 @@ class CfgVehicles
 			},
 			
 			{
-				"FST_Daara_ven_door2",
-				"door"
+				"ls_staticShipPart_venator_engine",
+				"engine"
 			},
 			
 			{
@@ -805,7 +804,7 @@ class CfgVehicles
 			},
 			
 			{
-				"FST_Daara_ven_bridge",
+				"ven_bridge",
 				"bridge"
 			}
 		};
@@ -818,12 +817,11 @@ class CfgVehicles
 		author="kripto202";
 		displayname="ven_hull_base";
 		editorpreview="";
-		editorcategory="ls_static";
-		editorsubcategory="ls_ship_parts";
-		vehicleClass="Structures_Military";
+		editorcategory="FST_Venator_Category";
+		editorsubcategory="FST_Venator_Category_P";
 		icon="iconObject_1x1";
 		mapsize=70;
-		model="\swlb_static\venator\ven_1.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator.p3d";
 		armor=1000000000000000000;
 		hideUnitInfo=1;
 		nameSound="ship";
@@ -852,7 +850,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body1_1.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body1_1.p3d";
 		hiddenselections[]=
 		{
 			"body1"
@@ -868,7 +866,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body1_2.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body1_2.p3d";
 		hiddenselections[]=
 		{
 			"body1"
@@ -884,7 +882,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body2_1.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body2_1.p3d";
 		hiddenselections[]=
 		{
 			"body2"
@@ -900,7 +898,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body2_2.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body2_2.p3d";
 		hiddenselections[]=
 		{
 			"body2"
@@ -916,7 +914,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body2_3.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body2_3.p3d";
 		hiddenselections[]=
 		{
 			"body2"
@@ -932,7 +930,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body3.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body3.p3d";
 		hiddenselections[]=
 		{
 			"body3"
@@ -948,7 +946,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body4.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body4.p3d";
 		hiddenselections[]=
 		{
 			"body4"
@@ -964,7 +962,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body5.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body5.p3d";
 		hiddenselections[]=
 		{
 			"body5"
@@ -980,7 +978,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body6.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body6.p3d";
 		hiddenselections[]=
 		{
 			"body6"
@@ -996,7 +994,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body7.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body7.p3d";
 		hiddenselections[]=
 		{
 			"body7"
@@ -1012,7 +1010,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body8.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body8.p3d";
 		hiddenselections[]=
 		{
 			"body8"
@@ -1028,7 +1026,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body9.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body9.p3d";
 		hiddenselections[]=
 		{
 			"body9"
@@ -1044,12 +1042,11 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\body10.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_body10.p3d";
 		hiddenselections[]=
 		{
 			"body10"
-		};
-		hiddenselectionstextures[]=
+		};enselectionstextures[]=
 		{
 			"41st_Vehicles\Venator\Daara Venator\body10_Daara_venator_co.paa"
 		};
@@ -1060,7 +1057,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\door.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_door.p3d";
 		hiddenselections[]=
 		{
 			"door1",
@@ -1078,7 +1075,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\door.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_door.p3d";
 		hiddenselections[]=
 		{
 			"door1",
@@ -1096,14 +1093,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\engine.p3d";
+		model="\ls\core\addons\props_staticships\venator\ls_venator_engine.p3d";
 		hiddenselections[]=
 		{
 			"engine"
 		};
 		hiddenselectionstextures[]=
 		{
-			"swlb_static\venator\data\engine_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\engine_co.paa"
 		};
 	};
 	class ven_interior1: ven_hull_base
@@ -1112,14 +1109,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior1.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior1.p3d";
+		hiddenSelections[]=
 		{
 			"interior1"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior1_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior1_co.paa"
 		};
 	};
 	class ven_interior2: ven_hull_base
@@ -1128,14 +1125,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior2.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior2.p3d";
+		hiddenSelections[]=
 		{
 			"interior2"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior2_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior2_co.paa"
 		};
 	};
 	class ven_interior3: ven_hull_base
@@ -1144,14 +1141,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior3.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior3.p3d";
+		hiddenSelections[]=
 		{
 			"interior3"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior3_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior3_co.paa"
 		};
 	};
 	class ven_interior4: ven_hull_base
@@ -1160,14 +1157,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior4.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior4.p3d";
+		hiddenSelections[]=
 		{
 			"interior4"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior4_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior4_co.paa"
 		};
 	};
 	class ven_interior5: ven_hull_base
@@ -1176,14 +1173,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior5.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior5.p3d";
+		hiddenSelections[]=
 		{
 			"interior5"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior5_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior5_co.paa"
 		};
 	};
 	class ven_interior6: ven_hull_base
@@ -1192,14 +1189,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior6.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior6.p3d";
+		hiddenSelections[]=
 		{
 			"interior6"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior6_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior6_co.paa"
 		};
 	};
 	class ven_interior7: ven_hull_base
@@ -1208,14 +1205,14 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="swlb_static\venator\interior7.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_ventator_interior7.p3d";
+		hiddenSelections[]=
 		{
 			"interior7"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior7_co.paa"
+			"\ls\core\addons\props_staticships\venator\data\interior7_co.paa"
 		};
 	};
 	class ven_interior8: ven_hull_base
@@ -1224,15 +1221,15 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\interior8.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_interior8.p3d";
+		hiddenSelections[]=
 		{
 			"interior8"
 		};
-		hiddenselectionstextures[]=
+		hiddenSelectionsTextures[]=
 		{
-			"swlb_static\venator\data\interior8_co.paa"
-		};
+			"\ls\core\addons\props_staticships\venator\data\interior8_co.paa"
+		};	
 	};
 	class FST_Daara_ven_bridge: ven_hull_base
 	{
@@ -1240,8 +1237,8 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
-		model="\swlb_static\venator\bridge.p3d";
-		hiddenselections[]=
+		model="\ls\core\addons\props_staticships\venator\ls_venator_bridge.p3d";
+		hiddenSelections[]=
 		{
 			"bridge"
 		};

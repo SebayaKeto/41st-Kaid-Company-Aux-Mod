@@ -46,15 +46,15 @@ class CfgWeapons
 		scopearsenal=2;
 		inertia=0;
 		canShootInWater=1;
-		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_ui.paa";
-		model="SWLW_merc_mando\pistols\westar35sa\westar35sa.p3d";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35sa_ui_ca.paa";
+		model="ls\core\addons\weapons_westar\westar35sa\ls_weapon_westar35sa.p3d";
 		hiddenSelections[]=
 		{
 			"camo1"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"SWLW_merc_mando\pistols\westar35sa\data\westar35sa_co.paa"
+			"ls\core\addons\weapons_westar\westar35sa\data\camo1_co.paa"
 		};
 		magazines[]=
 		{
@@ -97,28 +97,28 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"SWLW_merc_mando\pistols\westar35sa\sounds\westar35sa",
+					"ls\core\addons\sounds\weapons\westar35sa\shot1.wss",
 					1,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"SWLW_merc_mando\pistols\westar35sa\sounds\westar35sa",
+					"ls\core\addons\sounds\weapons\westar35sa\shot1.wss",
 					1,
 					1,
 					1800
 				};
 				begin3[]=
 				{
-					"SWLW_merc_mando\pistols\westar35sa\sounds\westar35sa",
+					"ls\core\addons\sounds\weapons\westar35sa\shot1.wss",
 					1,
 					1,
 					1800
 				};
 				begin4[]=
 				{
-					"SWLW_merc_mando\pistols\westar35sa\sounds\westar35sa",
+					"ls\core\addons\sounds\weapons\westar35sa\shot1.wss",
 					1,
 					1,
 					1800
@@ -182,8 +182,8 @@ class CfgWeapons
 	{
 		author="Inspired from SW Legion Studios";
 		displayName = "[41st] WestarSA Light (Normal)";
-		model="SWLW_merc_mando\pistols\westar35sa\westar35sa_laser.p3d";
-		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_laser_ui.paa";
+		model="ls\core\addons\weapons_westar\westar35sa\ls_pointer_westar35sa_laser.p3d";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35sa_pointer_ui_ca.paa";
 		scope=2;
         scopeArsenal = 2;
 		hiddenSelections[]=
@@ -192,7 +192,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\SWLW_merc_mando\pistols\westar35sa\data\westar35sa_co.paa"
+			"ls\core\addons\weapons_westar\westar35sa\data\camo1_co.paa"
 		};
 		class Iteminfo
         {
@@ -239,8 +239,8 @@ class CfgWeapons
 	{
 		author="Inspired from SW Legion Studios";
 		displayName = "[41st] WestarSA Light (Normal/Beam)";
-		model="SWLW_merc_mando\pistols\westar35sa\westar35sa_laser.p3d";
-		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_laser_ui.paa";
+		model="ls\core\addons\weapons_westar\westar35sa\ls_pointer_westar35sa_laser.p3d";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35sa_pointer_ui_ca.paa";
 		scope=2;
         scopeArsenal = 2;
 		hiddenSelections[]=
@@ -249,7 +249,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\SWLW_merc_mando\pistols\westar35sa\data\westar35sa_co.paa"
+			"ls\core\addons\weapons_westar\westar35sa\data\camo1_co.paa"
 		};
 		class Iteminfo
 		{
@@ -296,9 +296,9 @@ class CfgWeapons
 	{
 		author="Inspired from SW Legion Studios";
 		displayName = "[41st] WestarSA Light/Laser Module";
-		model="SWLW_merc_mando\pistols\westar35sa\westar35sa_laser.p3d";
-		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_laser_ui.paa";
-		scope=1;
+		model="ls\core\addons\weapons_westar\westar35sa\ls_pointer_westar35sa_laser.p3d";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35sa_pointer_ui_ca.paa";
+		scope=2;
         scopeArsenal = 0;
 		hiddenSelections[]=
 		{
@@ -306,7 +306,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\SWLW_merc_mando\pistols\westar35sa\data\westar35sa_co.paa"
+			"ls\core\addons\weapons_westar\westar35sa\data\camo1_co.paa"
 		};
 		class Iteminfo
         {
@@ -350,8 +350,8 @@ class CfgWeapons
     {
         author="Inspired from SW Legion Studios";
 		displayName = "[41st] WestarSA Light/Laser Module";
-		model="SWLW_merc_mando\pistols\westar35sa\westar35sa_laser.p3d";
-		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_laser_ui.paa";
+		model="ls\core\addons\weapons_westar\westar35sa\ls_pointer_westar35sa_laser.p3d";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35sa_pointer_ui_ca.paa";
         scope=2;
         scopeArsenal = 2;
         class Iteminfo
