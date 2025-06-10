@@ -37,7 +37,7 @@ class CfgAmmo
 		caliber=2.5999999;
 		typicalSpeed=880;
 		timeToLive=10;
-		model="ls_weapons_core\Effects\laser_Red.p3d";
+		model="3as\3as_weapons\data\tracer_red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Medium_Red_Fly";
 		tracerScale=1.2;
 		tracerStartTime=9.9999997e-006;
