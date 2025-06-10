@@ -1,4 +1,4 @@
-class CfgPatches 
+/* class CfgPatches 
 {
     class FST_AutoTurret
 	{
@@ -144,3 +144,4 @@ class CfgVehicles {
 		};
     };  
 };
+ */
