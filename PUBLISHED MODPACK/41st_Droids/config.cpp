@@ -1709,14 +1709,14 @@ class CfgVehicles
 		editorSubcategory="FST_BattleDroids_Subfaction";
 		armor=35;
 		armorStructural=100;
-		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
 		hiddenSelections[]=
 		{
 			"camo1"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"ls_armor_redfor\uniform\cis\bx\data\body_co.paa"
+			"\ls\core\addons\characters_droid\uniforms\bx\data\body_co.paa"
 		};
 		weapons[]=
 		{
@@ -1832,7 +1832,7 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] BX Commando Droid (Tukata)";
-		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
 		uniformClass="FST_DroidBX_Tukata";
 		faction="FST_Tukata_Faction";
 		editorSubcategory="FST_Tukata_Subfaction";
@@ -1849,7 +1849,7 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] BX Commando Droid (Sniper/Tukata)";
-		model="\ls_armor_redfor\uniform\cis\bx\lsd_cis_bx_uniform.p3d";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
 		uniformClass="FST_DroidBX_Tukata";
 		hiddenSelections[]=
 		{
