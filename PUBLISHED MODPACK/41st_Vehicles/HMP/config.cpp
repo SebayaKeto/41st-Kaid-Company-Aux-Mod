@@ -173,17 +173,17 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_AAT_Side",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 		};
 		magazines[]=
 		{
 			"FST_500Rnd_127x99_mag_red",
 			"FST_500Rnd_127x99_mag_red",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 		};
 		fuelCapacity=8000;
 		fuelConsumptionRate=0.138;

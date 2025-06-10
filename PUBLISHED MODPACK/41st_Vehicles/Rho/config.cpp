@@ -486,18 +486,18 @@ class CfgVehicles
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
 			"Laserdesignator_pilotCamera",
-			"ls_weapon_CMFlareLauncher",
+			"CMFlareLauncher",
 			"FST_SmokeLauncher"
         };
 		magazines[]=
 		{
 			"Laser_Battery",
 			"Laserbatteries",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
