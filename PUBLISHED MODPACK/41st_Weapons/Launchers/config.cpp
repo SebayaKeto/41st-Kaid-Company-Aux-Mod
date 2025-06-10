@@ -124,8 +124,8 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"ls_sounds\weapons\launcher\PLX_shot.wss",
-					10,
+					"3AS\3AS_Weapons\PLX1\Sounds\PLX_Fire.ogg",
+					3.1622777,
 					1,
 					2000
 				};
