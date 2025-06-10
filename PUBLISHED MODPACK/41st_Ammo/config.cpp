@@ -935,8 +935,8 @@ class CfgAmmo
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
 		fuseDistance=7;
-		ExplosionEffects="SWLW_plasma_he_impact";
-		CraterEffects="SWLW_plasma_he_impact";
+		ExplosionEffects="ls_plasma_impact_he ";
+		CraterEffects="ls_plasma_impact_he ";
 		lightcolor[]={0,0,1};
 	};
 	class FST_TDHE_RifleGrenade: G_40mm_HE
@@ -946,8 +946,8 @@ class CfgAmmo
 		indirectHit=30;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="SWLW_plasma_he_impact";
-		CraterEffects="SWLW_plasma_he_impact";
+		ExplosionEffects="ls_plasma_impact_he ";
+		CraterEffects="ls_plasma_impact_he ";
 		lightcolor[]={0,0,1};
 		fuseDistance=0;
 		timetolive=5;
@@ -961,8 +961,8 @@ class CfgAmmo
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
 		fuseDistance=7;
-		ExplosionEffects="SWLW_plasma_he_impact";
-		CraterEffects="SWLW_plasma_he_impact";
+		ExplosionEffects="ls_plasma_impact_he ";
+		CraterEffects="ls_plasma_impact_he ";
 		lightcolor[]={0,0,1};
 	};
 	class FST_Popper_Grenade_Ammo: G_40mm_HE
@@ -1841,7 +1841,7 @@ class CfgMagazines
 	{
 		author="Adapted from SW Legion Studios";
 		displayName="Westar-35SA energy cell (Blue)";
-		picture="\SWLW_merc_mando\pistols\westar35sa\data\ui\SWLW_westar35sa_mag_ui.paa";
+		picture="ls\core\addons\weapons_westar\data\ui\westar35sa_mag_ui_ca.paa";
 		ammo="FST_blasterbolt";
 		scope=2;
 		tracersEvery=1;
@@ -2315,7 +2315,7 @@ class CfgMagazines
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 	};
-	class SWLW_plx1_at_mag;
+	class ls_magazine_plx1_at;
 	class FST_RPS6_rocket: RPG32_F
 	{
 		author="Daara";
@@ -2349,13 +2349,13 @@ class CfgMagazines
 		mass=40;
 		initSpeed=165;
 	};
-	class FST_PLX1_Rocket: SWLW_plx1_at_mag
+	class FST_PLX1_Rocket: ls_magazine_plx1_at
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] PLX-1 Guided Missile [AT]";
 		displayNameShort="PLX-1 AT Missile";
-		model="SWLW_clones\launchers\rps6\rps6_mag.p3d";
-		picture="\SWLW_clones\launchers\rps6\data\ui\rps6_mag_ui.paa";
+		model="ls\core\addons\weapons_plx\ls_weapon_rps6.p3d";
+		picture="ls\core\addons\weapons_rps\data\ui\rps6_mag_ui_ca.paa";
 		ammo="FST_Missile";
 		scope=2;
 		count=1;
