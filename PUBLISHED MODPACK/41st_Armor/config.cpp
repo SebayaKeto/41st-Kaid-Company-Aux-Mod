@@ -33778,7 +33778,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsTextures[]=
 		{
-			""
+			"\MRC\JLTS\characters\CloneArmor\data\clone_vest_officer_co.paa"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
