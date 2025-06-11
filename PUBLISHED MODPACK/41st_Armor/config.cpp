@@ -11364,7 +11364,7 @@ class CfgWeapons
 		author="Daara";
 		scope=2;
 		displayName="[41st] Undersuit";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		picture="\41st_Armor\Logo.paa";
 		class ItemInfo: ItemInfo
 		{
@@ -14743,30 +14743,28 @@ class CfgWeapons
             mass=15;
         };
     };
-	class lsd_blueforUniform_Base;
-	class lsd_gar_jediCommander_uniform: lsd_blueforUniform_Base
+	class ls_blufor_unit_base;
+	class ls_garUniform_jediCommander: ls_blufor_unit_base
 	{
 		class ItemInfo;
 	};
-	class FST_Jedi_uniform: lsd_gar_jediCommander_uniform
+	class FST_Jedi_uniform: ls_garUniform_jediCommander
 	{
 		scope=2;
 		displayName="[41st] Jedi Armor";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
 			uniformClass="FST_Jedi";
 			containerClass="Supply150";
 			mass=40;
 		};
 	};
-	class FST_Dark_Jedi_uniform: lsd_gar_jediCommander_uniform
+	class FST_Dark_Jedi_uniform: ls_garUniform_jediCommander
 	{
 		scope=2;
 		displayName="[41st] Dark Jedi Armor";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
 			uniformClass="FST_DarkJedi";
 			containerClass="Supply150";
 			mass=40;
@@ -19125,12 +19123,6 @@ class CfgVehicles
 		uniformClass="FST_Uniform_Bodyglove";
 		nakedUniform="FST_Uniform_Bodyglove";
 		picture="\41st_Armor\Logo.paa";
-		hiddenSelectionsTextures[]=
-		{
-			"ls_armor_bluefor\uniform\gar\phase2\data\bodyGlove_plain_co.paa",
-			"",
-			""
-		};
 		linkedItems[]=
 		{
 			"ItemMap",
@@ -33162,8 +33154,8 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
-	class lsd_gar_jediCommander_base;
-	class FST_Jedi: lsd_gar_jediCommander_base
+	class ls_gar_jediCommander;
+	class FST_Jedi: ls_gar_jediCommander
 	{
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
@@ -33180,10 +33172,10 @@ class CfgVehicles
 			"41st_Armor\Data\Uniforms\armor_co_J_Daara.paa",
 			"41st_Armor\Data\Uniforms\robes_co_J_Daara.paa",
 			"41st_Armor\Data\Uniforms\belt_co_J_Daara.paa",
-			"\lsd_armor_bluefor\uniform\gar\jediCommander\data\undersuit_co.paa"
+			"\ls\core\addons\characters_clone\uniforms\JediCommander\data\undersuit_co.paa"
 		};
 	};
-	class FST_DarkJedi: lsd_gar_jediCommander_base
+	class FST_DarkJedi: ls_gar_jediCommander
 	{
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
@@ -33200,7 +33192,7 @@ class CfgVehicles
 			"41st_Armor\Data\Uniforms\armor_co_DJ.paa",
 			"41st_Armor\Data\Uniforms\robes_co_DJ.paa",
 			"41st_Armor\Data\Uniforms\belt_co_DJ.paa",
-			"\lsd_armor_bluefor\uniform\gar\jediCommander\data\undersuit_co.paa"
+			"\ls\core\addons\characters_clone\uniforms\JediCommander\data\undersuit_co.paa"
 		};
 	};
 	class FST_Zombie_Bloody: FST_Trooper_P2_DC15S
