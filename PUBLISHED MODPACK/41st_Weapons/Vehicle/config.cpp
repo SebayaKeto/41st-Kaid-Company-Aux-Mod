@@ -1586,7 +1586,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"swlb_core\data\sounds\vehicles\aat\weapon\aat_light_shot.wss",
+					"ls\core\addons\sounds\vehicles\aat\weapon\main_shot.wss",
 					1.5848932,
 					1,
 					2100
