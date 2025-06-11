@@ -42,30 +42,6 @@ class DefaultVehicleSystemsDisplayManagerRight
 		class MinimapDisplay;
 	};
 };
-class Extended_init_EventHandlers
-{
-	class FST_HMP_Base
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_HMP_Gunship
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-	class FST_HMP_Transport
-	{
-		class laat_init_eh
-		{
-			init="(_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[7,8,9,10]] call ls_vehicle_fnc_laatCargoTurretPhase;";
-		};
-	};
-};
 class CfgSounds
 {
 	class TAS_Clamps
@@ -80,6 +56,7 @@ class CfgSounds
 		titles[]={};
 	};
 };
+class ls_impulsor_base;
 class CfgFunctions
 {
 	class TAS
@@ -201,12 +178,6 @@ class CfgVehicles
 		};
 		cost=2000000;
 		armor=300;
-		ls_impulsor_fuelDrain_1=9.9999997e-005;
-		ls_impulsor_fuelDrain_2=9.9999997e-005;
-		ls_impulsor_boostSpeed_1=300;
-		ls_impulsor_boostSpeed_2=800;
-		tas_impulse_break=100;
-		ls_hasImpulse=1;
 		tas_can_impulse=0;
 		altFullForce=10000;
 		altNoForce=15000;
@@ -283,6 +254,15 @@ class CfgVehicles
 				"Ti"
 			};
 			thermalMode[]={0,1};
+		};
+		class ls_impulsor: ls_impulsor_base
+		{
+			enabled=1;
+			speed=300;
+			fueldrain=0.0001;
+			overchargespeed=800;
+			overchargeFuelDrain=0.0001;
+			overchargeCooldown=0
 		};
 		class exhausts
 		{

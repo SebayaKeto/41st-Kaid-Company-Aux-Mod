@@ -29,7 +29,7 @@ class SensorTemplateMan;
 class SensorTemplateLaser;
 class SensorTemplateNV;
 class SensorTemplateDataLink;
-
+class ls_impulsor_base;
 class CfgVehicles
 {
 	class Air;
@@ -267,6 +267,15 @@ class CfgVehicles
 					"Laser_T1_dir"
 				};
 			};
+		};
+		class ls_impulsor: ls_impulsor_base
+		{
+			enabled=1;
+			speed=300;
+			fueldrain=0.0001;
+			overchargespeed=800;
+			overchargeFuelDrain=0.0001;
+			overchargeCooldown=0
 		};
 		class VehicleTransport
 		{
