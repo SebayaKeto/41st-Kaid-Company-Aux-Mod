@@ -316,7 +316,7 @@ FST_Droid_Dispenser =  {
                                         
     _angle = [(_position vectorFromTo _spawnpos)#0, (_position vectorFromTo _spawnpos)#1, ((_position vectorFromTo _spawnpos)#2)];
                         
-    _projectile = createVehicle ["ls_ground_droidDispenser", [0, 0, 0], [], 0, "NONE"];
+    _projectile = createVehicle ["ls_droidDispenser", [0, 0, 0], [], 0, "NONE"];
     [_projectile, 0, 0] call BIS_fnc_setPitchBank;
     _projectile setPosATL (getPosATL _mainprojectile);
     [_projectile, _mainprojectile] call BIS_fnc_attachToRelative;
@@ -382,7 +382,7 @@ FST_Droid_Dispenser =  {
         _DroidPodCrater = createVehicle ["land_ShellCrater_02_small_F", _craterpos, [], 0, "CAN_COLLIDE"];
                                             
         deleteVehicle _projectile;
-        _projectile = createVehicle ["ls_ground_droidDispenser", [0, 0, 0], [], 0, "NONE"];
+        _projectile = createVehicle ["ls_droidDispenser", [0, 0, 0], [], 0, "NONE"];
         _projectile enableSimulation false;
         _projectile allowDamage false;
                     
