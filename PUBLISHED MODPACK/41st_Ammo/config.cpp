@@ -1478,7 +1478,7 @@ class CfgMagazines
 	class IDA_Blaster_Cell_Power1_300Rnd_Blue;
 	class IDA_Blaster_Cell_Power2_20Rnd_Blue;
 	class IDA_Blaster_Cell_Power3_40Rnd_Blue;
-	class IDA_Blaster_Cell_Power3_80Rnd_Blue;
+	class IDA_Blaster_Cell_Power3_60Rnd_Blue;
 	class IDA_Blaster_Cell_Power4_10Rnd_Blue;
 	class IDA_Blaster_Cell_Scatter_6Rnd_Blue;
 	class 100Rnd_65x39_caseless_mag;
@@ -2032,7 +2032,7 @@ class CfgMagazines
 		displayName="[41st] High-Power SBB3 Scatter Cell (Red)";
 		ammo="FST_blasterbolt_scatter_Red";
 	};
-	class FST_underbarrel_scatter_cell_Blue: IDA_Blaster_Cell_Power3_80Rnd_Blue
+	class FST_underbarrel_scatter_cell_Blue: IDA_Blaster_Cell_Power3_60Rnd_Blue
 	{
 		author="Gold";
 		displayName="[41st] High-Power Underbarrel Scatter Cell (Blue)";
@@ -2064,7 +2064,7 @@ class CfgMagazines
 		displayName="[41st] High-Power Underbarrel Scatter Cell (Red)";
 		ammo="FST_blasterbolt_Underbarel_scatter_Red";
 	};
-	class FST_thermal_slug_mag_Blue: IDA_Blaster_Cell_Power3_80Rnd_Blue
+	class FST_thermal_slug_mag_Blue: IDA_Blaster_Cell_Power3_60Rnd_Blue
 	{
 		author="Adapted From The Indecisive Armoury Team";
 		displayName="[41st] High-power Thermal Slug (Blue)";
