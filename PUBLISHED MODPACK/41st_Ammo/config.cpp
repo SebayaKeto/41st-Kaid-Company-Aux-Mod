@@ -938,6 +938,7 @@ class CfgAmmo
 		ExplosionEffects="GrenadeExplosion";
 		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 	};
 	class FST_TDHE_RifleGrenade: G_40mm_HE
 	{
@@ -952,6 +953,7 @@ class CfgAmmo
 		fuseDistance=0;
 		timetolive=5;
 		simulation = "shotShell";
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 	};
 	class FST_HE_WristRocket: G_40mm_HE
 	{
@@ -959,11 +961,13 @@ class CfgAmmo
 		indirectHitRange=7;
 		indirectHit=30;
 		effectflare="FlareShell";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		effectfly="IDA_BlasterBoltGlow_Medium_Red_Fly";
 		fuseDistance=7;
 		ExplosionEffects="GrenadeExplosion";
 		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
+		model="Indecisive_Armoury_Ammos\Data\Rocket\IDA_Rocket.p3d";
+		coefGravity=0.02;
 	};
 	class FST_Popper_Grenade_Ammo: G_40mm_HE
 	{
