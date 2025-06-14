@@ -20,7 +20,7 @@ for "_i" from 1 to 4 do {_plyer addItemToUniform "ACE_splint";};
 for "_i" from 1 to 5 do {_plyer addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 4 do {_plyer addItemToUniform "FST_blaster_cell_Blue";};
 _plyer addItemToUniform "ACE_EntrenchingTool";
-_plyer addItemToUniform "WBK_HeadLampItem";
+_plyer addItemToUniform "WBK_HeadLampItem_Double";
 _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
 

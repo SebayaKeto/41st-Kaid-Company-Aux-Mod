@@ -29,7 +29,7 @@ for "_i" from 1 to 4 do {_plyer addItemToUniform "IDA_grenade_Smoke_mag";};
 _plyer addItemToUniform "ACE_EntrenchingTool";
 _plyer addItemToUniform "IDA_grenade_Smoke_Blue_mag";
 _plyer addItemToUniform "IDA_grenade_Smoke_Purple_mag";
-_plyer addItemToUniform "WBK_HeadLampItem";
+_plyer addItemToUniform "WBK_HeadLampItem_Double";
 _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
 _plyer addItemToUniform "ItemAndroid";

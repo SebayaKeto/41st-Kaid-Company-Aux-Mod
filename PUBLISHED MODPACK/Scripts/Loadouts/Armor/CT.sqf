@@ -27,5 +27,3 @@ _plyer linkItem "ItemCompass";
 _plyer linkItem "ItemWatch";
 _plyer linkItem "FST_clone_comlink";
 _plyer linkItem "ItemGPS";
-
-_plyer addItemToUniform "ItemcTabHCam";
