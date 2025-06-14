@@ -935,8 +935,8 @@ class CfgAmmo
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
 		fuseDistance=7;
-		ExplosionEffects="ls_plasma_impact_he ";
-		CraterEffects="ls_plasma_impact_he ";
+		ExplosionEffects="GrenadeExplosion";
+		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
 	};
 	class FST_TDHE_RifleGrenade: G_40mm_HE
@@ -946,8 +946,8 @@ class CfgAmmo
 		indirectHit=30;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="ls_plasma_impact_he ";
-		CraterEffects="ls_plasma_impact_he ";
+		ExplosionEffects="GrenadeExplosion";
+		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
 		fuseDistance=0;
 		timetolive=5;
@@ -961,8 +961,8 @@ class CfgAmmo
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
 		fuseDistance=7;
-		ExplosionEffects="ls_plasma_impact_he ";
-		CraterEffects="ls_plasma_impact_he ";
+		ExplosionEffects="GrenadeExplosion";
+		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
 	};
 	class FST_Popper_Grenade_Ammo: G_40mm_HE
