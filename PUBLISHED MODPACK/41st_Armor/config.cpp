@@ -35,6 +35,7 @@ class CfgPatches
 			"FST_Trooper_P2_CSS",	
 			"FST_Trooper_P2_CL",				
 			"FST_Trooper_ARF",
+			"FST_Trooper_ARF_Urban",
 			"FST_Trooper_ARF_WhiteGreen",
 			"FST_Trooper_SERE",
 			"FST_GM_Base_Plastic_Sarlacc",
@@ -2781,6 +2782,75 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_CloneVestSuspenders_Urban: V_rebreatherB
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] Suspenders (Urban)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_Suspenders_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_CloneVestSuspenders_ARF: V_rebreatherB
 	{
 		author="Daara";
@@ -3002,6 +3072,75 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestSuspenders_ARF_Urban: V_rebreatherB
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARF Suspenders (Urban)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_ARF_Suspenders_Urban.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3600,6 +3739,62 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Woodland.paa",
 			"",
 			"41st_Armor\data\Helmets\FST_ARF_Helmet_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2",
+				"visor"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_ARF_Helmet_Urban: SWLB_clone_ARF_P1_helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARF Helmet (Urban)";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_Urban.paa",
+			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_Urban.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -11529,7 +11724,21 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
+	class FST_ARF_Uniform_Urban: JLTS_CloneArmorRecon
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Recon Armor (Urban)";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Trooper_ARF_Urban";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Pilot_Uniform: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16260,7 +16469,7 @@ class CfgVehicles
 		displayName="[41st] ARF Camo Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackStraps.p3d";
 	};
-	 class FST_ARF_backpack_Woodland: FST_Clone_backpack
+	class FST_ARF_backpack_Woodland: FST_Clone_backpack
 	{
 		author="Daara";
 		scope=2;
@@ -16276,6 +16485,28 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_ARF_backpack_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
+		};
+	};
+	class FST_ARF_backpack_Urban: FST_Clone_backpack
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] ARF Camo Backpack (Urban)";
+		maximumload=250;
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_ARF_Backpack_Urban.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -16808,6 +17039,29 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Mini_RTO_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
+		};
+		tf_range=50000;
+	};
+	class FST_Backpack_Antenna_Urban: JLTS_Clone_RTO_pack
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Mini RTO Pack (Urban)";
+		maximumload=250;
+		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Mini_RTO_Urban.paa",
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -19859,6 +20113,66 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_ARF_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_Trooper_ARF_Urban: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] ARF Trooper (Urban)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_ARF_Uniform_Urban";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_ARF_BodyUpper_Urban.paa",
+			"41st_Armor\Data\Uniforms\FST_ARF_BodyLower_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Armor_P2_Lower.rvmat",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_ARF_Helmet_Urban",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_ARF_Helmet_Urban",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -33938,6 +34252,33 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
+	class FST_Suspenders_Urban_Face: FST_Base_Glasses
+	{
+		author="Gold";
+		displayname="[41st] Suspenders [Urban] (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_Suspenders_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
 	class FST_Suspenders_ARF_Face: FST_Base_Glasses
 	{
 		author="Viz";
@@ -34004,6 +34345,33 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_ARF_Suspenders_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Suspenders_ARF_Urban_Face: FST_Base_Glasses
+	{
+		author="Gold";
+		displayname="[41st] ARF Suspenders [Urban] (Face)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_ARF_Suspenders_Urban.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
