@@ -313,6 +313,14 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Venator Ships";
 	};
+	class FST_Acclamator_Category_P
+	{
+		displayName="41st Acclamator Parts";
+	};
+	class FST_Acclamator_Category_S
+	{
+		displayName="41st Acclamator Ships";
+	};
 	class FST_BattleDroids_Subfaction
 	{
 		displayName="41st Battledroids";
@@ -379,6 +387,12 @@ class CfgEditorCategories
 	class FST_Venator_Category
 	{
 		displayname="[41st] Venator";
+		priority=8;
+		side=7;
+	};
+	class FST_Acclamator_Category
+	{
+		displayname="[41st] Acclamator";
 		priority=8;
 		side=7;
 	};
