@@ -5262,7 +5262,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5310,7 +5311,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5358,7 +5360,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5406,7 +5409,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5454,7 +5458,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5502,7 +5507,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5550,7 +5556,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5598,7 +5605,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5646,7 +5654,8 @@ class CfgWeapons
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
