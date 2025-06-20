@@ -64,8 +64,8 @@ class CfgPatches
 			"FST_Trooper_P1_41st",		
 			"FST_ARF_Desert",
 			// "FST_ARF_Woodland", 
-			"FST_Jedi",
-			"FST_DarkJedi",
+			"FST_",
+			"FST_Dark",
 			"FST_Zombie_Bloody",
 			"FST_P2_Officer",
 			"FST_P2_NCO",
@@ -15187,14 +15187,15 @@ class CfgWeapons
         };
     };
 	class ls_blufor_unit_base;
-	class ls_garUniform_jediCommander: ls_blufor_unit_base
+	class ls_garUniform_Commander: ls_blufor_unit_base
 	{
 		class ItemInfo;
 	};
-	class FST_Jedi_uniform: ls_garUniform_jediCommander
+	class FST__uniform: ls_garUniform_Commander
 	{
 		scope=2;
 		displayName="[41st] Jedi Armor";
+		JLTS_hasStunProtection = 1;
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_Jedi";
@@ -15206,6 +15207,7 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="[41st] Dark Jedi Armor";
+		JLTS_hasStunProtection = 1
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_DarkJedi";
