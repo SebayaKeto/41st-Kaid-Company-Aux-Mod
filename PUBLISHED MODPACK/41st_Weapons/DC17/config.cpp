@@ -198,7 +198,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class SWLW_DC17_ARC: FST_DC17
+	class ls_weapon_dc17s_dual_base: FST_DC17
 	{
 		class WeaponSlotsInfo;
 	};
@@ -206,7 +206,7 @@ class CfgWeapons
 	{
 		scope=1;
 		author="Legion Studios";
-		model="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
+		model="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual_dummy.p3d";
 		thermalMode[]={2,3};
 		visionMode[]=
 		{
@@ -217,8 +217,8 @@ class CfgWeapons
 		{
 			type=616;
 			hmdType=0;
-			uniformModel="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
-			modelOff="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
+			uniformModel="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual_dummy.p3d";
+			modelOff="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual_dummy.p3d";
 			mass=4;
 		};
 	};
@@ -238,20 +238,20 @@ class CfgWeapons
 		{
 			type=616;
 			hmdType=0;
-			uniformModel="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
-			modelOff="\ls_weapons\secondary\dual\ls_weapon_dualDC17_dummy.p3d";
+			uniformModel="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual_dummy.p3d";
+			modelOff="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual_dummy.p3d";
 			mass=4;
 		};
 	};
-	class FST_TwinDC17_Secondary: SWLW_DC17_ARC
+	class FST_TwinDC17_Secondary: ls_weapon_dc17s_dual_base
 	{
 		scope=2;
 		baseWeapon="FST_twinDC17_secondary";
 		displayName="[41st] Twin DC-17 Blaster Pistols";
-		model="\ls_weapons\secondary\dual\ls_weapon_dualDC17_secondary.p3d";
+		model="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual.p3d";
 		canShootInWater=1;
-		ls_isWeaponType=1;
-		ls_akimboAlternate="FST_weapon_dualDC17Left_dummy";
+		weapontype=WEAPONTYPE_AKIMBO=1;
+		akimboDummy="FST_weapon_dualDC17Left_dummy";
 
 		muzzles[]=
 		{
@@ -261,7 +261,7 @@ class CfgWeapons
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"\ls_weapons\secondary\dual\data\handAnim\dual_handAnim.rtm"
+			"ls\core\addons\weapons_dcseries\dc17s_dual\anims\dc17s_dual_handanim.rtm"
 		};
 		reloadAction="";
 		reloadMagazineSound[]=
@@ -291,7 +291,7 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		class Right: SWLW_DC17_ARC
+		class Right: FST_DC17
 		{
 			displayName="Right Hand";
 			magazines[]=
@@ -318,8 +318,8 @@ class CfgWeapons
 		displayName="[41st] Twin DC-17 Blaster Pistols";
 		model="\JMSLLTE_weapons\dc17\dc17_dual.p3d";
 		canShootInWater=1;
-	//	ls_isWeaponType=1;
-		ls_akimboAlternate="FST_weapon_dualDC17Left_dummy_Primary";
+	//	weaponType=WEAPONTYPE_AKIMBO=1;
+		akimboDummy="FST_weapon_dualDC17Left_dummy_Primary";
 		muzzles[]=
 		{
 			"Right",
@@ -358,7 +358,7 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		class Right: SWLW_DC17_ARC
+		class Right: FST_DC17
 		{
 			displayName="Right Hand";
 			magazines[]=
@@ -377,13 +377,13 @@ class CfgWeapons
 			muzzleEnd="usti_hlavne1";
 		};
 	};
-	class FST_weapon_dualDC17_secondary: SWLW_DC17_ARC
+	class FST_weapon_dualDC17_secondary: ls_weapon_dc17s_dual_base
 	{
 		scope=2;
 		displayName="[41st] Twin DC-17 Blaster Pistols";
-		model="\ls_weapons\secondary\dual\ls_weapon_dualDC17_secondary.p3d";
-		ls_isWeaponType=1;
-		ls_akimboAlternate="ls_weapon_dualDC17Left_dummy";
+		model="ls\core\addons\weapons_dcseries\dc17s_dual\ls_weapon_dc17s_dual.p3d";
+		weaponType=WEAPONTYPE_AKIMBO=1;
+		akimboDummy="ls_weapon_dc17s_dual_dummyWeapon";
 		magazines[]=
 		{
 			"FST_blaster_cell_low_Blue",
@@ -399,7 +399,7 @@ class CfgWeapons
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"\ls_weapons\secondary\dual\data\handAnim\dual_handAnim.rtm"
+			"ls\core\addons\weapons_dcseries\dc17s_dual\anims\dc17s_dual_handanim.rtm"
 		};
 		reloadAction="ls_dualPistol_reload";
 		reloadMagazineSound[]=
@@ -409,7 +409,7 @@ class CfgWeapons
 			1,
 			100
 		};
-		class Right: SWLW_DC17_ARC
+		class Right: FST_DC17
 		{
 			displayName="Right Hand";
 			magazines[]=
@@ -422,7 +422,7 @@ class CfgWeapons
 			reloadAction="ls_dualPistol_reload";
 			reloadMagazineSound[]=
 			{
-				"\swlb_core\data\sounds\weapons\_reload\dual_reload.ogg",
+				"ls\core\addons\sounds\weapons\reload\dc17s_dual.ogg",
 				3.5481339,
 				1,
 				10
