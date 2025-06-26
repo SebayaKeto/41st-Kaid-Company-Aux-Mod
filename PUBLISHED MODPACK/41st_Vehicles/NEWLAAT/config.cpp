@@ -817,6 +817,11 @@ class CfgVehicles
 						range[]={4000,6000,8000,12000};
 						resource="RscCustomInfoSensors";
 					};
+					class CrewDisplay
+					{
+						componentType = "CrewDisplayComponent";
+						resource = "RscCustomInfoCrew";
+					};
 				};
 			};
 			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
@@ -848,6 +853,11 @@ class CfgVehicles
 						componentType="SensorsDisplayComponent";
 						range[]={4000,6000,8000,12000};
 						resource="RscCustomInfoSensors";
+					};
+					class CrewDisplay
+					{
+						componentType = "CrewDisplayComponent";
+						resource = "RscCustomInfoCrew";
 					};
 				};
 			};
