@@ -30,7 +30,7 @@ _plyer addItemToUniform "ACE_IR_Strobe_Item";
 
 for "_i" from 1 to 8 do {_plyer addItemToVest "FST_blaster_battery_DC15L_Blue";};
 for "_i" from 1 to 3 do {_plyer addItemToVest "FST_grenade_Detonator_mag";};
-for "_i" from 1 to 3 do {_plyer addItemToVest "IDA_grenade_Smoke_mag";};
+for "_i" from 1 to 3 do {_plyer addItemToBackpack "IDA_grenade_Smoke_mag";};
 _plyer addItemToVest "IDA_grenade_Smoke_Blue_mag";
 _plyer addItemToVest "ls_mag_glowrod_hiGreen";
 
@@ -38,4 +38,4 @@ for "_i" from 1 to 6 do {_plyer addItemToBackpack "FST_blaster_battery_DC15L_Blu
 _plyer addItemToBackpack "ACE_Tripod";
 
 for "_i" from 1 to 2 do {_plyer addItemToUniform "ACE_CableTie";};
-_plyer addItemToVest "IDA_grenade_Smoke_Purple_mag";
+_plyer addItemToBackpack "IDA_grenade_Smoke_Purple_mag";
