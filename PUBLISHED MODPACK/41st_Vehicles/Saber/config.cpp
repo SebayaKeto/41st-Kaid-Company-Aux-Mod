@@ -1619,7 +1619,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
+					"ls\core\addons\sounds\vehicles\saber\weapon\saber_heavy_shot.wss",
 					3.1622777,
 					1,
 					1500
