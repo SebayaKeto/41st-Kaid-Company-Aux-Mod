@@ -964,15 +964,6 @@ class CfgAmmo
 			distance = 1;
 		};
 	};
-	class SmokeShell; //LaaT Smoke Rocket
-	class FST_AWS_SmokeShell : SmokeShell //LaaT Smoke Rocket
-	{
-		author = "Adapted from FIR Team by Viz"
-		smokeColor[] = {
-			1, 1, 1, 1
-		};
-		effectsSmoke = "IDA_SmokeEffect";
-	};
 	class ShotDeployBase; //LaaT Smoke Rocket
 	class FST_Hydra_Rocket_Smoke_Deploy : ShotDeployBase //LaaT Smoke Rocket
 	{
@@ -987,7 +978,7 @@ class CfgAmmo
 		//effectFly = "clustereffectfly";
 		CraterEffects = "GrenadeCrater";
 		explosionEffects = "GrenadeExplosion";
-		submunitionAmmo = "FST_AWS_SmokeShell";
+		submunitionAmmo = "SmokeShellArty";
 		submunitionConeAngle = 10;
 		submunitionConeType[] = {"randomcenter", 3};
 	};
@@ -1025,7 +1016,7 @@ class CfgAmmo
 
 		submunitionAmmo = "FST_Hydra_Rocket_Smoke_Deploy";
 		submunitionConeAngle = 5;
-		submunitionConeType[] = {"randomcenter",1};
+		submunitionConeType[] = {"randomcenter",3};
 		triggerDistance = 5;
 		triggerSpeedCoef[] = {0.8,1};
 
