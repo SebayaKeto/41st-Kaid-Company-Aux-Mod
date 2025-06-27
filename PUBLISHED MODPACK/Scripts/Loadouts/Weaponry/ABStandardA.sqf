@@ -13,7 +13,7 @@ _plyer addMagazine "Laserbatteries";
 _plyer addWeapon "FST_Electrobinoculars";
 
 comment "Add containers";
-_plyer addBackpack "FST_Clone_Backpack_Invisible";
+_plyer addBackpack "FST_Clone_Backpack_Invisible_STD";
 
 comment "Add items to containers";
 for "_i" from 1 to 2 do {_plyer addItemToUniform "IDA_BattleStim";};

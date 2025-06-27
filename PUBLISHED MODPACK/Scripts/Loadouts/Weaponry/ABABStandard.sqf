@@ -5,7 +5,7 @@ _LO = ((_this select 3) select 0) select 0;
 removeBackpack _plyer;
 
 comment "Add containers";
-_plyer addBackpack "FST_Backpack_Jumppack";
+_plyer addBackpack "FST_Backpack_Jumppack_STD_Ammo";
 
 for "_i" from 1 to 12 do {_plyer addItemToBackpack "FST_blaster_cell_High_Blue";};
 for "_i" from 1 to 18 do {_plyer addItemToBackpack "FST_blaster_cell_Blue";};
