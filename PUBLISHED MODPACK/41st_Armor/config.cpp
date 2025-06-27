@@ -17465,7 +17465,7 @@ class CfgVehicles
 		{
 			"\MRC\JLTS\characters\CloneArmor\data\Clone_LR_attachment_co.paa"
 		};
-		maximumload=390;
+		maximumload=250;
 		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
