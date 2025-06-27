@@ -16622,7 +16622,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] Clone Backpack[RPS]";
+		displayName="[41st] Clone Backpack (RPS)";
 		maximumload=240;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
@@ -16640,7 +16640,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] Clone Backpack[RifleAT]";
+		displayName="[41st] Clone Backpack (RifleAT)";
 		maximumload=250;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
@@ -16658,7 +16658,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] Clone Backpack[PLX]";
+		displayName="[41st] Clone Backpack (PLX)";
 		maximumload=250;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
@@ -16959,7 +16959,7 @@ class CfgVehicles
 		scope=2;
 		maximumload=170;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
-		displayName="[41st] Belt Bag(CQB)";
+		displayName="[41st] Belt Bag (CQB)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
 		hiddenSelections[]=
 		{
@@ -16976,7 +16976,7 @@ class CfgVehicles
 		scope=2;
 		maximumload=208;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
-		displayName="[41st] Belt Bag[Grenadier]";
+		displayName="[41st] Belt Bag (Grenadier)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
 		hiddenSelections[]=
 		{
@@ -16993,7 +16993,7 @@ class CfgVehicles
 		scope=2;
 		maximumload=224;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
-		displayName="[41st] Belt Bag[15L]";
+		displayName="[41st] Belt Bag (15L)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
 		hiddenSelections[]=
 		{
@@ -17010,7 +17010,7 @@ class CfgVehicles
 		scope=2;
 		maximumload=180;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
-		displayName="[41st] Belt Bag[Z6]";
+		displayName="[41st] Belt Bag (Z6)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
 		hiddenSelections[]=
 		{
