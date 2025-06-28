@@ -1,11 +1,12 @@
-d_EndSplashScreen = {
+[] spawn {
+
+};
+_EndSplashScreen = {
     for "_x" from 1 to 4 do {
         endLoadingScreen;
         sleep 3;
     };
 };
-
-[] spawn _EndSplashScreen;
 
 CHVD_allowNoGrass = false; // Set 'false' if you want to disable "Low" option for terrain (default: true)
 CHVD_maxView = 6000; // Set maximum view distance (default: 12000)
