@@ -34,7 +34,8 @@ for "_i" from 1 to 12 do {_plyer addItemToVest "FST_blaster_cell_High_Blue";};
 _plyer addItemToVest "IDA_grenade_Smoke_Blue_mag";
 _plyer addItemToVest "ls_mag_glowrod_hiGreen";
 
-for "_i" from 1 to 4 do {_plyer addItemToBackpack "FST_RPS6_rocket";};
+for "_i" from 1 to 3 do {_plyer addItemToBackpack "FST_RPS6_rocket";};
+_plyer addItemToBackpack "FST_RPS6_rocket_HE";
 
 for "_i" from 1 to 2 do {_plyer addItemToUniform "ACE_CableTie";};
 _plyer addItemToVest "IDA_grenade_Smoke_Purple_mag";

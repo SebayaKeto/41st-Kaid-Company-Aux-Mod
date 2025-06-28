@@ -5870,6 +5870,18 @@ class CfgWeapons
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Red: FST_Pilot_P1_Helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Red]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Red.paa",
+			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Red.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_Pilot_P1_Helmet_Nys: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
