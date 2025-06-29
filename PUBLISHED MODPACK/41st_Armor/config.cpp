@@ -202,6 +202,7 @@ class CfgPatches
 			"FST_P2_Xeha_Dirty",
 			"FST_P2_Ace",
 			"FST_P2_Samurai",
+			"FST_P2_Samurai_Dirty",
 			"FST_P2_Ruby",
 			"FST_P2_Ruby_Dirty",
 			"FST_P2_Sonic",
@@ -10438,7 +10439,17 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Samurai.paa",
 		};
-	};	
+	};
+	class FST_P2_Helmet_Samurai_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Samurai/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Samurai_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Evox: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -11506,6 +11517,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Drifter.paa",
+		};
+	};
+	class FST_P2_Helmet_Hijack: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Hijack]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hijack.paa",
 		};
 	};
 	class FST_P2_Helmet_Brutal: FST_P2_Helmet_Base
@@ -14977,6 +14998,20 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Samurai_Dirty: JLTS_CloneArmor
+    {
+        author="Gold";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Samurai/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Samurai_Dirty";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
     class FST_Uniform_Laer: JLTS_CloneArmor
     {
         author="Viz";
@@ -15789,6 +15824,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Claw.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Mono: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Mono)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Mono.paa",
 		};
 		visionMode[]=
 		{
@@ -33693,6 +33750,61 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Samurai",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+	class FST_P2_Samurai_Dirty: FST_Trooper_P2_DC15S
+    {
+        author="Gold";
+        displayName="[41st] CT-5151 'Samurai/Dirty'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Samurai_Dirty";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Samurai_Dirty.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Samurai_Dirty.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Samurai_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Samurai_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
