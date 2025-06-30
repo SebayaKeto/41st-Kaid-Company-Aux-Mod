@@ -7,6 +7,7 @@ removeAllWeapons _plyer;
 comment "Add weapons";
 _plyer addWeapon "FST_DC15C_F";
 _plyer addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+_plyer addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
 _plyer addBackpack "FST_Backpack_Jumppack_Rifleman";
 
 comment "Add binoculars";

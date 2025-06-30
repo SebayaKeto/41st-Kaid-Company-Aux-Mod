@@ -25,6 +25,7 @@ WeaponDroid1 addAction ["EOD/Engineer Backpack (Choose Weapon First)","Scripts\L
 WeaponDroid1 addAction ["GRENADIER DC-15A","Scripts\Loadouts\Weaponry\Grenadier.sqf"];
 WeaponDroid1 addAction ["GRENADIER DC-15S","Scripts\Loadouts\Weaponry\Grenadier15S.sqf"];
 WeaponDroid1 addAction ["JTAC (Choose Weapon First)","Scripts\Loadouts\Weaponry\JTAC.sqf"];
+WeaponDroid1 addAction ["JTAC/UGL (Choose Weapon First)","Scripts\Loadouts\Weaponry\JTAC_UGL.sqf"];
 WeaponDroid1 addAction ["CQC DP-23","Scripts\Loadouts\Weaponry\CQC.sqf"];
 WeaponDroid1 addAction ["CQC DC-15S","Scripts\Loadouts\Weaponry\CQC15S.sqf"];
 WeaponDroid1 addAction ["<t color='#89CFF0'>-=AUTOMATIC RIFLEMAN=-</t>", hint ""];
@@ -62,6 +63,7 @@ WeaponDroid1 addAction ["DC-15L Ammo Bearer (Choose Weapon First)","Scripts\Load
 WeaponDroid1 addAction ["Rifle AT Ammo Bearer (Choose Weapon First)","Scripts\Loadouts\Weaponry\ABABRAT.sqf"];
 WeaponDroid1 addAction ["MEDIC Backpack (Choose Weapon First)","Scripts\Loadouts\Weaponry\ABMedicBackpack.sqf"];
 WeaponDroid1 addAction ["JTAC (Choose Weapon First)","Scripts\Loadouts\Weaponry\ABJTAC.sqf"];
+WeaponDroid1 addAction ["JTAC/UGL (Choose Weapon First)","Scripts\Loadouts\Weaponry\ABJTAC_UGL.sqf"];
 WeaponDroid1 addAction ["LMG GUNNER DC-15L","Scripts\Loadouts\Weaponry\ABLmg.sqf"];
 WeaponDroid1 addAction ["RIFLE AT","Scripts\Loadouts\Weaponry\ABRifleAT.sqf"];
 WeaponDroid1 addAction ["<t color='#89CFF0'>-=AIRBORNE HOWLER=-</t>", hint ""];

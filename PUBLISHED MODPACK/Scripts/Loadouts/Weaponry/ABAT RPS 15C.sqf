@@ -9,6 +9,7 @@ comment "Add weapons";
 _plyer addWeapon "FST_DC15C_F";
 _plyer addWeapon "FST_RPS6HP";
 _plyer addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+_plyer addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
 _plyer addSecondaryWeaponItem "FST_RPS6_rocket";
 
 comment "Add binoculars";

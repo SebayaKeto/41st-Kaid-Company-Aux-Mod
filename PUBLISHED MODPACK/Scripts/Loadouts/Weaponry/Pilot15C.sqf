@@ -7,6 +7,7 @@ removeAllWeapons _plyer;
 comment "Add weapons";
 _plyer addWeapon "FST_DC15C_F";
 _plyer addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+_plyer addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
 
 comment "Add binoculars";
 _plyer addMagazine "Laserbatteries";
@@ -22,19 +23,20 @@ for "_i" from 1 to 2 do {_plyer addItemToUniform "IDA_BattleStim";};
 for "_i" from 1 to 20 do {_plyer addItemToUniform "IDA_BactaBandage";};
 for "_i" from 1 to 4 do {_plyer addItemToUniform "ACE_splint";};
 for "_i" from 1 to 5 do {_plyer addItemToUniform "ACE_tourniquet";};
+for "_i" from 1 to 3 do {_plyer addItemToUniform "FST_grenade_Detonator_mag";};
+for "_i" from 1 to 3 do {_plyer addItemToUniform "IDA_grenade_Smoke_mag";};
+for "_i" from 1 to 2 do {_plyer addItemToUniform "ACE_CableTie";};
 _plyer addItemToUniform "ACE_EntrenchingTool";
 _plyer addItemToUniform "WBK_HeadLampItem_Double";
 _plyer addItemToUniform "ACE_Flashlight_XL50";
 _plyer addItemToUniform "ACE_IR_Strobe_Item";
-_plyer addItemToUniform "ACE_DefusalKit";
-_plyer addItemToUniform "MineDetector";
-_plyer addItemToUniform "ItemcTab";
-for "_i" from 1 to 12 do {_plyer addItemToVest "FST_blaster_cell_High_Blue";};
-for "_i" from 1 to 3 do {_plyer addItemToUniform "FST_grenade_Detonator_mag";};
-for "_i" from 1 to 3 do {_plyer addItemToUniform "IDA_grenade_Smoke_mag";};
-_plyer addItemToUniform "IDA_grenade_Smoke_Blue_mag";
-_plyer addItemToUniform "ls_mag_glowrod_hiGreen";
-_plyer addItemToBackpack "ToolKit";
 
-for "_i" from 1 to 2 do {_plyer addItemToUniform "ACE_CableTie";};
+for "_i" from 1 to 12 do {_plyer addItemToVest "FST_blaster_cell_High_Blue";};
+_plyer addItemToVest "IDA_grenade_Smoke_Blue_mag";
 _plyer addItemToVest "IDA_grenade_Smoke_Purple_mag";
+_plyer addItemToVest "ACE_DefusalKit";
+_plyer addItemToVest "MineDetector";
+_plyer addItemToVest "ItemcTab";
+_plyer addItemToVest "ls_mag_glowrod_hiGreen";
+
+_plyer addItemToBackpack "ToolKit";
