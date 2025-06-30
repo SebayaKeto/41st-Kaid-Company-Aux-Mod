@@ -17442,6 +17442,23 @@ class CfgVehicles
 		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
+	class FST_Clone_backpack_RTO_UGL: FST_Clone_backpack
+	{
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
+		displayName="[41st] Clone RTOUGL Backpack";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
+		};
+		maximumload=250;
+		tf_dialog="JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=50000;
+		tf_subtype="digital_lr";
+	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
 	{
 		displayName="[41st] Clone RTO Backpack (Straps)";
@@ -19350,6 +19367,72 @@ class CfgVehicles
 		scopearsenal=2;
 		maximumload=170;
 		displayName="[41st] Jump Pack (LR)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_LR_UGL: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (LR/UGL)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
 		hiddenSelections[]=
