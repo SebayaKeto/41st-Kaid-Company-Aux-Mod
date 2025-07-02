@@ -14,8 +14,8 @@ class CfgPatches
 };
 class CfgVehicles
 {
-	class 3AS_Aegis_Shuttle_Base_F;
-	class FST_Aegis_Shuttle_Tukata: 3AS_Aegis_Shuttle_Base_F
+	class 3AS_Aegis_Shuttle_Pirate_F;
+	class FST_Aegis_Shuttle_Tukata: 3AS_Aegis_Shuttle_Pirate_F
 	{
 		author = "Gold";
 		crew="FST_Pilot_P1";
