@@ -246,7 +246,7 @@ class CfgPatches
 			"FST_P2_Evox_Dirty",
 			"FST_P2_Hazzo",
 			"FST_P2_Crab",
-			"FST_P2_Chip",
+			"FST_P2_Chips",
 			"FST_P2_Steel",
 			"FST_P2_Trenny",
 			"FST_P2_Trenny_Dirty",
@@ -269,6 +269,10 @@ class CfgPatches
 			"FST_P2_Bright",
 			"FST_P2_Jericho",
 			"FST_P2_Assassin",
+			"FST_P2_Adler",
+			"FST_P2_Buddhah",
+			"FST_P2_Raz",
+			"FST_P2_Recon",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -4885,6 +4889,62 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_ARF_Helmet_WhiteGreen_Buddhah: SWLB_clone_ARF_P1_helmet
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] ARF Helmet (Buddhah)";
+		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
+		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Buddhah.paa",
+			"",
+			"41st_Armor\data\Helmets\FST_ARF_Helmet_GreenWhite_Buddhah.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\helmet_arf.rvmat";
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2",
+				"visor"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_ARF_Helmet: SWLB_clone_ARF_P1_helmet
 	{
 		author="Daara";
@@ -6060,6 +6120,18 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Overwatch.paa",
 			"41st_Armor\data\LifeSupport\FST_LifeSupport_Overwatch.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Lancer: FST_Pilot_P1_Helmet
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Lancer]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Lancer.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Lancer.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
@@ -11829,14 +11901,14 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hazzo.paa"
 		};
 	};
-	class FST_P2_Helmet_Chip: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Chips: FST_P2_Helmet_Base
 	{
 		author="Viz";
 		scope=2;
-		displayName="[41st] P2 Helmet [Chip]";
+		displayName="[41st] P2 Helmet [Chips]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chip.paa"
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chips.paa"
 		};
 	};
 	class FST_P2_Helmet_Steel: FST_P2_Helmet_Base
@@ -11878,7 +11950,27 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Jericho.paa",
 		};
-	};	
+	};
+	class FST_P2_Helmet_Adler: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Adler]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Adler.paa",
+		};
+	};
+	class FST_P2_Helmet_Recon: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Recon]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Recon.paa",
+		};
+	};
 	//////////////UNIFORMS//////////////
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
@@ -15315,6 +15407,48 @@ class CfgWeapons
         {
             uniformModel="";
             uniformClass="FST_P2_Volos";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Raz: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Raz]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Raz";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Chips: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Chips]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Chips";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Buddhah: JLTS_CloneArmor
+    {
+        author="Viz";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Buddhah]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Buddhah";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -35247,6 +35381,171 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Volos",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Raz: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-6406 'Raz'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Raz";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Raz.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Raz.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Raz",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Raz",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Chips: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-1964 'Chips'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Chips";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Chips.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Chips.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Chips",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Chips",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Buddhah: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-0442 'Buddhah'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Buddhah";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Buddhah.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Buddhah.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Buddhah",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_ARF_Helmet_WhiteGreen_Buddhah",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
