@@ -16934,7 +16934,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Clone Backpack (Invisible/Z6)";
-		maximumload=180;
+		maximumload=315;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
 		{
