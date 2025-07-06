@@ -338,9 +338,9 @@ class CfgVehicles
 		{
 			enabled=1;
 			speed=300;
-			fueldrain=0.0001;
+			fueldrain=9.9999997e-005;
 			overchargespeed=800;
-			overchargeFuelDrain=0.0001;
+			overchargeFuelDrain=9.9999997e-005;
 			overchargeCooldown=0
 		};
 		hiddenSelectionsTextures[]=
