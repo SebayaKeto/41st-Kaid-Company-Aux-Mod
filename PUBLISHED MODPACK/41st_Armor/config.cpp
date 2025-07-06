@@ -15954,6 +15954,28 @@ class CfgWeapons
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Nahlens: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Nahlens)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Nahlens.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Overwatch: JLTS_CloneNVG
 	{
 		author="Daara";
@@ -16655,6 +16677,29 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Argo.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Visor_Cardinal: JLTS_CloneNVGCC
+	{
+		author="Gold";
+		displayName="[41st] Officer Visor (Cardinal)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Cardinal.paa",
 		};
 		visionMode[]=
 		{
@@ -37341,10 +37386,10 @@ class CfgFaces
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Delta.paa";
 		};
-		class FST_Clone_Mustang: Default
+		class FST_Navy_Face_Mustang: Default
 		{
 			author="Gold adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
-			displayname="[41st] Clone Trooper - Mustang";
+			displayname="[41st] Navy Face - Mustang";
 			texture="41st_Armor\Data\Faces\FST_Clone_Mustang.paa";
 			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
 			head="TCGM_FemHead_Eilish";
