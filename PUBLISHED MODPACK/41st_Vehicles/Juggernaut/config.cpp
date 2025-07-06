@@ -401,8 +401,8 @@ class CfgVehicles
 		waterPPInVehicle=0;
 		waterResistanceCoef=0.029999999;
 		engineShiftY=-0.5;
-		armor=2000;
-		armorStructural=15;
+		armor=600;
+		armorStructural=3;
 		armorLights=0.1;
 		crewExplosionProtection=0.99949998;
 		damageResistance=0.0071899998;
