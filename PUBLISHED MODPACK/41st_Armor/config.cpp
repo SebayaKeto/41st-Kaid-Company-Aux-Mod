@@ -18083,7 +18083,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
 		};
-		maximumload=250;
+		maximumload=300;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -20086,7 +20086,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=250;
+		maximumload=300;
 		displayName="[41st] Jump Pack (LR/UGL)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
