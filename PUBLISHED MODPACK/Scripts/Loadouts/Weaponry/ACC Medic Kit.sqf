@@ -3,6 +3,7 @@ _LO = ((_this select 3) select 0) select 0;
 
 //comment "Remove existing items";
 removeAllWeapons _plyer;
+removeBackpack _plyer;
 
 comment "Add weapons";
 _plyer addWeapon "FST_DC15C_F";
