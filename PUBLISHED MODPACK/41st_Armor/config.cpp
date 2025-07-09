@@ -235,6 +235,7 @@ class CfgPatches
 			"FST_P2_Salt",
 			"FST_P2_Cooker",
 			"FST_P2_Nahlens",
+			"FST_P2_Nahlens_Dirty",
 			"FST_P2_Woodland",
 			"FST_P2_Midnight",
 			"FST_P2_Silhouette",
@@ -6878,7 +6879,7 @@ class CfgWeapons
 				};
 			};
 		};
-	}; 
+	};
  	class FST_Airborne_Helmet_Cowboy: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -10834,6 +10835,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nahlens.paa",
 		};
 	};
+	class FST_P2_Helmet_Nahlens_Dirty: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Nahlens/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nahlens_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Kare: FST_P2_Helmet_Base
 	{
 		author="Vengence";
@@ -14154,7 +14165,7 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
 	class FST_Uniform_Nahlens: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14168,7 +14179,21 @@ class CfgWeapons
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
+	class FST_Uniform_Nahlens_Dirty: JLTS_CloneArmor
+	{
+		author="Viz";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Nahlens/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Nahlens_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Warlock: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15968,6 +15993,28 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Nahlens.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Nahlens_Dirty: JLTS_CloneNVG
+	{
+		author="Viz";
+		displayName="[41st] NCO Macrobinoculars (Nahlens/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Nahlens_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -30055,6 +30102,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Nahlens",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Nahlens_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Viz";
+		displayName="[41st] CT-5020 'Nahlens/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Nahlens_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Nahlens_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Nahlens_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Nahlens_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Nahlens_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
