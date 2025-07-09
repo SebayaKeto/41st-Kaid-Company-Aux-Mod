@@ -17273,7 +17273,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Clone Backpack (RifleAT)";
-		maximumload=250;
+		maximumload=350;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
 		{
@@ -18766,7 +18766,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=250;
+		maximumload=350;
 		displayName="[41st] Jump Pack (RifleAT)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
