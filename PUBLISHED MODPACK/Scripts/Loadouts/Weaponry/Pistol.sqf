@@ -7,4 +7,4 @@ _plyer addHandgunItem "FST_blaster_cell_low_Blue";
 _plyer addHandgunItem "3as_optic_holo_dc15s";
 
 comment "Add items to containers";
-for "_i" from 1 to 6 do {_plyer addItemToUniform "FST_blaster_cell_low_Blue";};
+for "_i" from 1 to 6 do {_plyer addItemToVest "FST_blaster_cell_low_Blue";};
