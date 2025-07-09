@@ -35,7 +35,7 @@ class CfgVehicles
 		editorCategory = "FST_CatagoryBarricades";
 		editorSubcategory = "FST_Subcategory_SecurityBarricades";
 		scope = 1;
-		scopecurator = 1;
+               scopeCurator = 1;
 		placement = "vertical";
 		mapSize = 1;
 		destrType = "DestructNo";
@@ -48,7 +48,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrier: FST_Barricade_SecurityBarrier_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+               scopeCurator = 2;
 		displayName = "[41st] Security Barrier";
 		hiddenSelections[] = {"Camo1","Plasteel", "Steel"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Barricades\Data\Textures\FSTBarrier_co.paa"};
@@ -57,7 +57,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrier_Factory: FST_Barricade_SecurityBarrier_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "[41st] Security Barrier (Factory)";
 		hiddenSelections[] = {"Camo1","Plasteel", "Steel"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_Factory_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Barricades\Data\Textures\FSTBarrier_Factory_co.paa"};
@@ -67,7 +67,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrier_Sand: FST_Barricade_SecurityBarrier_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "[41st] Security Barrier (Sand)";
 		hiddenSelections[] = {"Camo1","Plasteel", "Steel"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_Sand_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Barricades\Data\Textures\FSTBarrier_Sand_co.paa"};
@@ -76,7 +76,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrier_Tundra: FST_Barricade_SecurityBarrier_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "[41st] Security Barrier (Tundra)";
 		hiddenSelections[] = {"Camo1","Plasteel", "Steel"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_Tundra_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Barricades\Data\Textures\FSTBarrier_Tundra_co.paa"};
@@ -85,7 +85,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrier_Jungle: FST_Barricade_SecurityBarrier_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "[41st] Security Barrier (Jungle)";
 		hiddenSelections[] = {"Camo1","Plasteel", "Steel"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_JungleOvergrown_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Barricades\Data\Textures\FSTBarrier_JungleOvergrown_co.paa"};
@@ -121,7 +121,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrierShieldWide: FST_Barricade_SecurityBarrierShieldWide_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "[41st] Shielded Security Barrier";
 		hiddenSelections[] = {"Camo1","Plasteel", "Shield"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Common\Data\Textures\Shield\BlueShield_co.paa"};
@@ -153,7 +153,7 @@ class CfgVehicles
 	class FST_Barricade_SecurityBarrierShieldTowerTop: FST_Barricade_SecurityBarrierShieldTowerTop_Base
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "[41st] Shielded Security Tower Top";
 		hiddenSelections[] = {"Camo1","Plasteel", "Shield", "Camo1Low","Camo2","StairArmor","Railing","MetalGrid"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa", "FST\FST_Common\Data\Textures\Shield\BlueShield_co.paa","FST\FST_Barricades\Data\Textures\Camo1_co.paa","FST\FST_Barricades\Data\Textures\Camo2_co.paa","FST\FST_Common\Data\Textures\SteelStained\SteelStained_co.paa","FST\FST_Common\Data\Textures\HazardSteel\HazardSteel_co.paa","FST\FST_Common\Data\Textures\MetalGrid\MetalGrid_co.paa"};
@@ -163,7 +163,7 @@ class CfgVehicles
 		{
 			class Shield_Source
 			{
-				source = user; // "user" = custom source = not controlled by some engine value
+				source = "user"; // "user" = custom source = not controlled by some engine value
 				initPhase = 0; // Initial value of animations based on this source
 				animPeriod = 1; // Coefficient for duration of change of this animation
 				sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
