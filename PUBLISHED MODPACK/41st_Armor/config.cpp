@@ -10010,6 +10010,26 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};
+	class FST_P2_Helmet_Chunk: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Chunk]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chunk.paa",
+		};
+	};
+	class FST_P2_Helmet_Ridley: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Ridley]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ridley.paa",
+		};
+	};
 	class FST_P2_Helmet_Trauma: FST_P2_Helmet_Base
 	{
 		author="Gold";

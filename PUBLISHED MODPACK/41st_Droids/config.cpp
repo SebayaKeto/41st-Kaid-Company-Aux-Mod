@@ -1871,6 +1871,18 @@ class CfgVehicles
 		uniformClass="FST_DroidB2";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo_arms",
+			"legs",
+			"torso"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Arms_black.paa",
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Legs_black.paa",
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Torso_black.paa"
+		};
 		weapons[]=
 		{
 			"FST_WristBlaster",
@@ -1913,6 +1925,18 @@ class CfgVehicles
 		uniformClass="FST_DroidB2_TL";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo_arms",
+			"legs",
+			"torso"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Arms_black.paa",
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Legs_black.paa",
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Torso_black.paa"
+		};
 		weapons[]=
 		{
 			"FST_WristBlaster",
@@ -1959,6 +1983,18 @@ class CfgVehicles
 		uniformClass="FST_DroidB2";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo_arms",
+			"legs",
+			"torso"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Arms_black.paa",
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Legs_black.paa",
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Torso_black.paa"
+		};
 		weapons[]=
 		{
 			"IDA_BTX42",
