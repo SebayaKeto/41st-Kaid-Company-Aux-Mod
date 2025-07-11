@@ -1,0 +1,46 @@
+_camera = "camera" camcreate [0,0,0];
+_camera cameraeffect ["internal", "back"];
+WBK_KitSystem_PlayerTookKit = nil;
+titleCut ["", "BLACK IN", 1];
+playSoundUI ["Orange_Start_Sim", 0.2, 1];
+playSoundUI ["Orange_Choice_Select", 0.2, 1];
+createDialog 'WBK_KITArsenalAlike';
+WBK_simpeCamObj = "#particleSource" createVehicleLocal position player;
+WBK_simpeCamObj attachTo [player, [0.02, 0, 0.05], "Pelvis"]; 
+showcinemaBorder false;
+_camera = "camera" camcreate position player;
+_camera cameraeffect ["internal", "back"];
+_camera attachTo [player, [0.8,4,0], "Pelvis"];
+;comment "0:29:55";
+_camera camPrepareTarget WBK_simpeCamObj;
+_camera camPreparePos getPos player;
+_camera camPrepareFOV 0.318;
+_camera camCommitPrepared 0
+_ctrlSkillsOrAttacks_Podzskazki = findDisplay 46 ctrlCreate ["RscStructuredText", 281119901010]; 
+_ctrlSkillsOrAttacks_Podzskazki ctrlSetPosition [0.402031 * safezoneW + safezoneX, 0.016 * safezoneH + safezoneY, 0.211406 * safezoneW, 0.033 * safezoneH];   
+_ctrlSkillsOrAttacks_Podzskazki ctrlSetBackgroundColor [0, 0, 0, 0]; 
+_ctrlSkillsOrAttacks_Podzskazki ctrlSetStructuredText parseText format["<t size='1.25' align='center' font='PuristaSemibold'>%1</t>", name player];
+_ctrlSkillsOrAttacks_Podzskazki ctrlCommit 0; 
+_ctrlSkillsOrAttacks_Podzskazki_Class = findDisplay 46 ctrlCreate ["RscStructuredText", 281119901011]; 
+_ctrlSkillsOrAttacks_Podzskazki_Class ctrlSetPosition [0.402031 * safezoneW + safezoneX, 0.95 * safezoneH + safezoneY, 0.211406 * safezoneW, 0.033 * safezoneH];   
+_ctrlSkillsOrAttacks_Podzskazki_Class ctrlSetBackgroundColor [0, 0, 0, 0]; 
+if !(isNil {player getVariable "WBK_Kit_Name"}) then {_ctrlSkillsOrAttacks_Podzskazki_Class ctrlSetStructuredText parseText format["<t size='1.5' align='center' font='PuristaSemibold'>%1</t>", player getVariable "WBK_Kit_Name"];};
+_ctrlSkillsOrAttacks_Podzskazki_Class ctrlCommit 0; 
+player setVariable ["WBK_ClassHud",_ctrlSkillsOrAttacks_Podzskazki_Class];
+outlw_MR_blur = ppEffectCreate ["DynamicBlur", 401];
+outlw_MR_blur ppEffectEnable true;
+outlw_MR_blur ppEffectAdjust [0.1];
+outlw_MR_blur ppEffectCommit 0;
+@!dialog
+if !(isNil "WBK_KitSystem_PlayerTookKit") then {player setVariable ["WBK_AssignedKit",getUnitLoadout player]; playSoundUI ["Orange_PeriodSwitch_Notification", 0.2, 1];titleText ["<t size='2.4'>Current kit was selected.</t>", "PLAIN DOWN", -1, true, true];player reload [];}else{titleText ["<t size='2.4'>No kit was selected.</t>", "PLAIN DOWN", -1, true, true];playSoundUI ["Orange_ZoneRestriction_Distance_03", 2, 1];}; 
+ctrlDelete ((findDisplay 46) displayCtrl 281119901010);
+ctrlDelete ((findDisplay 46) displayCtrl 281119901011);
+titleCut ["", "BLACK IN", 1];
+ppEffectDestroy outlw_MR_blur;
+if !(player isKindOf "WBK_DT_Cont_3_chaos") then {player switchMove "";};
+player cameraEffect ["terminate","back"]
+deleteVehicle WBK_simpeCamObj;
+camDestroy _camera;
+closeDialog 0;
+(uiNamespace getVariable "BIS_AAN") closeDisplay 1;
+WBK_KitSystem_PlayerTookKit = nil;
