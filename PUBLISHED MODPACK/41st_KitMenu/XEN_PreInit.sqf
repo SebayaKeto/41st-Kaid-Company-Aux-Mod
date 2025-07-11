@@ -913,6 +913,21 @@ switch (_typeOfKit) do {
 		player setUnitTrait ["engineer", true];
 		player setUnitTrait ["explosiveSpecialist", true];
 	};
+	case "Pilot": {
+		player setUnitTrait ["Medic", true];
+		player setUnitTrait ["engineer", true];
+		player setUnitTrait ["explosiveSpecialist", true];
+	};
+	case "Crew Chief": {
+		player setUnitTrait ["Medic", true];
+		player setUnitTrait ["engineer", true];
+		player setUnitTrait ["explosiveSpecialist", true];
+	};
+	case "Crewman": {
+	player setUnitTrait ["Medic", true];
+	player setUnitTrait ["engineer", true];
+	player setUnitTrait ["explosiveSpecialist", true];
+	};
 	default {};
 };
 call WBK_UpdatePlayerKitOnMenu;
