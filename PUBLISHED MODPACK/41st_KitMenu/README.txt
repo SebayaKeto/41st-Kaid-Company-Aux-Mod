@@ -1,3 +1,3 @@
-kit menu based o webknight's kit menu
+Kit Menu based on Webknight's Kit Menu
 
 Created by Laer
