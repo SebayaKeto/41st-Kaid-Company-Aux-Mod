@@ -4,7 +4,6 @@ private _listCtrl = _display displayCtrl 4102;
 lbClear _listCtrl;
 private _helmetClasses = [];
 
-// Scan FST gear in CfgWeapons
 {
 	private _className = configName _x;
 
@@ -13,7 +12,6 @@ private _helmetClasses = [];
 		if (isClass _itemInfo) then {
 			private _type = getNumber (_itemInfo >> "type");
 
-			// Include headgear, vest, uniform, NVG, proxy backpacks
 			if (_type in [605, 701, 801, 901, 302]) then {
 				private _displayName = getText (_x >> "displayName");
 				private _picture = getText (_x >> "picture");
@@ -35,7 +33,6 @@ private _helmetClasses = [];
 	};
 } forEach ("true" configClasses (configFile >> "CfgWeapons"));
 
-// Scan FST backpacks in CfgVehicles (real backpacks)
 {
 	private _className = configName _x;
 

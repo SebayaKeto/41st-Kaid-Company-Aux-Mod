@@ -41,7 +41,6 @@ FST_fnc_selectHelmet = {
         private _itemInfo = _cfg >> "ItemInfo";
         _type = getNumber (_itemInfo >> "type");
     } else {
-        // Backpack detected (from CfgVehicles)
         _type = 302;
     };
 
@@ -280,7 +279,6 @@ switch true do {
 			player addWeapon "FST_RPS6HP";
 			player addSecondaryWeaponItem "FST_RPS6_rocket";
 			removeBackpack player;
-			// If Howler kit, use jumppack RPS backpack
 			if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 				player addBackpack "FST_Backpack_Jumppack_RPS";
 			} else {
@@ -298,7 +296,6 @@ switch true do {
 			player addWeapon "FST_PLX1";
 			player addSecondaryWeaponItem "FST_PLX1_Rocket";
 			removeBackpack player;
-			// Check for Howler kit to use airborne backpack
 			if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 				player addBackpack "FST_Backpack_Jumppack_PLX";
 			} else {
@@ -318,7 +315,6 @@ switch true do {
 			player addWeapon "FST_PLX1_Guided";
 			player addSecondaryWeaponItem "FST_PLX1_Rocket";
 			removeBackpack player;
-			// Check if player is using the Howler kit
 			if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 				player addBackpack "FST_Backpack_Jumppack_PLX";
 			} else {
@@ -411,7 +407,6 @@ switch true do {
 				"FST_SmokeGreen_LauncherGrenade",
 				"FST_SmokeRed_LauncherGrenade"
 			];
-			// === Save current backpack and its contents ===
 			private _backpackClass = backpack player;
 			private _backpackItems = backpackItems player;
 			private _backpackInventory = [];
@@ -425,24 +420,18 @@ switch true do {
 				};
 			} forEach _backpackItems;
 
-			// === Remove current weapon and mags ===
 			private _weaponStuff = primaryWeaponItems player;
 			private _mags = [primaryWeapon player] call CBA_fnc_compatibleMagazines;
 			{player removeMagazines _x;} forEach _mags;
 			player removeWeapon primaryWeapon player;
-
-			// === Add new weapon ===
 			player addWeapon _item;
 			player selectWeapon _item;
 			{player addPrimaryWeaponItem _x;} forEach _weaponStuff;
-
-			// === Magazine & backpack logic ===
 			private _newMags = [_item] call CBA_fnc_compatibleMagazines;
 			private _magType = if (count _newMags > 0) then {_newMags select 0} else {""};
 
 			switch (_item) do {
 				case "FST_DC15S": {
-					// Backpack refresh for standard ammo backpacks
 					private _curBP = backpack player;
 					if (_curBP in ["FST_Backpack_Jumppack_STD_Ammo", "FST_Clone_Backpack_Invisible_STD"]) then {
 						removeBackpack player;
@@ -483,7 +472,6 @@ switch true do {
 
 				case "FST_DC15A";
 				case "FST_DC15C_F": {
-					// Backpack refresh for standard ammo backpacks
 					private _curBP = backpack player;
 					if (_curBP in ["FST_Backpack_Jumppack_STD_Ammo", "FST_Clone_Backpack_Invisible_STD"]) then {
 						removeBackpack player;
@@ -799,8 +787,6 @@ switch true do {
 							player addItemToUniform _magType;
 						};
 					};
-
-					// Restore original backpack
 					if (_backpackClass != "") then {
 						removeBackpack player;
 						player addBackpack _backpackClass;
@@ -976,7 +962,6 @@ if (count _aditionalGear > 0) then {
 	   };
 	};
 	} forEach _aditionalGear;
-// === Split weapons by type ===
 _primaryWeapons = [];
 _secondaryWeapons = [];
 _launchers = [];
@@ -995,7 +980,6 @@ _launchers = [];
 	};
 }
 forEach _weapons;
-	// === Display categories ===
 	if (count _primaryWeapons > 0) then {
 		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Rifle_ca.paa";
 		_index = _listBox_AditionalStuff lbAdd " PRIMARY WEAPONS";
@@ -1012,6 +996,12 @@ forEach _weapons;
 	};
 
 	if (count _secondaryWeapons > 0) then {
+		_pic = "";
+		_index = _listBox_AditionalStuff lbAdd " ";
+		_listBox_AditionalStuff lbSetPicture [_index, _pic];
+		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+
 		_pic = "a3\ui_f\data\GUI\Cfg\Hints\handgun_ca.paa";
 		_index = _listBox_AditionalStuff lbAdd " SECONDARY WEAPONS";
 		_listBox_AditionalStuff lbSetPicture [_index, _pic];
@@ -1027,6 +1017,12 @@ forEach _weapons;
 	};
 
 	if (count _launchers > 0) then {
+		_pic = "";
+		_index = _listBox_AditionalStuff lbAdd " ";
+		_listBox_AditionalStuff lbSetPicture [_index, _pic];
+		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+
 		_pic = "a3\ui_f\data\GUI\Cfg\Hints\launcher_ca.paa";
 		_index = _listBox_AditionalStuff lbAdd " LAUNCHERS";
 		_listBox_AditionalStuff lbSetPicture [_index, _pic];
@@ -1176,11 +1172,10 @@ _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
 _listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
 };
 //backpacks start
-// === ADD STATIC BACKPACKS IF KIT IS AMMO BEARER (Regular or Airborne) ===
 if (_typeOfKit == "Ammo Bearer" || _typeOfKit == "Ammo Bearer ") then {
 	private _backpacks = [];
 	if (_typeOfKit == "Ammo Bearer ") then {
-		// Airborne version (extra space at end)
+		// Airborne version
 		_backpacks = [
 			["FST_Backpack_Jumppack_15L_Ammo", "10x DC15L Battery"],
 			["FST_Backpack_Jumppack_STD_Ammo", "Standard Ammo + 3x Detonators"],
@@ -1200,11 +1195,9 @@ if (_typeOfKit == "Ammo Bearer" || _typeOfKit == "Ammo Bearer ") then {
 
 	private _listBox_AditionalStuff = (findDisplay 2000) displayCtrl 1731;
 
-	// Spacer
 	private _indexSpacer = _listBox_AditionalStuff lbAdd " ";
 	_listBox_AditionalStuff lbSetData [_indexSpacer, "['any']"];
 
-	// Header
 	private _indexHeader = _listBox_AditionalStuff lbAdd " AMMO BACKPACKS";
 	_listBox_AditionalStuff lbSetPicture [_indexHeader, "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa"];
 	_listBox_AditionalStuff lbSetData [_indexHeader, "['any']"];
@@ -1246,16 +1239,13 @@ if (_typeOfKit == "Howler") then {
 
     private _listBox_AditionalStuff = (findDisplay 2000) displayCtrl 1731;
 
-    // Spacer
     private _indexSpacer = _listBox_AditionalStuff lbAdd " ";
     _listBox_AditionalStuff lbSetData [_indexSpacer, "['any']"];
 
-    // Header
     private _indexHeader = _listBox_AditionalStuff lbAdd " AMMO BACKPACKS";
     _listBox_AditionalStuff lbSetPicture [_indexHeader, "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa"];
     _listBox_AditionalStuff lbSetData [_indexHeader, "['any']"];
 
-    // Add each backpack
     {
         private _class = _x select 0;
         private _text = switch (_class) do {
@@ -1400,17 +1390,15 @@ Wbk_AddKit = {
     _text = _this select 3;
     _condition = _this select 4;
     _code = _this select 5;
-    _category = if (count _this > 6) then {_this select 6} else {"regular"}; // Get category or default
+    _category = if (count _this > 6) then {_this select 6} else {"regular"};
 
     _kitToTransfer = [_nameOfKit, _fullKit, _text, _condition, _code, _category];
 
-    // Global arrays for menu (initialize once)
     if (isNil "FST_AllKits") then { FST_AllKits = []; };
     if (isNil "FST_RegularKits") then { FST_RegularKits = []; };
     if (isNil "FST_AirborneKits") then { FST_AirborneKits = []; };
 	if (isNil "FST_PilotKits") then { FST_PilotKits = []; };
 
-    // Store globally for menu system
     FST_AllKits pushBack _kitToTransfer;
     switch (_category) do {
         case "airborne": { FST_AirborneKits pushBack _kitToTransfer; };
@@ -1418,7 +1406,6 @@ Wbk_AddKit = {
         default        { FST_RegularKits  pushBack _kitToTransfer; };
     };
 
-    // Store on object as before (for actual equipping)
     if (isNil {_obj getVariable "FST_ActualKits"}) exitWith {
         _obj setVariable ["FST_ActualKits", [_kitToTransfer]];
         _obj spawn Wbk_equip_load;

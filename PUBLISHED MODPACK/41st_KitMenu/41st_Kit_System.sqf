@@ -5,7 +5,7 @@ WBK_fnc_populateKitList = {
     private _listbox = _display displayCtrl 1732;
     lbClear _listbox;
 
-    // --- Update Switch button icon ---
+    // Update switch icon
     private _iconButton = _display displayCtrl 1603;
     if (!isNull _iconButton) then {
         switch (FST_CurrentKitCategory) do {
@@ -15,12 +15,6 @@ WBK_fnc_populateKitList = {
             default           { _iconButton ctrlShow false; };
         };
     };
-
-    // Update category button text if you want (optional)
-    // private _button = _display displayCtrl 1602;
-    // if (!isNull _button) then {
-    //     _button ctrlSetText (["Regular", "Airborne", "Pilot"] select (_order find FST_CurrentKitCategory));
-    // };
 
     private _kits = switch (FST_CurrentKitCategory) do {
         case "airborne": { FST_AirborneKits };
