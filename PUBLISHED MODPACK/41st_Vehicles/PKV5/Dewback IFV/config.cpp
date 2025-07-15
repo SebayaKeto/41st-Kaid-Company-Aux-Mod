@@ -118,6 +118,27 @@ class CfgVehicles
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
 		reportRemoteTargets=1;
 		receiveRemoteTargets=1;
+		memoryPointsGetInCargo="pos driver";
+		memoryPointsGetInCargoDir="pos driver dir";
+		transportSoldier=6;
+		cargoReversedGetOut[]={1};
+		cargoGetInAction[]=
+		{
+			"GetInLow"
+		};
+		cargoGetOutAction[]=
+		{
+			"GetOutLow"
+		};
+		cargoAction[]=
+		{
+			"passenger_flatground_leanleft",
+			"passenger_flatground_generic01",
+			"passenger_flatground_generic02",
+			"passenger_flatground_generic03",
+			"passenger_flatground_generic04",
+			"passenger_flatground_generic05"
+		};
 	class TransportItems
 			{
 			class _xx_IDA_Cauterizer
