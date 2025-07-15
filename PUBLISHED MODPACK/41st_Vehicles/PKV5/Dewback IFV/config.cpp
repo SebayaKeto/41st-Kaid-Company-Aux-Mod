@@ -118,27 +118,6 @@ class CfgVehicles
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
 		reportRemoteTargets=1;
 		receiveRemoteTargets=1;
-		memoryPointsGetInCargo="pos driver";
-		memoryPointsGetInCargoDir="pos driver dir";
-		transportSoldier=6;
-		cargoReversedGetOut[]={1};
-		cargoGetInAction[]=
-		{
-			"GetInLow"
-		};
-		cargoGetOutAction[]=
-		{
-			"GetOutLow"
-		};
-		cargoAction[]=
-		{
-			"passenger_flatground_leanleft",
-			"passenger_flatground_generic01",
-			"passenger_flatground_generic02",
-			"passenger_flatground_generic03",
-			"passenger_flatground_generic04",
-			"passenger_flatground_generic05"
-		};
 	class TransportItems
 			{
 			class _xx_IDA_Cauterizer
@@ -927,37 +906,37 @@ class CfgVehicles
 		torqueCurve[]=
 		{
 			{0,0},
-			
+
 			{
 				"(1600/2640)",
 				"(2650/2850)"
 			},
-			
+
 			{
 				"(1800/2640)",
 				"(2800/2850)"
 			},
-			
+
 			{
 				"(1900/2640)",
 				"(2850/2850)"
 			},
-			
+
 			{
 				"(2000/2640)",
 				"(2800/2850)"
 			},
-			
+
 			{
 				"(2200/2640)",
 				"(2750/2850)"
 			},
-			
+
 			{
 				"(2400/2640)",
 				"(2600/2850)"
 			},
-			
+
 			{
 				"(2640/2640)",
 				"(2350/2850)"
@@ -1503,7 +1482,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Left",
 				"Right",
