@@ -22,4 +22,14 @@ _plyer addWeapon "FST_Electrobinoculars";
 
 _plyer addItemToUniform "ACE_MapTools";
 
-_plyer addItemToBackpack "ItemAndroid";
+if (_plyer canAddItemToBackpack "ItemAndroid") then {
+    _plyer addItemToBackpack "ItemAndroid";
+} else {
+    if (_plyer canAddItemToVest "ItemAndroid") then {
+        _plyer addItemToVest "ItemAndroid";
+    } else {
+        if (_plyer canAddItemToUniform "ItemAndroid") then {
+            _plyer addItemToUniform "ItemAndroid";
+        };
+    };
+};
