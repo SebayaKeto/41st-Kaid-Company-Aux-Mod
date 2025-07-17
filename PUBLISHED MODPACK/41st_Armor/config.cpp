@@ -17196,11 +17196,17 @@ class CfgVehicles
 		class TransportWeapons
 		{
 		};
+		
 		class TransportBackpacks
 		{
 			class _xx_FST_Backpack_Medic
 			{ 
 				Backpack="FST_Backpack_Medic";
+				count=2;
+			};
+			class _xx_FST_Backpack_Jumppack_Medic
+			{ 
+				Backpack="FST_Backpack_Jumppack_Medic";
 				count=2;
 			};
 		};
