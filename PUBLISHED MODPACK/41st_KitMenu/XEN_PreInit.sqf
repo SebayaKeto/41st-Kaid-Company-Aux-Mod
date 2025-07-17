@@ -169,102 +169,160 @@ switch true do {
 			removeHeadgear player;
 			player addHeadgear _item;
 		};
-		case (isClass (configFile >> "CfgVehicles" >> _item)): {
-			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_backpack_1.ogg", "41st_KitMenu\sounds\select_backpack_2.ogg"], 0.95, 1];
-			removeBackpack player;
-			player addBackpack _item;
+case (isClass (configFile >> "CfgVehicles" >> _item)): {
+    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_backpack_1.ogg", "41st_KitMenu\sounds\select_backpack_2.ogg"], 0.95, 1];
+    removeBackpack player;
+    player addBackpack _item;
 
-			private _grenadeClass = "FST_grenade_Detonator_mag";
-			private _grenadesCurrent = { _x == _grenadeClass } count magazines player;
+    private _grenadeClass = "FST_grenade_Detonator_mag";
+    private _grenadesCurrent = { _x == _grenadeClass } count magazines player;
 
-			switch (_item) do {
-				// REGULAR BACKPACKS
-				case "FST_Clone_Backpack_Invisible_15L": {
-					for "_i" from 1 to 10 do { player addItemToBackpack "FST_blaster_battery_DC15L_Blue"; };
-				};
-				case "FST_Clone_Backpack_Invisible_RPS": {
-					for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
-					player addItemToBackpack "FST_RPS6_rocket_HE";
-				};
-				case "FST_Clone_Backpack_Invisible_Z6": {
-					for "_i" from 1 to 7 do { player addItemToBackpack "FST_blaster_battery_Blue"; };
-				};
-				case "FST_Clone_Backpack_Invisible_STD": {
-					for "_i" from 1 to 12 do { player addItemToBackpack "FST_blaster_cell_High_Blue"; };
-					for "_i" from 1 to 18 do { player addItemToBackpack "FST_blaster_cell_Blue"; };
-					for "_i" from 1 to 4 do {
-						player addItemToBackpack "FST_blaster_cell_LE_Blue";
-						player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
-					};
-					// Ensure player has exactly 6 grenades total
-					if (_grenadesCurrent < 6) then {
-						for "_i" from 1 to (6 - _grenadesCurrent) do {
-							if (player canAddItemToVest _grenadeClass) then {
-								player addItemToVest _grenadeClass;
-							} else {
-								player addItemToUniform _grenadeClass;
-							};
-						};
-					};
-				};
-				case "FST_Clone_Backpack_Invisible_RifleAT": {
-					for "_i" from 1 to 2 do { player addItemToBackpack "FST_thermal_coil_LP_Blue"; };
-					for "_i" from 1 to 4 do { player addItemToBackpack "FST_thermal_coil_T15_Blue"; };
-				};
-				case "FST_Clone_Backpack_Invisible_PLX": {
-					for "_i" from 1 to 3 do { player addItemToBackpack "FST_PLX1_Rocket"; };
-				};
-
-				// JUMP PACK BACKPACKS
-				case "FST_Backpack_Jumppack_15L_Ammo": {
-					for "_i" from 1 to 10 do { player addItemToBackpack "FST_blaster_battery_DC15L_Blue"; };
-				};
-				case "FST_Backpack_Jumppack_STD_Ammo": {
-					for "_i" from 1 to 12 do { player addItemToBackpack "FST_blaster_cell_High_Blue"; };
-					for "_i" from 1 to 18 do { player addItemToBackpack "FST_blaster_cell_Blue"; };
-					for "_i" from 1 to 4 do {
-						player addItemToBackpack "FST_blaster_cell_LE_Blue";
-						player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
-					};
-					// Ensure player has exactly 6 grenades total
-					if (_grenadesCurrent < 6) then {
-						for "_i" from 1 to (6 - _grenadesCurrent) do {
-							if (player canAddItemToVest _grenadeClass) then {
-								player addItemToVest _grenadeClass;
-							} else {
-								player addItemToUniform _grenadeClass;
-							};
-						};
-					};
-				};
-				case "FST_Backpack_Jumppack_RifleAT_Ammo": {
-					for "_i" from 1 to 2 do { player addItemToBackpack "FST_thermal_coil_LP_Blue"; };
-					for "_i" from 1 to 4 do { player addItemToBackpack "FST_thermal_coil_T15_Blue"; };
-				};
-				case "FST_Backpack_Jumppack_Z6_Ammo": {
-					for "_i" from 1 to 7 do { player addItemToBackpack "FST_blaster_battery_Blue"; };
-				};
-				case "FST_Backpack_Jumppack_PLX_Ammo": {
-					for "_i" from 1 to 3 do { player addItemToBackpack "FST_PLX1_Rocket"; };
-				};
-				case "FST_Backpack_Jumppack_RPS_Ammo": {
-					for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
-					player addItemToBackpack "FST_RPS6_rocket_HE";
-				};
-			};
-			if !(_item in ["FST_Clone_Backpack_Invisible_STD", "FST_Backpack_Jumppack_STD_Ammo"]) then {
-				if (_grenadesCurrent > 3) then {
-					player removeMagazines _grenadeClass;
-					for "_i" from 1 to 3 do {
-						if (player canAddItemToVest _grenadeClass) then {
-							player addItemToVest _grenadeClass;
-						} else {
-							player addItemToUniform _grenadeClass;
-						};
-					};
-				};
-			};
+		private _rawData = lbData [ctrlIDC _control, _index];
+		private _lbData = [];
+		try {
+			_lbData = call compile _rawData;
+		} catch {
+			_lbData = [_rawData];
 		};
+		private _item = _lbData select 0;
+		private _desc = if (count _lbData > 1) then {_lbData select 1} else {""};
+
+    switch (_item) do {
+        case "FST_Backpack_Antenna";
+        case "FST_Backpack_Jumppack_LR": {
+            switch (_desc) do {
+                case "10x DC15L Battery": {
+                    for "_i" from 1 to 10 do { player addItemToBackpack "FST_blaster_battery_DC15L_Blue"; };
+                };
+                case "3x RPS6 + 1x HE Rocket": {
+                    for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
+                    player addItemToBackpack "FST_RPS6_rocket_HE";
+                };
+                case "7x Z6 Battery": {
+                    for "_i" from 1 to 7 do { player addItemToBackpack "FST_blaster_battery_Blue"; };
+                };
+                case "Standard Ammo + 3x Detonators": {
+                    for "_i" from 1 to 12 do { player addItemToBackpack "FST_blaster_cell_High_Blue"; };
+                    for "_i" from 1 to 18 do { player addItemToBackpack "FST_blaster_cell_Blue"; };
+                    for "_i" from 1 to 4 do {
+                        player addItemToBackpack "FST_blaster_cell_LE_Blue";
+                        player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
+                    };
+                    // Ensure player has exactly 6 grenades total
+                    if (_grenadesCurrent < 6) then {
+                        for "_i" from 1 to (6 - _grenadesCurrent) do {
+                            if (player canAddItemToVest _grenadeClass) then {
+                                player addItemToVest _grenadeClass;
+                            } else {
+                                player addItemToUniform _grenadeClass;
+                            };
+                        };
+                    };
+                };
+                case "2x LP Coil + 4x T15 Coil": {
+                    for "_i" from 1 to 2 do { player addItemToBackpack "FST_thermal_coil_LP_Blue"; };
+                    for "_i" from 1 to 4 do { player addItemToBackpack "FST_thermal_coil_T15_Blue"; };
+                };
+                case "3x PLX Rockets": {
+                    for "_i" from 1 to 3 do { player addItemToBackpack "FST_PLX1_Rocket"; };
+                };
+            };
+        };
+
+        // REGULAR BACKPACKS
+        case "FST_Clone_Backpack_Invisible_15L": {
+            for "_i" from 1 to 10 do { player addItemToBackpack "FST_blaster_battery_DC15L_Blue"; };
+        };
+        case "FST_Clone_Backpack_Invisible_RPS": {
+            for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
+            player addItemToBackpack "FST_RPS6_rocket_HE";
+        };
+        case "FST_Clone_Backpack_Invisible_Z6": {
+            for "_i" from 1 to 7 do { player addItemToBackpack "FST_blaster_battery_Blue"; };
+        };
+        case "FST_Clone_Backpack_Invisible_STD": {
+            for "_i" from 1 to 12 do { player addItemToBackpack "FST_blaster_cell_High_Blue"; };
+            for "_i" from 1 to 18 do { player addItemToBackpack "FST_blaster_cell_Blue"; };
+            for "_i" from 1 to 4 do {
+                player addItemToBackpack "FST_blaster_cell_LE_Blue";
+                player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
+            };
+            // Ensure player has exactly 6 grenades total
+            if (_grenadesCurrent < 6) then {
+                for "_i" from 1 to (6 - _grenadesCurrent) do {
+                    if (player canAddItemToVest _grenadeClass) then {
+                        player addItemToVest _grenadeClass;
+                    } else {
+                        player addItemToUniform _grenadeClass;
+                    };
+                };
+            };
+        };
+        case "FST_Clone_Backpack_Invisible_RifleAT": {
+            for "_i" from 1 to 2 do { player addItemToBackpack "FST_thermal_coil_LP_Blue"; };
+            for "_i" from 1 to 4 do { player addItemToBackpack "FST_thermal_coil_T15_Blue"; };
+        };
+        case "FST_Clone_Backpack_Invisible_PLX": {
+            for "_i" from 1 to 3 do { player addItemToBackpack "FST_PLX1_Rocket"; };
+        };
+
+        // JUMP PACK BACKPACKS
+        case "FST_Backpack_Jumppack_15L_Ammo": {
+            for "_i" from 1 to 10 do { player addItemToBackpack "FST_blaster_battery_DC15L_Blue"; };
+        };
+        case "FST_Backpack_Jumppack_STD_Ammo": {
+            for "_i" from 1 to 12 do { player addItemToBackpack "FST_blaster_cell_High_Blue"; };
+            for "_i" from 1 to 18 do { player addItemToBackpack "FST_blaster_cell_Blue"; };
+            for "_i" from 1 to 4 do {
+                player addItemToBackpack "FST_blaster_cell_LE_Blue";
+                player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
+            };
+            // Ensure player has exactly 6 grenades total
+            if (_grenadesCurrent < 6) then {
+                for "_i" from 1 to (6 - _grenadesCurrent) do {
+                    if (player canAddItemToVest _grenadeClass) then {
+                        player addItemToVest _grenadeClass;
+                    } else {
+                        player addItemToUniform _grenadeClass;
+                    };
+                };
+            };
+        };
+        case "FST_Backpack_Jumppack_RifleAT_Ammo": {
+            for "_i" from 1 to 2 do { player addItemToBackpack "FST_thermal_coil_LP_Blue"; };
+            for "_i" from 1 to 4 do { player addItemToBackpack "FST_thermal_coil_T15_Blue"; };
+        };
+        case "FST_Backpack_Jumppack_Z6_Ammo": {
+            for "_i" from 1 to 7 do { player addItemToBackpack "FST_blaster_battery_Blue"; };
+        };
+        case "FST_Backpack_Jumppack_PLX_Ammo": {
+            for "_i" from 1 to 3 do { player addItemToBackpack "FST_PLX1_Rocket"; };
+        };
+        case "FST_Backpack_Jumppack_RPS_Ammo": {
+            for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
+            player addItemToBackpack "FST_RPS6_rocket_HE";
+        };
+    };
+
+    if !(_item in [
+        "FST_Clone_Backpack_Invisible_STD",
+        "FST_Backpack_Jumppack_STD_Ammo",
+        "FST_Backpack_Antenna",
+        "FST_Backpack_Jumppack_LR"
+    ]) then {
+        if (_grenadesCurrent > 3) then {
+            player removeMagazines _grenadeClass;
+            for "_i" from 1 to 3 do {
+                if (player canAddItemToVest _grenadeClass) then {
+                    player addItemToVest _grenadeClass;
+                } else {
+                    player addItemToUniform _grenadeClass;
+                };
+            };
+        };
+    };
+};
+
 		case (_item == "FST_RPS6_Disposable"): {
 			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_launcher_1.ogg","41st_KitMenu\sounds\select_launcher_2.ogg"], 0.85, 1];
 			private _currentLauncher = secondaryWeapon player;
@@ -588,7 +646,6 @@ switch true do {
 					player addPrimaryWeaponItem "FST_Optic_DC15L";
 				};
 				case "FST_Z6": {
-					// If Howler, give jumppack backpack. Else, regular.
 					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 						removeBackpack player;
 						player addBackpack "FST_Backpack_Jumppack_Z6";
@@ -1369,6 +1426,76 @@ if (_typeOfKit == "Howler") then {
         private _index = _listBox_AditionalStuff lbAdd _text;
         _listBox_AditionalStuff lbSetPicture [_index, _pic];
         _listBox_AditionalStuff lbSetData [_index, format ["['%1']", _class]];
+        _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+    } forEach _backpacks;
+};
+if (_typeOfKit == "Squad Leader") then {
+    private _backpacks = [
+        ["FST_Backpack_Antenna", "10x DC15L Battery"],
+        ["FST_Backpack_Antenna", "3x RPS6 + 1x HE Rocket"],
+        ["FST_Backpack_Antenna", "7x Z6 Battery"],
+        ["FST_Backpack_Antenna", "Standard Ammo + 3x Detonators"],
+        ["FST_Backpack_Antenna", "2x LP Coil + 4x T15 Coil"],
+        ["FST_Backpack_Antenna", "3x PLX Rockets"]
+    ];
+    private _listBox_AditionalStuff = (findDisplay 2000) displayCtrl 1731;
+    private _indexSpacer = _listBox_AditionalStuff lbAdd " ";
+    _listBox_AditionalStuff lbSetData [_indexSpacer, "['any']"];
+    private _indexHeader = _listBox_AditionalStuff lbAdd " AMMO BACKPACKS";
+    _listBox_AditionalStuff lbSetPicture [_indexHeader, "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa"];
+    _listBox_AditionalStuff lbSetData [_indexHeader, "['any']"];
+    {
+        private _class = _x select 0;
+        private _desc = _x select 1;
+        private _pic = getText (configFile >> "CfgVehicles" >> _class >> "picture");
+        private _disp = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
+        private _text = switch (_desc) do {
+            case "10x DC15L Battery": { "DC15L Pack" };
+            case "3x RPS6 + 1x HE Rocket": { "RPS6 Pack" };
+            case "7x Z6 Battery": { "Z6 Pack" };
+            case "Standard Ammo + 3x Detonators": { "Standard Ammo Pack" };
+            case "2x LP Coil + 4x T15 Coil": { "Rifle AT Pack" };
+            case "3x PLX Rockets": { "PLX Pack" };
+            default { _disp };
+        };
+        private _index = _listBox_AditionalStuff lbAdd _text;
+        _listBox_AditionalStuff lbSetPicture [_index, _pic];
+        _listBox_AditionalStuff lbSetData [_index, format ["['%1','%2']", _class, _desc]];
+        _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+    } forEach _backpacks;
+};
+if (_typeOfKit == "Squad Leader ") then {
+    private _backpacks = [
+        ["FST_Backpack_Jumppack_LR", "10x DC15L Battery"],
+        ["FST_Backpack_Jumppack_LR", "3x RPS6 + 1x HE Rocket"],
+        ["FST_Backpack_Jumppack_LR", "7x Z6 Battery"],
+        ["FST_Backpack_Jumppack_LR", "Standard Ammo + 3x Detonators"],
+        ["FST_Backpack_Jumppack_LR", "2x LP Coil + 4x T15 Coil"],
+        ["FST_Backpack_Jumppack_LR", "3x PLX Rockets"]
+    ];
+    private _listBox_AditionalStuff = (findDisplay 2000) displayCtrl 1731;
+    private _indexSpacer = _listBox_AditionalStuff lbAdd " ";
+    _listBox_AditionalStuff lbSetData [_indexSpacer, "['any']"];
+    private _indexHeader = _listBox_AditionalStuff lbAdd " AMMO BACKPACKS";
+    _listBox_AditionalStuff lbSetPicture [_indexHeader, "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa"];
+    _listBox_AditionalStuff lbSetData [_indexHeader, "['any']"];
+    {
+        private _class = _x select 0;
+        private _desc = _x select 1;
+        private _pic = getText (configFile >> "CfgVehicles" >> _class >> "picture");
+        private _disp = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
+        private _text = switch (_desc) do {
+            case "10x DC15L Battery": { "DC15L Pack" };
+            case "3x RPS6 + 1x HE Rocket": { "RPS6 Pack" };
+            case "7x Z6 Battery": { "Z6 Pack" };
+            case "Standard Ammo + 3x Detonators": { "Standard Ammo Pack" };
+            case "2x LP Coil + 4x T15 Coil": { "Rifle AT Pack" };
+            case "3x PLX Rockets": { "PLX Pack" };
+            default { _disp };
+        };
+        private _index = _listBox_AditionalStuff lbAdd _text;
+        _listBox_AditionalStuff lbSetPicture [_index, _pic];
+        _listBox_AditionalStuff lbSetData [_index, format ["['%1','%2']", _class, _desc]];
         _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
     } forEach _backpacks;
 };

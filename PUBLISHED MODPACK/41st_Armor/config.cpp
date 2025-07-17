@@ -18226,7 +18226,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack";
-		maximumload=250;
+		maximumload=340;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -20047,7 +20047,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=170;
+		maximumload=340;
 		displayName="[41st] Jump Pack (LR)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
