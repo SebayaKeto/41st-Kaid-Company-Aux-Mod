@@ -391,6 +391,24 @@ switch true do {
 				player addWeapon "UNSC_Knife";
 			};
 		};
+		case (_item == "FST_Hoster_Face"): {
+			playSoundUI [selectRandom [
+				"41st_KitMenu\sounds\select_cloth_1.ogg",
+				"41st_KitMenu\sounds\select_cloth_2.ogg",
+				"41st_KitMenu\sounds\select_cloth_3.ogg"
+			], 0.85, 1];
+
+			if ((vest player == "FST_Vest_NCO") || (vest player == "FST_Vest_HeavyBag")) then {
+				if (goggles player == "FST_Hoster_Face") then {
+					removeGoggles player;
+				} else {
+					player addGoggles "FST_Hoster_Face";
+				};
+			} else {
+				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+				systemChat "You need to be an FTL to wear the holster.";
+			};
+		};
 		case (_item isKindOf ["RifleCore", configFile >> "CfgWeapons"]): {
 			playSoundUI [selectRandom [
 				"41st_KitMenu\sounds\select_weapon_1.ogg",
@@ -1397,13 +1415,29 @@ Wbk_AddKit = {
     if (isNil "FST_AllKits") then { FST_AllKits = []; };
     if (isNil "FST_RegularKits") then { FST_RegularKits = []; };
     if (isNil "FST_AirborneKits") then { FST_AirborneKits = []; };
-	if (isNil "FST_PilotKits") then { FST_PilotKits = []; };
+    if (isNil "FST_PilotKits") then { FST_PilotKits = []; };
+    _kitNameExists = { (_x select 0) isEqualTo _nameOfKit };
 
-    FST_AllKits pushBack _kitToTransfer;
+    if ((FST_AllKits findIf _kitNameExists) == -1) then {
+        FST_AllKits pushBack _kitToTransfer;
+    };
+
     switch (_category) do {
-        case "airborne": { FST_AirborneKits pushBack _kitToTransfer; };
-		case "pilot":    { FST_PilotKits    pushBack _kitToTransfer; };
-        default        { FST_RegularKits  pushBack _kitToTransfer; };
+        case "airborne": {
+            if ((FST_AirborneKits findIf _kitNameExists) == -1) then {
+                FST_AirborneKits pushBack _kitToTransfer;
+            };
+        };
+        case "pilot": {
+            if ((FST_PilotKits findIf _kitNameExists) == -1) then {
+                FST_PilotKits pushBack _kitToTransfer;
+            };
+        };
+        default {
+            if ((FST_RegularKits findIf _kitNameExists) == -1) then {
+                FST_RegularKits pushBack _kitToTransfer;
+            };
+        };
     };
 
     if (isNil {_obj getVariable "FST_ActualKits"}) exitWith {
@@ -1411,9 +1445,13 @@ Wbk_AddKit = {
         _obj spawn Wbk_equip_load;
     };
     _array = _obj getVariable "FST_ActualKits";
-    _array pushBack _kitToTransfer;
-    _obj setVariable ["FST_ActualKits", _array];
+    _kitNameExistsObj = _array findIf { (_x select 0) isEqualTo _nameOfKit } > -1;
+    if (!_kitNameExistsObj) then {
+        _array pushBack _kitToTransfer;
+        _obj setVariable ["FST_ActualKits", _array];
+    };
 };
+
 
 
 [ missionNamespace, "arsenalOpened", { 

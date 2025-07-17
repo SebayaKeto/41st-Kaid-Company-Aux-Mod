@@ -245,7 +245,7 @@ class WBK_KITArsenalAlike
 			onLBSelChanged = "";
 			onLBDblClick = "";
 		};
-		class HelmetMenuButton
+		class CustomsMenuButton
 		{
 			idc = 1600;
 			type = 1;
@@ -257,17 +257,30 @@ class WBK_KITArsenalAlike
 			y = "0.85 * safezoneH + safezoneY";
 			w = "0.15 * safezoneW";
 			h = "0.04 * safezoneH";
-			action = "createDialog 'WBK_HelmetOverlay';";
+			action = "createDialog 'FST_CustomsOverlay';";
 			colorText[] = {1, 1, 1, 1};
 			colorDisabled[] = {0.5, 0.5, 0.5, 1};
-			colorBackground[] = {0, 0, 0, 1};
+			colorBackground[]        = {0, 0, 0, 1};
+			colorBackgroundActive[]  = {0, 0, 0, 1};
+			colorBackgroundDisabled[]= {0, 0, 0, 0.5};
+			colorFocused[]           = {0, 0, 0, 1};
+			colorShadow[]            = {0, 0, 0, 0};
+			colorBorder[]            = {0, 0, 0, 1};
 			onMouseEnter = "(_this select 0) ctrlSetTextColor [0,0,0,1];";
 			onMouseExit  = "(_this select 0) ctrlSetTextColor [1,1,1,1];";
-			soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+			soundEnter[]  = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+			soundPush[]   = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
+			soundClick[]  = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
+			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
+			offsetX = 0;
+			offsetY = 0;
+			offsetPressedX = 0;
+			offsetPressedY = 0;
+			borderSize = 0;
 		};
 	};
 };
-class WBK_HelmetOverlay
+class FST_CustomsOverlay
 {
 	idd = 4100;
 	movingEnable = false;
