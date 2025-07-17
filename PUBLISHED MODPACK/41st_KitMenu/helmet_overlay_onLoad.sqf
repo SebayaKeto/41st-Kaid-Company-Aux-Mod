@@ -12,7 +12,7 @@ private _helmetClasses = [];
 		if (isClass _itemInfo) then {
 			private _type = getNumber (_itemInfo >> "type");
 
-			if (_type in [605, 701, 801, 901, 302]) then {
+			if (_type in [605, 701, 801, 901, 302, 616, 101]) then {
 				private _displayName = getText (_x >> "displayName");
 				private _picture = getText (_x >> "picture");
 

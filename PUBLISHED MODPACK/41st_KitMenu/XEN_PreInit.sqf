@@ -44,36 +44,40 @@ FST_fnc_selectHelmet = {
         _type = 302;
     };
 
-    switch (_type) do {
-        case 605: {
-            removeHeadgear player;
-            player addHeadgear _gearClass;
-        };
-        case 801: {
-            private _items = uniformItems player;
-            removeUniform player;
-            player forceAddUniform _gearClass;
-            { player addItemToUniform _x; } forEach _items;
-        };
-        case 701: {
-            private _items = vestItems player;
-            removeVest player;
-            player addVest _gearClass;
-            { player addItemToVest _x; } forEach _items;
-        };
-        case 302: {
-            private _items = backpackItems player;
-            removeBackpack player;
-            player addBackpack _gearClass;
-            { player addItemToBackpack _x; } forEach _items;
-        };
-        case 901: {
-            player linkItem _gearClass;
-        };
-        default {
-            systemChat format ["[ERROR] Unrecognized gear type: %1", _type];
-        };
-    };
+	switch (_type) do {
+		case 605: {
+			removeHeadgear player;
+			player addHeadgear _gearClass;
+		};
+		case 801: {
+			private _items = uniformItems player;
+			removeUniform player;
+			player forceAddUniform _gearClass;
+			{ player addItemToUniform _x; } forEach _items;
+		};
+		case 701: {
+			private _items = vestItems player;
+			removeVest player;
+			player addVest _gearClass;
+			{ player addItemToVest _x; } forEach _items;
+		};
+		case 302: {
+			private _items = backpackItems player;
+			removeBackpack player;
+			player addBackpack _gearClass;
+			{ player addItemToBackpack _x; } forEach _items;
+		};
+		case 901: {
+			player linkItem _gearClass;
+		};
+		case 616;
+		case 101: { // <--- Add this for NVGs
+			player linkItem _gearClass;
+		};
+		default {
+			systemChat format ["[ERROR] Unrecognized gear type: %1", _type];
+		};
+	};
 };
 
 
