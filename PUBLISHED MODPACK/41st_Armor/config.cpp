@@ -4134,6 +4134,7 @@ class CfgWeapons
 		displayName="[41st] ARF Helmet (Sigs)";
 		picture="ls\core\addons\characters_clone_legacy\_ui\arf_phase1_helmet_ui_ca.paa";
 		model="ls\core\addons\characters_clone_legacy\helmets\arf\ls_gar_arf_helmet.p3d";
+		selectionFireAnim = "";
 		hiddenSelections[]=
 		{
 			"camo1",
