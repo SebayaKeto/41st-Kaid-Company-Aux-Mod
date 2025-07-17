@@ -261,13 +261,11 @@ class WBK_KITArsenalAlike
 			colorText[] = {1, 1, 1, 1};
 			colorDisabled[] = {0.5, 0.5, 0.5, 1};
 			colorBackground[]        = {0, 0, 0, 1};
-			colorBackgroundActive[]  = {0, 0, 0, 1};
+			colorBackgroundActive[]  = {0.15, 0.15, 0.2, 1};
 			colorBackgroundDisabled[]= {0, 0, 0, 0.5};
-			colorFocused[]           = {0, 0, 0, 1};
+			colorFocused[]           = {0.15, 0.15, 0.2, 1};
 			colorShadow[]            = {0, 0, 0, 0};
 			colorBorder[]            = {0, 0, 0, 1};
-			onMouseEnter = "(_this select 0) ctrlSetTextColor [0,0,0,1];";
-			onMouseExit  = "(_this select 0) ctrlSetTextColor [1,1,1,1];";
 			soundEnter[]  = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
 			soundPush[]   = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
 			soundClick[]  = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};

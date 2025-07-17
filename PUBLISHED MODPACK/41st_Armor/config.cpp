@@ -547,7 +547,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply120";
+			containerClass="Supply200";
 			hiddenSelections[]=
 			{
 				"camo1"
@@ -612,7 +612,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply120";
+			containerClass="Supply200";
 			hiddenSelections[]=
 			{
 				"camo1"
@@ -677,7 +677,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply120";
+			containerClass="Supply200";
 			hiddenSelections[]=
 			{
 				"camo1"
@@ -742,7 +742,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply120";
+			containerClass="Supply200";
 			hiddenSelections[]=
 			{
 				"camo1"
@@ -807,7 +807,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply120";
+			containerClass="Supply200";
 			hiddenSelections[]=
 			{
 				"camo1"
