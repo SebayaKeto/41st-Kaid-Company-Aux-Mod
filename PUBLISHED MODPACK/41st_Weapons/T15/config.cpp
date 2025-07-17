@@ -318,10 +318,7 @@ class CfgWeapons
 			{
                 compatibleItems[]= 
 				{
-                    "3AS_optic_holo_DC15S",
-                    "Optic_MRCO",
-                    "3AS_optic_reflex_DC15C",
-					"FST_Optic_MRCO_T15"
+					"FST_Attachment_Optic_Holo_DC15"
                 };
             };
             class MuzzleSlot: MuzzleSlot 
