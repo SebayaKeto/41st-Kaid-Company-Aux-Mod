@@ -118,28 +118,7 @@ class CfgVehicles
 		radarType=2;
 		reportRemoteTargets=1;
 		receiveRemoteTargets=1;
-		memoryPointsGetInCargo="pos driver";
-		memoryPointsGetInCargoDir="pos driver dir";
-		transportSoldier=0;
-		cargoReversedGetOut[]={1};
-		cargoGetInAction[]=
-		{
-			"GetInLow"
-		};
-		cargoGetOutAction[]=
-		{
-			"GetOutLow"
-		};
-		cargoAction[]=
-		{
-			"passenger_flatground_leanleft",
-			"passenger_flatground_generic01",
-			"passenger_flatground_generic02",
-			"passenger_flatground_generic03",
-			"passenger_flatground_generic04",
-			"passenger_flatground_generic05"
-		};
-	class TransportItems
+		class TransportItems
 			{
 			class _xx_IDA_Cauterizer
 				{
