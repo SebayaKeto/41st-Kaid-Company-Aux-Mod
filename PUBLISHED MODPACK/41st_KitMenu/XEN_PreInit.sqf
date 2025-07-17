@@ -1040,6 +1040,10 @@ switch (true) do {
             _uniformToSet = "FST_Uniform_EOD";
         };
     };
+	default {
+        _uniformToSet = "FST_Uniform_Recruit";
+        _headgearToSet = "FST_P2_Helmet_Recruit";
+    };
 };
 
 if (_uniformToSet != "" && (uniform player == "FST_Trooper_Uniform")) then {
