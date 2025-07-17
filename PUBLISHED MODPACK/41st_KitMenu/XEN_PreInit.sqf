@@ -44,36 +44,40 @@ FST_fnc_selectHelmet = {
         _type = 302;
     };
 
-    switch (_type) do {
-        case 605: {
-            removeHeadgear player;
-            player addHeadgear _gearClass;
-        };
-        case 801: {
-            private _items = uniformItems player;
-            removeUniform player;
-            player forceAddUniform _gearClass;
-            { player addItemToUniform _x; } forEach _items;
-        };
-        case 701: {
-            private _items = vestItems player;
-            removeVest player;
-            player addVest _gearClass;
-            { player addItemToVest _x; } forEach _items;
-        };
-        case 302: {
-            private _items = backpackItems player;
-            removeBackpack player;
-            player addBackpack _gearClass;
-            { player addItemToBackpack _x; } forEach _items;
-        };
-        case 901: {
-            player linkItem _gearClass;
-        };
-        default {
-            systemChat format ["[ERROR] Unrecognized gear type: %1", _type];
-        };
-    };
+	switch (_type) do {
+		case 605: {
+			removeHeadgear player;
+			player addHeadgear _gearClass;
+		};
+		case 801: {
+			private _items = uniformItems player;
+			removeUniform player;
+			player forceAddUniform _gearClass;
+			{ player addItemToUniform _x; } forEach _items;
+		};
+		case 701: {
+			private _items = vestItems player;
+			removeVest player;
+			player addVest _gearClass;
+			{ player addItemToVest _x; } forEach _items;
+		};
+		case 302: {
+			private _items = backpackItems player;
+			removeBackpack player;
+			player addBackpack _gearClass;
+			{ player addItemToBackpack _x; } forEach _items;
+		};
+		case 901: {
+			player linkItem _gearClass;
+		};
+		case 616;
+		case 101: {
+			player linkItem _gearClass;
+		};
+		default {
+			systemChat format ["[ERROR] Unrecognized gear type: %1", _type];
+		};
+	};
 };
 
 
@@ -444,6 +448,53 @@ switch true do {
 			player removeWeapon primaryWeapon player;
 			player addWeapon _item;
 			player selectWeapon _item;
+			private _specialKits = [
+				"Close Quarters Combatant",
+				"Engineer",
+				"Squad Leader",
+				"RTO"
+			];
+			private _curKit = player getVariable ["WBK_Kit_Name", ""];
+			private _specialGrenades = [
+				"IDA_grenade_Sonic_mag",
+				"FST_grenade_emp_mag"
+			];
+			private _detMag = "FST_grenade_Detonator_mag";
+
+			if !(_item isEqualTo "FST_DP23") then {
+				if (_curKit in _specialKits) then {
+					{ player removeMagazines _x; } forEach _specialGrenades;
+					private _curDetCount = { _x == _detMag } count magazines player;
+					private _detToAdd = 5 - _curDetCount;
+					if (_detToAdd > 0) then {
+						for "_i" from 1 to _detToAdd do {
+							if (player canAddItemToVest _detMag) then {
+								player addItemToVest _detMag;
+							} else {
+								if (player canAddItemToUniform _detMag) then {
+									player addItemToUniform _detMag;
+								} else {
+									player addItemToBackpack _detMag;
+								};
+							};
+						};
+					};
+					if (_curDetCount > 5) then {
+						player removeMagazines _detMag;
+						for "_i" from 1 to 5 do {
+							if (player canAddItemToVest _detMag) then {
+								player addItemToVest _detMag;
+							} else {
+								if (player canAddItemToUniform _detMag) then {
+									player addItemToUniform _detMag;
+								} else {
+									player addItemToBackpack _detMag;
+								};
+							};
+						};
+					};
+				};
+			};
 			{player addPrimaryWeaponItem _x;} forEach _weaponStuff;
 			private _newMags = [_item] call CBA_fnc_compatibleMagazines;
 			private _magType = if (count _newMags > 0) then {_newMags select 0} else {""};
@@ -558,8 +609,13 @@ switch true do {
 				case "FST_DP23": {
 					private _slugMag = "FST_thermal_slug_mag_Blue";
 					private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
-
-					if ((player getVariable ["WBK_Kit_Name", ""]) == "Close Quarters Combatant") then {
+					private _specialKits = [
+						"Close Quarters Combatant",
+						"Engineer",
+						"Squad Leader",
+						"RTO"
+					];
+					if ((player getVariable ["WBK_Kit_Name", ""]) in _specialKits) then {
 						{
 							private _mag = _x select 0;
 							private _count = _x select 1;
@@ -578,6 +634,27 @@ switch true do {
 							[_scatterCell, 17],
 							[_slugMag, 4]
 						];
+						private _specialGrenades = [
+							"FST_grenade_emp_mag",
+							"IDA_grenade_Sonic_mag",
+							"FST_grenade_Detonator_mag"
+						];
+						{
+							private _grenade = _x;
+							private _current = { _y == _grenade } count magazines player;
+							player removeMagazines _grenade;
+							for "_i" from 1 to 5 do {
+								if (player canAddItemToVest _grenade) then {
+									player addItemToVest _grenade;
+								} else {
+									if (player canAddItemToUniform _grenade) then {
+										player addItemToUniform _grenade;
+									} else {
+										player addItemToBackpack _grenade;
+									};
+								};
+							};
+						} forEach _specialGrenades;
 					} else {
 						{
 							private _mag = _x select 0;
@@ -867,28 +944,44 @@ switch (true) do {
         _headgearToSet = "FST_P2_Helmet_Recruit";
     };
     case (_name find "CT-" == 0): {
-        _uniformToSet = "FST_Trooper_Uniform";
+        if (_typeOfKit == "Medic") then {
+            _uniformToSet = "FST_Trooper_Medic";
+        } else {
+            _uniformToSet = "FST_Trooper_Uniform";
+        };
+        if (_typeOfKit == "Engineer") then {
+            _uniformToSet = "FST_Uniform_EOD";
+        };
     };
     case (_name find "SCT-" == 0): {
-        _uniformToSet = "FST_Uniform_SCT";
+        if (_typeOfKit == "Medic") then {
+            _uniformToSet = "FST_Uniform_SCT_Medic";
+        } else {
+            _uniformToSet = "FST_Uniform_SCT";
+        };
+        if (_typeOfKit == "Engineer") then {
+            _uniformToSet = "FST_Uniform_EOD";
+        };
     };
-    case (_name find "VCT-" == 0): {
-        _uniformToSet = "FST_Uniform_VCT";
-    };
-    case (_name find "CLC-" == 0): {
-        _uniformToSet = "FST_Uniform_CLC";
-    };
-    case (_name find "CPL-" == 0): {
-        _uniformToSet = "FST_Uniform_CPL";
-    };
-    case (_name find "CS-" == 0): {
-        _uniformToSet = "FST_Uniform_CS";
-    };
-    case (_name find "CSS-" == 0): {
-        _uniformToSet = "FST_Uniform_CSS";
-    };
-    case (_name find "CL-" == 0): {
-        _uniformToSet = "FST_Uniform_CL";
+    case (_name find "VCT-" == 0
+       || _name find "CLC-" == 0
+       || _name find "CPL-" == 0
+       || _name find "CS-" == 0
+       || _name find "CSS-" == 0
+       || _name find "CL-" == 0): {
+        if (_typeOfKit == "Medic") then {
+            _uniformToSet = "FST_Uniform_VCT_Medic";
+        } else {
+            if (_name find "VCT-" == 0) then { _uniformToSet = "FST_Uniform_VCT"; };
+            if (_name find "CLC-" == 0) then { _uniformToSet = "FST_Uniform_CLC"; };
+            if (_name find "CPL-" == 0) then { _uniformToSet = "FST_Uniform_CPL"; };
+            if (_name find "CS-" == 0)  then { _uniformToSet = "FST_Uniform_CS"; };
+            if (_name find "CSS-" == 0) then { _uniformToSet = "FST_Uniform_CSS"; };
+            if (_name find "CL-" == 0)  then { _uniformToSet = "FST_Uniform_CL"; };
+        };
+        if (_typeOfKit == "Engineer") then {
+            _uniformToSet = "FST_Uniform_EOD";
+        };
     };
 };
 
