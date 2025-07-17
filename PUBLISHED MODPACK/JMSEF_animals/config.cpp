@@ -9,9 +9,13 @@ class CfgPatches
 			"JMSEF_animals_var_bers_o",
 			"JMSEF_animals_var_alpha_o",
 			"FST_41st_Walker",
+			"FST_41st_Walker_Tukata",
 			"FST_41st_Crawler",
+			"FST_41st_Crawler_Tukata",
 			"FST_41st_Runner",
-			"FST_41st_Shambler"
+			"FST_41st_Runner_Tukata",
+			"FST_41st_Shambler",
+			"FST_41st_Shambler_Tukata",
 		};
 		weapons[]={};
 		requiredVersion=0.1;
@@ -172,6 +176,37 @@ class CfgVehicles
             "FST_P2_Helmet_Sere",
         };
     };
+	class FST_41st_Walker_Tukata: Zombie_O_Walker_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Tukata Walker Zombie";
+        scope = 2;
+        scopeCurator = 2;
+        faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+        uniformClass = "FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
+        };
+    };
 	class FST_41st_Runner: Zombie_O_RunnerAngry_CSAT 
     {
         author=Ruby;
@@ -197,6 +232,37 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Sere",
+        };
+    };
+	class FST_41st_Runner_Tukata: Zombie_O_RunnerAngry_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Tukata Runner Zombie";
+        scope = 2;
+        scopeCurator = 2;
+        faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+		uniformClass = "FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
         };
     };
 	class FST_41st_Crawler: Zombie_O_Crawler_CSAT 
@@ -226,6 +292,37 @@ class CfgVehicles
             "FST_P2_Helmet_Sere",
         };
     };
+	class FST_41st_Crawler_Tukata: Zombie_O_Crawler_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Tukata Crawler Zombie";
+        scope = 2;
+        scopeCurator = 2;
+		faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+		uniformClass = "FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
+        };
+    };
 	class FST_41st_Shambler: Zombie_O_Shambler_CSAT 
     {
         author=Ruby;
@@ -251,6 +348,37 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Sere",
+        };
+    };
+	class FST_41st_Shambler_Tukata: Zombie_O_Shambler_CSAT 
+    {
+        author=Ruby;
+        displayName = "[41st] Tukata Shambler Zombie";
+        scope = 2;
+        scopeCurator = 2;
+        faction="FST_Zombies_Faction";
+        editorSubcategory="FST_Zombies_Subfaction";
+        identityTypes[] = {""};
+		uniformClass = "FST_JMSLLTE_JinTrooper_armor_F_CombatUniform";
+		model="\JMSLLTE_empire_m\jin_trooper.p3d";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\jin_suit_co.paa",
+			"JMSLLTE_empire\data\body\jin_armor_co.paa"
+		};
+        WBK_ZombiesOriginalFactionClass = "";
+        linkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Invisible_Helmet",
         };
     };
 	class JMSEF_animals_var_bers_o: JMSEF_animals_varren_o
