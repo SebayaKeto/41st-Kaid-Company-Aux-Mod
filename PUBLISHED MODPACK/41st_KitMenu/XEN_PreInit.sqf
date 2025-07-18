@@ -117,8 +117,57 @@ params ["_control", "_index"];
 private ["_lbData", "_itemClass", "_itemCount"];
 _lbData = call compile (lbData [ctrlIDC _control, _index]);
 _item = _lbData select 0;
+private _isCQB = (count _lbData > 1) && {(_lbData select 1) == "CQB_MAGIC"};
 switch true do {
         case (_item == "any"): {};
+		case (_isCQB): {
+			playSoundUI [selectRandom [
+				"41st_KitMenu\sounds\select_weapon_1.ogg",
+				"41st_KitMenu\sounds\select_weapon_2.ogg"
+			], 0.85, 1];
+
+			_weaponStuff = primaryWeaponItems player;
+			_mags = [primaryWeapon player] call CBA_fnc_compatibleMagazines;
+			{player removeMagazines _x;} forEach _mags;
+			player removeWeapon primaryWeapon player;
+			player addWeapon "FST_DC15S";
+			player addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
+			player selectWeapon "FST_DC15S";
+			{player addPrimaryWeaponItem _x;} forEach _weaponStuff;
+
+			private _magClass = (["FST_DC15S"] call CBA_fnc_compatibleMagazines) select 0;
+			for "_i" from 1 to 15 do {
+				if (player canAddItemToVest _magClass) then {
+					player addItemToVest _magClass;
+				} else {
+					if (player canAddItemToBackpack _magClass) then {
+						player addItemToBackpack _magClass;
+					} else {
+						player addItemToUniform _magClass;
+					};
+				};
+			};
+
+			{
+				private _grenade = _x;
+				player removeMagazines _grenade;
+				for "_i" from 1 to 5 do {
+					if (player canAddItemToVest _grenade) then {
+						player addItemToVest _grenade;
+					} else {
+						if (player canAddItemToUniform _grenade) then {
+							player addItemToUniform _grenade;
+						} else {
+							player addItemToBackpack _grenade;
+						};
+					};
+				};
+			} forEach [
+				"IDA_grenade_Sonic_mag",
+				"FST_grenade_emp_mag",
+				"FST_grenade_Detonator_mag"
+			];
+		};
 		case ( isClass (configFile >> "CfgUnitInsignia" >> _item)): {
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_generic_1.ogg","41st_KitMenu\sounds\select_generic_2.ogg","41st_KitMenu\sounds\select_generic_3.ogg","41st_KitMenu\sounds\select_generic_4.ogg","41st_KitMenu\sounds\select_generic_5.ogg","41st_KitMenu\sounds\select_generic_6.ogg"], 0.85, 1];
 		    player setVariable ["BIS_fnc_setUnitInsignia_class", nil];
@@ -506,53 +555,24 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			player removeWeapon primaryWeapon player;
 			player addWeapon _item;
 			player selectWeapon _item;
-			private _specialKits = [
-				"Close Quarters Combatant",
-				"Engineer",
-				"Squad Leader",
-				"RTO"
-			];
-			private _curKit = player getVariable ["WBK_Kit_Name", ""];
-			private _specialGrenades = [
-				"IDA_grenade_Sonic_mag",
-				"FST_grenade_emp_mag"
-			];
+			private _empMag = "FST_grenade_emp_mag";
+			private _sonicMag = "IDA_grenade_Sonic_mag";
 			private _detMag = "FST_grenade_Detonator_mag";
-
-			if !(_item isEqualTo "FST_DP23") then {
-				if (_curKit in _specialKits) then {
-					{ player removeMagazines _x; } forEach _specialGrenades;
-					private _curDetCount = { _x == _detMag } count magazines player;
-					private _detToAdd = 5 - _curDetCount;
-					if (_detToAdd > 0) then {
-						for "_i" from 1 to _detToAdd do {
-							if (player canAddItemToVest _detMag) then {
-								player addItemToVest _detMag;
-							} else {
-								if (player canAddItemToUniform _detMag) then {
-									player addItemToUniform _detMag;
-								} else {
-									player addItemToBackpack _detMag;
-								};
-							};
-						};
-					};
-					if (_curDetCount > 5) then {
-						player removeMagazines _detMag;
-						for "_i" from 1 to 5 do {
-							if (player canAddItemToVest _detMag) then {
-								player addItemToVest _detMag;
-							} else {
-								if (player canAddItemToUniform _detMag) then {
-									player addItemToUniform _detMag;
-								} else {
-									player addItemToBackpack _detMag;
-								};
-							};
-						};
+			player removeMagazines _empMag;
+			player removeMagazines _sonicMag;
+			player removeMagazines _detMag;
+			for "_i" from 1 to 3 do {
+				if (player canAddItemToVest _detMag) then {
+					player addItemToVest _detMag;
+				} else {
+					if (player canAddItemToUniform _detMag) then {
+						player addItemToUniform _detMag;
+					} else {
+						player addItemToBackpack _detMag;
 					};
 				};
 			};
+
 			{player addPrimaryWeaponItem _x;} forEach _weaponStuff;
 			private _newMags = [_item] call CBA_fnc_compatibleMagazines;
 			private _magType = if (count _newMags > 0) then {_newMags select 0} else {""};
@@ -581,8 +601,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-
-					private _magCount = if ((player getVariable ["WBK_Kit_Name", ""]) == "Close Quarters Combatant") then {15} else {17};
+					private _magCount = 17;
 					for "_i" from 1 to _magCount do {
 						if (player canAddItemToVest _magType) then {
 							player addItemToVest _magType;
@@ -663,76 +682,47 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						};
 					};
 				};
-				case "FST_DP23": {
-					private _slugMag = "FST_thermal_slug_mag_Blue";
-					private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
-					private _specialKits = [
-						"Close Quarters Combatant",
-						"Engineer",
-						"Squad Leader",
-						"RTO"
-					];
-					if ((player getVariable ["WBK_Kit_Name", ""]) in _specialKits) then {
-						{
-							private _mag = _x select 0;
-							private _count = _x select 1;
-							for "_i" from 1 to _count do {
-								if (player canAddItemToVest _mag) then {
-									player addItemToVest _mag;
-								} else {
-									if (player canAddItemToBackpack _mag) then {
-										player addItemToBackpack _mag;
-									} else {
-										player addItemToUniform _mag;
-									};
-								};
+			case "FST_DP23": {
+				private _slugMag = "FST_thermal_slug_mag_Blue";
+				private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
+				{
+					private _mag = _x select 0;
+					private _count = _x select 1;
+					for "_i" from 1 to _count do {
+						if (player canAddItemToVest _mag) then {
+							player addItemToVest _mag;
+						} else {
+							if (player canAddItemToBackpack _mag) then {
+								player addItemToBackpack _mag;
+							} else {
+								player addItemToUniform _mag;
 							};
-						} forEach [
-							[_scatterCell, 17],
-							[_slugMag, 4]
-						];
-						private _specialGrenades = [
-							"FST_grenade_emp_mag",
-							"IDA_grenade_Sonic_mag",
-							"FST_grenade_Detonator_mag"
-						];
-						{
-							private _grenade = _x;
-							private _current = { _y == _grenade } count magazines player;
-							player removeMagazines _grenade;
-							for "_i" from 1 to 5 do {
-								if (player canAddItemToVest _grenade) then {
-									player addItemToVest _grenade;
-								} else {
-									if (player canAddItemToUniform _grenade) then {
-										player addItemToUniform _grenade;
-									} else {
-										player addItemToBackpack _grenade;
-									};
-								};
-							};
-						} forEach _specialGrenades;
-					} else {
-						{
-							private _mag = _x select 0;
-							private _count = _x select 1;
-							for "_i" from 1 to _count do {
-								if (player canAddItemToVest _mag) then {
-									player addItemToVest _mag;
-								} else {
-									if (player canAddItemToBackpack _mag) then {
-										player addItemToBackpack _mag;
-									} else {
-										player addItemToUniform _mag;
-									};
-								};
-							};
-						} forEach [
-							[_scatterCell, 9],
-							[_slugMag, 8]
-						];
+						};
 					};
-				};
+				} forEach [
+					[_scatterCell, 17],
+					[_slugMag, 4]
+				];
+				{
+					private _grenade = _x;
+					player removeMagazines _grenade;
+					for "_i" from 1 to 5 do {
+						if (player canAddItemToVest _grenade) then {
+							player addItemToVest _grenade;
+						} else {
+							if (player canAddItemToUniform _grenade) then {
+								player addItemToUniform _grenade;
+							} else {
+								player addItemToBackpack _grenade;
+							};
+						};
+					};
+				} forEach [
+					"FST_grenade_emp_mag",
+					"IDA_grenade_Sonic_mag",
+					"FST_grenade_Detonator_mag"
+				];
+			};
 				case "FST_DC15A_ugl": {
 					for "_i" from 1 to 13 do {
 						if (player canAddItemToVest _magType) then {
@@ -1146,8 +1136,16 @@ _launchers = [];
 			};
 		};
 	};
-}
-forEach _weapons;
+} forEach _weapons;
+
+// Inject [41st] DC-15S carbine (CQB) as a primary weapon for certain kits
+private _CQBKits = [
+    "Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader "
+];
+private _typeClean = toLower (trim _typeOfKit);
+if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
+    _primaryWeapons pushBack "[41st]_dc15s_cqb";
+};
 	if (count _primaryWeapons > 0) then {
 		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Rifle_ca.paa";
 		_index = _listBox_AditionalStuff lbAdd " PRIMARY WEAPONS";
@@ -1155,11 +1153,20 @@ forEach _weapons;
 		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
 		_listBox_AditionalStuff lbSetData [_index, "['any']"];
 		{
-			_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
-			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			if (_x == "[41st]_dc15s_cqb") then {
+				_pic = getText (configFile >> "CfgWeapons" >> "FST_DC15S" >> "picture");
+				_index = _listBox_AditionalStuff lbAdd "[41st] DC-15S carbine (CQB)";
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				// Use a special data string so you can detect it on selection
+				_listBox_AditionalStuff lbSetData [_index, "['FST_DC15S','CQB_MAGIC']"];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			} else {
+				_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			};
 		} forEach _primaryWeapons;
 	};
 
@@ -1500,6 +1507,7 @@ if (_typeOfKit == "Squad Leader ") then {
     } forEach _backpacks;
 };
 //backpacks end
+
 };
 
 WBK_UpdatePlayerKitOnMenu = {
