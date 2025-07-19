@@ -954,7 +954,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_RPS6_Disposable","FST_NVG", "FST_backpack_EWEB","FST_Republic_Mortar_Bag","FST_Westar_M5"],
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_RPS6_Disposable","FST_NVG", "FST_backpack_EWEB","FST_Republic_Mortar_Bag","FST_Westar_M5","FST_DP23"],
     "true",
     {},
     "regular"
@@ -1034,7 +1034,7 @@
             ["ls_grenade_chemlightGreen_magazine",1,1],
             ["IDA_grenade_Smoke_Purple_mag",1,1]
         ]],
-        ["FST_Clone_LR_attachment",[
+        ["FST_Backpack_Antenna",[
             ["ToolKit",1],
             ["FST_Bacta_Tank",1],
             ["IDA_Cauterizer",1],
@@ -1134,7 +1134,7 @@
     ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
     ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
 ], 
-["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_DC17","FST_RPS6_Disposable","FST_Z6","FST_PLX1","FST_PLX1_Guided","FST_RPS6HP","FST_backpack_EWEB","FST_Republic_Mortar_Bag"], 
+["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_DC17","FST_RPS6_Disposable","FST_Z6","FST_PLX1","FST_PLX1_Guided","FST_RPS6HP","FST_backpack_EWEB","FST_Republic_Mortar_Bag", "FST_DP23"], 
 "true",
 {},
 "airborne"

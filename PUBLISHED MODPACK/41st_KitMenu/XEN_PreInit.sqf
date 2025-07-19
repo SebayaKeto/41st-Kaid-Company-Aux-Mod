@@ -1196,6 +1196,34 @@ private _backpackToSet = "";
 private _name = name player;
 
 switch (true) do {
+	case (_name find "CXC-" == 0): {
+        _uniformToSet  = "FST_Uniform_SCT";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
+    case (_name find "CX-" == 0): {
+        _uniformToSet  = "FST_Uniform_VCT";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
+    case (_name find "CXV-" == 0): {
+        _uniformToSet  = "FST_Uniform_CLC";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
+    case (_name find "CXP-" == 0): {
+        _uniformToSet  = "FST_Uniform_CPL";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
+    case (_name find "CXS-" == 0): {
+        _uniformToSet  = "FST_Uniform_CS";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
+    case (_name find "CXL-" == 0): {
+        _uniformToSet  = "FST_Uniform_CL";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
+    case (_name find "CXR" == 0): {
+        _uniformToSet  = "FST_Uniform_CL";
+        _headgearToSet = "FST_Pilot_P1_Helmet";
+    };
 	case (_name find "ARC-" == 0): {
         _uniformToSet   = "FST_Uniform_CLC";
         _headgearToSet  = "FST_P2_ARC_Helmet";
@@ -1372,9 +1400,7 @@ _launchers = [];
 	};
 } forEach _weapons;
 
-private _CQBKits = [
-    "Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader "
-];
+private _CQBKits = ["Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader ","Howler","Emplaced Weapon"];
 private _typeClean = toLower (trim _typeOfKit);
 if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
     _primaryWeapons pushBack "[41st]_dc15s_cqb";
