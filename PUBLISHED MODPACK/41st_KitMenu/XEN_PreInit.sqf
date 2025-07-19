@@ -533,6 +533,13 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			};
 		};
 		case (_item isKindOf ["RifleCore", configFile >> "CfgWeapons"]): {
+		if (_item in ["FST_Westar_M5_UGL", "FST_Westar_M5"]) then {
+			if !("ARC-" in name player) then {
+				systemChat "Only ARC troopers can use this weapon!";
+				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+				breakOut "switch";
+			};
+		};
 			playSoundUI [selectRandom [
 				"41st_KitMenu\sounds\select_weapon_1.ogg",
 				"41st_KitMenu\sounds\select_weapon_2.ogg"
@@ -588,7 +595,6 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			{player addPrimaryWeaponItem _x;} forEach _weaponStuff;
 			private _newMags = [_item] call CBA_fnc_compatibleMagazines;
 			private _magType = if (count _newMags > 0) then {_newMags select 0} else {""};
-
 			switch (_item) do {
 				case "FST_DC15S": {
 					private _curBP = backpack player;
@@ -627,6 +633,40 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						};
 					};
 					player addPrimaryWeaponItem "FST_Attachment_Optic_Holo_DC15";
+				};
+
+				case "FST_Westar_M5": {
+					private _curBP = backpack player;
+					if (_curBP in ["FST_Backpack_Jumppack_STD_Ammo", "FST_Clone_Backpack_Invisible_STD"]) then {
+						removeBackpack player;
+						player addBackpack _curBP;
+						for "_i" from 1 to 12 do { player addItemToBackpack "FST_blaster_cell_High_Blue"; };
+						for "_i" from 1 to 18 do { player addItemToBackpack "FST_blaster_cell_Blue"; };
+						for "_i" from 1 to 4 do {
+							player addItemToBackpack "FST_blaster_cell_LE_Blue";
+							player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
+						};
+						private _grenadeClass = "FST_grenade_Detonator_mag";
+						private _grenadesCurrent = { _x == _grenadeClass } count magazines player;
+						if (_grenadesCurrent < 6) then {
+							for "_i" from 1 to (6 - _grenadesCurrent) do {
+								if (player canAddItemToVest _grenadeClass) then {
+									player addItemToVest _grenadeClass;
+								} else {
+									player addItemToUniform _grenadeClass;
+								};
+							};
+						};
+					};
+					player addPrimaryWeaponItem "FST_Scope_Westar_M5";
+					player addPrimaryWeaponItem "FST_blaster_cell_Westar_Blue";
+					for "_i" from 1 to 12 do {
+						if (player canAddItemToVest "FST_blaster_cell_Westar_Blue") then {
+							player addItemToVest "FST_blaster_cell_Westar_Blue";
+						} else {
+							player addItemToUniform "FST_blaster_cell_Westar_Blue";
+						};
+					};
 				};
 
 				case "FST_DC15A";
@@ -739,6 +779,88 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					"FST_grenade_Detonator_mag"
 				];
 			};
+
+				case "FST_Westar_M5_UGL": {
+					player addPrimaryWeaponItem "FST_blaster_cell_Westar_Blue";
+					player addPrimaryWeaponItem "FST_Scope_Westar_M5";
+					for "_i" from 1 to 12 do {
+						if (player canAddItemToVest "FST_blaster_cell_Westar_Blue") then {
+							player addItemToVest "FST_blaster_cell_Westar_Blue";
+						} else {
+							player addItemToUniform "FST_blaster_cell_Westar_Blue";
+						};
+					};
+
+					for "_i" from 1 to 6 do { player removeItemFromBackpack "FST_Smoke_LauncherGrenade"; };
+					for "_i" from 1 to 12 do { player removeItemFromBackpack "FST_HE_LauncherGrenade"; };
+					for "_i" from 1 to 2 do { player removeItemFromBackpack "ACE_HuntIR_M203"; };
+					for "_i" from 1 to 4 do { player removeItemFromBackpack "ACE_40mm_Flare_white"; };
+
+					for "_i" from 1 to 6 do {
+						if (player canAddItemToBackpack "FST_Smoke_LauncherGrenade") then {
+							player addItemToBackpack "FST_Smoke_LauncherGrenade";
+						} else {
+							if (player canAddItemToVest "FST_Smoke_LauncherGrenade") then {
+								player addItemToVest "FST_Smoke_LauncherGrenade";
+							} else {
+								player addItemToUniform "FST_Smoke_LauncherGrenade";
+							};
+						};
+					};
+					player addPrimaryWeaponItem "FST_HE_LauncherGrenade";
+					for "_i" from 1 to 12 do {
+						if (player canAddItemToBackpack "FST_HE_LauncherGrenade") then {
+							player addItemToBackpack "FST_HE_LauncherGrenade";
+						} else {
+							if (player canAddItemToVest "FST_HE_LauncherGrenade") then {
+								player addItemToVest "FST_HE_LauncherGrenade";
+							} else {
+								player addItemToUniform "FST_HE_LauncherGrenade";
+							};
+						};
+					};
+
+					for "_i" from 1 to 2 do {
+						if (player canAddItemToBackpack "ACE_HuntIR_M203") then {
+							player addItemToBackpack "ACE_HuntIR_M203";
+						} else {
+							if (player canAddItemToVest "ACE_HuntIR_M203") then {
+								player addItemToVest "ACE_HuntIR_M203";
+							} else {
+								player addItemToUniform "ACE_HuntIR_M203";
+							};
+						};
+					};
+
+					for "_i" from 1 to 4 do {
+						if (player canAddItemToBackpack "ACE_40mm_Flare_white") then {
+							player addItemToBackpack "ACE_40mm_Flare_white";
+						} else {
+							if (player canAddItemToVest "ACE_40mm_Flare_white") then {
+								player addItemToVest "ACE_40mm_Flare_white";
+							} else {
+								player addItemToUniform "ACE_40mm_Flare_white";
+							};
+						};
+					};
+					{
+						private _smokeMag = _x;
+						if (player canAddItemToBackpack _smokeMag) then {
+							player addItemToBackpack _smokeMag;
+						} else {
+							if (player canAddItemToVest _smokeMag) then {
+								player addItemToVest _smokeMag;
+							} else {
+								player addItemToUniform _smokeMag;
+							};
+						};
+					} forEach [
+						"FST_SmokeBlue_LauncherGrenade",
+						"FST_SmokeGreen_LauncherGrenade",
+						"FST_SmokeRed_LauncherGrenade"
+					];
+				};
+
 				case "FST_DC15A_ugl": {
 					player addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
 					for "_i" from 1 to 12 do {
@@ -1004,9 +1126,17 @@ playSoundUI ["41st_KitMenu\sounds\select_default.ogg", 0.3, 1];
 player setUnitLoadout _kit;
 private _uniformToSet = "";
 private _headgearToSet = "";
+private _vestToSet = "";
+private _backpackToSet = "";
 private _name = name player;
 
 switch (true) do {
+	case (_name find "ARC-" == 0): {
+        _uniformToSet   = "FST_Uniform_CLC";
+        _headgearToSet  = "FST_P2_ARC_Helmet";
+        _vestToSet      = "FST_CloneVestARC";
+        _backpackToSet  = "FST_Clone_Backpack_ARC";
+    };
     case (_name find "CR-" == 0): {
         _uniformToSet = "FST_Uniform_Recruit";
         _headgearToSet = "FST_P2_Helmet_Recruit";
@@ -1066,6 +1196,20 @@ if (_uniformToSet != "" && (uniform player == "FST_Trooper_Uniform")) then {
         removeHeadgear player;
         player addHeadgear _headgearToSet;
     };
+};
+
+if (_vestToSet != "" && {vest player != _vestToSet}) then {
+    private _vestItems = vestItems player;
+    removeVest player;
+    player addVest _vestToSet;
+    { player addItemToVest _x; } forEach _vestItems;
+};
+
+if (_backpackToSet != "" && {backpack player != _backpackToSet}) then {
+    private _backpackItems = backpackItems player;
+    removeBackpack player;
+    player addBackpack _backpackToSet;
+    { player addItemToBackpack _x; } forEach _backpackItems;
 };
 player setVariable ["WBK_Kit_Name",_typeOfKit,true];
 [player,_kit,_typeOfKit,_aditionalGear] spawn _codeExecute;
