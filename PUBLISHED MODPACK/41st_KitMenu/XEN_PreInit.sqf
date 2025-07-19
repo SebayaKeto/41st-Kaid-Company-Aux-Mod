@@ -120,6 +120,18 @@ _item = _lbData select 0;
 private _isCQB = (count _lbData > 1) && {(_lbData select 1) == "CQB_MAGIC"};
 switch true do {
         case (_item == "any"): {};
+		case (_item == "FST_NVG"): {
+			playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
+			if (hmd player == "FST_NVG") then {
+				player unlinkItem "FST_NVG";
+			} else {
+				if !("FST_NVG" in (assignedItems player)) then {
+					player linkItem "FST_NVG";
+				} else {
+					player linkItem "FST_NVG";
+				};
+			};
+		};
 		case (_isCQB): {
 			playSoundUI [selectRandom [
 				"41st_KitMenu\sounds\select_weapon_1.ogg",
@@ -601,7 +613,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-					private _magCount = 17;
+					player addPrimaryWeaponItem "FST_blaster_cell_Blue";
+					private _magCount = 16;
 					for "_i" from 1 to _magCount do {
 						if (player canAddItemToVest _magType) then {
 							player addItemToVest _magType;
@@ -640,8 +653,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-
-					for "_i" from 1 to 13 do {
+					player addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+					for "_i" from 1 to 12 do {
 						if (player canAddItemToVest _magType) then {
 							player addItemToVest _magType;
 						} else {
@@ -655,7 +668,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					player addBackpack "FST_Belt_Bag_15L";
 					player addItemToBackpack "ACE_Tripod";
 					private _magType = "FST_blaster_battery_DC15L_Blue";
-					for "_i" from 1 to 15 do {
+					player addPrimaryWeaponItem "FST_blaster_battery_DC15L_Blue";
+					for "_i" from 1 to 14 do {
 						if (player canAddItemToBackpack _magType) then {
 							player addItemToBackpack _magType;
 						} else {
@@ -672,9 +686,10 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						removeBackpack player;
 						player addBackpack "FST_Belt_Bag_Z6";
 					};
+					player addPrimaryWeaponItem "FST_blaster_battery_Blue";
 					player addItemToBackpack "ACE_Tripod";
 					private _magType = "FST_blaster_battery_Blue";
-					for "_i" from 1 to 7 do {
+					for "_i" from 1 to 6 do {
 						if (player canAddItemToBackpack _magType) then {
 							player addItemToBackpack _magType;
 						} else {
@@ -685,6 +700,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			case "FST_DP23": {
 				private _slugMag = "FST_thermal_slug_mag_Blue";
 				private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
+				player addPrimaryWeaponItem "FST_blaster_scatter_cell_DP23_Blue";
 				{
 					private _mag = _x select 0;
 					private _count = _x select 1;
@@ -700,7 +716,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						};
 					};
 				} forEach [
-					[_scatterCell, 17],
+					[_scatterCell, 16],
 					[_slugMag, 4]
 				];
 				{
@@ -724,7 +740,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				];
 			};
 				case "FST_DC15A_ugl": {
-					for "_i" from 1 to 13 do {
+					player addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+					for "_i" from 1 to 12 do {
 						if (player canAddItemToVest _magType) then {
 							player addItemToVest _magType;
 						} else {
@@ -748,8 +765,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-
-					for "_i" from 1 to 13 do {
+					player addPrimaryWeaponItem "FST_HE_LauncherGrenade";
+					for "_i" from 1 to 12 do {
 						if (player canAddItemToBackpack "FST_HE_LauncherGrenade") then {
 							player addItemToBackpack "FST_HE_LauncherGrenade";
 						} else {
@@ -803,7 +820,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				};
 
 				case "FST_DC15S_UGL": {
-					for "_i" from 1 to 15 do {
+					player addPrimaryWeaponItem "FST_blaster_cell_Blue";
+					for "_i" from 1 to 14 do {
 						if (player canAddItemToVest _magType) then {
 							player addItemToVest _magType;
 						} else {
@@ -827,7 +845,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-
+					player addPrimaryWeaponItem "FST_HE_LauncherGrenade";
 					for "_i" from 1 to 12 do {
 						if (player canAddItemToBackpack "FST_HE_LauncherGrenade") then {
 							player addItemToBackpack "FST_HE_LauncherGrenade";
@@ -885,7 +903,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					player addPrimaryWeaponItem "3as_bipod_vk38x_f";
 					removeBackpack player;
 					player addBackpack "FST_Clone_Backpack_RifleAT";
-					for "_i" from 1 to 8 do {
+					player addPrimaryWeaponItem "FST_thermal_coil_LP_Blue";
+					player addPrimaryWeaponItem "FST_thermal_coil_T15_Blue";
+					for "_i" from 1 to 7 do {
 						if (player canAddItemToVest "FST_thermal_coil_LP_Blue") then {
 							player addItemToVest "FST_thermal_coil_LP_Blue";
 						} else {
@@ -896,7 +916,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-					for "_i" from 1 to 7 do {
+					for "_i" from 1 to 4 do {
 						if (player canAddItemToVest "FST_thermal_coil_T15_Blue") then {
 							player addItemToVest "FST_thermal_coil_T15_Blue";
 						} else {
@@ -909,7 +929,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					};
 				};
 				case "FST_DC15LE": {
-					for "_i" from 1 to 13 do {
+					player addPrimaryWeaponItem "FST_blaster_cell_LE_Blue";
+					for "_i" from 1 to 12 do {
 						if (player canAddItemToVest "FST_blaster_cell_LE_Blue") then {
 							player addItemToVest "FST_blaster_cell_LE_Blue";
 						} else {
@@ -1142,7 +1163,6 @@ _launchers = [];
 	};
 } forEach _weapons;
 
-// Inject [41st] DC-15S carbine (CQB) as a primary weapon for certain kits
 private _CQBKits = [
     "Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader "
 ];
