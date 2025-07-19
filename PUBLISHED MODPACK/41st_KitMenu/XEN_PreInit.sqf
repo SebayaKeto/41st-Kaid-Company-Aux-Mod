@@ -383,10 +383,21 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
         };
     };
 };
-
 		case (_item == "FST_RPS6_Disposable"): {
-			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_launcher_1.ogg","41st_KitMenu\sounds\select_launcher_2.ogg"], 0.85, 1];
+			playSoundUI [selectRandom [
+				"41st_KitMenu\sounds\select_launcher_1.ogg",
+				"41st_KitMenu\sounds\select_launcher_2.ogg"
+			], 0.85, 1];
 			private _currentLauncher = secondaryWeapon player;
+			if (
+				(backpack player == "FST_Backpack_Jumppack_RPS") ||
+				(backpack player == "FST_Clone_Backpack_RPS") ||
+				(backpack player == "FST_Backpack_Jumppack_PLX") ||
+				(backpack player == "FST_Clone_Backpack_PLX")
+			) then {
+				removeBackpack player;
+			};
+
 			if (_currentLauncher == "FST_RPS6_Base") then {
 				player removeWeapon _currentLauncher;
 			} else {
@@ -394,58 +405,100 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			};
 		};
 		case (_item == "FST_RPS6HP"): {
-			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_launcher_1.ogg", "41st_KitMenu\sounds\select_launcher_2.ogg"], 0.85, 1];
-			private _existingLauncher = secondaryWeapon player;
-			private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
-			player removeWeapon _existingLauncher;
-			{ player removeMagazines _x; } forEach _launcherMags;
-			player addWeapon "FST_RPS6HP";
-			player addSecondaryWeaponItem "FST_RPS6_rocket";
-			removeBackpack player;
-			if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
-				player addBackpack "FST_Backpack_Jumppack_RPS";
+			if (secondaryWeapon player == "FST_RPS6HP") then {
+				player removeWeapon "FST_RPS6HP";
+				removeBackpack player;
+				playSoundUI ["41st_KitMenu\sounds\select_launcher_1.ogg", 0.85, 1];
 			} else {
-				player addBackpack "FST_Clone_Backpack_RPS";
+				if (primaryWeapon player == "FST_T15") then {
+					playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+					systemChat "You can't carry both the T15 and your selected launcher. Change primary weapon first.";
+				} else {
+					playSoundUI [selectRandom [
+						"41st_KitMenu\sounds\select_launcher_1.ogg",
+						"41st_KitMenu\sounds\select_launcher_2.ogg"
+					], 0.85, 1];
+					private _existingLauncher = secondaryWeapon player;
+					private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
+					player removeWeapon _existingLauncher;
+					{ player removeMagazines _x; } forEach _launcherMags;
+					player addWeapon "FST_RPS6HP";
+					player addSecondaryWeaponItem "FST_RPS6_rocket";
+					removeBackpack player;
+					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
+						player addBackpack "FST_Backpack_Jumppack_RPS";
+					} else {
+						player addBackpack "FST_Clone_Backpack_RPS";
+					};
+					for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
+					player addItemToBackpack "FST_RPS6_rocket_HE";
+				};
 			};
-			for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
-			player addItemToBackpack "FST_RPS6_rocket_HE";
 		};
 		case (_item == "FST_PLX1"): {
-			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_launcher_1.ogg", "41st_KitMenu\sounds\select_launcher_2.ogg"], 0.85, 1];
-			private _existingLauncher = secondaryWeapon player;
-			private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
-			player removeWeapon _existingLauncher;
-			{ player removeMagazines _x; } forEach _launcherMags;
-			player addWeapon "FST_PLX1";
-			player addSecondaryWeaponItem "FST_PLX1_Rocket";
-			removeBackpack player;
-			if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
-				player addBackpack "FST_Backpack_Jumppack_PLX";
+			if (secondaryWeapon player == "FST_PLX1") then {
+				player removeWeapon "FST_PLX1";
+				removeBackpack player;
+				playSoundUI ["41st_KitMenu\sounds\select_launcher_1.ogg", 0.85, 1];
 			} else {
-				player addBackpack "FST_Clone_Backpack_PLX";
-			};
-			for "_i" from 1 to 2 do {
-				player addItemToBackpack "FST_PLX1_Rocket";
-				player addItemToBackpack "FST_PLX1_AA_mag";
+				if (primaryWeapon player == "FST_T15") then {
+					playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+					systemChat "You can't carry both the T15 and your selected launcher. Change primary weapon first.";
+				} else {
+					playSoundUI [selectRandom [
+						"41st_KitMenu\sounds\select_launcher_1.ogg",
+						"41st_KitMenu\sounds\select_launcher_2.ogg"
+					], 0.85, 1];
+					private _existingLauncher = secondaryWeapon player;
+					private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
+					player removeWeapon _existingLauncher;
+					{ player removeMagazines _x; } forEach _launcherMags;
+					player addWeapon "FST_PLX1";
+					player addSecondaryWeaponItem "FST_PLX1_Rocket";
+					removeBackpack player;
+					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
+						player addBackpack "FST_Backpack_Jumppack_PLX";
+					} else {
+						player addBackpack "FST_Clone_Backpack_PLX";
+					};
+					for "_i" from 1 to 2 do {
+						player addItemToBackpack "FST_PLX1_Rocket";
+						player addItemToBackpack "FST_PLX1_AA_mag";
+					};
+				};
 			};
 		};
 		case (_item == "FST_PLX1_Guided"): {
-			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_launcher_1.ogg", "41st_KitMenu\sounds\select_launcher_2.ogg"], 0.85, 1];
-			private _existingLauncher = secondaryWeapon player;
-			private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
-			player removeWeapon _existingLauncher;
-			{ player removeMagazines _x; } forEach _launcherMags;
-			player addWeapon "FST_PLX1_Guided";
-			player addSecondaryWeaponItem "FST_PLX1_Rocket";
-			removeBackpack player;
-			if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
-				player addBackpack "FST_Backpack_Jumppack_PLX";
+			if (secondaryWeapon player == "FST_PLX1_Guided") then {
+				player removeWeapon "FST_PLX1_Guided";
+				removeBackpack player;
+				playSoundUI ["41st_KitMenu\sounds\select_launcher_1.ogg", 0.85, 1];
 			} else {
-				player addBackpack "FST_Clone_Backpack_PLX";
-			};
-			for "_i" from 1 to 2 do {
-				player addItemToBackpack "FST_PLX1_Rocket";
-				player addItemToBackpack "FST_PLX1_AA_mag";
+				if (primaryWeapon player == "FST_T15") then {
+					playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+					systemChat "You can't carry both the T15 and your selected launcher. Change primary weapon first.";
+				} else {
+					playSoundUI [selectRandom [
+						"41st_KitMenu\sounds\select_launcher_1.ogg",
+						"41st_KitMenu\sounds\select_launcher_2.ogg"
+					], 0.85, 1];
+					private _existingLauncher = secondaryWeapon player;
+					private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
+					player removeWeapon _existingLauncher;
+					{ player removeMagazines _x; } forEach _launcherMags;
+					player addWeapon "FST_PLX1_Guided";
+					player addSecondaryWeaponItem "FST_PLX1_Rocket";
+					removeBackpack player;
+					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
+						player addBackpack "FST_Backpack_Jumppack_PLX";
+					} else {
+						player addBackpack "FST_Clone_Backpack_PLX";
+					};
+					for "_i" from 1 to 2 do {
+						player addItemToBackpack "FST_PLX1_Rocket";
+						player addItemToBackpack "FST_PLX1_AA_mag";
+					};
+				};
 			};
 		};
 		case (_item isKindOf ["LauncherCore", configFile >> "CfgWeapons"]): {
@@ -539,6 +592,18 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
 				breakOut "switch";
 			};
+		};
+		if (
+			_item == "FST_T15" &&
+			(
+				secondaryWeapon player == "FST_PLX1" ||
+				secondaryWeapon player == "FST_PLX1_Guided" ||
+				secondaryWeapon player == "FST_RPS6HP"
+			)
+		) then {
+			playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+			systemChat "You can't carry both the T15 and your selected launcher. Deselect it or grab a disposable.";
+			breakOut "switch";
 		};
 			playSoundUI [selectRandom [
 				"41st_KitMenu\sounds\select_weapon_1.ogg",
@@ -1038,7 +1103,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 							};
 						};
 					};
-					for "_i" from 1 to 4 do {
+					for "_i" from 1 to 5 do {
 						if (player canAddItemToVest "FST_thermal_coil_T15_Blue") then {
 							player addItemToVest "FST_thermal_coil_T15_Blue";
 						} else {
@@ -1325,7 +1390,6 @@ if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
 				_pic = getText (configFile >> "CfgWeapons" >> "FST_DC15S" >> "picture");
 				_index = _listBox_AditionalStuff lbAdd "[41st] DC-15S carbine (CQB)";
 				_listBox_AditionalStuff lbSetPicture [_index, _pic];
-				// Use a special data string so you can detect it on selection
 				_listBox_AditionalStuff lbSetData [_index, "['FST_DC15S','CQB_MAGIC']"];
 				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
 			} else {
