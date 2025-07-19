@@ -10011,6 +10011,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};
+	class FST_P2_Helmet_Wind: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Wind]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Wind.paa",
+		};
+	};
 	class FST_P2_Helmet_Hugger: FST_P2_Helmet_Base
 	{
 		author="Gold";
