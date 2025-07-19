@@ -10846,16 +10846,6 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dragon.paa",
 		};
 	};
-	class FST_P2_Helmet_Hugger: FST_P2_Helmet_Base
-	{
-		author="Daara";
-		scope=2; 
-		displayName="[41st] P2 Helmet [Hugger]";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Snoob.paa",
-		};
-	};
 	class FST_P2_Helmet_Corsair: FST_P2_Helmet_Base
 	{
 		author="Vengence";
