@@ -120,7 +120,7 @@ class CfgVehicles
 		receiveRemoteTargets=1;
 		memoryPointsGetInCargo="pos driver";
 		memoryPointsGetInCargoDir="pos driver dir";
-		transportSoldier=6;
+		transportSoldier=8;
 		cargoReversedGetOut[]={1};
 		cargoGetInAction[]=
 		{
