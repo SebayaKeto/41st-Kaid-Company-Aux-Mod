@@ -221,6 +221,12 @@ switch true do {
 			if (_item == "FST_Vest_HeavyBag" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
+			if (_item == "FST_Vest_NCO_Kama" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
+			if (_item == "FST_Vest_NCO_Kama_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
 			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem) then {
 				player removeItem "itemAndroid";
 			};
