@@ -113,6 +113,7 @@ FST_fnc_filterHelmets = {
 
 
 Wbk_AssignAditionalGear = {
+private _typeOfKit = player getVariable ["WBK_Kit_Name", ""];
 params ["_control", "_index"];
 private ["_lbData", "_itemClass", "_itemCount"];
 _lbData = call compile (lbData [ctrlIDC _control, _index]);
@@ -120,6 +121,20 @@ _item = _lbData select 0;
 private _isCQB = (count _lbData > 1) && {(_lbData select 1) == "CQB_MAGIC"};
 switch true do {
         case (_item == "any"): {};
+
+		case (_item == "FST_Antenna"): {
+			playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
+			if (hmd player == "FST_Antenna") then {
+				player unlinkItem "FST_Antenna";
+			} else {
+				if !("FST_Antenna" in (assignedItems player)) then {
+					player linkItem "FST_Antenna";
+				} else {
+					player linkItem "FST_Antenna";
+				};
+			};
+		};
+
 		case (_item == "FST_NVG"): {
 			playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
 			if (hmd player == "FST_NVG") then {
@@ -227,9 +242,10 @@ switch true do {
 			if (_item == "FST_Vest_NCO_Kama_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
-			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem) then {
+			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]))
+			 	then {
 				player removeItem "itemAndroid";
-			};
+				};
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 605): {
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
@@ -1199,6 +1215,7 @@ private _uniformToSet = "";
 private _headgearToSet = "";
 private _vestToSet = "";
 private _backpackToSet = "";
+private _nvgToSet="";
 private _name = name player;
 
 switch (true) do {
@@ -1230,11 +1247,19 @@ switch (true) do {
         _uniformToSet  = "FST_Uniform_CL";
         _headgearToSet = "FST_Pilot_P1_Helmet";
     };
+	case (_name find ("BC-4973 " + '"' + "Merrik" + '"') == 0): {
+		_uniformToSet   = "FST_Uniform_Merrik_BC";
+		_headgearToSet  = "FST_BC_Helmet_Merrik";
+		_vestToSet      = "FST_CloneVestMerrik";
+		_backpackToSet  = "FST_Clone_LR_attachment";
+		_nvgToSet       = "FST_Marshal_Commander_Visor";
+	};
 	case (_name find "ARC-" == 0): {
         _uniformToSet   = "FST_Uniform_CLC";
         _headgearToSet  = "FST_P2_ARC_Helmet";
         _vestToSet      = "FST_CloneVestARC";
         _backpackToSet  = "FST_Clone_Backpack_ARC";
+		_nvgToSet       = "FST_Antenna";
     };
     case (_name find "CR-" == 0): {
         _uniformToSet = "FST_Uniform_Recruit";
@@ -1310,6 +1335,19 @@ if (_backpackToSet != "" && {backpack player != _backpackToSet}) then {
     player addBackpack _backpackToSet;
     { player addItemToBackpack _x; } forEach _backpackItems;
 };
+
+if (!isNil "_nvgToSet" && {_nvgToSet != ""}) then {
+    if (hmd player == _nvgToSet) then {
+        player unlinkItem _nvgToSet;
+    } else {
+        if !(_nvgToSet in (assignedItems player)) then {
+            player linkItem _nvgToSet;
+        } else {
+            player linkItem _nvgToSet;
+        };
+    };
+};
+
 player setVariable ["WBK_Kit_Name",_typeOfKit,true];
 [player,_kit,_typeOfKit,_aditionalGear] spawn _codeExecute;
 player setVariable ["BIS_fnc_setUnitInsignia_class", nil];
@@ -1320,6 +1358,19 @@ player setUnitTrait ["explosiveSpecialist", false];
 switch (_typeOfKit) do {
 	case "Medic": {
 		player setUnitTrait ["Medic", true];
+	};
+	case "Platoon Medic": {
+		player setUnitTrait ["Medic", true];
+	};
+	case "Platoon Sergeant": {
+		player setUnitTrait ["Medic", true];
+		player setUnitTrait ["engineer", true];
+		player setUnitTrait ["explosiveSpecialist", true];
+	};
+	case "Platoon Commander": {
+		player setUnitTrait ["Medic", true];
+		player setUnitTrait ["engineer", true];
+		player setUnitTrait ["explosiveSpecialist", true];
 	};
 	case "Engineer": {
 		player setUnitTrait ["engineer", true];
@@ -1336,9 +1387,11 @@ switch (_typeOfKit) do {
 		player setUnitTrait ["explosiveSpecialist", true];
 	};
 	case "Crewman": {
-	player setUnitTrait ["Medic", true];
 	player setUnitTrait ["engineer", true];
-	player setUnitTrait ["explosiveSpecialist", true];
+	};
+	case "Crewman Medic": {
+	player setUnitTrait ["engineer", true];
+	player setUnitTrait ["Medic", true];
 	};
 	default {};
 };
@@ -1406,7 +1459,7 @@ _launchers = [];
 	};
 } forEach _weapons;
 
-private _CQBKits = ["Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader ","Howler","Emplaced Weapon"];
+private _CQBKits = ["Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader ","Howler","Emplaced Weapon","Platoon RTO", "Platoon Medic","Platoon Sergeant","Platoon Commander","Crewman Medic"];
 private _typeClean = toLower (trim _typeOfKit);
 if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
     _primaryWeapons pushBack "[41st]_dc15s_cqb";
