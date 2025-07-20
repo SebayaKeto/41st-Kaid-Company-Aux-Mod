@@ -2,10 +2,19 @@ class CfgPatches {
     class FST_BARC {
         author = "Ghostly, Adjusted by Ruby.";
         requiredVersion = 1;
-        requiredAddons[]={};
+        requiredAddons[]=
+		{
+			"A3_Soft_F",
+			"A3_Data_F",
+			"A3_UI_F",
+			"A3_Anims_F",
+			"A3_Anims_F_Config_Sdr"
+		};
         units[] =
         {
-         "FST_BARC"
+			"FST_BARC",
+			"FST_BARC_Dirty",
+			"FST_BarcSideCar_Dirty"
         };
         weapons[] = {};
     };
@@ -197,4 +206,91 @@ class CfgVehicles
             };
         };
     };
+	class FST_BARC_Dirty: FST_BARC
+    {
+        scope = 2;
+        scopecurator=2;
+        scopearsenal=2;
+        side=1;
+        displayName="[41st] BARC (Dirty)";
+        author="Gold";
+        model="ls\core\addons\vehicles_barc\ls_vehicle_barc.p3d";
+        hiddenSelections[]=
+        {
+            "body",
+            "weapons",
+            "dashboard"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "\41st_Vehicles\Barc\Data\FST_BARC_body_Dirty.paa",
+            "\41st_Vehicles\Barc\Data\FST_BARC_weapons_Dirty.paa",
+            "\41st_Vehicles\Barc\Data\FST_BARC_Dash_Dirty.paa"
+        };
+    };
+	class 3AS_BarcSideCar;
+	class FST_BarcSideCar_Dirty: 3AS_BarcSideCar
+	{
+		displayname="[41st] BARC Speeder Sidecar (Dirty)";
+		scope = 2;
+        scopecurator=2;
+        scopearsenal=2;
+        side=1;
+		faction="FST_Faction";
+        editorSubcategory="FST_Ground_Vehicle";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\BARC\Data\FST_BARC_Sidecar_Body.paa",
+			"41st_Vehicles\BARC\Data\FST_BARC_Sidecar_Gunner.paa"
+		};
+		tas_canBlift=1;
+        tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+		canFloat=1;
+        acceleration=10;
+        brakeDistance=1;
+        maxSpeed=300;    ////// CHANGE It goes up to 200kmh max not 300 
+        waterLeakiness=2.5;
+        waterPPInVehicle=0;
+        waterAngularDampingCoef=0.5;
+        waterResistanceCoef=0.0049999999;
+        waterSpeedFactor=1;
+        waterSpeedCoef=3;
+        armor=300;
+        accelAidForceCoef=30;
+        accelAidForceSpd=20;
+        waterLinearDampingCoefY=10;
+        fuelCapacity=50;
+        idleRpm=1000;
+        redRpm=7000;
+        enginePower=600; 
+        minOmega=50; ////// CHANGE less to have it rev a bit more instead of jumping too fast
+        maxOmega=800; ////// CHANGE less to have it go up in more gears instead of immediatly flying to max speed
+        peakTorque=2500; ////// CHANGE less to have it go up in more gears instead of immediatly flying to max speed
+        normalSpeedForwardCoef=0.5;
+        slowSpeedForwardCoef=0.25;
+		ace_cargo_hasCargo=1;
+		ace_cargo_space=1000;
+        class TransportMagazines{};
+        class TransportItems{};
+        class TransportWeapons{};
+        class TransportBackpacks{};
+        class UserActions
+        {
+            class Flip
+            {
+                displayNameDefault="Press SPACEBAR to Flip Warthog";
+                displayName="Press SPACEBAR to Flip Warthog";
+                position="";
+                radius=6;
+                onlyForPlayer=1;
+                condition="(alive this) AND !(canmove this)";
+                statement="this setposATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 4]; this setVectorUp surfaceNormal getposATL this;";
+            };
+        };
+	};
 };   
