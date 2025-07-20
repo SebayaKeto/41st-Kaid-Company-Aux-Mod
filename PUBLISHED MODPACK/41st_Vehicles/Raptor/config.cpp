@@ -18,7 +18,8 @@ class CfgPatches
 		units[]=
 		{
 			"FST_vehicle_agtRaptor_base",
-			"FST_vehicle_agtRaptor"
+			"FST_vehicle_agtRaptor",
+			"FST_vehicle_agtRaptor_Scorch"
 		};
 		weapons[]={};
 		version=2;
@@ -1407,6 +1408,111 @@ class CfgVehicles
 				{
 					"\ls\core\addons\vehicles_agt\data\textures\tradefederation\camo1_co.paa",
 					"\ls\core\addons\vehicles_agt\data\textures\tradefederation\camo2_co.paa"
+				};
+			};
+		};
+};
+	class FST_vehicle_agtRaptor_Scorch: FST_vehicle_agtRaptor
+	{
+		scope=2;
+		author="Legion Studios";
+		displayName="[41st] AGT 'Raptor' (Scorch)";
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				isCopilot=0;
+				dontCreateAI=0;
+				body="mainTurret";
+				gun="mainGun";
+				memoryPointGunnerOptics="PiP1_pos";
+				memoryPointGun="machinegun";
+				gunnerForceOptics=1;
+				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_F.p3d";
+				turretInfoType="RscOptics_UGV_gunner";
+				weapons[]=
+				{
+					"FST_BTX42"
+				};
+				magazines[]=
+				{
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank",
+					"FST_FuelTank"
+				};
+				maxHorizontalRotSpeed=1.8;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\soft\UGV_01\Servo_UGV_gunner.wss",
+					0.31622776,
+					1,
+					30
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\soft\UGV_01\Servo_UGV_gunner_vertical.wss",
+					0.31622776,
+					1,
+					30
+				};
+				minElev=-10;
+				maxElev=60;
+				forceHideGunner=1;
+				outGunnerMayFire=1;
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				discreteDistanceInitIndex=2;
+				stabilizedInAxes=3;
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor=0.5;
+						material=-1;
+						armorComponent="hit_main_turret";
+						name="hit_main_turret_point";
+						visual="OtocVez";
+						passThrough=0;
+						minimalHit=0.029999999;
+						explosionShielding=0.40000001;
+						radius=0.25;
+						isTurret=1;
+					};
+					class HitGun
+					{
+						armor=0.5;
+						material=-1;
+						armorComponent="hit_main_gun";
+						name="hit_main_gun_point";
+						visual="OtocHlaven";
+						passThrough=0;
+						minimalHit=0.029999999;
+						explosionShielding=0.40000001;
+						radius=0.2;
+						isGun=1;
+					};
+				};
+				class ViewOptics: RCWSOptics
+				{
+					visionMode[]=
+					{
+						"Normal",
+						"TI"
+					};
+					initFov=0.46669999;
+					maxFov=0.46669999;
+					minFov=0.035;
+					directionStabilized=1;
 				};
 			};
 		};
