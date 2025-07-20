@@ -278,6 +278,8 @@ class CfgPatches
 			"FST_P2_Buddhah_Dirty",
 			"FST_P2_Raz",
 			"FST_P2_Recon",
+			"FST_P2_Cosmic_Dirty",
+			"FST_P2_Phoenix",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -12054,7 +12056,17 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Gunner.paa",
 		};
-	};	
+	};
+	class FST_P2_Helmet_Cosmic_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Cosmic/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cosmic_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_CosmicSmith: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -15303,6 +15315,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Phoenix: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Phoenix]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Phoenix";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Zen: JLTS_CloneArmor 
 	{
 		author="Daara";
@@ -15452,6 +15478,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Cosmic";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Cosmic_Dirty: JLTS_CloneArmor 
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cosmic/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cosmic_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -16068,6 +16108,94 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazzo.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Azrael: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Azrael)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Azrael.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Sledge: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Sledge)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Sledge.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Cosmic: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Cosmic)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Cosmic.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Cosmic_Dirty: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Cosmic/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Cosmic_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -26945,7 +27073,62 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; 
+	};
+	class FST_P2_Phoenix: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1710 'Phoenix'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Phoenix";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Phoenix.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Phoenix.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Phoenix",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Phoenix",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Cosmic: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -26993,6 +27176,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Cosmic",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Cosmic_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-2112 'Cosmic/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cosmic_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cosmic_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cosmic_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Cosmic_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Cosmic_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
