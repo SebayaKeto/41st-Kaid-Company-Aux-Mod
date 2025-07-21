@@ -661,6 +661,12 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			player removeWeapon primaryWeapon player;
 			player addWeapon _item;
 			player selectWeapon _item;
+			private _uglWeapons = ["FST_Westar_M5_UGL", "FST_DC15A_ugl", "FST_DC15S_UGL"];
+			if !((primaryWeapon player) in _uglWeapons) then {
+				if ([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
+					player removeItem "ACE_HuntIR_monitor";
+				};
+			};
 			private _empMag = "FST_grenade_emp_mag";
 			private _sonicMag = "IDA_grenade_Sonic_mag";
 			private _detMag = "FST_grenade_Detonator_mag";
@@ -946,6 +952,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						"FST_SmokeGreen_LauncherGrenade",
 						"FST_SmokeRed_LauncherGrenade"
 					];
+					if !([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
+						player addItem "ACE_HuntIR_monitor";
+					};
 				};
 
 				case "FST_DC15A_ugl": {
@@ -1026,6 +1035,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						"FST_SmokeGreen_LauncherGrenade",
 						"FST_SmokeRed_LauncherGrenade"
 					];
+					if !([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
+						player addItem "ACE_HuntIR_monitor";
+					};
 				};
 
 				case "FST_DC15S_UGL": {
@@ -1106,6 +1118,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						"FST_SmokeGreen_LauncherGrenade",
 						"FST_SmokeRed_LauncherGrenade"
 					];
+					if !([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
+						player addItem "ACE_HuntIR_monitor";
+					};
 				};
 				case "FST_T15": {
 					player addPrimaryWeaponItem "FST_Optic_MRCO_T15";
