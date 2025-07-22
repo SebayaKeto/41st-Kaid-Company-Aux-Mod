@@ -10085,6 +10085,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Saber.paa",
 		};
 	};
+	class FST_P2_Helmet_Blades: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Blades]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Blades.paa",
+		};
+	};
 	class FST_P2_Helmet_Hugger: FST_P2_Helmet_Base
 	{
 		author="Gold";
