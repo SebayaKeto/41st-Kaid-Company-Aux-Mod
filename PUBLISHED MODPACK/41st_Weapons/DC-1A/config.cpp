@@ -138,11 +138,11 @@ class CfgWeapons
 			reloadTime=0.066666663;
 			dispersion=0.00073000003;
 			recoilProne="DBA_Mod0_Recoil";
-			minRange=0;
+			minRange=2;
 			minRangeProbab=0.30000001;
-			midRange=5;
+			midRange=100;
 			midRangeProbab=0.69999999;
-			maxRange=10;
+			maxRange=10000;
 			maxRangeProbab=0.039999999;
 			showToPlayer=1;
 		};

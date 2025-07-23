@@ -16,8 +16,8 @@ class CfgPatches
 };
 class CfgWeapons
 {
-	class 3AS_RepublicDatapadRifle;
-	class FST_RepublicDatapad_Tooka: 3AS_RepublicDatapadRifle
+	class 3AS_RepublicDatapadPistol;
+	class FST_RepublicDatapad_Tooka: 3AS_RepublicDatapadPistol
 	{
 		scope=2;
 		displayName="[FST] Republic Datapad (Tooka)";
