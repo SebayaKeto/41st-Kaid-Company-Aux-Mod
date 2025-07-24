@@ -121,7 +121,27 @@ _item = _lbData select 0;
 private _isCQB = (count _lbData > 1) && {(_lbData select 1) == "CQB_MAGIC"};
 switch true do {
         case (_item == "any"): {};
-
+		case (_item == "REMOVE_PRIMARY"): {
+			private _pw = primaryWeapon player;
+			if (_pw != "") then {
+				private _pwMags = [_pw] call CBA_fnc_compatibleMagazines;
+				{ player removeMagazines _x; } forEach _pwMags;
+				player removeWeapon _pw;
+			};
+			{
+				player removeMagazines _x;
+			} forEach [
+				"IDA_grenade_Sonic_mag",
+				"FST_grenade_emp_mag"
+			];
+			private _det = "FST_grenade_Detonator_mag";
+			private _detCount = { _x == _det } count magazines player;
+			if (_detCount > 3) then {
+				private _extra = _detCount - 3 min 2;
+				for "_i" from 1 to _extra do { player removeMagazine _det; };
+			};
+			playSoundUI ["41st_KitMenu\sounds\select_default.ogg", 0.85, 1];
+		};
 		case (_item == "FST_Antenna"): {
 			playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
 			if (hmd player == "FST_Antenna") then {
@@ -1500,6 +1520,13 @@ if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
 				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
 			};
 		} forEach _primaryWeapons;
+			if (_typeOfKit == "Pilot") then {
+				_pic = "\a3\ui_f\data\igui\cfg\actions\delete_ca.paa";
+				_index = _listBox_AditionalStuff lbAdd "REMOVE PRIMARY WEAPON";
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+				_listBox_AditionalStuff lbSetData [_index, "['REMOVE_PRIMARY','PILOT_REMOVE']"];
+			};
 	};
 
 	if (count _secondaryWeapons > 0) then {
