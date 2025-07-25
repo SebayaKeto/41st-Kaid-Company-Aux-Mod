@@ -56,6 +56,7 @@ class CfgWeapons
 		{
 			"Single"
 		};
+		maxZeroing = 2500;
 		fireLightDiffuse[]={0,0,1};
 		class Single: Mode_SemiAuto
 		{
@@ -122,12 +123,12 @@ class CfgWeapons
 				opticsZoomMin=0.041999999;
 				opticsZoomMax=0.125;
 				opticsZoomInit=0.125;
-				discreteDistance[]={200,300,400,500,600,700,800,900,1000};
+				discreteDistance[]={200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500};
 				discreteDistanceInitIndex=0;
 				discreteInitIndex=0;
 				discretefov[]={0.125,0.041999999};
 				distanceZoomMin=100;
-				distanceZoomMax=1000;
+				distanceZoomMax=2500;
 				memoryPointCamera="opticView";
 				visionMode[]={};
 				opticsFlare=1;
