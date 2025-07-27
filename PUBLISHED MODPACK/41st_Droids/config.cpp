@@ -106,6 +106,22 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_DroidB1_Muddy: JLTS_DroidB1
+	{
+		author="Gold";
+		scope=2;
+		displayname="[41st] B1 Combat Uniform (Muddy)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_E5_Muddy";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
 	class FST_DroidB1_Commander: FST_DroidB1
 	{
 		author="Daara";
@@ -912,6 +928,16 @@ class CfgVehicles
 			"FST_Droid_blaster_cell_red",
 			"FST_Droid_blaster_cell_red",
 			"FST_Droid_blaster_cell_red",
+		};
+	};
+	class FST_Droid_B1_E5_Muddy: JLTS_Droid_B1_E5
+	{
+		author="Gold";
+		displayName="[41st] B1 Battledroid (Muddy)";
+		uniformClass="FST_DroidB1_Muddy";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Muddy.paa"
 		};
 	};
 	class FST_Droid_B1_Sniper: FST_Droid_B1_E5

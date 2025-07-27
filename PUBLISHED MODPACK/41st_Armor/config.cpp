@@ -282,6 +282,7 @@ class CfgPatches
 			"FST_P2_Phoenix",
 			"FST_P2_Blueeye",
 			"FST_P2_Arcus",
+			"FST_P2_Fire",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			//////////OTHERS//////////
@@ -5993,6 +5994,55 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_Crewman_Helmet_Benni: JLTS_CloneHelmetBARC
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] Crewman Helmet (Benni)";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
+		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Benni.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Crewman_Helmet_Colors: JLTS_CloneHelmetBARC
 	{
 		scope=2;
@@ -7404,7 +7454,111 @@ class CfgWeapons
 				};
 			};
 		};
-	}; 
+	};
+	class FST_Airborne_Helmet_Fire: JLTS_CloneHelmetAB
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Fire)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Fire.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Airborne_Helmet_Lang: JLTS_CloneHelmetAB
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Lang)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Lang.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Airborne_Helmet_Warlord: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -10169,6 +10323,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
+		};
+	};
+	class FST_P2_Helmet_Zephyr: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Zephyr]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Zephyr.paa",
 		};
 	};
 	class FST_P2_Helmet_Wind: FST_P2_Helmet_Base
@@ -14094,6 +14258,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Assassin";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Fire: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Fire]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Fire";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -18852,7 +19030,8 @@ class CfgVehicles
 		};
 		tf_range=50000;
 	};
-	class FST_Backpack_Antenna_ARF_Desert: JLTS_Clone_RTO_pack
+//OLD 	
+/*	class FST_Backpack_Antenna_ARF_Desert: JLTS_Clone_RTO_pack
 	{
 		author="Daara";
 		scope=2;
@@ -18874,7 +19053,7 @@ class CfgVehicles
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
 		tf_range=50000;
-	};
+	};*/
 	/* class FST_Backpack_Antenna_ARF_Woodland: JLTS_Clone_RTO_pack
 	{
 		author="Daara";
@@ -29445,6 +29624,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Airborne_Helmet_Assassin",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Fire: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1567 'Fire'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Fire";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Fire.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Fire.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Fire",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Fire",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
