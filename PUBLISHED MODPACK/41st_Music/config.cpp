@@ -99,6 +99,7 @@ class CfgMusic
 		"FST_Destiny_Perservate",
 		"FST_Subnautica_AThousandStrings",
 		"FST_Portal_YouCantEscapeYouKnow",
+		"FST_DeusEx_EnemyWithin",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -117,6 +118,7 @@ class CfgMusic
 		"FST_LA_ATer_Saints_Ofthe41st",
 		"FST_IntoTheFire",
 		"FST_Screaming_Eagles",
+		"FST_Disassembly_Industrial_Metal_Remix",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -692,6 +694,18 @@ class CfgMusic
 		};
 		duration="142";
 	};
+	class FST_DeusEx_EnemyWithin
+	{
+		name="(Desus Ex) Enemy Within - Combat";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\DeusEx_036EnemyWithinCombat.ogg",
+			1,
+			1
+		};
+		duration="186";
+	};
 	class FST_WT_WaltzoftheTornado
 	{
 		name="(War Thunder) Waltz of the Tornado";
@@ -1177,6 +1191,18 @@ class CfgMusic
 			1
 		};
 		duration="250";
+	};
+	class FST_Disassembly_Industrial_Metal_Remix
+	{
+		name="Disassembly Required Industrial Metal Remix";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\DisassemblyRequiredIndustrialMetalRemix.ogg",
+			1,
+			1
+		};
+		duration="120";
 	};
 	// Christmas
 		
