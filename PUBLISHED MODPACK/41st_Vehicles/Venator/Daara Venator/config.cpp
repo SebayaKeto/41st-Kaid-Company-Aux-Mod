@@ -32,7 +32,7 @@ class CfgPatches
 			"ven_interior1",
 			"ven_interior2",
 			"ven_interior3",
-			"ven_interior4",
+			"FST_ven_interior4",
 			"ven_interior5",
 			"ven_interior6",
 			"ven_interior7",
@@ -109,7 +109,7 @@ class CfgVehicles
 			"\ls\core\addons\props_staticships\venator\data\interior1_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior2_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior3_co.paa",
-			"\ls\core\addons\props_staticships\venator\data\interior4_co.paa",
+			"41st_Vehicles\Venator\data\FST_interior4_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior5_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior6_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior7_co.paa",
@@ -266,7 +266,7 @@ class CfgVehicles
 	};
 	class FST_Daara_venator_base_2: FST_Daara_venator_base
 	{
-		displayname="Venator (Open)";
+		displayname="[41st] Daara Venator (Open)";
 		multistructureparts[]=
 		{
 			
@@ -393,7 +393,7 @@ class CfgVehicles
 	};
 	class FST_Daara_venator_base_3: FST_Daara_venator_base
 	{
-		displayname="Venator (Hollowed)";
+		displayname="[41st] Daara Venator (Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -515,7 +515,7 @@ class CfgVehicles
 	};
 	class FST_Daara_venator_base_4: FST_Daara_venator_base
 	{
-		displayname="Venator (Open Hollowed)";
+		displayname="[41st] Daara Venator (Open Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -637,7 +637,7 @@ class CfgVehicles
 	};
 	class FST_Daara_venator_base_5: FST_Daara_venator_base
 	{
-		displayname="Venator (Open Fully Hollowed)";
+		displayname="[41st] Daara Venator (Open Fully Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -724,7 +724,7 @@ class CfgVehicles
 	};
 	class FST_Daara_venator_base_6: FST_Daara_venator_base
 	{
-		displayname="Venator (Fully Hollowed)";
+		displayname="[41st] Daara Venator (Fully Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -804,7 +804,7 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_bridge",
+				"FST_Daara_ven_bridge",
 				"bridge"
 			}
 		};
@@ -1046,7 +1046,8 @@ class CfgVehicles
 		hiddenselections[]=
 		{
 			"body10"
-		};enselectionstextures[]=
+		};
+		hiddenselectionstextures[]=
 		{
 			"41st_Vehicles\Venator\Daara Venator\body10_Daara_venator_co.paa"
 		};
@@ -1151,9 +1152,9 @@ class CfgVehicles
 			"\ls\core\addons\props_staticships\venator\data\interior3_co.paa"
 		};
 	};
-	class ven_interior4: ven_hull_base
+	class FST_ven_interior4: ven_hull_base
 	{
-		displayname="ven interior4";
+		displayname="[41st] ven interior4";
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
@@ -1164,7 +1165,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\ls\core\addons\props_staticships\venator\data\interior4_co.paa"
+			"41st_Vehicles\Venator\data\FST_interior4_co.paa",
 		};
 	};
 	class ven_interior5: ven_hull_base

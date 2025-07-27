@@ -32,12 +32,12 @@ class CfgPatches
 			"ven_interior1",
 			"ven_interior2",
 			"ven_interior3",
-			"ven_interior4",
+			"FST_ven_interior4",
 			"ven_interior5",
 			"ven_interior6",
 			"ven_interior7",
 			"ven_interior8",
-			"FST_ven_bridge"
+			"FST_Ven_bridge_White"
 		};
 		author="kripto202 adapted by Viz";
 	};
@@ -108,12 +108,12 @@ class CfgVehicles
 			"\ls\core\addons\props_staticships\venator\data\interior1_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior2_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior3_co.paa",
-			"\ls\core\addons\props_staticships\venator\data\interior4_co.paa",
+			"41st_Vehicles\Venator\data\FST_interior_4_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior5_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior6_co.paa",
 			"\ls\core\addons\props_staticships\venator\data\interior7_co.paa",
-			"\ls\core\addons\props_staticships\venator\data\interior8_co.paa",
-			"41st_Vehicles\Venator\data\bridge_co.paa"
+			"41st_Vehicles\Venator\data\FST_interior_8_co.paa",
+			"41st_Vehicles\Venator\data\FST_Bridge_White_co.paa"
 		};
 	};
 	class FST_venator_base: StaticShip
@@ -196,7 +196,7 @@ class CfgVehicles
 			},
 			
 			{
-				"ls_staticShipPart_venator_body10",
+				"ven_body10",
 				"body10"
 			},
 			
@@ -226,6 +226,11 @@ class CfgVehicles
 			},
 			
 			{
+				"FST_Ven_Interior_4",
+				"interior4"
+			},
+			
+			{
 				"ls_staticShipPart_venator_interior5",
 				"interior5"
 			},
@@ -241,12 +246,12 @@ class CfgVehicles
 			},
 			
 			{
-				"ls_staticShipPart_venator_interior8",
+				"FST_Ven_Interior_8",
 				"interior8"
 			},
 			
 			{
-				"FST_ven_bridge",
+				"FST_Ven_bridge_White",
 				"bridge"
 			}
 		};
@@ -261,7 +266,7 @@ class CfgVehicles
 	};
 	class FST_venator_base_2: FST_venator_base
 	{
-		displayname="Venator (Open)";
+		displayname="[41st] Venator (Open)";
 		multistructureparts[]=
 		{
 			
@@ -356,7 +361,7 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_interior4",
+				"FST_ven_interior_4",
 				"interior4"
 			},
 			
@@ -376,19 +381,19 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_interior8",
+				"FST_ven_interior_8",
 				"interior8"
 			},
 			
 			{
-				"FST_ven_bridge",
+				"FST_Ven_bridge_White",
 				"bridge"
 			}
 		};
 	};
 	class FST_venator_base_3: FST_venator_base
 	{
-		displayname="Venator (Hollowed)";
+		displayname="[41st] Venator (Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -483,6 +488,11 @@ class CfgVehicles
 			},
 			
 			{
+				"FST_Ven_Interior_4",
+				"interior4"
+			},
+			
+			{
 				"ven_interior5",
 				"interior5"
 			},
@@ -498,19 +508,19 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_interior8",
+				"FST_Ven_Interior_8",
 				"interior8"
 			},
 			
 			{
-				"FST_ven_bridge",
+				"FST_Ven_bridge_White",
 				"bridge"
 			}
 		};
 	};
 	class FST_venator_base_4: FST_venator_base
 	{
-		displayname="Venator (Open Hollowed)";
+		displayname="[41st] Venator (Open Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -605,6 +615,11 @@ class CfgVehicles
 			},
 			
 			{
+				"FST_Ven_Interior_4",
+				"interior4"
+			},
+			
+			{
 				"ven_interior5",
 				"interior5"
 			},
@@ -620,19 +635,19 @@ class CfgVehicles
 			},
 			
 			{
-				"ven_interior8",
+				"FST_Ven_Interior_8",
 				"interior8"
 			},
 			
 			{
-				"FST_ven_bridge",
+				"FST_Ven_bridge_White",
 				"bridge"
 			}
 		};
 	};
 	class FST_venator_base_5: FST_venator_base
 	{
-		displayname="Venator (Open Fully Hollowed)";
+		displayname="[41st] Venator (Open Fully Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -712,14 +727,14 @@ class CfgVehicles
 			},
 			
 			{
-				"FST_ven_bridge",
+				"FST_Ven_bridge_White",
 				"bridge"
 			}
 		};
 	};
 	class FST_venator_base_6: FST_venator_base
 	{
-		displayname="Venator (Fully Hollowed)";
+		displayname="[41st] Venator (Fully Hollowed)";
 		multistructureparts[]=
 		{
 			
@@ -799,7 +814,7 @@ class CfgVehicles
 			},
 			
 			{
-				"FST_ven_bridge",
+				"FST_Ven_bridge_White",
 				"bridge"
 			}
 		};
@@ -821,23 +836,15 @@ class CfgVehicles
 		hideUnitInfo=1;
 		nameSound="ship";
 		featureType=2;
-		class Hitpoints
-		{
-		};
-		class DestructionEffects
-		{
-		};
+		class Hitpoints{};
+		class DestructionEffects{};
 		class Damage
 		{
 			tex[]={};
 			mat[]={};
 		};
-		class AnimationSources
-		{
-		};
-		class UserActions
-		{
-		};
+		class AnimationSources{};
+		class UserActions{};
 	};
 	class FST_ven_body1_1: ven_hull_base
 	{
@@ -1147,9 +1154,9 @@ class CfgVehicles
 			"\ls\core\addons\props_staticships\venator\data\interior3_co.paa"
 		};
 	};
-	class ven_interior4: ven_hull_base
+	class FST_Ven_Interior_4: ven_hull_base
 	{
-		displayname="ven interior4";
+		displayname="[41st] Ven Interior 4";
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
@@ -1160,7 +1167,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\ls\core\addons\props_staticships\venator\data\interior4_co.paa"
+			"41st_Vehicles\Venator\data\FST_Interior_4_co.paa"
 		};
 	};
 	class ven_interior5: ven_hull_base
@@ -1211,9 +1218,9 @@ class CfgVehicles
 			"\ls\core\addons\props_staticships\venator\data\interior7_co.paa"
 		};
 	};
-	class ven_interior8: ven_hull_base
+	class FST_Ven_Interior_8: ven_hull_base
 	{
-		displayname="ven interior8";
+		displayname="[41st] Ven Interior 8";
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
@@ -1224,12 +1231,12 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\ls\core\addons\props_staticships\venator\data\interior8_co.paa"
+			"41st_Vehicles\Venator\data\FST_Interior_8_co.paa"
 		};
 	};
-	class FST_ven_bridge: ven_hull_base
+	class FST_Ven_bridge_White: ven_hull_base
 	{
-		displayname="[41st] ven bridge";
+		displayname="[41st] Ven Bridge (White)";
 		scope=2;
 		scopecurator=2;
 		editorpreview="";
@@ -1240,7 +1247,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\ls\core\addons\props_staticships\venator\data\bridge_co.paa"
+			"41st_Vehicles\Venator\data\FST_Bridge_White_co.paa"
 		};
 	};
 };
