@@ -139,7 +139,7 @@ class CfgVehicles
 		driverCanEject=1;
 		showAllTargets=4;
 		showCrewAim=0;
-		radarType=8;
+		radarType=4;
 		radarTargetSize=1.0;
 		visualTargetSize=1.0;
 		irTargetSize=1.0;
@@ -354,7 +354,13 @@ class CfgVehicles
 		driveoncomponent[]={};
 		camouflage=8;
 		audible=10;
-		accuracy=0.2;
+		accuracy=0.2;						
+		FIR_AWS_Enable=1;	
+		FIR_AWS_WeaponSystem=1;
+		FIR_AWS_B16Pod=1;
+		FIR_ITGT_Compatible=1;	
+		FIR_AWS_GPS_Targeting=1;	
+		FIR_AWS_CanUse_GPS_Target=1;		
 		class Turrets
 		{
 			class BubbleGun: NewTurret
@@ -438,7 +444,7 @@ class CfgVehicles
 				};
 				outGunnerMayFire=1;
 				commanding=-1;
-				primaryGunner=1;
+				primaryGunner=0;
 				gunnerGetInAction="GetInLow";
 				gunnerGetOutAction="GetOutLow";
 				gunnerinaction="gunner_apctracked1aa_in";
