@@ -1,19 +1,12 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: config.bin
-//Produced from mikero's Dos Tools Dll version 9.45
-//https://mikero.bytex.digital/Downloads
-//'now' is Fri Jun 27 21:29:46 2025 : 'file' last modified on Sat Aug 17 18:28:02 2024
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
 class WBK_RscActiveText
 {
     access = 0;
     type = 11;
     style = 48 + 2;
-    color[] = {1,1,1,1};           // Not faded
-    colorActive[] = {1,1,1,1};     // Not faded
-    colorDisabled[] = {1,1,1,1};   // Not faded
+    color[] = {1,1,1,1}; 
+    colorActive[] = {1,1,1,1};
+    colorDisabled[] = {1,1,1,1};
     font = "TahomaB";
     sizeEx = 0.04;
     soundEnter[] = {"",0.09,1};
@@ -343,13 +336,6 @@ class Extended_PreInit_EventHandlers
 	class WBK_Project_KitMenu_PreInit
 	{
 		init = "call compile preprocessFileLineNumbers '\41st_KitMenu\XEN_PreInit.sqf'";
-	};
-};
-class Extended_PostInit_EventHandlers
-{
-	class WBK_Project_KitMenu_PostInit
-	{
-		init = "call compile preprocessFileLineNumbers '\41st_KitMenu\XEH_postInit.sqf'";
 	};
 };
 class cfgMods

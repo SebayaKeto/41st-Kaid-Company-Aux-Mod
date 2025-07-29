@@ -1397,6 +1397,12 @@ switch (_typeOfKit) do {
 	case "Platoon Medic": {
 		player setUnitTrait ["Medic", true];
 	};
+		case "Squad Leader": {
+		player setUnitTrait ["Medic", true];
+	};
+		case "Squad Leader ": {
+		player setUnitTrait ["Medic", true];
+	};
 	case "Platoon Sergeant": {
 		player setUnitTrait ["Medic", true];
 		player setUnitTrait ["engineer", true];
@@ -1414,12 +1420,10 @@ switch (_typeOfKit) do {
 	case "Pilot": {
 		player setUnitTrait ["Medic", true];
 		player setUnitTrait ["engineer", true];
-		player setUnitTrait ["explosiveSpecialist", true];
 	};
 	case "Crew Chief": {
 		player setUnitTrait ["Medic", true];
 		player setUnitTrait ["engineer", true];
-		player setUnitTrait ["explosiveSpecialist", true];
 	};
 	case "Crewman": {
 	player setUnitTrait ["engineer", true];
@@ -2038,30 +2042,3 @@ Wbk_AddKit = {
         _obj setVariable ["FST_ActualKits", _array];
     };
 };
-
-
-
-[ missionNamespace, "arsenalOpened", { 
-		disableSerialization; 
-		_curatorDisplay = _this select 0; 
-		([] call BIS_fnc_GUIGrid) params ["", "", "_GUI_GRID_W", "_GUI_GRID_H"]; 
-		_GUI_GRID_W = _GUI_GRID_W / 40; 
-		_GUI_GRID_H = _GUI_GRID_H / 25; 
-		_btn = _curatorDisplay ctrlCreate ["RscButton", 2020]; 
-		_btn ctrlSetPosition [ 
-		 safezoneX + safezoneW - 32.5 * _GUI_GRID_W, 
-		 safeZoneY + 42.6 * _GUI_GRID_H, 
-		 7.99 * _GUI_GRID_W, 
-		 1.3 * _GUI_GRID_H 
-		]; 
-		_btn ctrlSetText "EXPORT AS A KIT"; 
-		_btn ctrlCommit 0; 
-		_btn ctrlAddEventHandler ["ButtonClick",
-		{
-			_target = missionnamespace getvariable ["BIS_fnc_arsenal_center", player];
-			copyToClipboard str getUnitLoadout _target;
-			playSoundUI ["41st_KitMenu\sounds\select_default.ogg", 0.3, 1];
-			playSoundUI ["Orange_Timeline_DateFadeIn", 0.3, 1];
-			titleText ["<t size='2.4'>Data was copied to a clipboard.</t>", "PLAIN DOWN", -1, true, true];
-		}];
-} ] call BIS_fnc_addScriptedEventHandler;
