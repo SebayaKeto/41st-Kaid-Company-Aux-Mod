@@ -422,7 +422,7 @@ class CfgVehicles
 		crewCrashProtection=9.9999997e-005;
 		damageResistance=0.02;
 		crewVulnerable=1;
-		armor=850;
+		armor=935;
 		armorStructural=8.5;
 		class HitPoints: HitPoints
 		{
