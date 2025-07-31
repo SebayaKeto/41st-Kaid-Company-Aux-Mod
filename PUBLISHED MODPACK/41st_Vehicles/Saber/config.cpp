@@ -352,7 +352,6 @@ class cfgvehicles
 					"FST_Heavy_laser_Cannon",
 					"FST_Medium_twin_laser_turret",
 					"FST_Rapture_AGM_Missile",
-					"FST_Stormfury_AA_Missile",
 					"SmokeLauncher"
 				};
 				memoryPointGun[]=
@@ -366,7 +365,6 @@ class cfgvehicles
 					"FST_100Rnd_Plasma_shells",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
 					"FST_500Rnd_High_Capacity_Plasma_Cell",
-					"FST_Stormfury_12Rnd_AA_Missile",
 					"FST_Rapture_12Rnd_AGM_Missile",
 					"SmokeLauncherMag",
 					"SmokeLauncherMag"

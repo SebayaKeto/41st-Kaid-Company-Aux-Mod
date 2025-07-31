@@ -1060,7 +1060,7 @@ class CfgVehicles
 		cost=1500000;
 		damageResistance=0.02;
 		crewVulnerable="false";
-		armor=1050;
+		armor=500;
 		armorStructural=3.5;
 		class HitPoints: HitPoints
 		{
@@ -1073,16 +1073,16 @@ class CfgVehicles
 				passThrough=1;
 				minimalHit=0.14;
 				explosionShielding=2;
-				radius=0.30000001;
+				radius=0.40000001;
 			};
 			class HitEngine: HitEngine
 			{
 				armor=1;
 				material=-1;
 				name="motor";
-				passThrough=0.80000001;
-				minimalHit=0.23999999;
-				explosionShielding=1;
+				passThrough=0;
+				minimalHit=0.079999998;
+				explosionShielding=1.4400001;
 				radius=0.33000001;
 			};
 			class HitLTrack: HitLTrack
