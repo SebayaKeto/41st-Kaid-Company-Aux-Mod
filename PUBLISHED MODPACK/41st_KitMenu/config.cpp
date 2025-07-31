@@ -62,8 +62,14 @@ class WBK_RscListBox
 	tooltipColorShade[] = {0,0,0,0.65};
 	class ListScrollBar
 	{
-		color[] = {1,1,1,1};
+		color[] = {0, 0, 0, 0.5};
 		autoScrollEnabled = 1;
+		width = 0.012;
+		shadow = 0;
+		thumb = "\A3\ui_f\gamma\cfg\scrollbar\thumb_ca.paa";
+		arrowEmpty = "";
+		arrowFull = "";
+		border = "";
 	};
 	x = 0;
 	y = 0;
@@ -127,7 +133,7 @@ class WBK_RscButton
 class WBK_KITArsenalAlike
 {
 	idd = 2000;
-	movingenable = "false";
+	movingenable = false;
 	onLoad = "[] spawn {execVM '\41st_KitMenu\41st_Kit_System.sqf';};";
 	class controls
 	{
@@ -202,7 +208,7 @@ class WBK_KITArsenalAlike
 		class variations_of_a_kit: WBK_Box
 		{
 			idc = 1000;
-			text = "Aditional weapons and equipment";
+			text = "Additional weapons and equipment";
 			x = "0.180312 * safezoneW + safezoneX";
 			y = "0.093 * safezoneH + safezoneY";
 			w = "0.170156 * safezoneW";
@@ -243,7 +249,7 @@ class WBK_KITArsenalAlike
 			idc = 1600;
 			type = 1;
 			style = 2;
-			text = "Customs";
+			text = "Limited arsenal";
 			font = "PuristaMedium";
 			sizeEx = "0.023 / (getResolution select 5)";
 			x = "0.454 * safezoneW + safezoneX";
