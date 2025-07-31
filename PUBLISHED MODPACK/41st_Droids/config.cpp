@@ -639,6 +639,21 @@ class CfgVehicles
 		tf_range=15000;
 		tf_subtype="digital_lr";
 	};
+	class FST_B1_Antenna_Muddy: FST_B1_Antenna
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] B1 Antenna (Muddy)";
+		model="\MRC\JLTS\characters\DroidArmor\DroidAntennaB1.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_B1_Backpack_Muddy.paa"
+		};
+	};
 	class FST_B1_Antenna_Kaid: FST_B1_Antenna
 	{
 		author="Viz";
