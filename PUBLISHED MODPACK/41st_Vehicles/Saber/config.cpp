@@ -215,6 +215,7 @@ class cfgvehicles
 		driverCanSee="4+8+2+32+16";
 		gunnerCanSee="4+2+8+32+16";
 		armorStructural=5;
+		crewCrashProtection = 0.05;
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
