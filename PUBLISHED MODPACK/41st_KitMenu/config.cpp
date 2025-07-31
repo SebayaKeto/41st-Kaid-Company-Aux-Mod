@@ -66,7 +66,7 @@ class WBK_RscListBox
 		autoScrollEnabled = 1;
 		width = 0.012;
 		shadow = 0;
-		thumb = "\A3\ui_f\gamma\cfg\scrollbar\thumb_ca.paa";
+		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
 		arrowEmpty = "";
 		arrowFull = "";
 		border = "";
@@ -320,6 +320,7 @@ class FST_CustomsOverlay
 			sizeEx = 0.035;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.5};
+			colorDisabled[] = {0.5, 0.5, 0.5, 1};
 			autocomplete = "";
 			onKeyUp = "[] spawn FST_fnc_filterHelmets;";
 		};

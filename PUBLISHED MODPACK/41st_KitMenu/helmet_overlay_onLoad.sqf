@@ -7,7 +7,7 @@ private _helmetClasses = [];
 {
 	private _className = configName _x;
 
-	if (["FST", _className] call BIS_fnc_inString) then {
+	if (["FST_", _className] call BIS_fnc_inString) then {
 		private _itemInfo = _x >> "ItemInfo";
 		if (isClass _itemInfo) then {
 			private _type = getNumber (_itemInfo >> "type");
