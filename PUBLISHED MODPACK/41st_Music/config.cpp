@@ -119,6 +119,15 @@ class CfgMusic
 		"FST_IntoTheFire",
 		"FST_Screaming_Eagles",
 		"FST_Disassembly_Industrial_Metal_Remix",
+		"FST_AlortaMusic_04",
+		"FST_Combat_4",
+		"FST_Combat_3",
+		"FST_Combat_2",
+		"FST_Combat_1",
+		"FST_AlortaMusic_CrippledHand",
+		"FST_PaganFuryTopic_GoingToWar",
+		"FST_AlortaMusic_OneLastMission",
+		"FST_AlortaMusic_MightyRush2",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -1203,6 +1212,114 @@ class CfgMusic
 			1
 		};
 		duration="120";
+	};
+	class FST_AlortaMusic_04
+	{
+		name="(Alorta Music) Epic Trailer 04";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\AlrotaMusic_EpicTrailer04.ogg",
+			1,
+			1
+		};
+		duration="149";
+	};
+	class FST_Combat_4
+	{
+		name="Combat 4";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Combat_4.ogg",
+			1,
+			1
+		};
+		duration="176";
+	};
+	class FST_Combat_3
+	{
+		name="Combat 3";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Combat_3.ogg",
+			1,
+			1
+		};
+		duration="170";
+	};
+	class FST_Combat_2
+	{
+		name="Combat 2";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Combat_2.ogg",
+			1,
+			1
+		};
+		duration="139";
+	};
+	class FST_Combat_1
+	{
+		name="Combat 1";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Combat_1.ogg",
+			1,
+			1
+		};
+		duration="169";
+	};
+	class FST_AlortaMusic_CrippledHand
+	{
+		name="(Alorta Music) Crippled Hand";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\AlortaMusic_CrippledHand.ogg",
+			1,
+			1
+		};
+		duration="149";
+	};
+	class FST_PaganFuryTopic_GoingToWar
+	{
+		name="(Pagan Fury Topic) Going to War";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\PaganFury_TopicGoingtoWar.ogg",
+			1,
+			1
+		};
+		duration="255";
+	};
+	class FST_AlortaMusic_OneLastMission
+	{
+		name="(Alorta Music) One Last Mission";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\AlrotaMusic_OneLastMission.ogg",
+			1,
+			1
+		};
+		duration="186";
+	};
+	class FST_AlortaMusic_MightyRush2
+	{
+		name="(Alorta Music) Mighty Rush 2";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\AlrotaMusic_MightyRush2.ogg",
+			1,
+			1
+		};
+		duration="128";
 	};
 	// Christmas
 		
