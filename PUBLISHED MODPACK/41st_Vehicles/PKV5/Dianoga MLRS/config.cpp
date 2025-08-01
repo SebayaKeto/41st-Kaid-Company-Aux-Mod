@@ -1188,7 +1188,7 @@ class CfgVehicles
 						{
 							class HitTurret
 							{
-								armor=1;
+								armor=2;
 								material=-1;
 								name="vezVelitele";
 								visual="vezVelitele";
@@ -1199,7 +1199,7 @@ class CfgVehicles
 							};
 							class HitGun
 							{
-								armor=1;
+								armor=2;
 								material=-1;
 								name="zbranVelitele";
 								visual="zbranVelitele";
