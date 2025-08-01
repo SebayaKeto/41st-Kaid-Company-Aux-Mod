@@ -921,9 +921,10 @@ class CfgVehicles
 			};
 		};
 		simulation="tankX";
-		enginePower=1082;
-		maxOmega=276;
-		peakTorque=4832;
+		enginePower=1500;
+		maxOmega=320;
+		peakTorque=7000;
+		maxSpeed=80;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -1233,7 +1234,7 @@ class CfgVehicles
 						{
 							class HitTurret
 							{
-								armor=0.30000001;
+								armor=1;
 								material=-1;
 								name="vezVelitele";
 								visual="vezVelitele";
@@ -1244,7 +1245,7 @@ class CfgVehicles
 							};
 							class HitGun
 							{
-								armor=0.30000001;
+								armor=1;
 								material=-1;
 								name="zbranVelitele";
 								visual="zbranVelitele";
