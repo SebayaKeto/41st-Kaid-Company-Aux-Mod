@@ -183,7 +183,7 @@ class CfgVehicles
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
 			"CMFlareLauncher",
-			"Laserdesignator_pilotCamera"
+			"Laserdesignator_mounted"
 		};
 		magazines[]=
 		{
