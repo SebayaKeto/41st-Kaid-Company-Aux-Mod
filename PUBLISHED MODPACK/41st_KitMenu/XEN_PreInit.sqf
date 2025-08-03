@@ -1294,21 +1294,14 @@ switch (true) do {
         _uniformToSet  = "FST_Uniform_CL";
         _headgearToSet = "FST_Pilot_P1_Helmet";
     };
-	case (_name find ("BC-4973 " + "Merrik") == 0): {
-		_uniformToSet   = "FST_Uniform_Merrik_BC";
-		_headgearToSet  = "FST_BC_Helmet_Merrik";
-		_vestToSet      = "FST_CloneVestMerrik";
-		_backpackToSet  = "FST_Clone_LR_attachment";
-		_nvgToSet       = "FST_Marshal_Commander_Visor";
-	};
-	case (_name find ("CC-1861 " + "Annex") == 0): {
+	case (_name find ("CC-1861 " + '"' + "Annex" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Annex";
 		_headgearToSet  = "FST_P2_Helmet_Annex";
 		_vestToSet      = "FST_pauldron_kama";
 		_backpackToSet  = "FST_Clone_LR_attachment";
 		_nvgToSet       = "FST_Visor_Annex";
 	};
-	case (_name find ("CC-1227 " + "Cardinal") == 0): {
+	case (_name find ("CC-1227 " + '"' + "Cardinal" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
 		_headgearToSet  = "FST_P2_Helmet_Cardinal3";
 		_vestToSet      = "FST_pauldron_kama";
