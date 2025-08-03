@@ -10608,14 +10608,14 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Skipjack.paa",
 		};
 	};
-	class FST_P2_Helmet_Frænk: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Fraenk: FST_P2_Helmet_Base
 	{
 		author="Gold";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Frænk]";
+		displayName="[41st] P2 Helmet [Fraenk]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Frænk.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fraenk.paa",
 		};
 	};
 	class FST_P2_Helmet_Houdini: FST_P2_Helmet_Base
