@@ -253,7 +253,19 @@ switch true do {
 			if (_item == "FST_Vest_NCO" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
+			if (_item == "FST_CloneVestAirborneNCO" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
+			if (_item == "FST_CloneVestAirborneNCO_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
 			if (_item == "FST_Vest_HeavyBag" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
+			if (_item == "FST_Vest_NCO_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
+			if (_item == "FST_Vest_HeavyBag_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
 			if (_item == "FST_Vest_NCO_Kama" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {

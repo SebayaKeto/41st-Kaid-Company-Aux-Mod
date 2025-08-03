@@ -1051,6 +1051,69 @@ class CfgWeapons
 			};
 		};
 	};
+class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
+	{
+		displayName="[41st] Fire Team Leader Sash (Veteran)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Vest_HeavyBag: JLTS_CloneVestAirborne
 	{
 		scope=2;
@@ -1065,7 +1128,74 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2",
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+		class FST_Vest_HeavyBag_Veteran: JLTS_CloneVestAirborne
+	{
+		scope=2;
+		displayName="[41st] Airborne Fire Team Leader Sash (Veteran)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2632,14 +2762,100 @@ class CfgWeapons
 		displayName="[41st] Airborne Squad Leader Sash";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Vests\FST_vest.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
 		class ItemInfo: VestItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply200";
-			hiddenSelections[]=
+			hiddenSelections[] =
 			{
 				"camo1",
 				"camo2"
+			};
+			hiddenSelectionsTextures[] =
+			{
+				"camo1",
+				"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{		
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestAirborneNCO_Veteran: JLTS_CloneVestAirborne
+	{
+		displayName="[41st] Airborne Squad Leader Sash (Veteran)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+			containerClass="Supply200";
+			hiddenSelections[] =
+			{
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[] =
+			{
+				"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
+				"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 			};
 			mass=80;
 			class HitpointsProtectionInfo
@@ -16507,6 +16723,22 @@ class CfgWeapons
             mass=15;
         };
     };
+
+	class FST_Uniform_Huntress: JLTS_CloneArmor
+    {
+        author="Laer";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Huntress]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Buddhah";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+
 	class ls_blufor_unit_base;
 	class ls_garUniform_jediCommander: ls_blufor_unit_base
 	{
@@ -38351,7 +38583,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -38419,7 +38651,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
