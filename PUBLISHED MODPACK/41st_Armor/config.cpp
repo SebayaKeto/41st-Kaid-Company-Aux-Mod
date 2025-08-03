@@ -6568,7 +6568,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Talisman.paa",
-			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Talisman.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
