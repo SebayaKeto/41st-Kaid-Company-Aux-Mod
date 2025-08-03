@@ -16723,22 +16723,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
             mass=15;
         };
     };
-
-	class FST_Uniform_Huntress: JLTS_CloneArmor
-    {
-        author="Laer";
-        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-        displayName="[41st] P2 Armor [Huntress]";
-        class ItemInfo: UniformItem
-        {
-            uniformModel="";
-            uniformClass="FST_P2_Buddhah";
-            uniformType="Neopren";
-            containerClass="Supply150";
-            mass=15;
-        };
-    };
-
 	class ls_blufor_unit_base;
 	class ls_garUniform_jediCommander: ls_blufor_unit_base
 	{
