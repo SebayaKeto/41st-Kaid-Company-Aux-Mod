@@ -1294,6 +1294,27 @@ switch (true) do {
         _uniformToSet  = "FST_Uniform_CL";
         _headgearToSet = "FST_Pilot_P1_Helmet";
     };
+	case (_name find ("BC-4973 " + "Merrik") == 0): {
+		_uniformToSet   = "FST_Uniform_Merrik_BC";
+		_headgearToSet  = "FST_BC_Helmet_Merrik";
+		_vestToSet      = "FST_CloneVestMerrik";
+		_backpackToSet  = "FST_Clone_LR_attachment";
+		_nvgToSet       = "FST_Marshal_Commander_Visor";
+	};
+	case (_name find ("CC-1861 " + "Annex") == 0): {
+		_uniformToSet   = "FST_Uniform_Annex";
+		_headgearToSet  = "FST_P2_Helmet_Annex";
+		_vestToSet      = "FST_pauldron_kama";
+		_backpackToSet  = "FST_Clone_LR_attachment";
+		_nvgToSet       = "FST_Visor_Annex";
+	};
+	case (_name find ("CC-1227 " + "Cardinal") == 0): {
+		_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
+		_headgearToSet  = "FST_P2_Helmet_Cardinal3";
+		_vestToSet      = "FST_pauldron_kama";
+		_backpackToSet  = "FST_Clone_LR_attachment";
+		_nvgToSet       = "FST_Visor_Cardinal";
+	};
 	case (_name find ("BC-4973 " + '"' + "Merrik" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Merrik_BC";
 		_headgearToSet  = "FST_BC_Helmet_Merrik";
@@ -1312,16 +1333,22 @@ switch (true) do {
         _uniformToSet = "FST_Uniform_Recruit";
         _headgearToSet = "FST_P2_Helmet_Recruit";
     };
-    case (_name find "CT-" == 0): {
-        if (_typeOfKit == "Medic") then {
-            _uniformToSet = "FST_Trooper_Medic";
-        } else {
-            _uniformToSet = "FST_Trooper_Uniform";
-        };
-        if (_typeOfKit == "Engineer") then {
-            _uniformToSet = "FST_Uniform_EOD";
-        };
-    };
+	case (_name find "CT-" == 0
+			|| _name find "ENS-" == 0
+			|| _name find "LTJG-" == 0
+			|| _name find "LT-" == 0
+			|| _name find "LCDR-" == 0
+			|| _name find "CDR-" == 0
+			|| _name find "CAPT-" == 0): { 
+			if (_typeOfKit == "Medic") then {
+				_uniformToSet = "FST_Trooper_Medic";
+			} else {
+				_uniformToSet = "FST_Trooper_Uniform";
+			};
+			if (_typeOfKit == "Engineer") then {
+				_uniformToSet = "FST_Uniform_EOD";
+			};
+		};
     case (_name find "SCT-" == 0): {
         if (_typeOfKit == "Medic") then {
             _uniformToSet = "FST_Uniform_SCT_Medic";
