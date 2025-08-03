@@ -10638,6 +10638,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
 		};
 	};
+	class FST_P2_Helmet_Fox: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Fox]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fox.paa",
+		};
+	};
 	class FST_P2_Helmet_Zephyr: FST_P2_Helmet_Base
 	{
 		author="Gold";
