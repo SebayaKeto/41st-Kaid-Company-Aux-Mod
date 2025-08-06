@@ -296,6 +296,7 @@ class CfgPatches
 			"FST_MedicalCrate",
 			"FST_ExplosiveCrate",
 			"FST_ExplodeFuelBarrel_1",
+			"FST_ShieldGen",
 			"FST_ExplodeFuelBarrel_2"
 		};
 		weapons[]={};
@@ -18054,7 +18055,6 @@ class CfgVehicles
 		class assembleInfo;
 	};
 
-
 	class FST_AmmoCrate: Box_NATO_Ammo_F
 	{
 		author="Daara";
@@ -18217,6 +18217,65 @@ class CfgVehicles
 			{
 				name="ACE_CableTie";
 				count=30;
+			};
+		};
+	};
+	class FST_ShieldGen: Box_NATO_Ammo_F
+	{
+		author="Daara";
+		displayName="[41st] Shield Generator";
+		editorCategory="FST_Crates";
+		editorSubcategory="FST_Supplies";
+		editorPreview="\3as\3as_props\Crates\EditorPreviews\3AS_Supply_Large_Blue_Prop.jpg";
+		model="3as\3as_props\crates\models\supply_Large.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_Props\Crates\Data\Supply_Large_Blue\Supply_Large_Blue_co.paa"
+		};
+		icon="iconCrateWpns";
+		armor=1000;
+		maximumLoad=1;
+		Scope=2;
+		ScopeCurator=2;
+		class TransportWeapons
+		{};
+		class TransportMagazines
+		{};
+		class UserActions
+		{
+			class shield_enable
+			{
+				displayName="Shield - Enable";
+				priority=10;
+				radius=10;
+				position="camera";
+				showWindow=0;
+				hideOnUse=1;
+				onlyForPlayer=0;
+				shortcut="";
+				condition="alive this && (typeof ((nearestObjects [this,[],1])select 0)) != '3as_planetaryshield_500' && speed this == 0";
+				statement="private _shield = createVehicle ['3as_planetaryshield_500', this, [], 0, 'CAN_COLLIDE']; _shield attachto [this];";
+			};
+			class shield_disable
+			{
+				displayName="Shield - Disable";
+				priority=10;
+				radius=10;
+				position="camera";
+				showWindow=0;
+				hideOnUse=1;
+				onlyForPlayer=0;
+				shortcut="";
+				condition="alive this && (typeof ((nearestObjects [this,['3as_planetaryshield_500'],1])select 0)) == '3as_planetaryshield_500'";
+				statement="deletevehicle (nearestObjects [this,['3as_planetaryshield_500'],1]);";
+			};
+			class EventHandlers
+			{
+				killed="deletevehicle (nearestObjects [this,['3as_planetaryshield_500'],0.1]);";
 			};
 		};
 	};
