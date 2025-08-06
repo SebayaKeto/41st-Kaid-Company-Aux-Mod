@@ -32,9 +32,9 @@ class CfgPatches
 			"FST_Trooper_P2_VCT_Medic",
 			"FST_Trooper_P2_CLC",
 			"FST_Trooper_P2_CPL",
-			"FST_Trooper_P2_CS",
-			"FST_Trooper_P2_CSS",
-			"FST_Trooper_P2_CL",
+			"FST_Trooper_P2_CS",		
+			"FST_Trooper_P2_CSS",	
+			"FST_Trooper_P2_CL",				
 			"FST_Trooper_ARF",
 			"FST_Trooper_ARF_Urban",
 			"FST_Trooper_ARF_WhiteGreen",
@@ -58,13 +58,13 @@ class CfgPatches
 			"FST_Arc_Trooper_P2",
 			"FST_bodyGlove",
 			"FST_Trooper_P1",
-			"FST_Trooper_P1_CMDR",
+			"FST_Trooper_P1_CMDR",	
 			"FST_Trooper_P1_CPT",
 			"FST_Trooper_P1_LT",
-			"FST_Trooper_P1_SGT",
-			"FST_Trooper_P1_41st",
+			"FST_Trooper_P1_SGT",	
+			"FST_Trooper_P1_41st",		
 			"FST_ARF_Desert",
-			// "FST_ARF_Woodland",
+			// "FST_ARF_Woodland", 
 			"FST_Jedi",
 			"FST_DarkJedi",
 			"FST_Zombie_Bloody",
@@ -175,13 +175,13 @@ class CfgPatches
 			"FST_P2_Doogle_Dirty",
 			"FST_P2_Man",
 			"FST_P2_Major",
-			"FST_P2_Major_Dirty",
+			"FST_P2_Major_Dirty",		
 			"FST_P2_Seraph",
 			"FST_P2_Zik",
 			"FST_P2_Zik_Dirty",
 			"FST_P2_Qball",
 			"FST_P2_Sturm",
-			"FST_P2_Duncy",
+			"FST_P2_Duncy",			
 			"FST_P2_NotSkilled",
 			"FST_P2_Charge",
 			"FST_P2_Hex",
@@ -291,12 +291,12 @@ class CfgPatches
 			"FST_P2_Fire",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
+			"FST_P2_Airman",
 			//////////OTHERS//////////
 			"FST_AmmoCrate",
 			"FST_MedicalCrate",
 			"FST_ExplosiveCrate",
 			"FST_ExplodeFuelBarrel_1",
-			"FST_ShieldGen",
 			"FST_ExplodeFuelBarrel_2"
 		};
 		weapons[]={};
@@ -362,14 +362,14 @@ class CfgEditorSubcategories
 		displayName="41st Creatures";
 	};
 };
-class CfgFactionClasses
-{
+class CfgFactionClasses 
+{ 
 	class FST_Faction
-	{
+	{ 
 		displayName="41st Elite Corps";
 		priority=1;
 		side=1;
-		icon="";
+		icon="";  	
 	};
 	class FST_BattleDroids_Faction
 	{
@@ -425,17 +425,17 @@ class CfgItems
 {
 	class JLTS_CloneBinocular;
 	class FST_CloneBinocular_Regular: JLTS_CloneBinocular
-	{
+	{ 
 		scope = 2;
-		scopeArsenal = 2;
+		scopeArsenal = 2; 
 		displayName = "[41st] Clone Trooper Electrobinocular";
 		hiddenSelectionsTextures[] = {"\Sawtes_Sight_test\FST_Clone_binocular_co.paa"};
 		visionMode[] = {"Normal","NVG"};
 	};
 	class FST_CloneBinocular_Thermal: JLTS_CloneBinocular
-	{
+	{ 
 		scope = 2;
-		scopeArsenal = 2;
+		scopeArsenal = 2; 
 		displayName = "[41st] Clone Trooper Electrobinocular (Thermal)";
 		hiddenSelectionsTextures[] = {"\Sawtes_Sight_test\FST_Clone_binocular_co.paa"};
 		visionMode[] = {"Normal","NVG","TI"};
@@ -2759,7 +2759,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_CloneVestAirborneNCO: JLTS_CloneVestAirborne
 	{
 		displayName="[41st] Airborne Squad Leader Sash";
@@ -2791,7 +2791,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 			mass=80;
 			class HitpointsProtectionInfo
-			{
+			{		
 				class Chest
 				{
 					HitpointName="HitChest";
@@ -2862,7 +2862,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 			mass=80;
 			class HitpointsProtectionInfo
-			{
+			{		
 				class Chest
 				{
 					HitpointName="HitChest";
@@ -3701,17 +3701,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_EOD: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [EOD]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_EOD.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Woodland: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Woodland]";
 		hiddenSelectionsTextures[]=
 		{
@@ -3721,11 +3721,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
 		};
-	};
+	};	
 	class FST_P2_Helmet_Desert: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Desert]";
 		hiddenSelectionsTextures[]=
 		{
@@ -4043,7 +4043,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	};	
 	class FST_ARF_Helmet_Woodland: SWLB_clone_ARF_P1_helmet
 	{
 		author="Daara";
@@ -4348,7 +4348,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Sere: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] SERE Helmet";
 		hiddenSelectionsTextures[]=
 		{
@@ -6569,7 +6569,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Talisman.paa",
-			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"41st_Armor\Data\LifeSupport\FST_LifeSupport_Talisman.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
@@ -6680,7 +6680,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
-	};
+	}; 
    	class FST_Pilot_P1_Helmet_Hercules: FST_Pilot_P1_Helmet
 	{
 		author="Daara";
@@ -6692,7 +6692,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
-	};
+	}; 
 	class JMSLLTE_EmpOfficerCap_black_helmet;
 	class FST_EmpOfficerCap_green_helmet: JMSLLTE_EmpOfficerCap_black_helmet
 	{
@@ -6716,7 +6716,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\data\LifeSupport\FST_LifeSupport_Medusa.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
-	};
+	}; 
    	class FST_Pilot_P1_Helmet_Vix: FST_Pilot_P1_Helmet
 	{
 		author="Vix";
@@ -6774,7 +6774,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Ghostly.paa",
 		};
-	};
+	}; 
 	class FST_P2_ARC_Helmet_Tally: JLTS_CloneHelmetP2
 	{
 		author="Daara";
@@ -7114,7 +7114,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Woodland: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -7166,7 +7166,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Nahlens: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7270,7 +7270,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Shut: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7322,7 +7322,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Sepie: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7374,7 +7374,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Viz: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7426,7 +7426,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Viz_Dirty: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7478,7 +7478,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Stein: JLTS_CloneHelmetAB
 	{
 		author="Viz";
@@ -7530,7 +7530,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Elk: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7582,7 +7582,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Lawman: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7634,7 +7634,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Mac: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -7686,7 +7686,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Sunny: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -8050,7 +8050,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Atlas: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -8154,7 +8154,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Noble: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -8206,7 +8206,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Silhouette: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -8258,7 +8258,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Silhouette_Dirty: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -8310,7 +8310,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Assassin: JLTS_CloneHelmetAB
 	{
 		author="Dara";
@@ -8570,7 +8570,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Prodigal: JLTS_CloneHelmetAB
 	{
 		author="Tanuki";
@@ -8622,7 +8622,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Impaler: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -8674,7 +8674,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Vishy: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -8726,7 +8726,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Nys: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -8778,7 +8778,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Squid: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -8830,7 +8830,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Spider: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -8882,7 +8882,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_James: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -8934,7 +8934,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_James_Dirty: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -9038,7 +9038,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Brick: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -9090,7 +9090,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Deso: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -9298,7 +9298,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Bookworm: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -9350,7 +9350,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
  	class FST_Airborne_Helmet_Dunder: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -9402,7 +9402,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; 
 	class FST_Airborne_Helmet_Mixer: JLTS_CloneHelmetAB
 	{
 		author="Gold";
@@ -10602,7 +10602,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Skipjack: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Skipjack]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10612,7 +10612,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Fraenk: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Fraenk]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10622,7 +10622,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Houdini: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Houdini]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10632,7 +10632,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Fizz: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Fizz]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10642,7 +10642,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Fox: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Fox]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10652,7 +10652,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Zephyr: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Zephyr]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10662,7 +10662,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Wind: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Wind]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10672,7 +10672,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Saber: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Saber]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10682,7 +10682,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Blades: FST_P2_Helmet_Base
 	{
 		author="Ruby";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Blades]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10692,7 +10692,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Apollon: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Apollon]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10702,7 +10702,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Hugger: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Hugger]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10712,7 +10712,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Chunk: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Chunk]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10722,7 +10722,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Ridley: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ridley]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10732,7 +10732,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Trauma: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Trauma]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10742,7 +10742,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Blueeye: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Blueeye]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10752,7 +10752,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Cloaker: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cloaker]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10762,7 +10762,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Rick: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rick]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10772,7 +10772,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Dagger: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Dagger]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10782,7 +10782,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Omen: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Omen]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10792,7 +10792,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Trace: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Trace]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10802,7 +10802,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Devo: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Devo]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10812,17 +10812,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Creed: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Creed]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Creed.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Nemesis: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nemesis]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10832,7 +10832,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Redeye: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Redeye]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10842,7 +10842,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Spitfire: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Spitfire]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10852,107 +10852,107 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Bale: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Bale]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bale.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Scrib: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Scrib]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Scrib.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Phoenix: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Phoenix]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Phoenix.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Yubi: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Yubi]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Yubi.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Pecan: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Pecan]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pecan.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Dilham: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Dilham]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Derp: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Derp]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Derp.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Ginger: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ginger]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ginger.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Felix: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Felix]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Felix.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Seraph: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Seraph]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Seraph.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Blood: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Blood]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10962,7 +10962,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Border: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Border]";
 		hiddenSelectionsTextures[]=
 		{
@@ -10972,18 +10972,18 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Merrik: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Merrik]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik.paa",
 		};
-	};
+	};	
 	class JLTS_CloneHelmetP2MC;
 	class FST_BC_Helmet_Merrik: JLTS_CloneHelmetP2MC
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] BC Helmet [Merrik]";
 		ace_hearing_protection=1;
         ace_hearing_lowerVolume=0;
@@ -11021,11 +11021,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	};	
 	class FST_MC_Helmet_Merrik3: JLTS_CloneHelmetP2MC
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] BC Helmet [Merrik V3]";
 		ace_hearing_protection=1;
         ace_hearing_lowerVolume=0;
@@ -11063,11 +11063,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	};	
 	class FST_P2_Helmet_Plop: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Plop]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11077,7 +11077,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Rhaegal: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rhaegal]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11087,7 +11087,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Tokarev: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tokarev]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11097,7 +11097,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Valius: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Valius]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11107,37 +11107,37 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Odin: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Odin]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Odin.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Aqua: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Aqua]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Aqua.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Diesel: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Diesel]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Diesel.paa",
 		};
-	};
+	};	
     class FST_P2_Helmet_Fury: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Fury]";
         hiddenSelectionsTextures[]=
         {
@@ -11147,7 +11147,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Kirby: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Kirby]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11157,73 +11157,73 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Vix: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Vix]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Vix.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Merrik2: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Merrik V2]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Merrik2.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Tooka: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tooka]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tooka.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Tally: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tally]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tally.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Tally2: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tally V2]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tally2.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Oil: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Oil]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Oil.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Annex: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Annex]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Annex.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Bulwark: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -11257,67 +11257,67 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Lucky: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Lucky]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lucky.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Church: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Church]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Church.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Harm: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Harm]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Harm.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Church2: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Church V2]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Church2.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Grim: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Grim]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Grim.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Burns: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Burns]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Burns.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Germ: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Germ]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11327,177 +11327,177 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Lupus: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Lupus]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lupus.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Dark: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Dark]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dark.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Sigs: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Sigs]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Swift: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Swift]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Swift.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Nori: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nori]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nori.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Cursed: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cursed]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cursed.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Spinel: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Spinel]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Spinel.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Cryptid: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cryptid]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cryptid.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Nys: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nys]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nys.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Mox: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Mox]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mox.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Jorge: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Jorge]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Jorge.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Zipper: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Zipper]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Zipper.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Warlock: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Warlock]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Warlock.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Clipz: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Clipz]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Clipz.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Crab: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Crab]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Crab.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Plums: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Plums]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Plums.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Colors: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Colors]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Colors.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Recruit: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Recruit]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11507,17 +11507,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Brick: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Brick]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Brick.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Dragon: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Dragon]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11527,7 +11527,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Corsair: FST_P2_Helmet_Base
 	{
 		author="Vengence";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Corsair]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11537,7 +11537,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Nahlens: FST_P2_Helmet_Base
 	{
 		author="Vengence";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nahlens]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11547,7 +11547,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Nahlens_Dirty: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nahlens/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11557,17 +11557,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Kare: FST_P2_Helmet_Base
 	{
 		author="Vengence";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Kare]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Kare.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Samurai: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Samurai]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11577,7 +11577,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Samurai_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Samurai/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11587,13 +11587,13 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Evox: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Evox]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Evox.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Evox_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -11603,11 +11603,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Evox_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Volos: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Volos]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11617,147 +11617,147 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Laer: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Laer]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Laer.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Laer_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Laer/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Laer_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Ripper: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ripper]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ripper.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Sierra: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Sierra]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sierra.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Mono: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Mono]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mono.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Mono_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Mono/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mono_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Nova: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nova]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nova.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Business: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Business]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Business.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Parsec: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Parsec]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Parsec.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Ruby: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ruby]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ruby.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Ruby_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ruby/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ruby_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Grif: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Grif]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Grif.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Primus: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Primus]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Primus.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Trenny: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Trenny]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Trenny.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Trenny_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Trenny/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11767,117 +11767,117 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Lancer: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Lancer]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lancer.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Lancer_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Lancer/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lancer_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Rint: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rint]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Rint_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rint/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Rint_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rint V2]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_V2.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Rint_Dirty_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rint/Dirty V2]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_V2_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Jax: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Jax]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Jax.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Mrogg: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Mrogg]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mrogg.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Nic: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Nic]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nic.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Medusa: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Medusa]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Medusa.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Minno: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Minno]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Minno.paa",
 		};
-	};
+	};	
     class FST_P2_Helmet_Sonic: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Sonic]";
         hiddenSelectionsTextures[]=
         {
@@ -11887,17 +11887,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Vulpes: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Vulpes]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Vulpes.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Harlequin: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Harlequin]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11907,7 +11907,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Lawman: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Lawman]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11917,7 +11917,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
     class FST_P2_Helmet_Stant: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Stant]";
         hiddenSelectionsTextures[]=
         {
@@ -11927,7 +11927,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Jammer: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Jammer]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11937,7 +11937,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Tar: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tar]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11947,7 +11947,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
     class FST_P2_Helmet_Ajax: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Ajax]";
         hiddenSelectionsTextures[]=
         {
@@ -11957,27 +11957,27 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_James: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [James]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_James.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_James_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [James/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_James_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Demon: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Demon]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11987,7 +11987,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Tiger: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tiger]";
 		hiddenSelectionsTextures[]=
 		{
@@ -11997,7 +11997,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Tiger_Dirty: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tiger/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12007,17 +12007,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Viper: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Viper]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Viper.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Mood: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Mood]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12027,7 +12027,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Mood_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Mood/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12037,7 +12037,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
     class FST_P2_Helmet_Connor: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Connor]";
         hiddenSelectionsTextures[]=
         {
@@ -12047,47 +12047,47 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Edge: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Edge]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Edge.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Coda: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Coda]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Coda.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Major: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Major]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Major.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Major_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Major/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Major_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Joko: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Joko]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12097,7 +12097,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Joko_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Joko/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12107,7 +12107,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Preacher: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Preacher]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12117,7 +12117,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Preacher_Dirty: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Preacher/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12127,127 +12127,127 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Rook: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rook]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rook.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Donut: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Donut]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Donut.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Deacon: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Deacon]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Deacon.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Arcus: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Arcus]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Arcus.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Duncy: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Duncy]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Duncy.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Dobie: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Dobie]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dobie.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Dobie_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Dobie/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dobie_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Sturm: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Sturm]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sturm.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Charge: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Charge]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Charge.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Doogle: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Doogle]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Doogle.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Doogle_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Doogle/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Doogle_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Squatch: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Squatch]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Squatch_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Squatch/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12257,27 +12257,27 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Soulz: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Soulz]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Soulz.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Stein: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Stein]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Stein.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Stein_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Stein/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12287,47 +12287,47 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Hex: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Hex]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hex.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Overwatch: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Overwatch]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Overwatch.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Xeha: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Xeha]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Xeha.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Xeha_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Xeha/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Xeha_Dirty.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Raven: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Raven]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12337,7 +12337,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Kito: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Kito]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12347,17 +12347,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Wilson: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Wilson]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_EOD_Wilson.paa",
 		};
-	};
+	};	 
 	class FST_P2_Helmet_Prancer: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Prancer]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12367,7 +12367,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Vector: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Vector]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12377,7 +12377,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Vector_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Vector/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12387,7 +12387,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Rumble: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rumble]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12397,7 +12397,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Rumble_Dirty: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rumble/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12407,7 +12407,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Vixen: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Vixen]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12417,7 +12417,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Marek: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Marek]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12427,7 +12427,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 /* 	class FST_P2_Helmet_Jaws: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Jaws]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12437,7 +12437,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Spade: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Spade]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12447,7 +12447,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Immel: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Immel]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12457,7 +12457,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Blossom: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Blossom]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12467,7 +12467,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
     class FST_P2_Helmet_Tombstone: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Tombstone]";
         hiddenSelectionsTextures[]=
         {
@@ -12477,7 +12477,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Ryx: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ryx]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12487,7 +12487,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Man: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Man]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12497,7 +12497,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Tex: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Tex]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12507,7 +12507,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Claw: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Claw]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12516,7 +12516,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	};	class FST_P2_Helmet_Claw_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Claw/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12526,7 +12526,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Hazard: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Hazard]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12536,7 +12536,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Hazard_Dirty: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Hazard/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12546,7 +12546,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 /*  class FST_P2_Helmet_Test: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Test]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12556,7 +12556,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Teddy: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Teddy]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12566,7 +12566,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Shockcap: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Shockcap]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12576,7 +12576,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Sly: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Sly]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12586,7 +12586,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	/*class FST_P2_Helmet_Sly_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Sly/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12596,7 +12596,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Martyr: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Martyr]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12606,7 +12606,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Cardinal: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cardinal]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12616,7 +12616,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Huntress: FST_P2_Helmet_Base
 	{
 		author="Tanuki";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Huntress]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12626,7 +12626,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Cardinal2: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cardinal V2]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12636,7 +12636,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
  	class FST_P2_Helmet_Cardinal3: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cardinal V3]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12646,7 +12646,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Alfour: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Alfour]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12656,7 +12656,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Drifter: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Drifter]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12666,7 +12666,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Hijack: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Hijack]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12676,67 +12676,67 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Brutal: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Brutal]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Brutal.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Rose: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Rose]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rose.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Delta: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Delta]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Delta.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Ticktock: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ticktock]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ticktock.paa",
 		};
-	};
+	};	
 	class FST_P2_Helmet_Ropey: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Ropey]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ropey.paa",
 		};
-	};
+	};	
  	class FST_P2_Helmet_Daara: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Daara]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Daara.paa",
 		};
-	};
+	};	 	
 	class FST_P2_Helmet_Gunner: FST_P2_Helmet_Base
 	{
 		author="Daara";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Gunner]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12746,7 +12746,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Cosmic_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Cosmic/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -12896,7 +12896,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
     class FST_P2_Helmet_Paymos: FST_P2_Helmet_Base
     {
         author="Viz";
-        scope=2;
+        scope=2; 
         displayName="[41st] P2 Helmet [Paymos]";
         hiddenSelectionsTextures[]=
         {
@@ -13036,7 +13036,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Jericho: FST_P2_Helmet_Base
 	{
 		author="Adler";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Jericho]";
 		hiddenSelectionsTextures[]=
 		{
@@ -13046,7 +13046,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Adler: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Adler]";
 		hiddenSelectionsTextures[]=
 		{
@@ -13056,11 +13056,21 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_P2_Helmet_Recon: FST_P2_Helmet_Base
 	{
 		author="Viz";
-		scope=2;
+		scope=2; 
 		displayName="[41st] P2 Helmet [Recon]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Recon.paa",
+		};
+	};
+	class FST_P2_Helmet_Airman: FST_P2_Helmet_Base
+	{
+		author="Adler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Airman]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Airman.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
@@ -13136,7 +13146,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_ARF_Uniform_WhiteGreen: JLTS_CloneArmorRecon
 	{
 		author="Daara";
@@ -13333,7 +13343,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	/* class FST_Arf_Uniform_Woodland: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -13389,7 +13399,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_GM_Plastic: JLTS_CloneArmor
 	{
 		author="Schlabbie And Maxim";
@@ -13617,7 +13627,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	};
 	class FST_Uniform_P1_CMDR: 3as_JLTS_CloneArmor_Base
 	{
-		author="Daara";
+		author="Daara"; 
 		scope=2;
 		displayName="[41st] Phase 1 Armor (CMDR)";
 		class ItemInfo: UniformItem
@@ -13796,7 +13806,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Officer: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -13810,7 +13820,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Wookiee: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -13825,7 +13835,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	///////////Custom Uniforms[Drip]///////////
   	class FST_Uniform_Ghostly: JLTS_CloneArmor
 	{
@@ -13840,7 +13850,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Ticktock: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -13868,7 +13878,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
   	class FST_Uniform_Daara: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -13882,7 +13892,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Argo: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14092,7 +14102,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Wuffer: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14106,7 +14116,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Fury: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14120,7 +14130,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Edge: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14148,7 +14158,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	};  
 	class FST_Uniform_Ares: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14162,7 +14172,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	};  
  	class FST_Uniform_Odin: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14176,7 +14186,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Elk: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14190,7 +14200,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Pole: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14204,7 +14214,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Vix: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14246,7 +14256,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Angel_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14274,7 +14284,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Jorge: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14288,7 +14298,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Lancer: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14302,7 +14312,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Lancer_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14316,7 +14326,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Deacon: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14414,7 +14424,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Rook: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14442,7 +14452,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Rumble: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -14484,7 +14494,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Parsec: JLTS_CloneArmor
 	{
 		author="Vengence";
@@ -14498,7 +14508,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Vector: JLTS_CloneArmor
 	{
 		author="Vengence";
@@ -14638,7 +14648,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Colors: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14876,7 +14886,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Jan: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14890,7 +14900,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Salt: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14904,7 +14914,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Mav: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14946,7 +14956,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Primus: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14960,7 +14970,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Riley: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14974,7 +14984,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Trenny: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -14988,7 +14998,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Trenny_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15114,7 +15124,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Vishy: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15128,7 +15138,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Mono: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15142,7 +15152,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Mono_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15156,7 +15166,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Ace: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15184,7 +15194,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Overwatch: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15198,7 +15208,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Business: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15212,7 +15222,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Tooka: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15226,7 +15236,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Recruit: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15240,7 +15250,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Medusa: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15254,7 +15264,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Martyr: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15268,7 +15278,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Harlequin: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15310,7 +15320,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Squatch: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15324,7 +15334,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Squatch_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15338,7 +15348,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Ripper: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15394,7 +15404,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Lawman: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15408,7 +15418,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Ampersand_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15422,7 +15432,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Xeha_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15436,7 +15446,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Deso_Dirty: JLTS_CloneArmor
 	{
 		author="Viz";
@@ -15450,7 +15460,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Joko: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15464,7 +15474,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Joko_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15478,7 +15488,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Vulpes: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15492,7 +15502,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Rint: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15506,7 +15516,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Rint_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15520,7 +15530,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Rint_V2: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15534,7 +15544,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Rint_Dirty_V2: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15548,7 +15558,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Bulwark: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15562,7 +15572,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Bulwark_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15576,7 +15586,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Coda: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15590,7 +15600,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_James: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15604,7 +15614,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_James_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15618,7 +15628,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Grif: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15632,7 +15642,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Deso: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15744,7 +15754,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Sly_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15758,7 +15768,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Germ: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15772,7 +15782,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Prancer: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15828,7 +15838,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Doogle_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15842,7 +15852,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Man: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15856,7 +15866,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Major: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15870,7 +15880,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class FST_Uniform_Pope: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15884,7 +15894,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Major_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15912,7 +15922,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Hazard: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15954,7 +15964,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Zik: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15968,7 +15978,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Zik_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15982,7 +15992,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Sturm: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15996,7 +16006,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Duncy: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16010,7 +16020,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Charge: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16024,7 +16034,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Hex: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16038,7 +16048,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
   	class FST_Uniform_Tex: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16052,7 +16062,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	};  
  	class FST_Uniform_Stein: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16066,7 +16076,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Stein_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16122,7 +16132,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Xeha: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16136,7 +16146,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_CosmicSmith: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16150,7 +16160,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
  	class FST_Uniform_Delta: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -16164,8 +16174,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
-	class FST_Uniform_Delta_Dirty: JLTS_CloneArmor
+	}; 
+	class FST_Uniform_Delta_Dirty: JLTS_CloneArmor 
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16193,7 +16203,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
- 	class FST_Uniform_Zen: JLTS_CloneArmor
+ 	class FST_Uniform_Zen: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16206,8 +16216,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
- 	class FST_Uniform_Tally: JLTS_CloneArmor
+	}; 
+ 	class FST_Uniform_Tally: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16220,8 +16230,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
- 	class FST_Uniform_Church: JLTS_CloneArmor
+	}; 
+ 	class FST_Uniform_Church: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16234,8 +16244,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
- 	class FST_Uniform_Brutal: JLTS_CloneArmor
+	}; 
+ 	class FST_Uniform_Brutal: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16248,8 +16258,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
- 	class FST_Uniform_Burns: JLTS_CloneArmor
+	}; 
+ 	class FST_Uniform_Burns: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16262,8 +16272,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
- 	class FST_Uniform_Annex: JLTS_CloneArmor
+	}; 
+ 	class FST_Uniform_Annex: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16277,7 +16287,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
- 	class FST_Uniform_Mood: JLTS_CloneArmor
+ 	class FST_Uniform_Mood: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16291,7 +16301,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
-	class FST_Uniform_Mood_Dirty: JLTS_CloneArmor
+	class FST_Uniform_Mood_Dirty: JLTS_CloneArmor 
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16305,7 +16315,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
- 	class FST_Uniform_Freezer: JLTS_CloneArmor
+ 	class FST_Uniform_Freezer: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16319,7 +16329,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
- 	class FST_Uniform_Ropey: JLTS_CloneArmor
+ 	class FST_Uniform_Ropey: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16333,7 +16343,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
-	class FST_Uniform_Cosmic: JLTS_CloneArmor
+	class FST_Uniform_Cosmic: JLTS_CloneArmor 
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16347,7 +16357,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
-	class FST_Uniform_Cosmic_Dirty: JLTS_CloneArmor
+	class FST_Uniform_Cosmic_Dirty: JLTS_CloneArmor 
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16361,7 +16371,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
- 	class FST_Uniform_Merrik: JLTS_CloneArmor
+ 	class FST_Uniform_Merrik: JLTS_CloneArmor 
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16374,8 +16384,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
-	class FST_Uniform_Merrik_3: JLTS_CloneArmor
+	}; 
+	class FST_Uniform_Merrik_3: JLTS_CloneArmor 
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16388,7 +16398,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	class JLTS_CloneArmorMC;
 	class FST_Uniform_Merrik_BC: JLTS_CloneArmorMC
 	{
@@ -16840,7 +16850,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	};
+	}; 
 	//////////////NVGs/////////////
 
 	class FST_NVG: JLTS_CloneNVG
@@ -17912,7 +17922,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
-};
+};	
 class CfgVehicles
 {
 	class Man;
@@ -18054,7 +18064,8 @@ class CfgVehicles
 	{
 		class assembleInfo;
 	};
-
+	
+	
 	class FST_AmmoCrate: Box_NATO_Ammo_F
 	{
 		author="Daara";
@@ -18220,65 +18231,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_ShieldGen: Box_NATO_Ammo_F
-	{
-		author="Daara";
-		displayName="[41st] Shield Generator";
-		editorCategory="FST_Crates";
-		editorSubcategory="FST_Supplies";
-		editorPreview="\3as\3as_props\Crates\EditorPreviews\3AS_Supply_Large_Blue_Prop.jpg";
-		model="3as\3as_props\crates\models\supply_Large.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"3AS\3AS_Props\Crates\Data\Supply_Large_Blue\Supply_Large_Blue_co.paa"
-		};
-		icon="iconCrateWpns";
-		armor=1000;
-		maximumLoad=1;
-		Scope=2;
-		ScopeCurator=2;
-		class TransportWeapons
-		{};
-		class TransportMagazines
-		{};
-		class UserActions
-		{
-			class shield_enable
-			{
-				displayName="Shield - Enable";
-				priority=10;
-				radius=10;
-				position="camera";
-				showWindow=0;
-				hideOnUse=1;
-				onlyForPlayer=0;
-				shortcut="";
-				condition="alive this && (typeof ((nearestObjects [this,[],1])select 0)) != '3as_planetaryshield_500' && speed this == 0";
-				statement="private _shield = createVehicle ['3as_planetaryshield_500', this, [], 0, 'CAN_COLLIDE']; _shield attachto [this];";
-			};
-			class shield_disable
-			{
-				displayName="Shield - Disable";
-				priority=10;
-				radius=10;
-				position="camera";
-				showWindow=0;
-				hideOnUse=1;
-				onlyForPlayer=0;
-				shortcut="";
-				condition="alive this && (typeof ((nearestObjects [this,['3as_planetaryshield_500'],1])select 0)) == '3as_planetaryshield_500'";
-				statement="deletevehicle (nearestObjects [this,['3as_planetaryshield_500'],1]);";
-			};
-			class EventHandlers
-			{
-				killed="deletevehicle (nearestObjects [this,['3as_planetaryshield_500'],0.1]);";
-			};
-		};
-	};
 	class FST_ExplosiveCrate: Box_NATO_Ammo_F
 	{
 		author="Daara";
@@ -18389,16 +18341,16 @@ class CfgVehicles
 		class TransportWeapons
 		{
 		};
-
+		
 		class TransportBackpacks
 		{
 			class _xx_FST_Backpack_Medic
-			{
+			{ 
 				Backpack="FST_Backpack_Medic";
 				count=2;
 			};
 			class _xx_FST_Backpack_Jumppack_Medic
-			{
+			{ 
 				Backpack="FST_Backpack_Jumppack_Medic";
 				count=2;
 			};
@@ -18450,9 +18402,9 @@ class CfgVehicles
 				count=5;
 				name="FST_Bacta_Tank";
 			};
-		};
+		};	
 	};
-	class FST_ExplodeFuelBarrel_1: Box_NATO_Ammo_F
+	class FST_ExplodeFuelBarrel_1: Box_NATO_Ammo_F 
 {
 	displayName="[41st] Fuel Barrel";
 	editorCategory="FST_Crates";
@@ -18462,13 +18414,13 @@ class CfgVehicles
 	armor=1000;
 	maximumLoad=2;
 	Scope=2;
-	ScopeCurator=2;
+	ScopeCurator=2;	
 	ace_refuel_fuelCargo=3200;
 	ace_refuel_hooks[] = {{0, 0, 0.5}};
 		ace_refuel_hoseLength=25;
 		eden=1;
 	};
-	class FST_ExplodeFuelBarrel_2: Box_NATO_Ammo_F
+	class FST_ExplodeFuelBarrel_2: Box_NATO_Ammo_F 
 {
 	displayName="[41st] Fuel Barrel (Logi ITT)";
 	editorCategory="FST_Crates";
@@ -18478,13 +18430,13 @@ class CfgVehicles
 	armor=1000;
 	maximumLoad=2;
 	Scope=2;
-	ScopeCurator=2;
+	ScopeCurator=2;	
 	ace_refuel_fuelCargo=900000;
 	ace_refuel_hooks[] = {{0, 0, 0.5}};
 		ace_refuel_hoseLength=25;
 		eden=1;
 	};
-
+	
 	//////////////Backpacks////////////////
 	class FST_blueforWeaponBag_base: Weapon_Bag_Base
 	{
@@ -19001,7 +18953,7 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_Bacta_Tank";
-			};
+			};			
 		};
 	};
 	class FST_Backpack_CrewChief: FST_Clone_backpack
@@ -19065,7 +19017,7 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_Bacta_Tank";
-			};
+			};			
 		};
 	};
 	class FST_Clone_backpack_EOD: FST_Clone_backpack
@@ -19137,7 +19089,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19157,7 +19109,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -19213,7 +19165,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=50000; 
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		NSM_jumppack_is_jumppack=1;
@@ -19223,7 +19175,7 @@ class CfgVehicles
 		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19542,7 +19494,7 @@ class CfgVehicles
 		};
 		tf_range=50000;
 	};
-//OLD
+//OLD 	
 /*	class FST_Backpack_Antenna_ARF_Desert: JLTS_Clone_RTO_pack
 	{
 		author="Daara";
@@ -19625,7 +19577,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19645,7 +19597,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -19691,7 +19643,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19711,7 +19663,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -19757,7 +19709,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19777,7 +19729,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -19823,7 +19775,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19843,7 +19795,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -19889,7 +19841,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19909,7 +19861,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -19955,7 +19907,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -19975,7 +19927,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20021,7 +19973,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20041,7 +19993,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20087,7 +20039,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20107,7 +20059,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20153,7 +20105,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20173,7 +20125,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20219,7 +20171,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20239,7 +20191,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20285,7 +20237,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20305,7 +20257,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20351,7 +20303,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20371,7 +20323,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20417,7 +20369,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20437,7 +20389,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20483,7 +20435,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20503,7 +20455,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20539,7 +20491,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=50000; 
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		NSM_jumppack_is_jumppack=1;
@@ -20549,7 +20501,7 @@ class CfgVehicles
 		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20610,7 +20562,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20630,12 +20582,12 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Forward Jump",
 				{12,20,50,0,0,0}
 			},
-
+			
 			{
 				"Short Jump",
 				{12,5,30,0,1,0}
@@ -20677,7 +20629,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20697,12 +20649,12 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Forward Jump",
 				{12,20,50,0,0,0}
 			},
-
+			
 			{
 				"Short Jump",
 				{12,5,30,0,1,0}
@@ -20748,7 +20700,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20768,12 +20720,12 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Forward Jump",
 				{12,20,50,0,0,0}
 			},
-
+			
 			{
 				"Short Jump",
 				{12,5,30,0,1,0}
@@ -20813,13 +20765,13 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_spam_delay=0;
+		DBA_jumppack_energy_capacity=150;
+		DBA_jumppack_recharge=10;
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20839,10 +20791,15 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
 			{
 				"Short Jump",
-				{12,2,100,0,1,0}
+				{12,5,30,0,1,0}
 			}
 		};
 		class TransportItems
@@ -20880,7 +20837,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -20900,7 +20857,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20952,7 +20909,7 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_Bacta_Tank";
-			};
+			};			
 		};
 	};
 /* 	class FST_Backpack_Jumppack_Medic_Test: JLTS_Clone_jumppack_mc
@@ -20986,7 +20943,7 @@ class CfgVehicles
 		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21057,7 +21014,7 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_Bacta_Tank";
-			};
+			};			
 		};
 	}; */
 	class FST_Backpack_Jumppack_Rifleman: JLTS_Clone_jumppack_mc
@@ -21096,7 +21053,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21116,7 +21073,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -21152,7 +21109,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=50000; 
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		NSM_jumppack_is_jumppack=1;
@@ -21162,7 +21119,7 @@ class CfgVehicles
 		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21223,7 +21180,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21243,7 +21200,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -21289,7 +21246,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21309,7 +21266,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -21355,7 +21312,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21375,7 +21332,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -21421,7 +21378,7 @@ class CfgVehicles
 		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21482,7 +21439,7 @@ class CfgVehicles
 		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
-
+			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
@@ -21502,7 +21459,7 @@ class CfgVehicles
 		};
 		DBA_jumppack_jump_types[]=
 		{
-
+			
 			{
 				"Break Fall",
 				{12,2,100,0,1,0}
@@ -21657,7 +21614,7 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_Bacta_Tank";
-			};
+			};			
 		};
 	};
 	class FST_Backpack_GM_RTO: JLTS_Clone_backpack_RTO
@@ -23454,7 +23411,7 @@ class CfgVehicles
 		};
 		respawnItems[]=
 		{
-
+			
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -23767,7 +23724,7 @@ class CfgVehicles
 		};
 		respawnItems[]=
 		{
-
+			
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -23888,7 +23845,7 @@ class CfgVehicles
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
-			"ItemCompass",
+			"ItemCompass",	
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
@@ -26711,7 +26668,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Ticktock: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -26766,7 +26723,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Annex: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -26821,7 +26778,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_James: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -26876,7 +26833,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_James_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -26931,7 +26888,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Mood: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -26986,7 +26943,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Mood_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -27041,7 +26998,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Zen: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27151,7 +27108,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Church: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27206,7 +27163,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Brutal: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27261,7 +27218,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Burns: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27316,7 +27273,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Freezer: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27371,7 +27328,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Ropey: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27426,7 +27383,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Spade: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27481,7 +27438,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Ripper: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27701,7 +27658,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Argo_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27756,7 +27713,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_ArgoV2: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -27811,7 +27768,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Hayes: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -28031,7 +27988,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Cardinal_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -28361,7 +28318,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_NotSkilled: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -28416,7 +28373,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Merrik: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -28471,7 +28428,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Merrik_3: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -29366,7 +29323,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P1_Pilot_Helmet_Vix",
+			"FST_P1_Pilot_Helmet_Vix", 
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -29421,7 +29378,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Vix_Dirty",
+			"FST_AB_Helmet_Vix_Dirty", 
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -29476,7 +29433,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P1_Pilot_Helmet_Pole",
+			"FST_P1_Pilot_Helmet_Pole", 
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -29594,7 +29551,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Snoob: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -33564,7 +33521,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	};	
  	class FST_P2_Recruit: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36314,7 +36271,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Stein: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36534,7 +36491,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
  	class FST_P2_Xeha: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36589,7 +36546,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_CosmicSmith: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36699,7 +36656,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Rint: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36754,7 +36711,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Rint_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36809,7 +36766,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Rint_V2: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36864,7 +36821,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Rint_Dirty_V2: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36919,7 +36876,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
 	class FST_P2_Bulwark: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -36974,7 +36931,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	};     
 	class FST_P2_Bulwark_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -37029,7 +36986,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	};     
     class FST_P2_Samurai: FST_Trooper_P2_DC15S
     {
         author="Viz";
@@ -37687,7 +37644,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};
+	}; 
   	class FST_P2_Evox: FST_Trooper_P2_DC15S
 	{
 		author="Viz";
@@ -38985,7 +38942,7 @@ class CfgGlasses
 		ACE_Resistance=1;
 		ACE_Protection=1;
 		ACE_TintAmount=0;
-	};
+	};	
 	class FST_Vest_NCO_Kama_Face: FST_Base_Glasses
 	{
 		displayName="[41st] Squad Leader Sash w/ Kama (Face)";
@@ -39786,15 +39743,15 @@ class cfgGroups
 	class WEST
 	{
 		name="BLUFOR";
-
+		
 		class FST_WOOK
 		{
 			name="41st Wookiees";
-
+			
 			class FST_Wookiee_Standard
 			{
 				name="Infantry";
-
+				
 				class FST_Wookiee_Squad
 				{
 					name="[41st] Wookiee Squad";
