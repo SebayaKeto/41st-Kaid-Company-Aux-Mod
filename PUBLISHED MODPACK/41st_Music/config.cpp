@@ -100,6 +100,7 @@ class CfgMusic
 		"FST_Subnautica_AThousandStrings",
 		"FST_Portal_YouCantEscapeYouKnow",
 		"FST_DeusEx_EnemyWithin",
+		"FST_EldenRing_FinalBattle",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -714,6 +715,18 @@ class CfgMusic
 			1
 		};
 		duration="186";
+	};
+	class FST_EldenRing_FinalBattle
+	{
+		name="(Elden Ring) The Final Battle (Epic Version)";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\EldenRing_FinalBattleEpicVersion.ogg",
+			1,
+			1
+		};
+		duration="334";
 	};
 	class FST_WT_WaltzoftheTornado
 	{
