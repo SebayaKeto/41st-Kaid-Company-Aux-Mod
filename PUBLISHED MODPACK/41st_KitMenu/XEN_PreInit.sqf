@@ -215,6 +215,42 @@ switch true do {
 				"FST_grenade_Detonator_mag"
 			];
 		};
+		case (_item == "JLTS_STATIC_OPTION" && {count _lbData > 1 && _lbData select 1 == "STATIC_MAGIC"}): {
+			playSoundUI ["41st_KitMenu\sounds\select_generic_3.ogg", 0.85, 1];
+			private _magClass = "JLTS_stun_mag_long";
+
+			private _allowedWeapons = [
+				"FST_DC15A",
+				"FST_DC15A_ugl",
+				"FST_DC15S",
+				"FST_DC15S_UGL",
+				"FST_DC15C_F"
+			];
+
+			private _currentWeapon = currentWeapon player;
+
+			if (_allowedWeapons findIf { _currentWeapon isEqualTo _x } != -1) then {
+				private _hasAny = { _x == _magClass } count magazines player;
+
+				if (_hasAny > 0) then {
+					player removeMagazines _magClass;
+				} else {
+					for "_i" from 1 to 5 do {
+						if (player canAddItemToVest _magClass) then {
+							player addItemToVest _magClass;
+						} else {
+							if (player canAddItemToBackpack _magClass) then {
+								player addItemToBackpack _magClass;
+							} else {
+								player addItemToUniform _magClass;
+							};
+						};
+					};
+				};
+			} else {
+				systemChat "Selected weapon doesn't allow stuns";
+			};
+		};
 		case ( isClass (configFile >> "CfgUnitInsignia" >> _item)): {
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_generic_1.ogg","41st_KitMenu\sounds\select_generic_2.ogg","41st_KitMenu\sounds\select_generic_3.ogg","41st_KitMenu\sounds\select_generic_4.ogg","41st_KitMenu\sounds\select_generic_5.ogg","41st_KitMenu\sounds\select_generic_6.ogg"], 0.85, 1];
 		    player setVariable ["BIS_fnc_setUnitInsignia_class", nil];
@@ -862,49 +898,51 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						};
 					};
 				};
-			case "FST_DP23": {
-				private _slugMag = "FST_thermal_slug_mag_Blue";
-				private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
-				player addPrimaryWeaponItem "FST_blaster_scatter_cell_DP23_Blue";
-				{
-					private _mag = _x select 0;
-					private _count = _x select 1;
-					for "_i" from 1 to _count do {
-						if (player canAddItemToVest _mag) then {
-							player addItemToVest _mag;
-						} else {
-							if (player canAddItemToBackpack _mag) then {
-								player addItemToBackpack _mag;
-							} else {
-								player addItemToUniform _mag;
-							};
-						};
-					};
-				} forEach [
-					[_scatterCell, 16],
-					[_slugMag, 4]
-				];
-				{
-					private _grenade = _x;
-					player removeMagazines _grenade;
-					for "_i" from 1 to 5 do {
-						if (player canAddItemToVest _grenade) then {
-							player addItemToVest _grenade;
-						} else {
-							if (player canAddItemToUniform _grenade) then {
-								player addItemToUniform _grenade;
-							} else {
-								player addItemToBackpack _grenade;
-							};
-						};
-					};
-				} forEach [
-					"FST_grenade_emp_mag",
-					"IDA_grenade_Sonic_mag",
-					"FST_grenade_Detonator_mag"
-				];
-			};
+				case "FST_DP23": {
+					private _slugMag = "FST_thermal_slug_mag_Blue";
+					private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
+					player addPrimaryWeaponItem "FST_blaster_scatter_cell_DP23_Blue";
 
+					{
+						private _mag = _x select 0;
+						private _count = _x select 1;
+						for "_i" from 1 to _count do {
+							if (player canAddItemToVest _mag) then {
+								player addItemToVest _mag;
+							} else {
+								if (player canAddItemToBackpack _mag) then {
+									player addItemToBackpack _mag;
+								} else {
+									player addItemToUniform _mag;
+								};
+							};
+						};
+					} forEach [
+						[_scatterCell, 16],
+						[_slugMag, 4]
+					];
+					if ((player getVariable ["WBK_Kit_Name", ""]) == "Close Quarters Combatant") then {
+						{
+							private _grenade = _x;
+							player removeMagazines _grenade;
+							for "_i" from 1 to 5 do {
+								if (player canAddItemToVest _grenade) then {
+									player addItemToVest _grenade;
+								} else {
+									if (player canAddItemToUniform _grenade) then {
+										player addItemToUniform _grenade;
+									} else {
+										player addItemToBackpack _grenade;
+									};
+								};
+							};
+						} forEach [
+							"FST_grenade_emp_mag",
+							"IDA_grenade_Sonic_mag",
+							"FST_grenade_Detonator_mag"
+						];
+					};
+				};
 				case "FST_Westar_M5_UGL": {
 					player addPrimaryWeaponItem "FST_blaster_cell_Westar_Blue";
 					player addPrimaryWeaponItem "FST_Scope_Westar_M5";
@@ -1512,11 +1550,11 @@ if (count _aditionalGear > 0) then {
 	   };
 	};
 	} forEach _aditionalGear;
-_primaryWeapons = [];
-_secondaryWeapons = [];
-_launchers = [];
+	_primaryWeapons = [];
+	_secondaryWeapons = [];
+	_launchers = [];
 
-{
+	{
 	if (_x isKindOf ["Rifle", configFile >> "CfgWeapons"]) then {
 		_primaryWeapons pushBack _x;
 	} else {
@@ -1528,212 +1566,247 @@ _launchers = [];
 			};
 		};
 	};
-} forEach _weapons;
+	} forEach _weapons;
 
-private _CQBKits = ["Close Quarters Combatant","Crewman","Engineer","Medic","RTO","Squad Leader","Squad Leader ","Howler","Emplaced Weapon","Platoon RTO", "Platoon Medic","Platoon Sergeant","Platoon Commander","Crewman Medic"];
-private _typeClean = toLower (trim _typeOfKit);
-if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
-    _primaryWeapons pushBack "[41st]_dc15s_cqb";
-};
-	if (count _primaryWeapons > 0) then {
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Rifle_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " PRIMARY WEAPONS";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, "['any']"];
-		{
-			if (_x == "[41st]_dc15s_cqb") then {
-				_pic = getText (configFile >> "CfgWeapons" >> "FST_DC15S" >> "picture");
-				_index = _listBox_AditionalStuff lbAdd "[41st] DC-15S carbine (CQB)";
-				_listBox_AditionalStuff lbSetPicture [_index, _pic];
-				_listBox_AditionalStuff lbSetData [_index, "['FST_DC15S','CQB_MAGIC']"];
-				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-			} else {
+	private _CQBKits = ["Close Quarters Combatant"];
+	private _typeClean = toLower (trim _typeOfKit);
+	if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
+		_primaryWeapons pushBack "[41st]_dc15s_cqb";
+	};
+		if (count _primaryWeapons > 0) then {
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Rifle_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " PRIMARY WEAPONS";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, "['any']"];
+			{
+				if (_x == "[41st]_dc15s_cqb") then {
+					_pic = getText (configFile >> "CfgWeapons" >> "FST_DC15S" >> "picture");
+					_index = _listBox_AditionalStuff lbAdd "[41st] DC-15S carbine (CQB)";
+					_listBox_AditionalStuff lbSetPicture [_index, _pic];
+					_listBox_AditionalStuff lbSetData [_index, "['FST_DC15S','CQB_MAGIC']"];
+					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+				} else {
+					_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+					_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+					_listBox_AditionalStuff lbSetPicture [_index, _pic];
+					_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+				};
+			} forEach _primaryWeapons;
+				if (_typeOfKit == "Pilot") then {
+					_pic = "\a3\ui_f\data\igui\cfg\actions\delete_ca.paa";
+					_index = _listBox_AditionalStuff lbAdd "REMOVE PRIMARY WEAPON";
+					_listBox_AditionalStuff lbSetPicture [_index, _pic];
+					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+					_listBox_AditionalStuff lbSetData [_index, "['REMOVE_PRIMARY','PILOT_REMOVE']"];
+				};
+		};
+
+		if (count _secondaryWeapons > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\handgun_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " SECONDARY WEAPONS";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, "['any']"];
+			{
 				_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
 				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
 				_listBox_AditionalStuff lbSetPicture [_index, _pic];
 				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
 				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-			};
-		} forEach _primaryWeapons;
-			if (_typeOfKit == "Pilot") then {
-				_pic = "\a3\ui_f\data\igui\cfg\actions\delete_ca.paa";
-				_index = _listBox_AditionalStuff lbAdd "REMOVE PRIMARY WEAPON";
-				_listBox_AditionalStuff lbSetPicture [_index, _pic];
-				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-				_listBox_AditionalStuff lbSetData [_index, "['REMOVE_PRIMARY','PILOT_REMOVE']"];
-			};
-	};
+			} forEach _secondaryWeapons;
+		};
 
-	if (count _secondaryWeapons > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+		if (count _launchers > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
 
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\handgun_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " SECONDARY WEAPONS";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, "['any']"];
-		{
-			_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\launcher_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " LAUNCHERS";
 			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
 			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _secondaryWeapons;
-	};
-
-	if (count _launchers > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\launcher_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " LAUNCHERS";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, "['any']"];
-		{
-			_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
-			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _launchers;
-	};
-	if (count _attachments > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Optics_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " ATTACHMENTS";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		{
-			_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
-			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _attachments;
-	};
-	if (count _equipment > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Stamina_CA.paa";
-		_index = _listBox_AditionalStuff lbAdd " EQUIPMENT";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		{
-			_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
-			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _equipment;
-	};
-	if (count _backpacks > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " BACKPACKS";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		{
-			_pic = getText (configFile >> "CfgVehicles" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgVehicles" >> _x >> "displayname");
-			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _backpacks;
-	};
-	if (count _glasses > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Pheripheal_vision_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " FACEWEAR";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		{
-			_pic = getText (configFile >> "CfgGlasses" >> _x >> "picture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgGlasses" >> _x >> "displayname");
-			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _glasses;
-	};
-	if (count _magazinesAndItems > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\Reload_ca.paa";
-		_index = _listBox_AditionalStuff lbAdd " MAGAZINES AND ITEMS";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		{
-			if ( isClass (configFile >> "CfgMagazines" >> _x)) then {
-				_pic = getText (configFile >> "CfgMagazines" >> _x >> "picture");
-				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayname");
-				_listBox_AditionalStuff lbSetPicture [_index, _pic];
-				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-			}else{
+			_listBox_AditionalStuff lbSetData [_index, "['any']"];
+			{
 				_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
 				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
 				_listBox_AditionalStuff lbSetPicture [_index, _pic];
 				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
 				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-			};
-		} forEach _magazinesAndItems;
-	};
-	if (count _patches > 0) then {
-		_pic = "";
-		_index = _listBox_AditionalStuff lbAdd " ";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		
-		_pic = "a3\ui_f\data\GUI\Cfg\Hints\UnitType_CA.paa";
-		_index = _listBox_AditionalStuff lbAdd " PATCHES";
-		_listBox_AditionalStuff lbSetPicture [_index, _pic];
-		_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-		{
-			_pic = getText (configFile >> "CfgUnitInsignia" >> _x >> "texture");
-			_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgUnitInsignia" >> _x >> "displayname");
+			} forEach _launchers;
+		};
+		if (count _attachments > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
 			_listBox_AditionalStuff lbSetPicture [_index, _pic];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
 			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-		} forEach _patches;
-	};
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Optics_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " ATTACHMENTS";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			{
+				_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			} forEach _attachments;
+		};
+		if (count _equipment > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Stamina_CA.paa";
+			_index = _listBox_AditionalStuff lbAdd " EQUIPMENT";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			{
+				_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			} forEach _equipment;
+		};
+		if (count _backpacks > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " BACKPACKS";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			{
+				_pic = getText (configFile >> "CfgVehicles" >> _x >> "picture");
+				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgVehicles" >> _x >> "displayname");
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			} forEach _backpacks;
+		};
+		if (count _glasses > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Pheripheal_vision_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " FACEWEAR";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			{
+				_pic = getText (configFile >> "CfgGlasses" >> _x >> "picture");
+				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgGlasses" >> _x >> "displayname");
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			} forEach _glasses;
+		};
+		if (count _magazinesAndItems > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Reload_ca.paa";
+			_index = _listBox_AditionalStuff lbAdd " MAGAZINES AND ITEMS";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			{
+				if ( isClass (configFile >> "CfgMagazines" >> _x)) then {
+					_pic = getText (configFile >> "CfgMagazines" >> _x >> "picture");
+					_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayname");
+					_listBox_AditionalStuff lbSetPicture [_index, _pic];
+					_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+				}else{
+					_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+					_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+					_listBox_AditionalStuff lbSetPicture [_index, _pic];
+					_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+				};
+			} forEach _magazinesAndItems;
+			private _allowedKits = [
+				"Rifleman",
+				"Ammo Bearer",
+				"Engineer",
+				"Medic",
+				"Grenadier",
+				"Close Quarters Combatant",
+				"Squad Leader",
+				"RTO",
+				"Anti Tank",
+				"Squad Leader ",
+				"Ammo Bearer ",
+				"Emplaced Weapon",
+				"Pilot",
+				"Crew Chief",
+				"Crewman",
+				"Howler",
+				"Platoon RTO",
+				"Platoon Medic",
+				"Platoon Sergeant",
+				"Platoon Commander",
+				"Crewman Medic"
+			];
+
+			if (_typeOfKit in _allowedKits) then {
+				private _staticClass = "JLTS_stun_mag_long";
+				if (isClass (configFile >> "CfgMagazines" >> _staticClass)) then {
+					private _staticName = "5 x Stun mags";
+					private _staticIcon = getText (configFile >> "CfgMagazines" >> _staticClass >> "picture");
+					private _indexStatic = _listBox_AditionalStuff lbAdd _staticName;
+					_listBox_AditionalStuff lbSetPicture [_indexStatic, _staticIcon];
+					_listBox_AditionalStuff lbSetData [_indexStatic, "['JLTS_STATIC_OPTION','STATIC_MAGIC']"];
+					_listBox_AditionalStuff lbSetPictureColor [_indexStatic, [1, 1, 1, 1]];
+				};
+			};
+		};
+		if (count _patches > 0) then {
+			_pic = "";
+			_index = _listBox_AditionalStuff lbAdd " ";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			
+			_pic = "a3\ui_f\data\GUI\Cfg\Hints\UnitType_CA.paa";
+			_index = _listBox_AditionalStuff lbAdd " PATCHES";
+			_listBox_AditionalStuff lbSetPicture [_index, _pic];
+			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
+			{
+				_pic = getText (configFile >> "CfgUnitInsignia" >> _x >> "texture");
+				_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgUnitInsignia" >> _x >> "displayname");
+				_listBox_AditionalStuff lbSetPicture [_index, _pic];
+				_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+			} forEach _patches;
+		};
 }else{
 _pic = "";
 _index = _listBox_AditionalStuff lbAdd "NONE";
