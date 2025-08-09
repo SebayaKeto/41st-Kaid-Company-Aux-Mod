@@ -1204,6 +1204,7 @@ class CfgVehicles
 						magazines[]=
 						{
 							"SmokeLauncherMag",
+							"SmokeLauncherMag",
 							"Laserbatteries"
 						};
 						turretInfoType="RscWeaponRangeZeroing";
