@@ -291,6 +291,7 @@ class CfgPatches
 			"FST_P2_Fire",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
+			"FST_P2_Airman",
 			//////////OTHERS//////////
 			"FST_AmmoCrate",
 			"FST_MedicalCrate",
@@ -13060,6 +13061,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Recon.paa",
+		};
+	};
+	class FST_P2_Helmet_Airman: FST_P2_Helmet_Base
+	{
+		author="Adler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Airman]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Airman.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////

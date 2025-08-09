@@ -391,7 +391,8 @@ class CfgWeapons
 		muzzles[]=
 		{
 			"this",
-			"EGLM"
+			"EGLM",
+			"Stun"
 		};
 		magazines[]=
 		{
@@ -454,6 +455,7 @@ class CfgWeapons
 				maxRange=200;
 				maxRangeProbab=0.3;
 			};
+			class Stun: JLTS_stun_muzzle{};
 		};
 		irLaserPos="";
 		irLaserEnd="";
@@ -1074,7 +1076,8 @@ class CfgWeapons
 		muzzles[]=
 		{
 			"This",
-			"EGLM"
+			"EGLM",
+			"Stun"
 		};
 		modes[]=
 		{
@@ -1136,6 +1139,7 @@ class CfgWeapons
 				maxRange=200;
 				maxRangeProbab=0.3;
 			};
+			class Stun: JLTS_stun_muzzle{};
 		};
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
@@ -1856,7 +1860,7 @@ class CfgWeapons
 					opticsZoomMin=0.25;
 					opticsZoomMax=1.25;
 					opticsZoomInit=0.75;
-					discreteDistance[]={200};
+					discreteDistance[]={60};
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=200;
 					distanceZoomMax=200;
@@ -1877,7 +1881,7 @@ class CfgWeapons
 					opticsZoomMin=0.25;
 					opticsZoomMax=1.25;
 					opticsZoomInit=0.75;
-					discreteDistance[]={200};
+					discreteDistance[]={60};
 					discreteDistanceInitIndex=0;
 					distanceZoomMin=200;
 					distanceZoomMax=200;
