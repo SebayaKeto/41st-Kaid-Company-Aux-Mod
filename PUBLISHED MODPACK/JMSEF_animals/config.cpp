@@ -158,7 +158,7 @@ class CfgVehicles
         faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-        uniformClass = "FST_Zombie_Bloody";
+        uniformClass = "FST_Uniform_Bloddy_Zombie";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
@@ -216,7 +216,7 @@ class CfgVehicles
         faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-		uniformClass = "FST_Zombie_Bloody";
+		uniformClass = "FST_Uniform_Bloddy_Zombie";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
@@ -274,7 +274,7 @@ class CfgVehicles
 		faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-		uniformClass = "FST_Zombie_Bloody";
+		uniformClass = "FST_Uniform_Bloddy_Zombie";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
@@ -332,7 +332,7 @@ class CfgVehicles
         faction="FST_Zombies_Faction";
         editorSubcategory="FST_Zombies_Subfaction";
         identityTypes[] = {""};
-        uniformClass = "FST_Zombie_Bloody";
+        uniformClass = "FST_Uniform_Bloddy_Zombie";
         model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[] = {"camo1", "camo2", "insignia"};
         hiddenSelectionsTextures[] = 
