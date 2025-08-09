@@ -1076,7 +1076,8 @@ class CfgWeapons
 		muzzles[]=
 		{
 			"This",
-			"EGLM",
+			"Stun",
+			"EGLM"
 		};
 		modes[]=
 		{
@@ -1138,6 +1139,7 @@ class CfgWeapons
 				maxRange=200;
 				maxRangeProbab=0.3;
 			};
+			class Stun: JLTS_stun_muzzle{};
 		};
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
