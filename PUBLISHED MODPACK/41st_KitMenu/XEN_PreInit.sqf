@@ -1724,58 +1724,43 @@ if (count _aditionalGear > 0) then {
 				_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
 			} forEach _glasses;
 		};
-		if (count _magazinesAndItems > 0) then {
+		private _allowedKits = [
+			"Rifleman","Ammo Bearer","Engineer","Medic","Grenadier","Close Quarters Combatant",
+			"Squad Leader","RTO","Anti Tank","Squad Leader ","Ammo Bearer ","Emplaced Weapon",
+			"Pilot","Crew Chief","Crewman","Howler","Platoon RTO","Platoon Medic",
+			"Platoon Sergeant","Platoon Commander","Crewman Medic"
+		];
+		private _canShowStuns = _typeOfKit in _allowedKits;
+
+		if ((count _magazinesAndItems > 0) || _canShowStuns) then {
 			_pic = "";
 			_index = _listBox_AditionalStuff lbAdd " ";
 			_listBox_AditionalStuff lbSetPicture [_index, _pic];
 			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-			
+			_listBox_AditionalStuff lbSetData [_index, "['any']"];
 			_pic = "a3\ui_f\data\GUI\Cfg\Hints\Reload_ca.paa";
 			_index = _listBox_AditionalStuff lbAdd " MAGAZINES AND ITEMS";
 			_listBox_AditionalStuff lbSetPicture [_index, _pic];
 			_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-			_listBox_AditionalStuff lbSetData [_index, format ["['%1']", any]];
-			{
-				if ( isClass (configFile >> "CfgMagazines" >> _x)) then {
-					_pic = getText (configFile >> "CfgMagazines" >> _x >> "picture");
-					_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayname");
-					_listBox_AditionalStuff lbSetPicture [_index, _pic];
-					_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-				}else{
-					_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
-					_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
-					_listBox_AditionalStuff lbSetPicture [_index, _pic];
-					_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
-					_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
-				};
-			} forEach _magazinesAndItems;
-			private _allowedKits = [
-				"Rifleman",
-				"Ammo Bearer",
-				"Engineer",
-				"Medic",
-				"Grenadier",
-				"Close Quarters Combatant",
-				"Squad Leader",
-				"RTO",
-				"Anti Tank",
-				"Squad Leader ",
-				"Ammo Bearer ",
-				"Emplaced Weapon",
-				"Pilot",
-				"Crew Chief",
-				"Crewman",
-				"Howler",
-				"Platoon RTO",
-				"Platoon Medic",
-				"Platoon Sergeant",
-				"Platoon Commander",
-				"Crewman Medic"
-			];
-
-			if (_typeOfKit in _allowedKits) then {
+			_listBox_AditionalStuff lbSetData [_index, "['any']"];
+			if (count _magazinesAndItems > 0) then {
+				{
+					if (isClass (configFile >> "CfgMagazines" >> _x)) then {
+						_pic = getText (configFile >> "CfgMagazines" >> _x >> "picture");
+						_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayname");
+						_listBox_AditionalStuff lbSetPicture [_index, _pic];
+						_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+						_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+					} else {
+						_pic = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+						_index = _listBox_AditionalStuff lbAdd getText (configFile >> "CfgWeapons" >> _x >> "displayname");
+						_listBox_AditionalStuff lbSetPicture [_index, _pic];
+						_listBox_AditionalStuff lbSetData [_index, format ["['%1']", _x]];
+						_listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
+					};
+				} forEach _magazinesAndItems;
+			};
+			if (_canShowStuns) then {
 				private _staticClass = "JLTS_stun_mag_long";
 				if (isClass (configFile >> "CfgMagazines" >> _staticClass)) then {
 					private _staticName = "5 x Stun mags";
