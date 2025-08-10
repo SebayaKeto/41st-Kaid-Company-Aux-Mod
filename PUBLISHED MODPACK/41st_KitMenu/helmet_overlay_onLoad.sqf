@@ -2,57 +2,29 @@ private _display = findDisplay 4100;
 uiNamespace setVariable ["FST_HelmetOverlay_Display", _display];
 private _listCtrl = _display displayCtrl 4102;
 lbClear _listCtrl;
-private _helmetClasses = [];
-
-{
-	private _className = configName _x;
-
-	if (["FST_", _className] call BIS_fnc_inString) then {
-		private _itemInfo = _x >> "ItemInfo";
-		if (isClass _itemInfo) then {
-			private _type = getNumber (_itemInfo >> "type");
-
-			if (_type in [605, 701, 801, 901, 302, 616, 101]) then {
-				private _displayName = getText (_x >> "displayName");
-				private _picture = getText (_x >> "picture");
-
-				if (_displayName != "") then {
-					private _index = _listCtrl lbAdd _displayName;
-
-					if (_picture != "") then {
-						_listCtrl lbSetPicture [_index, _picture];
-					};
-
-					private _quotedClass = str _className;
-					private _dataString = format ["[%1]", _quotedClass];
-					_listCtrl lbSetData [_index, _dataString];
-					_helmetClasses pushBack _className;
-				};
-			};
-		};
-	};
-} forEach ("true" configClasses (configFile >> "CfgWeapons"));
-
-{
-	private _className = configName _x;
-
-	if (["FST", _className] call BIS_fnc_inString && {getNumber (_x >> "isBackpack") == 1}) then {
-		private _displayName = getText (_x >> "displayName");
-		private _picture = getText (_x >> "picture");
-
-		if (_displayName != "") then {
-			private _index = _listCtrl lbAdd _displayName;
-			if (_picture != "") then {
-				_listCtrl lbSetPicture [_index, _picture];
-			};
-
-			private _quotedClass = str _className;
-			private _dataString = format ["[%1]", _quotedClass];
-			_listCtrl lbSetData [_index, _dataString];
-
-			_helmetClasses pushBack _className;
-		};
-	};
-} forEach ("true" configClasses (configFile >> "CfgVehicles"));
-
-uiNamespace setVariable ["FST_AllHelmetClasses", _helmetClasses];
+call FST_fnc_gearIndex;
+uiNamespace setVariable ["FST_CurrentCategories", ["helmets"]];
+[] call FST_fnc_refreshGearList;
+private _idx = uiNamespace getVariable ["FST_GearIndex", createHashMap];
+private _all = +(_idx getOrDefault ["uniforms",  []])
+            + (_idx getOrDefault ["vests",     []])
+            + (_idx getOrDefault ["helmets",   []])
+            + (_idx getOrDefault ["backpacks", []])
+            + (_idx getOrDefault ["facewear",  []]);
+uiNamespace setVariable ["FST_AllHelmetClasses", _all];
+private _searchCtrl = _display displayCtrl 4103;
+if (!isNull _searchCtrl) then {
+    _searchCtrl ctrlAddEventHandler ["KeyUp", {
+        [] call FST_fnc_filterHelmets;
+    }];
+};
+private _btnHelmets   = _display displayCtrl 4201;
+private _btnFacewear  = _display displayCtrl 4202;
+private _btnVests     = _display displayCtrl 4203;
+private _btnUniforms  = _display displayCtrl 4204;
+private _btnBackpacks = _display displayCtrl 4205;
+if (!isNull _btnHelmets)  then { _btnHelmets  ctrlAddEventHandler ["ButtonClick", { ["helmets"]   call FST_fnc_showCategory; }]; };
+if (!isNull _btnFacewear) then { _btnFacewear ctrlAddEventHandler ["ButtonClick", { ["facewear"]  call FST_fnc_showCategory; }]; };
+if (!isNull _btnVests)    then { _btnVests    ctrlAddEventHandler ["ButtonClick", { ["vests"]     call FST_fnc_showCategory; }]; };
+if (!isNull _btnUniforms) then { _btnUniforms ctrlAddEventHandler ["ButtonClick", { ["uniforms"]  call FST_fnc_showCategory; }]; };
+if (!isNull _btnBackpacks)then { _btnBackpacks ctrlAddEventHandler ["ButtonClick", { ["backpacks"] call FST_fnc_showCategory; }]; };

@@ -173,11 +173,9 @@ class WBK_KITArsenalAlike
 			w = "0.062 * safezoneH";
 			h = "0.080 * safezoneH";
 			tooltip = "Switch Kit Category";
-			action = "call FST_ToggleKitCategory;";
+			onMouseButtonDown = "call FST_ToggleKitCategory;";
 			onMouseEnter = "(_this select 0) ctrlSetPosition [ctrlPosition (_this select 0) select 0, ctrlPosition (_this select 0) select 1, 0.072 * safezoneH, 0.093 * safezoneH]; (_this select 0) ctrlCommit 0.07;";
-			onMouseExit = "(_this select 0) ctrlSetPosition [ctrlPosition (_this select 0) select 0, ctrlPosition (_this select 0) select 1, 0.062 * safezoneH, 0.080 * safezoneH]; (_this select 0) ctrlCommit 0.07;";
-			onButtonDown = "(_this select 0) ctrlSetPosition [ctrlPosition (_this select 0) select 0, ctrlPosition (_this select 0) select 1, 0.055 * safezoneH, 0.070 * safezoneH]; (_this select 0) ctrlCommit 0.03;";
-			onButtonUp = "(_this select 0) ctrlSetPosition [ctrlPosition (_this select 0) select 0, ctrlPosition (_this select 0) select 1, 0.072 * safezoneH, 0.093 * safezoneH]; (_this select 0) ctrlCommit 0.07;";
+			onMouseExit  = "(_this select 0) ctrlSetPosition [ctrlPosition (_this select 0) select 0, ctrlPosition (_this select 0) select 1, 0.062 * safezoneH, 0.080 * safezoneH]; (_this select 0) ctrlCommit 0.07;";
 		};
 		class RscListbox_1500: WBK_RscListBox
 		{
@@ -307,6 +305,56 @@ class FST_CustomsOverlay
 
 	class controls
 	{
+	class FST_Btn_Helmets: WBK_RscButton
+	{
+		idc = 4201;
+		text = "Helmets";
+		x = "(0.35 * safezoneW + safezoneX) + 0 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
+		y = "0.20 * safezoneH + safezoneY";
+		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
+		h = "0.035 * safezoneH";
+		tooltip = "Show helmets";
+	};
+	class FST_Btn_Facewear: WBK_RscButton
+	{
+		idc = 4202;
+		text = "Facewear";
+		x = "(0.35 * safezoneW + safezoneX) + 1 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
+		y = "0.20 * safezoneH + safezoneY";
+		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
+		h = "0.035 * safezoneH";
+		tooltip = "Show masks & goggles";
+	};
+	class FST_Btn_Vests: WBK_RscButton
+	{
+		idc = 4203;
+		text = "Vests";
+		x = "(0.35 * safezoneW + safezoneX) + 2 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
+		y = "0.20 * safezoneH + safezoneY";
+		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
+		h = "0.035 * safezoneH";
+		tooltip = "Show vests";
+	};
+	class FST_Btn_Uniforms: WBK_RscButton
+	{
+		idc = 4204;
+		text = "Uniforms";
+		x = "(0.35 * safezoneW + safezoneX) + 3 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
+		y = "0.20 * safezoneH + safezoneY";
+		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
+		h = "0.035 * safezoneH";
+		tooltip = "Show uniforms";
+	};
+	class FST_Btn_Backpacks: WBK_RscButton
+	{
+		idc = 4205;
+		text = "Backpacks";
+		x = "(0.35 * safezoneW + safezoneX) + 4 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
+		y = "0.20 * safezoneH + safezoneY";
+		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
+		h = "0.035 * safezoneH";
+		tooltip = "Show backpacks";
+	};
 		class HelmetSearchInput
 		{
 			idc = 4103;
@@ -328,12 +376,12 @@ class FST_CustomsOverlay
 		class HelmetList: WBK_RscListBox
 		{
 			idc = 4102;
+			style = 0;
 			x = 0.35 * safezoneW + safezoneX;
 			y = 0.3 * safezoneH + safezoneY;
 			w = 0.3 * safezoneW;
 			h = 0.4 * safezoneH;
 			onLBSelChanged = "_this call FST_fnc_selectHelmet;";
-
 		};
 	};
 };

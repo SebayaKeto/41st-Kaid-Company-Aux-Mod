@@ -21,21 +21,146 @@ if ((isNil {_obj getVariable "WBK_kitMenuPresent"})) then {
 systemChat "Object already have a kit menu";
 };
 };
-FST_fnc_selectHelmet = {
-    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
+FST_fnc_gearIndex = {
+    private _idx = createHashMapFromArray [
+        ["uniforms",  []],
+        ["vests",     []],
+        ["helmets",   []],
+        ["backpacks", []],
+        ["facewear",  []]
+    ];
+    {
+        private _cls = configName _x;
+        if (!(["FST_", _cls] call BIS_fnc_inString)) then { continue };
+        private _ii = _x >> "ItemInfo";
+        if !(isClass _ii) then { continue };
+        private _type = getNumber (_ii >> "type");
+
+        switch (_type) do {
+            case 801: { (_idx get "uniforms")  pushBack _cls; };
+            case 701: { (_idx get "vests")     pushBack _cls; };
+            case 605: { (_idx get "helmets")   pushBack _cls; };
+            default {};
+        };
+    } forEach ("true" configClasses (configFile >> "CfgWeapons"));
+    {
+        private _cls = configName _x;
+        if (!(["FST", _cls] call BIS_fnc_inString)) then { continue };
+        if (getNumber (_x >> "isBackpack") == 1) then {
+            (_idx get "backpacks") pushBack _cls;
+        };
+    } forEach ("true" configClasses (configFile >> "CfgVehicles"));
+    {
+        private _cls = configName _x;
+        if (!(["FST", _cls] call BIS_fnc_inString)) then { continue };
+        private _scopeOk = (getNumber (_x >> "scopeArsenal") == 2) || (getNumber (_x >> "scope") > 1);
+        if (_scopeOk) then { (_idx get "facewear") pushBack _cls; };
+    } forEach ("true" configClasses (configFile >> "CfgGlasses"));
+    uiNamespace setVariable ["FST_GearIndex", _idx];
+    private _all = +(_idx get "uniforms") + (_idx get "vests") + (_idx get "helmets") + (_idx get "backpacks") + (_idx get "facewear");
+    uiNamespace setVariable ["FST_AllHelmetClasses", _all];
+};
+FST_fnc_showCategory = {
+    params ["_cats"];
+    if (typeName _cats == "STRING") then { _cats = [_cats]; };
+    uiNamespace setVariable ["FST_CurrentCategories", _cats];
+    [] call FST_fnc_refreshGearList;
+    [] call FST_fnc_scrollListTop;
+};
+FST_fnc_refreshGearList = {
     private _display = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
+    if (isNull _display) exitWith {};
     private _listCtrl = _display displayCtrl 4102;
-    private _index = lbCurSel _listCtrl;
-    private _ctrlId = ctrlIDC _listCtrl;
-    private _text = lbText [_ctrlId, _index];
-    private _dataStr = lbData [_ctrlId, _index];
-    private _gearArray = call compile _dataStr;
-    private _gearClass = _gearArray select 0;
-    private _cfgW = configFile >> "CfgWeapons" >> _gearClass;
+    private _inputLower = toLower (ctrlText (_display displayCtrl 4103));
+    private _idx  = uiNamespace getVariable ["FST_GearIndex", createHashMap];
+    private _cats = uiNamespace getVariable ["FST_CurrentCategories", ["helmets"]];
+    private _classes = [];
+    { _classes append (_idx getOrDefault [_x, []]); } forEach _cats;
+    private _filtered = _classes select {
+        private _cls = _x;
+        private _cfgW = configFile >> "CfgWeapons"  >> _cls;
+        private _cfgV = configFile >> "CfgVehicles" >> _cls;
+        private _cfgG = configFile >> "CfgGlasses"  >> _cls;
+        private _cfg  = if (isClass _cfgW) then {_cfgW} else { if (isClass _cfgV) then {_cfgV} else {_cfgG} };
+        private _dn   = toLower getText (_cfg >> "displayName");
+        (_dn find _inputLower) > -1 || ((toLower _cls) find _inputLower) > -1
+    };
+    lbClear _listCtrl;
+    {
+        private _cls = _x;
+        private _cfgW = configFile >> "CfgWeapons"  >> _cls;
+        private _cfgV = configFile >> "CfgVehicles" >> _cls;
+        private _cfgG = configFile >> "CfgGlasses"  >> _cls;
+        private _cfg  = if (isClass _cfgW) then {_cfgW} else { if (isClass _cfgV) then {_cfgV} else {_cfgG} };
+        private _dn = getText (_cfg >> "displayName"); if (_dn == "") then { _dn = _cls; };
+        private _pic = getText (_cfg >> "picture");
+        private _i = _listCtrl lbAdd _dn;
+        if (_pic != "") then { _listCtrl lbSetPicture [_i, _pic]; };
+        _listCtrl lbSetData [_i, format ["[%1]", str _cls]];
+    } forEach _filtered;
+    [] spawn {
+        uiSleep 0;
+        private _display = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
+        if (isNull _display) exitWith {};
+        private _lb = _display displayCtrl 4102;
+        if (isNull _lb) exitWith {};
+        if ((lbSize _lb) > 0) then { lbSetCurSel [_lb, 0]; };
+        uiSleep 0;
+        if ((lbSize _lb) > 0) then { lbSetCurSel [_lb, 0]; };
+    };
+};
+FST_fnc_scrollListTop = {
+    private _display = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
+    if (isNull _display) exitWith {};
+    private _lb = _display displayCtrl 4102;
+    if (isNull _lb) exitWith {};
+    uiNamespace setVariable ["FST_SuppressSelect", true];
+    ctrlSetFocus _lb;
+    if ((lbSize _lb) > 0) then {
+        lbSetCurSel [_lb, 0];
+        0 spawn {
+            uiSleep 0;
+            private _display = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
+            if (isNull _display) exitWith {};
+            private _lb = _display displayCtrl 4102;
+            if (isNull _lb) exitWith {};
+            if ((lbSize _lb) > 0) then { lbSetCurSel [_lb, 0]; };
+            uiNamespace setVariable ["FST_SuppressSelect", false];
+        };
+    } else {
+        uiNamespace setVariable ["FST_SuppressSelect", false];
+    };
+};
+FST_fnc_selectHelmet = {
+	if (uiNamespace getVariable ["FST_SuppressSelect", false]) exitWith {
+        uiNamespace setVariable ["FST_SuppressSelect", false];
+    };
+    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
+    private _display  = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
+    private _listCtrl = _display displayCtrl 4102;
+    private _index    = lbCurSel _listCtrl;
+    private _ctrlId   = ctrlIDC _listCtrl;
+
+    private _dataStr  = lbData [_ctrlId, _index];
+    private _gearArr  = call compile _dataStr;
+    private _gearClass = _gearArr select 0;
+
+    private _cfgW = configFile >> "CfgWeapons"  >> _gearClass;
     private _cfgV = configFile >> "CfgVehicles" >> _gearClass;
-    private _isWeapon = isClass _cfgW;
+    private _cfgG = configFile >> "CfgGlasses"  >> _gearClass;
+    if (isClass _cfgG) exitWith {
+        if (goggles player == _gearClass) then {
+            removeGoggles player;
+        } else {
+            removeGoggles player;
+            player addGoggles _gearClass;
+        };
+    };
+
+    private _isWeapon  = isClass _cfgW;
     private _isVehicle = isClass _cfgV;
     private _cfg = if (_isWeapon) then {_cfgW} else {_cfgV};
+
     private _type = -1;
     if (_isWeapon) then {
         private _itemInfo = _cfg >> "ItemInfo";
@@ -43,75 +168,20 @@ FST_fnc_selectHelmet = {
     } else {
         _type = 302;
     };
-
-	switch (_type) do {
-		case 605: {
-			removeHeadgear player;
-			player addHeadgear _gearClass;
-		};
-		case 801: {
-			private _items = uniformItems player;
-			removeUniform player;
-			player forceAddUniform _gearClass;
-			{ player addItemToUniform _x; } forEach _items;
-		};
-		case 701: {
-			private _items = vestItems player;
-			removeVest player;
-			player addVest _gearClass;
-			{ player addItemToVest _x; } forEach _items;
-		};
-		case 302: {
-			private _items = backpackItems player;
-			removeBackpack player;
-			player addBackpack _gearClass;
-			{ player addItemToBackpack _x; } forEach _items;
-		};
-		case 901: {
-			player linkItem _gearClass;
-		};
-		case 616;
-		case 101: {
-			player linkItem _gearClass;
-		};
-		default {
-			systemChat format ["[ERROR] Unrecognized gear type: %1", _type];
-		};
-	};
+    switch (_type) do {
+        case 605: { removeHeadgear player; player addHeadgear _gearClass; };
+        case 801: { private _it = uniformItems player;  removeUniform player;  player forceAddUniform _gearClass; { player addItemToUniform _x; } forEach _it; };
+        case 701: { private _it = vestItems player;     removeVest player;     player addVest _gearClass;         { player addItemToVest _x;    } forEach _it; };
+        case 302: { private _it = backpackItems player; removeBackpack player; player addBackpack _gearClass;     { player addItemToBackpack _x;} forEach _it; };
+        case 901;
+        case 616;
+        case 101: { player linkItem _gearClass; };
+        default   { systemChat format ["[ERROR] Unrecognized gear type: %1", _type]; };
+    };
 };
-
-
 FST_fnc_filterHelmets = {
-	private _display = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
-	private _listCtrl = _display displayCtrl 4102;
-	private _input = ctrlText (_display displayCtrl 4103);
-	private _inputLower = toLower _input;
-	private _allHelmets = uiNamespace getVariable ["FST_AllHelmetClasses", []];
-	private _filtered = _allHelmets select {
-		private _cfgW = configFile >> "CfgWeapons" >> _x;
-		private _cfgV = configFile >> "CfgVehicles" >> _x;
-		private _cfg = if (isClass _cfgW) then {_cfgW} else {_cfgV};
-		private _displayName = toLower getText (_cfg >> "displayName");
-		private _className = toLower _x;
-		(_displayName find _inputLower) > -1 || (_className find _inputLower) > -1
-	};
-	lbClear _listCtrl;
-	{
-		private _cfgW = configFile >> "CfgWeapons" >> _x;
-		private _cfgV = configFile >> "CfgVehicles" >> _x;
-		private _cfg = if (isClass _cfgW) then {_cfgW} else {_cfgV};
-		private _displayName = getText (_cfg >> "displayName");
-		private _picture = getText (_cfg >> "picture");
-		private _index = _listCtrl lbAdd _displayName;
-		if (_picture != "") then {
-			_listCtrl lbSetPicture [_index, _picture];
-		};
-		private _dataStr = format ["[%1]", str _x];
-		_listCtrl lbSetData [_index, _dataStr];
-	} forEach _filtered;
+    [] call FST_fnc_refreshGearList;
 };
-
-
 Wbk_AssignAditionalGear = {
 private _typeOfKit = player getVariable ["WBK_Kit_Name", ""];
 params ["_control", "_index"];
@@ -664,7 +734,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"41st_KitMenu\sounds\select_cloth_3.ogg"
 			], 0.85, 1];
 
-			if ((vest player == "FST_Vest_NCO") || (vest player == "FST_Vest_HeavyBag")) then {
+			if ((vest player == "FST_Vest_NCO") ||(vest player == "FST_Vest_HeavyBag") ||(vest player == "FST_Vest_NCO_Veteran")) then {
 				if (goggles player == "FST_Hoster_Face") then {
 					removeGoggles player;
 				} else {

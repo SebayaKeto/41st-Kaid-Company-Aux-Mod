@@ -4,8 +4,6 @@ WBK_fnc_populateKitList = {
     private _display = findDisplay 2000;
     private _listbox = _display displayCtrl 1732;
     lbClear _listbox;
-
-    // Update switch icon
     private _iconButton = _display displayCtrl 1603;
     if (!isNull _iconButton) then {
         switch (FST_CurrentKitCategory) do {
@@ -15,14 +13,11 @@ WBK_fnc_populateKitList = {
             default           { _iconButton ctrlShow false; };
         };
     };
-
     private _kits = switch (FST_CurrentKitCategory) do {
         case "airborne": { FST_AirborneKits };
         case "pilot":    { FST_PilotKits };
         default        { FST_RegularKits };
     };
-
-    // Sort kits alphabetically
     _kits = +_kits;
     private _decorated = [];
     { _decorated pushBack [toLower (_x select 0), _forEachIndex]; } forEach _kits;
@@ -30,7 +25,6 @@ WBK_fnc_populateKitList = {
     private _sortedKits = [];
     { _sortedKits pushBack (_kits select (_x select 1)); } forEach _decorated;
     _kits = _sortedKits;
-
     {
         private _VAR_nameOfLoadout     = _x select 0;
         private _VAR_loadout           = _x select 1;
