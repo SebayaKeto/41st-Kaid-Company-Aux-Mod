@@ -27,7 +27,8 @@ FST_fnc_gearIndex = {
         ["vests",     []],
         ["helmets",   []],
         ["backpacks", []],
-        ["facewear",  []]
+        ["facewear",  []],
+        ["nvgs",      []]
     ];
     {
         private _cls = configName _x;
@@ -35,11 +36,11 @@ FST_fnc_gearIndex = {
         private _ii = _x >> "ItemInfo";
         if !(isClass _ii) then { continue };
         private _type = getNumber (_ii >> "type");
-
         switch (_type) do {
             case 801: { (_idx get "uniforms")  pushBack _cls; };
             case 701: { (_idx get "vests")     pushBack _cls; };
             case 605: { (_idx get "helmets")   pushBack _cls; };
+            case 616: { (_idx get "nvgs")      pushBack _cls; };
             default {};
         };
     } forEach ("true" configClasses (configFile >> "CfgWeapons"));
@@ -57,12 +58,17 @@ FST_fnc_gearIndex = {
         if (_scopeOk) then { (_idx get "facewear") pushBack _cls; };
     } forEach ("true" configClasses (configFile >> "CfgGlasses"));
     uiNamespace setVariable ["FST_GearIndex", _idx];
-    private _all = +(_idx get "uniforms") + (_idx get "vests") + (_idx get "helmets") + (_idx get "backpacks") + (_idx get "facewear");
+    private _all = +(_idx get "uniforms")
+                + (_idx get "vests")
+                + (_idx get "helmets")
+                + (_idx get "backpacks")
+                + (_idx get "facewear")
+                + (_idx get "nvgs");
     uiNamespace setVariable ["FST_AllHelmetClasses", _all];
 };
 FST_fnc_showCategory = {
-    params ["_cats"];
-    if (typeName _cats == "STRING") then { _cats = [_cats]; };
+    params [ ["_cats", ["helmets"], ["", []]] ];
+    if (_cats isEqualType "") then { _cats = [_cats]; };
     uiNamespace setVariable ["FST_CurrentCategories", _cats];
     [] call FST_fnc_refreshGearList;
     [] call FST_fnc_scrollListTop;
@@ -734,7 +740,12 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"41st_KitMenu\sounds\select_cloth_3.ogg"
 			], 0.85, 1];
 
-			if ((vest player == "FST_Vest_NCO") ||(vest player == "FST_Vest_HeavyBag") ||(vest player == "FST_Vest_NCO_Veteran")) then {
+			if (
+    			(vest player == "FST_Vest_NCO") ||
+    			(vest player == "FST_Vest_HeavyBag") ||
+    			(vest player == "FST_Vest_NCO_Veteran") ||
+    			(vest player == "FST_Vest_HeavyBag_Veteran")
+			) then {
 				if (goggles player == "FST_Hoster_Face") then {
 					removeGoggles player;
 				} else {
@@ -2029,8 +2040,32 @@ if (_typeOfKit == "Squad Leader ") then {
         _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
     } forEach _backpacks;
 };
-//backpacks end
 
+// --- figure out role tag used by autoCustoms (affects jumppacks etc.)
+private _roleClean = toLower (trim _typeOfKit);
+private _selectedKitRole = switch (_roleClean) do {
+    case "engineer":           { "eod" };
+    case "rto";
+    case "platoon rto":        { "rto" };
+    case "medic";
+    case "platoon medic";
+    case "crewman medic":      { "medic" };
+    default { "" };
+};
+
+// --- robust airborne detection from the selected KIT itself
+// kit layout: [primary, secondary, handgun, [uniform,...], [vest,...], [backpack,...], headgear, ...]
+private _helmetClass = _kit param [6, ""];
+private _bpClass     = ((_kit param [5, ["",[]]]) param [0, ""]);
+private _isAirborne  = (
+    (_helmetClass != "" && {(toLower _helmetClass) find "airborne" > -1}) ||
+    (_helmetClass isEqualTo "FST_Airborne_Helmet") ||
+    (_bpClass     != "" && {_bpClass find "FST_Backpack_Jumppack" == 0})
+);
+private _selectedKitType = if (_isAirborne) then {"airborne"} else {""};
+
+// --- call autoCustoms with real strings (not 'any')
+[player, _selectedKitRole, _selectedKitType] execVM "\41st_KitMenu\FST_autoCustoms.sqf";
 };
 
 WBK_UpdatePlayerKitOnMenu = {

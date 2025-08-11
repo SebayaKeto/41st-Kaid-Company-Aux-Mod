@@ -130,6 +130,94 @@ class WBK_RscButton
 	offsetPressedY = 0;
 	borderSize = 0;
 };
+class FST_CustomVariantSelector
+{
+    idd = 4200;
+    movingEnable = false;
+    enableSimulation = true;
+    onLoad = "uiNamespace setVariable ['FST_CustomVariantSelector_Display', _this select 0];";
+
+    class controls
+    {
+		class Panel: WBK_Box
+		{
+			idc = -1;
+			x = 0.30 * safezoneW + safezoneX;
+			y = 0.20 * safezoneH + safezoneY;
+			w = 0.40 * safezoneW;
+			h = 0.60 * safezoneH;
+			colorBackground[] = {0,0,0,0.5};
+			font = "PuristaMedium";
+		};
+        class Title: WBK_Box
+        {
+            idc = -1;
+            text = "Select Custom Variant";
+            x = 0.30 * safezoneW + safezoneX;
+            y = 0.20 * safezoneH + safezoneY;
+            w = 0.40 * safezoneW;
+            h = 0.044 * safezoneH;
+            colorText[] = {1,1,1,1};
+            colorBackground[] = {0,0,0,0.5};
+            font = "PuristaMedium";
+            sizeEx = "0.023 / (getResolution select 5)";
+        };
+		class VariantList: WBK_RscListBox
+		{
+			idc = 4201;
+			x = 0.305 * safezoneW + safezoneX;
+			y = 0.255 * safezoneH + safezoneY;
+			w = 0.39 * safezoneW;
+			h = 0.47 * safezoneH;
+			colorBackground[] = {0,0,0,0.5};
+			colorText[] = {1,1,1,1};
+			colorSelect[] = {0,0,0,1};
+			colorSelectBackground[] = {0.95,0.95,0.95,1};
+			font = "PuristaMedium";
+			sizeEx = "0.023 / (getResolution select 5)";
+			style = 0;
+			onLBDblClick = "[] call FST_fnc_confirmCustomVariant;";
+		};
+        class SelectButton: WBK_RscButton
+        {
+            idc = 4202;
+            text = "Select";
+            x = 0.305 * safezoneW + safezoneX;
+            y = 0.735 * safezoneH + safezoneY;
+            w = 0.19 * safezoneW;
+            h = 0.044 * safezoneH;
+            action = "[] call FST_fnc_confirmCustomVariant;";
+            font = "PuristaMedium";
+            sizeEx = "0.023 / (getResolution select 5)";
+            colorText[] = {1,1,1,1};
+            colorBackground[]        = {0,0,0,1};
+            colorBackgroundActive[]  = {0.15,0.15,0.2,1};
+            colorBackgroundDisabled[]= {0,0,0,0.5};
+            colorFocused[]           = {0.15,0.15,0.2,1};
+            colorBorder[]            = {0,0,0,1};
+            colorShadow[]            = {0,0,0,0};
+        };
+        class CancelButton: WBK_RscButton
+        {
+            idc = 4203;
+            text = "Cancel";
+            x = 0.505 * safezoneW + safezoneX;
+            y = 0.735 * safezoneH + safezoneY;
+            w = 0.19 * safezoneW;
+            h = 0.044 * safezoneH;
+            action = "closeDialog 0;";
+            font = "PuristaMedium";
+            sizeEx = "0.023 / (getResolution select 5)";
+            colorText[] = {1,1,1,1};
+            colorBackground[]        = {0,0,0,1};
+            colorBackgroundActive[]  = {0.15,0.15,0.2,1};
+            colorBackgroundDisabled[]= {0,0,0,0.5};
+            colorFocused[]           = {0.15,0.15,0.2,1};
+            colorBorder[]            = {0,0,0,1};
+            colorShadow[]            = {0,0,0,0};
+        };
+    };
+};
 class WBK_KITArsenalAlike
 {
 	idd = 2000;
@@ -305,64 +393,74 @@ class FST_CustomsOverlay
 
 	class controls
 	{
-	class FST_Btn_Helmets: WBK_RscButton
-	{
-		idc = 4201;
-		text = "Helmets";
-		x = "(0.35 * safezoneW + safezoneX) + 0 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
-		y = "0.20 * safezoneH + safezoneY";
-		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
-		h = "0.035 * safezoneH";
-		tooltip = "Show helmets";
-	};
-	class FST_Btn_Facewear: WBK_RscButton
-	{
-		idc = 4202;
-		text = "Facewear";
-		x = "(0.35 * safezoneW + safezoneX) + 1 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
-		y = "0.20 * safezoneH + safezoneY";
-		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
-		h = "0.035 * safezoneH";
-		tooltip = "Show masks & goggles";
-	};
-	class FST_Btn_Vests: WBK_RscButton
-	{
-		idc = 4203;
-		text = "Vests";
-		x = "(0.35 * safezoneW + safezoneX) + 2 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
-		y = "0.20 * safezoneH + safezoneY";
-		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
-		h = "0.035 * safezoneH";
-		tooltip = "Show vests";
-	};
-	class FST_Btn_Uniforms: WBK_RscButton
-	{
-		idc = 4204;
-		text = "Uniforms";
-		x = "(0.35 * safezoneW + safezoneX) + 3 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
-		y = "0.20 * safezoneH + safezoneY";
-		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
-		h = "0.035 * safezoneH";
-		tooltip = "Show uniforms";
-	};
-	class FST_Btn_Backpacks: WBK_RscButton
-	{
-		idc = 4205;
-		text = "Backpacks";
-		x = "(0.35 * safezoneW + safezoneX) + 4 * ( ((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5 + (0.005 * safezoneW) )";
-		y = "0.20 * safezoneH + safezoneY";
-		w = "((0.30 * safezoneW) - (4 * (0.005 * safezoneW))) / 5";
-		h = "0.035 * safezoneH";
-		tooltip = "Show backpacks";
-	};
+		class FST_Btn_Helmets: WBK_RscButton
+		{
+			idc = 4201;
+			text = "Helmets";
+			x = "(0.30 * safezoneW + safezoneX) + 0 * ( ((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6 + (0.006 * safezoneW) )";
+			y = "0.20 * safezoneH + safezoneY";
+			w = "((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6";
+			h = "0.035 * safezoneH";
+			tooltip = "Show helmets";
+		};
+		class FST_Btn_NVGs: WBK_RscButton
+		{
+			idc = 4206;
+			text = "NVGs";
+			x = "(0.30 * safezoneW + safezoneX) + 1 * ( ((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6 + (0.006 * safezoneW) )";
+			y = "0.20 * safezoneH + safezoneY";
+			w = "((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6";
+			h = "0.035 * safezoneH";
+			tooltip = "Show night vision";
+		};
+		class FST_Btn_Facewear: WBK_RscButton
+		{
+			idc = 4202;
+			text = "Facewear";
+			x = "(0.30 * safezoneW + safezoneX) + 2 * ( ((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6 + (0.006 * safezoneW) )";
+			y = "0.20 * safezoneH + safezoneY";
+			w = "((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6";
+			h = "0.035 * safezoneH";
+			tooltip = "Show masks & goggles";
+		};
+		class FST_Btn_Vests: WBK_RscButton
+		{
+			idc = 4203;
+			text = "Vests";
+			x = "(0.30 * safezoneW + safezoneX) + 3 * ( ((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6 + (0.006 * safezoneW) )";
+			y = "0.20 * safezoneH + safezoneY";
+			w = "((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6";
+			h = "0.035 * safezoneH";
+			tooltip = "Show vests";
+		};
+		class FST_Btn_Uniforms: WBK_RscButton
+		{
+			idc = 4204;
+			text = "Uniforms";
+			x = "(0.30 * safezoneW + safezoneX) + 4 * ( ((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6 + (0.006 * safezoneW) )";
+			y = "0.20 * safezoneH + safezoneY";
+			w = "((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6";
+			h = "0.035 * safezoneH";
+			tooltip = "Show uniforms";
+		};
+		class FST_Btn_Backpacks: WBK_RscButton
+		{
+			idc = 4205;
+			text = "Backpacks";
+			x = "(0.30 * safezoneW + safezoneX) + 5 * ( ((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6 + (0.006 * safezoneW) )";
+			y = "0.20 * safezoneH + safezoneY";
+			w = "((0.40 * safezoneW) - (5 * (0.006 * safezoneW))) / 6";
+			h = "0.035 * safezoneH";
+			tooltip = "Show backpacks";
+		};
 		class HelmetSearchInput
 		{
 			idc = 4103;
 			type = 2;
 			style = 0;
-			x = 0.35 * safezoneW + safezoneX;
+			x = 0.30 * safezoneW + safezoneX;
 			y = 0.25 * safezoneH + safezoneY;
-			w = 0.3 * safezoneW;
+			w = 0.40 * safezoneW;
 			h = 0.04 * safezoneH;
 			font = "PuristaMedium";
 			sizeEx = 0.035;
@@ -372,15 +470,14 @@ class FST_CustomsOverlay
 			autocomplete = "";
 			onKeyUp = "[] spawn FST_fnc_filterHelmets;";
 		};
-
 		class HelmetList: WBK_RscListBox
 		{
 			idc = 4102;
 			style = 0;
-			x = 0.35 * safezoneW + safezoneX;
-			y = 0.3 * safezoneH + safezoneY;
-			w = 0.3 * safezoneW;
-			h = 0.4 * safezoneH;
+			x = 0.30 * safezoneW + safezoneX;
+			y = 0.30 * safezoneH + safezoneY;
+			w = 0.40 * safezoneW;
+			h = 0.45 * safezoneH;
 			onLBSelChanged = "_this call FST_fnc_selectHelmet;";
 		};
 	};

@@ -23,6 +23,8 @@ private _btnFacewear  = _display displayCtrl 4202;
 private _btnVests     = _display displayCtrl 4203;
 private _btnUniforms  = _display displayCtrl 4204;
 private _btnBackpacks = _display displayCtrl 4205;
+private _btnNVG = _display displayCtrl 4206;
+if (!isNull _btnNVG)      then {_btnNVG       ctrlAddEventHandler ["ButtonClick", { ["nvgs"] call FST_fnc_showCategory; }];};
 if (!isNull _btnHelmets)  then { _btnHelmets  ctrlAddEventHandler ["ButtonClick", { ["helmets"]   call FST_fnc_showCategory; }]; };
 if (!isNull _btnFacewear) then { _btnFacewear ctrlAddEventHandler ["ButtonClick", { ["facewear"]  call FST_fnc_showCategory; }]; };
 if (!isNull _btnVests)    then { _btnVests    ctrlAddEventHandler ["ButtonClick", { ["vests"]     call FST_fnc_showCategory; }]; };
