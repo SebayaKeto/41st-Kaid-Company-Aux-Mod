@@ -275,7 +275,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ], 
-    ["UNSC_Knife","FST_NVG"], 
+    ["UNSC_Knife","FST_NVG","FST_Vest_NCO", "FST_Vest_NCO_Veteran","FST_Vest_Base","FST_DC17","FST_Hoster_Face"], 
     "true",
     {},
     "regular"
@@ -559,7 +559,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["UNSC_Knife"],
+    ["UNSC_Knife","FST_Vest_HeavyBag","FST_Vest_HeavyBag_Veteran","FST_Vest_Base", "FST_DC17","FST_Hoster_Face"],
     "true",
     {},
     "airborne"

@@ -1066,7 +1066,7 @@ class CfgWeapons
 		recoil="FST_recoil_dc15s";
 		displayName="[41st] DC-15S Carbine w/ UGL";
 		scope=2;
-		picture="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15S\DC15S_UGL_ui.paa";
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15S\Model\IDA_DC15S_UGL.p3d";
 		handAnim[]=
 		{

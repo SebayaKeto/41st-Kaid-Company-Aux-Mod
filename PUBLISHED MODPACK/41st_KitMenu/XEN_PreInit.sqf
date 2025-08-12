@@ -435,7 +435,6 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
                         player addItemToBackpack "FST_blaster_cell_LE_Blue";
                         player addItemToBackpack "FST_blaster_scatter_cell_DP23_Blue";
                     };
-                    // Ensure player has exactly 6 grenades total
                     if (_grenadesCurrent < 6) then {
                         for "_i" from 1 to (6 - _grenadesCurrent) do {
                             if (player canAddItemToVest _grenadeClass) then {
@@ -2040,8 +2039,6 @@ if (_typeOfKit == "Squad Leader ") then {
         _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
     } forEach _backpacks;
 };
-
-// --- figure out role tag used by autoCustoms (affects jumppacks etc.)
 private _roleClean = toLower (trim _typeOfKit);
 private _selectedKitRole = switch (_roleClean) do {
     case "engineer":           { "eod" };
@@ -2052,9 +2049,6 @@ private _selectedKitRole = switch (_roleClean) do {
     case "crewman medic":      { "medic" };
     default { "" };
 };
-
-// --- robust airborne detection from the selected KIT itself
-// kit layout: [primary, secondary, handgun, [uniform,...], [vest,...], [backpack,...], headgear, ...]
 private _helmetClass = _kit param [6, ""];
 private _bpClass     = ((_kit param [5, ["",[]]]) param [0, ""]);
 private _isAirborne  = (
@@ -2063,11 +2057,8 @@ private _isAirborne  = (
     (_bpClass     != "" && {_bpClass find "FST_Backpack_Jumppack" == 0})
 );
 private _selectedKitType = if (_isAirborne) then {"airborne"} else {""};
-
-// --- call autoCustoms with real strings (not 'any')
 [player, _selectedKitRole, _selectedKitType] execVM "\41st_KitMenu\FST_autoCustoms.sqf";
 };
-
 WBK_UpdatePlayerKitOnMenu = {
 _display = findDisplay 2000;
 _listBox = _display displayCtrl 1733;
