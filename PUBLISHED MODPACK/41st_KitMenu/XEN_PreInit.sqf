@@ -390,6 +390,15 @@ switch true do {
 			 	then {
 				player removeItem "itemAndroid";
 				};
+			if (_item == "FST_Vest_Base") then {
+				private _pistol   = "FST_DC17";
+				private _magClass = "FST_blaster_cell_low_Blue";
+				if (_pistol in weapons player) then {
+					player removeWeapon _pistol;
+				};
+				player removeMagazines _magClass;
+				systemChat "Pistol and mags removed — not allowed with plastoid armor.";
+			};
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 605): {
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
@@ -677,6 +686,28 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			{player addSecondaryWeaponItem _x;} forEach _weaponStuff;
 		};
 		case (_item == "FST_DC17"): {
+			private _allowedVests = [
+				"FST_pauldron_kama",
+				"FST_pauldron_kama_reversed",
+				"FST_CloneVestAirborneNCO",
+				"FST_Vest_NCO_Kama",
+				"FST_Vest_NCO_Kama_Veteran",
+				"FST_CloneVestAirborneNCO_Veteran",
+				"FST_Vest_HeavyBag",
+				"FST_Vest_HeavyBag_Veteran",
+				"FST_Vest_NCO",
+				"FST_Vest_NCO_Veteran"
+			];
+			private _kitName = player getVariable ["WBK_Kit_Name",""];
+			private _isAllowed =
+				((vest player) in _allowedVests) ||
+				(_kitName in ["Crew Chief","Pilot"]);
+
+			if !_isAllowed then {
+				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+				systemChat "Only FTL+, Crew Chiefs or Pilots can use the pistol.";
+				breakOut "switch";
+			};
 			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_pistol_1.ogg", "41st_KitMenu\sounds\select_pistol_2.ogg"], 0.85, 1];
 			private _magClass = "FST_blaster_cell_low_Blue";
 			private _knife = "UNSC_Knife";
