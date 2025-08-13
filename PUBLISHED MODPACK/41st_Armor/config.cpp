@@ -422,6 +422,23 @@ class CfgEditorCategories
 		side=7;
 	};
 };
+class CfgFunctions
+{
+    class FST
+    {
+        class Functions
+        {
+            class lowlight
+            {
+                file="41st_Armor\functions\fn_lowlight.sqf";
+            };
+            class changelowlightaperture
+            {
+                file="41st_Armor\functions\fn_changelowlightaperture.sqf";
+            };
+        };
+    };
+};
 class CfgItems
 {
 	class JLTS_CloneBinocular;
@@ -448,6 +465,17 @@ class Extended_PostInit_EventHandlers
     class FST_Munificent_QRF_postInit
     {
         init="call compile preprocessFileLineNumbers '\41st_Armor\Data\Modules.sqf'";
+    };
+    class FST_postinit
+    {
+        init="call compile preprocessFileLineNumbers '41st_Armor\xeh_postInit.sqf'";
+    };
+};
+class Extended_PreInit_EventHandlers
+{
+    class FST_preinit
+    {
+        init="call compileScript ['\41st_Armor\xeh_preInit.sqf']";
     };
 };
 class CfgWeapons
@@ -39133,6 +39161,16 @@ class CfgGlasses
 		displayName="===BASE CLASS===";
 		model="\A3\Weapons_f\DummyNVG";
 		mass=2;
+		identityTypes[]={};
+	};
+	class FST_Fynock_LowLight: FST_Base_Glasses
+	{
+		scope=2;
+		author="Ruby";
+		displayName="[41st] Fynock's Low Light System";
+		model="\A3\Weapons_f\DummyNVG";
+		mass=2;
+		FST_hasLowLight=1;
 		identityTypes[]={};
 	};
 	class FST_HUD: FST_Base_Glasses
