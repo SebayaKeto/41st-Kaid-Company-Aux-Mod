@@ -290,6 +290,7 @@ class CfgPatches
 			"FST_P2_Blueeye",
 			"FST_P2_Arcus",
 			"FST_P2_Fire",
+			"FST_P2_Valius",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
@@ -37869,7 +37870,7 @@ class CfgVehicles
         };
         linkedItems[]=
         {
-            "FST_P2_Helmet",
+            "FST_Airborne_Helmet_Appa",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -37879,7 +37880,7 @@ class CfgVehicles
         };
         respawnLinkedItems[]=
         {
-            "FST_P2_Helmet",
+            "FST_Airborne_Helmet_Appa",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -37924,7 +37925,7 @@ class CfgVehicles
         };
         linkedItems[]=
         {
-            "FST_P2_Helmet",
+            "FST_P2_Helmet_Valius",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -37934,7 +37935,7 @@ class CfgVehicles
         };
         respawnLinkedItems[]=
         {
-            "FST_P2_Helmet",
+            "FST_P2_Helmet_Valius",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
