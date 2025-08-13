@@ -34,15 +34,13 @@ switch (_rank) do {
     case "CT-":   {};
     case "SCT-":  { _allowHelmet = true; };
     case "VCT-":  { _allowHelmet = true; };
-
+    case "CLC-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CPL-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CS-":   { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CSS-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CSM-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CSL-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CL-":   { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
-
-    case "CLC-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "CXC-":  { _allowHelmet = true; };
     case "CX-":   { _allowHelmet = true; };
     case "CXV-":  { _allowHelmet = true; _allowArmor = true; };
@@ -50,8 +48,12 @@ switch (_rank) do {
     case "CXS-":  { _allowHelmet = true; _allowArmor = true; };
     case "CXL-":  { _allowHelmet = true; _allowArmor = true; };
     case "CXR-":  { _allowHelmet = true; _allowArmor = true; };
-    case "ENS-":  { _allowHelmet = true; _allowArmor = true; };
-    case "LTJG-": { _allowHelmet = true; _allowArmor = true; };
+    case "ENS-":  { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
+    case "LTJG-": { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
+    case "LT-": { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
+    case "LCDR-": { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
+    case "CDR-": { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
+    case "CAPT-": { _allowHelmet = true; _allowArmor = true; _allowNVG = true; _allowBack = true; };
     case "ARC-":  { _allowHelmet = true; _allowArmor = true; _allowVest = true; _allowBack = true; _allowNVG = true; };
 };
 
