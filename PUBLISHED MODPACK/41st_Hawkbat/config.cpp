@@ -2,11 +2,22 @@ class CfgPatches
 {
     class 41st_Hawkbat
     {
-        requiredAddons[]=
-        {
-            "ls_common"
-        };
-    };
+       requiredAddons[]=
+		{
+			"A3_Data_F",
+			"A3_anims_F",
+			"A3_Weapons_F",
+			"A3_Characters_F",
+			"IDA_Ammo",
+			"IDA_Republic",
+			"A3_Characters_F_Proxies",
+			"TAC_VESTS_W",
+			"TCGM_Girls"
+		};
+		units[]={};
+		weapons[]={};
+	};
+	author="Daara";
 };
 
 class CfgVehicles
