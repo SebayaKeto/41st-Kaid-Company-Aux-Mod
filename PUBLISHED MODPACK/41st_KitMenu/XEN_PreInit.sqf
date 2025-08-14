@@ -698,9 +698,15 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"FST_Vest_NCO",
 				"FST_Vest_NCO_Veteran"
 			];
+			private _allowedFaces = [
+				"FST_Heavy_Veteran_Face",
+				"FST_FTL_Veteran_Face"
+			];
+
 			private _kitName = player getVariable ["WBK_Kit_Name",""];
 			private _isAllowed =
 				((vest player) in _allowedVests) ||
+				((goggles player) in _allowedFaces) ||
 				(_kitName in ["Crew Chief","Pilot"]);
 
 			if !_isAllowed then {
@@ -708,6 +714,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				systemChat "Only FTL+, Crew Chiefs or Pilots can use the pistol.";
 				breakOut "switch";
 			};
+
 			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_pistol_1.ogg", "41st_KitMenu\sounds\select_pistol_2.ogg"], 0.85, 1];
 			private _magClass = "FST_blaster_cell_low_Blue";
 			private _knife = "UNSC_Knife";

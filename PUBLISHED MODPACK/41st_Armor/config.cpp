@@ -39378,6 +39378,15 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
+	class FST_FTL_Veteran_Face: FST_FTL_Face
+	{
+		displayname="[41st] Veteran Fire Team Leader Sash (Face)";
+		hiddenSelectionsTextures[]=
+		{
+			"",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+		};
+	};
 	class FST_Hoster_Face: FST_Base_Glasses
 	{
 		displayname="[41st] Holster (Face)";
@@ -39446,6 +39455,15 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
+	class FST_Heavy_Veteran_Face: FST_Heavy_Face
+	{
+		displayname="[41st] Veteran Airborne Fire Team Leader Sash (Face)";
+		hiddenSelectionsTextures[]=
+		{
+			"",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+		};
+	};
 	class FST_AirborneSLSash: FST_Base_Glasses
 	{
 		displayname="[41st] Airborne Squad Leader Sash (Face)";
@@ -39470,6 +39488,15 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};	
+	class FST_VeteranAirborneSLSash: FST_AirborneSLSash
+	{
+		displayname="[41st] Veteran Airborne Squad Leader Sash (Face)";
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
+	};
 	class FST_Vest_NCO_Kama_Face: FST_Base_Glasses
 	{
 		displayName="[41st] Squad Leader Sash w/ Kama (Face)";
