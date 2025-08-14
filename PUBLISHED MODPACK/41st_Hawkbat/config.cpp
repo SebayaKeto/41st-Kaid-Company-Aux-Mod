@@ -28,20 +28,20 @@ class CfgVehicles
     {
         scope = 2;
         author = "Ruby";
-        displayname = "[41st] Hawkbat"
+        displayname = "[41st] Hawkbat";
         hiddenSelectionsTextures[] =
         {
             "41st_Hawkbat\Data\FST_Hawkbat_Closed.paa"
         };
         parachuteclass = "FST_hawkbat_parachuteSteerable";
         ace_hasReserveParachute = 1;
-        ace_reserveParachute = "FST_Hawkbat_backpack_reserve"
+        ace_reserveParachute = "FST_Hawkbat_backpack_reserve";
     };
     class FST_Hawkbat_backpack_LR: ls_gar_Hawkbat_backpack
     {
         scope = 2;
         author = "Ruby";
-        displayname = "[41st] Hawkbat (LR)"
+        displayname = "[41st] Hawkbat (LR)";
          hiddenSelectionsTextures[] =
         {
             "41st_Hawkbat\Data\FST_Hawkbat_Closed.paa"
@@ -54,14 +54,14 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
 		tf_range=50000;
-		tf_subtype="digital_lr"
+		tf_subtype="digital_lr";
     };
 
     class FST_Hawkbat_backpack_reserve: FST_Hawkbat_backpack
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute"
+        displayname = "[41st] Hawkbat Reserve Parachute";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_1";
     };
@@ -70,7 +70,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)"
+        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_LR_1";
     };
@@ -78,7 +78,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute"
+        displayname = "[41st] Hawkbat Reserve Parachute";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_2";
     };
@@ -86,7 +86,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)"
+        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_LR_2";
     };
@@ -94,7 +94,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute"
+        displayname = "[41st] Hawkbat Reserve Parachute";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_3";
     };
@@ -102,7 +102,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)"
+        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_LR_3";
     };
@@ -110,7 +110,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute"
+        displayname = "[41st] Hawkbat Reserve Parachute";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_4";
     };
@@ -118,7 +118,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)"
+        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_LR_4";
     };
@@ -126,7 +126,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute"
+        displayname = "[41st] Hawkbat Reserve Parachute";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_5";
     };
@@ -134,7 +134,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)"
+        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
         ace_hasReserveParachute = 1;
         ace_reserveParachute = "FST_Hawkbat_backpack_reserve_5";
     };
@@ -142,7 +142,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute"
+        displayname = "[41st] Hawkbat Reserve Parachute";
         ace_hasReserveParachute = 0;
         ace_reserveParachute = "";
     };
@@ -150,7 +150,7 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)"
+        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
         ace_hasReserveParachute = 0;
         ace_reserveParachute = "";
     };
@@ -174,13 +174,13 @@ class CfgVehicles
     {
         scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat (LR)"
+        displayname = "[41st] Hawkbat (LR)";
         tf_dialog="JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode="tf_west_radio_code";
         tf_hasLRradio=1;
         tf_range=50000;
-        tf_subtype="digital_lr"
+        tf_subtype="digital_lr";
         hiddenSelectionsTextures[] =
         {
             "ls\core\addons\characters_clone_legacy\backpacks\hawkbat\data\parachute\camo1_co.paa",
@@ -191,59 +191,59 @@ class CfgVehicles
 
     class FST_hawkbat_parachuteSteerable_reserve: FST_hawkbat_parachuteSteerable
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute";
     };
     
     class FST_hawkbat_parachuteSteerable_reserve_LR: FST_hawkbat_parachuteSteerable_LR
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute (LR)";
     };
     class FST_hawkbat_parachuteSteerable_reserve_2: FST_hawkbat_parachuteSteerable
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute";
     };
     
     class FST_hawkbat_parachuteSteerable_reserve_LR_2: FST_hawkbat_parachuteSteerable_LR
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute (LR)";
     };
     class FST_hawkbat_parachuteSteerable_reserve_3: FST_hawkbat_parachuteSteerable
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute";
     };
     
     class FST_hawkbat_parachuteSteerable_reserve_LR_3: FST_hawkbat_parachuteSteerable_LR
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute (LR)";
     };
     class FST_hawkbat_parachuteSteerable_reserve_4: FST_hawkbat_parachuteSteerable
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute";
     };
     
-    class FST_hawkbat_parachuteSteerable_reserve_5: FST_hawkbat_parachuteSteerable_LR
+    class FST_hawkbat_parachuteSteerable_reserve_5: FST_hawkbat_parachuteSteerable
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
-        displayname = "[41st] Hawkbat Reserve Parachute (LR)";
+        displayname = "[41st] Hawkbat Reserve Parachute";
     };
      class FST_hawkbat_parachuteSteerable_reserve_LR_5: FST_hawkbat_parachuteSteerable_LR
     {
-        scope = 1
+        scope = 1;
         author = "Ruby";
         displayname = "[41st] Hawkbat Reserve Parachute (LR)";
     };
