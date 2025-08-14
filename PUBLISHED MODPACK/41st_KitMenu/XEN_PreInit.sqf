@@ -700,7 +700,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			];
 			private _allowedFaces = [
 				"FST_Heavy_Veteran_Face",
-				"FST_FTL_Veteran_Face"
+				"FST_FTL_Veteran_Face",
+				"FST_FTL_Face",
+				"FST_Heavy_Face"
 			];
 
 			private _kitName = player getVariable ["WBK_Kit_Name",""];
@@ -2266,3 +2268,4 @@ Wbk_AddKit = {
         _obj setVariable ["FST_ActualKits", _array];
     };
 };
+
