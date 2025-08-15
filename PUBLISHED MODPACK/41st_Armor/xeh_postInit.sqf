@@ -1,3 +1,5 @@
+["41st Elite Corps","FST_lowlight", "Toggle Low-Light Vision", {call FST_fnc_lowlight}, "", []] call CBA_fnc_addKeybind;
+
 FST_lowlight_aperture = FST_lowlight_defaultAperture;
 FST_disableLowlight = false;
 
@@ -26,5 +28,3 @@ FST_disableLowlight = false;
     },
     [209,[false,false,false]]
 ] call CBA_fnc_addKeybind;
-
-["41st Elite Corps","FST_lowlight", "Toggle Low-Light Vision", {call FST_fnc_lowlight}, "", []] call CBA_fnc_addKeybind;
