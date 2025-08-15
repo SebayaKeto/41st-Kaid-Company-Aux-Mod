@@ -8,3 +8,7 @@
     {  
     } // function that will be executed once on mission start and every time the setting is changed.
 ] call CBA_fnc_addSetting;
+
+if (isNil "FST_lowlight_aperture") then {
+    FST_lowlight_aperture = missionNamespace getVariable ["FST_lowlight_DefaultAperture", 2];
+};
