@@ -104,6 +104,8 @@ class CfgMusic
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
+		"FST_Inception_DreamIsCollapsing",
+		"FST_Inception_Mombasa",
 		"FST_banana",
 		"FST_TornadoOfSouls",
 		"FST_Stormtroopers",
@@ -1018,6 +1020,30 @@ class CfgMusic
 			1
 		};
 		duration="49";
+	};
+	class FST_Inception_DreamIsCollapsing
+	{
+		name="(Inception) Dream Is Collapsing ";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\HansZimmer_DreamIsCollapsing.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Inception_Mombasa
+	{
+		name="(Inception) Mombasa";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\HansZimmer_Mombasa.ogg",
+			1,
+			1
+		};
+		duration="294";
 	};
 	
 	//Other
