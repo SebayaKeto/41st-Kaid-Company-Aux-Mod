@@ -3272,6 +3272,334 @@ class cfgGroups
 						position[]={0,-5,0};
 					};
 				};
+				class FST_Droid_B1_E5_Platoon
+				{
+					name="[41st] B1 Squad (Platoon)";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_Droid_B1_Commander";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+					class Unit12
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit13
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit14
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit15
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit16
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit17
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit18
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit19
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit20
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit21
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit22
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+					class Unit23
+					{
+						side=0;
+						vehicle="FST_Droid_B1_Commander";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit24
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit25
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit26
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit27
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit28
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit29
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit30
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit31
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit32
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit33
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit34
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+					class Unit35
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit36
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit37
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AT";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit38
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit39
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AT";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit40
+					{
+						side=0;
+						vehicle="FST_Droid_B1_AR";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit41
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit42
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit43
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit44
+					{
+						side=0;
+						vehicle="FST_Droid_B1_E5";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit45
+					{
+						side=0;
+						vehicle="FST_Droid_B1_Commander";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
 				class FST_Droid_B1_E5_Squad_Sniper
 				{
 					name="[41st] B1 Squad (w/ Sniper)";
