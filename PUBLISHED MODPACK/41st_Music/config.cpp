@@ -101,6 +101,9 @@ class CfgMusic
 		"FST_Portal_YouCantEscapeYouKnow",
 		"FST_DeusEx_EnemyWithin",
 		"FST_EldenRing_FinalBattle",
+		"FST_Destiny_TheLinguist",
+		"FST_Halo_ThroughTheTrees",
+		"FST_Destiny_BringTheHaul",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -729,6 +732,42 @@ class CfgMusic
 			1
 		};
 		duration="334";
+	};
+	class FST_Destiny_TheLinguist
+	{
+		name="(Destiny 2) The Linguist";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny2_TheLinguist.ogg",
+			1,
+			1
+		};
+		duration="162";
+	};
+	class FST_Halo_ThroughTheTrees
+	{
+		name="(Halo Infinite) Through The Trees";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Halo_ThroughTheTrees.ogg",
+			1,
+			1
+		};
+		duration="185";
+	};
+	class FST_Destiny_BringTheHaul
+	{
+		name="(Destiny 2) Bring The Haul";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny2_BringTheHaul.ogg",
+			1,
+			1
+		};
+		duration="255";
 	};
 	class FST_WT_WaltzoftheTornado
 	{
