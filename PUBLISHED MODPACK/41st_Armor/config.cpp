@@ -590,6 +590,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -655,6 +656,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -720,6 +722,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -785,6 +788,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -850,6 +854,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -911,6 +916,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -976,6 +982,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1038,6 +1045,7 @@ class CfgWeapons
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1101,6 +1109,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1167,6 +1176,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1234,6 +1244,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1298,6 +1309,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1363,6 +1375,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1429,6 +1442,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1495,6 +1509,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1561,6 +1576,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1626,6 +1642,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1691,6 +1708,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1810,6 +1828,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1864,6 +1883,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1922,6 +1942,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -1991,6 +2012,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2056,6 +2078,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2121,6 +2144,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2175,6 +2199,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2230,6 +2255,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2293,6 +2319,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2356,6 +2383,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2410,6 +2438,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2672,6 +2701,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2743,6 +2773,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -2809,6 +2840,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply200";
 			hiddenSelections[] =
@@ -2880,6 +2912,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply200";
 			hiddenSelections[] =
@@ -2951,6 +2984,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3020,6 +3054,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3089,6 +3124,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3158,6 +3194,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3227,6 +3264,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3296,6 +3334,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3434,6 +3473,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3503,6 +3543,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
@@ -3572,6 +3613,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		class ItemInfo: VestItem
 		{
+			vesttype="Rebreather";
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 			containerClass="Supply200";
 			hiddenSelections[]=
