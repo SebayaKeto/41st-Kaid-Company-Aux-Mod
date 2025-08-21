@@ -295,6 +295,7 @@ class CfgPatches
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
+			"FST_P2_Coldstart",
 			//////////OTHERS//////////
 			"FST_AmmoCrate",
 			"FST_MedicalCrate",
@@ -13287,6 +13288,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Airman.paa",
 		};
 	};
+		class FST_P2_Helmet_Coldstart: FST_P2_Helmet_Base
+	{
+		author="Adler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Coldstart]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Coldstart.paa",
+		};
+	};
 	//////////////UNIFORMS//////////////
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
@@ -17092,6 +17103,34 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
             mass=15;
         };
     };
+	 	class FST_Uniform_Dash: JLTS_CloneArmor 
+	{
+		author="Adler";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Dash]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Dash";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	 	class FST_Uniform_Cyanide: JLTS_CloneArmor 
+	{
+		author="Adler";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cyanide]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cyanide";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class ls_blufor_unit_base;
 	class ls_garUniform_jediCommander: ls_blufor_unit_base
 	{
@@ -39335,6 +39374,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Cyanide: FST_Trooper_P2_DC15S
+	{
+		author="Adler";
+		displayName="[41st] CT-1014 'Cyanide'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cyanide";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cyanide.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cyanide.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Cyanide",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Cyanide",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Dash: FST_Trooper_P2_DC15S
+	{
+		author="Adler";
+		displayName="[41st] CT-9782 'Dash'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Dash";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Dash.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Dash.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Dash",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Dash",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class ls_gar_jediCommander;
 	class FST_Jedi: ls_gar_jediCommander
 	{
@@ -40412,6 +40561,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Delta";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Delta.paa";
+		};
+		class FST_Clone_Head_Squatch: FST_clone_Default_head
+		{
+			author="Adler"
+			name="Clone Trooper Squatch";
+			displayName="[41st] Clone Trooper - Squatch";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Squatch.paa";
 		};
 		class FST_Navy_Face_Mustang: Default
 		{
