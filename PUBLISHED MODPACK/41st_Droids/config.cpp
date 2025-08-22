@@ -735,7 +735,7 @@ class CfgVehicles
 		scope=2;
 		maximumload=250;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
-		displayName="[41st] Belt Bag";
+		displayName="[41st] Belt Bag (Tukata)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
 		hiddenSelections[]=
 		{
@@ -765,7 +765,7 @@ class CfgVehicles
 		scope=2;
 		maximumload=250;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_belt_bag_ui_ca.paa";
-		displayName="[41st] Belt Bag";
+		displayName="[41st] AR Belt Bag (Tukata)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBeltBag.p3d";
 		hiddenSelections[]=
 		{
