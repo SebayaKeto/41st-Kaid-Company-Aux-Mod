@@ -76,7 +76,7 @@ class CfgPatches
 			"FST_P2_Daara",
 			"FST_P2_Ghostly",
 			"FST_P2_Argo",
-			"FST_P2_ArgoV2",
+			"FST_P2_Argo_V2",
 			"FST_P2_Argo_Dirty",
 			"FST_P2_Spade",
 			"FST_P2_Ripper",
@@ -95,7 +95,7 @@ class CfgPatches
 			"FST_P2_Ropey",
 			"FST_P2_Merrik",
 			"FST_P2_Merrik_BC",
-			"FST_P2_Merrik_3",
+			"FST_P2_Merrik_V3",
 			"FST_P2_Zen",
 			"FST_P2_Brutal",
 			"FST_P2_Burns",
@@ -201,7 +201,7 @@ class CfgPatches
 			"FST_P2_Rint",
 			"FST_P2_Rint_Dirty",
 			"FST_P2_Rint_V2",
-			"FST_P2_Rint_Dirty_V2",
+			"FST_P2_Rint_V2_Dirty",
 			"FST_P2_CosmicSmith",
 			"FST_P2_Tally",
 			"FST_P2_Church",
@@ -1226,7 +1226,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-		class FST_Vest_HeavyBag_Veteran: JLTS_CloneVestAirborne
+	class FST_Vest_HeavyBag_Veteran: JLTS_CloneVestAirborne
 	{
 		scope=2;
 		displayName="[41st] Airborne Fire Team Leader Sash (Veteran)";
@@ -2751,7 +2751,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_CloneVestMerrik3: JLTS_CloneVestOfficer
+	class FST_CloneVestMerrik_V3: JLTS_CloneVestOfficer
 	{
 		displayName="[41st] Merrik's Vest and Kama (V3)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
@@ -11279,7 +11279,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};	
-	class FST_MC_Helmet_Merrik3: JLTS_CloneHelmetP2MC
+	class FST_MC_Helmet_Merrik_V3: JLTS_CloneHelmetP2MC
 	{
 		author="Gold";
 		scope=2; 
@@ -11421,7 +11421,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Vix.paa",
 		};
 	};	
-	class FST_P2_Helmet_Merrik2: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Merrik_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -11451,7 +11451,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tally.paa",
 		};
 	};	
-	class FST_P2_Helmet_Tally2: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Tally_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -11491,7 +11491,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bulwark.paa",
 		};
 	};
-	class FST_P2_Helmet_Bulwark_v2: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Bulwark_V2: FST_P2_Helmet_Base
 	{
 		author="Viz";
 		scope=2;
@@ -11501,7 +11501,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bulwark2.paa",
 		};
 	};
-	class FST_P2_Helmet_Bulwark_v2_Dirty: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Bulwark_V2_Dirty: FST_P2_Helmet_Base
 	{
 		author="Viz";
 		scope=2;
@@ -11541,7 +11541,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Harm.paa",
 		};
 	};	
-	class FST_P2_Helmet_Church2: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Church_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -12071,7 +12071,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rint_V2.paa",
 		};
 	};	
-	class FST_P2_Helmet_Rint_Dirty_V2: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Rint_V2_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -12880,7 +12880,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Huntress.paa",
 		};
 	};
- 	class FST_P2_Helmet_Cardinal2: FST_P2_Helmet_Base
+ 	class FST_P2_Helmet_Cardinal_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -12890,7 +12890,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cardinal2.paa",
 		};
 	};
- 	class FST_P2_Helmet_Cardinal3: FST_P2_Helmet_Base
+ 	class FST_P2_Helmet_Cardinal_V3: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -13090,7 +13090,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Argo.paa",
 		};
 	};
-	class FST_P2_Helmet_ArgoV2: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Argo_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2;
@@ -14188,7 +14188,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
- 	class FST_Uniform_ArgoV2: JLTS_CloneArmor
+ 	class FST_Uniform_Argo_V2: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -14196,7 +14196,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		class ItemInfo: UniformItem
 		{
 			uniformModel="";
-			uniformClass="FST_P2_ArgoV2";
+			uniformClass="FST_P2_Argo_V2";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -15700,7 +15700,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
-	class FST_Uniform_RipperV2: JLTS_CloneArmor
+	class FST_Uniform_Ripper_V2: JLTS_CloneArmor
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -15714,7 +15714,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
-	class FST_Uniform_RipperV2_Dirty: JLTS_CloneArmor
+	class FST_Uniform_Ripper_V2_Dirty: JLTS_CloneArmor
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -15882,7 +15882,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
-	class FST_Uniform_Rint_Dirty_V2: JLTS_CloneArmor
+	class FST_Uniform_Rint_V2_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -15890,7 +15890,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		class ItemInfo: UniformItem
 		{
 			uniformModel="";
-			uniformClass="FST_P2_Rint_Dirty_V2";
+			uniformClass="FST_P2_Rint_V2_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -16722,7 +16722,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
-	class FST_Uniform_Merrik_3: JLTS_CloneArmor 
+	class FST_Uniform_Merrik_V3: JLTS_CloneArmor 
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -16730,7 +16730,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		class ItemInfo: UniformItem
 		{
 			uniformModel="";
-			uniformClass="FST_P2_Merrik_3";
+			uniformClass="FST_P2_Merrik_V3";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -28179,7 +28179,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
- 	class FST_P2_ArgoV2: FST_Trooper_P2_DC15S
+ 	class FST_P2_Argo_V2: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-0626 'Argo' [V2]";
@@ -28894,7 +28894,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
-	class FST_P2_Merrik_3: FST_Trooper_P2_DC15S
+	class FST_P2_Merrik_V3: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
 		displayName="[41st] CT-4973 'Merrik (V3)'";
@@ -28930,7 +28930,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_MC_Helmet_Merrik3",
+			"FST_MC_Helmet_Merrik_V3",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -28940,7 +28940,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_MC_Helmet_Merrik3",
+			"FST_MC_Helmet_Merrik_V3",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37452,7 +37452,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
-	class FST_P2_Rint_Dirty_V2: FST_Trooper_P2_DC15S
+	class FST_P2_Rint_V2_Dirty: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-2724 'Rint' (Dirty V2)";

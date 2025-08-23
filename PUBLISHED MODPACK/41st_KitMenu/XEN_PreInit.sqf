@@ -1461,7 +1461,7 @@ switch (true) do {
 	};
 	case (_name find ("CC-1227 " + '"' + "Cardinal" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
-		_headgearToSet  = "FST_P2_Helmet_Cardinal3";
+		_headgearToSet  = "FST_P2_Helmet_Cardinal_V3";
 		_vestToSet      = "FST_pauldron_kama";
 		_backpackToSet  = "FST_Clone_LR_attachment";
 		_nvgToSet       = "FST_Visor_Cardinal";

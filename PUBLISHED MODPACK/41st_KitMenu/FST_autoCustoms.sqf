@@ -48,7 +48,9 @@ switch (_rank) do {
     case "CXR-":  { _allowHelmet = true; _allowArmor = true; };
     case "ARC-":  { _allowHelmet = true; _allowArmor = true; _allowVest = true; _allowBack = true; _allowNVG = true; };
 };
+
 missionNamespace setVariable ["FST_fnc_confirmCustomVariant", {
+    disableSerialization;
     private _disp = uiNamespace getVariable ["FST_CustomVariantSelector_Display", displayNull];
     if (isNull _disp) exitWith {};
     private _lb = _disp displayCtrl 4201;
@@ -64,8 +66,10 @@ missionNamespace setVariable ["FST_fnc_confirmCustomVariant", {
 }];
 
 private _openVariantSelector = {
+    disableSerialization;
     params ["_prompt", "_classes"];
     if (!hasInterface) exitWith { "" };
+
     private _resVar = format ["FST_CustomChoice_%1_%2", diag_tickTime, floor random 1e6];
     missionNamespace setVariable [_resVar, ""];
     uiNamespace setVariable ["FST_VariantResultVar", _resVar];
@@ -73,9 +77,14 @@ private _openVariantSelector = {
     if !(createDialog "FST_CustomVariantSelector") exitWith { "" };
     hintSilent _prompt;
 
-    private _display = uiNamespace getVariable ["FST_CustomVariantSelector_Display", displayNull];
-    private _deadline = diag_tickTime + 3;
-    waitUntil { uiSleep 0.01; !isNull _display || {diag_tickTime > _deadline} };
+    private _deadline = diag_tickTime + 5;
+    private _display = displayNull;
+    waitUntil {
+        uiSleep 0.01;
+        _display = uiNamespace getVariable ["FST_CustomVariantSelector_Display", displayNull];
+        if (isNull _display) then { _display = findDisplay 4200; };
+        !isNull _display || { diag_tickTime > _deadline }
+    };
     if (isNull _display) exitWith { "" };
 
     private _lb = _display displayCtrl 4201;
@@ -92,24 +101,27 @@ private _openVariantSelector = {
         _lb lbSetData [_i, _cls];
         if (_pic != "") then { _lb lbSetPicture [_i, _pic]; };
     } forEach _classes;
+
     if ((lbSize _lb) > 0) then { lbSetCurSel [_lb, 0]; };
     _lb ctrlAddEventHandler ["LBDblClick", {
         [] call (missionNamespace getVariable ["FST_fnc_confirmCustomVariant",{}]);
     }];
+
     waitUntil {
         uiSleep 0.01;
         isNull _display || { (missionNamespace getVariable [_resVar,""]) != "" }
     };
-    private _choice = missionNamespace getVariable [_resVar, ""];
-    _choice
+    missionNamespace getVariable [_resVar, ""]
 };
+
 private _collectWeaponsByPrefixes = {
     params ["_prefixes"];
     private _out = [];
     {
         private _cls = configName _x;
-        if (_prefixes findIf { _cls find _x == 0 } > -1) then { _out pushBack _cls; };
+        if (_prefixes findIf { _cls find _x == 0 } > -1) then { _out pushBackUnique _cls; };
     } forEach ("true" configClasses (configFile >> "CfgWeapons"));
+    _out sort true;
     _out
 };
 private _collectVehiclesByPrefixes = {
@@ -117,101 +129,138 @@ private _collectVehiclesByPrefixes = {
     private _out = [];
     {
         private _cls = configName _x;
-        if (_prefixes findIf { _cls find _x == 0 } > -1) then { _out pushBack _cls; };
+        if (_prefixes findIf { _cls find _x == 0 } > -1) then { _out pushBackUnique _cls; };
     } forEach ("true" configClasses (configFile >> "CfgVehicles"));
+    _out sort true;
     _out
 };
-private _restoreUniformItems = { params ["_unit","_items"]; { _unit addItemToUniform _x; } forEach _items; };
-private _restoreVestItems    = { params ["_unit","_items"]; { _unit addItemToVest    _x; } forEach _items; };
-private _restoreBackpackItems= { params ["_unit","_items"]; { _unit addItemToBackpack _x; } forEach _items; };
+private _filterByNameBoundary = {
+    params ["_classes","_prefixes"];
+    private _out = [];
+    {
+        private _cls = _x;
+        private _keep = false;
+        {
+            private _p = _x;
+            if (_cls find _p == 0) then {
+                private _len = count _p;
+                _keep = ((count _cls) == _len) || { (_cls select [_len,1]) isEqualTo "_" };
+            };
+            if (_keep) exitWith {};
+        } forEach _prefixes;
+        if (_keep) then { _out pushBackUnique _cls; };
+    } forEach _classes;
+    _out
+};
+private _restoreUniformItems  = { params ["_unit","_items"]; { _unit addItemToUniform  _x; } forEach _items; };
+private _restoreVestItems     = { params ["_unit","_items"]; { _unit addItemToVest     _x; } forEach _items; };
+private _restoreBackpackItems = { params ["_unit","_items"]; { _unit addItemToBackpack _x; } forEach _items; };
 if (_allowHelmet) then {
-    private _helmetPrefixes = [
-        format ["FST_P2_Helmet_%1",              _playerName],
-        format ["FST_Airborne_Helmet_%1",        _playerName],
-        format ["FST_Crewman_Helmet_%1",         _playerName],
-        format ["FST_Pilot_P1_Helmet_%1",        _playerName],
-        format ["FST_ARF_Helmet_WhiteGreen_%1",  _playerName]
-    ];
+    private _saved = _mem get "helmet";
     if (_rank isEqualTo "ARC-") then {
-        _helmetPrefixes pushBackUnique format ["FST_P2_ARC_Helmet_%1", _playerName];
+        private _arcPrefix = format ["FST_P2_ARC_Helmet_%1", _playerName];
+        if (!isNil {_saved} && { _saved find _arcPrefix != 0 }) then { _saved = nil; };
     };
-    private _allHelms = [_helmetPrefixes] call _collectWeaponsByPrefixes;
-    private _helms = _allHelms select { _x != "" };
-    private _memChoice = _mem getOrDefault ["helmet",""];
-    private _useMem = (_memChoice != "") && { _helms findIf { _x == _memChoice } > -1 };
-    if (_useMem) then {
-        removeHeadgear _unit; _unit addHeadgear _memChoice;
+
+    if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
+        removeHeadgear _unit;
+        _unit addHeadgear _saved;
     } else {
-        if ((count _helms) == 1) then {
-            removeHeadgear _unit; _unit addHeadgear (_helms select 0);
-            _mem set ["helmet", _helms select 0];
+        private _helmetPrefixes = if (_rank isEqualTo "ARC-") then {
+            [ format ["FST_P2_ARC_Helmet_%1", _playerName] ]
         } else {
-            if ((count _helms) > 1) then {
+            [
+                format ["FST_P2_Helmet_%1", _playerName],
+                format ["FST_Airborne_Helmet_%1", _playerName],
+                format ["FST_Crewman_Helmet_%1", _playerName],
+                format ["FST_Pilot_P1_Helmet_%1", _playerName],
+                format ["FST_ARF_Helmet_WhiteGreen_%1", _playerName]
+            ]
+        };
+
+        private _helms = [_helmetPrefixes] call _collectWeaponsByPrefixes;
+        _helms = [_helms, _helmetPrefixes] call _filterByNameBoundary;
+
+        if ((count _helms) == 1) then {
+            private _chosen = _helms#0;
+            removeHeadgear _unit;
+            _unit addHeadgear _chosen;
+            _mem set ["helmet", _chosen];
+            _unit setVariable ["FST_CustomSel", _mem, true];
+        } else {
+            if ((count _helms) >= 2) then {
                 private _chosen = ["Select a helmet", _helms] call _openVariantSelector;
                 if (_chosen != "") then {
-                    removeHeadgear _unit; _unit addHeadgear _chosen;
+                    removeHeadgear _unit;
+                    _unit addHeadgear _chosen;
                     _mem set ["helmet", _chosen];
+                    _unit setVariable ["FST_CustomSel", _mem, true];
                 };
             };
         };
     };
 };
 if (_allowArmor) then {
-    private _uniformPrefixes = [ format ["FST_Uniform_%1", _playerName] ];
-    private _allUniforms = [_uniformPrefixes] call _collectWeaponsByPrefixes;
-    private _unis = _allUniforms select { _x != "" };
-    private _memChoice = _mem getOrDefault ["uniform",""];
-    private _useMem = (_memChoice != "") && { _unis findIf { _x == _memChoice } > -1 };
-    if (_useMem) then {
+    private _saved = _mem get "uniform";
+    if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
         private _uItems = uniformItems _unit;
-        removeUniform _unit; _unit forceAddUniform _memChoice;
+        removeUniform _unit;
+        _unit forceAddUniform _saved;
         [_unit, _uItems] call _restoreUniformItems;
     } else {
+        private _uniformPrefixes = [format ["FST_Uniform_%1", _playerName]];
+        private _unis = [_uniformPrefixes] call _collectWeaponsByPrefixes;
+        _unis = [_unis, _uniformPrefixes] call _filterByNameBoundary;
+
         if ((count _unis) == 1) then {
+            private _chosen = _unis#0;
             private _uItems = uniformItems _unit;
-            removeUniform _unit; _unit forceAddUniform (_unis select 0);
+            removeUniform _unit;
+            _unit forceAddUniform _chosen;
             [_unit, _uItems] call _restoreUniformItems;
-            _mem set ["uniform", _unis select 0];
+            _mem set ["uniform", _chosen];
+            _unit setVariable ["FST_CustomSel", _mem, true];
         } else {
-            if ((count _unis) > 1) then {
+            if ((count _unis) >= 2) then {
                 private _chosen = ["Select a uniform", _unis] call _openVariantSelector;
                 if (_chosen != "") then {
                     private _uItems = uniformItems _unit;
-                    removeUniform _unit; _unit forceAddUniform _chosen;
+                    removeUniform _unit;
+                    _unit forceAddUniform _chosen;
                     [_unit, _uItems] call _restoreUniformItems;
                     _mem set ["uniform", _chosen];
+                    _unit setVariable ["FST_CustomSel", _mem, true];
                 };
             };
         };
     };
 };
 if (_allowVest) then {
-    private _vestPrefixes = [];
-    if (_rank isEqualTo "ARC-") then {
-        _vestPrefixes pushBack format ["FST_CloneVestARC_%1", _playerName];
-    };
+    private _saved = _mem get "vest";
+    if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
+        private _vItems = vestItems _unit;
+        if (vest _unit != "") then { removeVest _unit; };
+        _unit addVest _saved;
+        [_unit, _vItems] call _restoreVestItems;
+    } else {
+        private _vestPrefixes = [];
+        if (_rank isEqualTo "ARC-") then {
+            _vestPrefixes pushBack format ["FST_CloneVestARC_%1", _playerName];
+        };
+        if (count _vestPrefixes > 0) then {
+            private _vests = [_vestPrefixes] call _collectWeaponsByPrefixes;
+            _vests = [_vests, _vestPrefixes] call _filterByNameBoundary;
 
-    if ((count _vestPrefixes) > 0) then {
-        private _allVests = [_vestPrefixes] call _collectWeaponsByPrefixes;
-        private _vests = _allVests select { _x != "" };
-
-        private _memChoice = _mem getOrDefault ["vest",""];
-        private _useMem = (_memChoice != "") && { _vests findIf { _x == _memChoice } > -1 };
-
-        if (_useMem) then {
-            private _vItems = vestItems _unit;
-            if (vest _unit != "") then { removeVest _unit; };
-            _unit addVest _memChoice;
-            [_unit, _vItems] call _restoreVestItems;
-        } else {
             if ((count _vests) == 1) then {
+                private _chosen = _vests#0;
                 private _vItems = vestItems _unit;
                 if (vest _unit != "") then { removeVest _unit; };
-                _unit addVest (_vests select 0);
+                _unit addVest _chosen;
                 [_unit, _vItems] call _restoreVestItems;
-                _mem set ["vest", _vests select 0];
+                _mem set ["vest", _chosen];
+                _unit setVariable ["FST_CustomSel", _mem, true];
             } else {
-                if ((count _vests) > 1) then {
+                if ((count _vests) >= 2) then {
                     private _chosen = ["Select a vest", _vests] call _openVariantSelector;
                     if (_chosen != "") then {
                         private _vItems = vestItems _unit;
@@ -219,6 +268,7 @@ if (_allowVest) then {
                         _unit addVest _chosen;
                         [_unit, _vItems] call _restoreVestItems;
                         _mem set ["vest", _chosen];
+                        _unit setVariable ["FST_CustomSel", _mem, true];
                     };
                 };
             };
@@ -226,60 +276,64 @@ if (_allowVest) then {
     };
 };
 if (_allowNVG) then {
-    private _nvgPrefixes = [
-        format ["FST_NVG_%1", _playerName],
-        format ["FST_NVG_Fixed_%1", _playerName]
-    ];
-    private _allNVG = [_nvgPrefixes] call _collectWeaponsByPrefixes;
-    private _nvgs = _allNVG select { _x != "" };
-
-    private _memChoice = _mem getOrDefault ["nvg",""];
-    private _useMem = (_memChoice != "") && { _nvgs findIf { _x == _memChoice } > -1 };
-
-    if (_useMem) then {
-        _unit linkItem _memChoice;
+    private _saved = _mem get "nvg";
+    if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
+        _unit linkItem _saved;
     } else {
+        private _nvgPrefixes = [
+            format ["FST_NVG_%1", _playerName],
+            format ["FST_NVG_Fixed_%1", _playerName]
+        ];
+        private _nvgs = [_nvgPrefixes] call _collectWeaponsByPrefixes;
+        _nvgs = [_nvgs, _nvgPrefixes] call _filterByNameBoundary;
+
         if ((count _nvgs) == 1) then {
-            _unit linkItem (_nvgs select 0);
-            _mem set ["nvg", _nvgs select 0];
+            private _chosen = _nvgs#0;
+            _unit linkItem _chosen;
+            _mem set ["nvg", _chosen];
+            _unit setVariable ["FST_CustomSel", _mem, true];
         } else {
-            if ((count _nvgs) > 1) then {
-                private _chosen = ["Select NVG", _nvgs] call _openVariantSelector;
-                if (_chosen != "") then { _unit linkItem _chosen; _mem set ["nvg", _chosen]; };
+            if ((count _nvgs) >= 2) then {
+                private _chosen = ["Select NVGs", _nvgs] call _openVariantSelector;
+                if (_chosen != "") then {
+                    _unit linkItem _chosen;
+                    _mem set ["nvg", _chosen];
+                    _unit setVariable ["FST_CustomSel", _mem, true];
+                };
             };
         };
     };
 };
 if (_allowBack) then {
-    private _bpPrefixes = [];
-    if (_kitTagLower isEqualTo "airborne" && { !(_roleLower in ["eod","rto","medic"]) }) then {
-        _bpPrefixes pushBack format ["FST_Backpack_Jumppack_%1", _playerName];
-    };
-    if (_rank isEqualTo "ARC-") then {
-        _bpPrefixes pushBackUnique "FST_Clone_Backpack_ARC";
-    };
+    private _saved = _mem get "backpack";
+    if (!isNil {_saved} && { isClass (configFile >> "CfgVehicles" >> _saved) }) then {
+        private _bItems = backpackItems _unit;
+        if (backpack _unit != "") then { removeBackpack _unit; };
+        _unit addBackpack _saved;
+        [_unit, _bItems] call _restoreBackpackItems;
+    } else {
+        private _bpPrefixes = [];
+        if (_kitTagLower isEqualTo "airborne" && { !(_roleLower in ["eod","rto","medic"]) }) then {
+            _bpPrefixes pushBack format ["FST_Backpack_Jumppack_%1", _playerName];
+        };
+        if (_rank isEqualTo "ARC-") then {
+            _bpPrefixes pushBackUnique "FST_Clone_Backpack_ARC";
+        };
 
-    if ((count _bpPrefixes) > 0) then {
-        private _allBps = [_bpPrefixes] call _collectVehiclesByPrefixes;
-        private _bps = _allBps select { _x != "" };
+        if (count _bpPrefixes > 0) then {
+            private _bps = [_bpPrefixes] call _collectVehiclesByPrefixes;
+            _bps = [_bps, _bpPrefixes] call _filterByNameBoundary;
 
-        private _memChoice = _mem getOrDefault ["backpack",""];
-        private _useMem = (_memChoice != "") && { _bps findIf { _x == _memChoice } > -1 };
-
-        if (_useMem) then {
-            private _bItems = backpackItems _unit;
-            if (backpack _unit != "") then { removeBackpack _unit; };
-            _unit addBackpack _memChoice;
-            [_unit, _bItems] call _restoreBackpackItems;
-        } else {
             if ((count _bps) == 1) then {
+                private _chosen = _bps#0;
                 private _bItems = backpackItems _unit;
                 if (backpack _unit != "") then { removeBackpack _unit; };
-                _unit addBackpack (_bps select 0);
+                _unit addBackpack _chosen;
                 [_unit, _bItems] call _restoreBackpackItems;
-                _mem set ["backpack", _bps select 0];
+                _mem set ["backpack", _chosen];
+                _unit setVariable ["FST_CustomSel", _mem, true];
             } else {
-                if ((count _bps) > 1) then {
+                if ((count _bps) >= 2) then {
                     private _chosen = ["Select a backpack", _bps] call _openVariantSelector;
                     if (_chosen != "") then {
                         private _bItems = backpackItems _unit;
@@ -287,13 +341,14 @@ if (_allowBack) then {
                         _unit addBackpack _chosen;
                         [_unit, _bItems] call _restoreBackpackItems;
                         _mem set ["backpack", _chosen];
+                        _unit setVariable ["FST_CustomSel", _mem, true];
                     };
                 };
             };
         };
     };
 };
-_unit setVariable ["FST_CustomSel", _mem];
+_unit setVariable ["FST_CustomSel", _mem, true];
 if (_rank isEqualTo "ARC-") then {
     _unit linkItem "FST_Antenna";
 };
