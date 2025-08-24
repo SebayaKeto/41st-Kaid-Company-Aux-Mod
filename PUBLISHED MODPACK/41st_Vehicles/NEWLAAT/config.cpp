@@ -28,6 +28,7 @@ class CfgPatches
 			"FST_laati_Turret_Bees",
 			"FST_laati_Turret_Ruby",
 			"FST_laati_Turret_Hijack",
+			"FST_laati_Turret_Jorge",
 			"FST_laati_mk2_Daara",
 			"FST_laati_mk2_Shockcap",
 			"FST_laati_mk2_Spade",
@@ -41,6 +42,7 @@ class CfgPatches
 			"FST_laati_mk2_Bees",
 			"FST_laati_mk2_Ruby",
 			"FST_laati_mk2_Hijack",
+			"FST_laati_mk2_Jorge",
 			"FST_laati_mk1Lights",
 			"FST_laati_mk1Lights_Shockcap",
 			"FST_laati_mk1Lights_Spade",
@@ -55,6 +57,7 @@ class CfgPatches
 			"FST_laati_mk1Lights_Bees",
 			"FST_laati_mk1Lights_Ruby",
 			"FST_laati_mk1Lights_Hijack",
+			"FST_laati_mk1Lights_Jorge",
 			"FST_laati_mk2Lights_Shockcap",
 			"FST_laati_mk2Lights_Spade",
 			"FST_laati_mk2Lights_Grim",
@@ -68,6 +71,7 @@ class CfgPatches
 			"FST_laati_mk2Lights_Bees",
 			"FST_laati_mk2Lights_Ruby",
 			"FST_laati_mk2Lights_Hijack",
+			"FST_laati_mk2Lights_Jorge",
 			"FST_laati_Turret_RadarTestbed"
 		};
 		weapons[]=
@@ -3589,6 +3593,27 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
+	class FST_laati_Turret_Jorge: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=0;
+		displayname="[41st] LAAT/i Mk I Gunship (Jorge)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_P2_Jorge";
+		author="Gold";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_Jorge_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_Jorge_CO.paa",
+		};
+		textureList[]={};
+	};
 	class FST_laati_Turret_Jan: FST_laati_Turret
 	{
 		scope=2;
@@ -3948,6 +3973,27 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
+	class FST_laati_mk2_Jorge: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=0;
+		displayname="[41st] LAAT/i Mk II Gunship (Jorge)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_P2_Jorge";
+		author="Gold";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_Jorge_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_Jorge_CO.paa",
+		};
+		textureList[]={};
+	};
 	class FST_laati_mk2_Jan: FST_laati_mk2
 	{
 		scope=2;
@@ -4287,24 +4333,24 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
-	class FST_laati_mk1Lights_Hijack: FST_laati_mk1Lights
+	class FST_laati_mk1Lights_Jorge: FST_laati_mk1Lights
 	{
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		side=1;
-		displayname="[41st] LAAT/i Mk I Gunship (Hijack/Lamps)";
+		side=0;
+		displayname="[41st] LAAT/i Mk I Gunship (Jorge/Lamps)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
-		crew="FST_Pilot_P1";
-		author="Daara";
+		crew="FST_P2_Jorge";
+		author="Gold";
 		hiddenselectionstextures[]=
 		{
-			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Hijack.paa",
-			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
-			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Hull_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_Jorge_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
-			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+			"41st_Vehicles\NEWLAAT\Data\Interior_Jorge_CO.paa",
 		};
 		textureList[]={};
 	};
@@ -4664,6 +4710,27 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2Lights_Jorge: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=0;
+		displayname="[41st] LAAT/i Mk II Gunship (Jorge/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_P2_Jorge";
+		author="Gold";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_Jorge_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_Jorge_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_Jorge_CO.paa",
 		};
 		textureList[]={};
 	};
