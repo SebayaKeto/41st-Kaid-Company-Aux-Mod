@@ -276,6 +276,7 @@ class CfgPatches
 			"FST_P2_Plop",
 			"FST_P2_Bees",
 			"FST_P2_Dilham",
+			"FST_P2_Dilham_Dirty",
 			"FST_P2_Dragon",
 			"FST_P2_Gold_Dirty",
 			"FST_P2_Bright",
@@ -348,6 +349,14 @@ class CfgEditorSubcategories
 	class FST_Acclamator_Category_S
 	{
 		displayName="41st Acclamator Ships";
+	};
+	class FST_Providence_Category_P
+	{
+		displayName="41st Providence Parts";
+	};
+	class FST_Providence_Category_S
+	{
+		displayName="41st Providence Ships";
 	};
 	class FST_BattleDroids_Subfaction
 	{
@@ -785,6 +794,72 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Burns.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestARC_Jorge: V_PlateCarrier1_rgr
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Jorge]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_JARC.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -6389,6 +6464,104 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_Crewman_Helmet_Arthur: JLTS_CloneHelmetBARC
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] Crewman Helmet (Arthur)";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
+		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Arthur.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Crewman_Helmet_Merlin: JLTS_CloneHelmetBARC
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] Crewman Helmet (Merlin)";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
+		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Merlin.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Crewman_Helmet_Benni: JLTS_CloneHelmetBARC
 	{
 		scope=2;
@@ -6454,6 +6627,55 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Colors.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Crewman_Helmet_Jorge: JLTS_CloneHelmetBARC
+	{
+		scope=2;
+		author="Gold";
+		displayName="[41st] Crewman Helmet (Jorge)";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
+		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Jorge.paa"
 		};
 		subItems[]=
 		{
@@ -7061,6 +7283,54 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Burns.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_P2_ARC_Helmet_Jorge: JLTS_CloneHelmetP2
+	{
+		author="Gold";
+		displayName="[41st] P2 ARC Trooper Helmet (Jorge)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Jorge.paa"
 		};
 		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
 		class Iteminfo: HeadgearItem
@@ -7878,6 +8148,58 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Fire.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Airborne_Helmet_Jorge: JLTS_CloneHelmetAB
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Jorge)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Jorge.paa",
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -11165,7 +11487,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham.paa",
 		};
-	};	
+	};
+	class FST_P2_Helmet_Dilham_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Dilham/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Derp: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -15126,6 +15458,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
+	class FST_Uniform_Dilham_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Dilham/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Dilham_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Dragon: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -17927,6 +18273,50 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Fury: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Fury)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Fury.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Plop: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Plop)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Plop.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Dilham: JLTS_CloneNVG
 	{
 		author="Gold";
@@ -17963,6 +18353,50 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Dilham_Dirty: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Dilham/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Dilham_Dirty.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Fixed_Dilham_Dirty: JLTS_CloneNVG_spec
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Dilham/Fixed On/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Dilham_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -23233,6 +23667,64 @@ class CfgVehicles
 		class TransportItems
 		{
 		};
+	};
+	class FST_Backpack_Jumppack_Appa: FST_Backpack_Jumppack
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Appa)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
 	};
 	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack
 	{
@@ -31879,6 +32371,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Dilham",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Dilham_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-1622 'Dilham/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Dilham_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Dilham_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Dilham_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Dilham_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Dilham_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
