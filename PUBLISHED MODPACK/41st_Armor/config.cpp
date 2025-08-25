@@ -20108,6 +20108,7 @@ class CfgVehicles
 	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
 	{
+        maximumload=300;
 		displayName="[41st] Clone RTO Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTOStraps.p3d";
 	};
@@ -41288,3 +41289,4 @@ class cfgGroups
 		};
 	};
 };
+
