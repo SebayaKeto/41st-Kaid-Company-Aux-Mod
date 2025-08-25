@@ -696,7 +696,13 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"FST_Vest_HeavyBag",
 				"FST_Vest_HeavyBag_Veteran",
 				"FST_Vest_NCO",
-				"FST_Vest_NCO_Veteran"
+				"FST_Vest_NCO_Veteran",
+				"FST_CloneVestMerrik",
+				"FST_CloneVestARC",
+				"FST_CloneVestARC_Camo",
+				"FST_CloneVestARC_Tally",
+				"FST_CloneVestARC_Burns",
+				"FST_CloneVestARC_Major"
 			];
 			private _allowedFaces = [
 				"FST_Heavy_Veteran_Face",
@@ -783,7 +789,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
     			(vest player == "FST_Vest_NCO") ||
     			(vest player == "FST_Vest_HeavyBag") ||
     			(vest player == "FST_Vest_NCO_Veteran") ||
-    			(vest player == "FST_Vest_HeavyBag_Veteran")
+    			(vest player == "FST_Vest_HeavyBag_Veteran") ||
+				(vest player == "FST_CloneVestMerrik")
 			) then {
 				if (goggles player == "FST_Hoster_Face") then {
 					removeGoggles player;
