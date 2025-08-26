@@ -1281,7 +1281,7 @@ class CfgVehicles
 		latency=0.1;
 		switchTime=0;
 		tas_canBlift=1;
-		tas_liftVars="[[[[0,-4.5,-20]]], [0], [0]]";
+		tas_liftVars="[[[[0,-5,-14.5]]], [0], [0]]";
 		changeGearType="rpmratio";
 		changeGearOmegaRatios[]={1,0.33333334,0.33333334,0,0.99333334,0.33333334,0.98333335,0.69999999,0.98333335,0.73333335,0.98333335,0.73333335};
 		class complexGearbox

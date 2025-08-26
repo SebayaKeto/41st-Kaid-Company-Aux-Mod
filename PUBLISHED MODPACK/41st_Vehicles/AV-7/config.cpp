@@ -1100,7 +1100,7 @@ class CfgVehicles
 		editorSubcategory="FST_Ground_Vehicle";
 		generalMacro="B_MBT_01_arty_base_F";
 		tas_canBlift=1;
-		tas_liftVars="[[[[0,-4,-6.5]]], [-0.001], [-0.4]]";
+		tas_liftVars="[[[[0,-4,-28]]], [0.0], [-0.0]]";
 		crew="FST_Trooper_P2_DC15S";
 		typicalCargo[]=
 		{
