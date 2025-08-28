@@ -109,6 +109,9 @@ class CfgVehicles
 		memoryPointsGetInCommander="pos driver";
 		memoryPointsGetInCommanderDir="pos driver dir";
 		artilleryScanner=0;
+		maximumLoad=5000;
+		ace_cargo_space=30;
+		ace_cargo_hasCargo=1;
 		irScanGround=0;
 		irScanRangeMax=10000;
 		irScanRangeMin=2000;

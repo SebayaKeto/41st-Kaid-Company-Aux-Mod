@@ -68,6 +68,9 @@ class CfgVehicles
 		icon="\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
 		driverAction="mbt2_slot2a_out";
 		driverInAction="mbt2_slot2a_in";
+		maximumLoad=5000;
+		ace_cargo_space=30;
+		ace_cargo_hasCargo=1;
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCommander="pos driver";

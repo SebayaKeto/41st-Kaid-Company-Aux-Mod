@@ -110,6 +110,9 @@ class CfgVehicles
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
 		artilleryScanner=0;
+		maximumLoad=5000;
+		ace_cargo_space=30;
+		ace_cargo_hasCargo=1;
 		irScanGround=0;
 		irScanRangeMax=10000;
 		irScanRangeMin=2000;
