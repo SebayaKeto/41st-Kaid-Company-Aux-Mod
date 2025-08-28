@@ -329,7 +329,7 @@ class CfgAmmo
 		suppressionRadiusHit=32;
 		explosive=0.80000001;
 		cost=300;
-		airFriction=-3.96e-005;
+		artilleryLock=1;
 		CraterEffects="HeavyBombCrater";
 		explosionEffects="HeavyBombExplosion";
 		typicalSpeed=1550;
