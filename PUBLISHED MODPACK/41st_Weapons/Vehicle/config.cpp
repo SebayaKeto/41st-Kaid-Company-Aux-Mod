@@ -964,7 +964,7 @@ class CfgAmmo
 			distance = 1;
 		};
 	};
-	class ShotDeployBase; //LaaT Smoke Rocket
+	/* class ShotDeployBase; //LaaT Smoke Rocket
 	class FST_Hydra_Rocket_Smoke_Deploy : ShotDeployBase //LaaT Smoke Rocket
 	{
 		author = "Adapted from FIR Team by Viz"
@@ -981,8 +981,8 @@ class CfgAmmo
 		submunitionAmmo = "SmokeShellArty";
 		submunitionConeAngle = 10;
 		submunitionConeType[] = {"randomcenter", 3};
-	};
-	class FST_Hydra_Rocket_Smoke : MissileBase //LaaT Smoke Rocket
+	}; */
+	/* class FST_Hydra_Rocket_Smoke : MissileBase //LaaT Smoke Rocket
 	{
 		author = "Adapted from FIR Team by Viz"
 		model = "\FIR_AirWeaponSystem_US\Data\Rocket\hydra_rocket_fly.p3d";
@@ -1048,7 +1048,7 @@ class CfgAmmo
 			frequency = 20;
 			distance = 1;
 		};
-	};
+	}; */
 };
 
 class CfgMagazines
@@ -2680,14 +2680,14 @@ class CfgWeapons
 			weaponSoundEffect = "DefaultRifle";
 		};
 	};
-	class FIR_RKT_Base : RocketPods
+	/* class FIR_RKT_Base : RocketPods
 	{	
 		class EventHandlers 
 		{
 			fired = "[_this] execVM '\FIR_AirWeaponSystem_US\Script\TGTSystem\FCS\ROCKET_EH.sqf';";
 		};	
 	};
-	class FST_RKT_Launcher : FIR_RKT_Base //Laat Smoke Rocket
+	/* class FST_RKT_Launcher : FIR_RKT_Base //Laat Smoke Rocket
 	{
 		author = "Adapted from FIR Team by Viz"
 		ballisticsComputer = 8;
@@ -2775,6 +2775,6 @@ class CfgWeapons
 			
 			dispersion = 0.006000;
 		};		
-	};
+	}; */
 };
 

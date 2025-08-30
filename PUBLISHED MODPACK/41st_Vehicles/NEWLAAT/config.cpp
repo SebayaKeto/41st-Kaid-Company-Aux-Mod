@@ -475,13 +475,12 @@ class CfgVehicles
 		{
 			"FST_30mm_Autocannon_LAAT",
 			"FST_Rapture_AGM_Missile",
-			"FST_Foehammer_AGM_Missile",
+			// "FST_Foehammer_AGM_Missile",
 			"FST_Stormfury_AA_Missile",
 			"FST_Harrower_HARM_Missile",
 			"Laserdesignator_pilotCamera",
 			"CMFlareLauncher",
 			"FST_SUU25",
-			"FST_RKT_Launcher",
 			"FST_SmokeLauncher"
         };
 		magazines[]=
@@ -496,9 +495,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -514,8 +510,8 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile", 
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile", 
 		};
 		class pilotCamera
 		{
@@ -3281,9 +3277,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3312,10 +3305,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -3345,9 +3338,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3376,10 +3366,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -3661,9 +3651,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3692,10 +3679,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -3725,9 +3712,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -3756,10 +3740,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4042,9 +4026,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4073,10 +4054,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4106,9 +4087,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4137,10 +4115,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4401,9 +4379,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4432,10 +4407,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4465,9 +4440,6 @@ class CfgVehicles
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
 			"FST_LAAT_P_12rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
-			"FST_LAAT_Smoke_P_16rnd_M",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
 			"FST_Thermal_Coil",
@@ -4496,10 +4468,10 @@ class CfgVehicles
 			"FST_Rapture_4Rnd_AGM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
 			"FST_Harrower_2Rnd_HARM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile",
-			"FST_Foehammer_4Rnd_AGM_Missile"
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile",
+			// "FST_Foehammer_4Rnd_AGM_Missile"
 		};
 		textureList[]={};
 	};
@@ -4899,7 +4871,7 @@ class CfgAmmo
 		};			
 	};
 	class M_Air_AA;
-	class FST_Foehammer_Anti_Tank_Missile : M_Air_AA
+	/* class FST_Foehammer_Anti_Tank_Missile : M_Air_AA
 	{
 		model = "\FIR_AirWeaponSystem_US\data\ASM2\ASM2_fly";
 		proxyShape = "\FIR_AirWeaponSystem_US\data\ASM2\ASM2";
@@ -4997,7 +4969,7 @@ class CfgAmmo
 				};
 			};
 		};			
-	};
+	}; */
 	class FST_Stormfury_High_Velocity_Missile: OPTRE_M_ASGM2_AA
 	{
 		model="OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
@@ -5127,7 +5099,7 @@ class CfgMagazines
 		ammo="FST_Rapture_Anti_Tank_Missile";
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
 	};
-	class FST_Foehammer_4Rnd_AGM_Missile: VehicleMagazine
+	/* class FST_Foehammer_4Rnd_AGM_Missile: VehicleMagazine
 	{
 		displayName="[41st] Rapture ATGM";
 		displayNameShort="ATGM";
@@ -5136,7 +5108,7 @@ class CfgMagazines
 		maxLeadSpeed=650;
 		ammo="FST_Foehammer_Anti_Tank_Missile";
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
-	};
+	}; */
 	class FST_Stormfury_12Rnd_AA_Missile: OPTRE_8Rnd_C2GMLS_missiles
 	{
 		displayName="[41st] Stormfury HVAA";
@@ -5489,7 +5461,7 @@ class Cfgweapons
 		reloadTime = 5;
 		magazineReloadTime=5;
 	};
-	class FST_Foehammer_AGM_Missile: weapon_AGM_65Launcher
+	/* class FST_Foehammer_AGM_Missile: weapon_AGM_65Launcher
 	{
 		displayName="[41st] Foehammer Dual-Mode ATGM";
 		magazines[]=
@@ -5516,7 +5488,7 @@ class Cfgweapons
 		maxRangeProbab = 0.55;
 		maxLeadSpeed = 2500;
 		FIR_AWS_SMS_A10C_CODE = "FIR_AirWeaponSystem_US\ui\sms\a10\wep_MAV.paa";		
-	};
+	}; */
 	class FST_Stormfury_AA_Missile: missiles_ASRAAM
 	{
 		displayName="[41st] Stormfury High Velocity Missile";
