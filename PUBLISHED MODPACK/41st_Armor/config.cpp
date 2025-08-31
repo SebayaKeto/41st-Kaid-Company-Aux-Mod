@@ -17,6 +17,8 @@ class CfgPatches
 		units[]=
 		{
 			//////////CLONES//////////
+			"FST_Commando",
+			"FST_Commando_Jorge",
 			"FST_Trooper_Blank",
 			"FST_Trooper_P2_DC15S",
 			"FST_Trooper_P2_DC15A",
@@ -247,9 +249,11 @@ class CfgPatches
 			"FST_P2_Silhouette",
 			"FST_P2_Silhouette_Dirty",
 			"FST_P2_Lucky",
+			"FST_P2_Lucky_Dirty",
 			"FST_P2_Sledge",
 			"FST_P2_Sierra",
 			"FST_P2_Tar",
+			"FST_P2_Tar_Dirty",
 			"FST_P2_Gold",
 			"FST_P2_Creed",
 			"FST_P2_House",
@@ -350,14 +354,6 @@ class CfgEditorSubcategories
 	class FST_Acclamator_Category_S
 	{
 		displayName="41st Acclamator Ships";
-	};
-	class FST_Providence_Category_P
-	{
-		displayName="41st Providence Parts";
-	};
-	class FST_Providence_Category_S
-	{
-		displayName="41st Providence Ships";
 	};
 	class FST_BattleDroids_Subfaction
 	{
@@ -526,6 +522,71 @@ class CfgWeapons
 	class V_rebreatherB;
 	class V_PlateCarrier1_rgr;
 	//////////////Vests//////////////
+	class 3AS_Katarn_Vest_Team_Leader;
+	class FST_Commando_Vest: 3AS_Katarn_Vest_Team_Leader
+	{
+		author="Gold";
+		scope=2;
+		displayname="[41st] Commando Team Leader Pauldron";
+		weaponPoolAvailable=1;
+		allowedSlots[]={901};
+		model="\3AS\3AS_Characters\Commando\3AS_Katarn_Vest_Team_Leader.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Commando_Vest.paa"
+		};
+		descriptionShort="$STR_A3_SP_NOARMOR";
+		class ItemInfo: VestItem
+		{
+			uniformModel="\3AS\3AS_Characters\Commando\3AS_Katarn_Vest_Team_Leader.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"41st_Armor\Data\Vests\FST_Commando_Vest.paa"
+			};
+			containerClass="Supply200";
+			mass=15;
+		};
+	};
+	class FST_Commando_Vest_Jorge: 3AS_Katarn_Vest_Team_Leader
+	{
+		author="Gold";
+		scope=2;
+		displayname="[41st] Commando Team Leader Pauldron (Jorge)";
+		weaponPoolAvailable=1;
+		allowedSlots[]={901};
+		model="\3AS\3AS_Characters\Commando\3AS_Katarn_Vest_Team_Leader.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Commando_Vest_Jorge.paa"
+		};
+		descriptionShort="$STR_A3_SP_NOARMOR";
+		class ItemInfo: VestItem
+		{
+			uniformModel="\3AS\3AS_Characters\Commando\3AS_Katarn_Vest_Team_Leader.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"41st_Armor\Data\Vests\FST_Commando_Vest_Jorge.paa"
+			};
+			containerClass="Supply200";
+			mass=15;
+		};
+	};
 	class FST_Vest_Base: V_rebreatherB
 	{
 		author="Daara";
@@ -3752,6 +3813,68 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		class ItemInfo{};
 	};
 	//////////////HELMETS//////////////
+	class ItemCore;
+	class 3AS_Katarn_Helmet_Base: ItemCore
+	{
+		class ItemInfo;
+	};
+	class FST_Commando_Helmet_Base: 3AS_Katarn_Helmet_Base
+	{
+		author="Gold";
+		displayName="";
+		picture="\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		class ItemInfo: ItemInfo
+		{
+			mass=15;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Commando_Helmet: FST_Commando_Helmet_Base
+	{
+		author="Gold";
+		displayName="[41st] Commando Helmet";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Commando_Helmet.paa",
+			"41st_Armor\Data\Helmets\FST_Commando_Helmet.paa"
+		};
+	};
+	class FST_Commando_Helmet_Jorge: FST_Commando_Helmet_Base
+	{
+		author="Gold";
+		displayName="[41st] Commando Helmet (Jorge)";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Commando_Helmet_Jorge.paa",
+			"41st_Armor\Data\Helmets\FST_Commando_Helmet_Jorge.paa"
+		};
+	};
 	class FST_P2_Helmet_Base: JLTS_CloneHelmetP2
 	{
 		author="Daara";
@@ -6891,6 +7014,18 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Sierra.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Jorge: FST_Pilot_P1_Helmet
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Jorge]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Jorge.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
@@ -11853,7 +11988,17 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lucky.paa",
 		};
-	};	
+	};
+	class FST_P2_Helmet_Lucky_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Lucky/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Lucky_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Church: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -12532,6 +12677,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tar.paa",
+		};
+	};
+	class FST_P2_Helmet_Tar_Dirty: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Tar/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Tar_Dirty.paa",
 		};
 	};
     class FST_P2_Helmet_Ajax: FST_P2_Helmet_Base
@@ -14210,6 +14365,56 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
+	class Uniform_Base;
+	class FST_Commando_Uniform: Uniform_Base
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] Commando Uniform";
+		tas_is_commando=1;
+		picture="3AS\3AS_Characters\Commando\data\UI\Katarn_Uniform_Unmarked_UI_ca.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Commando_Uniform.paa"
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_Commando";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	
+	class FST_Commando_Uniform_Jorge: Uniform_Base
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] Commando Uniform (Jorge)";
+		tas_is_commando=1;
+		picture="3AS\3AS_Characters\Commando\data\UI\Katarn_Uniform_Unmarked_UI_ca.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Commando_Uniform_Jorge.paa"
+		};
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_Commando_Jorge";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class 3as_JLTS_CloneArmor_Base;
 	class FST_Uniform_P1: 3as_JLTS_CloneArmor_Base
 	{
@@ -15725,6 +15930,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
+	class FST_Uniform_Tar_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Tar/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Tar_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Silhouette: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -16578,7 +16797,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
 	class FST_Uniform_Pope: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -16929,6 +17148,34 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_NCO_Jorge: JLTS_CloneArmor 
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [NCO / Jorge]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_NCO_Jorge";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_JARC: JLTS_CloneArmor 
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [JARC]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_JARC";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Church: JLTS_CloneArmor 
 	{
 		author="Daara";
@@ -17179,6 +17426,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
         {
             uniformModel="";
             uniformClass="FST_P2_Lucky";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Lucky_Dirty: JLTS_CloneArmor
+    {
+        author="Gold";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Lucky/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Lucky_dirty";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -17862,6 +18123,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Snoob.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Wuffer: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Wuffer)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Wuffer.paa",
 		};
 		visionMode[]=
 		{
@@ -18803,6 +19086,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		thermalMode[]={0,1};
 	};
 };	
+class UniformSlotInfo
+{
+	slotType=0;
+	linkProxy="-";
+};
 class CfgVehicles
 {
 	class Man;
@@ -19318,6 +19606,29 @@ class CfgVehicles
 	};
 	
 	//////////////Backpacks////////////////
+	class 3AS_Katarn_Backpack_Base;
+	class FST_Commando_Backpack: 3AS_Katarn_Backpack_Base
+	{
+		scope=2;
+		displayName="[41st] Commando Backpack";
+		Picture="FST_212th_Armor\Data\Backpack\UI\Katarn_Backpack_Unmarked_UI_ca.paa"
+		maximumLoad=250;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Commando_Backpack.paa"
+		};
+	};
+	class FST_Commando_Backpack_Jorge: 3AS_Katarn_Backpack_Base
+	{
+		scope=2;
+		displayName="[41st] Commando Backpack (Jorge)";
+		Picture="FST_212th_Armor\Data\Backpack\UI\Katarn_Backpack_Unmarked_UI_ca.paa"
+		maximumLoad=250;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Commando_Backpack_Jorge.paa"
+		};
+	};
 	class FST_blueforWeaponBag_base: Weapon_Bag_Base
 	{
 		author="Legion Studios";
@@ -21478,14 +21789,14 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_JORGE_Jumppack: JLTS_Clone_jumppack_mc
+	class FST_Backpack_JORGE_Jumppack_Boss: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		maximumload=250;
-		displayName="[41st] Jump Pack (Jorge)";
+		displayName="[41st] Jump Pack (Jorge/Boss)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
 		hiddenSelections[]=
@@ -23764,6 +24075,64 @@ class CfgVehicles
 		{
 		};
 	};
+	class FST_Backpack_Jumppack_Jorge: FST_Backpack_Jumppack
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Jorge)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
 	class FST_Backpack_Jumppack_Appa: FST_Backpack_Jumppack
 	{
 		author="Gold";
@@ -24344,6 +24713,454 @@ class CfgVehicles
 		items[]={};
 		respawnItems[]={};
 	};
+	class FST_Commando: B_Soldier_F
+	{
+		author="Gold";
+		displayName="[41st] Republic Commando";
+		scope=2;
+		scopeCurator=2;
+		scopearsenal=2;
+		side=1;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO"
+		};
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Subfaction";
+		uniformClass="FST_Commando_Uniform";
+		nakedUniform="U_BasicBody";
+		backpack="FST_Commando_Backpack";
+		model="\3AS\3AS_Characters\Commando\3AS_Katarn_Armor.p3d";
+		modelSides[]={3,1};
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Commando_Uniform.paa",
+			"\3AS\3AS_Characters\Commando\data\Katarn_Undersuit_CO.paa"
+		};
+		weapons[]=
+		{
+			"IDA_DC15S",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"IDA_DC15S",
+			"Throw",
+			"Put"
+		};
+		magazines[]={};
+		respawnMagazines[]={};
+		items[]=
+		{
+			"ACE_EntrenchingTool",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		respawnItems[]=
+		{
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		linkedItems[]=
+		{
+			"FST_Commando_Helmet",
+			"FST_Commando_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Commando_Helmet",
+			"FST_Commando_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		class UniformInfo
+		{
+			class SlotsInfo
+			{
+				class NVG: UniformSlotInfo
+				{
+					slotType=602;
+				};
+				class Scuba: UniformSlotInfo
+				{
+					slotType=604;
+				};
+				class Googles: UniformSlotInfo
+				{
+					slotType=603;
+				};
+				class Headgear: UniformSlotInfo
+				{
+					slotType=605;
+				};
+			};
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket{};
+			class HitFace: HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=8;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=6;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=6;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=8;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=6;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=6;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=6;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class FST_Commando_Jorge: B_Soldier_F
+	{
+		author="Gold";
+		displayName="[41st] Republic Commando (Jorge)";
+		scope=2;
+		scopeCurator=2;
+		scopearsenal=2;
+		side=0;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO"
+		};
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Subfaction";
+		uniformClass="FST_Commando_Uniform_Jorge";
+		nakedUniform="U_BasicBody";
+		backpack="FST_Commando_Backpack_Jorge";
+		model="\3AS\3AS_Characters\Commando\3AS_Katarn_Armor.p3d";
+		modelSides[]={3,1};
+		hiddenSelections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Commando_Uniform_Jorge.paa",
+			"\3AS\3AS_Characters\Commando\data\Katarn_Undersuit_CO.paa"
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		respawnMagazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		items[]=
+		{
+			"ACE_EntrenchingTool",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		respawnItems[]=
+		{
+			
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		linkedItems[]=
+		{
+			"FST_Commando_Helmet_Jorge",
+			"FST_Commando_Vest_Jorge",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Commando_Helmet_Jorge",
+			"FST_Commando_Vest_Jorge",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};	
 	class FST_Trooper_P2_DC15S: B_Soldier_F
 	{
 		author="Daara";
@@ -28161,7 +28978,117 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	}; 
+	};
+	class FST_P2_NCO_Jorge: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-0515 'NCO / Jorge'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_NCO_Jorge";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_NCO_Jorge.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_NCO_Jorge.Paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_JARC: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-0515 'JARC'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_JARC";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_JARC.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_JARC.Paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_ARC_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_ARC_Helmet_Jorge",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Church: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -33237,6 +34164,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Tar",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Tar_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-5411 'Tar/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Tar";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Tar_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Tar_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Tar_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Tar_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -38920,6 +39902,61 @@ class CfgVehicles
             "JLTS_clone_comlink"
         };
     };
+	class FST_P2_Lucky_Dirty: FST_Trooper_P2_DC15S
+    {
+        author="Viz";
+        displayName="[41st] CT-0033 'Lucky/Dirty'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Lucky";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lucky_Dirty.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lucky_Dirty.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Lucky_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Lucky_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
 	class FST_P2_Viz: FST_Trooper_P2_DC15S
     {
         author="Viz";
@@ -41309,6 +42346,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Squatch";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Squatch.paa";
+		};
+		class FST_Clone_Head_Jorge: FST_clone_Default_head
+		{
+			author="Adler"
+			name="Clone Trooper Jorge";
+			displayName="[41st] Clone Trooper - Jorge";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Jorge.paa";
 		};
 		class FST_Navy_Face_Mustang: Default
 		{
