@@ -772,6 +772,8 @@ class cfgvehicles
 	{	
 		author="Gold";
 		displayName="[41st] TX-130 Saber Tank (Jorge)";
+		crew="FST_P2_Jorge";
+		side=0;
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -942,6 +944,8 @@ class cfgvehicles
 	{	
 		author="Gold";
 		displayName="[41st] TX-130 Super Saber Tank (Jorge)";
+		crew="FST_P2_Jorge";
+		side=0;
 		hiddenSelections[]=
 		{
 			"camo1",

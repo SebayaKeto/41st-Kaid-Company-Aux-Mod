@@ -14,6 +14,7 @@ class CfgPatches
 			"FST_Jug",
 			"FST_Jug_Grey",
 			"FST_Jug_Cardinal",
+			"FST_Jug_Jorge",
 			"FST_Jug_static",
 			"FST_Jug_destroy_static"
 		};
@@ -2886,6 +2887,72 @@ class CfgVehicles
 			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Wheels.paa"
 		};
 		textureList[]={};
+	};
+	class FST_Jug_Jorge: FST_B_Jug_01_base_F
+	{
+		author="Gold";
+		displayName="[41st] HAVw A6 Juggernaut (Jorge)";
+		scope=2;
+		side=0;
+		model="3as\3as_Jug\model\3as_jug.p3d";
+		icon="3AS\3as_Jug\data\ui\Jug_top_ca.paa";
+		picture="3as\3as_Jug\data\ui\Jug_side_ca.paa";
+		editorPreview="\3as\3as_Jug\images\3as_jug.jpg";
+		_generalMacro="B_APC_Wheeled_01_cannon_F";
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_P2_Jorge";
+		typicalCargo[]=
+		{
+			"FST_P2_Jorge"
+		};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Base_Jorge.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Weapons_Jorge.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Props_Jorge.paa",
+			"41st_Vehicles\Juggernaut\Data\FST_Juggernaut_Wheels.paa"
+		};
+		textureList[]={};
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]=
+			{
+				"clan",
+				"zasleh2",
+				"zasleh_1",
+				"light_l",
+				"light_r",
+				"light_r2",
+				"light_l2",
+				"zadni svetlo",
+				"brzdove svetlo",
+				"podsvit pristroju",
+				"poskozeni"
+			};
+			verticalOffset=2.3859999;
+			verticalOffsetWorld=-0.075999998;
+			init="[this, '', []] call bis_fnc_initVehicle";
+		};
+		accuracy=0.30000001;
+		class Library
+		{
+			libTextDesc="$STR_A3_CFGVEHICLES_APC_WHEELED_01_LIBRARY0";
+		};
+		unitInfoType="RscUnitInfoTank";
+		radarType=8;
+		driverCanSee="4+8+2+32+16";
+		gunnerCanSee="4+2+8+32+16";
+		threat[]={1,1,0.30000001};
 	};
 	class FST_Jug_Grey: FST_B_Jug_01_base_F
 	{

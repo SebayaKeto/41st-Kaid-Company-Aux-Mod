@@ -767,4 +767,25 @@ class CfgVehicles
 			"3AS\3AS_LAATC\data\Textures\LAAT_C_Detail_Front_co.paa"
 		};
 	};
+	class FST_LAATC_Jorge: FST_LAATC
+	{
+		author="Gold";
+		displayName="[41st] LAAT/C (Jorge)";
+		crew="FST_P2_Jorge";
+		side=0;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Hull_Jorge_CO.paa",
+			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Wings_Jorge_CO.paa",
+			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Top_Jorge_CO.paa",
+			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Detail_Front_Jorge_CO.paa"
+		};
+	};
 };

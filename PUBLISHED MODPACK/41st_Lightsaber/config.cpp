@@ -1,6 +1,8 @@
-class CfgPatches {
-    class FST_Lightsaber {
-        author = "Daara";
+class CfgPatches 
+{
+    class FST_Lightsaber 
+	{
+        author = "Samurai";
         requiredAddons[]=
 		{
 			"A3_Data_F",

@@ -11,7 +11,9 @@ class CfgPatches
 		units[]=
 		{
 			"FST_AV7",
-			"FST_AV7_EdenOnly"
+			"FST_AV7_EdenOnly",
+			"FST_AV7_Jorge",
+			"FST_AV7_Jorge_EdenOnly"
 		};
 		weapons[]={};
 	};
@@ -1216,6 +1218,50 @@ class CfgVehicles
 				displayName="Toggle Legs";
 				onPhaseChanged="_this call TAS_fnc_toggleLegs;";
 			};
+		};
+	};
+	class FST_AV7_Jorge: FST_AV7
+	{
+		author="Gold";
+		displayName="[41st] AV-7 Field Cannon Artillery (Jorge)";
+		scope=2;
+		side=0;
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_P2_Jorge";
+		typicalCargo[]=
+		{
+			"FST_P2_Jorge"
+		};
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\AV-7\Data\av7_Jorge_co.paa"
+		};
+	};
+	class FST_AV7_Jorge_EdenOnly: FST_AV7_EdenOnly
+	{
+		author="Gold";
+		displayName="[41st] AV-7 (Jorge) (Eden ONLY // Legs Deployed)";
+		scope=2;
+		side=0;
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_P2_Jorge";
+		typicalCargo[]=
+		{
+			"FST_P2_Jorge"
+		};
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\AV-7\Data\av7_Jorge_co.paa"
 		};
 	};
 };

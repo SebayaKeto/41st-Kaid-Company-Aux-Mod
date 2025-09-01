@@ -3879,6 +3879,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayname="[41st] AT-TE Heavy Walker (Jorge)";
+		crew="FST_P2_Jorge";
+		side=0;
 		scope=2;
 		hiddenselections[]=
 		{

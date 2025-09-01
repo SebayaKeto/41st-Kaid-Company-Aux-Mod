@@ -1887,18 +1887,21 @@ class CfgMagazines
 	{
 		author="Gold";
 		displayName="[41st] Low-power Thermal coil (Green)";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_LP_Green";
 	};
 	class FST_thermal_coil_LP_Yellow: FST_thermal_coil_LP_Blue
 	{
 		author="Gold";
 		displayName="[41st] Low-power Thermal coil (Yellow)";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_LP_Yellow";
 	};
 	class FST_thermal_coil_LP_Red: FST_thermal_coil_LP_Blue
 	{
 		author="Gold";
 		displayName="[41st] Low-power Thermal coil (Red)";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_LP_Red";
 	};
 	class FST_thermal_coil_T15_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
@@ -1918,18 +1921,21 @@ class CfgMagazines
 	{
 		author="Gold";
 		displayName="[41st] High-power Thermal Coil (Green)";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_T15_Green";
 	};
 	class FST_thermal_coil_T15_Yellow: FST_thermal_coil_T15_Blue
 	{
 		author="Gold";
 		displayName="[41st] High-power Thermal Coil (Yellow)";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_T15_Yellow";
 	};
 	class FST_thermal_coil_T15_Red: FST_thermal_coil_T15_Blue
 	{
 		author="Gold";
 		displayName="[41st] High-power Thermal Coil (Red)";
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_T15_Red";
 	};
 	//IS THIS EVEN USED? AMMO ISNT CALLING ANYTHING THAT WORKS
