@@ -1763,6 +1763,72 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_pauldron_kama_Woodland: JLTS_CloneVestOfficer
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Woodland)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Woodland.paa",
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_pauldron_kama_khaki: JLTS_CloneVestOfficer
 	{
 		author="Daara";
@@ -19184,6 +19250,26 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_Antenna_Woodland: JLTS_CloneNVGRange
+	{
+		author="Daara";
+		displayName="[41st] Officer Rangefinder (Woodland)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Antenna_Woodland.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_Visor: JLTS_CloneNVGCC
 	{
 		author="Daara";
@@ -19198,6 +19284,29 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Visor_Woodland: JLTS_CloneNVGCC
+	{
+		author="Daara";
+		displayName="[41st] Officer Visor (Woodland)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Woodland.paa",
 		};
 		visionMode[]=
 		{
@@ -41842,6 +41951,29 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_vest.paa",
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_Woodland_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Face/Woodland)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Woodland.paa",
 		};
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
 		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
