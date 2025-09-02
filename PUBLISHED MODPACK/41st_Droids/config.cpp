@@ -33,7 +33,8 @@ class CfgPatches
 			"FST_JMSLLTE_JinTrooper_armor_F",
 			"FST_JMSLLTE_JinTrooper_armor_AR",
 			"FST_JMSLLTE_JinTrooper_armor_AT",
-			"FST_MSE_Droid"
+			"FST_MSE_Droid",
+			"FST_JARCtrooper"
 		};
 		weapons[]={};
 	};
@@ -2754,6 +2755,9 @@ class CfgVehicles
 		backpack="";
 		uniformclass="FST_Jorgetrooper_Uniform";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		allowedFacewear[] = {""};
+		faceType = "Man_A3";
+		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -2994,6 +2998,7 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
+		class EventHandlers{init = "if (local _this) then { (_this select 0) setFace 'FST_Clone_Head_Jorge'; };";};
 	};
 	class FST_Jorgetrooper_AT: FST_Jorgetrooper
 	{
@@ -3008,6 +3013,9 @@ class CfgVehicles
 		backpack="FST_HD_backpack_at_predef";
 		uniformclass="FST_Jorgetrooper_Uniform_AT";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		allowedFacewear[] = {""};
+		faceType = "Man_A3";
+		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3083,6 +3091,7 @@ class CfgVehicles
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
 		};
+		class EventHandlers{init = "if (local _this) then { (_this select 0) setFace 'FST_Clone_Head_Jorge'; };";};
 	};
 	class FST_Jorgetrooper_AR: FST_Jorgetrooper
 	{
@@ -3097,6 +3106,9 @@ class CfgVehicles
 		backpack="";
 		uniformclass="FST_Jorgetrooper_Uniform_AR";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		allowedFacewear[] = {""};
+		faceType = "Man_A3";
+		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3166,6 +3178,95 @@ class CfgVehicles
 			"FST_blaster_battery_blue",
 			"FST_blaster_battery_blue",
 		};
+		class EventHandlers{init = "if (local _this) then { (_this select 0) setFace 'FST_Clone_Head_Jorge'; };";};
+	};
+		class FST_JARCtrooper: WBK_BX_Assasin_1
+	{
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopecurator=2;
+		displayName="[41st] Brainwashed ARC Trooper";
+		author="Laer";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		nakedUniform="U_BasicBody";
+		canBleed = 1;
+		role="Rifleman";
+		backpack="FST_Clone_Backpack_ARC";
+		uniformClass="FST_Uniform_JARC";
+		genericNames="NATOMen";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		allowedFacewear[] = {""};
+		faceType = "Man_A3";
+		identityTypes[] = {"FST_Jorge_FaceOnly"};
+		hiddenSelections[]={"camo1", "camo2"};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_JARC.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_JARC.Paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Armor_P2_Upper.rvmat",
+			"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat"
+		};
+		weapons[]={"FST_Westar_M5", "UNSC_Knife", "JLTS_CloneBinocular", "Throw", "Put"};
+		respawnWeapons[]={"FST_Westar_M5", "UNSC_Knife", "JLTS_CloneBinocular", "Throw", "Put"};
+		linkedItems[]=
+		{
+			"FST_P2_ARC_Helmet_Jorge",
+			"FST_CloneVestARC_Jorge",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_ARC_Helmet_Jorge",
+			"FST_CloneVestARC_Jorge",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag"
+		};
+		respawnMagazines[]=
+		{
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"FST_blaster_cell_Westar_Blue",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag"
+		};
+		class SoundEnvironExt {
+			generic[] = {};
+		};
+		class SoundEquipment {
+			soldier[] = {};
+		};
+		armor=35;
+		armorStructural=100;
+		explosionshielding=8;
 	};
  };
 class cfgGroups

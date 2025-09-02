@@ -1,10 +1,13 @@
 _unitWithSword = _this;
 _unitWithSword setSpeaker "NoVoice";
+_isJARC = (typeOf _unitWithSword == "FST_JARCtrooper");
 if (isPlayer _unitWithSword) exitWith {
 _unitWithSword removeAllEventHandlers "Killed";
 _unitWithSword addEventHandler ["Killed", {
 _unitWithSword = _this select 0;
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [_unitWithSword, "WBK_b2_dying", 10, 10] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf";
+};
 [_unitWithSword, {
 _object = _this;
 _particlesSpark = "#particlesource" createVehicleLocal (getposATL _object);                                  
@@ -44,7 +47,9 @@ if (!(_x == _unitWithSword) and (alive _x) and !(lifeState _x == "INCAPACITATED"
 orushiiUnit = _x;
 };
 } forEach nearestObjects [_unitWithSword,["WBK_BX_Assasin_1"],15];
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [orushiiUnit, selectRandom ["BX_FriendlyDown_1","BX_FriendlyDown_2","BX_FriendlyDown_3","BX_FriendlyDown_4"]] spawn BX_SayPhrase;
+};
 };
 }];
 };
@@ -189,7 +194,9 @@ _arr = parseSimpleArray getText (configFile >> "CfgWeapons" >> handgunWeapon _ma
 _rndSnd = selectRandom _arr;  
 [_victim, _rndSnd, 50, 7] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf"; 
 [_victim, "dobi_criticalHit", 20, 7] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf"; 
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [_main, selectRandom ["BX_EnemyDown_1","BX_EnemyDown_2","BX_EnemyDown_3","BX_EnemyDown_4"]] spawn BX_SayPhrase;
+};
 [_victim, {
 _object = _this;
 _blood = "#particlesource" createVehicleLocal (getposATL _object);          
@@ -264,7 +271,9 @@ if (!(alive _main)) exitWith {};
 [_victim, selectRandom ["leg_hit1","leg_hit2","leg_hit3"], 100, 3] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf"; 
 sleep 0.8;
 if (!(alive _main)) exitWith {};
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [_main, selectRandom ["BX_EnemyDown_1","BX_EnemyDown_2","BX_EnemyDown_3","BX_EnemyDown_4"]] spawn BX_SayPhrase;
+};
 [_victim, "dobi_bones", 100, 4] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf";  
 [_victim, "dobi_criticalHit", 50, 7] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf"; 
 sleep 1.8;
@@ -301,7 +310,9 @@ _actFrWeapExecut = [{
 _unitWithSword removeAllEventHandlers "Killed";
 _unitWithSword addEventHandler ["Killed", {
 _unitWithSword = _this select 0;
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [_unitWithSword, "WBK_b2_dying", 10, 10] execVM "\WebKnight_StarWars_Mechanic\createSoundGlobal.sqf";
+};
 [_unitWithSword, {
 _object = _this;
 _particlesSpark = "#particlesource" createVehicleLocal (getposATL _object);                                  
@@ -341,7 +352,9 @@ if (!(_x == _unitWithSword) and (alive _x) and !(lifeState _x == "INCAPACITATED"
 orushiiUnit = _x;
 };
 } forEach nearestObjects [_unitWithSword,["WBK_BX_Assasin_1"],15];
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [orushiiUnit, selectRandom ["BX_FriendlyDown_1","BX_FriendlyDown_2","BX_FriendlyDown_3","BX_FriendlyDown_4"]] spawn BX_SayPhrase;
+};
 };
 }];
 
@@ -388,7 +401,9 @@ _unitWithSword setVariable ["IMS_Droid_SwitchToNormalWeapon",0];
 [_unitWithSword, "ims_takeOut_TwoHanded"] remoteExec ["playActionNow", _unitWithSword];
 [_unitWithSword, "ims_takeOut_TwoHanded"] remoteExec ["playActionNow", _unitWithSword];
 [_unitWithSword, "ims_takeOut_TwoHanded"] remoteExec ["playActionNow", _unitWithSword];
-[_unitWithSword, selectRandom ["BX_SwitchingMelee_1","BX_SwitchingMelee_2"]] spawn BX_SayPhrase;
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
+    [_unitWithSword, selectRandom ["BX_SwitchingMelee_1","BX_SwitchingMelee_2"]] spawn BX_SayPhrase;
+};
 sleep 0.55;
 if (!(alive _unitWithSword)) exitWith {};
 _unitWithSword setVariable ["canMakeAttack",0];
@@ -585,7 +600,9 @@ _this setDamage 1;
 [_WBK_GrenadeObj, [3 * (sin (getdir _droid )), 3 * (cos (getdir _droid)), 2]] remoteExec ["setvelocity", _WBK_GrenadeObj];
 sleep 0.1;
 if (!(animationState _droid == "SW_FIGHT_DROID_COMMANDO_DODGING")) exitWith {};
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [_droid, selectRandom ["BX_ThrowingGrenade_1","BX_ThrowingGrenade_2","BX_ThrowingGrenade_3"]] spawn BX_SayPhrase;
+};
 [_droid, [-12 * (sin (getdir _droid )), -12 * (cos (getdir _droid)), 2]] remoteExec ["setvelocity", _droid];
 sleep 0.7;
 _droid setVariable ["AI_CanTurn",0];
@@ -838,7 +855,9 @@ _unitWithSword enableAI "PATH";
 _unitWithSword enableAI "ANIM";
 _unitWithSword enableAI "MOVE";
 _unitWithSword allowDamage false;
+if ((typeOf _unitWithSword) != "FST_JARCtrooper") then {
 [_unitWithSword, selectRandom ["BX_EnemyDown_1","BX_EnemyDown_2","BX_EnemyDown_3","BX_EnemyDown_4"]] spawn BX_SayPhrase;
+};
 if (
 (animationState _unitWithSword == "Human_Execution_GenericOnehanded_headSmash_1_main") or
 (animationState _unitWithSword == "Human_Execution_GenericTwoHanded_headSmash_1_main") or

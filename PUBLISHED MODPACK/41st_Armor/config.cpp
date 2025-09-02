@@ -42677,6 +42677,7 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Jorge";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Jorge.paa";
+			identityTypes[] = {"FST_Jorge_FaceOnly"};
 		};
 		class FST_Navy_Face_Mustang: Default
 		{
