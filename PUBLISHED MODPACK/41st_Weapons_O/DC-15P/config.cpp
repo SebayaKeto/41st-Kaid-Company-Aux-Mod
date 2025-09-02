@@ -22,7 +22,7 @@ class CfgWeapons
 	class FST_DC15P: IDA_DC15P
 	{
 		author="Gold";
-		displayName="[41st] DC15P Blaster Pistol";
+		displayName="[41st] DC-15P Blaster Pistol";
 		baseWeapon="FST_DC15P";
 		scope=2;
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15P\Model\IDA_DC15P.p3d";
