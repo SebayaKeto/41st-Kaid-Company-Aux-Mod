@@ -45,6 +45,7 @@ class CfgWeapons
 	class U_I_CombatUniform;
 	class UniformItem;
 	class JLTS_DroidB1;
+	class 3AS_CIS_Light_helmet;
 	class VestItem;
 	class Vest_Camo_Base;
 	class GoG_HolsterSwordVestBack_Invis: Vest_Camo_Base
@@ -107,6 +108,54 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_CIS_Light_Helmet: 3AS_CIS_Light_helmet
+    {
+        author = "Ruby";
+        displayname="[41st] CIS Human Divison Officer Helmet";
+        hiddenSelections[]=
+        {
+            "camo"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Droids\Data\Extras\FST_Helmet_HumDiv_Officer.paa"
+        };
+    };
+    class FST_HumanDiv_Pouches_Base: FST_DroidB1
+    {
+        author="Ruby";
+        scope=0;
+        displayname="[41st] Human Divison Pouches Base"
+        JLTS_isDroid=0;
+        hiddenselections[]=
+        {
+            "pouch1",
+            "pouch2",
+            "pouch3"
+        };
+        class ItemInfo: vestitem
+        {
+            hiddenselections[]=
+            {
+                "pouch1",
+                "pouch2",
+                "pouch3"
+            };
+            uniformmodel="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+        };
+    };
+    class FST_HumanDiv_Pouches: FST_HumanDiv_Pouches_Base
+    {
+        author="Ruby";
+        scope=2;
+        displayname="[41st] Human Divison Pouches"
+        hiddenselectionstextures[]=
+        {
+            "41st_Droids\Data\Extras\FST_Pouches_HumDiv.paa",
+            "41st_Droids\Data\Extras\FST_Pouches_HumDiv.paa",
+            "41st_Droids\Data\Extras\FST_Pouches_HumDiv.paa"
+        };
+    };
 	class FST_DroidB1_Muddy: JLTS_DroidB1
 	{
 		author="Gold";
@@ -561,6 +610,7 @@ class CfgVehicles
 {
 	class JLTS_B1_Backpack;
 	class JLTS_B1_antenna;
+	class 3AS_B_CloneGM_Base_F;
 	class FST_B1_Backpack: JLTS_B1_Backpack
 	{
 		author="Daara";
@@ -618,6 +668,21 @@ class CfgVehicles
 			"41st_Droids\Data\Extras\Kaid_Droids\FST_B1_Backpack.paa"
 		};
 	};
+	class FST_Backpack_HumanDiv: FST_B1_Backpack
+    {
+        author = "Ruby";
+        displayname = "[41st] Human Divison Backpack"
+        model="\3AS\3AS_Republic_Characters\Backpacks\3AS_Clonetrooper_Backpack_GM.p3d";
+        picture="\A3\Weapons_F\Ammoboxes\Bags\data\ui\backpack_CA.paa";
+        hiddenSelections[]=
+        {
+            "Backpack"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Droids\Data\Extras\FST_Backpack_GM_HumDiv.paa"
+        };
+    };
 	class FST_B1_Antenna: JLTS_B1_antenna
 	{
 		author="Daara";
@@ -680,7 +745,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_HD_backpack_at_predef: FST_B1_backpack
+	class FST_HD_backpack_at_predef: FST_Backpack_HumanDiv
 	{
 		scope=2;
 		model="";
