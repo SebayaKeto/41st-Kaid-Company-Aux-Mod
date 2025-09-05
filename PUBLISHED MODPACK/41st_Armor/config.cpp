@@ -11509,6 +11509,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Skipjack.paa",
 		};
 	};
+	class FST_P2_Helmet_Avrath: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Avrath]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Avrath.paa",
+		};
+	};
 	class FST_P2_Helmet_Dash: FST_P2_Helmet_Base
 	{
 		author="Gold";
