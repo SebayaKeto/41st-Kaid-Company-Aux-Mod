@@ -63,6 +63,42 @@ class CfgWeapons
 			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Woodland.paa",
 		};
 	};
+	class FST_Midnight_Electrobinoculars: FST_Electrobinoculars
+	{
+		displayName="[41st] Kaid Company Electrobinoculars (Midnight)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Midnight.paa",
+		};
+	};
+	class FST_Urban_Electrobinoculars: FST_Electrobinoculars
+	{
+		displayName="[41st] Kaid Company Electrobinoculars (Urban)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Urban.paa",
+		};
+	};
+	class FST_Desert_Electrobinoculars: FST_Electrobinoculars
+	{
+		displayName="[41st] Kaid Company Electrobinoculars (Desert)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Desert.paa",
+		};
+	};
 	class FST_ARF_Electrobinoculars: FST_Electrobinoculars
 	{
 		displayName="[41st] ARF Electrobinoculars";

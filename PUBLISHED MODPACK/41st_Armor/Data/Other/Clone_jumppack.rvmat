@@ -1,1 +1,52 @@
-class StageTI{	texture = "#(argb,8,8,3)color(0.5,0,0,0,TI)";};ambient[]={0.5,0.5,0.5,1};diffuse[]={0.69999999,0.69999999,0.69999999,1};forcedDiffuse[]={0,0,0,0};emmisive[]={0,0,0,1};specular[]={0.69999999,0.69999999,0.69999999,0.1};specularPower=100;PixelShaderID="Super";VertexShaderID="Super";class Stage0{    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_ti.paa";    uvSource = "tex";};class Stage1{    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_nohq.paa";    uvSource = "tex";};class Stage2{    texture  = "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";    uvSource = "tex";};class Stage3{    texture  = "#(argb,8,8,3)color(1,1,1,0,MC)";    uvSource = "tex";};class Stage4{    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_as.paa";    uvSource = "tex";};class Stage5{    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_smdi.paa";    uvSource = "tex";};class Stage6{    texture  = "#(ai,64,64,1)fresnel(1,1)";    uvSource = "none";};class Stage7{    texture  = "a3\data_f\env_co.paa";    uvSource = "none";};
+class StageTI
+{
+	texture = "#(argb,8,8,3)color(0.5,0,0,0,TI)";
+};
+ambient[]={0.5,0.5,0.5,1};
+diffuse[]={0.69999999,0.69999999,0.69999999,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0.69999999,0.69999999,0.69999999,0.1};
+specularPower=100;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage0
+{
+    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_ti.paa";
+    uvSource = "tex";
+};
+class Stage1
+{
+    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_nohq.paa";
+    uvSource = "tex";
+};
+class Stage2
+{
+    texture  = "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
+    uvSource = "tex";
+};
+class Stage3
+{
+    texture  = "#(argb,8,8,3)color(1,1,1,0,MC)";
+    uvSource = "tex";
+};
+class Stage4
+{
+    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_as.paa";
+    uvSource = "tex";
+};
+class Stage5
+{
+    texture  = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_smdi.paa";
+    uvSource = "tex";
+};
+class Stage6
+{
+    texture  = "#(ai,64,64,1)fresnel(1,1)";
+    uvSource = "none";
+};
+class Stage7
+{
+    texture  = "a3\data_f\env_co.paa";
+    uvSource = "none";
+};

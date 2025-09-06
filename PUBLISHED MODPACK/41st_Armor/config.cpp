@@ -1168,6 +1168,282 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_vest_woodland_holster: FST_vest_base
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Holster (Woodland)";
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_vest_Midnight_holster: FST_vest_base
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Holster (Midnight)";
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_vest_Urban_holster: FST_vest_base
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Holster (Urban)";
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_vest_Desert_holster: FST_vest_base
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Holster (Desert)";
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Desert.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Vest_NCO: JLTS_CloneVestRecon
 	{
 		displayName="[41st] Fire Team Leader Sash";
@@ -1180,6 +1456,278 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Woodland: JLTS_CloneVestRecon
+	{
+		displayName="[41st] Fire Team Leader Sash (Woodland)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Midnight: JLTS_CloneVestRecon
+	{
+		displayName="[41st] Fire Team Leader Sash (Midnight)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Urban: JLTS_CloneVestRecon
+	{
+		displayName="[41st] Fire Team Leader Sash (Urban)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Desert: JLTS_CloneVestRecon
+	{
+		displayName="[41st] Fire Team Leader Sash (Desert)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -1563,6 +2111,294 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_Vest_NCO_Kama_Woodland: FST_Vest_NCO_SL
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Woodland)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_woodland.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat",
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Kama_Midnight: FST_Vest_NCO_SL
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Midnight)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_midnight.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat",
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Kama_Urban: FST_Vest_NCO_SL
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Urban)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_urban.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat",
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Vest_NCO_Kama_Desert: FST_Vest_NCO_SL
+	{
+		displayName="[41st] Squad Leader Sash w/ Kama (Desert)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_desert.paa",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat",
+			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestReconOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Vest_NCO_Kama_Khaki: FST_Vest_NCO_SL
 	{
 		displayName="[41st] Squad Leader Sash w/ Kama (Khaki)";
@@ -1777,6 +2613,220 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat",
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_pauldron_kama_Midnight: JLTS_CloneVestOfficer
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Midnight)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_pauldron_kama_Urban: JLTS_CloneVestOfficer
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Urban)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_pauldron_kama_Desert: JLTS_CloneVestOfficer
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Desert)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Desert.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
 		};
 		class ItemInfo: VestItem
 		{
@@ -2401,6 +3451,81 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	{
 		displayName="[41st] Pauldron";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1",
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestLieutenant_Woodland: JLTS_CloneVestOfficer
+	{
+		displayName="[41st] Pauldron (Woodland)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
 		class ItemInfo: VestItem
 		{
 			vesttype="Rebreather";
@@ -3447,7 +4572,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_CloneVestSuspenders_ARF: V_rebreatherB
+	/* class FST_CloneVestSuspenders_ARF: V_rebreatherB
 	{
 		author="Daara";
 		scope=2;
@@ -3586,7 +4711,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	};
+	}; */
 	/* class FST_CloneVestSuspenders_ARF_Woodland: V_rebreatherB
 	{
 		author="Daara";
@@ -3656,11 +4781,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	}; */
-	class FST_CloneVestSuspenders_ARF_Desert: V_rebreatherB
+	class FST_CloneVestSuspenders_Ranger_Desert: V_rebreatherB
 	{
 		author="Daara";
 		scope=2;
-		displayName="[41st] ARF Suspenders (Desert)";
+		displayName="[41st] Ranger Suspenders (Desert)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
@@ -3726,11 +4851,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_CloneVestSuspenders_ARF_Urban: V_rebreatherB
+	class FST_CloneVestSuspenders_Ranger_Urban: V_rebreatherB
 	{
 		author="Gold";
 		scope=2;
-		displayName="[41st] ARF Suspenders (Urban)";
+		displayName="[41st] Ranger Suspenders (Urban)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
@@ -3796,11 +4921,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_CloneVestSuspenders_ARF_Black: V_rebreatherB
+	class FST_CloneVestSuspenders_Rangers_Black: V_rebreatherB
 	{
 		author="Gold";
 		scope=2;
-		displayName="[41st] ARF Suspenders (Black)";
+		displayName="[41st] Ranger Suspenders (Black)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestSuspender_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
@@ -4062,7 +5187,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
 		};
 	};	
-	class FST_P2_Helmet_Urban: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Urban: FST_P2_Helmet_Base	
 	{
 		author="Daara";
 		scope=2; 
@@ -11537,16 +12662,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Skipjack.paa",
 		};
 	};
-	class FST_P2_Helmet_Avrath: FST_P2_Helmet_Base
-	{
-		author="Gold";
-		scope=2; 
-		displayName="[41st] P2 Helmet [Avrath]";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Avrath.paa",
-		};
-	};
 	class FST_P2_Helmet_Dash: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -11615,6 +12730,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Eagle.paa",
+		};
+	};
+	class FST_P2_Helmet_Avrath: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Avrath]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Avrath.paa",
 		};
 	};
 	class FST_P2_Helmet_Fox: FST_P2_Helmet_Base
@@ -18162,6 +19287,60 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Urban: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Urban)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_nvg.rvmat"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Midnight: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Midnight)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_nvg.rvmat"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Dobie: JLTS_CloneNVG
 	{
 		author="Viz";
@@ -19023,7 +20202,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class FST_NVG_Desert: JLTS_CloneNVG
 	{
 		author="Daara";
-		displayName="[41st] ARF Macrobinoculars (Desert)";
+		displayName="[41st] NCO Macrobinoculars (Desert)";
 		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
@@ -19345,6 +20524,91 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\clone_visor.rvmat"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Visor_Urban: JLTS_CloneNVGCC
+	{
+		author="Daara";
+		displayName="[41st] Officer Visor (Urban)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\clone_visor.rvmat"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Visor_Midnight: JLTS_CloneNVGCC
+	{
+		author="Daara";
+		displayName="[41st] Officer Visor (Midnight)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\clone_visor.rvmat"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Visor_Desert: JLTS_CloneNVGCC
+	{
+		author="Daara";
+		displayName="[41st] Officer Visor (Desert)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Desert.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\clone_visor.rvmat"
 		};
 		visionMode[]=
 		{
@@ -20199,7 +21463,7 @@ class CfgVehicles
 		displayName="[41st] Clone Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackStraps.p3d";
 	};
-	class FST_Clone_Backpack_ARF: FST_Clone_backpack
+	/* class FST_Clone_Backpack_ARF: FST_Clone_backpack
 	{
 		author="Daara";
 		scope=2;
@@ -20220,7 +21484,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-	};
+	}; */
 	class FST_Clone_Backpack_ARC: FST_Clone_backpack
 	{
 		author="Viz";
@@ -20245,19 +21509,19 @@ class CfgVehicles
 		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
-	class FST_ARF_backpack_s: FST_Clone_Backpack_ARF
+	/* class FST_ARF_backpack_s: FST_Clone_Backpack_ARF
 	{
 		displayName="[41st] ARF Camo Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackStraps.p3d";
-	};
-	class FST_ARF_backpack_Woodland: FST_Clone_backpack
+	}; */
+	class FST_Clone_backpack_Woodland: FST_Clone_backpack
 	{
 		author="Daara";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] ARF Camo Backpack (Woodland)";
-		maximumload=250;
+		displayName="[41st] Clone Backpack (Woodland)";
+		maximumload=400;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
 		{
@@ -20265,21 +21529,21 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_ARF_backpack_Woodland.paa"
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Woodland.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
 	};
-	class FST_ARF_backpack_Midnight: FST_Clone_backpack
+	class FST_Clone_backpack_Midnight: FST_Clone_backpack
 	{
 		author="Gold";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] ARF Camo Backpack (Midnight)";
-		maximumload=250;
+		displayName="[41st] Clone Backpack (Midnight)";
+		maximumload=400;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
 		{
@@ -20287,21 +21551,21 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_ARF_backpack_Midnight.paa"
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Midnight.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
 	};
-	class FST_ARF_backpack_Urban: FST_Clone_backpack
+	class FST_Clone_backpack_Urban: FST_Clone_backpack
 	{
 		author="Gold";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] ARF Camo Backpack (Urban)";
-		maximumload=250;
+		displayName="[41st] Clone Backpack (Urban)";
+		maximumload=400;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
 		{
@@ -20309,20 +21573,20 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_ARF_Backpack_Urban.paa"
+			"41st_Armor\Data\Equipment\FST_Clone_Backpack_Urban.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
 	};
-	class FST_ARF_backpack_Desert: FST_Clone_backpack
+	class FST_Clone_backpack_Desert: FST_Clone_backpack
 	{
 		author="Daara";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		displayName="[41st] ARF Camo Backpack (Desert)";
+		displayName="[41st] Clone Backpack (Desert)";
 		maximumload=250;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
@@ -20331,7 +21595,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Equipment\FST_ARF_backpack_Desert.paa"
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Desert.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -20792,13 +22056,97 @@ class CfgVehicles
 		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
+	class FST_Clone_backpack_RTO_Woodland: FST_Clone_backpack
+	{
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
+		displayName="[41st] Clone RTO Backpack (Woodland)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
+		};
+		maximumload=300;
+		tf_dialog="JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=50000;
+		tf_subtype="digital_lr";
+	};
+	class FST_Clone_backpack_RTO_Desert: FST_Clone_backpack
+	{
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
+		displayName="[41st] Clone RTO Backpack (Desert)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
+		};
+		maximumload=300;
+		tf_dialog="JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=50000;
+		tf_subtype="digital_lr";
+	};
+	class FST_Clone_backpack_RTO_Urban: FST_Clone_backpack
+	{
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
+		displayName="[41st] Clone RTO Backpack (Urban)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
+		};
+		maximumload=300;
+		tf_dialog="JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=50000;
+		tf_subtype="digital_lr";
+	};
+	class FST_Clone_backpack_RTO_Midnight: FST_Clone_backpack
+	{
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
+		displayName="[41st] Clone RTO Backpack (Midnight)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTO.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Clone_backpack_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
+		};
+		maximumload=300;
+		tf_dialog="JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=50000;
+		tf_subtype="digital_lr";
+	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
 	{
         maximumload=300;
 		displayName="[41st] Clone RTO Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTOStraps.p3d";
 	};
-	class FST_ARF_backpack_RTO: FST_Clone_Backpack_ARF
+	/* class FST_ARF_backpack_RTO: FST_Clone_Backpack_ARF
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
 		displayName="[41st] ARF Camo RTO Backpack";
@@ -20814,11 +22162,11 @@ class CfgVehicles
 		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
-	class FST_ARF_backpack_s_RTO: FST_ARF_backpack_RTO
+		class FST_ARF_backpack_s_RTO: FST_ARF_backpack_RTO
 	{
 		displayName="[41st] ARF Camo RTO Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTOStraps.p3d";
-	};
+	}; */
 	class FST_Zeus_backpack: FST_Clone_backpack
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
@@ -21237,6 +22585,270 @@ class CfgVehicles
 		DBA_jumppack_energy_capacity=100;
 		DBA_jumppack_recharge=7.6;
 		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
+		DBA_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Woodland: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=320;
+		displayName="[41st] Jump Pack (Woodland)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woodland.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Desert: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=320;
+		displayName="[41st] Jump Pack (Desert)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Urban: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=320;
+		displayName="[41st] Jump Pack (Urban)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Midnight: JLTS_Clone_jumppack_mc
+	{
+		author="Daara";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=320;
+		displayName="[41st] Jump Pack (Midnight)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
 		DBA_jumppack_effect_points[]=
 		{
 			
@@ -22265,77 +23877,6 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Jumppack_ARF_Desert: JLTS_Clone_jumppack_mc
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] ARF Jump Pack (Desert)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Desert.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
- 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=0;
-		DBA_jumppack_energy_capacity=150;
-		DBA_jumppack_recharge=10;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Forward Jump",
-				{12,20,50,0,0,0}
-			},
-			
-			{
-				"Short Jump",
-				{12,5,30,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
 	class FST_Backpack_Jumppack_Medic: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -22354,7 +23895,7 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"
 		};
-		hiddenSelectionsMaterials[]=
+		hiddenSelectionsMaterials[]=	
 		{
 			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
 		};
@@ -23015,7 +24556,7 @@ class CfgVehicles
 		tf_range=50000;
 		tf_subtype="digital_lr";
 	}; */
-	class FST_ARF_backpack_RTO_Desert: FST_Backpack_Antenna
+	/* class FST_ARF_backpack_RTO_Desert: FST_Backpack_Antenna
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
 		displayName="[41st] ARF Camo RTO Backpack [Desert]";
@@ -23030,7 +24571,7 @@ class CfgVehicles
 		tf_hasLRradio=1;
 		tf_range=50000;
 		tf_subtype="digital_lr";
-	};
+	}; */
 	class FST_Backpack_GM_Base: JLTS_Clone_backpack
 	{
 		author="Schlabbie And Maxim";
@@ -23170,192 +24711,6 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-	};
-	class FST_Backpack_Jumppack_Woodland: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Woodland)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Jumppack_Woodland.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Desert: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Desert)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Jumppack_Desert.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Midnight: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Midnight)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_Jumppack_Midnight.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
 	};
 	class FST_Backpack_Jumppack_Noble: FST_Backpack_Jumppack
 	{
@@ -41815,6 +43170,110 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
+	class FST_Hoster_Woodland_Face: FST_Base_Glasses
+	{
+		displayname="[41st] Holster (Woodland/Face)";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Hoster_Midnight_Face: FST_Base_Glasses
+	{
+		displayname="[41st] Holster (Midnight/Face)";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Hoster_Urban_Face: FST_Base_Glasses
+	{
+		displayname="[41st] Holster (Urban/Face)";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_Hoster_Desert_Face: FST_Base_Glasses
+	{
+		displayname="[41st] Holster (Desert/Face)";
+		model="\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Desert.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
 	class FST_SL_Face: FST_Base_Glasses
 	{
 		displayname="[41st] Squad Leader Sash (Face)";
@@ -42012,6 +43471,91 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_vest_Woodland.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_Desert_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Face/Desert)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Desert.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_Midnight_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Face/Midnight)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+		};
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_pauldron_kama_Urban_Face: FST_Base_Glasses
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] Officer's Pauldron w/ Kama (Face/Urban)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_vest_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
 		};
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
 		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
@@ -42443,7 +43987,7 @@ class CfgGlasses
 	class FST_Suspenders_ARF_Face: FST_Base_Glasses
 	{
 		author="Viz";
-		displayname="[41st] ARF Suspenders (Face)";
+		displayname="[41st] Ranger Suspenders (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
 		{
@@ -42467,10 +44011,10 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
-	class FST_Suspenders_ARF_Dirty_Face: FST_Base_Glasses
+	class FST_Suspenders_Ranger_Dirty_Face: FST_Base_Glasses
 	{
 		author="Viz";
-		displayname="[41st] ARF Suspenders [Dirty] (Face)";
+		displayname="[41st] Ranger Suspenders [Dirty] (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
 		{
@@ -42494,10 +44038,10 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
-	class FST_Suspenders_ARF_Desert_Face: FST_Base_Glasses
+	class FST_Suspenders_Ranger_Desert_Face: FST_Base_Glasses
 	{
 		author="Viz";
-		displayname="[41st] ARF Suspenders [Desert] (Face)";
+		displayname="[41st] Ranger Suspenders [Desert] (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
 		{
@@ -42524,7 +44068,7 @@ class CfgGlasses
 	class FST_Suspenders_ARF_Urban_Face: FST_Base_Glasses
 	{
 		author="Gold";
-		displayname="[41st] ARF Suspenders [Urban] (Face)";
+		displayname="[41st] Ranger Suspenders [Urban] (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
 		{
@@ -42551,7 +44095,7 @@ class CfgGlasses
 	class FST_Suspenders_ARF_Black_Face: FST_Base_Glasses
 	{
 		author="Viz";
-		displayname="[41st] ARF Suspenders [Black] (Face)";
+		displayname="[41st] Ranger Suspenders [Black] (Face)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
 		hiddenSelections[]=
 		{

@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture = "\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_ti.paa";
+	texture = "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_ti.paa";
 };
 ambient[] = {0.5,0.5,0.5,1};
 diffuse[] = {0.7,0.7,0.7,1};
@@ -12,7 +12,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_nohq.paa";
+	texture = "MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -48,7 +48,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_as.paa";
+	texture = "MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -60,7 +60,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "41st_Armor\Data\Equipment\FST_AB_Jumppack_Camo_smdi.paa";
+	texture = "41st_Armor\Data\Equipment\FST_Visor_camo_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
