@@ -4062,6 +4062,34 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
 		};
 	};	
+	class FST_P2_Helmet_Urban: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Urban]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Urban.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
+		};
+	};
+	class FST_P2_Helmet_Midnight: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Midnight]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Midnight.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
+		};
+	};	
 	class FST_P2_Helmet_Desert: FST_P2_Helmet_Base
 	{
 		author="Daara";
