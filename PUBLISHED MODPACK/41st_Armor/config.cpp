@@ -20155,6 +20155,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Rumble_Dirty: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Rumble/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Rumble_Dirty.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Tooka: JLTS_CloneNVG
 	{
 		author="Viz";
@@ -20433,6 +20455,50 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Plop.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Nori: JLTS_CloneNVG
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Nori)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Nori.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Fixed_Nori: JLTS_CloneNVG_spec
+	{
+		author="Gold";
+		displayName="[41st] NCO Macrobinoculars (Nori/Fixed On)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Nori.paa",
 		};
 		visionMode[]=
 		{
