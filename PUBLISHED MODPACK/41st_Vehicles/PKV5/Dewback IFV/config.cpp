@@ -123,7 +123,7 @@ class CfgVehicles
 		receiveRemoteTargets=1;
 		memoryPointsGetInCargo="pos driver";
 		memoryPointsGetInCargoDir="pos driver dir";
-		transportSoldier=8;
+		transportSoldier=12;
 		cargoReversedGetOut[]={1};
 		cargoGetInAction[]=
 		{
@@ -140,9 +140,16 @@ class CfgVehicles
 			"passenger_flatground_generic02",
 			"passenger_flatground_generic03",
 			"passenger_flatground_generic04",
-			"passenger_flatground_generic05"
+			"passenger_flatground_generic05",
+			"passenger_flatground_generic06",
+			"passenger_flatground_generic07",
+			"passenger_flatground_generic08",
+			"passenger_flatground_generic09",
+			"passenger_flatground_generic10",
+			"passenger_flatground_generic11",
+			"passenger_flatground_generic12"
 		};
-	class TransportItems
+		class TransportItems
 			{
 			class _xx_IDA_Cauterizer
 				{
@@ -1278,6 +1285,7 @@ class CfgVehicles
                     "FST_thermal_coil",
                     "FST_thermal_coil",
                     "FST_thermal_coil",
+					"FST_thermal_coil",
                     "Laserbatteries"
                 };
 				minElev=-7;

@@ -5539,7 +5539,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	};
 	class FST_cloneUniform_scout_undersuit_woodland: FST_cloneUniform_scout_Woodland
 	{
-		displayname = "[41st] Scout Undersuit (Woodland)"
+		displayname = "[41st] Scout Undersuit (Woodland)";
 		class ItemInfo: UniformItem
 		{
 			uniformclass = "FST_clone_scout_undersuit_woodland";
@@ -5547,7 +5547,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	};
 	class FST_cloneUniform_scout_undersuit_Midnight: FST_cloneUniform_scout_Midnight
 	{
-		displayname = "[41st] Scout Undersuit (Midnight)"
+		displayname = "[41st] Scout Undersuit (Midnight)";
 		class ItemInfo: UniformItem
 		{
 			uniformclass = "FST_clone_scout_undersuit_midnight";
@@ -5555,7 +5555,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	};
 	class FST_cloneUniform_scout_undersuit_Urban: FST_cloneUniform_scout_Urban
 	{
-		displayname = "[41st] Scout Undersuit (Urban)"
+		displayname = "[41st] Scout Undersuit (Urban)";
 		class ItemInfo: UniformItem
 		{
 			uniformclass = "FST_clone_scout_undersuit_urban";
@@ -5563,7 +5563,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	};
 	class FST_cloneUniform_scout_undersuit_Desert: FST_cloneUniform_scout_Desert
 	{
-		displayname = "[41st] Scout Undersuit (Desert)"
+		displayname = "[41st] Scout Undersuit (Desert)";
 		class ItemInfo: UniformItem
 		{
 			uniformclass = "FST_clone_scout_undersuit_Desert";
@@ -28436,7 +28436,6 @@ class CfgVehicles
 	};
 	class FST_clone_scout_undersuit_woodland: FST_clone_scout_woodland
 	{
-		scope = 0;
 		displayname = "[41st] Clone Scout Trooper Undersuit (Woodland)";
 		hiddenSelectionsTextures[]= 
 		{
@@ -28746,7 +28745,6 @@ class CfgVehicles
 	};
 	class FST_clone_scout_undersuit_Midnight: FST_clone_scout_Midnight
 	{
-		scope = 0;
 		displayname = "[41st] Clone Scout Trooper Undersuit (Midnight)";
 		hiddenSelectionsTextures[]= 
 		{
@@ -29057,7 +29055,6 @@ class CfgVehicles
 	class FST_clone_scout_undersuit_Desert: FST_clone_scout_Desert
 	{
 		displayname = "[41st] Clone Scout Trooper Undersuit (Desert)";
-		scope = 0;
 		hiddenSelectionsTextures[]= 
 		{
 			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Desert.paa",
@@ -29366,7 +29363,6 @@ class CfgVehicles
 	};
 	class FST_clone_scout_undersuit_Urban: FST_clone_scout_Urban
 	{
-		scope = 0;
 		displayname = "[41st] Clone Scout Trooper Undersuit (Urban)";
 		hiddenSelectionsTextures[]= 
 		{
