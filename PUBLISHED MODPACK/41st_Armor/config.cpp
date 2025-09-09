@@ -72,6 +72,10 @@ class CfgPatches
 			"FST_Jedi",
 			"FST_DarkJedi",
 			"FST_Zombie_Bloody",
+			"FST_clone_scout_Desert",
+			"FST_clone_scout_Midnight",
+			"FST_clone_scout_Woodland",
+			"FST_clone_scout_Urban",
 			"FST_P2_Officer",
 			"FST_P2_NCO",
 			"FST_P2_Recruit",
@@ -511,6 +515,7 @@ class CfgWeapons
 	class 3as_P2_Pilot_helmet;
 	class 3as_ATRT_Helmet;
 	class SWLB_clone_ARF_P1_helmet;
+	class ls_cloneHelmet_scout;
 	class ls_gar_phase1Pilot_helmet;
 	/////////////////////////
 	//////////VESTS/////////
@@ -520,6 +525,7 @@ class CfgWeapons
 	class JLTS_CloneVestLieutenant;
 	class JLTS_CloneVestRecon;
 	class JLTS_CloneVestKama;
+	class ls_cloneVest_scout;
 	class JLTS_CloneVestOfficer;
 	class JLTS_CloneVestOfficer2;
 	class JLTS_CloneVestAirborne;
@@ -1065,6 +1071,266 @@ class CfgWeapons
 				"camo1"
 			};
 			mass=15;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneVest_Scout_Woodland: ls_cloneVest_scout
+	{
+		author = "Ruby";
+		scope = 2;
+		displayname = "[41st] Clone Scout Pouches (Woodland)";
+		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+		hiddenselections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Scout_Pouches_Woodland.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=15;
+			containerclass="Supply200";
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneVest_Scout_Midnight: ls_cloneVest_scout
+	{
+		author = "Ruby";
+		scope = 2;
+		displayname = "[41st] Clone Scout Pouches (Midnight)";
+		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+		hiddenselections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Scout_Pouches_Midnight.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=15;
+			containerclass="Supply200";
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneVest_Scout_Desert: ls_cloneVest_scout
+	{
+		author = "Ruby";
+		scope = 2;
+		displayname = "[41st] Clone Scout Pouches (Desert)";
+		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+		hiddenselections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Scout_Pouches_Desert.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=15;
+			containerclass="Supply200";
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneVest_Scout_Urban: ls_cloneVest_scout
+	{
+		author = "Ruby";
+		scope = 2;
+		displayname = "[41st] Clone Scout Pouches (Urban)";
+		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+		hiddenselections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Scout_Pouches_Urban.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=15;
+			containerclass="Supply200";
 			class HitpointsProtectionInfo
 			{
 				class Chest
@@ -5203,6 +5469,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class JLTS_CloneArmorGrenadier;
 	class JLTS_CloneArmorSupport;
 	class UniformItem;
+	class ls_cloneUniform_scout;
 	class HeadgearItem;
 	class lsd_gar_bodyGlove_uniform
 	{
@@ -5213,6 +5480,94 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	class 3AS_Katarn_Helmet_Base: ItemCore
 	{
 		class ItemInfo;
+	};
+	class FST_cloneUniform_scout_Woodland: ls_cloneUniform_scout
+	{
+		scope = 2;
+		author = "Ruby";
+		displayname = "[41st] Scout Trooper Armor (Woodland)";
+		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformClass="FST_clone_scout_woodland";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_cloneUniform_scout_Desert: ls_cloneUniform_scout
+	{
+		scope = 2;
+		author = "Ruby";
+		displayname = "[41st] Scout Trooper Armor (Desert)";
+		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformClass="FST_clone_scout_Desert";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_cloneUniform_scout_Midnight: ls_cloneUniform_scout
+	{
+		scope = 2;
+		author = "Ruby";
+		displayname = "[41st] Scout Trooper Armor (Midnight)";
+		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformClass="FST_clone_scout_Midnight";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_cloneUniform_scout_Urban: ls_cloneUniform_scout
+	{
+		scope = 2;
+		author = "Ruby";
+		displayname = "[41st] Scout Trooper Armor (Urban)";
+		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformClass="FST_clone_scout_Urban";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_cloneUniform_scout_undersuit_woodland: FST_cloneUniform_scout_Woodland
+	{
+		displayname = "[41st] Scout Undersuit (Woodland)"
+		class ItemInfo: UniformItem
+		{
+			uniformclass = "FST_clone_scout_undersuit_woodland";
+		};
+	};
+	class FST_cloneUniform_scout_undersuit_Midnight: FST_cloneUniform_scout_Midnight
+	{
+		displayname = "[41st] Scout Undersuit (Midnight)"
+		class ItemInfo: UniformItem
+		{
+			uniformclass = "FST_clone_scout_undersuit_midnight";
+		};
+	};
+	class FST_cloneUniform_scout_undersuit_Urban: FST_cloneUniform_scout_Urban
+	{
+		displayname = "[41st] Scout Undersuit (Urban)"
+		class ItemInfo: UniformItem
+		{
+			uniformclass = "FST_clone_scout_undersuit_urban";
+		};
+	};
+	class FST_cloneUniform_scout_undersuit_Desert: FST_cloneUniform_scout_Desert
+	{
+		displayname = "[41st] Scout Undersuit (Desert)"
+		class ItemInfo: UniformItem
+		{
+			uniformclass = "FST_clone_scout_undersuit_Desert";
+		};
 	};
 	class FST_Commando_Helmet_Base: 3AS_Katarn_Helmet_Base
 	{
@@ -5556,6 +5911,186 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				"Camo1",
 				"Visor"
 			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneHelmet_Scout_Woodland: ls_cloneHelmet_scout
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Scout Trooper Helmet (Woodland)";
+		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Woodland.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneHelmet_Scout_Midnight: ls_cloneHelmet_scout
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Scout Trooper Helmet (Midnight)";
+		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneHelmet_Scout_Desert: ls_cloneHelmet_scout
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Scout Trooper Helmet (Desert)";
+		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_cloneHelmet_Scout_Urban: ls_cloneHelmet_scout
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Scout Trooper Helmet (Urban)";
+		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
+			mass=15;
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
 			class HitpointsProtectionInfo
 			{
 				class Head
@@ -21209,6 +21744,39 @@ class CfgVehicles
 			};
 		};
 	};
+	class ls_clone_unit_base
+	{
+		class HitPoints;
+	};
+	class ls_clone_scout_base: ls_clone_unit_base
+	{
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket
+			{
+				armor=1;
+				depends="HitHead";
+				explosionShielding=1;
+				material=-1;
+				minimalHit=0;
+				name="head";
+				passThrough=0;
+				radius=1;
+				visual="";
+			};
+			class HitFace;
+			class HitNeck;
+			class HitHead;
+			class HitPelvis;
+			class HitAbdomen;
+			class HitDiaphragm;
+			class HitChest;
+			class HitBody;
+			class HitArms;
+			class HitHands;
+			class HitLegs;
+		};
+	};
 	class ContainerSupply;
 	class Box_NATO_Ammo_F;
 	class B_Kitbag_rgr;
@@ -27249,7 +27817,7 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-	};	
+	};
 	class FST_Trooper_P2_DC15S: B_Soldier_F
 	{
 		author="Daara";
@@ -27564,6 +28132,1246 @@ class CfgVehicles
 			{
 				name="leg_r";
 			};
+		};
+	};
+	class FST_clone_scout_woodland: ls_clone_scout_base
+	{
+		scope = 2;
+		displayname = "[41st] Clone Scout Trooper (Woodland)";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		faction="FST_Faction";
+		editorSubcategory="FST_Subfaction";
+		uniformclass = "FST_cloneUniform_scout_woodland";
+		nakeduniform = "FST_cloneUniform_scout_undersuit_woodland";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Woodland.paa",
+			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Woodland.paa"
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		respawnMagazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		items[]=
+		{
+			"ACE_EntrenchingTool",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		respawnItems[]=
+		{
+			
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		linkedItems[]=
+		{
+			"FST_cloneHelmet_scout_woodland",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_cloneHelmet_scout_woodland",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
+			class HitFace: HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=8;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=6;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=6;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=8;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=6;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=6;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=6;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class FST_clone_scout_undersuit_woodland: FST_clone_scout_woodland
+	{
+		scope = 0;
+		displayname = "[41st] Clone Scout Trooper Undersuit (Woodland)";
+		hiddenSelectionsTextures[]= 
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Woodland.paa",
+			""
+		};
+	};
+	class FST_clone_scout_Midnight: ls_clone_scout_base
+	{
+		scope = 2;
+		displayname = "[41st] Clone Scout Trooper (Midnight)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Subfaction";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		uniformclass = "FST_cloneUniform_scout_Midnight";
+		nakedUniform = "FST_cloneUniform_scout_undersuit_Midnight";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Midnight.paa",
+			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Midnight.paa"
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		respawnMagazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		items[]=
+		{
+			"ACE_EntrenchingTool",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		respawnItems[]=
+		{
+			
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		linkedItems[]=
+		{
+			"FST_cloneHelmet_scout_Midnight",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_cloneHelmet_scout_Midnight",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
+			class HitFace: HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=8;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=6;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=6;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=8;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=6;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=6;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=6;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class FST_clone_scout_undersuit_Midnight: FST_clone_scout_Midnight
+	{
+		scope = 0;
+		displayname = "[41st] Clone Scout Trooper Undersuit (Midnight)";
+		hiddenSelectionsTextures[]= 
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Midnight.paa",
+			""
+		};
+	};
+	class FST_clone_scout_Desert: ls_clone_scout_base
+	{
+		scope = 2;
+		displayname = "[41st] Clone Scout Trooper (Desert)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Subfaction";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		uniformclass = "FST_cloneUniform_scout_Desert";
+		nakeduniform = "FST_cloneUniform_scout_Desert";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Desert.paa",
+			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Desert.paa"
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		respawnMagazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		items[]=
+		{
+			"ACE_EntrenchingTool",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		respawnItems[]=
+		{
+			
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		linkedItems[]=
+		{
+			"FST_cloneHelmet_scout_Desert",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_cloneHelmet_scout_Desert",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
+			class HitFace: HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=8;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=6;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=6;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=8;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=6;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=6;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=6;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class FST_clone_scout_undersuit_Desert: FST_clone_scout_Desert
+	{
+		displayname = "[41st] Clone Scout Trooper Undersuit (Desert)";
+		scope = 0;
+		hiddenSelectionsTextures[]= 
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Desert.paa",
+			""
+		};
+	};
+	class FST_clone_scout_Urban: ls_clone_scout_base
+	{
+		scope = 2;
+		displayname = "[41st] Clone Scout Trooper (Urban)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Subfaction";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		uniformclass = "FST_cloneUniform_scout_Urban";
+		nakeduniform = "FST_cloneUniform_scout_Urban";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Urban.paa",
+			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Urban.paa"
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		respawnMagazines[]=
+		{
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Green_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Blue_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_Red_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Smoke_mag",
+			"FST_grenade_Detonator_mag",
+			"IDA_blaster_cell",
+		};
+		items[]=
+		{
+			"ACE_EntrenchingTool",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		respawnItems[]=
+		{
+			
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_Splint",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_PlasmaIV_500",
+			"ACE_Spraypaintgreen",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"WBK_HeadLampItem",
+			"acc_flashlight",
+			"Laserbatteries",
+		};
+		linkedItems[]=
+		{
+			"FST_cloneHelmet_scout_Urban",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_cloneHelmet_scout_Urban",
+			"itemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket
+			{
+			};
+			class HitFace: HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=8;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=6;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=6;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=8;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=6;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=6;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=6;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=6;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class FST_clone_scout_undersuit_Urban: FST_clone_scout_Urban
+	{
+		scope = 0;
+		displayname = "[41st] Clone Scout Trooper Undersuit (Urban)";
+		hiddenSelectionsTextures[]= 
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Urban.paa",
+			""
 		};
 	};
 	class FST_Trooper_P2_DC15A: FST_Trooper_P2_DC15S
@@ -44916,6 +46724,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Squatch";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Squatch.paa";
+		};
+		class FST_Clone_Head_Rumble: FST_clone_Default_head
+		{
+			author="Ruby"
+			name="Clone Trooper Squatch";
+			displayName="[41st] Clone Trooper - Rumble";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Rumble.paa";
 		};
 		class FST_Clone_Head_Jorge: FST_clone_Default_head
 		{
