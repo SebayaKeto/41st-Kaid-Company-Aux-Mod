@@ -21744,39 +21744,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class ls_clone_unit_base
-	{
-		class HitPoints;
-	};
-	class ls_clone_scout_base: ls_clone_unit_base
-	{
-		class HitPoints: HitPoints
-		{
-			class ACE_HDBracket
-			{
-				armor=1;
-				depends="HitHead";
-				explosionShielding=1;
-				material=-1;
-				minimalHit=0;
-				name="head";
-				passThrough=0;
-				radius=1;
-				visual="";
-			};
-			class HitFace;
-			class HitNeck;
-			class HitHead;
-			class HitPelvis;
-			class HitAbdomen;
-			class HitDiaphragm;
-			class HitChest;
-			class HitBody;
-			class HitArms;
-			class HitHands;
-			class HitLegs;
-		};
-	};
 	class ContainerSupply;
 	class Box_NATO_Ammo_F;
 	class B_Kitbag_rgr;
@@ -28134,9 +28101,12 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_woodland: ls_clone_scout_base
+	class FST_clone_scout_woodland: B_Soldier_F
 	{
+		author = "Ruby";
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Woodland)";
 		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
 		faction="FST_Faction";
@@ -28443,9 +28413,11 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Midnight: ls_clone_scout_base
+	class FST_clone_scout_Midnight: B_Soldier_F
 	{
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Midnight)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Subfaction";
@@ -28752,9 +28724,11 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Desert: ls_clone_scout_base
+	class FST_clone_scout_Desert: B_Soldier_F
 	{
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Desert)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Subfaction";
@@ -29061,9 +29035,11 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Urban: ls_clone_scout_base
+	class FST_clone_scout_Urban: B_Soldier_F
 	{
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Urban)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Subfaction";
