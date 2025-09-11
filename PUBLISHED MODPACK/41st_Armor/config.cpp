@@ -13755,14 +13755,14 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Redeye.paa",
 		};
 	};
-	class FST_P2_Helmet_Spitfire: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Perceval: FST_P2_Helmet_Base
 	{
 		author="Gold";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Spitfire]";
+		displayName="[41st] P2 Helmet [Perceval]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Spitfire.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Perceval.paa",
 		};
 	};
 	class FST_P2_Helmet_Bale: FST_P2_Helmet_Base
