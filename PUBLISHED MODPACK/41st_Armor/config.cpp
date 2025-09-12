@@ -1437,7 +1437,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_vest_woodland_holster: FST_vest_base
+	class FST_vest_Woodland_holster: FST_vest_base
 	{
 		author="Daara";
 		scope=2;
@@ -20089,7 +20089,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	{
 		scope=2;
 		displayName="[41st] Dark Jedi Armor";
-		JLTS_hasStunProtection = 1
+		JLTS_hasStunProtection = 1;
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_DarkJedi";
