@@ -22032,17 +22032,17 @@ class CfgVehicles
 			};
 			class _xx_FST_grenade_Penetrator_mag
 			{
-				count=20;
+				count=8;
 				magazine="FST_grenade_Penetrator_mag";
 			};
 			class _xx_IDA_explosive_Detpack_mag
 			{
-				count=10;
+				count=8;
 				magazine="IDA_explosive_Detpack_mag";
 			};
 			class _xx_FST_grenade_emp_mag
 			{
-				count=10;
+				count=8;
 				magazine="FST_grenade_emp_mag";
 			};
 		};
