@@ -1437,7 +1437,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_vest_woodland_holster: FST_vest_base
+	class FST_vest_Woodland_holster: FST_vest_base
 	{
 		author="Daara";
 		scope=2;
@@ -13755,14 +13755,14 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Redeye.paa",
 		};
 	};
-	class FST_P2_Helmet_Spitfire: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Perceval: FST_P2_Helmet_Base
 	{
 		author="Gold";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Spitfire]";
+		displayName="[41st] P2 Helmet [Perceval]";
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Spitfire.paa",
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Perceval.paa",
 		};
 	};
 	class FST_P2_Helmet_Bale: FST_P2_Helmet_Base
@@ -15949,6 +15949,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_House_Dirty.paa"
 		};
 	};
+	class FST_P2_Helmet_Five: FST_P2_Helmet_Base
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] P2 Helmet [Five]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Five.paa"
+		};
+	};
 	class FST_P2_Helmet_Hazzo: FST_P2_Helmet_Base
 	{
 		author="Viz";
@@ -16039,7 +16049,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Airman.paa",
 		};
 	};
-		class FST_P2_Helmet_Coldstart: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Coldstart: FST_P2_Helmet_Base
 	{
 		author="Adler";
 		scope=2; 
@@ -20079,7 +20089,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 	{
 		scope=2;
 		displayName="[41st] Dark Jedi Armor";
-		JLTS_hasStunProtection = 1
+		JLTS_hasStunProtection = 1;
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_DarkJedi";
@@ -21618,6 +21628,29 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_Visor_Sigs: JLTS_CloneNVGCC
+	{
+		author="Gold";
+		displayName="[41st] Officer Visor (Sigs)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Sigs.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
 };	
 class UniformSlotInfo
 {
@@ -21742,39 +21775,6 @@ class CfgVehicles
 			class HitLegs: HitLegs
 			{
 			};
-		};
-	};
-	class ls_clone_unit_base
-	{
-		class HitPoints;
-	};
-	class ls_clone_scout_base: ls_clone_unit_base
-	{
-		class HitPoints: HitPoints
-		{
-			class ACE_HDBracket
-			{
-				armor=1;
-				depends="HitHead";
-				explosionShielding=1;
-				material=-1;
-				minimalHit=0;
-				name="head";
-				passThrough=0;
-				radius=1;
-				visual="";
-			};
-			class HitFace;
-			class HitNeck;
-			class HitHead;
-			class HitPelvis;
-			class HitAbdomen;
-			class HitDiaphragm;
-			class HitChest;
-			class HitBody;
-			class HitArms;
-			class HitHands;
-			class HitLegs;
 		};
 	};
 	class ContainerSupply;
@@ -28134,9 +28134,12 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_woodland: ls_clone_scout_base
+	class FST_clone_scout_woodland: B_Soldier_F
 	{
+		author = "Ruby";
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Woodland)";
 		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
 		faction="FST_Faction";
@@ -28443,9 +28446,11 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Midnight: ls_clone_scout_base
+	class FST_clone_scout_Midnight: B_Soldier_F
 	{
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Midnight)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Subfaction";
@@ -28752,9 +28757,11 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Desert: ls_clone_scout_base
+	class FST_clone_scout_Desert: B_Soldier_F
 	{
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Desert)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Subfaction";
@@ -29061,9 +29068,11 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Urban: ls_clone_scout_base
+	class FST_clone_scout_Urban: B_Soldier_F
 	{
 		scope = 2;
+		scopeCurator=2;
+		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Urban)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Subfaction";
@@ -46729,6 +46738,14 @@ class CfgFaces
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Rumble.paa";
 		};
+		class FST_Clone_Head_Preacher: FST_clone_Default_head
+		{
+			author="Ruby"
+			name="Clone Trooper Squatch";
+			displayName="[41st] Clone Trooper - Preacher";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Preacher.paa";
+		};
 		class FST_Clone_Head_Jorge: FST_clone_Default_head
 		{
 			author="Adler"
@@ -46743,6 +46760,25 @@ class CfgFaces
 			author="Gold adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
 			displayname="[41st] Navy Face - Mustang";
 			texture="41st_Armor\Data\Faces\FST_Clone_Mustang.paa";
+			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
+			head="TCGM_FemHead_Eilish";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Ruby: Default
+		{
+			author="Gold adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Ruby";
+			texture="41st_Armor\Data\Faces\FST_Clone_Ruby.paa";
 			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
 			head="TCGM_FemHead_Eilish";
 			identityTypes[]=
