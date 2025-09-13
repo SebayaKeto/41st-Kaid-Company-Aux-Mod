@@ -735,6 +735,220 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Camo.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestARC_Midnight: V_PlateCarrier1_rgr
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Midnight]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestARC_Urban: V_PlateCarrier1_rgr
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Urban]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestARC_Desert: V_PlateCarrier1_rgr
+	{
+		author="Viz";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Desert]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Desert.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+		};
 		class ItemInfo: VestItem
 		{
 			vesttype="Rebreather";
@@ -7819,6 +8033,150 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Woodland.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_P2_ARC_Helmet_Midnight: JLTS_CloneHelmetP2
+	{
+		author="Gold";
+		displayName="[41st] P2 ARC Trooper Helmet (Midnight)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Midnight.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_P2_ARC_Helmet_Urban: JLTS_CloneHelmetP2
+	{
+		author="Gold";
+		displayName="[41st] P2 ARC Trooper Helmet (Urban)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Urban.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_P2_ARC_Helmet_Desert: JLTS_CloneHelmetP2
+	{
+		author="Gold";
+		displayName="[41st] P2 ARC Trooper Helmet (Desert)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Desert.paa"
 		};
 		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
 		class Iteminfo: HeadgearItem
@@ -21419,6 +21777,66 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Antenna_Woodland.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Antenna_Midnight: JLTS_CloneNVGRange
+	{
+		author="Daara";
+		displayName="[41st] Officer Rangefinder (Midnight)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Antenna_Midnight.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Antenna_Urban: JLTS_CloneNVGRange
+	{
+		author="Daara";
+		displayName="[41st] Officer Rangefinder (Urban)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Antenna_Urban.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_Antenna_Desert: JLTS_CloneNVGRange
+	{
+		author="Daara";
+		displayName="[41st] Officer Rangefinder (Desert)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Antenna_Desert.paa",
 		};
 		visionMode[]=
 		{
