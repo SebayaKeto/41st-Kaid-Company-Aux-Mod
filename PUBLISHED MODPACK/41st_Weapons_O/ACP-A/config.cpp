@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class ACP-A
+	class FST_ACPA
 	{
 		requiredAddons[]=
 		{
@@ -19,11 +19,11 @@ class UnderBarrelSlot;
 class CfgWeapons
 {
 	class 3AS_ScatterGun_F;
-	class FST_ACP-A: 3AS_ScatterGun_F
+	class FST_ACPA: 3AS_ScatterGun_F
 	{
 		author="Gold";
 		displayName="[41st] ACP-A";
-		baseWeapon="FST_ACP";
+		baseWeapon="FST_ACPA";
 		scope=2;
 		model="3as\3AS_Weapons\Scattergun\3AS_Scattergun_F.p3d";
 		magazines[]=

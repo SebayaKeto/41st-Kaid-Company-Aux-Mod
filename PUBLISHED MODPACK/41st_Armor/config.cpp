@@ -162,6 +162,8 @@ class CfgPatches
 			"FST_P2_Demon",
 			"FST_P2_Squatch",
 			"FST_P2_Squatch_Dirty",
+			"FST_P2_Squatch_V2",
+			"FST_P2_Squatch_Dirty_V2",
 			"FST_P2_Lawman",
 			"FST_P2_Ampersand_Dirty",
 			"FST_P2_Joko",
@@ -1212,6 +1214,72 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Major.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_CloneVestARC_Squatch: V_PlateCarrier1_rgr
+	{
+		author="Gold";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Squatch]";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Squatch.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -9633,6 +9701,102 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_P2_ARC_Helmet_Squatch: JLTS_CloneHelmetP2
+	{
+		author="Gold";
+		displayName="[41st] P2 ARC Trooper Helmet (Squatch)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Squatch.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_P2_ARC_Helmet_Squatch_Dirty: JLTS_CloneHelmetP2
+	{
+		author="Gold";
+		displayName="[41st] P2 ARC Trooper Helmet (Squatch/Dirty)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Squatch_Dirty.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
  	class FST_P2_ARC_Helmet_Major: JLTS_CloneHelmetP2
 	{
 		author="Gold";
@@ -10276,7 +10440,59 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 				};
 			};
 		};
-	}; 
+	};
+	class FST_Airborne_Helmet_Arctic: JLTS_CloneHelmetAB
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Arctic)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Arctic.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Airborne_Helmet_Sepie: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -18868,7 +19084,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
  	class FST_Uniform_Squatch: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -18882,7 +19098,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			containerClass="Supply150";
 			mass=15;
 		};
-	}; 
+	};
  	class FST_Uniform_Squatch_Dirty: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -18892,6 +19108,34 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Squatch_V2: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Squatch V2]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Squatch_V2";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+ 	class FST_Uniform_Squatch_Dirty_V2: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Squatch/Dirty V2]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Squatch_Dirty_V2";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -40757,6 +41001,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Squatch_V2: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-2275 'Squatch V2'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Squatch_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_SquatchV2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_SquatchV2.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Squatch",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Squatch",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Squatch_Dirty_V2: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-2275 'Squatch' (Dirty V2)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Squatch_Dirty_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Squatch_DirtyV2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Squatch_DirtyV2.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Nic: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -47151,7 +47505,7 @@ class CfgFaces
 		class FST_Clone_Head_Rumble: FST_clone_Default_head
 		{
 			author="Ruby"
-			name="Clone Trooper Squatch";
+			name="Clone Trooper Rumble";
 			displayName="[41st] Clone Trooper - Rumble";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Rumble.paa";
@@ -47159,7 +47513,7 @@ class CfgFaces
 		class FST_Clone_Head_Preacher: FST_clone_Default_head
 		{
 			author="Ruby"
-			name="Clone Trooper Squatch";
+			name="Clone Trooper Preacher";
 			displayName="[41st] Clone Trooper - Preacher";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Preacher.paa";
