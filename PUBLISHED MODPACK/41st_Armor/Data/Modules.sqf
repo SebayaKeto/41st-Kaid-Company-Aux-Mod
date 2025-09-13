@@ -28,7 +28,7 @@
             ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Munificent."], [0, 10, 2, 0]],
 
             // NEW: Ship Health Multiplier
-            ["SLIDER", ["Ship Health Multiplier", "Custom HP multiplier for the ship (1 = default)."], [0, 10, 1, 0]]
+            ["SLIDER", ["Ship Health Multiplier", "Custom HP multiplier for the ship (1 = default)."], [0, 100, 25, 0]]
 
             ], {
                 params ["_values", "_arguments"];
