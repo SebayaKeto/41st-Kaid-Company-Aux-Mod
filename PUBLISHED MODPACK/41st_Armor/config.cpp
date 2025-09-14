@@ -16825,7 +16825,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
-	class FST_ARF_Uniform_Urban: JLTS_CloneArmorRecon
+	class FST_Uniform_Urban: JLTS_CloneArmorRecon
 	{
 		author="Gold";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -30468,7 +30468,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_ARF_Uniform_Urban";
+		uniformclass="FST_Uniform_Urban";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
