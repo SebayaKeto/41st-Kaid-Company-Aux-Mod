@@ -33,17 +33,17 @@ class CfgVehicles
 		placement = "vertical";
 		mapSize = 1;
 		destrType = "DestructNo";
-		displayName = "[41st] Security Barrier";
+		displayName = "Short Trench";
 		model = "FST\FST_Trenches\FST_Trench_Short.p3d";
 		faction = "prop";
 		eden = 1;
 	};
 	// Base Asset and Texture
-	class FST_Trench_Short: FST_Barricade_SecurityBarrier_Base
+	class FST_Trench_Short: FST_Trench_Base
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "[41st] Security Barrier";
+		displayName = "Short Trench";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_co.paa"};
 		hiddenSelectionsMaterials[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier.rvmat"};
