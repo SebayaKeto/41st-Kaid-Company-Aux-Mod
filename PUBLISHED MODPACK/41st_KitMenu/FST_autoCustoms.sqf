@@ -5,6 +5,7 @@ private _roleNameTrim = trim _roleName;
 private _roleLower    = toLower _roleNameTrim;
 private _kitTagTrim   = trim _kitTag;
 private _kitTagLower  = toLower _kitTagTrim;
+missionNamespace setVariable ["FST_AutoCustoms_SkipPrompts", (_kitTagLower isEqualTo "ranger")];
 private _nameFull      = name _unit;
 private _split         = _nameFull splitString " ";
 private _rankAndNumber = _split param [0, ""];
@@ -48,6 +49,7 @@ switch (_rank) do {
     case "CXR-":  { _allowHelmet = true; _allowArmor = true; };
     case "ARC-":  { _allowHelmet = true; _allowArmor = true; _allowVest = true; _allowBack = true; _allowNVG = true; };
 };
+private _skipCustoms = (_kitTagLower isEqualTo "ranger");
 
 missionNamespace setVariable ["FST_fnc_confirmCustomVariant", {
     disableSerialization;
@@ -155,7 +157,7 @@ private _filterByNameBoundary = {
 private _restoreUniformItems  = { params ["_unit","_items"]; { _unit addItemToUniform  _x; } forEach _items; };
 private _restoreVestItems     = { params ["_unit","_items"]; { _unit addItemToVest     _x; } forEach _items; };
 private _restoreBackpackItems = { params ["_unit","_items"]; { _unit addItemToBackpack _x; } forEach _items; };
-if (_allowHelmet) then {
+if (!_skipCustoms && _allowHelmet) then {
     private _saved = _mem get "helmet";
     if (_rank isEqualTo "ARC-") then {
         private _arcPrefix = format ["FST_P2_ARC_Helmet_%1", _playerName];
@@ -200,7 +202,7 @@ if (_allowHelmet) then {
         };
     };
 };
-if (_allowArmor) then {
+if (!_skipCustoms && _allowArmor) then {
     private _saved = _mem get "uniform";
     if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
         private _uItems = uniformItems _unit;
@@ -235,7 +237,7 @@ if (_allowArmor) then {
         };
     };
 };
-if (_allowVest) then {
+if (!_skipCustoms && _allowVest) then {
     private _saved = _mem get "vest";
     if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
         private _vItems = vestItems _unit;
@@ -275,7 +277,7 @@ if (_allowVest) then {
         };
     };
 };
-if (_allowNVG) then {
+if (!_skipCustoms && _allowNVG) then {
     private _saved = _mem get "nvg";
     if (!isNil {_saved} && { isClass (configFile >> "CfgWeapons" >> _saved) }) then {
         _unit linkItem _saved;
@@ -304,7 +306,7 @@ if (_allowNVG) then {
         };
     };
 };
-if (_allowBack) then {
+if (!_skipCustoms && _allowBack) then {
     private _saved = _mem get "backpack";
     if (!isNil {_saved} && { isClass (configFile >> "CfgVehicles" >> _saved) }) then {
         private _bItems = backpackItems _unit;

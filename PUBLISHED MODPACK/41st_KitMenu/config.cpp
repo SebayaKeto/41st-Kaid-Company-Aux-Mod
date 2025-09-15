@@ -1,4 +1,17 @@
 #define _ARMA_
+class RscFrame
+{
+    access = 0;
+    type = 0;
+    style = 64;
+    idc = -1;
+    shadow = 0;
+    colorText[] = {1,1,1,1};
+    colorBackground[] = {0,0,0,0};
+    font = "TahomaB";
+    sizeEx = 0.02;
+    text = "";
+};
 class WBK_RscActiveText
 {
     access = 0;
@@ -361,6 +374,103 @@ class WBK_KITArsenalAlike
 			offsetPressedY = 0;
 			borderSize = 0;
 		};
+		class Frame_Preset_Woodland: RscFrame
+		{
+			idc = 2610;
+			colorText[] = {1,1,1,1};
+			w = "0.042 * safezoneH + (3 * pixelW)";
+			h = "0.042 * safezoneH + (3 * pixelH)";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) - (1.5 * pixelW)";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH) - (1.5 * pixelH)";
+		};
+		class Frame_Preset_Desert: RscFrame
+		{
+			idc = 2611; colorText[] = {1,1,1,1};
+			w = "0.042 * safezoneH + (3 * pixelW)";
+			h = "0.042 * safezoneH + (3 * pixelH)";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 1 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH) - (1.5 * pixelH)";
+		};
+		class Frame_Preset_Urban: RscFrame
+		{
+			idc = 2612; colorText[] = {1,1,1,1};
+			w = "0.042 * safezoneH + (3 * pixelW)";
+			h = "0.042 * safezoneH + (3 * pixelH)";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 2 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH) - (1.5 * pixelH)";
+		};
+		class Frame_Preset_Midnight: RscFrame
+		{
+			idc = 2613; colorText[] = {1,1,1,1};
+			w = "0.042 * safezoneH + (3 * pixelW)";
+			h = "0.042 * safezoneH + (3 * pixelH)";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 3 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH) - (1.5 * pixelH)";
+		};
+		class Frame_Jumppack: RscFrame
+		{
+			idc = 2614; colorText[] = {1,1,1,1};
+			w = "0.042 * safezoneH + (3 * pixelW)";
+			h = "0.042 * safezoneH + (3 * pixelH)";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 4 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH) - (1.5 * pixelH)";
+		};
+
+		class Btn_Preset_Woodland: WBK_RscActiveText
+		{
+			idc = 1610;
+			style = 48; text = "\41st_KitMenu\data\Woodland.paa"; tooltip = "Woodland";
+			w = "0.042 * safezoneH"; h = "0.042 * safezoneH";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 0 * ((0.042 * safezoneH) + (0.007 * safezoneW))";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH)";
+			color[] = {1,1,1,1}; colorActive[] = {1,1,1,1}; colorDisabled[] = {1,1,1,1};
+			onMouseButtonDown = "['Woodland'] call FST_ApplyCamoPreset;";
+		};
+		class Btn_Preset_Desert: WBK_RscActiveText
+		{
+			idc = 1611;
+			style = 48; text = "\41st_KitMenu\data\Desert.paa"; tooltip = "Desert";
+			w = "0.042 * safezoneH"; h = "0.042 * safezoneH";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 1 * ((0.042 * safezoneH) + (0.007 * safezoneW))";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH)";
+			color[] = {1,1,1,1}; colorActive[] = {1,1,1,1}; colorDisabled[] = {1,1,1,1};
+			onMouseButtonDown = "['Desert'] call FST_ApplyCamoPreset;";
+		};
+		class Btn_Preset_Urban: WBK_RscActiveText
+		{
+			idc = 1612;
+			style = 48; text = "\41st_KitMenu\data\Urban.paa"; tooltip = "Urban";
+			w = "0.042 * safezoneH"; h = "0.042 * safezoneH";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 2 * ((0.042 * safezoneH) + (0.007 * safezoneW))";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH)";
+			color[] = {1,1,1,1}; colorActive[] = {1,1,1,1}; colorDisabled[] = {1,1,1,1};
+			onMouseButtonDown = "['Urban'] call FST_ApplyCamoPreset;";
+		};
+		class Btn_Preset_Midnight: WBK_RscActiveText
+		{
+			idc = 1613;
+			style = 48; text = "\41st_KitMenu\data\Midnight.paa"; tooltip = "Midnight";
+			w = "0.042 * safezoneH"; h = "0.042 * safezoneH";
+			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 3 * ((0.042 * safezoneH) + (0.007 * safezoneW))";
+			y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH)";
+			color[] = {1,1,1,1}; colorActive[] = {1,1,1,1}; colorDisabled[] = {1,1,1,1};
+			onMouseButtonDown = "['Midnight'] call FST_ApplyCamoPreset;";
+		};
+			class Btn_Jumppack: WBK_RscActiveText
+			{
+				idc = 1614;
+				style = 48;
+				text = "\41st_KitMenu\data\jumppack.paa";
+				tooltip = "Toggle Jumppack";
+				w = "0.042 * safezoneH"; 
+				h = "0.042 * safezoneH";
+				x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 4 * ((0.042 * safezoneH) + (0.007 * safezoneW))";
+				y = "(0.85 * safezoneH + safezoneY) - (0.042 * safezoneH) - (0.012 * safezoneH)";
+				color[] = {1,1,1,1}; 
+				colorActive[] = {1,1,1,1}; 
+				colorDisabled[] = {1,1,1,1};
+				onMouseButtonDown = "[] call FST_fnc_toggleJumppack;";
+			};
 	};
 };
 class FST_CustomsOverlay

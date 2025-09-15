@@ -7,16 +7,18 @@ WBK_fnc_populateKitList = {
     private _iconButton = _display displayCtrl 1603;
     if (!isNull _iconButton) then {
         switch (FST_CurrentKitCategory) do {
-            case "regular":   { _iconButton ctrlSetText "\41st_KitMenu\data\P2_base_helmet.paa";   _iconButton ctrlShow true; };
-            case "airborne":  { _iconButton ctrlSetText "\41st_KitMenu\data\Airborne_base_helmet.paa";  _iconButton ctrlShow true; };
-            case "pilot":     { _iconButton ctrlSetText "\41st_KitMenu\data\Pilot_base_helmet.paa";     _iconButton ctrlShow true; };
-            default           { _iconButton ctrlShow false; };
+            case "regular":  { _iconButton ctrlSetText "\41st_KitMenu\data\P2_base_helmet.paa";  _iconButton ctrlShow true; };
+            case "airborne": { _iconButton ctrlSetText "\41st_KitMenu\data\Airborne_base_helmet.paa"; _iconButton ctrlShow true; };
+            case "pilot":    { _iconButton ctrlSetText "\41st_KitMenu\data\Pilot_base_helmet.paa"; _iconButton ctrlShow true; };
+            case "ranger":   { _iconButton ctrlSetText "\41st_KitMenu\data\ranger.paa"; _iconButton ctrlShow true; };
+            default { _iconButton ctrlShow false; };
         };
     };
     private _kits = switch (FST_CurrentKitCategory) do {
-        case "airborne": { FST_AirborneKits };
-        case "pilot":    { FST_PilotKits };
-        default        { FST_RegularKits };
+    case "airborne": { FST_AirborneKits };
+    case "pilot":    { FST_PilotKits };
+    case "ranger":   { FST_RangerKits };
+    default          { FST_RegularKits };
     };
     _kits = +_kits;
     private _decorated = [];
@@ -44,11 +46,24 @@ WBK_fnc_populateKitList = {
             _listbox lbSetColor [_index, [0.35, 0.35, 0.35, 1]];
         };
     } forEach _kits;
+    private _display = findDisplay 2000;
+    {
+        private _ctrl = _display displayCtrl _x;
+        if (!isNull _ctrl) then {
+            _ctrl ctrlShow (FST_CurrentKitCategory isEqualTo "ranger");
+        };
+    } forEach [1610,1611,1612,1613,1614,2610,2611,2612,2613,2614];
+    private _jpBtn = _display displayCtrl 1615;
+    if (!isNull _jpBtn) then {
+        _jpBtn ctrlSetText "\41st_KitMenu\data\jumppack.paa";
+        _jpBtn ctrlShow (FST_CurrentKitCategory isEqualTo "ranger");
+        _jpBtn ctrlSetEventHandler ["ButtonClick", "[] call FST_fnc_toggleJumppack;"];
+    };
 };
 
 FST_ToggleKitCategory = {
     playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
-    private _order = ["regular", "airborne", "pilot"];
+    private _order = ["regular", "airborne", "ranger", "pilot"];
     private _idx = _order find FST_CurrentKitCategory;
     FST_CurrentKitCategory = _order select (((_idx + 1) mod count _order));
     call WBK_fnc_populateKitList;
