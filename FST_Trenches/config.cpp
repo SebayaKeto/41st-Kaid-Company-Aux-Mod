@@ -11,7 +11,9 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"FST_Trench_Short"
+			"FST_Trench_Short",
+			"FST_Trench_Long",
+			"FST_Trench_High"
 		};
 		weapons[]={};
 	};
@@ -51,5 +53,12 @@ class CfgVehicles
 		scopecurator = 2;
 		displayName = "Long Trench";
 		model = "FST\FST_Trenches\FST_Trench_Long.p3d";
+	};
+	class FST_Trench_High: FST_Trench_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "High Trench";
+		model = "FST\FST_Trenches\FST_Trench_High.p3d";
 	};
 };
