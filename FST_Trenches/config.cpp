@@ -61,4 +61,12 @@ class CfgVehicles
 		displayName = "High Trench";
 		model = "FST\FST_Trenches\FST_Trench_High.p3d";
 	};
+	class FST_Trench_Vehicle: FST_Trench_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Vehicle";
+		model = "FST\FST_Trenches\FST_Trench_Vehicle.p3d";
+	};
+};
 };
