@@ -15,7 +15,8 @@ class CfgPatches
 			"FST_Trench_Long",
 			"FST_Trench_High",
 			"FST_Trench_Vehicle",
-			"FST_Trench_Varactyl"
+			"FST_Trench_Varactyl",
+			"FST_Trench_Foxhole"
 		};
 		weapons[]={};
 	};
@@ -76,5 +77,12 @@ class CfgVehicles
 		scopecurator = 2;
 		displayName = "Varactyl Trench";
 		model = "FST\FST_Trenches\FST_Trench_Dorito.p3d";
+	};
+	class FST_Trench_Foxhole: FST_Trench_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Foxhole Trench";
+		model = "FST\FST_Trenches\FST_Trench_Foxhole.p3d";
 	};
 };
