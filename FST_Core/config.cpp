@@ -28,6 +28,10 @@ class CfgEditorCategories
 	{
 		displayname = "[FST] GAR Barricades";
 	};
+	class FST_CatagoryTrenches
+	{
+		displayname = "[FST] GAR Trenches";
+	};
 	class FST_CatagoryVegetationKashyyyk
 	{
 		displayname = "[FST] Kashyyyk Vegetation";
@@ -38,6 +42,10 @@ class CfgEditorSubcategories
 	class FST_Subcategory_SecurityBarricades
 	{
 		displayName = "Security Barricades";
+	};
+	class FST_Subcategory_TrenchesEntrenchingTool
+	{
+		displayName = "Trenches (Entrenching Tool)";
 	};
 	class FST_Subcategory_KashyyykVines
 	{
