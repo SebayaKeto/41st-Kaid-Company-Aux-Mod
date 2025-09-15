@@ -62,6 +62,9 @@ class CfgWeapons
 		{
 			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Woodland.paa",
 		};
+		visionMode[] = {"Normal","NVG","Ti"};
+        thermalMode[] = {0,1};
+
 	};
 	class FST_Midnight_Electrobinoculars: FST_Electrobinoculars
 	{
@@ -74,6 +77,8 @@ class CfgWeapons
 		{
 			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Midnight.paa",
 		};
+		visionMode[] = {"Normal","NVG","Ti"};
+        thermalMode[] = {0,1};
 	};
 	class FST_Urban_Electrobinoculars: FST_Electrobinoculars
 	{
@@ -86,6 +91,8 @@ class CfgWeapons
 		{
 			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Urban.paa",
 		};
+		visionMode[] = {"Normal","NVG","Ti"};
+        thermalMode[] = {0,1};
 	};
 	class FST_Desert_Electrobinoculars: FST_Electrobinoculars
 	{
@@ -98,6 +105,8 @@ class CfgWeapons
 		{
 			"41st_Weapons\Electrobinoculars\Data\FST_Electro_Binos_Desert.paa",
 		};
+		visionMode[] = {"Normal","NVG","Ti"};
+        thermalMode[] = {0,1};
 	};
 	class FST_ARF_Electrobinoculars: FST_Electrobinoculars
 	{
