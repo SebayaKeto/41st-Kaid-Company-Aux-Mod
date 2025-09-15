@@ -44,8 +44,12 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 		displayName = "Short Trench";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier_co.paa"};
-		hiddenSelectionsMaterials[] = {"FST\FST_Barricades\Data\Textures\FSTBarrier.rvmat"};
+	};
+	class FST_Trench_Long: FST_Trench_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Long Trench";
+		model = "FST\FST_Trenches\FST_Trench_Long.p3d";
 	};
 };
