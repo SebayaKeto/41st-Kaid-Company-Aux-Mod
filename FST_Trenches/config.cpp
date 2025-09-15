@@ -16,7 +16,9 @@ class CfgPatches
 			"FST_Trench_High",
 			"FST_Trench_Vehicle",
 			"FST_Trench_Varactyl",
-			"FST_Trench_Foxhole"
+			"FST_Trench_Foxhole",
+			"FST_Trench_Big",
+			"FST_Trench_Giant"
 		};
 		weapons[]={};
 	};
@@ -84,5 +86,19 @@ class CfgVehicles
 		scopecurator = 2;
 		displayName = "Foxhole Trench";
 		model = "FST\FST_Trenches\FST_Trench_Foxhole.p3d";
+	};
+	class FST_Trench_Big: FST_Trench_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Big Trench";
+		model = "FST\FST_Trenches\FST_Trench_Big.p3d";
+	};
+	class FST_Trench_Giant: FST_Trench_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Giant Trench";
+		model = "FST\FST_Trenches\FST_Trench_Giant.p3d";
 	};
 };
