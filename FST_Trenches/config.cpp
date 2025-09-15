@@ -69,4 +69,3 @@ class CfgVehicles
 		model = "FST\FST_Trenches\FST_Trench_Vehicle.p3d";
 	};
 };
-};
