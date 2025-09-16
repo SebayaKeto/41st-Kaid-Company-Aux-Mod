@@ -22825,6 +22825,11 @@ class CfgVehicles
 				count=6;
 				magazine="ACE_40mm_Flare_Red";
 			};
+			class _xx_ACE_HuntIR_M203
+			{
+				count=5;
+				magazine="ACE_HuntIR_M203";
+			};
 			class _xx_ACE_40mm_Flare_White
 			{
 				count=6;

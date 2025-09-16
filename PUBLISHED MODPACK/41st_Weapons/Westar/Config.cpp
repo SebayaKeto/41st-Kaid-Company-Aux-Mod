@@ -454,14 +454,18 @@ class CfgWeapons
 			{
 				"FST_HE_LauncherGrenade",
 				"FST_HE_LauncherGrenade_Delayed_5",
-				"IDA_Smoke_LauncherGrenade",
-				"IDA_SmokeRed_LauncherGrenade",
-				"IDA_SmokeGreen_LauncherGrenade",
-				"IDA_SmokeBlue_LauncherGrenade",
-				"IDA_SmokePurple_LauncherGrenade",
+				//"FST_TDHE_LauncherGrenade",
+				"FST_Smoke_LauncherGrenade",
+				"FST_SmokeRed_LauncherGrenade",
+				"FST_SmokeGreen_LauncherGrenade",
+				"FST_SmokeBlue_LauncherGrenade",
+				"FST_SmokePurple_LauncherGrenade",
+				"FST_Droid_Popper_Launcher",
 				"ACE_40mm_Flare_Red",
+				"ACE_40mm_Flare_green",
 				"ACE_40mm_Flare_White",
-				"ACE_HuntIR_M203",
+				"ACE_40mm_Flare_ir",
+				"ACE_HuntIR_M203"
 			};
 			magazineWell[]={};
 			cameraDir="OP_look";
