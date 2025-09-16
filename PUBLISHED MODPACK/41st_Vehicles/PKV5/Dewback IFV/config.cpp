@@ -150,23 +150,23 @@ class CfgVehicles
 			"passenger_flatground_generic12"
 		};
 		class TransportItems
-			{
+		{
 			class _xx_IDA_Cauterizer
-				{
-					name="IDA_Cauterizer";
-					count=1;
-				};
+			{
+				name="IDA_Cauterizer";
+				count=1;
+			};
 			class _xx_FST_Bacta_Tank
-				{
-					name="FST_Bacta_Tank";
-					count=1;
-				};
+			{
+				name="FST_Bacta_Tank";
+				count=1;
+			};
 			class _xx_ToolKit
-				{
+			{
 				name="Toolkit";
 				count=1;
+			};
 		};
-	};
 		weapon[]=
 		{
 			"TruckHorn2"
@@ -931,10 +931,10 @@ class CfgVehicles
 			};
 		};
 		simulation="tankX";
-		enginePower=1500;
+		enginePower=1650; //1500
 		maxOmega=320;
-		peakTorque=7000;
-		maxSpeed=80;
+		peakTorque=7700; //7000
+		maxSpeed=90; //80
 		torqueCurve[]=
 		{
 			{0,0},
@@ -1250,7 +1250,7 @@ class CfgVehicles
 								name="vezVelitele";
 								visual="vezVelitele";
 								passThrough=0;
-								minimalHit=0.029999999;
+								minimalHit=0.2; //0.029999999
 								explosionShielding=0.60000002;
 								radius=0.25;
 							};
@@ -1261,7 +1261,7 @@ class CfgVehicles
 								name="zbranVelitele";
 								visual="zbranVelitele";
 								passThrough=0;
-								minimalHit=0.029999999;
+								minimalHit=0.5; //0.029999999
 								explosionShielding=0.60000002;
 								radius=0.25;
 							};
@@ -1359,7 +1359,7 @@ class CfgVehicles
 						name="vez";
 						visual="vez";
 						passThrough=0;
-						minimalHit=0.02;
+						minimalHit=0.2; //0.02
 						explosionShielding=0.30000001;
 						radius=0.25;
 					};
@@ -1370,7 +1370,7 @@ class CfgVehicles
 						name="zbran";
 						visual="";
 						passThrough=0;
-						minimalHit=0;
+						minimalHit=0.5; //0
 						explosionShielding=1;
 						radius=0.25;
 					};
