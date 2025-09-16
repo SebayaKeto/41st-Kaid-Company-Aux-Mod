@@ -6285,9 +6285,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelections[]=
 		{
 			"camo1",
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Woodland.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Woodland.paa"
 		};
 		subItems[]=
@@ -6300,7 +6302,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 			hiddenSelections[]=
 			{
-				"camo1"
+				"camo1",
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -6330,9 +6333,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelections[]=
 		{
 			"camo1",
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa"
 		};
 		subItems[]=
@@ -6345,7 +6350,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 			hiddenSelections[]=
 			{
-				"camo1"
+				"camo1",
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -6375,9 +6381,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelections[]=
 		{
 			"camo1",
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa"
 		};
 		subItems[]=
@@ -6390,7 +6398,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 			hiddenSelections[]=
 			{
-				"camo1"
+				"camo1",
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
@@ -6420,9 +6429,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelections[]=
 		{
 			"camo1",
+			"visor"
 		};
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa"
 		};
 		subItems[]=
@@ -6435,7 +6446,8 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 			hiddenSelections[]=
 			{
-				"camo1"
+				"camo1",
+				"visor"
 			};
 			allowedSlots[]={801,901,701,605};
 			modelSides[]={6};
