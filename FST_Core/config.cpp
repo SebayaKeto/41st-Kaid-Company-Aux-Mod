@@ -47,6 +47,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Trenches (Entrenching Tool)";
 	};
+	class FST_Subcategory_TrenchesEngineered
+	{
+		displayName = "Trenches (Engineered)";
+	};
 	class FST_Subcategory_KashyyykVines
 	{
 		displayName = "Kashyyyk Vines";

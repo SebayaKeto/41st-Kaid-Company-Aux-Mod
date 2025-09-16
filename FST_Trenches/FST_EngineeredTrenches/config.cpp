@@ -40,59 +40,19 @@ class CfgVehicles
 		eden = 1;
 	};
 	// Base Asset and Texture
-	class FST_Trench_Engineered_Short: FST_Trench_Base
+	class FST_Trench_Engineered_Short: FST_Trench_EngineeredBase
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Short Trench";
+		displayName = "Engineered Short Trench";
+		HiddenSelections[] = {"Camo","Camo1"};
+		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa"};
+		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat"};
 	};
-	class FST_Trench_Engineered_ArmoredShort: FST_Trench_Base
+	class FST_Trench_Engineered_ArmoredShort: FST_Trench_EngineeredBase
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Long Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Long.p3d";
-	};
-	class FST_Trench_High: FST_Trench_Base
-	{
-		scope = 2;
-		scopecurator = 2;
-		displayName = "High Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_High.p3d";
-	};
-	class FST_Trench_Vehicle: FST_Trench_Base
-	{
-		scope = 2;
-		scopecurator = 2;
-		displayName = "Vehicle Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Vehicle.p3d";
-	};
-	class FST_Trench_Varactyl: FST_Trench_Base
-	{
-		scope = 2;
-		scopecurator = 2;
-		displayName = "Varactyl Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Dorito.p3d";
-	};
-	class FST_Trench_Foxhole: FST_Trench_Base
-	{
-		scope = 2;
-		scopecurator = 2;
-		displayName = "Foxhole Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Foxhole.p3d";
-	};
-	class FST_Trench_Big: FST_Trench_Base
-	{
-		scope = 2;
-		scopecurator = 2;
-		displayName = "Big Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Big.p3d";
-	};
-	class FST_Trench_Giant: FST_Trench_Base
-	{
-		scope = 2;
-		scopecurator = 2;
-		displayName = "Giant Trench";
-		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Giant.p3d";
+		displayName = "Engineered Short Trench (Armored)";
 	};
 };
