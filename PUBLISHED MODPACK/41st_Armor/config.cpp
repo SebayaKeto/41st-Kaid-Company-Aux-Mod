@@ -1474,6 +1474,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Woodland.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
+		};
 		class ItemInfo: VestItem
 		{
 			vesttype="Rebreather";
@@ -1538,6 +1542,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -1604,6 +1612,10 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Desert.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
+		};
 		class ItemInfo: VestItem
 		{
 			vesttype="Rebreather";
@@ -1668,6 +1680,10 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -6292,6 +6308,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Woodland.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Woodland.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -6339,6 +6360,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
 		};
 		subItems[]=
 		{
@@ -6388,6 +6414,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
+		};
 		subItems[]=
 		{
 			"Integrated_NVG_TI_1_F"
@@ -6435,6 +6466,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
 		};
 		subItems[]=
 		{
@@ -29063,6 +29099,11 @@ class CfgVehicles
 			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Woodland.paa",
 			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Woodland.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"ls\core\addons\characters_clone\uniforms\scout\data\camo1.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Armor.rvmat"
+		};
 		weapons[]=
 		{
 			"Throw",
@@ -29373,6 +29414,11 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Midnight.paa",
 			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Midnight.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"ls\core\addons\characters_clone\uniforms\scout\data\camo1.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Armor.rvmat"
 		};
 		weapons[]=
 		{
@@ -29685,6 +29731,11 @@ class CfgVehicles
 			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Desert.paa",
 			"41st_Armor\Data\Uniforms\FST_Scout_Armor_Desert.paa"
 		};
+		hiddenSelectionsMaterials[]=
+		{
+			"ls\core\addons\characters_clone\uniforms\scout\data\camo1.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Armor.rvmat"
+		};
 		weapons[]=
 		{
 			"Throw",
@@ -29990,6 +30041,11 @@ class CfgVehicles
 		{
 			"camo1",
 			"camo2"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"ls\core\addons\characters_clone\uniforms\scout\data\camo1.rvmat",
+			"41st_Armor\Data\Other\Camos\Clone_Scout_Armor.rvmat"
 		};
 		hiddenSelectionsTextures[]=
 		{
