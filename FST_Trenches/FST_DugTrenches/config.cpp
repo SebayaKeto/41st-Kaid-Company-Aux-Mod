@@ -42,6 +42,9 @@ class CfgVehicles
 		destrType = "DestructNo";
 		displayName = "Short Trench";
 		model = "FST\FST_Trenches\FST_DugTrenches\FST_Trench_Short.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"FST\FST_Common\Data\Textures\DarkBrownStone\DarkBrownStone_co.paa"};
+		hiddenSelectionsMaterials[] = {"FST\FST_Common\Data\Textures\DarkBrownStone\DarkBrownStone.rvmat"};
 		faction = "prop";
 		eden = 1;
 	};
