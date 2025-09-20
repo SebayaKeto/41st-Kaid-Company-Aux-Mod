@@ -13333,7 +13333,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		subItems[]=
 		{
-			"k_nvg"
+			"Integrated_NVG_TI_1_F"
 		};
 		class Iteminfo: HeadgearItem
 		{
