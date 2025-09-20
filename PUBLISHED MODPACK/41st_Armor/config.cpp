@@ -250,6 +250,7 @@ class CfgPatches
 			"FST_P2_Stec",
 			"FST_P2_Riley",
 			"FST_P2_Felix",
+			"FST_P2_Felix_Dirty",
 			"FST_P2_Vixen",
 			"FST_P2_Salt",
 			"FST_P2_Cooker",
@@ -14695,6 +14696,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ginger.paa",
 		};
 	};	
+	class FST_P2_Helmet_Honsou: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Honsou]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Honsou.paa",
+		};
+	};
 	class FST_P2_Helmet_Felix: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -14705,6 +14716,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Felix.paa",
 		};
 	};	
+	class FST_P2_Helmet_Felix_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Felix/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Felix_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Seraph: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -45571,6 +45592,59 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Felix",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Felix_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-1037 'Felix/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Felix_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Felix_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Felix_Dirty.Paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Felix_Dirty",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Felix_Dirty",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
