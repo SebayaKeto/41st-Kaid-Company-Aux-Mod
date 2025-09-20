@@ -32,7 +32,11 @@ class CfgMusicClasses
 	};
 	class FST_Mission_Music
 	{
-		displayName="41st - Mission Tracks (Daara Only)";
+		displayName="41st - Mission Tracks";
+	};
+	class FST_KPDH_Music
+	{
+		displayName="41st - Kpop Demon Hunters Tracks";
 	};
 };
 
@@ -160,6 +164,14 @@ class CfgMusic
 		"FST_Rakghoul",
 		"FST_UnityInBattle",
 		"FST_Order66",
+		
+		//KPOP Demon Hunters
+		"FST_Golden",
+		"FST_HowItsDone",
+		"FST_Takedown",
+		"FST_WhatItSoundsLike",
+		"FST_YourIdol",
+		"FST_SodaPop",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -1534,6 +1546,80 @@ class CfgMusic
 		};
 		duration="264";
 	};
-		
+	
+	//Kpop Demon Hunters
+	
+	class FST_Golden
+	{
+		name="Huntrix - Golden";
+		musicClass="FST_KPDH_Music";
+		sound[]=
+		{
+			"41st_Music\KPDHTracks\Golden.ogg",
+			1,
+			1
+		};
+		duration="192";
+	};
+	class FST_HowItsDone
+	{
+		name="Huntrix - How Its Done";
+		musicClass="FST_KPDH_Music";
+		sound[]=
+		{
+			"41st_Music\KPDHTracks\HowItsDone.ogg",
+			1,
+			1
+		};
+		duration="180";
+	};	
+	class FST_Takedown
+	{
+		name="Huntrix - Takedown";
+		musicClass="FST_KPDH_Music";
+		sound[]=
+		{
+			"41st_Music\KPDHTracks\Takedown.ogg",
+			1,
+			1
+		};
+		duration="182";
+	};	
+	class FST_WhatItSoundsLike
+	{
+		name="Huntrix - What It Sounds Like";
+		musicClass="FST_KPDH_Music";
+		sound[]=
+		{
+			"41st_Music\KPDHTracks\WhatItSoundsLike.ogg",
+			1,
+			1
+		};
+		duration="250";
+	};	
+	class FST_YourIdol
+	{
+		name="Saja Boys - Your Idol";
+		musicClass="FST_KPDH_Music";
+		sound[]=
+		{
+			"41st_Music\KPDHTracks\YourIdol.ogg",
+			1,
+			1
+		};
+		duration="192";
+	};	
+	class FST_SodaPop
+	{
+		name="Saja Boys - Soda Pop";
+		musicClass="FST_KPDH_Music";
+		sound[]=
+		{
+			"41st_Music\KPDHTracks\SodaPop.ogg",
+			1,
+			1
+		};
+		duration="210";
+	};	
 };
 
