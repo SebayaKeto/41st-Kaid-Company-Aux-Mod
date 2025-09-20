@@ -104,6 +104,7 @@ class CfgMusic
 		"FST_Destiny_TheLinguist",
 		"FST_Halo_ThroughTheTrees",
 		"FST_Destiny_BringTheHaul",
+		"FST_Destiny_TheWarmindRemix",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -768,6 +769,18 @@ class CfgMusic
 			1
 		};
 		duration="255";
+	};
+	class FST_Destiny_TheWarmindRemix
+	{
+		name="(Destiny 2) The Warmind (Remix) ";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny2_TheWarmindRemix.ogg",
+			1,
+			1
+		};
+		duration="406";
 	};
 	class FST_WT_WaltzoftheTornado
 	{
