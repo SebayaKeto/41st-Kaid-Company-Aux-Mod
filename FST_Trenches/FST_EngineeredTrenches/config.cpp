@@ -35,16 +35,19 @@ class CfgVehicles
 		mapSize = 1;
 		destrType = "DestructNo";
 		displayName = "Engineered Short Trench";
-		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredShort.p3d";
+		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredSmall.p3d";
+		HiddenSelections[] = {"Camo","Camo1","Camo2","Camo3"};
+		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3_co.paa"};
+		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3.rvmat"};
 		faction = "prop";
 		eden = 1;
 	};
 	// Base Asset and Texture
-	class FST_Trench_Engineered_Short: FST_Trench_EngineeredBase
+	class FST_Trench_Engineered_Small: FST_Trench_EngineeredBase
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Engineered Short Trench";
+		displayName = "Engineered Small Trench";
 		HiddenSelections[] = {"Camo","Camo1","Camo2","Camo3"};
 		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3_co.paa"};
 		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3.rvmat"};
@@ -53,6 +56,43 @@ class CfgVehicles
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Engineered Short Trench (Armored)";
+		displayName = "Engineered Small Trench (Armored)";
+		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredArmoredSmall.p3d";
+	};
+	class FST_Trench_Engineered_Medium: FST_Trench_EngineeredBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Engineered Medium Trench";
+		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredMedium.p3d";
+		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3_co.paa"};
+		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3.rvmat"};
+	};
+	class FST_Trench_Engineered_ArmoredMedium: FST_Trench_EngineeredBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Engineered Medium Trench (Armored)";
+		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredArmoredMedium.p3d";
+		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3_co.paa"};
+		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3.rvmat"};
+	};
+	class FST_Trench_Engineered_Large: FST_Trench_EngineeredBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Engineered Large Trench";
+		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredLarge.p3d";
+		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3_co.paa"};
+		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3.rvmat"};
+	};
+	class FST_Trench_Engineered_ArmoredLarge: FST_Trench_EngineeredBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Engineered Large Trench (Armored)";
+		model = "FST\FST_Trenches\FST_EngineeredTrenches\FST_Trench_EngineeredArmoredLarge.p3d";
+		HiddenSelectionsTextures[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1_co.paa","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates_co.paa","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3_co.paa"};
+		HiddenSelectionsMaterials[] = {"FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo1.rvmat","FST\FST_Common\Data\Textures\SteelPlates\SteelPlates.rvmat","FST\FST_Trenches\FST_EngineeredTrenches\Data\Textures\Camo3.rvmat"};
 	};
 };
