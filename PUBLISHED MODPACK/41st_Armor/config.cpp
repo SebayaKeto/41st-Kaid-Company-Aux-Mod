@@ -20905,6 +20905,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
             mass=15;
         };
     };
+	class FST_Uniform_Jericho: JLTS_CloneArmor
+    {
+        author="Steel";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Jericho]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Jericho";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Felix: JLTS_CloneArmor
     {
         author="Viz";
@@ -45855,6 +45869,59 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Fizz",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Jericho: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-7473 'Jericho'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Jericho";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jericho.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Jericho.Paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Jericho",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Jericho",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
