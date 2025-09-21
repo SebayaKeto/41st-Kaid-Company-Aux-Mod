@@ -1844,7 +1844,7 @@ class CfgVehicles
 		uniformClass="FST_DroidBX";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
-		armor=35;
+		armor=60;
 		armorStructural=100;
 		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
 		hiddenSelections[]=
@@ -1914,7 +1914,7 @@ class CfgVehicles
 		uniformClass="FST_DroidBX";
 		faction="FST_Tukata_Faction";
 		editorSubcategory="FST_Tukata_Subfaction";
-		armor=25;
+		armor=60;
 		armorStructural=100;
 		weapons[]=
 		{
@@ -3060,7 +3060,7 @@ class CfgVehicles
 			"FST_blaster_cell_High_Blue"
 		};
 		armor=4; 
-		armorStructural=1;
+		armorStructural=3;
 		explosionshielding=6;
 		class HitPoints: HitPoints
 		{
