@@ -109,6 +109,7 @@ class CfgMusic
 		"FST_Halo_ThroughTheTrees",
 		"FST_Destiny_BringTheHaul",
 		"FST_Destiny_TheWarmindRemix",
+		"FST_Destiny_DreadfulHarmony",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -793,6 +794,18 @@ class CfgMusic
 			1
 		};
 		duration="406";
+	};
+	class FST_Destiny_DreadfulHarmony
+	{
+		name="(Destiny 2) Deadful Harmony (High Action) ";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny2_DreadfulHarmony.ogg",
+			1,
+			1
+		};
+		duration="146";
 	};
 	class FST_WT_WaltzoftheTornado
 	{
