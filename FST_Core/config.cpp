@@ -51,6 +51,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Trenches (Engineered)";
 	};
+	class FST_Subcategory_TrenchesBastion
+	{
+		displayName = "Trenches (Bastion)";
+	};
 	class FST_Subcategory_KashyyykVines
 	{
 		displayName = "Kashyyyk Vines";
