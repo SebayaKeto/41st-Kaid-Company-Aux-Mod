@@ -110,6 +110,7 @@ class CfgMusic
 		"FST_Destiny_BringTheHaul",
 		"FST_Destiny_TheWarmindRemix",
 		"FST_Destiny_DreadfulHarmony",
+		"FST_Destiny_UnswornUnlovedErased",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -758,6 +759,18 @@ class CfgMusic
 			1
 		};
 		duration="162";
+	};
+	class FST_Destiny_UnswornUnlovedErased
+	{
+		name="(Destiny 2) Unsworn, Unloved, Erased";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny2_Unsworn_Unloved_Erased.ogg",
+			1,
+			1
+		};
+		duration="189";
 	};
 	class FST_Halo_ThroughTheTrees
 	{
