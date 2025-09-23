@@ -111,7 +111,7 @@ class CfgMusic
 		"FST_Destiny_TheWarmindRemix",
 		"FST_Destiny_DreadfulHarmony",
 		"FST_Destiny_UnswornUnlovedErased",
-		
+		"FST_Starwars_ImHanSolo",
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
 		"FST_Inception_DreamIsCollapsing",
@@ -771,6 +771,18 @@ class CfgMusic
 			1
 		};
 		duration="189";
+	};
+	class FST_Starwars_ImHanSolo
+	{
+		name="(Kinect Star Wars) I'm Han Solo"
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\StarWars_ImHanSolo.ogg",
+			1,
+			1
+		};
+		duration="231";
 	};
 	class FST_Halo_ThroughTheTrees
 	{
