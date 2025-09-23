@@ -950,7 +950,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"FST_CloneVestARC_Camo",
 				"FST_CloneVestARC_Tally",
 				"FST_CloneVestARC_Burns",
-				"FST_CloneVestARC_Major"
+				"FST_CloneVestARC_Major",
+				"FST_CloneVestARC_Mono",
+				"FST_CloneVestARC_Squatch"
 			];
 			private _allowedFaces = [
 				"FST_Heavy_Veteran_Face",
