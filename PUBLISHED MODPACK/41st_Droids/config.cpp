@@ -15,8 +15,14 @@ class CfgPatches
 			"FST_Droid_B1_OOM",
 			"FST_CIS_TS_F",
 			"FST_BX",
+			"FST_BX_Rusty",
 			"FST_BX_Tukata",
+			"FST_BX_AT",
+			"FST_BX_AT_Rusty",
+			"FST_BX_AA",
+			"FST_BX_AA_Rusty",
 			"FST_BX_Sniper",
+			"FST_BX_Sniper_Rusty",
 			"FST_BX_Sniper_Tukata",
 			"FST_B2",
 			"FST_B2_TL",
@@ -411,6 +417,23 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class FST_DroidBX_Rusty: FST_DroidB1
+	{
+		author="Steel";
+		scope=2;
+		displayname="[41st] BX Combat Uniform (Rusty)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+        JLTS_deathSounds="";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_BX_Rusty";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
 	class FST_DroidBX_Tukata: FST_DroidB1
 	{
 		author="Gold";
@@ -640,6 +663,7 @@ class CfgVehicles
 {
 	class JLTS_B1_Backpack;
 	class JLTS_B1_antenna;
+	class FST_Backpack_RTO_Hidden;
 	class 3AS_B_CloneGM_Base_F;
 	class FST_B1_Backpack: JLTS_B1_Backpack
 	{
@@ -821,6 +845,30 @@ class CfgVehicles
 			{
 				count=10;
 				magazine="FST_Droid_blaster_battery_Red";
+			};
+		};
+	};
+	class FST_BX_InvisAT: FST_Backpack_RTO_Hidden
+	{
+		scope=2;
+		class TransportMagazines
+		{
+			class _xx_FST_RPS6_Rocket
+			{
+				count=2;
+				magazine="FST_RPS6_Rocket";
+			};
+		};
+	};
+	class FST_BX_InvisAA: FST_Backpack_RTO_Hidden
+	{
+		scope=2;
+		class TransportMagazines
+		{
+			class _xx_FST_E60R_AA_mag
+			{
+				count=2;
+				magazine="FST_E60R_AA_mag";
 			};
 		};
 	};
@@ -1844,7 +1892,7 @@ class CfgVehicles
 		uniformClass="FST_DroidBX";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
-		armor=35;
+		armor=40;
 		armorStructural=100;
 		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
 		hiddenSelections[]=
@@ -1912,9 +1960,9 @@ class CfgVehicles
 		Backpack="";
 		displayName="[41st] BX Commando Droid (Sniper)";
 		uniformClass="FST_DroidBX";
-		faction="FST_Tukata_Faction";
-		editorSubcategory="FST_Tukata_Subfaction";
-		armor=25;
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		armor=40;
 		armorStructural=100;
 		weapons[]=
 		{
@@ -1965,6 +2013,211 @@ class CfgVehicles
 			"IDA_grenade_Detonator_mag",
 		};
 	};
+	class FST_BX_AT: FST_BX
+	{
+		scope=2;
+		author="Steel";
+		backpack="FST_BX_InvisAT";
+		displayName="[41st] BX Commando Droid (Anti-Tank)";
+		uniformClass="FST_DroidBX";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		armor=40;
+		armorStructural=100;
+		weapons[]=
+		{
+			"FST_E5",
+			"WBK_Dutch_Vibro",
+			"FST_RPS6HP",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_E5",
+			"WBK_Dutch_Vibro",
+			"FST_RPS6HP",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"JLTS_NVG_droid_chip_2",
+			"GoG_HolsterSwordVestBack",
+			"FST_HUD",
+		};
+		respawnLinkedItems[]=
+		{
+			"JLTS_NVG_droid_chip_2",
+			"GoG_HolsterSwordVestBack",
+			"FST_HUD",
+		};
+		Items[]={};
+		respawnItems[]={};
+		magazines[]=
+		{
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+			"FST_RPS6_rocket_HE",
+			"FST_RPS6_rocket_HE",
+			"FST_RPS6_rocket_HE",
+
+		};
+		respawnMagazines[]=
+		{
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+			"FST_RPS6_rocket_HE",
+			"FST_RPS6_rocket_HE",
+			"FST_RPS6_rocket_HE",
+		};
+	};
+	class FST_BX_AA: FST_BX
+	{
+		scope=2;
+		author="Steel";
+		backpack="FST_BX_InvisAA";
+		displayName="[41st] BX Commando Droid (Anti-Air)";
+		uniformClass="FST_DroidBX";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		armor=40;
+		armorStructural=100;
+		weapons[]=
+		{
+			"FST_E5",
+			"WBK_Dutch_Vibro",
+			"FST_E60R_AA",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_E5",
+			"WBK_Dutch_Vibro",
+			"FST_E60R_AA",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"JLTS_NVG_droid_chip_2",
+			"GoG_HolsterSwordVestBack",
+			"FST_HUD",
+		};
+		respawnLinkedItems[]=
+		{
+			"JLTS_NVG_droid_chip_2",
+			"GoG_HolsterSwordVestBack",
+			"FST_HUD",
+		};
+		Items[]={};
+		respawnItems[]={};
+		magazines[]=
+		{
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+			"FST_E60R_AA_mag",
+			"FST_E60R_AA_mag",
+			"FST_E60R_AA_mag",
+		};
+		respawnMagazines[]=
+		{
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"IDA_grenade_Smoke_mag",
+			"IDA_grenade_Detonator_mag",
+			"IDA_grenade_Detonator_mag",
+			"FST_E60R_AA_mag",
+			"FST_E60R_AA_mag",
+			"FST_E60R_AA_mag",
+		};
+	};
+	class FST_BX_Rusty: FST_BX
+	{
+		author="Steel";
+		displayName="[41st] BX Commando Droid (Rusty)";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
+		uniformClass="FST_DroidBX_Rusty";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_BX_Rusty_Body.paa"
+		};
+	};
+	class FST_BX_Sniper_Rusty: FST_BX_Sniper
+	{
+		author="Steel";
+		displayName="[41st] BX Commando Droid (Sniper/Rusty)";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
+		uniformClass="FST_DroidBX_Rusty";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_BX_Rusty_Body.paa"
+		};
+	};
+		class FST_BX_AT_Rusty: FST_BX_AT
+	{
+		author="Steel";
+		displayName="[41st] BX Commando Droid (Anti-Tank/Rusty)";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
+		uniformClass="FST_DroidBX_Rusty";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_BX_Rusty_Body.paa"
+		};
+	};
+	class FST_BX_AA_Rusty: FST_BX_AA
+	{
+		author="Steel";
+		displayName="[41st] BX Commando Droid (Anti-Air/Rusty)";
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
+		uniformClass="FST_DroidBX_Rusty";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_BX_Rusty_Body.paa"
+		};
+	};
 	class FST_BX_Tukata: FST_BX
 	{
 		author="Gold";
@@ -1988,6 +2241,8 @@ class CfgVehicles
 		displayName="[41st] BX Commando Droid (Sniper/Tukata)";
 		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
 		uniformClass="FST_DroidBX_Tukata";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -4425,6 +4680,140 @@ class cfgGroups
 					{
 						side=0;
 						vehicle="FST_BX_Sniper";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+				};
+				class FST_BX_AntiTankTeam
+				{
+					name="[41st] BX Anti-Tank Team";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_BX_AT";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_BX_AT";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+				};
+				class FST_BX_AntiAirTeam
+				{
+					name="[41st] BX Anti-Air Team";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_BX_AA";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_BX_AA";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+				};
+				class FST_BX_KillTeam_Rusty
+				{
+					name="[41st] BX Kill Team (Rusty)";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_BX_Rusty";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_BX_Rusty";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_BX_Rusty";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_BX_Rusty";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+				};
+				class FST_BX_SniperTeam_Rusty
+				{
+					name="[41st] BX Sniper Team (Rusty)";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_BX_Sniper_Rusty";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_BX_Sniper_Rusty";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+				};
+				class FST_BX_AntiTankTeam_Rusty
+				{
+					name="[41st] BX Anti-Tank Team (Rusty)";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_BX_AT_Rusty";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_BX_AT_Rusty";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+				};
+				class FST_BX_AntiAirTeam_Rusty
+				{
+					name="[41st] BX Anti-Air Team (Rusty)";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_BX_AA_Rusty";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_BX_AA_Rusty";
 						rank="PRIVATE";
 						position[]={0,-1,0};
 					};
