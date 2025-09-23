@@ -123,6 +123,7 @@ class CfgWeapons
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="FST_Westar_fried";
 		JLTS_repairTime=5;
 		ace_overheating_mrbs=40000;
 		ace_overheating_slowdownFactor=0;
@@ -706,6 +707,14 @@ class CfgWeapons
 				};	
 			};
 		};
+	};
+	class FST_Westar_fried: FST_Westar_M5
+	{
+		baseWeapon="FST_Westar_fried";
+		displayname = "[41st] Westar-M5 (Fried)";
+		scope = 1;
+		magazines[]={};
+		JLTS_isFried=1;
 	};	
 	class FST_Westar_M5_UGL: FST_Westar_M5
 	{
