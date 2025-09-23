@@ -2170,7 +2170,7 @@
 
 [
     this, 
-    "Platoon RTO", 
+    "Platoon RTO (UAV)", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
         [],
