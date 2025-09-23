@@ -3315,7 +3315,7 @@ class CfgVehicles
 			"FST_blaster_cell_High_Blue"
 		};
 		armor=4; 
-		armorStructural=1;
+		armorStructural=3;
 		explosionshielding=6;
 		class HitPoints: HitPoints
 		{

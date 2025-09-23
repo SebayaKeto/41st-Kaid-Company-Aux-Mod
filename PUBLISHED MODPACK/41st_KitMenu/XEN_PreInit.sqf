@@ -950,7 +950,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"FST_CloneVestARC_Camo",
 				"FST_CloneVestARC_Tally",
 				"FST_CloneVestARC_Burns",
-				"FST_CloneVestARC_Major"
+				"FST_CloneVestARC_Major",
+				"FST_CloneVestARC_Mono",
+				"FST_CloneVestARC_Squatch"
 			];
 			private _allowedFaces = [
 				"FST_Heavy_Veteran_Face",
@@ -2129,7 +2131,7 @@ if (count _aditionalGear > 0) then {
 			"Rifleman","Ammo Bearer","Engineer","Medic","Grenadier","Close Quarters Combatant",
 			"Squad Leader","RTO","Anti Tank","Squad Leader ","Ammo Bearer ","Emplaced Weapon",
 			"Pilot","Crew Chief","Crewman","Howler","Platoon RTO","Platoon Medic",
-			"Platoon Sergeant","Platoon Commander","Crewman Medic"
+			"Platoon Sergeant","Platoon Commander","Crewman Medic","Platoon RTO (UAV)"
 		];
 		private _canShowStuns = _typeOfKit in _allowedKits;
 

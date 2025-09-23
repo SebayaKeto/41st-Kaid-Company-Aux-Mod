@@ -12,6 +12,7 @@ class CfgPatches
 		{
 			"FST_DC17",
 			"FST_DC17_Primary",
+			"FST_DualDC17_ARC",
 			"FST_TwinDC17_Secondary",
 			"FST_TwinDC17_Primary"
 		};
@@ -30,6 +31,7 @@ class CfgWeapons
 	class NVGoggles;
 	class Pistol_Base_F;
 	class WeaponSlotsInfo;
+	class 3AS_DC17S_Dual_F;
 	class hgun_Pistol_heavy_01_F: Pistol_Base_F
 	{
         class WeaponSlotsInfo;
@@ -433,6 +435,141 @@ class CfgWeapons
 			displayName="Left Hand";
 			muzzlePos="usti hlavne left";
 			muzzleEnd="konec hlavne left";
+		};
+	};
+	class FST_DualDC17_ARC: 3AS_DC17S_Dual_F
+	{
+		author = "Ruby";
+		scope = 2;
+		baseweapon = "FST_DualDC17_ARC";
+		displayname = "[41st] Dual DC-17 (ARC)";
+		model="\3AS\3AS_Weapons\Republic\DC17S\3AS_DC17S_Dual_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC17S\Data\UI\3as_dc17s.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3AS\3AS_Weapons\Republic\DC17S\Data\Anim\DC17S_Dual_Handanim.rtm"
+		};
+		reloadAction="3AS_GestureReloadDualDC17S";
+		magazines[]=
+		{
+			"FST_blaster_cell_low_Blue",
+			"FST_blaster_cell_low_Green",
+			"FST_blaster_cell_low_Yellow",
+			"FST_blaster_cell_low_Red"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single"
+		};
+		class Single: Mode_SemiAuto
+		{
+	
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\41st_Weapons\DC17\Data\dc17v2 2-117.ogg",
+					1.25,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\41st_Weapons\DC17\Data\dc17v2 2-117.ogg",
+					1.25,
+					1.015,
+					1800
+				};
+				begin3[]=
+				{
+					"\41st_Weapons\DC17\Data\dc17v2 2-117.ogg",
+					1.25,
+					0.98500001,
+					1800
+				};
+				begin4[]=
+				{
+					"\41st_Weapons\DC17\Data\dc17v2 2-117.ogg",
+					1.25,
+					1.01,
+					1800
+				};
+				begin5[]=
+				{
+					"\41st_Weapons\DC17\Data\dc17v2 2-117.ogg",
+					1.25,
+					0.995,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\41st_Weapons\DC17\Data\dc17v2 2-117.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			reloadTime=0.1;
+			dispersion=0.0011;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=20;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
 		};
 	};
 };
