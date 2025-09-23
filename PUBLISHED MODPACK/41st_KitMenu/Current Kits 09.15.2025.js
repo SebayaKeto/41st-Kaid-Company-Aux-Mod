@@ -1188,6 +1188,55 @@
 ] spawn Wbk_AddKit;
 
 [
+    this, 
+    "Platoon RTO (UAV)", 
+    [
+        ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
+        [],
+        [],
+        ["FST_Trooper_Uniform",[
+            ["IDA_BactaBandage",20],
+            ["IDA_BattleStim",2],
+            ["ACE_splint",4],
+            ["ACE_tourniquet",5],
+            ["ACE_EntrenchingTool",1],
+            ["WBK_HeadLampItem_Double",1],
+            ["ACE_Flashlight_XL50",1],
+            ["ACE_IR_Strobe_Item",1],
+            ["ACE_CableTie",2],
+            ["ACE_MapTools",1],
+            ["ItemAndroid",1],
+            ["IDA_grenade_Smoke_Purple_mag",2,1]
+        ]],
+        ["FST_Vest_NCO_Kama",[
+            ["FST_blaster_cell_High_Blue",12,40],
+            ["FST_grenade_Detonator_mag",3,1],
+            ["IDA_grenade_Smoke_mag",3,1],
+            ["IDA_grenade_Smoke_Blue_mag",1,1],
+            ["ls_grenade_chemlightGreen_magazine",1,1],
+            ["IDA_grenade_Smoke_Purple_mag",1,1]
+        ]],
+        ["FST_Backpack_Antenna",[
+            ["IDA_grenade_Smoke_mag",10,1],
+            ["IDA_grenade_Smoke_Blue_mag",5,1],
+            ["IDA_grenade_Smoke_Green_mag",5,1],
+            ["IDA_grenade_Smoke_Red_mag",5,1],
+            ["ACE_UAVBattery",1],
+            ["DRNP_AR2P",1],
+            ["IDA_grenade_Smoke_Purple_mag",3,1]
+        ]],
+        "FST_P2_Helmet",
+        "", 
+        ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
+        ["ItemMap","B_UavTerminal","FST_clone_comlink","ItemCompass","ItemWatch",""]
+    ], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","FST_DC15LE","UNSC_Knife","FST_RPS6_Disposable","FST_NVG","FST_DC17","FST_TwinDC17_Secondary","FST_Vest_NCO_Kama","FST_Vest_NCO_Kama_Veteran","FST_Westar_M5","FST_Westar_M5_UGL"], 
+    "true",
+    {},
+    "regular"
+] spawn Wbk_AddKit;
+
+[
     this,
     "Platoon RTO",
     [
@@ -1227,6 +1276,55 @@
         "",
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
+    ],
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","FST_DC15LE","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL","FST_CloneVestAirborneNCO", "FST_CloneVestAirborneNCO_Veteran"], 
+    "true",
+    {},
+    "airborne"
+] spawn Wbk_AddKit;
+
+[
+    this,
+    "Platoon RTO (UAV)",
+    [
+        ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
+        [],
+        [],
+        ["FST_Trooper_Uniform",[
+            ["IDA_BactaBandage",20],
+            ["IDA_BattleStim",2],
+            ["ACE_splint",4],
+            ["ACE_tourniquet",5],
+            ["ACE_EntrenchingTool",1],
+            ["WBK_HeadLampItem_Double",1],
+            ["ACE_Flashlight_XL50",1],
+            ["ACE_IR_Strobe_Item",1],
+            ["ACE_CableTie",2],
+            ["ACE_MapTools",1],
+            ["ItemAndroid",1],
+            ["IDA_grenade_Smoke_Purple_mag",2,1]
+        ]],
+        ["FST_CloneVestAirborneNCO",[
+            ["FST_blaster_cell_High_Blue",12,40],
+            ["FST_grenade_Detonator_mag",3,1],
+            ["IDA_grenade_Smoke_mag",3,1],
+            ["IDA_grenade_Smoke_Blue_mag",1,1],
+            ["ls_grenade_chemlightGreen_magazine",1,1],
+            ["IDA_grenade_Smoke_Purple_mag",1,1]
+        ]],
+        ["FST_Backpack_Jumppack_LR_UGL",[
+            ["IDA_grenade_Smoke_mag",10,1],
+            ["IDA_grenade_Smoke_Blue_mag",5,1],
+            ["IDA_grenade_Smoke_Green_mag",5,1],
+            ["IDA_grenade_Smoke_Red_mag",5,1],
+            ["ACE_UAVBattery",1],
+            ["DRNP_AR2P",1],
+            ["IDA_grenade_Smoke_Purple_mag",3,1]
+        ]],
+        "FST_Airborne_Helmet",
+        "",
+        ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
+        ["ItemMap","B_UavTerminal","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
     ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","FST_DC15LE","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL","FST_CloneVestAirborneNCO", "FST_CloneVestAirborneNCO_Veteran"], 
     "true",
@@ -2063,6 +2161,56 @@
         "", 
         ["FST_Woodland_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
+    ], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","FST_DC15LE","UNSC_Knife","FST_RPS6_Disposable","FST_NVG_Woodland","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
+    "true",
+    {},
+    "ranger"
+] spawn Wbk_AddKit;
+
+[
+    this, 
+    "Platoon RTO", 
+    [
+        ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
+        [],
+        [],
+        ["FST_Uniform_Woodland",[
+            ["ItemcTabHCam",1],
+            ["IDA_BactaBandage",20],
+            ["IDA_BattleStim",2],
+            ["ACE_splint",4],
+            ["ACE_tourniquet",5],
+            ["ACE_EntrenchingTool",1],
+            ["WBK_HeadLampItem_Double",1],
+            ["ACE_Flashlight_XL50",1],
+            ["ACE_IR_Strobe_Item",1],
+            ["ACE_CableTie",2],
+            ["ACE_MapTools",1],
+            ["ItemcTab",1],
+            ["IDA_grenade_Smoke_Purple_mag",2,1]
+        ]],
+        ["FST_Vest_NCO_Kama_Woodland",[
+            ["FST_blaster_cell_High_Blue",12,40],
+            ["FST_grenade_Detonator_mag",3,1],
+            ["IDA_grenade_Smoke_mag",3,1],
+            ["IDA_grenade_Smoke_Blue_mag",1,1],
+            ["ls_grenade_chemlightGreen_magazine",1,1],
+            ["IDA_grenade_Smoke_Purple_mag",1,1]
+        ]],
+        ["FST_Backpack_Antenna_Woodland",[
+            ["IDA_grenade_Smoke_mag",10,1],
+            ["IDA_grenade_Smoke_Blue_mag",5,1],
+            ["IDA_grenade_Smoke_Green_mag",5,1],
+            ["IDA_grenade_Smoke_Red_mag",5,1],
+            ["ACE_UAVBattery",1],
+            ["DRNP_AR2P",1],
+            ["IDA_grenade_Smoke_Purple_mag",3,1]
+        ]],
+        "FST_P2_Helmet_Woodland",
+        "", 
+        ["FST_Woodland_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
+        ["ItemMap","B_UavTerminal","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ], 
     ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","FST_DC15LE","UNSC_Knife","FST_RPS6_Disposable","FST_NVG_Woodland","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
     "true",

@@ -2129,7 +2129,7 @@ if (count _aditionalGear > 0) then {
 			"Rifleman","Ammo Bearer","Engineer","Medic","Grenadier","Close Quarters Combatant",
 			"Squad Leader","RTO","Anti Tank","Squad Leader ","Ammo Bearer ","Emplaced Weapon",
 			"Pilot","Crew Chief","Crewman","Howler","Platoon RTO","Platoon Medic",
-			"Platoon Sergeant","Platoon Commander","Crewman Medic"
+			"Platoon Sergeant","Platoon Commander","Crewman Medic","Platoon RTO (UAV)"
 		];
 		private _canShowStuns = _typeOfKit in _allowedKits;
 
