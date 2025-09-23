@@ -23,7 +23,7 @@ class Stage1
 
 {
 
-	texture = "FST\FST_Trenches\FST_BastionTrenches\Data\Textures\Camo_NOHQ.paa";
+	texture = "FST\FST_Trenches\FST_BastionTrenches\Data\Textures\Camo_nohq.paa";
 
 	uvSource = "tex";
 
@@ -95,7 +95,7 @@ class Stage4
 
 {
 
-	texture = "FST\FST_Trenches\FST_BastionTrenches\Data\Textures\Camo_AS.paa";
+	texture = "FST\FST_Trenches\FST_BastionTrenches\Data\Textures\Camo_as.paa";
 
 	uvSource = "tex";
 
@@ -119,7 +119,7 @@ class Stage5
 
 {
 
-	texture = "FST\FST_Trenches\FST_BastionTrenches\Data\Textures\Camo_SMDI.paa";
+	texture = "FST\FST_Trenches\FST_BastionTrenches\Data\Textures\Camo_smdi.paa";
 
 	uvSource = "tex";
 
@@ -143,7 +143,7 @@ class Stage6
 
 {
 
-	texture="#(ai,64,64,1)fresnel(1.5191,0.05)";
+	texture="#(ai,64,64,1)fresnel(1.2,0.1)";
 
 	uvSource = "tex";
 
