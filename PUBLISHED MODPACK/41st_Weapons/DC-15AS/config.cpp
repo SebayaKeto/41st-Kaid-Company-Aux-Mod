@@ -40,7 +40,7 @@ class CfgWeapons
 	{
 		author="Gold";
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
+		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="FST_DC15A_fried";
 		displayName="[41st] DC-15A Rifle";
 		descriptionShort="Long range, slow rate of fire.";
@@ -757,7 +757,7 @@ class CfgWeapons
 	class FST_DC15S: IDA_DC15S
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
+		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="FST_DC15S_fried";
 		JLTS_repairTime=5;
 		IDA_plasmabolt=1;
@@ -1571,7 +1571,7 @@ class CfgWeapons
 	{
 		scope=2;
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
+		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="FST_DC15C_fried";
 		displayName="[41st] DC-15C Carbine";
 		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_F.p3d";
