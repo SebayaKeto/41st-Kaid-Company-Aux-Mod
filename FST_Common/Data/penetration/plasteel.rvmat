@@ -1,0 +1,9 @@
+surfaceInfo="FST\FST_Common\Data\penetration\plasteel.bisurf";
+ambient[]={0.15000001,0.15000001,0.34999999,1};
+diffuse[]={0.15000001,0.15000001,0.34999999,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0,0,0,1};
+specularPower=1;
+PixelShaderID="Normal";
+VertexShaderID="Basic";

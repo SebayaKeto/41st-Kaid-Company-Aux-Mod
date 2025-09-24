@@ -39,6 +39,9 @@ class CfgWeapons
 	class FST_DC15A: IDA_DC15A
 	{
 		author="Gold";
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="FST_DC15A_fried";
 		displayName="[41st] DC-15A Rifle";
 		descriptionShort="Long range, slow rate of fire.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
@@ -754,7 +757,8 @@ class CfgWeapons
 	class FST_DC15S: IDA_DC15S
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="FST_DC15S_fried";
 		JLTS_repairTime=5;
 		IDA_plasmabolt=1;
 		IDA_heatpershot=1;
@@ -1566,6 +1570,9 @@ class CfgWeapons
 	class FST_DC15C_F: FST_DC15C_Base_F
 	{
 		scope=2;
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="FST_DC15C_fried";
 		displayName="[41st] DC-15C Carbine";
 		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_F.p3d";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
@@ -1648,6 +1655,30 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
+	};
+	class FST_DC15A_fried: FST_DC15A
+	{
+		baseWeapon="FST_DC15A_fried";
+		displayname = "[41st] DC-15A (Fried)";
+		scope = 1;
+		magazines[]={};
+		JLTS_isFried=1;
+	};
+	class FST_DC15S_fried: FST_DC15S
+	{
+		baseWeapon="FST_DC15S_fried";
+		displayname = "[41st] DC-15S (Fried)";
+		scope = 1;
+		magazines[]={};
+		JLTS_isFried=1;
+	};
+	class FST_DC15C_fried: FST_DC15C_F
+	{
+		baseWeapon="FST_DC15C_fried";
+		displayname = "[41st] DC-15C (Fried)";
+		scope = 1;
+		magazines[]={};
+		JLTS_isFried=1;
 	};
     class acc_flashlight;
     class FST_Attachment_Light_Normal_White: acc_flashlight
