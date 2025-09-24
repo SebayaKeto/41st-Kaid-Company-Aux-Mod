@@ -160,6 +160,8 @@ class CfgPatches
 			"FST_P2_Medusa",
 			"FST_P2_Woods",
 			"FST_P2_Harlequin",
+			"FST_P2_Harlequin_Dirty",
+			"FST_P2_Blades",
 			"FST_P2_Demon",
 			"FST_P2_Squatch",
 			"FST_P2_Squatch_Dirty",
@@ -574,6 +576,7 @@ class CfgWeapons
 	{
 		author="Gold";
 		scope=2;
+		armor=40;
 		displayname="[41st] Commando Team Leader Pauldron (Jorge)";
 		weaponPoolAvailable=1;
 		allowedSlots[]={901};
@@ -13333,7 +13336,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"k_nvg"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -19497,6 +19500,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Harlequin_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Blades: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Blades]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Blades";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -29000,6 +29017,175 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch",
 			"JLTS_clone_comlink"
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket{};
+			class HitFace: HitFace
+			{
+				armor=10;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=60;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=60;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=60;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=60;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=60;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=60;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=60;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=60;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=60;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=60;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=60;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=60;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
 		};
 	};
 	class FST_Trooper_P2_DC15S: B_Soldier_F
@@ -41414,7 +41600,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Harlequin",
+			"FST_Crewman_Helmet_Harlequin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41424,7 +41610,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Harlequin",
+			"FST_Crewman_Helmet_Harlequin_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41480,6 +41666,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Crewman_Helmet_Harlequin_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Blades: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-4876 'Blades'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Blades";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Blades.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Blades.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Crewman_Helmet_Blades",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Crewman_Helmet_Blades",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
