@@ -313,7 +313,6 @@ class CfgPatches
 			"FST_P2_Arcus",
 			"FST_P2_Fire",
 			"FST_P2_Valius",
-			"FST_P2_Harm",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
@@ -10014,54 +10013,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_P2_ARC_Helmet_Mono_Dirty: JLTS_CloneHelmetP2
-	{
-		author="Ruby";
-		displayName="[41st] P2 ARC Trooper Helmet (Mono/Dirty)";
-		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
-		};
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Mono_Dirty.paa"
-		};
-		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
-	};
  	class FST_P2_ARC_Helmet_Major_Dirty: JLTS_CloneHelmetP2
 	{
 		author="Viz";
@@ -13570,58 +13521,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_Airborne_Helmet_Thug: JLTS_CloneHelmetAB
-	{
-		author="Daara";
-		displayName="[41st] Airborne Helmet (Thug)";
-		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\data\Helmets\FST_AB_Helmet_Thug.paa",
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
-	};
 	class FST_Airborne_Helmet_Poly: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -16779,7 +16678,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Daara.paa",
 		};
-	}; 	
+	};	 	
 	class FST_P2_Helmet_Gunner: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -19690,6 +19589,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Steel: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Steel]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Steel";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Ripper: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -20259,20 +20172,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Seraph";
-			uniformType="Neopren";
-			containerClass="Supply150";
-			mass=15;
-		};
-	}; 
-	class FST_Uniform_Harm: JLTS_CloneArmor
-	{
-		author="Fowler";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Harm]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Harm";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -42119,6 +42018,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Steel: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-8784 'Steel'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Steel";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Steel.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Steel.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Steel",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Steel",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Nic: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -43871,61 +43825,6 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Seraph",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	};
-	class FST_P2_Harm: FST_Trooper_P2_DC15S
-	{
-		author="Fowler";
-		displayName="[41st] CT-7497 'Harm'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Harm";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Harm.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Harm.Paa",
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet_Harm",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet_Harm",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

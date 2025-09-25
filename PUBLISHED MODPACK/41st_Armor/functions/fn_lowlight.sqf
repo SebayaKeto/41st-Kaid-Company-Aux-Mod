@@ -1,6 +1,7 @@
 #include "\x\cba\addons\main\script_macros_common.hpp"
-if (!hasInterface) exitWith {};
+
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+
 private _hasLowLight = GET_NUMBER(configFile >> "CfgGlasses" >> (goggles ace_player) >> "FST_hasLowLight",0) == 1;
 
 if (FST_disableLowlight) exitwith{};
