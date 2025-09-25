@@ -116,6 +116,7 @@ class CfgMusic
 		"FST_Ace_Prelude",
 		"FST_Ace_Silent",
 		"FST_Ace_Tango",
+		"FST_HanSolo",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -704,6 +705,18 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_HanSolo
+	{
+		name="(Star Wars) I'm Han Solo";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\StarWars_ImHanSolo.ogg",
+			1,
+			1
+		};
+		duration="231";
 	};
 	class FST_Destiny_UntoldLegends
 	{
