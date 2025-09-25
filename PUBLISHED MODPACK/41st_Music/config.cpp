@@ -117,6 +117,7 @@ class CfgMusic
 		"FST_Ace_Silent",
 		"FST_Ace_Tango",
 		"FST_HanSolo",
+		"FST_Archangel",
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -705,6 +706,18 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_Archangel
+	{
+		name="(Zombies BO) Archangel";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Archangel.ogg",
+			1,
+			1
+		};
+		duration="310";
 	};
 	class FST_HanSolo
 	{
