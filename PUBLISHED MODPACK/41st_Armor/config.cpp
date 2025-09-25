@@ -313,6 +313,8 @@ class CfgPatches
 			"FST_P2_Arcus",
 			"FST_P2_Fire",
 			"FST_P2_Valius",
+			"FST_P2_Harm",
+			"FST_P2_Marcus",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
@@ -14843,6 +14845,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Seraph.paa",
+		};
+	};	
+	class FST_P2_Helmet_Marcus: FST_P2_Helmet_Base
+	{
+		author="Fowler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Marcus]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Marcus.paa",
 		};
 	};	
 	class FST_P2_Helmet_Blood: FST_P2_Helmet_Base

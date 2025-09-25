@@ -111,7 +111,13 @@ class CfgMusic
 		"FST_Destiny_TheWarmindRemix",
 		"FST_Destiny_DreadfulHarmony",
 		"FST_Destiny_UnswornUnlovedErased",
-		"FST_Starwars_ImHanSolo",
+		"FST_Ace_Blockade",
+		"FST_Ace_InvisibleFleet",
+		"FST_Ace_Prelude",
+		"FST_Ace_Silent",
+		"FST_Ace_Tango",
+		"FST_HanSolo",
+		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
 		"FST_Inception_DreamIsCollapsing",
@@ -700,6 +706,18 @@ class CfgMusic
 		};
 		duration="415";
 	};
+	class FST_HanSolo
+	{
+		name="(Star Wars) I'm Han Solo";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\StarWars_ImHanSolo.ogg",
+			1,
+			1
+		};
+		duration="231";
+	};
 	class FST_Destiny_UntoldLegends
 	{
 		name="(Destiny) Untold Legends";
@@ -772,17 +790,65 @@ class CfgMusic
 		};
 		duration="189";
 	};
-	class FST_Starwars_ImHanSolo
+	class FST_Ace_InvisibleFleet
 	{
-		name="(Kinect Star Wars) I'm Han Solo"
+		name="(Ace Combat 04) Invincible Fleet";
 		musicClass="FST_OtherGames";
 		sound[]=
 		{
-			"41st_Music\GameTracks\StarWars_ImHanSolo.ogg",
+			"41st_Music\GameTracks\Ace_InvisibleFleet.ogg",
 			1,
 			1
 		};
-		duration="231";
+		duration="229";
+	};
+	class FST_Ace_Prelude
+	{
+		name="(Ace Combat 04) Prelude";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Prelude.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Ace_Silent
+	{
+		name="(Ace Combat 04) Silent";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Silent.ogg",
+			1,
+			1
+		};
+		duration="49";
+	};
+	class FST_Ace_Blockade
+	{
+		name="(Ace Combat 04) Blockade";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Blockade.ogg",
+			1,
+			1
+		};
+		duration="289";
+	};
+	class FST_Ace_Tango
+	{
+		name="(Ace Combat 04) Tango Line";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Tango.ogg",
+			1,
+			1
+		};
+		duration="124";
 	};
 	class FST_Halo_ThroughTheTrees
 	{

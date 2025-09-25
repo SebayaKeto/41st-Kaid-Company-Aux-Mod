@@ -6,12 +6,15 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"A3_Structures_F_Exp_Civilian",
-			"FST_Core"
+			"FST_Core",
+			"FST_Common"
 		};
 		requiredVersion=0.1;
 		units[]=
 		{
-			"FST_Trench_Bastion_Small"
+			"FST_Trench_Bastion_Small",
+			"FST_Trench_Bastion_Medium",
+			"FST_Trench_Bastion_Large"
 		};
 		weapons[]={};
 	};
@@ -44,5 +47,19 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 		displayName = "Bastion Small Trench";
+	};
+	class FST_Trench_Bastion_Medium: FST_Trench_BastionBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Bastion Medium Trench";
+		model = "FST\FST_Trenches\FST_BastionTrenches\FST_Trench_BastionMedium.p3d";
+	};
+	class FST_Trench_Bastion_Large: FST_Trench_BastionBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Bastion Large Trench";
+		model = "FST\FST_Trenches\FST_BastionTrenches\FST_Trench_BastionLarge.p3d";
 	};
 };
