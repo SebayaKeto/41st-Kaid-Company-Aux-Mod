@@ -1,9 +1,9 @@
+if (!hasInterface) exitWith {};
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
 
 private _goggles = goggles ace_player;
 private _hasLowLight = GET_NUMBER(configFile >> "CfgGlasses" >> (_goggles) >> "FST_hasLowLight",0) == 1;
-
 if (FST_disableLowlight OR !_hasLowlight) exitwith{};
 
 params ["_activate","_increase"];
