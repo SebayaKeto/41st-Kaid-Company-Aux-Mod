@@ -23170,6 +23170,7 @@ class CfgVehicles
 	class JLTS_Clone_LR_attachment;
 	class WBK_B2_Mod_Standart;
 	class WBK_BX_Assasin_1;
+	class ls_reinsertTerminal;
 	class lsd_gar_bodyGlove_base;
 	class Bag_Base;
 	class Weapon_Bag_Base: Bag_Base
@@ -23177,7 +23178,30 @@ class CfgVehicles
 		class assembleInfo;
 	};
 	
-	
+	class FST_ReinsertTerminal: ls_reinsertTerminal 
+	{
+        scope = 2;
+        scopeCurator = 2;
+        author = "Ruby";
+        displayName = "[41st] Reinsert Terminal";
+		model="3AS\3AS_Props\Terminals\Terminal_Console.p3d";
+		hiddenSelections[]=
+		{
+			"camo1";
+		};
+		hiddenselectionstextures[]=
+		{
+			"3AS\3AS_Props\Terminals\data\base_co.paa";
+		};	
+		hiddenSelectionsMaterials[]=
+		{
+			"3AS\3AS_Props\Terminals\data\base_co.paa";
+		};
+		editorCategory="FST_Crates";
+		editorSubcategory="FST_Supplies";
+		vehicleClass = "Structures";
+        simulation = "thingx";
+	};
 	class FST_AmmoCrate: Box_NATO_Ammo_F
 	{
 		author="Daara";
