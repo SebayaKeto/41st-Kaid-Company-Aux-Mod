@@ -314,10 +314,7 @@ class CfgPatches
 			"FST_P2_Fire",
 			"FST_P2_Valius",
 			"FST_P2_Harm",
-<<<<<<< HEAD
 			"FST_P2_Marcus",
-=======
->>>>>>> parent of 39bdcfc (finally bought some clothes)
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
