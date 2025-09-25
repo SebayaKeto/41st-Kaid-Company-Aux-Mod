@@ -109,7 +109,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\radios\data\ui\clone_comlink_item_ui_ca.paa";
 		model="\A3\weapons_F\ammo\mag_univ.p3d";
 		tf_prototype=1;
-		tf_range=1000;
+		tf_range=300;
 		tf_dialog="JLTS_clone_comlink_dialog";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialogUpdate="call TFAR_fnc_updateSWDialogToChannel;";
