@@ -322,6 +322,7 @@ class CfgPatches
 			"FST_P2_Airman",
 			"FST_P2_Coldstart",
 			//////////OTHERS//////////
+			"FST_ReinsertTerminal",
 			"FST_AmmoCrate",
 			"FST_MedicalCrate",
 			"FST_ExplosiveCrate",
