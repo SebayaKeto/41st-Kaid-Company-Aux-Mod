@@ -23603,6 +23603,23 @@ class CfgVehicles
 			"41st_Armor\Data\Equipment\FST_Commando_Backpack_Jorge.paa"
 		};
 	};
+	class FST_Commando_Backpack_Jorge_Ammobearer: FST_Commando_Backpack_Jorge
+	{
+		scope=2;
+		class TransportMagazines
+		{
+			class _xx_FST_blaster_cell_High_Blue
+			{
+				count=15;
+				magazine="FST_blaster_cell_High_Blue";
+			};
+			class _xx_FST_blaster_cell_Blue
+			{
+				count=16;
+				magazine="FST_blaster_cell_Blue";
+			};
+		};
+	};
 	class FST_blueforWeaponBag_base: Weapon_Bag_Base
 	{
 		author="Legion Studios";
@@ -29159,7 +29176,7 @@ class CfgVehicles
 		editorSubcategory="FST_Subfaction";
 		uniformClass="FST_Commando_Uniform_Jorge";
 		nakedUniform="U_BasicBody";
-		backpack="FST_Commando_Backpack_Jorge";
+		backpack="FST_Commando_Backpack_Jorge_Ammobearer";
 		model="\3AS\3AS_Characters\Commando\3AS_Katarn_Armor.p3d";
 		modelSides[]={3,1};
 		hiddenSelections[]=
@@ -29174,11 +29191,13 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
+			"FST_DC17M",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
+			"FST_DC17M",
 			"Throw",
 			"Put"
 		};
@@ -29196,7 +29215,21 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
+			"FST_grenade_Detonator_mag",
+			"FST_grenade_Detonator_mag",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
 		};
 		respawnMagazines[]=
 		{
@@ -29212,7 +29245,21 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
+			"FST_grenade_Detonator_mag",
+			"FST_grenade_Detonator_mag",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
 		};
 		items[]=
 		{

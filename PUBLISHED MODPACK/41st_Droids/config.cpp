@@ -2063,10 +2063,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
-
 		};
 		respawnMagazines[]=
 		{
@@ -2077,9 +2073,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
 		};
 	};
 	class FST_BX_AA: FST_BX
@@ -2132,9 +2125,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
 		};
 		respawnMagazines[]=
 		{
@@ -2145,9 +2135,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
 		};
 	};
 	class FST_BX_Rusty: FST_BX
@@ -3756,6 +3743,7 @@ class CfgVehicles
 		explosionshielding=8;
 	};
  };
+class FST_Commando_Jorge;
 class cfgGroups
 {
 	class EAST
@@ -5098,6 +5086,40 @@ class cfgGroups
 						vehicle="FST_Jorgetrooper";
 						rank="PRIVATE";
 						position[]={0,-5,0};
+					};
+				};
+				class FST_JorgeCommando_Squad
+				{
+					name="[41st] Brainwashed Commando Squad";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="PRIVATE";
+						position[]={1,-1,0};
 					};
 				};
 				class FST_Zombie_Pack_Walker
