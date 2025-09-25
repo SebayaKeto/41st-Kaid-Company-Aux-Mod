@@ -1,4 +1,3 @@
-if (!hasInterface) exitWith {};
 [
     "FST_lowlight_DefaultAperture", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
     "SLIDER", // setting type
