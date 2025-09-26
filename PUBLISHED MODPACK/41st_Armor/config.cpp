@@ -9480,6 +9480,18 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Heller: FST_Pilot_P1_Helmet
+	{
+		author="Ruby";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Heller]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Heller.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
   	class FST_Pilot_P1_Helmet_Spade: FST_Pilot_P1_Helmet
 	{
 		author="Daara";
@@ -15815,6 +15827,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Parsec.paa",
+		};
+	};	
+	class FST_P2_Helmet_Benni: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Benni]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Benni.paa",
 		};
 	};	
 	class FST_P2_Helmet_Ruby: FST_P2_Helmet_Base
