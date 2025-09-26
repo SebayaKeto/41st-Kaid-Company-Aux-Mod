@@ -183,6 +183,7 @@ class CfgMusic
 		"FST_Rakghoul",
 		"FST_UnityInBattle",
 		"FST_Order66",
+		"FST_EvilAmbience",
 		
 		//KPOP Demon Hunters
 		"FST_Golden",
@@ -336,6 +337,18 @@ class CfgMusic
 			1
 		};
 		duration="8";
+	};
+	class FST_EvilAmbience
+	{
+		name="[Secret] Execute Order 66";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Evil_Ambient.ogg",
+			4,
+			1
+		};
+		duration="1200";
 	};
 	class FST_Rakghoul
 	{
