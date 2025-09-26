@@ -3226,6 +3226,8 @@ class CfgVehicles
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		backpack="";
 		uniformclass="FST_Jorgetrooper_Uniform";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
