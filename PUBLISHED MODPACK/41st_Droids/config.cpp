@@ -3269,6 +3269,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3279,6 +3281,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3529,6 +3533,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3539,6 +3545,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3620,6 +3628,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3630,6 +3640,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3694,6 +3706,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3704,6 +3718,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
