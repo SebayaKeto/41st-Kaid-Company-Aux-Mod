@@ -3233,7 +3233,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3495,7 +3494,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3592,7 +3590,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3686,7 +3683,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]={"camo1", "camo2"};
 		hiddenSelectionsTextures[]=
 		{
