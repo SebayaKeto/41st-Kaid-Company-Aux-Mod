@@ -67,7 +67,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Bastion Large Trench";
+		displayName = "Bastion Trench (Curved 90)";
 		model = "FST\FST_Trenches\FST_BastionTrenches\FST_Trench_BastionCurve90.p3d";
 	};
 };
