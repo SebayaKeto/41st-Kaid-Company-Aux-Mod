@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class FST_Trenches_Engineered
+	class FST_Trenches_Bastion
 	{
 		author="Maldova";
 		requiredAddons[]=
@@ -14,7 +14,8 @@ class CfgPatches
 		{
 			"FST_Trench_Bastion_Small",
 			"FST_Trench_Bastion_Medium",
-			"FST_Trench_Bastion_Large"
+			"FST_Trench_Bastion_Large",
+			"FST_Trench_Bastion_Curve90"
 		};
 		weapons[]={};
 	};
@@ -61,5 +62,12 @@ class CfgVehicles
 		scopecurator = 2;
 		displayName = "Bastion Large Trench";
 		model = "FST\FST_Trenches\FST_BastionTrenches\FST_Trench_BastionLarge.p3d";
+	};
+	class FST_Trench_Bastion_Curve90: FST_Trench_BastionBase
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Bastion Large Trench";
+		model = "FST\FST_Trenches\FST_BastionTrenches\FST_Trench_BastionCurve90.p3d";
 	};
 };
