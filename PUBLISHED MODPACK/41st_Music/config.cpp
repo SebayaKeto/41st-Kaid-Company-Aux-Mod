@@ -340,7 +340,7 @@ class CfgMusic
 	};
 	class FST_EvilAmbience
 	{
-		name="[Secret] Execute Order 66";
+		name="[Ambience] Evil Ambience";
 		musicClass="FST_Mission_Music";
 		sound[]=
 		{
