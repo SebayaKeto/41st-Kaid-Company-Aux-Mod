@@ -118,6 +118,16 @@ class CfgMusic
 		"FST_Ace_Tango",
 		"FST_HanSolo",
 		"FST_Archangel",
+		"FST_DeusEx_TheNothing",
+		"FST_MajorasMask_FinalHours",
+		"FST_KingsField_DarkReality",
+		"FST_Cygnus_CryforEternity",
+		"FST_LobotomyCorp_ThirdWarning",
+		"FST_Escapists_LockDown",
+		"FST_Escapists2_Lockdown",
+		"FST_DeusEx_TheIlluminati",
+		"FST_LobotomyCorp_FourthWarning",
+	
 		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
@@ -706,6 +716,114 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_DeusEx_TheNothing
+	{
+		name="(Deus Ex) The Nothing";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\DeusEx_TheNothing.ogg",
+			1,
+			1
+		};
+		duration="122";
+	};
+	class FST_MajorasMask_FinalHours
+	{
+		name="(Majoras Mask) Final Hours";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\MajorasMask_FinalHours.ogg",
+			1,
+			1
+		};
+		duration="261";
+	};
+	class FST_KingsField_DarkReality
+	{
+		name="(Kings Field) Dark Reality";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\KingsField_DarkReality.ogg",
+			1,
+			1
+		};
+		duration="341";
+	};
+	class FST_Cygnus_CryforEternity
+	{
+		name="(Cygnus) Cry For Eternity";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Cygnus_CryforEternity.ogg",
+			1,
+			1
+		};
+		duration="103";
+	};
+	class FST_LobotomyCorp_ThirdWarning
+	{
+		name="(Lobotomy Corp) Third Warning";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\LobotomyCorp_ThirdWarning.ogg",
+			1,
+			1
+		};
+		duration="236";
+	};
+	class FST_Escapists_LockDown
+	{
+		name="(Escapists) Lockdown";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\TheEscapists_LockDown.ogg",
+			1,
+			1
+		};
+		duration="96";
+	};
+	class FST_Escapists2_Lockdown
+	{
+		name="(Escapists 2) Lockdown";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Escapists2_Lockdown.ogg",
+			1,
+			1
+		};
+		duration="136";
+	};
+	class FST_DeusEx_TheIlluminati
+	{
+		name="(Deus Ex) The Illuminati";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\DeusEx_TheIlluminati.ogg",
+			1,
+			1
+		};
+		duration="159";
+	};
+	class FST_LobotomyCorp_FourthWarning
+	{
+		name="(Lobotomy Corp) Fourth Warning";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\LobotomyCorp_FourthWarning.ogg",
+			1,
+			1
+		};
+		duration="265";
 	};
 	class FST_Archangel
 	{
