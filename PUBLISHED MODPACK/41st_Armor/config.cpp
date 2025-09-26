@@ -15527,6 +15527,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mox.paa",
 		};
 	};	
+	class FST_P2_Helmet_Mox_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Mox/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mox_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Jorge: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -22253,6 +22263,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Mox.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Mox_Dirty: JLTS_CloneNVG
+	{
+		author="Ruby";
+		displayName="[41st] NCO Macrobinoculars (Mox/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Mox_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -41128,6 +41160,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Mox_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-8998 'Mox' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Mox";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Mox_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Mox_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Mox_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Mox_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Business: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -49069,6 +49156,82 @@ class CfgFaces
 			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
 			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
 			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Mustang_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Mustang (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Mustang_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
+			head="TCGM_FemHead_Eilish";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Ruby_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Ruby (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Ruby_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
+			head="TCGM_FemHead_Eilish";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Stone_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Stone (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Stone_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Stone.rvmat";
+			head="TCGM_FemHead_Stone";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Stone_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Stone_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Portman_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Portman (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Portman_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Portman.rvmat";
+			head="TCGM_FemHead_Portman";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_White"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white2_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white2.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white2_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white2.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Portman_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Portman_injury.rvmat";
 			disabled=0;
 		};
 	};
