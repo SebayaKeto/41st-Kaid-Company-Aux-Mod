@@ -993,11 +993,11 @@
             ["ToolKit",1]
         ]],
         "FST_Pilot_P1_Helmet",
-        "",
+        "FST_Fynock_LowLight",
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_Vest_NCO_Kama","FST_Vest_Base","FST_TwinDC17_Secondary","FST_Fynock_LowLight","FST_pauldron_kama_reversed","FST_pauldron_kama_reversed_veteran","FST_pauldron_kama","FST_pauldron_kama_veteran"],
+    ["FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_Vest_NCO_Kama","FST_Vest_Base","FST_TwinDC17_Secondary","FST_pauldron_kama_reversed","FST_pauldron_kama_reversed_veteran","FST_pauldron_kama","FST_pauldron_kama_veteran"],
     "true",
     {},
     "pilot"
@@ -1043,11 +1043,11 @@
             ["ACE_plasmaIV_500",4]
         ]],
         "FST_Pilot_P1_Helmet",
-        "",
+        "FST_Fynock_LowLight",
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DP23","UNSC_Knife","FST_Fynock_LowLight","FST_DC17"],
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DP23","UNSC_Knife","FST_DC17"],
     "true",
     {},
     "pilot"
