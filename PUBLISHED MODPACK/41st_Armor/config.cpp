@@ -204,6 +204,7 @@ class CfgPatches
 			"FST_P2_NotSkilled",
 			"FST_P2_Charge",
 			"FST_P2_Hex",
+			"FST_P2_Lupus",
 			"FST_P2_Viz",
 			"FST_P2_Viz_Dirty",
 			"FST_P2_Tex",
@@ -20540,6 +20541,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Lupus: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Lupus]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Lupus";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
   	class FST_Uniform_Tex: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -21603,6 +21618,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Nahlens.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Huntress: JLTS_CloneNVG
+	{
+		author="Ruby";
+		displayName="[41st] NCO Macrobinoculars (Huntress)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Huntress.paa",
 		};
 		visionMode[]=
 		{
@@ -44812,7 +44849,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_P2_Hex: FST_Trooper_P2_DC15S
+	class FST_P2_Hex: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-4916 'Hex'";
@@ -44849,6 +44886,61 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"FST_P2_Helmet_Hex",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Hex",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Lupus: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-5973 'Lupus'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Lupus";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lupus.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lupus.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Lupus",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
