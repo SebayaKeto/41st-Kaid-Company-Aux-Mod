@@ -129,12 +129,18 @@ class CfgWeapons
             "41st_Droids\Data\Extras\FST_Helmet_HumDiv_Officer.paa"
         };
     };
-    class FST_HumanDiv_Pouches_Base: FST_DroidB1
+    class V_rebreatherB;
+    class FST_HumanDiv_Pouches_Base: V_rebreatherB
     {
         author="Ruby";
-        scope=1;
         displayname="[41st] Human Divison Pouches Base"
+        model="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+        scope=0;
+		scopecurator=0;
+		scopearsenal=0;
         JLTS_isDroid=0;
+		allowedSlots[]={901};
+		picture="\41st_Armor\Logo.paa";
         hiddenselections[]=
         {
             "pouch1",
@@ -143,20 +149,46 @@ class CfgWeapons
         };
         class ItemInfo: vestitem
         {
+            uniformmodel="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+			containerclass="Supply200";
+			mass=80;
+			vesttype="Rebreather";
             hiddenselections[]=
             {
                 "pouch1",
                 "pouch2",
                 "pouch3"
             };
-            uniformmodel="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=1;
+					PassThrough=0.1;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=0;
+					PassThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=0;
+					passThrough=0.1;
+				};
+			};
         };
     };
     class FST_HumanDiv_Pouches: FST_HumanDiv_Pouches_Base
     {
         author="Ruby";
-        scope=2;
         displayname="[41st] Human Divison Pouches"
+        scope=2;
+		scopecurator=2;
+		scopearsenal=2;
         hiddenselectionstextures[]=
         {
             "41st_Droids\Data\Extras\FST_Pouches_HumDiv.paa",
