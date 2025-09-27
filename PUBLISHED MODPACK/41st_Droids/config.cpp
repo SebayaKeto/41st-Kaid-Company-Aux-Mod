@@ -30,6 +30,7 @@ class CfgPatches
 			"FST_U_CIS_Heavy",
 			"FST_U_CIS_Heavy_AT",
 			"FST_U_CIS_Light",
+			"FST_U_CIS_Light_Veteran",
 			"FST_Jorgetrooper",
 			"FST_Jorgetrooper_AT",
 			"FST_Jorgetrooper_AR",
@@ -131,7 +132,7 @@ class CfgWeapons
     class FST_HumanDiv_Pouches_Base: FST_DroidB1
     {
         author="Ruby";
-        scope=0;
+        scope=1;
         displayname="[41st] Human Divison Pouches Base"
         JLTS_isDroid=0;
         hiddenselections[]=
@@ -525,10 +526,22 @@ class CfgWeapons
 	class FST_U_CIS_Light_Armor: 3AS_Uniform_CIS_Human_Base
 	{
 		author="Gold";
-		displayName="[41st] CIS Human Division Armor (Light)";
+		displayName="[41st] CIS Human Division Light Armor";
 		scope=2;
 		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		model="3AS\3AS_CIS_Infantry\Model\CIS_Inf.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_U_CIS_Light";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+	class FST_U_CIS_Light_Armor_Veteran: FST_U_CIS_Light_Armor
+	{
+		author="Gold";
+		displayName="[41st] CIS Human Division Light Armor (Veteran)";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -540,7 +553,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="FST_U_CIS_Light";
+			uniformClass="FST_U_CIS_Light_Veteran";
 			containerClass="Supply150";
 			mass=40;
 		};
@@ -2875,6 +2888,142 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"3AS\3AS_CIS_Infantry\data\cis_inf_texture_armour_co.paa"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_Light_Helmet",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_CIS_Light_Helmet",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	class FST_U_CIS_Light_Veteran: 3AS_U_CIS_Light
+	{
+		author="Gold";
+		displayName="[41st] CIS Human Division (Light/Veteran)";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		class HitPoints
+		{
+			class HitFace
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitNeck: HitFace
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitPelvis: HitHead
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitBody: HitChest
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitArms: HitBody
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitHands: HitArms
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitLegs: HitHands
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+			};
+			class HitLeftArm
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+		};
+		class UniformInfo
+		{
+			class SlotsInfo
+			{
+				class NVG: UniformSlotInfo
+				{
+					slotType=602;
+				};
+				class Scuba: UniformSlotInfo
+				{
+					slotType=604;
+				};
+				class Headgear: UniformSlotInfo
+				{
+					slotType=605;
+				};
+			};
+		};
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
 		};
 		linkedItems[]=
 		{
