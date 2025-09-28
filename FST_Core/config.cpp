@@ -32,6 +32,10 @@ class CfgEditorCategories
 	{
 		displayname = "[FST] GAR Trenches";
 	};
+	class FST_CatagoryOutpost
+	{
+		displayname = "[FST] GAR Outpost";
+	};
 	class FST_CatagoryVegetationKashyyyk
 	{
 		displayname = "[FST] Kashyyyk Vegetation";
@@ -54,6 +58,14 @@ class CfgEditorSubcategories
 	class FST_Subcategory_TrenchesBastion
 	{
 		displayName = "Trenches (Bastion)";
+	};
+	class FST_Subcategory_OutpostWallsGAR
+	{
+		displayName = "Light Walls (GAR)";
+	};
+	class FST_Subcategory_OutpostWallsCIS
+	{
+		displayName = "Light Walls (CIS)";
 	};
 	class FST_Subcategory_KashyyykVines
 	{
