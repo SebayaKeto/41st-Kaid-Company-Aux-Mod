@@ -17,6 +17,10 @@ class CfgPatches
 			"FST_OutpostWall_GAR_Woodland",
 			"FST_OutpostWall_GAR_Sand",
 			"FST_OutpostWall_GAR_Urban",
+			"FST_OutpostWall_GAR_UrbanPropoganda",
+			"FST_OutpostWall_GAR_FSTOne",
+			"FST_OutpostWall_GAR_FSTTwo",
+			"FST_OutpostWall_GAR_Jungle",
 			"FST_OutpostWall_CIS"
 		};
 		weapons[]={};
@@ -33,7 +37,7 @@ class CfgVehicles
 	class FST_OutpostWall_Base: House_F
 	{
 		editorCategory = "FST_CatagoryOutpost";
-		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		editorSubcategory = "FST_Subcategory_OutpostWallsNeutral";
 		scope = 1;
 		scopecurator = 1;
 		placement = "vertical";
@@ -71,6 +75,7 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 		displayName = "Light Outpost Wall (GAR)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
@@ -91,6 +96,7 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 		displayName = "Light Outpost Wall (Woodland)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
@@ -111,6 +117,7 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 		displayName = "Light Outpost Wall (Sand)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
@@ -131,6 +138,7 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 		displayName = "Light Outpost Wall (Urban)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
@@ -150,7 +158,8 @@ class CfgVehicles
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Light Outpost Wall (Urban)";
+		displayName = "Light Outpost Wall (Urban Propoganda)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
@@ -162,6 +171,69 @@ class CfgVehicles
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_UrbanTwo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_GAR_FSTOne: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (Kaid)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_FSTOne_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_GAR_FSTTwo: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (Kaid Camo)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_FSTTwo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_GAR_Jungle: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (Jungle)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Jungle_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};

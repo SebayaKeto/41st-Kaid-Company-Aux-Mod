@@ -59,6 +59,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Trenches (Bastion)";
 	};
+	class FST_Subcategory_OutpostWallsNeutral
+	{
+		displayName = "Light Walls (Neutral)";
+	};
 	class FST_Subcategory_OutpostWallsGAR
 	{
 		displayName = "Light Walls (GAR)";
