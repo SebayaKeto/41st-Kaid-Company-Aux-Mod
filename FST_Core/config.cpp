@@ -32,9 +32,13 @@ class CfgEditorCategories
 	{
 		displayname = "[FST] GAR Trenches";
 	};
-	class FST_CatagoryOutpost
+	class FST_CatagoryMajorOutpost
 	{
-		displayname = "[FST] GAR Outpost";
+		displayname = "[FST] Outposts (Major Factions)";
+	};
+	class FST_CatagoryMinorOutpost
+	{
+		displayname = "[FST] Outposts (Minor Factions)";
 	};
 	class FST_CatagoryVegetationKashyyyk
 	{
@@ -70,6 +74,18 @@ class CfgEditorSubcategories
 	class FST_Subcategory_OutpostWallsCIS
 	{
 		displayName = "Light Walls (CIS)";
+	};
+	class FST_Subcategory_OutpostWallsPirates
+	{
+		displayName = "Light Walls (Pirates)";
+	};
+	class FST_Subcategory_OutpostWallsBlackSun
+	{
+		displayName = "Light Walls (Black Sun)";
+	};
+	class FST_Subcategory_OutpostWallsHuttCartel
+	{
+		displayName = "Light Walls (Hutt Cartel)";
 	};
 	class FST_Subcategory_KashyyykVines
 	{

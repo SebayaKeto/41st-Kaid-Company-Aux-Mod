@@ -36,7 +36,7 @@ class CfgVehicles
 	class Ruins_F;
 	class FST_OutpostWall_Base: House_F
 	{
-		editorCategory = "FST_CatagoryOutpost";
+		editorCategory = "FST_CatagoryMajorOutpost";
 		editorSubcategory = "FST_Subcategory_OutpostWallsNeutral";
 		scope = 1;
 		scopecurator = 1;
@@ -74,12 +74,33 @@ class CfgVehicles
 	{
 		scope = 2;
 		scopecurator = 2;
-		displayName = "Light Outpost Wall (GAR)";
+		displayName = "Light Outpost Wall (GAR 1)";
 		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_GAR_V2: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (GAR 2)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_V2_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
 		};
@@ -238,6 +259,7 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
+	// CIS Assets
 	class FST_OutpostWall_CIS: FST_OutpostWall_Base
 	{
 		scope = 2;
@@ -259,5 +281,71 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
-	
+	// Minor Faction Assets
+	class FST_OutpostWall_Pirate: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (Pirate)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsPirates";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Pirate.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_BlackSun: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (Black Sun)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsBlackSun";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_BlackSun_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Pirate.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_HuttCartel: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall (Hutt Cartel)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsHuttCartel";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Pirate.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
 };
