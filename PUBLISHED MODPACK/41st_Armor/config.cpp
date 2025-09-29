@@ -24185,7 +24185,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	/* class FST_ARF_backpack_s: FST_Clone_Backpack_ARF
@@ -24446,7 +24446,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 		class TransportItems
 		{
@@ -24715,7 +24715,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_UGL: FST_Clone_backpack
@@ -24732,7 +24732,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Woodland: FST_Clone_backpack
@@ -24753,7 +24753,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Desert: FST_Clone_backpack
@@ -24774,7 +24774,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Urban: FST_Clone_backpack
@@ -24795,7 +24795,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Midnight: FST_Clone_backpack
@@ -24816,7 +24816,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
@@ -24917,7 +24917,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=2500;
+		tf_range=50000;
 		tf_subtype="digital_lr";
 		mass=11;
 	};
@@ -24938,7 +24938,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack.paa",
 		};
-		tf_range=2500;
+		tf_range=50000;
 	};
 	class FST_Backpack_Antenna_Woodland: JLTS_Clone_RTO_pack
 	{
@@ -24961,7 +24961,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=2500;
+		tf_range=50000;
 	};
 	class FST_Backpack_Antenna_Desert: JLTS_Clone_RTO_pack
 	{
@@ -24984,7 +24984,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=2500;
+		tf_range=50000;
 	};
 	class FST_Backpack_Antenna_Midnight: JLTS_Clone_RTO_pack
 	{
@@ -25007,7 +25007,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=2500;
+		tf_range=50000;
 	};
 	class FST_Backpack_Antenna_Urban: JLTS_Clone_RTO_pack
 	{
@@ -25030,7 +25030,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=2500;
+		tf_range=50000;
 	};
 	class FST_Backpack_Antenna_ARF_Dirty: JLTS_Clone_RTO_pack
 	{
@@ -25049,7 +25049,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa",
 		};
-		tf_range=2500;
+		tf_range=50000;
 	};
 //OLD 	
 /*	class FST_Backpack_Antenna_ARF_Desert: JLTS_Clone_RTO_pack
@@ -25322,7 +25322,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -25388,7 +25388,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -25454,7 +25454,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -25520,7 +25520,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -26986,7 +26986,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27052,7 +27052,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27179,7 +27179,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27373,7 +27373,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		maximumload=250;
-		tf_range=2500;
+		tf_range=50000;
 		displayName="[41st] Cold Weather RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
 		hiddenselections[]=
@@ -27413,7 +27413,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27471,7 +27471,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27529,7 +27529,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27587,7 +27587,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27645,7 +27645,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27703,7 +27703,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27761,7 +27761,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27819,7 +27819,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27877,7 +27877,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27937,7 +27937,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27997,7 +27997,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28057,7 +28057,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28117,7 +28117,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28175,7 +28175,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28233,7 +28233,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28291,7 +28291,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28349,7 +28349,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28409,7 +28409,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28467,7 +28467,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28527,7 +28527,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28585,7 +28585,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28643,7 +28643,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28701,7 +28701,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28759,7 +28759,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28817,7 +28817,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28877,7 +28877,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28937,7 +28937,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28997,7 +28997,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -29057,7 +29057,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=2500;
+		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
