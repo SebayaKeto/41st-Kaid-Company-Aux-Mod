@@ -144,6 +144,7 @@ class CfgPatches
 			"FST_P2_Overwatch",
 			"FST_P2_Tooka",
 			"FST_P2_Mox",
+			"FST_P2_Mox_Dirty",
 			"FST_P2_Pope",
 			"FST_P2_Business",
 			"FST_P2_Dobie",
@@ -19822,6 +19823,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Mox_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Mox/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Mox_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Recruit: JLTS_CloneArmor
 	{
 		author="Daara";
