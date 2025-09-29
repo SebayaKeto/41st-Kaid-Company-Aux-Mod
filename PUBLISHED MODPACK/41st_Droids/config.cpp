@@ -30,6 +30,7 @@ class CfgPatches
 			"FST_U_CIS_Heavy",
 			"FST_U_CIS_Heavy_AT",
 			"FST_U_CIS_Light",
+			"FST_U_CIS_Light_Veteran",
 			"FST_Jorgetrooper",
 			"FST_Jorgetrooper_AT",
 			"FST_Jorgetrooper_AR",
@@ -128,12 +129,18 @@ class CfgWeapons
             "41st_Droids\Data\Extras\FST_Helmet_HumDiv_Officer.paa"
         };
     };
-    class FST_HumanDiv_Pouches_Base: FST_DroidB1
+    class V_rebreatherB;
+    class FST_HumanDiv_Pouches_Base: V_rebreatherB
     {
         author="Ruby";
-        scope=0;
         displayname="[41st] Human Divison Pouches Base"
+        model="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+        scope=0;
+		scopecurator=0;
+		scopearsenal=0;
         JLTS_isDroid=0;
+		allowedSlots[]={901};
+		picture="\41st_Armor\Logo.paa";
         hiddenselections[]=
         {
             "pouch1",
@@ -142,20 +149,46 @@ class CfgWeapons
         };
         class ItemInfo: vestitem
         {
+            uniformmodel="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+			containerclass="Supply200";
+			mass=80;
+			vesttype="Rebreather";
             hiddenselections[]=
             {
                 "pouch1",
                 "pouch2",
                 "pouch3"
             };
-            uniformmodel="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=1;
+					PassThrough=0.1;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=0;
+					PassThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=0;
+					passThrough=0.1;
+				};
+			};
         };
     };
     class FST_HumanDiv_Pouches: FST_HumanDiv_Pouches_Base
     {
         author="Ruby";
-        scope=2;
         displayname="[41st] Human Divison Pouches"
+        scope=2;
+		scopecurator=2;
+		scopearsenal=2;
         hiddenselectionstextures[]=
         {
             "41st_Droids\Data\Extras\FST_Pouches_HumDiv.paa",
@@ -525,10 +558,22 @@ class CfgWeapons
 	class FST_U_CIS_Light_Armor: 3AS_Uniform_CIS_Human_Base
 	{
 		author="Gold";
-		displayName="[41st] CIS Human Division Armor (Light)";
+		displayName="[41st] CIS Human Division Light Armor";
 		scope=2;
 		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		model="3AS\3AS_CIS_Infantry\Model\CIS_Inf.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_U_CIS_Light";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+	class FST_U_CIS_Light_Armor_Veteran: FST_U_CIS_Light_Armor
+	{
+		author="Gold";
+		displayName="[41st] CIS Human Division Light Armor (Veteran)";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -540,7 +585,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="FST_U_CIS_Light";
+			uniformClass="FST_U_CIS_Light_Veteran";
 			containerClass="Supply150";
 			mass=40;
 		};
@@ -2063,10 +2108,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
-
 		};
 		respawnMagazines[]=
 		{
@@ -2077,9 +2118,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
-			"FST_RPS6_rocket_HE",
 		};
 	};
 	class FST_BX_AA: FST_BX
@@ -2132,9 +2170,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
 		};
 		respawnMagazines[]=
 		{
@@ -2145,9 +2180,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Detonator_mag",
 			"IDA_grenade_Detonator_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
-			"FST_E60R_AA_mag",
 		};
 	};
 	class FST_BX_Rusty: FST_BX
@@ -2906,6 +2938,142 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
+	class FST_U_CIS_Light_Veteran: 3AS_U_CIS_Light
+	{
+		author="Gold";
+		displayName="[41st] CIS Human Division (Light/Veteran)";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		class HitPoints
+		{
+			class HitFace
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitNeck: HitFace
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitPelvis: HitHead
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitBody: HitChest
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitArms: HitBody
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitHands: HitArms
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class HitLegs: HitHands
+			{
+				armor=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+			};
+			class HitLeftArm
+			{
+				armor=1;
+				passthrough=1;
+				explosionShielding	= 100;	
+				minimalHit			= 0.01;	
+			};
+		};
+		class UniformInfo
+		{
+			class SlotsInfo
+			{
+				class NVG: UniformSlotInfo
+				{
+					slotType=602;
+				};
+				class Scuba: UniformSlotInfo
+				{
+					slotType=604;
+				};
+				class Headgear: UniformSlotInfo
+				{
+					slotType=605;
+				};
+			};
+		};
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_Light_Helmet",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_CIS_Light_Helmet",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
 	class FST_JMSLLTE_JinTrooper_armor_F: FST_CIS_Heavy_Base_F
 	{
 		author="JMax";
@@ -3239,12 +3407,13 @@ class CfgVehicles
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
+		faction="FST_Tukata_Faction";
+		editorSubcategory="FST_Tukata_Subfaction";
 		backpack="";
 		uniformclass="FST_Jorgetrooper_Uniform";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3282,6 +3451,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3292,6 +3463,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3502,7 +3675,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3542,6 +3714,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3552,6 +3726,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3595,7 +3771,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3633,6 +3808,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3643,6 +3820,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3685,7 +3864,6 @@ class CfgVehicles
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		allowedFacewear[] = {""};
 		faceType = "Man_A3";
-		identityTypes[] = {"FST_Jorge_FaceOnly"};
 		hiddenSelections[]={"camo1", "camo2"};
 		hiddenSelectionsTextures[]=
 		{
@@ -3707,6 +3885,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		respawnLinkedItems[]=
@@ -3717,6 +3897,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ItemCompass",
 			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1",
 			"JLTS_clone_comlink"
 		};
 		magazines[]=
@@ -3756,6 +3938,7 @@ class CfgVehicles
 		explosionshielding=8;
 	};
  };
+class FST_Commando_Jorge;
 class cfgGroups
 {
 	class EAST
@@ -5098,6 +5281,40 @@ class cfgGroups
 						vehicle="FST_Jorgetrooper";
 						rank="PRIVATE";
 						position[]={0,-5,0};
+					};
+				};
+				class FST_JorgeCommando_Squad
+				{
+					name="[41st] Brainwashed Commando Squad";
+					faction="FST_BattleDroids_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="SERGEANT";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_Commando_Jorge";
+						rank="PRIVATE";
+						position[]={1,-1,0};
 					};
 				};
 				class FST_Zombie_Pack_Walker

@@ -168,7 +168,7 @@ class CfgVehicles
 		minOmega=50;
         ace_cargo_hasCargo   = 1;
         ace_cargo_space      = 1000;
-        tf_range             = 100000;
+        tf_range             = 5000;
         tf_isolatedAmount    = 0.4;
         tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
         tf_hasLRradio        = 1;

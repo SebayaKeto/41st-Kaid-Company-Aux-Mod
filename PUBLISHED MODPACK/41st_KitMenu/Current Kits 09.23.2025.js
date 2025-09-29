@@ -993,7 +993,7 @@
             ["ToolKit",1]
         ]],
         "FST_Pilot_P1_Helmet",
-        "",
+        "FST_Fynock_LowLight",
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
@@ -1043,7 +1043,7 @@
             ["ACE_plasmaIV_500",4]
         ]],
         "FST_Pilot_P1_Helmet",
-        "",
+        "FST_Fynock_LowLight",
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],

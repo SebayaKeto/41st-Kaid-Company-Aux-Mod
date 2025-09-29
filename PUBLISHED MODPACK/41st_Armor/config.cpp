@@ -160,6 +160,8 @@ class CfgPatches
 			"FST_P2_Medusa",
 			"FST_P2_Woods",
 			"FST_P2_Harlequin",
+			"FST_P2_Harlequin_Dirty",
+			"FST_P2_Blades",
 			"FST_P2_Demon",
 			"FST_P2_Squatch",
 			"FST_P2_Squatch_Dirty",
@@ -202,6 +204,7 @@ class CfgPatches
 			"FST_P2_NotSkilled",
 			"FST_P2_Charge",
 			"FST_P2_Hex",
+			"FST_P2_Lupus",
 			"FST_P2_Viz",
 			"FST_P2_Viz_Dirty",
 			"FST_P2_Tex",
@@ -265,6 +268,7 @@ class CfgPatches
 			"FST_P2_Lucky",
 			"FST_P2_Lucky_Dirty",
 			"FST_P2_Sledge",
+			"FST_P2_Sledge_Dirty",
 			"FST_P2_Sierra",
 			"FST_P2_Tar",
 			"FST_P2_Tar_Dirty",
@@ -312,11 +316,14 @@ class CfgPatches
 			"FST_P2_Fire",
 			"FST_P2_Valius",
 			"FST_P2_Harm",
+			"FST_P2_Marcus",
+			"FST_P2_Butter",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
 			"FST_P2_Coldstart",
 			//////////OTHERS//////////
+			"FST_ReinsertTerminal",
 			"FST_AmmoCrate",
 			"FST_MedicalCrate",
 			"FST_ExplosiveCrate",
@@ -575,6 +582,7 @@ class CfgWeapons
 	{
 		author="Gold";
 		scope=2;
+		armor=40;
 		displayname="[41st] Commando Team Leader Pauldron (Jorge)";
 		weaponPoolAvailable=1;
 		allowedSlots[]={901};
@@ -8699,6 +8707,55 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_Crewman_Helmet_Waffle: JLTS_CloneHelmetBARC
+	{
+		scope=2;
+		author="Daara";
+		displayName="[41st] Crewman Helmet (Waffle)";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
+		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Waffle.paa"
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F",
+			"Integrated_NVG_TI_0_F"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Crewman_Helmet_Harlequin: JLTS_CloneHelmetBARC
 	{
 		scope=2;
@@ -9469,6 +9526,18 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ruby.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Heller: FST_Pilot_P1_Helmet
+	{
+		author="Ruby";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Heller]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Heller.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
@@ -13359,6 +13428,110 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_Airborne_Helmet_Starlet: JLTS_CloneHelmetAB
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Starlet)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Starlet.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Airborne_Helmet_Texas: JLTS_CloneHelmetAB
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Texas)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Texas.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Airborne_Helmet_Delta: JLTS_CloneHelmetAB
 	{
 		author="Daara";
@@ -13382,7 +13555,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		subItems[]=
 		{
-			"Integrated_NVG_TI_1_F"
+			"k_nvg"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -14451,6 +14624,58 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
+	class FST_Airborne_Helmet_Butter: JLTS_CloneHelmetAB
+	{
+		author="Fowler";
+		displayName="[41st] Airborne Helmet (Butter)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Butter.paa",
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_Airborne_Helmet_Harribel: JLTS_CloneHelmetAB
 	{
 		author="Viz";
@@ -14941,6 +15166,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Seraph.paa",
+		};
+	};	
+	class FST_P2_Helmet_Marcus: FST_P2_Helmet_Base
+	{
+		author="Fowler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Marcus]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Marcus.paa",
 		};
 	};	
 	class FST_P2_Helmet_Blood: FST_P2_Helmet_Base
@@ -15458,6 +15693,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mox.paa",
 		};
 	};	
+	class FST_P2_Helmet_Mox_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Mox/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mox_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Jorge: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -15736,6 +15981,26 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Parsec.paa",
+		};
+	};	
+	class FST_P2_Helmet_Benni: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Benni]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Benni.paa",
+		};
+	};	
+	class FST_P2_Helmet_Flatline: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Flatline]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Flatline.paa",
 		};
 	};	
 	class FST_P2_Helmet_Ruby: FST_P2_Helmet_Base
@@ -17005,6 +17270,16 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sledge.paa"
+		};
+	};
+	class FST_P2_Helmet_Sledge_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P2 Helmet [Sledge]/Dirty";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sledge_Dirty.paa"
 		};
 	};
 	class FST_P2_Helmet_House: FST_P2_Helmet_Base
@@ -19085,6 +19360,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
+	class FST_Uniform_Sledge_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Sledge/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Sledge_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Plop: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -19603,6 +19892,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
+	class FST_Uniform_Blades: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Blades]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Blades";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Demon: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -19673,6 +19976,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Steel: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Steel]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Steel";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Ripper: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -20387,6 +20704,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Lupus: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Lupus]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Lupus";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
   	class FST_Uniform_Tex: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -20903,6 +21234,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
         {
             uniformModel="";
             uniformClass="FST_P2_Ruby";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Flatline: JLTS_CloneArmor
+    {
+        author="Ruby";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Flatline]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Flatline";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -21458,6 +21803,50 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Huntress: JLTS_CloneNVG
+	{
+		author="Ruby";
+		displayName="[41st] NCO Macrobinoculars (Huntress)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Huntress.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Phoenix: JLTS_CloneNVG
+	{
+		author="Ruby";
+		displayName="[41st] NCO Macrobinoculars (Phoenix)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Phoenix.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Nahlens_Dirty: JLTS_CloneNVG
 	{
 		author="Viz";
@@ -21560,6 +21949,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Sledge.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Sledge_Dirty: JLTS_CloneNVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Sledge/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Sledge_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -22088,6 +22499,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Mox.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
+	class FST_NVG_Mox_Dirty: JLTS_CloneNVG
+	{
+		author="Ruby";
+		displayName="[41st] NCO Macrobinoculars (Mox/Dirty)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Mox_Dirty.paa",
 		};
 		visionMode[]=
 		{
@@ -23028,6 +23461,7 @@ class CfgVehicles
 	class JLTS_Clone_LR_attachment;
 	class WBK_B2_Mod_Standart;
 	class WBK_BX_Assasin_1;
+	class ls_reinsertTerminal;
 	class lsd_gar_bodyGlove_base;
 	class Bag_Base;
 	class Weapon_Bag_Base: Bag_Base
@@ -23035,7 +23469,30 @@ class CfgVehicles
 		class assembleInfo;
 	};
 	
-	
+	class FST_ReinsertTerminal: ls_reinsertTerminal 
+	{
+        scope = 2;
+        scopeCurator = 2;
+        author = "Ruby";
+        displayName = "[41st] Reinsert Terminal";
+		model="3AS\3AS_Props\Terminals\Terminal_Console.p3d";
+		hiddenSelections[]=
+		{
+			"camo1";
+		};
+		hiddenselectionstextures[]=
+		{
+			"3AS\3AS_Props\Terminals\data\base_co.paa";
+		};	
+		hiddenSelectionsMaterials[]=
+		{
+			"3AS\3AS_Props\Terminals\data\base_co.paa";
+		};
+		editorCategory="FST_Crates";
+		editorSubcategory="FST_Supplies";
+		vehicleClass = "Structures";
+        simulation = "thingx";
+	};
 	class FST_AmmoCrate: Box_NATO_Ammo_F
 	{
 		author="Daara";
@@ -23436,6 +23893,23 @@ class CfgVehicles
 			"41st_Armor\Data\Equipment\FST_Commando_Backpack_Jorge.paa"
 		};
 	};
+	class FST_Commando_Backpack_Jorge_Ammobearer: FST_Commando_Backpack_Jorge
+	{
+		scope=2;
+		class TransportMagazines
+		{
+			class _xx_FST_blaster_cell_High_Blue
+			{
+				count=15;
+				magazine="FST_blaster_cell_High_Blue";
+			};
+			class _xx_FST_blaster_cell_Blue
+			{
+				count=16;
+				magazine="FST_blaster_cell_Blue";
+			};
+		};
+	};
 	class FST_blueforWeaponBag_base: Weapon_Bag_Base
 	{
 		author="Legion Studios";
@@ -23711,7 +24185,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	/* class FST_ARF_backpack_s: FST_Clone_Backpack_ARF
@@ -23972,7 +24446,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 		class TransportItems
 		{
@@ -24241,7 +24715,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_UGL: FST_Clone_backpack
@@ -24258,7 +24732,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Woodland: FST_Clone_backpack
@@ -24279,7 +24753,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Desert: FST_Clone_backpack
@@ -24300,7 +24774,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Urban: FST_Clone_backpack
@@ -24321,7 +24795,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_RTO_Midnight: FST_Clone_backpack
@@ -24342,7 +24816,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
@@ -24443,7 +24917,7 @@ class CfgVehicles
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
-		tf_range=50000;
+		tf_range=2500;
 		tf_subtype="digital_lr";
 		mass=11;
 	};
@@ -24464,7 +24938,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack.paa",
 		};
-		tf_range=50000;
+		tf_range=2500;
 	};
 	class FST_Backpack_Antenna_Woodland: JLTS_Clone_RTO_pack
 	{
@@ -24487,7 +24961,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=50000;
+		tf_range=2500;
 	};
 	class FST_Backpack_Antenna_Desert: JLTS_Clone_RTO_pack
 	{
@@ -24510,7 +24984,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=50000;
+		tf_range=2500;
 	};
 	class FST_Backpack_Antenna_Midnight: JLTS_Clone_RTO_pack
 	{
@@ -24533,7 +25007,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=50000;
+		tf_range=2500;
 	};
 	class FST_Backpack_Antenna_Urban: JLTS_Clone_RTO_pack
 	{
@@ -24556,7 +25030,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_RTO_pack.rvmat"
 		};
-		tf_range=50000;
+		tf_range=2500;
 	};
 	class FST_Backpack_Antenna_ARF_Dirty: JLTS_Clone_RTO_pack
 	{
@@ -24575,7 +25049,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Radio_Backpack_Dirty.paa",
 		};
-		tf_range=50000;
+		tf_range=2500;
 	};
 //OLD 	
 /*	class FST_Backpack_Antenna_ARF_Desert: JLTS_Clone_RTO_pack
@@ -24848,7 +25322,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -24914,7 +25388,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -24980,7 +25454,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -25046,7 +25520,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -26512,7 +26986,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -26578,7 +27052,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -26705,7 +27179,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -26899,7 +27373,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		maximumload=250;
-		tf_range=50000;
+		tf_range=2500;
 		displayName="[41st] Cold Weather RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
 		hiddenselections[]=
@@ -26939,7 +27413,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -26997,7 +27471,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27055,7 +27529,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27113,7 +27587,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27171,7 +27645,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27229,7 +27703,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27287,7 +27761,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27345,7 +27819,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27403,7 +27877,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27463,7 +27937,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27523,7 +27997,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27583,7 +28057,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27643,7 +28117,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27701,7 +28175,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27759,7 +28233,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27817,7 +28291,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27875,7 +28349,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27935,7 +28409,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -27993,7 +28467,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28053,7 +28527,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28111,7 +28585,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28169,7 +28643,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28227,7 +28701,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28285,7 +28759,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28343,7 +28817,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28403,7 +28877,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28463,7 +28937,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28523,7 +28997,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28583,7 +29057,7 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
-		tf_range=50000;
+		tf_range=2500;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
 		DBA_jumppack_is_jumppack=1;
@@ -28992,7 +29466,7 @@ class CfgVehicles
 		editorSubcategory="FST_Subfaction";
 		uniformClass="FST_Commando_Uniform_Jorge";
 		nakedUniform="U_BasicBody";
-		backpack="FST_Commando_Backpack_Jorge";
+		backpack="FST_Commando_Backpack_Jorge_Ammobearer";
 		model="\3AS\3AS_Characters\Commando\3AS_Katarn_Armor.p3d";
 		modelSides[]={3,1};
 		hiddenSelections[]=
@@ -29007,11 +29481,13 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
+			"FST_DC17M",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
+			"FST_DC17M",
 			"Throw",
 			"Put"
 		};
@@ -29029,7 +29505,21 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
+			"FST_grenade_Detonator_mag",
+			"FST_grenade_Detonator_mag",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
 		};
 		respawnMagazines[]=
 		{
@@ -29045,7 +29535,21 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
+			"FST_grenade_Detonator_mag",
+			"FST_grenade_Detonator_mag",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
+			"FST_DC17M_EC40_Cell_Blue",
 		};
 		items[]=
 		{
@@ -29115,6 +29619,175 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch",
 			"JLTS_clone_comlink"
+		};
+		class HitPoints: HitPoints
+		{
+			class ACE_HDBracket: ACE_HDBracket{};
+			class HitFace: HitFace
+			{
+				armor=10;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitNeck
+			{
+				armor=60;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=60;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=60;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=60;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=60;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=60;
+				material=-1;
+				name="spine3";
+				passThrough="0.33000001radius = 0.18";
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitBody
+			{
+				armor=60;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=60;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=60;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=60;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm: HitLegs
+			{
+				armor=60;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=60;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
 		};
 	};
 	class FST_Trooper_P2_DC15S: B_Soldier_F
@@ -38073,6 +38746,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Sledge_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-3256 'Sledge/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Sledge_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Sledge_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Sledge_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Sledge_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Sledge_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Assassin: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -40668,6 +41396,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Mox_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Gold";
+		displayName="[41st] CT-8998 'Mox' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Mox";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Mox_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Mox_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Mox_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Mox_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Business: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -41529,7 +42312,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Harlequin",
+			"FST_Crewman_Helmet_Harlequin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41539,7 +42322,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Harlequin",
+			"FST_Crewman_Helmet_Harlequin_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41595,6 +42378,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Crewman_Helmet_Harlequin_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Blades: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-4876 'Blades'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Blades";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Blades.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Blades.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Crewman_Helmet_Blades",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Crewman_Helmet_Blades",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41870,6 +42708,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Steel: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-8784 'Steel'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Steel";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Steel.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Steel.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Steel",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Steel",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -44133,7 +45026,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_P2_Hex: FST_Trooper_P2_DC15S
+	class FST_P2_Hex: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
 		displayName="[41st] CT-4916 'Hex'";
@@ -44170,6 +45063,61 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"FST_P2_Helmet_Hex",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Hex",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Lupus: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-5973 'Lupus'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Lupus";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lupus.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lupus.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Lupus",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -45060,6 +46008,61 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Samurai_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+	class FST_P2_Flatline: FST_Trooper_P2_DC15S
+    {
+        author="Ruby";
+        displayName="[41st] CT-4382 'Flatline'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Flatline";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Flatline.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Flatline.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Flatline",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Flatline",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -48446,6 +49449,14 @@ class CfgFaces
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Preacher.paa";
 		};
+		class FST_Clone_Head_James: FST_clone_Default_head
+		{
+			author="Ruby"
+			name="Clone Trooper James";
+			displayName="[41st] Clone Trooper - James";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_James.paa";
+		};
 		class FST_Clone_Head_Jorge: FST_clone_Default_head
 		{
 			author="Adler"
@@ -48491,6 +49502,82 @@ class CfgFaces
 			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
 			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
 			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Mustang_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Mustang (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Mustang_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
+			head="TCGM_FemHead_Eilish";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Ruby_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Ruby (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Ruby_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Eilish.rvmat";
+			head="TCGM_FemHead_Eilish";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Eilish_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Stone_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Stone (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Stone_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Stone.rvmat";
+			head="TCGM_FemHead_Stone";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_WhitePony"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Stone_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Stone_injury.rvmat";
+			disabled=0;
+		};
+		class FST_Navy_Face_Portman_Zenoc: Default
+		{
+			author="Ruby adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
+			displayname="[41st] Navy Face - Portman (Zenoc)";
+			texture="41st_Armor\Data\Faces\FST_Clone_Portman_Zenoc.paa";
+			material="TCGM_Girls\textures\TCGM_f_Portman.rvmat";
+			head="TCGM_FemHead_Portman";
+			identityTypes[]=
+			{
+				"Head_TCGM_Girls_White"
+			};
+			textureHL="\TCGM_Girls\textures\TCGM_hl_f_white2_co.paa";
+			materialHL="TCGM_Girls\textures\TCGM_hl_f_white2.rvmat";
+			textureHL2="\TCGM_Girls\textures\TCGM_hl_f_white2_co.paa";
+			materialHL2="TCGM_Girls\textures\TCGM_hl_f_white2.rvmat";
+			materialWounded1="TCGM_Girls\textures\TCGM_f_Portman_injury.rvmat";
+			materialWounded2="TCGM_Girls\textures\TCGM_f_Portman_injury.rvmat";
 			disabled=0;
 		};
 	};

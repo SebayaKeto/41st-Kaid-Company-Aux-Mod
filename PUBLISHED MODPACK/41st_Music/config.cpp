@@ -111,7 +111,24 @@ class CfgMusic
 		"FST_Destiny_TheWarmindRemix",
 		"FST_Destiny_DreadfulHarmony",
 		"FST_Destiny_UnswornUnlovedErased",
-		"FST_Starwars_ImHanSolo",
+		"FST_Ace_Blockade",
+		"FST_Ace_InvisibleFleet",
+		"FST_Ace_Prelude",
+		"FST_Ace_Silent",
+		"FST_Ace_Tango",
+		"FST_HanSolo",
+		"FST_Archangel",
+		"FST_DeusEx_TheNothing",
+		"FST_MajorasMask_FinalHours",
+		"FST_KingsField_DarkReality",
+		"FST_Cygnus_CryforEternity",
+		"FST_LobotomyCorp_ThirdWarning",
+		"FST_Escapists_LockDown",
+		"FST_Escapists2_Lockdown",
+		"FST_DeusEx_TheIlluminati",
+		"FST_LobotomyCorp_FourthWarning",
+	
+		
 		//Misc tracks
 		"FST_TF1_Youreasoldiernow",
 		"FST_Inception_DreamIsCollapsing",
@@ -166,6 +183,7 @@ class CfgMusic
 		"FST_Rakghoul",
 		"FST_UnityInBattle",
 		"FST_Order66",
+		"FST_EvilAmbience",
 		
 		//KPOP Demon Hunters
 		"FST_Golden",
@@ -319,6 +337,18 @@ class CfgMusic
 			1
 		};
 		duration="8";
+	};
+	class FST_EvilAmbience
+	{
+		name="[Ambience] Evil Ambience";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Evil_Ambient.ogg",
+			4,
+			1
+		};
+		duration="1200";
 	};
 	class FST_Rakghoul
 	{
@@ -700,6 +730,138 @@ class CfgMusic
 		};
 		duration="415";
 	};
+	class FST_DeusEx_TheNothing
+	{
+		name="(Deus Ex) The Nothing";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\DeusEx_TheNothing.ogg",
+			1,
+			1
+		};
+		duration="122";
+	};
+	class FST_MajorasMask_FinalHours
+	{
+		name="(Majoras Mask) Final Hours";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\MajorasMask_FinalHours.ogg",
+			1,
+			1
+		};
+		duration="261";
+	};
+	class FST_KingsField_DarkReality
+	{
+		name="(Kings Field) Dark Reality";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\KingsField_DarkReality.ogg",
+			1,
+			1
+		};
+		duration="341";
+	};
+	class FST_Cygnus_CryforEternity
+	{
+		name="(Cygnus) Cry For Eternity";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Cygnus_CryforEternity.ogg",
+			1,
+			1
+		};
+		duration="103";
+	};
+	class FST_LobotomyCorp_ThirdWarning
+	{
+		name="(Lobotomy Corp) Third Warning";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\LobotomyCorp_ThirdWarning.ogg",
+			1,
+			1
+		};
+		duration="236";
+	};
+	class FST_Escapists_LockDown
+	{
+		name="(Escapists) Lockdown";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\TheEscapists_LockDown.ogg",
+			1,
+			1
+		};
+		duration="96";
+	};
+	class FST_Escapists2_Lockdown
+	{
+		name="(Escapists 2) Lockdown";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Escapists2_Lockdown.ogg",
+			1,
+			1
+		};
+		duration="136";
+	};
+	class FST_DeusEx_TheIlluminati
+	{
+		name="(Deus Ex) The Illuminati";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\DeusEx_TheIlluminati.ogg",
+			1,
+			1
+		};
+		duration="159";
+	};
+	class FST_LobotomyCorp_FourthWarning
+	{
+		name="(Lobotomy Corp) Fourth Warning";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\LobotomyCorp_FourthWarning.ogg",
+			1,
+			1
+		};
+		duration="265";
+	};
+	class FST_Archangel
+	{
+		name="(Zombies BO) Archangel";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Archangel.ogg",
+			1,
+			1
+		};
+		duration="310";
+	};
+	class FST_HanSolo
+	{
+		name="(Star Wars) I'm Han Solo";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\StarWars_ImHanSolo.ogg",
+			1,
+			1
+		};
+		duration="231";
+	};
 	class FST_Destiny_UntoldLegends
 	{
 		name="(Destiny) Untold Legends";
@@ -772,17 +934,65 @@ class CfgMusic
 		};
 		duration="189";
 	};
-	class FST_Starwars_ImHanSolo
+	class FST_Ace_InvisibleFleet
 	{
-		name="(Kinect Star Wars) I'm Han Solo"
+		name="(Ace Combat 04) Invincible Fleet";
 		musicClass="FST_OtherGames";
 		sound[]=
 		{
-			"41st_Music\GameTracks\StarWars_ImHanSolo.ogg",
+			"41st_Music\GameTracks\Ace_InvisibleFleet.ogg",
 			1,
 			1
 		};
-		duration="231";
+		duration="229";
+	};
+	class FST_Ace_Prelude
+	{
+		name="(Ace Combat 04) Prelude";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Prelude.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Ace_Silent
+	{
+		name="(Ace Combat 04) Silent";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Silent.ogg",
+			1,
+			1
+		};
+		duration="49";
+	};
+	class FST_Ace_Blockade
+	{
+		name="(Ace Combat 04) Blockade";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Blockade.ogg",
+			1,
+			1
+		};
+		duration="289";
+	};
+	class FST_Ace_Tango
+	{
+		name="(Ace Combat 04) Tango Line";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_Tango.ogg",
+			1,
+			1
+		};
+		duration="124";
 	};
 	class FST_Halo_ThroughTheTrees
 	{
