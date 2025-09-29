@@ -122,7 +122,7 @@ class CfgWeapons
 	class FST_Westar_M5 : arifle_MX_Base_F
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
+		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="FST_Westar_fried";
 		JLTS_repairTime=5;
 		ace_overheating_mrbs=40000;

@@ -10,7 +10,21 @@ class CfgPatches
 		weapons[]={};
 	};
 };
-
+class CfgFunctions {
+    class FST {
+        class EMP {
+            file = "\41st_Ammo\functions";
+            class onHit {};
+            class onHitEMP {};
+        };
+    };
+};
+class Extended_HitPart_EventHandlers {
+    class CAManBase {
+		JLTS_weapons_core = "";
+        FST_weapons_core = "if (JLTS_settings_EMP_mainSwitch == 1) then {(_this select 0) call FST_fnc_onHit;};";
+    };
+};
 class CfgSoundShaders
 {
     class FST_GrenadeEMP_Exp_SoundShader
