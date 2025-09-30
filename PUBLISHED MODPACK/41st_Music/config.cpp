@@ -127,6 +127,7 @@ class CfgMusic
 		"FST_Escapists2_Lockdown",
 		"FST_DeusEx_TheIlluminati",
 		"FST_LobotomyCorp_FourthWarning",
+		"FST_Stygian_Scope",
 	
 		
 		//Misc tracks
@@ -183,7 +184,6 @@ class CfgMusic
 		"FST_Rakghoul",
 		"FST_UnityInBattle",
 		"FST_Order66",
-		"FST_EvilAmbience",
 		
 		//KPOP Demon Hunters
 		"FST_Golden",
@@ -337,18 +337,6 @@ class CfgMusic
 			1
 		};
 		duration="8";
-	};
-	class FST_EvilAmbience
-	{
-		name="[Ambience] Evil Ambience";
-		musicClass="FST_Mission_Music";
-		sound[]=
-		{
-			"41st_Music\MissionTracks\Evil_Ambient.ogg",
-			4,
-			1
-		};
-		duration="1200";
 	};
 	class FST_Rakghoul
 	{
@@ -729,6 +717,18 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_Stygian_Scope
+	{
+		name="(Stygian) Scope";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Stygian_Scope.ogg",
+			1,
+			1
+		};
+		duration="114";
 	};
 	class FST_DeusEx_TheNothing
 	{
