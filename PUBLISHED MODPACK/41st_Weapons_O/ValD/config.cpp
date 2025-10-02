@@ -83,11 +83,7 @@ class CfgWeapons
 		};
 		modes[]=
 		{
-			"fullAuto",
-			"close",
-			"medium",
-			"far",
-			"veryFar"
+			"fullAuto"
 		};
 		class fullAuto: Mode_FullAuto
 		{

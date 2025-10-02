@@ -159,14 +159,14 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\41st_Weapons_O\ValD\Data\Val-D idea7.ogg",
+					"41st_Weapons_O\Maalras\Data\Maalras1.ogg",
 					1,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"\41st_Weapons_O\ValD\Data\Val-D idea8.ogg",
+					"41st_Weapons_O\Maalras\Data\Maalras2.ogg",
 					1,
 					1,
 					1800
