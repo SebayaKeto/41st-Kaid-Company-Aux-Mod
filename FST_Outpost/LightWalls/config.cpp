@@ -64,6 +64,30 @@ class CfgVehicles
 		eden = 1;
 	};
 	// Base Asset and Texture
+	class FST_OutpostWall_Unmarked_Curve: FST_OutpostWall_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (Unmarked)";
+		model = "FST\FST_Outpost\LightWalls\FST_OutpostWall_Light_Curve.p3d";
+		hiddenSelections[]={"Camo","Camo1","Camo2","Camo3","Camo4"};
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_Unmarked_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve.rvmat"
+		};
+	};
 	class FST_OutpostWall_Unmarked: FST_OutpostWall_Base
 	{
 		scope = 2;
@@ -133,7 +157,6 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
-	
 	class FST_OutpostWall_GAR_Woodland: FST_OutpostWall_Base
 	{
 		scope = 2;
@@ -281,6 +304,96 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
+	class FST_OutpostWall_Unmarked_Curve_GAROne: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (GAR 1)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_GAROne_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GAROne_co.paa"
+		};
+	};
+	class FST_OutpostWall_Unmarked_Curve_GARTwo: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (GAR 2)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_GARTwo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GARTwo_co.paa"
+		};
+	};
+	class FST_OutpostWall_Unmarked_Curve_GARLight: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (GAR Light)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_GARLight_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GARLight_co.paa"
+		};
+	};
+	class FST_OutpostWall_Unmarked_Curve_GARUrban: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (GAR Urban)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_GARUrban_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GARUrban_co.paa"
+		};
+	};
+	class FST_OutpostWall_Unmarked_Curve_GARWoodland: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (GAR Woodland)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_GARWoodland_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GARWoodland_co.paa"
+		};
+	};
+	class FST_OutpostWall_Unmarked_Curve_GARSand: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (GAR Sand)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_GARSand_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GARSand_co.paa"
+		};
+	};
 	// CIS Assets
 	class FST_OutpostWall_CIS: FST_OutpostWall_Base
 	{
@@ -345,6 +458,36 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
+	class FST_OutpostWall_Curve_CISLight: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (CIS Light)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsCIS";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_CISLight_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_CISLight_co.paa"
+		};
+	};
+	class FST_OutpostWall_Curve_CISDark: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (CIS Dark)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsCIS";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_CISDark_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_CISDark_co.paa"
+		};
+	};
 	// Minor Faction Assets
 	class FST_OutpostWall_Tagged: FST_OutpostWall_Base
 	{
@@ -366,6 +509,22 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Pirate.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_Curve_Tagged: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (Tagged)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsPirates";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_Tagged_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_Tagged_co.paa"
 		};
 	};
 	class FST_OutpostWall_Pirate: FST_OutpostWall_Base
@@ -390,6 +549,22 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
+	class FST_OutpostWall_Curve_Pirate: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (Pirate)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsPirates";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_Pirate_co.paa"
+		};
+	};
 	class FST_OutpostWall_BlackSun: FST_OutpostWall_Base
 	{
 		scope = 2;
@@ -412,6 +587,22 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
 		};
 	};
+	class FST_OutpostWall_Curve_BlackSun: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (Black Sun)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsBlackSun";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_BlackSun_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_BlackSun_co.paa"
+		};
+	};
 	class FST_OutpostWall_HuttCartel: FST_OutpostWall_Base
 	{
 		scope = 2;
@@ -432,6 +623,22 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Pirate.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2.rvmat",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3.rvmat"
+		};
+	};
+	class FST_OutpostWall_Curve_HuttCartel: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (Hutt Cartel)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsHuttCartel";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_Hutt_co.paa"
 		};
 	};
 };
