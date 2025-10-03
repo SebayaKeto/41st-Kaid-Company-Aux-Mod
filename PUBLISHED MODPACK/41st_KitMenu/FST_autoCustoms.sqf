@@ -1,3 +1,4 @@
+if (true) exitWith {};
 params [["_unit", player], ["_roleName", ""], ["_kitTag", ""]];
 if !(_roleName isEqualType "") then { _roleName = "" };
 if !(_kitTag   isEqualType "") then { _kitTag   = "" };

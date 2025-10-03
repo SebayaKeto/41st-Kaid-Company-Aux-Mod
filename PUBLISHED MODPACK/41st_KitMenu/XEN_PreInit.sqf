@@ -1735,6 +1735,7 @@ switch (true) do {
         _uniformToSet  = "FST_Uniform_CL";
         _headgearToSet = "FST_Pilot_P1_Helmet";
     };
+	/*
 	case (_name find ("CC-1861 " + '"' + "Annex" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Annex";
 		_headgearToSet  = "FST_P2_Helmet_Annex";
@@ -1813,6 +1814,7 @@ switch (true) do {
             _uniformToSet = "FST_Uniform_EOD";
         };
     };
+	*/
 	default {
         _uniformToSet = "FST_Uniform_Recruit";
         _headgearToSet = "FST_P2_Helmet_Recruit";
