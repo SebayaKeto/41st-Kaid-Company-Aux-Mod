@@ -140,6 +140,7 @@ class CfgPatches
 			"FST_P2_Rumble_Dirty",
 			"FST_P2_Sunny",
 			"FST_P2_Cowboy",
+			"FST_P2_Cutlass",
 			"FST_P2_Jan",
 			"FST_P2_Overwatch",
 			"FST_P2_Tooka",
@@ -17035,6 +17036,26 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Huntress.paa",
 		};
 	};
+	class FST_P2_Helmet_Pole: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Pole]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pole.paa",
+		};
+	};
+	class FST_P2_Helmet_Pole_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Pole/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pole_Dirty.paa",
+		};
+	};
  	class FST_P2_Helmet_Cardinal_V2: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -19528,6 +19549,20 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Cowboy";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Cutlass: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cutlass]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cutlass";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -39185,6 +39220,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Cowboy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Cutlass: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-0893 'Cutlass'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cutlass";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cutlass.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cutlass.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Cutlass",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Cutlass",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
