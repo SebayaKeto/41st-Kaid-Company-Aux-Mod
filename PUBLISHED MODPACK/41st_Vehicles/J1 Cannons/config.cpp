@@ -12,6 +12,8 @@ class CfgPatches
 		{
 			"FST_J1_Proton_Cannon",
 			"FST_J1_Proton_Legged",
+			"FST_J1_Proton_AT",
+			"FST_J1_Proton_AT_Legged",
 			"FST_J1_Cinematic_Proton_Cannon",
 			"FST_J1_Cinematic_Proton_Legged"
 		};
@@ -504,6 +506,74 @@ class CfgVehicles
 					"FST_10Rnd_Proton_AP",
 					"FST_10Rnd_Proton_AP",
 					"FST_10Rnd_Proton_AP"
+				};
+			};
+		};
+	};
+	class FST_J1_Proton_AT: FST_J1_Proton_Cannon
+	{
+		author = "Ruby";
+		displayname = "[41st] J1 Proton Cannon (AT)";
+		scope = 2;
+		scopecurator=2;
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		crew="FST_Droid_B1_OOM";
+		model="3AS\3AS_CIS_Static\J1_Proton_Cannon\model\3AS_J1_Proton_Cannon.p3d";
+		editorSubcategory="EdSubcat_Turrets";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				weapons[]=
+				{
+					"3AS_Hailfire_Barrage_Weapon"
+				};
+				magazines[]=
+				{
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile"
+				};
+			};
+		};
+	};
+	class FST_J1_Proton_AT_Legged: FST_J1_Proton_Legged
+	{
+		author = "Ruby";
+		displayname = "[41st] J1 Proton Cannon (AT/Legged)";
+		scope = 2;
+		scopecurator=2;
+		side=0;
+		faction="FST_BattleDroids_Faction";
+		crew="FST_Droid_B1_OOM";
+		model="3AS\3AS_CIS_Static\J1_Proton_Cannon\model\3AS_J1_Proton_Legged.p3d";
+		hiddenselections[]=
+		{
+			"camo0",
+			"camo1"
+		};
+		hiddenselectionstextures[]=
+		{
+			"3as\3as_cis_static\j1_proton_cannon\data\j1_body_co.paa",
+			"3as\3as_cis_static\j1_proton_cannon\data\j1_gun_Legs_co.paa"
+		};
+		editorSubcategory="EdSubcat_Turrets";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				weapons[]=
+				{
+					"3AS_Hailfire_Barrage_Weapon"
+				};
+				magazines[]=
+				{
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile",
+					"3AS_30Rnd_Missile"
 				};
 			};
 		};
