@@ -44,6 +44,10 @@ class CfgEditorCategories
 	{
 		displayname = "[FST] Kashyyyk Vegetation";
 	};
+	class FST_CatagoryCECTypeOneCratesRSU
+	{
+		displayname = "[FST] CEC Type-1 Storage Crates";
+	};
 };
 class CfgEditorSubcategories
 {
@@ -90,5 +94,25 @@ class CfgEditorSubcategories
 	class FST_Subcategory_KashyyykVines
 	{
 		displayName = "Kashyyyk Vines";
+	};
+	class FST_CatagoryCECGeneric
+	{
+		displayname = "Generic";
+	};
+	class FST_CatagoryCECForce
+	{
+		displayname = "Force Suppresant";
+	};
+	class FST_CatagoryCECLiquid
+	{
+		displayname = "Liquid";
+	};
+	class FST_CatagoryCECMedical
+	{
+		displayname = "Medical";
+	};
+	class FST_CatagoryCECAmmunition
+	{
+		displayname = "Ammunition";
 	};
 };
