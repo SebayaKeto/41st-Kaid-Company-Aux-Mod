@@ -14939,7 +14939,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Slow.paa",
 		};
 	};
-	class FST_P2_Helmet_Slow: FST_P2_Helmet_Base
+	class FST_P2_Helmet_White: FST_P2_Helmet_Base
 	{
 		author="Ruby";
 		scope=2; 
