@@ -50,10 +50,15 @@ class CfgPatches
 			"FST_GM_Base_Plastic_Radark",
 			"FST_GM_Base_Plastic_Zillo",
 			"FST_GM_Base_Plastic_Kadoshi",
+			"FST_GM_Base_Plastic_Rancor",
 			"FST_GM_Base_Plastic_Sanval",
 			"FST_GM_Base_Plastic_Hydra",
 			"FST_GM_Base_Plastic_Uvak",
 			"FST_GM_Base_Plastic_Howler",
+			"FST_GM_Base_Plastic_Voxyn",
+			"FST_GM_Base_Plastic_Raxshir",
+			"FST_GM_Base_Plastic_Gharzr",
+			"FST_GM_Base_Plastic_Varactyl",
 			// "FST_Trooper_ARF_Medic",
 			"FST_Trooper_Crewman",
 			"FST_Trooper_Medic",
@@ -14924,6 +14929,26 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Argyle.paa",
 		};
 	};
+	class FST_P2_Helmet_Slow: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Slow]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Slow.paa",
+		};
+	};
+	class FST_P2_Helmet_White: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [White]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_White.paa",
+		};
+	};
 	class FST_P2_Helmet_Fraenk: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -18050,6 +18075,21 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			mass=15;
 		};
 	};
+	class FST_Uniform_GM_Plastic_Rancor: JLTS_CloneArmor
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Clonetrooper Cold Weather Uniform (Rancor)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		model="JLTS_AE_GM\SEA_Uniform_GM_plastic.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_GM_Base_Plastic_Rancor";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_GM_Plastic_Kadoshi: JLTS_CloneArmor
 	{
 		author="Schlabbie And Maxim";
@@ -18121,6 +18161,66 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Howler";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_GM_Plastic_Voxyn: JLTS_CloneArmor
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Clonetrooper Cold Weather Uniform (Voxyn)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		model="JLTS_AE_GM\SEA_Uniform_GM_plastic.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_GM_Base_Plastic_Voxyn";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_GM_Plastic_Raxshir: JLTS_CloneArmor
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Clonetrooper Cold Weather Uniform (Raxshir)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		model="JLTS_AE_GM\SEA_Uniform_GM_plastic.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_GM_Base_Plastic_Raxshir";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_GM_Plastic_Gharzr: JLTS_CloneArmor
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Clonetrooper Cold Weather Uniform (Gharzr)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		model="JLTS_AE_GM\SEA_Uniform_GM_plastic.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_GM_Base_Plastic_Gharzr";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_GM_Plastic_Varactyl: JLTS_CloneArmor
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Clonetrooper Cold Weather Uniform (Varactyl)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		model="JLTS_AE_GM\SEA_Uniform_GM_plastic.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_GM_Base_Plastic_Varactyl";
 			containerClass="Supply150";
 			mass=15;
 		};
@@ -34352,6 +34452,62 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_GM_Base_Plastic_Rancor: FST_GM_Base_Plastic
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Cold Weather Trooper (Rancor)";
+		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_GM_Plastic_Rancor";
+		backpack="";
+		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"Uniform",
+			"insignia"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Rancor.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_GM_Base_Plastic_Sanval: FST_GM_Base_Plastic
 	{
 		author="Daara";
@@ -34540,6 +34696,230 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Howler.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_GM_Base_Plastic_Voxyn: FST_GM_Base_Plastic
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Cold Weather Trooper (Voxyn)";
+		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_GM_Plastic_Voxyn";
+		backpack="";
+		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"Uniform",
+			"insignia"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Voxyn.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_GM_Base_Plastic_Raxshir: FST_GM_Base_Plastic
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Cold Weather Trooper (Raxshir)";
+		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_GM_Plastic_Raxshir";
+		backpack="";
+		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"Uniform",
+			"insignia"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Raxshir.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_GM_Base_Plastic_Gharzr: FST_GM_Base_Plastic
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Cold Weather Trooper (Gharzr)";
+		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_GM_Plastic_Gharzr";
+		backpack="";
+		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"Uniform",
+			"insignia"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Gharzr.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_GM_Helmet",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_GM_Base_Plastic_Varactyl: FST_GM_Base_Plastic
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Cold Weather Trooper (Varactyl)";
+		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_GM_Plastic_Varactyl";
+		backpack="";
+		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"Uniform",
+			"insignia"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Varactyl.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
