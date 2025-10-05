@@ -14929,6 +14929,26 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Argyle.paa",
 		};
 	};
+	class FST_P2_Helmet_Slow: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Slow]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Slow.paa",
+		};
+	};
+	class FST_P2_Helmet_Slow: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [White]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_White.paa",
+		};
+	};
 	class FST_P2_Helmet_Fraenk: FST_P2_Helmet_Base
 	{
 		author="Gold";
