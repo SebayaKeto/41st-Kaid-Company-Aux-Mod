@@ -128,6 +128,7 @@ class CfgMusic
 		"FST_DeusEx_TheIlluminati",
 		"FST_LobotomyCorp_FourthWarning",
 		"FST_Stygian_Scope",
+		"FST_Destiny_Invitation",
 	
 		
 		//Misc tracks
@@ -717,6 +718,18 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_Destiny_Invitation
+	{
+		name="(Destiny) An Invitation (Boss)";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny2_InvitationBoss.ogg",
+			1,
+			1
+		};
+		duration="749";
 	};
 	class FST_Stygian_Scope
 	{
