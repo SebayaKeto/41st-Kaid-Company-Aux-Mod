@@ -1480,6 +1480,26 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_vest_gm_FTL : FST_Vest_GM_Base
+	{
+		displayName="[41st] Fire Team Leader Cold Weather Vest";
+		author="Schlabbie And Maxim";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Vests\FST_vest_gm_FTL.paa"
+		};
+	}
+	class FST_vest_gm_SL : FST_Vest_GM_Base
+	{
+		displayName="[41st] Squad Leader Cold Weather Vest";
+		author="Schlabbie And Maxim";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Vests\FST_vest_gm_SL.paa"
+		};
+	}
 	class FST_cloneVest_Scout_Woodland: ls_cloneVest_scout
 	{
 		author = "Ruby";
