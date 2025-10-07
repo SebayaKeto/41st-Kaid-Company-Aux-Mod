@@ -6252,6 +6252,10 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"Camo1",
 			"Visor"
 		};
+		subItems[]=
+		{
+			"k_nvg"
+		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\data\Helmets\FST_GM_Helmet.paa",

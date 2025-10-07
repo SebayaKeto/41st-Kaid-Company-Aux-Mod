@@ -601,7 +601,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["FST_Vest_Base","UNSC_Knife","FST_Vest_HeavyBag","FST_Vest_HeavyBag_Veteran","FST_DC17", "FST_RPS6_Disposable","FST_Hoster_Face","FST_Westar_M5"],
+    ["FST_Vest_Base","UNSC_Knife","FST_Vest_HeavyBag","FST_Vest_HeavyBag_Veteran","FST_DC17", "FST_RPS6_Disposable","FST_Hoster_Face"],
     "true",
     {},
     "airborne"
@@ -697,7 +697,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_DP23","FST_DC17","FST_TwinDC17_Secondary","FST_Vest_NCO_Kama","FST_Vest_NCO_Kama_Veteran","FST_Vest_Base","FST_Westar_M5"], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_DP23","FST_Westar_M5"], 
     "true",
     {},
     "airborne"
