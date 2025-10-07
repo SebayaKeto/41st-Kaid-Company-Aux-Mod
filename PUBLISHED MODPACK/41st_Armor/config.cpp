@@ -6252,10 +6252,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"Camo1",
 			"Visor"
 		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\data\Helmets\FST_GM_Helmet.paa",
@@ -22009,6 +22005,13 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+
+	class FST_NVG_Invisible : FST_NVG
+	{
+		displayName="[41st] Invisible NVGS";
+		model="";
+	}
+
 	class FST_NVG_Woodland: JLTS_CloneNVG
 	{
 		author="Gold";
@@ -22036,6 +22039,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Invisible_Thermals : FST_NVG_Woodland
+	{
+		displayName="[41st] Invisible NVGS special";
+		model="";
+	}
 	class FST_NVG_Urban: JLTS_CloneNVG
 	{
 		author="Gold";
