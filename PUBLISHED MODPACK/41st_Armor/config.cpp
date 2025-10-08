@@ -389,6 +389,10 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Battledroids";
 	};
+	class FST_HumanDivision_Subfaction
+	{
+		displayName="41st CIS Human Division";
+	};
 	class FST_Tukata_Subfaction
 	{
 		displayName="41st Tukata PMC";
