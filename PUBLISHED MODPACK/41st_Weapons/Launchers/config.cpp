@@ -546,8 +546,7 @@ class CfgWeapons
 		magazineWell[]={};
 		magazines[]=
 		{
-			"FST_RPS6_rocket",
-			"FST_RPS6_rocket_HE",
+			"FST_RPS6_rocket_SR"
 		};
 		class Single: Mode_SemiAuto
 		{

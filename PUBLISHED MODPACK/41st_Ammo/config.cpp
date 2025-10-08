@@ -864,6 +864,7 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=0.5;
 		caliber=5;
+		timeToLive = 2.0;
 		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
 		submunitionConeType[]=
 		{
@@ -1106,11 +1107,23 @@ class CfgAmmo
 		timeToLive=10;
 		sideAirFriction=0.075000003;
 	};
+	class FST_rocket_SR: R_PG32V_F
+	{
+		hit=800;
+		caliber=60;
+		indirectHit=200;
+		indirectHitRange=4;
+		maxSpeed=165;
+		thrust=165;
+		thrustTime=0.1;
+		timeToLive=10;
+		sideAirFriction=0.075000003;
+	};
  	class FST_rocket_HE: R_PG32V_F
 	{
-		hit=250;
-		indirectHit=200;
-		indirectHitRange=10;
+		hit=80;
+		indirectHit=180;
+		indirectHitRange=15;
 		maxSpeed=160;
 		thrust=160;
 		thrustTime=0.1;
@@ -2347,6 +2360,18 @@ class CfgMagazines
 		initSpeed=160;
 		mass=40;
 	};
+	class FST_RPS6_rocket_SR: RPG32_F
+	{
+		author="Daara";
+		displayName="[41st] RPS-6 Rocket (SR)";
+		displayNameShort="RPS-6 Rocket";
+		descriptionShort="SR Rocket. Compatible with RPS-6SR Rocket Launchers.";
+		ammo="FST_rocket_SR";
+		Scope=2;
+		initSpeed=160;
+		mass=40;
+	};
+
 	class FST_RPS6_rocket_Disposable: RPG32_F
 	{
 		author="Adapted from the Indecisive Armoury Team";

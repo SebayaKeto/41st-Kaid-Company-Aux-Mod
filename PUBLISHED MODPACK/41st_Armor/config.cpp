@@ -17744,6 +17744,11 @@ class CfgVehicles
 				count=12;
 				magazine="FST_RPS6_rocket_HE";
 			};
+			class _xx_FST_FST_rocket_SR
+			{
+				count=6;
+				magazine="FST_RPS6_rocket_SR";
+			};	
 			class _xx_FST_PLX1_Rocket
 			{
 				count=5;
