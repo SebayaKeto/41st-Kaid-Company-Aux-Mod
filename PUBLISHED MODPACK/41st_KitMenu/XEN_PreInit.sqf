@@ -1718,12 +1718,17 @@ private _backpackToSet = "";
 private _nvgToSet="";
 private _name = name player;
 private _kitUniformClass = "";
-private _kitUniformClass = "";
 if ((_kit isEqualType []) && {(count _kit) > 3}) then {
     private _u = _kit select 3;
     if ((_u isEqualType []) && {(count _u) > 0}) then {
         _kitUniformClass = _u select 0;
     };
+};
+switch (true) do {
+    case (_name find "ARC-" == 0 && { _kitUniformClass isEqualTo "FST_Uniform_GM_Plastic" }): {
+        _nvgToSet = "FST_NVG_Invisible_Thermals";
+    };
+    default {};
 };
 if !(_kitUniformClass isEqualTo "FST_Uniform_GM_Plastic") then {
 switch (true) do {
