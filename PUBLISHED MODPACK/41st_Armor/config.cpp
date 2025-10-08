@@ -489,12 +489,10 @@ class CfgItems
 		hiddenSelectionsTextures[] = {"\Sawtes_Sight_test\FST_Clone_binocular_co.paa"};
 		visionMode[] = {"Normal","NVG"};
 	};
-	class FST_CloneBinocular_Thermal: JLTS_CloneBinocular
+	class FST_CloneBinocular_Thermal: FST_CloneBinocular_Regular
 	{ 
-		scope = 2;
-		scopeArsenal = 2; 
 		displayName = "[41st] Clone Trooper Electrobinocular (Thermal)";
-		hiddenSelectionsTextures[] = {"\Sawtes_Sight_test\FST_Clone_binocular_co.paa"};
+
 		visionMode[] = {"Normal","NVG","TI"};
 		thermalMode[] = {0,1,4,5,6,7};
 	};
@@ -743,17 +741,11 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_CloneVestARC_Camo: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Camo: FST_CloneVestARC
 	{
 		author="Viz";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Camo]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Camo.paa"
@@ -762,68 +754,12 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Midnight: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Midnight: FST_CloneVestARC
 	{
 		author="Viz";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Midnight]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Midnight.paa"
@@ -832,68 +768,12 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Urban: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Urban: FST_CloneVestARC
 	{
 		author="Viz";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Urban]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Urban.paa"
@@ -902,68 +782,12 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Desert: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Desert: FST_CloneVestARC
 	{
 		author="Viz";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Desert]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Desert.paa"
@@ -972,451 +796,65 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Tally: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Tally: FST_CloneVestARC
 	{
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Tally]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Tally.paa"
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Burns: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Burns: FST_CloneVestARC
 	{
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Burns]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Burns.paa"
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Jorge: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Jorge: FST_CloneVestARC
 	{
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Jorge]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_JARC.paa"
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_CloneVestARC_Major: V_PlateCarrier1_rgr
+ 	class FST_CloneVestARC_Major: FST_CloneVestARC
 	{
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Major]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Major.paa"
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_CloneVestARC_Mono: V_PlateCarrier1_rgr
+ 	class FST_CloneVestARC_Mono: FST_CloneVestARC
 	{
 		author="Daara";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Mono]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Mono.paa"
 		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_CloneVestARC_Squatch: V_PlateCarrier1_rgr
+	class FST_CloneVestARC_Squatch: FST_CloneVestARC
 	{
 		author="Gold";
 		scope=2;
 		displayName="[41st] ARC Trooper Vest [Squatch]";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Squatch.paa"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_Vest_GM_Base: JLTS_CloneVestOfficer
@@ -1570,211 +1008,34 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_cloneVest_Scout_Midnight: ls_cloneVest_scout
+	class FST_cloneVest_Scout_Midnight: FST_cloneVest_Scout_Woodland
 	{
 		author = "Ruby";
 		scope = 2;
 		displayname = "[41st] Clone Scout Pouches (Midnight)";
-		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
-		hiddenselections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Midnight.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=15;
-			containerclass="Supply200";
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_cloneVest_Scout_Desert: ls_cloneVest_scout
+	class FST_cloneVest_Scout_Desert: FST_cloneVest_Scout_Woodland
 	{
 		author = "Ruby";
 		scope = 2;
 		displayname = "[41st] Clone Scout Pouches (Desert)";
-		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
-		hiddenselections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Desert.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=15;
-			containerclass="Supply200";
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_cloneVest_Scout_Urban: ls_cloneVest_scout
+	class FST_cloneVest_Scout_Urban: FST_cloneVest_Scout_Woodland
 	{
 		author = "Ruby";
 		scope = 2;
 		displayname = "[41st] Clone Scout Pouches (Urban)";
-		model="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
-		hiddenselections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Scout_Pouches_Urban.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Scout_Pouches.rvmat"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformmodel="ls\core\addons\characters_clone\vests\scout\ls_vest_clone_scout.p3d";
-			hiddenSelections[]=
-			{
-				"camo1"
-			};
-			mass=15;
-			containerclass="Supply200";
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_vest_holster: FST_vest_base
@@ -2250,272 +1511,36 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_Vest_NCO_Midnight: JLTS_CloneVestRecon
+	class FST_Vest_NCO_Midnight: FST_Vest_NCO_Woodland
 	{
 		displayName="[41st] Fire Team Leader Sash (Midnight)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Midnight.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo2"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Vest_NCO_Urban: JLTS_CloneVestRecon
+	class FST_Vest_NCO_Urban: FST_Vest_NCO_Woodland
 	{
 		displayName="[41st] Fire Team Leader Sash (Urban)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Urban.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo2"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Vest_NCO_Desert: JLTS_CloneVestRecon
+	class FST_Vest_NCO_Desert: FST_Vest_NCO_Woodland
 	{
 		displayName="[41st] Fire Team Leader Sash (Desert)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Desert.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_vest_sash.rvmat"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo2"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
+class FST_Vest_NCO_Veteran: FST_Vest_NCO
 	{
 		displayName="[41st] Fire Team Leader Sash (Veteran)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo2"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_Vest_HeavyBag: JLTS_CloneVestAirborne
@@ -2586,72 +1611,14 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_Vest_HeavyBag_Veteran: JLTS_CloneVestAirborne
+	class FST_Vest_HeavyBag_Veteran: FST_Vest_HeavyBag
 	{
 		scope=2;
 		displayName="[41st] Airborne Fire Team Leader Sash (Veteran)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"",
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
-			containerClass="Supply200";
-			hiddenSelections[]=
-			{
-				"camo1",
-				"camo2",
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_Vest_NCO_SL: FST_Vest_NCO
@@ -5099,76 +4066,13 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_CloneVestAirborneNCO_Veteran: JLTS_CloneVestAirborne
+	class FST_CloneVestAirborneNCO_Veteran: FST_CloneVestAirborneNCO
 	{
 		displayName="[41st] Airborne Squad Leader Sash (Veteran)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		hiddenSelections[] =
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[] =
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
-		};
-		class ItemInfo: VestItem
-		{
-			vesttype="Rebreather";
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
-			containerClass="Supply200";
-			hiddenSelections[] =
-			{
-				"camo1",
-				"camo2"
-			};
-			hiddenSelectionsTextures[] =
-			{
-				"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
-				"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
-			};
-			mass=80;
-			class HitpointsProtectionInfo
-			{		
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Arms
-				{
-					hitpointName="HitArms";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Legs
-				{
-					hitpointName="Hitlegs";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_CloneVestSuspenders: V_PlateCarrier1_rgr
@@ -6387,163 +5291,37 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_cloneHelmet_Scout_Midnight: ls_cloneHelmet_scout
+	class FST_cloneHelmet_Scout_Midnight: FST_cloneHelmet_Scout_Woodland
 	{
 		author="Daara";
 		scope=2;
 		displayName="[41st] Scout Trooper Helmet (Midnight)";
-		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"visor"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Midnight.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class ItemInfo: HeadgearItem
-		{
-			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
-			mass=15;
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_cloneHelmet_Scout_Desert: ls_cloneHelmet_scout
+	class FST_cloneHelmet_Scout_Desert: FST_cloneHelmet_Scout_Woodland
 	{
 		author="Daara";
 		scope=2;
 		displayName="[41st] Scout Trooper Helmet (Desert)";
-		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"visor"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Desert.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class ItemInfo: HeadgearItem
-		{
-			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
-			mass=15;
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_cloneHelmet_Scout_Urban: ls_cloneHelmet_scout
+	class FST_cloneHelmet_Scout_Urban: FST_cloneHelmet_Scout_Woodland
 	{
 		author="Daara";
 		scope=2;
 		displayName="[41st] Scout Trooper Helmet (Urban)";
-		model="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"visor"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa",
 			"41st_Armor\Data\Helmets\FST_Scout_Helmet_Urban.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class ItemInfo: HeadgearItem
-		{
-			uniformModel="ls\core\addons\characters_clone\helmets\scout\ls_helmet_clone_scout.p3d";
-			mass=15;
-			hiddenSelections[]=
-			{
-				"camo1",
-				"visor"
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_ARF_Helmet_Blank: SWLB_clone_ARF_P1_helmet
@@ -8639,829 +7417,169 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		scope=2;
 		author="Daara";
 		displayName="[41st] Crewman Helmet (Demon)";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Demon.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Nova: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Nova: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Steel";
 		displayName="[41st] Crewman Helmet (Nova)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Nova.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Blades: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Blades: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Daara";
 		displayName="[41st] Crewman Helmet (Blades)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Blades.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Waffle: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Waffle: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Daara";
 		displayName="[41st] Crewman Helmet (Waffle)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Waffle.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Harlequin: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Harlequin: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Harlequin)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Harlequin.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Oak: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Oak: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Oak)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Oak.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Hotshot: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Hotshot: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Daara";
 		displayName="[41st] Crewman Helmet (Hotshot)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Hotshot.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Hotshot_Dirty: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Hotshot_Dirty: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Hotshot/Dirty)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Hotshot_Dirty.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Harlequin_Dirty: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Harlequin_Dirty: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Viz";
 		displayName="[41st] Crewman Helmet (Harlequin/Dirty)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Harlequin_Dirty.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Ace: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Ace: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Ace)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Ace.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Angel: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Angel: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Daara";
 		displayName="[41st] Crewman Helmet (Angel)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Angel.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Angel_Dirty: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Angel_Dirty: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Angel/Dirty)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Angel_Dirty.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Arthur: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Arthur: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Arthur)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Arthur.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Merlin: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Merlin: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Merlin)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Merlin.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Benni: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Benni: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Benni)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Benni.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Colors: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Colors: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Viz";
 		displayName="[41st] Crewman Helmet (Colors)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Colors.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Crewman_Helmet_Jorge: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Jorge: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Jorge)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Jorge.paa"
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_Airborne_Helmet: JLTS_CloneHelmetAB
@@ -9516,52 +7634,14 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_Airborne_Helmet_NCO: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_NCO: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne NCO Helmet";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_NCO.paa",
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	//////////////Custom Helmets//////////////
@@ -10535,1159 +8615,231 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
- 	class FST_Airborne_Helmet_Annex: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Annex: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Annex)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Annex.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Woodland: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Woodland: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Woodland)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Woodland.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_AB.rvmat"
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1"
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Nahlens: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Nahlens: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Nahlens)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Nahlens.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Antonius: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Antonius: FST_Airborne_Helmet
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Antonius)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Antonius.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Cowboy: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Cowboy: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Cowboy)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cowboy.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Shut: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Shut: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Shut)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Shut.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Arctic: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Arctic: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Arctic)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Arctic.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Cyanide: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Cyanide: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Cyanide)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cyanide.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Hinx: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Hinx: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Hinx)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Hinx.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Sepie: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Sepie: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Sepie)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sepie.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Viz: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Viz: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Viz)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Viz.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Viz_Dirty: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Viz_Dirty: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Viz/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Viz_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Stein: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Stein: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Stein)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Stein.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Elk: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Elk: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Elk)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Elk.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Lawman: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Lawman: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Lawman)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Lawman.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Mac: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Mac: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Mac)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Mac.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Sunny: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Sunny: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Sunny)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sunny.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Waffle: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Waffle: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Waffle)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Waffle.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Fire: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Fire: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Fire)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Fire.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Jorge: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Jorge: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Jorge)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Jorge.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Lang: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Lang: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Lang)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Lang.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Warlord: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Warlord: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Warlord)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Warlord.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Cutlass: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Cutlass: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Cutlass)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
 		hiddenselections[]=
 		{
 			"camo1",
@@ -11696,3211 +8848,615 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Milton: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Milton: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Milton)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Milton.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Glacial: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Glacial: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Glacial)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Glacial.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Atlas: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Atlas: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Atlas)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Atlas.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Alek: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Alek: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Alek)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Alek.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Noble: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Noble: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Noble)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Noble.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Silhouette: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Silhouette: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Silhouette)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Silhouette.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Silhouette_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Silhouette_Dirty: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Silhouette/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Silhouette_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Assassin: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Assassin: FST_Airborne_Helmet
 	{
 		author="Dara";
 		displayName="[41st] Airborne Helmet (Assassin)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Assassin.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Puma: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Puma: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Puma)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Puma.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Puma_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Puma_Dirty: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Puma/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Puma_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Ares: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Ares: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Ares)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ares.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Sparrow: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Sparrow: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Sparrow)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sparrow.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Prodigal: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Prodigal: FST_Airborne_Helmet
 	{
 		author="Tanuki";
 		displayName="[41st] Airborne Helmet (Prodigal)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Prodigal.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat"
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1"
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Impaler: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Impaler: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Impaler)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Impaler.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Vishy: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Vishy: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Vishy)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vishy.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Nys: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Nys: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Nys)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Nys.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Squid: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Squid: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Squid)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Squid.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Spider: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Spider: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Spider)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Spider.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_James: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_James: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (James)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_James.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_James_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_James_Dirty: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (James/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_James_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Vengence: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Vengence: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Vengence)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vengeance.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Brick: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Brick: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Brick)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Brick.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Deso: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Deso: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Deso)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Deso.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Helix: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Helix: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Helix)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Helix.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Helix_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Helix_Dirty: FST_Airborne_Helmet
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Helix/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Helix_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Deso_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Deso_Dirty: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Deso/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Deso_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Zen: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Zen: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Zen)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Zen.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Bookworm: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Bookworm: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Bookworm)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Bookworm.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
- 	class FST_Airborne_Helmet_Dunder: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Dunder: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Dunder)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Dunder.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	}; 
-	class FST_Airborne_Helmet_Mixer: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Mixer: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Mixer)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Mixer.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Preacher: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Preacher: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Preacher)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Preacher.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Preacher_Dirty: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Preacher_Dirty: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Preacher/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Preacher_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Mav: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Mav: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Mav)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Mav.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
- 	class FST_Airborne_Helmet_Medusa: JLTS_CloneHelmetAB
+ 	class FST_Airborne_Helmet_Medusa: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Medusa)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Medusa.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Prancer: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Prancer: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Prancer)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Prancer.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Starlet: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Starlet: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Starlet)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Starlet.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Texas: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Texas: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Texas)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Texas.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Delta: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Delta: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Delta)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Delta.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Delta_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Delta_Dirty: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Delta/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Delta_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Ruby: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Ruby: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Ruby)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ruby.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Ruby_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Ruby_Dirty: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Ruby/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ruby_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Thug: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Thug: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Thug)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Thug.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Poly: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Poly: FST_Airborne_Helmet
 	{
 		author="Daara";
 		displayName="[41st] Airborne Helmet (Poly)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Poly.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Dakka: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Dakka: FST_Airborne_Helmet
 	{
 		author="Vengence";
 		displayName="[41st] Airborne Helmet (Dakka)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Dakka.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Bright: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Bright: FST_Airborne_Helmet
 	{
 		author="Vengence";
 		displayName="[41st] Airborne Helmet (Bright)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Bright.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Zombie: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Zombie: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Zombie)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Zombie.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Marek: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Marek: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Marek)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Marek.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Marek_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Marek_Dirty: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Marek/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Marek_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Crusader: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Crusader: FST_Airborne_Helmet
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Crusader)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Crusader.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Kelj: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Kelj: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Kelj)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Kelj.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Riley: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Riley: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Riley)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Riley_V2: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Riley_V2: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Riley/V2)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Binary: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Binary: FST_Airborne_Helmet
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Binary)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Binary.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Salt: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Salt: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Salt)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Salt.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Gold: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Gold: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Gold)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Gold.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Red: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Red: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Red)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Red.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Vix: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Vix: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Vix)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vix.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Vix_Dirty: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Vix_Dirty: FST_Airborne_Helmet
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Vix/Dirty)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vix_Dirty.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Appa: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Appa: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Appa)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Appa.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Butter: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Butter: FST_Airborne_Helmet
 	{
 		author="Fowler";
 		displayName="[41st] Airborne Helmet (Butter)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Butter.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
-		};
 	};
-	class FST_Airborne_Helmet_Harribel: JLTS_CloneHelmetAB
+	class FST_Airborne_Helmet_Harribel: FST_Airborne_Helmet
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Harribel)";
 		scope=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Harribel.paa",
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
-		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
-		class Iteminfo: HeadgearItem
-		{
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
-			mass=15;
-			hiddenselections[]=
-			{
-				"camo1",
-			};
-			allowedSlots[]={801,901,701,605};
-			modelSides[]={6};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointname="HitHead";
-					armor=6;
-					PassThrough=0.08975;
-				};
-				class Face
-				{
-					hitpointName="HitFace";
-					armor=6;
-					PassThrough=0.08975;
-				};
-			};
 		};
 	};
 	class FST_P2_Helmet_Skipjack: FST_P2_Helmet_Base
@@ -21998,7 +16554,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed: JLTS_CloneNVG_spec
+		class FST_NVG_Fixed: JLTS_CloneNVG_spec
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Fixed On)";
@@ -22058,1318 +16614,536 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		displayName="[41st] Invisible NVGS special";
 		model="";
 	}
-	class FST_NVG_Urban: JLTS_CloneNVG
+	class FST_NVG_Urban: FST_NVG_Woodland
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Urban)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Urban.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_nvg.rvmat"
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Midnight: JLTS_CloneNVG
+	class FST_NVG_Midnight: FST_NVG_Woodland
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Midnight)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Midnight.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_nvg.rvmat"
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Dobie: JLTS_CloneNVG
+	class FST_NVG_Dobie: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Dobie)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dobie.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Stant: JLTS_CloneNVG
+	class FST_NVG_Stant: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Stant)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Stant.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Nahlens: JLTS_CloneNVG
+	class FST_NVG_Nahlens: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Nahlens)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Nahlens.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Huntress: JLTS_CloneNVG
+	class FST_NVG_Huntress: FST_NVG
 	{
 		author="Ruby";
 		displayName="[41st] NCO Macrobinoculars (Huntress)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Huntress.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Phoenix: JLTS_CloneNVG
+	class FST_NVG_Phoenix: FST_NVG
 	{
 		author="Ruby";
 		displayName="[41st] NCO Macrobinoculars (Phoenix)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Phoenix.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Nahlens_Dirty: JLTS_CloneNVG
+	class FST_NVG_Nahlens_Dirty: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Nahlens/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Nahlens_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Arcus: JLTS_CloneNVG
+	class FST_NVG_Arcus: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Arcus)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Arcus.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Hazzo: JLTS_CloneNVG
+	class FST_NVG_Hazzo: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Hazzo)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazzo.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Azrael: JLTS_CloneNVG
+	class FST_NVG_Azrael: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Azrael)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Azrael.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Sledge: JLTS_CloneNVG
+	class FST_NVG_Sledge: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Sledge)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Sledge.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Sledge_Dirty: JLTS_CloneNVG
+	class FST_NVG_Sledge_Dirty: FST_NVG
 	{
 		author="Steel";
 		displayName="[41st] NCO Macrobinoculars (Sledge/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Sledge_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Steel: JLTS_CloneNVG
+	class FST_NVG_Steel: FST_NVG
 	{
 		author="Steel";
 		displayName="[41st] NCO Macrobinoculars (Steel)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Steel.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Steel_Dirty: JLTS_CloneNVG
+	class FST_NVG_Steel_Dirty: FST_NVG
 	{
 		author="Steel";
 		displayName="[41st] NCO Macrobinoculars (Steel/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Steel_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Cosmic: JLTS_CloneNVG
+	class FST_NVG_Cosmic: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Cosmic)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Cosmic.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Cosmic_Dirty: JLTS_CloneNVG
+	class FST_NVG_Cosmic_Dirty: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Cosmic/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Cosmic_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Overwatch: JLTS_CloneNVG
+	class FST_NVG_Overwatch: FST_NVG
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Overwatch)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Overwatch.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Snoob: JLTS_CloneNVG
+	class FST_NVG_Snoob: FST_NVG
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Snoob)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Snoob.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Wuffer: JLTS_CloneNVG
+	class FST_NVG_Wuffer: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Wuffer)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Wuffer.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_House: JLTS_CloneNVG
+	class FST_NVG_House: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (House)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_House.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_House_Dirty: JLTS_CloneNVG
+	class FST_NVG_House_Dirty: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (House/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_House_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Coda: JLTS_CloneNVG
+	class FST_NVG_Coda: FST_NVG
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Coda)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Coda.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Xeha: JLTS_CloneNVG
+	class FST_NVG_Xeha: FST_NVG
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Xeha)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Xeha.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Xeha_Dirty: JLTS_CloneNVG
+	class FST_NVG_Xeha_Dirty: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Xeha/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Xeha_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Burns: JLTS_CloneNVG
+	class FST_NVG_Burns: FST_NVG
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Burns)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Burns.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Rint: JLTS_CloneNVG
+	class FST_NVG_Rint: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Rint)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Rint.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Lancer: JLTS_CloneNVG
+	class FST_NVG_Lancer: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Lancer)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Lancer.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Rumble: JLTS_CloneNVG
+	class FST_NVG_Rumble: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Rumble)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Rumble.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Rumble_Dirty: JLTS_CloneNVG
+	class FST_NVG_Rumble_Dirty: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Rumble/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Rumble_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Tooka: JLTS_CloneNVG
+	class FST_NVG_Tooka: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Tooka)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Tooka.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Squatch: JLTS_CloneNVG
+	class FST_NVG_Squatch: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Squatch)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Squatch.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Hazard: JLTS_CloneNVG
+	class FST_NVG_Hazard: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Hazard)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazard.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Hazard_Dirty: JLTS_CloneNVG
+	class FST_NVG_Hazard_Dirty: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Hazard/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hazard_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Vector: JLTS_CloneNVG
+	class FST_NVG_Vector: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Vector)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Vector.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Vector_Dirty: JLTS_CloneNVG
+	class FST_NVG_Vector_Dirty: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Vector/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Vector_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Business: JLTS_CloneNVG
+	class FST_NVG_Business: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Business)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Business.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Claw: JLTS_CloneNVG
+	class FST_NVG_Claw: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Claw)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Claw.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Mox: JLTS_CloneNVG
+	class FST_NVG_Mox: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Mox)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Mox.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Mox_Dirty: JLTS_CloneNVG
+	class FST_NVG_Mox_Dirty: FST_NVG
 	{
 		author="Ruby";
 		displayName="[41st] NCO Macrobinoculars (Mox/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Mox_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Mono: JLTS_CloneNVG
+	class FST_NVG_Mono: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Mono)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Mono.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Warlock: JLTS_CloneNVG
+	class FST_NVG_Warlock: FST_NVG
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Warlock V2)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_warlock_V2.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fury: JLTS_CloneNVG
+	class FST_NVG_Fury: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Fury)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fury.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Plop: JLTS_CloneNVG
+	class FST_NVG_Plop: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Plop)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Plop.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Nori: JLTS_CloneNVG
+	class FST_NVG_Nori: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Nori)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Nori.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_Nori: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_Nori: FST_NVG_Fixed
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Nori/Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Nori.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Dilham: JLTS_CloneNVG
+	class FST_NVG_Dilham: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Dilham)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_Dilham: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_Dilham: FST_NVG_Fixed
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Dilham/Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Dilham_Dirty: JLTS_CloneNVG
+	class FST_NVG_Dilham_Dirty: FST_NVG
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Dilham/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_Dilham_Dirty: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_Dilham_Dirty: FST_NVG_Fixed
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Dilham/Fixed On/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Desert: JLTS_CloneNVG
+	class FST_NVG_Desert: FST_NVG_Woodland
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Desert)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Desert.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_nvg.rvmat"
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_Tiger: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_Tiger: FST_NVG_Fixed
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Tiger/Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Tiger.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_James: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_James: FST_NVG_Fixed
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (James/Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_James.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_James_Dirty: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_James_Dirty: FST_NVG_Fixed
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (James/Fixed On/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_James_Dirty.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_Warlock: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_Warlock: FST_NVG_Fixed
 	{
 		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Warlock/Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Warlock.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Fixed_Claw: JLTS_CloneNVG_spec
+	class FST_NVG_Fixed_Claw: FST_NVG_Fixed
 	{
 		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Claw/Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Claw_Dirty.paa"
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Argo: JLTS_CloneNVG
+	class FST_NVG_Argo: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Argo)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Argo.paa"
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Bulwark: JLTS_CloneNVG
+	class FST_NVG_Bulwark: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Bulwark)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Bulwark.paa"
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_NVG_Bulwark_Dirty: JLTS_CloneNVG
+	class FST_NVG_Bulwark_Dirty: FST_NVG
 	{
 		author="Viz";
 		displayName="[41st] NCO Macrobinoculars (Bulwark/Dirty)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Bulwark_Dirty.paa"
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
-		};
-		thermalMode[]={0,1};
 	};
 	class FST_Marshal_Commander_Visor: JLTS_CloneNVGMC
 	{
@@ -23414,85 +17188,41 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
-	class FST_Antenna_Woodland: JLTS_CloneNVGRange
+	class FST_Antenna_Woodland: FST_Antenna
 	{
 		author="Daara";
 		displayName="[41st] Officer Rangefinder (Woodland)";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Antenna_Woodland.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Antenna_Midnight: JLTS_CloneNVGRange
+	class FST_Antenna_Midnight: FST_Antenna
 	{
 		author="Daara";
 		displayName="[41st] Officer Rangefinder (Midnight)";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Antenna_Midnight.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Antenna_Urban: JLTS_CloneNVGRange
+	class FST_Antenna_Urban: FST_Antenna
 	{
 		author="Daara";
 		displayName="[41st] Officer Rangefinder (Urban)";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Antenna_Urban.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Antenna_Desert: JLTS_CloneNVGRange
+	class FST_Antenna_Desert: FST_Antenna
 	{
 		author="Daara";
 		displayName="[41st] Officer Rangefinder (Desert)";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Antenna_Desert.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
 	class FST_Visor: JLTS_CloneNVGCC
 	{
@@ -23544,178 +17274,68 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
-	class FST_Visor_Urban: JLTS_CloneNVGCC
+	class FST_Visor_Urban: FST_Visor_Woodland
 	{
 		author="Daara";
 		displayName="[41st] Officer Visor (Urban)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Urban.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\clone_visor.rvmat"
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Visor_Midnight: JLTS_CloneNVGCC
+	class FST_Visor_Midnight: FST_Visor_Woodland
 	{
 		author="Daara";
 		displayName="[41st] Officer Visor (Midnight)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Midnight.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\clone_visor.rvmat"
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Visor_Desert: JLTS_CloneNVGCC
+	class FST_Visor_Desert: FST_Visor_Woodland
 	{
 		author="Daara";
 		displayName="[41st] Officer Visor (Desert)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Desert.paa",
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\clone_visor.rvmat"
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Visor_Argo: JLTS_CloneNVGCC
+	class FST_Visor_Argo: FST_Visor
 	{
 		author="Daara";
 		displayName="[41st] Officer Visor (Argo)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Argo.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Visor_Cardinal: JLTS_CloneNVGCC
+	class FST_Visor_Cardinal: FST_Visor
 	{
 		author="Gold";
 		displayName="[41st] Officer Visor (Cardinal)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Cardinal.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Visor_Annex: JLTS_CloneNVGCC
+	class FST_Visor_Annex: FST_Visor
 	{
 		author="Gold";
 		displayName="[41st] Officer Visor (Annex)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Annex.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
-	class FST_Visor_Sigs: JLTS_CloneNVGCC
+	class FST_Visor_Sigs: FST_Visor
 	{
 		author="Gold";
 		displayName="[41st] Officer Visor (Sigs)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_cc_visor_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Sigs.paa",
 		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,1};
 	};
 };	
 class UniformSlotInfo
