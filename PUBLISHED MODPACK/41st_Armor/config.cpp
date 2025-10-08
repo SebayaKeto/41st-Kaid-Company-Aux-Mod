@@ -7462,6 +7462,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Harlequin.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Seraph: FST_Crewman_Helmet
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet (Seraph)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Seraph.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Oak: FST_Crewman_Helmet
 	{
 		scope=2;
@@ -38979,7 +38989,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Seraph",
+			"FST_Crewman_Helmet_Seraph",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -38989,7 +38999,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Seraph",
+			"FST_Crewman_Helmet_Seraph",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
