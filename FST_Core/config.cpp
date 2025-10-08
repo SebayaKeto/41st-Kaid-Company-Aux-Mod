@@ -115,4 +115,8 @@ class CfgEditorSubcategories
 	{
 		displayname = "Ammunition";
 	};
+	class FST_CatagoryCECResupplies
+	{
+		displayname = "Resupplies";
+	};
 };

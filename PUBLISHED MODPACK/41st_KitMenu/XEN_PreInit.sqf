@@ -572,6 +572,12 @@ switch true do {
 			if (_item == "FST_Vest_HeavyBag" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
+			if (_item == "FST_vest_gm_FTL" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
+			if (_item == "FST_vest_gm_SL" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
+				player addItem "itemAndroid";
+			};
 			if (_item == "FST_Vest_NCO_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
@@ -587,7 +593,10 @@ switch true do {
 			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
 				player removeItem "itemAndroid";
 			};
-			if (_item == "FST_Vest_Base") then {
+			if (_item == "FST_Vest_GM_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
+				player removeItem "itemAndroid";
+			};
+			if (_item == "FST_Vest_Base" || _item =="FST_Vest_GM_Base") then {
 				private _pistol   = "FST_DC17";
 				private _magClass = "FST_blaster_cell_low_Blue";
 				if (_pistol in weapons player) then {
@@ -943,6 +952,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				"FST_CloneVestAirborneNCO_Veteran",
 				"FST_Vest_HeavyBag",
 				"FST_Vest_HeavyBag_Veteran",
+				"FST_vest_gm_SL",
+				"FST_vest_gm_FTL",
 				"FST_Vest_NCO",
 				"FST_Vest_NCO_Veteran",
 				"FST_CloneVestMerrik",
@@ -1039,6 +1050,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
     			(vest player == "FST_Vest_NCO") ||
     			(vest player == "FST_Vest_HeavyBag") ||
     			(vest player == "FST_Vest_NCO_Veteran") ||
+				(vest player == "FST_vest_gm_FTL") ||
     			(vest player == "FST_Vest_HeavyBag_Veteran") ||
 				(vest player == "FST_CloneVestMerrik")
 			) then {
@@ -1705,7 +1717,20 @@ private _vestToSet = "";
 private _backpackToSet = "";
 private _nvgToSet="";
 private _name = name player;
-
+private _kitUniformClass = "";
+if ((_kit isEqualType []) && {(count _kit) > 3}) then {
+    private _u = _kit select 3;
+    if ((_u isEqualType []) && {(count _u) > 0}) then {
+        _kitUniformClass = _u select 0;
+    };
+};
+switch (true) do {
+    case (_name find "ARC-" == 0 && { _kitUniformClass isEqualTo "FST_Uniform_GM_Plastic" }): {
+        _nvgToSet = "FST_NVG_Invisible_Thermals";
+    };
+    default {};
+};
+if !(_kitUniformClass isEqualTo "FST_Uniform_GM_Plastic") then {
 switch (true) do {
 	case (_name find "CXC-" == 0): {
         _uniformToSet  = "FST_Uniform_SCT";
@@ -1735,7 +1760,6 @@ switch (true) do {
         _uniformToSet  = "FST_Uniform_CL";
         _headgearToSet = "FST_Pilot_P1_Helmet";
     };
-	/*
 	case (_name find ("CC-1861 " + '"' + "Annex" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Annex";
 		_headgearToSet  = "FST_P2_Helmet_Annex";
@@ -1814,13 +1838,12 @@ switch (true) do {
             _uniformToSet = "FST_Uniform_EOD";
         };
     };
-	*/
 	default {
         _uniformToSet = "FST_Uniform_Recruit";
         _headgearToSet = "FST_P2_Helmet_Recruit";
     };
 };
-
+};
 if (_uniformToSet != "" && (uniform player == "FST_Trooper_Uniform")) then {
     private _uniformItems = uniformItems player;
     removeUniform player;

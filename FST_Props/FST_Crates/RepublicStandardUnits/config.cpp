@@ -38,10 +38,6 @@ class CfgVehicles
 		model = "FST\FST_Props\FST_Crates\RepublicStandardUnits\RSUStandardCECOne.p3d";
 		faction = "prop";
 		eden = 1;
-		accuracy = 0.2;
-		animated = 0;
-		armor = 10000;
-		cost = 0;
 		hiddenSelections[]={"Camo","Camo1"};
 		hiddenSelectionsTextures[]=
 		{
@@ -53,6 +49,8 @@ class CfgVehicles
 			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1.rvmat",
 			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo1_CEC1.rvmat"
 		};
+		ace_cargo_space = 3;
+		ace_cargo_size = 4;
 	};
 	class FST_Crate_RSU_TypeOne_Unmarked: FST_Crate_RSU_TypeOne_Base
 	{
@@ -145,6 +143,58 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_Sith_co.paa",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1.rvmat",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo1_CEC1.rvmat"
+		};
+	};
+	// Resupply Crates
+	class FST_Crate_RSU_TypeOne_Ammunition: FST_Crate_RSU_TypeOne_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "C5 Resupply (Ammunition)";
+		editorSubcategory = "FST_CatagoryCECResupplies";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_C5_co.paa",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1.rvmat",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo1_CEC1.rvmat"
+		};
+	};
+	class FST_Crate_RSU_TypeOne_Explosives: FST_Crate_RSU_TypeOne_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "H3 Resupply (Explosives)";
+		editorSubcategory = "FST_CatagoryCECResupplies";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_H3_co.paa",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1.rvmat",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo1_CEC1.rvmat"
+		};
+	};
+	class FST_Crate_RSU_TypeOne_FrontlineMedical: FST_Crate_RSU_TypeOne_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "M1 Resupply (Medical)";
+		editorSubcategory = "FST_CatagoryCECResupplies";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_M1_co.paa",
 			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_co.paa"
 		};
 		hiddenSelectionsMaterials[]=

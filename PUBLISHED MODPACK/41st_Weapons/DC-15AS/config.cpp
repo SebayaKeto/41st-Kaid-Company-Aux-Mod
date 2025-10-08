@@ -1240,11 +1240,7 @@ class CfgWeapons
 				"ACE_40mm_Flare_green",
 				"ACE_40mm_Flare_White",
 				"ACE_40mm_Flare_ir",
-				"ACE_HuntIR_M203",
-				"FST_thermal_slug_mag_Blue",
-				"FST_thermal_slug_mag_Green",
-				"FST_thermal_slug_mag_Red",
-				"FST_thermal_slug_mag_Yellow"
+				"ACE_HuntIR_M203"
 			};
 			cameraDir="OP_look";
 			discreteDistance[]={50,100,150,200};
