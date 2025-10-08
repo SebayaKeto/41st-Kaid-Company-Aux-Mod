@@ -9379,6 +9379,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Blue: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Blue)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Blue.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Binary: FST_Airborne_Helmet
 	{
 		author="Steel";
@@ -9897,6 +9907,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Honsou.paa",
+		};
+	};
+	class FST_P2_Helmet_Sandman: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Sandman]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sandman.paa",
 		};
 	};
 	class FST_P2_Helmet_Felix: FST_P2_Helmet_Base
@@ -43942,6 +43962,14 @@ class CfgFaces
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Jorge.paa";
 			identityTypes[] = {"FST_Jorge_FaceOnly"};
+		};
+		class FST_Clone_Head_Trenny: FST_clone_Default_head
+		{
+			author="Steel"
+			name="Clone Trooper Trenny";
+			displayName="[41st] Clone Trooper - Trenny";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Trenny.paa";
 		};
 		class FST_Navy_Face_Mustang: Default
 		{
