@@ -6207,6 +6207,7 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"camo2",
 			"visor"
 		};
+		subItems[] = {};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_CO.paa",
@@ -8606,11 +8607,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet.paa"
 		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F",
-			"Integrated_NVG_TI_0_F"
-		};
 		class Iteminfo: HeadgearItem
 		{
 			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
@@ -8638,14 +8634,11 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			};
 		};
 	};
-	class FST_Crewman_Helmet_Demon: JLTS_CloneHelmetBARC
+	class FST_Crewman_Helmet_Demon: FST_Crewman_Helmet
 	{
 		scope=2;
 		author="Daara";
 		displayName="[41st] Crewman Helmet (Demon)";
-		ace_hearing_protection=1;
-		ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\driver_ui_ca.paa";
 		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ATRT.p3d";
 		hiddenSelections[]=
 		{
@@ -22005,7 +21998,28 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 		};
 		thermalMode[]={0,1};
 	};
-
+	class FST_NVG_Fixed: JLTS_CloneNVG_spec
+	{
+		author="Daara";
+		displayName="[41st] NCO Macrobinoculars (Fixed On)";
+		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG.paa",
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+		thermalMode[]={0,1};
+	};
 	class FST_NVG_Invisible : FST_NVG
 	{
 		displayName="[41st] Invisible NVGS";
@@ -23178,28 +23192,6 @@ class FST_Vest_NCO_Veteran: JLTS_CloneVestRecon
 			"Normal",
 			"NVG",
 			"TI"
-		};
-		thermalMode[]={0,1};
-	};
-	class FST_NVG_Fixed: JLTS_CloneNVG_spec
-	{
-		author="Daara";
-		displayName="[41st] NCO Macrobinoculars (Fixed On)";
-		modelOptics="\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-		model="\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_NVG.paa",
-		};
-		visionMode[]=
-		{
-			"Normal",
-			"NVG"
 		};
 		thermalMode[]={0,1};
 	};
