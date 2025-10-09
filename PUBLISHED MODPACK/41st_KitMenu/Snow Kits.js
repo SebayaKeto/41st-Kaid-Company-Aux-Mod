@@ -1098,7 +1098,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
     ], 
-    ["FST_DC15A","FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_TwinDC17_Secondary","FST_vest_gm_FTL","FST_Vest_GM_Base","FST_CloneVestSuspenders"],
+    ["FST_DC15A","FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_TwinDC17_Secondary","FST_vest_gm_SL","FST_vest_gm_FTL","FST_Vest_GM_Base","FST_CloneVestSuspenders"],
     "true", 
     {}, 
     "regular"
@@ -1638,7 +1638,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
     ],
-    ["FST_DC15A","FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_TwinDC17_Secondary","FST_vest_gm_FTL","FST_Vest_GM_Base","FST_CloneVestSuspenders"],
+    ["FST_DC15A","FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_TwinDC17_Secondary","FST_vest_gm_SL","FST_vest_gm_FTL","FST_Vest_GM_Base","FST_CloneVestSuspenders"],
     "true",
     {},
     "regular"
