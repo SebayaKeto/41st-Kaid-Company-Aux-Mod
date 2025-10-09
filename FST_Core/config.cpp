@@ -48,6 +48,10 @@ class CfgEditorCategories
 	{
 		displayname = "[FST] CEC Type-1 Storage Crates";
 	};
+	class FST_CatagoryCECTypeTwoCratesRSU
+	{
+		displayname = "[FST] CEC Type-2 Storage Crates";
+	};
 };
 class CfgEditorSubcategories
 {
