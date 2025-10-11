@@ -38,8 +38,7 @@ private _all = +(_idx getOrDefault ["uniforms",  []])
             +  (_idx getOrDefault ["vests",     []])
             +  (_idx getOrDefault ["helmets",   []])
             +  (_idx getOrDefault ["backpacks", []])
-            +  (_idx getOrDefault ["facewear",  []])
-            +  (_idx getOrDefault ["nvgs",      []]);
+            +  (_idx getOrDefault ["facewear",  []]);
 uiNamespace setVariable ["FST_AllHelmetClasses", _all];
 FST_fnc_renderGearList = {
     private _disp   = uiNamespace getVariable ["FST_HelmetOverlay_Display", displayNull];
@@ -73,7 +72,7 @@ FST_fnc_renderGearList = {
             { (toLower _dn)  find _query > -1 }
         ) then {
             private _i = _list lbAdd _dn;
-            _list lbSetData [_i, _cls];
+            _list lbSetData [_i, str [_cls]];
             if (_ic != "") then { _list lbSetPicture [_i, _ic]; };
             _list lbSetPictureColor [_i, [1,1,1,1]];
         };
