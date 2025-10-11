@@ -18252,7 +18252,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] ARC Backpack";
-		maximumload=250;
+		maximumload=320;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackARC.p3d";
 		hiddenSelections[]=
 		{
@@ -21336,7 +21336,7 @@ class CfgVehicles
 	{
 		author="Schlabbie And Maxim";
 		scope=2;
-		maximumload=250;
+		maximumload=320;
 		displayName="[41st] Cold Weather Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
@@ -21453,7 +21453,7 @@ class CfgVehicles
 		author="Schlabbie And Maxim";
 		scope=2;
 		scopecurator=2;
-		maximumload=250;
+		maximumload=320;
 		tf_range=50000;
 		displayName="[41st] Cold Weather RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
@@ -44284,4 +44284,5 @@ class cfgGroups
 		};
 	};
 };
+
 
