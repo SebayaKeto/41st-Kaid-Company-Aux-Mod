@@ -149,3 +149,55 @@ class CfgSoundCurves
 	  };
 	};
 };
+class CfgSoundShaders
+{
+	class FST_OutpostWallEntranceSoundShader
+	{
+		samples[] = 
+		{
+			{ "FST\FST_Core\Sounds\FST_OutpostEntrance_LightGate", 1 }
+		};
+		volume = db0; 
+		range = 100; 
+		rangeCurve = FST_OutpostWallEntranceSoundCurve; 
+	};
+};
+class cfgDistanceFilters
+{
+	class FST_OutpostWallEntranceDistanceFilter
+	{
+		type = "lowPassFilter";
+		minCutoffFrequency = 300;
+		qFactor = 1;
+		innerRange = 10;
+		range = 500;
+		powerFactor = 32;
+	};
+};
+class cfgSound3DProcessors
+{
+	class FST_OutpostWallEntrance3DProcessor
+	{
+		type = "panner"; 
+		innerRange = 0; 
+		range = 10; 
+		rangeCurve = LinearCurve; 
+	};
+};
+class CfgSoundSets
+{
+	class FST_OutpostWallEntranceSoundset
+	{
+		soundShaders[] =
+		{
+			FST_OutpostWallEntranceSoundShader
+		};
+		volumeFactor = 1.6; 
+		volumeCurve = FST_OutpostWallEntranceSoundCurve; // amplitude attenuation curve, can be class name or array of points (CfgSoundCurves)
+		sound3DProcessingType = FST_OutpostWallEntrance3DProcessor; // sound processing type class name (CfgSound3DProcessors)
+		distanceFilter = FST_OutpostWallEntranceDistanceFilter; // class name of custom distance frequency attenuation filter (CfgDistanceFilters)
+		spatial = true; // is sound considered as positional
+		doppler = false;
+		loop = false;
+	};
+};

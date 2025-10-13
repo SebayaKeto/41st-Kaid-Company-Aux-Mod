@@ -88,7 +88,7 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve.rvmat"
 		};
 	};
-	class FST_OutpostWall_Unmarked_Entrance_Base: FST_OutpostWall_Base
+	class FST_OutpostWall_Entrance_Base: FST_OutpostWall_Base
 	{
 		displayName = "Light Outpost Wall Entrance (Unmarked)";
 		model = "FST\FST_Outpost\LightWalls\FST_OutpostWall_Light_Entrance.p3d";
@@ -118,49 +118,61 @@ class CfgVehicles
 			// Animation sources for doors
 			class Door_1_source
 			{
-				source = user; // "user" = custom source = not controlled by some engine value
+				source = "user"; // "user" = custom source = not controlled by some engine value
 				initPhase = 0; // Initial value of animations based on this source
-				animPeriod = 3; // Coefficient for duration of change of this animation
-				sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
+				animPeriod = 2.5; // Coefficient for duration of change of this animation
+				sound = "FST_OutpostWallEntranceSoundset"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
 			};
-			class Door_2_source: Door_1_source {};
+			class Door_2_source: Door_1_source{};
 		};
 		class UserActions
 		{
 			class OpenDoor_1
 			{
-				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />"; // This is displayed in the center of the screen just below crosshair. In this case it's an icon, not a text.
-				displayName = "Open Left Door"; // Label of the action used in the action menu itself.
-				position = DoorActivation; // Point in Memory lod in p3d around which the action is available.
-				priority = 0.1; // Priority coefficient used for sorting action in the action menu.
-				radius = 2; // Range around the above defined point in which you need to be to access the action.
-				onlyForPlayer = false; // Defines if the action is available only to players or AI as well.
-				condition = ((this animationPhase 'Door1Rotation') < 0.5);// Condition for showing the action in action menu. In this case it checks if the door is closed.
-				statement = ([this, 'Door1Rotation'] call BIS_fnc_DoorNoHandleOpen); // Action taken when this action is selected in the action menu. In this case it calls a function that opens the door.
+				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorOpen.paa' size='0.25' />";
+				displayName = "Open Left Door";
+				position = "DoorActivation";
+				priority = 0.1;
+				radius = 5;
+				onlyForPlayer = false;
+				condition = "((this animationPhase 'Door1Rotation') < 0.5)";
+				statement = "([this, 'Door1Rotation'] call BIS_fnc_DoorNoHandleOpen)";
 			};
 			class CloseDoor_1: OpenDoor_1
 			{
+				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='0.25' />";
 				displayName = "Close Left Door";
 				priority = 0.2;
-				condition = ((this animationPhase 'Door1Rotation') >= 0.5);// Checks if the door is currently open
-				statement = ([this, 'Door1Rotation'] call BIS_fnc_DoorNoHandleClose);
+				condition = "((this animationPhase 'Door1Rotation') >= 0.5)";
+				statement = "([this, 'Door1Rotation'] call BIS_fnc_DoorNoHandleClose)";
 			};
 			class OpenDoor_2: OpenDoor_1
 			{
-				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />"; // This is displayed in the center of the screen just below crosshair. In this case it's an icon, not a text.
-				displayName = "Open Right Door"; // Label of the action used in the action menu itself.
-				priority = 0.1; // Priority coefficient used for sorting action in the action menu.
-				condition = ((this animationPhase 'Door2Rotation') < 0.5);// Condition for showing the action in action menu. In this case it checks if the door is closed.
-				statement = ([this, 'Door2Rotation'] call BIS_fnc_DoorNoHandleOpen); // Action taken when this action is selected in the action menu. In this case it calls a function that opens the door.
+				displayName = "Open Right Door";
+				priority = 0.1;
+				condition = "((this animationPhase 'Door2Rotation') < 0.5)";
+				statement = "([this, 'Door2Rotation'] call BIS_fnc_DoorNoHandleOpen)";
 			};
 			class CloseDoor_2: OpenDoor_2
 			{
+				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='0.25' />";
 				displayName = "Close Right Door";
 				priority = 0.2;
-				condition = ((this animationPhase 'Door2Rotation') >= 0.5);// Checks if the door is currently open
-				statement = ([this, 'Door2Rotation'] call BIS_fnc_DoorNoHandleClose);
+				condition = "((this animationPhase 'Door2Rotation') >= 0.5)";
+				statement = "([this, 'Door2Rotation'] call BIS_fnc_DoorNoHandleClose)";
 			};
 		};
+		class SimpleObject
+		{
+			animate[] = {{"Door1Rotation",0},{"Door2Rotation",0}};
+			eden = 1;
+			verticalOffset = 0;
+		};
+	};
+	class FST_OutpostWall_Entrance_Unmarked: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2; 
 	};
 	class FST_OutpostWall_Unmarked: FST_OutpostWall_Base
 	{
