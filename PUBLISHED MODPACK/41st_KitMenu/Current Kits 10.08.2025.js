@@ -436,7 +436,7 @@
             ["IDA_grenade_Smoke_Purple_mag",1,1]
         ]],
         ["FST_Clone_Backpack_RPS",[
-            ["FST_RPS6_rocket",3,1],
+            ["FST_RPS6_rocket",4,1],
             ["FST_RPS6_rocket_HE",1,1]
         ]],
         "FST_P2_Helmet",
@@ -2106,7 +2106,7 @@
             ["IDA_grenade_Smoke_Purple_mag",1,1]
         ]],
         ["FST_Clone_backpack_Woodland",[
-            ["FST_RPS6_rocket",3,1],
+            ["FST_RPS6_rocket",4,1],
             ["FST_RPS6_rocket_HE",1,1]
         ]],
         "FST_P2_Helmet_Woodland",

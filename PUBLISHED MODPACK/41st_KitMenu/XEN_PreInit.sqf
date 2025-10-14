@@ -833,7 +833,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						};
 						player addBackpack _bpClass;
 					};
-					for "_i" from 1 to 3 do { player addItemToBackpack "FST_RPS6_rocket"; };
+					for "_i" from 1 to 4 do { player addItemToBackpack "FST_RPS6_rocket"; };
 					player addItemToBackpack "FST_RPS6_rocket_HE";
 				};
 			};
