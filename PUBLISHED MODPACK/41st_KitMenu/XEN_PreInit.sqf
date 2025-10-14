@@ -838,6 +838,45 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				};
 			};
 		};
+
+		case (_item == "FST_RPS6_SR"): {
+			if (secondaryWeapon player == "FST_RPS6_SR") then {
+				player removeWeapon "FST_RPS6_SR";
+				removeBackpack player;
+				playSoundUI ["41st_KitMenu\sounds\select_launcher_1.ogg", 0.85, 1];
+			} else {
+				if (primaryWeapon player == "FST_T15") then {
+					playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+					systemChat "You can't carry both the T15 and your selected launcher. Change primary weapon first.";
+				} else {
+					playSoundUI [selectRandom [
+						"41st_KitMenu\sounds\select_launcher_1.ogg",
+						"41st_KitMenu\sounds\select_launcher_2.ogg"
+					], 0.85, 1];
+					private _existingLauncher = secondaryWeapon player;
+					private _launcherMags = [secondaryWeapon player] call CBA_fnc_compatibleMagazines;
+					player removeWeapon _existingLauncher;
+					{ player removeMagazines _x; } forEach _launcherMags;
+					player addWeapon "FST_RPS6_SR";
+					player addSecondaryWeaponItem "FST_RPS6_rocket_SR";
+					removeBackpack player;
+					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
+						player addBackpack "FST_Backpack_Jumppack_RPS";
+					} else {
+						private _isRanger = toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger";
+						private _bpClass  = "FST_Clone_Backpack_RPS";
+						if (_isRanger) then {
+							private _camo  = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
+							private _cand  = format ["FST_Clone_backpack_%1", _camo];
+							if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _bpClass = _cand; };
+						};
+						player addBackpack _bpClass;
+					};
+					for "_i" from 1 to 2 do { player addItemToBackpack "FST_RPS6_rocket_SR"; };
+				};
+			};
+		};
+
 		case (_item == "FST_PLX1"): {
 			if (secondaryWeapon player == "FST_PLX1") then {
 				player removeWeapon "FST_PLX1";
