@@ -90,8 +90,10 @@ class CfgVehicles
 	};
 	class FST_OutpostWall_Entrance_Base: FST_OutpostWall_Base
 	{
+		_generalMacro = "FST_OutpostWall_Entrance_Base";
 		displayName = "Light Outpost Wall Entrance (Unmarked)";
 		model = "FST\FST_Outpost\LightWalls\FST_OutpostWall_Light_Entrance.p3d";
+		numberOfDoors=2;
 		hiddenSelections[]={"Camo","Camo1","Camo2","Camo3","Camo4","Camo5","Camo6"};
 		hiddenSelectionsTextures[]=
 		{
@@ -116,61 +118,116 @@ class CfgVehicles
 		class AnimationSources
 		{
 			// Animation sources for doors
-			class Door_1_source
+			class door_1_sound_source
 			{
 				source = "user"; // "user" = custom source = not controlled by some engine value
 				initPhase = 0; // Initial value of animations based on this source
-				animPeriod = 2.5; // Coefficient for duration of change of this animation
+				animPeriod = 1; // Coefficient for duration of change of this animation
 				sound = "FST_OutpostWallEntranceSoundset"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
+				soundPosition="DoorActivation";
 			};
-			class Door_2_source: Door_1_source{};
+			class door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class door_2_sound_source
+			{
+				source = "user"; // "user" = custom source = not controlled by some engine value
+				initPhase = 0; // Initial value of animations based on this source
+				animPeriod = 1; // Coefficient for duration of change of this animation
+				sound = "FST_OutpostWallEntranceSoundset"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
+				soundPosition="DoorActivation";
+			};
+			class door_2_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class door_2_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
 		};
 		class UserActions
 		{
 			class OpenDoor_1
 			{
-				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorOpen.paa' size='0.25' />";
+				displayNameDefault = "<img image='\FST\FST_Core\UIImages\FST_DoorOpen.paa' size='6' />";
 				displayName = "Open Left Door";
-				position = "DoorActivation";
-				priority = 0.1;
-				radius = 5;
+				position = "door_1_trigger";
+				priority = 11;
+				actionNamedSel="door_1_action";
+				radius = 3;
 				onlyForPlayer = false;
-				condition = "((this animationPhase 'Door1Rotation') < 0.5)";
-				statement = "([this, 'Door1Rotation'] call BIS_fnc_DoorNoHandleOpen)";
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 1, 1] call BIS_fnc_Door)";
 			};
 			class CloseDoor_1: OpenDoor_1
 			{
-				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='0.25' />";
+				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='6' />";
 				displayName = "Close Left Door";
-				priority = 0.2;
-				condition = "((this animationPhase 'Door1Rotation') >= 0.5)";
-				statement = "([this, 'Door1Rotation'] call BIS_fnc_DoorNoHandleClose)";
+				priority = 11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 1, 0] call BIS_fnc_Door)";
 			};
-			class OpenDoor_2: OpenDoor_1
+			class OpenDoor_2
 			{
 				displayName = "Open Right Door";
-				priority = 0.1;
-				condition = "((this animationPhase 'Door2Rotation') < 0.5)";
-				statement = "([this, 'Door2Rotation'] call BIS_fnc_DoorNoHandleOpen)";
+				position = "door_2_trigger";
+				priority = 11;
+				actionNamedSel="door_2_action";
+				radius = 3;
+				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 2, 1] call BIS_fnc_Door)";
 			};
 			class CloseDoor_2: OpenDoor_2
 			{
-				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='0.25' />";
+				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='6' />";
 				displayName = "Close Right Door";
-				priority = 0.2;
-				condition = "((this animationPhase 'Door2Rotation') >= 0.5)";
-				statement = "([this, 'Door2Rotation'] call BIS_fnc_DoorNoHandleClose)";
+				priority = 11;
+				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 2, 0] call BIS_fnc_Door)";
 			};
 		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		actionBegin2="OpenDoor_2";
+		actionEnd2="OpenDoor_2";
 		class SimpleObject
 		{
-			animate[] = {{"Door1Rotation",0},{"Door2Rotation",0}};
-			eden = 1;
-			verticalOffset = 0;
+			eden=1;
+			animate[] = 
+			{
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=3.0599999;
+			verticalOffsetWorld=0;
+			init="''";
 		};
 	};
 	class FST_OutpostWall_Entrance_Unmarked: FST_OutpostWall_Entrance_Base
 	{
+		_generalMacro="FST_OutpostWall_Entrance_Unmarked";
 		scope = 2;
 		scopecurator = 2; 
 	};
