@@ -129,6 +129,20 @@ class CfgWeapons
             "41st_Droids\Data\Extras\FST_Helmet_HumDiv_Officer.paa"
         };
     };
+	class JMSLLTE_Ofcap_helmet;
+	class FST_OfficerCap_CIS: JMSLLTE_Ofcap_helmet
+    {
+        author = "Steel";
+        displayname="[41st] CIS Officer Cap";
+        hiddenSelections[]=
+        {
+            "camo"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Droids\Data\Extras\FST_OfficerCap_CIS.paa"
+        };
+    };
     class V_rebreatherB;
     class FST_HumanDiv_Pouches_Base: V_rebreatherB
     {
