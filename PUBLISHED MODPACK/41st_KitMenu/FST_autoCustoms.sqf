@@ -308,8 +308,8 @@ if (!_skipCustoms && _allowNVG) then {
     };
 };
 if (!_skipCustoms && _allowBack) then {
-    private _saved = _mem get "backpack";
-    if (!isNil {_saved} && { isClass (configFile >> "CfgVehicles" >> _saved) }) then {
+private _saved = _mem get "backpack";
+    if (!isNil {_saved} && { isClass (configFile >> "CfgVehicles" >> _saved) } && { _kitTagLower isEqualTo "airborne" }) then {
         private _bItems = backpackItems _unit;
         if (backpack _unit != "") then { removeBackpack _unit; };
         _unit addBackpack _saved;
