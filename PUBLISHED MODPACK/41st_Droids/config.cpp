@@ -712,6 +712,20 @@ class CfgWeapons
 			mass=40;
 		};
 	};
+	class ls_mandalorianUniform;
+    class FST_Mandosuit: ls_mandalorianUniform
+	{
+		scope=2;
+		author="Tooka";
+		displayName="[41st] Mandalorian Undersuit";
+		picture="\ls\core\addons\characters_mandalorian\data\ui\undersuit_ui_ca.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformClass="FST_mandoUndersuit";
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
 };
 class UniformSlotInfo
 {
@@ -1147,6 +1161,196 @@ class CfgVehicles
 			"FST_Droid_blaster_cell_red",
 			"FST_Droid_blaster_cell_red",
 		};
+	};
+	class ls_mandalorian_base;
+	class FST_mandoUndersuit: ls_mandalorian_base
+	{
+		scope=2;
+		author="Tooka";
+		displayName="[41st] Mandalorian Undersuit";
+		uniformClass="FST_Mandosuit";
+		model="\A3\Characters_F_Beta\INDEP\ia_soldier_02.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"insignia"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\ls\core\addons\characters_mandalorian\uniforms\undersuit\data\undersuit_co.paa"
+		};
+		nakedUnifrom="U_BasicBody";
+		class HitPoints: O_Soldier_F
+		{
+			class HitFace
+			{
+				armor=50;
+				material=-1;
+				name="face_hub";
+				passThrough=0.80000001;
+				radius=0.079999998;
+				explosionShielding=0.1;
+				minimalHit=0.0099999998;
+			};
+			class HitNeck: HitFace
+			{
+				armor=50;
+				material=-1;
+				name="neck";
+				passThrough=0.80000001;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+			};
+			class HitHead: HitNeck
+			{
+				armor=50;
+				material=-1;
+				name="head";
+				passThrough=0.80000001;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.0099999998;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=16;
+				material=-1;
+				name="pelvis";
+				passThrough=0.80000001;
+				radius=0.23999999;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=20;
+				material=-1;
+				name="spine1";
+				passThrough=0.80000001;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=20;
+				material=-1;
+				name="spine2";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=35;
+				material=-1;
+				name="spine3";
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+			};
+			class HitBody: HitChest
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.0099999998;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=20;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=20;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=20;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+			};
+			class HitLeftArm
+			{
+				armor=20;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.079999998;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.0099999998;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor=20;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.0099999998;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO"
+		};
+		armor=5;
+		armorStructural=6;
+		explosionShielding=65;
+		minTotalDamageThreshold=0.001;
+		impactDamageMultiplier=0.5;
 	};
 	class FST_Droid_B1_E5_Muddy: JLTS_Droid_B1_E5
 	{
