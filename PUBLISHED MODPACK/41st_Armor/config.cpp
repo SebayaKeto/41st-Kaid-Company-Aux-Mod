@@ -261,7 +261,6 @@ class CfgPatches
 			"FST_P2_Wuffer",
 			"FST_P2_Wuffer_Dirty",
 			"FST_P2_Stec",
-			"FST_P2_Riley",
 			"FST_P2_Felix",
 			"FST_P2_Felix_Dirty",
 			"FST_P2_Vixen",
@@ -9383,6 +9382,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Gustav: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Gustav)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Gustav.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Blue: FST_Airborne_Helmet
