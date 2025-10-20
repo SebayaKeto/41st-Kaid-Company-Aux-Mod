@@ -124,7 +124,7 @@ class CfgEditorSubcategories
 		displayname = "Resupplies";
 	};
 };
-class CfgSoundCurves
+/* class CfgSoundCurves
 {
 	class FST_OutpostWallEntranceSoundCurve
 	{
@@ -157,7 +157,7 @@ class CfgSoundShaders
 		{
 			{ "FST\FST_Core\Sounds\FST_OutpostEntrance_LightGate", 1 }
 		};
-		volume = db0; 
+		volume = db30; 
 		range = 100; 
 		rangeCurve = FST_OutpostWallEntranceSoundCurve; 
 	};
@@ -192,7 +192,7 @@ class CfgSoundSets
 		{
 			FST_OutpostWallEntranceSoundShader
 		};
-		volumeFactor = 1.6; 
+		volumeFactor = 15; 
 		volumeCurve = FST_OutpostWallEntranceSoundCurve; // amplitude attenuation curve, can be class name or array of points (CfgSoundCurves)
 		sound3DProcessingType = FST_OutpostWallEntrance3DProcessor; // sound processing type class name (CfgSound3DProcessors)
 		distanceFilter = FST_OutpostWallEntranceDistanceFilter; // class name of custom distance frequency attenuation filter (CfgDistanceFilters)
@@ -200,4 +200,4 @@ class CfgSoundSets
 		doppler = false;
 		loop = false;
 	};
-};
+}; */
