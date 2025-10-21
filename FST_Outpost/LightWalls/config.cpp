@@ -1,3 +1,5 @@
+#include "sounds.cpp"
+
 class CfgPatches
 {
 	class FST_Outpost_LightWalls
@@ -122,16 +124,16 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "FST_OutpostWallEntranceSoundset";
-				soundPosition="general_door_trigger";
+				sound = "LightOutpostDoorsSound";
+				soundPosition="door_1_trigger";
 			};
 			class Door_2_source
 			{
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "FST_OutpostWallEntranceSoundset";
-				soundPosition="general_door_trigger";
+				sound = "LightOutpostDoorsSound";
+				soundPosition="door_2_trigger";
 			};
 		};
 		class UserActions
@@ -141,20 +143,18 @@ class CfgVehicles
 				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorOpen.paa' size='6' />";
 				displayName = "Open Left Door";
 				position = "general_door_trigger";
-				priority = 10;
-				radius = 4;
+				priority = 11;
+				radius = 5;
 				condition="((this animationSourcePhase 'Door_1_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement = "this animateSource ['Door_1_source', 1, true]";
+				statement = "this animateSource ['Door_1_source', 1]";
 			};
 			class CloseDoor_1: OpenDoor_1
 			{
 				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='5' />";
 				displayName = "Close Left Door";
 				position = "general_door_trigger";
-				priority = 10;
-				radius = 4;
 				condition="((this animationSourcePhase 'Door_1_source') >= 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement = "this animateSource ['Door_1_source', 0, true]";
+				statement = "this animateSource ['Door_1_source', 0]";
 			};
 			class OpenDoor_2
 			{
@@ -162,16 +162,16 @@ class CfgVehicles
 				displayName = "Open Right Door";
 				position = "general_door_trigger";
 				priority = 11;
-				radius = 4;
+				radius = 5;
 				condition="((this animationSourcePhase 'Door_2_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement = "this animateSource ['Door_2_source', 1, true]";
+				statement = "this animateSource ['Door_2_source', 1]";
 			};
 			class CloseDoor_2: OpenDoor_2
 			{
 				displayNameDefault = "<img image='FST\FST_Core\UIImages\FST_DoorClose.paa' size='5' />";
 				displayName = "Close Right Door";
 				condition="((this animationSourcePhase 'Door_2_source') >= 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement = "this animateSource ['Door_2_source', 0, true]";
+				statement = "this animateSource ['Door_2_source', 0]";
 			};
 		};
 		actionBegin1="OpenDoor_1";
@@ -754,46 +754,6 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_Hutt_co.paa"
-		};
-	};
-};
-class CfgSounds
-{
-	// Define the sound for the door opening
-	class FST_Door_Open_Sound_Outpost
-	{
-		name = "FST_Door_Open_Sound_Outpost";
-		// IMPORTANT: Replace this path with the actual path to your sound file
-		sound[] = {"FST\FST_Core\Sounds\FST_OutpostEntrance_LightGate.ogg", 1, 1, 15};
-		titles[] = {};
-	};
-
-	// Define the sound for the door closing
-	class FST_Door_Close_Sound_Outpost
-	{
-		name = "FST_Door_Close_Sound_Outpost";
-		// IMPORTANT: Replace this path with the actual path to your sound file
-		sound[] = {"FST\FST_Core\Sounds\FST_OutpostEntrance_LightGate.ogg", 1, 1, 15};
-		titles[] = {};
-	};
-};
-class CfgAnimationSourceSounds
-{
-	// This is the soundset referenced by your door's AnimationSources
-	class FST_OutpostWallEntranceSoundset
-	{
-		// Sound played when the animation phase goes from 0 to 1 (opening)
-		class open
-		{
-			sound = "FST_Door_Open_Sound_Outpost";
-			// Time in the animation when the sound should start (0.0 = beginning)
-			begin = 0.0; 
-		};
-		// Sound played when the animation phase goes from 1 to 0 (closing)
-		class close
-		{
-			sound = "FST_Door_Close_Sound_Outpost";
-			begin = 0.0;
 		};
 	};
 };
