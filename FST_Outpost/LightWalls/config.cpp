@@ -91,7 +91,6 @@ class CfgVehicles
 	};
 	class FST_OutpostWall_Entrance_Base: FST_OutpostWall_Base
 	{
-		_generalMacro = "FST_OutpostWall_Entrance_Base";
 		displayName = "Light Outpost Wall Entrance (Unmarked)";
 		model = "FST\FST_Outpost\LightWalls\FST_OutpostWall_Light_Entrance.p3d";
 		numberOfDoors=2;
@@ -202,6 +201,334 @@ class CfgVehicles
 	{
 		scope = 2;
 		scopecurator = 2;
+	};
+	class FST_OutpostWall_Entrance_GAROne: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (GAR One)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_GARTwo: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (GAR Two)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_GARTwo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_GARSand: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (GAR Sand)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_GARSand_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Sand_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_GARJungle: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (GAR Jungle)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_GARJungle_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Jungle_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_GARWoodland: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (GAR Woodland)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_GARWoodland_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Woodland_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_GARUrban: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (GAR Urban)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_GARUrban_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_GAR_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Urban_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_CISOne: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (CIS One)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsCIS";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_CIS_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_CIS_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_CISTwo: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (CIS Two)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsCIS";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_CISTwo_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_CIS_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_Pirate: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (Pirate)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsPirates";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Pirate_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_Tagged: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (Tagged)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsPirates";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_Tagged_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_Tagged_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Tagged_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_BlackSun: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (Black Sun)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsBlackSun";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_BlackSun_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_BlackSun_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_Pirate_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_BlackSun_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
+	};
+	class FST_OutpostWall_Entrance_Hutt: FST_OutpostWall_Entrance_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Entrance (Hutt)";
+		editorCategory = "FST_CatagoryMinorOutpost";
+		editorSubcategory = "FST_Subcategory_OutpostWallsHuttCartel";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance_Hutt_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance_Hutt_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo1_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo2_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo3_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo4_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo5_Entrance.rvmat",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Entrance\Camo6_Entrance.rvmat"
+		};
 	};
 	class FST_OutpostWall_Unmarked: FST_OutpostWall_Base
 	{
@@ -447,6 +774,21 @@ class CfgVehicles
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
 			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_GARTwo_co.paa"
+		};
+	};
+	class FST_OutpostWall_Unmarked_Curve_FST: FST_OutpostWall_Unmarked_Curve
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "Light Outpost Wall Curve (FST)";
+		editorSubcategory = "FST_Subcategory_OutpostWallsGAR";
+		hiddenSelectionsTextures[]=
+		{
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo_Curve_Unmarked_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo1_Curve_FST_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo2_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo3_co.paa",
+			"FST\FST_Outpost\LightWalls\Data\Textures\Camo4_Curve_FST_co.paa"
 		};
 	};
 	class FST_OutpostWall_Unmarked_Curve_GARLight: FST_OutpostWall_Unmarked_Curve
