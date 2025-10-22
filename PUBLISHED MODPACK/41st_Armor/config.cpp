@@ -17456,18 +17456,16 @@ class CfgVehicles
 	{
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket
-			{
-				armor=1;
-				depends="HitHead";
-				explosionShielding=1;
-				material=-1;
-				minimalHit=0;
-				name="head";
-				passThrough=0;
-				radius=1;
-				visual="";
-			};
+			
+			armor=1;
+			depends="HitHead";
+			explosionShielding=1;
+			material=-1;
+			minimalHit=0;
+			name="head";
+			passThrough=0;
+			radius=1;
+			visual="";
 			class HitFace;
 			class HitNeck;
 			class HitHead;
@@ -17485,9 +17483,7 @@ class CfgVehicles
 	{
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 			};
@@ -17527,9 +17523,7 @@ class CfgVehicles
 	{
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 			};
@@ -23464,7 +23458,6 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket{};
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -23806,7 +23799,6 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket{};
 			class HitFace: HitFace
 			{
 				armor=10;
@@ -24120,9 +24112,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -24428,9 +24418,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -24744,9 +24732,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -25060,9 +25046,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -25376,9 +25360,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -26766,9 +26748,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
@@ -27658,9 +27638,7 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class ACE_HDBracket: ACE_HDBracket
-			{
-			};
+			
 			class HitFace: HitFace
 			{
 				armor=1;
