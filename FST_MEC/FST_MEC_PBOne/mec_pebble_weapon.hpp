@@ -12,6 +12,8 @@ class MEC_Battery_PBOne: ItemCore
 	simulation = "ItemMineDetector";
 	useAsBinocular = 0;
 	type = 4096;
+    editorCategory = "FST_MEC_CategoryEquipment";
+    editorSubcategory = "FST_MEC_SubcategoryBatteries";
 	class ItemInfo: InventoryWeapon_Base_F
 	{
 		mass = 1;
