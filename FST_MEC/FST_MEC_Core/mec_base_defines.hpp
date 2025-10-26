@@ -1,10 +1,3 @@
-/*
-    mec_base_ddefines.hpp
-    Maldova Engineering Corp. (MEC) - Core Definitions
-    
-    This file defines constants and path variables used across all MEC
-    configuration (.hpp) and scripting (.sqf) files.
-*/
 
 // --- CORE FRAMEWORK DEFINITIONS ---
 #define MEC_TAG MEC             // Global tag for CfgFunctions (e.g., MEC_fnc_initializeMECPebble)
