@@ -16,7 +16,7 @@ class CfgVehicles
 {
     class Item_Base_F; 
     class Static_F;
-    #include "mec_pebble_item.hpp"       // MEC-PB/1 Item
+    #include "mec_pebble_item.hpp"
 };
 class CfgWeapons
 {

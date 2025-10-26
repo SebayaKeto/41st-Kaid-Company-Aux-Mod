@@ -10,7 +10,7 @@
 // --- Function 1: Initialize Power State on ANY Object ---
 // Sets up all necessary default variables on the target object.
 // Call: [itemObject, 1000, 10, "MEC_TAG_fnc_dischargeRate"] call MEC_TAG_fnc_initializeChargeState;
-MEC_fnc_initializeChargeState = {
+initializeChargeState = {
     params ["_object", "_maxCharge", "_baseDischargeRate", "_dischargeFunction"];
 
     // 1. Initial State Check (Do not overwrite variables if already present)
@@ -36,7 +36,7 @@ MEC_fnc_initializeChargeState = {
 // Displays the charge status of any object with the correct variables.
 // Called via the ACE Interaction menu.
 // Call: [player, itemObject] call MEC_TAG_fnc_checkChargeState;
-MEC_fnc_checkChargeState = {
+checkChargeState = {
     params ["_player", "_object"];
     
     private _charge = _object getVariable ["currentCharge", 0];
