@@ -4,17 +4,22 @@
 //https://mikero.bytex.digital/Downloads
 //'now' is Wed Apr 24 11:48:44 2024 : 'file' last modified on Wed Apr 17 19:43:44 2024
 ////////////////////////////////////////////////////////////////////
-
+#include "mec_base_defines.hpp"
 #define _ARMA_
-
-class CfgPatches
+class CfgFunctions
 {
-	class FST_MEC_Functions
-	{
-		author = "Maldova";
-		units[] = {};
-		weapons[] = {};
-		requiredAddons[] = {"A3_Data_F_Enoch_Loadorder","CBA_MAIN","FST_Core","FST_Common"};
-		requiredversion = 0.1;
-	};
+    class FST_MEC_func
+    {
+        tag = MEC_TAG; 
+        class FST_MEC_Core_func
+        {
+            file = MEC_FUNCTION_PATH;
+            class electricitysystem
+            {
+                file = MEC_ELECTRICITY_PATH_GENERICDEFINES;
+                class checkChargeState {};
+                class initializeChargeState {};
+            };
+        };
+    };
 };

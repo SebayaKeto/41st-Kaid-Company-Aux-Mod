@@ -24,11 +24,19 @@ class CfgEditorCategories
 	{
 		displayname = "[MEC] Structures";
 	};
+	class FST_MEC_CategoryEquipment
+	{
+		displayname = "[MEC] Equipment";
+	};
 };
 class CfgEditorSubcategories
 {
 	class FST_MEC_SubcategoryBarriers
 	{
 		displayName = "[MEC] Barriers";
+	};
+	class FST_MEC_SubcategoryBatteries
+	{
+		displayName = "[MEC] Batteries";
 	};
 };
