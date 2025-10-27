@@ -11,78 +11,13 @@ class MEC_FusionCell: Land_WoodenCrate_01_F
     placement = "vertical";
     mapSize = 1;
     destrType = "DestructNo";
-    aggregateReflectors[] =
-    {
-        {"Light_1","Light_2","Light_3","Light_4","Light_5","Light_6","Light_7"}
-    };
-    class Reflectors
-    {
-        class Light_1
-        {
-            color[]= {2500,1000,1000};
-            ambient[]= {2.5,1,1};
-            intensity= 600;
-            size= 0.5;
-            innerAngle= 20;
-            outerAngle= 100;
-            coneFadeCoe= 3;
-
-            position= "Light_1_pos";
-            direction= "Light_1_dir";
-            hitpoint= "Light_1_HitPoint";
-
-            useFlare= true;
-            flareSize= 2;
-            flareMaxDistance= 130;
-
-            class Attenuation
-            {
-                start= 0;
-                constant= 0;
-                linear= 0;
-                quadratic= 0.3;
-
-                hardLimitStart= 50;
-                hardLimitEnd= 65;
-            };
-        };
-        class Light_2: Light_1
-        {
-            position= "Light_2_pos";
-            direction= "Light_2_dir";
-        };
-        class Light_3: Light_1
-        {
-            position= "Light_3_pos";
-            direction= "Light_3_dir";
-        };
-        class Light_4: Light_1
-        {
-            position= "Light_4_pos";
-            direction= "Light_4_dir";
-            blinking= true;
-            blinkingPattern[]= {0.25, 1.0};
-            blinkingStartsOn= true;
-            blinkingPatternGuarantee= true;
-        };
-        class Light_5: Light_1
-        {
-            position= "Light_5_pos";
-            direction= "Light_5_dir";
-        };
-        class Light_6: Light_1
-        {
-            position= "Light_6_pos";
-            direction= "Light_6_dir";
-        };
-        class Light_7: Light_1
-        {
-            position= "Light_7_pos";
-            direction= "Light_7_dir";
-            blinking= true;
-            blinkingPattern[]= {0.45, 1.30};
-            blinkingStartsOn= true;
-            blinkingPatternGuarantee= true;
-        };
-    };
+    ace_cargo_space = 2;
+    ace_cargo_size = 4;
+    MEC_PowerSystem = 1;
+    MEC_PowerSystem_Type = "FusionCell";
+    MEC_PowerSystem_MaxCharge = 10000; // Max Charge Capacity
+    MEC_PowerSystem_InitialCharge = 10000; // Initial Charge on Spawn
+    MEC_PowerSystem_ChargeRate = 500; // Charge Rate (units per second)
+    MEC_PowerSystem_CanDischarge = 0; // Can't Discharge
+    MEC_PowerSystem_DischargeRate = 0; // Discharge Rate (units per second)
 };

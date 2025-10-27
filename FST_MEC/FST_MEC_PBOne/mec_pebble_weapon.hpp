@@ -14,6 +14,13 @@ class MEC_Battery_PBOne: ItemCore
 	type = 4096;
     editorCategory = "FST_MEC_CategoryEquipment";
     editorSubcategory = "FST_MEC_SubcategoryBatteries";
+	MEC_PowerSystem = 1;
+    MEC_PowerSystem_Type = "MiniFusionCell";
+    MEC_PowerSystem_MaxCharge = 10000; // Max Charge Capacity
+    MEC_PowerSystem_InitialCharge = 10000; // Initial Charge on Spawn
+    MEC_PowerSystem_ChargeRate = 500; // Charge Rate (units per second)
+    MEC_PowerSystem_CanDischarge = 0; // Can't Discharge
+    MEC_PowerSystem_DischargeRate = 0; // Discharge Rate (units per second)
 	class ItemInfo: InventoryWeapon_Base_F
 	{
 		mass = 1;
