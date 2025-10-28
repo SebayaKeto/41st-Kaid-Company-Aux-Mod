@@ -9387,6 +9387,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Forge: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Forge)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Forge.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Gustav: FST_Airborne_Helmet
 	{
 		author="Steel";
