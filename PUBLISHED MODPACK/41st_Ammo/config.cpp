@@ -2378,7 +2378,7 @@ class CfgMagazines
 		displayName="[41st] RPS-6 Rocket";
 		displayNameShort="RPS-6 Rocket";
 		descriptionShort="HEAT Rocket. Compatible with RPS-6 Rocket Launchers.";
-		ammo="FST_rocket";
+		ammo="FST_rocket_HE";
 		Scope=1;
 		mass=40;
 		initSpeed=165;
