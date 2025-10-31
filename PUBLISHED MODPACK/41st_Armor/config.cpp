@@ -17095,6 +17095,24 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Equipment\FST_NVG_Squatch.paa",
 		};
 	};
+	class FST_NVG_Kirby: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Kirby)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Kirby.paa",
+		};
+	};
+	class FST_NVG_Kirby_Dirty: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Kirby/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Kirby_Dirty.paa",
+		};
+	};
 	class FST_NVG_Hazard: FST_NVG
 	{
 		author="Gold";
@@ -44399,6 +44417,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Cardinal";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Cardinal.paa";
+		};
+		class FST_Clone_Head_Sly: FST_clone_Default_head
+		{
+			author="Steel"
+			name="Clone Trooper Sly";
+			displayName="[41st] Clone Trooper - Sly";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Sly.paa";
 		};
 		class FST_Clone_Head_ampersand: FST_clone_Default_head
 		{
