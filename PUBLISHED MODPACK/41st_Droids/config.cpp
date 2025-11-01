@@ -979,7 +979,7 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor=50;
+				armor=25;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
@@ -989,7 +989,7 @@ class CfgVehicles
 			};
 			class HitNeck: HitFace
 			{
-				armor=50;
+				armor=25;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -999,7 +999,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=50;
+				armor=25;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -1044,7 +1044,7 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=35;
+				armor=25;
 				material=-1;
 				name="spine3";
 				passThrough=0.33000001;
@@ -1055,7 +1055,7 @@ class CfgVehicles
 			};
 			class HitBody: HitChest
 			{
-				armor=1000;
+				armor=270;
 				material=-1;
 				name="body";
 				passThrough=1;
@@ -1067,7 +1067,7 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=20;
+				armor=10;
 				material=-1;
 				name="arms";
 				passThrough=1;
@@ -1079,7 +1079,7 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=20;
+				armor=10;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -1091,7 +1091,7 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=20;
+				armor=10;
 				material=-1;
 				name="legs";
 				passThrough=1;
@@ -1107,7 +1107,7 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=20;
+				armor=10;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
@@ -1122,7 +1122,7 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=20;
+				armor=10;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
@@ -1141,7 +1141,7 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO"
 		};
-		armor=5;
+		armor=4;
 		armorStructural=6;
 		explosionShielding=65;
 		minTotalDamageThreshold=0.001;
