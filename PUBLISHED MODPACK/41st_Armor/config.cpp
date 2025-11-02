@@ -7482,6 +7482,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Seraph.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Flatline: FST_Crewman_Helmet
+	{
+		scope=2;
+		author="Laer";
+		displayName="[41st] Crewman Helmet (Flatline)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Flatline.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Oak: FST_Crewman_Helmet
 	{
 		scope=2;
@@ -44396,7 +44406,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Burns: FST_clone_Default_head
 		{
-			author="Viz"
+			author="Viz";
 			name="Clone Trooper Burns";
 			displayName="[41st] Clone Trooper - Burns";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44404,15 +44414,23 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Sigs: FST_clone_Default_head
 		{
-			author="Gold"
+			author="Gold";
 			name="Clone Trooper Sigs";
 			displayName="[41st] Clone Trooper - Sigs";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Sigs.paa";
 		};
+		class FST_Clone_Head_Harlequin: FST_clone_Default_head
+		{
+			author="Laer";
+			name="Clone Trooper Harlequin";
+			displayName="[41st] Clone Trooper - Harlequin";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Harlequin.paa";
+		};
 		class FST_Clone_Head_Cardinal: FST_clone_Default_head
 		{
-			author="Viz"
+			author="Viz";
 			name="Clone Trooper Cardinal";
 			displayName="[41st] Clone Trooper - Cardinal";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44420,7 +44438,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Sly: FST_clone_Default_head
 		{
-			author="Steel"
+			author="Steel";
 			name="Clone Trooper Sly";
 			displayName="[41st] Clone Trooper - Sly";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44428,7 +44446,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_ampersand: FST_clone_Default_head
 		{
-			author="Gold"
+			author="Gold";
 			name="Clone Trooper ampersand";
 			displayName="[41st] Clone Trooper - ampersand";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44436,7 +44454,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Delta: FST_clone_Default_head
 		{
-			author="Gold"
+			author="Gold";
 			name="Clone Trooper Delta";
 			displayName="[41st] Clone Trooper - Delta";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44444,7 +44462,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Squatch: FST_clone_Default_head
 		{
-			author="Adler"
+			author="Adler";
 			name="Clone Trooper Squatch";
 			displayName="[41st] Clone Trooper - Squatch";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44452,7 +44470,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Rumble: FST_clone_Default_head
 		{
-			author="Ruby"
+			author="Ruby";
 			name="Clone Trooper Rumble";
 			displayName="[41st] Clone Trooper - Rumble";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44460,7 +44478,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Preacher: FST_clone_Default_head
 		{
-			author="Ruby"
+			author="Ruby";
 			name="Clone Trooper Preacher";
 			displayName="[41st] Clone Trooper - Preacher";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44468,7 +44486,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_James: FST_clone_Default_head
 		{
-			author="Ruby"
+			author="Ruby";
 			name="Clone Trooper James";
 			displayName="[41st] Clone Trooper - James";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44476,7 +44494,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Jorge: FST_clone_Default_head
 		{
-			author="Adler"
+			author="Adler";
 			name="Clone Trooper Jorge";
 			displayName="[41st] Clone Trooper - Jorge";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
@@ -44485,7 +44503,7 @@ class CfgFaces
 		};
 		class FST_Clone_Head_Trenny: FST_clone_Default_head
 		{
-			author="Steel"
+			author="Steel";
 			name="Clone Trooper Trenny";
 			displayName="[41st] Clone Trooper - Trenny";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
