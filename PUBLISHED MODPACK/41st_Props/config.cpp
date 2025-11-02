@@ -40,6 +40,10 @@ class CfgEditorSubcategories
 	{
 		displayName="41st Baseplates";
 	};
+	class FST_LandingPads
+	{
+		displayName="41st Landing Pads";
+	}
 	class FST_CIS_JORGE_FOB
 	{
 		displayName="41st CIS FOB (Jorge)";
@@ -387,6 +391,7 @@ class CfgVehicles
 	//LANDINGPADS//
 	///////////////
 	class 3AS_Pad_CIS_Prop;
+	class 3AS_Pad_GAR_Prop;
 	class FST_CIS_LandingPad_Jorge: 3AS_Pad_CIS_Prop
 	{
 		author="Gold";
@@ -401,6 +406,67 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Props\Data\FST_pad_cis_Jorge_co.paa"
+		};
+	};
+	class FST_GAR_LandingPad_Gweem: 3AS_Pad_GAR_Prop
+	{
+		author="Steel";
+		displayName="[41st] GAR Landing Pad (41st)";
+		model="\3AS\3AS_structures\landingPads\Pad_GAR.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_LandingPads";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_pad_gar_CO.paa"
+		};
+	};
+	class FST_GAR_LandingPad_Gweem1: FST_GAR_LandingPad_Gweem
+	{
+		author="Steel";
+		displayName="[41st] GAR Landing Pad 1 (41st)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_pad1_gar_CO.paa"
+		};
+	};
+	class FST_GAR_LandingPad_Gweem2: FST_GAR_LandingPad_Gweem
+	{
+		author="Steel";
+		displayName="[41st] GAR Landing Pad 2 (41st)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_pad2_gar_CO.paa"
+		};
+	};
+	class FST_GAR_LandingPad_Gweem3: FST_GAR_LandingPad_Gweem
+	{
+		author="Steel";
+		displayName="[41st] GAR Landing Pad 3 (41st)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_pad3_gar_CO.paa"
+		};
+	};
+	class FST_GAR_LandingPad_Gweem4: FST_GAR_LandingPad_Gweem
+	{
+		author="Steel";
+		displayName="[41st] GAR Landing Pad 4 (41st)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_pad4_gar_CO.paa"
+		};
+	};
+	class FST_GAR_LandingPad_Gweem5: FST_GAR_LandingPad_Gweem
+	{
+		author="Steel";
+		displayName="[41st] GAR Landing Pad 5 (41st)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_pad5_gar_CO.paa"
 		};
 	};
 	//////////////
