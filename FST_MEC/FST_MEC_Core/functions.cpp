@@ -16,7 +16,7 @@ class CfgFunctions
             file = MEC_FUNCTION_PATH;
             class electricitysystem
             {
-                file = MEC_ELECTRICITY_PATH_GENERICDEFINES;
+                file = "FST\FST_MEC\FST_MEC_Core\functions\electricitysystem\fn_mec_powerinitialize.sqf";
                 class checkChargeState {};
                 class initializeChargeState {};
             };

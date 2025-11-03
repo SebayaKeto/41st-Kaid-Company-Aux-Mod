@@ -1,15 +1,18 @@
-#include "mec_base_defines.hpp" // NEW: Include base definitions
+#include "mec_base_defines.hpp"
 
 class CfgPatches
 {
     class FST_MEC_PBOne_Patch
     {
         units[] = {};
-        weapons[] = {}; 
-        magazines[] = {};
-        requiredVersion = 1.0;
-        requiredAddons[] = {"ace_common", "ace_interact_menu", "A3_Data_F_Loadorder"}; 
-        author = MEC_AUTHOR;
+        weapons[] = {};
+        requiredVersion = 0.1;
+        requiredAddons[] = {"ace_common"}; 
+        name = "MEC: Maldova Engineering Corp."; // Mod Name
+        author = MEC_AUTHOR; // Author information
+        logo = MEC_ICON_PATH; // Path to logo
+        picture = MEC_ICON_PATH; // Path to picture
+        dlcTag = "MEC_Mod"; // DLC Tag
     };
 };
 class CfgVehicles

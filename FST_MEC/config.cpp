@@ -10,10 +10,14 @@ class CfgPatches
 {
 	class FST_MEC_Patch
 	{
-		author = "Maldova";
 		units[] = {};
-		weapons[] = {};
-		requiredAddons[] = {};
-		requiredversion = 0.1;
+        weapons[] = {};
+        requiredVersion = 0.1;
+        requiredAddons[] = {"ace_common"}; 
+        name = "MEC: Maldova Engineering Corp."; // Mod Name
+        author = MEC_AUTHOR; // Author information
+        logo = MEC_ICON_PATH; // Path to logo
+        picture = MEC_ICON_PATH; // Path to picture
+        dlcTag = "MEC_Mod"; // DLC Tag
 	};
 };

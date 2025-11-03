@@ -12,7 +12,7 @@ class MEC_FusionCell: Land_WoodenCrate_01_F
     mapSize = 1; // Map icon size 
     destrType = "DestructNo"; // Indestructible
     ace_cargo_space = 2; // This item has 2 cargo space units
-    ace_cargo_size = 4; // 4 slots
+    ace_cargo_size = 4; // Takes up 4 slots in ace cargo system
     MEC_PowerSystem = 1; // Enable Power System
     MEC_PowerSystem_IsSupplier = 1; //Can Supply Power (set to 0 for consumer-only role)
     MEC_PowerSystem_IsConsumer = 0; //Can Consume Power (set to 0 for supplier-only role)
@@ -25,4 +25,5 @@ class MEC_FusionCell: Land_WoodenCrate_01_F
     MEC_PowerSystem_ChargeRate = 200; // Charge Rate (units per second)
     MEC_PowerSystem_CanDischarge = 0; // Can't discharge power over time
     MEC_PowerSystem_DischargeRate = 0; // Discharge Rate (units per second).  Needed if CanDischarge is 1
+    picture = MEC_ICON_PATH; // Path to picture
 };
