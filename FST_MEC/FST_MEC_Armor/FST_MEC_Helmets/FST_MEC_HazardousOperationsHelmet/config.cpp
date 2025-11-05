@@ -24,6 +24,9 @@ class CfgWeapons
 		displayName = "[MEC] Hazardous Operations Helmet";
 		picture = "FST\FST_MEC\ui\icons\mec_hazardhelmet_icon.paa";
 		model = "FST\FST_MEC\FST_MEC_Armor\FST_MEC_Helmets\FST_MEC_HazardousOperationsHelmet\MEC_HazardousOperationsHelmet.p3d";
+		hiddenSelections[] = {"Camo","Camo1"};
+		hiddenSelectionsTextures[] = {"FST\FST_MEC\FST_MEC_Armor\FST_MEC_Helmets\FST_MEC_HazardousOperationsHelmet\Data\Textures\Camo_co.paa","FST\FST_MEC\FST_MEC_Armor\FST_MEC_Helmets\FST_MEC_HazardousOperationsHelmet\Data\Textures\Camo_co.paa"};
+		hiddenSelectionsMaterials[] = {"FST\FST_MEC\FST_MEC_Armor\FST_MEC_Helmets\FST_MEC_HazardousOperationsHelmet\Data\Textures\Camo.rvmat","FST\FST_MEC\FST_MEC_Armor\FST_MEC_Helmets\FST_MEC_HazardousOperationsHelmet\Data\Textures\Camo1.rvmat"};
 		subItems[] = {};
 		class ItemInfo: HeadgearItem
 		{
