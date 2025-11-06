@@ -9399,6 +9399,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Acidic: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Acidic)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Acidic.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Forge: FST_Airborne_Helmet
 	{
 		author="Steel";
@@ -11404,6 +11414,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Bard: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Bard]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bard.paa",
+		};
+	};	
 	class FST_P2_Helmet_Prangle: FST_P2_Helmet_Base
 	{
 		author="Steel";
