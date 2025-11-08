@@ -9629,6 +9629,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Eagle.paa",
 		};
 	};
+	class FST_P2_Helmet_Pringles: FST_P2_Helmet_Base
+	{
+		author="Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Pringles]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Pringles.paa",
+		};
+	};
 	class FST_P2_Helmet_Avrath: FST_P2_Helmet_Base
 	{
 		author="Gold";
