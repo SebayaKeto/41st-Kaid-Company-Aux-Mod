@@ -35,6 +35,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "[MEC] Barriers";
 	};
+	class FST_MEC_SubcategoryPlatforms
+	{
+		displayName = "[MEC] Platforms";
+	};
 	class FST_MEC_SubcategoryBatteries
 	{
 		displayName = "[MEC] Batteries";
