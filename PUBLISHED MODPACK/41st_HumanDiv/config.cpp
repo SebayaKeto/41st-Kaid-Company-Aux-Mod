@@ -9,7 +9,9 @@ class CfgPatches
 			"FST_U_CIS_Heavy",
 			"FST_U_CIS_Heavy_AT",
 			"FST_U_CIS_Light",
+			"FST_CIS_HumanStandard",
 			"FST_U_CIS_Light_Veteran",
+
 		};
 		weapons[]={};
 	};
@@ -46,6 +48,32 @@ class CfgWeapons
 		{
 			uniformModel="\A3\Characters_F\blufor\equip_b_vest02.p3d";
 			containerClass="Supply100";
+			mass=50;
+			armor=200;
+			passThrough=0.3;
+			hiddenSelections[]=
+				{
+				"camo"
+				};
+		};
+	};
+	class FST_CIS_HolsterVest_Medic: FST_CIS_HolsterVest
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] CIS Human Division Vest (Medic)";
+		picture="";
+		model="\A3\Characters_F\blufor\equip_b_vest02.p3d";
+		hiddenSelections[]=
+			{
+			"camo"
+			};
+		hiddenSelectionsTextures[]=
+		{};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\A3\Characters_F\blufor\equip_b_vest02.p3d";
+			containerClass="Supply200";
 			mass=50;
 			armor=200;
 			passThrough=0.3;
@@ -489,6 +517,72 @@ class CfgWeapons
 			};
 		};
 	};
+	class JMSLLTE_StormtrooperHolster_armor;
+	class FST_CIS_CaptainHolster: JMSLLTE_StormtrooperHolster_armor
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] CIS Captain Holster";
+		picture="\JMSLLTE_empire\vests\ico\ico_v_storm.paa";
+		model="\JMSLLTE_empire_m\vests\StormtroperHolster.p3d";
+		class ItemInfo: VestItem
+		{
+			uniformmodel="\JMSLLTE_empire_m\vests\StormtroperHolster.p3d";
+			containerClass="Supply100";
+			mass=20;
+			modelsides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=5;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=30;
+					passThrough=0.40000001;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=30;
+					passThrough=0.40000001;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=15;
+					passThrough=0.40000001;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=20;
+					passThrough=0.40000001;
+				};
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=5;
+					passThrough=0.2;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=20;
+					passThrough=0.2;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.40000001;
+				};
+			};
+		};
+	};
 	class ItemCore;
 	class FST_Uniform_CIS_Heavy_Base: ItemCore
 	{
@@ -561,14 +655,16 @@ class CfgWeapons
 			mass=100;
 		};
 	};
-	class 3AS_U_CIS_Medic_Armor;
-	class FST_U_CIS_Medic_Armor: 3AS_U_CIS_Medic_Armor
+	class FST_U_CIS_Medic_Armor: FST_U_CIS_Light_Armor
 	{
 		author="Tooka";
 		displayName="[41st] CIS Human Division Light Armor (Medic)";
 		scope=2;
 		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
-		model="3AS\3AS_CIS_Infantry\Model\CIS_Inf.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\cis_inf_medic_texture_armour_co.paa"
+		};
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
@@ -577,14 +673,16 @@ class CfgWeapons
 			mass=100;
 		};
 	};
-	class 3AS_U_CIS_Officer_Armor;
-	class FST_U_CIS_Officer_Armor: 3AS_U_CIS_Officer_Armor
+	class FST_U_CIS_Officer_Armor: FST_U_CIS_Light_Armor
 	{
 		author="Tooka";
 		displayName="[41st] CIS Human Division Light Armor (Officer)";
 		scope=2;
 		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
-		model="3AS\3AS_CIS_Infantry\Model\CIS_Inf.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\cis_inf_officer_texture_armour_co.paa"
+		};
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
@@ -602,7 +700,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="FST_CIS_OfficerBase";
+			uniformClass="FST_CIS_OfficerUniformBase";
 			Armor=5;
 			modelSides[]={6};
 			containerClass="Supply150";
@@ -618,11 +716,76 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="FST_CIS_StandardBase";
+			uniformClass="FST_CIS_StandardUniformBase";
 			Armor=5;
 			modelSides[]={6};
 			containerClass="Supply150";
 			mass=10;
+		};
+	};
+	class FST_ValD;
+	class FST_ValD_Standard: FST_ValD
+	{
+		scope=1;
+		class linkedItems
+		{
+			class Optic
+			{
+				slot="CowsSlot";
+				item="DBA_MRCO_B";
+			};
+		};
+	};
+	class FST_Maalras_SMG;
+	class FST_Maalras_SMG_Standard: FST_Maalras_SMG
+	{
+		scope=1;
+		class linkedItems
+		{
+			class Optic
+			{
+				slot="CowsSlot";
+				item="DBA_MRCO_B";
+			};
+		};
+	};
+	class FST_SE14R;
+	class FST_SE14R_Opticed: FST_SE14R
+	{
+		scope=1;
+		class linkedItems
+		{
+			class Optic
+			{
+				slot="CowsSlot";
+				item="3AS_Imp_Optic_SE14R";
+			};
+		};
+	};
+	class FST_ZH73_MK2;
+	class FST_ZK73_Standard: FST_ZH73_MK2
+	{
+		scope=1;
+		class linkedItems
+		{
+			class Optic
+			{
+				slot="CowsSlot";
+				item="ls_cows_zh73_scope";
+			};
+		};
+	};
+	class FST_Cinnagaran_Carbine;
+	class FST_CC_Standard: FST_Cinnagaran_Carbine
+	{
+		scope=1;
+		class linkedItems
+		{
+			class Pointer
+			{
+				slot="PointerSlot";
+				item="3AS_Flashlight_Cinnagaran_1_F";
+			};
 		};
 	};
 };
@@ -758,6 +921,626 @@ class CfgVehicles
 		};
 	};
 	class O_Soldier_F;
+	class Vest_Base_F;
+	class FST_HumanDiv_BasicVest: Vest_Base_F
+	{
+		scope=1;
+		displayName="[41st] CIS Human Division Vest";
+		uniformClass="FST_CIS_HolsterVest";
+		class TransportWeapons
+		{
+			class _xx_IDA_VibroKnife
+			{
+				weapon="IDA_VibroKnife";
+				count=1;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_IDA_BactaBandage
+			{
+				name="IDA_BactaBandage";
+				count=10;
+			};
+			class _xx_IDA_BattleStim
+			{
+				name="IDA_BattleStim";
+				count=2;
+			};
+			class _xx_ACE_splint
+			{
+				name="ACE_splint";
+				count=2;
+			};
+			class _xx_ACE_touniquet
+			{
+				name="ACE_touniquet";
+				count=2;
+			};
+		};
+	};
+	class FST_HumDivBack_Standard: FST_CIS_Backpack_Invisible
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportWeapons
+		{
+			class _xx_IDA_VibroKnife
+			{
+				weapon="IDA_VibroKnife";
+				count=1;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_CISCloneAmmoPack:FST_Backpack_HumanDiv
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_FST_blaster_cell_High_Blue
+			{
+				name="FST_blaster_cell_High_Blue";
+				count=5;
+			};
+			class _xx_FST_blaster_scatter_cell_DP23_Blue
+			{
+				name="FST_blaster_scatter_cell_DP23_Blue";
+				count=5;
+			};
+			class _xx_FST_blaster_cell_Blue
+			{
+				name="FST_blaster_cell_Blue";
+				count=5;
+			};
+			class _xx_FST_blaster_cell_low_Blue
+			{
+				name="FST_blaster_cell_low_Blue";
+				count=5;
+			};
+			class _xx_FST_blaster_battery_Blue
+			{
+				name="FST_blaster_battery_Blue";
+				count=1;
+			};
+			class _xx_FST_blaster_battery_DC15L_Blue
+			{
+				name="FST_blaster_cell_DC15L_Blue";
+				count=1;
+			};
+			class _xx_FST_thermal_coil_LP_Blue
+			{
+				name="FST_thermal_coil_LP_Blue";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_LE_Blue
+			{
+				name="FST_blaster_cell_LE_Blue";
+				count=1;
+			};
+		};
+	};
+	class FST_HumDivBack_EOD:FST_Backpack_HumanDiv
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_JMSLLTE_Detonitecharge_imp_Mag
+			{
+				name="JMSLLTE_Detonitecharge_imp_Mag";
+				count=3;
+			};
+			class _xx_APERSTripMine_Wire_Mag
+			{
+				name="APERSTripMine_Wire_Mag";
+				count=3;
+			};
+			class _xx_APERSMine_Range_Mag
+			{
+				name="APERSMine_Range_Mag";
+				count=3;
+			};
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+		};
+	};
+	class FST_HumDivBack_Auto: FST_CIS_HumanDiv_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_FST_blaster_battery_Red
+			{
+				name="FST_blaster_battery_Red";
+				count=5;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_HumDivBack_CQC: FST_CIS_HumanDiv_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_FST_blaster_scatter_cell_SBB3_Red
+			{
+				name="FST_blaster_scatter_cell_SBB3_Red";
+				count=15;
+			};
+			class _xx_IDA_grenade_Sonic_mag
+			{
+				name="IDA_grenade_Sonic_mag";
+				count=4;
+			};
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=4;
+			};
+			class _xx_IDA_grenade_Detonator_mag
+			{
+				name="IDA_grenade_Detonator_mag";
+				count=2;
+			};
+		};
+	};
+	class FST_HumDivBack_Gren: FST_CIS_HumanDiv_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_FST_ZH73_Mag_Red
+			{
+				name="FST_ZH73_Mag_Red";
+				count=10;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_FST_thermal_slug_mag_Red
+			{
+				name="FST_thermal_slug_mag_Red";
+				count=4;
+			};
+			class _xx_FST_HE_LauncherGrenade
+			{
+				name="FST_HE_LauncherGrenade";
+				count=1;
+			};
+		};
+	};
+	class FST_HumDivBack_AT: FST_CIS_Backpack_Invisible
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_FST_RPS6_rocket
+			{
+				name="FST_RPS6_rocket";
+				count=2;
+			};
+		};
+	};
+	class FST_HumDivBack_AA: FST_CIS_Backpack_Invisible
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_FST_E60R_AA_mag
+			{
+				name="FST_E60R_AA_mag";
+				count=2;
+			};
+		};
+	};
+	class FST_HumDivBack_Radio: FST_CIS_RTO_Backpack
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_HumDivBack_Medic: FST_CIS_Medic_Backpack
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportWeapons
+		{
+			class _xx_IDA_VibroKnife
+			{
+				weapon="IDA_VibroKnife";
+				count=1;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_IDA_BactaBandage
+			{
+				name="IDA_BactaBandage";
+				count=20;
+			};
+			class _xx_IDA_BattleStim
+			{
+				name="IDA_BattleStim";
+				count=5;
+			};
+			class _xx_ACE_splint
+			{
+				name="ACE_splint";
+				count=5;
+			};
+			class _xx_ACE_touniquet
+			{
+				name="ACE_touniquet";
+				count=5;
+			};
+			class _xx_ACE_bloodIV
+			{
+				name="ACE_bloodIV";
+				count=2;
+			};
+			class _xx_ACE_bloodIV_500
+			{
+				name="ACE_bloodIV_500";
+				count=1;
+			};
+			class _xx_ACE_plasmaIV
+			{
+				name="ACE_plasmaIV";
+				count=1;
+			};
+			class _xx_ACE_plasmaIV_500
+			{
+				name="ACE_plasmaIV_500";
+				count=1;
+			};
+			class _xx_FST_Bacta_Tank
+			{
+				name="FST_Bacta_Tank";
+				count=1;
+			};
+			class _xx_IDA_Cauterizer
+			{
+				name="IDA_Cauterizer";
+				count=1;
+			};
+		};
+	};
+	class FST_HumDivBack_Mark: FST_CIS_Marksman_Satchel
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_Droid_blaster_cell_Overcharged_Red
+			{
+				name="FST_Droid_blaster_cell_Overcharged_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_HumDivBack_DroneOp: FST_CIS_Drone_Backpack
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_HumDivBack_BStaff: FST_CIS_Officer_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_ACE_Chemlight_HiRed
+			{
+				name="ACE_Chemlight_HiRed";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_HumDivBack_Navy: FST_CIS_Officer_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_IDA_grenade_Sonic_mag
+			{
+				name="IDA_grenade_Sonic_mag";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_HumDivBack_NCap: FST_CIS_Officer_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_IDA_grenade_Sonic_mag
+			{
+				name="IDA_grenade_Sonic_mag";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_41st_Food_CakeSlice
+			{
+				name="41st_Food_CakeSlice";
+				count=1;
+			};
+			class _xx_41st_Food_Crayons
+			{
+				name="41st_Food_Crayons";
+				count=1;
+			};
+		};
+	};
+	class FST_HumDivBack_BComm: FST_CIS_Officer_Legbag
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_IDA_grenade_Sonic_mag
+			{
+				name="IDA_grenade_Sonic_mag";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_ACE_Banana
+			{
+				name="ACE_Banana";
+				count=1;
+			};
+		};
+	};
+	class FST_HumDivBack_Engi: FST_CIS_Engineer_Backpack
+	{
+		author = "Tooka";
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_Toolkit
+			{
+				name="Toolkit";
+				count=1;
+			};
+			class _xx_IDA_grenade_Sonic_mag
+			{
+				name="IDA_grenade_Sonic_mag";
+				count=1;
+			};
+			class _xx_IDA_grenade_Smoke_Red_mag
+			{
+				name="IDA_grenade_Smoke_Red_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Red
+			{
+				name="FST_blaster_cell_Red";
+				count=15;
+			};
+			class _xx_FST_blaster_cell_low_Red
+			{
+				name="FST_blaster_cell_low_Red";
+				count=15;
+			};
+			class _xx_ACE_SpraypaintRed
+			{
+				name="ACE_SpraypaintRed";
+				count=1;
+			};
+			class _xx_ACE_SpraypaintYellow
+			{
+				name="ACE_SpraypaintYellow";
+				count=1;
+			};
+		};
+	};
 	class JMSLLTE_h_ISB_headgear;
 	class FST_CIS_BaseHelmet: JMSLLTE_h_ISB_headgear
 	{
@@ -802,104 +1585,68 @@ class CfgVehicles
 				armor=0;
 				material=-1;
 				name="pelvis";
-				passThrough=0.80000001;
+				passThrough=0;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=0;
 				visual="injury_body";
-				minimalHit=0.0099999998;
+				minimalHit=0;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=0;
-				material=-1;
 				name="spine1";
-				passThrough=0.80000001;
-				radius=0;
-				explosionShielding=3;
 				visual="injury_body";
-				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=0;
-				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
-				radius=0;
-				explosionShielding=6;
 				visual="injury_body";
-				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=0;
-				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
-				radius=0;
-				explosionShielding=6;
 				visual="injury_body";
-				minimalHit=0.0099999998;
 			};
 			class HitBody: HitChest
 			{
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=0;
 				visual="injury_body";
-				minimalHit=0.0099999998;
+				minimalHit=0
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
 				armor=0;
-				material=-1;
 				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=3;
 				visual="injury_hands";
-				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=0;
-				material=-1;
 				name="hands";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
 				visual="injury_hands";
-				minimalHit=0.0099999998;
 				depends="HitArms";
 			};
 			class HitLegs: HitHands
 			{
-				armor=0;
-				material=-1;
 				name="legs";
-				passThrough=1;
-				radius=0;
-				explosionShielding=3;
 				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
 			};
 			class HitLeftArm
 			{
 				armor=0;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=0;
 				visual="injury_hands";
-				minimalHit=0.0099999998;
+				minimalHit=0;
 			};
 			class HitRightArm: HitLeftArm
 			{
@@ -910,11 +1657,11 @@ class CfgVehicles
 				armor=0;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=0;
 				visual="injury_legs";
-				minimalHit=0.0099999998;
+				minimalHit=0;
 			};
 			class HitRightLeg: HitLeftLeg
 			{
@@ -936,7 +1683,7 @@ class CfgVehicles
 	class FST_Droid_B1_E5;
 	class FST_CIS_Heavy_Base_F: FST_Droid_B1_E5
 	{
-		author="Adapted from 3AS";
+		author="Tooka";
 		identityTypes[]=
 		{
 			"LanguageENG_F",
@@ -944,12 +1691,12 @@ class CfgVehicles
 			"G_NATO_default"
 		};
 		faceType="Man_A3";
-		backpack="FST_HD_backpack_at_predef";
+		backpack="";
 		side=0;
 		faction="FST_BattleDroids_Faction";
 		genericNames="NATOMen";
 		vehiclesClass="Men";
-		editorSubcategory="FST_BattleDroids_Subfaction";
+		editorSubcategory="FST_HumanDiv";
 		portrait="";
 		picture="";
 		icon="iconMan";
@@ -1073,7 +1820,7 @@ class CfgVehicles
 			};
 			class HitBody: HitChest
 			{
-				armor=1000;
+				armor=400;
 				material=-1;
 				name="body";
 				passThrough=1;
@@ -1121,7 +1868,7 @@ class CfgVehicles
 			};
 			class Incapacitated: HitLegs
 			{
-				armor=1000;
+				armor=400;
 				material=-1;
 				name="body";
 				passThrough=1;
@@ -1162,7 +1909,7 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
-		armor=25; 
+		armor=15; 
 		armorStructural=7;
 		explosionshielding=45;
 		HiddenSelections[]=
@@ -1178,75 +1925,25 @@ class CfgVehicles
 			"3AS\3AS_CIS_Infantry\data\heavy\cis_heavy.rvmat"
 		};
 		class EventHandlers;
-		weapons[]=
-		{
-			"FST_E5C_Stock",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"FST_E5C_Stock",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_HUD",
-			"ItemMap",
-			"JLTS_droid_comlink",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_NVG_droid_chip_1",
-			"JLTS_NVG_droid_chip_1",
-			"3AS_CIS_Light_helmet"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_HUD",
-			"ItemMap",
-			"JLTS_droid_comlink",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_NVG_droid_chip_1",
-			"JLTS_NVG_droid_chip_1",
-			"3AS_CIS_Light_helmet"
-		};
-		magazines[]=
-		{
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"IDA_grenade_Detonator_mag",
-			"IDA_grenade_Detonator_mag",
-		};
-		respawnMagazines[]=
-		{
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"IDA_grenade_Detonator_mag",
-			"IDA_grenade_Detonator_mag",
-		};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]={};
+		respawnLinkedItems[]={};
+		magazines[]={};
+		respawnMagazines[]={};
 	};
 	class FST_U_CIS_Heavy: FST_CIS_Heavy_Base_F
 	{
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
-		scope=2;
-		scopecurator=2;
-		displayName="[41st] CIS Human Division (Heavy)";
-		author="Adapted from 3AS";
+		scope=1;
+		scopecurator=1;
+		displayName="[41st] CIS Human Division (Obsolete Retired Class)"; //Keep around as most custom NPCs use this as their base still
+		author="Tooka";
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
-		backpack="";
+		backpack="FST_HumDivBack_Auto";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
@@ -1257,41 +1954,76 @@ class CfgVehicles
 		{
 			"3AS\3AS_CIS_Infantry\data\heavy\cis_heavy_texture_armour_co.paa"
 		};
+	};
+	class FST_CIS_HumanDiv_Auto: FST_CIS_Heavy_Base_F
+	{
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopecurator=2;
+		displayName="[41st] CIS Human Division (Autorifleman)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Heavy_Armor";
+		role="Rifleman";
+		backpack="FST_HumDivBack_Auto";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\heavy\cis_heavy_texture_armour_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_M41",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
 		linkedItems[]=
 		{
-			"FST_HUD",
-			"ItemMap",
+			"FST_CIS_AmmoVest",
 			"JLTS_droid_comlink",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_NVG_droid_chip_1",
-			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_2",
 			"3AS_CIS_Light_helmet"
 		};
-		respawnLinkedItems[]=
+		magazines[]=
 		{
-			"FST_HUD",
-			"ItemMap",
-			"JLTS_droid_comlink",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_NVG_droid_chip_1",
-			"JLTS_NVG_droid_chip_1",
-			"3AS_CIS_Light_helmet"
+			"FST_blaster_battery_Red",
+			"FST_blaster_cell_low_Red",
+			"ACE_Chemlight_HiRed",
+			"IDA_grenade_Smoke_Red_mag"
+		};
+		class EventHandlers
+		{
+			init="(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Autorifleman'; _unit suppressFor 999;};";
 		};
 	};
-	class FST_U_CIS_Heavy_AT: FST_CIS_Heavy_Base_F
+	class FST_CIS_HumanDiv_AT: FST_CIS_Heavy_Base_F
 	{
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopecurator=2;
 		displayName="[41st] CIS Human Division (AT)";
-		author="Adapted from 3AS";
+		author="Tooka";
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
-		backpack="FST_HD_backpack_at_predef";
+		backpack="FST_HumDivBack_AT";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
@@ -1302,77 +2034,143 @@ class CfgVehicles
 		{
 			"3AS\3AS_CIS_Infantry\data\heavy\cis_heavy_texture_armour_co.paa"
 		};
-		class EventHandlers;
 		weapons[]=
 		{
-			"FST_E5C_Stock",
+			"FST_ValD_Standard",
+			"FST_SE14R",
 			"FST_RPS6HP",
 			"Throw",
 			"Put"
 		};
-		respawnWeapons[]=
+		Items[]=
 		{
-			"FST_E5C_Stock",
-			"FST_RPS6HP",
-			"Throw",
-			"Put"
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
 		{
-			"FST_HUD",
-			"ItemMap",
+			"FST_CIS_HolsterVest",
+			"3AS_G_AT_4_F",
 			"JLTS_droid_comlink",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_NVG_droid_chip_1",
-			"JLTS_NVG_droid_chip_1",
-			"3AS_CIS_Light_helmet"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_HUD",
-			"ItemMap",
-			"JLTS_droid_comlink",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_NVG_droid_chip_1",
-			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_2",
 			"3AS_CIS_Light_helmet"
 		};
 		magazines[]=
 		{
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"IDA_grenade_Detonator_mag",
-			"IDA_grenade_Detonator_mag",
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red",
+			"FST_RPS6_rocket"
 		};
-		respawnMagazines[]=
+		class EventHandlers
 		{
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"IDA_grenade_Detonator_mag",
-			"IDA_grenade_Detonator_mag",
+			init="(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Antitank';};";
 		};
 	};
-	class 3AS_U_CIS_Light;
-	class FST_U_CIS_Light: 3AS_U_CIS_Light
+	class FST_CIS_HumanDiv_AA: FST_CIS_Heavy_Base_F
 	{
-		author="Gold";
-		displayName="[41st] CIS Human Division (Light)";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
+		scopecurator=2;
+		displayName="[41st] CIS Human Division (AA)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Heavy_Armor";
+		role="Rifleman";
+		backpack="FST_HumDivBack_AA";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\heavy\cis_heavy_texture_armour_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"FST_E60R_AA",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"3AS_G_AT_4_F",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red",
+			"FST_E60R_AA_mag"
+		};
+		class EventHandlers
+		{
+			init="(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Antiair';};";
+		};
+	};
+	class O_soldier_base_F;
+	class FST_U_CIS_Light: FST_Droid_B1_E5
+	{
+		author="Gold + Tooka";
+		displayName="[41st] CIS Human Division (Light)";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=1;
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor";
 		role="Rifleman";
+		identityTypes[]={};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Characters_F\BLUFOR\Data\clothing1.rvmat",
+				"A3\Characters_F\BLUFOR\Data\clothing1_injury.rvmat",
+				"A3\Characters_F\BLUFOR\Data\clothing1_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"A3\characters_f\common\data\coveralls.rvmat",
+				"A3\Characters_F\Common\Data\coveralls_injury.rvmat",
+				"A3\Characters_F\Common\Data\coveralls_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"
+			};
+		};
 		class HitPoints
 		{
 			class HitFace
@@ -1453,7 +2251,7 @@ class CfgVehicles
 			};
 			class HitBody: HitChest
 			{
-				armor=300;
+				armor=200;
 				material=-1;
 				name="body";
 				passThrough=1;
@@ -1534,9 +2332,10 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
-		armor=14; 
+		armor=7; 
 		armorStructural=4;
 		explosionshielding=20;
+		model="3AS\3AS_CIS_Infantry\Model\CIS_Inf.p3d";
 		class UniformInfo
 		{
 			class SlotsInfo
@@ -1563,21 +2362,135 @@ class CfgVehicles
 		{
 			"3AS\3AS_CIS_Infantry\data\cis_inf_texture_armour_co.paa"
 		};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]={};
+		respawnLinkedItems[]={};
+		magazines[]={};
+		respawnMagazines[]={};
+	};
+	class FST_CIS_HumanDiv_Standard: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Standard";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (Standard)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\cis_inf_texture_armour_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
 		linkedItems[]=
 		{
-			"FST_CIS_Light_Helmet",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
+			"FST_CIS_HolsterVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Light_helmet"
 		};
-		respawnLinkedItems[]=
+		magazines[]=
 		{
-			"FST_CIS_Light_Helmet",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio"
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Standard Trooper';};";
+		};
+	};
+	class FST_CIS_HumanDiv_AmmoBearer: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_CISCloneAmmoPack";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (Ammo)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\cis_inf_texture_armour_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_ZK73_Standard",
+			"IDA_VibroKnife",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_HumanDiv_Pouches",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_ZH73_Mag_Red",
+			"FST_thermal_slug_mag_Red",
+			"ACE_Chemlight_HiRed",
+			"IDA_grenade_Smoke_Red_mag"
+		};
+		class EventHandlers
+		{
+			init="(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'FST_thermal_slug_mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; (_this select 0) addItemToVest 'FST_ZH73_Mag_Red'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Ammo Bearer';};";
 		};
 	};
 	class FST_U_CIS_Light_Veteran: FST_U_CIS_Light
@@ -1585,7 +2498,7 @@ class CfgVehicles
 		author="Gold";
 		displayName="[41st] CIS Human Division (Light/Veteran)";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
-		scope=2;
+		scope=1;
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
@@ -1615,33 +2528,540 @@ class CfgVehicles
 			"ItemRadio"
 		};
 	};
-	class FST_U_CIS_Medic: 3AS_U_CIS_Light
+	class FST_CIS_HumanDiv_RTO: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Radio";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (RTO)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"ls_imperial_earPiece",
+			"JLTS_droid_comlink",
+			"OPTRE_NVG_UL",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division RTO';};";
+		};
+	};
+	class FST_CIS_HumanDiv_CQC: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_CQC";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (CQC)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		weapons[]=
+		{
+			"FST_SBB3",
+			"IDA_VibroKnife",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_CQB_Vest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_scatter_cell_SBB3_Red",
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division CQC';};";
+		};
+	};
+	class FST_CIS_HumanDiv_Gren: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Gren";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (Grenadier)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		weapons[]=
+		{
+			"FST_ZK73_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_AmmoVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_ZH73_Mag_Red",
+			"FST_HE_LauncherGrenade",
+			"FST_blaster_cell_low_Red",
+			"ACE_Chemlight_HiRed",
+			"IDA_grenade_Smoke_Red_mag"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; (_this select 0) addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Grenadier';};";
+		};
+	};
+	class FST_CIS_HumanDiv_Mark: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Mark";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (Marksman)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		weapons[]=
+		{
+			"FST_E5S",
+			"FST_SE14R_Opticed",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"3AS_G_Marksman_3_F",
+			"JLTS_droid_comlink",
+			"ls_cloneNVG_commando_visor_mpStealth",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_Droid_blaster_cell_Overcharged_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Marksman';};";
+		};
+	};
+	class FST_CIS_HumanDiv_EOD: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_EOD";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (EOD)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		canDeactivateMines = 1;	
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		weapons[]=
+		{
+			"FST_Maalras_SMG_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_EODVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red",
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; (_this select 0) addItemToVest 'ACE_M26_Clacker'; (_this select 0) addItemToVest 'MineDetector'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division EOD';};";
+		};
+	};
+	class FST_CIS_HumanDiv_DroneOp: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_DroneOp";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (Droid Operator)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Light_Armor_Veteran";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Droids\Data\Extras\FST_Armor_HumDiv_Veteran.paa"
+		};
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow",
+			"JLTS_droidCaller"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"442_tech_clone_glass2_44",
+			"JLTS_droid_comlink",
+			"OPTRE_NVG_UL",
+			"3AS_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Droid Operator';};";
+		};
+	};
+	class FST_U_CIS_Medic: FST_U_CIS_Light
 	{
 		author="Tooka";
 		displayName="[41st] CIS Human Division (Medic)";
-		scope=2;
+		scope=1;
 		uniformClass="FST_U_CIS_Medic_Armor";
 		hiddenSelectionsTextures[]=
 		{
 			"3AS\3AS_CIS_Infantry\data\cis_inf_medic_texture_armour_co.paa"
 		};
 	};
-	class FST_U_CIS_Combat_Officer: 3AS_U_CIS_Light
+	class FST_CIS_HumanDiv_Medic: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Medic";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator = 2;
+		displayName="[41st] CIS Human Division (Medic)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_CIS_Medic_Armor";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		attendant = 1;
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\cis_inf_medic_texture_armour_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_Maalras_SMG_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest_Medic",
+			"3AS_G_Medic_5_F",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"3AS_CIS_Medic_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red",
+			"ACE_Chemlight_HiRed",
+			"IDA_grenade_Smoke_Red_mag"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; (_this select 0) addItemToVest 'FST_blaster_cell_low_Red'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Medic';};";
+		};
+	};
+	class FST_U_CIS_Combat_Officer: FST_U_CIS_Light
 	{
 		author="Tooka";
 		displayName="[41st] CIS Human Division (Officer)";
-		scope=2;
+		scope=1;
 		uniformClass="FST_U_CIS_Officer_Armor";
 		hiddenSelectionsTextures[]=
 		{
 			"3AS\3AS_CIS_Infantry\data\cis_inf_officer_texture_armour_co.paa"
 		};
 	};
-	class JMSLLTE_EmpOfficer_black_F;
-	class FST_CIS_OfficerBase: JMSLLTE_EmpOfficer_black_F
+	class FST_CIS_HumanDiv_Officer: FST_U_CIS_Light
 	{
 		author="Tooka";
+		displayName="[41st] CIS Human Division (Officer)";
 		scope=2;
+		scopeCurator = 2;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Radio";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		uniformClass="FST_U_CIS_Officer_Armor";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"3AS\3AS_CIS_Infantry\data\cis_inf_officer_texture_armour_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R_Opticed",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_100",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"ls_holoprojector_bountyPuck",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_CIS_Light_helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BactaBandage'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'IDA_BattleStim'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_splint'; (_this select 0) addItemToVest 'ACE_tourniquet'; (_this select 0) addItemToVest 'ACE_tourniquet';  (_this select 0) addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 0.1; _unit setName 'CIS Human Division Commander';};";
+		};
+	};
+	class JMSLLTE_EmpOfficer_black_F;
+	class FST_EmpOfficer_black_Base: JMSLLTE_EmpOfficer_black_F
+	{
+
+	};
+	class FST_CIS_OfficerUniformBase: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		scope=1;
 		modelSides[]={6};
 		model="\JMSLLTE_empire_m\officer.p3d";
 		nakedUniform="U_BasicBody";
@@ -1654,10 +3074,220 @@ class CfgVehicles
 			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
 		};
 	};
-	class FST_CIS_StandardBase: JMSLLTE_EmpOfficer_black_F
+	class FST_HumanDiv_NOfficer: FST_EmpOfficer_black_Base
 	{
 		author="Tooka";
+		displayName="[41st] CIS Naval Officer";
+		uniformClass="FST_CIS_OfficerUnifoirm";
 		scope=2;
+		scopeCurator = 2;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Navy";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_CC_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_100",
+			"JLTS_credits_50",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"JLTS_credit_card",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"JLTS_intel_holoProjector",
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_NavyHolster",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_P2_Invisible_Helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim';_u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_u']; sleep 0.1; _unit setName 'CIS Naval Officer';}; _u setSkill 0.85; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',1.0]; _u setSkill ['spotTime',1.0]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',1.0]; _u setSkill ['general',0.75];";
+		};
+	};
+	class FST_HumanDiv_BComm: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		displayName="[41st] CIS Base Commander";
+		uniformClass="FST_CIS_OfficerUnifoirm";
+		scope=2;
+		scopeCurator = 2;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_BComm";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_Relbyk25_Pistol",
+			"IDA_Electrobinoculars_Rep",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_100",
+			"JLTS_credits_100",
+			"JLTS_credits_50",
+			"JLTS_credits_50",
+			"JLTS_credits_500",
+			"JLTS_intel_datapad_civ",
+			"JLTS_credit_card",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"JLTS_droidCaller",
+			"JLTS_intel_holoProjector",
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_OfficerVestL",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_OfficerCap_CIS",
+			"ItemMap"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim';_u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToUniform '3AS_RepublicDatapadPistol'; _this spawn {params ['_u']; sleep 0.1; _unit setName 'CIS Base Commander';}; _u setSkill 0.85; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',1.0]; _u setSkill ['spotTime',1.0]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',1.0]; _u setSkill ['general',0.75];";
+		};
+	};
+	class FST_HumanDiv_NCaptain: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		displayName="[41st] CIS Ship Captain";
+		uniformClass="FST_CIS_OfficerUnifoirm";
+		scope=2;
+		scopeCurator = 2;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_NCap";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_Relbyk25_Pistol",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_100",
+			"JLTS_credits_50",
+			"JLTS_credits_50",
+			"JLTS_credits_50",
+			"JLTS_credits_50",
+			"JLTS_credits_500",
+			"JLTS_credits_500",
+			"JLTS_credits_1000",
+			"JLTS_intel_datapad_civ",
+			"JLTS_credit_card",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"JLTS_intel_datacard",
+			"JLTS_droidCaller",
+			"JLTS_intel_holoProjector",
+			"3AS_Intel_DataChip",
+			"3AS_Intel_DataChip",
+			"3AS_Intel_DataChip",
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_CaptainHolster",
+			"3AS_G_RTO_1_F",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_OfficerCap_CIS",
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim';_u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToUniform '3AS_RepublicDatapadPistol'; _this spawn {params ['_u']; sleep 0.1; _unit setName 'CIS Ship Captain';}; _u setSkill 0.85; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',1.0]; _u setSkill ['spotTime',1.0]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',1.0]; _u setSkill ['general',0.75];";
+		};
+	};
+	class FST_CIS_StandardUniformBase: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		scope=1;
 		modelSides[]={6};
 		model="\JMSLLTE_empire_m\officer.p3d";
 		nakedUniform="U_BasicBody";
@@ -1668,6 +3298,191 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"JMSLLTE_empire\data\body\of_body_CISs_co.paa"
+		};
+	};
+	class FST_HumanDiv_BStaff: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		displayName="[41st] CIS Base Staff";
+		uniformClass="FST_CIS_StandardUniform";
+		scope=2;
+		scopeCurator = 2;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_BStaff";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CISs_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_Maalras_SMG_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"JLTS_intel_datacard",
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_OfficerVestH",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_CIS_StaffHelmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim';_u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_u']; sleep 0.1; _unit setName 'CIS Base Staff';}; _u setSkill 0.85; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',1.0]; _u setSkill ['spotTime',1.0]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',1.0]; _u setSkill ['general',0.75];";
+		};
+	};
+	class FST_HumanDiv_NPerson: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		displayName="[41st] CIS Naval Personnel";
+		uniformClass="FST_CIS_StandardUniform";
+		scope=2;
+		scopeCurator = 2;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Navy";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CISs_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_CC_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_50",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"JLTS_credit_card",
+			"JLTS_intel_datacard",
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_NavyHolster",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_P2_Invisible_Helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim';_u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u add _this spawn {params ['_u']; sleep 0.1; _unit setName 'CIS Naval Personnel';}; _u setSkill 0.85; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',1.0]; _u setSkill ['spotTime',1.0]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',1.0]; _u setSkill ['general',0.75];";
+		};
+	};
+	class FST_HumanDiv_NEngi: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		displayName="[41st] CIS Naval Engineer";
+		uniformClass="FST_CIS_StandardUniform";
+		scope=2;
+		scopeCurator = 2;
+		engineer=1;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		faceType="Man_A3";
+		backpack="FST_HumDivBack_Engi";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_HumanDiv";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CISs_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_CC_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"JLTS_credits_10",
+			"JLTS_credits_10",
+			"JLTS_credits_100",
+			"JLTS_credits_50",
+			"JLTS_intel_datapad_civ",
+			"JLTS_credit_card",
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_NavyHolster",
+			"JLTS_droid_comlink",
+			"3AS_G_Engineer_7_F",
+			"JMSLLTE_NV_MechGlass",
+			"FST_P2_Invisible_Helmet"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim';_u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_u']; sleep 0.1; _unit setName 'CIS Naval Engineer';}; _u setSkill 0.85; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',1.0]; _u setSkill ['spotTime',1.0]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',1.0]; _u setSkill ['general',0.75];";
 		};
 	};
 };

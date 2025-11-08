@@ -666,8 +666,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_Backpack_HumanDiv;
-	class FST_HD_backpack_at_predef: FST_Backpack_HumanDiv
+	class FST_HD_backpack_at_predef: FST_B1_backpack
 	{
 		scope=2;
 		model="";
@@ -1055,7 +1054,7 @@ class CfgVehicles
 			};
 			class HitBody: HitChest
 			{
-				armor=270;
+				armor=215;
 				material=-1;
 				name="body";
 				passThrough=1;
@@ -1141,7 +1140,7 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO"
 		};
-		armor=4;
+		armor=2;
 		armorStructural=6;
 		explosionShielding=65;
 		minTotalDamageThreshold=0.001;
