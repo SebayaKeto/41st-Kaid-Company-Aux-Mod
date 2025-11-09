@@ -7633,10 +7633,6 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		{
 			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
 		};
-		subItems[]=
-		{
-			"k_nvg"
-		};
 		class Iteminfo: HeadgearItem
 		{
 			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
