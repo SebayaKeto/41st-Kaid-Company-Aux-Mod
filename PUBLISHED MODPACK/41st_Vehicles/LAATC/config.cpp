@@ -804,8 +804,8 @@ class CfgVehicles
 		{
 			"41st_Vehicles\LAATC\Data\LAAT_C_Hull_CO_41st_Pole.paa",
 			"41st_Vehicles\LAATC\Data\LAAT_C_Wings_CO_41st_Pole.paa",
-			"\41st_Vehicles\LAATC\Data\LAAT_C_Top_CO_41st_Pole.paa",
-			"3AS\3AS_LAATC\data\Textures\LAAT_C_Detail_Front_CO_41st_Pole.paa"
+			"41st_Vehicles\LAATC\Data\LAAT_C_Top_CO_41st_Pole.paa",
+			"41st_Vehicles\LAATC\Data\LAAT_C_Detail_Front_CO_41st_Pole.paa"
 		};
 	};
 };
