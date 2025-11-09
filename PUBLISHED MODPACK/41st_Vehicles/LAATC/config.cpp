@@ -12,6 +12,7 @@ class CfgPatches
 		units[]=
 		{
 			"FST_LAATC",
+			"FST_LAATC_Pole",
 		};
 		weapons[]={};
 	};
@@ -786,6 +787,25 @@ class CfgVehicles
 			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Wings_Jorge_CO.paa",
 			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Top_Jorge_CO.paa",
 			"41st_Vehicles\LAATC\Data\FST_LAAT_C_Detail_Front_Jorge_CO.paa"
+		};
+	};
+	class FST_LAATC_Pole: FST_LAATC
+	{
+		author="Steel";
+		displayName="[41st] LAAT/C (Pole)";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\LAATC\Data\LAAT_C_Hull_CO_41st_Pole.paa",
+			"41st_Vehicles\LAATC\Data\LAAT_C_Wings_CO_41st_Pole.paa",
+			"\41st_Vehicles\LAATC\Data\LAAT_C_Top_CO_41st_Pole.paa",
+			"3AS\3AS_LAATC\data\Textures\LAAT_C_Detail_Front_CO_41st_Pole.paa"
 		};
 	};
 };
