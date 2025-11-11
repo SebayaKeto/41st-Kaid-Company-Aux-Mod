@@ -122,6 +122,7 @@
         ["ACE_IR_Strobe_Item",1],
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
+        ["ACE_FortifyToken", 50],
         ["FST_grenade_Penetrator_mag",4,1]
     ]],
     ["FST_Vest_Base",[
@@ -625,6 +626,7 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             ["ACE_Fortify",1],
+            ["ACE_FortifyToken", 50],
             ["FST_grenade_Penetrator_mag",4,1]
         ]],
         ["FST_Vest_Base",[
@@ -1780,6 +1782,7 @@
         ["ACE_IR_Strobe_Item",1],
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
+        ["ACE_FortifyToken", 50],
         ["FST_grenade_Penetrator_mag",4,1]
     ]],
     ["FST_Vest_Base",[
