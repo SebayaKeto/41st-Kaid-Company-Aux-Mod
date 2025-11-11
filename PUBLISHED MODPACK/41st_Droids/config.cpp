@@ -3360,6 +3360,7 @@ class cfgGroups
 					name="[41st] B1 Squad (STD)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -3450,6 +3451,7 @@ class cfgGroups
 					name="[41st] B1 Squad (Platoon)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -3778,6 +3780,7 @@ class cfgGroups
 					name="[41st] B1 Squad (w/ Sniper)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -3868,6 +3871,7 @@ class cfgGroups
 					name="[41st] B1 Squad (w/ AT)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -3958,6 +3962,7 @@ class cfgGroups
 					name="[41st] B1 Squad (w/ AA)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4048,6 +4053,7 @@ class cfgGroups
 					name="[41st] B1 Squad (AT/AA)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4138,6 +4144,7 @@ class cfgGroups
 					name="[41st] B1 Fireteam";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4186,6 +4193,7 @@ class cfgGroups
 					name="[41st] B1 Guided AT Team";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4220,6 +4228,7 @@ class cfgGroups
 					name="[41st] BX Kill Team";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4254,6 +4263,7 @@ class cfgGroups
 					name="[41st] BX Sniper Team";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4274,6 +4284,7 @@ class cfgGroups
 					name="[41st] BX Anti-Tank Team";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4294,6 +4305,7 @@ class cfgGroups
 					name="[41st] BX Anti-Air Team";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4314,6 +4326,7 @@ class cfgGroups
 					name="[41st] BX Kill Team (Rusty)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4348,6 +4361,7 @@ class cfgGroups
 					name="[41st] BX Sniper Team (Rusty)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4368,6 +4382,7 @@ class cfgGroups
 					name="[41st] BX Anti-Tank Team (Rusty)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4388,6 +4403,7 @@ class cfgGroups
 					name="[41st] BX Anti-Air Team (Rusty)";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4408,6 +4424,7 @@ class cfgGroups
 					name="[41st] B2 Team";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
@@ -4428,6 +4445,7 @@ class cfgGroups
 					name="[41st] B2 Squad";
 					faction="FST_BattleDroids_Faction";
 					side=0;
+					ls_dispenser_available = 1;
 					class Unit0
 					{
 						side=0;
