@@ -7230,6 +7230,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
         ace_hearing_lowerVolume=0;
 		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
 		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
+		subItems[] = {};
 		class Iteminfo: HeadgearItem
 		{
 			uniformModel="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
