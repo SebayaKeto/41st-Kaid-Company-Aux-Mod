@@ -326,7 +326,7 @@ class CfgVehicles
 				discreteDistanceInitIndex=2;
 				turretInfoType="RscOptics_crows";
 				gunnerOpticsModel="\a3\weapons_f_gamma\reticle\HMG_01_Optics_Gunner_F";
-				minElev=-10;
+				minElev=-30;
 				maxElev=15;
 				minTurn=-360;
 				soundServo[]=
