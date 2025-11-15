@@ -122,7 +122,7 @@
         ["ACE_IR_Strobe_Item",1],
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
-        ["FST_grenade_Penetrator_mag",4,1]
+        ["FST_grenade_Penetrator_mag",3,1]
     ]],
     ["FST_Vest_GM_Base",[
         ["FST_blaster_cell_High_Blue",12,40],
@@ -625,7 +625,7 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             ["ACE_Fortify",1],
-            ["FST_grenade_Penetrator_mag",4,1]
+            ["FST_grenade_Penetrator_mag",3,1]
         ]],
         ["FST_Vest_GM_Base",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -1780,7 +1780,7 @@
         ["ACE_IR_Strobe_Item",1],
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
-        ["FST_grenade_Penetrator_mag",4,1]
+        ["FST_grenade_Penetrator_mag",3,1]
     ]],
     ["FST_Vest_Base",[
         ["FST_blaster_cell_High_Blue",12,40],
