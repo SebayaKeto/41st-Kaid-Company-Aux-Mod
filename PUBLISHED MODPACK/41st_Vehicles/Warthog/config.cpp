@@ -16,7 +16,11 @@ class CfgPatches
 			//"FST_Technical_Twin_Laser_Snow",
 			//"FST_Technical_Transport",
 			"FST_Technical_Transport_White",
-			"FST_Technical_Transport_Indep"
+			"FST_Technical_Transport_Indep",
+			"FST_Technical_Twin_Laser_Woodland",
+			"FST_Technical_Twin_Laser_Urban",
+			"FST_Technical_Twin_Laser_Desert",
+			"FST_Technical_Twin_Laser_Midnight"
 		};
 		addonRootClass="OPTRE_Vehicles";
 		weapons[]={};
@@ -912,8 +916,8 @@ class CfgVehicles
 				castGunnerShadow=1;
 				startEngine=0;
 				enableManualFire=0;
-				gunnerOpticsModel="a3\weapons_f\Reticle\optics_empty";
-				gunnerOutOpticsModel="a3\weapons_f\Reticle\optics_empty";
+				gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_01_w_F.p3d";
+				gunnerOutOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_01_w_F.p3d";
 				gunnerForceOptics=1;
 				hasGunner=1;
 				class ViewGunner: ViewOptics
@@ -1036,7 +1040,7 @@ class CfgVehicles
             "camo1",
 			"camo2",
 			"camo3",
-			"camo_details"
+			"camo_details",
         };
         hiddenSelectionsTextures[]=
         {
@@ -1046,6 +1050,98 @@ class CfgVehicles
 			"41st_Vehicles\Warthog\Data\Decals\Main_Decals.paa"
         };	
 	};	
+	class FST_Technical_Twin_Laser_Woodland: FST_Technical_Twin_Laser_White
+	{
+		author="Laer";
+		displayname = "[41st] PR-10 'Puma' (Woodland/Turret)";
+		scope=2;
+		side=1;
+		hiddenSelections[]=
+        {
+            "camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+			"camo_interior"
+        };
+		hiddenSelectionsTextures[]=
+        {
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Woodland.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Woodland.paa",
+			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Woodland.paa"
+        };
+	};
+	class FST_Technical_Twin_Laser_Urban: FST_Technical_Twin_Laser_Woodland
+	{
+		author="Laer";
+		displayname = "[41st] PR-10 'Puma' (Urban/Turret)";
+		scope=2;
+		side=1;
+		hiddenSelections[]=
+        {
+            "camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+			"camo_interior"
+        };
+		hiddenSelectionsTextures[]=
+        {
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Urban.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Urban.paa",
+			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Urban.paa"
+        };
+	};
+	class FST_Technical_Twin_Laser_Desert: FST_Technical_Twin_Laser_Woodland
+	{
+		author="Laer";
+		displayname = "[41st] PR-10 'Puma' (Desert/Turret)";
+		scope=2;
+		side=1;
+		hiddenSelections[]=
+        {
+            "camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+			"camo_interior"
+        };
+		hiddenSelectionsTextures[]=
+        {
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Desert.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Desert.paa",
+			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Desert.paa"
+        };
+	};
+	class FST_Technical_Twin_Laser_Midnight: FST_Technical_Twin_Laser_Woodland
+	{
+		author="Laer";
+		displayname = "[41st] PR-10 'Puma' (Midnight/Turret)";
+		scope=2;
+		side=1;
+		hiddenSelections[]=
+        {
+            "camo1",
+			"camo2",
+			"camo3",
+			"camo_details",
+			"camo_interior"
+        };
+		hiddenSelectionsTextures[]=
+        {
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Midnight.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Midnight.paa",
+			"41st_Vehicles\Warthog\Data\Turret\M12_turret_White_co.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Midnight.paa"
+        };
+	};
 	class FST_Technical_Transport: OPTRE_M813_TT
 	{
 		scope=2;

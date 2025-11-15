@@ -424,6 +424,7 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_HP: IDA_Blasterbolt_Power6_VEHICLE
 	{
+		explosionEffects="MortarExplosion";
 		model="3as\3as_weapons\data\tracer_red.p3d";
 		effectFly="3AS_PlasmaBolt_Medium_Red_Fly";
 		hit=900;

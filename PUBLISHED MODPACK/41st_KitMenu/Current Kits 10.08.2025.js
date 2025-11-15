@@ -122,6 +122,7 @@
         ["ACE_IR_Strobe_Item",1],
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
+        ["ACE_FortifyToken", 50],
         ["FST_grenade_Penetrator_mag",4,1]
     ]],
     ["FST_Vest_Base",[
@@ -625,6 +626,7 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             ["ACE_Fortify",1],
+            ["ACE_FortifyToken", 50],
             ["FST_grenade_Penetrator_mag",4,1]
         ]],
         ["FST_Vest_Base",[
@@ -997,7 +999,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
     ],
-    ["FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_Vest_NCO_Kama","FST_Vest_Base","FST_TwinDC17_Secondary","FST_pauldron_kama_reversed","FST_pauldron_kama_reversed_veteran","FST_pauldron_kama","FST_pauldron_kama_veteran"],
+    ["FST_DC15S","UNSC_Knife","FST_DC17","FST_DC15C_F","FST_DP23","FST_Vest_NCO_Kama","FST_Vest_NCO_Kama_Veteran","FST_Vest_Base","FST_TwinDC17_Secondary","FST_pauldron_kama_reversed","FST_pauldron_kama_reversed_veteran","FST_pauldron_kama","FST_pauldron_kama_veteran"],
     "true",
     {},
     "pilot"
@@ -1780,6 +1782,7 @@
         ["ACE_IR_Strobe_Item",1],
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
+        ["ACE_FortifyToken", 50],
         ["FST_grenade_Penetrator_mag",4,1]
     ]],
     ["FST_Vest_Base",[

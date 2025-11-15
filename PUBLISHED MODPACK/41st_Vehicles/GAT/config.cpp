@@ -1082,8 +1082,14 @@ class CfgVehicles
 		};
 		cargoAction[]={};
 		maxFordingDepth=-0.80000001;
-		waterResistance=0;
-		waterDamageEngine=0.2;
+		canFloat=1;
+		waterResistance=9.9999997e-005;
+		waterResistanceCoef=1e-010;
+		waterLeakiness=0.0099999998;
+		waterAngularDampingCoef=5;
+		waterLinearDampingCoefX=10;
+		waterLinearDampingCoefY=10;
+		waterSpeedFactor=10;
 		LODDriverTurnedin=1100;
 		LODDriverTurnedOut=0;
 		LODDriverOpticsIn=1202;
