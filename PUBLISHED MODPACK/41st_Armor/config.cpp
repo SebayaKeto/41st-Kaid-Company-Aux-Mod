@@ -7402,6 +7402,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		};
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2.paa",
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2.paa"
 		};
 		class Iteminfo: HeadgearItem
@@ -7439,6 +7440,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		displayName="[41st] Crewman Helmet Mk2 (Harlequin)";
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin.paa",
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin.paa"
 		};
 	};
@@ -7449,6 +7451,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		displayName="[41st] Crewman Helmet Mk2 (Harlequin/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin_Dirty.paa",
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin_Dirty.paa"
 		};
 	};
@@ -7459,6 +7462,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		displayName="[41st] Crewman Helmet Mk2 (Nova)";
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa",
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa"
 		};
 	};
@@ -7469,6 +7473,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		displayName="[41st] Crewman Helmet Mk2 (Ace)";
 		hiddenSelectionsTextures[]=
 		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace.paa",
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace.paa"
 		};
 	};
