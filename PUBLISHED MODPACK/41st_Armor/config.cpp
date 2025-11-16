@@ -168,6 +168,8 @@ class CfgPatches
 			"FST_P2_Woods",
 			"FST_P2_Harlequin",
 			"FST_P2_Harlequin_Dirty",
+			"FST_P2_Harlequin_V2",
+			"FST_P2_Harlequin_V2_Dirty",
 			"FST_P2_Blades",
 			"FST_P2_Demon",
 			"FST_P2_Squatch",
@@ -336,6 +338,7 @@ class CfgPatches
 			"FST_P2_Marcus",
 			"FST_P2_Butter",
 			"FST_P2_Nova",
+			"FST_P2_Nova_V2",
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Airman",
@@ -550,6 +553,7 @@ class CfgWeapons
 	class SWLB_clone_ARF_P1_helmet;
 	class ls_cloneHelmet_scout;
 	class ls_gar_phase1Pilot_helmet;
+	class ls_cloneHelmet_atrtDriver;
 	/////////////////////////
 	//////////VESTS/////////
 	////////////////////////
@@ -7382,6 +7386,93 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_P1_Helmet_Officer.paa"
 		};
 	};
+	// New crewman shit
+	class FST_Crewman_Helmet_Mk2: ls_cloneHelmet_atrtDriver
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		model="\ls\core\addons\characters_clone\helmets\atrtDriver\ls_helmet_clone_atrtDriver.p3d";
+		hiddenSelections[]=
+		{
+			"helmet",
+			"visor"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2.paa"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\ls\core\addons\characters_clone\helmets\atrtDriver\ls_helmet_clone_atrtDriver.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"helmet",
+				"visor"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Harlequin: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Harlequin)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Harlequin_Dirty: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Harlequin/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin_Dirty.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Nova: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Nova)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Ace: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Ace)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace.paa"
+		};
+	};
+	// Old crewman shit
 	class FST_Crewman_Helmet: JLTS_CloneHelmetBARC
 	{
 		scope=2;
@@ -16989,6 +17080,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Arcus_Dirty.paa",
+		};
+	};
+	class FST_NVG_Hex: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Hex)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Hex.paa",
 		};
 	};
 	class FST_NVG_Hazzo: FST_NVG
