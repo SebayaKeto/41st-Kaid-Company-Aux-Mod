@@ -7625,6 +7625,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
         ace_hearing_lowerVolume=0;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		subItems[] = {};
 		hiddenselections[]=
 		{
 			"camo1",
