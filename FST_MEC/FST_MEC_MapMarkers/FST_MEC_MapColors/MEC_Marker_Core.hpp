@@ -24,7 +24,7 @@
 #define COLOR_MEC_RLS_YELLOW 		{0.9, 0.9, 0.1, 1}
 
 // --- Republic Faction Colors ---
-#define COLOR_REP_STANDARD 			{0.6, 0.2, 0.2, 1} 	// Standard GAR Maroon/Red (Default)
+#define COLOR_REP_STANDARD 			{0.25, 0.0, 0.0, 1} 	// Standard GAR Maroon/Red (Default)
 #define COLOR_REP_501ST 			{0.1, 0.15, 0.6, 1} // 501st Legion (Blue)
 #define COLOR_REP_212TH 			{0.85, 0.4, 0.05, 1} // 212th Attack Bn (Orange)
 #define COLOR_REP_41ST 				{0.3, 0.5, 0.3, 1} 	// 41st Elite Corps (Camo Green)

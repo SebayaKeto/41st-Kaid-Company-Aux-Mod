@@ -63,7 +63,7 @@ class CfgMarkerColors
 	MEC_MARKER_COLOR_CLASS(MEC_Republic_HornCo, "Horn Company (Gold)", COLOR_REP_HORN_CO); 
 	MEC_MARKER_COLOR_CLASS(MEC_Republic_38thArmored, "38th Armored Division (Maroon)", COLOR_REP_38TH_ARMORED); 
 	MEC_MARKER_COLOR_CLASS(MEC_Republic_CamoScout, "Camo Recon/Scout (Forest)", COLOR_REP_CAMO_SCOUT); 
-	MEC_MARKER_COLOR_CLASS(MEC_Republic_NovaCorps, "Nova Corps ()", COLOR_REP_NOVA_CORPS);
+	MEC_MARKER_COLOR_CLASS(MEC_Republic_NovaCorps, "Nova Corps (Maroon/Purple)", COLOR_REP_NOVA_CORPS);
 
 	// --- Separatist & CIS ---
 	MEC_MARKER_COLOR_CLASS(MEC_CIS_Geonosian, "CIS Geonosian Separatists", COLOR_CIS_GEONOSIAN); 
