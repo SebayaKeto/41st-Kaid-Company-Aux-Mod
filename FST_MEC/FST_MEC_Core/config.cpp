@@ -24,6 +24,10 @@ class CfgEditorCategories
 	{
 		displayname = "[MEC] Structures";
 	};
+	class FST_MEC_CategoryPowerSystems
+	{
+		displayname = "[MEC] Power Systems";
+	};
 	class FST_MEC_CategoryEquipment
 	{
 		displayname = "[MEC] Equipment";
@@ -42,5 +46,17 @@ class CfgEditorSubcategories
 	class FST_MEC_SubcategoryBatteries
 	{
 		displayName = "[MEC] Batteries";
+	};
+	class FST_MEC_SubcategoryGenerators
+	{
+		displayName = "[MEC] Generators";
+	};
+	class FST_MEC_SubcategoryConduits
+	{
+		displayName = "[MEC] Power Conduits";
+	};
+	class FST_MEC_BreakerBoxes
+	{
+		displayName = "[MEC] Breaker Boxes";
 	};
 };
