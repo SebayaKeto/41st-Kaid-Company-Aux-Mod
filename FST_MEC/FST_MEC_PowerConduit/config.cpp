@@ -22,9 +22,9 @@ class CfgVehicles
 	{
 		class DestructionEffects;
 	};
-    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Base, "FST_MEC_BreakerBox", "Breaker Box (Base)", "Camo.paa", "Camo.rvmat");
-    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Yellow, "FST_MEC_BreakerBox", "Breaker Box (Yellow)", "Camo_Yellow.paa", "Camo.rvmat");
-    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_MEC, "FST_MEC_BreakerBox", "Breaker Box (MEC)", "Camo_MEC.paa", "Camo_MEC.rvmat");
-    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Republic, "FST_MEC_BreakerBox", "Breaker Box (Republic)", "Camo_Republic.paa", "Camo_Republic.rvmat");
-    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Senate, "FST_MEC_BreakerBox", "Breaker Box (Senate)", "Camo_Senate.paa", "Camo_Senate.rvmat");
+    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Base, "FST\FST_MEC\FST_MEC_PowerConduit\FST_MEC_BreakerBox.p3d", "Breaker Box (Base)", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo.paa", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo.rvmat");
+    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Yellow, "FST\FST_MEC\FST_MEC_PowerConduit\FST_MEC_BreakerBox.p3d", "Breaker Box (Yellow)", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_Yellow.paa", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo.rvmat");
+    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_MEC, "FST\FST_MEC\FST_MEC_PowerConduit\FST_MEC_BreakerBox.p3d", "Breaker Box (MEC)", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_MEC.paa", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_MEC.rvmat");
+    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Republic, "FST\FST_MEC\FST_MEC_PowerConduit\FST_MEC_BreakerBox.p3d", "Breaker Box (Republic)", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_Republic.paa", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_Republic.rvmat");
+    MEC_POWERSYSTEM_BREAKERBOX_CLASS(MEC_BreakerBox_Senate, "FST\FST_MEC\FST_MEC_PowerConduit\FST_MEC_BreakerBox.p3d", "Breaker Box (Senate)", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_Senate.paa", "FST\FST_MEC\FST_MEC_PowerConduit\Data\Textures\Camo_Senate.rvmat");
 };
