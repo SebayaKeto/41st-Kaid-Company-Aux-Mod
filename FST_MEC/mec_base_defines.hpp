@@ -1,4 +1,6 @@
 // --- 1. CORE MOD TAGS AND PATHS ---
+#define MEC_FULL_NAME "Maldova Engineering Corporation (MEC)"
+#define MEC_SHORT_NAME "MEC"
 #define MEC_TAG FST_MEC                             // The CfgFunctions Tag (e.g., MEC_TAG_fnc_...)
 #define MEC_TAG_POWERSYSTEM "MEC_PowerSystem"       // Tag for Power System Functions
 #define MEC_PREFIX "MEC"                            // General Prefix for Classnames (e.g., MEC_PB1_Item)
