@@ -1,4 +1,4 @@
-#include "MEC_Conduits_BreakerBox.hpp"
+#include "mec_base_defines.hpp"
 class CfgPatches
 {
 	class MEC_FST_Conduits

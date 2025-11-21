@@ -1,7 +1,7 @@
 #include "mec_base_defines.hpp"
 class CfgPatches
 {
-	class MEC_Aegis_Barriers
+	class MEC_Aegis
 	{
 		units[] = {};
 		weapons[] = {};
