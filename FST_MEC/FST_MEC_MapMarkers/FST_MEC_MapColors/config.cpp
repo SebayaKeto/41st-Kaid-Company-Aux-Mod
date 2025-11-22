@@ -94,5 +94,4 @@ class CfgMarkerColors
 	MEC_MARKER_COLOR_CLASS(MEC_Empire_ImperialGrey, "Imperial Standard", COLOR_EMPIRE_GREY);
 	MEC_MARKER_COLOR_CLASS(MEC_Empire_RoyalGuard, "Royal Guard", COLOR_EMPIRE_ROYAL_GUARD);
 	MEC_MARKER_COLOR_CLASS(MEC_FirstOrder_Standard, "First Order Standard", COLOR_FIRST_ORDER);
-
 };
