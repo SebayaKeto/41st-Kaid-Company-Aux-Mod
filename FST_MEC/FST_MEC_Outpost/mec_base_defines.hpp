@@ -93,3 +93,8 @@
 #define MEC_AEGIS_DESCRIPTION_TYPE_11 "Graphene-Infused Titanium integrates graphene layers for superior electrical properties, thermal management, and ultimate structural performance."
 #define MEC_AEGIS_DESCRIPTION_TYPE_12 "Beskar barriers represent the pinnacle of MEC technology, offering unparalleled durability and legendary resistance to all known threats."
 #define MEC_AEGIS_DESCRIPTION_TYPE_13 "Custom barrier composition tailored to specific operational requirements and environmental conditions."
+
+//--------------------------------------------
+// Miscellaneous
+//--------------------------------------------
+#define MEC_AUTHORSLIST[] {"MaldovaMods"} // Author List for Credits
