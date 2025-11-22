@@ -17,7 +17,7 @@ private _playerName    = (_playerNameRaw splitString """") joinString "";
 _playerName            = trim _playerName;
 diag_log format ["[FST autoCustoms] Parsed name='%1' -> rank=%2, callsign=%3", _nameFull, _rank, _playerName];
 private _pnameLower = toLower _playerName;
-if (_pnameLower in ["merrik","annex","cardinal"]) exitWith {};
+if (_pnameLower in ["merrik","annex","cardinal","sigs"]) exitWith {};
 private _mem = _unit getVariable ["FST_CustomSel", createHashMap];
 private _allowHelmet = false;
 private _allowArmor  = false;

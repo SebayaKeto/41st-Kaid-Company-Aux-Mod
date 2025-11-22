@@ -63,12 +63,17 @@ FST_ApplyCamoPreset = {
     };
     private _uniform = format ["FST_Uniform_%1", _camoCap];
     [_uniform] call _swapUniform;
-    private _newBino = format ["FST_%1_Electrobinoculars", _camoCap];
-    if (isClass (configFile >> "CfgWeapons" >> _newBino)) then {
-        private _curBino = binocular _unit;
-        if (_curBino != "") then { _unit removeWeapon _curBino; };
-        _unit addWeapon _newBino;
-    };
+	private _newBino = format ["FST_%1_Electrobinoculars", _camoCap];
+	if (isClass (configFile >> "CfgWeapons" >> _newBino)) then {
+		private _curBino = binocular _unit;
+		if (_curBino != "") then {
+			_unit removeWeapon _curBino;
+			_unit addWeapon _newBino;
+			if (isClass (configFile >> "CfgMagazines" >> "Laserbatteries")) then {
+				_unit addMagazine "Laserbatteries";
+			};
+		};
+	};
     private _curHmd = hmd _unit;
     if (_curHmd != "") then {
         private _newHmd = "";
@@ -85,23 +90,28 @@ FST_ApplyCamoPreset = {
         };
     };
     private _curVest = vest _unit;
-    if (_curVest != "") then {
-        private _vestNew = "";
-        if (_curVest find "FST_Vest_NCO_Kama" == 0) then {
-            _vestNew = format ["FST_Vest_NCO_Kama_%1", _camoCap];
-        } else {
-            if (_curVest find "FST_Vest_NCO" == 0) then {
-                _vestNew = format ["FST_Vest_NCO_%1", _camoCap];
-            } else {
-                if (_curVest find "FST_pauldron_kama" == 0) then {
-                    _vestNew = format ["FST_pauldron_kama_%1", _camoCap];
-                };
-            };
-        };
-        if (_vestNew != "" && isClass (configFile >> "CfgWeapons" >> _vestNew)) then {
-            [_vestNew] call _swapVest;
-        };
-    };
+	private _curVest = vest _unit;
+	if (_curVest != "") then {
+		private _vestNew = "";
+		if (_curVest find "FST_Vest_NCO_Kama" == 0) then {
+			_vestNew = format ["FST_Vest_NCO_Kama_%1", _camoCap];
+		} else {
+			if (_curVest find "FST_Vest_NCO" == 0) then {
+				_vestNew = format ["FST_Vest_NCO_%1", _camoCap];
+			} else {
+				if (_curVest find "FST_pauldron_kama" == 0) then {
+					_vestNew = format ["FST_pauldron_kama_%1", _camoCap];
+				} else {
+					if (_curVest find "FST_CloneVestLieutenant" == 0) then {
+						_vestNew = format ["FST_CloneVestLieutenant_%1", _camoCap];
+					};
+				};
+			};
+		};
+		if (_vestNew != "" && isClass (configFile >> "CfgWeapons" >> _vestNew)) then {
+			[_vestNew] call _swapVest;
+		};
+	};
 	private _curBp = backpack _unit;
 	if (_curBp != "") then {
 		private _bpNew = "";
@@ -1812,6 +1822,13 @@ switch (true) do {
 		_vestToSet      = "FST_pauldron_kama";
 		_backpackToSet  = "FST_Clone_LR_attachment";
 		_nvgToSet       = "FST_Visor_Cardinal";
+	};
+	case (_name find ("BSM-1362 "+'"'+"Sigs"+'"') == 0): {
+		_uniformToSet   = "FST_Uniform_Sigs";
+		_headgearToSet  = "FST_P2_Helmet_Sigs";
+		_vestToSet      = "FST_CloneVestLieutenant";
+		_backpackToSet  = "FST_Clone_LR_attachment";
+		_nvgToSet       = "FST_Visor_Sigs";
 	};
 	case (_name find ("BC-4973 " + '"' + "Merrik" + '"') == 0): {
 		_uniformToSet   = "FST_Uniform_Merrik_BC";
