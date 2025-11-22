@@ -32,6 +32,10 @@ class CfgEditorCategories
 	{
 		displayname = "[MEC] Equipment";
 	};
+	class FST_MEC_CategoryAegisBarriers
+	{
+		displayname = "[MEC] Aegis";
+	};
 };
 class CfgEditorSubcategories
 {
@@ -58,5 +62,9 @@ class CfgEditorSubcategories
 	class FST_MEC_BreakerBoxes
 	{
 		displayName = "[MEC] Breaker Boxes";
+	};
+	class FST_MEC_AegisBarriers_Duracrete
+	{
+		displayName = "[MEC] Duracrete Barriers";
 	};
 };

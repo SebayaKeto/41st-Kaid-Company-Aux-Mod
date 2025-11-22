@@ -13,7 +13,7 @@ emmisive[] = {0,0,0,0};
 
 specular[] = {0.3,0.3,0.3,1};
 
-specularPower = 50;
+specularPower = 60;
 
 PixelShaderID = "Super";
 
@@ -143,7 +143,7 @@ class Stage6
 
 {
 
-	texture="#(ai,64,64,1)fresnel(2,1)";
+	texture="#(ai,64,64,1)fresnel(2,2)";
 
 	uvSource = "tex";
 
