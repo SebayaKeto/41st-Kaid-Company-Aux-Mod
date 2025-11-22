@@ -17,4 +17,15 @@ class CfgPatches
 		requiredAddons[] = {"A3_Data_F_Enoch_Loadorder","CBA_MAIN","FST_Core","FST_Common"};
 		requiredversion = 0.1;
 	};
-};=
+};
+class CfgFactionClasses
+{
+    class FST_CCN_FACTION
+    {
+        displayName = "Collicoid Creation Nest";
+        priority = 1;
+        side = 0;
+        icon = "\A3\ui_f\data\map\markers\flags\CSAT_ca.paa";
+        flag = "\A3\ui_f\data\map\markers\flags\CSAT_ca.paa";
+    };
+};

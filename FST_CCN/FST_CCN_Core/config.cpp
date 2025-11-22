@@ -211,3 +211,226 @@ class CfgSounds
 		titles[] = {};
 	};
 };
+class CfgVehicles 
+{
+    class House;
+	class House_F: House
+	{
+		class DestructionEffects;
+	};
+
+    // --- ROOT CCN BASE ---
+	class CCN_Barrier_Base : House_F 
+	{ 
+		scope = 0; 
+		displayName = "CCN Hive Barrier"; 
+		author = CCN_FULL_NAME; 
+		destructType = "DestructBuilding"; 
+		editorCategory = "FST_CCN_CategoryHiveBarriers"; 
+		model = ""; 
+	};
+
+    // TEMPLATE: BRONZIUM (Standard CIS)
+    class CCN_Template_Bronzium: CCN_Barrier_Base
+    {
+        class DestructionEffects : DestructionEffects 
+		{
+            class Sound { simulation = "sound"; type = "CCN_Sound_Bronzium_Snap"; position = ""; intensity = 1; interval = 1; lifeTime = 1; };
+            class Dust { simulation = "particles"; type = "CCN_Cloudlet_Bronzium_Dust"; position = ""; intensity = 1; interval = 1; lifeTime = 0.05; };
+            class Sparks { simulation = "particles"; type = "CCN_Cloudlet_Bronzium_Shards"; position = ""; intensity = 1; interval = 1; lifeTime = 0.05; };
+			class ruins { simulation = "ruin"; type = ""; position = ""; intensity = 1; interval = 1; lifeTime = 1; };
+		};
+    };
+
+    // TEMPLATE: HEAVY CHITIN (Organic/Hive)
+    class CCN_Template_Chitin: CCN_Barrier_Base
+    {
+        class DestructionEffects : DestructionEffects 
+		{
+            class Sound { simulation = "sound"; type = "CCN_Sound_Chitin_Collapse"; position = ""; intensity = 1; interval = 1; lifeTime = 1; };
+            class Smoke { simulation = "particles"; type = "CCN_Cloudlet_Chitin_Smoke"; position = ""; intensity = 1; interval = 1; lifeTime = 0.05; };
+            class Debris { simulation = "particles"; type = "CCN_Cloudlet_Chitin_Debris"; position = ""; intensity = 1; interval = 1; lifeTime = 0.05; };
+			class ruins { simulation = "ruin"; type = ""; position = ""; intensity = 1; interval = 1; lifeTime = 1; };
+		};
+    };
+
+    // TEMPLATE: PHRIK-LATTICE (High-Tier)
+    class CCN_Template_Phrik: CCN_Barrier_Base
+    {
+        class DestructionEffects : DestructionEffects 
+		{
+            class Sound { simulation = "sound"; type = "CCN_Sound_Phrik_Failure"; position = ""; intensity = 1; interval = 1; lifeTime = 1; };
+            class Flash { simulation = "particles"; type = "CCN_Cloudlet_Phrik_Discharge"; position = ""; intensity = 1; interval = 1; lifeTime = 0.05; };
+			class ruins { simulation = "ruin"; type = ""; position = ""; intensity = 1; interval = 1; lifeTime = 1; };
+		};
+    };
+	// ============================================
+	// --- CCN AUTONOMOUS DRONE BASE ---
+	// ============================================
+	class UGV_01_base_F;
+	class CCN_Drone_Base: UGV_01_base_F
+	{
+		scope = 0;
+		displayName = "CCN Autonomous Unit";
+		author = CCN_FULL_NAME;
+		side = 0; 
+		faction = "FST_CCN_FACTION";
+		crew = "O_UAV_AI";
+		
+		isUav = 1;
+		enableGPS = 1;
+		radarType = 8;
+		reportOwnPosition = 1;
+		
+		// AI Skill Coefficients (Representing the Hive Mind precision)
+		precision = 0.8;  // High aiming precision
+		aimingShake = 0.1; // Very steady
+		aimingSpeed = 1.5; // Fast target acquisition
+		spotable = 0.8;   // Standard visibility profile
+		
+		// --- SENSOR COMPONENTS ---
+		// Defines what the drone can "see"
+		class Components 
+		{
+			class SensorsManagerComponent 
+			{
+				class Components 
+				{
+					class LaserSensorComponent 
+					{
+						class AirTarget 
+						{
+							minRange = 500; 
+							maxRange = 3000; 
+							objectDistanceLimitCoef = -1; 
+							viewDistanceLimitCoef = -1; 
+						};
+						class GroundTarget 
+						{
+							minRange = 500; 
+							maxRange = 3000; 
+							objectDistanceLimitCoef = -1; 
+							viewDistanceLimitCoef = -1; 
+						};
+						maxTrackableSpeed = 50; 
+						angleRangeHorizontal = 180; 
+						angleRangeVertical = 180; 
+						animDirection = "mainGun"; 
+						componentType = "LaserSensorComponent";
+						typeRecognitionDistance = 2000; // Distance to ID target types
+					};
+					class ActiveRadarSensorComponent 
+					{
+						class AirTarget 
+						{
+							minRange = 500; 
+							maxRange = 5000; 
+							objectDistanceLimitCoef = -1; 
+							viewDistanceLimitCoef = -1; 
+						};
+						class GroundTarget 
+						{
+							minRange = 500; 
+							maxRange = 4000; 
+							objectDistanceLimitCoef = -1; 
+							viewDistanceLimitCoef = -1; 
+						};
+						maxTrackableSpeed = 100; 
+						angleRangeHorizontal = 360; // 360-degree awareness
+						angleRangeVertical = 100; 
+						groundNoiseDistanceCoef = 0.2; 
+						maxGroundNoiseDistance = 200; 
+						minSpeedThreshold = 0; 
+						animDirection = "mainGun"; 
+						componentType = "ActiveRadarSensorComponent";
+						typeRecognitionDistance = 4000; 
+					};
+				};
+			};
+		};
+
+		// --- DURABILITY & PROTECTION ---
+		armor = 100;
+		armorStructural = 2; // Multiplier for structural integrity
+		damageResistance = 0.004; // Resistance to small arms fire
+		crewVulnerable = 0; // AI "brain" cannot be sniped out easily
+		crewExplosionProtection = 0.99; // Highly resistant to shockwaves
+		
+		// --- VISUALS & INTERFACE ---
+		icon = "\A3\ui_f\data\map\VehicleIcons\iconDrone_ca.paa"; // Map icon
+		picture = "\A3\Drones_F\Soft_F_Gamma\UGV_01\Data\UI\UGV_01_CA.paa"; // Inventory picture
+		mapSize = 1.5; // Size on map in meters
+		hiddenSelections[] = {"Camo", "Camo1"};
+		
+		// --- LOGISTICS ---
+		transportSoldier = 0; // Cannot carry passengers
+		typicalCargo[] = {};
+		enableManualFire = 0; // Depends on if it has weapons (Base has none)
+		
+		// --- AUDIO (Default Electric Drone Hum) ---
+		soundEngineOnInt[] = {"A3\Sounds_F\vehicles\soft\UGV_01\UGV_01_int_start", 0.5, 1.0};
+		soundEngineOnExt[] = {"A3\Sounds_F\vehicles\soft\UGV_01\UGV_01_ext_start", 0.7, 1.0, 200};
+		soundEngineOffInt[] = {"A3\Sounds_F\vehicles\soft\UGV_01\UGV_01_int_stop", 0.5, 1.0};
+		soundEngineOffExt[] = {"A3\Sounds_F\vehicles\soft\UGV_01\UGV_01_ext_stop", 0.7, 1.0, 200};
+		
+		// --- DAMAGE & DESTRUCTION ---
+		class EventHandlers 
+		{
+			killed = "params ['_unit']; playSound3D ['A3\Sounds_F\sfx\special_sfx\sparkles_03.wss', _unit, false, getPosASL _unit, 5, 1, 100];";
+			init = "(_this select 0) spawn { \
+            params ['_drone']; \
+            while {alive _drone} do { \
+                sleep 5; \
+                /* Check for enemies (WEST/GUER) within 50m */ \
+                private _enemies = _drone nearEntities [['Man', 'LandVehicle'], 50]; \
+                _enemies = _enemies select {side _x != side _drone && side _x != CIVILIAN}; \
+                \
+                if (count _enemies > 0) then { \
+                    /* Target Found */ \
+                    private _target = _enemies select 0; \
+                    _drone doMove (getPos _target); \
+                    \
+                    /* If close enough (5m), explode */ \
+                    if (_drone distance _target < 5) then { \
+                        playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+                        sleep 1; \
+                        private _bomb = createVehicle ['HelicopterExploSmall', getPosATL _drone, [], 0, 'CAN_COLLIDE']; \
+                        _drone setDamage 1; \
+                    }; \
+                }; \
+            }; \
+        };";
+    	};
+		// --- ANIMATIONS & USER INTERACTIONS ---
+		class UserActions
+		{
+			class CCN_Self_Destruct
+			{
+				displayName = "<t color='#ff0000'>INITIATE SELF-DESTRUCT</t>"; // Red text
+				priority = 0;
+				radius = 2;
+				position = "";
+				showWindow = 0;
+				onlyForPlayer = 0; // AI or scripted usage
+				condition = "alive this"; // Can only explode if not already dead
+				
+				// --- SELF DESTRUCT SCRIPT ---
+				// 1. Plays alarm (Beep)
+				// 2. Waits 3 seconds
+				// 3. Spawns explosion (Helicopter explosion size)
+				// 4. Sets damage to 1 (Kill)
+				statement = "this spawn { \
+					params ['_drone']; \
+					playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+					sleep 1; \
+					playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+					sleep 1; \
+					playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+					sleep 1; \
+					private _bomb = createVehicle ['HelicopterExploSmall', getPosATL _drone, [], 0, 'CAN_COLLIDE']; \
+					_drone setDamage 1; \
+				};";
+			};
+		};
+	};
+}; 
