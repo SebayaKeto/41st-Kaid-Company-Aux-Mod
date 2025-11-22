@@ -28,9 +28,10 @@ class CfgVehicles
 		scopeCurator = 1; 
 		displayName = "MEC Aegis Barrier System"; 
 		author = MEC_FULL_NAME; 
-		destructType = "DestructNo"; 
+		destructType = "DestructWreck"; 
 		editorCategory = "FST_MEC_CategoryAegisBarriers"; 
 		editorSubcategory = "FST_MEC_AegisBarriers_Duracrete"; 
+		cost = 10000;
 		model = "FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\FST_MEC_DuracreteBarrier.p3d"; 
 		hiddenSelections[] = {"Camo"}; 
 		hiddenSelectionsTextures[] = {""};
