@@ -179,7 +179,7 @@ class CfgSounds
     {
         name = "CCN_Bronzium_Snap";
         // Pitch 1.2 makes 'metal_destr' sound lighter/sharper/brittle
-        sound[] = {"A3\sounds_f\structures\destr\metal_destr_02.wss", 3.0, 1.2, 150}; 
+        sound[] = {"a3\sounds_f\arsenal\sfx\bullet_hits\metal_05.wss", 3.0, 1.2, 150}; 
         titles[] = {};
     };
 
@@ -188,7 +188,7 @@ class CfgSounds
     {
         name = "CCN_Chitin_Collapse";
         // Pitch 0.8 on 'glass_destr' creates a hollow, crunchy sound
-        sound[] = {"A3\sounds_f\structures\destr\glass_destr_01.wss", 2.5, 0.8, 100}; 
+        sound[] = {"a3\sounds_f\arsenal\sfx\bullet_hits\glass_08.wss", 2.5, 0.8, 100}; 
         titles[] = {};
     };
 
@@ -197,7 +197,7 @@ class CfgSounds
     {
         name = "CCN_Phrik_Failure";
         // High pitched spark sound
-        sound[] = {"A3\sounds_f\sfx\special_sfx\sparkles_01.wss", 3.0, 0.5, 200}; 
+        sound[] = {"a3\sounds_f\sfx\special_sfx\sparkles_wreck_1.wss", 3.0, 0.5, 200}; 
         titles[] = {};
     };
 
@@ -206,7 +206,7 @@ class CfgSounds
 	{
 		name = "CCN_Shielded_Impact";
 		// Combination of 'HitMetal' and 'HitWood' sounds blended
-		sound[] = {"A3\sounds_f\structures\destr\hit_metal_01.wss", 2.0, 0.7, 150,  "A3\sounds_f\structures\destr\hit_wood_01.wss", 1.5, 0.9, 100}; 
+		//sound[] = {"A3\sounds_f\structures\destr\hit_metal_01.wss", 2.0, 0.7, 150,  "A3\sounds_f\structures\destr\hit_wood_01.wss", 1.5, 0.9, 100}; 
 
 		titles[] = {};
 	};
@@ -357,8 +357,8 @@ class CfgVehicles
 		crewExplosionProtection = 0.99; // Highly resistant to shockwaves
 		
 		// --- VISUALS & INTERFACE ---
-		icon = "\A3\ui_f\data\map\VehicleIcons\iconDrone_ca.paa"; // Map icon
-		picture = "\A3\Drones_F\Soft_F_Gamma\UGV_01\Data\UI\UGV_01_CA.paa"; // Inventory picture
+		//icon = "\A3\ui_f\data\map\VehicleIcons\iconDrone_ca.paa"; // Map icon
+		//picture = "\A3\Drones_F\Soft_F_Gamma\UGV_01\Data\UI\UGV_01_CA.paa"; // Inventory picture
 		mapSize = 1.5; // Size on map in meters
 		hiddenSelections[] = {"Camo", "Camo1"};
 		
@@ -376,7 +376,7 @@ class CfgVehicles
 		// --- DAMAGE & DESTRUCTION ---
 		class EventHandlers 
 		{
-			killed = "params ['_unit']; playSound3D ['A3\Sounds_F\sfx\special_sfx\sparkles_03.wss', _unit, false, getPosASL _unit, 5, 1, 100];";
+			killed = "params ['_unit']; playSound3D ['A3\Sounds_F\sfx\special_sfx\sparkles_wreck_3.wss', _unit, false, getPosASL _unit, 5, 1, 100];";
 			init = "(_this select 0) spawn { \
             params ['_drone']; \
             while {alive _drone} do { \
@@ -392,7 +392,7 @@ class CfgVehicles
                     \
                     /* If close enough (5m), explode */ \
                     if (_drone distance _target < 5) then { \
-                        playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+                        playSound3D ['a3\Sounds_F\sfx\beep_target.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
                         sleep 1; \
                         private _bomb = createVehicle ['HelicopterExploSmall', getPosATL _drone, [], 0, 'CAN_COLLIDE']; \
                         _drone setDamage 1; \
@@ -421,11 +421,11 @@ class CfgVehicles
 				// 4. Sets damage to 1 (Kill)
 				statement = "this spawn { \
 					params ['_drone']; \
-					playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+					playSound3D ['a3\Sounds_F\sfx\beep_target.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
 					sleep 1; \
-					playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+					playSound3D ['a3\Sounds_F\sfx\beep_target.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
 					sleep 1; \
-					playSound3D ['A3\Sounds_F\sfx\beeps\floppy_drive.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
+					playSound3D ['a3\Sounds_F\sfx\beep_target.wss', _drone, false, getPosASL _drone, 5, 2, 50]; \
 					sleep 1; \
 					private _bomb = createVehicle ['HelicopterExploSmall', getPosATL _drone, [], 0, 'CAN_COLLIDE']; \
 					_drone setDamage 1; \
