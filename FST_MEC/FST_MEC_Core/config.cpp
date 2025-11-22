@@ -20,6 +20,7 @@ class CfgPatches
 };
 class CfgEditorCategories
 {
+	// Main categories
 	class FST_MEC_CategoryStructures
 	{
 		displayname = "[MEC] Structures";
@@ -36,9 +37,18 @@ class CfgEditorCategories
 	{
 		displayname = "[MEC] Aegis";
 	};
+	class FST_MEC_CategoryDefensiveSystems
+	{
+		displayname = "[MEC] Defensive Systems";
+	};
+	class FST_MEC_CategoryBunkers
+	{
+		displayname = "[MEC] Bunkers";
+	};
 };
 class CfgEditorSubcategories
 {
+	// Structures subcategories
 	class FST_MEC_SubcategoryBarriers
 	{
 		displayName = "[MEC] Barriers";
@@ -47,6 +57,7 @@ class CfgEditorSubcategories
 	{
 		displayName = "[MEC] Platforms";
 	};
+	// Power Systems subcategories
 	class FST_MEC_SubcategoryBatteries
 	{
 		displayName = "[MEC] Batteries";
@@ -63,9 +74,88 @@ class CfgEditorSubcategories
 	{
 		displayName = "[MEC] Breaker Boxes";
 	};
+	// Aegis Barriers subcategories
 	class FST_MEC_AegisBarriers_Duracrete
 	{
 		displayName = "[MEC] Duracrete Barriers";
+	};
+	class FST_MEC_AegisBarriers_Plasteel
+	{
+		displayName = "[MEC] Plasteel Barriers";
+	};
+	class FST_MEC_AegisBarriers_Titanium
+	{
+		displayName = "[MEC] Titanium Barriers";
+	};
+	class FST_MEC_AegisBarriers_Beskar
+	{
+		displayName = "[MEC] Beskar Barriers";
+	};
+	// Defensive Systems subcategories
+	class FST_MEC_SubcategoryTurrets
+	{
+		displayName = "[MEC] Turrets";
+	};
+	class FST_MEC_SubcategoryMissileSystems
+	{
+		displayName = "[MEC] Missile Systems";
+	};
+	// Bunker subcategories
+	class FST_MEC_SubcategoryBunkerModules
+	{
+		displayName = "[MEC] Bunker Modules";
+	};
+	class FST_MEC_SubcategoryBunkerEntrances
+	{
+		displayName = "[MEC] Bunker Entrances";
+	};
+	class FST_MEC_SubcategoryBunkerRoofs
+	{
+		displayName = "[MEC] Bunker Roofs";
+	};
+	class FST_MEC_SubcategoryBunkerWalls
+	{
+		displayName = "[MEC] Bunker Walls";
+	};
+	class FST_MEC_SubcategoryBunkerFloors
+	{
+		displayName = "[MEC] Bunker Floors";
+	};
+	class FST_MEC_SubcategoryBunkerStairs
+	{
+		displayName = "[MEC] Bunker Stairs";
+	};
+	class FST_MEC_SubcategoryBunkerDetails
+	{
+		displayName = "[MEC] Bunker Details";
+	};
+	class FST_MEC_SubcategoryBunkerDoors
+	{
+		displayName = "[MEC] Bunker Doors";
+	};
+	class FST_MEC_SubcategoryBunkerHatches
+	{
+		displayName = "[MEC] Bunker Hatches";
+	};
+	class FST_MEC_SubcategoryBunkerLadders
+	{
+		displayName = "[MEC] Bunker Ladders";
+	};
+	class FST_MEC_SubcategoryBunkerUtilities
+	{
+		displayName = "[MEC] Bunker Utilities";
+	};
+	class FST_MEC_SubcategoryBunkerFurniture
+	{
+		displayName = "[MEC] Bunker Furniture";
+	};
+	class FST_MEC_SubcategoryBunkerDecor
+	{
+		displayName = "[MEC] Bunker Decor";
+	};
+	class FST_MEC_SubcategoryBunkerStorage
+	{
+		displayName = "[MEC] Bunker Storage";
 	};
 };
 class CfgCloudlets

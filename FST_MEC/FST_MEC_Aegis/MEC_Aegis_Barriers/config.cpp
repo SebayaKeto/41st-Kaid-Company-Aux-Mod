@@ -63,7 +63,6 @@ class CfgVehicles
 		hiddenSelectionsMaterials[] = {"FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\Data\DuracreteTextures\Camo.rvmat"};
 		replaceDamagedHitpoints[] = {"Hitzone_1_hitpoint"};
 		replaceDamaged = "MEC_Aegis_Barrier_Duracrete_Large_Damaged";
-
         class HitPoints 
         {
             class Hitzone_1_hitpoint 
