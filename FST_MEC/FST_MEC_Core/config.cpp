@@ -45,6 +45,10 @@ class CfgEditorCategories
 	{
 		displayname = "[MEC] Bunkers";
 	};
+	class FST_MEC_CategoryMisc
+	{
+		displayname = "[MEC] Miscellaneous";
+	};
 };
 class CfgEditorSubcategories
 {
@@ -157,6 +161,14 @@ class CfgEditorSubcategories
 	{
 		displayName = "[MEC] Bunker Storage";
 	};
+	class FST_MEC_SubcategoryBunkerMisc
+	{
+		displayName = "[MEC] Bunker Miscellaneous";
+	};
+	class FST_MEC_SubcategoryBunkerRuin
+	{
+		displayName = "[MEC] Bunker Ruins";
+	};
 };
 class CfgCloudlets
 {
@@ -239,7 +251,7 @@ class CfgSounds
     {
         name = "MEC_Duracrete_Crumble";
         // Vanilla 'DestrWall' @ 0.75 pitch (Deeper, heavier)
-        sound[] = {"@A3\sounds_f\structures\destr\wall_destr_01.wss", 3.16, 0.75, 200};
+        sound[] = {"A3\sounds_f\structures\destr\wall_destr_01.wss", 3.16, 0.75, 200};
         titles[] = {};
     };
 
@@ -248,7 +260,7 @@ class CfgSounds
     {
         name = "MEC_Plasteel_Snap";
         // Vanilla 'DestrGlass' @ 0.6 pitch (Sounds like crunching hard plastic)
-        sound[] = {"@A3\sounds_f\structures\destr\glass_destr_02.wss", 1.77, 0.6, 100};
+        sound[] = {"A3\sounds_f\structures\destr\glass_destr_02.wss", 1.77, 0.6, 100};
         titles[] = {};
     };
 
@@ -257,7 +269,7 @@ class CfgSounds
     {
         name = "MEC_Titanium_Shear";
         // Vanilla 'DestrMetal' @ 0.6 pitch (Heavy tearing metal)
-        sound[] = {"@A3\sounds_f\structures\destr\metal_destr_01.wss", 3.16, 0.6, 200};
+        sound[] = {"A3\sounds_f\structures\destr\metal_destr_01.wss", 3.16, 0.6, 200};
         titles[] = {};
     };
 
@@ -266,7 +278,7 @@ class CfgSounds
     {
         name = "MEC_Beskar_Ring";
         // Vanilla 'HitMetal' @ 0.5 pitch (Gong-like impact)
-        sound[] = {"@A3\Sounds_F\physics\bullet_impacts\metal_plate_01.wss", 4.0, 0.5, 100};
+        sound[] = {"A3\Sounds_F\physics\bullet_impacts\metal_plate_01.wss", 4.0, 0.5, 100};
         titles[] = {};
     };
 };
