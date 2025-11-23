@@ -53,31 +53,21 @@ class CfgVehicles
 			repairable = 0;
 			repairableClass = "";
 		};
-	};
-	class MEC_Aegis_Barrier_Duracrete_Large: MEC_Aegis_Barrier_Base
-	{
-		scope = 2; 
-		displayName = "Duracrete Aegis Barrier (Large)";
-		model = "FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\FST_MEC_DuracreteBarrier.p3d"; 
-		hiddenSelectionsTextures[] = {"FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\Data\DuracreteTextures\Camo_co.paa"};
-		hiddenSelectionsMaterials[] = {"FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\Data\DuracreteTextures\Camo.rvmat"};
-		replaceDamagedHitpoints[] = {"Hitzone_1_hitpoint"};
-		replaceDamaged = "MEC_Aegis_Barrier_Duracrete_Large_Damaged";
-        class HitPoints 
+		class HitPoints 
         {
             class Hitzone_1_hitpoint 
             {
-                armor = 100;
+                armor = 10;
                 material = -1;
                 name = "Dam_1";
                 visual = "Dam_1"; 
                 passThrough = 0.7;
-                radius = 0.1;
+                radius = 0.4;
                 explosionShielding = 1;
                 minimalHit = 0.01;
             };
         };
-		class DestructionEffects : DestructionEffects
+		class DestructionEffects
 		{
 			class Sound
 			{
@@ -107,6 +97,30 @@ class CfgVehicles
 				lifeTime = 1;
 			};
 		};
+	};
+	class MEC_Aegis_Barrier_Duracrete_Large: MEC_Aegis_Barrier_Base
+	{
+		scope = 2; 
+		displayName = "Duracrete Aegis Barrier (Large)";
+		model = "FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\FST_MEC_DuracreteBarrier.p3d"; 
+		hiddenSelectionsTextures[] = {"FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\Data\DuracreteTextures\Camo_co.paa"};
+		hiddenSelectionsMaterials[] = {"FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\Data\DuracreteTextures\Camo.rvmat"};
+		replaceDamagedHitpoints[] = {"Hitzone_1_hitpoint"};
+		replaceDamaged = "MEC_Aegis_Barrier_Duracrete_Large_Damaged";
+        class HitPoints 
+        {
+            class Hitzone_1_hitpoint 
+            {
+                armor = 100;
+                material = -1;
+                name = "Dam_1";
+                visual = "Dam_1"; 
+                passThrough = 0.7;
+                radius = 0.1;
+                explosionShielding = 1;
+                minimalHit = 0.01;
+            };
+        };
 	};
 	class MEC_Aegis_Barrier_Duracrete_Large_Damaged: MEC_Aegis_Barrier_Base
 	{
