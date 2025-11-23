@@ -61,7 +61,7 @@ class CfgVehicles
                 material = -1;
                 name = "Dam_1";
                 visual = "Dam_1"; 
-                passThrough = 0.7;
+                passThrough = 0.9;
                 radius = 0.4;
                 explosionShielding = 1;
                 minimalHit = 0.01;
@@ -124,7 +124,7 @@ class CfgVehicles
 	};
 	class MEC_Aegis_Barrier_Duracrete_Large_Damaged: MEC_Aegis_Barrier_Base
 	{
-		scope = 1;
+		scope = 2;
 		displayName = MEC_AEGIS_DISPLAY_NAME_TYPE_1;
 		model = "FST\FST_MEC\FST_MEC_Aegis\MEC_Aegis_Barriers\FST_MEC_DuracreteBarrier_Damaged.p3d";
 		hiddenSelections[] = {"Camo","Camo1"}; 
@@ -148,7 +148,7 @@ class CfgVehicles
 			repairable = 1;
 			repairableClass = "MEC_Aegis_Barrier_Duracrete_Large";
 		};
-        class DestructionEffects : DestructionEffects
+        class DestructionEffects
 		{
 			class Sound
 			{
