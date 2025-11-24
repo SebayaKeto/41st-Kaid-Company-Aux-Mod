@@ -1,6 +1,3 @@
-// Hoersch-Kessel Driveworks Core Config
-// Main configuration entry point for the HKD addon
-
 #include "hkd_defines.hpp"
 
 class CfgPatches
@@ -203,12 +200,8 @@ class CfgEditorSubcategories
     };
 };
 
-// Include marker definitions
 #include "hkd_markers.hpp"
 
-// ============================================================================
-// MAP COLOR SCHEMES
-// ============================================================================
 class CfgFactionColors
 {
     class HKD_Primary
@@ -245,35 +238,5 @@ class CfgFactionColors
     {
         displayName = "HKD - Highlight";
         color[] = {0.9, 0.8, 0.1};
-    };
-};
-
-// ============================================================================
-// CUSTOM MAP COLORS
-// ============================================================================
-class CfgFactionMarkerColors
-{
-    class HKD_Corporate
-    {
-        displayName = "HKD - Corporate";
-        side = "CIVILIAN";
-        defaultColor[] = {0.2, 0.8, 0.2, 1.0};
-        defaultIcon = "\A3\ui_f\data\map\markers\civilian\civilian_ca.paa";
-    };
-    
-    class HKD_Military
-    {
-        displayName = "HKD - Military";
-        side = "EAST";
-        defaultColor[] = {0.8, 0.2, 0.2, 1.0};
-        defaultIcon = "\A3\ui_f\data\map\markers\military\military_ca.paa";
-    };
-    
-    class HKD_Research
-    {
-        displayName = "HKD - Research";
-        side = "CIVILIAN";
-        defaultColor[] = {0.2, 0.6, 1.0, 1.0};
-        defaultIcon = "\A3\ui_f\data\map\markers\military\installation_ca.paa";
     };
 };
