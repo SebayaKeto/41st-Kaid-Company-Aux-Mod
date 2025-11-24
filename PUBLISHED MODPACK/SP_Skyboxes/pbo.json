@@ -1,0 +1,22 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "Space Skyboxes\\SP_Skyboxes"
+        },
+        {
+            "name": "Mikero",
+            "value": "DePbo.dll.7.97"
+        },
+        {
+            "name": "version",
+            "value": "21071415"
+        }
+    ]
+}
