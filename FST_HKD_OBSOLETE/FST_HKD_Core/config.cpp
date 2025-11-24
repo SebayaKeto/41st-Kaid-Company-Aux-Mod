@@ -4,39 +4,47 @@ class CfgPatches
 {
 	class FST_HKD_Core
 	{
-		author = "Hoersch-Kessel Drive";
+        addonRootClass = "A3_Modules_F_Curator";
+        author = "Hoersch-Kessel Drive";
 		units[] = 
         {
-            "Land_HKD_VehicleBlocker",
             "Module_HKD_Drop_Single",
             "Module_HKD_Drop_Radius"
         };
 		weapons[] = {};
-		requiredAddons[] = 
+        requiredAddons[] = 
         {
             "A3_Data_F_Enoch_Loadorder",
             "A3_Data_F_ParticleEffects",
             "A3_Sounds_F",
             "A3_Modules_F",
+            "A3_Modules_F_Curator",
             "CBA_MAIN",
             "FST_Core",
-            "FST_Common"
+            "FST_Common",
+            "FST_HKD_Structures"
         };
 		requiredversion = 0.1;
 	};
 };
 #include "HKD_Dialogs.hpp"
 #include "HKD_Faction_Def.hpp"
+#include "FST_HKD_Settings.hpp"
+
 class CfgEditorCategories
 {
-	class FST_HKD_CategoryStructures 
+    class FST_HKD_CategoryStructures 
     { 
-        displayname = "[HKD] Naval Fortifications"; 
+        displayName = "[HKD] Naval Fortifications"; 
+    };
+    class HKD_Zeus_Modules
+    {
+        displayName = "[HKD] Modules";
     };
 };
 class CfgEditorSubcategories
 {
-	class FST_HKD_Subcategory_Barriers 
+    class FST_HKD_Subcategory_Barriers 
     { 
         displayName = "[HKD] Hull-Plate Barriers"; 
     };
@@ -58,15 +66,10 @@ class CfgFunctions
             class moduleHKDDropRadius_Execution {};
             class dialogHandler {};
             class initHKDDrop {}; 
+            class serverHKDDropExecution {};
+            class serverSetCancel {};
+            class clientUpdateProgress {};
         };
-    };
-};
-class CfgFactionClasses
-{
-    class NO_CATEGORY;
-    class HKD_Zeus_Modules: NO_CATEGORY
-    {
-        displayName = "HKD Orbital Logistics";
     };
 };
 class CfgVehicles
@@ -82,22 +85,26 @@ class CfgVehicles
     // --- BASE MODULE ---
     class Module_HKD_Drop_Base: Module_F
     {
+        author = "Hoersch-Kessel Drive";
+        _generalMacro = "Module_HKD_Drop_Base";
         scope = 1; // Abstract
+        scopeCurator = 2;
         category = "HKD_Zeus_Modules";
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
         isDisposable = 0;
+        curatorCanAttach = 1;
         
         // Define Shared Arguments
-        class Arguments: ArgumentsBaseUnits
+        class Arguments
         {
             class Object_Class
             {
                 displayName = "Object Class";
                 description = "Classname of object to drop (Must have HKD_CanBeGravDropped=1)";
                 typeName = "STRING";
-                defaultValue = "Land_HKD_VehicleBlocker";
+                defaultValue = "FST_HKD_Blocker_Blank";
             };
             class Drop_Altitude
             {
@@ -130,19 +137,27 @@ class CfgVehicles
     // --- MODULE 1: SINGLE DROP ---
     class Module_HKD_Drop_Single: Module_HKD_Drop_Base
     {
+        author = "Hoersch-Kessel Drive";
+        _generalMacro = "Module_HKD_Drop_Single";
         scope = 2; // Visible
+        scopeCurator = 2;
         displayName = "HKD Drop (Single)";
         function = "HKD_fnc_moduleHKDDropSingle";
         icon = "\a3\Modules_F_Curator\Data\iconOrdnance_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitModule_ca.paa";
     };
 
-    // --- MODULE 2: RADIUS DROP (Updated) ---
+    // --- MODULE 2: RADIUS DROP ---
     class Module_HKD_Drop_Radius: Module_HKD_Drop_Base
     {
+        author = "Hoersch-Kessel Drive";
+        _generalMacro = "Module_HKD_Drop_Radius";
         scope = 2; // Visible
+        scopeCurator = 2;
         displayName = "HKD Drop (Radius)";
         function = "HKD_fnc_moduleHKDDropRadius";
-        icon = "\a3\Modules_F_Curator\Data\iconArea_ca.paa";
+        icon = "\a3\Modules_F_Curator\Data\iconsmoke_ca.paa";
+        portrait = "\a3\Modules_F_Curator\Data\portraitModule_ca.paa";
         
         class Arguments: Arguments
         {
@@ -163,7 +178,7 @@ class CfgVehicles
             };
             
             // Re-declare base args to ensure they appear in the list
-            class Object_Class { displayName = "Object Class"; typeName = "STRING"; defaultValue = "Land_HKD_VehicleBlocker"; };
+            class Object_Class { displayName = "Object Class"; typeName = "STRING"; defaultValue = "FST_HKD_Blocker_Blank"; };
             class Drop_Altitude { displayName = "Drop Altitude"; typeName = "NUMBER"; defaultValue = "1000"; };
             class Random_Dir { displayName = "Randomize Rotation"; typeName = "BOOL"; defaultValue = "1"; };
             class Compass_Dir { displayName = "Fixed Direction"; typeName = "NUMBER"; defaultValue = "0"; };
