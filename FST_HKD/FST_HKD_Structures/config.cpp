@@ -27,5 +27,6 @@ class CfgPatches
 
 class CfgVehicles
 {
+    class House_F;
     #include "Blockers/Blocker.cpp"
 };
