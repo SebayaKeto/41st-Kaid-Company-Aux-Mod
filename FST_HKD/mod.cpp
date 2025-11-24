@@ -1,0 +1,9 @@
+name = "Hoersch-Kessel Driveworks";
+picture = "";
+logoSmall = "";
+logo = "";
+logoOver = "";
+tooltip = "Hoersch-Kessel Driveworks - Star Wars Universe Assets";
+overview = "A comprehensive collection of Hoersch-Kessel Driveworks assets and equipment from the Star Wars universe.";
+author = "FST";
+version = "1.0";
