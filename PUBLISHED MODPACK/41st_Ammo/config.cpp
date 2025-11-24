@@ -1174,7 +1174,7 @@ class CfgAmmo
 				"JAV_TOP",
 				"JAV_DIR"
 			};
-			canVanillaLock=0;
+			canVanillaLock=1;
 			defaultAttackProfile="JAV_TOP";
 			defaultSeekerLockMode="LOBL";
 			defaultSeekerType="Optic";
@@ -1185,7 +1185,7 @@ class CfgAmmo
 			};
 			enabled=1;
 			pitchRate = 60;
-            yawRate = 60;
+			yawRate = 60;
 			seekerAccuracy=1;
 			seekerAngle=180;
 			seekerLockModes[]=
@@ -1218,7 +1218,18 @@ class CfgAmmo
 		missileLockMaxDistance = 3000;
 		missileLockMinDistance = 0;
 		thrust = 50;
-		weaponLockSystem = "2 + 8 + 16";
+	};
+	class M_Titan_AA;
+	class FST_AA_Missile : M_Titan_AA
+	{
+		author = "Laer";
+		model  = "OPTRE_weapons\Aircraft\ASGM10_missile_fly.p3d";
+		hit              = 150;
+		indirectHit      = 125;
+		indirectHitRange = 13;
+		manualControl=1;
+		effectsMissile   = "3AS_Rocket_effect_Purple_fly";
+		cmImmunity = 0.85;
 	};
 	class FlameRound;
 	class FST_Fire: FlameRound
@@ -2403,7 +2414,7 @@ class CfgMagazines
 		author="Daara";
 		displayName="[41st] PLX-1 Guided Missile [AA]";
 		descriptionShort="PLX-1 AA Missile";
-		ammo="FST_Stormfury_High_Velocity_Missile";
+		ammo="FST_AA_Missile";
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		mass=50;

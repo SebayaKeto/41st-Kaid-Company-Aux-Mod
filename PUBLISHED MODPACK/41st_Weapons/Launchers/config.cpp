@@ -16,7 +16,7 @@ class CfgPatches
 		weapons[]=
 		{
 			"FST_PLX1",
-			"FST_PLX1_Guided",
+			//"FST_PLX1_Guided",
 			"FST_RPS6HP",
 			"FST_RPS6_Disposable",
 			"FST_RPS6_Used",
@@ -62,13 +62,14 @@ class CfgWeapons
 	};
 	class FST_PLX1: FST_PLX1_Base
 	{
-		author = "Viz"
-		displayName="[41st] PLX-1 Rocket launcher [Mk.A]";
+		author = "Viz";
+		displayName="[41st] PLX-1 Rocket launcher [Mk.AV]";
 		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
 		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
 		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
 		scope=2;
+		weaponLockSystem = 1 + 2 + 4 + 8 + 16;
 		scopecurator=2;
 		ace_overpressure_angle=45;
 		ace_overpressure_damage=0.69999999;
@@ -76,7 +77,7 @@ class CfgWeapons
 		ace_overpressure_range=10;
 		ace_reloadlaunchers_enabled=1;
 		ace_javelin_enabled=1;
-		canLock= 0;
+		canLock= 2;
 		reloadAction="ReloadRPG";
 		recoil="recoil_titan_short";
 		maxZeroing=3000;
@@ -103,8 +104,8 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"ls_sounds\weapons\launcher\PLX_shot.wss",
-					10,
+					"3AS\3AS_Weapons\PLX1\Sounds\PLX_Fire.ogg",
+					3.1622777,
 					1,
 					2000
 				};
@@ -194,7 +195,7 @@ class CfgWeapons
 		inertia=1.1;
 		initSpeed=30;
 	};
-	class FST_PLX1_Guided: Launcher_Base_F
+	/*class FST_PLX1_Guided: Launcher_Base_F
 	{
 		author = "Viz"
 		displayName="[41st] PLX-1 Rocket launcher [Mk.V]";
@@ -367,7 +368,7 @@ class CfgWeapons
 				discreteInitIndex=0;
 			};
 		};
-	};
+	};*/
 	class IDA_RPS6_Base;
 	class FST_RPS6_Base: IDA_RPS6_Base
 	{
