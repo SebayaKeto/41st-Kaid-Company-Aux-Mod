@@ -210,6 +210,8 @@ class CfgPatches
 			"FST_P2_Major",
 			"FST_P2_Major_Dirty",		
 			"FST_P2_Seraph",
+			"FST_P2_Arthur",
+			"FST_P2_Merlin",
 			"FST_P2_Zik",
 			"FST_P2_Zik_Dirty",
 			"FST_P2_Qball",
@@ -303,6 +305,7 @@ class CfgPatches
 			"FST_P2_Red",
 			"FST_P2_Riley",
 			"FST_P2_Riley_V2",
+			"FST_P2_Riley_V2_Dirty",
 			"FST_P2_Appa",
 			"FST_P2_Primus",
 			"FST_P2_Selene",
@@ -7466,6 +7469,17 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Blades: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Blades)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Ace: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -8782,6 +8796,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Antonius.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Remedy: FST_Airborne_Helmet
+	{
+		author="Ruby";
+		displayName="[41st] Airborne Helmet (Remedy)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy.paa",
+		};
+	};
  	class FST_Airborne_Helmet_Cowboy: FST_Airborne_Helmet
 	{
 		author="Daara";
@@ -9504,6 +9528,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Riley_V2_Dirty: FST_Airborne_Helmet
+	{
+		author="Ruby";
+		displayName="[41st] Airborne Helmet (Riley/V2/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Acidic: FST_Airborne_Helmet
@@ -14725,6 +14759,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Riley_V2_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Riley/V2/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Riley_V2_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Trenny: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15504,6 +15552,34 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		{
 			uniformModel="";
 			uniformClass="FST_P2_James";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Arthur: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Arthur]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Arthur";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Merlin: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Merlin]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Merlin";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -35200,6 +35276,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Riley_V2_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Ruby";
+		displayName="[41st] CT-2213 'Riley' (V2/Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Riley_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Riley_V2_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Riley_V2_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Riley_V2_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Riley_V2_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Trenny: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -39932,6 +40063,116 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Crewman_Helmet_Seraph",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Arthur: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1155 'Arthur'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Arthur";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Arthur.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Arthur.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Crewman_Helmet_Arthur",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Crewman_Helmet_Arthur",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Merlin: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-3579 'Merlin'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Arthur";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Merlin.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Merlin.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Crewman_Helmet_Merlin",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Crewman_Helmet_Merlin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
