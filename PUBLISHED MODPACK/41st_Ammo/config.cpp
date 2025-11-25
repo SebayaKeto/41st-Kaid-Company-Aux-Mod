@@ -1167,6 +1167,7 @@ class CfgAmmo
 		author = "Viz";
 		airLock=1;
 		ace_frag_enabled=0;
+
 		class ace_missileguidance
 		{
 			attackProfiles[]=
@@ -1203,6 +1204,7 @@ class CfgAmmo
 			seekLastTargetPos=1;
 			useModeForAttackProfile=1;
 		};
+
 		caliber=60;
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
 		hit=1000;

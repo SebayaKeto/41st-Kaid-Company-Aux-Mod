@@ -16,7 +16,7 @@ class CfgPatches
 		weapons[]=
 		{
 			"FST_PLX1",
-			//"FST_PLX1_Guided",
+			"FST_PLX1_Guided",
 			"FST_RPS6HP",
 			"FST_RPS6_Disposable",
 			"FST_RPS6_Used",
@@ -63,7 +63,7 @@ class CfgWeapons
 	class FST_PLX1: FST_PLX1_Base
 	{
 		author = "Viz";
-		displayName="[41st] PLX-1 Rocket launcher [Mk.AV]";
+		displayName="[41st] PLX-1 Rocket launcher [Mk.A]";
 		model="\MRC\JLTS\weapons\PLX1\PLX1.p3d";
 		picture="\MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
 		uiPicture="MRC\JLTS\weapons\PLX1\data\ui\PLX1_ui_ca.paa";
@@ -195,7 +195,7 @@ class CfgWeapons
 		inertia=1.1;
 		initSpeed=30;
 	};
-	/*class FST_PLX1_Guided: Launcher_Base_F
+	class FST_PLX1_Guided: Launcher_Base_F
 	{
 		author = "Viz"
 		displayName="[41st] PLX-1 Rocket launcher [Mk.V]";
@@ -210,8 +210,10 @@ class CfgWeapons
 		ace_overpresssure_priority=1;
 		ace_overpressure_range=10;
 		ace_reloadlaunchers_enabled=1;
-		ace_javelin_enabled=1;
-		canLock= 0;
+		ace_javelin_enabled=0;
+		canLock= 2;
+		lockAcquire = 0;
+		weaponLockDelay = 3;
 		reloadAction="ReloadRPG";
 		recoil="recoil_titan_short";
 		maxZeroing=3000;
@@ -368,7 +370,7 @@ class CfgWeapons
 				discreteInitIndex=0;
 			};
 		};
-	};*/
+	};
 	class IDA_RPS6_Base;
 	class FST_RPS6_Base: IDA_RPS6_Base
 	{
