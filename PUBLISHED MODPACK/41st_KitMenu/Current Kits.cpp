@@ -445,7 +445,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
     ],
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC17","FST_RPS6_Disposable","UNSC_Knife","FST_NVG","FST_PLX1","FST_RPS6HP","FST_T15","FST_Vest_NCO", "FST_Vest_NCO_Veteran","FST_Vest_Base","FST_Hoster_Face","FST_Westar_M5","FST_RPS6_SR"],
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC17","FST_RPS6_Disposable","UNSC_Knife","FST_NVG","FST_PLX1","FST_PLX1_Guided","FST_RPS6HP","FST_T15","FST_Vest_NCO", "FST_Vest_NCO_Veteran","FST_Vest_Base","FST_Hoster_Face","FST_Westar_M5","FST_RPS6_SR"],
     "true",
     {},
     "regular"
@@ -1136,7 +1136,7 @@
     ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
     ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]
 ], 
-["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_DC17","FST_RPS6_Disposable","FST_Z6","FST_PLX1","FST_RPS6HP","FST_backpack_EWEB","FST_Republic_Mortar_Bag", "FST_DP23","FST_RPS6_SR"], 
+["FST_DC15A","FST_DC15S","FST_DC15C_F","UNSC_Knife","FST_DC17","FST_RPS6_Disposable","FST_Z6","FST_PLX1","FST_PLX1_Guided","FST_RPS6HP","FST_backpack_EWEB","FST_Republic_Mortar_Bag", "FST_DP23","FST_RPS6_SR"], 
 "true",
 {},
 "airborne"
