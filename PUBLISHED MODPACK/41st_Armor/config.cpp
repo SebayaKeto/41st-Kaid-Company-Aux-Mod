@@ -5777,7 +5777,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\GreenVisor_co.paa"
 		};
 	};
-	class TAC_W_ghillie_GR1;
+	/* class TAC_W_ghillie_GR1;
 	class FST_W_ghillie_O1: TAC_W_ghillie_GR1
 	{
 		scope=2;
@@ -5812,7 +5812,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 				};
 			};
 		};
-	};
+	}; */
 	class FST_P2_Helmet_Sere: FST_P2_Helmet_Base
 	{
 		author="Daara";
