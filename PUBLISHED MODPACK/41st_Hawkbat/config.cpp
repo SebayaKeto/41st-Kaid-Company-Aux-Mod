@@ -11,7 +11,6 @@ class CfgPatches
 			"IDA_Ammo",
 			"IDA_Republic",
 			"A3_Characters_F_Proxies",
-			"TAC_VESTS_W",
 			"TCGM_Girls"
 		};
 		units[]={};
