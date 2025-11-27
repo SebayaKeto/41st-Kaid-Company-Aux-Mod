@@ -38,6 +38,28 @@ class CfgEditorSubcategories
 		displayName = "Human Division"; 
 	};
 };
+class CfgMagazines
+{
+	class IDA_grenade_Smoke_mag;
+	class FST_grenade_smoke_orange_mag: IDA_grenade_Smoke_mag
+	{
+		scope=2;
+		author="Tooka";
+		displayName="[41st] Smoke Canister (Orange)";
+		descriptionShort="Smoke Canister (Orange)";
+		displayNameShort="Orange Smoke";
+		model="\Indecisive_Armoury_Ammos\Data\Smoke\IDA_smoke_grenade.p3d";
+		ammo="FST_smoke_Orange";
+	};
+};
+class CfgAmmo
+{
+	class IDA_smoke;
+	class FST_smoke_Orange: IDA_smoke
+	{
+		smokeColor[]={1,0.45,0.1,1};
+	};
+};
 class CfgWeapons
 {
 	class U_I_CombatUniform;
@@ -839,6 +861,22 @@ class CfgWeapons
 			};
 		};
 	};
+	class GrenadeLauncher;
+	class Throw: GrenadeLauncher
+	{
+		muzzles[]+=
+		{
+			"FST_grenade_Smoke_Orange_muzzle",
+		};
+		class ThrowMuzzle;
+		class FST_grenade_Smoke_Orange_muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"FST_grenade_smoke_orange_mag"
+			};
+		};
+	};
 };
 class UniformSlotInfo
 {
@@ -1031,9 +1069,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1136,9 +1174,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 		};
@@ -1186,9 +1224,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=4;
 			};
 			class _xx_IDA_grenade_Detonator_mag
@@ -1241,9 +1279,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1276,9 +1314,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1311,9 +1349,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1409,9 +1447,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_Droid_blaster_cell_Overcharged_Red
@@ -1439,9 +1477,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1469,9 +1507,9 @@ class CfgVehicles
 				name="ACE_Chemlight_HiRed";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1499,9 +1537,9 @@ class CfgVehicles
 				name="IDA_grenade_Sonic_mag";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -1529,9 +1567,9 @@ class CfgVehicles
 				name="IDA_grenade_Sonic_mag";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_low_Red
@@ -1564,9 +1602,9 @@ class CfgVehicles
 				name="IDA_grenade_Sonic_mag";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_low_Red
@@ -1599,9 +1637,9 @@ class CfgVehicles
 				name="IDA_grenade_Sonic_mag";
 				count=1;
 			};
-			class _xx_IDA_grenade_Smoke_Red_mag
+			class _xx_FST_grenade_smoke_orange_mag
 			{
-				name="IDA_grenade_Smoke_Red_mag";
+				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
 			class _xx_FST_blaster_cell_Red
@@ -2084,7 +2122,7 @@ class CfgVehicles
 			"FST_blaster_battery_Red",
 			"FST_blaster_cell_low_Red",
 			"ACE_Chemlight_HiRed",
-			"IDA_grenade_Smoke_Red_mag"
+			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
@@ -2565,7 +2603,7 @@ class CfgVehicles
 			"FST_ZH73_Mag_Red",
 			"FST_thermal_slug_mag_Red",
 			"ACE_Chemlight_HiRed",
-			"IDA_grenade_Smoke_Red_mag"
+			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
@@ -2770,7 +2808,7 @@ class CfgVehicles
 			"FST_HE_LauncherGrenade",
 			"FST_blaster_cell_low_Red",
 			"ACE_Chemlight_HiRed",
-			"IDA_grenade_Smoke_Red_mag"
+			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
@@ -3033,7 +3071,7 @@ class CfgVehicles
 			"FST_blaster_cell_Red",
 			"FST_blaster_cell_low_Red",
 			"ACE_Chemlight_HiRed",
-			"IDA_grenade_Smoke_Red_mag"
+			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
