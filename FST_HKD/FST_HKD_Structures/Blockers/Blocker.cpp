@@ -1,129 +1,134 @@
 
 
 // ===================================================================================
-// HKD BLOCKERS - VEHICLE/INFANTRY BLOCKERS
+// HKD DEFENSIVE FORTIFICATIONS - VEHICLE/INFANTRY BLOCKERS & BARRIERS
 // ===================================================================================
-// Massive wedge-shaped barriers made from recycled starship armor
-// Designed for area denial and forcing vehicles upward to expose underside
+// Hoersch-Kessel Driveworks defensive structures: wedge barriers, walls, and fortifications
+// Made from battle-hardened armor plating and reinforced materials
+// Designed for area denial, vehicle obstacles, and defensive positions
+// Supports multi-faction scenarios, custom deployments, and universal compatibility
 
 // =========================================================================
-// BASE BLOCKER CLASS
+// LARGE WEDGE BARRIER BASE CLASS (Vehicle Deflector)
 // =========================================================================
-class FST_HKD_VehBlocker_Base : House_F 
+class FST_HKD_Barrier_WedgeLarge_Base : House_F 
+{
+    scope = 0; // Hidden base class - not placeable directly
+    author = "Hoersch-Kessel Driveworks"; // Asset creator
+    displayName = "HKD Large Wedge Barrier (Base)"; // Internal display name
+    description = "A massive, wedge-shaped slab of reinforced armor plating. Designed to force vehicles upward, exposing underbelly. Provides heavy protection against small arms and light cannons."; // Editor tooltip
+    model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_Blocker_Large.p3d"; // 3D model file
+    mapSize = 4.0; // Icon size on map
+    editorCategory = "fst_hkd_edcat"; // Editor category
+    editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers"; // Editor subcategory
+    
+    class Damage // Damage texture configuration
+    {
+        tex[] = {}; // Damage textures (empty - uses hidden selections)
+        mat[] = {}; // Damage materials (empty - uses hidden selections)
+    };
+    
+    hiddenSelections[] = {"Camo"}; // Textureable selection name
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_Blank_co.paa"}; // Default texture
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo.rvmat"}; // Material file
+    
+    armor = 600; // Structural durability
+    destrType = "DestructBuilding"; // Destruction class type
+    
+    class DestructionEffects // Visual effects on destruction
+    {
+    };
+};
+class FST_HKD_Barrier_WedgeLarge_Blank : FST_HKD_Barrier_WedgeLarge_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Large Wedge Barrier - Unpainted"; // Editor list name
+    description = "Massive wedge barrier - unpainted hull plating. Vehicle deflector."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg"; // Preview image
+    
+    class EventHandlers {}; // Empty event handler class
+};
+class FST_HKD_Barrier_WedgeLarge_Default : FST_HKD_Barrier_WedgeLarge_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Large Wedge Barrier - Standard"; // Editor list name
+    description = "Massive wedge barrier - HKD markings. Vehicle deflector."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"}; // HKD variant texture
+    
+    class EventHandlers {}; // Empty event handler class
+};
+class FST_HKD_Barrier_WedgeLarge_Corporate : FST_HKD_Barrier_WedgeLarge_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Large Wedge Barrier - Corporate"; // Editor list name
+    description = "Massive wedge barrier - HKD corporate markings. Vehicle deflector."; // Editor tooltip
+    editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"}; // HKD variant texture
+    class EventHandlers {}; // Empty event handler class
+};
+// =========================================================================
+// MEDIUM COVER BARRIER BASE CLASS (Infantry Cover)
+// =========================================================================
+class FST_HKD_Barrier_CoverMedium_Base : House_F 
+{
+    scope = 0; // Hidden base class - not placeable directly
+    author = "Hoersch-Kessel Driveworks"; // Asset creator
+    displayName = "HKD Medium Cover Barrier (Base)"; // Internal display name
+    description = "Reinforced cover slab for infantry and unit positioning and area denial."; // Editor tooltip
+    model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_Blocker_Medium.p3d"; // 3D model file
+    mapSize = 2.0; // Icon size on map (smaller than vehicle blocker)
+    editorCategory = "fst_hkd_edcat"; // Editor category
+    editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers"; // Editor subcategory
+    class Damage { tex[] = {}; mat[] = {}; }; // Damage textures/materials
+    hiddenSelections[] = {"Camo"}; // Textureable selection name
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_Blank_co.paa"}; // Default texture
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo.rvmat"}; // Material file
+    armor = 300; // Structural durability (lighter than vehicle blocker)
+    destrType = "DestructBuilding"; // Destruction class type
+    class DestructionEffects {}; // Destruction visual effects
+};
+class FST_HKD_Barrier_CoverMedium_Blank : FST_HKD_Barrier_CoverMedium_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Medium Cover Barrier - Unpainted"; // Editor list name
+    description = "Medium cover barrier - unpainted plating. Infantry positioning."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg"; // Preview image
+    class EventHandlers {}; // Empty event handler class
+};
+class FST_HKD_Barrier_CoverMedium_Default : FST_HKD_Barrier_CoverMedium_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Medium Cover Barrier - Standard"; // Editor list name
+    description = "Medium cover barrier - HKD markings. Infantry positioning."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"}; // HKD variant texture
+    class EventHandlers {}; // Empty event handler class
+};
+class FST_HKD_Barrier_CoverMedium_Corporate : FST_HKD_Barrier_CoverMedium_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Medium Cover Barrier - Corporate"; // Editor list name
+    description = "Medium cover barrier - HKD corporate markings. Infantry/droid positioning."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"}; // HKD variant texture
+    class EventHandlers {}; // Empty event handler class
+};
+// =========================================================================
+// ANTI-PERSONNEL SPIKES & LINES (Infantry Deterrent)
+// =========================================================================
+class FST_HKD_Spike_Single_Base : House_F 
 {
     scope = 0;
     author = "Hoersch-Kessel Driveworks";
-    displayName = "HKD Blocker (Base)";
-    description = "A massive, wedge-shaped slab of recycled starship armor. Designed to force repulsor tanks upward, exposing their underbelly. Immune to small arms and light cannons.";
-    model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_VehicleBlocker.p3d";
-    mapSize = 4.0;
-    editorCategory = "fst_hkd_edcat";
-    editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers";
-    
-    class Damage 
-    {
-        tex[] = {};
-        mat[] = {};
-    };
-    
-    hiddenSelections[] = {"Camo"};
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_Blank_co.paa"};
-    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo.rvmat"};
-    
-    armor = 600;
-    destrType = "DestructBuilding";
-    
-    class DestructionEffects 
-    {
-    };
-};
-class FST_HKD_VehBlocker_Blank : FST_HKD_VehBlocker_Base 
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[HKD] Blocker - Blank";
-    description = "Massive wedge-shaped barrier (Unpainted Hull Plating)";
-    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg";
-    
-    class EventHandlers {};
-};
-class FST_HKD_VehBlocker_CIS : FST_HKD_VehBlocker_Base 
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[HKD] Blocker - CIS";
-    description = "Massive wedge-shaped barrier (CIS Markings)";
-    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg";
-    hiddenSelectionsTextures[] = {"\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"};
-    
-    class EventHandlers {};
-};
-class FST_HKD_VehBlocker_HKD : FST_HKD_VehBlocker_Base 
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[HKD] Vehicle Blocker - HKD";
-    description = "Massive wedge-shaped barrier (HKD Corporate Markings)";
-    editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg";
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"};
-    class EventHandlers {};
-};
-class FST_HKD_InfBlocker_Base : House_F 
-{
-    scope = 0;
-    author = "Hoersch-Kessel Driveworks";
-    displayName = "HKD Infantry Blocker (Base)";
-    description = "A reinforced slab designed for infantry cover and area denial.";
-    model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_InfantryBlocker.p3d";
-    mapSize = 2.0;
-    editorCategory = "fst_hkd_edcat";
-    editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers";
-    class Damage { tex[] = {}; mat[] = {}; };
-    hiddenSelections[] = {"Camo"};
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_Blank_co.paa"};
-    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo.rvmat"};
-    armor = 300;
-    destrType = "DestructBuilding";
-    class DestructionEffects {};
-};
-class FST_HKD_InfBlocker_Blank : FST_HKD_InfBlocker_Base 
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[HKD] Infantry Blocker - Blank";
-    description = "Infantry cover (Unpainted Hull Plating)";
-    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg";
-    class EventHandlers {};
-};
-class FST_HKD_InfBlocker_CIS : FST_HKD_InfBlocker_Base 
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[HKD] Infantry Blocker - CIS";
-    description = "Infantry cover (CIS Markings)";
-    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg";
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"};
-    class EventHandlers {};
-};
-class FST_HKD_InfBlocker_HKD : FST_HKD_InfBlocker_Base 
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[HKD] Infantry Blocker - HKD";
-    description = "Infantry cover (HKD Corporate Markings)";
-    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg";
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"};
-    class EventHandlers {};
-};
-// =========================================================================
-// INFANTRY SPIKES
-// =========================================================================
-class FST_HKD_InfantrySpike : House_F {
-    scope = 2;
-    scopeCurator = 2;
-    author = "Hoersch-Kessel Driveworks";
-    displayName = "[HKD] Infantry Spike";
-    description = "Anti-personnel spike for area denial.";
+    displayName = "HKD Anti-Personnel Spike (Base)";
+    description = "Single anti-personnel spike. Infantry deterrent.";
     model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_InfantrySpike.p3d";
     mapSize = 1.0;
     editorCategory = "fst_hkd_edcat";
@@ -135,48 +140,103 @@ class FST_HKD_InfantrySpike : House_F {
     destrType = "DestructBuilding";
     class EventHandlers {};
 };
-class FST_HKD_InfantrySpikeLineFiveM : House_F {
+class FST_HKD_Spike_Single : FST_HKD_Spike_Single_Base 
+{
+    scope = 2;
+    scopeCurator = 2;
+    displayName = "[HKD] Anti-Personnel Spike";
+    description = "Single anti-personnel spike - standard variant. Infantry deterrent.";
+    class EventHandlers {};
+};
+class FST_HKD_Spike_Line5m : House_F 
+{
     scope = 2;
     scopeCurator = 2;
     author = "Hoersch-Kessel Driveworks";
-    displayName = "[HKD] Infantry Spike Line (5m)";
-    description = "Five-meter line of anti-personnel spikes.";
+    displayName = "[HKD] Anti-Personnel Spike Line (5m)";
+    description = "Five-meter line of anti-personnel spikes - barrier deployment.";
     model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_InfantrySpikeFiveM.p3d";
     mapSize = 5.0;
     editorCategory = "fst_hkd_edcat";
     editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers";
-    hiddenSelections[] = {"Camo"};
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\TankTraps\Camo_co.paa"};
-    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\TankTraps\Camo.rvmat"};
-    armor = 100;
+    armor = 200;
     destrType = "DestructBuilding";
     class EventHandlers {};
 };
-class FST_HKD_InfantrySpikeLineTenM : House_F {
+class FST_HKD_Spike_Line10m : House_F 
+{
     scope = 2;
     scopeCurator = 2;
     author = "Hoersch-Kessel Driveworks";
-    displayName = "[HKD] Infantry Spike Line (10m)";
-    description = "Ten-meter line of anti-personnel spikes.";
+    displayName = "[HKD] Anti-Personnel Spike Line (10m)";
+    description = "Ten-meter line of anti-personnel spikes - extended barrier deployment.";
     model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_InfantrySpikeTenM.p3d";
     mapSize = 10.0;
     editorCategory = "fst_hkd_edcat";
     editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers";
-    hiddenSelections[] = {"Camo"};
-    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\TankTraps\Camo_co.paa"};
-    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\TankTraps\Camo.rvmat"};
-    armor = 100;
+    armor = 400;
     destrType = "DestructBuilding";
     class EventHandlers {};
 };
 // =========================================================================
-// TANK TRAP BLOCKERS (3 VARIANTS)
+// SMALL DEFENSIVE BLOCKER BASE CLASS (Compact Cover)
 // =========================================================================
-class FST_HKD_TankTrap_Base : House_F {
+class FST_HKD_Blocker_Small_Base : House_F 
+{
+    scope = 0; // Hidden base class - not placeable directly
+    author = "Hoersch-Kessel Driveworks"; // Asset creator
+    displayName = "HKD Small Blocker (Base)"; // Internal display name
+    description = "Compact defensive blocker for positioning and light cover. Ideal for quick deployments and smaller positions."; // Editor tooltip
+    model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_Blocker_Small.p3d"; // 3D model file
+    mapSize = 1.5; // Icon size on map
+    editorCategory = "fst_hkd_edcat"; // Editor category
+    editorSubcategory = "fst_hkd_edsubcat_structures_fortifications_barriers"; // Editor subcategory
+    class Damage { tex[] = {}; mat[] = {}; }; // Damage textures/materials
+    hiddenSelections[] = {"Camo"}; // Textureable selection name
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_Blank_co.paa"}; // Default texture
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo.rvmat"}; // Material file
+    armor = 200; // Structural durability (lighter than medium blocker)
+    destrType = "DestructBuilding"; // Destruction class type
+    class DestructionEffects {}; // Destruction visual effects
+};
+class FST_HKD_Blocker_Small_Blank : FST_HKD_Blocker_Small_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Small Blocker - Unpainted"; // Editor list name
+    description = "Compact blocker - unpainted hull plating. Light defensive positioning."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg"; // Preview image
+    class EventHandlers {}; // Empty event handler class
+};
+class FST_HKD_Blocker_Small_Default : FST_HKD_Blocker_Small_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Small Blocker - Standard"; // Editor list name
+    description = "Compact blocker - HKD markings. Light defensive positioning."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"}; // HKD variant texture
+    class EventHandlers {}; // Empty event handler class
+};
+class FST_HKD_Blocker_Small_Corporate : FST_HKD_Blocker_Small_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Small Blocker - Corporate"; // Editor list name
+    description = "Compact blocker - HKD corporate markings. Light defensive positioning."; // Editor tooltip
+    editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"}; // HKD variant texture
+    class EventHandlers {}; // Empty event handler class
+};
+// =========================================================================
+// ANTI-VEHICLE TANK TRAPS (Vehicle Deterrent)
+// =========================================================================
+class FST_HKD_Trap_Tank_Base : House_F 
+{
     scope = 0;
     author = "Hoersch-Kessel Driveworks";
-    displayName = "HKD Tank Trap (Base)";
-    description = "Anti-vehicle tank trap for area denial.";
+    displayName = "HKD Anti-Vehicle Tank Trap (Base)";
+    description = "HKD anti-vehicle trap for vehicle deterrent and area denial.";
     model = "FST\FST_HKD\FST_HKD_Structures\Blockers\HKD_TankTrap.p3d";
     mapSize = 2.0;
     editorCategory = "fst_hkd_edcat";
@@ -188,28 +248,31 @@ class FST_HKD_TankTrap_Base : House_F {
     destrType = "DestructBuilding";
     class EventHandlers {};
 };
-class FST_HKD_TankTrap_Blank : FST_HKD_TankTrap_Base {
+class FST_HKD_Trap_Tank_Blank : FST_HKD_Trap_Tank_Base 
+{
     scope = 2;
     scopeCurator = 2;
-    displayName = "[HKD] Tank Trap - Blank";
-    description = "Tank trap (Unpainted Hull Plating)";
+    displayName = "[HKD] Anti-Vehicle Tank Trap - Unpainted";
+    description = "Tank trap - unpainted hull plating. Vehicle deterrent.";
     editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_TankTrapBlank.jpg";
     class EventHandlers {};
 };
-class FST_HKD_TankTrap_CIS : FST_HKD_TankTrap_Base {
+class FST_HKD_Trap_Tank_Default : FST_HKD_Trap_Tank_Base 
+{
     scope = 2;
     scopeCurator = 2;
-    displayName = "[HKD] Tank Trap - CIS";
-    description = "Tank trap (CIS Markings)";
+    displayName = "[HKD] Anti-Vehicle Tank Trap - Standard";
+    description = "Tank trap - HKD markings. Vehicle deterrent";
     editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_TankTrapCIS.jpg";
     hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\TankTraps\Camo_CIS_CO.paa"};
     class EventHandlers {};
 };
-class FST_HKD_TankTrap_HKD : FST_HKD_TankTrap_Base {
+class FST_HKD_Trap_Tank_Corporate : FST_HKD_Trap_Tank_Base 
+{
     scope = 2;
     scopeCurator = 2;
-    displayName = "[HKD] Tank Trap - HKD";
-    description = "Tank trap (HKD Corporate Markings)";
+    displayName = "[HKD] Anti-Vehicle Tank Trap - Corporate";
+    description = "Tank trap - HKD corporate markings. Vehicle deterrent.";
     editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_TankTrapCompany.jpg";
     hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\TankTraps\Camo_HKD_co.paa"};
     class EventHandlers {};
