@@ -37,7 +37,43 @@ class CfgPatches
             // ===== ANTI-VEHICLE TANK TRAPS =====
             "FST_HKD_Trap_Tank_Blank",
             "FST_HKD_Trap_Tank_Default",
-            "FST_HKD_Trap_Tank_Corporate"
+            "FST_HKD_Trap_Tank_Corporate",
+            
+            // ===== HEAVY WALL STRAIGHT SECTIONS =====
+            "FST_HKD_Wall_Heavy_Straight_Blank",
+            "FST_HKD_Wall_Heavy_Straight_CIS",
+            "FST_HKD_Wall_Heavy_Straight_HKD",
+            "FST_HKD_Wall_Heavy_Straight_RawForged",
+            
+            // ===== HEAVY WALL CURVED SECTIONS =====
+            "FST_HKD_Wall_Heavy_Curved_Blank",
+            "FST_HKD_Wall_Heavy_Curved_CIS",
+            "FST_HKD_Wall_Heavy_Curved_HKD",
+            "FST_HKD_Wall_Heavy_Curved_RawForged",
+            
+            // ===== HEAVY WALL GATES (Closed) =====
+            "FST_HKD_Wall_Heavy_Gate_Blank",
+            "FST_HKD_Wall_Heavy_Gate_CIS",
+            "FST_HKD_Wall_Heavy_Gate_HKD",
+            "FST_HKD_Wall_Heavy_Gate_RawForged",
+            
+            // ===== HEAVY WALL OPEN GATES =====
+            "FST_HKD_Wall_Heavy_OpenGate_Blank",
+            "FST_HKD_Wall_Heavy_OpenGate_CIS",
+            "FST_HKD_Wall_Heavy_OpenGate_HKD",
+            "FST_HKD_Wall_Heavy_OpenGate_RawForged",
+            
+            // ===== HEAVY WALL BUNKERS =====
+            "FST_HKD_Wall_Heavy_Bunker_Blank",
+            "FST_HKD_Wall_Heavy_Bunker_CIS",
+            "FST_HKD_Wall_Heavy_Bunker_HKD",
+            "FST_HKD_Wall_Heavy_Bunker_RawForged",
+            
+            // ===== HEAVY WALL TOWERS =====
+            "FST_HKD_Wall_Heavy_Tower_Blank",
+            "FST_HKD_Wall_Heavy_Tower_CIS",
+            "FST_HKD_Wall_Heavy_Tower_HKD",
+            "FST_HKD_Wall_Heavy_Tower_RawForged"
         };
         weapons[] = {};
     };
@@ -47,4 +83,5 @@ class CfgVehicles
 {
     class House_F;
     #include "Blockers/Blocker.cpp"
+    #include "HeavyWalls/HeavyWalls.cpp"
 };
