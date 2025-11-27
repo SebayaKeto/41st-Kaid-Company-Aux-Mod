@@ -14,17 +14,17 @@ class CfgPatches
         requiredAddons[] = {"A3_Structures_F"};
         requiredVersion = 0.1;
         units[] = {
-            // ===== LARGE WEDGE BARRIERS (Vehicle Deflectors) =====
-            "FST_HKD_Barrier_WedgeLarge_Blank",
-            "FST_HKD_Barrier_WedgeLarge_Default",
-            "FST_HKD_Barrier_WedgeLarge_Corporate",
+            // ===== LARGE BLOCKERS (Vehicle Deflectors) =====
+            "FST_HKD_Blocker_Large_Blank",
+            "FST_HKD_Blocker_Large_Default",
+            "FST_HKD_Blocker_Large_Corporate",
             
-            // ===== MEDIUM COVER BARRIERS (Infantry Cover) =====
-            "FST_HKD_Barrier_CoverMedium_Blank",
-            "FST_HKD_Barrier_CoverMedium_Default",
-            "FST_HKD_Barrier_CoverMedium_Corporate",
+            // ===== MEDIUM BLOCKERS (Infantry Cover) =====
+            "FST_HKD_Blocker_Medium_Blank",
+            "FST_HKD_Blocker_Medium_Default",
+            "FST_HKD_Blocker_Medium_Corporate",
             
-            // ===== SMALL DEFENSIVE BLOCKERS (Compact Cover) =====
+            // ===== SMALL BLOCKERS (Compact Cover) =====
             "FST_HKD_Blocker_Small_Blank",
             "FST_HKD_Blocker_Small_Default",
             "FST_HKD_Blocker_Small_Corporate",

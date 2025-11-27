@@ -11,7 +11,7 @@
 // =========================================================================
 // LARGE WEDGE BARRIER BASE CLASS (Vehicle Deflector)
 // =========================================================================
-class FST_HKD_Barrier_WedgeLarge_Base : House_F 
+class FST_HKD_Blocker_Large_Base : House_F 
 {
     scope = 0; // Hidden base class - not placeable directly
     author = "Hoersch-Kessel Driveworks"; // Asset creator
@@ -39,33 +39,33 @@ class FST_HKD_Barrier_WedgeLarge_Base : House_F
     {
     };
 };
-class FST_HKD_Barrier_WedgeLarge_Blank : FST_HKD_Barrier_WedgeLarge_Base 
+class FST_HKD_Blocker_Large_Blank : FST_HKD_Blocker_Large_Base 
 {
     scope = 2; // Placeable in editor and visible in-game
     scopeCurator = 2; // Placeable by curator/admin
-    displayName = "[HKD] Large Wedge Barrier - Unpainted"; // Editor list name
-    description = "Massive wedge barrier - unpainted hull plating. Vehicle deflector."; // Editor tooltip
+    displayName = "[HKD] Large Blocker - Unpainted"; // Editor list name
+    description = "Massive wedge blocker - unpainted hull plating. Vehicle deflector."; // Editor tooltip
     editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg"; // Preview image
     
     class EventHandlers {}; // Empty event handler class
 };
-class FST_HKD_Barrier_WedgeLarge_Default : FST_HKD_Barrier_WedgeLarge_Base 
+class FST_HKD_Blocker_Large_Default : FST_HKD_Blocker_Large_Base 
 {
     scope = 2; // Placeable in editor and visible in-game
     scopeCurator = 2; // Placeable by curator/admin
-    displayName = "[HKD] Large Wedge Barrier - Standard"; // Editor list name
-    description = "Massive wedge barrier - HKD markings. Vehicle deflector."; // Editor tooltip
+    displayName = "[HKD] Large Blocker - Standard"; // Editor list name
+    description = "Massive wedge blocker - HKD markings. Vehicle deflector."; // Editor tooltip
     editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg"; // Preview image
     hiddenSelectionsTextures[] = {"\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"}; // HKD variant texture
     
     class EventHandlers {}; // Empty event handler class
 };
-class FST_HKD_Barrier_WedgeLarge_Corporate : FST_HKD_Barrier_WedgeLarge_Base 
+class FST_HKD_Blocker_Large_Corporate : FST_HKD_Blocker_Large_Base 
 {
     scope = 2; // Placeable in editor and visible in-game
     scopeCurator = 2; // Placeable by curator/admin
-    displayName = "[HKD] Large Wedge Barrier - Corporate"; // Editor list name
-    description = "Massive wedge barrier - HKD corporate markings. Vehicle deflector."; // Editor tooltip
+    displayName = "[HKD] Large Blocker - Corporate"; // Editor list name
+    description = "Massive wedge blocker - HKD corporate markings. Vehicle deflector."; // Editor tooltip
     editorPreview = "FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg"; // Preview image
     hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"}; // HKD variant texture
     class EventHandlers {}; // Empty event handler class
@@ -73,7 +73,7 @@ class FST_HKD_Barrier_WedgeLarge_Corporate : FST_HKD_Barrier_WedgeLarge_Base
 // =========================================================================
 // MEDIUM COVER BARRIER BASE CLASS (Infantry Cover)
 // =========================================================================
-class FST_HKD_Barrier_CoverMedium_Base : House_F 
+class FST_HKD_Blocker_Medium_Base : House_F 
 {
     scope = 0; // Hidden base class - not placeable directly
     author = "Hoersch-Kessel Driveworks"; // Asset creator
@@ -91,31 +91,31 @@ class FST_HKD_Barrier_CoverMedium_Base : House_F
     destrType = "DestructBuilding"; // Destruction class type
     class DestructionEffects {}; // Destruction visual effects
 };
-class FST_HKD_Barrier_CoverMedium_Blank : FST_HKD_Barrier_CoverMedium_Base 
+class FST_HKD_Blocker_Medium_Blank : FST_HKD_Blocker_Medium_Base 
 {
     scope = 2; // Placeable in editor and visible in-game
     scopeCurator = 2; // Placeable by curator/admin
-    displayName = "[HKD] Medium Cover Barrier - Unpainted"; // Editor list name
-    description = "Medium cover barrier - unpainted plating. Infantry positioning."; // Editor tooltip
+    displayName = "[HKD] Medium Blocker - Unpainted"; // Editor list name
+    description = "Medium blocker - unpainted plating. Infantry positioning."; // Editor tooltip
     editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeBlank.jpg"; // Preview image
     class EventHandlers {}; // Empty event handler class
 };
-class FST_HKD_Barrier_CoverMedium_Default : FST_HKD_Barrier_CoverMedium_Base 
+class FST_HKD_Blocker_Medium_Default : FST_HKD_Blocker_Medium_Base 
 {
     scope = 2; // Placeable in editor and visible in-game
     scopeCurator = 2; // Placeable by curator/admin
-    displayName = "[HKD] Medium Cover Barrier - Standard"; // Editor list name
-    description = "Medium cover barrier - HKD markings. Infantry positioning."; // Editor tooltip
+    displayName = "[HKD] Medium Blocker - Standard"; // Editor list name
+    description = "Medium blocker - HKD markings. Infantry positioning."; // Editor tooltip
     editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCIS.jpg"; // Preview image
     hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_CIS_co.paa"}; // HKD variant texture
     class EventHandlers {}; // Empty event handler class
 };
-class FST_HKD_Barrier_CoverMedium_Corporate : FST_HKD_Barrier_CoverMedium_Base 
+class FST_HKD_Blocker_Medium_Corporate : FST_HKD_Blocker_Medium_Base 
 {
     scope = 2; // Placeable in editor and visible in-game
     scopeCurator = 2; // Placeable by curator/admin
-    displayName = "[HKD] Medium Cover Barrier - Corporate"; // Editor list name
-    description = "Medium cover barrier - HKD corporate markings. Infantry/droid positioning."; // Editor tooltip
+    displayName = "[HKD] Medium Blocker - Corporate"; // Editor list name
+    description = "Medium blocker - HKD corporate markings. Infantry/droid positioning."; // Editor tooltip
     editorPreview = "\FST\FST_HKD\FST_HKD_Structures\Blockers\Data\UI\HKD_UI_BlockerLargeCompany.jpg"; // Preview image
     hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\Blockers\Data\Textures\VehicleBlockers\Camo_HKD_co.paa"}; // HKD variant texture
     class EventHandlers {}; // Empty event handler class
