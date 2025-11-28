@@ -90,6 +90,32 @@ class FST_HKD_Wall_Heavy_Straight_RawForged : FST_HKD_Wall_Heavy_Straight_Base
     class EventHandlers {}; // Empty event handler class
 };
 
+class FST_HKD_Wall_Heavy_Straight_DarkMetal : FST_HKD_Wall_Heavy_Straight_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Heavy Wall - Straight (Dark Metal)"; // Editor list name
+    description = "Straight wall section - dark metallic finish. Perimeter defense."; // Editor tooltip
+    editorPreview = "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\UI\HKD_UI_HeavyWallStraightRawForged.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight_DarkMetal_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight_co.paa"}; // Dark Metal variant textures
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight.rvmat"}; // Dark Metal material files
+    
+    class EventHandlers {}; // Empty event handler class
+};
+
+class FST_HKD_Wall_Heavy_Straight_DarkMetal_CIS : FST_HKD_Wall_Heavy_Straight_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Heavy Wall - Straight (Dark Metal - CIS)"; // Editor list name
+    description = "Straight wall section - dark metallic finish with CIS markings. Perimeter defense."; // Editor tooltip
+    editorPreview = "\FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\UI\HKD_UI_HeavyWallStraightCIS.jpg"; // Preview image
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight_DarkMetal_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight_CIS_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight_co.paa"}; // Dark Metal CIS variant textures
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight.rvmat"}; // Dark Metal CIS material files
+    
+    class EventHandlers {}; // Empty event handler class
+};
+
 /* 
 // =========================================================================
 // CURVED WALL SECTION BASE CLASS
@@ -252,6 +278,30 @@ class FST_HKD_Wall_Heavy_OpenGate_Rawforged : FST_HKD_Wall_Heavy_OpenGate_Base
     //editorPreview = "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\UI\HKD_UI_WallOpenGateRawForged.jpg"; // Preview image
     hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight_RawForged_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight_co.paa"}; // Raw Forged variant textures (uses Straight wall)
     hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight.rvmat"}; // Raw Forged material files (uses Straight wall)
+    
+    class EventHandlers {}; // Empty event handler class
+};
+
+class FST_HKD_Wall_Heavy_OpenGate_DarkMetal : FST_HKD_Wall_Heavy_OpenGate_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Heavy Wall - Open Gate (Dark Metal)"; // Editor list name
+    description = "Gate wall section (open) - dark metallic finish. Access passage."; // Editor tooltip
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight_DarkMetal_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight_co.paa"}; // Dark Metal variant textures (uses Straight wall)
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight.rvmat"}; // Dark Metal material files (uses Straight wall)
+    
+    class EventHandlers {}; // Empty event handler class
+};
+
+class FST_HKD_Wall_Heavy_OpenGate_DarkMetal_CIS : FST_HKD_Wall_Heavy_OpenGate_Base 
+{
+    scope = 2; // Placeable in editor and visible in-game
+    scopeCurator = 2; // Placeable by curator/admin
+    displayName = "[HKD] Heavy Wall - Open Gate (Dark Metal - CIS)"; // Editor list name
+    description = "Gate wall section (open) - dark metallic finish with CIS markings. Access passage."; // Editor tooltip
+    hiddenSelectionsTextures[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight_DarkMetal_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight_CIS_co.paa", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight_co.paa"}; // Dark Metal CIS variant textures (uses Straight wall)
+    hiddenSelectionsMaterials[] = {"FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo1_Straight.rvmat", "FST\FST_HKD\FST_HKD_Structures\HeavyWalls\Data\Textures\Camo2_Straight.rvmat"}; // Dark Metal CIS material files (uses Straight wall)
     
     class EventHandlers {}; // Empty event handler class
 };
