@@ -7490,6 +7490,61 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Angel: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Angel)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Angel.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Angel.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Angel_Dirty: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Angel/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Angel_Dirty.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Angel_Dirty.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Flatline: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Flatline)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Flatline.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Flatline.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Arthur: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Arthur)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Arthur.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Arthur.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Merlin: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Merlin)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Merlin.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Merlin.paa"
+		};
+	};
 	// Old crewman shit
 	class FST_Crewman_Helmet: JLTS_CloneHelmetBARC
 	{
@@ -9537,6 +9592,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Cloaker: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Cloaker)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Cloaker.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Acidic: FST_Airborne_Helmet
@@ -17169,6 +17234,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Hex.paa",
+		};
+	};
+	class FST_NVG_Fixed_Hex: FST_NVG_Fixed
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Hex/Fixed On)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Hex.paa",
 		};
 	};
 	class FST_NVG_Hazzo: FST_NVG
@@ -32616,7 +32690,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Angel",
+			"FST_Crewman_Helmet_Mk2_Angel",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -32626,7 +32700,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Angel",
+			"FST_Crewman_Helmet_Mk2_Angel",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -32671,7 +32745,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_Crewman_Helmet_Angel",
+			"FST_Crewman_Helmet_Mk2_Angel_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -32681,7 +32755,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_Crewman_Helmet_Angel",
+			"FST_Crewman_Helmet_Mk2_Angel_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -40106,7 +40180,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_Crewman_Helmet_Arthur",
+			"FST_Crewman_Helmet_Mk2_Arthur",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -40116,7 +40190,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_Crewman_Helmet_Arthur",
+			"FST_Crewman_Helmet_Mk2_Arthur",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -40161,7 +40235,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_Crewman_Helmet_Merlin",
+			"FST_Crewman_Helmet_Mk2_Merlin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -40171,7 +40245,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_Crewman_Helmet_Merlin",
+			"FST_Crewman_Helmet_Mk2_Merlin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41701,7 +41775,7 @@ class CfgVehicles
         };
         linkedItems[]=
         {
-            "FST_P2_Helmet_Flatline",
+            "FST_Crewman_Helmet_Mk2_Flatline",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -41711,7 +41785,7 @@ class CfgVehicles
         };
         respawnLinkedItems[]=
         {
-            "FST_P2_Helmet_Flatline",
+            "FST_Crewman_Helmet_Mk2_Flatline",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -45065,6 +45139,30 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Cardinal";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Cardinal.paa";
+		};
+		class FST_Clone_Head_Bulwark: FST_clone_Default_head
+		{
+			author="Steel";
+			name="Clone Trooper Bulwark";
+			displayName="[41st] Clone Trooper - Bulwark";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Bulwark.paa";
+		};
+		class FST_Clone_Head_Claw: FST_clone_Default_head
+		{
+			author="Steel";
+			name="Clone Trooper Claw";
+			displayName="[41st] Clone Trooper - Claw";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Claw.paa";
+		};
+		class FST_Clone_Head_Mono: FST_clone_Default_head
+		{
+			author="Steel";
+			name="Clone Trooper Mono";
+			displayName="[41st] Clone Trooper - Mono";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Mono.paa";
 		};
 		class FST_Clone_Head_Sly: FST_clone_Default_head
 		{
