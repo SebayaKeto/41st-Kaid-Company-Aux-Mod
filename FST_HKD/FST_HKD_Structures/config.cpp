@@ -73,7 +73,10 @@ class CfgPatches
             "FST_HKD_Wall_Heavy_Tower_Blank",
             "FST_HKD_Wall_Heavy_Tower_CIS",
             "FST_HKD_Wall_Heavy_Tower_HKD",
-            "FST_HKD_Wall_Heavy_Tower_RawForged"
+            "FST_HKD_Wall_Heavy_Tower_RawForged",
+            
+            // ===== WALL GREEBLE DETAILS =====
+            "FST_HKD_WallGreeble_Small"
         };
         weapons[] = {};
     };
@@ -84,4 +87,5 @@ class CfgVehicles
     class House_F;
     #include "Blockers/Blocker.cpp"
     #include "HeavyWalls/HeavyWalls.cpp"
+    #include "WallGreeble/WallGreeble.cpp"
 };

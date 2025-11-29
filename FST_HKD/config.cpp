@@ -106,6 +106,10 @@ class CfgEditorSubcategories
     {
         displayName = "Structures - Fortifications - Gates";
     };
+    class fst_hkd_edsubcat_structures_fortifications_greeble
+    {
+        displayName = "Structures - Fortifications - Greeble";
+    };
     
     // Structures - Buildings
     class fst_hkd_edsubcat_structures_buildings
