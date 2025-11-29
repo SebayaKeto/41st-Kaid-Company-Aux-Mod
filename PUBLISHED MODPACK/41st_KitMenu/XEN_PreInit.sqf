@@ -441,16 +441,27 @@ switch true do {
 				};
 			};
 		};
+		case (_item == "FST_NVG" || {_item find "FST_NVG_" == 0}): {
+			playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
+			private _cls = _item;
+			private _hg = toLower headgear player;
+			if ((_cls == "FST_NVG" || ((toLower _cls) find "fst_nvg_" == 0)) && {
+				(
+					(_hg find "fst_airborne_helmet") != -1 ||
+					(_hg find "fst_crewman_helmet_mk2") != -1 ||
+					(_hg find "fst_crewman_helmet") != -1 ||
+					(_hg find "fst_pilot_p1_helmet") != -1
+				)
+			}) then {
+				_cls = "FST_NVG_Invisible";
+			};
 
-	case (_item == "FST_NVG" || {_item find "FST_NVG_" == 0}): {
-		playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
-		private _cls = _item;
-		if (hmd player == _cls) then {
-			player unlinkItem _cls;
-		} else {
-			player linkItem _cls;
+			if (hmd player == _cls) then {
+				player unlinkItem _cls;
+			} else {
+				player linkItem _cls;
+			};
 		};
-	};
 		case (_isCQB): {
 			playSoundUI [selectRandom [
 				"41st_KitMenu\sounds\select_weapon_1.ogg",

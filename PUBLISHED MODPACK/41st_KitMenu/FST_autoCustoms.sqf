@@ -175,6 +175,7 @@ if (!_skipCustoms && _allowHelmet) then {
             [
                 format ["FST_P2_Helmet_%1", _playerName],
                 format ["FST_Airborne_Helmet_%1", _playerName],
+                format ["FST_Crewman_Helmet_Mk2_%1", _playerName],
                 format ["FST_Crewman_Helmet_%1", _playerName],
                 format ["FST_Pilot_P1_Helmet_%1", _playerName],
                 format ["FST_ARF_Helmet_WhiteGreen_%1", _playerName]
