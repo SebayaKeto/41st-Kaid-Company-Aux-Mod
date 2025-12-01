@@ -5,15 +5,18 @@ class CfgPatches
     {
         author = "FST";
         name = "FST HKD Props";
-        requiredAddons[] = {"A3_Structures_F"};
+        requiredAddons[] = {"A3_Structures_F", "A3_Soft_F"};
         requiredVersion = 0.1;
         units[] = {
+            // ===== CARGO CRATES =====
+            "FST_HKD_Crate_CargoSmall_Blank",
+            "FST_HKD_Crate_CargoSmall_Blue",
+            "FST_HKD_Crate_CargoSmall_Orange",
+            "FST_HKD_Crate_CargoSmall_White",
+            "FST_HKD_Crate_CargoSmall_GeneralLogistics",
+            
             // ===== SUPPLY CRATES =====
-            "FST_HKD_Crate_SupplyMedium_Blank",
-            "FST_HKD_Crate_SupplyMedium_Blue",
-            "FST_HKD_Crate_SupplyMedium_Orange",
-            "FST_HKD_Crate_SupplyMedium_White",
-            "FST_HKD_Crate_SupplyMedium_GeneralLogistics"
+            "FST_HKD_Crate_SupplySmall_Blank"
         };
         weapons[] = {};
     };
@@ -22,6 +25,7 @@ class CfgPatches
 class CfgVehicles
 {
     class House_F;
+    class ReammoBox_F;
     #include "Crates/Crates.cpp"
     #include "Posts/Posts.cpp"
     #include "Containers/Containers.cpp"
