@@ -57,21 +57,21 @@ class FST_HKD_Barricade_Portable_Base : ThingX
     
     class DestructionEffects // Visual effects on destruction
     {
-        class Smoke
-        {
-            simulation = "smoke";
-            type = "SmokeShellWhite";
-            position = "";
-            intensity = 0.6;
-            interval = 0.1;
-        };
-        
-        class Dust
+        class MetalChunks
         {
             simulation = "particles";
-            type = "Dust";
+            type = "ObjectDestructionDebris";
             position = "";
-            intensity = 0.4;
+            intensity = 0.8;
+            interval = 0.05;
+        };
+        
+        class MetalFragments
+        {
+            simulation = "particles";
+            type = "MetalFragments";
+            position = "";
+            intensity = 0.6;
             interval = 0.1;
         };
     };
