@@ -170,6 +170,10 @@ class CfgEditorSubcategories
     {
         displayName = "Structures - Props - Signs";
     };
+    class fst_hkd_edsubcat_structures_props_barricades
+    {
+        displayName = "Structures - Props - Barricades";
+    };
     
     // Weapons
     class fst_hkd_edsubcat_weapons_rifles

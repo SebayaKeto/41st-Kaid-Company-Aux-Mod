@@ -5,6 +5,7 @@
 // Hoersch-Kessel Driveworks tactical barricade systems
 // Modular defensive barriers for field fortifications
 // All barricades reference the single HKD_InfantryBarrier.p3d model and Camo_InfantryBarricade textures
+// Destroyed state uses HKD_DestroyedAsset textures from FST_HKD_Common
 
 class FST_HKD_Barricade_Portable_Base : ThingX 
 {
@@ -24,7 +25,7 @@ class FST_HKD_Barricade_Portable_Base : ThingX
         {
             "FST\FST_HKD\FST_HKD_Props\Barricades\Data\Textures\Camo_InfantryBarricade.rvmat", // Normal state
             "FST\FST_HKD\FST_HKD_Props\Barricades\Data\Textures\Camo_InfantryBarricade.rvmat", // Light damage
-            "FST\FST_HKD\FST_HKD_Props\Barricades\Data\Textures\Camo_InfantryBarricade_Destroyed.rvmat" // Destroyed state
+            "FST\FST_HKD\FST_HKD_Common\Data\Textures\HKD_DestroyedAsset.rvmat" // Destroyed state
         };
     };
     
