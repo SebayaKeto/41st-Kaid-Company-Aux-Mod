@@ -16,7 +16,10 @@ class CfgPatches
             "FST_HKD_Crate_CargoSmall_GeneralLogistics",
             
             // ===== SUPPLY CRATES =====
-            "FST_HKD_Crate_SupplySmall_Blank"
+            "FST_HKD_Crate_SupplySmall_Blank",
+            
+            // ===== PORTABLE BARRICADES =====
+            "FST_HKD_Barricade_Portable_Blank",
         };
         weapons[] = {};
     };
@@ -26,7 +29,9 @@ class CfgVehicles
 {
     class House_F;
     class ReammoBox_F;
+    class ThingX;
     #include "Crates/Crates.cpp"
+    #include "Barricades/Barricades.cpp"
     #include "Posts/Posts.cpp"
     #include "Containers/Containers.cpp"
     #include "SignagePanels/SignagePanels.cpp"
