@@ -1326,11 +1326,11 @@ class CfgVehicles
 			"FST_500Rnd_127x99_mag_red",
 			"FST_Stormfury_12Rnd_AA_Missile",
 			"FST_Rapture_12Rnd_AGM_Missile",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
-			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
 		};
 		class textureSources
 		{
