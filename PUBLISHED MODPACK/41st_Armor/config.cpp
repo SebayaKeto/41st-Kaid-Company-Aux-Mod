@@ -17969,6 +17969,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Equipment\FST_Visor_Cardinal.paa",
 		};
 	};
+	class FST_Visor_Shockcap: FST_Visor
+	{
+		author="Ruby";
+		displayName="[41st] Officer Visor (Shockcap)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Shockcap.paa",
+		};
+	};
 	class FST_Visor_Annex: FST_Visor
 	{
 		author="Gold";
