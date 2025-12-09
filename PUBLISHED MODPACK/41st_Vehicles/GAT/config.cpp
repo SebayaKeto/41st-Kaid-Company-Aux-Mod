@@ -1934,8 +1934,8 @@ class CfgVehicles
 		};
 		hiddenSelectionstextures[]=
 		{
-			"3AS\3AS_GAT\data\hull_CO.paa",
-			"3AS\3AS_GAT\data\weapons_CO.paa"
+			"41st_Vehicles\GAT\Data\FST_GAT_SPAA_Hull",
+			"41st_Vehicles\GAT\Data\FST_GAT_SPAA_Weapons"
 		};
 		editorPreview="3as\3as_gat\images\3AS_GAT.jpg";
 		class TextureSources
