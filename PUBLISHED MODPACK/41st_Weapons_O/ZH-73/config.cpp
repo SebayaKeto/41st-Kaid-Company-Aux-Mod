@@ -41,6 +41,11 @@ class CfgWeapons
 			"This",
 			"UGL_ZH73"
 		};
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
 		class UGL_ZH73: UGL_F
 		{
 			displayName="[41st] ZH-73";
@@ -70,7 +75,8 @@ class CfgWeapons
 				"FST_thermal_slug_mag_Blue",
 				"FST_thermal_slug_mag_Green",
 				"FST_thermal_slug_mag_Red",
-				"FST_thermal_slug_mag_Yellow"
+				"FST_thermal_slug_mag_Yellow",
+				"IDA_HE_LauncherGrenade"
 			};
 			cameraDir="eye";
 			discreteDistance[]={50};
@@ -88,6 +94,12 @@ class CfgWeapons
 				10
 			};
 			magazineWell[]={};
+			minRange=50;
+			minRangeProbab=0.01;
+			midRange=150;
+			midRangeProbab=0.5;
+			maxRange=300;
+			maxRangeProbab=0.5;
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -112,15 +124,16 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.15000001;
-			dispersion=0.0030149999;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			dispersion=0.0003;
+			minRange=60;
+			minRangeProbab=1;
+			midRange=300;
+			midRangeProbab=0.85;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
+			maxRangeProbab=0.05;
+			aiRateOfFire=1.5;
+			aiRateOfFireDistance=150;
+			aiRateOfFireDispersion=2;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -146,14 +159,12 @@ class CfgWeapons
 			};
 			reloadTime=0.13;
 			dispersion=0.0014545;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
+			minRange=1;
+			minRangeProbab=0;
+			midRange=50;
+			midRangeProbab=0;
+			maxRange=100;
+			maxRangeProbab=0;
 		};
 	};
 };

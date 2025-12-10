@@ -60,6 +60,12 @@ class CfgAmmo
 		smokeColor[]={1,0.45,0.1,1};
 	};
 };
+class CowsSlot;
+class UnderBarrelSlot;
+class MuzzleSlot;
+class PointerSlot;
+class Mode_SemiAuto;
+class Mode_FullAuto;
 class CfgWeapons
 {
 	class U_I_CombatUniform;
@@ -861,6 +867,289 @@ class CfgWeapons
 			};
 		};
 	};
+	class JMSLLTE_e5;
+	class WeaponSlotsInfo;
+	class FST_E5_Human: JMSLLTE_e5
+	{
+		scope=1;
+		displayName="[41st] E5 Elite";
+		baseWeapon="FST_E5_Human";
+		model="\JMSLLTE_weapons\e5\e5.p3d";
+		author="Tooka";
+		descriptionShort="Shiny version of an E5.";
+		reloadAction="";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\blaster_reload_3.ogg",
+			1.5,
+			1,
+			100
+		};
+		recoil="recoil_spar";
+		magazines[]=
+		{
+			"FST_Droid_blaster_cell_Red"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					1.015,
+					1800
+				};
+				begin3[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					0.98500001,
+					1800
+				};
+				begin4[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					1.01,
+					1800
+				};
+				begin5[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					0.995,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			reloadTime=0.5;
+			dispersion=0.00095;
+			minRange=75;
+			minRangeProbab=0.6;
+			midRange=200;
+			midRangeProbab=0.5;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1.75,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1.75,
+					1.015,
+					1800
+				};
+				begin3[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1.75,
+					0.98500001,
+					1800
+				};
+				begin4[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1.75,
+					1.01,
+					1800
+				};
+				begin5[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1.75,
+					0.995,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			reloadTime=0.15;
+			dispersion=0.0055;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
+			midRangeProbab=0.69999999;
+			maxRange=100;
+			maxRangeProbab=0.30000001;
+		};
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		weaponInfoType="RscOptics_nightstalker";
+		modelOptics="\Indecisive_Armoury_Weapons_Imperial\Data\LowPower_Scope\IDA_LowPower_Scope_Red.p3d";
+		class OpticsModes
+		{
+			class Iron
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+			};
+			class E5_Scope
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				cameraDir="";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=50;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]=
+				{
+					"JMSLLTE_acc_flashlight"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class linkedItems
+		{
+			class Pointer
+			{
+				slot="PointerSlot";
+				item="JMSLLTE_acc_flashlight";
+			};
+		};
+	};
 	class GrenadeLauncher;
 	class Throw: GrenadeLauncher
 	{
@@ -1262,7 +1551,12 @@ class CfgVehicles
 			class _xx_FST_HE_LauncherGrenade
 			{
 				name="FST_HE_LauncherGrenade";
-				count=1;
+				count=2;
+			};
+			class _xx_IDA_HE_LauncherGrenade
+			{
+				name="IDA_HE_LauncherGrenade";
+				count=2;
 			};
 		};
 	};
@@ -1397,9 +1691,9 @@ class CfgVehicles
 				name="ACE_splint";
 				count=5;
 			};
-			class _xx_ACE_touniquet
+			class _xx_ACE_tourniquet
 			{
-				name="ACE_touniquet";
+				name="ACE_tourniquet";
 				count=5;
 			};
 			class _xx_ACE_bloodIV
@@ -1872,7 +2166,7 @@ class CfgVehicles
 				material=-1;
 				name="face_hub";
 				passThrough=0.9;
-				radius=0.08;
+				radius=0.1;
 				explosionShielding=0.1;
 				minimalHit=0;
 			};
@@ -1882,7 +2176,7 @@ class CfgVehicles
 				material=-1;
 				name="neck";
 				passThrough=0.9;
-				radius=0.08;
+				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0;
 			};
@@ -1892,7 +2186,7 @@ class CfgVehicles
 				material=-1;
 				name="head";
 				passThrough=0.5;
-				radius=0.12;
+				radius=0.14;
 				explosionShielding=0.5;
 				minimalHit=0.002;
 				depends="HitFace max HitNeck";
@@ -2115,6 +2409,7 @@ class CfgVehicles
 			"FST_CIS_AmmoVest",
 			"JLTS_droid_comlink",
 			"JLTS_NVG_droid_chip_2",
+			"G_JMSLLTE_None",
 			"3AS_CIS_Light_helmet"
 		};
 		magazines[]=
@@ -2126,7 +2421,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Autorifleman'; _unit suppressFor 999; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Autorifleman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_AT: FST_CIS_Heavy_Base_F
@@ -2184,7 +2479,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Antitank'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.7]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Antitank'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.7]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_AA: FST_CIS_Heavy_Base_F
@@ -2242,7 +2537,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Antiair'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.8]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Antiair'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.8]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class O_soldier_base_F;
@@ -2296,7 +2591,7 @@ class CfgVehicles
 				material=-1;
 				name="face_hub";
 				passThrough=0.9;
-				radius=0.08;
+				radius=0.1;
 				explosionShielding=0.1;
 				minimalHit=0;
 			};
@@ -2306,7 +2601,7 @@ class CfgVehicles
 				material=-1;
 				name="neck";
 				passThrough=0.9;
-				radius=0.08;
+				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0;
 			};
@@ -2316,7 +2611,7 @@ class CfgVehicles
 				material=-1;
 				name="head";
 				passThrough=0.5;
-				radius=0.12;
+				radius=0.14;
 				explosionShielding=0.5;
 				minimalHit=0.002;
 				depends="HitFace max HitNeck";
@@ -2481,7 +2776,10 @@ class CfgVehicles
         };
 		Items[]={};
 		respawnItems[]={};
-		linkedItems[]={};
+		linkedItems[]=
+		{
+			"G_JMSLLTE_None"
+		};
 		respawnLinkedItems[]={};
 		magazines[]={};
 		respawnMagazines[]={};
@@ -2544,7 +2842,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Standard Trooper'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Standard Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_AmmoB: FST_U_CIS_Light
@@ -2577,7 +2875,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_ZK73_Standard",
+			"FST_E5_Human",
 			"IDA_VibroKnife",
 			"Throw",
 			"Put"
@@ -2600,14 +2898,13 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_ZH73_Mag_Red",
-			"FST_thermal_slug_mag_Red",
+			"FST_Droid_blaster_cell_red",
 			"ACE_Chemlight_HiRed",
 			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'FST_thermal_slug_mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _u addItemToVest 'FST_ZH73_Mag_Red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Ammo Bearer'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;};  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.65]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Ammo Bearer'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;};  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.65]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_U_CIS_Light_Veteran: FST_U_CIS_Light
@@ -2688,7 +2985,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division RTO'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.75]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division RTO'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.75]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_CQC: FST_U_CIS_Light
@@ -2748,7 +3045,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division CQC'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division CQC'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_Gren: FST_U_CIS_Light
@@ -2805,14 +3102,14 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_ZH73_Mag_Red",
-			"FST_HE_LauncherGrenade",
+			"IDA_HE_LauncherGrenade",
 			"FST_blaster_cell_low_Red",
 			"ACE_Chemlight_HiRed",
 			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; (_this select 0) addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Grenadier'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; (_this select 0) addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Grenadier'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_Mark: FST_U_CIS_Light
@@ -2874,7 +3171,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Marksman'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.85]; _u setSkill ['aimingShake',0.8]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.65]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Marksman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.85]; _u setSkill ['aimingShake',0.8]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.65]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_EOD: FST_U_CIS_Light
@@ -2936,7 +3233,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToVest 'ACE_M26_Clacker'; _u addItemToVest 'MineDetector'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division EOD'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;};  _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.75]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToVest 'ACE_M26_Clacker'; _u addItemToVest 'MineDetector'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division EOD'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;};  _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.75]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_DroneOp: FST_U_CIS_Light
@@ -2999,7 +3296,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Droid Operator'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.75]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.75]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Droid Operator'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.75]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.75]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_U_CIS_Medic: FST_U_CIS_Light
@@ -3075,7 +3372,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red';  _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Medic'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.5]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red';  _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Medic'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.5]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_U_CIS_Combat_Officer: FST_U_CIS_Light
@@ -3151,7 +3448,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Commander'; [_unit, 0.2, 'body', 'stab'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.8]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.9]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'DIAMOND';};";
+			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Commander'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.8]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.9]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'DIAMOND';};";
 		};
 	};
 	class JMSLLTE_EmpOfficer_black_F;

@@ -37,7 +37,7 @@ class CfgWeapons
 			"FST_blaster_scatter_cell_SBB3_Yellow",
 			"FST_blaster_scatter_cell_SBB3_Red",
 		};
-		reloadAction="";
+		reloadAction="WBK_HaloShotgun_Reload";
 		recoil="FST_recoil_DP23";
 		class Fire: Mode_SemiAuto
 		{
@@ -121,11 +121,11 @@ class CfgWeapons
 			soundBurst="true";
 			dispersion=0;
 			minRange=1;
-			minRangeProbab=0.5;
+			minRangeProbab=1;
 			midRange=25;
 			midRangeProbab=0.075000003;
-			maxRange=50;
-			maxRangeProbab=0.30000001;
+			maxRange=10000;
+			maxRangeProbab=0.1;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

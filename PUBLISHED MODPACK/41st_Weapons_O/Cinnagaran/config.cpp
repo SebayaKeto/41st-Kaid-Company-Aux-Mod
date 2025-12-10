@@ -39,12 +39,14 @@ class CfgWeapons
 		{
 			reloadTime=0.050000001;
 			dispersion=0.00066000002;
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=20;
+			minRangeProbab=0.89;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=55;
 			soundContinuous=0;
 			soundBurst=0;
 			sounds[]=
@@ -63,13 +65,15 @@ class CfgWeapons
 		class FullAuto: Mode_FullAuto
 		{
 			reloadTime=0.079999998;
-			dispersion=0.00106;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			dispersion=0.00206;
+			minRange=1;
+			minRangeProbab=0.99;
+			midRange=50;
+			midRangeProbab=0.75;
+			maxRange=100;
+			maxRangeProbab=0.2;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=1000;
 			soundContinuous=0;
 			soundBurst=0;
 			sounds[]=

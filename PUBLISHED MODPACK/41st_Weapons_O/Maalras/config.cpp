@@ -140,8 +140,14 @@ class CfgWeapons
 			reloadTime=0.059999999;
 			soundContinuous=0;
 			autoFire=0;
-			aiRateOfFire=0.1;
-			aiRateOfFireDistance=0;
+			minRange=20;
+			minRangeProbab=0.89;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=55;
 			dispersion=0.0020300001;
 			sounds[]=
 			{
@@ -186,8 +192,14 @@ class CfgWeapons
 			burst=1;
 			soundContinuous=0;
 			autoFire=1;
-			aiRateOfFire=0.079999998;
-			aiRateOfFireDistance=0;
+			minRange=1;
+			minRangeProbab=0.99;
+			midRange=50;
+			midRangeProbab=0.75;
+			maxRange=100;
+			maxRangeProbab=0.2;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=1000;
 			dispersion=0.0020300001;
 			sounds[]=
 			{

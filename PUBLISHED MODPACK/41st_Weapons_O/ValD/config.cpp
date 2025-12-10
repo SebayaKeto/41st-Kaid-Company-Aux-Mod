@@ -118,12 +118,12 @@ class CfgWeapons
 			dispersion=0.00145;
 			recoil="M240Recoil";
 			recoilProne="M240RecoilProne";
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=1;
+			minRangeProbab=0.75;
 			midRange=100;
-			midRangeProbab=0.69999999;
+			midRangeProbab=0.65;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.40000001;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

@@ -667,6 +667,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		coefGravity=0.1;
 	};
 	class FST_blasterbolt_DMR_Blue: FST_blasterbolt
 	{
@@ -939,6 +940,7 @@ class CfgAmmo
 		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+		allowAgainstInfantry=0;
 	};
 	class FST_TDHE_RifleGrenade: G_40mm_HE
 	{

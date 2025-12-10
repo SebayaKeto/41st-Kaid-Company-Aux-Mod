@@ -151,12 +151,12 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.2;
-			dispersion=0.00120000003;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			reloadTime=0.5;
+			dispersion=0.00095;
+			minRange=75;
+			minRangeProbab=0.6;
+			midRange=200;
+			midRangeProbab=0.5;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
@@ -237,13 +237,13 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.2;
-			dispersion=0.00120000003;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
+			reloadTime=0.15;
+			dispersion=0.0055;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
 			midRangeProbab=0.69999999;
-			maxRange=10000;
+			maxRange=100;
 			maxRangeProbab=0.30000001;
 		};
 		distanceZoomMin=400;
@@ -552,9 +552,9 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\41st_Weapons\CIS\Data\SW02_Weapons_Blasters_E5_Laser_Close_VAR_04 0 0 0.wav",
-					2.5,
+					"MRC\JLTS\weapons\E5\sounds\E5_fire",
 					1,
+					0.89999998,
 					1800
 				};
 				soundBegin[]=
@@ -577,12 +577,15 @@ class CfgWeapons
 			};
 			reloadTime=0.2;
 			dispersion=0.00010000003;
-			minRange=2;
+			minRange=1;
 			minRangeProbab=0.5;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 	};
 	class IDA_WristBlaster;

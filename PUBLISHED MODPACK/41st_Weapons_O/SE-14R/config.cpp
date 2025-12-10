@@ -89,15 +89,16 @@ class CfgWeapons
 			};
 			recoilProne="recoil_prone_pistol_heavy";
 			reloadTime=0.1;
-			dispersion=0.0039900001;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
+			dispersion=0.0035;
+			minRange=1;
+			minRangeProbab=1;
+			midRange=75;
+			midRangeProbab=0.65;
+			maxRange=100;
+			maxRangeProbab=0.05;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=20;
+			aiRateOfFireDispersion=1;
 			soundContinuous=0;
 			soundBurst=0;
 			
