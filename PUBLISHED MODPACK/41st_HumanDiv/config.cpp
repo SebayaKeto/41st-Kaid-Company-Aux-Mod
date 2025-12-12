@@ -2182,7 +2182,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=6;
+				armor=4;
 				material=-1;
 				name="head";
 				passThrough=0.5;
@@ -2204,7 +2204,7 @@ class CfgVehicles
 			};
 			class HitAbdomen
 			{
-				armor=7;
+				armor=6;
 				material=-1;
 				name="spine1";
 				passThrough=0.8;
@@ -2215,7 +2215,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm
 			{
-				armor=8;
+				armor=7;
 				material=-1;
 				name="spine2";
 				passThrough=0.7;
@@ -2237,7 +2237,7 @@ class CfgVehicles
 			};
 			class HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="body";
 				passThrough=0.99;
@@ -2607,7 +2607,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=6;
+				armor=5;
 				material=-1;
 				name="head";
 				passThrough=0.5;
@@ -2618,7 +2618,7 @@ class CfgVehicles
 			};
 			class HitPelvis
 			{
-				armor=6;
+				armor=5;
 				material=-1;
 				name="pelvis";
 				passThrough=0.9;
@@ -2629,7 +2629,7 @@ class CfgVehicles
 			};
 			class HitAbdomen
 			{
-				armor=7;
+				armor=5;
 				material=-1;
 				name="spine1";
 				passThrough=0.8;
@@ -2640,7 +2640,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm
 			{
-				armor=7;
+				armor=6;
 				material=-1;
 				name="spine2";
 				passThrough=0.7;
@@ -2662,7 +2662,7 @@ class CfgVehicles
 			};
 			class HitBody
 			{
-				armor=15;
+				armor=13;
 				material=-1;
 				name="body";
 				passThrough=0.99;
@@ -2677,7 +2677,7 @@ class CfgVehicles
 				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=0.99;
+				passThrough=1;
 				radius=0;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -2701,7 +2701,7 @@ class CfgVehicles
 				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=0.99;
+				passThrough=1;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -2713,7 +2713,7 @@ class CfgVehicles
 				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=0.99;
+				passThrough=1;
 				radius=0;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -2728,7 +2728,7 @@ class CfgVehicles
 				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=0.99;
+				passThrough=1;
 				radius=0.06;
 				explosionShielding=3;
 				visual="injury_legs";
