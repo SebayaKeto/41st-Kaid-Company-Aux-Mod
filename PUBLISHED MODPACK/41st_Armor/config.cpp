@@ -178,6 +178,7 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty",
 			"FST_P2_Squatch_V2",
 			"FST_P2_Squatch_Dirty_V2",
+			"FST_P2_Marcus",
 			"FST_P2_Nori",
 			"FST_P2_Nori_Dirty",
 			"FST_P2_Kate",
@@ -8076,6 +8077,18 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Cursed: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Cursed]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Cursed.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
   	class FST_Pilot_P1_Helmet_Ripper: FST_Pilot_P1_Helmet
 	{
 		author="Daara";
@@ -15469,6 +15482,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Marcus: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Marcus]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Marcus";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Coldstart: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -33447,7 +33474,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Cursed",
+			"FST_P1_Pilot_Helmet_Cursed",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -33457,7 +33484,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Cursed",
+			"FST_P1_Pilot_Helmet_Cursed",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -38528,6 +38555,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Marcus: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-1551 'Marcus'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Marcus";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Marcus.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Marcus.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Marcus",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Marcus",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
