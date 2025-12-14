@@ -184,15 +184,22 @@ class CfgVehicles
 				memoryPointsGetInGunnerDir="Pos Gunner dir";
 				weapons[]=
 				{
-					"FST_Flak_Cannon"
+					"FST_40mw_HH9P_AC"
 				};
 				magazines[]=
 				{
-					"FST_FlakCannon_1000Rnd_AA_shells",
-					"FST_FlakCannon_1000Rnd_AA_shells",
-					"FST_FlakCannon_1000Rnd_AA_shells",
-					"FST_FlakCannon_1000Rnd_AA_shells",
-					"FST_FlakCannon_1000Rnd_AA_shells"
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag",
+					"FST_40mm_UB9HV_HEI_x140_mag"
 				};
 				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
 				gunnerOpticsShowCursor=1;
