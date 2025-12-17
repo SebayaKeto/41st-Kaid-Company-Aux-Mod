@@ -213,6 +213,9 @@ class CfgPatches
 			"FST_P2_Major",
 			"FST_P2_Major_Dirty",		
 			"FST_P2_Seraph",
+			"FST_P2_Strider",
+			"FST_P2_Lang",
+			"FST_P2_Twist",
 			"FST_P2_Arthur",
 			"FST_P2_Merlin",
 			"FST_P2_Zik",
@@ -10257,6 +10260,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Seraph.paa",
 		};
 	};
+	class FST_P2_Helmet_Strider: FST_P2_Helmet_Base
+	{
+		author="Fowler";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Strider]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Strider.paa",
+		};
+	};
 		class FST_P2_Helmet_Pig: FST_P2_Helmet_Base
 	{
 		author="Fowler";
@@ -16196,6 +16209,34 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Lang: JLTS_CloneArmor
+	{
+		author="Fowler";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Lang]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Lang";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Twist: JLTS_CloneArmor
+	{
+		author="Fowler";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Twist]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Twist";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Harm: JLTS_CloneArmor
 	{
 		author="Fowler";
@@ -17487,6 +17528,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Arcus_Dirty.paa",
+		};
+	};
+	class FST_NVG_Demon: FST_NVG
+	{
+		author="Demon";
+		displayName="[41st] NCO Macrobinoculars (Demon)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Demon.paa",
 		};
 	};
 	class FST_NVG_Hex: FST_NVG
@@ -40755,6 +40805,116 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Crewman_Helmet_Seraph",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Lang: FST_Trooper_P2_DC15S
+	{
+		author="Lang";
+		displayName="[41st] CT-5050 'Lang'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Lang";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Lang.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Lang.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Lang",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Lang",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Twist: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-7274 'Twist'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Twist";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Twist.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Twist.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Twist",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Twist",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
