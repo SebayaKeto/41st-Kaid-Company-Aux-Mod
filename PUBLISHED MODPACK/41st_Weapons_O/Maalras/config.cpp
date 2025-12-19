@@ -48,7 +48,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"DBA_Republic\Addons\DBA_Weapons\DBA_Maalras\Rifle.rvmat"
+			"DBA_Republic\Addons\DBA_Weapons\DBA_Maalras\data\Rifle.rvmat"
 		};
 		modelOptics="-";
 		optics=1;
