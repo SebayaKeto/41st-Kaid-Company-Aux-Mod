@@ -31,11 +31,29 @@ class CfgPatches
 	};
 	author="Tooka";
 };
+class CfgFactionClasses
+{
+	class FST_HumanDiv_Faction
+	{
+		displayName="41st CIS Humans";
+		priority=1;
+		side=2;
+		icon="";
+	};
+};
 class CfgEditorSubcategories
 {
 	class FST_HumanDiv
 	{
 		displayName = "Human Division"; 
+	};
+	class FST_NavalStaff
+	{
+		displayName = "Naval Staff"; 
+	};
+	class FST_BaseStaff
+	{
+		displayName = "Base Staff"; 
 	};
 };
 class CfgMagazines
@@ -51,9 +69,16 @@ class CfgMagazines
 		model="\Indecisive_Armoury_Ammos\Data\Smoke\IDA_smoke_grenade.p3d";
 		ammo="FST_smoke_Orange";
 	};
+	class FST_E60R_AA_mag;
+	class FST_E60R_AA_mag_HD: FST_E60R_AA_mag
+	{
+		scope=1;
+		mass=1;
+	};
 };
 class CfgAmmo
 {
+	class GrenadeHand_stone;
 	class IDA_smoke;
 	class FST_smoke_Orange: IDA_smoke
 	{
@@ -867,6 +892,32 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_RPS6HP;
+	class FST_RPS6HP_HD: FST_RPS6HP
+	{
+		scope=1;
+		displayName="[41st] RPS-6 Human Division";
+		baseWeapon="FST_RPS6HP_HD";
+		class WeaponSlotsInfo
+		{
+			mass=1;
+		};
+	};
+	class FST_E60R_AA;
+	class FST_E60R_AA_HD: FST_E60R_AA
+	{
+		scope=1;
+		displayName="[41st] E60R Human Division";
+		baseWeapon="FST_E60R_AA_HD";
+		magazines[]=
+		{
+			"FST_E60R_AA_mag_HD"
+		};
+		class WeaponSlotsInfo
+		{
+			mass=1;
+		};
+	};
 	class JMSLLTE_e5;
 	class WeaponSlotsInfo;
 	class FST_E5_Human: JMSLLTE_e5
@@ -1155,7 +1206,7 @@ class CfgWeapons
 	{
 		muzzles[]+=
 		{
-			"FST_grenade_Smoke_Orange_muzzle",
+			"FST_grenade_Smoke_Orange_muzzle"
 		};
 		class ThrowMuzzle;
 		class FST_grenade_Smoke_Orange_muzzle: ThrowMuzzle
@@ -1623,9 +1674,9 @@ class CfgVehicles
 				name="FST_blaster_cell_low_Red";
 				count=15;
 			};
-			class _xx_FST_E60R_AA_mag
+			class _xx_FST_E60R_AA_mag_HD
 			{
-				name="FST_E60R_AA_mag";
+				name="FST_E60R_AA_mag_HD";
 				count=2;
 			};
 		};
@@ -2111,7 +2162,7 @@ class CfgVehicles
 		faceType="Man_A3";
 		backpack="";
 		side=0;
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		genericNames="NATOMen";
 		vehiclesClass="Men";
 		editorSubcategory="FST_HumanDiv";
@@ -2355,7 +2406,7 @@ class CfgVehicles
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
 		backpack="FST_HumDivBack_Auto";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -2378,7 +2429,7 @@ class CfgVehicles
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
 		backpack="FST_HumDivBack_Auto";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -2436,7 +2487,7 @@ class CfgVehicles
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
 		backpack="FST_HumDivBack_AT";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -2450,7 +2501,7 @@ class CfgVehicles
 		{
 			"FST_ValD_Standard",
 			"FST_SE14R",
-			"FST_RPS6HP",
+			"FST_RPS6HP_HD",
 			"Throw",
 			"Put"
 		};
@@ -2494,7 +2545,7 @@ class CfgVehicles
 		uniformClass="FST_U_CIS_Heavy_Armor";
 		role="Rifleman";
 		backpack="FST_HumDivBack_AA";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -2508,7 +2559,7 @@ class CfgVehicles
 		{
 			"FST_ValD_Standard",
 			"FST_SE14R",
-			"FST_E60R_AA",
+			"FST_E60R_AA_HD",
 			"Throw",
 			"Put"
 		};
@@ -2533,7 +2584,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Red",
 			"FST_blaster_cell_low_Red",
-			"FST_E60R_AA_mag"
+			"FST_E60R_AA_mag_HD"
 		};
 		class EventHandlers
 		{
@@ -2802,7 +2853,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -2863,7 +2914,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -2944,7 +2995,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -3006,7 +3057,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -3066,7 +3117,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -3130,7 +3181,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -3192,7 +3243,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		canDeactivateMines = 1;	
 		hiddenSelections[]=
@@ -3254,7 +3305,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Light_Armor_Veteran";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -3328,7 +3379,7 @@ class CfgVehicles
 		nakedUniform="U_BasicBody";
 		uniformClass="FST_U_CIS_Medic_Armor";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		attendant = 1;
 		hiddenSelections[]=
@@ -3404,7 +3455,7 @@ class CfgVehicles
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
+		faction="FST_HumanDiv_Faction";
 		editorSubcategory="FST_HumanDiv";
 		hiddenSelections[]=
 		{
@@ -3489,8 +3540,8 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_HumanDiv";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_NavalStaff";
 		hiddenSelections[]=
 		{
 			"Camo1"
@@ -3554,8 +3605,8 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_HumanDiv";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_BaseStaff";
 		class HitPoints
 		{
 			class HitFace
@@ -3782,8 +3833,8 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_HumanDiv";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_NavalStaff";
 		hiddenSelections[]=
 		{
 			"Camo1"
@@ -3873,8 +3924,8 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_HumanDiv";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_BaseStaff";
 		class HitPoints
 		{
 			class HitFace
@@ -4092,8 +4143,8 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_HumanDiv";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_NavalStaff";
 		hiddenSelections[]=
 		{
 			"Camo1"
@@ -4155,8 +4206,8 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
 		role="Rifleman";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_HumanDiv";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_NavalStaff";
 		hiddenSelections[]=
 		{
 			"Camo1"
@@ -4206,9 +4257,9 @@ class cfgGroups
 	{
 		name="OPFOR";
 		
-		class FST_CIS
+		class FST_HumanDiv_Faction
 		{
-			name="41st Battledroids";
+			name="41st CIS Humans";
 			
 			class FST_HumanDiv
 			{
@@ -4217,7 +4268,7 @@ class cfgGroups
 				class FST_S_HumanDiv_Fireteam
 				{
 					name="[41st] Human Division Fireteam";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4265,7 +4316,7 @@ class cfgGroups
 				class FST_S_HumanDiv_Antiair
 				{
 					name="[41st] Human Division Antiair Team";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4292,7 +4343,7 @@ class cfgGroups
 				class FST_S_HumanDiv_Markers
 				{
 					name="[41st] Human Division Marksman Team";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4326,7 +4377,7 @@ class cfgGroups
 				class FST_S_HumanDiv_Standard
 				{
 					name="[41st] Human Division Standard Squad";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4430,7 +4481,7 @@ class cfgGroups
 				class FST_S_HumanDiv_ExlpoSquad
 				{
 					name="[41st] Human Division Explosives Squad";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4531,10 +4582,119 @@ class cfgGroups
 						position[]={0,-6,0};
 					};
 				};
+				class FST_S_HumanDiv_BaseGuard
+				{
+					name="[41st] Human Division Guard Squad";
+					faction="FST_HumanDiv_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_Officer";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_Standard";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_CQC";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_AmmoB";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_Auto";
+						rank="CORPORAL";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_CQC";
+						rank="CORPORAL";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_Medic";
+						rank="CORPORAL";
+						position[]={1,-6,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_RTO";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_Standard";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_CQC";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_AmmoB";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_Auto";
+						rank="CORPORAL";
+						position[]={0,-4,0};
+					};
+					class Unit12
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_CQC";
+						rank="CORPORAL";
+						position[]={0,-5,0};
+					};
+					class Unit13
+					{
+						side=0;
+						vehicle="FST_CIS_HumanDiv_DroneOp";
+						rank="CORPORAL";
+						position[]={0,-6,0};
+					};
+				};
+			};
+			class FST_BaseStaff
+			{
+				name="Base Staff";
+
 				class FST_S_HumanDiv_BaseStaff
 				{
 					name="[41st] Human Division Base Staff";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4635,10 +4795,15 @@ class cfgGroups
 						position[]={0,-6,0};
 					};
 				};
+			};
+			class FST_NavalStaff
+			{
+				name="Naval Staff";
+
 				class FST_S_HumanDiv_NavyStaff
 				{
 					name="[41st] Human Division Navy Staff";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
@@ -4742,7 +4907,7 @@ class cfgGroups
 				class FST_S_HumanDiv_BridgeStaff
 				{
 					name="[41st] Human Division Bridge Crew";
-					faction="FST_BattleDroids_Faction";
+					faction="FST_HumanDiv_Faction";
 					side=0;
 					class Unit0
 					{
