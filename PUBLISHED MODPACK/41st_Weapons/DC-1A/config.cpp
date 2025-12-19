@@ -52,6 +52,10 @@ class CfgWeapons
 		scopeArsenal=2;
 		ace_clearJamAction="";
 		reloadAction="3AS_GestureReload_DC17M";
+		hiddenSelectionsMaterials[]=
+		{
+			"DBA_Republic\Addons\DBA_Weapons\DBA_DC15A\Data\DC15AMOD0.rvmat"
+		};
 		magazines[]=
 		{
 			"FST_DC1A_Prototype_120Rnd_Blue",

@@ -32,6 +32,10 @@ class CfgWeapons
 		model="DBA_Republic\Addons\DBA_Weapons\DBA_ValD\DBA_ValD.p3d";
 		picture="DBA_Republic\Addons\DBA_Effects\icons\Verpine_CA.paa";
 		UiPicture="DBA_Republic\Addons\DBA_Effects\icons\Verpine_CA.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"DBA_Republic\Addons\DBA_Weapons\DBA_ValD\Data\DBA_ValD.rvmat"
+		};
 		magazines[]=
 		{
 			"FST_blaster_cell_Blue",

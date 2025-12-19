@@ -22,6 +22,10 @@ class CfgWeapons
 		baseWeapon="FST_Gundark";
 		scope=2;
 		model="DBA_Republic\Addons\DBA_Weapons\DBA_Gundark\gundark.p3d";
+		hiddenSelectionsMaterials[]=
+		{
+			"DBA_Republic\Addons\DBA_Weapons\DBA_Gundark\data\Gundark.rvmat"
+		};
 		magazines[]=
 		{
 			"FST_blaster_cell_LE_Blue",

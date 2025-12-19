@@ -26,6 +26,10 @@ class CfgWeapons
 		baseWeapon="FST_Verpine";
 		scope=2;
 		model="DBA_Republic\Addons\DBA_Weapons\DBA_Verpine\verpine.p3d";
+		hiddenSelectionsMaterials[]=
+		{
+			"DBA_Republic\Addons\DBA_Weapons\DBA_Verpine\data\Valken.rvmat"
+		};
 		magazines[]=
 		{
 			"FST_blaster_cell_High_Blue",
