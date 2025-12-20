@@ -144,7 +144,7 @@ class CfgMusic
 		"FST_Clair_RenoirsCane",
 		"FST_Clair_WeLost",
 		"FST_Clair_TheEndInMe",
-		"FST_Clair_VersosDrafts",
+		"FST_Clair_Osquio",
 		"FST_Clair_NosVies",
 	
 		
@@ -1528,25 +1528,25 @@ class CfgMusic
 		};
 		duration="176";
 	};
-	class FST_Clair_VersosDrafts
-	{
-		name="(Clair Obscur) Verso's Drafts";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Clair33_Verso's_Drafts",
-			1,
-			1
-		};
-		duration="282";
-	};
+	class FST_Clair_Osquio
+    {
+        name="(Clair Obscur) Osquio - Verso's Draft";
+        musicClass="FST_OtherGames";
+        sound[]=
+        {
+            "41st_Music\GameTracks\Clair33_Osquio_VersoDrafts.ogg",
+            1,
+            1
+        };
+        duration="282";
+    };
 	class FST_Clair_NosVies
 	{
 		name="(Clair Obscur) Nos vies en Lumiere";
 		musicClass="FST_OtherGames";
 		sound[]=
 		{
-			"41st_Music\GameTracks\Clair33_Nos_vies_en_Lumiere",
+			"41st_Music\GameTracks\Clair33_Nosvies_enLumiere.ogg",
 			1,
 			1
 		};
