@@ -1514,7 +1514,7 @@ class CfgMusic
 			1,
 			1
 		};
-		duration="92";
+		duration="513";
 	};
 	class FST_Clair_TheEndInMe
 	{
