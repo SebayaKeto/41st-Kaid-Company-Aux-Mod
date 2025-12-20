@@ -129,6 +129,23 @@ class CfgMusic
 		"FST_LobotomyCorp_FourthWarning",
 		"FST_Stygian_Scope",
 		"FST_Destiny_Invitation",
+		"FST_Clair_Un33Decembre",
+		"FST_Clair_RainfromtheGround",
+		"FST_Clair_Lumiere",
+		"FST_Clair_Alicia",
+		"FST_Clair_Dualliste",
+		"FST_Clair_OurDraftsCollides",
+		"FST_Clair_Monoco",
+		"FST_Clair_Paintress",
+		"FST_Clair_InLumieresName",
+		"FST_Clair_Lampmaster",
+		"FST_Clair_UneViePiendre",
+		"FST_Clair_UneViewTaimer",
+		"FST_Clair_RenoirsCane",
+		"FST_Clair_WeLost",
+		"FST_Clair_TheEndInMe",
+		"FST_Clair_VersosDrafts",
+		"FST_Clair_NosVies",
 	
 		
 		//Misc tracks
@@ -1330,6 +1347,210 @@ class CfgMusic
 			1
 		};
 		duration="189";
+	};
+	class FST_Clair_Un33Decembre
+	{
+		name="(Clair Obscur) Un 33 Decembre a Paris";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Un_33_Decembre_a_Paris.ogg",
+			1,
+			1
+		};
+		duration="133";
+	};
+	class FST_Clair_RainfromtheGround
+	{
+		name="(Clair Obscur) Rain from the Ground";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Rain_from_the_Ground.ogg",
+			1,
+			1
+		};
+		duration="185";
+	};
+	class FST_Clair_Lumiere
+	{
+		name="(Clair Obscur) Lumiere";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Lumiere.ogg",
+			1,
+			1
+		};
+		duration="222";
+	};
+	class FST_Clair_Alicia
+	{
+		name="(Clair Obscur) Alicia";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Alicia.ogg",
+			1,
+			1
+		};
+		duration="170";
+	};
+	class FST_Clair_Dualliste
+	{
+		name="(Clair Obscur) Dualliste";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Dualliste.ogg",
+			1,
+			1
+		};
+		duration="362";
+	};
+	class FST_Clair_OurDraftsCollides
+	{
+		name="(Clair Obscur) Our Drafts Collides";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Our_Drafts_Collides.ogg",
+			1,
+			1
+		};
+		duration="472";
+	};
+	class FST_Clair_Monoco
+	{
+		name="(Clair Obscur) Monoco";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Monoco.ogg",
+			1,
+			1
+		};
+		duration="144";
+	};
+	class FST_Clair_Paintress
+	{
+		name="(Clair Obscur) Paintress";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Paintress.ogg",
+			1,
+			1
+		};
+		duration="530";
+	};
+	class FST_Clair_InLumieresName
+	{
+		name="(Clair Obscur) In Lumiere's Name";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_In_Lumiere's_Name.ogg",
+			1,
+			1
+		};
+		duration="187";
+	};
+	class FST_Clair_Lampmaster
+	{
+		name="(Clair Obscur) Lampmaster";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Lampmaster.ogg",
+			1,
+			1
+		};
+		duration="223";
+	};
+	class FST_Clair_UneViePiendre
+	{
+		name="(Clair Obscur) Une Vie a Peindre";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Une_vie_a_peindre.ogg",
+			1,
+			1
+		};
+		duration="660";
+	};
+	class FST_Clair_UneViewTaimer
+	{
+		name="(Clair Obscur) Une Vie a T'aimer";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Une_vie_a_t'aimer.ogg",
+			1,
+			1
+		};
+		duration="660";
+	};
+	class FST_Clair_RenoirsCane
+	{
+		name="(Clair Obscur) Renoir's Cane";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Renoir's_Cane.ogg",
+			1,
+			1
+		};
+		duration="92";
+	};
+	class FST_Clair_WeLost
+	{
+		name="(Clair Obscur) We Lost";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_We_Lost.ogg",
+			1,
+			1
+		};
+		duration="92";
+	};
+	class FST_Clair_TheEndInMe
+	{
+		name="(Clair Obscur) The End In Me";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_The_End_In_Me.ogg",
+			1,
+			1
+		};
+		duration="176";
+	};
+	class FST_Clair_VersosDrafts
+	{
+		name="(Clair Obscur) Verso's Drafts";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Verso's_Drafts",
+			1,
+			1
+		};
+		duration="282";
+	};
+	class FST_Clair_NosVies
+	{
+		name="(Clair Obscur) Nos vies en Lumiere";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Nos_vies_en_Lumiere",
+			1,
+			1
+		};
+		duration="1980";
 	};
 
 	//Films

@@ -11734,7 +11734,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch.paa",
 		};
-	};	
+	};
 	class FST_P2_Helmet_Squatch_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -11743,6 +11743,56 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Zora: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Zora]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Zora.paa",
+		};
+	};
+	class FST_P2_Helmet_Mig: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Mig]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mig.paa",
+		};
+	};
+	class FST_P2_Helmet_Knight: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Knight]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Knight.paa",
+		};
+	};
+	class FST_P2_Helmet_Forge: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Forge]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Forge.paa",
+		};
+	};
+	class FST_P2_Helmet_Raptor: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Raptor]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Raptor.paa",
 		};
 	};
 	class FST_P2_Helmet_Bard: FST_P2_Helmet_Base
@@ -17771,6 +17821,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Squatch.paa",
+		};
+	};
+	class FST_NVG_Vix: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Vix)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Vix.paa",
 		};
 	};
 	class FST_NVG_Kirby: FST_NVG
