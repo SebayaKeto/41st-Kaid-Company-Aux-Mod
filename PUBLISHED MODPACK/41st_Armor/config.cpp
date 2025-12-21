@@ -8080,6 +8080,18 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Pole_Dirty: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Pole/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Pole_Dirty.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Pole.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_Pilot_P1_Helmet_Cursed: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
@@ -33143,7 +33155,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P1_Pilot_Helmet_Pole",
+			"FST_P1_Pilot_Helmet_Pole_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -33153,7 +33165,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P1_Pilot_Helmet_Pole", 
+			"FST_P1_Pilot_Helmet_Pole_Dirty", 
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
