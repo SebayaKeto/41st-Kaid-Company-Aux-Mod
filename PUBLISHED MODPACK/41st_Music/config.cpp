@@ -116,6 +116,17 @@ class CfgMusic
 		"FST_Ace_Prelude",
 		"FST_Ace_Silent",
 		"FST_Ace_Tango",
+		"FST_Ace_LiberationOfGracemeria",
+		"FST_Ace_Daredevil",
+		"FST_Ace_Zero",
+		"FST_Ace_AneaLanding",
+		"FST_Ace_SiegeOnSilvat",
+		"FST_Ace_SanlomaAssault",
+		"FST_Ace_DeadSea",
+		"FST_Ace_RagnoFortress",
+		"FST_Ace_FiresOfLiberation",
+		"FST_Ace_Malebolge",
+		"FST_Ace_CityLights",
 		"FST_HanSolo",
 		"FST_Archangel",
 		"FST_DeusEx_TheNothing",
@@ -1023,6 +1034,138 @@ class CfgMusic
 			1
 		};
 		duration="124";
+	};
+	class FST_Ace_LiberationOfGracemeria
+	{
+		name="(Ace Combat 6) The Liberation of Gracemeria";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_THELIBERATIONOFGRACEMERIA.ogg",
+			1,
+			1
+		};
+		duration="438";
+	};
+	class FST_Ace_Daredevil
+	{
+		name="(Ace Combat 7) Daredevil";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_DAREDEVIL.ogg",
+			1,
+			1
+		};
+		duration="321";
+	};
+	class FST_Ace_Zero
+	{
+		name="(Ace Combat Zero) Zero";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_ZERO.ogg",
+			1,
+			1
+		};
+		duration="309";
+	};
+	class FST_Ace_AneaLanding
+	{
+		name="(Ace Combat 6) Anea Landing";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_ANEALANDING.ogg",
+			1,
+			1
+		};
+		duration="259";
+	};
+	class FST_Ace_SiegeOnSilvat
+	{
+		name="(Ace Combat 6) Siege on Silvat";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_SIEGEONSILVAT.ogg",
+			1,
+			1
+		};
+		duration="307";
+	};
+	class FST_Ace_SanlomaAssault
+	{
+		name="(Ace Combat 6) San Loma Assault";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_SANLOMAASSAULT.ogg",
+			1,
+			1
+		};
+		duration="266";
+	};
+	class FST_Ace_DeadSea
+	{
+		name="(Ace Combat 6) The Dead Sea";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_THEDEADSEA.ogg",
+			1,
+			1
+		};
+		duration="286";
+	};
+	class FST_Ace_RagnoFortress
+	{
+		name="(Ace Combat 6) Ragno Fortress";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_RAGNOFORTRESS.ogg",
+			1,
+			1
+		};
+		duration="369";
+	};
+	class FST_Ace_FiresOfLiberation
+	{
+		name="(Ace Combat 6) Fires of Liberation";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_FIRESOFLIBERATION.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Ace_Malebolge
+	{
+		name="(Ace Combat 6) Malebolge";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_MALEBOLGE.ogg",
+			1,
+			1
+		};
+		duration="228";
+	};
+	class FST_Ace_CityLights
+	{
+		name="(Ace Combat 6) City Lights";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_CITYLIGHTS.ogg",
+			1,
+			1
+		};
+		duration="223";
 	};
 	class FST_Halo_ThroughTheTrees
 	{
