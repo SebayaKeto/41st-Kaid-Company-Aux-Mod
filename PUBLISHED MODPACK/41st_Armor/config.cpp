@@ -214,6 +214,7 @@ class CfgPatches
 			"FST_P2_Major",
 			"FST_P2_Major_Dirty",		
 			"FST_P2_Seraph",
+			"FST_P2_Saber",
 			"FST_P2_Strider",
 			"FST_P2_Lang",
 			"FST_P2_Twist",
@@ -16291,6 +16292,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Seraph";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Saber: JLTS_CloneArmor
+	{
+		author="Fowler";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Saber]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Saber";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -40956,6 +40971,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Crewman_Helmet_Seraph",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Saber: FST_Trooper_P2_DC15S
+	{
+		author="Fowler";
+		displayName="[41st] CT-1178 'Saber'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Saber";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Saber.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Saber.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Saber",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Saber",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
