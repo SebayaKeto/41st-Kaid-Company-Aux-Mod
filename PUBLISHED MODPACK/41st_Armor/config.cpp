@@ -178,6 +178,7 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty",
 			"FST_P2_Squatch_V2",
 			"FST_P2_Squatch_Dirty_V2",
+			"FST_P2_Shut",
 			"FST_P2_Peaches",
 			"FST_P2_Hugger",
 			"FST_P2_Alfour",
@@ -264,6 +265,7 @@ class CfgPatches
 			"FST_P2_Fury",
 			"FST_P2_Tombstone",
 			"FST_P2_Stant",
+			"FST_P2_Stant_Dirty",
 			"FST_P2_Connor",
 			"FST_P2_Ryx",
 			"FST_P2_Paymos",
@@ -11421,6 +11423,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
             "41st_Armor\Data\Helmets\FST_P2_Helmet_Stant.paa",
         };
     };
+	class FST_P2_Helmet_Stant_Dirty: FST_P2_Helmet_Base
+    {
+        author="Steel";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Stant/Dirty]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Stant_Dirty.paa",
+        };
+    };
  	class FST_P2_Helmet_Jammer: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -14927,6 +14939,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	};
+	class FST_Uniform_Stant_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Stant/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Stant_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Hazzo: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15571,6 +15597,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Shut: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Shut]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Shut";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Peaches: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -17597,6 +17637,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Stant.paa",
+		};
+	};
+	class FST_NVG_Stant_Dirty: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Stant/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Stant_Dirty.paa",
 		};
 	};
 	class FST_NVG_Nahlens: FST_NVG
@@ -35007,6 +35056,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Stant_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-9690 'Stant/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Stant_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Stant_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Stant_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Stant_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Stant_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Colors: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -38804,6 +38908,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Shut: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-4819 'Shut'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Shut";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Shut.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Shut.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Shut",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Shut",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
