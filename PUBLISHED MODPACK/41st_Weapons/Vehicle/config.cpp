@@ -715,6 +715,36 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_OP_Red: IDA_Blasterbolt_Power6_VEHICLE
 	{
+		CraterEffects="ATRocketCrater";
+		class CamShakeExplode
+		{
+			power=40;
+			duration=2.2;
+			frequency=20;
+			distance=143.636;
+		};
+		class CamShakeHit
+		{
+			power=120;
+			duration=0.60000002;
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power=3.3097501;
+			duration=2.2;
+			frequency=20;
+			distance=87.635597;
+		};
+		class CamShakePlayerFire
+		{
+			power=0.02;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+		explosionEffects="MortarExplosion";
 		model="3as\3as_weapons\data\tracer_red";
 		effectFly="3AS_PlasmaBolt_Medium_Red_Fly";
 		hit=1200;
