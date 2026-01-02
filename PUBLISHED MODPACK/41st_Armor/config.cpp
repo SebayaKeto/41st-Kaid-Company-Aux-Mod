@@ -178,6 +178,8 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty",
 			"FST_P2_Squatch_V2",
 			"FST_P2_Squatch_Dirty_V2",
+			"FST_P2_Atlas",
+			"FST_P2_Atlas_Dirty",
 			"FST_P2_Shut",
 			"FST_P2_Peaches",
 			"FST_P2_Hugger",
@@ -9138,6 +9140,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Atlas.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Atlas_Dirty: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Atlas/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Atlas_Dirty.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Alek: FST_Airborne_Helmet
 	{
 		author="Gold";
@@ -9646,6 +9658,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Kellog: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Kellog)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Kellog.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Gum: FST_Airborne_Helmet
@@ -17331,6 +17353,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
         {
             uniformModel="";
             uniformClass="FST_P2_Atlas";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Atlas_Dirty: JLTS_CloneArmor
+    {
+        author="Steel";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Atlas/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Atlas_Dirty";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -44767,6 +44803,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Atlas",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Atlas_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-9512 'Atlas/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Atlas_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Atlas_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Atlas_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Atlas_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Atlas_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
