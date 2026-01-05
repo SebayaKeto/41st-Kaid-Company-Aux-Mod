@@ -156,6 +156,7 @@ class CfgVehicles
 			description="Mounted heavy repeating blaster turret";
 		};
 		model="3AS\3AS_Static\HeavyRepeater\3AS_HeavyRepeaterStatic.p3d";
+		armor=125;
 		editorSubcategory="EdSubcat_Turrets";
 		picture="\A3\Static_f_gamma\data\ui\gear_StaticTurret_MG_CA.paa";
 		UiPicture="\A3\Static_f_gamma\data\ui\gear_StaticTurret_MG_CA.paa";
