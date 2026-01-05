@@ -1754,7 +1754,6 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 call WBK_UpdatePlayerKitOnMenu;
 };
 
-
 Wbk_AssignKit = {
 params ["_control", "_index"];
 private ["_lbData", "_itemClass", "_itemCount"];
@@ -1774,6 +1773,7 @@ player setUnitLoadout _kit;
 private _uniformToSet = "";
 private _headgearToSet = "";
 private _vestToSet = "";
+private _glassesToSet = "";
 private _backpackToSet = "";
 private _nvgToSet="";
 private _name = name player;
@@ -1848,6 +1848,11 @@ switch (true) do {
 		_backpackToSet  = "FST_Clone_LR_attachment";
 		_nvgToSet       = "FST_Marshal_Commander_Visor";
 	};
+	// special case
+	case (_name find "Snowfox" > -1): {
+		_glassesToSet = "FST_Fynock_LowLight";
+	};
+	// special case
 	case (_name find "ARC-" == 0): {
         _uniformToSet   = "FST_Uniform_CLC";
         _headgearToSet  = "FST_P2_ARC_Helmet";
@@ -1946,6 +1951,11 @@ if (!isNil "_nvgToSet" && {_nvgToSet != ""}) then {
             player linkItem _nvgToSet;
         };
     };
+};
+
+if (_glassesToSet != "" && {goggles player != _glassesToSet}) then {
+	removeGoggles player;
+	player addGoggles _glassesToSet;
 };
 
 player setVariable ["WBK_Kit_Name",_typeOfKit,true];
