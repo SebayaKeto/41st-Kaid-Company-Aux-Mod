@@ -25438,7 +25438,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_woodland: B_Soldier_F
+	class FST_clone_scout_woodland: FST_Trooper_P2_DC15S
 	{
 		author = "Ruby";
 		scope = 2;
@@ -25753,7 +25753,7 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Midnight: B_Soldier_F
+	class FST_clone_scout_Midnight: FST_Trooper_P2_DC15S
 	{
 		scope = 2;
 		scopeCurator=2;
@@ -26067,7 +26067,7 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Desert: B_Soldier_F
+	class FST_clone_scout_Desert: FST_Trooper_P2_DC15S
 	{
 		scope = 2;
 		scopeCurator=2;
@@ -26381,7 +26381,7 @@ class CfgVehicles
 			""
 		};
 	};
-	class FST_clone_scout_Urban: B_Soldier_F
+	class FST_clone_scout_Urban: FST_Trooper_P2_DC15S
 	{
 		scope = 2;
 		scopeCurator=2;
