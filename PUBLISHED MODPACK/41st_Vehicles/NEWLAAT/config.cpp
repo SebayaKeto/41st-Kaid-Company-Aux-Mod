@@ -4420,7 +4420,7 @@ class CfgVehicles
 			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st.paa",
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
-			"41st_Vehicles\NEWLAAT\Data\Interior_CO.paa"
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
 	};
@@ -4441,7 +4441,7 @@ class CfgVehicles
 			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Talisman.paa",
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
-			"41st_Vehicles\NEWLAAT\Data\Interior_CO.paa"
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
 		};
 		textureList[]={};
 	};
