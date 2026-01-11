@@ -157,6 +157,8 @@ class CfgMusic
 		"FST_Clair_TheEndInMe",
 		"FST_Clair_Osquio",
 		"FST_Clair_NosVies",
+		"FST_Destiny_TheList",
+		"FST_Destiny_ClashOfWills",
 	
 		
 		//Misc tracks
@@ -746,6 +748,30 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_Destiny_TheList
+	{
+		name="(Destiny) The List";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny_TheList.ogg",
+			1,
+			1
+		};
+		duration="219";
+	};
+	class FST_Destiny_ClashOfWills
+	{
+		name="(Destiny) Clash of Wills";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny_ClashOfWills.ogg",
+			1,
+			1
+		};
+		duration="257";
 	};
 	class FST_Destiny_Invitation
 	{
