@@ -4791,6 +4791,7 @@ class CfgVehicles
 		};
 		class Components
 		{
+			class TransportCountermeasuresComponent {};
 			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
 			{
 				class Components: components

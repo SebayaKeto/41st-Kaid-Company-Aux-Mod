@@ -1041,6 +1041,7 @@ class cfgvehicles
 				usepip=2;
 				class Components
 				{
+					class TransportCountermeasuresComponent {};
 					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
 					{
 						class Components: components
@@ -1128,6 +1129,7 @@ class cfgvehicles
 				stabilizedInAxes=3;
 				class Components
 				{
+					class TransportCountermeasuresComponent {};
 					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftCommander
 					{
 						class Components: components
@@ -1237,6 +1239,7 @@ class cfgvehicles
 		};
 		class Components
 		{
+			class TransportCountermeasuresComponent {};
 			class SensorsManagerComponent
 			{
 				class Components
