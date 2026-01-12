@@ -9531,6 +9531,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ruby.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Prime: FST_Airborne_Helmet
+	{
+		author="Ruby";
+		displayName="[41st] Airborne Helmet (Prime)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Prime.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Ruby_Dirty: FST_Airborne_Helmet
 	{
 		author="Daara";
@@ -17733,6 +17743,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Phoenix.paa",
+		};
+	};
+	class FST_NVG_Valius: FST_NVG
+	{
+		author="Ruby";
+		displayName="[41st] NCO Macrobinoculars (Valius)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Valius.paa",
 		};
 	};
 	class FST_NVG_Nahlens_Dirty: FST_NVG
