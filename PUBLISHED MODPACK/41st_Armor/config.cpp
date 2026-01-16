@@ -7512,6 +7512,17 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades_Dirty.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Brop: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Brop)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Brop.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Brop.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Ace: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -9669,6 +9680,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
+		};
+	};
+		class FST_Airborne_Helmet_Woods: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Woods)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Woods.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Kellog: FST_Airborne_Helmet

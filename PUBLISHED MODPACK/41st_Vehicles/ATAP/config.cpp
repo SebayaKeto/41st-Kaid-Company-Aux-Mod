@@ -4452,7 +4452,7 @@ class CfgVehicles
 				elevationMode=0;
 				minElev=-12;
 				initElev=0;
-				maxElev=70;
+				maxElev=90;
 				maxTurn=30;
 				minTurn=-30;
 				minOutElev=-10;
