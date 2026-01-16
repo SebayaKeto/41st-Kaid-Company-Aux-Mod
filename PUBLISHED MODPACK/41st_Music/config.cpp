@@ -116,6 +116,17 @@ class CfgMusic
 		"FST_Ace_Prelude",
 		"FST_Ace_Silent",
 		"FST_Ace_Tango",
+		"FST_Ace_LiberationOfGracemeria",
+		"FST_Ace_Daredevil",
+		"FST_Ace_Zero",
+		"FST_Ace_AneaLanding",
+		"FST_Ace_SiegeOnSilvat",
+		"FST_Ace_SanlomaAssault",
+		"FST_Ace_DeadSea",
+		"FST_Ace_RagnoFortress",
+		"FST_Ace_FiresOfLiberation",
+		"FST_Ace_Malebolge",
+		"FST_Ace_CityLights",
 		"FST_HanSolo",
 		"FST_Archangel",
 		"FST_DeusEx_TheNothing",
@@ -129,6 +140,25 @@ class CfgMusic
 		"FST_LobotomyCorp_FourthWarning",
 		"FST_Stygian_Scope",
 		"FST_Destiny_Invitation",
+		"FST_Clair_Un33Decembre",
+		"FST_Clair_RainfromtheGround",
+		"FST_Clair_Lumiere",
+		"FST_Clair_Alicia",
+		"FST_Clair_Dualliste",
+		"FST_Clair_OurDraftsCollides",
+		"FST_Clair_Monoco",
+		"FST_Clair_Paintress",
+		"FST_Clair_InLumieresName",
+		"FST_Clair_Lampmaster",
+		"FST_Clair_UneViePiendre",
+		"FST_Clair_UneViewTaimer",
+		"FST_Clair_RenoirsCane",
+		"FST_Clair_WeLost",
+		"FST_Clair_TheEndInMe",
+		"FST_Clair_Osquio",
+		"FST_Clair_NosVies",
+		"FST_Destiny_TheList",
+		"FST_Destiny_ClashOfWills",
 	
 		
 		//Misc tracks
@@ -719,6 +749,30 @@ class CfgMusic
 		};
 		duration="415";
 	};
+	class FST_Destiny_TheList
+	{
+		name="(Destiny) The List";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny_TheList.ogg",
+			1,
+			1
+		};
+		duration="219";
+	};
+	class FST_Destiny_ClashOfWills
+	{
+		name="(Destiny) Clash of Wills";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny_ClashOfWills.ogg",
+			1,
+			1
+		};
+		duration="257";
+	};
 	class FST_Destiny_Invitation
 	{
 		name="(Destiny) An Invitation (Boss)";
@@ -1006,6 +1060,138 @@ class CfgMusic
 			1
 		};
 		duration="124";
+	};
+	class FST_Ace_LiberationOfGracemeria
+	{
+		name="(Ace Combat 6) The Liberation of Gracemeria";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_THELIBERATIONOFGRACEMERIA.ogg",
+			1,
+			1
+		};
+		duration="438";
+	};
+	class FST_Ace_Daredevil
+	{
+		name="(Ace Combat 7) Daredevil";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_DAREDEVIL.ogg",
+			1,
+			1
+		};
+		duration="321";
+	};
+	class FST_Ace_Zero
+	{
+		name="(Ace Combat Zero) Zero";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_ZERO.ogg",
+			1,
+			1
+		};
+		duration="309";
+	};
+	class FST_Ace_AneaLanding
+	{
+		name="(Ace Combat 6) Anea Landing";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_ANEALANDING.ogg",
+			1,
+			1
+		};
+		duration="259";
+	};
+	class FST_Ace_SiegeOnSilvat
+	{
+		name="(Ace Combat 6) Siege on Silvat";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_SIEGEONSILVAT.ogg",
+			1,
+			1
+		};
+		duration="307";
+	};
+	class FST_Ace_SanlomaAssault
+	{
+		name="(Ace Combat 6) San Loma Assault";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_SANLOMAASSAULT.ogg",
+			1,
+			1
+		};
+		duration="266";
+	};
+	class FST_Ace_DeadSea
+	{
+		name="(Ace Combat 6) The Dead Sea";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_THEDEADSEA.ogg",
+			1,
+			1
+		};
+		duration="286";
+	};
+	class FST_Ace_RagnoFortress
+	{
+		name="(Ace Combat 6) Ragno Fortress";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_RAGNOFORTRESS.ogg",
+			1,
+			1
+		};
+		duration="369";
+	};
+	class FST_Ace_FiresOfLiberation
+	{
+		name="(Ace Combat 6) Fires of Liberation";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_FIRESOFLIBERATION.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Ace_Malebolge
+	{
+		name="(Ace Combat 6) Malebolge";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_MALEBOLGE.ogg",
+			1,
+			1
+		};
+		duration="228";
+	};
+	class FST_Ace_CityLights
+	{
+		name="(Ace Combat 6) City Lights";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Ace_CITYLIGHTS.ogg",
+			1,
+			1
+		};
+		duration="223";
 	};
 	class FST_Halo_ThroughTheTrees
 	{
@@ -1330,6 +1516,210 @@ class CfgMusic
 			1
 		};
 		duration="189";
+	};
+	class FST_Clair_Un33Decembre
+	{
+		name="(Clair Obscur) Un 33 Decembre a Paris";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Un_33_Decembre_a_Paris.ogg",
+			1,
+			1
+		};
+		duration="133";
+	};
+	class FST_Clair_RainfromtheGround
+	{
+		name="(Clair Obscur) Rain from the Ground";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Rain_from_the_Ground.ogg",
+			1,
+			1
+		};
+		duration="185";
+	};
+	class FST_Clair_Lumiere
+	{
+		name="(Clair Obscur) Lumiere";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Lumiere.ogg",
+			1,
+			1
+		};
+		duration="222";
+	};
+	class FST_Clair_Alicia
+	{
+		name="(Clair Obscur) Alicia";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Alicia.ogg",
+			1,
+			1
+		};
+		duration="170";
+	};
+	class FST_Clair_Dualliste
+	{
+		name="(Clair Obscur) Dualliste";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Dualliste.ogg",
+			1,
+			1
+		};
+		duration="362";
+	};
+	class FST_Clair_OurDraftsCollides
+	{
+		name="(Clair Obscur) Our Drafts Collides";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Our_Drafts_Collides.ogg",
+			1,
+			1
+		};
+		duration="472";
+	};
+	class FST_Clair_Monoco
+	{
+		name="(Clair Obscur) Monoco";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Monoco.ogg",
+			1,
+			1
+		};
+		duration="144";
+	};
+	class FST_Clair_Paintress
+	{
+		name="(Clair Obscur) Paintress";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Paintress.ogg",
+			1,
+			1
+		};
+		duration="530";
+	};
+	class FST_Clair_InLumieresName
+	{
+		name="(Clair Obscur) In Lumiere's Name";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_In_Lumiere's_Name.ogg",
+			1,
+			1
+		};
+		duration="187";
+	};
+	class FST_Clair_Lampmaster
+	{
+		name="(Clair Obscur) Lampmaster";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Lampmaster.ogg",
+			1,
+			1
+		};
+		duration="223";
+	};
+	class FST_Clair_UneViePiendre
+	{
+		name="(Clair Obscur) Une Vie a Peindre";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Une_vie_a_peindre.ogg",
+			1,
+			1
+		};
+		duration="660";
+	};
+	class FST_Clair_UneViewTaimer
+	{
+		name="(Clair Obscur) Une Vie a T'aimer";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Une_vie_a_t'aimer.ogg",
+			1,
+			1
+		};
+		duration="660";
+	};
+	class FST_Clair_RenoirsCane
+	{
+		name="(Clair Obscur) Renoir's Cane";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Renoir's_Cane.ogg",
+			1,
+			1
+		};
+		duration="92";
+	};
+	class FST_Clair_WeLost
+	{
+		name="(Clair Obscur) We Lost";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_We_Lost.ogg",
+			1,
+			1
+		};
+		duration="513";
+	};
+	class FST_Clair_TheEndInMe
+	{
+		name="(Clair Obscur) The End In Me";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_The_End_In_Me.ogg",
+			1,
+			1
+		};
+		duration="176";
+	};
+	class FST_Clair_Osquio
+    {
+        name="(Clair Obscur) Osquio - Verso's Draft";
+        musicClass="FST_OtherGames";
+        sound[]=
+        {
+            "41st_Music\GameTracks\Clair33_Osquio_VersoDrafts.ogg",
+            1,
+            1
+        };
+        duration="282";
+    };
+	class FST_Clair_NosVies
+	{
+		name="(Clair Obscur) Nos vies en Lumiere";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Clair33_Nosvies_enLumiere.ogg",
+			1,
+			1
+		};
+		duration="1980";
 	};
 
 	//Films
