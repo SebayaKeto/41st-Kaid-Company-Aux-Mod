@@ -30,10 +30,10 @@ class CfgWeapons
 		model="3as\3AS_Weapons\Greenfor\model\3AS_CinnagaranCarbine.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_Blue",
-			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow",
-			"FST_blaster_cell_Red"
+			"FST_blaster_cell_low_Blue_smg",
+			"FST_blaster_cell_low_Green_smg",
+			"FST_blaster_cell_low_Yellow_smg",
+			"FST_blaster_cell_low_Red_smg"
 		};
 		class Burst: Mode_Burst
 		{

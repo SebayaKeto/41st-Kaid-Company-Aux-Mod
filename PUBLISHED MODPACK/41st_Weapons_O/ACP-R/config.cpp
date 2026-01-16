@@ -111,6 +111,8 @@ class CfgMagazines
 		model="\ls\core\addons\weapons_repeaters\acpr\ls_magazine_acpr.p3d";
 		count=60;
 		ammo="FST_blasterbolt";
+		initSpeed=250;
+		mass=4;
 	};
 	class FST_ACPR_Mag_Green: FST_ACPR_Mag_Blue
 	{

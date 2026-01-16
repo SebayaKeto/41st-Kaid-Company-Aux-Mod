@@ -1804,6 +1804,34 @@ class CfgMagazines
 		displayName="[41st] Low-Power Energy Cell (Red)";
 		ammo="FST_blasterbolt_Red";
 	};
+	class FST_blaster_cell_low_Blue_smg: FST_blaster_cell_low_Blue
+	{
+		displayName="[41st] Rapidfire Energy Cell (Blue)";
+		descriptionShort="120 Rnds Low Power SMG Ammo";
+		ammo="FST_blasterbolt";
+		count=120;
+	};
+	class FST_blaster_cell_low_Green_smg: FST_blaster_cell_low_Blue
+	{
+		displayName="[41st] Rapidfire Energy Cell (Green)";
+		descriptionShort="120 Rnds Low Power SMG Ammo";
+		ammo="FST_blasterbolt_green";
+		count=120;
+	};
+	class FST_blaster_cell_low_Yellow_smg: FST_blaster_cell_low_Blue
+	{
+		displayName="[41st] Rapidfire Energy Cell (Yellow)";
+		descriptionShort="120 Rnds Low Power SMG Ammo";
+		ammo="FST_blasterbolt_yellow";
+		count=120;
+	};
+	class FST_blaster_cell_low_Red_smg: FST_blaster_cell_low_Blue
+	{
+		displayName="[41st] Rapidfire Energy Cell (Red)";
+		descriptionShort="120 Rnds Low Power SMG Ammo";
+		ammo="FST_blasterbolt_Red";
+		count=120;
+	};
 	class FST_blaster_cell_LV13_Blue: 100Rnd_65x39_caseless_mag
 	{
 		author="Gold";

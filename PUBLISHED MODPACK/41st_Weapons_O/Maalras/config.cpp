@@ -56,10 +56,10 @@ class CfgWeapons
 		opticsZoomMax=0.34999999;
 		magazines[]=
 		{
-			"FST_blaster_cell_Blue",
-			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow",
-			"FST_blaster_cell_Red"
+			"FST_blaster_cell_low_Blue_smg",
+			"FST_blaster_cell_low_Green_smg",
+			"FST_blaster_cell_low_Yellow_smg",
+			"FST_blaster_cell_low_Red_smg"
 		};
 		muzzles[]=
 		{

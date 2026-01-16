@@ -1484,9 +1484,9 @@ class CfgVehicles
 		scopeArsenal = 0;
 		class TransportItems
 		{
-			class _xx_FST_blaster_cell_Red
+			class _xx_FST_blaster_cell_low_Red_smg
 			{
-				name="FST_blaster_cell_Red";
+				name="FST_blaster_cell_low_Red_smg";
 				count=15;
 			};
 			class _xx_FST_blaster_cell_low_Red
@@ -1857,9 +1857,9 @@ class CfgVehicles
 				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
-			class _xx_FST_blaster_cell_Red
+			class _xx_FST_blaster_cell_low_Red_smg
 			{
-				name="FST_blaster_cell_Red";
+				name="FST_blaster_cell_low_Red_smg";
 				count=15;
 			};
 			class _xx_FST_blaster_cell_low_Red
@@ -1887,9 +1887,9 @@ class CfgVehicles
 				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
-			class _xx_FST_blaster_cell_Red
+			class _xx_FST_blaster_cell_low_Red_smg
 			{
-				name="FST_blaster_cell_Red";
+				name="FST_blaster_cell_low_Red_smg";
 				count=15;
 			};
 			class _xx_FST_blaster_cell_low_Red
@@ -1987,9 +1987,9 @@ class CfgVehicles
 				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
-			class _xx_FST_blaster_cell_Red
+			class _xx_FST_blaster_cell_low_Red_smg
 			{
-				name="FST_blaster_cell_Red";
+				name="FST_blaster_cell_low_Red_smg";
 				count=15;
 			};
 			class _xx_FST_blaster_cell_low_Red
@@ -2472,7 +2472,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Autorifleman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; [_u, -1] call ace_advanced_fatigue_fnc_addLoadFactor; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Autorifleman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CIS_HumanDiv_AT: FST_CIS_Heavy_Base_F
@@ -3279,7 +3279,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red_smg",
 			"FST_blaster_cell_low_Red",
 		};
 		class EventHandlers
@@ -3416,14 +3416,14 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red_smg",
 			"FST_blaster_cell_low_Red",
 			"ACE_Chemlight_HiRed",
 			"FST_grenade_smoke_orange_mag"
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red';  _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Medic'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.5]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "private _u = _this select 0; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Medic'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.5]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_U_CIS_Combat_Officer: FST_U_CIS_Light
@@ -3580,7 +3580,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red_smg",
 			"FST_blaster_cell_low_Red"
 		};
 		class EventHandlers
@@ -4118,7 +4118,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red_smg",
 			"FST_blaster_cell_low_Red"
 		};
 		class EventHandlers
@@ -4180,7 +4180,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red_smg",
 			"FST_blaster_cell_low_Red"
 		};
 		class EventHandlers
@@ -4242,7 +4242,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red_smg",
 			"FST_blaster_cell_low_Red"
 		};
 		class EventHandlers
