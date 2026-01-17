@@ -16,6 +16,7 @@ class CfgPatches
 			"FST_DC15S",
 			"FST_DC15S_UGL",
 			"FST_DC15C_F",
+			"FST_DC15C_UGL",
 			"FST_DC15LE",
 			"FST_Mercenary_DC15S_UGL_Wood"
 		};
@@ -1650,6 +1651,95 @@ class CfgWeapons
 			{
 				compatibleItems[]={};
 			};
+		};
+	};
+	class FST_DC15C_UGL: FST_DC15C_F
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		baseWeapon = "FST_DC15C_UGL";
+		displayName = "[41st] DC-15C Carbine w/ UGL";
+		model = "\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_GL.p3d";
+		handAnim[] =
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15CGL_Handanim.rtm"
+		};
+		muzzles[] =
+		{
+			"this",
+			"GL_3GL_F"
+		};
+		class GL_3GL_F: UGL_F
+		{
+			displayName = "[41st] UGL";
+			useModelOptics = 0;
+			useExternalOptic = 0;
+			cameraDir = "OP_look";
+			discreteDistance[] = {50,75,100,150,200,250,300,350,400};
+			discreteDistanceCameraPoint[] =
+			{
+				"OP_eye_50",
+				"OP_eye_75",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200",
+				"OP_eye_250",
+				"OP_eye_300",
+				"OP_eye_350",
+				"OP_eye_400"
+			};
+			discreteDistanceInitIndex = 1;
+			reloadAction = "GestureReloadMXUGL";
+			reloadMagazineSound[] =
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				1,
+				1,
+				10
+			};
+			recoil = "FST_recoil_DP23";
+			magazineWell[] = {};
+			magazines[] =
+			{
+				"FST_HE_LauncherGrenade",
+				"FST_HE_LauncherGrenade_Delayed_5",
+				//"FST_TDHE_LauncherGrenade",
+				"FST_Smoke_LauncherGrenade",
+				"FST_SmokeRed_LauncherGrenade",
+				"FST_SmokeGreen_LauncherGrenade",
+				"FST_SmokeBlue_LauncherGrenade",
+				"FST_SmokePurple_LauncherGrenade",
+				"FST_Droid_Popper_Launcher",
+				"ACE_40mm_Flare_Red",
+				"ACE_40mm_Flare_green",
+				"ACE_40mm_Flare_White",
+				"ACE_40mm_Flare_ir",
+				"ACE_HuntIR_M203"
+			};
+			class Single: Mode_SemiAuto
+			{
+				sounds[] = {"StandardSound"};
+				class StandardSound
+				{
+					weaponSoundEffect = "";
+					begin1[] = {"\41st_Weapons\DC-15AS\Data\41st GL New 2-343.ogg", 4, 1, 1800};
+					begin2[] = {"\41st_Weapons\DC-15AS\Data\41st GL New 2-343.ogg", 4, 1, 1800};
+					soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				};
+				reloadTime = 2;
+				dispersion = 0.001;
+				minRange = 2;
+				minRangeProbab = 0.5;
+				midRange = 100;
+				midRangeProbab = 0.7;
+				maxRange = 200;
+				maxRangeProbab = 0.3;
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 75;
 		};
 	};
 	class FST_DC15A_fried: FST_DC15A
