@@ -1682,15 +1682,15 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 		respawnMagazines[]=
 		{
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
-			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
 		};
 	};
 	class FST_Droid_B1_Scorch: FST_Droid_B1_E5
