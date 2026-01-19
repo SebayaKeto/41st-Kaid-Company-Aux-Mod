@@ -7,6 +7,7 @@ class CfgPatches
 		{
 			"FST_Droid_B1_E5",
 			"FST_Droid_B1_Sniper",
+			"FST_Droid_B1_Jetpack",
 			"FST_Droid_B1_Commander",
 			"FST_Droid_B1_AT",
 			"FST_Droid_B1_GAT",
@@ -181,6 +182,22 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_Droid_B1_AR";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			mass=40;
+		};
+	};
+	class FST_DroidB1_Jetpack: FST_DroidB1
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] B1 Combat Uniform (Jetpack)";
+		JLTS_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_Droid_B1_Jetpack";
 			containerClass="Supply200";
 			uniformType="Neopren";
 			mass=40;
@@ -545,8 +562,22 @@ class CfgVehicles
 {
 	class JLTS_B1_Backpack;
 	class JLTS_B1_antenna;
+	class WBK_3AS_B1_Rocket;
 	class FST_Backpack_RTO_Hidden;
+	class JLTS_B1_jetpack_Rocket;
 	class 3AS_B_CloneGM_Base_F;
+	class FST_B1_Backpack_Jetpack: JLTS_B1_jetpack_Rocket
+	{
+		author = "Ruby";
+		scope = 2;
+		displayname = "[41st] B1 Battle Jetpack"
+		tf_dialog="JLTS_droid_lr_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_east_radio_code";
+		tf_hasLRradio=1;
+		tf_range=15000;
+		tf_subtype="digital_lr";
+	};
 	class FST_B1_Backpack: JLTS_B1_Backpack
 	{
 		author="Daara";
@@ -1599,6 +1630,69 @@ class CfgVehicles
 			"FST_Droid_blaster_battery_Red",
 		};
 	};
+	class FST_Droid_B1_Jetpack: WBK_3AS_B1_Rocket
+	{
+		scope=2;
+		author="Daara";
+		backpack="FST_B1_Backpack_Jetpack";
+		displayName="[41st] B1 Battledroid (Jetpack)";
+		armor=4;
+		armorStructural=100;
+		uniformClass="FST_DroidB1_Jetpack";
+		faction="FST_BattleDroids_Faction";
+		editorSubcategory="FST_BattleDroids_Subfaction";
+		model="\MRC\JLTS\characters\DroidArmor\DroidUniformB1.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\DroidArmor\data\b1_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_HUD",
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_NVG_droid_chip_1",
+			"JLTS_NVG_droid_chip_1"
+		};
+		magazines[]=
+		{
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+		};
+		respawnMagazines[]=
+		{
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+			"FST_Droid_blaster_battery_Red",
+		};
+	};
 	class FST_Droid_B1_Scorch: FST_Droid_B1_E5
 	{
 		scope=2;
@@ -1938,8 +2032,8 @@ class CfgVehicles
 			"IDA_grenade_Detonator_mag"
 		};
 	};
-	class WBK_BX_Assasin_1;
-	class FST_BX: WBK_BX_Assasin_1
+	class WBK_LS_BX;
+	class FST_BX: WBK_LS_BX
 	{
 		scope=2;
 		identityTypes[]={};
@@ -1963,14 +2057,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_E5",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
 			"FST_E5",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"Throw",
 			"Put"
 		};
@@ -2024,14 +2118,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_E5S",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
 			"FST_E5S",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"Throw",
 			"Put"
 		};
@@ -2084,7 +2178,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_E5",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"FST_RPS6HP",
 			"Throw",
 			"Put"
@@ -2092,7 +2186,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"FST_E5",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"FST_RPS6HP",
 			"Throw",
 			"Put"
@@ -2146,7 +2240,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FST_E5",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"FST_E60R_AA",
 			"Throw",
 			"Put"
@@ -2154,7 +2248,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"FST_E5",
-			"WBK_Dutch_Vibro",
+			"wbk_vibroblade_new",
 			"FST_E60R_AA",
 			"Throw",
 			"Put"
@@ -2296,8 +2390,8 @@ class CfgVehicles
 			"41st_Droids\Data\Extras\FST_BX_Tukata_Body.paa"
 		};
 	};
-	class WBK_B2_Mod_Standart;
-	class FST_B2: WBK_B2_Mod_Standart
+	class WBK_LS_B2;
+	class FST_B2: WBK_LS_B2
 	{
 		scope=2;
 		identityTypes[]={};
@@ -2305,6 +2399,7 @@ class CfgVehicles
 		Backpack="";
 		displayName="[41st] B2 Super Battledroid";
 		uniformClass="FST_DroidB2";
+		model="\ls\core\addons\characters_droid\uniforms\b2\ls_uniform_droid_b2.p3d";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
 		hiddenSelections[]=
@@ -2351,7 +2446,7 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_TL: WBK_B2_Mod_Standart
+	class FST_B2_TL: WBK_LS_B2
 	{
 		scope=2;
 		identityTypes[]={};
@@ -2359,6 +2454,7 @@ class CfgVehicles
 		Backpack="";
 		displayName="[41st] B2 Super Battledroid Team Leader";
 		uniformClass="FST_DroidB2_TL";
+		model="\ls\core\addons\characters_droid\uniforms\b2\ls_uniform_droid_b2.p3d";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
 		hiddenSelections[]=
@@ -2409,12 +2505,13 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_Flame: WBK_B2_Mod_Standart
+	class FST_B2_Flame: WBK_LS_B2
 	{
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
 		Backpack="";
+		model="\ls\core\addons\characters_droid\uniforms\b2\ls_uniform_droid_b2.p3d";
 		displayName="[41st] B2 Super Battledroid (Flame)";
 		uniformClass="FST_DroidB2";
 		faction="FST_BattleDroids_Faction";
@@ -3248,7 +3345,7 @@ class CfgVehicles
 		};
 		class EventHandlers{init = "if (local _this) then { (_this select 0) setFace 'FST_Clone_Head_Jorge'; };";};
 	};
-		class FST_JARCtrooper: WBK_BX_Assasin_1
+	class FST_JARCtrooper: WBK_LS_BX
 	{
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
