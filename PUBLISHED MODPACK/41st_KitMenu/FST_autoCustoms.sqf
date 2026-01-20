@@ -1,5 +1,6 @@
 params [["_unit", player], ["_roleName", ""], ["_kitTag", ""]];
 if ((uniform _unit) isEqualTo "FST_Uniform_GM_Plastic") exitWith {};
+if ((uniform _unit) isEqualTo "FST_Uniform_P1_41st") exitWith {};
 if !(_roleName isEqualType "") then { _roleName = "" };
 if !(_kitTag   isEqualType "") then { _kitTag   = "" };
 private _roleNameTrim = trim _roleName;

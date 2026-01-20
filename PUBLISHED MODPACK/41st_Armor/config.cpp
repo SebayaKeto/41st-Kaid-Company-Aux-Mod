@@ -17680,6 +17680,14 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		};
 		thermalMode[]={0,1};
 	};
+	class FST_NVG_Thermals : FST_NVG_Woodland
+	{
+		displayName="[41st] NCO Macrobinoculars (Thermals)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG.paa",
+		};
+	};
 	class FST_NVG_Invisible_Thermals : FST_NVG_Woodland
 	{
 		displayName="[41st] Invisible NVGS special";

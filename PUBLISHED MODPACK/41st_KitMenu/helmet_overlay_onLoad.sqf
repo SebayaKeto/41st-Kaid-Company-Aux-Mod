@@ -7,7 +7,8 @@ if (isNil "FST_arsenalBlacklist") then {
         "FST_NVG_Invisible_Thermals",
         "FST_NVG_Invisible",
         "FST_Fynock_LowLight",
-        "FST_U_CIS_TS"
+        "FST_U_CIS_TS",
+        "FST_NVG_Thermals"
     ];
 };
 if (isNil "FST_arsenalPrefixBlacklist") then {
