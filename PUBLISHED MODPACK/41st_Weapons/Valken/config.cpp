@@ -251,7 +251,7 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.075000003;
-			dispersion=0.00073000003;
+			dispersion=0.00145;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=100;
@@ -319,7 +319,7 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.085714288;
-			dispersion=0.0024000001;
+			dispersion=0.00145;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=100;
