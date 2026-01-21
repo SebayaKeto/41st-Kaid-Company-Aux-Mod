@@ -59,13 +59,11 @@ class CfgWeapons
 			soundBurst=0;
 			showToPlayer=1;
 			minRange=2;
-			minRangeProbab=0.5;
+			minRangeProbab=0;
 			midRange=100;
-			midRangeProbab=0.69999999;
+			midRangeProbab=0;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=0.001;
-			aiRateOfFireDistance=25;
+			maxRangeProbab=0;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -91,14 +89,14 @@ class CfgWeapons
 			dispersion=0.00229;
 			soundBurst=0;
 			showToPlayer=1;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=1;
+			minRangeProbab=1;
+			midRange=50;
+			midRangeProbab=1;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=5;
-			aiRateOfFireDistance=25;
+			maxRangeProbab=0.1;
+			aiRateOfFire=0.05;
+			aiRateOfFireDistance=1000;
 		};
 	};
 };

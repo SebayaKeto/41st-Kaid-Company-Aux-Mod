@@ -24,10 +24,10 @@ class CfgWeapons
 		model="\JMSLLTE_weapons\relbyk23\relbyk23.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_low_Blue",
-			"FST_blaster_cell_low_Green",
-			"FST_blaster_cell_low_Yellow",
-			"FST_blaster_cell_low_Red"
+			"FST_blaster_cell_SSP_Blue",
+			"FST_blaster_cell_SSP_Green",
+			"FST_blaster_cell_SSP_Yellow",
+			"FST_blaster_cell_SSP_Red"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -55,8 +55,6 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
 		};
 	};
 };

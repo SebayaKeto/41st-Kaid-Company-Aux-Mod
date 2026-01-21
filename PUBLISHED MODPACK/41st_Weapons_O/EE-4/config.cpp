@@ -29,10 +29,10 @@ class CfgWeapons
 		model="\JMSLLTE_weapons\ee3\ee4.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_Blue",
-			"FST_blaster_cell_Green",
-			"FST_blaster_cell_Yellow",
-			"FST_blaster_cell_Red"
+			"FST_blaster_cell_low_Blue_smg",
+			"FST_blaster_cell_low_Green_smg",
+			"FST_blaster_cell_low_Yellow_smg",
+			"FST_blaster_cell_low_Red_smg"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -52,10 +52,10 @@ class CfgWeapons
 			};
 			recoil="recoil_single_sdar";
 			recoilProne="recoil_single_prone_sdar";
-			reloadTime=0.11;
+			reloadTime=0.19;
 			dispersion=0.0020000001;
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=20;
+			minRangeProbab=0.89;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
@@ -81,12 +81,12 @@ class CfgWeapons
 			recoilProne="recoil_single_prone_sdar";
 			reloadTime=0.11;
 			dispersion=0.0022;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			minRange=1;
+			minRangeProbab=0.99;
+			midRange=50;
+			midRangeProbab=0.75;
+			maxRange=100;
+			maxRangeProbab=0.2;
 		};
 	};
 };

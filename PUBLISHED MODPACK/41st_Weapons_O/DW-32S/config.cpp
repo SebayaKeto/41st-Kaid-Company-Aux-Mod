@@ -63,16 +63,19 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.1;
+			reloadTime=0.6;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00086999999;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=60;
+			minRangeProbab=1;
+			midRange=300;
+			midRangeProbab=0.85;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.05;
+			aiRateOfFire=1.5;
+			aiRateOfFireDistance=150;
+			aiRateOfFireDispersion=2;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -107,13 +110,12 @@ class CfgWeapons
 			dispersion=0.00086999999;
 			recoil="recoil_auto_mx";
 			recoilProne="recoil_auto_prone_mx";
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=1e-006;
+			minRange=1;
+			minRangeProbab=0;
+			midRange=50;
+			midRangeProbab=0;
+			maxRange=100;
+			maxRangeProbab=0;
 		};
 	};
 };

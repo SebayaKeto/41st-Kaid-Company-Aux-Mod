@@ -54,14 +54,15 @@ class CfgWeapons
 					"DMR06_InteriorTail_SoundSet"
 				};
 			};
-			minRange=2;
+			minRange=1;
 			minRangeProbab=0.5;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
-			aiRateOfFire=3;
-			aiRateOfFireDistance=500;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 	};	
 };

@@ -11,6 +11,7 @@ class CfgPatches
 	};
 };
 class Mode_FullAuto;
+class Mode_SemiAuto;
 class WeaponSlotsInfo;
 class CowsSlot;
 class MuzzleSlot;
@@ -33,7 +34,12 @@ class CfgWeapons
 			"FST_blaster_cell_low_Yellow_smg",
 			"FST_blaster_cell_low_Red_smg"
 		};
-		class fullAuto: Mode_FullAuto
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
+		class Single: Mode_SemiAuto
 		{
 			sounds[]=
 			{
@@ -48,18 +54,40 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
+				soundSetShot[]=
 				{
-					"DBA_Republic\Addons\DBA_Weapons\DBA_ValD\Data\vad.ogg",
-					1.55,
-					1,
-					1800
+					"3AS_DLT19_Shot_SoundSet"
 				};
-				soundBegin[]=
+			};
+			reloadTime=0.059999999;
+			dispersion=0.00145;
+			recoil="M240Recoil";
+			recoilProne="M240RecoilProne";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
 				{
-					"begin1",
-					1
+					"3AS_DLT19_Shot_SoundSet"
 				};
 			};
 			reloadTime=0.1;

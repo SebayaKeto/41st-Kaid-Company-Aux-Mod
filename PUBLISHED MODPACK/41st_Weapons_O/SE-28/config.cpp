@@ -24,10 +24,10 @@ class CfgWeapons
 		model="Indecisive_Armoury_Weapons_INDEP\Data\SE28\Models\IDA_SE28.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_High_Blue",
-			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red"
+			"FST_blaster_cell_low_Blue_smg",
+			"FST_blaster_cell_low_Green_smg",
+			"FST_blaster_cell_low_Yellow_smg",
+			"FST_blaster_cell_low_Red_smg"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -106,10 +106,10 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.13333334;
+			reloadTime=0.21;
 			dispersion=0.001;
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=20;
+			minRangeProbab=0.89;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
@@ -193,13 +193,13 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.13333334;
-			dispersion=0.001;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			dispersion=0.007;
+			minRange=1;
+			minRangeProbab=0.99;
+			midRange=50;
+			midRangeProbab=0.75;
+			maxRange=100;
+			maxRangeProbab=0.2;
 		};
 	};
 };

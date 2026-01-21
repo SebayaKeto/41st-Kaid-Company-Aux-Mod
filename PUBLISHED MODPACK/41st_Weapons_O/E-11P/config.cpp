@@ -10,7 +10,7 @@ class CfgPatches
 		weapons[]={};
 	};
 };
-class Mode_SemiAuto;
+class Mode_FullAuto;
 class WeaponSlotsInfo;
 class CowsSlot;
 class MuzzleSlot;
@@ -28,12 +28,16 @@ class CfgWeapons
 		model="Indecisive_Armoury_Weapons_IMPERIAL\Data\E11P\Model\IDA_E11P.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_low_Blue",
-			"FST_blaster_cell_low_Green",
-			"FST_blaster_cell_low_Yellow",
-			"FST_blaster_cell_low_Red"
+			"FST_blaster_cell_low_Blue_smg",
+			"FST_blaster_cell_low_Green_smg",
+			"FST_blaster_cell_low_Yellow_smg",
+			"FST_blaster_cell_low_Red_smg"
 		};
-		class Single: Mode_SemiAuto
+		modes[]=
+		{
+			"FullAuto"
+		};
+		class FullAuto: Mode_FullAuto
 		{
 			sounds[]=
 			{
@@ -111,13 +115,13 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.1;
-			dispersion=0.0035000001;
-			minRange=2;
-			minRangeProbab=0.5;
+			dispersion=0.009;
+			minRange=1;
+			minRangeProbab=0.99;
 			midRange=100;
-			midRangeProbab=0.075000003;
+			midRangeProbab=0.75;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.2;
 		};
 	};	
 };

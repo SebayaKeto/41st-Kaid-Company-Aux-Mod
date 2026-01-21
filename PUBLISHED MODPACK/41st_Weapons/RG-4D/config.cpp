@@ -43,10 +43,10 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_High_Blue",
-			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red"
+			"FST_blaster_cell_SSP_Blue",
+			"FST_blaster_cell_SSP_Green",
+			"FST_blaster_cell_SSP_Yellow",
+			"FST_blaster_cell_SSP_Red"
 		};
 		fireLightDiffuse[]={0,0,1};
 		muzzles[]=

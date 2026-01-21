@@ -1573,6 +1573,29 @@ class CfgMagazines
 		displayName="[41st] Droid Standard Energy Cell (Red)";
 		ammo="FST_blasterbolt_Red";
 	};
+	class FST_blaster_cell_SSP_Blue: FST_blaster_cell_Blue
+	{
+		displayName="[41st] Heavy Sidearm Cell (Blue)";
+		displayNameShort="Heavy Sidearm Cell";
+		descriptionShort="15 round capacity.";
+		ammo="FST_blasterbolt";
+		count=15;
+	};
+	class FST_blaster_cell_SSP_Green: FST_blaster_cell_SSP_Blue
+	{
+		displayName="[41st] Heavy Sidearm Cell (Green)";
+		ammo="FST_blasterbolt_Green";
+	};
+	class FST_blaster_cell_SSP_Yellow: FST_blaster_cell_SSP_Blue
+	{
+		displayName="[41st] Heavy Sidearm Cell (Yellow)";
+		ammo="FST_blasterbolt_Yellow";
+	};
+	class FST_blaster_cell_SSP_Red: FST_blaster_cell_SSP_Blue
+	{
+		displayName="[41st] Heavy Sidearm Cell (Red)";
+		ammo="FST_blasterbolt_Red";
+	};
 	class FST_blaster_cell_Westar_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue 
 	{
 		author="Daara";
@@ -1958,6 +1981,7 @@ class CfgMagazines
 		displayName="[41st] Low-power Thermal coil (Red)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_LP_Red";
+		count=20;
 	};
 	class FST_thermal_coil_T15_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{

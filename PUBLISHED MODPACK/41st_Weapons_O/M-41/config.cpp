@@ -106,7 +106,7 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.15000001;
-			dispersion=0.00050000002;
+			dispersion=0.005;
 			burst=1;
 			soundContinuous="false";
 			soundBurst="true";

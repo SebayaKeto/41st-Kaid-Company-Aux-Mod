@@ -96,14 +96,15 @@ class CfgWeapons
 			recoilProne="recoil_single_prone_ebr";
 			reloadTime=0.75;
 			dispersion=0.00029088801;
-			minRange=2;
+			minRange=1;
 			minRangeProbab=0.5;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
-			aiRateOfFire=1;
-			aiRateOfFireDistance=500;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 	};
 };

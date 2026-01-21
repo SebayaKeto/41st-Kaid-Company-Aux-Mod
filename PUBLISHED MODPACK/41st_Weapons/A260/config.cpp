@@ -124,12 +124,12 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.1;
+			reloadTime=0.15;
 			dispersion=0.00073000003;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=75;
+			minRangeProbab=0.6;
+			midRange=200;
+			midRangeProbab=0.5;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
@@ -208,11 +208,11 @@ class CfgWeapons
 			};
 			reloadTime=0.1;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
 			midRangeProbab=0.69999999;
-			maxRange=10000;
+			maxRange=100;
 			maxRangeProbab=0.30000001;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo

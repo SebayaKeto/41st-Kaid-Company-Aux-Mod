@@ -58,14 +58,14 @@ class CfgWeapons
 			};
 			reloadTime=0.15000001;
 			dispersion=0.0030149999;
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=20;
+			minRangeProbab=0.89;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
+			aiRateOfFireDistance=55;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -90,14 +90,14 @@ class CfgWeapons
 			};
 			reloadTime=0.1;
 			dispersion=0.0014545;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
+			minRange=1;
+			minRangeProbab=0.99;
+			midRange=50;
+			midRangeProbab=0.75;
+			maxRange=100;
+			maxRangeProbab=0.2;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=1000;
 		};
 	};
 };

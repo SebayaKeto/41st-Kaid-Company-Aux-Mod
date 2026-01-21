@@ -28,10 +28,10 @@ class CfgWeapons
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\DC15P\Model\IDA_DC15P.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_low_Blue",
-			"FST_blaster_cell_low_Green",
-			"FST_blaster_cell_low_Yellow",
-			"FST_blaster_cell_low_Red"
+			"FST_blaster_cell_SSP_Blue",
+			"FST_blaster_cell_SSP_Green",
+			"FST_blaster_cell_SSP_Yellow",
+			"FST_blaster_cell_SSP_Red"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -115,7 +115,7 @@ class CfgWeapons
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=100;
-			midRangeProbab=0.075000003;
+			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};

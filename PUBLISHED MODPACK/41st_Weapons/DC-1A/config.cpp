@@ -97,7 +97,7 @@ class CfgWeapons
 		modes[]=
 		{
 			"FullAuto",
-			"single",
+			"Single"
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -140,14 +140,16 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.066666663;
-			dispersion=0.00073000003;
+			dispersion=0.0073;
 			recoilProne="DBA_Mod0_Recoil";
-			minRange=2;
-			minRangeProbab=0.30000001;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=1;
+			minRangeProbab=1;
+			midRange=50;
+			midRangeProbab=1;
 			maxRange=10000;
-			maxRangeProbab=0.039999999;
+			maxRangeProbab=0.1;
+			aiRateOfFire=0.05;
+			aiRateOfFireDistance=1000;
 			showToPlayer=1;
 		};
 		class Single: Mode_SemiAuto
@@ -189,11 +191,11 @@ class CfgWeapons
 			reloadTime=0.079999998;
 			dispersion=0.00073000003;
 			minRange=2;
-			minRangeProbab=0.0099999998;
+			minRangeProbab=0;
 			midRange=200;
-			midRangeProbab=0.0099999998;
+			midRangeProbab=0;
 			maxRange=400;
-			maxRangeProbab=0.0099999998;
+			maxRangeProbab=0;
 			recoil="DBA_Mod0_Recoil";
 			recoilProne="DBA_Mod0_Recoil";
 		};

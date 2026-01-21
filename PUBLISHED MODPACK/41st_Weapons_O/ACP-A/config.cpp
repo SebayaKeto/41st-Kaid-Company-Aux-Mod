@@ -50,12 +50,12 @@ class CfgWeapons
 			};
 			reloadTime=1.5;
 			dispersion=0.00066000002;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=1;
+			minRangeProbab=1;
+			midRange=25;
+			midRangeProbab=0.075000003;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.1;
 			soundContinuous=0;
 			soundBurst=0;
 			
