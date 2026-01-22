@@ -194,6 +194,7 @@ class CfgPatches
 			"FST_P2_Joko",
 			"FST_P2_Joko_Dirty",
 			"FST_P2_Coda",
+			"FST_P2_Coda_Dirty",
 			"FST_P2_Grif",
 			"FST_P2_Deso",
 			"FST_P2_Deso_Dirty",
@@ -7512,6 +7513,17 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades_Dirty.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Seraph: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Seraph)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Seraph.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Seraph.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Brop: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -11637,6 +11649,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Coda.paa",
 		};
 	};	
+	class FST_P2_Helmet_Coda_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Coda/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Coda_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Major: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -12236,7 +12258,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sly.paa",
 		};
 	};
- 	/*class FST_P2_Helmet_Sly_Dirty: FST_P2_Helmet_Base
+ 	class FST_P2_Helmet_Sly_Dirty: FST_P2_Helmet_Base
 	{
 		author="Daara";
 		scope=2; 
@@ -12245,7 +12267,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sly_Dirty.paa",
 		};
-	};*/
+	};
  	class FST_P2_Helmet_Martyr: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -16057,6 +16079,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Coda_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Coda/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Coda_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
  	class FST_Uniform_James: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -17971,6 +18007,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Coda.paa",
+		};
+	};
+	class FST_NVG_Coda_Dirty: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Coda/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Coda_Dirty.paa",
 		};
 	};
 	class FST_NVG_Xeha: FST_NVG
@@ -40171,6 +40216,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Coda_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-0011 'Coda/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Coda_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Coda_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Coda_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Coda_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Coda_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Grif: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -41472,7 +41572,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_Crewman_Helmet_Seraph",
+			"FST_Crewman_Helmet_Mk2_Seraph",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41482,7 +41582,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_Crewman_Helmet_Seraph",
+			"FST_Crewman_Helmet_Mk2_Seraph",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
