@@ -45,7 +45,7 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"JMSLLTE_TL50_Shot_SoundSet",
+					"JMSLLTE_E11_Shot_SoundSet",
 					"SDAR_Tail_SoundSet",
 					"SDAR_InteriorTail_SoundSet"
 				};

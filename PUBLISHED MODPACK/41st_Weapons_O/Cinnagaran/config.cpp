@@ -58,7 +58,7 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_Cinnagaran_SoundSet"
+					"3AS_Arkanian_SoundSet"
 				};
 			};
 		};
@@ -85,7 +85,7 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_Cinnagaran_SoundSet"
+					"3AS_Arkanian_SoundSet"
 				};
 			};
 		};
