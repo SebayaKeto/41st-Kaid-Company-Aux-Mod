@@ -10034,6 +10034,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Saber.paa",
 		};
 	};
+	class FST_P2_Helmet_Vex: FST_P2_Helmet_Base
+	{
+		author="Gold";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Vex]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Vex.paa",
+		};
+	};
 	class FST_P2_Helmet_Blades: FST_P2_Helmet_Base
 	{
 		author="Ruby";
