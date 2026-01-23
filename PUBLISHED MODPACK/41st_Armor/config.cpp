@@ -47118,6 +47118,14 @@ class CfgFaces
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Trenny.paa";
 		};
+		class FST_Clone_Head_Sierra: FST_clone_Default_head
+		{
+			author="Ruby";
+			name="[41st] Clone Trooper - Sierra";
+			displayName="[41st] Clone Trooper - Sierra";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Sierra.paa";
+		};
 		class FST_Navy_Face_Mustang: Default
 		{
 			author="Gold adapted from TCGM"; //BE CAREFULL OF WHAT FACE YOU ARE DOING. THIS ISNT A CLONE FACE FROM LEGION STUDIO
