@@ -407,32 +407,20 @@ FST_Droid_Dispenser =  {
         _spawn = _position;
         _side = (_dropside select 0);
         _list = [
-            ["FST_Droid_B1_E5",
-            "FST_Droid_B1_E5",
-            "FST_Droid_B1_AR",
-            "FST_Droid_B1_Commander",
-            "FST_Droid_B1_AT"],
-            ["FST_Droid_B1_E5",
-            "FST_Droid_B1_AR",
-            "FST_Droid_B1_Commander"],
-            ["FST_Droid_B1_E5",
-            "FST_Droid_B1_AR",
-            "FST_Droid_B1_Commander"],
-            ["FST_Droid_B1_E5",
-            "FST_Droid_B1_AR",
-            "FST_Droid_B1_Commander"],
-            ["FST_Droid_B1_E5",
-            "FST_Droid_B1_AR",
-            "FST_Droid_B1_Commander"],
-            ["FST_Droid_B1_E5",
-            "FST_Droid_B1_AR",
-            "FST_Droid_B1_Commander"],
-            ["FST_BX",
-            "FST_BX",
-            "FST_BX"],
-			["FST_Jorgetrooper",
-			"FST_Jorgetrooper_AT",
-			"FST_Jorgetrooper_AR"]
+            // 0
+            ["FST_Droid_B1_E5","FST_Droid_B1_E5","FST_Droid_B1_AR","FST_Droid_B1_Commander","FST_Droid_B1_AT"],
+            // 1
+            ["FST_Droid_B1_E5","FST_Droid_B1_AR","FST_Droid_B1_Commander"],
+            // 2
+            ["FST_Droid_B1_E5","FST_Droid_B1_AR","FST_Droid_B1_Commander"],
+            // 3
+            ["FST_Droid_B1_E5","FST_Droid_B1_AR","FST_Droid_B1_Commander"],
+            // 4
+            ["FST_BX","FST_BX","FST_BX"],
+            // 5
+            ["FST_Jorgetrooper","FST_Jorgetrooper_AT","FST_Jorgetrooper_AR"],
+            // 6
+            ["FST_B2_TL","FST_B2"]
         ] # _selection;
                                             
         _listout = [];
@@ -479,12 +467,11 @@ FST_Droid_Dispenser =  {
 ["[41st] Droid Modules", "Droid Dispenser",
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
-        
-        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge", "B2"];
         
         ["spawn Droid Dispenser", [
             ["sideS", ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
-            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 2, 3, _options, nil]],
+            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 3, 3, _options, nil]],
             ["CHECKBOX", ["Linger", "Stays at the landing zone and spawns Droids unless destroyed."], [True]]
             ], {
                 params ["_values", "_arguments"];
