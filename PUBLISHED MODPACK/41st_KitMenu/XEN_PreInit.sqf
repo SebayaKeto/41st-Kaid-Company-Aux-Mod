@@ -1830,125 +1830,118 @@ if ((_kit isEqualType []) && {(count _kit) > 3}) then {
     };
 };
 private _isP1Kit = (_kitUniformClass isEqualTo "FST_Uniform_P1_41st");
-switch (true) do {
-    case (_name find "ARC-" == 0 && { _kitUniformClass isEqualTo "FST_Uniform_GM_Plastic" }): {
-        _nvgToSet = "FST_NVG_Invisible_Thermals";
-    };
-    default {};
-};
 if !(_kitUniformClass isEqualTo "FST_Uniform_GM_Plastic") then {
-switch (true) do {
-	case (_name find "CXC-" == 0): {
-        _uniformToSet  = "FST_Uniform_SCT";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-    case (_name find "CX-" == 0): {
-        _uniformToSet  = "FST_Uniform_VCT";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-    case (_name find "CXV-" == 0): {
-        _uniformToSet  = "FST_Uniform_CLC";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-    case (_name find "CXP-" == 0): {
-        _uniformToSet  = "FST_Uniform_CPL";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-    case (_name find "CXS-" == 0): {
-        _uniformToSet  = "FST_Uniform_CS";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-    case (_name find "CXL-" == 0): {
-        _uniformToSet  = "FST_Uniform_CL";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-    case (_name find "CXR" == 0): {
-        _uniformToSet  = "FST_Uniform_CL";
-        _headgearToSet = "FST_Pilot_P1_Helmet";
-    };
-	case (_name find ("CC-1861 " + '"' + "Annex" + '"') == 0): {
-		if (_isP1Kit) then {
-			_vestToSet      = "FST_pauldron_kama";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_NVG_Invisible_Thermals";
-		} else {
-			_uniformToSet   = "FST_Uniform_Annex";
-			_headgearToSet  = "FST_P2_Helmet_Annex";
-			_vestToSet      = "FST_pauldron_kama";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_Visor_Annex";
+	switch (true) do {
+		case (_name find "CXC-" == 0): {
+			_uniformToSet  = "FST_Uniform_SCT";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
 		};
-	};
-	case (_name find ("CC-1227 " + '"' + "Cardinal" + '"') == 0): {
-		if (_isP1Kit) then {
-			_vestToSet      = "FST_pauldron_kama";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_NVG_Invisible_Thermals";
-		} else {
-			_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
-			_headgearToSet  = "FST_P2_Helmet_Cardinal_V3";
-			_vestToSet      = "FST_pauldron_kama";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_Visor_Cardinal";
+		case (_name find "CX-" == 0): {
+			_uniformToSet  = "FST_Uniform_VCT";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
 		};
-	};
-	case (_name find ("BSM-1362 "+'"'+"Sigs"+'"') == 0): {
-		if (_isP1Kit) then {
-			_vestToSet      = "FST_CloneVestLieutenant";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_NVG_Invisible_Thermals";
-		} else {
-			_uniformToSet   = "FST_Uniform_Sigs";
-			_headgearToSet  = "FST_P2_Helmet_Sigs";
-			_vestToSet      = "FST_CloneVestLieutenant";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_Visor_Sigs";
+		case (_name find "CXV-" == 0): {
+			_uniformToSet  = "FST_Uniform_CLC";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
 		};
-	};
-	case (_name find ("BC-4973 " + '"' + "Merrik" + '"') == 0): {
-		if (_isP1Kit) then {
-			_vestToSet      = "FST_CloneVestMerrik";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_NVG_Invisible_Thermals";
-		} else {
-			_uniformToSet   = "FST_Uniform_Merrik_BC";
-			_headgearToSet  = "FST_BC_Helmet_Merrik";
-			_vestToSet      = "FST_CloneVestMerrik";
-			_backpackToSet  = "FST_Clone_LR_attachment";
-			_nvgToSet       = "FST_Marshal_Commander_Visor";
+		case (_name find "CXP-" == 0): {
+			_uniformToSet  = "FST_Uniform_CPL";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
 		};
-	};
-	// special case
-	case (_name find "Snowfox" > -1): {
-		_glassesToSet = "FST_Fynock_LowLight";
-	};
-	// special case
-	case (_name find "ARC-" == 0): {
-		if (_isP1Kit) then {
-			_uniformToSet   = _kitUniformClass;
-			_headgearToSet  = "FST_P2_ARC_Helmet";
-			_vestToSet      = "FST_CloneVestARC";
-			_backpackToSet  = "FST_Clone_Backpack_ARC";
-			_nvgToSet       = "FST_Antenna";
-		} else {
-			_uniformToSet   = "FST_Uniform_CLC";
-			_headgearToSet  = "FST_P2_ARC_Helmet";
-			_vestToSet      = "FST_CloneVestARC";
-			_backpackToSet  = "FST_Clone_Backpack_ARC";
-			_nvgToSet       = "FST_Antenna";
+		case (_name find "CXS-" == 0): {
+			_uniformToSet  = "FST_Uniform_CS";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
 		};
-	};
-    case (_name find "CR-" == 0): {
-        _uniformToSet = "FST_Uniform_Recruit";
-        _headgearToSet = "FST_P2_Helmet_Recruit";
-    };
-	case (_name find "CT-" == 0
+		case (_name find "CXL-" == 0): {
+			_uniformToSet  = "FST_Uniform_CL";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
+		};
+		case (_name find "CXR" == 0): {
+			_uniformToSet  = "FST_Uniform_CL";
+			_headgearToSet = "FST_Pilot_P1_Helmet";
+		};
+		case (_name find ("CC-1861 " + '"' + "Annex" + '"') == 0): {
+			if (_isP1Kit) then {
+				_vestToSet      = "FST_pauldron_kama";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_NVG_Invisible_Thermals";
+			} else {
+				_uniformToSet   = "FST_Uniform_Annex";
+				_headgearToSet  = "FST_P2_Helmet_Annex";
+				_vestToSet      = "FST_pauldron_kama";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_Visor_Annex";
+			};
+		};
+		case (_name find ("CC-1227 " + '"' + "Cardinal" + '"') == 0): {
+			if (_isP1Kit) then {
+				_vestToSet      = "FST_pauldron_kama";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_NVG_Invisible_Thermals";
+			} else {
+				_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
+				_headgearToSet  = "FST_P2_Helmet_Cardinal_V3";
+				_vestToSet      = "FST_pauldron_kama";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_Visor_Cardinal";
+			};
+		};
+		case (_name find ("BSM-1362 "+'"'+"Sigs"+'"') == 0): {
+			if (_isP1Kit) then {
+				_vestToSet      = "FST_CloneVestLieutenant";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_NVG_Invisible_Thermals";
+			} else {
+				_uniformToSet   = "FST_Uniform_Sigs";
+				_headgearToSet  = "FST_P2_Helmet_Sigs";
+				_vestToSet      = "FST_CloneVestLieutenant";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_Visor_Sigs";
+			};
+		};
+		case (_name find ("BC-4973 " + '"' + "Merrik" + '"') == 0): {
+			if (_isP1Kit) then {
+				_vestToSet      = "FST_CloneVestMerrik";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_NVG_Invisible_Thermals";
+			} else {
+				_uniformToSet   = "FST_Uniform_Merrik_BC";
+				_headgearToSet  = "FST_BC_Helmet_Merrik";
+				_vestToSet      = "FST_CloneVestMerrik";
+				_backpackToSet  = "FST_Clone_LR_attachment";
+				_nvgToSet       = "FST_Marshal_Commander_Visor";
+			};
+		};
+		case (_name find "Snowfox" > -1): {
+			_glassesToSet = "FST_Fynock_LowLight";
+		};
+		case (_name find "ARC-" == 0): {
+			if (_isP1Kit) then {
+				_headgearToSet = "FST_P2_ARC_Helmet";
+				_vestToSet     = "FST_CloneVestARC";
+				_backpackToSet = "FST_Clone_Backpack_ARC";
+				_nvgToSet      = "FST_NVG_Invisible_Thermals";
+			} else {
+				_uniformToSet  = "FST_Uniform_CLC";
+				_headgearToSet = "FST_P2_ARC_Helmet";
+				_vestToSet     = "FST_CloneVestARC";
+				_backpackToSet = "FST_Clone_Backpack_ARC";
+				_nvgToSet      = "FST_Antenna";
+			};
+		};
+		case (_isP1Kit): {};
+		case (_name find "CR-" == 0): {
+			_uniformToSet  = "FST_Uniform_Recruit";
+			_headgearToSet = "FST_P2_Helmet_Recruit";
+		};
+		case (_name find "CT-" == 0
 			|| _name find "ENS-" == 0
 			|| _name find "LTJG-" == 0
 			|| _name find "LT-" == 0
 			|| _name find "LCDR-" == 0
 			|| _name find "CDR-" == 0
-			|| _name find "CAPT-" == 0): { 
+			|| _name find "CAPT-" == 0
+		): {
 			if (_typeOfKit == "Medic") then {
 				_uniformToSet = "FST_Trooper_Medic";
 			} else {
@@ -1958,51 +1951,57 @@ switch (true) do {
 				_uniformToSet = "FST_Uniform_EOD";
 			};
 		};
-    case (_name find "SCT-" == 0): {
-        if (_typeOfKit == "Medic") then {
-            _uniformToSet = "FST_Uniform_SCT_Medic";
-        } else {
-            _uniformToSet = "FST_Uniform_SCT";
-        };
-        if (_typeOfKit == "Engineer") then {
-            _uniformToSet = "FST_Uniform_EOD";
-        };
-    };
-    case (_name find "VCT-" == 0
-       || _name find "CLC-" == 0
-       || _name find "CPL-" == 0
-       || _name find "CS-" == 0
-       || _name find "CSS-" == 0
-       || _name find "CL-" == 0): {
-        if (_typeOfKit == "Medic") then {
-            _uniformToSet = "FST_Uniform_VCT_Medic";
-        } else {
-            if (_name find "VCT-" == 0) then { _uniformToSet = "FST_Uniform_VCT"; };
-            if (_name find "CLC-" == 0) then { _uniformToSet = "FST_Uniform_CLC"; };
-            if (_name find "CPL-" == 0) then { _uniformToSet = "FST_Uniform_CPL"; };
-            if (_name find "CS-" == 0)  then { _uniformToSet = "FST_Uniform_CS"; };
-            if (_name find "CSS-" == 0) then { _uniformToSet = "FST_Uniform_CSS"; };
-            if (_name find "CL-" == 0)  then { _uniformToSet = "FST_Uniform_CL"; };
-        };
-        if (_typeOfKit == "Engineer") then {
-            _uniformToSet = "FST_Uniform_EOD";
-        };
-    };
-	default {
-        _uniformToSet = "FST_Uniform_Recruit";
-        _headgearToSet = "FST_P2_Helmet_Recruit";
-    };
+
+		case (_name find "SCT-" == 0): {
+			if (_typeOfKit == "Medic") then {
+				_uniformToSet = "FST_Uniform_SCT_Medic";
+			} else {
+				_uniformToSet = "FST_Uniform_SCT";
+			};
+			if (_typeOfKit == "Engineer") then {
+				_uniformToSet = "FST_Uniform_EOD";
+			};
+		};
+
+		case (_name find "VCT-" == 0
+			|| _name find "CLC-" == 0
+			|| _name find "CPL-" == 0
+			|| _name find "CS-" == 0
+			|| _name find "CSS-" == 0
+			|| _name find "CL-" == 0
+		): {
+			if (_typeOfKit == "Medic") then {
+				_uniformToSet = "FST_Uniform_VCT_Medic";
+			} else {
+				if (_name find "VCT-" == 0) then { _uniformToSet = "FST_Uniform_VCT"; };
+				if (_name find "CLC-" == 0) then { _uniformToSet = "FST_Uniform_CLC"; };
+				if (_name find "CPL-" == 0) then { _uniformToSet = "FST_Uniform_CPL"; };
+				if (_name find "CS-"  == 0) then { _uniformToSet = "FST_Uniform_CS"; };
+				if (_name find "CSS-" == 0) then { _uniformToSet = "FST_Uniform_CSS"; };
+				if (_name find "CL-"  == 0) then { _uniformToSet = "FST_Uniform_CL"; };
+			};
+			if (_typeOfKit == "Engineer") then {
+				_uniformToSet = "FST_Uniform_EOD";
+			};
+		};
+
+		default {
+			_uniformToSet  = "FST_Uniform_Recruit";
+			_headgearToSet = "FST_P2_Helmet_Recruit";
+		};
+	};
 };
-};
-if (_uniformToSet != "" && ((uniform player == "FST_Trooper_Uniform") || _isP1Kit)) then {
+
+if (_uniformToSet != "" && { (uniform player) == "FST_Trooper_Uniform" }) then {
     private _uniformItems = uniformItems player;
     removeUniform player;
     player forceAddUniform _uniformToSet;
     { player addItemToUniform _x; } forEach _uniformItems;
-    if (_headgearToSet != "") then {
-        removeHeadgear player;
-        player addHeadgear _headgearToSet;
-    };
+};
+
+if (_headgearToSet != "" && { headgear player != _headgearToSet }) then {
+    removeHeadgear player;
+    player addHeadgear _headgearToSet;
 };
 
 if (_vestToSet != "" && {vest player != _vestToSet}) then {
