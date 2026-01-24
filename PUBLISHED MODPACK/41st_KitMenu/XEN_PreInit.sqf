@@ -22,6 +22,12 @@ systemChat "Object already have a kit menu";
 };
 };
 FST_ApplyCamoPreset = {
+	if (
+		(missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger"
+		&& {(uniform player) isEqualTo "FST_Uniform_P1_41st"}
+	) exitWith {
+		playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+	};
     params [["_camo","Woodland"]];
     private _unit = player;
     private _camoLower = toLower _camo;
@@ -90,7 +96,6 @@ FST_ApplyCamoPreset = {
         };
     };
     private _curVest = vest _unit;
-	private _curVest = vest _unit;
 	if (_curVest != "") then {
 		private _vestNew = "";
 		if (_curVest find "FST_Vest_NCO_Kama" == 0) then {
@@ -160,7 +165,14 @@ FST_fnc_updateAditionalListCamo = {
 		if (_item find "FST_Vest_NCO_Kama"      == 0) then { _new = format ["FST_Vest_NCO_Kama_%1", _camoCap]; };
 		if (_item find "FST_Vest_NCO"           == 0) then { _new = format ["FST_Vest_NCO_%1",      _camoCap]; };
 		if (_item find "FST_pauldron_kama"      == 0) then { _new = format ["FST_pauldron_kama_%1", _camoCap]; };
-		if (_item find "FST_Backpack_Antenna"   == 0) then { _new = format ["FST_Backpack_Antenna_%1", _camoCap]; };
+		if (_item find "FST_Backpack_Antenna" == 0) then {
+			private _isSL = (player getVariable ["WBK_Kit_Name",""]) in ["Squad Leader","Squad Leader "];
+			_new = if (_isSL && {(uniform player) isEqualTo "FST_Uniform_P1_41st"}) then {
+				"FST_Backpack_Antenna"
+			} else {
+				format ["FST_Backpack_Antenna_%1", _camoCap]
+			};
+		};
 		if (_item find "FST_Clone_backpack_RTO" == 0) then { _new = format ["FST_Clone_backpack_RTO_%1", _camoCap]; };
 		if (_item find "FST_Clone_backpack"     == 0) then { _new = format ["FST_Clone_backpack_%1", _camoCap]; };
 		if (_item == "FST_Backpack_Jumppack")          then { _new = format ["FST_Backpack_Jumppack_%1", _camoCap]; };
@@ -183,7 +195,12 @@ FST_fnc_updateAditionalListCamo = {
 FST_fnc_toggleJumppack = {
     private _unit = player;
     private _camo = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
-    private _jpClass = format ["FST_Backpack_Jumppack_%1", _camo];
+	private _jpClass =
+    if ((uniform player) isEqualTo "FST_Uniform_P1_41st") then {
+        "FST_Backpack_Jumppack_LR_UGL"
+    } else {
+        format ["FST_Backpack_Jumppack_%1", _camo]
+    };
     if !(isClass (configFile >> "CfgVehicles" >> _jpClass)) exitWith {
         systemChat format ["[KitMenu] Jumppack class not found: %1", _jpClass];
         playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
@@ -396,7 +413,14 @@ if ((missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualT
         case (_item == "FST_Vest_NCO"):         { _item = format ["FST_Vest_NCO_%1", _camo]; };
         case (_item == "FST_Vest_NCO_Kama"):    { _item = format ["FST_Vest_NCO_Kama_%1", _camo]; };
         case (_item == "FST_pauldron_kama"):    { _item = format ["FST_pauldron_kama_%1", _camo]; };
-        case (_item == "FST_Backpack_Antenna"): { _item = format ["FST_Backpack_Antenna_%1", _camo]; };
+		case (_item == "FST_Backpack_Antenna"): {
+			private _isSL = (player getVariable ["WBK_Kit_Name",""]) in ["Squad Leader","Squad Leader "];
+			_item = if (_isSL && {(uniform player) isEqualTo "FST_Uniform_P1_41st"}) then {
+				"FST_Backpack_Antenna"
+			} else {
+				format ["FST_Backpack_Antenna_%1", _camo]
+			};
+		};
         case (_item == "FST_Clone_backpack_RTO"): { _item = format ["FST_Clone_backpack_RTO_%1", _camo]; };
         case (_item == "FST_Clone_backpack"):     { _item = format ["FST_Clone_backpack_%1", _camo]; };
 		case (_item == "FST_Backpack_Jumppack"):         { _item = format ["FST_Backpack_Jumppack_%1", _camo]; };
@@ -639,8 +663,12 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 	if (_isRanger && _isSL) then {
 		private _camo = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
 		if (_item == "FST_Backpack_Antenna") then {
-			private _cand = format ["FST_Backpack_Antenna_%1", _camo];
-			if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _equipClass = _cand; };
+			if ((uniform player) isEqualTo "FST_Uniform_P1_41st") then {
+				_equipClass = "FST_Backpack_Antenna";
+			} else {
+				private _cand = format ["FST_Backpack_Antenna_%1", _camo];
+				if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _equipClass = _cand; };
+			};
 		};
 		if (_item == "FST_Backpack_Jumppack_LR") then {
 			private _cand2 = format ["FST_Backpack_Jumppack_LR_%1", _camo];
@@ -649,13 +677,8 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 	};
 	removeBackpack player;
 	player addBackpack _equipClass;
-
-    removeBackpack player;
-    player addBackpack _item;
-
     private _grenadeClass = "FST_grenade_Detonator_mag";
     private _grenadesCurrent = { _x == _grenadeClass } count magazines player;
-
 		private _rawData = lbData [ctrlIDC _control, _index];
 		private _lbData = [];
 		try {
@@ -845,14 +868,18 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 						player addBackpack "FST_Backpack_Jumppack_RPS";
 					} else {
-						private _isRanger = toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger";
-						private _bpClass  = "FST_Clone_Backpack_RPS";
+					private _isRanger = toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger";
+					private _bpClass  = "FST_Clone_Backpack_RPS";
+					if ((uniform player) isEqualTo "FST_Uniform_P1_41st") then {
+						_bpClass = "FST_Clone_Backpack_RPS";
+					} else {
 						if (_isRanger) then {
 							private _camo  = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
 							private _cand  = format ["FST_Clone_backpack_%1", _camo];
 							if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _bpClass = _cand; };
 						};
-						player addBackpack _bpClass;
+					};
+					player addBackpack _bpClass;
 					};
 					for "_i" from 1 to 4 do { player addItemToBackpack "FST_RPS6_rocket"; };
 					player addItemToBackpack "FST_RPS6_rocket_HE";
@@ -884,14 +911,18 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 						player addBackpack "FST_Backpack_Jumppack_RPS";
 					} else {
-						private _isRanger = toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger";
-						private _bpClass  = "FST_Clone_Backpack_RPS";
+					private _isRanger = toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger";
+					private _bpClass  = "FST_Clone_Backpack_RPS";
+					if ((uniform player) isEqualTo "FST_Uniform_P1_41st") then {
+						_bpClass = "FST_Clone_Backpack_RPS";
+					} else {
 						if (_isRanger) then {
 							private _camo  = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
 							private _cand  = format ["FST_Clone_backpack_%1", _camo];
 							if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _bpClass = _cand; };
 						};
-						player addBackpack _bpClass;
+					};
+					player addBackpack _bpClass;
 					};
 					for "_i" from 1 to 2 do { player addItemToBackpack "FST_RPS6_rocket_SR"; };
 				};
@@ -1328,13 +1359,24 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					};
 					player addPrimaryWeaponItem "FST_Optic_DC15L";
 				};
-
 				case "FST_Valken38x": {
 					removeBackpack player;
-					player addBackpack "FST_Clone_backpack_Woodland";
-					player addItemToBackpack "ACE_Tripod";
+					private _bpClass = if ((uniform player) isEqualTo "FST_Uniform_P1_41st") then {
+						"FST_belt_bag_15L"
+					} else {
+						"FST_Clone_backpack_Woodland"
+					};
+					player addBackpack _bpClass;
+
+					if (player canAddItemToBackpack "ACE_Tripod") then {
+						player addItemToBackpack "ACE_Tripod";
+					} else {
+						player addItemToVest "ACE_Tripod";
+					};
+
 					private _magType = "FST_blaster_cell_Valken_Blue";
 					player addPrimaryWeaponItem "FST_blaster_cell_Valken_Blue";
+
 					for "_i" from 1 to 14 do {
 						if (player canAddItemToBackpack _magType) then {
 							player addItemToBackpack _magType;
@@ -1345,7 +1387,6 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					player addPrimaryWeaponItem "FST_optic_VK38X_1";
 					player addPrimaryWeaponItem "3AS_Bipod_VK38X_f";
 				};
-
 				case "FST_Z6": {
 					if ((player getVariable ["WBK_Kit_Name",""]) == "Howler") then {
 						removeBackpack player;
@@ -1664,10 +1705,14 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					player addPrimaryWeaponItem "3as_bipod_vk38x_f";
 					removeBackpack player;
 					private _bpClass = "FST_Clone_Backpack_RifleAT";
-					if (toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger") then {
-						private _camo = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
-						private _cand = format ["FST_Clone_backpack_%1", _camo];
-						if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _bpClass = _cand; };
+					if ((uniform player) isEqualTo "FST_Uniform_P1_41st") then {
+						_bpClass = "FST_Clone_Backpack_RifleAT";
+					} else {
+						if (toLower (player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger") then {
+							private _camo = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
+							private _cand = format ["FST_Clone_backpack_%1", _camo];
+							if (isClass (configFile >> "CfgVehicles" >> _cand)) then { _bpClass = _cand; };
+						};
 					};
 					player addBackpack _bpClass;
 					player addPrimaryWeaponItem "FST_thermal_coil_LP_Blue";
@@ -1784,6 +1829,7 @@ if ((_kit isEqualType []) && {(count _kit) > 3}) then {
         _kitUniformClass = _u select 0;
     };
 };
+private _isP1Kit = (_kitUniformClass isEqualTo "FST_Uniform_P1_41st");
 switch (true) do {
     case (_name find "ARC-" == 0 && { _kitUniformClass isEqualTo "FST_Uniform_GM_Plastic" }): {
         _nvgToSet = "FST_NVG_Invisible_Thermals";
@@ -1821,32 +1867,56 @@ switch (true) do {
         _headgearToSet = "FST_Pilot_P1_Helmet";
     };
 	case (_name find ("CC-1861 " + '"' + "Annex" + '"') == 0): {
-		_uniformToSet   = "FST_Uniform_Annex";
-		_headgearToSet  = "FST_P2_Helmet_Annex";
-		_vestToSet      = "FST_pauldron_kama";
-		_backpackToSet  = "FST_Clone_LR_attachment";
-		_nvgToSet       = "FST_Visor_Annex";
+		if (_isP1Kit) then {
+			_vestToSet      = "FST_pauldron_kama";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_NVG_Invisible_Thermals";
+		} else {
+			_uniformToSet   = "FST_Uniform_Annex";
+			_headgearToSet  = "FST_P2_Helmet_Annex";
+			_vestToSet      = "FST_pauldron_kama";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_Visor_Annex";
+		};
 	};
 	case (_name find ("CC-1227 " + '"' + "Cardinal" + '"') == 0): {
-		_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
-		_headgearToSet  = "FST_P2_Helmet_Cardinal_V3";
-		_vestToSet      = "FST_pauldron_kama";
-		_backpackToSet  = "FST_Clone_LR_attachment";
-		_nvgToSet       = "FST_Visor_Cardinal";
+		if (_isP1Kit) then {
+			_vestToSet      = "FST_pauldron_kama";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_NVG_Invisible_Thermals";
+		} else {
+			_uniformToSet   = "FST_Uniform_Cardinal_Dirty";
+			_headgearToSet  = "FST_P2_Helmet_Cardinal_V3";
+			_vestToSet      = "FST_pauldron_kama";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_Visor_Cardinal";
+		};
 	};
 	case (_name find ("BSM-1362 "+'"'+"Sigs"+'"') == 0): {
-		_uniformToSet   = "FST_Uniform_Sigs";
-		_headgearToSet  = "FST_P2_Helmet_Sigs";
-		_vestToSet      = "FST_CloneVestLieutenant";
-		_backpackToSet  = "FST_Clone_LR_attachment";
-		_nvgToSet       = "FST_Visor_Sigs";
+		if (_isP1Kit) then {
+			_vestToSet      = "FST_CloneVestLieutenant";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_NVG_Invisible_Thermals";
+		} else {
+			_uniformToSet   = "FST_Uniform_Sigs";
+			_headgearToSet  = "FST_P2_Helmet_Sigs";
+			_vestToSet      = "FST_CloneVestLieutenant";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_Visor_Sigs";
+		};
 	};
 	case (_name find ("BC-4973 " + '"' + "Merrik" + '"') == 0): {
-		_uniformToSet   = "FST_Uniform_Merrik_BC";
-		_headgearToSet  = "FST_BC_Helmet_Merrik";
-		_vestToSet      = "FST_CloneVestMerrik";
-		_backpackToSet  = "FST_Clone_LR_attachment";
-		_nvgToSet       = "FST_Marshal_Commander_Visor";
+		if (_isP1Kit) then {
+			_vestToSet      = "FST_CloneVestMerrik";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_NVG_Invisible_Thermals";
+		} else {
+			_uniformToSet   = "FST_Uniform_Merrik_BC";
+			_headgearToSet  = "FST_BC_Helmet_Merrik";
+			_vestToSet      = "FST_CloneVestMerrik";
+			_backpackToSet  = "FST_Clone_LR_attachment";
+			_nvgToSet       = "FST_Marshal_Commander_Visor";
+		};
 	};
 	// special case
 	case (_name find "Snowfox" > -1): {
@@ -1854,12 +1924,20 @@ switch (true) do {
 	};
 	// special case
 	case (_name find "ARC-" == 0): {
-        _uniformToSet   = "FST_Uniform_CLC";
-        _headgearToSet  = "FST_P2_ARC_Helmet";
-        _vestToSet      = "FST_CloneVestARC";
-        _backpackToSet  = "FST_Clone_Backpack_ARC";
-		_nvgToSet       = "FST_Antenna";
-    };
+		if (_isP1Kit) then {
+			_uniformToSet   = _kitUniformClass;
+			_headgearToSet  = "FST_P2_ARC_Helmet";
+			_vestToSet      = "FST_CloneVestARC";
+			_backpackToSet  = "FST_Clone_Backpack_ARC";
+			_nvgToSet       = "FST_Antenna";
+		} else {
+			_uniformToSet   = "FST_Uniform_CLC";
+			_headgearToSet  = "FST_P2_ARC_Helmet";
+			_vestToSet      = "FST_CloneVestARC";
+			_backpackToSet  = "FST_Clone_Backpack_ARC";
+			_nvgToSet       = "FST_Antenna";
+		};
+	};
     case (_name find "CR-" == 0): {
         _uniformToSet = "FST_Uniform_Recruit";
         _headgearToSet = "FST_P2_Helmet_Recruit";
@@ -1916,7 +1994,7 @@ switch (true) do {
     };
 };
 };
-if (_uniformToSet != "" && (uniform player == "FST_Trooper_Uniform")) then {
+if (_uniformToSet != "" && ((uniform player == "FST_Trooper_Uniform") || _isP1Kit)) then {
     private _uniformItems = uniformItems player;
     removeUniform player;
     player forceAddUniform _uniformToSet;
@@ -2608,6 +2686,27 @@ _listBox lbSetPictureColor [_index, [1, 1, 1, 1]];
 };
 };
 } forEach items player;
+
+private _disp = findDisplay 2000;
+if (!isNull _disp) then {
+    private _lockRangerCamo =
+        (missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger"
+        && {(uniform player) isEqualTo "FST_Uniform_P1_41st"};
+    {
+        private _c = _disp displayCtrl _x;
+        if (!isNull _c) then {
+            _c ctrlEnable (!_lockRangerCamo);
+            _c ctrlSetFade (if (_lockRangerCamo) then {0.65} else {0});
+            _c ctrlCommit 0;
+        };
+    } forEach [1610,1611,1612,1613];
+    private _jp = _disp displayCtrl 1614;
+    if (!isNull _jp) then {
+        _jp ctrlEnable true;
+        _jp ctrlSetFade 0;
+        _jp ctrlCommit 0;
+    };
+};
 };
 
 

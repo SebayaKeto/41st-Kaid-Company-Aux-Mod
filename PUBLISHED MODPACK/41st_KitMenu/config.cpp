@@ -385,7 +385,8 @@ class WBK_KITArsenalAlike
 		};
 		class Frame_Preset_Desert: RscFrame
 		{
-			idc = 2611; colorText[] = {1,1,1,1};
+			idc = 2611;
+			colorText[] = {1,1,1,1};
 			w = "0.042 * safezoneH + (3 * pixelW)";
 			h = "0.042 * safezoneH + (3 * pixelH)";
 			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 1 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
@@ -393,7 +394,8 @@ class WBK_KITArsenalAlike
 		};
 		class Frame_Preset_Urban: RscFrame
 		{
-			idc = 2612; colorText[] = {1,1,1,1};
+			idc = 2612;
+			colorText[] = {1,1,1,1};
 			w = "0.042 * safezoneH + (3 * pixelW)";
 			h = "0.042 * safezoneH + (3 * pixelH)";
 			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 2 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
@@ -401,7 +403,8 @@ class WBK_KITArsenalAlike
 		};
 		class Frame_Preset_Midnight: RscFrame
 		{
-			idc = 2613; colorText[] = {1,1,1,1};
+			idc = 2613;
+			colorText[] = {1,1,1,1};
 			w = "0.042 * safezoneH + (3 * pixelW)";
 			h = "0.042 * safezoneH + (3 * pixelH)";
 			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 3 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";
@@ -409,7 +412,8 @@ class WBK_KITArsenalAlike
 		};
 		class Frame_Jumppack: RscFrame
 		{
-			idc = 2614; colorText[] = {1,1,1,1};
+			idc = 2614;
+			colorText[] = {1,1,1,1};
 			w = "0.042 * safezoneH + (3 * pixelW)";
 			h = "0.042 * safezoneH + (3 * pixelH)";
 			x = "((0.454 * safezoneW + safezoneX) + (0.15 * safezoneW)/2 - ((5 * (0.042 * safezoneH)) + (4 * (0.007 * safezoneW)))/2) + 4 * ((0.042 * safezoneH) + (0.007 * safezoneW)) - (1.5 * pixelW)";

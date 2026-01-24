@@ -1458,9 +1458,9 @@
         "FST_P1_41st_NCO",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
-        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_Antenna"]
     ], 
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL","FST_Antenna"], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
     "true",
     {},
     "regular"
@@ -1498,7 +1498,7 @@
         "FST_P1_41st_NCO",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
-        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_Antenna"]
     ], 
     ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
     "true",
@@ -1537,9 +1537,9 @@
         "FST_P1_41st_Officer",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
-        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_Antenna"]
     ], 
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL","FST_Antenna"], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
     "true",
     {},
     "regular"
@@ -1576,7 +1576,7 @@
         "FST_P1_41st_Officer",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
-        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_Antenna"]
     ], 
     ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
     "true",
@@ -2018,7 +2018,7 @@
             ["IDA_grenade_Smoke_Purple_mag",1,1]
         ]],
         ["FST_Backpack_Antenna",[]],
-        "FST_P1_41st",
+        "FST_P1_41st_NCO",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
@@ -2157,7 +2157,7 @@
             ["IDA_grenade_Smoke_Red_mag",5,1],
             ["IDA_grenade_Smoke_Purple_mag",3,1]
         ]],
-        "FST_P1_41st",
+        "FST_P1_41st_NCO",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
@@ -2207,7 +2207,7 @@
             ["DRNP_AR2P",1],
             ["IDA_grenade_Smoke_Purple_mag",3,1]
         ]],
-        "FST_P1_41st",
+        "FST_P1_41st_NCO",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","B_UavTerminal","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
@@ -2250,7 +2250,7 @@
         "FST_P1_41st_Officer",
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
-        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_Antenna"]
     ], 
     ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15S_UGL","FST_DP23","UNSC_Knife","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Westar_M5","FST_Westar_M5_UGL"], 
     "true",
