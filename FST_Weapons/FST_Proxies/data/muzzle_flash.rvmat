@@ -1,0 +1,18 @@
+class StageTI
+{
+	texture="a3\data_f\default_hot_ti_ca.paa";
+};
+ambient[]={0.99000001,0.27000001,0.02,0.80000001};
+diffuse[]={0.99000001,0.27000001,0.02,1};
+forcedDiffuse[]={1,1,0.69999999,1};
+emmisive[]={1,0.80000001,0.60000002,1};
+specular[]={0,0,0,0};
+specularPower=0;
+renderFlags[]=
+{
+	"NoZWrite",
+	"NoAlphaWrite",
+	"AddBlend"
+};
+PixelShaderID="Normal";
+VertexShaderID="Basic";

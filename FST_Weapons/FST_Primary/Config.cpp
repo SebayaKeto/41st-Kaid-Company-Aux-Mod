@@ -13,50 +13,14 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"FST_DC15A"
+			"FST_DC15A_VersionTwo"
 		};
 		magazines[]=
 		{
-			"FST_DC15A_Mag"
 		};
 		ammo[]=
 		{
-			"FST_DC15A_Energy_Ammo"
 		};	
-	};
-};
-class CfgAmmo
-{
-	class BulletBase;
-	class B_65x39_Caseless: BulletBase {};
-	
-	class FST_DC15A_Energy_Ammo: B_65x39_Caseless
-	{
-		hit = 12;
-		typicalSpeed = 920;
-		supersonicCrackNear[] = {};
-		supersonicCrackFar[] = {};
-		visibleFire = 3;
-		audibleFire = 5;
-	};
-};
-class CfgMagazines
-{
-	class 30Rnd_65x39_caseless_mag;
-	
-	class FST_DC15A_Mag: 30Rnd_65x39_caseless_mag
-	{
-		author = "Maldova";
-		scope = Public;
-		displayName = "[41st] DC-15A Energy Cell";
-		displayNameShort = "High Energy";
-		descriptionShort = "DC-15A Energy Cell";
-		picture = "\A3\Weapons_F\Data\UI\M_30stanag_CA.paa";
-		ammo = "FST_DC15A_Energy_Ammo";
-		count = 60;
-		mass = 8;
-		initSpeed = 920;
-		tracersEvery = 1;
 	};
 };
 class Mode_SemiAuto;
@@ -75,49 +39,79 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class FST_DC15A: Rifle_Base_F
+	class FST_DC15A_VersionTwo: Rifle_Base_F
 	{
 		author = "Maldova";
-		scope = Public;
+		scope = 2;
 		displayName = "[41st] DC-15A Blaster Rifle";
 		descriptionShort = "DC-15A Blaster Rifle";
-		model = "\FST\FST_Weapons\FST_Primary\DC15A .p3d";
-		//picture = "\A3\Weapons_F\Rifles\MX\Data\UI\gear_mx_rifle_ca.paa";
-		baseWeapon = "FST_DC15A";
-		
-		magazines[] = {"FST_DC15A_Mag"};
-		magazineWell[] = {};
-		
+		model = "\FST\FST_Weapons\FST_Primary\DC15A.p3d";
+		picture = "FST\FST_Weapons\FST_Primary\Icons\DC15AIcon.paa";
+		baseWeapon = "FST_DC15A_VersionTwo";
+		magazineWell[] = {"FST_DC15AMagwell"};
 		modes[] = {"Single","FullAuto"};
-		
-		class Single: Mode_SemiAuto
-		{
-			reloadTime = 0.08;
-			dispersion = 0.00087;
-			minRange = 2;
-			minRangeProbab = 0.5;
-			midRange = 200;
-			midRangeProbab = 0.7;
-			maxRange = 400;
-			maxRangeProbab = 0.3;
-		};
-		
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime = 0.08;
-			dispersion = 0.00087;
+			reloadTime = 0.2;
+			dispersion = 0.00066;
 			minRange = 0;
 			minRangeProbab = 0.9;
 			midRange = 15;
 			midRangeProbab = 0.7;
 			maxRange = 30;
 			maxRangeProbab = 0.1;
-			aiRateOfFire = 1e-006;
+			soundContinuous = 0;
+			soundBurst = 0;
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"FST_DC15Soundset_Shot"};
+			};
 		};
-		
+		class Single: Mode_SemiAuto
+		{
+			reloadTime = 0.05;
+			dispersion = 0.00066;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.7;
+			maxRange = 400;
+			maxRangeProbab = 0.3;
+			soundContinuous = 0;
+			soundBurst = 0;
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"FST_DC15Soundset_Shot"};
+			};
+		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 80;
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {};
+				iconPosition[] = {0,0.45};
+				iconScale = 0.2;
+			};
+			class CowsSlot: CowsSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = 
+				{
+					"3AS_Optic_Red_DC15A",
+					"3AS_Optic_LEScope_DC15A"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+			};
 		};
 	};
 };

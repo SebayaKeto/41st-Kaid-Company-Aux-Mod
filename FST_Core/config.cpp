@@ -124,3 +124,25 @@ class CfgEditorSubcategories
 		displayname = "Resupplies";
 	};
 };
+class CfgFunctions
+{
+	class WPS_Weapon
+	{
+		file = "WPS\WPS_Weapons\Functions";
+		class scripts
+		{
+			class onHit{};
+			class onHitStun{};
+			class onHitConcussion{};
+			class onHitIon{};
+			class onHitIncendiary{};
+		};
+	};
+};
+class Extended_HitPart_EventHandlers
+{
+	class CAManBase
+	{
+		hitPart = "(_this select 0) call WPS_Weapon_fnc_onHit";
+	};
+};
