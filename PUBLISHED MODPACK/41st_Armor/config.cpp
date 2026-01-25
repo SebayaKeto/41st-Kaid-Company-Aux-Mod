@@ -179,6 +179,8 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty",
 			"FST_P2_Squatch_V2",
 			"FST_P2_Squatch_Dirty_V2",
+			"FST_P2_Texas",
+			"FST_P2_Nerd",
 			"FST_P2_Atlas",
 			"FST_P2_Atlas_Dirty",
 			"FST_P2_Shut",
@@ -316,6 +318,7 @@ class CfgPatches
 			"FST_P2_Hazzo",
 			"FST_P2_Crab",
 			"FST_P2_Chips",
+			"FST_P2_Chips_Dirty",
 			"FST_P2_Steel",
 			"FST_P2_Steel_Dirty",
 			"FST_P2_Trenny",
@@ -11891,6 +11894,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Nerd: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Nerd]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Nerd.paa",
+		};
+	};
 	class FST_P2_Helmet_Zora: FST_P2_Helmet_Base
 	{
 		author="Steel";
@@ -12778,6 +12791,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chips.paa"
+		};
+	};
+	class FST_P2_Helmet_Chips_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P2 Helmet [Chips/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Chips_Dirty.paa"
 		};
 	};
 	class FST_P2_Helmet_Steel: FST_P2_Helmet_Base
@@ -15747,6 +15770,48 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Nerd: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Nerd]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Nerd";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Strider: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Strider]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Strider";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Texas: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Texas]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Texas";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Shut: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -17593,6 +17658,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
         {
             uniformModel="";
             uniformClass="FST_P2_Chips";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
+	class FST_Uniform_Chips_Dirty: JLTS_CloneArmor
+    {
+        author="Steel";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Chips/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Chips_Dirty";
             uniformType="Neopren";
             containerClass="Supply150";
             mass=15;
@@ -39286,6 +39365,171 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Nerd: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-0415 'Nerd'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Nerd";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Nerd.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Nerd.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Nerd",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Nerd",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Strider: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-3019 'Strider'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Strider";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Strider.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Strider.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Strider",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Strider",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Texas: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-0213 'Texas'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Texas";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Texas.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Texas.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Texas",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Texas",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Shut: FST_Trooper_P2_DC15S
 	{
 		author="Steel";
@@ -45585,6 +45829,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Chips_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-1964 'Chips/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Chips_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Chips_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Chips_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Chips_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Chips_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Buddhah: FST_Trooper_P2_DC15S
 	{
 		author="Viz";
@@ -47246,6 +47545,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Squatch";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Squatch.paa";
+		};
+		class FST_Clone_Head_Dilham: FST_clone_Default_head
+		{
+			author="Steel";
+			name="Clone Trooper Dilham";
+			displayName="[41st] Clone Trooper - Dilham";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Dilham.paa";
 		};
 		class FST_Clone_Head_Rumble: FST_clone_Default_head
 		{
