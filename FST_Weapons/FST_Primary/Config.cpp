@@ -59,22 +59,30 @@ class CfgMagazines
 		tracersEvery = 1;
 	};
 };
+class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
+class SlotInfo;
+class CowsSlot;
+class MuzzleSlot;
+class PointerSlot;
+class UnderBarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class arifle_MX_Base_F: Rifle_Base_F
+	class Rifle;
+	class Rifle_Base_F: Rifle
 	{
 		class WeaponSlotsInfo;
+		class GunParticles;
 	};
-	
-	class FST_DC15A: arifle_MX_Base_F
+	class FST_DC15A: Rifle_Base_F
 	{
 		author = "Maldova";
 		scope = Public;
 		displayName = "[41st] DC-15A Blaster Rifle";
 		descriptionShort = "DC-15A Blaster Rifle";
 		model = "\FST\FST_Weapons\FST_Primary\DC15A .p3d";
-		picture = "\A3\Weapons_F\Rifles\MX\Data\UI\gear_mx_rifle_ca.paa";
+		//picture = "\A3\Weapons_F\Rifles\MX\Data\UI\gear_mx_rifle_ca.paa";
 		baseWeapon = "FST_DC15A";
 		
 		magazines[] = {"FST_DC15A_Mag"};
