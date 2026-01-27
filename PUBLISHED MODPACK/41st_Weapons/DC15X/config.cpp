@@ -101,12 +101,15 @@ class CfgWeapons
 			};
 			reloadTime=1;
 			dispersion=9.9999997e-005;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=60;
+			minRangeProbab=1;
+			midRange=300;
+			midRangeProbab=0.85;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.05;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 		modelOptics="\A3\Weapons_F\acc\reticle_lrps_F";
 		class OpticsModes

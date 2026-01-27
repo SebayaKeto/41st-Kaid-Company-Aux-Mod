@@ -157,11 +157,11 @@ class CfgWeapons
 			soundBurst="true";
 			dispersion=0;
 			minRange=1;
-			minRangeProbab=0.5;
+			minRangeProbab=1;
 			midRange=25;
-			midRangeProbab=0.075000003;
-			maxRange=50;
-			maxRangeProbab=0.30000001;
+			midRangeProbab=0.75000003;
+			maxRange=10000;
+			maxRangeProbab=0.1;
 		};
 		weaponInfoType="RscOptics_nightstalker";
 		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";

@@ -1919,7 +1919,7 @@ class CfgVehicles
 			};
 			class _xx_FST_blaster_cell_low_Red
 			{
-				name="FST_blaster_cell_low_Red";
+				name="FST_blaster_cell_SSP_Red";
 				count=15;
 			};
 			class _xx_41st_Food_CakeSlice
@@ -1952,7 +1952,7 @@ class CfgVehicles
 				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
-			class _xx_FST_blaster_cell_low_Red
+			class _xx_FST_blaster_cell_SSP_Red
 			{
 				name="FST_blaster_cell_low_Red";
 				count=15;
@@ -3809,7 +3809,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_low_Red"
+			"FST_blaster_cell_SSP_Red"
 		};
 		class EventHandlers
 		{
@@ -3884,7 +3884,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"FST_blaster_cell_low_Red"
+			"FST_blaster_cell_SSP_Red"
 		};
 		class EventHandlers
 		{

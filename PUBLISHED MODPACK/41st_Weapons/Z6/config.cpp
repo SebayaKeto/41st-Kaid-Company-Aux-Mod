@@ -141,21 +141,18 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.059999999;
-			magazines[]=
-			{
-				"FST_blaster_battery",
-				"FST_blaster_battery_Red"
-			};
 			dispersion=0.003;
 			burst=1;
 			soundContinuous="false";
 			soundBurst="true";
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.075000003;
+			minRange=1;
+			minRangeProbab=1;
+			midRange=50;
+			midRangeProbab=1;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.1;
+			aiRateOfFire=0.05;
+			aiRateOfFireDistance=1000;
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;

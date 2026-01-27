@@ -141,15 +141,13 @@ class CfgWeapons
 			recoil="recoil_pistol_heavy";
 			recoilProne="recoil_prone_pistol_heavy";
 			reloadTime=0.2;
-			dispersion=0.01015;
-			minRange=5;
-			minRangeProbab=0.30000001;
-			midRange=25;
-			midRangeProbab=0.60000002;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
+			dispersion=0.00206;
+			minRange=0;
+			minRangeProbab=1;
+			midRange=100;
+			midRangeProbab=0.75;
+			maxRange=250;
+			maxRangeProbab=0.5;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
