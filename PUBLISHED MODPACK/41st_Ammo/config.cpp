@@ -2450,13 +2450,11 @@ class CfgMagazines
 		mass=40;
 		initSpeed=165;
 	};
-	class FST_PLX1_Rocket: ls_magazine_plx1_at
+	class FST_PLX1_Rocket: Titan_AT
 	{
 		author="Adapted from the Indecisive Armoury Team";
 		displayName="[41st] PLX-1 Guided Missile [AT]";
 		displayNameShort="PLX-1 AT Missile";
-		model="ls\core\addons\weapons_plx\ls_weapon_rps6.p3d";
-		picture="ls\core\addons\weapons_rps\data\ui\rps6_mag_ui_ca.paa";
 		ammo="FST_Missile";
 		scope=2;
 		count=1;
