@@ -45,3 +45,23 @@ FST_disableLowlight = false;
             
        }, {}, [_pos]] call zen_dialog_fnc_create;
 }, "\A3\ui_f\data\igui\cfg\actions\talk_ca.paa"] call zen_custom_modules_fnc_register;
+
+["[41st] Droid Modules", "Chapter Title",
+{
+    params [["_pos", [0,0,0], [[]], 3], ["_logic", objNull, [objNull]]];
+
+    ["Chapter Title ", [
+        ["EDIT", ["Title Text", "What do you want to type in here."], ["Type whatever!!"]],
+        ["EDIT", ["Duration", "How long the chapter title will appear in Seconds."], ["5"]]
+    ], {
+        params ["_values", "_arguments"];
+        private _text = _values # 0;
+        private _duration = parseNumber (_values # 1);
+
+        private _vehicle = objectParent ace_player;
+        if (isNull _vehicle || !(ace_player == driver _vehicle && {_vehicle isKindOf "Air"})) then {
+            [_duration, _text] remoteExec ["OPTRE_fnc_chapterTitle", 0];
+        };
+    }, {}, [_pos]] call zen_dialog_fnc_create;
+
+}, "\A3\ui_f\data\igui\cfg\actions\talk_ca.paa"] call zen_custom_modules_fnc_register;
