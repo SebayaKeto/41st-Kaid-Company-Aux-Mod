@@ -24400,7 +24400,7 @@ class CfgVehicles
 	};
 	class FST_Backpack_Jumppack_Cutlass: FST_Backpack_Jumppack
 	{
-		author="Gold";
+		author="Vengence";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
