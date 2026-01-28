@@ -426,12 +426,12 @@ class CfgWeapons
 			};
 			reloadTime=0.2;
 			dispersion=0.00170000003;
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=1;
+			minRangeProbab=1;
 			midRange=100;
-			midRangeProbab=0.69999999;
+			midRangeProbab=0.8;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.2;
 			aiRateOfFire=0.2;
 			aiRateOfFireDistance=300;
 		};

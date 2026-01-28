@@ -47,11 +47,11 @@ class CfgWeapons
 			reloadTime=0.16500001;
 			dispersion=0.00092999998;
 			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=30;
-			maxRangeProbab=0.1;
+			minRangeProbab=0.99;
+			midRange=50;
+			midRangeProbab=0.75;
+			maxRange=100;
+			maxRangeProbab=0.2;
 			soundContinuous=0;
 			soundBurst=0;
 			sounds[]=
@@ -79,12 +79,12 @@ class CfgWeapons
 		{
 			reloadTime=0.1;
 			dispersion=0.00025000001;
-			minRange=2;
-			minRangeProbab=0.30000001;
-			midRange=150;
+			minRange=20;
+			minRangeProbab=0.89;
+			midRange=100;
 			midRangeProbab=0.69999999;
-			maxRange=350;
-			maxRangeProbab=0.1;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
 			soundContinuous=0;
 			soundBurst=0;
 			sounds[]=

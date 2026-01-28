@@ -251,13 +251,16 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.075000003;
-			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			dispersion=0.00073000003;
+			minRange=60;
+			minRangeProbab=1;
+			midRange=300;
+			midRangeProbab=0.85;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.05;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -319,13 +322,13 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.085714288;
-			dispersion=0.00145;
+			dispersion=0.0024000001;
 			minRange=2;
-			minRangeProbab=0.5;
+			minRangeProbab=0;
 			midRange=100;
-			midRangeProbab=0.69999999;
+			midRangeProbab=0;
 			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0;
 		};
 		weaponInfoType="RscOptics_nightstalker";
 		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";

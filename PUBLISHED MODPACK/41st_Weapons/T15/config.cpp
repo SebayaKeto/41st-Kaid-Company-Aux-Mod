@@ -154,12 +154,15 @@ class CfgWeapons
 			};
 			reloadTime=0.3;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.7;
+			minRange=60;
+			minRangeProbab=1;
+			midRange=300;
+			midRangeProbab=0.85;
 			maxRange=10000;
-			maxRangeProbab=0.3;
+			maxRangeProbab=0.05;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 		class OpticsModes
 		{
@@ -256,12 +259,15 @@ class CfgWeapons
 				};
 				reloadTime = 0.5;
 				dispersion = 0.002;
-				minRange = 2;
-				minRangeProbab = 0.5;
-				midRange = 100;
-				midRangeProbab = 0.7;
-				maxRange = 300;
-				maxRangeProbab = 0.3;
+				minRange=60;
+				minRangeProbab=1;
+				midRange=300;
+				midRangeProbab=0.85;
+				maxRange=10000;
+				maxRangeProbab=0.05;
+				aiRateOfFire=4;
+				aiRateOfFireDistance=1;
+				aiRateOfFireDispersion=3;
 			};
 			modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
 			class OpticsModes

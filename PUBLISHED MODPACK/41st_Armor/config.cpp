@@ -168,6 +168,7 @@ class CfgPatches
 			"FST_P2_Poly",
 			"FST_P2_Medusa",
 			"FST_P2_Woods",
+			"FST_P2_Woods_Dirty",
 			"FST_P2_Harlequin",
 			"FST_P2_Harlequin_Dirty",
 			"FST_P2_Harlequin_V2",
@@ -179,6 +180,7 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty",
 			"FST_P2_Squatch_V2",
 			"FST_P2_Squatch_Dirty_V2",
+			"FST_P2_Heller",
 			"FST_P2_Texas",
 			"FST_P2_Nerd",
 			"FST_P2_Atlas",
@@ -7519,6 +7521,17 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades_Dirty.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Kare: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Kare)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Kare.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Kare.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Seraph: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -9710,7 +9723,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
 		};
 	};
-		class FST_Airborne_Helmet_Woods: FST_Airborne_Helmet
+	class FST_Airborne_Helmet_Woods: FST_Airborne_Helmet
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Woods)";
@@ -9718,6 +9731,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Woods.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Woods_Dirty: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Woods/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Woods_Dirty.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Kellog: FST_Airborne_Helmet
@@ -14171,6 +14194,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Woods_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Woods/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Woods_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Pecan: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -15795,6 +15832,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Heller: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Heller]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Heller";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Nerd: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -23689,6 +23740,75 @@ class CfgVehicles
 		{
 		};
 	};
+	class FST_Backpack_Jumppack_Woods: FST_Backpack_Jumppack
+	{
+		author="Steel";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Woods)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		DBA_jumppack_is_jumppack=1;
+		DBA_jumppack_spam_delay=1;
+		DBA_jumppack_energy_capacity=100;
+		DBA_jumppack_recharge=7.6;
+		DBA_jumppack_jump_effect_script="";
+		DBA_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		DBA_jumppack_sound_ignite[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		DBA_jumppack_sound_land[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		DBA_jumppack_sound_idle[]=
+		{
+			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		DBA_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Woods_Dirty: FST_Backpack_Jumppack_Woods
+	{
+		author="Steel";
+		displayname="[41st] Jump Pack (Woods/Dirty)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods_Dirty.paa"
+		};
+	};
 	class FST_Backpack_Jumppack_Vix: FST_Backpack_Jumppack
 	{
 		author="Daara";
@@ -24223,7 +24343,7 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa_Dirty.paa"
 		};
-	}
+	};
 	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack
 	{
 		author="Gold";
@@ -38925,6 +39045,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Woods_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-8825 'Woods/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Woods_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Woods_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Woods_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Woods_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Woods_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Martyr: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -39467,6 +39642,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Heller: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-1047 'Heller'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Heller";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Heller.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Heller.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P1_Pilot_Helmet_Heller",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P1_Pilot_Helmet_Heller",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

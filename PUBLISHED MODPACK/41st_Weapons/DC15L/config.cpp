@@ -185,12 +185,12 @@ class CfgWeapons
             reloadTime=0.1;  // 600 RPM
             textureType = "fastAuto"; //Faster Icon for fire type
             dispersion=0.0011;
-            minRange=2;
-            minRangeProbab=0.5;
-            midRange=100;
-            midRangeProbab=0.69999999;
-            maxRange=10000;
-            maxRangeProbab=0.30000001;
+            minRange=1;
+			minRangeProbab=1;
+			midRange=50;
+			midRangeProbab=1;
+			maxRange=100;
+			maxRangeProbab=0.9;
             displayNameShort = "Full Auto";
 		};
 		class SlowAuto: FullAuto
@@ -273,12 +273,14 @@ class CfgWeapons
             reloadTime=0.171;  // 350 RPM
             textureType = "fullAuto"; //Faster Icon for fire type
             dispersion=0.0011;
-            minRange=2;
-            minRangeProbab=0.5;
-            midRange=100;
-            midRangeProbab=0.69999999;
+            minRange=100;
+            minRangeProbab=1;
+            midRange=150;
+            midRangeProbab=0.9;
             maxRange=10000;
-            maxRangeProbab=0.30000001;
+            maxRangeProbab=0.1;
+			aiRateOfFire=0.05;
+			aiRateOfFireDistance=1000;
             displayNameShort = "Slow Auto";
 		};
 		aiDispersionCoefY=24;

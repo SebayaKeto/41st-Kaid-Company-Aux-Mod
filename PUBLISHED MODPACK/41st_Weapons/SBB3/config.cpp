@@ -123,7 +123,7 @@ class CfgWeapons
 			minRange=1;
 			minRangeProbab=1;
 			midRange=25;
-			midRangeProbab=0.075000003;
+			midRangeProbab=0.75000003;
 			maxRange=10000;
 			maxRangeProbab=0.1;
 		};

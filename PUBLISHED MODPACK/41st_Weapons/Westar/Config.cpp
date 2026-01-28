@@ -265,10 +265,10 @@ class CfgWeapons
 			};
 			reloadTime=0.1;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=150;
+			minRangeProbab=0.6;
+			midRange=250;
+			midRangeProbab=0.5;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
@@ -351,13 +351,13 @@ class CfgWeapons
 			};
 			burst=3;
 			reloadTime=0.0853;
-			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
+			dispersion=0.00073000003;
+			minRange=75;
+			minRangeProbab=0.9;
 			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.8;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -437,12 +437,12 @@ class CfgWeapons
 				};
 			};
 			reloadTime = 0.1143;
-			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
+			dispersion=0.00073000003;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
 			midRangeProbab=0.69999999;
-			maxRange=10000;
+			maxRange=100;
 			maxRangeProbab=0.30000001;
 		};
 		class FST_WestarM5_GL_F: UGL_F
@@ -535,7 +535,7 @@ class CfgWeapons
 		author="Gold";
 		scope=2;
 		displayName="[41st] Westar-M5A Rifle";
-		model="ls\core\addons\weapons_westar\westar35s\ls_weapon_westar35s.p3d";
+		model="ls\core\addons\weapons_westar\westar35c\ls_weapon_westar35c.p3d";
 		baseWeapon="FST_Westar_M5_A";
 		handAnim[]=
 		{
@@ -670,12 +670,12 @@ class CfgWeapons
 						0.5
 					};
 				};
-				minRange=30;
-				minRangeProbab=0.1;
-				midRange=200;
-				midRangeProbab=0.69999999;
-				maxRange=400;
-				maxRangeProbab=0.050000001;
+				minRange=1;
+				minRangeProbab=1;
+				midRange=25;
+				midRangeProbab=0.75;
+				maxRange=100;
+				maxRangeProbab=0.5;
 			};
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo

@@ -49,12 +49,12 @@ class CfgWeapons
 			recoilProne="recoil_prone_pistol_heavy";
 			reloadTime=0.13;
 			dispersion=0.000165;
-			minRange=2;
-			minRangeProbab=0.5;
+			minRange=0;
+			minRangeProbab=1;
 			midRange=100;
-			midRangeProbab=0.69999999;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
+			midRangeProbab=0.75;
+			maxRange=250;
+			maxRangeProbab=0.5;
 		};
 	};
 };

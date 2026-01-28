@@ -176,10 +176,10 @@ class CfgWeapons
 			};
 			reloadTime=0.15;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=75;
+			minRangeProbab=0.6;
+			midRange=200;
+			midRangeProbab=0.5;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
@@ -262,11 +262,11 @@ class CfgWeapons
 			};
 			reloadTime=0.15;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
 			midRangeProbab=0.69999999;
-			maxRange=10000;
+			maxRange=100;
 			maxRangeProbab=0.30000001;
 		};
 		class OpticsModes
@@ -452,12 +452,12 @@ class CfgWeapons
 				};
 				reloadTime=2;
 				dispersion=0.001;
-				minRange=2;
-				minRangeProbab=0.5;
-				midRange=100;
-				midRangeProbab=0.7;
-				maxRange=200;
-				maxRangeProbab=0.3;
+				minRange=50;
+				minRangeProbab=0.01;
+				midRange=150;
+				midRangeProbab=0.5;
+				maxRange=300;
+				maxRangeProbab=0.5;
 			};
 			class Stun: JLTS_stun_muzzle{};
 		};
@@ -649,12 +649,15 @@ class CfgWeapons
 			};
 			reloadTime=0.13333334;
 			dispersion=0.001;
-			minRange=2;
+			minRange=1;
 			minRangeProbab=0.5;
 			midRange=100;
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
         {
@@ -892,10 +895,10 @@ class CfgWeapons
 			};
 			reloadTime=0.09230769;
 			dispersion=0.00073000003;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=75;
+			minRangeProbab=0.6;
+			midRange=200;
+			midRangeProbab=0.5;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
@@ -978,11 +981,11 @@ class CfgWeapons
 			};
 			reloadTime=0.1;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
 			midRangeProbab=0.69999999;
-			maxRange=10000;
+			maxRange=100;
 			maxRangeProbab=0.30000001;
 		};
 		class OpticsModes
@@ -1137,12 +1140,12 @@ class CfgWeapons
 				};
 				reloadTime=2;
 				dispersion=0.001;
-				minRange=2;
-				minRangeProbab=0.5;
-				midRange=100;
-				midRangeProbab=0.7;
-				maxRange=200;
-				maxRangeProbab=0.3;
+				minRange=50;
+				minRangeProbab=0.01;
+				midRange=150;
+				midRangeProbab=0.5;
+				maxRange=300;
+				maxRangeProbab=0.5;
 			};
 			class Stun: JLTS_stun_muzzle{};
 		};
@@ -1262,6 +1265,25 @@ class CfgWeapons
 				10
 			};
 			magazineWell[]={};
+			class Single: Mode_SemiAuto
+			{
+				sounds[] = {"StandardSound"};
+				class StandardSound
+				{
+					weaponSoundEffect = "";
+					begin1[] = {"\41st_Weapons\DC-15AS\Data\41st GL New 2-343.ogg", 4, 1, 1800};
+					begin2[] = {"\41st_Weapons\DC-15AS\Data\41st GL New 2-343.ogg", 4, 1, 1800};
+					soundBegin[] = {"begin1", 0.5, "begin2", 0.5};
+				};
+				reloadTime=2;
+				dispersion=0.001;
+				minRange=50;
+				minRangeProbab=0.01;
+				midRange=150;
+				midRangeProbab=0.5;
+				maxRange=300;
+				maxRangeProbab=0.5;
+			};
 		};
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
@@ -1470,11 +1492,11 @@ class CfgWeapons
 			burst=4;
 			reloadTime=0.1;
 			dispersion=0.00073000003;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
+			minRange=1;
+			minRangeProbab=0.7;
+			midRange=50;
 			midRangeProbab=0.69999999;
-			maxRange=10000;
+			maxRange=100;
 			maxRangeProbab=0.30000001;
 		};
 		class Single: Mode_SemiAuto
@@ -1556,10 +1578,10 @@ class CfgWeapons
 			};
 			reloadTime=0.1;
 			dispersion=0.00145;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.69999999;
+			minRange=75;
+			minRangeProbab=0.6;
+			midRange=200;
+			midRangeProbab=0.5;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
 		};
