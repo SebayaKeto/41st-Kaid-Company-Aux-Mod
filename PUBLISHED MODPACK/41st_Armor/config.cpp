@@ -17498,6 +17498,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
             mass=15;
         };
     };
+	class FST_Uniform_Gustav: JLTS_CloneArmor
+    {
+        author="Ruby";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Gustav]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Gustav";
+            uniformType="Neopren";
+            containerClass="Supply150";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Flatline: JLTS_CloneArmor
     {
         author="Ruby";
@@ -44607,6 +44621,61 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Ruby",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+	class FST_P2_Gustav: FST_Trooper_P2_DC15S
+    {
+        author="Ruby";
+        displayName="[41st] CT-1718 'Gustav'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Gustav";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2",
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Gustav.Paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Gustav.Paa",
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_Airborne_Helmet_Gustav",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_Airborne_Helmet_Gustav",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
