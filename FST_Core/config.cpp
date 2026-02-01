@@ -126,9 +126,9 @@ class CfgEditorSubcategories
 };
 class CfgFunctions
 {
-	class WPS_Weapon
+	class FST_Weapon
 	{
-		file = "WPS\WPS_Weapons\Functions";
+		file = "FST\FST_Weapons\FST_Functions";
 		class scripts
 		{
 			class onHit{};
@@ -143,6 +143,6 @@ class Extended_HitPart_EventHandlers
 {
 	class CAManBase
 	{
-		hitPart = "(_this select 0) call WPS_Weapon_fnc_onHit";
+		hitPart = "(_this select 0) call FST_Weapon_fnc_onHit";
 	};
 };
