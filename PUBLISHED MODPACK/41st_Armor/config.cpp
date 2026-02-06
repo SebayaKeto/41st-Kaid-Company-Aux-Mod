@@ -20242,98 +20242,11 @@ class CfgVehicles
 				count=5;
 				name="IDA_explosive_Detpack_mag";
 			};
-			class _xx_DBA_ImploderBlock_mag
+		/*	class _xx_DBA_ImploderBlock_mag
 			{
 				count=2;
 				name="DBA_ImploderBlock_mag";
-			};
-			class _xx_ACE_DefusalKit
-			{
-				count=1;
-				name="ACE_DefusalKit";
-			};
-			class _xx_ACE_M26_Clacker
-			{
-				count=1;
-				name="ACE_M26_Clacker";
-			};
-			class _xx_MineDetector
-			{
-				count=1;
-				name="MineDetector";
-			};
-		};
-	};
-	class FST_Backpack_Jumppack_EOD: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=390;
-		displayName="[41st] Jump Pack (Engineer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-			class _xx_IDA_explosive_Detpack_mag
-			{
-				count=5;
-				name="IDA_explosive_Detpack_mag";
-			};
-			class _xx_DBA_ImploderBlock_mag
-			{
-				count=2;
-				name="DBA_ImploderBlock_mag";
-			};
+			}; */
 			class _xx_ACE_DefusalKit
 			{
 				count=1;
@@ -20862,34 +20775,26 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		NSM_jumppack_is_jumppack=1;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=7.6;
+		NSM_jumppack_jump_effect_script="";
+		NSM_jumppack_effect_points[]= {};
+		NSM_jumppack_sound_ignite[]=
 		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
+			"NSM_Main\sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_ignite[]=
+		NSM_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"NSM_Main\sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		NSM_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"NSM_Main\sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		NSM_jumppack_jump_types[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
@@ -20899,1123 +20804,279 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_GRN: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Custom: FST_Backpack_Jumppack
+	{
+		author="Steel";
+		maximumload=340;
+		displayName="[41st] Jump Pack (Name Here)";
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+	};
+	class FST_Backpack_Jumppack_EOD: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
+		maximumload=390;
+		displayName="[41st] Jump Pack (Engineer)";
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"
+		};
+		class TransportItems
+		{
+			class _xx_IDA_explosive_Detpack_mag
+			{
+				count=5;
+				name="IDA_explosive_Detpack_mag";
+			};
+		/*	class _xx_DBA_ImploderBlock_mag
+			{
+				count=2;
+				name="DBA_ImploderBlock_mag";
+			}; */
+			class _xx_ACE_DefusalKit
+			{
+				count=1;
+				name="ACE_DefusalKit";
+			};
+			class _xx_ACE_M26_Clacker
+			{
+				count=1;
+				name="ACE_M26_Clacker";
+			};
+			class _xx_MineDetector
+			{
+				count=1;
+				name="MineDetector";
+			};
+		};
+	};
+	class FST_Backpack_Jumppack_GRN: FST_Backpack_Jumppack
+	{
+		author="Daara";
 		maximumload=208;
 		displayName="[41st] Jump Pack (GRN)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_CQB: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_CQB: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=170;
 		displayName="[41st] Jump Pack (CQB)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Woodland: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Woodland: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=320;
 		displayName="[41st] Jump Pack (Woodland)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woodland.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
 		tf_range=50000;
 		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Desert: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Desert: FST_Backpack_Jumppack_Woodland
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=320;
 		displayName="[41st] Jump Pack (Desert)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Desert.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Urban: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Urban: FST_Backpack_Jumppack_Woodland
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=320;
 		displayName="[41st] Jump Pack (Urban)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Urban.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Midnight: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Midnight: FST_Backpack_Jumppack_Woodland
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=320;
 		displayName="[41st] Jump Pack (Midnight)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Midnight.paa"
 		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_STD_Ammo: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_STD_Ammo: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=320;
 		displayName="[41st] Jump Pack (STD AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_15L_Ammo: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_15L_Ammo: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=340;
 		displayName="[41st] Jump Pack (15L AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_RifleAT_Ammo: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_RifleAT_Ammo: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=280;
 		displayName="[41st] Jump Pack (Rifle AT AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_15L: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_15L: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=200;
 		displayName="[41st] Jump Pack (15L)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_RifleAT: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_RifleAT: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=350;
 		displayName="[41st] Jump Pack (RifleAT)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Z6: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Z6: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=180;
 		displayName="[41st] Jump Pack (Z6)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Z6_Ammo: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Z6_Ammo: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=315;
 		displayName="[41st] Jump Pack (Z6 AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_PLX_Ammo: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_PLX_Ammo: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=250;
 		displayName="[41st] Jump Pack (PLX AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_RPS_Ammo: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_RPS_Ammo: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=240;
 		displayName="[41st] Jump Pack (RPS AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_PLX: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_PLX: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=250;
 		displayName="[41st] Jump Pack (PLX)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_RPS: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_RPS: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=240;
 		displayName="[41st] Jump Pack (RPS)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
@@ -22086,20 +21147,10 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Jumppack_Grinch: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Grinch: FST_Backpack_Jumppack
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
 		displayName="[41st] Jump Pack (Grinch)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			""
@@ -22110,63 +21161,12 @@ class CfgVehicles
 		tf_subtype="digital_lr";
 		tf_range=50000;
 		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=0;
-		DBA_jumppack_energy_capacity=150;
-		DBA_jumppack_recharge=10;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Forward Jump",
-				{12,20,50,0,0,0}
-			},
-			
-			{
-				"Short Jump",
-				{12,5,30,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
 	};
-	class FST_Backpack_JORGE_Jumppack_Boss: JLTS_Clone_jumppack_mc
+	class FST_Backpack_JORGE_Jumppack_Boss: FST_Backpack_Jumppack
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=250;
 		displayName="[41st] Jump Pack (Jorge/Boss)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
@@ -22178,44 +21178,6 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=0;
-		DBA_jumppack_energy_capacity=150;
-		DBA_jumppack_recharge=10;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Forward Jump",
-				{12,20,50,0,0,0}
-			},
-			
-			{
-				"Short Jump",
-				{12,5,30,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
@@ -22291,62 +21253,14 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Jumppack_Medic: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Medic: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=250;
 		displayName="[41st] Jump Pack (Medic)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"
-		};
-		hiddenSelectionsMaterials[]=	
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
@@ -22502,67 +21416,14 @@ class CfgVehicles
 			};			
 		};
 	}; */
-	class FST_Backpack_Jumppack_Rifleman: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_Rifleman: FST_Backpack_Jumppack
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=10;
 		displayName="[41st] Jump Pack (Rifleman)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
@@ -22633,195 +21494,40 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Invisible_Jumppack: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Invisible_Jumppack: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=400;
 		displayName="[41st] Jump Pack (Invisible)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			""
 		};
- 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_LR: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_LR: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=340;
 		displayName="[41st] Jump Pack (LR)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_LR_UGL: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Jumppack_LR_UGL: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=300;
 		displayName="[41st] Jump Pack (LR/UGL)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
@@ -22892,59 +21598,20 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Descentpack: JLTS_Clone_jumppack_mc
+	class FST_Backpack_Descentpack: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
 		maximumload=250;
 		displayName="[41st] Fynock Descent Pack";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=0.001;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		NSM_jumppack_recharge=0.001;
+		NSM_jumppack_jump_types[]=
 		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			
 			{
 				"Break Fall",
 				{12,2,100,0,1,0}
@@ -22986,7 +21653,7 @@ class CfgVehicles
 		tf_range=50000;
 		tf_subtype="digital_lr";
 	}; */
-	class FST_Backpack_GM_Base: JLTS_Clone_backpack
+	class FST_Backpack_GM_Base: FST_Backpack_Jumppack
 	{
 		author="Schlabbie And Maxim";
 		scope=2;
@@ -22999,7 +21666,7 @@ class CfgVehicles
 		};
 	};
 	class JLTS_Clone_backpack_eod;
-	class FST_Backpack_GM_EOD: JLTS_Clone_backpack_eod
+	class FST_Backpack_GM_EOD: FST_Backpack_Jumppack_EOD
 	{
 		author="Schlabbie And Maxim";
 		scope=2;
@@ -23018,11 +21685,11 @@ class CfgVehicles
 				count=5;
 				name="IDA_explosive_Detpack_mag";
 			};
-			class _xx_DBA_ImploderBlock_mag
+	/*		class _xx_DBA_ImploderBlock_mag
 			{
 				count=2;
 				name="DBA_ImploderBlock_mag";
-			};
+			}; */
 			class _xx_ACE_DefusalKit
 			{
 				count=1;
@@ -23041,7 +21708,7 @@ class CfgVehicles
 		};
 	};
 	class JLTS_Clone_backpack_medic;
-	class FST_Backpack_GM_Medic: JLTS_Clone_backpack_medic
+	class FST_Backpack_GM_Medic: FST_Backpack_Jumppack_Medic
 	{
 		author="Schlabbie And Maxim";
 		scope=2;
@@ -23102,13 +21769,10 @@ class CfgVehicles
 			};			
 		};
 	};
-	class FST_Backpack_GM_RTO: JLTS_Clone_backpack_RTO
+	class FST_Backpack_GM_RTO: FST_Backpack_Jumppack_Custom
 	{
 		author="Schlabbie And Maxim";
-		scope=2;
-		scopecurator=2;
 		maximumload=320;
-		tf_range=50000;
 		displayName="[41st] Cold Weather RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
 		hiddenselections[]=
@@ -23126,471 +21790,87 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
 	};
-	class FST_Backpack_Jumppack_Noble: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Noble: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Noble)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Noble.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Delta: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Delta: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Delta)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Delta_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Delta_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Delta/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Puma: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Puma: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Puma)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Puma.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Ruby: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Ruby: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Ruby)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ruby.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Ruby_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Ruby_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Ruby/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ruby_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Zen: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Zen: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Zen)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Zen.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Ares: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Ares: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Ares)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Ares_Dirty: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Ares_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Ares/Dirty)"
@@ -23599,425 +21879,89 @@ class CfgVehicles
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares_Dirty.paa"
 		};
 	}
-	class FST_Backpack_Jumppack_Vishy: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Vishy: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Vishy)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vishy.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Deso: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Deso: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Deso)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Deso_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Deso_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Deso/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Medusa: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Medusa: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Medusa)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Medusa.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Annex: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Annex: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Annex)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Annex.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Riley: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Riley: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Riley)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Riley.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Woods: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Woods: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Woods)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Woods_Dirty: FST_Backpack_Jumppack_Woods
+	class FST_Backpack_Jumppack_Woods_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Woods/Dirty)"
@@ -24026,533 +21970,101 @@ class CfgVehicles
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods_Dirty.paa"
 		};
 	};
-	class FST_Backpack_Jumppack_Vix: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Vix: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Vix)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Vix_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Vix_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Vix/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Helix: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Helix: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Helix)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Helix.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Helix_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Helix_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Helix/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Helix_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_James: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_James: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (James)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_James.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_James_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_James_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (James/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_James_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Sunny: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Sunny: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Sunny)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Sunny.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
 		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Jorge: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Jorge: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Jorge)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Appa: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Appa: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Appa)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Appa/Dirty)"
@@ -24561,7 +22073,7 @@ class CfgVehicles
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa_Dirty.paa"
 		};
 	};
-	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Silhouette)"
@@ -24570,539 +22082,107 @@ class CfgVehicles
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Silhouette.paa"
 		};
 	};
-	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Vengence)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vengence.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Cowboy: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Cowboy: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Cowboy)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cowboy.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Salt: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Salt: FST_Backpack_Jumppack_Custom
 	{
 		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Salt)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Salt.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Cutlass: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Cutlass: FST_Backpack_Jumppack_Custom
 	{
 		author="Vengence";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Cutlass)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cutlass.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Viz: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Viz: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Viz)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Viz.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Viz_Dirty: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Viz_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Viz/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Viz_Dirty.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Poly: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Poly: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Poly)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Poly.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Bookworm: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Bookworm: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Bookworm)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Bookworm.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Marek: FST_Backpack_Jumppack
+	class FST_Backpack_Jumppack_Marek: FST_Backpack_Jumppack_Custom
 	{
 		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
 		displayName="[41st] Jump Pack (Marek)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek.paa"
 		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		DBA_jumppack_sound_ignite[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		DBA_jumppack_sound_land[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		DBA_jumppack_sound_idle[]=
-		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		DBA_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
 		class TransportItems
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack_Custom
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Marek/Dirty)"

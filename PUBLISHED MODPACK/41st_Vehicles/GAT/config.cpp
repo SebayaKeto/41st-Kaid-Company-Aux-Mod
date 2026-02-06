@@ -2184,7 +2184,7 @@ class CfgVehicles
 		};
 		class AnimationSources: AnimationSources
 		{
-			class muzzle_hide_cannon
+/*			class muzzle_hide_cannon
 			{
 				source="reload";
 				weapon="DBA_40mw_HH9P_AC";
@@ -2193,7 +2193,7 @@ class CfgVehicles
 			{
 				source="ammorandom";
 				weapon="DBA_40mw_HH9P_AC";
-			};
+			}; */
 			class HitComTurret_src
 			{
 				source="Hit";

@@ -1759,7 +1759,7 @@ class CfgMagazines
 		displayName="[41st] Droid High-Power Energy Battery (Red)";
 		ammo="FST_blasterbolt_high_Red";
 	};
-	class FST_DC1A_Prototype_120Rnd_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
+	/*class FST_DC1A_Prototype_120Rnd_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{
 		displayname="[41st] DC1A Battery (Blue)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
@@ -1794,7 +1794,7 @@ class CfgMagazines
 	{
 		displayname="[41st] DC1A Battery (Red)";
 		ammo="FST_blasterbolt_high_Red";
-	};
+	};*/
 	class FST_blaster_cell_low_Blue: IDA_Blaster_Cell_Power1_300Rnd_Blue
 	{
 		author="Adapted from the Indecisive Armoury Team";

@@ -831,27 +831,27 @@ class CfgWeapons
 	class FST_ValD_Standard: FST_ValD
 	{
 		scope=1;
-		class linkedItems
+	/*	class linkedItems
 		{
 			class Optic
 			{
 				slot="CowsSlot";
 				item="DBA_MRCO_B";
 			};
-		};
+		}; */
 	};
 	class FST_Maalras_SMG;
 	class FST_Maalras_SMG_Standard: FST_Maalras_SMG
 	{
 		scope=1;
-		class linkedItems
+	/*	class linkedItems
 		{
 			class Optic
 			{
 				slot="CowsSlot";
 				item="DBA_MRCO_B";
 			};
-		};
+		}; */
 	};
 	class FST_SE14R;
 	class FST_SE14R_Opticed: FST_SE14R

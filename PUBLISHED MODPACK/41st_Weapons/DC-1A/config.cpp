@@ -1,4 +1,4 @@
-class CfgPatches
+/*class CfgPatches
 {
 	class FST_DC1A_Prototype
 	{

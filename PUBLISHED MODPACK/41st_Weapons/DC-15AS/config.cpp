@@ -1198,7 +1198,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class FST_Mercenary_DC15S_UGL_Wood: FST_DC15S_UGL
+/*	class FST_Mercenary_DC15S_UGL_Wood: FST_DC15S_UGL
 	{
 		displayName="[41st] Mercenary DC-15S Carbine w/ UGL";
 		baseWeapon= "FST_Mercenary_DC15S_UGL_Wood";
@@ -1333,7 +1333,7 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-	};
+	}; */
 	class FST_DC15C_Base_F: Rifle_Base_F
 	{
 		author="Daara";
