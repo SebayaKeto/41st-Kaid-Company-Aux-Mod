@@ -335,6 +335,7 @@ class CfgPatches
 			"FST_P2_Zephyr",
 			"FST_P2_Red",
 			"FST_P2_Riley",
+			"FST_P2_Riley_Dirty",
 			"FST_P2_Riley_V2",
 			"FST_P2_Riley_V2_Dirty",
 			"FST_P2_Appa",
@@ -9744,6 +9745,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Riley_Dirty: FST_Airborne_Helmet
+	{
+		author="Viz";
+		displayName="[41st] Airborne Helmet (Riley/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_Dirty.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Riley_V2: FST_Airborne_Helmet
 	{
 		author="Viz";
@@ -11997,6 +12008,16 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Deo: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Deo]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Deo.paa",
 		};
 	};
 	class FST_P2_Helmet_Heller: FST_P2_Helmet_Base
@@ -15428,6 +15449,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Riley";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Riley_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Riley/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Riley_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -37061,6 +37096,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Riley_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-2213 'Riley'/Dirty";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Riley_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Riley_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Riley_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Riley_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Riley_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Riley_V2: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -48605,6 +48695,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Cardinal";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Cardinal.paa";
+		};
+		class FST_Clone_Head_Arcus: FST_clone_Default_head
+		{
+			author="Steel";
+			name="Clone Trooper Arcus";
+			displayName="[41st] Clone Trooper - Arcus";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Arcus.paa";
 		};
 		class FST_Clone_Head_Bulwark: FST_clone_Default_head
 		{
