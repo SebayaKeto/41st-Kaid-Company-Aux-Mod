@@ -1,0 +1,22 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "NSM_End"
+        },
+        {
+            "name": "Mikero",
+            "value": "DePbo.dll.9.96"
+        },
+        {
+            "name": "version",
+            "value": "25052421"
+        }
+    ]
+}
