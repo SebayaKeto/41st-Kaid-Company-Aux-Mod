@@ -14936,6 +14936,20 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			mass=15;
 		};
 	};
+	class FST_Uniform_Gum: JLTS_CloneArmor
+	{
+		author="Ruby";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Gum]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Gum";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
  	class FST_Uniform_Bookworm: JLTS_CloneArmor
 	{
 		author="Vengence";
@@ -39086,6 +39100,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Gum: FST_Trooper_P2_DC15S
+	{
+		author="Ruby";
+		displayName="[41st] CT-9918 'Gum'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Gum";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Gum.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Gum.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Gum",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Gum",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
  	class FST_P2_Marek: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
@@ -48791,6 +48860,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - James";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_James.paa";
+		};
+		class FST_Clone_Head_Joko: FST_clone_Default_head
+		{
+			author="Ruby";
+			name="Clone Trooper Joko";
+			displayName="[41st] Clone Trooper - Joko";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Joko.paa";
 		};
 		class FST_Clone_Head_Jorge: FST_clone_Default_head
 		{
