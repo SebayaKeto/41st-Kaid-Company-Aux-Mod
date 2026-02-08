@@ -2445,12 +2445,6 @@ class CfgVehicles
 			"FST_Droid_blaster_battery_Red"
 		};
 		armor=1000;
-		class EventHandlers
-		{
-			init = "_u = _this select 0; \
-					_u addEventHandler ['Local', { params ['_unit','_isLocal']; if (_isLocal) then { _unit forceWalk true; }; }]; \
-					if (local _u) then { _u forceWalk true; };";
-		};
 	};
 	class FST_B2_TL: WBK_LS_B2
 	{
@@ -2510,12 +2504,6 @@ class CfgVehicles
 			"FST_HE_LauncherWristRocket"
 		};
 		armor=1000;
-		class EventHandlers
-		{
-			init = "_u = _this select 0; \
-					_u addEventHandler ['Local', { params ['_unit','_isLocal']; if (_isLocal) then { _unit forceWalk true; }; }]; \
-					if (local _u) then { _u forceWalk true; };";
-		};
 	};
 	class FST_B2_Flame: WBK_LS_B2
 	{
@@ -2582,12 +2570,6 @@ class CfgVehicles
 			"IDA_FuelTank",
 			"IDA_FuelTank"
 
-		};
-		class EventHandlers
-		{
-			init = "_u = _this select 0; \
-					_u addEventHandler ['Local', { params ['_unit','_isLocal']; if (_isLocal) then { _unit forceWalk true; }; }]; \
-					if (local _u) then { _u forceWalk true; };";
 		};
 	};
 	class FST_CIS_Heavy_Base_F;
@@ -3455,6 +3437,20 @@ class CfgVehicles
 		explosionshielding=8;
 	};
  };
+ class Extended_Init_EventHandlers
+{
+	class FST_B2
+  	{
+		class FST_forceWalk
+		{
+		init = "_u = _this select 0; \
+				_u addEventHandler ['Local', { params ['_unit','_isLocal']; if (_isLocal) then { _unit forceWalk true; }; }]; \
+				if (local _u) then { _u forceWalk true; };";
+		};
+  	};
+	class FST_B2_TL: FST_B2 {};
+	class FST_B2_Flame: FST_B2 {};
+};
 class FST_Commando_Jorge;
 class cfgGroups
 {
