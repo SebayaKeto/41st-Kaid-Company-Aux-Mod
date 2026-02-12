@@ -201,7 +201,7 @@ class CfgVehicles
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Droid_B1_OOM";
-		displayName="[41st] Vulture Droid (CAS)";
+		displayName="[41st] Vulture Droid";
 		type="VAir";
 		cost=10000000;
 		threat[]={0.2,1,0.89999998};
