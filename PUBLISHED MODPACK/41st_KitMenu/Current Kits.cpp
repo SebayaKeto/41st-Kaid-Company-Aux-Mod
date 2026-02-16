@@ -1095,7 +1095,7 @@
                 ["ToolKit",1]
             ]
         ],
-        "FST_Crewman_Helmet", 
+        "FST_Crewman_Helmet_Mk2", 
         "", 
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
@@ -1635,7 +1635,7 @@
                 ["ToolKit",1]
             ]
         ],
-        "FST_Crewman_Helmet",
+        "FST_Crewman_Helmet_Mk2",
         "",
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]

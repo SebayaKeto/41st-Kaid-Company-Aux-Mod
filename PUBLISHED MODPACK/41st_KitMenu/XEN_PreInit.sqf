@@ -473,7 +473,6 @@ switch true do {
 				(
 					(_hg find "fst_airborne_helmet") != -1 ||
 					(_hg find "fst_crewman_helmet_mk2") != -1 ||
-					(_hg find "fst_crewman_helmet") != -1 ||
 					(_hg find "fst_pilot_p1_helmet") != -1
 				)
 			}) then {
