@@ -1,4 +1,4 @@
-/*class CfgPatches
+class CfgPatches
 {
 	class FST_DwarfSpiderDroid
 	{
@@ -561,4 +561,3 @@ class CfgVehicles
 		};
 	};
 };
-*/

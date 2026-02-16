@@ -1,2 +1,0 @@
-hint str time;
-time
