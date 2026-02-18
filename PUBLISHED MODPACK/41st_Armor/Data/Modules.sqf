@@ -3,13 +3,13 @@
 ["[41st] Droid Modules", "Munificent QRF Deployment",
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
-        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos"];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge", "B2"];
 
         ["Quick Reaction Force Deployment (Munificent)", [
             // Direction / side / droid type
             ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
             ["sideS",   ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
-            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 2, 3, _options, nil]],
+            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 3, 3, _options, nil]],
 
             // Drop pods
             ["SLIDER",  ["Drop pod Amount", "How many drop pods will be Deployed"], [0, 24, 8, 0]],
