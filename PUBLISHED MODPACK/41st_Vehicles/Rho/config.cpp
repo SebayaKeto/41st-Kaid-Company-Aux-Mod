@@ -102,7 +102,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Vehicles\Rho\Data\FST_Rho_Hull.paa",
-			"\3as\3as_republic_heli\nu_class\data\hull_front_co.paa",
+			"41st_Vehicles\Nu\data\FST_Nu_exterior.paa",
 			"\41st_Vehicles\Rho\data\FST_Rho_Wings.paa",
 			"3as\3as_republic_heli\rho_class\data\cockpit_co.paa",
 			"\41st_Vehicles\Rho\data\FST_Rho_Cockpit_Interface.paa",
