@@ -827,6 +827,25 @@ class CfgWeapons
 			mass=10;
 		};
 	};
+	class JMSLLTE_EmpTrooperArmor_blackS_F_CombatUniform;
+	class FST_CorruptPDFUni: JMSLLTE_EmpTrooperArmor_blackS_F_CombatUniform
+	{
+		author="JMax";
+		scope=2;
+		displayName="[41st] Totharvis PDF Uniform";
+		picture="\JMSLLTE_empire\data\ico\ico_u_trooper_bl.paa";
+		nakedUniform="U_BasicBody";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="FST_CorruptPDF";
+			Armor=10;
+			modelSides[]={6};
+			containerClass="Supply100";
+			mass=30;
+		};
+	};
 	class FST_ValD;
 	class FST_ValD_Standard: FST_ValD
 	{
@@ -2956,6 +2975,24 @@ class CfgVehicles
 		class EventHandlers
 		{
 			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Ammo Bearer'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;};  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.65]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+		};
+	};
+	class FST_CorruptPDF: FST_U_CIS_Light
+	{
+		author="Tooka";
+		scope=1;
+		modelSides[]={6};
+		model="\JMSLLTE_empire_m\trooper.p3d";
+		nakedUniform="U_BasicBody";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\Trooper_body_black_co.paa",
+			"JMSLLTE_empire\data\body\Trooper_armor_black_serg_co.paa"
 		};
 	};
 	class FST_U_CIS_Light_Veteran: FST_U_CIS_Light
