@@ -5,6 +5,7 @@ class CfgPatches
 		author="Daara";
 		requiredaddons[]=
 		{
+
 		};
 		requiredversion=1;
 		units[]=
@@ -12,11 +13,17 @@ class CfgPatches
 			//"FST_Saber",
 			"FST_Saber_Rancor",
 			"FST_Saber_Jorge",
+			"FST_Saber_PDF",
+			"FST_Saber_Gray",
 			//"FST_SuperSaber",
 			"FST_SuperSaber_Rancor",
 			"FST_SuperSaber_Jorge",
+			"FST_SuperSaber_PDF",
+			"FST_SuperSaber_Gray",
 			//"FST_Saber_Fly",
-			"FST_Recon_Saber"
+			"FST_Recon_Saber",
+			"FST_Recon_Saber_PDF",
+			"FST_Recon_Saber_Gray"
 		};
 		weapons[]={};
 	};
@@ -784,7 +791,41 @@ class cfgvehicles
 			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Jorge_co.paa",
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
 		};
-	};	
+	};
+	class FST_Saber_Gray: FST_Saber
+	{	
+		author="Steel";
+		displayName="[41st] TX-130 Saber Tank (Gray)";
+		crew="FST_P2_Recruit";
+		side=1;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_plain_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_plain_co.paa",
+		};
+	};
+	class FST_Saber_PDF: FST_Saber
+	{	
+		author="Steel";
+		displayName="[41st] TX-130 Saber Tank (PDF)";
+		crew="JLTS_Droid_B1_Prototype";
+		side=0;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_PDF_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_PDF_co.paa",
+		};
+	};
 	class FST_SuperSaber: FST_Saber
 	{
 		scope=2;
@@ -955,6 +996,40 @@ class cfgvehicles
 		{
 			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_Jorge_co.paa",
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_Jorge_co.paa",
+		};
+	};
+	class FST_SuperSaber_Gray: FST_SuperSaber
+	{	
+		author="Steel";
+		displayName="[41st] TX-130 Super Saber Tank (Gray)";
+		crew="FST_P2_Recruit";
+		side=1;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_plain_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_plain_co.paa",
+		};
+	};
+	class FST_SuperSaber_PDF: FST_SuperSaber
+	{	
+		author="Steel";
+		displayName="[41st] TX-130 Super Saber Tank (PDF)";
+		crew="JLTS_Droid_B1_Prototype";
+		side=0;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_PDF_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_PDF_co.paa",
 		};
 	};
 	class FST_Recon_Saber: FST_Saber
@@ -1350,6 +1425,40 @@ class cfgvehicles
 				"Normal",
 				"NVG"
 			};
+		};
+	};
+	class FST_Recon_Saber_Gray: FST_Recon_Saber
+	{	
+		author="Steel";
+		displayName="[41st] TX-130 Recon Saber Tank (Gray)";
+		crew="FST_P2_Recruit";
+		side=1;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_plain_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\FST_Saber_Weapons_recon_plain_co.paa",
+		};
+	};
+	class FST_Recon_Saber_PDF: FST_Recon_Saber
+	{	
+		author="Steel";
+		displayName="[41st] TX-130 Recon Saber Tank (PDF)";
+		crew="JLTS_Droid_B1_Prototype";
+		side=0;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_PDF_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\FST_Saber_Weapons_recon_PDF_co.paa",
 		};
 	};
 };

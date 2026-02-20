@@ -8,6 +8,15 @@ class CfgPatches
 			"land_FST_CIS_Bunker_v2",
 			"land_FST_cis_Wall_Tower_v2",
 			"land_FST_cis_Wall_Gate_v2",
+			"FST_CIS_Small_Wall_Short_PDF",
+			"FST_CIS_Small_Wall_Ramp_PDF",
+			"FST_CIS_Wall_Gate_PDF",
+			"FST_CIS_Small_Wall_Bunker_PDF",
+			"FST_CIS_Small_Wall_Corner_PDF",
+			"FST_CIS_Small_Wall_Med_PDF",
+			"FST_cis_Small_Wall_Long_PDF",
+			"FST_CIS_Bunker_PDF",
+			"FST_CIS_Wall_Tower_PDF"
 		};
 		weapons[]={};
 		requiredAddons[]=
@@ -47,6 +56,10 @@ class CfgEditorSubcategories
 	class FST_CIS_JORGE_FOB
 	{
 		displayName="41st CIS FOB (Jorge)";
+	};
+	class FST_CIS_PDF_FOB
+	{
+		displayName="41st CIS FOB (PDF)";
 	};
 };
 class CfgVehicles
@@ -193,6 +206,21 @@ class CfgVehicles
 			"41st_Props\Data\FST_CIS_small_wall_short_Jorge_co.paa"
 		};
 	};
+	class FST_CIS_Small_Wall_Short_PDF: land_3AS_cis_Wall_Short_v2
+	{
+		displayName="[41st] CIS Small Wall Short (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Wall_Short_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_small_wall_short_co.paa"
+		};
+	};
 	class land_3AS_CIS_Ramp_v2;
 	class FST_CIS_Small_Wall_Ramp_Jorge: land_3AS_CIS_Ramp_v2
 	{
@@ -207,6 +235,21 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Props\Data\FST_cis_small_wall_ramp_Jorge_co.paa"
+		};
+	};
+	class FST_CIS_Small_Wall_Ramp_PDF: land_3AS_CIS_Ramp_v2
+	{
+		displayName="[41st] CIS Small Wall Ramp (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_ramp_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_small_wall_ramp_co.paa"
 		};
 	};
 	class land_3AS_CIS_Wall_Inv_Corner_v2;
@@ -241,6 +284,21 @@ class CfgVehicles
 			"41st_Props\Data\FST_CIS_small_wall_gate_Jorge_co.paa"
 		};
 	};
+	class FST_CIS_Wall_Gate_PDF: land_3AS_CIS_Wall_Gate_v2
+	{
+		displayName="[41st] CIS Wall Gate (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Wall_gate_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_small_wall_gate.paa"
+		};
+	};
 	class FST_CIS_Wall_Door_Jorge: land_3AS_CIS_Wall_Door_v2
 	{
 		displayName="[41st] CIS Wall Door (Jore)";
@@ -271,6 +329,21 @@ class CfgVehicles
 			"41st_Props\Data\FST_CIS_small_wall_bunker_Jorge_co.paa"
 		};
 	};
+	class FST_CIS_Small_Wall_Bunker_PDF: land_3AS_CIS_Bunker_v2
+	{
+		displayName="[41st] CIS Wall Bunker (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Wall_Bunker_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_wallbunker_co.paa"
+		};
+	};
 	class land_3AS_CIS_Wall_Corner_v2;
 	class FST_CIS_Small_Wall_Corner_Jorge: land_3AS_CIS_Wall_Corner_v2
 	{
@@ -285,6 +358,21 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Props\Data\FST_CIS_small_wall_corner_Jorge_co.paa"
+		};
+	};
+	class FST_CIS_Small_Wall_Corner_PDF: land_3AS_CIS_Wall_Corner_v2
+	{
+		displayName="[41st] CIS Small Wall Corner (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Wall_Corner_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_small_wall_corner.paa"
 		};
 	};
 	class FST_CIS_Small_Wall_Med: land_3AS_CIS_Wall_Med_v2
@@ -304,6 +392,23 @@ class CfgVehicles
 			"41st_Props\Data\FST_CIS_small_wall_medium_Jorge_co.paa"
 		};
 	};
+	class FST_CIS_Small_Wall_Med_PDF: land_3AS_CIS_Wall_Med_v2
+	{
+		displayName="[41st] CIS Small Wall Med (PDF)";
+		scope=2;
+		scopecurator=2;
+		model="3AS\3AS_structures\FOB\3AS_cis_Wall_Med_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_small_wall_medium_co.paa"
+		};
+	};
 	class land_3AS_cis_Wall_Long_v2;
 	class FST_cis_Small_Wall_Long: land_3AS_cis_Wall_Long_v2
 	{
@@ -320,6 +425,23 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Props\Data\FST_CIS_small_wall_long_Jorge_co.paa"
+		};
+	};
+	class FST_cis_Small_Wall_Long_PDF: land_3AS_cis_Wall_Long_v2
+	{
+		author="Steel";
+		displayName="[41st] CIS Small Wall Long (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Wall_Long_v2.p3d";
+		editorPreview="\3AS\3AS_structures\FOB\editorPreviews\land_3AS_cis_Wall_Long_v2.jpg";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_small_wall_long_co.paa"
 		};
 	};
 	class 3AS_City_Wall_Straight_Prop;
@@ -368,6 +490,21 @@ class CfgVehicles
 			"41st_Props\Data\FST_CIS_bunker_Jorge_co.paa"
 		};
 	};
+	class FST_CIS_Bunker_PDF: land_3AS_CIS_Bunker_v2
+	{
+		displayName="[41st] CIS Bunker (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Bunker_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_bunker_co.paa"
+		};
+	};
 	///////////////
 	////TOWERS/////
 	///////////////
@@ -385,6 +522,21 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Props\Data\FST_CIS_tower_Jorge_co.paa"
+		};
+	};
+	class FST_CIS_Wall_Tower_PDF: land_3AS_CIS_Wall_Tower_v2
+	{
+		displayName="[41st] CIS Tower (PDF)";
+		model="\3AS\3AS_structures\FOB\3AS_cis_Wall_Tower_v2.p3d";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\PDF_tower_co.paa"
 		};
 	};
 	///////////////
