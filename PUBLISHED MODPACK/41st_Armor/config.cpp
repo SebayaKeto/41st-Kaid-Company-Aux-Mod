@@ -7534,6 +7534,17 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades_Dirty.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Changeling: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Changeling)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Changeling.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Changeling.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Nerd: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
