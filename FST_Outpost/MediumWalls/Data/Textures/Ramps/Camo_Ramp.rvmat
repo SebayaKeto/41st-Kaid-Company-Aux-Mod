@@ -23,7 +23,7 @@ class Stage1
 
 {
 
-	texture = "FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp__nohq.paa";
+	texture = "FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp_nohq.paa";
 
 	uvSource = "tex";
 
@@ -95,7 +95,7 @@ class Stage4
 
 {
 
-	texture = "FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp__as.paa";
+	texture = "FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp_as.paa";
 
 	uvSource = "tex";
 
@@ -119,7 +119,7 @@ class Stage5
 
 {
 
-	texture = "FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp__smdi.paa";
+	texture = "FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp_smdi.paa";
 
 	uvSource = "tex";
 

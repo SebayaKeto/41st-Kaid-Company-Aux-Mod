@@ -17,10 +17,10 @@ class FST_Outpost_MediumWall_Base: House_F
 	editorCategory = "FST_CatagoryMajorOutpost";
 	editorSubcategory = "FST_Subcategory_OutpostWallsNeutral";
 
-	// scope=1 keeps this class hidden from direct editor placement.
-	scope = 1;
-	// scopecurator=1 keeps this base class hidden from Zeus.
-	scopecurator = 1;
+	// scope=0 keeps this class hidden from direct editor placement.
+	scope = 0;
+	// scopecurator=0 keeps this base class hidden from Zeus.
+	scopecurator = 0;
 
 	// Preferred placement axis in editor tools.
 	// Useful for snap/rotate workflows when composing wall lines.
@@ -31,7 +31,7 @@ class FST_Outpost_MediumWall_Base: House_F
 	destrType = "DestructNo";
 
 	// Fallback display name (overridable by child classes).
-	displayName = "Medium Outpost Wall (Unmarked)";
+	displayName = "Medium Outpost Wall (Short)";
 	// Geometry/model path for this wall piece.
 	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumShort.p3d";
 
@@ -76,25 +76,10 @@ class FST_Outpost_MediumWall_Base: House_F
 						name = "Republic (Maroon)";
 						value = "Republic_Maroon";
 					};
-					class Republic_Tan
-					{
-						name = "Republic (Tan)";
-						value = "Republic_Tan";
-					};
 					class Republic_Green
 					{
 						name = "Republic (Green)";
 						value = "Republic_Green";
-					};
-					class Republic_Blue
-					{
-						name = "Republic (Blue)";
-						value = "Republic_Blue";
-					};
-					class CIS_Dark
-					{
-						name = "CIS (Dark)";
-						value = "CIS_Dark";
 					};
 				};
 			};
@@ -114,6 +99,39 @@ class FST_Outpost_MediumWallShort_Unmarked: FST_Outpost_MediumWall_Base
 	scope = 2;
 	// scopecurator=2 exposes class in Zeus curator interface.
 	scopecurator = 2;
+	displayName = "Medium Outpost Wall (Short)";
+};
+class FST_Outpost_MediumWallMedium_Unmarked: FST_Outpost_MediumWall_Base
+{
+	// scope=2 exposes class in Eden object browser.
+	scope = 2;
+	// scopecurator=2 exposes class in Zeus curator interface.
+	scopecurator = 2;
+	displayName = "Medium Outpost Wall (Medium)";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumMedium.p3d";
+};
+class FST_Outpost_MediumWallFoxhole: FST_Outpost_MediumWall_Base
+{
+	// scope=2 exposes class in Eden object browser.
+	scope = 2;
+	// scopecurator=2 exposes class in Zeus curator interface.
+	scopecurator = 2;
+	displayName = "Medium Outpost Wall (Foxhole)";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumFoxhole.p3d";
+	editorPreview = "\FST\FST_Outpost\MediumWalls\Data\Icons\FST_RepublicOutpostMediumFoxholePreview.jpg";
+	// Texture applied to hidden selection(s).
+	hiddenSelectionsTextures[]=
+	{
+		"FST\FST_Outpost\MediumWalls\Data\Textures\Foxholes\Camo_co.paa",
+		"FST\FST_Core\TrimSheets\Republic_DecalSheet\Republic_DecalSheet_Green_CA.paa"
+	};
+	// Material (rvmat) applied to hidden selection(s).
+	// Keep this aligned with texture channels expected by the rvmat.
+	hiddenSelectionsMaterials[]=
+	{
+		"FST\FST_Outpost\MediumWalls\Data\Textures\Foxholes\Camo.rvmat",
+		"FST\FST_Core\TrimSheets\Republic_DecalSheet\Republic_DecalSheet.rvmat"
+	};
 };
 class FST_Outpost_MediumWallRamp_Unmarked: FST_Outpost_MediumWall_Base
 {
@@ -121,7 +139,21 @@ class FST_Outpost_MediumWallRamp_Unmarked: FST_Outpost_MediumWall_Base
 	scope = 2;
 	// scopecurator=2 exposes class in Zeus curator interface.
 	scopecurator = 2;
+	displayName = "Medium Outpost Wall (Ramp)";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumRamp.p3d";
 	editorPreview = "\FST\FST_Outpost\MediumWalls\Data\Icons\FST_RepublicOutpostMediumRampPreview.jpg";
+	hiddenSelections[]={"Camo"};
+	// Texture applied to hidden selection(s).
+	hiddenSelectionsTextures[]=
+	{
+		"FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp_co.paa"
+	};
+	// Material (rvmat) applied to hidden selection(s).
+	// Keep this aligned with texture channels expected by the rvmat.
+	hiddenSelectionsMaterials[]=
+	{
+		"FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp.rvmat"
+	};
 };
 
 
