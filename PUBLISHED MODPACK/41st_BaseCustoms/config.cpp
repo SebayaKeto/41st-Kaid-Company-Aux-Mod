@@ -32,11 +32,26 @@ class CfgEditorSubcategories
 		displayName = "Base Custom Unit"; 
 	};
 };
+class CfgIdentities
+{
+    class NPCCBlue
+    {
+        name="NPC";
+        face="WhiteHead_01";
+        glasses="None";
+        speaker="Male09ENG";
+        pitch=1;
+    };
+};
 class CfgVehicles
 {
     class C_man_1;
-    class lsd_gar_bodyGlove_base;
-    class FST_BaseCustomBlue: lsd_gar_bodyGlove_base
+    class O_soldier_base_F;
+	class O_Soldier_F: O_soldier_base_F
+	{
+		class HitPoints;
+	};
+    class FST_BaseCustomBlue: O_Soldier_F
     {
         author="Tooka";
         scope=2;
@@ -52,19 +67,14 @@ class CfgVehicles
             "Throw",
 			"Put"
         };
-		identityTypes[]={};
         Items[]={};
 		respawnItems[]={};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
 		magazines[]={};
 		respawnMagazines[]={};
-        class EventHandlers
-        {
-            init = "_this spawn { params ['_unit']; sleep 2; if (!isServer) exitWith {}; if (is3DEN || is3DENPreview) exitWith {}; private _defaultUniform = 'FST_Uniform_Bodyglove'; if (uniform _unit == _defaultUniform) then { deleteVehicle _unit; };};";
-        };
     };
-    class FST_BaseCustomRed: lsd_gar_bodyGlove_base
+    class FST_BaseCustomRed: O_Soldier_F
     {
         author="Tooka";
         scope=2;
@@ -87,12 +97,8 @@ class CfgVehicles
 		respawnLinkedItems[]={};
 		magazines[]={};
 		respawnMagazines[]={};
-        class EventHandlers
-        {
-            init = "_this spawn { params ['_unit']; sleep 2; if (!isServer) exitWith {}; if (is3DEN || is3DENPreview) exitWith {}; private _defaultUniform = 'FST_Uniform_Bodyglove'; if (uniform _unit == _defaultUniform) then { deleteVehicle _unit; };};";
-        };
     };
-    class FST_BaseCustomGreen: lsd_gar_bodyGlove_base
+    class FST_BaseCustomGreen: O_Soldier_F
     {
         author="Tooka";
         scope=2;
@@ -115,10 +121,6 @@ class CfgVehicles
 		respawnLinkedItems[]={};
 		magazines[]={};
 		respawnMagazines[]={};
-        class EventHandlers
-        {
-            init = "_this spawn { params ['_unit']; sleep 2; if (!isServer) exitWith {}; if (is3DEN || is3DENPreview) exitWith {}; private _defaultUniform = 'FST_Uniform_Bodyglove'; if (uniform _unit == _defaultUniform) then { deleteVehicle _unit; };};";
-        };
     };
     class FST_BaseCustomCiv: C_man_1
     {
@@ -142,9 +144,5 @@ class CfgVehicles
 		respawnLinkedItems[]={};
 		magazines[]={};
 		respawnMagazines[]={};
-        class EventHandlers
-        {
-            init = "_this spawn { params ['_unit']; sleep 2; if (!isServer) exitWith {}; if (is3DEN || is3DENPreview) exitWith {}; private _defaultUniform = 'FST_Uniform_Bodyglove'; if (uniform _unit == _defaultUniform) then { deleteVehicle _unit; };};";
-        };
     };
 };
