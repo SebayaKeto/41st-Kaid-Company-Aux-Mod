@@ -112,12 +112,33 @@ class CfgVehicles
 		scope = 2;
 		scopecurator = 2;
 	};
+	class FST_Barricade_FerocreteBarrier_Medium: FST_Barricade_FerocreteBarrier_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "[41st] Ferocrete Barrier (Medium)";
+		model = "FST\FST_Barricades\Republic_MediumConcreteBarricade.p3d";
+	};
+	class FST_Barricade_FerocreteBarrier_Large: FST_Barricade_FerocreteBarrier_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "[41st] Ferocrete Barrier (Large)";
+		model = "FST\FST_Barricades\Republic_LargeConcreteBarricade.p3d";
+	};
 	class FST_Barricade_FerocreteBarrier_Corner: FST_Barricade_FerocreteBarrier_Base
 	{
 		scope = 2;
 		scopecurator = 2;
 		displayName = "[41st] Ferocrete Barrier (Corner)";
 		model = "FST\FST_Barricades\Republic_CornerConcreteBarricade.p3d";
+	};
+	class FST_Barricade_FerocreteBarrier_CornerEnclosed: FST_Barricade_FerocreteBarrier_Base
+	{
+		scope = 2;
+		scopecurator = 2;
+		displayName = "[41st] Ferocrete Barrier (Corner Enclosed)";
+		model = "FST\FST_Barricades\Republic_CornerCircleConcreteBarricade.p3d";
 	};
 };
 class cfgFunctions
