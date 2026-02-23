@@ -18814,6 +18814,15 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 			"41st_Armor\Data\Equipment\FST_NVG_Omen.paa",
 		};
 	};
+	class FST_NVG_Fixed_Omen: FST_NVG_Fixed
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Omen/Fixed On)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Omen.paa",
+		};
+	};
 	class FST_NVG_Edge: FST_NVG
 	{
 		author="Steel";
