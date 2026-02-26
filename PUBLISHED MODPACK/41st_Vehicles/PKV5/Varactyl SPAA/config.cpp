@@ -8,7 +8,9 @@ class CfgPatches
 		};
 		units[]=
 		{
-			"FST_PKV5_UP_Shredder"
+			"FST_PKV5_UP_Shredder",
+			"FST_PKV5_UP_Shredder_Gray",
+			"FST_PKV5_UP_Shredder_PDF"
 		};
 		weapons[]={};
 	};
@@ -1599,6 +1601,46 @@ class CfgVehicles
 		typicalCargo[]=
 		{
 			"FST_Trooper_P2_DC15S"
+		};
+	};
+	class FST_PKV5_UP_Shredder_Gray: FST_PKV5AAA_UP
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Varactyl' SPAA/Gray";
+		accuracy=1.3;
+		side=1;
+		faction = "FST_Faction";
+		crew = "FST_P2_Recruit";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"FST_P2_Recruit"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Plain.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_SPAA_Plain.paa"
+		};
+	};
+	class FST_PKV5_UP_Shredder_PDF: FST_PKV5AAA_UP
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Varactyl' SPAA/PDF";
+		accuracy=1.3;
+		side=0;
+		faction = "FST_Faction";
+		crew = "JLTS_Droid_B1_Prototype";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"JLTS_Droid_B1_Prototype"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_PDF.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_SPAA_Plain.paa"
 		};
 	};
 };

@@ -11,7 +11,7 @@ class CfgPatches
 			"3AS_APC_Jug",
 			"3AS_Animations"
 		};
-		units[] = { "FST_PX10_Tukata", "FST_PX10_CIS" };
+		units[] = { "FST_PX10_Tukata", "FST_PX10_CIS", "FST_PX10_Gray", "FST_PX10_PDF" };
 		weapons[] = {};
 	};
 };
@@ -65,6 +65,52 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] = {
 		"\41st_Vehicles\PX10\Data\FST_PX10CAV_CIS_CO.paa",                    // main hull
+		"3as\3as_rebel_armor\px10_cav\textures\px10cavintback_co.paa", // interior back
+		"3as\3as_rebel_armor\px10_cav\textures\px10cavintfront_co.paa",// interior front
+		"3as\3as_rebel_armor\px10_cav\textures\px10fuel_co.paa",       // fuel module
+		"3as\3as_rebel_armor\px10_cav\textures\px10crane_co.paa"       // repair module
+		};
+	};
+	class FST_PX10_Gray : FST_PX10_Tukata
+	{
+		displayName = "PX-10 Gray";
+		author = "Steel";
+		faction = "FST_Faction";
+		editorSubcategory = "FST_Ground_Vehicle";
+		side = 1;
+
+		crew="FST_P2_Recruit";
+		typicalCargo[] = { "FST_P2_Recruit" };
+
+		hiddenSelections[] = 
+		{
+		"Camo", "camo2", "camo3", "camo_Fuel", "camo_repair"
+		};
+		hiddenSelectionsTextures[] = {
+		"\41st_Vehicles\PX10\Data\FST_PX10CAV_plain_CO.paa",                    // main hull
+		"3as\3as_rebel_armor\px10_cav\textures\px10cavintback_co.paa", // interior back
+		"3as\3as_rebel_armor\px10_cav\textures\px10cavintfront_co.paa",// interior front
+		"3as\3as_rebel_armor\px10_cav\textures\px10fuel_co.paa",       // fuel module
+		"3as\3as_rebel_armor\px10_cav\textures\px10crane_co.paa"       // repair module
+		};
+	};
+	class FST_PX10_PDF : FST_PX10_Tukata
+	{
+		displayName = "PX-10 PDF";
+		author = "Steel";
+		faction = "FST_BattleDroids_Faction";
+		editorSubcategory = "FST_Ground_Vehicle";
+		side = 0;
+
+		crew="JLTS_Droid_B1_Prototype";
+		typicalCargo[] = { "JLTS_Droid_B1_Prototype" };
+
+		hiddenSelections[] = 
+		{
+		"Camo", "camo2", "camo3", "camo_Fuel", "camo_repair"
+		};
+		hiddenSelectionsTextures[] = {
+		"\41st_Vehicles\PX10\Data\FST_PX10CAV_pdf_CO.paa",                    // main hull
 		"3as\3as_rebel_armor\px10_cav\textures\px10cavintback_co.paa", // interior back
 		"3as\3as_rebel_armor\px10_cav\textures\px10cavintfront_co.paa",// interior front
 		"3as\3as_rebel_armor\px10_cav\textures\px10fuel_co.paa",       // fuel module

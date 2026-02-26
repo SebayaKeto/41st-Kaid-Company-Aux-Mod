@@ -9,7 +9,9 @@ class CfgPatches
 		units[]=
 		{
 			"FST_PK_V5_MLRS_Carrier_UP",
-			"FST_PKV5_MLRS_Carrier"
+			"FST_PKV5_MLRS_Carrier",
+			"FST_PKV5_MLRS_Carrier_Gray",
+			"FST_PKV5_MLRS_Carrier_PDF"
 		};
 		weapons[]={};
 	};
@@ -1454,6 +1456,46 @@ class CfgVehicles
 		typicalCargo[]=
 		{
 			"FST_Trooper_P2_DC15S"
+		};
+	};
+	class FST_PKV5_MLRS_Carrier_Gray: FST_PK_V5_MLRS_Carrier_UP
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Dianoga' MLRS/Gray";
+		accuracy=1000;
+		side=1;
+		faction = "FST_Faction";
+		crew = "FST_P2_Recruit";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"FST_P2_Recruit"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Plain.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_MLRS_Plain.paa"
+		};
+	};
+	class FST_PKV5_MLRS_Carrier_PDF: FST_PK_V5_MLRS_Carrier_UP
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Dianoga' MLRS/PDF";
+		accuracy=1000;
+		side=0;
+		faction = "FST_Faction";
+		crew = "JLTS_Droid_B1_Prototype";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"JLTS_Droid_B1_Prototype"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_PDF.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_MLRS_Plain.paa"
 		};
 	};
 };
