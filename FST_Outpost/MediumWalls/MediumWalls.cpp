@@ -101,6 +101,16 @@ class FST_Outpost_MediumWallShort_Unmarked: FST_Outpost_MediumWall_Base
 	scopecurator = 2;
 	displayName = "Medium Outpost Wall (Short)";
 };
+class FST_Outpost_MediumWallSkinny_Unmarked: FST_Outpost_MediumWall_Base
+{
+	// scope=2 exposes class in Eden object browser.
+	scope = 2;
+	// scopecurator=2 exposes class in Zeus curator interface.
+	scopecurator = 2;
+	displayName = "Medium Outpost Wall (Skinny)";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumSkinny.p3d";
+	editorPreview = "\FST\FST_Outpost\MediumWalls\Data\Icons\FST_RepublicOutpostMediumSkinnyPreview.jpg";
+};
 class FST_Outpost_MediumWallMedium_Unmarked: FST_Outpost_MediumWall_Base
 {
 	// scope=2 exposes class in Eden object browser.
@@ -154,6 +164,11 @@ class FST_Outpost_MediumWallRamp_Unmarked: FST_Outpost_MediumWall_Base
 	{
 		"FST\FST_Outpost\MediumWalls\Data\Textures\Ramps\Camo_Ramp.rvmat"
 	};
+};
+class FST_Outpost_MediumWallRampSkinny_Unmarked: FST_Outpost_MediumWallRamp_Unmarked
+{
+	displayName = "Medium Outpost Wall (Ramp Skinny)";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumRampSkinny.p3d";
 };
 
 
