@@ -108,7 +108,7 @@ class FST_Outpost_MediumWallSkinny_Unmarked: FST_Outpost_MediumWall_Base
 	// scopecurator=2 exposes class in Zeus curator interface.
 	scopecurator = 2;
 	displayName = "Medium Outpost Wall (Skinny)";
-	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumSkinny.p3d";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumShortThin.p3d";
 	editorPreview = "\FST\FST_Outpost\MediumWalls\Data\Icons\FST_RepublicOutpostMediumSkinnyPreview.jpg";
 };
 class FST_Outpost_MediumWallMedium_Unmarked: FST_Outpost_MediumWall_Base
