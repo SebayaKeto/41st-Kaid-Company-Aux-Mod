@@ -15,7 +15,7 @@ class FST_Outpost_MediumWall_Base: House_F
 	// Eden category + subcategory placement tree.
 	// Controls where this object appears in the editor browser hierarchy.
 	editorCategory = "FST_CatagoryMajorOutpost";
-	editorSubcategory = "FST_Subcategory_OutpostWallsNeutral";
+	editorSubcategory = "FST_Subcategory_OutpostWallsNeutral_Medium";
 
 	// scope=0 keeps this class hidden from direct editor placement.
 	scope = 0;

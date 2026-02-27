@@ -75,6 +75,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Light Walls (Neutral)";
 	};
+	class FST_Subcategory_OutpostWallsNeutral_Medium
+	{
+		displayName = "Medium Walls (Neutral)";
+	};
 	class FST_Subcategory_OutpostWallsGAR
 	{
 		displayName = "Light Walls (GAR)";
