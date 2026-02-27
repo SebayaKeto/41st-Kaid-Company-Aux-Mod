@@ -170,5 +170,10 @@ class FST_Outpost_MediumWallRampSkinny_Unmarked: FST_Outpost_MediumWallRamp_Unma
 	displayName = "Medium Outpost Wall (Ramp Skinny)";
 	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumRampSkinny.p3d";
 };
+class FST_Outpost_MediumWallExtension_Unmarked: FST_Outpost_MediumWallRamp_Unmarked
+{
+	displayName = "Medium Outpost Wall (Extension)";
+	model = "FST\FST_Outpost\MediumWalls\FST_OutpostWall_MediumExtension.p3d";
+};
 
 
