@@ -1696,7 +1696,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -1762,7 +1762,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_vest.paa",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2117,7 +2117,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Khaki.paa",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2184,7 +2184,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4136,7 +4136,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[] =
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
 		};
 	};
 	class FST_CloneVestSuspenders: V_PlateCarrier1_rgr
@@ -48552,7 +48552,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -48609,7 +48609,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -48627,7 +48627,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[] =
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
 		};
 	};
 	class FST_Vest_NCO_Kama_Face: FST_Base_Glasses
@@ -48643,7 +48643,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_vest.paa",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		scope=2;
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
@@ -48667,7 +48667,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Khaki.paa",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		scope=2;
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
@@ -48691,7 +48691,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran",
-			"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
 		};
 		scope=2;
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
