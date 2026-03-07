@@ -20343,7 +20343,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Clone Backpack (Desert)";
-		maximumload=250;
+		maximumload=400;
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpack.p3d";
 		hiddenSelections[]=
 		{
