@@ -21379,7 +21379,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=320;
+		maximumload=400;
 		displayName="[41st] Jump Pack (Woodland)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
@@ -21445,7 +21445,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=320;
+		maximumload=400;
 		displayName="[41st] Jump Pack (Desert)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
@@ -21511,7 +21511,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=320;
+		maximumload=400;
 		displayName="[41st] Jump Pack (Urban)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
@@ -21577,7 +21577,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		maximumload=320;
+		maximumload=400;
 		displayName="[41st] Jump Pack (Midnight)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
