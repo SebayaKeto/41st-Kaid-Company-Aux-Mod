@@ -18,7 +18,9 @@ class CfgPatches
 			"FST_Blaze_AAT",
 			"FST_Looted_AAT",
 			"FST_Shockcap_AAT",
-			"FST_Tukata_AAT"
+			"FST_Tukata_AAT",
+			"FST_Gray_AAT",
+			"FST_PDF_AAT"
 		};
 		weapons[]={};
 	};
@@ -1108,6 +1110,41 @@ class CfgVehicles
 				name = "track_r";
 				visual = "track_r";
 			};
+		};
+	};
+	class FST_Gray_AAT: FST_AAT
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayName="[41st] AAT (Gray)";
+		crew="FST_P2_Recruit";
+		author="Steel";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\AAT\Data\Plain_AAT_CO.paa"
+		};
+	};
+	class FST_PDF_AAT: FST_AAT
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] AAT (PDF)";
+		crew="JLTS_Droid_B1_Prototype";
+		author="Steel";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\AAT\Data\PDF_AAT_CO.paa"
 		};
 	};
 };

@@ -9,7 +9,9 @@ class CfgPatches
 		units[]=
 		{
 			"FST_ISP",
-			"FST_ISP_Transport"
+			"FST_ISP_Transport",
+			"FST_ISP_Gray",
+			"FST_ISP_PDF"
 		};
 		weapons[]={};
 		author="$STR_3AS_Studio";
@@ -1819,5 +1821,42 @@ class CfgVehicles
 			"HideTurrets",
 			1
 		};
+	};
+	class FST_ISP_Gray: FST_ISP_Base
+	{
+		scope=2;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\SwampSpeeder\Data\FST_SwampSpeeder_Plain_co.paa",
+			"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa"
+		};
+		faction="FST_Faction";
+		crew="FST_P2_Recruit";
+		displayName="[41st] ISP Swamp Speeder (Gray)";
+		editorSubcategory="FST_Ground_Vehicle";
+	};
+	class FST_ISP_PDF: FST_ISP_Base
+	{
+		scope=2;
+		side=0;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\SwampSpeeder\Data\FST_SwampSpeeder_PDF_co.paa",
+			"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa"
+		};
+		faction="FST_Faction";
+		crew="JLTS_Droid_B1_Prototype";
+		displayName="[41st] ISP Swamp Speeder (PDF)";
+		editorSubcategory="FST_Ground_Vehicle";
 	};
 };

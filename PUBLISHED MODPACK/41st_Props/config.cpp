@@ -16,7 +16,9 @@ class CfgPatches
 			"FST_CIS_Small_Wall_Med_PDF",
 			"FST_cis_Small_Wall_Long_PDF",
 			"FST_CIS_Bunker_PDF",
-			"FST_CIS_Wall_Tower_PDF"
+			"FST_CIS_Wall_Tower_PDF",
+			"FST_Baseplate_50_PDF",
+			"FST_Baseplate_50_PDF_Emblem"
 		};
 		weapons[]={};
 		requiredAddons[]=
@@ -1060,6 +1062,28 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Props\Data\FST_bp_cis_Jorge_co.paa"
+		};
+	};
+	class FST_Prop_Baseplate_50_PDF: 3AS_Prop_Baseplate_50x50
+	{
+		author="Steel";
+		displayName="[41st] PDF Baseplate (50x50)";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_PDF_50BP.paa"
+		};
+	};
+	class FST_Prop_Baseplate_50_PDF_Emblem: 3AS_Prop_Baseplate_50x50
+	{
+		author="Steel";
+		displayName="[41st] PDF Baseplate/Emblem (50x50)";
+		editorCategory="FST_Faction";
+		editorSubcategory="FST_CIS_PDF_FOB";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Props\Data\FST_PDF_Emblem_50BP.paa"
 		};
 	};
 	class FST_Prop_Baseplate_50_Square: 3AS_Prop_Baseplate_50x50
