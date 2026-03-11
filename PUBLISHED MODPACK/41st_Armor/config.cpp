@@ -19685,25 +19685,25 @@ class CfgVehicles
 				count=10;
 				magazine="IDA_grenade_Smoke_Purple_mag";
 			};
-			class _xx_IDA_Smoke_LauncherGrenade
+			class _xx_FST_Smoke_LauncherGrenade
 			{
-				count=10;
-				magazine="IDA_Smoke_LauncherGrenade";
+				count=30;
+				magazine="FST_Smoke_LauncherGrenade";
 			};
-			class _xx_IDA_SmokeRed_LauncherGrenade
+			class _xx_FST_SmokeRed_LauncherGrenade
 			{
-				count=10;
-				magazine="IDA_SmokeRed_LauncherGrenade";
+				count=30;
+				magazine="FST_SmokeRed_LauncherGrenade";
 			};
-			class _xx_IDA_SmokeGreen_LauncherGrenade
+			class _xx_FST_SmokeGreen_LauncherGrenade
 			{
-				count=10;
-				magazine="IDA_SmokeGreen_LauncherGrenade";
+				count=30;
+				magazine="FST_SmokeGreen_LauncherGrenade";
 			};
-			class _xx_IDA_SmokeBlue_LauncherGrenade
+			class _xx_FST_SmokeBlue_LauncherGrenade
 			{
-				count=10;
-				magazine="IDA_SmokeBlue_LauncherGrenade";
+				count=30;
+				magazine="FST_SmokeBlue_LauncherGrenade";
 			};
 			class _xx_ACE_40mm_Flare_Red
 			{
@@ -19772,7 +19772,7 @@ class CfgVehicles
 		{
 			class _xx_FST_HE_LauncherGrenade
 			{
-				count=20;
+				count=30;
 				magazine="FST_HE_LauncherGrenade";
 			};
 			class _xx_FST_RPS6_rocket

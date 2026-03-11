@@ -541,6 +541,37 @@ class CfgAmmo
 		supersoniccrackfar[]={};
 		soundSetSonicCrack[]={};
 	};
+	class FST_blasterbolt_T15: FST_Blasterbolt
+	{
+		// what the hell is this Ruby!!! T-15 blaster bolts have a submunition of the FST Blaster-Bolt, and if you remove it the T-15 has more damage.  However the time to live would be correct, so to counter that, I'm remaking this but with a shorter time to live.
+
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		ACE_damageType="plasma";
+		cartridge="";
+		lightcolor[]={0,0.30000001,1};
+		hit=28; //28
+		indirectHit=0;
+		explosive=1;
+		indirectHitRange=0.5;
+		caliber=1.8; //1.6
+		coefGravity=0.02;
+		timetolive=0.5;
+		waterFriction=-0.0099999998;
+		deflecting=0;
+		airfriction=0;
+		tracerstarttime=0.050000001;
+		tracerendtime=10;
+		nvgonly=0;
+		airlock=1;
+		irtarget=1;
+		brightness=1000;
+		flaresize=5;
+		tracerscale=1;
+		effectflare="FlareShell";
+		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		ExplosionEffects="IDA_ImpactEffect";
+		cratereffects="";
+	};
 	class FST_blasterbolt_Green: FST_blasterbolt
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
@@ -855,7 +886,7 @@ class CfgAmmo
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
 	};
-	class FST_thermal_shell_LP_Blue: IDA_blasterbolt
+	class FST_thermal_shell_LP_Blue: IDA_Blasterbolt
 	{
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Medium_Blue_Fly";
@@ -865,8 +896,8 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=0.5;
 		caliber=5;
-		timeToLive = 2.0;
-		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
+		timeToLive = 0.9;
+		submunitionAmmo="FST_blasterbolt_T15"; // Submunition ammo class
 		submunitionConeType[]=
 		{
 			"random",
@@ -1550,7 +1581,7 @@ class CfgMagazines
 		descriptionShort="60 round capacity.";
 		ammo="FST_blasterbolt";
 		count=60;
-		initSpeed=250;
+		initSpeed=270;
 		mass=8;
 	};
 	class FST_blaster_cell_Green: FST_blaster_cell_Blue
@@ -1957,7 +1988,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_thermal_shell_LP_BLue";
-		count=20;
+		count=15;
 		initSpeed=300;
 		mass=35;
 	};
@@ -1981,7 +2012,7 @@ class CfgMagazines
 		displayName="[41st] Low-power Thermal coil (Red)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		ammo="FST_thermal_shell_LP_Red";
-		count=20;
+		count=15;
 	};
 	class FST_thermal_coil_T15_Blue: IDA_Blaster_Cell_Power3_40Rnd_Blue
 	{

@@ -170,6 +170,8 @@ class CfgWeapons
 		magazines[]=
 		{
 			"FST_32Rnd_155mm_ATAP_Mortar_shells",
+			"FST_8Rnd_82mm_Mo_Flare_white",
+			"FST_8Rnd_82mm_Mo_Smoke_white"
 /* 			"3AS_32Rnd_300mm_Mo_shells",
 			"3AS_12Rnd_300mm_Mo_smoke",
 			"3AS_4Rnd_300mm_Mo_guided",
@@ -4436,7 +4438,11 @@ class CfgVehicles
 					"FST_10Rnd_Siege_Cannon_HHE_shells",
 					"FST_10Rnd_Siege_Cannon_HHE_shells",
 					"FST_32Rnd_155mm_ATAP_Mortar_shells",
-					"FST_32Rnd_155mm_ATAP_Mortar_shells",				
+					"FST_32Rnd_155mm_ATAP_Mortar_shells",		
+					"FST_8Rnd_82mm_Mo_Flare_white",
+					"FST_8Rnd_82mm_Mo_Flare_white",
+					"FST_8Rnd_82mm_Mo_Smoke_white",
+					"FST_8Rnd_82mm_Mo_Smoke_white"
 				};
 				gunnerAction="mbt1_slot2_out";
 				gunnerInAction="ATAP_Gunner2";

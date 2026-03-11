@@ -252,6 +252,14 @@ class CfgVehicles
 			"passenger_generic01_leanright",
 			"passenger_low01"
 		};
+		class TransportWeapons
+		{
+			class _xx_FST_RPS6_Disposable
+			{
+				weapon="FST_RPS6_Disposable";
+				count=6;
+			};
+		};
 		class TransportMagazines
 		{
 			class _xx_Laserbatteries
@@ -359,25 +367,25 @@ class CfgVehicles
 				count=20;
 				magazine="IDA_grenade_Smoke_Purple_mag";
 			};
-			class _xx_IDA_Smoke_LauncherGrenade
+			class _xx_FST_Smoke_LauncherGrenade
 			{
-				count=20;
-				magazine="IDA_Smoke_LauncherGrenade";
+				count=30;
+				magazine="FST_Smoke_LauncherGrenade";
 			};
-			class _xx_IDA_SmokeRed_LauncherGrenade
+			class _xx_FST_SmokeRed_LauncherGrenade
 			{
-				count=20;
-				magazine="IDA_SmokeRed_LauncherGrenade";
+				count=30;
+				magazine="FST_SmokeRed_LauncherGrenade";
 			};
-			class _xx_IDA_SmokeGreen_LauncherGrenade
+			class _xx_FST_SmokeGreen_LauncherGrenade
 			{
-				count=20;
-				magazine="IDA_SmokeGreen_LauncherGrenade";
+				count=30;
+				magazine="FST_SmokeGreen_LauncherGrenade";
 			};
-			class _xx_IDA_SmokeBlue_LauncherGrenade
+			class _xx_FST_SmokeBlue_LauncherGrenade
 			{
-				count=20;
-				magazine="IDA_SmokeBlue_LauncherGrenade";
+				count=30;
+				magazine="FST_SmokeBlue_LauncherGrenade";
 			};
 			class _xx_ACE_40mm_Flare_Red
 			{
