@@ -1005,81 +1005,9 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			{player addSecondaryWeaponItem _x;} forEach _weaponStuff;
 		};
 		case (_item == "FST_DC17"): {
-			private _allowedVests = [
-				"FST_CloneVestSuspenders_Ranger_Urban",
-				"FST_CloneVestSuspenders_Ranger_Woodland",
-				"FST_CloneVestSuspenders_Ranger_Midnight",
-				"FST_CloneVestSuspenders_Ranger_Desert",
-				"FST_CloneVestSuspenders_Urban",
-				"FST_CloneVestSuspenders_Woodland",
-				"FST_CloneVestSuspenders_Midnight",
-				"FST_CloneVestSuspenders_Desert",
-				"FST_CloneVestLieutenant_Urban",
-				"FST_CloneVestLieutenant_Woodland",
-				"FST_CloneVestLieutenant_Midnight",
-				"FST_CloneVestLieutenant_Desert",
-				"FST_pauldron_kama_Urban",
-				"FST_pauldron_kama_Woodland",
-				"FST_pauldron_kama_Midnight",
-				"FST_pauldron_kama_Desert",
-				"FST_Vest_NCO_Kama_Urban",
-				"FST_Vest_NCO_Kama_Woodland",
-				"FST_Vest_NCO_Kama_Midnight",
-				"FST_Vest_NCO_Kama_Desert",
-				"FST_Vest_NCO_Desert",
-				"FST_Vest_NCO_Midnight",
-				"FST_Vest_NCO_Woodland",
-				"FST_Vest_NCO_Urban",
-				"FST_vest_Woodland_holster",
-				"FST_vest_Midnight_holster",
-				"FST_vest_Urban_holster",
-				"FST_vest_Desert_holster",
-				"FST_pauldron_kama",
-				"FST_pauldron_kama_reversed",
-				"FST_CloneVestAirborneNCO",
-				"FST_Vest_NCO_Kama",
-				"FST_Vest_NCO_Kama_Veteran",
-				"FST_CloneVestAirborneNCO_Veteran",
-				"FST_Vest_HeavyBag",
-				"FST_Vest_HeavyBag_Veteran",
-				"FST_vest_gm_SL",
-				"FST_vest_gm_FTL",
-				"FST_Vest_NCO",
-				"FST_Vest_NCO_Veteran",
-				"FST_CloneVestMerrik",
-				"FST_CloneVestARC",
-				"FST_CloneVestARC_Camo",
-				"FST_CloneVestARC_Tally",
-				"FST_CloneVestARC_Burns",
-				"FST_CloneVestARC_Major",
-				"FST_CloneVestARC_Mono",
-				"FST_CloneVestARC_Squatch"
-			];
-			private _allowedFaces = [
-				"FST_Heavy_Veteran_Face",
-				"FST_FTL_Veteran_Face",
-				"FST_FTL_Face",
-				"FST_Heavy_Face"
-			];
-
 			private _kitName = player getVariable ["WBK_Kit_Name",""];
-			private _isAllowed =
-				((vest player) in _allowedVests) ||
-				((goggles player) in _allowedFaces) ||
-				(_kitName in ["Crew Chief","Pilot"]);
-
-			if !_isAllowed then {
-				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
-				systemChat "Only FTL+, Crew Chiefs or Pilots can use the pistol.";
-				breakOut "switch";
-			};
-
 			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_pistol_1.ogg", "41st_KitMenu\sounds\select_pistol_2.ogg"], 0.85, 1];
 			private _magClass = "FST_blaster_cell_low_Blue";
-			private _knife = "UNSC_Knife";
-			if (_knife in weapons player) then {
-				player removeWeapon _knife;
-			};
 			if ("FST_DC17" in weapons player) then {
 				player removeWeapon "FST_DC17";
 				player removeMagazines _magClass;
@@ -1110,48 +1038,6 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				for "_i" from 1 to 6 do {
 					player addMagazine _magClass;
 				};
-			};
-		};
-		case (_item == "UNSC_Knife"): {
-			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_pistol_1.ogg", "41st_KitMenu\sounds\select_pistol_2.ogg"], 0.85, 1];
-			private _pistol = "FST_DC17";
-			private _magClass = "FST_blaster_cell_low_Blue";
-			private _hasKnife = _pistol in weapons player;
-
-			if (_hasKnife) then {
-				player removeWeapon _pistol;
-				player removeMagazines _magClass;
-			};
-
-			if ("UNSC_Knife" in weapons player) then {
-				player removeWeapon "UNSC_Knife";
-			} else {
-				player addWeapon "UNSC_Knife";
-			};
-		};
-		case (_item == "FST_Hoster_Face"): {
-			playSoundUI [selectRandom [
-				"41st_KitMenu\sounds\select_cloth_1.ogg",
-				"41st_KitMenu\sounds\select_cloth_2.ogg",
-				"41st_KitMenu\sounds\select_cloth_3.ogg"
-			], 0.85, 1];
-
-			if (
-    			(vest player == "FST_Vest_NCO") ||
-    			(vest player == "FST_Vest_HeavyBag") ||
-    			(vest player == "FST_Vest_NCO_Veteran") ||
-				(vest player == "FST_vest_gm_FTL") ||
-    			(vest player == "FST_Vest_HeavyBag_Veteran") ||
-				(vest player == "FST_CloneVestMerrik")
-			) then {
-				if (goggles player == "FST_Hoster_Face") then {
-					removeGoggles player;
-				} else {
-					player addGoggles "FST_Hoster_Face";
-				};
-			} else {
-				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
-				systemChat "You need to be an FTL to wear the holster.";
 			};
 		};
 		case (_item isKindOf ["RifleCore", configFile >> "CfgWeapons"]): {
@@ -1208,7 +1094,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			player removeWeapon primaryWeapon player;
 			player addWeapon _item;
 			player selectWeapon _item;
-			private _uglWeapons = ["FST_Westar_M5_UGL", "FST_DC15A_ugl", "FST_DC15S_UGL"];
+			private _uglWeapons = ["FST_Westar_M5_UGL", "FST_DC15A_ugl", "FST_DC15S_UGL","FST_DC15C_UGL"];
 			if !((primaryWeapon player) in _uglWeapons) then {
 				if ([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
 					player removeItem "ACE_HuntIR_monitor";
@@ -1535,6 +1421,89 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 				};
 
 				case "FST_DC15A_ugl": {
+					player addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
+					for "_i" from 1 to 12 do {
+						if (player canAddItemToVest _magType) then {
+							player addItemToVest _magType;
+						} else {
+							player addItemToUniform _magType;
+						};
+					};
+
+					for "_i" from 1 to 6 do { player removeItemFromBackpack "FST_Smoke_LauncherGrenade"; };
+					for "_i" from 1 to 12 do { player removeItemFromBackpack "FST_HE_LauncherGrenade"; };
+					for "_i" from 1 to 2 do { player removeItemFromBackpack "ACE_HuntIR_M203"; };
+					for "_i" from 1 to 4 do { player removeItemFromBackpack "ACE_40mm_Flare_white"; };
+
+					for "_i" from 1 to 6 do {
+						if (player canAddItemToBackpack "FST_Smoke_LauncherGrenade") then {
+							player addItemToBackpack "FST_Smoke_LauncherGrenade";
+						} else {
+							if (player canAddItemToVest "FST_Smoke_LauncherGrenade") then {
+								player addItemToVest "FST_Smoke_LauncherGrenade";
+							} else {
+								player addItemToUniform "FST_Smoke_LauncherGrenade";
+							};
+						};
+					};
+					player addPrimaryWeaponItem "FST_HE_LauncherGrenade";
+					for "_i" from 1 to 12 do {
+						if (player canAddItemToBackpack "FST_HE_LauncherGrenade") then {
+							player addItemToBackpack "FST_HE_LauncherGrenade";
+						} else {
+							if (player canAddItemToVest "FST_HE_LauncherGrenade") then {
+								player addItemToVest "FST_HE_LauncherGrenade";
+							} else {
+								player addItemToUniform "FST_HE_LauncherGrenade";
+							};
+						};
+					};
+
+					for "_i" from 1 to 2 do {
+						if (player canAddItemToBackpack "ACE_HuntIR_M203") then {
+							player addItemToBackpack "ACE_HuntIR_M203";
+						} else {
+							if (player canAddItemToVest "ACE_HuntIR_M203") then {
+								player addItemToVest "ACE_HuntIR_M203";
+							} else {
+								player addItemToUniform "ACE_HuntIR_M203";
+							};
+						};
+					};
+
+					for "_i" from 1 to 4 do {
+						if (player canAddItemToBackpack "ACE_40mm_Flare_white") then {
+							player addItemToBackpack "ACE_40mm_Flare_white";
+						} else {
+							if (player canAddItemToVest "ACE_40mm_Flare_white") then {
+								player addItemToVest "ACE_40mm_Flare_white";
+							} else {
+								player addItemToUniform "ACE_40mm_Flare_white";
+							};
+						};
+					};
+					{
+						private _smokeMag = _x;
+						if (player canAddItemToBackpack _smokeMag) then {
+							player addItemToBackpack _smokeMag;
+						} else {
+							if (player canAddItemToVest _smokeMag) then {
+								player addItemToVest _smokeMag;
+							} else {
+								player addItemToUniform _smokeMag;
+							};
+						};
+					} forEach [
+						"FST_SmokeBlue_LauncherGrenade",
+						"FST_SmokeGreen_LauncherGrenade",
+						"FST_SmokeRed_LauncherGrenade"
+					];
+					if !([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
+						player addItem "ACE_HuntIR_monitor";
+					};
+				};
+
+				case "FST_DC15C_UGL": {
 					player addPrimaryWeaponItem "FST_blaster_cell_High_Blue";
 					for "_i" from 1 to 12 do {
 						if (player canAddItemToVest _magType) then {
@@ -2706,8 +2675,6 @@ if (!isNull _disp) then {
     };
 };
 };
-
-
 
 Wbk_AddKit = {
     _obj = _this select 0;
