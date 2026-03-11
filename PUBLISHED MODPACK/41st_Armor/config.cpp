@@ -2184,7 +2184,7 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran",
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4135,8 +4135,8 @@ class FST_Vest_NCO_Veteran: FST_Vest_NCO
 		displayName="[41st] Airborne Squad Leader Sash (Veteran)";
 		hiddenSelectionsTextures[] =
 		{
-			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+			"41st_Armor\Data\Vests\FST_Vest_Veteran",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran"
 		};
 	};
 	class FST_CloneVestSuspenders: V_PlateCarrier1_rgr
@@ -48626,8 +48626,8 @@ class CfgGlasses
 		displayname="[41st] Veteran Airborne Squad Leader Sash (Face)";
 		hiddenSelectionsTextures[] =
 		{
-			"41st_Armor\Data\Vests\FST_Vest_Veteran.paa",
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+			"41st_Armor\Data\Vests\FST_Vest_Veteran",
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran"
 		};
 	};
 	class FST_Vest_NCO_Kama_Face: FST_Base_Glasses
@@ -48691,7 +48691,7 @@ class CfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Veteran",
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran.paa"
+			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co_Veteran"
 		};
 		scope=2;
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";

@@ -6,6 +6,8 @@ class CfgPatches
 		units[]=
 		{
 			"FST_JMSLLTE_I_veh_ITT_jinata_F",
+			"FST_ITT_Gray",
+			"FST_ITT_PDF"
 		};
 		weapons[]={};
 		requiredVersion=0.1;
@@ -1645,6 +1647,60 @@ class CfgVehicles
 		{
 			"Tex_ITT_jinata",
 			1
+		};
+	};
+	class FST_ITT_Gray: FST_JMSLLTE_veh_ITT_base
+	{
+		author="Steel";
+		scope=2;
+		scopeCurator=2;
+		side=1;
+		displayName="K79-S80 'ITT' Troop Transport (Gray)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_P2_Recruit";
+		typicalCargo[]=
+		{
+			"FST_P2_Recruit"
+		};
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\TukataITT\Data\Plain_front_co",
+			"41st_Vehicles\TukataITT\Data\Plain_mid_co",
+			"41st_Vehicles\TukataITT\Data\Plain_back_co"
+		};
+	};
+	class FST_ITT_PDF: FST_JMSLLTE_veh_ITT_base
+	{
+		author="Steel";
+		scope=2;
+		scopeCurator=2;
+		side=0;
+		displayName="K79-S80 'ITT' Troop Transport (PDF)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="JLTS_Droid_B1_Prototype";
+		typicalCargo[]=
+		{
+			"JLTS_Droid_B1_Prototype"
+		};
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\TukataITT\Data\PDF_front_co",
+			"41st_Vehicles\TukataITT\Data\PDF_mid_co",
+			"41st_Vehicles\TukataITT\Data\PDF_back_co"
 		};
 	};
 };
