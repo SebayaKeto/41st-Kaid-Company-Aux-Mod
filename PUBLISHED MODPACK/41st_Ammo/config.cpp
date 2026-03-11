@@ -936,6 +936,7 @@ class CfgAmmo
 		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
 		ACE_damageType="plasma";
+		timeToLive = 0.9;
 		hit=400;
 		indirectHit=1;
 		explosive=1;
