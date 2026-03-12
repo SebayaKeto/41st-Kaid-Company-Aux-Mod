@@ -1985,7 +1985,7 @@ class CfgMagazines
 		author="Adapted From The Indecisive Armoury Team";
 		displayName="[41st] Low-power Thermal coil (Blue)";
 		displayNameShort="LP Thermal coil (Blue)";
-		descriptionShort="20 round capacity.";
+		descriptionShort="15 round capacity.";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_thermal_shell_LP_BLue";

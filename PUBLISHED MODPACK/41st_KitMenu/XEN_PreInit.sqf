@@ -109,12 +109,40 @@ FST_ApplyCamoPreset = {
 				} else {
 					if (_curVest find "FST_CloneVestLieutenant" == 0) then {
 						_vestNew = format ["FST_CloneVestLieutenant_%1", _camoCap];
+					} else {
+						if (
+							_curVest == "FST_vest_holster" ||
+							_curVest == "FST_vest_Woodland_holster" ||
+							_curVest == "FST_vest_Midnight_holster" ||
+							_curVest == "FST_vest_Urban_holster" ||
+							_curVest == "FST_vest_Desert_holster"
+						) then {
+							_vestNew = format ["FST_vest_%1_holster", _camoCap];
+						};
 					};
 				};
 			};
 		};
 		if (_vestNew != "" && isClass (configFile >> "CfgWeapons" >> _vestNew)) then {
 			[_vestNew] call _swapVest;
+		};
+	};
+
+	private _curGoggles = goggles _unit;
+	if (_curGoggles != "") then {
+		private _gogglesNew = "";
+		if (
+			_curGoggles == "FST_FTL_Face" ||
+			_curGoggles == "FST_FTL_Woodland_Face" ||
+			_curGoggles == "FST_FTL_Midnight_Face" ||
+			_curGoggles == "FST_FTL_Urban_Face" ||
+			_curGoggles == "FST_FTL_Desert_Face"
+		) then {
+			_gogglesNew = format ["FST_FTL_%1_Face", _camoCap];
+		};
+		if (_gogglesNew != "" && isClass (configFile >> "CfgGlasses" >> _gogglesNew)) then {
+			removeGoggles _unit;
+			_unit addGoggles _gogglesNew;
 		};
 	};
 	private _curBp = backpack _unit;
@@ -165,6 +193,26 @@ FST_fnc_updateAditionalListCamo = {
 		if (_item find "FST_Vest_NCO_Kama"      == 0) then { _new = format ["FST_Vest_NCO_Kama_%1", _camoCap]; };
 		if (_item find "FST_Vest_NCO"           == 0) then { _new = format ["FST_Vest_NCO_%1",      _camoCap]; };
 		if (_item find "FST_pauldron_kama"      == 0) then { _new = format ["FST_pauldron_kama_%1", _camoCap]; };
+
+		if (
+			_item == "FST_vest_holster" ||
+			_item == "FST_vest_Woodland_holster" ||
+			_item == "FST_vest_Midnight_holster" ||
+			_item == "FST_vest_Urban_holster" ||
+			_item == "FST_vest_Desert_holster"
+		) then {
+			_new = format ["FST_vest_%1_holster", _camoCap];
+		};
+
+		if (
+			_item == "FST_FTL_Face" ||
+			_item == "FST_FTL_Woodland_Face" ||
+			_item == "FST_FTL_Midnight_Face" ||
+			_item == "FST_FTL_Urban_Face" ||
+			_item == "FST_FTL_Desert_Face"
+		) then {
+			_new = format ["FST_FTL_%1_Face", _camoCap];
+		};
 		if (_item find "FST_Backpack_Antenna" == 0) then {
 			private _isSL = (player getVariable ["WBK_Kit_Name",""]) in ["Squad Leader","Squad Leader "];
 			_new = if (_isSL && {(uniform player) isEqualTo "FST_Uniform_P1_41st"}) then {
@@ -599,11 +647,48 @@ switch true do {
 			[player, _insignia] call BIS_fnc_setUnitInsignia;
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 701): {
-		   playSoundUI [selectRandom ["41st_KitMenu\sounds\select_cloth_1.ogg","41st_KitMenu\sounds\select_cloth_2.ogg","41st_KitMenu\sounds\select_cloth_3.ogg"], 0.85, 1];
-		   _items = vestItems player;
+			playSoundUI [selectRandom ["41st_KitMenu\sounds\select_cloth_1.ogg","41st_KitMenu\sounds\select_cloth_2.ogg","41st_KitMenu\sounds\select_cloth_3.ogg"], 0.85, 1];
+			_items = vestItems player;
 			removeVest player;
-			player addVest _item;
+
+			private _vestToEquip = _item;
+			private _pistol      = "FST_DC17";
+			private _magClass    = "FST_blaster_cell_low_Blue";
+			private _knife       = "IDA_Clone_Knife";
+
+			if (_item == "FST_Vest_NCO") then {
+				_vestToEquip = "FST_vest_holster";
+				removeGoggles player;
+				player addGoggles "FST_FTL_Face";
+			};
+
+			if (_item == "FST_Vest_NCO_Veteran") then {
+				_vestToEquip = "FST_vest_holster";
+				removeGoggles player;
+				player addGoggles "FST_FTL_Veteran_Face";
+			};
+
+			if (_item == "FST_Vest_HeavyBag") then {
+				_vestToEquip = "FST_vest_holster";
+				removeGoggles player;
+				player addGoggles "FST_Heavy_Face";
+			};
+
+			if (_item == "FST_Vest_HeavyBag_Veteran") then {
+				_vestToEquip = "FST_vest_holster";
+				removeGoggles player;
+				player addGoggles "FST_Heavy_Veteran_Face";
+			};
+
+			if (_item == "FST_Vest_NCO_Woodland") then {
+				_vestToEquip = "FST_vest_Woodland_holster";
+				removeGoggles player;
+				player addGoggles "FST_FTL_Woodland_Face";
+			};
+
+			player addVest _vestToEquip;
 			{player addItemToVest _x;} forEach _items;
+
 			if (_item == "FST_Vest_NCO" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
@@ -634,19 +719,83 @@ switch true do {
 			if (_item == "FST_Vest_NCO_Kama_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
+
+			if (
+				_item == "FST_Vest_NCO" ||
+				_item == "FST_Vest_NCO_Woodland" ||
+				_item == "FST_CloneVestAirborneNCO" ||
+				_item == "FST_CloneVestAirborneNCO_Veteran" ||
+				_item == "FST_Vest_HeavyBag" ||
+				_item == "FST_vest_gm_FTL" ||
+				_item == "FST_vest_gm_SL" ||
+				_item == "FST_Vest_NCO_Veteran" ||
+				_item == "FST_Vest_HeavyBag_Veteran" ||
+				_item == "FST_Vest_NCO_Kama" ||
+				_item == "FST_Vest_NCO_Kama_Veteran"
+			) then {
+				if (handgunWeapon player == _knife) then {
+					player removeWeapon _knife;
+
+					private _uCont = uniformContainer player;
+					if !(isNull _uCont) then {
+						private _wc = getWeaponCargo _uCont;
+						private _wClasses = _wc select 0;
+
+						if !(_knife in _wClasses) then {
+							_uCont addWeaponCargoGlobal [_knife, 1];
+						};
+					};
+				};
+
+				player removeMagazines _magClass;
+
+				if !(_pistol in weapons player) then {
+					player addWeapon _pistol;
+				};
+
+				player addHandgunItem _magClass;
+
+				for "_i" from 1 to 6 do {
+					player addItemToUniform _magClass;
+				};
+			};
+
 			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
 				player removeItem "itemAndroid";
 			};
 			if (_item == "FST_Vest_GM_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
 				player removeItem "itemAndroid";
 			};
-			if (_item == "FST_Vest_Base" || _item =="FST_Vest_GM_Base") then {
-				private _pistol   = "FST_DC17";
-				private _magClass = "FST_blaster_cell_low_Blue";
+
+			if (_item == "FST_Vest_Base" || _item == "FST_Vest_GM_Base") then {
+				private _uCont = uniformContainer player;
+
+				if !(isNull _uCont) then {
+					private _wc = getWeaponCargo _uCont;
+					private _wClasses = _wc select 0;
+					private _wCounts = _wc select 1;
+
+					clearWeaponCargoGlobal _uCont;
+
+					for "_i" from 0 to ((count _wClasses) - 1) do {
+						private _wClass = _wClasses select _i;
+						private _wCount = _wCounts select _i;
+
+						if !(_wClass == _knife) then {
+							_uCont addWeaponCargoGlobal [_wClass, _wCount];
+						};
+					};
+				};
+
 				if (_pistol in weapons player) then {
 					player removeWeapon _pistol;
 				};
+
 				player removeMagazines _magClass;
+
+				if !(handgunWeapon player == _knife) then {
+					player addWeapon _knife;
+				};
 			};
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 605): {

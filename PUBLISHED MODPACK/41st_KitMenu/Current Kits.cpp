@@ -1057,7 +1057,7 @@
         ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
         ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible_Thermals"]
     ],
-    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DP23","FST_DC17"],
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DP23"],
     "true",
     {},
     "pilot"

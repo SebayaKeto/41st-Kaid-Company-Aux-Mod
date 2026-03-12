@@ -1599,7 +1599,7 @@ class CfgWeapons
 			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Desert.paa"
 		};
 	};
-class FST_Vest_NCO_Veteran: FST_Vest_NCO
+	class FST_Vest_NCO_Veteran: FST_Vest_NCO
 	{
 		displayName="[41st] Fire Team Leader Sash (Veteran)";
 		hiddenSelectionsTextures[]=
@@ -48406,6 +48406,42 @@ class CfgGlasses
 		ACE_Resistance=1;
 		ACE_Protection=1;
 		ACE_TintAmount=0;
+	};
+	class FST_FTL_Woodland_Face: FST_FTL_Face
+	{
+	displayname="[41st] Fire Team Leader Sash (Woodland/Face)";
+	hiddenSelectionsTextures[]=
+	{
+		"",
+		"41st_Armor\Data\Vests\FST_Clone_vest_heavy_woodland.paa"
+	};
+	};
+	class FST_FTL_Midnight_Face: FST_FTL_Face
+	{
+	displayname="[41st] Fire Team Leader Sash (Midnight/Face)";
+	hiddenSelectionsTextures[]=
+	{
+		"",
+		"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Midnight.paa"
+	};
+	};
+		class FST_FTL_Urban_Face: FST_FTL_Face
+	{
+	displayname="[41st] Fire Team Leader Sash (Urban/Face)";
+	hiddenSelectionsTextures[]=
+	{
+		"",
+		"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Urban.paa"
+	};
+	};
+		class FST_FTL_Desert_Face: FST_FTL_Face
+	{
+	displayname="[41st] Fire Team Leader Sash (Desert/Face)";
+	hiddenSelectionsTextures[]=
+	{
+		"",
+		"41st_Armor\Data\Vests\FST_Clone_vest_heavy_Desert.paa"
+	};
 	};
 	class FST_FTL_Veteran_Face: FST_FTL_Face
 	{
