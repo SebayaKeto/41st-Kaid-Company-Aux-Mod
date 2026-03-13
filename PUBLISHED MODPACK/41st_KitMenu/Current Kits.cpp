@@ -343,7 +343,8 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_Vest_NCO_Kama",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -769,7 +770,8 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_CloneVestAirborneNCO",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -1469,7 +1471,8 @@
             ["ACE_CableTie",2],
             ["SquadShieldMagazine",1,1],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_pauldron_kama_reversed",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -1511,7 +1514,8 @@
             ["ACE_CableTie",2],
             ["SquadShieldMagazine",1,1],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_pauldron_kama_reversed",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -1552,7 +1556,8 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_pauldron_kama",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -1593,7 +1598,8 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_pauldron_kama",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2039,7 +2045,8 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_Vest_NCO_Kama_Woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2274,7 +2281,8 @@
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
         ]],
         ["FST_pauldron_kama_Woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
