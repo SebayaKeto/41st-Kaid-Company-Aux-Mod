@@ -27,8 +27,14 @@
             // NEW: Number of Turrets
             ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Munificent."], [0, 10, 2, 0]],
 
-            // NEW: Ship Health Multiplier
-            ["SLIDER", ["Ship Health Multiplier", "Custom HP multiplier for the ship (1 = default)."], [0, 100, 25, 0]]
+            // NEW: Custom turret classnames (pulls from CBA addon settings)
+            ["CHECKBOX", ["Custom Turrets?", "If enabled, turret classnames will be pulled from the CBA addon settings instead of the faction default."], [false]],
+
+            // NEW: Ship HP pool
+            ["SLIDER", ["Ship HP", "HP pool for the ship. Stored as this value x100 internally (e.g. 25 = 2500 HP). Default is the CBA addon setting."], [1, 5000, 25, 0]],
+
+            // NEW: Death condition
+            ["TOOLBOX", ["Death Condition", "What happens when the ship is destroyed. Crash Ship = falls from the sky. Retreat = jumps out."], [0, 1, 2, ["Crash Ship", "Retreat (Jump Out)"], nil]]
 
             ], {
                 params ["_values", "_arguments"];
@@ -46,9 +52,11 @@
                 _ArmedShip         = _values select 8;
                 _EndWithJumpOut    = _values select 9;
 
-                // NEW: turret count & custom HP
+                // NEW: turret count, custom turret, HP, death condition
                 _NumberOfTurrets   = _values select 10;
-                _ShipHealthMult    = _values select 11;
+                _UseCustomTurret   = _values select 11;
+                _ShipHealthMult    = _values select 12;
+                _DeathCondition    = _values select 13;
 
                 // Editor position
                 _position = _arguments select 0;
@@ -67,7 +75,9 @@
                     _ArmedShip,
                     _EndWithJumpOut,
                     _NumberOfTurrets,
-                    _ShipHealthMult
+                    _UseCustomTurret,
+                    _ShipHealthMult,
+                    _DeathCondition
                 ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Munificent_QRF", 2];
 
             }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
@@ -92,8 +102,10 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         "_VultureSkill",
         "_ArmedShip",
         "_EndWithJumpOut",
-        ["_NumberOfTurrets", 1],    // Default if not passed
-        ["_ShipHealthMult", 1]      // Default if not passed
+        ["_NumberOfTurrets", 1],       // Default if not passed
+        ["_UseCustomTurret", false],   // Default if not passed
+        ["_ShipHealthMult", 25],       // Default if not passed (matches slider default, = 2500 HP internally)
+        ["_DeathCondition", 0]         // Default if not passed: 0 = crash, 1 = retreat
     ];
 
     // Convert ASL coords to ATL
@@ -114,20 +126,6 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         _dropside
     ] call SciFiSupportPLUS_fnc_JumpShipIn;
 
-    // If we want an armed Munificent, configure its turrets & custom HP
-    if (_ArmedShip) then {
-        [
-            _ReturnShip,
-            false,               // targetInfantry
-            true,                // targetVehicle
-            true,                // AddTurret
-            _NumberOfTurrets,    // Extra turret count
-            false,               // Use custom turret array?
-            _ShipHealthMult,     // Custom HP multiplier
-            0                    // deathCondition
-        ] call ScifiSupportPLUS_FTL_SupportShip;
-    };
-
     // -------------------------------------------------
     // 3) Spawn a new scheduled block to handle sleeps
     // -------------------------------------------------
@@ -142,7 +140,12 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         _AmountofBanshees,
         _VultureType,
         _VultureSkill,
-        _EndWithJumpOut
+        _EndWithJumpOut,
+        _ArmedShip,
+        _NumberOfTurrets,
+        _UseCustomTurret,
+        _ShipHealthMult,
+        _DeathCondition
     ] spawn {
         // Re-parse in the scheduled environment
         params [
@@ -156,8 +159,35 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
             "_AmountofBanshees",
             "_VultureType",
             "_VultureSkill",
-            "_EndWithJumpOut"
+            "_EndWithJumpOut",
+            "_ArmedShip",
+            "_NumberOfTurrets",
+            "_UseCustomTurret",
+            "_ShipHealthMult",
+            "_DeathCondition"
         ];
+
+        // Wait until the ship is fully spawned and alive before configuring it
+        waitUntil { !isNull _ReturnShip && { alive _ReturnShip } };
+
+        // If we want an armed Munificent, configure its turrets, HP, and death behavior.
+        // Done here (in scheduled env) so the ship has fully initialized first.
+        if (_ArmedShip) then {
+            // deathCondition 0 = CrashShip_Scripted on kill (graceful fall).
+            // deathCondition 1 = JumpOut on kill (retreat).
+            // Confirmed from FTL_SupportShip source (FTL_Framework line ~5384).
+            // _UseCustomTurret pulls classnames from CBA addon settings when true.
+            [
+                _ReturnShip,
+                false,               // targetInfantry
+                true,                // targetVehicle
+                true,                // AddTurret
+                _NumberOfTurrets,    // Extra turret count
+                _UseCustomTurret,    // Use CBA custom turret classnames?
+                _ShipHealthMult,     // Custom HP pool (stored x100 internally)
+                _DeathCondition      // 0 = crash gracefully, 1 = retreat (jump out)
+            ] call ScifiSupportPLUS_FTL_SupportShip;
+        };
 
         // ---- Now we can safely sleep: ----
         sleep 6;
