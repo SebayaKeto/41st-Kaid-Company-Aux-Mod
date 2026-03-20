@@ -8,6 +8,8 @@ class CfgPatches
 			"FST_Republic_Mortar_Bag",
 			"FST_Training_Mortar",
 			"FST_Training_Mortar_Bag",
+			"FST_Gray_Mortar",
+			"FST_PDF_Mortar",
 		};
 		weapons[]={};
 		requiredAddons[]=
@@ -165,7 +167,40 @@ class CfgVehicles
 				"FST_Training_Mortar_Bag"
 			};
 		};
-	};		
+	};
+	class FST_Gray_Mortar: FST_Republic_Mortar
+	{
+	author="Steel";
+	displayName="[41st] Mortar (Gray)";
+	crew="FST_P2_Recruit";
+	hiddenSelections[]=
+		{
+			"Camo_1",
+			"Camo_2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\Mortar\Data\Plain_Base_CO.paa",
+			"\41st_Vehicles\Mortar\Data\Plain_Tube_CO.paa"
+		};
+	};
+	class FST_PDF_Mortar: FST_Republic_Mortar
+	{
+	author="Steel";
+	displayName="[41st] PDF Mortar";
+	crew="JLTS_Droid_B1_Prototype";
+	side=0;
+	hiddenSelections[]=
+		{
+			"Camo_1",
+			"Camo_2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\Mortar\Data\PDF_Base_CO.paa",
+			"\41st_Vehicles\Mortar\Data\PDF_Tube_CO.paa"
+		};
+	};
 	class Bag_Base;
 	class Weapon_Bag_Base: Bag_Base
 	{

@@ -16,7 +16,9 @@ class CfgPatches
 			"FST_ATTE_Jorge",
 			"FST_ATTE_gwenn",
 			"FST_ATTE_Rancor",
-			"FST_ATTE_Klanka"
+			"FST_ATTE_Klanka",
+			"FST_ATTE_Gray",
+			"FST_ATTE_PDF"
 		};
 		weapons[]={};
 		ammo[]=
@@ -3969,6 +3971,58 @@ class CfgVehicles
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Cockpit_co.paa",
 			"41st_Vehicles\ATTE\Data\Detail\FST_ATTE_Detail_Rancor_co.paa",
 			"41st_Vehicles\ATTE\Data\Legs\FST_ATTE_Legs_Klanka_co.paa",
+			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Glass_ca.paa",
+			"3as\3as_atte\data\textures\3as_atte_armor_co.paa"
+		};
+	};
+	class FST_ATTE_Gray: FST_ATTE_Base
+	{
+		author="Steel";
+		displayname="[41st] AT-TE Heavy Walker (Gray)";
+		scope=2;
+		side=1;
+		crew="FST_P2_Recruit";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"camo5",
+			"camo11"
+		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\ATTE\Data\Shell\FST_ATTE_Shell_Plain_co.paa",
+			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Cockpit_co.paa",
+			"41st_Vehicles\ATTE\Data\Detail\FST_ATTE_Detail_Base_co.paa",
+			"41st_Vehicles\ATTE\Data\Legs\FST_ATTE_Legs_Plain_co.paa",
+			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Glass_ca.paa",
+			"3as\3as_atte\data\textures\3as_atte_armor_co.paa"
+		};
+	};
+	class FST_ATTE_PDF: FST_ATTE_Base
+	{
+		author="Steel";
+		displayname="[41st] AT-TE Heavy Walker (PDF)";
+		scope=2;
+		side=0;
+		crew="JLTS_Droid_B1_Prototype";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"camo5",
+			"camo11"
+		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\ATTE\Data\Shell\FST_ATTE_Shell_PDF_co.paa",
+			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Cockpit_co.paa",
+			"41st_Vehicles\ATTE\Data\Detail\FST_ATTE_Detail_PDF_co.paa",
+			"41st_Vehicles\ATTE\Data\Legs\FST_ATTE_Legs_PDF_co.paa",
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Glass_ca.paa",
 			"3as\3as_atte\data\textures\3as_atte_armor_co.paa"
 		};

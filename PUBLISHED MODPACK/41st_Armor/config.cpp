@@ -181,6 +181,7 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty",
 			"FST_P2_Squatch_V2",
 			"FST_P2_Squatch_Dirty_V2",
+			"FST_P2_Remedy",
 			"FST_P2_Mig",
 			"FST_P2_Slow",
 			"FST_P2_Scrib",
@@ -346,6 +347,7 @@ class CfgPatches
 			"FST_P2_Riley_Dirty",
 			"FST_P2_Riley_V2",
 			"FST_P2_Riley_V2_Dirty",
+			"FST_P2_Sin",
 			"FST_P2_Appa",
 			"FST_P2_Appa",
 			"FST_P2_Primus",
@@ -390,6 +392,7 @@ class CfgPatches
 			//"FST_P2_Jaws",
 			"FST_P2_Raven",
 			"FST_P2_Coldstart",
+			"FST_BX_Womprat",
 			//////////OTHERS//////////
 			"FST_ReinsertTerminal",
 			"FST_AmmoCrate",
@@ -3213,6 +3216,19 @@ class CfgWeapons
 					PassThrough=0.08975;
 				};
 			};
+		};
+	};
+	class FST_CloneVestLieutenant_Dirty: FST_CloneVestLieutenant
+	{
+		displayName="[41st] Pauldron/Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Ranger.paa"
 		};
 	};
 	class FST_CloneVestLieutenant_Woodland: JLTS_CloneVestOfficer
@@ -7535,6 +7551,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Blades_Dirty.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Claw: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Steel";
+		displayName="[41st] Crewman Helmet Mk2 (Claw)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Claw.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Claw.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Changeling: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -9792,6 +9819,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Sin: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Sin)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Sin.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Sphinx: FST_Airborne_Helmet
 	{
 		author="Steel";
@@ -12047,6 +12084,56 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Squatch_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Brop: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Brop]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Brop.paa",
+		};
+	};
+	class FST_P2_Helmet_Ghost: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Ghost]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ghost.paa",
+		};
+	};
+	class FST_P2_Helmet_Famine: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Famine]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Famine.paa",
+		};
+	};
+	class FST_P2_Helmet_Riley: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Riley]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Riley.paa",
+		};
+	};
+	class FST_P2_Helmet_Riley_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Riley/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Riley_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Clan: FST_P2_Helmet_Base
 	{
 		author="Steel";
@@ -12375,6 +12462,26 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rumble_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Rumble_V2: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rumble V2]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rumble_V2.paa",
+		};
+	};
+	class FST_P2_Helmet_Rumble_V2_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rumble V2/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rumble_V2_Dirty.paa",
 		};
 	};
 	class FST_P2_Helmet_Vixen: FST_P2_Helmet_Base
@@ -15641,6 +15748,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Sin: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Sin]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Sin";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Trenny: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -16126,6 +16247,34 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_Dirty_V2";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_BX_Womprat: JLTS_CloneArmor
+	{
+		author="Steel";
+		scope=2;
+		displayname="[41st] Womprat's BX Combat Uniform";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_BX_Womprat";
+			uniformType="Neopren";
+			containerClass="Supply200";
+			mass=40;
+		};
+	};
+	class FST_Uniform_Remedy: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Remedy]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Remedy";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -18844,6 +18993,33 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Rumble_Dirty.paa",
+		};
+	};
+	class FST_NVG_Rumble_Fixed: FST_NVG_Fixed
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Rumble/Fixed On)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Rumble.paa",
+		};
+	};
+	class FST_NVG_Rumble_Fixed_Dirty: FST_NVG_Fixed
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Rumble/Fixed On/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Rumble_Dirty.paa",
+		};
+	};
+	class FST_NVG_Cursed: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Cursed)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Cursed.paa",
 		};
 	};
 	class FST_NVG_Tooka: FST_NVG
@@ -23940,7 +24116,7 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares_Dirty.paa"
 		};
-	}
+	};
 	class FST_Backpack_Jumppack_Vishy: FST_Backpack_Jumppack
 	{
 		author="Gold";
@@ -24910,6 +25086,15 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Silhouette.paa"
+		};
+	};
+	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+		displayname="[41st] Jump Pack (Sin)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Sin.paa"
 		};
 	};
 	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack
@@ -37568,6 +37753,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Sin: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-6846 'Sin'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Sin";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Sin.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Sin.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Sin",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Sin",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Trenny: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -40485,6 +40725,112 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Squatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class WBK_LS_BX;
+	class FST_BX_Womprat: WBK_LS_BX
+	{
+		author="Steel";
+		displayName="[41st] BX Commando Droid";
+		scope=2;
+		Backpack="";
+		side=1;
+		uniformClass="FST_Uniform_BX_Womprat";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		armor=40;
+		armorStructural=100;
+		model="\ls\core\addons\characters_droid\uniforms\bx\ls_uniform_droid_bx.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Other\FST_body_Womprat_co.paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Remedy: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-2609 'Remedy'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Remedy";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Remedy.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Remedy.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Remedy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Remedy",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -49445,6 +49791,19 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
+	class FST_Pauldron_Single_Face_Dirty: FST_Pauldron_Single_Face
+	{
+		displayname="[41st] Pauldron (Face/Dirty)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Ranger.paa"
+		};
+	};
 	class FST_Pauldron_Single_Face_Woodland: FST_Base_Glasses
 	{
 		displayname="[41st] Pauldron (Woodland/Face)";
@@ -49780,6 +50139,24 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Sierra";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Sierra.paa";
+		};
+		class FST_BX_Face_Womprat: Default
+		{
+			author="Adapted from Legion Studios by Steel";
+			displayname="[41st] BX Droid - Womprat";
+			identityTypes[]=
+			{
+				"ls_head_bxDroid"
+			};
+			head="ls_head_droidBX";
+			material="ls\core\addons\characters_droid\uniforms\bx\data\body.rvmat";
+			texture="41st_Armor\Data\Other\FST_body_Womprat_co.paa";
+			materialWounded1="";
+			materialWounded2="";
+			textureHL="41st_Armor\Data\Other\FST_body_Womprat_co.paa";
+			materialHL="ls\core\addons\characters_droid\uniforms\bx\data\body.rvmat";
+			textureHL2="41st_Armor\Data\Other\FST_body_Womprat_co.paa";
+			materialHL2="ls\core\addons\characters_droid\uniforms\bx\data\body.rvmat";
 		};
 		class FST_Navy_Face_Mustang: Default
 		{
