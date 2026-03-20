@@ -48970,6 +48970,44 @@ class CfgGlasses
 		ACE_Protection=1;
 		ACE_TintAmount=0;
 	};
+	class FST_Vest_GM_Base_Face: FST_Base_Glasses
+	{
+		displayname="[41st] Clonetrooper Cold Weather Vest (Face)";
+		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Vests\FST_vest_gm.paa"
+		};
+		picture="\41st_Armor\Logo.paa";
+		scope=2;
+		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
+		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
+		ACE_OverlayCracked="41st_Armor\Data\Equipment\FST_P2_HUD_Cracked.paa";
+		ACE_DustPath="\z\ace\addons\goggles\textures\fx\dust%1.paa";
+		ACE_Resistance=1;
+		ACE_Protection=1;
+		ACE_TintAmount=0;
+	};
+	class FST_vest_gm_FTL_Face: FST_Vest_GM_Base_Face
+	{
+		displayName="[41st] Fire Team Leader Cold Weather Vest (Face)";
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Vests\FST_vest_gm_FTL.paa"
+		};
+	};
+	class FST_vest_gm_SL_Face: FST_Vest_GM_Base_Face
+	{
+		displayName="[41st] Squad Leader Cold Weather Vest (Face)";
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Vests\FST_vest_gm_SL.paa"
+		};
+	};
 	class FST_Heavy_Veteran_Face: FST_Heavy_Face
 	{
 		displayname="[41st] Veteran Airborne Fire Team Leader Sash (Face)";
