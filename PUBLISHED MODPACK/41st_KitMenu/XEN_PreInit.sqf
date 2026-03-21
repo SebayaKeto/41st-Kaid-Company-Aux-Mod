@@ -686,6 +686,12 @@ switch true do {
 				player addGoggles "FST_FTL_Woodland_Face";
 			};
 
+			if (_item == "FST_vest_gm_FTL") then {
+				_vestToEquip = "FST_vest_holster";
+				removeGoggles player;
+				player addGoggles "FST_vest_gm_FTL_Face";
+			};
+
 			player addVest _vestToEquip;
 			{player addItemToVest _x;} forEach _items;
 
@@ -1463,7 +1469,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						[_scatterCell, 16],
 						[_slugMag, 4]
 					];
-					if ((player getVariable ["WBK_Kit_Name", ""]) == "Close Quarters Combatant") then {
+					if ((player getVariable ["WBK_Kit_Name", ""]) in ["Close Quarters Combatant", "Squad Leader", "Squad Leader "]) then {
 						{
 							private _grenade = _x;
 							player removeMagazines _grenade;
@@ -2267,7 +2273,7 @@ if (count _aditionalGear > 0) then {
 	};
 	} forEach _weapons;
 
-	private _CQBKits = ["Close Quarters Combatant"];
+	private _CQBKits = ["Close Quarters Combatant","Squad Leader","Squad Leader "];
 	private _typeClean = toLower (trim _typeOfKit);
 	if (_CQBKits findIf {toLower _x == _typeClean} != -1) then {
 		_primaryWeapons pushBack "[41st]_dc15s_cqb";

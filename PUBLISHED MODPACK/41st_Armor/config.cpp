@@ -4880,7 +4880,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_woodland";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -4894,7 +4894,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_Desert";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -4908,7 +4908,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_Midnight";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -4922,7 +4922,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_Urban";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13289,7 +13289,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_DC15S";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13304,7 +13304,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_DC15A";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13319,7 +13319,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Medic";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13333,7 +13333,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_ARF";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -13347,7 +13347,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_ARF_WhiteGreen";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13361,7 +13361,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_ARF_Urban";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13376,7 +13376,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Pilot_P1";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13390,7 +13390,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_EOD";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13404,7 +13404,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_SCT";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13418,7 +13418,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_SCT_Medic";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13432,7 +13432,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_VCT";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13446,7 +13446,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_VCT_Medic";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13460,7 +13460,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CLC";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13474,7 +13474,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CPL";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13488,7 +13488,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CS";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13502,7 +13502,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CSS";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13516,7 +13516,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CL";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13530,7 +13530,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_ARF_Desert";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -13544,7 +13544,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_ARF_Woodland";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; */
@@ -13558,7 +13558,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Woodland";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13572,7 +13572,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Midnight";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13586,7 +13586,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_SERE";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -13601,7 +13601,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13616,7 +13616,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_NCO";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13631,7 +13631,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Officer";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13646,7 +13646,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Sarlacc";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13661,7 +13661,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Wampa";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13676,7 +13676,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Krayt";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13691,7 +13691,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Nexu";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13706,7 +13706,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Radark";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13721,7 +13721,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Zillo";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13736,7 +13736,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Rancor";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13751,7 +13751,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Kadoshi";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13766,7 +13766,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Sanval";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13781,7 +13781,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Hydra";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13796,7 +13796,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Uvak";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13811,7 +13811,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Howler";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13826,7 +13826,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Voxyn";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13841,7 +13841,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Raxshir";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13856,7 +13856,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Gharzr";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13871,7 +13871,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Varactyl";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13896,7 +13896,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_Commando";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13921,7 +13921,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_Commando_Jorge";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13936,7 +13936,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13950,7 +13950,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_CMDR";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13964,7 +13964,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_CPT";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13978,7 +13978,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_LT";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -13992,7 +13992,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_SGT";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14006,7 +14006,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14020,7 +14020,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Sarlacc";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14034,7 +14034,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Wampa";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14048,7 +14048,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Krayt";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14062,7 +14062,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Nexu";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14076,7 +14076,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Radark";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14090,7 +14090,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Zillo";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14104,7 +14104,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Kadoshi";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14118,7 +14118,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_NCO";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14132,7 +14132,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Officer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14147,7 +14147,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Wookiee";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14162,7 +14162,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ghostly";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14176,7 +14176,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ticktock";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14190,7 +14190,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Spade";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14204,7 +14204,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Daara";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14218,7 +14218,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Argo";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14232,7 +14232,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Argo_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14246,7 +14246,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Argo_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14260,7 +14260,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cardinal";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14274,7 +14274,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Trace";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14288,7 +14288,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Appa";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -14302,7 +14302,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Rick";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -14316,7 +14316,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Appa_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -14330,7 +14330,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Valius";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -14344,7 +14344,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cardinal_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14358,7 +14358,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Huntress";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14372,7 +14372,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Huntress_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14386,7 +14386,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Creed";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14400,7 +14400,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_House";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14414,7 +14414,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_House_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14428,7 +14428,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hayes";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14442,7 +14442,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hayes_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14456,7 +14456,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Helix";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14470,7 +14470,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Helix_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14484,7 +14484,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Diesel";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14498,7 +14498,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_NotSkilled";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14512,7 +14512,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sigs";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14526,7 +14526,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ginger";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14540,7 +14540,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Woods";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14554,7 +14554,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Woods_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14568,7 +14568,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pecan";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14582,7 +14582,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Wuffer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14596,7 +14596,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Wuffer_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14610,7 +14610,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Fury";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14624,7 +14624,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Edge";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14638,7 +14638,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14652,7 +14652,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14666,7 +14666,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14680,7 +14680,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14694,7 +14694,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ares";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};  
@@ -14708,7 +14708,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ares_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14722,7 +14722,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Odin";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14736,7 +14736,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Odin_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14750,7 +14750,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Elk";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14764,7 +14764,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cloaker";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14778,7 +14778,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pole";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14792,7 +14792,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pole_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14806,7 +14806,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vix";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14820,7 +14820,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vix_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14834,7 +14834,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Angel";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14848,7 +14848,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Angel_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14862,7 +14862,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Snoob";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14876,7 +14876,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jorge";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14890,7 +14890,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lancer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14904,7 +14904,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lancer_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -14918,7 +14918,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Deacon";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14932,7 +14932,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cursed";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14946,7 +14946,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hijack";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14960,7 +14960,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mixer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14974,7 +14974,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hotshot";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -14988,7 +14988,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hotshot_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15002,7 +15002,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vengence";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15016,7 +15016,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rook";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15030,7 +15030,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mrogg";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15044,7 +15044,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rumble";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15058,7 +15058,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rumble_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15072,7 +15072,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Poly";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15086,7 +15086,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Parsec";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15100,7 +15100,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vector";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15114,7 +15114,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arctic";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15128,7 +15128,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vector_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15142,7 +15142,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dobie";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15156,7 +15156,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dobie_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15170,7 +15170,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bigs";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15184,7 +15184,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Gum";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15198,7 +15198,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bookworm";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15212,7 +15212,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marek";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15226,7 +15226,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marek_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15240,7 +15240,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marek_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15254,7 +15254,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sunny";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15268,7 +15268,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Colors";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15282,7 +15282,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stec";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15296,7 +15296,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blueeye";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15310,7 +15310,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arcus";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15324,7 +15324,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arcus_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15338,7 +15338,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Assassin";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15352,7 +15352,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Fire";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15366,7 +15366,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Alek";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15380,7 +15380,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bright";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15394,7 +15394,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Gold";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15408,7 +15408,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Gold_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15422,7 +15422,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bees";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15436,7 +15436,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dilham";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15450,7 +15450,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dilham_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15464,7 +15464,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dragon";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15478,7 +15478,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sledge";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15492,7 +15492,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sledge_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15506,7 +15506,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Plop";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15520,7 +15520,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Plop_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15534,7 +15534,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stant";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15548,7 +15548,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stant_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15562,7 +15562,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hazzo";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15576,7 +15576,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cowboy";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15590,7 +15590,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cutlass";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15604,7 +15604,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jan";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15618,7 +15618,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Five";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15632,7 +15632,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Salt";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15646,7 +15646,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mav";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15660,7 +15660,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mav_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15674,7 +15674,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Kirby";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15688,7 +15688,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Primus";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15702,7 +15702,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15716,7 +15716,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15730,7 +15730,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15744,7 +15744,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15758,7 +15758,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sin";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15772,7 +15772,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Trenny";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15786,7 +15786,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Trenny_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15800,7 +15800,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sierra";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15814,7 +15814,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sierra_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15828,7 +15828,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tar";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15842,7 +15842,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tar_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15856,7 +15856,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Silhouette";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15870,7 +15870,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Silhouette_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15884,7 +15884,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nys";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15898,7 +15898,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nahlens";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15912,7 +15912,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nahlens_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15926,7 +15926,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Warlock";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15940,7 +15940,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vishy";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15954,7 +15954,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mono";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15968,7 +15968,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mono_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -15982,7 +15982,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ace";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -15996,7 +15996,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Viper";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16010,7 +16010,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Overwatch";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16024,7 +16024,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Business";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16038,7 +16038,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Business_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16052,7 +16052,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tooka";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16066,7 +16066,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mox";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16080,7 +16080,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mox_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16094,7 +16094,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Recruit";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16108,7 +16108,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Medusa";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16122,7 +16122,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Martyr";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16136,7 +16136,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Harlequin";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16150,7 +16150,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Harlequin_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16164,7 +16164,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blades";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16178,7 +16178,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blades_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16192,7 +16192,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Demon";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16206,7 +16206,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16220,7 +16220,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16234,7 +16234,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16248,7 +16248,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_Dirty_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16276,7 +16276,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Remedy";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16290,7 +16290,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Butter";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16304,7 +16304,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Scrib";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16318,7 +16318,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Slow";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16332,7 +16332,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mig";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16346,7 +16346,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Recon";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16360,7 +16360,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Perceval";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16374,7 +16374,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blue";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16388,7 +16388,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Devo";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16402,7 +16402,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Magma";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16416,7 +16416,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Heller";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16430,7 +16430,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Heller_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16444,7 +16444,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nerd";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16458,7 +16458,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Strider";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16472,7 +16472,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Texas";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16486,7 +16486,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Shut";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16500,7 +16500,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Peaches";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16514,7 +16514,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hugger";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16528,7 +16528,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Alfour";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16542,7 +16542,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marcus";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16556,7 +16556,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coldstart";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16570,7 +16570,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Kate";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16584,7 +16584,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Kate_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16598,7 +16598,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Steel";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16612,7 +16612,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Steel_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16626,7 +16626,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zephyr";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16640,7 +16640,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ripper";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16654,7 +16654,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ripper_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16668,7 +16668,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ripper_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -16682,7 +16682,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nic";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16696,7 +16696,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lawman";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16710,7 +16710,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ampersand_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16724,7 +16724,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Xeha_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16738,7 +16738,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Deso_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16752,7 +16752,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Joko";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16766,7 +16766,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Joko_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16780,7 +16780,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vulpes";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16794,7 +16794,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16808,7 +16808,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16822,7 +16822,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16836,7 +16836,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16850,7 +16850,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bulwark";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16864,7 +16864,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bulwark_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16878,7 +16878,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16892,7 +16892,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16906,7 +16906,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16920,7 +16920,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda_Dirty_V2";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16934,7 +16934,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_James";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16948,7 +16948,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arthur";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16962,7 +16962,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Merlin";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16976,7 +16976,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_James_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -16990,7 +16990,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Grif";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17004,7 +17004,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Deso";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17018,7 +17018,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tiger";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17032,7 +17032,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tiger_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17046,7 +17046,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jammer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17060,7 +17060,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jammer_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17074,7 +17074,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Puma";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17088,7 +17088,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Puma_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17102,7 +17102,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sly";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17116,7 +17116,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sly_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17130,7 +17130,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Germ";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17144,7 +17144,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Prancer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17158,7 +17158,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Preacher";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17172,7 +17172,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Preacher_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17186,7 +17186,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Doogle";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17200,7 +17200,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Doogle_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17214,7 +17214,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Man";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17228,7 +17228,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Major";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17242,7 +17242,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Airman";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17256,7 +17256,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Airman_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17270,7 +17270,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_White";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17284,7 +17284,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pope";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17298,7 +17298,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Major_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17312,7 +17312,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Seraph";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17326,7 +17326,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Saber";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17340,7 +17340,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lang";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17354,7 +17354,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Twist";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17368,7 +17368,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Harm";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17382,7 +17382,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hazard";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17396,7 +17396,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hazard_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17410,7 +17410,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Qball";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17424,7 +17424,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zik";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17438,7 +17438,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zik_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17452,7 +17452,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sturm";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17466,7 +17466,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Duncy";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17480,7 +17480,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Charge";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17494,7 +17494,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hex";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17508,7 +17508,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hex_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17522,7 +17522,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lupus";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17536,7 +17536,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tex";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};  
@@ -17550,7 +17550,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stein";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17564,7 +17564,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stein_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17578,7 +17578,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Claw";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -17592,7 +17592,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Claw_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -17606,7 +17606,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Raven";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17620,7 +17620,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Xeha";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17634,7 +17634,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_CosmicSmith";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17648,7 +17648,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Delta";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17662,7 +17662,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Delta_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17676,7 +17676,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Phoenix";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17690,7 +17690,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zen";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17704,7 +17704,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tally";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17718,7 +17718,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_NCO_Jorge";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17732,7 +17732,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_JARC";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17746,7 +17746,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Church";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17760,7 +17760,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Brutal";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17774,7 +17774,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Burns";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17788,7 +17788,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Annex";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17802,7 +17802,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mood";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17816,7 +17816,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mood_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17830,7 +17830,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Freezer";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17844,7 +17844,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ropey";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17858,7 +17858,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cosmic";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17872,7 +17872,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cosmic_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17886,7 +17886,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Merrik";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17900,7 +17900,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Merrik_V3";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 
@@ -17917,7 +17917,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformClass="FST_P2_Merrik_BC";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -17931,7 +17931,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Samurai";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -17945,7 +17945,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Samurai_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -17959,7 +17959,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Laer";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -17973,7 +17973,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Harribel";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -17987,7 +17987,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Omen";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18001,7 +18001,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Pig";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18015,7 +18015,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Laer_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18029,7 +18029,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Lucky";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18043,7 +18043,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Lucky_dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18057,7 +18057,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Viz";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18071,7 +18071,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Viz_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18085,7 +18085,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Ruby";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18099,7 +18099,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Gustav";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18113,7 +18113,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Flatline";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18127,7 +18127,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Ruby_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18141,7 +18141,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Evox";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18155,7 +18155,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Evox_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18169,7 +18169,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Crab";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18183,7 +18183,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Selene";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18197,7 +18197,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Red";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18211,7 +18211,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Ryx";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18225,7 +18225,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Fizz";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18239,7 +18239,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Jericho";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18253,7 +18253,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Felix";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18267,7 +18267,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Felix_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18281,7 +18281,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Vixen";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18295,7 +18295,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Nova";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18309,7 +18309,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Atlas";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18323,7 +18323,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Atlas_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18337,7 +18337,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Noble";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18351,7 +18351,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Cooker";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18365,7 +18365,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Sonic";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18379,7 +18379,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Volos";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18393,7 +18393,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Raz";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18407,7 +18407,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Chips";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18421,7 +18421,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Chips_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18435,7 +18435,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Buddhah";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18449,7 +18449,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Buddhah_Dirty";
             uniformType="Neopren";
-            containerClass="Supply150";
+            containerClass="Supply180";
             mass=15;
         };
     };
@@ -18463,7 +18463,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dash";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -18477,7 +18477,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cyanide";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	};
@@ -18494,7 +18494,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_Jedi";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=40;
 		};
 	};
@@ -18506,7 +18506,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_DarkJedi";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=40;
 		};
 	};
@@ -18520,7 +18520,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Zombie_Bloody";
 			uniformType="Neopren";
-			containerClass="Supply150";
+			containerClass="Supply180";
 			mass=15;
 		};
 	}; 

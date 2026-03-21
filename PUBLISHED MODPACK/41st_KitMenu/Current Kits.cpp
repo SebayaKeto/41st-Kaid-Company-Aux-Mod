@@ -1627,7 +1627,7 @@
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
         [],
-        ["IDA_Clone_Knife","","","",[],[],""],
+        [],
         [
             "FST_Trooper_Uniform",
             [
