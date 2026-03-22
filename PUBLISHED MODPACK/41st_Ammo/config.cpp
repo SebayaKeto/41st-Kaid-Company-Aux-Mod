@@ -66,8 +66,8 @@ class CfgAmmo
 		hit=28; //28
 		indirectHit=0;
 		explosive=1;
-		indirectHitRange=0.5;
-		caliber=1.8; //1.6
+		indirectHitRange=0.1; // 0.5
+		caliber=1.6; //1.8
 		coefGravity=0.02;
 		timetolive=6;
 		waterFriction=-0.0099999998;
@@ -963,7 +963,7 @@ class CfgAmmo
 	class FST_HE_RifleGrenade: G_40mm_HE
 	{
 		ace_frag_enabled=1;
-		indirectHitRange=7;
+		indirectHitRange=5;
 		indirectHit=30;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
@@ -977,7 +977,7 @@ class CfgAmmo
 	class FST_TDHE_RifleGrenade: G_40mm_HE
 	{
 		ace_frag_enabled=1;
-		indirectHitRange=7;
+		indirectHitRange=5;
 		indirectHit=30;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";

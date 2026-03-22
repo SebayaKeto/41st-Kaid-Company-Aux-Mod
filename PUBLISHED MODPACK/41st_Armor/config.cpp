@@ -11,7 +11,9 @@ class CfgPatches
 			"IDA_Ammo",
 			"IDA_Republic",
 			"A3_Characters_F_Proxies",
-			"TCGM_Girls"
+			"TCGM_Girls",
+			"ace_medical_engine",
+			"ace_medical_damage"
 		};
 		units[]=
 		{
@@ -707,25 +709,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -773,25 +775,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -951,25 +953,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1040,25 +1042,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1135,25 +1137,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1204,25 +1206,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1273,25 +1275,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1342,25 +1344,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1411,25 +1413,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1475,25 +1477,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1543,25 +1545,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1643,25 +1645,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1717,25 +1719,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1784,25 +1786,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1856,25 +1858,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -1928,25 +1930,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2000,25 +2002,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2072,25 +2074,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2139,25 +2141,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2206,25 +2208,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2272,25 +2274,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2342,25 +2344,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2412,25 +2414,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2482,25 +2484,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2552,25 +2554,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2618,25 +2620,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2684,25 +2686,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2749,25 +2751,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2804,25 +2806,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2863,25 +2865,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2922,25 +2924,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -2988,25 +2990,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3054,25 +3056,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3120,25 +3122,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3183,25 +3185,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3263,25 +3265,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3330,25 +3332,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3397,25 +3399,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3464,25 +3466,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3520,25 +3522,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3584,25 +3586,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3648,25 +3650,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3703,25 +3705,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3766,25 +3768,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3829,25 +3831,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3895,25 +3897,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -3967,25 +3969,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4039,25 +4041,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4111,25 +4113,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4186,25 +4188,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4256,25 +4258,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4326,25 +4328,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4396,25 +4398,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4466,25 +4468,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4536,25 +4538,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4605,25 +4607,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4675,25 +4677,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4745,25 +4747,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4815,25 +4817,25 @@ class CfgWeapons
 				{
 					HitpointName="HitChest";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Diaphragm
 				{
 					HitpointName="HitDiaphragm";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=6;
-					PassThrough=0.08975;
+					PassThrough=0.05;
 				};
 				class Arms
 				{
@@ -4880,7 +4882,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_woodland";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -4894,7 +4896,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_Desert";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -4908,7 +4910,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_Midnight";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -4922,7 +4924,7 @@ class CfgWeapons
 		{
 			uniformClass="FST_clone_scout_Urban";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13289,7 +13291,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_DC15S";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13304,7 +13306,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_DC15A";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13319,7 +13321,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Medic";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13333,7 +13335,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_ARF";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -13347,7 +13349,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_ARF_WhiteGreen";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13361,7 +13363,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_ARF_Urban";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13376,7 +13378,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Pilot_P1";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13390,7 +13392,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_EOD";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13404,7 +13406,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_SCT";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13418,7 +13420,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_SCT_Medic";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13432,7 +13434,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_VCT";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13446,7 +13448,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_VCT_Medic";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13460,7 +13462,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CLC";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13474,7 +13476,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CPL";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13488,7 +13490,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CS";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13502,7 +13504,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CSS";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13516,7 +13518,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_P2_CL";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13530,7 +13532,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_ARF_Desert";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -13544,7 +13546,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_ARF_Woodland";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; */
@@ -13558,7 +13560,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Woodland";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13572,7 +13574,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Midnight";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13586,7 +13588,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Trooper_SERE";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -13601,7 +13603,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13616,7 +13618,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_NCO";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13631,7 +13633,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Officer";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13646,7 +13648,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Sarlacc";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13661,7 +13663,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Wampa";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13676,7 +13678,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Krayt";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13691,7 +13693,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Nexu";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13706,7 +13708,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Radark";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13721,7 +13723,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Zillo";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13736,7 +13738,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Rancor";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13751,7 +13753,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Kadoshi";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13766,7 +13768,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Sanval";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13781,7 +13783,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Hydra";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13796,7 +13798,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Uvak";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13811,7 +13813,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Howler";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13826,7 +13828,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Voxyn";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13841,7 +13843,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Raxshir";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13856,7 +13858,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Gharzr";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13871,7 +13873,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_GM_Base_Plastic_Varactyl";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13896,7 +13898,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_Commando";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13921,7 +13923,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="FST_Commando_Jorge";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13936,7 +13938,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13950,7 +13952,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_CMDR";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13964,7 +13966,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_CPT";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13978,7 +13980,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_LT";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -13992,7 +13994,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_SGT";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14006,7 +14008,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14020,7 +14022,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Sarlacc";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14034,7 +14036,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Wampa";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14048,7 +14050,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Krayt";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14062,7 +14064,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Nexu";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14076,7 +14078,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Radark";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14090,7 +14092,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Zillo";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14104,7 +14106,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformType="Neopren";
 			uniformClass="FST_Trooper_P1_41st_Kadoshi";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14118,7 +14120,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_NCO";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14132,7 +14134,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Officer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14147,7 +14149,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Wookiee";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14162,7 +14164,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ghostly";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14176,7 +14178,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ticktock";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14190,7 +14192,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Spade";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14204,7 +14206,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Daara";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14218,7 +14220,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Argo";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14232,7 +14234,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Argo_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14246,7 +14248,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Argo_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14260,7 +14262,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cardinal";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14274,7 +14276,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Trace";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14288,7 +14290,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Appa";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -14302,7 +14304,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Rick";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -14316,7 +14318,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Appa_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -14330,7 +14332,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Valius";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -14344,7 +14346,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cardinal_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14358,7 +14360,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Huntress";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14372,7 +14374,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Huntress_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14386,7 +14388,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Creed";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14400,7 +14402,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_House";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14414,7 +14416,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_House_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14428,7 +14430,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hayes";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14442,7 +14444,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hayes_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14456,7 +14458,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Helix";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14470,7 +14472,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Helix_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14484,7 +14486,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Diesel";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14498,7 +14500,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_NotSkilled";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14512,7 +14514,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sigs";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14526,7 +14528,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ginger";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14540,7 +14542,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Woods";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14554,7 +14556,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Woods_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14568,7 +14570,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pecan";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14582,7 +14584,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Wuffer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14596,7 +14598,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Wuffer_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14610,7 +14612,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Fury";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14624,7 +14626,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Edge";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14638,7 +14640,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14652,7 +14654,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14666,7 +14668,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14680,7 +14682,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nori_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14694,7 +14696,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ares";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};  
@@ -14708,7 +14710,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ares_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14722,7 +14724,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Odin";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14736,7 +14738,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Odin_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14750,7 +14752,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Elk";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14764,7 +14766,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cloaker";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14778,7 +14780,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pole";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14792,7 +14794,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pole_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14806,7 +14808,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vix";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14820,7 +14822,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vix_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14834,7 +14836,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Angel";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14848,7 +14850,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Angel_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14862,7 +14864,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Snoob";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14876,7 +14878,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jorge";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14890,7 +14892,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lancer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14904,7 +14906,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lancer_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -14918,7 +14920,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Deacon";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14932,7 +14934,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cursed";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14946,7 +14948,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hijack";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14960,7 +14962,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mixer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14974,7 +14976,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hotshot";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -14988,7 +14990,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hotshot_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15002,7 +15004,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vengence";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15016,7 +15018,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rook";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15030,7 +15032,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mrogg";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15044,7 +15046,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rumble";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15058,7 +15060,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rumble_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15072,7 +15074,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Poly";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15086,7 +15088,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Parsec";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15100,7 +15102,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vector";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15114,7 +15116,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arctic";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15128,7 +15130,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vector_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15142,7 +15144,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dobie";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15156,7 +15158,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dobie_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15170,7 +15172,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bigs";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15184,7 +15186,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Gum";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15198,7 +15200,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bookworm";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15212,7 +15214,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marek";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15226,7 +15228,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marek_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15240,7 +15242,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marek_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15254,7 +15256,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sunny";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15268,7 +15270,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Colors";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15282,7 +15284,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stec";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15296,7 +15298,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blueeye";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15310,7 +15312,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arcus";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15324,7 +15326,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arcus_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15338,7 +15340,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Assassin";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15352,7 +15354,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Fire";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15366,7 +15368,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Alek";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15380,7 +15382,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bright";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15394,7 +15396,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Gold";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15408,7 +15410,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Gold_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15422,7 +15424,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bees";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15436,7 +15438,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dilham";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15450,7 +15452,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dilham_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15464,7 +15466,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dragon";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15478,7 +15480,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sledge";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15492,7 +15494,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sledge_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15506,7 +15508,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Plop";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15520,7 +15522,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Plop_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15534,7 +15536,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stant";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15548,7 +15550,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stant_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15562,7 +15564,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hazzo";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15576,7 +15578,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cowboy";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15590,7 +15592,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cutlass";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15604,7 +15606,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jan";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15618,7 +15620,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Five";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15632,7 +15634,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Salt";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15646,7 +15648,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mav";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15660,7 +15662,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mav_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15674,7 +15676,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Kirby";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15688,7 +15690,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Primus";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15702,7 +15704,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15716,7 +15718,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15730,7 +15732,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15744,21 +15746,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Riley_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
-		};
-	}; 
-	class FST_Uniform_Sin: JLTS_CloneArmor
-	{
-		author="Steel";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Sin]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Sin";
-			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15772,7 +15760,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Trenny";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15786,7 +15774,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Trenny_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15800,7 +15788,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sierra";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15814,7 +15802,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sierra_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15828,7 +15816,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tar";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15842,7 +15830,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tar_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15856,7 +15844,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Silhouette";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15870,7 +15858,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Silhouette_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15884,7 +15872,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nys";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15898,7 +15886,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nahlens";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15912,7 +15900,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nahlens_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15926,7 +15914,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Warlock";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15940,7 +15928,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vishy";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15954,7 +15942,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mono";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15968,7 +15956,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mono_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -15982,7 +15970,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ace";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -15996,7 +15984,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Viper";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16010,7 +15998,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Overwatch";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16024,7 +16012,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Business";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16038,7 +16026,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Business_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16052,7 +16040,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tooka";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16066,7 +16054,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mox";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16080,7 +16068,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mox_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16094,7 +16082,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Recruit";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16108,7 +16096,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Medusa";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16122,7 +16110,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Martyr";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16136,7 +16124,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Harlequin";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16150,7 +16138,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Harlequin_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16164,7 +16152,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blades";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16178,7 +16166,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blades_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16192,7 +16180,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Demon";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16206,7 +16194,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16220,7 +16208,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16234,7 +16222,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16248,7 +16236,35 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Squatch_Dirty_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Butter: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Butter]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Butter";
+			uniformType="Neopren";
+			containerClass="Supply150";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Scrib: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Scrib]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Scrib";
+			uniformType="Neopren";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16280,34 +16296,6 @@ class CfgWeapons
 			mass=15;
 		};
 	};
-	class FST_Uniform_Butter: JLTS_CloneArmor
-	{
-		author="Steel";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Butter]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Butter";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
-		};
-	};
-	class FST_Uniform_Scrib: JLTS_CloneArmor
-	{
-		author="Steel";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Scrib]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Scrib";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
-		};
-	};
 	class FST_Uniform_Slow: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -16318,7 +16306,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Slow";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16332,7 +16320,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mig";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16346,7 +16334,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Recon";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16360,7 +16348,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Perceval";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16374,7 +16362,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Blue";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16388,7 +16376,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Devo";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16402,7 +16390,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Magma";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16416,7 +16404,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Heller";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16430,7 +16418,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Heller_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16444,7 +16432,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nerd";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16458,7 +16446,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Strider";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16472,7 +16460,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Texas";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16486,7 +16474,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Shut";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16500,7 +16488,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Peaches";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16514,7 +16502,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hugger";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16528,7 +16516,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Alfour";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16542,7 +16530,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Marcus";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16556,7 +16544,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coldstart";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16570,7 +16558,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Kate";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16584,7 +16572,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Kate_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16598,7 +16586,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Steel";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16612,7 +16600,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Steel_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16626,7 +16614,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zephyr";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16640,7 +16628,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ripper";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16654,7 +16642,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ripper_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16668,7 +16656,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ripper_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -16682,7 +16670,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Nic";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16696,7 +16684,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lawman";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16710,7 +16698,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ampersand_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16724,7 +16712,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Xeha_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16738,7 +16726,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Deso_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16752,7 +16740,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Joko";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16766,7 +16754,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Joko_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16780,7 +16768,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Vulpes";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16794,7 +16782,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16808,7 +16796,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16822,7 +16810,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16836,7 +16824,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Rint_V2_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16850,7 +16838,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bulwark";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16864,7 +16852,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Bulwark_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16878,7 +16866,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16892,7 +16880,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16906,7 +16894,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16920,7 +16908,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Coda_Dirty_V2";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16934,7 +16922,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_James";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16948,7 +16936,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Arthur";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16962,7 +16950,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Merlin";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16976,7 +16964,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_James_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -16990,7 +16978,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Grif";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17004,7 +16992,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Deso";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17018,7 +17006,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tiger";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17032,7 +17020,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tiger_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17046,7 +17034,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jammer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17060,7 +17048,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Jammer_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17074,7 +17062,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Puma";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17088,7 +17076,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Puma_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17102,7 +17090,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sly";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17116,7 +17104,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sly_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17130,7 +17118,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Germ";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17144,7 +17132,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Prancer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17158,7 +17146,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Preacher";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17172,7 +17160,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Preacher_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17186,7 +17174,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Doogle";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17200,7 +17188,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Doogle_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17214,7 +17202,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Man";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17228,7 +17216,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Major";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17242,7 +17230,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Airman";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17256,7 +17244,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Airman_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17270,7 +17258,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_White";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17284,7 +17272,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Pope";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17298,7 +17286,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Major_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17312,7 +17300,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Seraph";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17326,7 +17314,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Saber";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17340,7 +17328,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lang";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17354,7 +17342,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Twist";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17368,7 +17356,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Harm";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17382,7 +17370,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hazard";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17396,7 +17384,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hazard_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17410,7 +17398,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Qball";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17424,7 +17412,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zik";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17438,7 +17426,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zik_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17452,7 +17440,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Sturm";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17466,7 +17454,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Duncy";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17480,7 +17468,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Charge";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17494,7 +17482,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hex";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17508,7 +17496,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Hex_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17522,7 +17510,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Lupus";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17536,7 +17524,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tex";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};  
@@ -17550,7 +17538,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stein";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17564,7 +17552,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Stein_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17578,7 +17566,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Claw";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -17592,7 +17580,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Claw_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -17606,7 +17594,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Raven";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17620,7 +17608,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Xeha";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17634,7 +17622,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_CosmicSmith";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17648,7 +17636,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Delta";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17662,7 +17650,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Delta_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17676,7 +17664,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Phoenix";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17690,7 +17678,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Zen";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17704,7 +17692,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Tally";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17718,7 +17706,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_NCO_Jorge";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17732,7 +17720,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_JARC";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17746,7 +17734,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Church";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17760,7 +17748,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Brutal";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17774,7 +17762,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Burns";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17788,7 +17776,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Annex";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17802,7 +17790,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mood";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17816,7 +17804,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Mood_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17830,7 +17818,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Freezer";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17844,7 +17832,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Ropey";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17858,7 +17846,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cosmic";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17872,7 +17860,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cosmic_Dirty";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17886,7 +17874,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Merrik";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17900,7 +17888,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Merrik_V3";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -17917,7 +17905,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformClass="FST_P2_Merrik_BC";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -17931,7 +17919,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Samurai";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -17945,7 +17933,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Samurai_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -17959,7 +17947,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Laer";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -17973,7 +17961,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Harribel";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -17987,7 +17975,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Omen";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18001,7 +17989,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Pig";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18015,7 +18003,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Laer_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18029,7 +18017,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Lucky";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18043,7 +18031,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Lucky_dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18057,7 +18045,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Viz";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18071,7 +18059,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Viz_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18085,7 +18073,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Ruby";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18099,7 +18087,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Gustav";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18113,7 +18101,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Flatline";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18127,7 +18115,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Ruby_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18141,7 +18129,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Evox";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18155,7 +18143,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Evox_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18169,7 +18157,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Crab";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18183,7 +18171,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Selene";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18197,7 +18185,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Red";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18211,7 +18199,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Ryx";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18225,7 +18213,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Fizz";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18239,7 +18227,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Jericho";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18253,7 +18241,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Felix";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18267,7 +18255,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Felix_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18281,7 +18269,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Vixen";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18295,7 +18283,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Nova";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18309,7 +18297,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Atlas";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18323,7 +18311,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Atlas_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18337,7 +18325,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Noble";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18351,7 +18339,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Cooker";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18365,7 +18353,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Sonic";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18379,7 +18367,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Volos";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18393,7 +18381,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Raz";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18407,7 +18395,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Chips";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18421,7 +18409,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Chips_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18435,7 +18423,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Buddhah";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18449,7 +18437,7 @@ class CfgWeapons
             uniformModel="";
             uniformClass="FST_P2_Buddhah_Dirty";
             uniformType="Neopren";
-            containerClass="Supply180";
+            containerClass="Supply150";
             mass=15;
         };
     };
@@ -18463,7 +18451,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Dash";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -18477,7 +18465,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_P2_Cyanide";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	};
@@ -18494,7 +18482,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_Jedi";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=40;
 		};
 	};
@@ -18506,7 +18494,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformClass="FST_DarkJedi";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=40;
 		};
 	};
@@ -18520,7 +18508,7 @@ class CfgWeapons
 			uniformModel="";
 			uniformClass="FST_Zombie_Bloody";
 			uniformType="Neopren";
-			containerClass="Supply180";
+			containerClass="Supply150";
 			mass=15;
 		};
 	}; 
@@ -25823,19 +25811,20 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
+			explosionShielding=0.7;
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -25845,7 +25834,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -25854,77 +25843,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -25936,36 +25926,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -25975,12 +25965,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -26164,19 +26154,20 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
+			explosionShielding=0.7;
 			class HitFace: HitFace
 			{
-				armor=10;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=60;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -26186,7 +26177,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=60;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -26195,77 +26186,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=60;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=60;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=60;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=60;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=60;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=60;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=60;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -26277,36 +26269,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=60;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=60;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -26316,12 +26308,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=60;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -26477,20 +26469,21 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			
+			explosionShielding=0.7;
+
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -26500,7 +26493,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -26509,77 +26502,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -26591,36 +26585,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -26630,12 +26624,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -26783,20 +26777,20 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			
+			explosionShielding=0.7;
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -26806,7 +26800,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -26815,77 +26809,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -26897,36 +26892,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -26936,12 +26931,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -27097,20 +27092,21 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
+			explosionShielding=0.7;
 			
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -27120,7 +27116,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -27129,77 +27125,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -27211,36 +27208,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -27250,12 +27247,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -27411,20 +27408,21 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
+			explosionShielding=0.7;
 			
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -27434,7 +27432,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -27443,77 +27441,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -27525,36 +27524,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -27564,12 +27563,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -27725,20 +27724,21 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
+			explosionShielding=0.7;
 			
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -27748,7 +27748,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -27757,77 +27757,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -27839,36 +27840,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -27878,12 +27879,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -29113,20 +29114,20 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			
+			explosionShielding=0.7;
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -29136,7 +29137,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -29145,77 +29146,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -29227,36 +29229,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -29266,12 +29268,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -30003,20 +30005,20 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			
+			explosionShielding=0.7;
 			class HitFace: HitFace
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="face_hub";
 				passThrough=0.80000001;
 				radius=0.079999998;
-				explosionShielding=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.0099999998;
 			};
 			class HitNeck: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="neck";
 				passThrough=0.80000001;
@@ -30026,7 +30028,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
+				armor=12;
 				material=-1;
 				name="head";
 				passThrough=0.80000001;
@@ -30035,77 +30037,78 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
-				armor=8;
+				armor=20;
 				material=-1;
 				name="pelvis";
 				passThrough=0.80000001;
 				radius=0.23999999;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=6;
+				armor=20;
 				material=-1;
 				name="spine1";
 				passThrough=0.80000001;
 				radius=0.16;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=6;
+				armor=22;
 				material=-1;
 				name="spine2";
 				passThrough=0.33000001;
 				radius=0.18000001;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=22;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
-				explosionShielding=6;
+				passThrough=0.33000001;
+				radius=0.18000001;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=6;
+				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="arms";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -30117,36 +30120,36 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="legs";
 				passThrough=1;
 				radius=0.14;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
 				name="body";
 				passThrough=1;
 				radius=0;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="";
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
 				radius=0.079999998;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
@@ -30156,12 +30159,12 @@ class CfgVehicles
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor=6;
+				armor=15;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
 				radius=0.1;
-				explosionShielding=3;
+				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
@@ -50422,3 +50425,44 @@ class cfgGroups
 };
 
 
+
+class ACE_Medical_Injuries
+{
+	class wounds
+	{
+		// Custom plasma strike wound for blasterbolts (ACE_damageType="plasma")
+		// Tuned for 4-6 body hits to down a trooper with Plastoid vest
+		// painCoefficient=0.32, painUnconsciousThreshold=0.65, playerDamageThreshold=1.5
+		// 1 wound/hit * 0.45 pain * 0.32 coeff = ~0.144 effective pain/hit -> ~4-5 hits to threshold
+		class PlasmaStrike
+		{
+			bleeding = 0.05;	// light bleed - creates medical urgency without fast bleedout
+			pain = 0.45;		// tuned for 4-6 torso hits / 5-7 limb hits to down
+			causeLimping = 1;	// leg hits can cause limping
+			causeFracture = 0;	// plasma burns don't cause fractures
+		};
+	};
+
+	class damageTypes
+	{
+		class plasma
+		{
+			// selectionSpecific=1 means wounds only appear on the body part actually hit
+			selectionSpecific = 1;
+
+			class wounds
+			{
+				class PlasmaStrike
+				{
+					// thresholds[] = {{damageValue, maxWoundsAtThatValue}, ...}
+					// Low threshold (0.01) ensures even limb hits attenuated by vest armor
+					// still generate a wound. Arms vest PassThrough=0.08975 means only ~9%
+					// of damage reaches the hitpoint, so threshold must be very low.
+					// 1 wound per hit keeps TTK at 4-6 body shots, ~8-10 arm shots
+					thresholds[] = {{0.01, 1}, {0, 0}};
+					weighting[] = {{1, 1}};
+				};
+			};
+		};
+	};
+};
