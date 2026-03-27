@@ -19814,6 +19814,11 @@ class CfgVehicles
 				count=10;
 				magazine="FST_thermal_coil_T15_Blue";
 			};
+			class _xx_FST_blaster_cell_Westar_Blue
+			{
+				count=28;
+				magazine="FST_blaster_cell_Westar_Blue";
+			};
 			class _xx_FST_blaster_cell_Valken
 			{
 				count=20;
