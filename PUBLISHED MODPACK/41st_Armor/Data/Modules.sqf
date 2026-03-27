@@ -176,17 +176,92 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
             // deathCondition 0 = CrashShip_Scripted on kill (graceful fall).
             // deathCondition 1 = JumpOut on kill (retreat).
             // Confirmed from FTL_SupportShip source (FTL_Framework line ~5384).
-            // _UseCustomTurret pulls classnames from CBA addon settings when true.
+            //
+            // NOTE: We always pass _AddTurret_UseCustom=false to FTL_SupportShip.
+            // The mod's custom turret path (FTL_Framework ~line 5169) builds an array
+            // from the CBA setting and passes it directly to createVehicle, which expects
+            // a string classname — it silently fails and no turret spawns. Instead, when
+            // _UseCustomTurret is true we read the CBA array ourselves and spawn turrets
+            // manually below, after FTL_SupportShip has set up HP and death condition.
             [
                 _ReturnShip,
                 false,               // targetInfantry
                 true,                // targetVehicle
-                true,                // AddTurret
+                (_NumberOfTurrets > 0) && !_UseCustomTurret, // AddTurret: let mod handle if not custom
                 _NumberOfTurrets,    // Extra turret count
-                _UseCustomTurret,    // Use CBA custom turret classnames?
+                false,               // AddTurret_UseCustom: always false, we handle custom ourselves
                 _ShipHealthMult,     // Custom HP pool (stored x100 internally)
                 _DeathCondition      // 0 = crash gracefully, 1 = retreat (jump out)
             ] call ScifiSupportPLUS_FTL_SupportShip;
+
+            // If custom turrets are requested, spawn them directly from the CBA array.
+            // This bypasses the mod's broken createVehicle-with-array path.
+            if (_UseCustomTurret && _NumberOfTurrets > 0) then {
+                private _customList = ScifiSupportPlus_SupportShip_CustomTurretArray;
+                if (count _customList > 0) then {
+                    for "_t" from 1 to _NumberOfTurrets do {
+                        private _turretClass = selectRandom _customList;
+                        private _turret = createVehicle [_turretClass, getPosATL _ReturnShip, [], 0, "CAN_COLLIDE"];
+                        _turret setvectorUp [0, 0, 1];
+                        [_turret, _ReturnShip, true] call BIS_fnc_attachToRelative;
+                        [_turret, _ReturnShip] remoteExecCall ["disableCollisionWith", 0];
+                        createVehicleCrew _turret;
+                        [_turret] joinSilent (group _ReturnShip);
+                        [_turret] remoteExec ["fnc_initTurretradarandSensors", 0];
+                        _turret allowCrewInImmobile [true, true];
+                        _turret setSkill ["courage", 1];
+                        _turret setSkill ["aimingAccuracy", 0];
+                        _turret setSkill ["aimingSpeed", 1];
+                        _turret setSkill ["spotDistance", 1];
+                        _turret setSkill ["spotTime", 1];
+
+                        // Replicate the mod's turret AI firing loop (FTL_Framework ~line 5266).
+                        // Without this the turret spawns but its AI is never explicitly put into
+                        // RED/FIREWEAPON — it defaults to whatever state createVehicleCrew gives it,
+                        // which is inconsistent across spawns and causes the "not shooting after
+                        // first spawn" behaviour.
+                        [_turret, _ReturnShip] spawn {
+                            params ["_turret", "_ship"];
+                            while {alive _turret} do {
+                                private _stopFiring = _ship getVariable ["FTL_stopFiring", nil];
+                                if (isNil "_stopFiring") then {
+                                    if (combatMode (group _turret) != "RED") then {
+                                        [_turret, "RED"] remoteExecCall ["setUnitCombatMode", 0];
+                                        (group _turret) setCombatMode "RED";
+                                        (group _turret) setBehaviour "AWARE";
+                                        { [_x, "AUTOCOMBAT"] remoteExecCall ["enableAI", 0]; [_x, "AUTOTARGET"] remoteExecCall ["enableAI", 0]; [_x, "TARGET"] remoteExecCall ["enableAI", 0]; [_x, "FIREWEAPON"] remoteExecCall ["enableAI", 0]; uiSleep 0.01; } forEach crew _turret;
+                                        [_turret, "AUTOCOMBAT"] remoteExecCall ["enableAI", 0];
+                                        [_turret, "AUTOTARGET"] remoteExecCall ["enableAI", 0];
+                                        [_turret, "TARGET"] remoteExecCall ["enableAI", 0];
+                                        [_turret, "FIREWEAPON"] remoteExecCall ["enableAI", 0];
+                                    };
+                                } else {
+                                    if (combatMode (group _turret) != "BLUE") then {
+                                        [_turret, "BLUE"] remoteExecCall ["setUnitCombatMode", 0];
+                                        (group _turret) setCombatMode "BLUE";
+                                        (group _turret) setBehaviour "CARELESS";
+                                        { [_x, "AUTOCOMBAT"] remoteExecCall ["disableAI", 0]; [_x, "AUTOTARGET"] remoteExecCall ["disableAI", 0]; [_x, "TARGET"] remoteExecCall ["disableAI", 0]; [_x, "FIREWEAPON"] remoteExecCall ["disableAI", 0]; uiSleep 0.01; } forEach crew _turret;
+                                        [_turret, "AUTOCOMBAT"] remoteExecCall ["disableAI", 0];
+                                        [_turret, "AUTOTARGET"] remoteExecCall ["disableAI", 0];
+                                        [_turret, "TARGET"] remoteExecCall ["disableAI", 0];
+                                        [_turret, "FIREWEAPON"] remoteExecCall ["disableAI", 0];
+                                    };
+                                };
+                                sleep 1;
+                            };
+                        };
+
+                        // Store on ship so the Killed/Deleted EH can clean them up
+                        private _turrets = _ReturnShip getVariable ["FTL_ExtraTurretOBJ", []];
+                        _turrets pushBack _turret;
+                        _ReturnShip setVariable ["FTL_ExtraTurretOBJ", _turrets];
+                        uiSleep 0.1;
+                    };
+                } else {
+                    // CBA array is empty — fall back to mod default turrets
+                    [_ReturnShip, false, true, true, _NumberOfTurrets, false, _ShipHealthMult, _DeathCondition] call ScifiSupportPLUS_FTL_SupportShip;
+                };
+            };
         };
 
         // ---- Now we can safely sleep: ----
@@ -213,7 +288,8 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         _PodArray = [];
 
         // Function to attach a particle source to each "pod" point
-        createandAttachParticleSource = {
+        // Prefixed FST_ to avoid shadowing the same function defined in the mod's FTL_Framework.
+        FST_createandAttachParticleSource = {
             params ["_podobject", "_location"];
             _modelData = _podobject modelToWorld _location;
             _particleSource = "#particleSource" createVehicle _modelData;
@@ -231,7 +307,7 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
 
         // Attach each effect
         {
-            _PodArray pushBack ([_ReturnShip, _x] call createandAttachParticleSource);
+            _PodArray pushBack ([_ReturnShip, _x] call FST_createandAttachParticleSource);
         } forEach _podLocations;
 
         // Clean them up if the ship dies
@@ -256,9 +332,11 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
                 _randomPodLocation = _PodArray select _randomIndex;
                 _PodArray deleteAt _randomIndex;
 
+                // Use getPosASL so FST_Droid_Dispenser's internal ASLtoATL conversion is correct.
+                // getPosATL would be double-converted and land in the wrong place.
                 _currentposition = [
-                    (getPosATL _randomPodLocation select 0),
-                    (getPosATL _randomPodLocation select 1),
+                    (getPosASL _randomPodLocation select 0),
+                    (getPosASL _randomPodLocation select 1),
                     0
                 ];
 
@@ -529,22 +607,22 @@ FST_Droid_Dispenser =  {
 			["SLIDER",["Insert Distance","How far away the aircraft start it's flight path"],[1000,5000,2000,0]],
 			["toOLBOX", "Insert Direction", [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]]
 		],
-		{ 
-			_this spawn {
+		{
 			params["_values", "_arguments"];
 
-				_Aircraft = _values # 0;
-				_dropvehicle = _values # 1;
-				_addcrew = _values # 2;
-				_InsertDistance = _values # 3;
-				_direction = _values # 4;
+			_Aircraft = _values # 0;
+			_dropvehicle = _values # 1;
+			_addcrew = _values # 2;
+			_InsertDistance = _values # 3;
+			_direction = _values # 4;
 
-				_Ship_direction = [0, 45, 90, 135, 180, 225, 270, 315] # _direction;
-										
-				_position=_arguments select 0;
-					
-				[_position,_Aircraft,_dropvehicle,_addcrew,_InsertDistance,_Ship_direction] call FST_ScifiSupportPlus_fnc_SW_HMPVehicleDrop;
-			};
+			_Ship_direction = [0, 45, 90, 135, 180, 225, 270, 315] # _direction;
+
+			_position = _arguments select 0;
+
+			// Must run on server -- createVehicle/attachTo/waitUntil on a client
+			// means vehicle ownership is that client. Disconnect = vehicles vanish.
+			[_position,_Aircraft,_dropvehicle,_addcrew,_InsertDistance,_Ship_direction] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_HMPVehicleDrop", 2];
 		},
 		{},
 		[_pos]] call zen_dialog_fnc_create;

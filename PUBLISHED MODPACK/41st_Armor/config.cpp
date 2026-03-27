@@ -209,7 +209,6 @@ class CfgPatches
 			"FST_P2_Nori_V2_Dirty",
 			"FST_P2_Kate",
 			"FST_P2_Kate_V2",
-			"FST_P2_Kate_Dirty",
 			"FST_P2_Lawman",
 			"FST_P2_Ampersand_Dirty",
 			"FST_P2_Joko",
@@ -9862,14 +9861,14 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Woods_Dirty.paa",
 		};
 	};
-	class FST_Airborne_Helmet_Kellogg: FST_Airborne_Helmet
+	class FST_Airborne_Helmet_Kellog: FST_Airborne_Helmet
 	{
 		author="Steel";
-		displayName="[41st] Airborne Helmet (Kellogg)";
+		displayName="[41st] Airborne Helmet (Kellog)";
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\data\Helmets\FST_AB_Helmet_Kellogg.paa",
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Kellog.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Gum: FST_Airborne_Helmet
@@ -10785,16 +10784,6 @@ class CfgWeapons
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Helmets\FST_P2_Helmet_Kate_V2.paa",
-        };
-    };
-	class FST_P2_Helmet_Kate_Dirty: FST_P2_Helmet_Base
-    {
-        author="Steel";
-        scope=2; 
-        displayName="[41st] P2 Helmet [Kate/Dirty]";
-        hiddenSelectionsTextures[]=
-        {
-            "41st_Armor\Data\Helmets\FST_P2_Helmet_Kate_Dirty.paa",
         };
     };
 	class FST_P2_Helmet_Kirby: FST_P2_Helmet_Base
@@ -15467,20 +15456,6 @@ class CfgWeapons
 			mass=15;
 		};
 	};
-	class FST_Uniform_Adler: JLTS_CloneArmor
-	{
-		author="Steel";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Adler]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Adler";
-			uniformType="Neopren";
-			containerClass="Supply150";
-			mass=15;
-		};
-	};
 	class FST_Uniform_Dragon: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -16596,20 +16571,6 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Kate_V2";
-			uniformType="Neopren";
-			containerClass="Supply150";
-			mass=15;
-		};
-	};
-	class FST_Uniform_Kate_Dirty: JLTS_CloneArmor
-	{
-		author="Steel";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Kate/Dirty]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_Kate_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply150";
 			mass=15;
@@ -19319,15 +19280,6 @@ class CfgWeapons
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham_Dirty.paa",
 		};
 	};
-	class FST_NVG_Rick: FST_NVG
-	{
-		author="Steel";
-		displayName="[41st] NCO Macrobinoculars (Rick)";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Equipment\FST_NVG_Rick.paa",
-		};
-	};
 	class FST_NVG_Desert: FST_NVG_Woodland
 	{
 		author="Daara";
@@ -19861,11 +19813,6 @@ class CfgVehicles
 			{
 				count=10;
 				magazine="FST_thermal_coil_T15_Blue";
-			};
-			class _xx_FST_blaster_cell_Westar_Blue
-			{
-				count=28;
-				magazine="FST_blaster_cell_Westar_Blue";
 			};
 			class _xx_FST_blaster_cell_Valken
 			{
@@ -37149,61 +37096,6 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
-	class FST_P2_Adler: FST_Trooper_P2_DC15S
-	{
-		author="Steel";
-		displayName="[41st] CT-1204 'Adler'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Adler";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Adler.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Adler.Paa",
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet_Adler",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet_Adler",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	};
 	class FST_P2_Bees: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -42152,61 +42044,6 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Kate_V2",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	};
-	class FST_P2_Kate_Dirty: FST_Trooper_P2_DC15S
-	{
-		author="Steel";
-		displayName="[41st] CT-1145 'Kate/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Kate_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Kate_Dirty.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Kate_Dirty.Paa",
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet_Kate_Dirty",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet_Kate_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
