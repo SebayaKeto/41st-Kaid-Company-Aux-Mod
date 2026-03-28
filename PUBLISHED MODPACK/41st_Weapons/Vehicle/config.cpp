@@ -1183,7 +1183,7 @@ class CfgMagazines
 		count=500;
 		ammo="FST_127x99_red";
 		initSpeed=910;
-		maxLeadSpeed=36.111099;
+		maxLeadSpeed=288.111099;
 		tracersEvery=1;
 		nameSound="mgun";
 		muzzleImpulseFactor[]={0.050000001,0.050000001};
