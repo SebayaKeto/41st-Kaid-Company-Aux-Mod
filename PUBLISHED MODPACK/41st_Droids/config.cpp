@@ -835,6 +835,7 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_E5: JLTS_Droid_B1_E5
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		scopecurator = 2;
 		side=0;
@@ -869,84 +870,138 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor=1;
-				explosionShielding=80; //Was 100
+				armor=0.25;
+				material=-1;
+				name="face_hub";
+				passThrough=0.1;
+				radius=0.08;
+				explosionShielding=0.5;
 				minimalHit=0.01;
 			};
 			class HitNeck: HitFace
 			{
-				armor=1;
-				explosionShielding=80;
+				armor=0.25;
+				material=-1;
+				name="neck";
+				passThrough=0.1;
+				radius=0.1;
+				explosionShielding=0.5;
 				minimalHit=0.01;
 			};
 			class HitHead: HitNeck
 			{
-				armor=1;
-				explosionShielding=80;
+				armor=0.25;
+				material=-1;
+				name="head";
+				passThrough=0.1;
+				radius=0.2;
+				explosionShielding=0.5;
 				minimalHit=0.01;
+				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
 				armor=1;
-				explosionShielding=80;
+				material=-1;
+				name="pelvis";
+				passThrough=0.8;
+				radius=0.24;
+				explosionShielding=3;
+				visual="injury_body";
 				minimalHit=0.01;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
 				armor=1;
-				explosionShielding=80;
+				material=-1;
+				name="spine1";
+				passThrough=0.8;
+				radius=0.16;
+				explosionShielding=3;
+				visual="injury_body";
 				minimalHit=0.01;
 			};
 			class HitDiaphragm: HitAbdomen
 			{
 				armor=1;
-				explosionShielding=80;
+				material=-1;
+				name="spine2";
+				passThrough=0.33;
+				radius=0.18;
+				explosionShielding=6;
+				visual="injury_body";
 				minimalHit=0.01;
 			};
 			class HitChest: HitDiaphragm
 			{
 				armor=1;
-				explosionShielding=80;
+				material=-1;
+				name="spine3";
+				passThrough=0.33;
+				radius=0.18;
+				explosionShielding=6;
+				visual="injury_body";
 				minimalHit=0.01;
 			};
 			class HitBody: HitChest
 			{
 				armor=1;
-				passthrough=1;
-				explosionShielding=80;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
 				minimalHit=0.01;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
 				armor=1;
-				passthrough=1;
-				explosionShielding=85;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_hands";
 				minimalHit=0.01;
+				depends="";
 			};
 			class HitHands: HitArms
 			{
 				armor=1;
-				passthrough=1;
-				explosionShielding=85;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0.05;
+				explosionShielding=1;
+				visual="injury_hands";
 				minimalHit=0.01;
 			};
 			class HitLegs: HitHands
 			{
 				armor=1;
-				explosionShielding=85;
+				material=-1;
+				name="legs";
+				passThrough=0.8;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_legs";
 				minimalHit=0.01;
+				depends="";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
-			};
-			class HitLeftArm
-			{
-				armor=1;
-				passthrough=1;
-				explosionShielding=85;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
 				minimalHit=0.01;
-			}; 
+				depends="HitFace max HitNeck max HitHead max HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
 		};
 		linkedItems[]=
 		{
@@ -1038,7 +1093,7 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
 				armor=16;
 				material=-1;
@@ -1131,9 +1186,16 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=6;
+				minimalHit=0.01;
+				depends="HitFace max HitNeck max HitHead max HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitLeftArm
 			{
@@ -1632,6 +1694,7 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Jetpack: WBK_3AS_B1_Rocket
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_Backpack_Jetpack";
@@ -3022,7 +3085,7 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="HitFace max HitNeck";
 			};
-			class HitPelvis: HitHead
+			class HitPelvis
 			{
 				armor=8;
 				material=-1;
@@ -3061,14 +3124,15 @@ class CfgVehicles
 				armor=8;
 				material=-1;
 				name="spine3";
-				passThrough="0.33000001radius = 0.18";
+				passThrough=0.33000001;
+				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody
 			{
-				armor=1000;
+				armor=50;
 				material=-1;
 				name="body";
 				passThrough=1;
@@ -3114,7 +3178,7 @@ class CfgVehicles
 				minimalHit=0.0099999998;
 				depends="0";
 			};
-			class Incapacitated: HitLegs
+			class Incapacitated
 			{
 				armor=1000;
 				material=-1;
@@ -3126,7 +3190,7 @@ class CfgVehicles
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm: HitLegs
+			class HitLeftArm
 			{
 				armor=6;
 				material=-1;
