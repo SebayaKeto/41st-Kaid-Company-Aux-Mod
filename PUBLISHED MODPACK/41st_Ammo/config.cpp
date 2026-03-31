@@ -1731,7 +1731,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
 		displayName="[41st] Low-Power DC-15L Extended Capacity Magazine (Blue)";
 		displayNameShort="LP Energy Battery";
-		descriptionShort="150 round capacity.";
+		descriptionShort="120 round capacity.";
 		ammo="FST_blasterbolt";
 		JLTS_hasElectronics=0;
 		JLTS_hasEMPProtection=1;
