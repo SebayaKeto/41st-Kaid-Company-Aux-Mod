@@ -2717,6 +2717,7 @@ class CfgVehicles
 		author="Daara";
 		_generalMacro="B_APC_Wheeled_01_base_F";
 		side=1;
+		tf_isolatedAmount = 1;
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
