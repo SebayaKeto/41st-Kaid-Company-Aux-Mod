@@ -1589,6 +1589,18 @@ class CfgMusic
 		};
 		duration="472";
 	};
+	class FST_Frostpunk_TheCityMustSurvive
+	{
+		name="(Frostpunk) The City Must Survive";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Frostpunk_The_City_Must_Survive.ogg",
+			1,
+			1
+		};
+		duration="472";
+	};
 	class FST_Clair_Monoco
 	{
 		name="(Clair Obscur) Monoco";
