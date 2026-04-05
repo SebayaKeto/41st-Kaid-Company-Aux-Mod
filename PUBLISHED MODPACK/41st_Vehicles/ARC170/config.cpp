@@ -6,6 +6,7 @@ class CfgPatches
 		{
 			"FST_Arc_170",
 			"FST_Arc_170_Ghostly",
+			"FST_Arc_170_Pole",
 			"FST_ARC_170_Jorge"
 		};
 		weapons[]={};
@@ -898,6 +899,52 @@ class CfgVehicles
 		{
 			"41st_Vehicles\ARC170\Data\FST_Ghostly_Main_Frame_CO.paa",
 			"41st_Vehicles\ARC170\Data\FST_Ghostly_Wings_Engines_CO.paa",
+			"3as\3AS_ARC170\Data\units\101st_Guns_CO.paa",
+			"a3\air_f_jets\plane_fighter_01\data\fighter_01_glass_01_ca.paa"
+		};
+	};
+	class FST_ARC_170_Pole: FST_ARC_170
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayName="[41st] ARC-170 Heavy Fighter (Pole)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Laer";
+		weapons[]=
+		{
+			"FST_ARC_Heavy_Chaingun",
+			"FST_Rapture_AGM_Missile",
+			"FST_Stormfury_AA_Missile",
+			"FST_Harrower_HARM_Missile",
+			"ls_weapon_CMFlareLauncher",
+			"Laserdesignator_pilotCamera"
+		};
+		magazines[]=
+		{
+			"FST_ARC_4000Rnd_Heavy_shells",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"ls_mag_192rnd_CMFlareChaff_cyan",
+			"Laserbatteries",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile",
+			"FST_Harrower_2Rnd_HARM_Missile"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\ARC170\Data\FST_Pole_Main_Frame_CO.paa",
+			"41st_Vehicles\ARC170\Data\FST_Pole_Wings_Engines_CO.paa",
 			"3as\3AS_ARC170\Data\units\101st_Guns_CO.paa",
 			"a3\air_f_jets\plane_fighter_01\data\fighter_01_glass_01_ca.paa"
 		};

@@ -4,7 +4,8 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"FST_Arc_170_Rear"
+			"FST_Arc_170_Rear",
+			"FST_Arc_170_Pole_Rear"
 		};
 		weapons[]={};
 		requiredVersion=0.1;
@@ -894,4 +895,23 @@ class CfgVehicles
 			"flare_launcher2_dir"
 		};
 	};
+class FST_Arc_170_Pole_Rear: FST_Arc_170_Rear
+{
+	author="Laer";
+	displayName="[41st] ARC-170 Heavy Fighter (Rear/Pole)";
+		hiddenselections[]=
+		{
+			"camo1",
+			"camo2",
+			"guns",
+			"glass"
+		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\ARC170\Data\FST_Pole_Main_Frame_CO.paa",
+			"41st_Vehicles\ARC170\Data\FST_Pole_Wings_Engines_CO.paa",
+			"3as\3AS_ARC170\Data\units\101st_Guns_CO.paa",
+			"a3\air_f_jets\plane_fighter_01\data\fighter_01_glass_01_ca.paa"
+		};
+}
 };
