@@ -20926,12 +20926,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -20939,19 +20939,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21499,12 +21499,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21512,19 +21512,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21565,12 +21565,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21578,19 +21578,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21631,12 +21631,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21644,19 +21644,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21697,12 +21697,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21710,19 +21710,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21763,12 +21763,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21776,19 +21776,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21829,12 +21829,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21842,19 +21842,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21895,12 +21895,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21908,19 +21908,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -21961,12 +21961,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -21974,19 +21974,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22027,12 +22027,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22040,19 +22040,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22093,12 +22093,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22106,19 +22106,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22159,12 +22159,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22172,19 +22172,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22225,12 +22225,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22238,19 +22238,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22291,12 +22291,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22304,19 +22304,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22357,12 +22357,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22370,19 +22370,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22423,12 +22423,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22436,19 +22436,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22489,12 +22489,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22502,19 +22502,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22555,12 +22555,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22568,19 +22568,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22621,12 +22621,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script=""; //DBA_jumppack_effect_fnc_jt_21
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22634,19 +22634,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22748,12 +22748,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=0;
-		DBA_jumppack_energy_capacity=150;
-		DBA_jumppack_recharge=10;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=0;
+		FST_jumppack_energy_capacity=150;
+		FST_jumppack_recharge=10;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22761,19 +22761,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22815,12 +22815,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=0;
-		DBA_jumppack_energy_capacity=150;
-		DBA_jumppack_recharge=10;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=0;
+		FST_jumppack_energy_capacity=150;
+		FST_jumppack_recharge=10;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22828,19 +22828,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22886,12 +22886,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=0;
-		DBA_jumppack_energy_capacity=150;
-		DBA_jumppack_recharge=10;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=0;
+		FST_jumppack_energy_capacity=150;
+		FST_jumppack_recharge=10;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22899,19 +22899,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -22952,12 +22952,12 @@ class CfgVehicles
 		};
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -22965,19 +22965,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -23168,12 +23168,12 @@ class CfgVehicles
 		tf_range=50000; */
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -23181,19 +23181,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -23295,12 +23295,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -23308,19 +23308,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -23361,12 +23361,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -23374,19 +23374,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -23427,12 +23427,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -23440,19 +23440,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -23554,12 +23554,12 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=0.001;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=0.001;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			
 			{
@@ -23567,19 +23567,19 @@ class CfgVehicles
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			
 			{
@@ -23788,31 +23788,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -23846,31 +23846,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -23904,31 +23904,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -23962,31 +23962,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24020,31 +24020,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24078,31 +24078,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24136,31 +24136,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24194,31 +24194,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24261,31 +24261,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24319,31 +24319,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24379,31 +24379,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24439,31 +24439,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24499,31 +24499,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24559,31 +24559,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24619,31 +24619,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24688,31 +24688,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24746,31 +24746,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24804,31 +24804,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24862,31 +24862,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24920,31 +24920,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -24980,31 +24980,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25038,31 +25038,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25098,31 +25098,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25156,31 +25156,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25241,31 +25241,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25299,31 +25299,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25357,31 +25357,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25415,31 +25415,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25473,31 +25473,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25531,31 +25531,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25591,31 +25591,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25651,31 +25651,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25711,31 +25711,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
@@ -25771,31 +25771,31 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 		JLTS_isJumppack=0;
-		DBA_jumppack_is_jumppack=1;
-		DBA_jumppack_spam_delay=1;
-		DBA_jumppack_energy_capacity=100;
-		DBA_jumppack_recharge=7.6;
-		DBA_jumppack_jump_effect_script="";
-		DBA_jumppack_effect_points[]=
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
 		{
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		DBA_jumppack_sound_ignite[]=
+		FST_jumppack_sound_ignite[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
 		};
-		DBA_jumppack_sound_land[]=
+		FST_jumppack_sound_land[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21End.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
 		};
-		DBA_jumppack_sound_idle[]=
+		FST_jumppack_sound_idle[]=
 		{
-			"DBA_Core\Addons\DBA_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
 		};
-		DBA_jumppack_jump_types[]=
+		FST_jumppack_jump_types[]=
 		{
 			{
 				"Short Jump",
