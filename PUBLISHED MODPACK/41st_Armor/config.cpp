@@ -19397,6 +19397,15 @@ class CfgWeapons
 			"41st_Armor\Data\Equipment\FST_NVG_Dilham_Dirty.paa",
 		};
 	};
+	class FST_NVG_Fizz: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Fizz)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Fizz.paa",
+		};
+	};
 	class FST_NVG_Rick: FST_NVG
 	{
 		author="Steel";
