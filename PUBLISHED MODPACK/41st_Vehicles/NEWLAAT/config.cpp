@@ -2281,6 +2281,61 @@ class CfgVehicles
 				};
 			};
 		};
+		// ============================================================
+		// FST LAAT Pylon System
+		// 4 pylons: 2 missile rails (inner) + 2 bomb rails (outer)
+		// Missile pylons: Stormfury, Rapture, Concussion, Torpedo
+		// Bomb pylons   : Plasma Bombs (all), EMP, Mine Dispenser
+		// ============================================================
+		class Pylons
+		{
+			class Pylon_MissileLeft
+			{
+				hardpoints[]   = { "B_AGM65_RAIL" };
+				index          = 1;
+				type           = 1;
+				pylonWeapon    = "FST_Stormfury_Pylon_Weapon";
+				loadedMagazine = "";
+				allowedMagazines[] =
+				{
+					"FST_PylonMissile_1Rnd_Stormfury",
+					"FST_PylonMissile_2Rnd_Stormfury",
+					"FST_PylonMissile_1Rnd_Rapture",
+					"FST_PylonMissile_4Rnd_Rapture",
+					"FST_PylonMissile_1Rnd_Concussion_Missile",
+					"FST_PylonMissile_2Rnd_Concussion_Missile",
+					"FST_PylonMissile_1Rnd_Proton_Torpedo",
+					"FST_PylonMissile_2Rnd_Proton_Torpedo"
+				};
+			};
+			class Pylon_MissileRight: Pylon_MissileLeft
+			{
+				index = 2;
+			};
+			class Pylon_BombLeft
+			{
+				hardpoints[]   = { "B_BOMB_PYLON" };
+				index          = 3;
+				type           = 1;
+				pylonWeapon    = "FST_Plasma_Bomb_500_Weapon";
+				loadedMagazine = "";
+				allowedMagazines[] =
+				{
+					"FST_PylonMissile_1Rnd_Plasma_Bomb_500",
+					"FST_PylonMissile_1Rnd_Plasma_Bomb_500_LG",
+					"FST_PylonMissile_1Rnd_Plasma_Bomb_1000",
+					"FST_PylonMissile_1Rnd_Plasma_Bomb_1000_LG",
+					"FST_PylonMissile_1Rnd_Plasma_Bomb_2000",
+					"FST_PylonMissile_1Rnd_Plasma_Bomb_2000_LG",
+					"FST_PylonMissile_1Rnd_EMP_Bomb",
+					"FST_PylonMissile_1Rnd_Mine_Dispenser"
+				};
+			};
+			class Pylon_BombRight: Pylon_BombLeft
+			{
+				index = 4;
+			};
+		};
 	};
 	class FST_laati_Turret: FST_laat_Base
 	{
@@ -5416,6 +5471,217 @@ class CfgAmmo
 			};
 		};
 	};
+	// ── forward declarations for 3AS and vanilla parents ────
+	class 3AS_High_Energy_Missile;
+	class 3AS_Proton_Torpedo;
+	class 3AS_ARC_EMP_BOMB_01;
+	class Bo_Mk82;
+	class Bo_GBU12_LGB;
+	class Bomb_04_F;
+
+	// ============================================================
+	// FST_Concussion_Missile  — BVR A2A (AMRAAM equivalent)
+	// Yellow glow, low carry cap, long radar lock range.
+	// ============================================================
+	class FST_Concussion_Missile: 3AS_High_Energy_Missile
+	{
+		hit                    = 260;
+		indirectHit            = 40;
+		indirectHitRange       = 4;
+		caliber                = 8;
+		cost                   = 600;
+		thrust                 = 280;
+		thrustTime             = 14;
+		maxSpeed               = 800;
+		maxControlRange        = 9000;
+		maneuvrability         = 22;
+		initTime               = 0.5;
+		timeToLive             = 35;
+		airFriction            = 0;
+		sideAirFriction        = 0.12;
+		airLock                = 2;
+		irLock                 = 1;
+		laserLock              = 0;
+		nvLock                 = 0;
+		weaponLockSystem       = "2 + 8";
+		missileLockCone        = 30;
+		missileKeepLockedCone  = 60;
+		missileLockMaxDistance = 9000;
+		missileLockMinDistance = 200;
+		missileLockMaxSpeed    = 800;
+		cmImmunity             = 0.65;
+		effectsMissile         = "3AS_Rocket_effect_Yellow_fly";
+		effectFly              = "3AS_Rocket_effect_Yellow_fly";
+		effectsMissileInit     = "PylonBackEffects";
+	};
+
+	// ============================================================
+	// FST_Proton_Torpedo  — short-range heavy IR torpedo
+	// Big red glow. Anti-ship / area suppression / fighter kill.
+	// ============================================================
+	class FST_Proton_Torpedo: 3AS_Proton_Torpedo
+	{
+		hit                    = 1800;
+		indirectHit            = 900;
+		indirectHitRange       = 10;
+		caliber                = 70;
+		cost                   = 700;
+		thrust                 = 200;
+		thrustTime             = 5;
+		maxSpeed               = 480;
+		maxControlRange        = 2500;
+		maneuvrability         = 14;
+		initTime               = 0.1;
+		timeToLive             = 18;
+		fuseDistance           = 15;
+		airFriction            = 0;
+		sideAirFriction        = 0.14;
+		airLock                = 0;
+		irLock                 = 1;
+		laserLock              = 0;
+		nvLock                 = 0;
+		weaponLockSystem       = "8";
+		missileLockCone        = 60;
+		missileKeepLockedCone  = 80;
+		missileLockMaxDistance = 2500;
+		missileLockMinDistance = 50;
+		missileLockMaxSpeed    = 600;
+		cmImmunity             = 0.25;
+		effectFly              = "3AS_PlasmaBolt_Large_Red_Fly";
+		effectsMissile         = "3AS_PlasmaBolt_Large_Red_Fly";
+		effectsMissileInit     = "PylonBackEffects";
+		craterEffects          = "HeavyBombCrater";
+		explosionEffects       = "HeavyBombExplosion";
+		explosionSoundEffect   = "DefaultExplosion";
+		multiSoundHit[] = { "soundHit1",0.2,"soundHit2",0.2,"soundHit3",0.2,"soundHit4",0.2,"soundHit5",0.2 };
+		soundHit1[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_1",   2.5118899, 1, 2400 };
+		soundHit2[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_2",   2.5118899, 1, 2400 };
+		soundHit3[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_3",   2.5118899, 1, 2400 };
+		soundHit4[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_1", 2.5118899, 1, 2400 };
+		soundHit5[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_2", 2.5118899, 1, 2400 };
+		class CamShakeExplode { power=22; duration=2.2; frequency=20; distance=240; };
+		class CamShakeHit     { power=140; duration=0.8; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_Plasma_Bomb_500  — 500 LB GP. Blue glow via effectFly.
+	// ============================================================
+	class FST_Plasma_Bomb_500: Bo_Mk82
+	{
+		hit              = 2000;
+		indirectHit      = 1000;
+		indirectHitRange = 15;
+		caliber          = 30;
+		cost             = 350;
+		effectFly        = "3AS_PlasmaBolt_Large_Blue_Fly";
+		craterEffects    = "BombCrater";
+		explosionEffects = "BombExplosion";
+		explosionSoundEffect = "DefaultExplosion";
+		multiSoundHit[] = { "soundHit1",0.2,"soundHit2",0.2,"soundHit3",0.2,"soundHit4",0.2,"soundHit5",0.2 };
+		soundHit1[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_1",   2.5118864, 1, 2400 };
+		soundHit2[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_2",   2.5118864, 1, 2400 };
+		soundHit3[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_3",   2.5118864, 1, 2400 };
+		soundHit4[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_1", 2.5118864, 1, 2400 };
+		soundHit5[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_2", 2.5118864, 1, 2400 };
+		class CamShakeExplode { power=12; duration=1.8; frequency=20; distance=150; };
+		class CamShakeHit     { power=80; duration=0.8; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_Plasma_Bomb_500_LG  — 500 LB laser-guided. Blue glow.
+	// ============================================================
+	class FST_Plasma_Bomb_500_LG: Bo_GBU12_LGB
+	{
+		hit              = 2000;
+		indirectHit      = 1000;
+		indirectHitRange = 15;
+		caliber          = 30;
+		cost             = 500;
+		laserLock        = 1;
+		irLock           = 0;
+		airLock          = 0;
+		effectFly        = "3AS_PlasmaBolt_Large_Blue_Fly";
+		craterEffects    = "BombCrater";
+		explosionEffects = "BombExplosion";
+		explosionSoundEffect = "DefaultExplosion";
+		multiSoundHit[] = { "soundHit1",0.2,"soundHit2",0.2,"soundHit3",0.2,"soundHit4",0.2,"soundHit5",0.2 };
+		soundHit1[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_1",   2.5118864, 1, 2400 };
+		soundHit2[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_2",   2.5118864, 1, 2400 };
+		soundHit3[] = { "\A3\Sounds_F\weapons\Explosion\expl_big_3",   2.5118864, 1, 2400 };
+		soundHit4[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_1", 2.5118864, 1, 2400 };
+		soundHit5[] = { "\A3\Sounds_F\weapons\Explosion\expl_shell_2", 2.5118864, 1, 2400 };
+		class CamShakeExplode { power=12; duration=1.8; frequency=20; distance=150; };
+		class CamShakeHit     { power=80; duration=0.8; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_Plasma_Bomb_1000  — 1000 LB GP
+	// ============================================================
+	class FST_Plasma_Bomb_1000: FST_Plasma_Bomb_500
+	{
+		hit=4000; indirectHit=2000; indirectHitRange=22; caliber=50; cost=550;
+		craterEffects="HeavyBombCrater"; explosionEffects="HeavyBombExplosion";
+		class CamShakeExplode { power=18; duration=2.2; frequency=20; distance=250; };
+		class CamShakeHit     { power=120; duration=0.9; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_Plasma_Bomb_1000_LG  — 1000 LB laser-guided
+	// ============================================================
+	class FST_Plasma_Bomb_1000_LG: FST_Plasma_Bomb_500_LG
+	{
+		hit=4000; indirectHit=2000; indirectHitRange=22; caliber=50; cost=700;
+		craterEffects="HeavyBombCrater"; explosionEffects="HeavyBombExplosion";
+		class CamShakeExplode { power=18; duration=2.2; frequency=20; distance=250; };
+		class CamShakeHit     { power=120; duration=0.9; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_Plasma_Bomb_2000  — 2000 LB GP
+	// ============================================================
+	class FST_Plasma_Bomb_2000: FST_Plasma_Bomb_500
+	{
+		hit=7000; indirectHit=3500; indirectHitRange=30; caliber=75; cost=900;
+		craterEffects="HeavyBombCrater"; explosionEffects="HeavyBombExplosion";
+		class CamShakeExplode { power=26; duration=2.8; frequency=20; distance=380; };
+		class CamShakeHit     { power=180; duration=1.0; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_Plasma_Bomb_2000_LG  — 2000 LB laser-guided
+	// ============================================================
+	class FST_Plasma_Bomb_2000_LG: FST_Plasma_Bomb_500_LG
+	{
+		hit=7000; indirectHit=3500; indirectHitRange=30; caliber=75; cost=1100;
+		craterEffects="HeavyBombCrater"; explosionEffects="HeavyBombExplosion";
+		class CamShakeExplode { power=26; duration=2.8; frequency=20; distance=380; };
+		class CamShakeHit     { power=180; duration=1.0; frequency=20; distance=1; };
+	};
+
+	// ============================================================
+	// FST_EMP_Bomb  — EMP placeholder, inherits 3AS
+	// ============================================================
+	class FST_EMP_Bomb: 3AS_ARC_EMP_BOMB_01 {};
+
+	// ============================================================
+	// FST_Mine_Dispenser_Ammo  — GATOR-style AT mine scatter bomb
+	// Airburst at ~50 m, scatters 12 AT mines in a 45-degree cone.
+	// ============================================================
+	class FST_Mine_Dispenser_Ammo: Bo_Mk82
+	{
+		hit=5; indirectHit=1; indirectHitRange=0.5; cost=600;
+		submunitionAmmo="Mo_ATMineRange";
+		submunitionConeType[]={ "randomcenter", 12 };
+		submunitionConeAngle=45;
+		triggerDistance=50;
+		triggerOnImpact=0;
+		deleteParentWhenTriggered=1;
+		craterEffects=""; explosionEffects="";
+		explosionSoundEffect="DefaultExplosion";
+		multiSoundHit[]={ "soundHit1",0.5,"soundHit2",0.5 };
+		soundHit1[]={ "\A3\Sounds_F\weapons\Explosion\expl_shell_1",1.0,1,1000 };
+		soundHit2[]={ "\A3\Sounds_F\weapons\Explosion\expl_shell_2",1.0,1,1000 };
+	};
 };
 class CfgMagazines
 {
@@ -5490,6 +5756,235 @@ class CfgMagazines
 		maxLeadSpeed=1000;
 		ammo="FST_AGM88";
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
+	};
+	// ── STORMFURY pylon variants ───────────────────────────────
+	class FST_PylonMissile_1Rnd_Stormfury: VehicleMagazine
+	{
+		scope=2;
+		displayName="[41st] Stormfury HVAA (Pylon x1)";
+		displayNameShort="HVAA";
+		descriptionShort="AA Missile";
+		ammo="FST_Stormfury_High_Velocity_Missile";
+		count=1;
+		initSpeed=300;
+		maxLeadSpeed=1000;
+		effectsMissile="3AS_PlasmaBolt_Large_Purple_Fly";
+		nameSound="missiles";
+		mass=128;
+		model="\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
+		hardpoints[]={"B_AGM65_RAIL","REP_AAA_RAIL","CIS_AAA_RAIL","IMP_AAA_RAIL","REBEL_AAA_RAIL"};
+		pylonWeapon="FST_Stormfury_Pylon_Weapon";
+	};
+	class FST_PylonMissile_2Rnd_Stormfury: FST_PylonMissile_1Rnd_Stormfury
+	{
+		displayName="[41st] Stormfury HVAA (Pylon x2)";
+		count=2; mass=256;
+	};
+
+	// ── RAPTURE pylon variants ───────────────────────────────────
+	class FST_PylonMissile_1Rnd_Rapture: VehicleMagazine
+	{
+		scope=2;
+		displayName="[41st] Rapture ATGM (Pylon x1)";
+		displayNameShort="ATGM";
+		descriptionShort="Anti-Tank Missile";
+		ammo="FST_Rapture_Anti_Tank_Missile";
+		count=1;
+		initSpeed=200;
+		maxLeadSpeed=650;
+		effectsMissile="3AS_Rocket_effect_Blue_fly";
+		nameSound="missiles";
+		mass=128;
+		model="\A3\Weapons_F_Jets\Ammo\PylonPod_Missile_AGM_01_x1_F.p3d";
+		hardpoints[]={"B_AGM65_RAIL","REP_AGM_RAIL","CIS_AGM_RAIL","IMP_AGM_RAIL","REBEL_AGM_RAIL"};
+		pylonWeapon="FST_Rapture_Pylon_Weapon";
+	};
+	class FST_PylonMissile_4Rnd_Rapture: FST_PylonMissile_1Rnd_Rapture
+	{
+		displayName="[41st] Rapture ATGM (Pylon x4)";
+		count=4; mass=380;
+	};
+
+	// ── CONCUSSION MISSILE ──────────────────────────────────────
+	class FST_1Rnd_Concussion_Missile: VehicleMagazine
+	{
+		scope=2;
+		displayName="[41st] Concussion Missile x1";
+		displayNameShort="CMis";
+		descriptionShort="BVR A2A";
+		ammo="FST_Concussion_Missile";
+		count=1; initSpeed=0; maxLeadSpeed=800;
+		nameSound="missiles";
+		sound[]={ "",1,1 };
+		reloadSound[]={ "",0.00031622799,1 };
+	};
+	class FST_PylonMissile_1Rnd_Concussion_Missile: FST_1Rnd_Concussion_Missile
+	{
+		displayName="[41st] Concussion Missile (Pylon x1)";
+		count=1; mass=128;
+		model="\A3\Weapons_F_Jets\Ammo\PylonPod_Missile_AA_06_x1_F";
+		hardpoints[]={"B_AGM65_RAIL","REP_AAA_RAIL","CIS_AAA_RAIL","IMP_AAA_RAIL","REBEL_AAA_RAIL"};
+		pylonWeapon="FST_Concussion_Missile_Weapon";
+	};
+	class FST_PylonMissile_2Rnd_Concussion_Missile: FST_PylonMissile_1Rnd_Concussion_Missile
+	{
+		displayName="[41st] Concussion Missile (Pylon x2)";
+		count=2; mass=256;
+	};
+
+	// ── PROTON TORPEDO ──────────────────────────────────────────
+	class FST_1Rnd_Proton_Torpedo: VehicleMagazine
+	{
+		scope=2;
+		displayName="[41st] Proton Torpedo x1";
+		displayNameShort="PTorp";
+		descriptionShort="Heavy IR Torpedo";
+		ammo="FST_Proton_Torpedo";
+		count=1; initSpeed=0; maxLeadSpeed=480;
+		nameSound="missiles";
+		sound[]={ "",1,1 };
+		reloadSound[]={ "",0.00031622799,1 };
+	};
+	class FST_PylonMissile_1Rnd_Proton_Torpedo: FST_1Rnd_Proton_Torpedo
+	{
+		displayName="[41st] Proton Torpedo (Pylon x1)";
+		count=1; mass=256;
+		model="\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
+		hardpoints[]={"B_AGM65_RAIL","REP_AGM_RAIL","CIS_AGM_RAIL","IMP_AGM_RAIL","REBEL_AGM_RAIL"};
+		pylonWeapon="FST_Proton_Torpedo_Weapon";
+	};
+	class FST_PylonMissile_2Rnd_Proton_Torpedo: FST_PylonMissile_1Rnd_Proton_Torpedo
+	{
+		displayName="[41st] Proton Torpedo (Pylon x2)";
+		count=2; mass=500;
+	};
+
+	// ── 500 LB PLASMA BOMB (GP) ─────────────────────────────────
+	class FST_1Rnd_Plasma_Bomb_500: VehicleMagazine
+	{
+		scope=2; displayName="[41st] 500 LB Plasma Bomb";
+		displayNameShort="PB500"; descriptionShort="500 LB GP";
+		ammo="FST_Plasma_Bomb_500"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Plasma_Bomb_500: FST_1Rnd_Plasma_Bomb_500
+	{
+		displayName="[41st] 500 LB Plasma Bomb (Pylon)";
+		count=1; mass=230;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Plasma_Bomb_500_Weapon";
+	};
+
+	// ── 500 LB PLASMA BOMB GUIDED ───────────────────────────────
+	class FST_1Rnd_Plasma_Bomb_500_LG: VehicleMagazine
+	{
+		scope=2; displayName="[41st] 500 LB Plasma Bomb LG";
+		displayNameShort="PB500-LG"; descriptionShort="500 LB LGB";
+		ammo="FST_Plasma_Bomb_500_LG"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Plasma_Bomb_500_LG: FST_1Rnd_Plasma_Bomb_500_LG
+	{
+		displayName="[41st] 500 LB Plasma Bomb LG (Pylon)";
+		count=1; mass=240;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Plasma_Bomb_500_LG_Weapon";
+	};
+
+	// ── 1000 LB PLASMA BOMB (GP) ────────────────────────────────
+	class FST_1Rnd_Plasma_Bomb_1000: VehicleMagazine
+	{
+		scope=2; displayName="[41st] 1000 LB Plasma Bomb";
+		displayNameShort="PB1000"; descriptionShort="1000 LB GP";
+		ammo="FST_Plasma_Bomb_1000"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Plasma_Bomb_1000: FST_1Rnd_Plasma_Bomb_1000
+	{
+		displayName="[41st] 1000 LB Plasma Bomb (Pylon)";
+		count=1; mass=460;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Plasma_Bomb_1000_Weapon";
+	};
+
+	// ── 1000 LB PLASMA BOMB GUIDED ──────────────────────────────
+	class FST_1Rnd_Plasma_Bomb_1000_LG: VehicleMagazine
+	{
+		scope=2; displayName="[41st] 1000 LB Plasma Bomb LG";
+		displayNameShort="PB1000-LG"; descriptionShort="1000 LB LGB";
+		ammo="FST_Plasma_Bomb_1000_LG"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Plasma_Bomb_1000_LG: FST_1Rnd_Plasma_Bomb_1000_LG
+	{
+		displayName="[41st] 1000 LB Plasma Bomb LG (Pylon)";
+		count=1; mass=480;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Plasma_Bomb_1000_LG_Weapon";
+	};
+
+	// ── 2000 LB PLASMA BOMB (GP) ────────────────────────────────
+	class FST_1Rnd_Plasma_Bomb_2000: VehicleMagazine
+	{
+		scope=2; displayName="[41st] 2000 LB Plasma Bomb";
+		displayNameShort="PB2000"; descriptionShort="2000 LB GP";
+		ammo="FST_Plasma_Bomb_2000"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Plasma_Bomb_2000: FST_1Rnd_Plasma_Bomb_2000
+	{
+		displayName="[41st] 2000 LB Plasma Bomb (Pylon)";
+		count=1; mass=910;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Plasma_Bomb_2000_Weapon";
+	};
+
+	// ── 2000 LB PLASMA BOMB GUIDED ──────────────────────────────
+	class FST_1Rnd_Plasma_Bomb_2000_LG: VehicleMagazine
+	{
+		scope=2; displayName="[41st] 2000 LB Plasma Bomb LG";
+		displayNameShort="PB2000-LG"; descriptionShort="2000 LB LGB";
+		ammo="FST_Plasma_Bomb_2000_LG"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Plasma_Bomb_2000_LG: FST_1Rnd_Plasma_Bomb_2000_LG
+	{
+		displayName="[41st] 2000 LB Plasma Bomb LG (Pylon)";
+		count=1; mass=930;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Plasma_Bomb_2000_LG_Weapon";
+	};
+
+	// ── EMP BOMB ────────────────────────────────────────────────
+	class FST_1Rnd_EMP_Bomb: VehicleMagazine
+	{
+		scope=2; displayName="[41st] EMP Bomb";
+		displayNameShort="EMP"; descriptionShort="Electromagnetic Pulse";
+		ammo="FST_EMP_Bomb"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_EMP_Bomb: FST_1Rnd_EMP_Bomb
+	{
+		displayName="[41st] EMP Bomb (Pylon)";
+		count=1; mass=350;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_EMP_Bomb_Weapon";
+	};
+
+	// ── MINE DISPENSER ──────────────────────────────────────────
+	class FST_1Rnd_Mine_Dispenser: VehicleMagazine
+	{
+		scope=2; displayName="[41st] Mine Dispenser";
+		displayNameShort="MINES"; descriptionShort="AT Mine Scatter";
+		ammo="FST_Mine_Dispenser_Ammo"; count=1; initSpeed=0; maxLeadSpeed=25; nameSound="missiles";
+	};
+	class FST_PylonMissile_1Rnd_Mine_Dispenser: FST_1Rnd_Mine_Dispenser
+	{
+		displayName="[41st] Mine Dispenser (Pylon)";
+		count=1; mass=280;
+		model="\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_02_F.p3d";
+		hardpoints[]={"B_BOMB_PYLON","REP_BOMB_RAIL","CIS_BOMB_RAIL","IMP_BOMB_RAIL","REBEL_BOMB_RAIL"};
+		pylonWeapon="FST_Mine_Dispenser_Weapon";
 	};
 };
 class Cfgweapons
@@ -5913,4 +6408,115 @@ class Cfgweapons
 		maxLeadSpeed = 2500;
 		magazines[] = { "FST_Harrower_2Rnd_HARM_Missile" };
 	};
-};
+	// ── additional forward declarations ─────────────────────
+	class weapon_AMRAAMLauncher;
+	class weapon_GBU12Launcher;
+	class Mk82BombLauncher;
+	class weapon_AGM_KH25Launcher;
+
+	// ── STORMFURY pylon weapon ───────────────────────────────────
+	class FST_Stormfury_Pylon_Weapon: missiles_ASRAAM
+	{
+		displayName="[41st] Stormfury HVAA (Pylon)";
+		maxRange=6000; canLock=2; airLock=1; weaponLockDelay=2;
+		reloadTime=0.001; magazineReloadTime=1;
+		aiRateOfFire=3; aiRateOfFireDistance=500;
+		magazines[]=
+		{
+			"FST_PylonMissile_1Rnd_Stormfury",
+			"FST_PylonMissile_2Rnd_Stormfury",
+			"FST_Stormfury_4Rnd_AA_Missile"
+		};
+	};
+
+	// ── RAPTURE pylon weapon ─────────────────────────────────────
+	class FST_Rapture_Pylon_Weapon: weapon_AGM_65Launcher
+	{
+		displayName="[41st] Rapture ATGM (Pylon)";
+		maxRange=6000; canLock=2; airLock=1; weaponLockDelay=2;
+		reloadTime=0.001; magazineReloadTime=1;
+		aiRateOfFire=3; aiRateOfFireDistance=500;
+		magazines[]=
+		{
+			"FST_PylonMissile_1Rnd_Rapture",
+			"FST_PylonMissile_4Rnd_Rapture",
+			"FST_Rapture_4Rnd_AGM_Missile"
+		};
+	};
+
+	// ── CONCUSSION MISSILE weapon ────────────────────────────────
+	class FST_Concussion_Missile_Weapon: weapon_AMRAAMLauncher
+	{
+		displayName="[41st] Concussion Missile Launcher";
+		maxRange=9000; canLock=2; airLock=1; weaponLockDelay=2.5;
+		reloadTime=0.1; magazineReloadTime=0.1;
+		aiRateOfFire=5; aiRateOfFireDistance=500;
+		cursor="EmptyCursor"; cursorAim="missile";
+		lockingTargetSound[]={ "\A3\Sounds_F\weapons\Rockets\locked_1",0.56234133,1 };
+		lockedTargetSound[] ={ "\A3\Sounds_F\weapons\Rockets\locked_3",0.56234133,2.5 };
+		magazines[]=
+		{
+			"FST_PylonMissile_1Rnd_Concussion_Missile",
+			"FST_PylonMissile_2Rnd_Concussion_Missile",
+			"FST_1Rnd_Concussion_Missile"
+		};
+	};
+
+	// ── PROTON TORPEDO weapon ────────────────────────────────────
+	class FST_Proton_Torpedo_Weapon: weapon_GBU12Launcher
+	{
+		displayName="[41st] Proton Torpedo Launcher";
+		maxRange=2500; canLock=2; airLock=1; weaponLockDelay=1.5;
+		reloadTime=0.1; magazineReloadTime=0.1;
+		aiRateOfFire=5; aiRateOfFireDistance=300;
+		cursor="EmptyCursor"; cursorAim="missile";
+		magazines[]=
+		{
+			"FST_PylonMissile_1Rnd_Proton_Torpedo",
+			"FST_PylonMissile_2Rnd_Proton_Torpedo",
+			"FST_1Rnd_Proton_Torpedo"
+		};
+	};
+
+	// ── BOMB weapons ─────────────────────────────────────────────
+	class FST_Plasma_Bomb_500_Weapon: Mk82BombLauncher
+	{
+		displayName="[41st] 500 LB Plasma Bomb"; reloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Plasma_Bomb_500","FST_1Rnd_Plasma_Bomb_500" };
+	};
+	class FST_Plasma_Bomb_500_LG_Weapon: weapon_GBU12Launcher
+	{
+		displayName="[41st] 500 LB Plasma Bomb LG"; reloadTime=0.1; magazineReloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Plasma_Bomb_500_LG","FST_1Rnd_Plasma_Bomb_500_LG" };
+	};
+	class FST_Plasma_Bomb_1000_Weapon: Mk82BombLauncher
+	{
+		displayName="[41st] 1000 LB Plasma Bomb"; reloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Plasma_Bomb_1000","FST_1Rnd_Plasma_Bomb_1000" };
+	};
+	class FST_Plasma_Bomb_1000_LG_Weapon: weapon_GBU12Launcher
+	{
+		displayName="[41st] 1000 LB Plasma Bomb LG"; reloadTime=0.1; magazineReloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Plasma_Bomb_1000_LG","FST_1Rnd_Plasma_Bomb_1000_LG" };
+	};
+	class FST_Plasma_Bomb_2000_Weapon: Mk82BombLauncher
+	{
+		displayName="[41st] 2000 LB Plasma Bomb"; reloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Plasma_Bomb_2000","FST_1Rnd_Plasma_Bomb_2000" };
+	};
+	class FST_Plasma_Bomb_2000_LG_Weapon: weapon_GBU12Launcher
+	{
+		displayName="[41st] 2000 LB Plasma Bomb LG"; reloadTime=0.1; magazineReloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Plasma_Bomb_2000_LG","FST_1Rnd_Plasma_Bomb_2000_LG" };
+	};
+	class FST_EMP_Bomb_Weapon: Mk82BombLauncher
+	{
+		displayName="[41st] EMP Bomb Launcher"; reloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_EMP_Bomb","FST_1Rnd_EMP_Bomb" };
+	};
+	class FST_Mine_Dispenser_Weapon: Mk82BombLauncher
+	{
+		displayName="[41st] Mine Dispenser"; reloadTime=0.1; aiRateOfFire=5;
+		magazines[]={ "FST_PylonMissile_1Rnd_Mine_Dispenser","FST_1Rnd_Mine_Dispenser" };
+	};
+};
