@@ -1,0 +1,2 @@
+hint str time;
+time
