@@ -15754,6 +15754,20 @@ class CfgWeapons
 			containerClass="Supply180";
 			mass=15;
 		};
+	};
+	class FST_Uniform_Sin: JLTS_CloneArmor
+	{
+		author="Laer";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Sin]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Sin";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
 	}; 
 	class FST_Uniform_Riley: JLTS_CloneArmor
 	{
