@@ -1703,4 +1703,32 @@ class CfgVehicles
 			"41st_Vehicles\TukataITT\Data\PDF_back_co"
 		};
 	};
+	class FST_ITT_New: FST_JMSLLTE_veh_ITT_base
+	{
+		author="Daara";
+		scope=2;
+		scopeCurator=2;
+		side=1;
+		displayName="K79-S80 'ITT' Troop Transport";
+		faction="FST_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_Trooper_P2_DC15S";
+		armor=500; //250
+		typicalCargo[]=
+		{
+			"FST_Trooper_P2_DC15S"
+		};
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\TukataITT\Data\FST_41st_K79_front_co",
+			"41st_Vehicles\TukataITT\Data\FST_41st_K79_mid_co",
+			"41st_Vehicles\TukataITT\Data\FST_41st_K79_back_co"
+		};
+	};
 };
