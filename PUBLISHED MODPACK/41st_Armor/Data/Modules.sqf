@@ -173,20 +173,106 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         // If we want an armed Munificent, configure its turrets, HP, and death behavior.
         // Done here (in scheduled env) so the ship has fully initialized first.
         if (_ArmedShip) then {
-            // deathCondition 0 = CrashShip_Scripted on kill (graceful fall).
-            // deathCondition 1 = JumpOut on kill (retreat).
-            // Confirmed from FTL_SupportShip source (FTL_Framework line ~5384).
-            // _UseCustomTurret pulls classnames from CBA addon settings when true.
+            // Pass AddTurret=false so FTL_SupportShip only sets up HP, death condition,
+            // and the missile targeting system -- we spawn turrets ourselves below so we
+            // can place them at explicit world positions outside the CoreOBJ hitbox.
+            // (FTL_SupportShip places all turrets at CoreOBJ origin [0,0,0] for count>1,
+            // inside the hull where they have no line of sight.)
             [
                 _ReturnShip,
                 false,               // targetInfantry
                 true,                // targetVehicle
-                true,                // AddTurret
-                _NumberOfTurrets,    // Extra turret count
-                _UseCustomTurret,    // Use CBA custom turret classnames?
+                false,               // AddTurret: we handle this ourselves
+                _NumberOfTurrets,    // param still needed for FTL_SupportShip internals
+                false,               // AddTurret_UseCustom
                 _ShipHealthMult,     // Custom HP pool (stored x100 internally)
                 _DeathCondition      // 0 = crash gracefully, 1 = retreat (jump out)
             ] call ScifiSupportPLUS_FTL_SupportShip;
+
+            // Spawn our own turrets at explicit world positions so they are:
+            // - Outside the CoreOBJ hitbox (which blocks line of sight when at [0,0,0])
+            // - Still inside the visual Munificent hull
+            // We create each turret at a world position offset from the CoreOBJ,
+            // then use BIS_fnc_attachToRelative with keepWorldPos=true so the
+            // attachment offset is calculated correctly from that spawn position.
+            // ls_munificent dirOffset=270: visual length runs along CoreOBJ X axis.
+            [_ReturnShip, _NumberOfTurrets, _UseCustomTurret, _dropside] spawn {
+                params ["_ship", "_count", "_useCustom", "_dropside"];
+                if (_count < 1) exitWith {};
+
+                // Prepare turret class list for per-turret selection
+                private _turretClassList = [];
+                if (_useCustom && (count ScifiSupportPlus_SupportShip_CustomTurretArray > 0)) then {
+                    _turretClassList = ScifiSupportPlus_SupportShip_CustomTurretArray;
+                } else {
+                    _turretClassList = ["3AS_CIS_Naval_Gun_180"];
+                };
+
+                private _turrets = [];
+                for "_i" from 0 to (_count - 1) do {
+                    // Pick class per-turret so mixed arrays get variety
+                    private _turretClass = selectRandom _turretClassList;
+
+                    // Space turrets 80m apart along Y (ship length), centred on origin.
+                    // X alternates +/-25m for port/starboard stagger.
+                    // These offsets are in CoreOBJ model space; 25m+ clears the CoreOBJ hitbox.
+                    private _offsetY = (_i - (_count - 1) / 2) * 80;
+                    private _offsetX = [25, -25] select ((_i mod 2) != 0);
+                    private _spawnPos = _ship modelToWorld [_offsetX, _offsetY, 0];
+
+                    private _turret = createVehicle [_turretClass, _spawnPos, [], 0, "NONE"];
+                    _turret setVectorUp [0, 0, 1];
+
+                    // Attach keeping world position -- offset is auto-calculated from
+                    // the spawn position we chose, so it lands where we want it.
+                    [_turret, _ship, true] call BIS_fnc_attachToRelative;
+                    [_turret, _ship] remoteExecCall ["disableCollisionWith", 0];
+
+                    createVehicleCrew _turret;
+                    [_turret] joinSilent (group _ship);
+                    _turret allowCrewInImmobile [true, true];
+
+                    // Full radar so turrets detect air targets
+                    _turret setVehicleRadar 15;
+                    vehicle _turret setVehicleReportRemoteTargets true;
+                    vehicle _turret setVehicleReceiveRemoteTargets true;
+                    vehicle _turret setVehicleReportOwnPosition true;
+                    { vehicle _turret enableVehicleSensor [(_x select 0), true]; } forEach (listVehicleSensors _turret);
+
+                    // Skills
+                    _turret setSkill ["courage", 1];
+                    _turret setSkill ["aimingAccuracy", 0];
+                    _turret setSkill ["aimingSpeed", 1];
+                    _turret setSkill ["spotDistance", 1];
+                    _turret setSkill ["spotTime", 1];
+
+                    // DS and AI -- JumpShipIn disables DS on the ship group globally.
+                    // Since we run server-side we must re-enable it explicitly.
+                    [_turret, true] remoteExec ["enableDynamicSimulation", 0];
+                    { [_x, true] remoteExec ["enableDynamicSimulation", 0]; } forEach crew _turret;
+
+                    // Turret AI firing loop (mirrors FTL_SupportShip behaviour)
+                    [_turret, _ship] spawn {
+                        params ["_turret", "_ship"];
+                        while {alive _turret} do {
+                            if (isNil {_ship getVariable "FTL_stopFiring"}) then {
+                                if (combatMode (group _turret) != "RED") then {
+                                    (group _turret) setCombatMode "RED";
+                                    (group _turret) setBehaviour "AWARE";
+                                    { [_x, "AUTOCOMBAT"] remoteExecCall ["enableAI", 0]; [_x, "AUTOTARGET"] remoteExecCall ["enableAI", 0]; [_x, "TARGET"] remoteExecCall ["enableAI", 0]; [_x, "FIREWEAPON"] remoteExecCall ["enableAI", 0]; } forEach crew _turret;
+                                };
+                            };
+                            sleep 1;
+                        };
+                    };
+
+                    _turrets pushBack _turret;
+                    sleep 0.1;
+                };
+
+                // Store on ship for Killed/Deleted EH cleanup
+                _ship setVariable ["FTL_ExtraTurretOBJ", _turrets, true];
+            };
         };
 
         // ---- Now we can safely sleep: ----
@@ -303,12 +389,21 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
                     _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
                     (_dropside select 0) createVehicleCrew _Banshee;
 
+                    // sleep 3: the DS fix fires ~15 remoteExec calls per turret all at once
+                    // once FTL_ExtraTurretOBJ is populated. With 10 turrets that is ~150
+                    // operations in a burst. Even though engineOn is local, the scheduler
+                    // needs enough breathing room to process it cleanly. 3 seconds is
+                    // safe -- the outer loop has sleep 5 between each vulture anyway.
+                    sleep 3;
+
                     if (_VultureSkill == 1) then {
-                        // “Maximum skill”
+                        // "Maximum skill"
                         {
                             _x setSkill 1.0;
                         } forEach crew _Banshee;
                     };
+                    (group _Banshee) setCombatMode "RED";
+                    (group _Banshee) setBehaviour "AWARE";
                     _Banshee engineOn true;
                 };
                 sleep 5;
@@ -323,6 +418,21 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
 
         if (_EndWithJumpOut) then {
             [objNull, "Serenity Actual: Munificent overhead, they've dropped droids and are retreating!"] call BIS_fnc_showCuratorFeedbackMessage;
+
+            // FIX: turrets end up at map edge when jumping out.
+            // JumpOut calls deleteVehicle on the CoreOBJ. Arma detaches all attached
+            // children before firing the Deleted EH. The EH's cleanup block is async
+            // (spawned), so by the time it runs the entity is fully deleted and
+            // getVariable returns nothing -- turrets are never cleaned up.
+            // We capture the turret array NOW while the ship is still alive, then
+            // watch for the ship to be deleted and clean up ourselves.
+            private _turretArrayForCleanup = _ReturnShip getVariable ["FTL_ExtraTurretOBJ", []];
+            [_ReturnShip, _turretArrayForCleanup] spawn {
+                params ["_ship", "_turrets"];
+                waitUntil { sleep 1; isNull _ship };
+                { deleteVehicleCrew _x; deleteVehicle _x; } forEach _turrets;
+            };
+
             [_ReturnShip] call SciFiSupportPLUS_fnc_JumpOut;
         } else {
             [objNull, "Serenity Actual: Munificent overhead, they've dropped droid pods!"] call BIS_fnc_showCuratorFeedbackMessage;
@@ -465,23 +575,31 @@ FST_Droid_Dispenser =  {
         };
                     
         if (_linger) then {
-            sleep 1;
-            _projectile allowDamage true;
-            while {alive _projectile} do {
-                _time = time;
-                waitUntil {
-                    (time - _time) > 20 or !(alive _projectile)
-                };
-                if (alive _projectile) then {
-                    _DroidgroupLinger = [_spawn, _side, [selectRandom _listout]] call BIS_fnc_spawnGroup;
-                } else {
-                    sleep 1;
-                    _munition = createVehicle ["M_Mo_82mm_AT_LG", _craterpos, [], 0, "CAN_COLLIDE"];
-                    _munition setShotParents [player, player];
-                    _munition setVectorDirAndUp ([[vectorDir _munition, vectorUp _munition], 0, -90, 0] call BIS_fnc_transformVectorDirAndUp);   
-                    _munition setVelocity [0, 0, -10];
-                    sleep 1;
-                    deleteVehicle _projectile;
+            // Linger logic runs in its own spawn with all variables passed explicitly
+            // via params. The outer spawn's non-private variables (_craterpos, _spawn,
+            // _positionATL, etc.) can go stale inside deeply nested while/waitUntil
+            // blocks after prolonged execution -- passing them through params ensures
+            // they are properly scoped for the lifetime of this spawn.
+            [_craterpos, _spawn, _side, _projectile, _listout] spawn {
+                params ["_craterpos", "_spawn", "_side", "_projectile", "_listout"];
+                sleep 1;
+                _projectile allowDamage true;
+                while {alive _projectile} do {
+                    _time = time;
+                    waitUntil {
+                        (time - _time) > 20 or !(alive _projectile)
+                    };
+                    if (alive _projectile) then {
+                        [_spawn, _side, [selectRandom _listout]] call BIS_fnc_spawnGroup;
+                    } else {
+                        sleep 1;
+                        _munition = createVehicle ["M_Mo_82mm_AT_LG", _craterpos, [], 0, "CAN_COLLIDE"];
+                        _munition setShotParents [player, player];
+                        _munition setVectorDirAndUp ([[vectorDir _munition, vectorUp _munition], 0, -90, 0] call BIS_fnc_transformVectorDirAndUp);
+                        _munition setVelocity [0, 0, -10];
+                        sleep 1;
+                        deleteVehicle _projectile;
+                    };
                 };
             };
         };
