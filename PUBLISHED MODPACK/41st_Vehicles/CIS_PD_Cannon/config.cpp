@@ -338,6 +338,109 @@ class CfgVehicles
 				};
 			};
 		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=0;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						typeRecognitionDistance=4000;
+						maxTrackableSpeed=1000;
+						angleRangeHorizontal=90;
+						angleRangeVertical=60;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=0;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=7000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=100;
+						aimDown=-45;
+						maxTrackableSpeed=1388.89;
+					};
+					class DataLinkSensorComponent: SensorTemplateDataLink
+					{
+						class AirTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=0;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft
+			{
+				class Components
+				{
+					class UAVDisplay
+					{
+						componentType = "UAVFeedDisplayComponent";
+						range[] = {4000, 10000};
+					};
+					class SensorDisplay
+					{
+						componentType = "SensorsDisplayComponent";
+						range[] = {4000, 10000};
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight
+			{
+				class Components
+				{
+					class UAVDisplay
+					{
+						componentType = "UAVFeedDisplayComponent";
+						range[] = {4000, 10000};
+					};
+					class SensorDisplay
+					{
+						componentType = "SensorsDisplayComponent";
+						range[] = {4000, 10000};
+					};
+				};
+			};
+		};
 		class SimpleObject
 		{
 			eden=1;
