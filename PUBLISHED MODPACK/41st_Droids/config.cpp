@@ -877,6 +877,8 @@ class CfgVehicles
 				radius=0.08;
 				explosionShielding=0.5;
 				minimalHit=0.01;
+				visual="injury_head";
+    			depends="";
 			};
 			class HitNeck: HitFace
 			{
@@ -887,6 +889,8 @@ class CfgVehicles
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.01;
+				visual="injury_head";
+    			depends="";
 			};
 			class HitHead: HitNeck
 			{
@@ -897,7 +901,8 @@ class CfgVehicles
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.01;
-				depends="HitFace max HitNeck";
+    			visual="injury_head";
+  				depends="HitFace max HitNeck";
 			};
 			class HitPelvis
 			{
