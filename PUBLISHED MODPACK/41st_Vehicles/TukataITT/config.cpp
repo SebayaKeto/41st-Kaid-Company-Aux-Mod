@@ -7,7 +7,8 @@ class CfgPatches
 		{
 			"FST_JMSLLTE_I_veh_ITT_jinata_F",
 			"FST_ITT_Gray",
-			"FST_ITT_PDF"
+			"FST_ITT_PDF",
+			"FST_ITT_New"
 		};
 		weapons[]={};
 		requiredVersion=0.1;
