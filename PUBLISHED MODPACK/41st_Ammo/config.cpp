@@ -56,6 +56,8 @@ class CfgSoundSets
 class CfgAmmo
 {
 	class BulletBase;
+	class 101st_PlasmaBase_Turret: BulletBase {};
+	class 101st_Sniper_Ammo_Red: BulletBase {};
 	class IDA_blasterbolt;
 	class FST_blasterbolt: IDA_Blasterbolt
 	{
