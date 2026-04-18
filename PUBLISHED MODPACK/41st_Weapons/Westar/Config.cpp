@@ -115,6 +115,10 @@ class CfgWeapons
 					memoryPointCamera="eye";
 					visionMode[]={"Normal"};
 					discretefov[]={};
+					distanceZoomMin = 100;
+					distanceZoomMax = 100;
+					discreteInitIndex = 0;
+					opticsPPEffects[] = {};
 				};
 			};
 		};
