@@ -181,6 +181,7 @@ class CfgVehicles
 		{
 			"FST_40mw_HH9P_AC",
 			"FST_Rapture_AGM_Missile_AI",
+			"FST_Stormfury_AA_Missile_AI",
 			"FST_BTX42",
 			"CMFlareLauncher"
 		};
@@ -198,6 +199,10 @@ class CfgVehicles
 			"FST_40mm_UB9HV_HEI_x140_mag",
 			"FST_40mm_UB9HV_HEI_x140_mag",
 			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Stormfury_12Rnd_AA_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
+			"FST_Rapture_12Rnd_AGM_Missile",
 			"240Rnd_CMFlare_Chaff_Magazine"
 		};
 		displayName="[41st] Vulture Droid (Evil)";
