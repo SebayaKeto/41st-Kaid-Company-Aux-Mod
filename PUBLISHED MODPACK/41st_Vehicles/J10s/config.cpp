@@ -561,20 +561,43 @@ class CfgAmmo
 		tracerScale=1.895;
 		airFriction=-0.00012;
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
-		
-		class CamShakeExplode
-		{
-			power=3.6055501;
-			duration=0.80000001;
-			frequency=20;
-			distance=10.8167;
-		};
-		class CamShakeHit
-		{
-			power=13;
-			duration=0.40000001;
-			frequency=20;
-			distance=1;
-		};
 	};
+		
+   class CamShakeExplode
+    {
+        power=3.6055501;
+        duration=0.80000001;
+        frequency=20;
+        distance=10.8167;
+    };
+    class CamShakeHit
+    {
+        power=13;
+        duration=0.40000001;
+        frequency=20;
+        distance=1;
+        Hit_Foliage_Green="IDA_ImpactEffect";
+        Hit_Foliage_Dead="IDA_ImpactEffect";
+        Hit_Foliage_Green_big="IDA_ImpactEffect";
+        Hit_Foliage_Palm="IDA_ImpactEffect";
+        Hit_Foliage_Pine="IDA_ImpactEffect";
+        hitFoliage="IDA_ImpactEffect";
+        hitGlass="IDA_ImpactEffect";
+        hitGlassArmoRed="IDA_ImpactEffect";
+        hitWood="IDA_ImpactEffect";
+        hitMetal="IDA_ImpactEffect";
+        hitMetalPlate="IDA_ImpactEffect";
+        hitBuilding="IDA_ImpactEffect";
+        hitPlastic="IDA_ImpactEffect";
+        hitRubber="IDA_ImpactEffect";
+        hitTyre="IDA_ImpactEffect";
+        hitConcrete="IDA_ImpactEffect";
+        hitMan="IDA_ImpactEffect";
+        hitGroundSoft="IDA_ImpactEffect";
+        hitGroundRed="IDA_ImpactEffect";
+        hitGroundHard="IDA_ImpactEffect";
+        hitWater="IDA_ImpactEffect";
+        hitVirtual="IDA_ImpactEffect";
+        default_mat="IDA_ImpactEffect";
+    };
 };
