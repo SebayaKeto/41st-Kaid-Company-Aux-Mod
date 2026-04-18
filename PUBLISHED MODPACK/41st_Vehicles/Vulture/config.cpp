@@ -179,18 +179,28 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"3AS_Vulture_Cannon",
+			"FST_40mw_HH9P_AC",
 			"FST_Rapture_AGM_Missile_AI",
 			"FST_BTX42",
 			"CMFlareLauncher"
 		};
 		magazines[]=
 		{
-			"3AS_300Rnd_Vulture_Shells",
-			"3AS_300Rnd_Vulture_Shells",
-			"3AS_300Rnd_Vulture_Shells",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
+			"FST_40mm_UB9HV_HEI_x140_mag",
 			"240Rnd_CMFlare_Chaff_Magazine"
 		};
+		displayName="[41st] Vulture Droid (Evil)";
 		author="Daara";
 		// armor=100;
 		// armorStructural=5;
