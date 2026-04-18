@@ -8242,6 +8242,30 @@ class CfgWeapons
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Ouranos: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Ouranos]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ouranos.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Ouranos.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Souls: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Souls]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Souls.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Souls.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_Pilot_P1_Helmet_House: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
@@ -9342,6 +9366,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Assassin.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Cait: FST_Airborne_Helmet
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Cait)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Cait.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Puma: FST_Airborne_Helmet
 	{
 		author="Gold";
@@ -9500,6 +9534,26 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Deso.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Ordo: FST_Airborne_Helmet
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Ordo)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Ordo.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Kodiak: FST_Airborne_Helmet
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Kodiak)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Kodiak.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Helix: FST_Airborne_Helmet
@@ -10130,6 +10184,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz.paa",
+		};
+	};
+	class FST_P2_Helmet_Fizz_Dirty: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Fizz]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Fizz_Dirty.paa",
 		};
 	};
 	class FST_P2_Helmet_Eagle: FST_P2_Helmet_Base
@@ -11047,6 +11111,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
 		};
 	};	
+	class FST_P2_Helmet_Murk: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Murk]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Murk.paa",
+		};
+	};	
 	class FST_P2_Helmet_Jan: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -11347,6 +11421,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Samurai_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Gleb: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Gleb]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Gleb.paa",
+		};
+	};	
 	class FST_P2_Helmet_Evox: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -18348,6 +18432,20 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Fizz_Dirty: JLTS_CloneArmor
+    {
+        author="Daara";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Fizz/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Fizz_Dirty";
+            uniformType="Neopren";
+            containerClass="Supply180";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Jericho: JLTS_CloneArmor
     {
         author="Steel";
@@ -18932,6 +19030,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Zephyr.paa",
+		};
+	};
+	class FST_NVG_Zephyr_Dirty: FST_NVG
+	{
+		author="Daara";
+		displayName="[41st] NCO Macrobinoculars (Zephyr/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Zephyr_Dirty.paa",
 		};
 	};
 	class FST_NVG_Sledge_Dirty: FST_NVG
@@ -47969,6 +48076,59 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+  	class FST_P2_Fizz_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1592 'Fizz' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Fizz_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Fizz_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Fizz_Dirty.Paa"
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Fizz",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Fizz",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Jericho: FST_Trooper_P2_DC15S
 	{
 		author="Steel";
@@ -50581,6 +50741,30 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Sly";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Sly.paa";
+		};
+		class FST_Clone_Head_Evox: FST_clone_Default_head
+		{
+			author="Daara";
+			name="Clone Trooper Evox";
+			displayName="[41st] Clone Trooper - Evox";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Evox.paa";
+		};
+		class FST_Clone_Head_Cosmic: FST_clone_Default_head
+		{
+			author="Daara";
+			name="Clone Trooper Cosmic";
+			displayName="[41st] Clone Trooper - Cosmic";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Cosmic.paa";
+		};
+		class FST_Clone_Head_House: FST_clone_Default_head
+		{
+			author="Daara";
+			name="Clone Trooper House";
+			displayName="[41st] Clone Trooper - House";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_House.paa";
 		};
 		class FST_Clone_Head_ampersand: FST_clone_Default_head
 		{
