@@ -182,7 +182,6 @@ class CfgVehicles
 			"FST_40mw_HH9P_AC",
 			"FST_Rapture_AGM_Missile_AI",
 			"FST_Stormfury_AA_Missile_AI",
-			"FST_BTX42",
 			"CMFlareLauncher"
 		};
 		magazines[]=
