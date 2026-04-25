@@ -29,29 +29,31 @@ if (count _vehData > 0) then {
     switch (_behavior) do {
         case "garrison": {
             private _buildings = nearestObjects [_pos, ["House", "Building"], _radius];
-            private _bldgPositions = [];
+            private _priorityPositions = [];
+            private _buildingPositions = [];
 
-            // Standard buildingPos
+            // 3AS garrison points (hand-placed — highest priority)
+            private _3asPoints = _pos nearObjects ["3as_GarrisonPoint", _radius];
+            { _priorityPositions pushBack (getPosATL _x); } forEach _3asPoints;
+
+            // CBA building positions (hand-placed — high priority)
+            private _cbaPoints = _pos nearObjects ["CBA_BuildingPos", _radius];
+            { _priorityPositions pushBack (getPosATL _x); } forEach _cbaPoints;
+
+            // Standard buildingPos (fill remainder)
             {
                 private _bldg = _x;
                 private _i = 0;
                 private _bp = _bldg buildingPos _i;
                 while { !(_bp isEqualTo [0,0,0]) } do {
-                    _bldgPositions pushBack _bp;
+                    _buildingPositions pushBack _bp;
                     _i = _i + 1;
                     _bp = _bldg buildingPos _i;
                 };
             } forEach _buildings;
 
-            // 3AS garrison points
-            private _3asPoints = nearestObjects [_pos, ["3as_GarrisonPoint"], _radius];
-            { _bldgPositions pushBack (getPosATL _x); } forEach _3asPoints;
-
-            // CBA building positions
-            private _cbaPoints = nearestObjects [_pos, ["CBA_BuildingPos"], _radius];
-            { _bldgPositions pushBack (getPosATL _x); } forEach _cbaPoints;
-
-            _bldgPositions = _bldgPositions call BIS_fnc_arrayShuffle;
+            _buildingPositions = _buildingPositions call BIS_fnc_arrayShuffle;
+            private _bldgPositions = _priorityPositions + _buildingPositions;
             private _units = units _group;
             {
                 if (_forEachIndex < count _bldgPositions) then {

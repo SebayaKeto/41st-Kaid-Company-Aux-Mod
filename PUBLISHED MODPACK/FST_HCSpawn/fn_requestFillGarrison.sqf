@@ -13,36 +13,42 @@ if (!isServer) exitWith {};
 
 params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2]];
 
-// --- Scan all garrison positions ---
+// --- Scan all garrison positions (hand-placed first, then buildingPos) ---
 private _buildings = nearestObjects [_center, ["House", "Building"], _radius];
-private _allPositions = [];
+private _priorityPositions = [];
+private _buildingPositions = [];
 
-// Standard buildingPos
+// 3AS garrison points (hand-placed — highest priority)
+private _3asPoints = _center nearObjects ["3as_GarrisonPoint", _radius];
+{ _priorityPositions pushBack (getPosATL _x); } forEach _3asPoints;
+
+// CBA building positions (hand-placed — high priority)
+private _cbaPoints = _center nearObjects ["CBA_BuildingPos", _radius];
+{ _priorityPositions pushBack (getPosATL _x); } forEach _cbaPoints;
+
+// Standard buildingPos (auto-generated — fill remainder)
 {
     private _building = _x;
     private _i = 0;
     private _pos = _building buildingPos _i;
     while { !(_pos isEqualTo [0,0,0]) } do {
-        _allPositions pushBack _pos;
+        _buildingPositions pushBack _pos;
         _i = _i + 1;
         _pos = _building buildingPos _i;
     };
 } forEach _buildings;
 
-// 3AS garrison points
-private _3asPoints = nearestObjects [_center, ["3as_GarrisonPoint"], _radius];
-{ _allPositions pushBack (getPosATL _x); } forEach _3asPoints;
+// Shuffle only buildingPos — hand-placed points keep their order
+_buildingPositions = _buildingPositions call BIS_fnc_arrayShuffle;
 
-// CBA building positions
-private _cbaPoints = nearestObjects [_center, ["CBA_BuildingPos"], _radius];
-{ _allPositions pushBack (getPosATL _x); } forEach _cbaPoints;
+// Combine: priority first, then shuffled buildingPos
+private _allPositions = _priorityPositions + _buildingPositions;
 
 if (count _allPositions == 0) exitWith {
     "[FST] No garrison positions found." remoteExec ["systemChat", _callerID];
 };
 
-// --- Density filter ---
-_allPositions = _allPositions call BIS_fnc_arrayShuffle;
+// --- Density filter (cuts from the end — buildingPos trimmed first) ---
 private _fillCount = ceil (count _allPositions * _density) max 1;
 
 // AI cap check
