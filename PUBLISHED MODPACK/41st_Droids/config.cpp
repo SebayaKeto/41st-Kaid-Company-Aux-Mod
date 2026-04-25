@@ -866,7 +866,7 @@ class CfgVehicles
 		};
 		Items[]={};
 		respawnItems[]={};
-		class HitPoints: O_Soldier_F
+		class HitPoints
 		{
 			class HitFace
 			{
