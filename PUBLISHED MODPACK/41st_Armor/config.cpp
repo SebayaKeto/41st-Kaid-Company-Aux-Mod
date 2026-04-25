@@ -370,6 +370,11 @@ class CfgPatches
 			"FST_P2_Bees",
 			"FST_P2_Dilham",
 			"FST_P2_Dilham_Dirty",
+			"FST_P2_Rick",
+			"FST_P2_Rick_Dirty",
+			"FST_P2_Kirby",
+			"FST_P2_Kirby_Dirty",
+			"FST_P2_Oak",
 			"FST_P2_Dragon",
 			"FST_P2_Gold_Dirty",
 			"FST_P2_Bright",
@@ -10386,6 +10391,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rick.paa",
 		};
 	};
+	class FST_P2_Helmet_Rick_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Rick/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Rick_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Dagger: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -10889,6 +10904,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Kirby.paa",
+		};
+	};
+	class FST_P2_Helmet_Kirby_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Kirby/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Kirby_Dirty.paa",
 		};
 	};
 	class FST_P2_Helmet_Vix: FST_P2_Helmet_Base
@@ -14436,6 +14461,20 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Rick_Dirty: JLTS_CloneArmor
+    {
+        author="Steel";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Rick/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Rick_Dirty";
+            uniformType="Neopren";
+            containerClass="Supply180";
+            mass=15;
+        };
+    };
 	 class FST_Uniform_Appa_Dirty: JLTS_CloneArmor
     {
         author="Steel";
@@ -15587,6 +15626,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Oak: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Oak]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Oak";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Adler: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -15820,6 +15873,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Kirby";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Kirby_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Kirby/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Kirby_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -19534,6 +19601,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Rick.paa",
+		};
+	};
+	class FST_NVG_Rick_Dirty: FST_NVG
+	{
+		author="Steel";
+		displayName="[41st] NCO Macrobinoculars (Rick/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Rick_Dirty.paa",
 		};
 	};
 	class FST_NVG_Desert: FST_NVG_Woodland
@@ -37418,6 +37494,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Oak: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-4487 'Oak'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Oak";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Oak.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Oak.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Oak",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Oak",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Adler: FST_Trooper_P2_DC15S
 	{
 		author="Steel";
@@ -37850,6 +37981,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Kirby",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Kirby_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-2000 'Kirby/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Kirby_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Kirby_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Kirby_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Kirby_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Kirby_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -47365,6 +47551,61 @@ class CfgVehicles
         respawnLinkedItems[]=
         {
             "FST_P2_Helmet_Rick",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+    };
+	class FST_P2_Rick_Dirty: FST_Trooper_P2_DC15S
+    {
+        author="Steel";
+        displayName="[41st] CT-1210 'Rick/Dirty'";
+        scope=2;
+        Backpack="";
+        side=1;
+        role="Rifleman";
+        faction="FST_Faction";
+        editorSubcategory="FST_Customs_Subfaction";
+        uniformclass="FST_Uniform_Rick_Dirty";
+        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        hiddenSelections[]=
+        {
+            "camo1",
+            "camo2"
+        };
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rick_Dirty.paa",
+            "41st_Armor\Data\Uniforms\FST_P2_BodyLower_Rick_Dirty.paa"
+        };
+        weapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        respawnWeapons[]=
+        {
+            "JLTS_CloneBinocular",
+            "Throw",
+            "Put"
+        };
+        linkedItems[]=
+        {
+            "FST_P2_Helmet_Rick_Dirty",
+            "FST_base_Vest",
+            "ItemMap",
+            "ItemGPS",
+            "ItemCompass",
+            "ItemWatch",
+            "JLTS_clone_comlink"
+        };
+        respawnLinkedItems[]=
+        {
+            "FST_P2_Helmet_Rick_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
