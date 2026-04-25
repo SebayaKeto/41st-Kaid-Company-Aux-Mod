@@ -44,6 +44,11 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_frontlineSpawn;
     }] call CBA_fnc_addEventHandler;
 
+    // QRF (from Zeus client)
+    ["FST_HC_evt_qrf", {
+        _this call FST_HCSpawn_fnc_qrfSpawn;
+    }] call CBA_fnc_addEventHandler;
+
     // Zeus hold/release (from Zeus client)
     ["FST_HC_evt_zeusHold", {
         _this call FST_HCSpawn_fnc_zeusHold;

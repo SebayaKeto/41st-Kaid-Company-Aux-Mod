@@ -16,7 +16,7 @@ FST_HC_UnitCounts = [];     // [count1, count2, ...] — bookkeeping
 // Group tracking — via setVariable on each group
 // "FST_HC_tracked" = [hcIndex, unitCount] on tracked groups
 // "FST_HC_heldBy" = zeusClientOwner on held groups
-// "FST_HC_onHC" = hcIndex (global broadcast for debug draw)
+// "FST_HC_onHC" = hcIndex (server-local, debug draw uses owner command)
 FST_HC_TrackedCount = 0;
 
 // Transfer queue

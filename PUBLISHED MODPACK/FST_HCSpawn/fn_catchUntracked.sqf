@@ -1,7 +1,6 @@
 // FST_HCSpawn_fnc_catchUntracked
-// Server-side. Scans allGroups for AI groups not in our hashmap.
+// Server-side. Scans allGroups for AI groups not tracked on an HC.
 // Queues them for HC transfer. Runs periodically via PFH.
-// Cost: O(allGroups) with O(1) hashmap lookups — fast even at scale.
 
 if (!isServer) exitWith {};
 if (count FST_HC_Array == 0) exitWith {}; // no HCs, nothing to offload
@@ -11,10 +10,10 @@ private _queued = 0;
 {
     private _grp = _x;
 
-    // Skip: player groups, empty, null
-    if (isPlayer leader _grp) then { continue };
+    // Skip: null, empty, player groups
     if (isNull _grp) then { continue };
     if (count units _grp == 0) then { continue };
+    if (isPlayer leader _grp) then { continue };
 
     // Skip: already tracked on HC
     if (count (_grp getVariable ["FST_HC_tracked", []]) > 0) then { continue };

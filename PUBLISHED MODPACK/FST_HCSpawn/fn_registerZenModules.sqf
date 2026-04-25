@@ -111,4 +111,54 @@ if (!hasInterface) exitWith {};
     "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline", count FST_HC_Templates];
+// ============================================================
+// QRF MODULE
+// ============================================================
+[
+    "41st Kaid Modules",
+    "--- QRF Response ---",
+    {
+        params ["_pos"];
+        ["QRF Response",
+        [
+            ["COMBO", "Infantry Template", [
+                keys FST_HC_Templates,
+                values FST_HC_Templates apply { _x select 2 },
+                0
+            ]],
+            ["SLIDER", "Number of Squads", [1, 4, 1, 0]],
+            ["COMBO", "Transport", [
+                ["foot", "SAC", "PAC", "MTT", "HMP"],
+                ["On Foot", "SAC (1 squad)", "PAC (2 squads)", "MTT (4 squads)", "HMP Gunship (air)"],
+                0
+            ]],
+            ["COMBO", "Escort", [
+                ["none", "AAT", "N99"],
+                ["No Escort", "AAT Tank", "N99 Tank"],
+                0
+            ]],
+            ["SLIDER", "Escort Count", [1, 4, 2, 0]]
+        ],
+        {
+            params ["_values", "_args"];
+            _args params ["_pos"];
+            private _templateKey = _values select 0;
+            private _squadCount = round (_values select 1);
+            private _transport = _values select 2;
+            private _escort = _values select 3;
+            private _escortCount = round (_values select 4);
+            private _caller = clientOwner;
+
+            ["FST_HC_evt_qrf", [_pos, _templateKey, _squadCount, _transport, _escort, _escortCount, _caller]]
+                call CBA_fnc_serverEvent;
+
+            systemChat format ["[FST] QRF: %1x squads via %2 inbound", _squadCount, _transport];
+        },
+        {},
+        [_pos]
+        ] call zen_dialog_fnc_create;
+    },
+    "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF", count FST_HC_Templates];

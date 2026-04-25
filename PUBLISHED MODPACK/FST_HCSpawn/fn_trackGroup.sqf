@@ -16,12 +16,11 @@ private _unitCount = count units _group;
 // Mark as tracked (server-local variable)
 _group setVariable ["FST_HC_tracked", [_hcIndex, _unitCount]];
 
-// Set HC index for debug draw (no broadcast — debug draw reads via owner command)
+// Set HC index for debug draw
 _group setVariable ["FST_HC_onHC", _hcIndex];
 
-// Update bookkeeping counts
-if (_hcIndex >= 0 && _hcIndex < count FST_HC_UnitCounts) then {
-    FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + _unitCount];
-};
+// Don't increment FST_HC_UnitCounts here — spawnGroupOnTarget and
+// requestFillGarrison pre-increment for load balancing. recountUnits
+// corrects to actual values every 30s.
 
 FST_HC_TrackedCount = FST_HC_TrackedCount + 1;

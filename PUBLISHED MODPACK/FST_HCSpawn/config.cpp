@@ -55,6 +55,7 @@ class CfgFunctions {
             class checkObjectives {};
             class cleanupGroups {};
             class frontlineSpawn {};
+            class qrfSpawn {};
         };
         class Debug {
             file = "FST_HCSpawn";
