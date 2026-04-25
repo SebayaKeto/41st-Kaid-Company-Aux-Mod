@@ -1067,6 +1067,10 @@ class CfgVehicles
 			"FST_Droid_blaster_cell_red",
 			"FST_Droid_blaster_cell_red",
 		};
+		class EventHandlers
+		{
+			init = "if (local (_this select 0)) then { [{_this removeEventHandler ['HandleDamage', _this getVariable ['ace_medical_HandleDamageEHID', -1]]}, _this select 0] call CBA_fnc_execNextFrame; };";
+		};
 	};
 	class ls_mandalorian_base;
 	class FST_mandoUndersuit: ls_mandalorian_base
