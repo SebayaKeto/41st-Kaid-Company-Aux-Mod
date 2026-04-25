@@ -878,6 +878,7 @@ class CfgVehicles
 				explosionShielding=0.5;
 				minimalHit=0.01;
 				visual="injury_head";
+    			depends="";
 			};
 			class HitNeck: HitFace
 			{
@@ -889,6 +890,7 @@ class CfgVehicles
 				explosionShielding=0.5;
 				minimalHit=0.01;
 				visual="injury_head";
+    			depends="";
 			};
 			class HitHead: HitNeck
 			{
@@ -899,8 +901,8 @@ class CfgVehicles
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.01;
-				visual="injury_head";
-				depends="HitFace max HitNeck";
+    			visual="injury_head";
+  				depends="HitFace max HitNeck";
 			};
 			class HitPelvis
 			{
@@ -912,6 +914,7 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.01;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -958,7 +961,7 @@ class CfgVehicles
 				minimalHit=0.01;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
-			class HitArms
+			class HitArms: HitBody
 			{
 				armor=1;
 				material=-1;
@@ -968,22 +971,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.01;
-				depends="0";
-			};
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.08;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.01;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
+				depends="";
 			};
 			class HitHands: HitArms
 			{
@@ -995,9 +983,8 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.01;
-				depends="HitLeftArm max HitRightArm";
 			};
-			class HitLegs
+			class HitLegs: HitHands
 			{
 				armor=1;
 				material=-1;
@@ -1007,22 +994,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.01;
-				depends="0";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=0.8;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.01;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
+				depends="";
 			};
 			class Incapacitated
 			{
@@ -1074,10 +1046,6 @@ class CfgVehicles
 			"FST_Droid_blaster_cell_red",
 			"FST_Droid_blaster_cell_red",
 		};
-		class EventHandlers
-		{
-			init = "if (local (_this select 0)) then { [{_this removeEventHandler ['HandleDamage', _this getVariable ['ace_medical_HandleDamageEHID', -1]]}, _this select 0] call CBA_fnc_execNextFrame; };";
-		};
 	};
 	class ls_mandalorian_base;
 	class FST_mandoUndersuit: ls_mandalorian_base
@@ -1097,7 +1065,7 @@ class CfgVehicles
 			"\ls\core\addons\characters_mandalorian\uniforms\undersuit\data\undersuit_co.paa"
 		};
 		nakedUnifrom="U_BasicBody";
-		class HitPoints
+		class HitPoints: O_Soldier_F
 		{
 			class HitFace
 			{
@@ -1140,6 +1108,7 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.0099999998;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -3131,6 +3100,7 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.0099999998;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
