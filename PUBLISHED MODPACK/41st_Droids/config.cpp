@@ -878,7 +878,7 @@ class CfgVehicles
 				explosionShielding=0.5;
 				minimalHit=0.01;
 				visual="injury_head";
-    			depends="";
+				depends="";
 			};
 			class HitNeck: HitFace
 			{
@@ -890,7 +890,7 @@ class CfgVehicles
 				explosionShielding=0.5;
 				minimalHit=0.01;
 				visual="injury_head";
-    			depends="";
+				depends="";
 			};
 			class HitHead: HitNeck
 			{
@@ -901,8 +901,8 @@ class CfgVehicles
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.01;
-    			visual="injury_head";
-  				depends="HitFace max HitNeck";
+				visual="injury_head";
+				depends="HitFace max HitNeck";
 			};
 			class HitPelvis
 			{
@@ -961,7 +961,7 @@ class CfgVehicles
 				minimalHit=0.01;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
-			class HitArms: HitBody
+			class HitArms
 			{
 				armor=1;
 				material=-1;
@@ -971,6 +971,16 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.01;
+				depends="0";
+			};
+			class HitLeftArm: HitArms
+			{
+				name="hand_l";
+				depends="";
+			};
+			class HitRightArm: HitArms
+			{
+				name="hand_r";
 				depends="";
 			};
 			class HitHands: HitArms
@@ -983,8 +993,9 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_hands";
 				minimalHit=0.01;
+				depends="HitLeftArm max HitRightArm";
 			};
-			class HitLegs: HitHands
+			class HitLegs
 			{
 				armor=1;
 				material=-1;
@@ -994,6 +1005,16 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.01;
+				depends="0";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				name="leg_l";
+				depends="";
+			};
+			class HitRightLeg: HitLegs
+			{
+				name="leg_r";
 				depends="";
 			};
 			class Incapacitated
@@ -1065,7 +1086,7 @@ class CfgVehicles
 			"\ls\core\addons\characters_mandalorian\uniforms\undersuit\data\undersuit_co.paa"
 		};
 		nakedUnifrom="U_BasicBody";
-		class HitPoints: O_Soldier_F
+		class HitPoints
 		{
 			class HitFace
 			{
