@@ -878,7 +878,6 @@ class CfgVehicles
 				explosionShielding=0.5;
 				minimalHit=0.01;
 				visual="injury_head";
-				depends="0";
 			};
 			class HitNeck: HitFace
 			{
@@ -890,7 +889,6 @@ class CfgVehicles
 				explosionShielding=0.5;
 				minimalHit=0.01;
 				visual="injury_head";
-				depends="0";
 			};
 			class HitHead: HitNeck
 			{
@@ -914,7 +912,6 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.01;
-				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -973,15 +970,20 @@ class CfgVehicles
 				minimalHit=0.01;
 				depends="0";
 			};
-			class HitLeftArm: HitArms
+			class HitLeftArm
 			{
+				armor=1;
+				material=-1;
 				name="hand_l";
-				depends="0";
+				passThrough=1;
+				radius=0.08;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.01;
 			};
-			class HitRightArm: HitArms
+			class HitRightArm: HitLeftArm
 			{
 				name="hand_r";
-				depends="0";
 			};
 			class HitHands: HitArms
 			{
@@ -1007,15 +1009,20 @@ class CfgVehicles
 				minimalHit=0.01;
 				depends="0";
 			};
-			class HitLeftLeg: HitLegs
+			class HitLeftLeg
 			{
+				armor=1;
+				material=-1;
 				name="leg_l";
-				depends="0";
+				passThrough=0.8;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_legs";
+				minimalHit=0.01;
 			};
-			class HitRightLeg: HitLegs
+			class HitRightLeg: HitLeftLeg
 			{
 				name="leg_r";
-				depends="0";
 			};
 			class Incapacitated
 			{
@@ -1133,7 +1140,6 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -3125,7 +3131,6 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
