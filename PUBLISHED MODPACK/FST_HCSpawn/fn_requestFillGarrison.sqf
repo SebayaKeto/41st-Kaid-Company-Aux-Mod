@@ -13,6 +13,9 @@ if (!isServer) exitWith {};
 
 params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2]];
 
+// Ensure ground-level position for scanning (ZEN passes ASL)
+_center = [_center select 0, _center select 1, 0];
+
 // --- Scan all garrison positions (hand-placed first, then buildingPos) ---
 private _buildings = nearestObjects [_center, ["House", "Building"], _radius];
 private _priorityPositions = [];
