@@ -1,0 +1,114 @@
+// FST_HCSpawn_fnc_registerZenModules
+// Client-side. Registers ZEN custom modules under "41st Kaid Modules".
+// Default behavior: Assault (LAMBS rush)
+
+if (!hasInterface) exitWith {};
+
+// ============================================================
+// TEMPLATE MODULES
+// ============================================================
+{
+    private _key = _x;
+    private _data = _y;
+    _data params ["_side", "_unitClasses", "_desc"];
+
+    private _code = compile format [
+        '
+        params ["_pos"];
+        ["%1",
+        [
+            ["COMBO", "Behavior", [[0,1,2,3,4,5], ["Assault","Hunt","Garrison","Patrol","Static","No Behavior"], 0]]
+        ],
+        {
+            params ["_values", "_args"];
+            _args params ["_pos", "_key"];
+            private _behavior = ["assault","hunt","garrison","patrol","static","none"] select (_values select 0);
+            ["FST_HC_evt_quickSpawn", [_pos, _key, _behavior, -1]] call CBA_fnc_serverEvent;
+            systemChat format ["[FST] Spawning %%1 (%%2)", _key, _behavior];
+        },
+        {},
+        [_pos, "%2"]
+        ] call zen_dialog_fnc_create;
+        ',
+        _desc, _key
+    ];
+
+    ["41st Kaid Modules", _desc, _code, "\a3\Modules_F_Curator\Data\iconManual_ca.paa"]
+        call zen_custom_modules_fnc_register;
+
+} forEach FST_HC_Templates;
+
+// ============================================================
+// FILL GARRISON MODULE
+// ============================================================
+[
+    "41st Kaid Modules",
+    "--- Fill Garrison ---",
+    {
+        params ["_pos"];
+        ["Fill Garrison",
+        [
+            ["SLIDER", "Scan Radius (m)", [25, 500, 150, 0]],
+            ["SLIDER", "Density %", [10, 100, 75, 0]],
+            ["SLIDER", "B2 Mix %", [0, 100, 20, 0]]
+        ],
+        {
+            params ["_values", "_args"];
+            _args params ["_pos"];
+            private _radius = _values select 0;
+            private _density = (_values select 1) / 100;
+            private _b2Ratio = (_values select 2) / 100;
+            private _caller = clientOwner;
+
+            ["FST_HC_evt_fillGarrison", [_pos, _radius, _density, _b2Ratio, _caller]] call CBA_fnc_serverEvent;
+            systemChat format ["[FST] Filling — %1m, %2%3 density, %4%5 B2",
+                round _radius, round (_density*100), "%", round (_b2Ratio*100), "%"];
+        },
+        {},
+        [_pos]
+        ] call zen_dialog_fnc_create;
+    },
+    "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+// ============================================================
+// FRONTLINE MODULE
+// ============================================================
+[
+    "41st Kaid Modules",
+    "--- Frontline Assault ---",
+    {
+        params ["_pos"];
+        ["Frontline Assault",
+        [
+            ["COMBO", "Template", [
+                keys FST_HC_Templates,
+                values FST_HC_Templates apply { _x select 2 },
+                0
+            ]],
+            ["SLIDER", "Number of Waves", [1, 20, 3, 0]],
+            ["SLIDER", "Seconds Between Waves", [1, 30, 5, 0]],
+            ["SLIDER", "Assault Radius", [100, 2000, 500, 0]]
+        ],
+        {
+            params ["_values", "_args"];
+            _args params ["_pos"];
+            private _templateKey = _values select 0;
+            private _waveCount = round (_values select 1);
+            private _waveDelay = _values select 2;
+            private _assaultRadius = _values select 3;
+            private _caller = clientOwner;
+
+            ["FST_HC_evt_frontline", [_pos, _templateKey, _waveCount, _waveDelay, _assaultRadius, _caller]]
+                call CBA_fnc_serverEvent;
+
+            systemChat format ["[FST] Frontline: %1x waves incoming", _waveCount];
+        },
+        {},
+        [_pos]
+        ] call zen_dialog_fnc_create;
+    },
+    "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline", count FST_HC_Templates];
