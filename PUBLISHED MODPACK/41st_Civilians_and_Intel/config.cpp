@@ -9,6 +9,8 @@ class CfgPatches
 			"FST_CIS_Prisoner",
 			"FST_CIS_Clone_Prisoner",
 			"FST_Civilian_Basic",
+			"FST_Civilian_Poor",
+			"FST_Civilian_Wealthy",
 			"FST_CivDataW_Normal", 
 			"FST_CivDataW_Abnormal", 
 			"FST_CivDataW_Betting", 
@@ -138,6 +140,61 @@ class CfgPatches
 			"FST_CivData_UwU", 
 			"FST_CivData_Virus",
 			"FST_CivData_Work",
+			"FST_SpaceData_Normal",
+			"FST_SpaceData_Abnormal", 
+			"FST_SpaceData_Aqua",
+			"FST_SpaceData_Blast",
+			"FST_SpaceData_Brick",
+			"FST_SpaceData_Chem",
+			"FST_SpaceData_Child",
+			"FST_SpaceData_Droid",
+			"FST_SpaceData_Drop",
+			"FST_SpaceData_Fire",
+			"FST_SpaceData_Oil",
+			"FST_SpaceData_Press",
+			"FST_SpaceData_Radio",
+			"FST_SpaceData_SPACE",
+			"FST_SpaceData_Squish",
+			"FST_StylusData_Normal",
+			"FST_StylusData_Abnormal",
+			"FST_StylusData_Alien",
+			"FST_StylusData_Broken",
+			"FST_StylusData_Check",
+			"FST_StylusData_Chew",
+			"FST_StylusData_Delivery",
+			"FST_StylusData_Draw",
+			"FST_StylusData_Engine",
+			"FST_StylusData_Flight",
+			"FST_StylusData_Form",
+			"FST_StylusData_Game",
+			"FST_StylusData_Lost",
+			"FST_StylusData_Note",
+			"FST_StylusData_Scratch",
+			"FST_StylusData_Stab",
+			"FST_StylusData_Wait",
+			"FST_ReadData_Normal",
+			"FST_ReadData_Abnormal",
+			"FST_ReadData_Action",
+			"FST_ReadData_Alien",
+			"FST_ReadData_Bad",
+			"FST_ReadData_Bio",
+			"FST_ReadData_Boring",
+			"FST_ReadData_Cook",
+			"FST_ReadData_Droid",
+			"FST_ReadData_Flicker",
+			"FST_ReadData_Horror",
+			"FST_ReadData_Jedi",
+			"FST_ReadData_Legal",
+			"FST_ReadData_Love",
+			"FST_ReadData_Medical",
+			"FST_ReadData_Mystery",
+			"FST_ReadData_News",
+			"FST_ReadData_Religion",
+			"FST_ReadData_Report",
+			"FST_ReadData_Snap",
+			"FST_ReadData_Tabloid",
+			"FST_ReadData_Text",
+			"FST_ReadData_Youth",
 			"FST_CivDatacard_Normal",
 			"FST_CivDatacard_Abnormal",
 			"FST_CivDatacard_Blueprint",
@@ -223,6 +280,15 @@ class CfgFactionClasses
 		icon="";
 	};
 };
+class CfgEditorCategories
+{
+	class FST_Intel_Catagory
+	{
+		displayname="[41st] Intel Items";
+		priority=8;
+		side=7;
+	};
+};
 class CfgEditorSubcategories
 {
 	class FST_StandardCivs
@@ -240,6 +306,10 @@ class CfgEditorSubcategories
 	class FST_PrisonCivs
 	{
 		displayName = "CIS Prisoners"; 
+	};
+	class FST_IntelItems
+	{
+		displayName = "Intel Items"; 
 	};
 };
 class CfgFunctions
@@ -1498,8 +1568,8 @@ class CfgVehicles
 		displayName="[41st] Datapad (Normal)";
 		scope=2;
 		scopeCurator=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Normal
@@ -1514,8 +1584,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Suspicious)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Abnormal
@@ -1530,8 +1601,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Memes)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Meme
@@ -1546,8 +1618,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Cat)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Cat
@@ -1562,8 +1635,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Selfies)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Selfie
@@ -1578,8 +1652,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Pics)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_UwU
@@ -1594,8 +1669,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Overloaded)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Overload
@@ -1610,8 +1686,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Broken)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Dead
@@ -1626,8 +1703,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Gamer)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Gamer
@@ -1642,8 +1720,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Idiot User)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Idiot
@@ -1658,8 +1737,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Virus Filled)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Virus
@@ -1674,8 +1754,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Powerless)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Off
@@ -1690,8 +1771,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Damaged)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Damage
@@ -1706,8 +1788,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Alien Language)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Lang
@@ -1722,8 +1805,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Password)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Password
@@ -1738,8 +1822,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Outdated)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Old
@@ -1754,8 +1839,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Bulged Battery)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Bulge
@@ -1770,8 +1856,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Slow)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Slow
@@ -1786,8 +1873,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Betting)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Betting
@@ -1802,8 +1890,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Gross)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Ew
@@ -1818,8 +1907,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Starship)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Spacer
@@ -1834,8 +1924,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Illegal)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Illegal
@@ -1850,8 +1941,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Interface Device)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Interface
@@ -1866,8 +1958,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (UV Display)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_UV
@@ -1882,8 +1975,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (IR Display)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_IR
@@ -1898,8 +1992,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Expensive)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Costly
@@ -1914,8 +2009,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datapad (Work)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivData_Work
@@ -1930,8 +2026,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Normal)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Normal
@@ -1946,8 +2043,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Suspicious)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Abnormal
@@ -1962,8 +2060,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Empty)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Empty
@@ -1978,8 +2077,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Taxes)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Tax
@@ -1994,8 +2094,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Library)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Fiction
@@ -2010,8 +2111,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Hologame)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Game
@@ -2026,8 +2128,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Personal Journal)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Journal
@@ -2042,8 +2145,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Blueprint)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Blueprint
@@ -2058,8 +2162,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Pictures)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_OwO
@@ -2074,8 +2179,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Medical)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Medical
@@ -2090,8 +2196,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Music)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Music
@@ -2106,8 +2213,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Buisness Report)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Report
@@ -2122,8 +2230,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Corrupted)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Corrupt
@@ -2138,8 +2247,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Broken)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Broken
@@ -2154,8 +2264,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Virus)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Virus
@@ -2170,8 +2281,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Speeder Manual)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Manual
@@ -2186,8 +2298,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (MSE Pics)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Mouse
@@ -2202,8 +2315,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Document)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Doc
@@ -2218,8 +2332,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Holonews)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_News
@@ -2234,8 +2349,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Pet Care)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Care
@@ -2250,8 +2366,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Calendar)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Calendar
@@ -2266,8 +2383,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Holomovie)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Movie
@@ -2282,8 +2400,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Family Pics)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Family
@@ -2298,8 +2417,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Transactions)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Money
@@ -2314,8 +2434,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Program)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Program
@@ -2330,8 +2451,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Datacard (Troll)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivDatacard_Troll
@@ -2346,8 +2468,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Normal)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Normal
@@ -2362,8 +2485,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Suspicious)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Abnormal
@@ -2378,8 +2502,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Blank)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Blank
@@ -2394,8 +2519,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Grocery List)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Food
@@ -2410,8 +2536,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Coupon)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Coupon
@@ -2426,8 +2553,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Flyer)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Flyer
@@ -2442,8 +2570,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Stickfigure)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Stick
@@ -2458,8 +2587,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Receipt)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Receipt
@@ -2474,8 +2604,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Buisness Card)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_BCard
@@ -2490,8 +2621,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Collector Card)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_CCard
@@ -2506,8 +2638,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Note)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Note
@@ -2522,8 +2655,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Food Ad)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Ad
@@ -2538,8 +2672,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Picture)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Picture
@@ -2554,8 +2689,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Crazy)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Crazy
@@ -2570,8 +2706,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Doodle)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Doodle
@@ -2586,8 +2723,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Form)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Form
@@ -2602,8 +2740,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (List)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_List
@@ -2618,8 +2757,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Document)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Doc
@@ -2634,8 +2774,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Trash)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Trash
@@ -2650,8 +2791,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Letter)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Letter
@@ -2666,8 +2808,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Math Work)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Work
@@ -2682,8 +2825,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Gross)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Gross
@@ -2698,8 +2842,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Starchart)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Starchart
@@ -2714,8 +2859,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Love Note)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Love
@@ -2730,8 +2876,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi (Wanted Poster)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsi_Wanted
@@ -2746,8 +2893,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Normal)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Normal
@@ -2762,8 +2910,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Suspicious)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Abnormal
@@ -2778,8 +2927,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Project)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Project
@@ -2794,8 +2944,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Taxes)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Taxes
@@ -2810,8 +2961,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Work)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Work
@@ -2826,8 +2978,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Confusing)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Um
@@ -2842,8 +2995,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Pictures)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Photo
@@ -2858,8 +3012,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Medical)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Med
@@ -2874,8 +3029,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Construction)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Plan
@@ -2890,8 +3046,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Ruined)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Ruin
@@ -2906,8 +3063,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Police Report)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Police
@@ -2922,8 +3080,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Legal Docs)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Law
@@ -2938,8 +3097,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Alien)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Alien
@@ -2954,8 +3114,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Conspiracy)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Paranoid
@@ -2970,8 +3131,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Order Record)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Order
@@ -2986,8 +3148,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Shipping Record)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Transport
@@ -3002,8 +3165,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Old Records)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Record
@@ -3018,8 +3182,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Profile)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Profile
@@ -3034,8 +3199,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Starcharts)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Starchart
@@ -3050,8 +3216,9 @@ class CfgVehicles
 		author="Tooka";
 		displayName="[41st] Flimsi Folder (Starship)";
 		scope=2;
-		editorCategory="EdCat_Equipment";
-		editorSubcategory="EdSubcat_InventoryItems";
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_CivFlimsiFile_Starship
