@@ -11136,6 +11136,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Sigs.paa",
 		};
 	};	
+	class FST_P2_Helmet_Loco: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Loco]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Loco.paa",
+		};
+	};	
 	class FST_P2_Helmet_Murk: FST_P2_Helmet_Base
 	{
 		author="Daara";
