@@ -1714,7 +1714,7 @@ class CfgVehicles
 		faction="FST_Faction";
 		editorSubcategory="FST_Ground_Vehicle";
 		crew="FST_Trooper_P2_DC15S";
-		armor=500; //250
+		armor=750; //250
 		typicalCargo[]=
 		{
 			"FST_Trooper_P2_DC15S"

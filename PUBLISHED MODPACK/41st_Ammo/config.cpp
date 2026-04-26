@@ -11,30 +11,32 @@ class CfgPatches
 	};
 };
 // Fix broken vanilla impact particles — keep valid configs but produce nothing visible.
-// IDA's own cloudlets (IDA_ImpactSparks1, IDA_ImpactSparks2, IDA_Blaster_Hit_Exp) are unaffected.
+// Fix broken vanilla impact particles triggered by explosive=1.
+// Uses lifeTime=0.001 (not 0) so engine composites initialize normally.
+// IDA's own cloudlets (IDA_ImpactSparks1, IDA_ImpactSparks2) are separate classes, unaffected.
 class CfgCloudlets {
 	class Default;
-	class impactsparksmed2: Default {
+	class impactsparks2: Default {
 		interval = 1;
-		lifeTime = 0;
+		lifeTime = 0.001;
 		size[] = {0};
 		color[] = {{0,0,0,0}};
 	};
 	class impactsmoke2: Default {
 		interval = 1;
-		lifeTime = 0;
+		lifeTime = 0.001;
 		size[] = {0};
 		color[] = {{0,0,0,0}};
 	};
 	class impactsmokemed2: Default {
 		interval = 1;
-		lifeTime = 0;
+		lifeTime = 0.001;
 		size[] = {0};
 		color[] = {{0,0,0,0}};
 	};
 	class impactsmokelow2: Default {
 		interval = 1;
-		lifeTime = 0;
+		lifeTime = 0.001;
 		size[] = {0};
 		color[] = {{0,0,0,0}};
 	};

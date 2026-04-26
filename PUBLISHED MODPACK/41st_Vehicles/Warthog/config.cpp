@@ -20,7 +20,11 @@ class CfgPatches
 			"FST_Technical_Twin_Laser_Woodland",
 			"FST_Technical_Twin_Laser_Urban",
 			"FST_Technical_Twin_Laser_Desert",
-			"FST_Technical_Twin_Laser_Midnight"
+			"FST_Technical_Twin_Laser_Midnight",
+			"FST_Technical_FAV_Woodland",
+			"FST_Technical_FAV_Desert",
+			"FST_Technical_FAV_Midnight",
+			"FST_Technical_FAV_Urban"
 		};
 		addonRootClass="OPTRE_Vehicles";
 		weapons[]={};
@@ -412,6 +416,186 @@ class CfgVehicles
 		class TransportItems{};
 		class TransportWeapons{};
 		class TransportBackpacks{};
+	};
+	class FST_Technical_FAV_Woodland: OPTRE_M12_Base
+	{
+        scope = 2;
+        scopecurator = 2;
+        side = 1;
+		faction="FST_Faction";
+		ace_cargo_hasCargo   = 1;
+        ace_cargo_space      = 1000;
+        tf_range             = 5000;
+        tf_isolatedAmount    = 0.4;
+        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio        = 1;
+        displayname = "[41st] PR-10 'Puma' (Woodland/Transport)";
+        editorSubcategory="FST_Ground_Vehicle";
+        tas_canBlift=1;
+		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+        author = "Fuck You Ruby";
+        crew = "FST_Trooper_P2_DC15S";
+		crewCrashProtection=9.9999997e-005;
+		damageResistance=0.02;
+		armor=450;
+		armorStructural=6.0;
+        hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_transport_details",
+			"camo_net"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Woodland.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Woodland.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Cage_Woodland.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Rear_Woodland.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Woodland.paa",
+			"41st_Vehicles\PR10\Data\Ranger_Decals.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa"
+		};
+	};
+	class FST_Technical_FAV_Desert: OPTRE_M12_Base
+	{
+        scope = 2;
+        scopecurator = 2;
+        side = 1;
+		faction="FST_Faction";
+		ace_cargo_hasCargo   = 1;
+        ace_cargo_space      = 1000;
+        tf_range             = 5000;
+        tf_isolatedAmount    = 0.4;
+        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio        = 1;
+        displayname = "[41st] PR-10 'Puma' (Desert/Transport)";
+        editorSubcategory="FST_Ground_Vehicle";
+        tas_canBlift=1;
+		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+        author = "Fuck You Ruby";
+        crew = "FST_Trooper_P2_DC15S";
+		crewCrashProtection=9.9999997e-005;
+		damageResistance=0.02;
+		armor=450;
+		armorStructural=6.0;
+        hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_transport_details",
+			"camo_net"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Desert.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Desert.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Cage_Desert.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Rear_Desert.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Desert.paa",
+			"41st_Vehicles\PR10\Data\Ranger_Decals.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa"
+		};
+	};
+	class FST_Technical_FAV_Midnight: OPTRE_M12_Base
+	{
+        scope = 2;
+        scopecurator = 2;
+        side = 1;
+		faction="FST_Faction";
+		ace_cargo_hasCargo   = 1;
+        ace_cargo_space      = 1000;
+        tf_range             = 5000;
+        tf_isolatedAmount    = 0.4;
+        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio        = 1;
+        displayname = "[41st] PR-10 'Puma' (Midnight/Transport)";
+        editorSubcategory="FST_Ground_Vehicle";
+        tas_canBlift=1;
+		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+        author = "Fuck You Ruby";
+        crew = "FST_Trooper_P2_DC15S";
+		crewCrashProtection=9.9999997e-005;
+		damageResistance=0.02;
+		armor=450;
+		armorStructural=6.0;
+        hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_transport_details",
+			"camo_net"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Midnight.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Midnight.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Cage_Midnight.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Rear_Midnight.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Midnight.paa",
+			"41st_Vehicles\PR10\Data\Ranger_Decals.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa"
+		};
+	};
+	class FST_Technical_FAV_Urban: OPTRE_M12_Base
+	{
+        scope = 2;
+        scopecurator = 2;
+        side = 1;
+		faction="FST_Faction";
+		ace_cargo_hasCargo   = 1;
+        ace_cargo_space      = 1000;
+        tf_range             = 5000;
+        tf_isolatedAmount    = 0.4;
+        tf_dialogUpdate      = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_hasLRradio        = 1;
+        displayname = "[41st] PR-10 'Puma' (Urban/Transport)";
+        editorSubcategory="FST_Ground_Vehicle";
+        tas_canBlift=1;
+		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+        author = "Fuck You Ruby";
+        crew = "FST_Trooper_P2_DC15S";
+		crewCrashProtection=9.9999997e-005;
+		damageResistance=0.02;
+		armor=450;
+		armorStructural=6.0;
+        hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3",
+			"Camo4",
+			"camo_details",
+			"camo_interior",
+			"camo_transport_details",
+			"camo_net"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\PR10\Data\FST_M12_Front_Urban.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Under_Urban.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Cage_Urban.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Rear_Urban.paa",
+			"41st_Vehicles\PR10\Data\Main_Decals.paa",
+			"41st_Vehicles\PR10\Data\FST_M12_Interior_Urban.paa",
+			"41st_Vehicles\PR10\Data\Ranger_Decals.paa",
+			"\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa"
+		};
 	};
 	class FST_Technical_Base: OPTRE_M12A1_LRV
 	{
