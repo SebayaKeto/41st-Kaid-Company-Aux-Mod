@@ -10,6 +10,14 @@ class CfgPatches
 		weapons[]={};
 	};
 };
+// Override broken vanilla impact particles that error on every explosive=1 impact
+class CfgCloudlets {
+	class Default;
+	class impactsparksmed2: Default { interval = 0; };
+	class impactsmoke2: Default { interval = 0; };
+	class impactsmokemed2: Default { interval = 0; };
+	class impactsmokelow2: Default { interval = 0; };
+};
 class CfgFunctions {
     class FST {
         class EMP {
@@ -85,7 +93,7 @@ class CfgAmmo
 		tracerscale=1;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="IDA_ImpactEffect";
+		ExplosionEffects="";
 		cratereffects="";
 		class HitEffects
 		{
@@ -571,7 +579,7 @@ class CfgAmmo
 		tracerscale=1;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="IDA_ImpactEffect";
+		ExplosionEffects="";
 		cratereffects="";
 	};
 	class FST_blasterbolt_Green: FST_blasterbolt
