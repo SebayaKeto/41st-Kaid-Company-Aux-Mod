@@ -1246,6 +1246,7 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_E5_Muddy: JLTS_Droid_B1_E5
 	{
+		ace_medical_enabled = 0;
 		author="Gold";
 		displayName="[41st] B1 Battledroid (Muddy)";
 		uniformClass="FST_DroidB1_Muddy";
@@ -2103,6 +2104,7 @@ class CfgVehicles
 	class WBK_LS_BX;
 	class FST_BX: WBK_LS_BX
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2461,6 +2463,7 @@ class CfgVehicles
 	class WBK_LS_B2;
 	class FST_B2: WBK_LS_B2
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2516,6 +2519,7 @@ class CfgVehicles
 	};
 	class FST_B2_TL: WBK_LS_B2
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2575,6 +2579,7 @@ class CfgVehicles
 	};
 	class FST_B2_Flame: WBK_LS_B2
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2966,6 +2971,7 @@ class CfgVehicles
 	};
 	class FST_Jorgetrooper: FST_CIS_Heavy_Base_F
 	{
+		ace_medical_enabled = 0;
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopecurator=2;

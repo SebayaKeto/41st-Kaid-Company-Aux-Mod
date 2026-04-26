@@ -10,13 +10,34 @@ class CfgPatches
 		weapons[]={};
 	};
 };
-// Override broken vanilla impact particles that error on every explosive=1 impact
+// Fix broken vanilla impact particles — keep valid configs but produce nothing visible.
+// IDA's own cloudlets (IDA_ImpactSparks1, IDA_ImpactSparks2, IDA_Blaster_Hit_Exp) are unaffected.
 class CfgCloudlets {
 	class Default;
-	class impactsparksmed2: Default { interval = 0; };
-	class impactsmoke2: Default { interval = 0; };
-	class impactsmokemed2: Default { interval = 0; };
-	class impactsmokelow2: Default { interval = 0; };
+	class impactsparksmed2: Default {
+		interval = 1;
+		lifeTime = 0;
+		size[] = {0};
+		color[] = {{0,0,0,0}};
+	};
+	class impactsmoke2: Default {
+		interval = 1;
+		lifeTime = 0;
+		size[] = {0};
+		color[] = {{0,0,0,0}};
+	};
+	class impactsmokemed2: Default {
+		interval = 1;
+		lifeTime = 0;
+		size[] = {0};
+		color[] = {{0,0,0,0}};
+	};
+	class impactsmokelow2: Default {
+		interval = 1;
+		lifeTime = 0;
+		size[] = {0};
+		color[] = {{0,0,0,0}};
+	};
 };
 class CfgFunctions {
     class FST {
@@ -93,7 +114,7 @@ class CfgAmmo
 		tracerscale=1;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="";
+		ExplosionEffects="IDA_ImpactEffect";
 		cratereffects="";
 		class HitEffects
 		{
@@ -579,7 +600,7 @@ class CfgAmmo
 		tracerscale=1;
 		effectflare="FlareShell";
 		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="";
+		ExplosionEffects="IDA_ImpactEffect";
 		cratereffects="";
 	};
 	class FST_blasterbolt_Green: FST_blasterbolt
