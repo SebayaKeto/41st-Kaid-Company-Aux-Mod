@@ -98,7 +98,7 @@ class CfgAmmo
 		lightcolor[]={0,0.30000001,1};
 		hit=28; //28
 		indirectHit=0;
-		explosive=1;
+		explosive=0; // 1
 		indirectHitRange=0.1; // 0.5
 		caliber=1.6; //1.8
 		coefGravity=0.02;
