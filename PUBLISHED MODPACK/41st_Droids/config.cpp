@@ -836,6 +836,7 @@ class CfgVehicles
 	class FST_Droid_B1_E5: JLTS_Droid_B1_E5
 	{
 		ace_medical_enabled = 0;
+		ls_isDroid = 1;
 		scope=2;
 		scopecurator = 2;
 		side=0;
