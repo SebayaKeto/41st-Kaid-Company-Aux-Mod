@@ -4,3 +4,6 @@
 *.bikey
 *.ebo
 *.zip
+
+.hemttprivatekey
+.biprivatekey
