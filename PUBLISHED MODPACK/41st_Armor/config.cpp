@@ -4088,6 +4088,22 @@ class CfgWeapons
 			};
 		};
 	}; 
+	class FST_CloneVestSigs: FST_pauldron_kama_reversed_veteran
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] Sig's Vest and Kama";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Sigs.paa",
+		};
+	};
 	class FST_CloneVestAirborneNCO: JLTS_CloneVestAirborne
 	{
 		displayName="[41st] Airborne Squad Leader Sash";
@@ -9901,6 +9917,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Kortnul: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Kortnul)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Kortnul.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Sin: FST_Airborne_Helmet
 	{
 		author="Steel";
@@ -10559,6 +10585,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Kiwi: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Kiwi]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Kiwi.paa",
 		};
 	};
 	class FST_P2_Helmet_Derp: FST_P2_Helmet_Base
@@ -26113,6 +26149,15 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek_Dirty.paa"
+		};
+	}
+	class FST_Backpack_Jumppack_Bright: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+		displayname="[41st] Jump Pack (Bright)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumpack_Bright.paa"
 		};
 	}
 	//////////////Loadouts////////////////
