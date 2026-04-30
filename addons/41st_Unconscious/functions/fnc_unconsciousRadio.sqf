@@ -1,4 +1,3 @@
-#include "\x\cba\addons\main\script_macros_common.hpp"
 
 params ["_unit", "_volume"];
 
