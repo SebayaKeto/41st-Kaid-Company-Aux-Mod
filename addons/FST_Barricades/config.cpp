@@ -6,7 +6,8 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"A3_Structures_F_Exp_Civilian",
-			"FST_Core"
+			"FST_Core",
+			"FST_Common"
 		};
 		requiredVersion=0.1;
 		units[]=
@@ -16,7 +17,11 @@ class CfgPatches
 			"FST_Barricade_SecurityBarrier_Sand",
 			"FST_Barricade_SecurityBarrier_Tundra",
 			"FST_Barricade_SecurityBarrier_Jungle",
-			"FST_Barricade_FerocreteBarrier_Small"
+			"FST_Barricade_FerocreteBarrier_Small",
+			"FST_Barricade_FerocreteBarrier_Medium",
+			"FST_Barricade_FerocreteBarrier_Large",
+			"FST_Barricade_FerocreteBarrier_Corner",
+			"FST_Barricade_FerocreteBarrier_CornerEnclosed"
 		};
 		weapons[]={};
 	};
