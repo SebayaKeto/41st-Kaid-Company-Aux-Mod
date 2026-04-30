@@ -825,7 +825,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Camo: FST_CloneVestARC
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Camo]";
 		hiddenSelectionsTextures[]=
 		{
@@ -839,7 +838,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Midnight: FST_CloneVestARC
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Midnight]";
 		hiddenSelectionsTextures[]=
 		{
@@ -853,7 +851,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Urban: FST_CloneVestARC
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Urban]";
 		hiddenSelectionsTextures[]=
 		{
@@ -867,7 +864,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Desert: FST_CloneVestARC
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Desert]";
 		hiddenSelectionsTextures[]=
 		{
@@ -880,8 +876,6 @@ class CfgWeapons
 	};
 	class FST_CloneVestARC_Tally: FST_CloneVestARC
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Tally]";
 		hiddenSelectionsTextures[]=
 		{
@@ -891,7 +885,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Burns: FST_CloneVestARC
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Burns]";
 		hiddenSelectionsTextures[]=
 		{
@@ -901,7 +894,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Jorge: FST_CloneVestARC
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Jorge]";
 		hiddenSelectionsTextures[]=
 		{
@@ -911,7 +903,6 @@ class CfgWeapons
  	class FST_CloneVestARC_Major: FST_CloneVestARC
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Major]";
 		hiddenSelectionsTextures[]=
 		{
@@ -920,8 +911,6 @@ class CfgWeapons
 	};
  	class FST_CloneVestARC_Mono: FST_CloneVestARC
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Mono]";
 		hiddenSelectionsTextures[]=
 		{
@@ -931,7 +920,6 @@ class CfgWeapons
 	class FST_CloneVestARC_Squatch: FST_CloneVestARC
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] ARC Trooper Vest [Squatch]";
 		hiddenSelectionsTextures[]=
 		{
@@ -1003,8 +991,6 @@ class CfgWeapons
 	class FST_vest_gm_FTL : FST_Vest_GM_Base
 	{
 		displayName="[41st] Fire Team Leader Cold Weather Vest";
-		author="Schlabbie And Maxim";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Vests\FST_vest_gm_FTL.paa"
@@ -1013,8 +999,6 @@ class CfgWeapons
 	class FST_vest_gm_SL : FST_Vest_GM_Base
 	{
 		displayName="[41st] Squad Leader Cold Weather Vest";
-		author="Schlabbie And Maxim";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Vests\FST_vest_gm_SL.paa"
@@ -1091,8 +1075,6 @@ class CfgWeapons
 	};
 	class FST_cloneVest_Scout_Midnight: FST_cloneVest_Scout_Woodland
 	{
-		author = "Ruby";
-		scope = 2;
 		displayname = "[41st] Clone Scout Pouches (Midnight)";
 		hiddenSelectionsTextures[]=
 		{
@@ -1101,8 +1083,6 @@ class CfgWeapons
 	};
 	class FST_cloneVest_Scout_Desert: FST_cloneVest_Scout_Woodland
 	{
-		author = "Ruby";
-		scope = 2;
 		displayname = "[41st] Clone Scout Pouches (Desert)";
 		hiddenSelectionsTextures[]=
 		{
@@ -1111,8 +1091,6 @@ class CfgWeapons
 	};
 	class FST_cloneVest_Scout_Urban: FST_cloneVest_Scout_Woodland
 	{
-		author = "Ruby";
-		scope = 2;
 		displayname = "[41st] Clone Scout Pouches (Urban)";
 		hiddenSelectionsTextures[]=
 		{
@@ -1694,7 +1672,6 @@ class CfgWeapons
 	};
 	class FST_Vest_HeavyBag_Veteran: FST_Vest_HeavyBag
 	{
-		scope=2;
 		displayName="[41st] Airborne Fire Team Leader Sash (Veteran)";
 		hiddenSelectionsTextures[]=
 		{
@@ -1706,14 +1683,9 @@ class CfgWeapons
 	{
 		displayName="[41st] Squad Leader Sash";
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
 		hiddenSelections[]=
 		{
 			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Vests\FST_Clone_vest_heavy_co.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -3235,11 +3207,6 @@ class CfgWeapons
 	class FST_CloneVestLieutenant_Dirty: FST_CloneVestLieutenant
 	{
 		displayName="[41st] Pauldron/Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Ranger.paa"
@@ -4091,14 +4058,7 @@ class CfgWeapons
 	class FST_CloneVestSigs: FST_pauldron_kama_reversed_veteran
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] Sig's Vest and Kama";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Sigs.paa",
@@ -5017,13 +4977,10 @@ class CfgWeapons
 	};
 	class FST_Commando_Helmet: FST_Commando_Helmet_Base
 	{
-		author="Gold";
 		displayName="[41st] Commando Helmet";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Commando_Helmet.paa",
@@ -5032,13 +4989,10 @@ class CfgWeapons
 	};
 	class FST_Commando_Helmet_Jorge: FST_Commando_Helmet_Base
 	{
-		author="Gold";
 		displayName="[41st] Commando Helmet (Jorge)";
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Commando_Helmet_Jorge.paa",
@@ -5093,7 +5047,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet";
 		hiddenSelectionsTextures[]=
@@ -5143,7 +5096,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_EOD: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [EOD]";
 		hiddenSelectionsTextures[]=
@@ -5153,7 +5105,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Woodland: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Woodland]";
 		hiddenSelectionsTextures[]=
@@ -5167,7 +5118,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Urban: FST_P2_Helmet_Base	
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Urban]";
 		hiddenSelectionsTextures[]=
@@ -5181,7 +5131,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Midnight: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Midnight]";
 		hiddenSelectionsTextures[]=
@@ -5195,7 +5144,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Desert: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Desert]";
 		hiddenSelectionsTextures[]=
@@ -5403,8 +5351,6 @@ class CfgWeapons
 	};
 	class FST_cloneHelmet_Scout_Midnight: FST_cloneHelmet_Scout_Woodland
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Scout Trooper Helmet (Midnight)";
 		hiddenSelectionsTextures[]=
 		{
@@ -5414,8 +5360,6 @@ class CfgWeapons
 	};
 	class FST_cloneHelmet_Scout_Desert: FST_cloneHelmet_Scout_Woodland
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Scout Trooper Helmet (Desert)";
 		hiddenSelectionsTextures[]=
 		{
@@ -5425,8 +5369,6 @@ class CfgWeapons
 	};
 	class FST_cloneHelmet_Scout_Urban: FST_cloneHelmet_Scout_Woodland
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Scout Trooper Helmet (Urban)";
 		hiddenSelectionsTextures[]=
 		{
@@ -5775,7 +5717,6 @@ class CfgWeapons
 	{
 		author="Maldova";
 		displayName="[41st] Scout Helmet";
-		scope=2;
 		scopeCurator=2;
 		picture="";
 		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
@@ -5793,10 +5734,6 @@ class CfgWeapons
 		{
 			"41st_Armor\Data\Helmets\ScoutHelmet.rvmat",
 			"41st_Armor\Data\Helmets\visor.rvmat"
-		};
-		subItems[]=
-		{
-			"Integrated_NVG_TI_1_F"
 		};
 		class ItemInfo: HeadgearItem
 		{
@@ -5825,12 +5762,6 @@ class CfgWeapons
 	class FST_ScoutHelmet_MarkedOne: FST_ScoutHelmet_Base
 	{
 		displayName="[41st] Scout Helmet (CT)";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Visor"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\ScoutMarkedOne_co.paa",
@@ -5840,12 +5771,6 @@ class CfgWeapons
 	class FST_ScoutHelmet_Woodland_Unmarked: FST_ScoutHelmet_Base
 	{
 		displayName="[41st] Scout Helmet (Woodland)";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Visor"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\ScoutWoodlandUnmarked_co.paa",
@@ -5855,12 +5780,6 @@ class CfgWeapons
 	class FST_ScoutHelmet_Woodland_MarkedOne: FST_ScoutHelmet_Base
 	{
 		displayName="[41st] Scout Helmet (CT Woodland)";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Visor"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\ScoutWoodlandMarkedOne_co.paa",
@@ -5905,7 +5824,6 @@ class CfgWeapons
 	}; */
 	class FST_P2_Helmet_Sere: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] SERE Helmet";
 		hiddenSelectionsTextures[]=
@@ -7355,13 +7273,7 @@ class CfgWeapons
 	};
 	class FST_P1_SGT: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 SGT Helmet";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7373,13 +7285,7 @@ class CfgWeapons
 	};
 	class FST_P1_LT: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 LT Helmet";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7391,13 +7297,7 @@ class CfgWeapons
 	};
 	class FST_P1_CPT: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 CPT Helmet";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7409,13 +7309,7 @@ class CfgWeapons
 	};
 	class FST_P1_CMDR: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 CMDR Helmet";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7427,13 +7321,7 @@ class CfgWeapons
 	};
 	class FST_P1_41st: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Helmet (41st)";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7445,13 +7333,7 @@ class CfgWeapons
 	};
 	class FST_P1_41st_NCO: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Helmet (41st NCO)";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7463,13 +7345,7 @@ class CfgWeapons
 	};
 	class FST_P1_41st_Officer: FST_P1_Base
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Helmet (41st Officer)";
-		ace_hearing_protection=1;
-        ace_hearing_lowerVolume=0;
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\phase1_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Standard_P1.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
@@ -7528,8 +7404,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Harlequin: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Harlequin)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7539,8 +7413,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Harlequin_Dirty: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Harlequin/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7550,8 +7422,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Nova: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Nova)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7561,8 +7431,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Blades: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Blades)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7572,8 +7440,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Blades_Dirty: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Blades/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7583,8 +7449,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Claw: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Claw)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7594,8 +7458,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Changeling: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Changeling)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7605,8 +7467,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Nerd: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Nerd)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7616,8 +7476,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Oak: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Oak)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7627,8 +7485,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Kare: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Kare)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7638,8 +7494,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Seraph: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Seraph)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7649,8 +7503,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Brop: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Brop)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7660,8 +7512,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Ace: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Ace)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7671,8 +7521,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Angel: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Angel)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7682,8 +7530,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Angel_Dirty: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Angel/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7693,8 +7539,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Flatline: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Flatline)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7704,8 +7548,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Arthur: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Arthur)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7715,8 +7557,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Mk2_Merlin: FST_Crewman_Helmet_Mk2
 	{
-		scope=2;
-		author="Steel";
 		displayName="[41st] Crewman Helmet Mk2 (Merlin)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7771,8 +7611,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Demon: FST_Crewman_Helmet
 	{
-		scope=2;
-		author="Daara";
 		displayName="[41st] Crewman Helmet (Demon)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7781,7 +7619,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Nova: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Steel";
 		displayName="[41st] Crewman Helmet (Nova)";
 		hiddenSelectionsTextures[]=
@@ -7791,8 +7628,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Blades: FST_Crewman_Helmet
 	{
-		scope=2;
-		author="Daara";
 		displayName="[41st] Crewman Helmet (Blades)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7801,8 +7636,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Waffle: FST_Crewman_Helmet
 	{
-		scope=2;
-		author="Daara";
 		displayName="[41st] Crewman Helmet (Waffle)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7811,7 +7644,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Harlequin: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Harlequin)";
 		hiddenSelectionsTextures[]=
@@ -7821,7 +7653,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Seraph: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Steel";
 		displayName="[41st] Crewman Helmet (Seraph)";
 		hiddenSelectionsTextures[]=
@@ -7831,7 +7662,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Flatline: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Laer";
 		displayName="[41st] Crewman Helmet (Flatline)";
 		hiddenSelectionsTextures[]=
@@ -7841,7 +7671,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Oak: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Oak)";
 		hiddenSelectionsTextures[]=
@@ -7853,8 +7682,6 @@ class CfgWeapons
 	OLD HOTSHOT
 	class FST_Crewman_Helmet_Hotshot: FST_Crewman_Helmet
 	{
-		scope=2;
-		author="Daara";
 		displayName="[41st] Crewman Helmet (Hotshot)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7864,7 +7691,6 @@ class CfgWeapons
 	
 	class FST_Crewman_Helmet_Hotshot_Dirty: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Hotshot/Dirty)";
 		hiddenSelectionsTextures[]=
@@ -7875,7 +7701,6 @@ class CfgWeapons
 	*/
 	class FST_Crewman_Helmet_Harlequin_Dirty: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Viz";
 		displayName="[41st] Crewman Helmet (Harlequin/Dirty)";
 		hiddenSelectionsTextures[]=
@@ -7885,7 +7710,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Ace: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Ace)";
 		hiddenSelectionsTextures[]=
@@ -7895,8 +7719,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Angel: FST_Crewman_Helmet
 	{
-		scope=2;
-		author="Daara";
 		displayName="[41st] Crewman Helmet (Angel)";
 		hiddenSelectionsTextures[]=
 		{
@@ -7905,7 +7727,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Angel_Dirty: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Angel/Dirty)";
 		hiddenSelectionsTextures[]=
@@ -7915,7 +7736,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Arthur: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Arthur)";
 		hiddenSelectionsTextures[]=
@@ -7925,7 +7745,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Merlin: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Merlin)";
 		hiddenSelectionsTextures[]=
@@ -7935,7 +7754,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Benni: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Benni)";
 		hiddenSelectionsTextures[]=
@@ -7945,7 +7763,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Colors: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Viz";
 		displayName="[41st] Crewman Helmet (Colors)";
 		hiddenSelectionsTextures[]=
@@ -7955,7 +7772,6 @@ class CfgWeapons
 	};
 	class FST_Crewman_Helmet_Jorge: FST_Crewman_Helmet
 	{
-		scope=2;
 		author="Gold";
 		displayName="[41st] Crewman Helmet (Jorge)";
 		hiddenSelectionsTextures[]=
@@ -8014,9 +7830,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_NCO: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne NCO Helmet";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_NCO.paa",
@@ -8025,8 +7839,6 @@ class CfgWeapons
 	//////////////Custom Helmets//////////////
   	class FST_Pilot_P1_Helmet_Ghostly: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Ghostly]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8038,7 +7850,6 @@ class CfgWeapons
   	class FST_Pilot_P1_Helmet_Raz: FST_Pilot_P1_Helmet
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Raz]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8050,7 +7861,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Ruby: FST_Pilot_P1_Helmet
 	{
 		author="Ruby";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Ruby]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8062,7 +7872,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Heller: FST_Pilot_P1_Helmet
 	{
 		author="Ruby";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Heller]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8073,8 +7882,6 @@ class CfgWeapons
 	};
   	class FST_Pilot_P1_Helmet_Spade: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Spade]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8085,8 +7892,6 @@ class CfgWeapons
 	};
   	class FST_Pilot_P1_Helmet_Shockcap: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Shockcap]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8097,8 +7902,6 @@ class CfgWeapons
 	};
   	class FST_Pilot_P1_Helmet_Hijack: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Hijack]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8110,7 +7913,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Sierra: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Sierra]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8122,7 +7924,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Jorge: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Jorge]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8134,7 +7935,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Red: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Red]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8146,7 +7946,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Talisman: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Talisman]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8158,7 +7957,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Nys: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Nys]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8170,7 +7968,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Bees: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Bees]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8182,7 +7979,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Derp: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Derp]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8194,7 +7990,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Sepie: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Sepie]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8205,8 +8000,6 @@ class CfgWeapons
 	};
   	class FST_Pilot_P1_Helmet_Qball: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Qball]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8217,8 +8010,6 @@ class CfgWeapons
 	};
   	class FST_Pilot_P1_Helmet_Grim: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Grim]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8230,7 +8021,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Pole: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Pole]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8242,7 +8032,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Pole_Dirty: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Pole/Dirty]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8254,7 +8043,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Cursed: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Cursed]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8266,7 +8054,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Ouranos: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Ouranos]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8278,7 +8065,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Souls: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Souls]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8290,7 +8076,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_House: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [House]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8301,8 +8086,6 @@ class CfgWeapons
 	};
   	class FST_Pilot_P1_Helmet_Ripper: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Ripper]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8313,8 +8096,6 @@ class CfgWeapons
 	};
    	class FST_Pilot_P1_Helmet_Daara: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Daara]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8325,8 +8106,6 @@ class CfgWeapons
 	}; 
    	class FST_Pilot_P1_Helmet_Hercules: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Hercules]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8350,7 +8129,6 @@ class CfgWeapons
    	class FST_Pilot_P1_Helmet_Medusa: FST_Pilot_P1_Helmet
 	{
 		author="Medusa";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Medusa]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8362,7 +8140,6 @@ class CfgWeapons
    	class FST_Pilot_P1_Helmet_Vix: FST_Pilot_P1_Helmet
 	{
 		author="Vix";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Vix]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8374,7 +8151,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Jan: FST_Pilot_P1_Helmet
 	{
 		author="Gold";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Jan]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8385,8 +8161,6 @@ class CfgWeapons
 	};
 	class FST_Pilot_P1_Helmet_Woods: FST_Pilot_P1_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Woods]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8398,7 +8172,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Overwatch: FST_Pilot_P1_Helmet
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Overwatch]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8410,7 +8183,6 @@ class CfgWeapons
 	class FST_Pilot_P1_Helmet_Lancer: FST_Pilot_P1_Helmet
 	{
 		author="Viz";
-		scope=2;
 		displayName="[41st] P1 Pilot Helmet [Lancer]";
 		hiddenSelectionsTextures[]=
 		{
@@ -8421,8 +8193,6 @@ class CfgWeapons
 	};
 	class FST_BARC_Helmet_Ghostly: FST_BARC_Helmet
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] BARC Helmet [Ghostly]";
 		hiddenSelectionsTextures[]=
 		{
@@ -9055,9 +8825,7 @@ class CfgWeapons
 	};
  	class FST_Airborne_Helmet_Annex: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Annex)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Annex.paa",
@@ -9067,7 +8835,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Woodland)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Woodland.paa"
@@ -9075,9 +8842,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Nahlens: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Nahlens)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Nahlens.paa",
@@ -9087,7 +8852,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Antonius)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Antonius.paa",
@@ -9097,7 +8861,6 @@ class CfgWeapons
 	{
 		author="Ruby";
 		displayName="[41st] Airborne Helmet (Remedy)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy.paa",
@@ -9105,9 +8868,7 @@ class CfgWeapons
 	};
  	class FST_Airborne_Helmet_Cowboy: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Cowboy)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cowboy.paa",
@@ -9115,9 +8876,7 @@ class CfgWeapons
 	}; 
 	class FST_Airborne_Helmet_Shut: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Shut)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Shut.paa",
@@ -9127,7 +8886,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Arctic)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Arctic.paa",
@@ -9137,7 +8895,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Cyanide)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cyanide.paa",
@@ -9147,7 +8904,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Hinx)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Hinx.paa",
@@ -9155,9 +8911,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Sepie: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Sepie)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sepie.paa",
@@ -9165,9 +8919,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Viz: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Viz)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Viz.paa",
@@ -9175,9 +8927,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Viz_Dirty: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Viz/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Viz_Dirty.paa",
@@ -9187,7 +8937,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Stein)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Stein.paa",
@@ -9195,9 +8944,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Elk: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Elk)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Elk.paa",
@@ -9205,9 +8952,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Lawman: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Lawman)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Lawman.paa",
@@ -9215,9 +8960,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Mac: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Mac)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Mac.paa",
@@ -9225,9 +8968,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Sunny: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Sunny)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sunny.paa",
@@ -9235,9 +8976,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Waffle: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Waffle)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Waffle.paa",
@@ -9247,7 +8986,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Fire)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Fire.paa",
@@ -9257,7 +8995,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Jorge)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Jorge.paa",
@@ -9267,7 +9004,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Lang)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Lang.paa",
@@ -9277,7 +9013,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Warlord)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Warlord.paa",
@@ -9287,11 +9022,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Cutlass)";
-		scope=2;
-		hiddenselections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass.paa",
@@ -9301,7 +9031,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Milton)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Milton.paa",
@@ -9311,7 +9040,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Glacial)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Glacial.paa",
@@ -9321,7 +9049,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Atlas)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Atlas.paa",
@@ -9331,7 +9058,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Atlas/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Atlas_Dirty.paa",
@@ -9341,7 +9067,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Alek)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Alek.paa",
@@ -9351,7 +9076,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Noble)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Noble.paa",
@@ -9361,7 +9085,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Silhouette)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Silhouette.paa",
@@ -9371,7 +9094,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Silhouette/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Silhouette_Dirty.paa",
@@ -9381,7 +9103,6 @@ class CfgWeapons
 	{
 		author="Dara";
 		displayName="[41st] Airborne Helmet (Assassin)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Assassin.paa",
@@ -9389,9 +9110,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Cait: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Cait)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cait.paa",
@@ -9401,7 +9120,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Puma)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Puma.paa",
@@ -9411,7 +9129,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Puma/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Puma_Dirty.paa",
@@ -9421,7 +9138,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Ares)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ares.paa",
@@ -9431,7 +9147,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Ares/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ares_Dirty.paa",
@@ -9441,7 +9156,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Sparrow)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sparrow.paa",
@@ -9451,7 +9165,6 @@ class CfgWeapons
 	{
 		author="Tanuki";
 		displayName="[41st] Airborne Helmet (Prodigal)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Prodigal.paa"
@@ -9461,7 +9174,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Impaler)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Impaler.paa",
@@ -9469,9 +9181,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Vishy: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Vishy)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vishy.paa",
@@ -9479,9 +9189,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Nys: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Nys)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Nys.paa",
@@ -9489,9 +9197,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Squid: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Squid)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Squid.paa",
@@ -9499,9 +9205,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Spider: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Spider)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Spider.paa",
@@ -9509,9 +9213,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_James: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (James)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_James.paa",
@@ -9521,7 +9223,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (James/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_James_Dirty.paa",
@@ -9529,9 +9230,7 @@ class CfgWeapons
 	};
  	class FST_Airborne_Helmet_Vengence: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Vengence)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vengeance.paa",
@@ -9539,9 +9238,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Brick: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Brick)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Brick.paa",
@@ -9549,9 +9246,7 @@ class CfgWeapons
 	}; 
 	class FST_Airborne_Helmet_Deso: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Deso)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Deso.paa",
@@ -9559,9 +9254,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Ordo: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Ordo)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ordo.paa",
@@ -9569,9 +9262,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Kodiak: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Kodiak)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Kodiak.paa",
@@ -9579,9 +9270,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Helix: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Helix)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Helix.paa",
@@ -9591,7 +9280,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Helix/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Helix_Dirty.paa",
@@ -9599,9 +9287,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Deso_Dirty: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Deso/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Deso_Dirty.paa",
@@ -9609,9 +9295,7 @@ class CfgWeapons
 	};
  	class FST_Airborne_Helmet_Zen: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Zen)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Zen.paa",
@@ -9619,9 +9303,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Bookworm: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Bookworm)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Bookworm.paa",
@@ -9629,9 +9311,7 @@ class CfgWeapons
 	}; 
  	class FST_Airborne_Helmet_Dunder: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Dunder)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Dunder.paa",
@@ -9641,7 +9321,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Mixer)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Mixer.paa",
@@ -9651,7 +9330,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Preacher)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Preacher.paa",
@@ -9661,7 +9339,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Preacher/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Preacher_Dirty.paa",
@@ -9671,7 +9348,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Mav)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Mav.paa",
@@ -9679,9 +9355,7 @@ class CfgWeapons
 	};
  	class FST_Airborne_Helmet_Medusa: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Medusa)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Medusa.paa",
@@ -9689,9 +9363,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Prancer: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Prancer)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Prancer.paa",
@@ -9699,9 +9371,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Starlet: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Starlet)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Starlet.paa",
@@ -9709,9 +9379,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Texas: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Texas)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Texas.paa",
@@ -9719,9 +9387,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Delta: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Delta)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Delta.paa",
@@ -9729,9 +9395,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Delta_Dirty: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Delta/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Delta_Dirty.paa",
@@ -9739,9 +9403,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Ruby: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Ruby)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ruby.paa",
@@ -9751,7 +9413,6 @@ class CfgWeapons
 	{
 		author="Ruby";
 		displayName="[41st] Airborne Helmet (Prime)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Prime.paa",
@@ -9759,9 +9420,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Ruby_Dirty: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Ruby/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ruby_Dirty.paa",
@@ -9769,9 +9428,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Thug: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Thug)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Thug.paa",
@@ -9779,9 +9436,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Poly: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Poly)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Poly.paa",
@@ -9789,9 +9444,7 @@ class CfgWeapons
 	};
 	class FST_Airborne_Helmet_Poly_Dirty: FST_Airborne_Helmet
 	{
-		author="Daara";
 		displayName="[41st] Airborne Helmet (Poly/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Poly_Dirty.paa",
@@ -9801,7 +9454,6 @@ class CfgWeapons
 	{
 		author="Vengence";
 		displayName="[41st] Airborne Helmet (Dakka)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Dakka.paa",
@@ -9811,7 +9463,6 @@ class CfgWeapons
 	{
 		author="Vengence";
 		displayName="[41st] Airborne Helmet (Bright)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Bright.paa",
@@ -9821,7 +9472,6 @@ class CfgWeapons
 	{
 		author="Vengence";
 		displayName="[41st] Airborne Helmet (Chap)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Chap.paa",
@@ -9831,7 +9481,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Zombie)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Zombie.paa",
@@ -9841,7 +9490,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Marek)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Marek.paa",
@@ -9851,7 +9499,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Marek/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Marek_Dirty.paa",
@@ -9861,7 +9508,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Crusader)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Crusader.paa",
@@ -9871,7 +9517,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Kelj)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Kelj.paa",
@@ -9881,7 +9526,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Riley)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley.paa",
@@ -9891,7 +9535,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Riley/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_Dirty.paa",
@@ -9901,7 +9544,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Riley/V2)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2.paa",
@@ -9911,7 +9553,6 @@ class CfgWeapons
 	{
 		author="Ruby";
 		displayName="[41st] Airborne Helmet (Riley/V2/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Riley_V2_Dirty.paa",
@@ -9921,7 +9562,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Kortnul)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Kortnul.paa",
@@ -9931,7 +9571,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Sin)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sin.paa",
@@ -9941,7 +9580,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Sphinx)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Sphinx.paa",
@@ -9951,7 +9589,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Woods)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Woods.paa",
@@ -9961,7 +9598,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Woods/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Woods_Dirty.paa",
@@ -9971,7 +9607,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Kellogg)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Kellogg.paa",
@@ -9981,7 +9616,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Gum)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Gum.paa",
@@ -9991,7 +9625,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Cloaker)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cloaker.paa",
@@ -10001,7 +9634,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Acidic)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Acidic.paa",
@@ -10011,7 +9643,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Forge)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Forge.paa",
@@ -10021,7 +9652,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Gustav)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Gustav.paa",
@@ -10031,7 +9661,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Blue)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Blue.paa",
@@ -10041,7 +9670,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Binary)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Binary.paa",
@@ -10051,7 +9679,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Salt)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Salt.paa",
@@ -10061,7 +9688,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Gold)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Gold.paa",
@@ -10071,7 +9697,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Red)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Red.paa",
@@ -10081,7 +9706,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Vix)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vix.paa",
@@ -10091,7 +9715,6 @@ class CfgWeapons
 	{
 		author="Gold";
 		displayName="[41st] Airborne Helmet (Vix/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Vix_Dirty.paa",
@@ -10101,7 +9724,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Appa)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Appa.paa",
@@ -10111,7 +9733,6 @@ class CfgWeapons
 	{
 		author="Steel";
 		displayName="[41st] Airborne Helmet (Appa/Dirty)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Appa_Dirty.paa",
@@ -10121,7 +9742,6 @@ class CfgWeapons
 	{
 		author="Fowler";
 		displayName="[41st] Airborne Helmet (Butter)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Butter.paa",
@@ -10131,7 +9751,6 @@ class CfgWeapons
 	{
 		author="Viz";
 		displayName="[41st] Airborne Helmet (Harribel)";
-		scope=2;
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Harribel.paa",
@@ -10229,7 +9848,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Fizz_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Fizz]";
 		hiddenSelectionsTextures[]=
@@ -10719,7 +10337,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Merrik: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Merrik]";
 		hiddenSelectionsTextures[]=
@@ -10984,7 +10601,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Merrik_V2: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Merrik V2]";
 		hiddenSelectionsTextures[]=
@@ -11004,7 +10620,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Tally: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Tally]";
 		hiddenSelectionsTextures[]=
@@ -11014,7 +10629,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Tally_V2: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Tally V2]";
 		hiddenSelectionsTextures[]=
@@ -11034,7 +10648,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Annex: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Annex]";
 		hiddenSelectionsTextures[]=
@@ -11044,7 +10657,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Bulwark: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Bulwark]";
 		hiddenSelectionsTextures[]=
@@ -11074,7 +10686,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Lucky: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Lucky]";
 		hiddenSelectionsTextures[]=
@@ -11094,7 +10705,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Church: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Church]";
 		hiddenSelectionsTextures[]=
@@ -11104,7 +10714,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Harm: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Harm]";
 		hiddenSelectionsTextures[]=
@@ -11114,7 +10723,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Church_V2: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Church V2]";
 		hiddenSelectionsTextures[]=
@@ -11124,7 +10732,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Grim: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Grim]";
 		hiddenSelectionsTextures[]=
@@ -11134,7 +10741,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Burns: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Burns]";
 		hiddenSelectionsTextures[]=
@@ -11144,7 +10750,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Germ: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Germ]";
 		hiddenSelectionsTextures[]=
@@ -11154,7 +10759,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Lupus: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Lupus]";
 		hiddenSelectionsTextures[]=
@@ -11164,7 +10768,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Dark: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Dark]";
 		hiddenSelectionsTextures[]=
@@ -11174,7 +10777,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Sigs: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Sigs]";
 		hiddenSelectionsTextures[]=
@@ -11184,7 +10786,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Loco: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Loco]";
 		hiddenSelectionsTextures[]=
@@ -11194,7 +10795,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Murk: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Murk]";
 		hiddenSelectionsTextures[]=
@@ -11204,7 +10804,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Jan: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Jan]";
 		hiddenSelectionsTextures[]=
@@ -11214,7 +10813,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Magma: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Magma]";
 		hiddenSelectionsTextures[]=
@@ -11224,7 +10822,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Swift: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Swift]";
 		hiddenSelectionsTextures[]=
@@ -11234,7 +10831,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Nori: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Nori]";
 		hiddenSelectionsTextures[]=
@@ -11274,7 +10870,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Cursed: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Cursed]";
 		hiddenSelectionsTextures[]=
@@ -11284,7 +10879,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Spinel: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Spinel]";
 		hiddenSelectionsTextures[]=
@@ -11294,7 +10888,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Cryptid: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Cryptid]";
 		hiddenSelectionsTextures[]=
@@ -11304,7 +10897,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Nys: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Nys]";
 		hiddenSelectionsTextures[]=
@@ -11324,7 +10916,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Mox_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Mox/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -11334,7 +10925,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Jorge: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Jorge]";
 		hiddenSelectionsTextures[]=
@@ -11344,7 +10934,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Zipper: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Zipper]";
 		hiddenSelectionsTextures[]=
@@ -11354,7 +10943,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Warlock: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Warlock]";
 		hiddenSelectionsTextures[]=
@@ -11364,7 +10952,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Clipz: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Clipz]";
 		hiddenSelectionsTextures[]=
@@ -11374,7 +10961,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Crab: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Crab]";
 		hiddenSelectionsTextures[]=
@@ -11384,7 +10970,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Plums: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Plums]";
 		hiddenSelectionsTextures[]=
@@ -11404,7 +10989,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Colors: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Colors]";
 		hiddenSelectionsTextures[]=
@@ -11414,7 +10998,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Recruit: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Recruit]";
 		hiddenSelectionsTextures[]=
@@ -11424,7 +11007,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Brick: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Brick]";
 		hiddenSelectionsTextures[]=
@@ -11484,7 +11066,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Samurai: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Samurai]";
 		hiddenSelectionsTextures[]=
@@ -11504,7 +11085,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Gleb: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Gleb]";
 		hiddenSelectionsTextures[]=
@@ -11514,7 +11094,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Evox: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Evox]";
 		hiddenSelectionsTextures[]=
@@ -11534,7 +11113,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Volos: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Volos]";
 		hiddenSelectionsTextures[]=
@@ -11544,7 +11122,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Laer: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Laer]";
 		hiddenSelectionsTextures[]=
@@ -11564,7 +11141,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Ripper: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Ripper]";
 		hiddenSelectionsTextures[]=
@@ -11574,7 +11150,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Sierra: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Sierra]";
 		hiddenSelectionsTextures[]=
@@ -11594,7 +11169,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Mono: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Mono]";
 		hiddenSelectionsTextures[]=
@@ -11604,7 +11178,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Mono_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Mono/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -11614,7 +11187,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Nova: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Nova]";
 		hiddenSelectionsTextures[]=
@@ -11624,7 +11196,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Business: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Business]";
 		hiddenSelectionsTextures[]=
@@ -11644,7 +11215,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Parsec: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Parsec]";
 		hiddenSelectionsTextures[]=
@@ -11674,7 +11244,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Ruby: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Ruby]";
 		hiddenSelectionsTextures[]=
@@ -11684,7 +11253,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Ruby_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Ruby/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -11694,7 +11262,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Grif: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Grif]";
 		hiddenSelectionsTextures[]=
@@ -11704,7 +11271,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Primus: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Primus]";
 		hiddenSelectionsTextures[]=
@@ -11714,7 +11280,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Trenny: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Trenny]";
 		hiddenSelectionsTextures[]=
@@ -11734,7 +11299,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Lancer: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Lancer]";
 		hiddenSelectionsTextures[]=
@@ -11744,7 +11308,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Lancer_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Lancer/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -11754,7 +11317,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Rint: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rint]";
 		hiddenSelectionsTextures[]=
@@ -11764,7 +11326,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Rint_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rint/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -11774,7 +11335,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Rint_V2: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rint V2]";
 		hiddenSelectionsTextures[]=
@@ -11784,7 +11344,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Rint_V2_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rint/Dirty V2]";
 		hiddenSelectionsTextures[]=
@@ -11794,7 +11353,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Jax: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Jax]";
 		hiddenSelectionsTextures[]=
@@ -11804,7 +11362,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Mrogg: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Mrogg]";
 		hiddenSelectionsTextures[]=
@@ -11814,7 +11371,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Nic: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Nic]";
 		hiddenSelectionsTextures[]=
@@ -11824,7 +11380,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Medusa: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Medusa]";
 		hiddenSelectionsTextures[]=
@@ -11834,7 +11389,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Minno: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Minno]";
 		hiddenSelectionsTextures[]=
@@ -11854,7 +11408,6 @@ class CfgWeapons
     };
 	class FST_P2_Helmet_Vulpes: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Vulpes]";
 		hiddenSelectionsTextures[]=
@@ -11864,7 +11417,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Harlequin: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Harlequin]";
 		hiddenSelectionsTextures[]=
@@ -11884,7 +11436,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Lawman: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Lawman]";
 		hiddenSelectionsTextures[]=
@@ -11914,7 +11465,6 @@ class CfgWeapons
     };
  	class FST_P2_Helmet_Jammer: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Jammer]";
 		hiddenSelectionsTextures[]=
@@ -11924,7 +11474,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Tar: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Tar]";
 		hiddenSelectionsTextures[]=
@@ -11954,7 +11503,6 @@ class CfgWeapons
     };
 	class FST_P2_Helmet_James: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [James]";
 		hiddenSelectionsTextures[]=
@@ -11964,7 +11512,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_James_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [James/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -11974,7 +11521,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Demon: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Demon]";
 		hiddenSelectionsTextures[]=
@@ -11984,7 +11530,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Tiger: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Tiger]";
 		hiddenSelectionsTextures[]=
@@ -12004,7 +11549,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Viper: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Viper]";
 		hiddenSelectionsTextures[]=
@@ -12014,7 +11558,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Mood: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Mood]";
 		hiddenSelectionsTextures[]=
@@ -12044,7 +11587,6 @@ class CfgWeapons
     };
 	class FST_P2_Helmet_Edge: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Edge]";
 		hiddenSelectionsTextures[]=
@@ -12054,7 +11596,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Coda: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Coda]";
 		hiddenSelectionsTextures[]=
@@ -12094,7 +11635,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Major: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Major]";
 		hiddenSelectionsTextures[]=
@@ -12104,7 +11644,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Major_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Major/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -12114,7 +11653,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Joko: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Joko]";
 		hiddenSelectionsTextures[]=
@@ -12134,7 +11672,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Preacher: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Preacher]";
 		hiddenSelectionsTextures[]=
@@ -12154,7 +11691,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Rook: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rook]";
 		hiddenSelectionsTextures[]=
@@ -12164,7 +11700,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Donut: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Donut]";
 		hiddenSelectionsTextures[]=
@@ -12174,7 +11709,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Deacon: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Deacon]";
 		hiddenSelectionsTextures[]=
@@ -12184,7 +11718,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Arcus: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Arcus]";
 		hiddenSelectionsTextures[]=
@@ -12204,7 +11737,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Duncy: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Duncy]";
 		hiddenSelectionsTextures[]=
@@ -12214,7 +11746,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Dobie: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Dobie]";
 		hiddenSelectionsTextures[]=
@@ -12234,7 +11765,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Sturm: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Sturm]";
 		hiddenSelectionsTextures[]=
@@ -12244,7 +11774,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Charge: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Charge]";
 		hiddenSelectionsTextures[]=
@@ -12254,7 +11783,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Doogle: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Doogle]";
 		hiddenSelectionsTextures[]=
@@ -12274,7 +11802,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Squatch: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Squatch]";
 		hiddenSelectionsTextures[]=
@@ -12284,7 +11811,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Squatch_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Squatch/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -12514,7 +12040,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Soulz: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Soulz]";
 		hiddenSelectionsTextures[]=
@@ -12524,7 +12049,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Stein: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Stein]";
 		hiddenSelectionsTextures[]=
@@ -12534,7 +12058,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Stein_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Stein/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -12544,7 +12067,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Hex: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Hex]";
 		hiddenSelectionsTextures[]=
@@ -12564,7 +12086,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Overwatch: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Overwatch]";
 		hiddenSelectionsTextures[]=
@@ -12574,7 +12095,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Xeha: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Xeha]";
 		hiddenSelectionsTextures[]=
@@ -12594,7 +12114,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Raven: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Raven]";
 		hiddenSelectionsTextures[]=
@@ -12604,7 +12123,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Kito: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Kito]";
 		hiddenSelectionsTextures[]=
@@ -12614,7 +12132,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Wilson: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Wilson]";
 		hiddenSelectionsTextures[]=
@@ -12624,7 +12141,6 @@ class CfgWeapons
 	};	 
 	class FST_P2_Helmet_Prancer: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Prancer]";
 		hiddenSelectionsTextures[]=
@@ -12634,7 +12150,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Vector: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Vector]";
 		hiddenSelectionsTextures[]=
@@ -12654,7 +12169,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Rumble: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rumble]";
 		hiddenSelectionsTextures[]=
@@ -12704,7 +12218,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Marek: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Marek]";
 		hiddenSelectionsTextures[]=
@@ -12724,7 +12237,6 @@ class CfgWeapons
 	}; */
 	class FST_P2_Helmet_Spade: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Spade]";
 		hiddenSelectionsTextures[]=
@@ -12734,7 +12246,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Immel: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Immel]";
 		hiddenSelectionsTextures[]=
@@ -12744,7 +12255,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Blossom: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Blossom]";
 		hiddenSelectionsTextures[]=
@@ -12764,7 +12274,6 @@ class CfgWeapons
     };
 	class FST_P2_Helmet_Ryx: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Ryx]";
 		hiddenSelectionsTextures[]=
@@ -12774,7 +12283,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Man: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Man]";
 		hiddenSelectionsTextures[]=
@@ -12784,7 +12292,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Tex: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Tex]";
 		hiddenSelectionsTextures[]=
@@ -12794,7 +12301,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Claw: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Claw]";
 		hiddenSelectionsTextures[]=
@@ -12813,7 +12319,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Hazard: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Hazard]";
 		hiddenSelectionsTextures[]=
@@ -12843,7 +12348,6 @@ class CfgWeapons
 	}; */
  	class FST_P2_Helmet_Teddy: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Teddy]";
 		hiddenSelectionsTextures[]=
@@ -12853,7 +12357,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Shockcap: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Shockcap]";
 		hiddenSelectionsTextures[]=
@@ -12863,7 +12366,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Sly: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Sly]";
 		hiddenSelectionsTextures[]=
@@ -12873,7 +12375,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Sly_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Sly/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -12883,7 +12384,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Martyr: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Martyr]";
 		hiddenSelectionsTextures[]=
@@ -12893,7 +12393,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Cardinal: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Cardinal]";
 		hiddenSelectionsTextures[]=
@@ -12943,7 +12442,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Cardinal_V2: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Cardinal V2]";
 		hiddenSelectionsTextures[]=
@@ -12953,7 +12451,6 @@ class CfgWeapons
 	};
  	class FST_P2_Helmet_Cardinal_V3: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Cardinal V3]";
 		hiddenSelectionsTextures[]=
@@ -12963,7 +12460,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Alfour: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Alfour]";
 		hiddenSelectionsTextures[]=
@@ -12973,7 +12469,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Drifter: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Drifter]";
 		hiddenSelectionsTextures[]=
@@ -12993,7 +12488,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Brutal: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Brutal]";
 		hiddenSelectionsTextures[]=
@@ -13003,7 +12497,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Rose: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Rose]";
 		hiddenSelectionsTextures[]=
@@ -13013,7 +12506,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Delta: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Delta]";
 		hiddenSelectionsTextures[]=
@@ -13023,7 +12515,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Ticktock: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Ticktock]";
 		hiddenSelectionsTextures[]=
@@ -13033,7 +12524,6 @@ class CfgWeapons
 	};	
 	class FST_P2_Helmet_Ropey: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Ropey]";
 		hiddenSelectionsTextures[]=
@@ -13043,7 +12533,6 @@ class CfgWeapons
 	};	
  	class FST_P2_Helmet_Daara: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Daara]";
 		hiddenSelectionsTextures[]=
@@ -13053,7 +12542,6 @@ class CfgWeapons
 	}; 	
 	class FST_P2_Helmet_Gunner: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Gunner]";
 		hiddenSelectionsTextures[]=
@@ -13073,7 +12561,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_CosmicSmith: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [CosmicSmith]";
 		hiddenSelectionsTextures[]=
@@ -13083,7 +12570,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Freezer: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Freezer]";
 		hiddenSelectionsTextures[]=
@@ -13103,7 +12589,6 @@ class CfgWeapons
 	}; */
 	class FST_P2_Helmet_NotSkilled: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [NotSkilled]";
 		hiddenSelectionsTextures[]=
@@ -13113,7 +12598,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Zen: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Zen]";
 		hiddenSelectionsTextures[]=
@@ -13123,7 +12607,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Bookworm: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Bookworm]";
 		hiddenSelectionsTextures[]=
@@ -13133,7 +12616,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Bigs: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Bigs]";
 		hiddenSelectionsTextures[]=
@@ -13143,7 +12625,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Argo: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Argo]";
 		hiddenSelectionsTextures[]=
@@ -13153,7 +12634,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Argo_V2: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Argo V2]";
 		hiddenSelectionsTextures[]=
@@ -13163,7 +12643,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Argo_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Argo/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -13173,7 +12652,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Hoyo: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Hoyo]";
 		hiddenSelectionsTextures[]=
@@ -13183,7 +12661,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Euchre: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Euchre]";
 		hiddenSelectionsTextures[]=
@@ -13193,7 +12670,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Zik: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Zik]";
 		hiddenSelectionsTextures[]=
@@ -13203,7 +12679,6 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Zik_Dirty: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Zik/Dirty]";
 		hiddenSelectionsTextures[]=
@@ -13225,7 +12700,6 @@ class CfgWeapons
 	OLD HOTSHOT
 	class FST_P2_Helmet_Hotshot: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Hotshot]";
 		hiddenSelectionsTextures[]=
@@ -13246,7 +12720,6 @@ class CfgWeapons
 	*/
 	class FST_P2_Helmet_Pope: FST_P2_Helmet_Base
 	{
-		author="Daara";
 		scope=2;
 		displayName="[41st] P2 Helmet [Pope]";
 		hiddenSelectionsTextures[]=
@@ -18964,7 +18437,6 @@ class CfgWeapons
 	}
 	class FST_NVG_Urban: FST_NVG_Woodland
 	{
-		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Urban)";
 		hiddenSelectionsTextures[]=
 		{
@@ -18973,7 +18445,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Midnight: FST_NVG_Woodland
 	{
-		author="Gold";
 		displayName="[41st] NCO Macrobinoculars (Midnight)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19171,7 +18642,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Zephyr_Dirty: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Zephyr/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19225,7 +18695,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Overwatch: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Overwatch)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19234,7 +18703,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Snoob: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Snoob)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19279,7 +18747,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Coda: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Coda)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19297,7 +18764,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Xeha: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Xeha)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19315,7 +18781,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Burns: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Burns)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19549,7 +19014,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Warlock: FST_NVG
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Warlock V2)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19693,7 +19157,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Fixed_Tiger: FST_NVG_Fixed
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Tiger/Fixed On)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19702,7 +19165,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Fixed_James: FST_NVG_Fixed
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (James/Fixed On)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19711,7 +19173,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Fixed_James_Dirty: FST_NVG_Fixed
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (James/Fixed On/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19729,7 +19190,6 @@ class CfgWeapons
 	};
 	class FST_NVG_Fixed_Claw: FST_NVG_Fixed
 	{
-		author="Daara";
 		displayName="[41st] NCO Macrobinoculars (Claw/Fixed On)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19808,7 +19268,6 @@ class CfgWeapons
 	};
 	class FST_Antenna_Woodland: FST_Antenna
 	{
-		author="Daara";
 		displayName="[41st] Officer Rangefinder (Woodland)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19817,7 +19276,6 @@ class CfgWeapons
 	};
 	class FST_Antenna_Midnight: FST_Antenna
 	{
-		author="Daara";
 		displayName="[41st] Officer Rangefinder (Midnight)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19826,7 +19284,6 @@ class CfgWeapons
 	};
 	class FST_Antenna_Urban: FST_Antenna
 	{
-		author="Daara";
 		displayName="[41st] Officer Rangefinder (Urban)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19835,7 +19292,6 @@ class CfgWeapons
 	};
 	class FST_Antenna_Desert: FST_Antenna
 	{
-		author="Daara";
 		displayName="[41st] Officer Rangefinder (Desert)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19894,7 +19350,6 @@ class CfgWeapons
 	};
 	class FST_Visor_Urban: FST_Visor_Woodland
 	{
-		author="Daara";
 		displayName="[41st] Officer Visor (Urban)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19903,7 +19358,6 @@ class CfgWeapons
 	};
 	class FST_Visor_Midnight: FST_Visor_Woodland
 	{
-		author="Daara";
 		displayName="[41st] Officer Visor (Midnight)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19912,7 +19366,6 @@ class CfgWeapons
 	};
 	class FST_Visor_Desert: FST_Visor_Woodland
 	{
-		author="Daara";
 		displayName="[41st] Officer Visor (Desert)";
 		hiddenSelectionsTextures[]=
 		{
@@ -19921,7 +19374,6 @@ class CfgWeapons
 	};
 	class FST_Visor_Argo: FST_Visor
 	{
-		author="Daara";
 		displayName="[41st] Officer Visor (Argo)";
 		hiddenSelectionsTextures[]=
 		{
@@ -20396,16 +19848,7 @@ class CfgVehicles
 	class FST_MedicalCrate: FST_AmmoCrate
 	{
 		displayName="[41st] Medical Crate";
-		editorCategory="FST_Crates";
-		editorSubcategory="FST_Supplies";
 		editorPreview="\MRC\JLTS\weapons\Crates\data\ui\editorPreviews\JLTS_Ammobox_ammo_GAR.jpg";
-		model="3as\3as_props\crates\models\supply_Large.p3d";
-		Scope=2;
-		ScopeCurator=2;
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"3AS\3AS_Props\Crates\Data\Supply_Large_Medical\Supply_Large_Medical_co.paa"
@@ -20543,7 +19986,6 @@ class CfgVehicles
 	};
 	class FST_Commando_Backpack_Jorge_Ammobearer: FST_Commando_Backpack_Jorge
 	{
-		scope=2;
 		class TransportMagazines
 		{
 			class _xx_FST_blaster_cell_High_Blue
@@ -21177,29 +20619,22 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_Backpack_Jumppack_EOD: JLTS_Clone_jumppack_mc
+		// -----------------------------------------------------------------------------
+	// 41st jumppack inheritance cleanup
+	// Place this inside CfgVehicles, replacing the old active FST jumppack classes.
+	// -----------------------------------------------------------------------------
+	class FST_Backpack_Jumppack_Base: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=390;
-		displayName="[41st] Jump Pack (Engineer)";
+		scope=0;
+		scopecurator=0;
+		scopearsenal=0;
 		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
+		hiddenSelections[]={"camo1"};
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"};
+		hiddenSelectionsMaterials[]={"41st_Armor\Data\Other\Clone_jumppack.rvmat"};
+
 		tf_hasLRradio=0;
 		JLTS_isJumppack=0;
 		FST_jumppack_is_jumppack=1;
@@ -21209,32 +20644,167 @@ class CfgVehicles
 		FST_jumppack_jump_effect_script="";
 		FST_jumppack_effect_points[]=
 		{
-			
 			{
 				"spine3",
 				{0,-0.30000001,-0.1}
 			}
 		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
+		FST_jumppack_sound_ignite[]={"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"};
+		FST_jumppack_sound_land[]={"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"};
+		FST_jumppack_sound_idle[]={"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"};
 		FST_jumppack_jump_types[]=
 		{
-			
 			{
 				"Short Jump",
 				{12,2,100,0,1,0}
 			}
 		};
+
+		class TransportItems{};
+	};
+
+	class FST_Backpack_Jumppack_LR_Base: FST_Backpack_Jumppack_Base
+	{
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+	};
+
+	class FST_Backpack_Jumppack_Command_Base: FST_Backpack_Jumppack_LR_Base
+	{
+		FST_jumppack_spam_delay=0;
+		FST_jumppack_energy_capacity=150;
+		FST_jumppack_recharge=10;
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+	};
+
+	class FST_Backpack_Jumppack: FST_Backpack_Jumppack_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (Ammo Bearer)";
+	};
+
+	class FST_Backpack_Jumppack_Custom_LR_Base: FST_Backpack_Jumppack
+	{
+		scope=0;
+		scopecurator=0;
+		scopearsenal=0;
+		maximumload=340;
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+	};
+
+	class FST_Backpack_Jumppack_GRN: FST_Backpack_Jumppack
+	{
+		maximumload=208;
+		displayName="[41st] Jump Pack (GRN)";
+	};
+
+	class FST_Backpack_Jumppack_CQB: FST_Backpack_Jumppack
+	{
+		maximumload=170;
+		displayName="[41st] Jump Pack (CQB)";
+	};
+
+	class FST_Backpack_Jumppack_STD_Ammo: FST_Backpack_Jumppack
+	{
+		maximumload=320;
+		displayName="[41st] Jump Pack (STD AmmoBearer)";
+	};
+
+	class FST_Backpack_Jumppack_15L_Ammo: FST_Backpack_Jumppack
+	{
+		maximumload=340;
+		displayName="[41st] Jump Pack (15L AmmoBearer)";
+	};
+
+	class FST_Backpack_Jumppack_RifleAT_Ammo: FST_Backpack_Jumppack
+	{
+		maximumload=280;
+		displayName="[41st] Jump Pack (Rifle AT AmmoBearer)";
+	};
+
+	class FST_Backpack_Jumppack_15L: FST_Backpack_Jumppack
+	{
+		maximumload=200;
+		displayName="[41st] Jump Pack (15L)";
+	};
+
+	class FST_Backpack_Jumppack_RifleAT: FST_Backpack_Jumppack
+	{
+		maximumload=350;
+		displayName="[41st] Jump Pack (RifleAT)";
+	};
+
+	class FST_Backpack_Jumppack_Z6: FST_Backpack_Jumppack
+	{
+		maximumload=180;
+		displayName="[41st] Jump Pack (Z6)";
+	};
+
+	class FST_Backpack_Jumppack_Z6_Ammo: FST_Backpack_Jumppack
+	{
+		maximumload=315;
+		displayName="[41st] Jump Pack (Z6 AmmoBearer)";
+	};
+
+	class FST_Backpack_Jumppack_PLX_Ammo: FST_Backpack_Jumppack
+	{
+		displayName="[41st] Jump Pack (PLX AmmoBearer)";
+	};
+
+	class FST_Backpack_Jumppack_RPS_Ammo: FST_Backpack_Jumppack
+	{
+		maximumload=240;
+		displayName="[41st] Jump Pack (RPS AmmoBearer)";
+	};
+
+	class FST_Backpack_Jumppack_PLX: FST_Backpack_Jumppack
+	{
+		displayName="[41st] Jump Pack (PLX)";
+	};
+
+	class FST_Backpack_Jumppack_RPS: FST_Backpack_Jumppack
+	{
+		maximumload=240;
+		displayName="[41st] Jump Pack (RPS)";
+	};
+
+	class FST_Backpack_Jumppack_Rifleman: FST_Backpack_Jumppack
+	{
+		maximumload=10;
+		displayName="[41st] Jump Pack (Rifleman)";
+	};
+
+	class FST_Backpack_Jumppack_EOD: FST_Backpack_Jumppack_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=390;
+		displayName="[41st] Jump Pack (Engineer)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Engineer.paa"};
+		hiddenSelectionsMaterials[]={};
 		class TransportItems
 		{
 			class _xx_IDA_explosive_Detpack_mag
@@ -21264,6 +20834,553 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class FST_Backpack_Jumppack_Medic: FST_Backpack_Jumppack
+	{
+		displayName="[41st] Jump Pack (Medic)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"};
+		class TransportItems
+		{
+			class _xx_IDA_BactaBandage
+			{
+				count=80;
+				name="IDA_BactaBandage";
+			};
+			class _xx_ACE_PlasmaIV
+			{
+				count=6;
+				name="ACE_PlasmaIV";
+			};
+			class _xx_ACE_PlasmaIV_500
+			{
+				count=8;
+				name="ACE_PlasmaIV_500";
+			};
+			class _xx_IDA_BattleStim
+			{
+				count=15;
+				name="IDA_BattleStim";
+			};
+			class _xx_ACE_Adenosine
+			{
+				count=6;
+				name="ACE_Adenosine";
+			};
+			class _xx_ACE_Splint
+			{
+				count=6;
+				name="ACE_Splint";
+			};
+			class _xx_ACE_tourniquet
+			{
+				count=6;
+				name="ACE_tourniquet";
+			};
+			class _xx_IDA_Cauterizer
+			{
+				count=1;
+				name="IDA_Cauterizer";
+			};
+			class _xx_FST_Bacta_Tank
+			{
+				count=1;
+				name="FST_Bacta_Tank";
+			};
+		};
+	};
+
+	class FST_Backpack_Jumppack_Woodland: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=400;
+		displayName="[41st] Jump Pack (Woodland)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woodland.paa"};
+		hiddenSelectionsMaterials[]={"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"};
+	};
+
+	class FST_Backpack_Jumppack_Desert: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=400;
+		displayName="[41st] Jump Pack (Desert)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Desert.paa"};
+		hiddenSelectionsMaterials[]={"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"};
+	};
+
+	class FST_Backpack_Jumppack_Urban: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=400;
+		displayName="[41st] Jump Pack (Urban)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Urban.paa"};
+		hiddenSelectionsMaterials[]={"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"};
+	};
+
+	class FST_Backpack_Jumppack_Midnight: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=400;
+		displayName="[41st] Jump Pack (Midnight)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Midnight.paa"};
+		hiddenSelectionsMaterials[]={"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"};
+	};
+
+	class FST_Backpack_Invisible_Jumppack: FST_Backpack_Jumppack_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=400;
+		displayName="[41st] Jump Pack (Invisible)";
+		hiddenSelectionsTextures[]={""};
+		hiddenSelectionsMaterials[]={};
+	};
+
+	class FST_Backpack_Jumppack_LR: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (LR)";
+	};
+
+	class FST_Backpack_Jumppack_LR_UGL: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=300;
+		displayName="[41st] Jump Pack (LR/UGL)";
+	};
+
+	class FST_Backpack_Jumppack_Grinch: FST_Backpack_Jumppack_Command_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (Grinch)";
+		hiddenSelectionsTextures[]={""};
+		hiddenSelectionsMaterials[]={};
+	};
+
+	class FST_Backpack_JORGE_Jumppack_Boss: FST_Backpack_Jumppack_Command_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Jump Pack (Jorge/Boss)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"};
+		hiddenSelectionsMaterials[]={};
+	};
+
+	class FST_Backpack_Descentpack: FST_Backpack_Jumppack_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=250;
+		displayName="[41st] Fynock Descent Pack";
+		hiddenSelectionsTextures[]={"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"};
+		hiddenSelectionsMaterials[]={};
+		FST_jumppack_recharge=0.001;
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Break Fall",
+				{12,2,100,0,1,0}
+			}
+		};
+	};
+
+	class FST_Backpack_Jumppack_Noble: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Noble)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Noble.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Delta: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Delta)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Delta_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Delta/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Puma: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Puma)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Puma.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Ruby: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Ruby)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ruby.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Ruby_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Ruby/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ruby_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Zen: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Zen)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Zen.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Ares: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Ares)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Vishy: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Vishy)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vishy.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Deso: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Deso)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Deso_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Deso/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Medusa: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Medusa)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Medusa.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Annex: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Annex)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Annex.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Riley: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Steel";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Riley)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Riley.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Woods: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Steel";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Woods)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Vix: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Vix)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Vix_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Vix/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Helix: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Helix)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Helix.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Helix_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Helix/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Helix_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_James: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (James)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_James.paa"};
+	};
+
+	class FST_Backpack_Jumppack_James_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (James/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_James_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Sunny: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Sunny)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Sunny.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Jorge: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Jorge)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Appa: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Appa)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Vengence)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vengence.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Cowboy: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Cowboy)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cowboy.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Starlet: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Laer";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Starlet)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Starlet.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Salt: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Gold";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Salt)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Salt.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Cutlass: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Vengence";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Cutlass)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cutlass.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Viz: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Viz)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Viz.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Viz_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Viz/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Viz_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Poly: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Poly)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Poly.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Poly_Dirty: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Poly/Dirty)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Poly_Dirty.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Bookworm: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Bookworm)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Bookworm.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Marek: FST_Backpack_Jumppack_Custom_LR_Base
+	{
+		author="Viz";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[41st] Jump Pack (Marek)";
+		hiddenSelectionsTextures[]={"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek.paa"};
+	};
+
+	class FST_Backpack_Jumppack_Ares_Dirty: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+	};
+
+	class FST_Backpack_Jumppack_Woods_Dirty: FST_Backpack_Jumppack_Woods
+	{
+	};
+
+	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+	};
+
+	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+	};
+
+	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+	};
+
+	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+	};
+
+	class FST_Backpack_Jumppack_Bright: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+	};
+
 /* 	class FST_Backpack_Jumppack_EOD_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -21746,1194 +21863,60 @@ class CfgVehicles
 		};
 		tf_range=50000;
 	}; */
-	class FST_Backpack_Jumppack: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Ammo Bearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_GRN: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=208;
-		displayName="[41st] Jump Pack (GRN)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_CQB: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=170;
-		displayName="[41st] Jump Pack (CQB)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Woodland: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=400;
-		displayName="[41st] Jump Pack (Woodland)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woodland.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Desert: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=400;
-		displayName="[41st] Jump Pack (Desert)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Desert.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Urban: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=400;
-		displayName="[41st] Jump Pack (Urban)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Urban.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Midnight: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=400;
-		displayName="[41st] Jump Pack (Midnight)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Midnight.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Camos\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_STD_Ammo: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=320;
-		displayName="[41st] Jump Pack (STD AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_15L_Ammo: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (15L AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_RifleAT_Ammo: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=280;
-		displayName="[41st] Jump Pack (Rifle AT AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_15L: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=200;
-		displayName="[41st] Jump Pack (15L)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_RifleAT: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=350;
-		displayName="[41st] Jump Pack (RifleAT)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Z6: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=180;
-		displayName="[41st] Jump Pack (Z6)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Z6_Ammo: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=315;
-		displayName="[41st] Jump Pack (Z6 AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_PLX_Ammo: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (PLX AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_RPS_Ammo: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=240;
-		displayName="[41st] Jump Pack (RPS AmmoBearer)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_PLX: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (PLX)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_RPS: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=240;
-		displayName="[41st] Jump Pack (RPS)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script=""; //FST_jumppack_effect_fnc_jt_21
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
+	
+	// FST_Backpack_Jumppack moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_GRN moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_CQB moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Woodland moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Desert moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Urban moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Midnight moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_STD_Ammo moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_15L_Ammo moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_RifleAT_Ammo moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_15L moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_RifleAT moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Z6 moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Z6_Ammo moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_PLX_Ammo moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_RPS_Ammo moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_PLX moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_RPS moved into the refactored jumppack section above.
+
 /* 	class FST_Backpack_Jumppack_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -22999,140 +21982,12 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Jumppack_Grinch: JLTS_Clone_jumppack_mc
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Grinch)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			""
-		};
- 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=0;
-		FST_jumppack_energy_capacity=150;
-		FST_jumppack_recharge=10;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Forward Jump",
-				{12,20,50,0,0,0}
-			},
-			
-			{
-				"Short Jump",
-				{12,5,30,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_JORGE_Jumppack_Boss: JLTS_Clone_jumppack_mc
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Jorge/Boss)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=0;
-		FST_jumppack_energy_capacity=150;
-		FST_jumppack_recharge=10;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Forward Jump",
-				{12,20,50,0,0,0}
-			},
-			
-			{
-				"Short Jump",
-				{12,5,30,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
+	
+	// FST_Backpack_Jumppack_Grinch moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_JORGE_Jumppack_Boss moved into the refactored jumppack section above.
+
 	/* class FST_Backpack_Jumppack_ARF_Woodland: JLTS_Clone_jumppack_mc
 	{
 		author="Viz";
@@ -23204,112 +22059,9 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Jumppack_Medic: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Jump Pack (Medic)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_medic.paa"
-		};
-		hiddenSelectionsMaterials[]=	
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-			class _xx_IDA_BactaBandage
-			{
-				count=80;
-				name="IDA_BactaBandage";
-			};
-			class _xx_ACE_PlasmaIV
-			{
-				count=6;
-				name="ACE_PlasmaIV";
-			};
-			class _xx_ACE_PlasmaIV_500
-			{
-				count=8;
-				name="ACE_PlasmaIV_500";
-			};
-			class _xx_IDA_BattleStim
-			{
-				count=15;
-				name="IDA_BattleStim";
-			};
-			class _xx_ACE_Adenosine
-			{
-				count=6;
-				name="ACE_Adenosine";
-			};
-			class _xx_ACE_Splint
-			{
-				count=6;
-				name="ACE_Splint";
-			};
-			class _xx_ACE_tourniquet
-			{
-				count=6;
-				name="ACE_tourniquet";
-			};
-			class _xx_IDA_Cauterizer
-			{
-				count=1;
-				name="IDA_Cauterizer";
-			};
-			class _xx_FST_Bacta_Tank
-			{
-				count=1;
-				name="FST_Bacta_Tank";
-			};			
-		};
-	};
+	
+	// FST_Backpack_Jumppack_Medic moved into the refactored jumppack section above.
+
 /* 	class FST_Backpack_Jumppack_Medic_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -23415,72 +22167,9 @@ class CfgVehicles
 			};			
 		};
 	}; */
-	class FST_Backpack_Jumppack_Rifleman: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=10;
-		displayName="[41st] Jump Pack (Rifleman)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-/* 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000; */
-		tf_hasLRradio=0;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
+	
+	// FST_Backpack_Jumppack_Rifleman moved into the refactored jumppack section above.
+
 /* 	class FST_Backpack_Jumppack_Rifleman_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -23546,200 +22235,15 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Invisible_Jumppack: JLTS_Clone_jumppack_mc
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=400;
-		displayName="[41st] Jump Pack (Invisible)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			""
-		};
- 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_LR: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (LR)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_LR_UGL: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=300;
-		displayName="[41st] Jump Pack (LR/UGL)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"41st_Armor\Data\Other\Clone_jumppack.rvmat"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
+	
+	// FST_Backpack_Invisible_Jumppack moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_LR moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_LR_UGL moved into the refactored jumppack section above.
+
 /* 	class FST_Backpack_Jumppack_LR_Test: JLTS_Clone_jumppack_mc
 	{
 		author="Daara";
@@ -23805,68 +22309,9 @@ class CfgVehicles
 		{
 		};
 	}; */
-	class FST_Backpack_Descentpack: JLTS_Clone_jumppack_mc
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=250;
-		displayName="[41st] Fynock Descent Pack";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=0.001;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			
-			{
-				"Break Fall",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
+	
+	// FST_Backpack_Descentpack moved into the refactored jumppack section above.
+
 	/* class FST_ARF_backpack_RTO_Woodland: FST_Backpack_Antenna
 	{
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_backpack_ui_ca.paa";
@@ -24039,2128 +22484,131 @@ class CfgVehicles
 		tf_encryptionCode="tf_west_radio_code";
 		tf_hasLRradio=1;
 	};
-	class FST_Backpack_Jumppack_Noble: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Noble)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Noble.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Delta: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Delta)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Delta_Dirty: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Delta/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Delta_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Puma: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Puma)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Puma.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Ruby: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Ruby)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ruby.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Ruby_Dirty: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Ruby/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ruby_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Zen: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Zen)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Zen.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Ares: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Ares)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Ares_Dirty: FST_Backpack_Jumppack_Ares
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Ares/Dirty)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares_Dirty.paa"
-		};
-	};
-	class FST_Backpack_Jumppack_Vishy: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Vishy)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vishy.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Deso: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Deso)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Deso_Dirty: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Deso/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Medusa: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Medusa)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Medusa.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Annex: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Annex)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Annex.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Riley: FST_Backpack_Jumppack
-	{
-		author="Steel";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Riley)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Riley.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Woods: FST_Backpack_Jumppack
-	{
-		author="Steel";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Woods)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Woods_Dirty: FST_Backpack_Jumppack_Woods
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Woods/Dirty)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods_Dirty.paa"
-		};
-	};
-	class FST_Backpack_Jumppack_Vix: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Vix)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Vix_Dirty: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Vix/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Helix: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Helix)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Helix.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Helix_Dirty: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Helix/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Helix_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_James: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (James)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_James.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_James_Dirty: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (James/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_James_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Sunny: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Sunny)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Sunny.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Jorge: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Jorge)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Jorge.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Appa: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Appa)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack_Ares
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Appa/Dirty)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa_Dirty.paa"
-		};
-	};
-	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack_Ares
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Silhouette)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Silhouette.paa"
-		};
-	};
-	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack_Ares
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Sin)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Sin.paa"
-		};
-	};
-	class FST_Backpack_Jumppack_Vengence: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Vengence)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vengence.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Cowboy: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Cowboy)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cowboy.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Starlet: FST_Backpack_Jumppack
-	{
-		author="Laer";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Starlet)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Starlet.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Salt: FST_Backpack_Jumppack
-	{
-		author="Gold";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Salt)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Salt.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Cutlass: FST_Backpack_Jumppack
-	{
-		author="Vengence";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Cutlass)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cutlass.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems{};
-	};
-	class FST_Backpack_Jumppack_Viz: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Viz)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Viz.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Viz_Dirty: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Viz/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Viz_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Poly: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Poly)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Poly.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Poly_Dirty: FST_Backpack_Jumppack
-	{
-		author="Daara";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Poly/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Poly_Dirty.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Bookworm: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Bookworm)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Bookworm.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Marek: FST_Backpack_Jumppack
-	{
-		author="Viz";
-		scope=2;
-		scopecurator=2;
-		scopearsenal=2;
-		maximumload=340;
-		displayName="[41st] Jump Pack (Marek)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek.paa"
-		};
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
-		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
-		tf_subtype="digital_lr";
-		tf_range=50000;
-		tf_hasLRradio=1;
-		JLTS_isJumppack=0;
-		FST_jumppack_is_jumppack=1;
-		FST_jumppack_spam_delay=1;
-		FST_jumppack_energy_capacity=100;
-		FST_jumppack_recharge=7.6;
-		FST_jumppack_jump_effect_script="";
-		FST_jumppack_effect_points[]=
-		{
-			{
-				"spine3",
-				{0,-0.30000001,-0.1}
-			}
-		};
-		FST_jumppack_sound_ignite[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
-		};
-		FST_jumppack_sound_land[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
-		};
-		FST_jumppack_sound_idle[]=
-		{
-			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
-		};
-		FST_jumppack_jump_types[]=
-		{
-			{
-				"Short Jump",
-				{12,2,100,0,1,0}
-			}
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack_Ares
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Marek/Dirty)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek_Dirty.paa"
-		};
-	}
-	class FST_Backpack_Jumppack_Bright: FST_Backpack_Jumppack_Ares
-	{
-		author="Steel";
-		displayname="[41st] Jump Pack (Bright)"
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Armor\Data\Equipment\FST_AB_Jumpack_Bright.paa"
-		};
-	}
-	//////////////Loadouts////////////////
+	
+	// FST_Backpack_Jumppack_Noble moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Delta moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Delta_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Puma moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Ruby moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Ruby_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Zen moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Ares moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Ares_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Vishy moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Deso moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Deso_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Medusa moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Annex moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Riley moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Woods moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Woods_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Vix moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Vix_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Helix moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Helix_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_James moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_James_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Sunny moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Jorge moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Appa moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Appa_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Silhouette moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Sin moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Vengence moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Cowboy moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Starlet moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Salt moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Cutlass moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Viz moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Viz_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Poly moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Poly_Dirty moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Bookworm moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Marek moved into the refactored jumppack section above.
+
+	
+	// FST_Backpack_Jumppack_Marek_Dirty moved into the refactored jumppack section above.
+
+	// FST_Backpack_Jumppack_Bright moved into the refactored jumppack section above.
+//////////////Loadouts////////////////
 	class FST_bodyGlove: lsd_gar_bodyGlove_base
 	{
 		author="Daara";
@@ -27176,13 +23624,8 @@ class CfgVehicles
 	class FST_clone_scout_woodland: FST_Trooper_P2_DC15S
 	{
 		author = "Ruby";
-		scope = 2;
-		scopeCurator=2;
-		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Woodland)";
 		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
-		faction="FST_Faction";
-		editorSubcategory="FST_Subfaction";
 		uniformclass = "FST_cloneUniform_scout_woodland";
 		nakeduniform = "FST_cloneUniform_scout_undersuit_woodland";
 		hiddenselections[]=
@@ -27210,87 +23653,6 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		magazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		respawnMagazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		items[]=
-		{
-			"ACE_EntrenchingTool",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
-		respawnItems[]=
-		{
-			
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
 		linkedItems[]=
 		{
 			"FST_cloneHelmet_scout_woodland",
@@ -27309,176 +23671,6 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-		class HitPoints: HitPoints
-		{
-			explosionShielding=0.7;
-			class HitFace: HitFace
-			{
-				armor=12;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=22;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=22;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitBody
-			{
-				armor=50;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=15;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=15;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=15;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-			class HitLeftArm
-			{
-				armor=15;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.079999998;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=15;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
 	};
 	class FST_clone_scout_undersuit_woodland: FST_clone_scout_woodland
 	{
@@ -27491,12 +23683,7 @@ class CfgVehicles
 	};
 	class FST_clone_scout_Midnight: FST_Trooper_P2_DC15S
 	{
-		scope = 2;
-		scopeCurator=2;
-		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Midnight)";
-		faction="FST_Faction";
-		editorSubcategory="FST_Subfaction";
 		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
 		uniformclass = "FST_cloneUniform_scout_Midnight";
 		nakedUniform = "FST_cloneUniform_scout_undersuit_Midnight";
@@ -27525,87 +23712,6 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		magazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		respawnMagazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		items[]=
-		{
-			"ACE_EntrenchingTool",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
-		respawnItems[]=
-		{
-			
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
 		linkedItems[]=
 		{
 			"FST_cloneHelmet_scout_Midnight",
@@ -27624,177 +23730,6 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-		class HitPoints: HitPoints
-		{
-			explosionShielding=0.7;
-			
-			class HitFace: HitFace
-			{
-				armor=12;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=22;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=22;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitBody
-			{
-				armor=50;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=15;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=15;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=15;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-			class HitLeftArm
-			{
-				armor=15;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.079999998;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=15;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
 	};
 	class FST_clone_scout_undersuit_Midnight: FST_clone_scout_Midnight
 	{
@@ -27807,12 +23742,7 @@ class CfgVehicles
 	};
 	class FST_clone_scout_Desert: FST_Trooper_P2_DC15S
 	{
-		scope = 2;
-		scopeCurator=2;
-		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Desert)";
-		faction="FST_Faction";
-		editorSubcategory="FST_Subfaction";
 		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
 		uniformclass = "FST_cloneUniform_scout_Desert";
 		nakeduniform = "FST_cloneUniform_scout_Desert";
@@ -27841,87 +23771,6 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		magazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		respawnMagazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		items[]=
-		{
-			"ACE_EntrenchingTool",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
-		respawnItems[]=
-		{
-			
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
 		linkedItems[]=
 		{
 			"FST_cloneHelmet_scout_Desert",
@@ -27940,177 +23789,6 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-		class HitPoints: HitPoints
-		{
-			explosionShielding=0.7;
-			
-			class HitFace: HitFace
-			{
-				armor=12;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=22;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=22;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitBody
-			{
-				armor=50;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=15;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=15;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=15;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-			class HitLeftArm
-			{
-				armor=15;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.079999998;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=15;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
 	};
 	class FST_clone_scout_undersuit_Desert: FST_clone_scout_Desert
 	{
@@ -28123,12 +23801,7 @@ class CfgVehicles
 	};
 	class FST_clone_scout_Urban: FST_Trooper_P2_DC15S
 	{
-		scope = 2;
-		scopeCurator=2;
-		scopearsenal=2;
 		displayname = "[41st] Clone Scout Trooper (Urban)";
-		faction="FST_Faction";
-		editorSubcategory="FST_Subfaction";
 		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
 		uniformclass = "FST_cloneUniform_scout_Urban";
 		nakeduniform = "FST_cloneUniform_scout_Urban";
@@ -28157,87 +23830,6 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		magazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		respawnMagazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		items[]=
-		{
-			"ACE_EntrenchingTool",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
-		respawnItems[]=
-		{
-			
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
 		linkedItems[]=
 		{
 			"FST_cloneHelmet_scout_Urban",
@@ -28256,177 +23848,6 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-		class HitPoints: HitPoints
-		{
-			explosionShielding=0.7;
-			
-			class HitFace: HitFace
-			{
-				armor=12;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=22;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=22;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitBody
-			{
-				armor=50;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=15;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=15;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=15;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-			class HitLeftArm
-			{
-				armor=15;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.079999998;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=15;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
 	};
 	class FST_clone_scout_undersuit_Urban: FST_clone_scout_Urban
 	{
@@ -28439,17 +23860,7 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_DC15A: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Trooper (DC-15A)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Subfaction";
-		uniformclass="FST_Trooper_Uniform";
-		nakedUniform="";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelectionsMaterials[]=
 		{
 			"Indecisive_Armoury_units\REPUBLIC\Data\Clone_Uniform\IDA_P2_BodyUpper.rvmat",
@@ -28491,114 +23902,16 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		respawnWeapons[]=
-		{
-			"IDA_DC15S",
-			"Throw",
-			"Put"
-		};
-		magazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		respawnMagazines[]=
-		{
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Green_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Blue_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_Red_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"IDA_grenade_Smoke_mag",
-			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
-		};
-		items[]=
-		{
-			"ACE_EntrenchingTool",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
-		respawnItems[]=
-		{
-			
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_Splint",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_PlasmaIV_500",
-			"ACE_Spraypaintgreen",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"ACE_CableTie",
-			"WBK_HeadLampItem",
-			"acc_flashlight",
-			"Laserbatteries",
-		};
 	};
 	class FST_Pilot_P1: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Clone Pilot (Fynock Squadron)";
-		Backpack="";
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Spec_Subfaction";
 		uniformclass="FST_Pilot_Uniform";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
 			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper.paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower.paa",
 		};
 		weapons[]=
 		{
@@ -28637,16 +23950,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_EOD: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] EOD P2 Trooper";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_EOD";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -28692,16 +23998,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_ARF: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] ARF Trooper (Camo)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_ARF_Uniform";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -28754,14 +24053,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] ARF Trooper (Urban)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Urban";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -28812,16 +24105,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_SERE: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] SERE Trooper";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_SERE";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -28867,16 +24153,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_ARF_WhiteGreen: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] ARF Trooper (White/Green)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_ARF_Uniform_WhiteGreen";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -28922,16 +24201,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_SCT: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Senior Clone Trooper";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_SCT";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -28977,16 +24249,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_SCT_Medic: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Senior Clone Trooper (Medic)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_SCT_Medic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29032,16 +24297,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_VCT: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Veteran Clone Trooper";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_VCT";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29087,16 +24345,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_VCT_Medic: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Veteran Clone Trooper (Medic)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_VCT_Medic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29142,16 +24393,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_CLC: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Lance Corporal";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_CLC";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29197,16 +24441,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_CPL: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Corporal";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_CPL";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29252,16 +24489,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_CS: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Sergeant";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_CS";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29307,16 +24537,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_CSS: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Staff Sergeant";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_CSS";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29362,16 +24585,9 @@ class CfgVehicles
 	};
 	class FST_Trooper_P2_CL: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Lieutenant";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_CL";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29417,16 +24633,9 @@ class CfgVehicles
 	};
 	class FST_P2_Medic: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Medic Armor";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Trooper_Medic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29532,16 +24741,9 @@ class CfgVehicles
 	}; */
  	class FST_ARF_Desert: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] ARF Trooper (Desert)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Desert";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29594,16 +24796,9 @@ class CfgVehicles
 	class 3as_Clone_P1;
 	class FST_Trooper_P1: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -29646,210 +24841,15 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-		class HitPoints: HitPoints
-		{
-			explosionShielding=0.7;
-			class HitFace: HitFace
-			{
-				armor=12;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=22;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=22;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitBody
-			{
-				armor=50;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=15;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=15;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=15;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-			class HitLeftArm
-			{
-				armor=15;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.079999998;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=15;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
 	};
 	class FST_Trooper_P1_CMDR: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (CMDR)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_CMDR";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Phase1_Commander_upper_CO.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -29874,37 +24874,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_CPT: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (CPT)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_CPT";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Phase1_Captain_upper_CO.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -29929,37 +24904,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_LT: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (LT)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_LT";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Phase1_Lieutenant_upper_CO.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -29984,37 +24934,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_SGT: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (SGT)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_SGT";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Phase1_Sergeant_upper_CO.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30039,37 +24964,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (41st)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30094,37 +24994,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Sarlacc: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Sarlacc)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Sarlacc";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Sarlacc.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30149,37 +25024,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Wampa: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Wampa)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Wampa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Wampa.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30204,37 +25054,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Krayt: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Krayt)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Krayt";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Krayt.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30259,37 +25084,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Nexu: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Nexu)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Nexu";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Nexu.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30314,37 +25114,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Radark: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Radark)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Radark";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Radark.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30369,37 +25144,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Zillo: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Zillo)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Zillo";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Zillo.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30424,37 +25174,12 @@ class CfgVehicles
 	};
 	class FST_Trooper_P1_41st_Kadoshi: FST_Trooper_P1
 	{
-		author="Daara";
 		displayName="[41st] P1 Clone Trooper (Kadoshi)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_P1_41st_Kadoshi";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P1_BodyUpper_Kadoshi.paa",
 			"\3AS\3as_JLTS\Uniforms\data\Phase1\Standard_Unmarked_Lower_CO.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30479,8 +25204,6 @@ class CfgVehicles
 	};
 	class FST_GM_Base_Plastic: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (DC15A)";
 		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
 		editorSubcategory="FST_Customs_Subfaction";
@@ -30537,211 +25260,16 @@ class CfgVehicles
 			"ItemWatch",
 			"JLTS_clone_comlink"
 		};
-		class HitPoints: HitPoints
-		{
-			explosionShielding=0.7;
-			class HitFace: HitFace
-			{
-				armor=12;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=12;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=20;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=22;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=22;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitBody
-			{
-				armor=50;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=15;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=15;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=15;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-			class HitLeftArm
-			{
-				armor=15;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.079999998;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=15;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
 	};
 	class FST_GM_Base_Plastic_NCO: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather NCO (DC15A)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_NCO";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_NCO.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30766,14 +25294,8 @@ class CfgVehicles
 	};
 	class FST_GM_Base_Plastic_Officer: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Officer (DC15A)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Officer";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -30786,18 +25308,6 @@ class CfgVehicles
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Officer.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
 		};
 		linkedItems[]=
 		{
@@ -30822,913 +25332,191 @@ class CfgVehicles
 	};
 	class FST_GM_Base_Plastic_Sarlacc: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Sarlacc)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Sarlacc";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Sarlacc.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Wampa: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Wampa)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Wampa";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Wampa.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Krayt: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Krayt)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Krayt";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Krayt.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Nexu: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Nexu)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Nexu";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Nexu.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Radark: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Radark)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Radark";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Radark.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Zillo: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Zillo)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Zillo";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Zillo.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Kadoshi: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Kadoshi)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Kadoshi";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Kadoshi.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Rancor: FST_GM_Base_Plastic
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Rancor)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Rancor";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Rancor.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Sanval: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Sanval)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Sanval";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Sanval.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Hydra: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Hydra)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Hydra";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Hydra.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Uvak: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Uvak)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Uvak";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Uvak.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Howler: FST_GM_Base_Plastic
 	{
-		author="Daara";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Howler)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Howler";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Howler.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Voxyn: FST_GM_Base_Plastic
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Voxyn)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Voxyn";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Voxyn.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Raxshir: FST_GM_Base_Plastic
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Raxshir)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Raxshir";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Raxshir.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Gharzr: FST_GM_Base_Plastic
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Gharzr)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Gharzr";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Gharzr.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	class FST_GM_Base_Plastic_Varactyl: FST_GM_Base_Plastic
 	{
 		author="Steel";
-		scope=2;
 		displayName="[41st] Cold Weather Trooper (Varactyl)";
-		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
-		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_GM_Plastic_Varactyl";
-		backpack="";
-		model="JLTS_AE_GM\SEA_Uniform_GM_Plastic.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"Uniform",
-			"insignia"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Varactyl.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_GM_Helmet",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
 	};
 	///////////////CUSTOM UNIFORMS///////////////
 	class FST_P2_Ghostly: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-6314 'Ghostly'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ghostly";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -31779,16 +25567,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Ticktock: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-8750 'Ticktock'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ticktock";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -31834,16 +25615,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Annex: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1861 'Annex'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Annex";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -31889,16 +25663,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_James: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2009 'James'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_James";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -31946,14 +25713,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2009 'James/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_James_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -31999,16 +25760,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Mood: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1886 'Mood'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mood";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32056,14 +25810,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1886 'Mood/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mood_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32109,16 +25857,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Zen: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4586 'Zen'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Zen";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32164,16 +25905,9 @@ class CfgVehicles
 	};
  	class FST_P2_Tally: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0515 'Tally'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tally";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32221,14 +25955,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-0515 'NCO / Jorge'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_NCO_Jorge";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32276,14 +26004,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-0515 'JARC'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_JARC";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32329,16 +26051,9 @@ class CfgVehicles
 	};
  	class FST_P2_Church: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7994 'Church'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Church";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32384,16 +26099,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Brutal: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-3972 'Brutal'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Brutal";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32439,16 +26147,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Burns: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7067 'Burns'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Burns";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32494,16 +26195,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Freezer: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-3777 'Freezer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Freezer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32549,16 +26243,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Ropey: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4079 'Ropey'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ropey";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32604,16 +26291,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Spade: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1326 'Spade'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Spade";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32659,16 +26339,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Ripper: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0666 'Ripper'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ripper";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32714,16 +26387,9 @@ class CfgVehicles
 	};
 	class FST_P2_Ripper_V2: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0666 'Ripper' [V2]";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ripper";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32771,14 +26437,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-0666 'Ripper/Dirty' [V2]";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ripper";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32824,16 +26484,9 @@ class CfgVehicles
 	};
  	class FST_P2_Argo: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0626 'Argo'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Argo";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32879,16 +26532,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Argo_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0626 'Argo' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Argo_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32934,16 +26580,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Argo_V2: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0626 'Argo' [V2]";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Argo";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -32989,16 +26628,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Hayes: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-8818 'Hayes'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hayes";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33044,16 +26676,9 @@ class CfgVehicles
 	};
 	class FST_P2_Hayes_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-8818 'Hayes/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hayes_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33099,16 +26724,9 @@ class CfgVehicles
 	};
 	class FST_P2_Helix: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5732 'Helix'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Helix";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33156,14 +26774,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-5732 'Helix/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Helix_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33209,16 +26821,9 @@ class CfgVehicles
 	};
  	class FST_P2_Cardinal: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1227 'Cardinal'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cardinal";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33264,16 +26869,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_Trace: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2148 'Trace'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Trace";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33321,14 +26919,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1227 'Cardinal/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cardinal_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33376,14 +26968,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-9078 'Huntress'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Huntress";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33431,14 +27017,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-9078 'Huntress/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Huntress_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33486,14 +27066,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-6512 'Creed'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Creed";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33539,16 +27113,9 @@ class CfgVehicles
 	};
 	class FST_P2_House: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2225 'House'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_House";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33596,14 +27163,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2225 'House/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_House_Dirtyy";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33649,16 +27210,9 @@ class CfgVehicles
 	};
  	class FST_P2_Diesel: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5606 'Diesel'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Diesel";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33704,16 +27258,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_NotSkilled: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-XXXX 'NotSkilled'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_NotSkilled";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33759,16 +27306,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Merrik: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4973 'Merrik'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Merrik";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33816,19 +27356,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4973 'Merrik (V3)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Merrik";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_MC_BodyUpper_Merrik3.paa",
@@ -33871,14 +27400,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1710 'Phoenix'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Phoenix";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33926,14 +27449,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2112 'Cosmic'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cosmic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -33981,14 +27498,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2112 'Cosmic/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cosmic_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34036,14 +27547,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-7445 'Gold'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Gold";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34091,14 +27596,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-7445 'Gold/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Gold_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34144,13 +27643,7 @@ class CfgVehicles
 	};
  	class FST_Wookiee: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Wookiee Freedom Fighter";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		nakedUniform="lsd_bodyGlove_uniform";
 		uniformclass="FST_Uniform_Wookiee";
@@ -34277,16 +27770,9 @@ class CfgVehicles
 	};
  	class FST_P2_Sigs: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1362 'Sigs'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sigs";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34332,16 +27818,9 @@ class CfgVehicles
 	};
  	class FST_P2_Ginger: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5698 'Ginger'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ginger";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34387,16 +27866,9 @@ class CfgVehicles
 	};
 	class FST_P2_Pecan: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1738 'Pecan'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Pecan";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34442,16 +27914,9 @@ class CfgVehicles
 	};
  	class FST_P2_Fury: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1911 'Fury'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Fury";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34497,16 +27962,9 @@ class CfgVehicles
 	};
  	class FST_P2_Edge: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1982 'Edge'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Edge";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34552,16 +28010,9 @@ class CfgVehicles
 	};
 	class FST_P2_Nori: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0041 'Nori'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nori";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34609,14 +28060,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0041 'Nori/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nori_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34664,14 +28109,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0041 'Nori V2'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nori_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34719,14 +28158,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0041 'Nori V2/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nori_V2_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34772,16 +28205,9 @@ class CfgVehicles
 	};
 	class FST_P2_Ares: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4515 'Ares'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ares";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34829,14 +28255,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4515 'Ares/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ares_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34882,16 +28302,9 @@ class CfgVehicles
 	};
  	class FST_P2_Odin: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7777 'Odin'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Odin";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34939,14 +28352,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-7777 'Odin/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Odin_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -34992,16 +28399,9 @@ class CfgVehicles
 	};
  	class FST_P2_Elk: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0665 'Elk'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Elk";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35047,16 +28447,9 @@ class CfgVehicles
 	};
 	class FST_P2_Cloaker: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4447 'Cloaker'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Elk";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35102,16 +28495,9 @@ class CfgVehicles
 	};
  	class FST_P2_Vix: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1582 'Vix'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vix";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35159,14 +28545,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1582 'Vix/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vix_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35212,16 +28592,9 @@ class CfgVehicles
 	};
  	class FST_P2_Pole: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1582 'Pole'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Pole";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35269,14 +28642,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1582 'Pole/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Pole_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35322,16 +28689,9 @@ class CfgVehicles
 	};
  	class FST_P2_Angel: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5051 'Angel'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Angel";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35379,14 +28739,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-5051 'Angel/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Angel_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35432,16 +28786,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Snoob: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2505 'Snoob'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Snoob";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35487,16 +28834,9 @@ class CfgVehicles
 	};
  	class FST_P2_Jorge: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1362 'Jorge'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Jorge";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35542,16 +28882,9 @@ class CfgVehicles
 	};
  	class FST_P2_Lancer: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2404 'Lancer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Lancer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35597,16 +28930,9 @@ class CfgVehicles
 	};
  	class FST_P2_Lancer_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2404 'Lancer/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Lancer_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35654,14 +28980,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-3063 'Deacon'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Deacon";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35709,14 +29029,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-3825 'Cursed'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cursed";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35764,14 +29078,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-7500 'Hijack'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hijack";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35819,14 +29127,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-7170 'Mixer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mixer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35876,14 +29178,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-0133 'Hotshot'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hotshot";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35931,14 +29227,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-0133 'Hotshot/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hotshot_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -35987,14 +29277,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2325 'Vengence'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vengence";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36042,14 +29326,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1830 'Rook'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rook";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36095,16 +29373,9 @@ class CfgVehicles
 	};
  	class FST_P2_Mrogg: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4120 'Mrogg'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mrogg";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36150,16 +29421,9 @@ class CfgVehicles
 	};
  	class FST_P2_Rumble: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1917 'Rumble'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rumble";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36205,16 +29469,9 @@ class CfgVehicles
 	};
  	class FST_P2_Rumble_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1917 'Rumble/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rumble_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36260,16 +29517,9 @@ class CfgVehicles
 	};
  	class FST_P2_Poly: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2323 'Poly'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Poly";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36315,16 +29565,9 @@ class CfgVehicles
 	};
  	class FST_P2_Poly_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2323 'Poly' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Poly_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36370,16 +29613,9 @@ class CfgVehicles
 	};
  	class FST_P2_Sunny: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2213 'Sunny'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sunny";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36427,14 +29663,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4377 'Stec'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Stec";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36482,14 +29712,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-3256 'Sledge'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sledge";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36537,14 +29761,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-3256 'Sledge/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sledge_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36592,14 +29810,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-3256 'Assassin'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Assassin";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36647,14 +29859,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1567 'Fire'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Fire";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36702,14 +29908,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4584 'Wuffer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Wuffer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36757,14 +29957,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4584 'Wuffer/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Wuffer_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36812,14 +30006,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2319 'Salt'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Salt";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36867,14 +30055,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1411 'Cowboy'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cowboy";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36922,14 +30104,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0893 'Cutlass'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cutlass";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -36977,14 +30153,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4106 'Jan'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Jan";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37032,14 +30202,8 @@ class CfgVehicles
 	{
 		author="Ruby";
 		displayName="[41st] CT-5569 'Five'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Five";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37087,14 +30251,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-9690 'Stant'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Stant";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37142,14 +30300,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-9690 'Stant/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Stant_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37197,14 +30349,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4464 'Colors'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Colors";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37252,14 +30398,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4464 'Blueeye'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Blueeye";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37307,14 +30447,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4464 'Arcus'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Arcus";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37362,14 +30496,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4464 'Arcus/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Arcus_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37417,14 +30545,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-5419 'Alek'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Alek";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37472,14 +30594,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2326 'Bright'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bright";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37527,14 +30643,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-9106 'Dragon'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Dragon";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37582,14 +30692,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1622 'Dilham'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Dilham";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37637,14 +30741,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1622 'Dilham/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Dilham_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37692,14 +30790,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4487 'Oak'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Oak";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37747,14 +30839,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1204 'Adler'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Adler";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37802,14 +30888,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-8335 'Bees'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bees";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37857,14 +30937,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2161 'Plop'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Plop";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37912,14 +30986,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-2161 'Plop/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Plop_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -37967,14 +31035,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-8044 'Hazzo'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hazzo";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38022,14 +31084,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1297 'Mav'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mav";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38077,14 +31133,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1297 'Mav'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mav_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38132,14 +31182,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2000 'Kirby'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Kirby";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38187,14 +31231,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-2000 'Kirby/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Kirby_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38242,14 +31280,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1008 'Primus'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Primus";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38297,14 +31329,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2213 'Riley'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Riley";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38352,14 +31378,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-2213 'Riley'/Dirty";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Riley_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38407,14 +31427,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2213 'Riley' (V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Riley_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38462,14 +31476,8 @@ class CfgVehicles
 	{
 		author="Ruby";
 		displayName="[41st] CT-2213 'Riley' (V2/Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Riley_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38517,14 +31525,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-6846 'Sin'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sin";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38572,14 +31574,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2213 'Trenny'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Trenny";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38627,14 +31623,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2213 'Trenny/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Trenny_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38682,14 +31672,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1170 'Sierra'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sierra";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38737,14 +31721,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1170 'Sierra/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sierra_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38792,14 +31770,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-5411 'Tar'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tar";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38847,14 +31819,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-5411 'Tar/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tar";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38902,14 +31868,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1223 'Silhouette'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Silhouette";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -38957,14 +31917,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1223 'Silhouette/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Silhouette_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39012,14 +31966,8 @@ class CfgVehicles
 	{
 		author="Laer";
 		displayName="[41st] CT-1455 'Starlet'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Starlet";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39067,14 +32015,8 @@ class CfgVehicles
 	{
 		author="Laer";
 		displayName="[41st] CT-1996 'Fox'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Fox";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39122,14 +32064,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-6373 'Nys'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nys";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39177,14 +32113,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] Woodland Clone Troopers";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Woodland";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39237,14 +32167,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] Midnight Clone Troopers";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Midnight";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39297,14 +32221,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-5020 'Nahlens'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nahlens";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39352,14 +32270,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-5020 'Nahlens/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nahlens_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39407,14 +32319,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-6373 'Nyz'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nyz";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39462,14 +32368,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-3141 'Warlock'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Warlock";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39517,14 +32417,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2322 'Vishy'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vishy";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39572,14 +32466,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4563 'Mono'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mono";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39627,14 +32515,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4563 'Mono/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mono_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39682,14 +32564,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4686 'Ace'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ace";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39735,16 +32611,9 @@ class CfgVehicles
 	};
 	class FST_P2_Pope: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2213 'Pope'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Pope";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39792,14 +32661,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2213 'Viper'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Viper";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39847,14 +32710,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-0151 'Overwatch'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Overwatch";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39902,14 +32759,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-7770 'Tooka'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tooka";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -39957,14 +32808,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-8998 'Mox'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mox";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40012,14 +32857,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-8998 'Mox' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mox";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40067,14 +32906,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-8282 'Business'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Business";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40122,14 +32955,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-8282 'Business/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Business_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40177,14 +33004,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-5025 'Dobie'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Dobie";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40232,14 +33053,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-5025 'Dobie (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Dobie_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40287,14 +33102,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-1157 'Vector'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vector";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40342,14 +33151,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1157 'Vector (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vector_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40397,14 +33200,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-1030 'Parsec'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Parsec";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40452,14 +33249,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-5447 'Arctic'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Arctic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40507,14 +33298,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-0377 'Bigs'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bigs";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40562,14 +33347,8 @@ class CfgVehicles
 	{
 		author="Ruby";
 		displayName="[41st] CT-9918 'Gum'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Gum";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40617,14 +33396,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-1226 'Marek'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Marek";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40672,14 +33445,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-1226 'Marek' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Marek_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40727,14 +33494,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1226 'Marek' (V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Marek_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40782,14 +33543,8 @@ class CfgVehicles
 	{
 		author="Vengence";
 		displayName="[41st] CT-9115 'Bookworm'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bookworm";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40835,16 +33590,9 @@ class CfgVehicles
 	};	
  	class FST_P2_Recruit: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Clone Recruit Armor";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Recruit";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40890,16 +33638,9 @@ class CfgVehicles
 	};
  	class FST_P2_Medusa: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1046 'Medusa'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Medusa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -40945,16 +33686,9 @@ class CfgVehicles
 	};
  	class FST_P2_Woods: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-8825 'Woods'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Woods";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41002,14 +33736,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-8825 'Woods/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Woods_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41055,16 +33783,9 @@ class CfgVehicles
 	};
  	class FST_P2_Martyr: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1447 'Martyr'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Martyr";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41110,16 +33831,9 @@ class CfgVehicles
 	};
  	class FST_P2_Harlequin: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2645 'Harlequin'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Harlequin";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41167,14 +33881,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-2645 'Harlequin (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Harlequin_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41222,14 +33930,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4876 'Blades'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Blades";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41277,14 +33979,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4876 'Blades/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Blades_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41330,16 +34026,9 @@ class CfgVehicles
 	};
  	class FST_P2_Demon: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-3555 'Demon'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Demon";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41385,16 +34074,9 @@ class CfgVehicles
 	};
  	class FST_P2_Squatch: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2275 'Squatch'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Squatch";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41440,16 +34122,9 @@ class CfgVehicles
 	};
  	class FST_P2_Squatch_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2275 'Squatch' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Squatch_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41497,14 +34172,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2275 'Squatch V2'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Squatch_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41550,16 +34219,9 @@ class CfgVehicles
 	};
  	class FST_P2_Squatch_Dirty_V2: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2275 'Squatch' (Dirty V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Squatch_Dirty_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41658,14 +34320,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-2609 'Remedy'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Remedy";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41713,14 +34369,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1379 'Butter'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Butter";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41768,14 +34418,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1111 'Scrib'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Scrib";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41823,14 +34467,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-9050 'Slow'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Slow";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41878,14 +34516,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-6279 'Mig'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Mig";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41933,14 +34565,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4554 'Recon'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Recon";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -41988,14 +34614,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1318 'Perceval'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Perceval";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42043,14 +34663,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-2256 'Blue'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Blue";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42098,14 +34712,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1981 'Devo'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Devo";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42153,14 +34761,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0810 'Magma'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Magma";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42208,14 +34810,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1047 'Heller'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Heller";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42263,14 +34859,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1047 'Heller/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Heller_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42318,14 +34908,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0415 'Nerd'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nerd";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42373,14 +34957,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-3019 'Strider'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Strider";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42428,14 +35006,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0213 'Texas'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Texas";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42483,14 +35055,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4819 'Shut'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Shut";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42538,14 +35104,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1134 'Peaches'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Peaches";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42593,14 +35153,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4981 'Hugger'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hugger";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42648,14 +35202,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-7977 'Alfour'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Alfour";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42703,14 +35251,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1551 'Marcus'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Marcus";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42758,14 +35300,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-9835 'Coldstart'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Coldstart";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42813,14 +35349,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1145 'Kate'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Kate";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42868,14 +35398,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1145 'Kate' (V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Kate_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42923,14 +35447,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1145 'Kate/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Kate_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -42978,14 +35496,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-8784 'Steel'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Steel";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43033,14 +35545,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-8784 'Steel/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Steel_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43088,14 +35594,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1462 'Zephyr'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Zephyr";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43143,14 +35643,8 @@ class CfgVehicles
 	{
 		author="Laer";
 		displayName="[41st] CT-1462 'Zephyr/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Zephyr_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43196,16 +35690,9 @@ class CfgVehicles
 	};
  	class FST_P2_Nic: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5837 'Nic'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43251,16 +35738,9 @@ class CfgVehicles
 	};
  	class FST_P2_Lawman: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4462 'Lawman'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Lawman";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43306,16 +35786,9 @@ class CfgVehicles
 	};
  	class FST_P2_NCO: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-XXXX 'NCO'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_NCO";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43361,16 +35834,9 @@ class CfgVehicles
 	};
  	class FST_P2_Officer: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-XXXX 'Officer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Officer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43416,16 +35882,9 @@ class CfgVehicles
 	};
  	class FST_P2_Ampersand_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1027 'Ampersand (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ampersand_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43473,14 +35932,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-1837 'Xeha (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Xeha_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43528,14 +35981,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-2324 'Deso (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Deso_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43581,16 +36028,9 @@ class CfgVehicles
 	};
  	class FST_P2_Joko: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-8140 'Joko'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Joko";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43638,14 +36078,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-8140 'Joko (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Joko_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43691,16 +36125,9 @@ class CfgVehicles
 	};
  	class FST_P2_Coda: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0011 'Coda'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Coda";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43748,14 +36175,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0011 'Coda/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Coda_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43803,14 +36224,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0011 'Coda' (V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Coda_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43858,14 +36273,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-0011 'Coda/Dirty' (V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Coda_Dirty_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43911,16 +36320,9 @@ class CfgVehicles
 	};
  	class FST_P2_Grif: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7994 'Grif'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Grif";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -43966,16 +36368,9 @@ class CfgVehicles
 	};
  	class FST_P2_Deso: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2324 'Deso'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Deso";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44021,16 +36416,9 @@ class CfgVehicles
 	};
  	class FST_P2_Tiger: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1067 'Tiger'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tiger";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44078,14 +36466,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-1067 'Tiger' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tiger_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44131,16 +36513,9 @@ class CfgVehicles
 	};
  	class FST_P2_Jammer: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1668 'Jammer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Jammer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44186,16 +36561,9 @@ class CfgVehicles
 	};
  	class FST_P2_Puma: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-9999 'Puma'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Puma";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44243,14 +36611,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-9999 'Puma' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Puma_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44296,16 +36658,9 @@ class CfgVehicles
 	};
  	class FST_P2_Sly: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7662 'Sly'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sly";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44351,16 +36706,9 @@ class CfgVehicles
 	};
  	class FST_P2_Sly_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7662 'Sly' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sly_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44408,14 +36756,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-1668 'Jammer' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Jammer_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44461,16 +36803,9 @@ class CfgVehicles
 	};
  	class FST_P2_Germ: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0004 'Germ'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Germ";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44516,16 +36851,9 @@ class CfgVehicles
 	};
  	class FST_P2_Prancer: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1513 'Prancer'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Prancer";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44571,16 +36899,9 @@ class CfgVehicles
 	};
  	class FST_P2_Preacher: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-9317 'Preacher'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Preacher";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44628,14 +36949,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-9317 'Preacher (Dirty)'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Preacher_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44681,16 +36996,9 @@ class CfgVehicles
 	};
  	class FST_P2_Doogle: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2711 'Doogle'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Doogle";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44738,14 +37046,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-2711 'Doogle'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Doogle";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44791,16 +37093,9 @@ class CfgVehicles
 	};
  	class FST_P2_Man: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7934 'Man'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Man";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44848,14 +37143,8 @@ class CfgVehicles
 	{
 		author="Ruby";
 		displayName="[41st] CT-1597 'White'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_White";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44903,14 +37192,8 @@ class CfgVehicles
 	{
 		author="Ruby";
 		displayName="[41st] CT-5983 'Airman'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Airman";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -44958,14 +37241,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-5983 'Airman/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Airman_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45011,16 +37288,9 @@ class CfgVehicles
 	};
  	class FST_P2_Major: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2217 'Major'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Major";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45066,16 +37336,9 @@ class CfgVehicles
 	};
  	class FST_P2_Major_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2217 'Major' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Major_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45123,14 +37386,8 @@ class CfgVehicles
     {
         author="Viz";
         displayName="[41st] CT-6969 'Claw'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Claw";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -45176,16 +37433,9 @@ class CfgVehicles
     };
     class FST_P2_Claw_Dirty: FST_Trooper_P2_DC15S
     {
-        author="Daara";
         displayName="[41st] CT-6969 'Claw' (Dirty)";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Claw_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -45231,16 +37481,9 @@ class CfgVehicles
     };
  	class FST_P2_Seraph: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4242 'Seraph'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Seraph";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45288,14 +37531,8 @@ class CfgVehicles
 	{
 		author="Fowler";
 		displayName="[41st] CT-1178 'Saber'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Saber";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45343,14 +37580,8 @@ class CfgVehicles
 	{
 		author="Lang";
 		displayName="[41st] CT-5050 'Lang'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Lang";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45396,16 +37627,9 @@ class CfgVehicles
 	};
 	class FST_P2_Twist: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-7274 'Twist'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Twist";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45453,14 +37677,8 @@ class CfgVehicles
 	{
 		author="Fowler";
 		displayName="[41st] CT-6242 'Harribel'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Harribel";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45506,14 +37724,8 @@ class CfgVehicles
 	{
 		author="Fowler";
 		displayName="[41st] CT-1947 'Omen'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Omen";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45559,14 +37771,8 @@ class CfgVehicles
 	{
 		author="Fowler";
 		displayName="[41st] CT-6482 'Pig'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Pig";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45610,16 +37816,9 @@ class CfgVehicles
 	};
 	class FST_P2_Arthur: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1155 'Arthur'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Arthur";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45665,16 +37864,9 @@ class CfgVehicles
 	};
 	class FST_P2_Merlin: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-3579 'Merlin'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Arthur";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45722,14 +37914,8 @@ class CfgVehicles
 	{
 		author="Fowler";
 		displayName="[41st] CT-7497 'Harm'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Harm";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45775,16 +37961,9 @@ class CfgVehicles
 	};
  	class FST_P2_Hazard: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-0126 'Hazard'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hazard";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45832,14 +38011,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-0126 'Hazard' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hazard_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45885,16 +38058,9 @@ class CfgVehicles
 	};
  	class FST_P2_Qball: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-9189 'Qball'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Qball";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45940,16 +38106,9 @@ class CfgVehicles
 	};
  	class FST_P2_Zik: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1258 'Zik'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Zik";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -45995,16 +38154,9 @@ class CfgVehicles
 	};
  	class FST_P2_Zik_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1258 'Zik' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Zik_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46050,16 +38202,9 @@ class CfgVehicles
 	};
  	class FST_P2_Sturm: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2556 'Sturm'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sturm";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46105,16 +38250,9 @@ class CfgVehicles
 	};
  	class FST_P2_Duncy: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1337 'Duncy'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Duncy";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46160,16 +38298,9 @@ class CfgVehicles
 	};
  	class FST_P2_Charge: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-XXXX 'Charge'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Charge";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46215,16 +38346,9 @@ class CfgVehicles
 	};
 	class FST_P2_Hex: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4916 'Hex'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hex";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46272,14 +38396,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-4916 'Hex/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Hex_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46325,16 +38443,9 @@ class CfgVehicles
 	};
  	class FST_P2_Lupus: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5973 'Lupus'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Lupus";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46380,16 +38491,9 @@ class CfgVehicles
 	};
   	class FST_P2_Tex: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-9841 'Tex'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Tex";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46435,16 +38539,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Stein: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-3615 'Stein'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Stein";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46490,16 +38587,9 @@ class CfgVehicles
 	};
  	class FST_P2_Stein_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-3615 'Stein' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Stein_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46600,16 +38690,9 @@ class CfgVehicles
 	};  */
  	class FST_P2_Raven: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-6899 'Raven'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Raven";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46655,16 +38738,9 @@ class CfgVehicles
 	}; 
  	class FST_P2_Xeha: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1837 'Xeha'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Xeha";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46710,16 +38786,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_CosmicSmith: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2112 'CosmicSmith'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_CosmicSmith";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46765,16 +38834,9 @@ class CfgVehicles
 	};
 	class FST_P2_Vulpes: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-6174 'Vulpes'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vulpes";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46820,16 +38882,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_Rint: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2724 'Rint'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rint";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46875,16 +38930,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_Rint_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2724 'Rint' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rint_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46930,16 +38978,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_Rint_V2: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2724 'Rint' (V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rint_V2";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -46985,16 +39026,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_Rint_V2_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-2724 'Rint' (Dirty V2)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Rint_V2_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -47040,16 +39074,9 @@ class CfgVehicles
 	}; 
 	class FST_P2_Bulwark: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5445 'Bulwark'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bulwark";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -47095,16 +39122,9 @@ class CfgVehicles
 	};     
 	class FST_P2_Bulwark_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-5445 'Bulwark' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bulwark_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -47152,14 +39172,8 @@ class CfgVehicles
     {
         author="Viz";
         displayName="[41st] CT-5151 'Samurai'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Samurai";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47207,14 +39221,8 @@ class CfgVehicles
     {
         author="Gold";
         displayName="[41st] CT-5151 'Samurai/Dirty'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Samurai_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47262,14 +39270,8 @@ class CfgVehicles
     {
         author="Ruby";
         displayName="[41st] CT-4382 'Flatline'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Flatline";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47317,14 +39319,8 @@ class CfgVehicles
     {
         author="Ruby";
         displayName="[41st] CT-1112 'Ruby'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Ruby";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47372,14 +39368,8 @@ class CfgVehicles
     {
         author="Ruby";
         displayName="[41st] CT-1718 'Gustav'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Gustav";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47425,16 +39415,9 @@ class CfgVehicles
     };
 	class FST_P2_Ruby_Dirty: FST_Trooper_P2_DC15S
     {
-        author="Daara";
         displayName="[41st] CT-1112 'Ruby/Dirty'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Ruby_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47480,16 +39463,9 @@ class CfgVehicles
     };
  	class FST_P2_Delta: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-6792 'Delta'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Delta";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -47537,14 +39513,8 @@ class CfgVehicles
     {
         author="Gold";
         displayName="[41st] CT-6792 'Delta' (Dirty)";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Delta_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47592,14 +39562,8 @@ class CfgVehicles
     {
         author="Viz";
         displayName="[41st] CT-2137 'Laer'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Laer";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47647,14 +39611,8 @@ class CfgVehicles
     {
         author="Gold";
         displayName="[41st] CT-2137 'Laer' (Dirty)";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Laer_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -47702,19 +39660,8 @@ class CfgVehicles
     {
         author="Ruby";
         displayName="[41st] CT-1210 'Rick'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Rick";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-        hiddenSelections[]=
-        {
-            "camo1",
-            "camo2"
-        };
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rick.paa",
@@ -47757,19 +39704,8 @@ class CfgVehicles
     {
         author="Steel";
         displayName="[41st] CT-1210 'Rick/Dirty'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Rick_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-        hiddenSelections[]=
-        {
-            "camo1",
-            "camo2"
-        };
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Rick_Dirty.paa",
@@ -47812,19 +39748,8 @@ class CfgVehicles
     {
         author="Laer";
         displayName="[41st] CT-3434 'Appa'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Appa";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-        hiddenSelections[]=
-        {
-            "camo1",
-            "camo2"
-        };
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Appa.paa",
@@ -47867,19 +39792,8 @@ class CfgVehicles
     {
         author="Steel";
         displayName="[41st] CT-3434 'Appa/Dirty'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Appa_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-        hiddenSelections[]=
-        {
-            "camo1",
-            "camo2"
-        };
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Appa_Dirty.paa",
@@ -47922,19 +39836,8 @@ class CfgVehicles
     {
         author="Laer";
         displayName="[41st] CT-4545 'Valius'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Valius";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-        hiddenSelections[]=
-        {
-            "camo1",
-            "camo2"
-        };
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Valius.paa",
@@ -47977,14 +39880,8 @@ class CfgVehicles
     {
         author="Viz";
         displayName="[41st] CT-0033 'Lucky'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Lucky";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -48032,14 +39929,8 @@ class CfgVehicles
     {
         author="Viz";
         displayName="[41st] CT-0033 'Lucky/Dirty'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Lucky";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -48087,14 +39978,8 @@ class CfgVehicles
     {
         author="Viz";
         displayName="[41st] CT-4848 'Viz'";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Viz";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -48140,16 +40025,9 @@ class CfgVehicles
     };
 	class FST_P2_Viz_Dirty: FST_Trooper_P2_DC15S
     {
-        author="Daara";
         displayName="[41st] CT-4848 'Viz' (Dirty)";
-        scope=2;
-        Backpack="";
-        side=1;
-        role="Rifleman";
-        faction="FST_Faction";
         editorSubcategory="FST_Customs_Subfaction";
         uniformclass="FST_Uniform_Viz_Dirty";
-        model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
         hiddenSelections[]=
         {
             "camo1",
@@ -48195,16 +40073,9 @@ class CfgVehicles
     };
   	class FST_P2_Daara: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-4424 'Daara'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Daara";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48250,14 +40121,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-4364 'Evox'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Evox";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48303,14 +40168,8 @@ class CfgVehicles
 	{
 		author="Gold";
 		displayName="[41st] CT-4364 'Evox/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Evox";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48356,14 +40215,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-2105 'Crab'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Crab";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48409,19 +40262,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-2606 'Selene'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Selene";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Selene.Paa",
@@ -48462,19 +40304,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-1592 'Fizz'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Fizz";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Fizz.Paa",
@@ -48513,21 +40344,9 @@ class CfgVehicles
 	};
   	class FST_P2_Fizz_Dirty: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] CT-1592 'Fizz' (Dirty)";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Fizz_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Fizz_Dirty.Paa",
@@ -48568,19 +40387,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-7473 'Jericho'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Jericho";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Jericho.Paa",
@@ -48621,19 +40429,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-1037 'Felix'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Felix";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Felix.Paa",
@@ -48674,19 +40471,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1037 'Felix/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Felix_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Felix_Dirty.Paa",
@@ -48727,19 +40513,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-2553 'Vixen'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Vixen";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Vixen.Paa",
@@ -48780,14 +40555,8 @@ class CfgVehicles
 	{
 		author="Adler";
 		displayName="[41st] CT-1284 'Red'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Red";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48835,14 +40604,8 @@ class CfgVehicles
 	{
 		author="Adler";
 		displayName="[41st] CT-7467 'Ryx'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Ryx";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48890,14 +40653,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-9661 'Nova'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Nova";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -48945,14 +40702,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-9512 'Atlas'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Atlas";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49000,14 +40751,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-9512 'Atlas/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Atlas_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49055,14 +40800,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-0312 'Noble'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Noble";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49110,14 +40849,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-5475 'Cooker'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cooker";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49165,14 +40898,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-5432 'Sonic'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Sonic";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49220,14 +40947,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-1770 'Volos'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Volos";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49275,14 +40996,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-6406 'Raz'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Raz";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49330,14 +41045,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-1964 'Chips'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Chips";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49385,14 +41094,8 @@ class CfgVehicles
 	{
 		author="Steel";
 		displayName="[41st] CT-1964 'Chips/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Chips_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49440,14 +41143,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-0442 'Buddhah'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Buddhah";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49495,14 +41192,8 @@ class CfgVehicles
 	{
 		author="Viz";
 		displayName="[41st] CT-0442 'Buddhah/Dirty'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Buddhah_Dirty";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49550,14 +41241,8 @@ class CfgVehicles
 	{
 		author="Adler";
 		displayName="[41st] CT-1014 'Cyanide'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Cyanide";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49605,14 +41290,8 @@ class CfgVehicles
 	{
 		author="Adler";
 		displayName="[41st] CT-9782 'Dash'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Dash";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49699,16 +41378,9 @@ class CfgVehicles
 	};
 	class FST_Zombie_Bloody: FST_Trooper_P2_DC15S
 	{
-		author="Daara";
 		displayName="[41st] Zombie Trooper";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
 		uniformclass="FST_Uniform_Bloddy_Zombie";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -49770,10 +41442,7 @@ class CfgGlasses
 		scope=2;
 		author="Ruby";
 		displayName="[41st] Fynock's Low Light System";
-		model="\A3\Weapons_f\DummyNVG";
-		mass=2;
 		FST_hasLowLight=1;
-		identityTypes[]={};
 	};
 	class FST_HUD: FST_Base_Glasses
 	{
@@ -50920,11 +42589,6 @@ class CfgGlasses
 	class FST_Pauldron_Single_Face_Dirty: FST_Pauldron_Single_Face
 	{
 		displayname="[41st] Pauldron (Face/Dirty)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestLieutenant.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-		};
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Vest_Ranger.paa"
