@@ -1,0 +1,20 @@
+name = "41st Kaid Company Aux Mod"
+prefix = "fst"
+
+[version]
+major = 0
+minor = 1
+patch = 0
+
+[files]
+include = [
+    "README.md",
+    "MIGRATION_NOTES.md",
+]
+exclude = [
+    "PUBLISHED MODPACK/**/*",
+    ".hemttout/**/*",
+]
+
+[properties]
+author = "41st Kaid Company"
