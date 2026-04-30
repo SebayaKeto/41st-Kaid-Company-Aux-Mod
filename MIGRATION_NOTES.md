@@ -7,3 +7,4 @@ This is a conservative first-pass HEMTT migration.
 - Uncertain prefix decisions are deferred to a later pass.
 - Duplicate `CfgPatches` risks still need manual review.
 - No Arma runtime paths were rewritten.
+- Disabled `addons/FST_Barricades/Data/Backup.cpp` by renaming it to `Backup.cpp.disabled` because HEMTT scans/lints `.cpp` files and this backup file contains invalid config syntax.
