@@ -145,6 +145,7 @@ class CfgPatches
 			"FST_P2_Mixer",
 			"FST_P2_Vengence",
 			"FST_P2_Viper",
+			"FST_P2_Viper_Dirty",
 			"FST_P2_Rook",
 			"FST_P2_Mrogg",
 			"FST_P2_Rumble",
@@ -11556,6 +11557,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Viper.paa",
 		};
 	};	
+	class FST_P2_Helmet_Viper: FST_P2_Helmet_Base
+	{
+		author = "Ruby";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Viper/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Viper_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Mood: FST_P2_Helmet_Base
 	{
 		scope=2; 
@@ -15780,6 +15791,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Viper";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Viper_Dirty: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Viper/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Viper_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -32698,6 +32723,55 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Viper",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Viper_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Ruby";
+		displayName="[41st] CT-2213 'Viper/Dirty'";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Viper";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Viper_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Viper_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Viper_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Viper_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
