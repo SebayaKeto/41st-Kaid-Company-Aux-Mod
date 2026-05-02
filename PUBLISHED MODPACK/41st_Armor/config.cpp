@@ -11557,7 +11557,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Viper.paa",
 		};
 	};	
-	class FST_P2_Helmet_Viper: FST_P2_Helmet_Base
+	class FST_P2_Helmet_Viper_Dirty: FST_P2_Helmet_Base
 	{
 		author = "Ruby";
 		scope=2; 
