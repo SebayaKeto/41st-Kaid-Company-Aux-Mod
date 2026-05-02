@@ -46,16 +46,11 @@ if (!hasInterface) exitWith {};
     "--- Fill Garrison ---",
     {
         params ["_pos"];
-
-        private _replacementOptions = [] call FST_HCSpawn_fnc_getFSTOpforUnitOptions;
-        _replacementOptions params ["_replacementValues", "_replacementLabels"];
-
         ["Fill Garrison",
         [
             ["SLIDER", "Scan Radius (m)", [25, 500, 150, 0]],
             ["SLIDER", "Density %", [10, 100, 75, 0]],
-            ["SLIDER", "B2 Mix %", [0, 100, 20, 0]],
-            ["COMBO", ["B1 Replacement Unit", "Default keeps the original weighted B1 pool. Selecting a unit replaces only the B1 portion; the B2 mix slider still controls B2s. Only FST_ OPFOR infantry are listed."], [_replacementValues, _replacementLabels, 0], true]
+            ["SLIDER", "B2 Mix %", [0, 100, 20, 0]]
         ],
         {
             params ["_values", "_args"];
@@ -63,14 +58,11 @@ if (!hasInterface) exitWith {};
             private _radius = _values select 0;
             private _density = (_values select 1) / 100;
             private _b2Ratio = (_values select 2) / 100;
-            private _b1Replacement = _values select 3;
             private _caller = clientOwner;
 
-            ["FST_HC_evt_fillGarrison", [_pos, _radius, _density, _b2Ratio, _caller, _b1Replacement]] call CBA_fnc_serverEvent;
-
-            private _replacementText = if (_b1Replacement isEqualTo "") then { "Default B1 mix" } else { _b1Replacement };
-            systemChat format ["[FST] Filling — %1m, %2%3 density, %4%5 B2, B1: %6",
-                round _radius, round (_density*100), "%", round (_b2Ratio*100), "%", _replacementText];
+            ["FST_HC_evt_fillGarrison", [_pos, _radius, _density, _b2Ratio, _caller]] call CBA_fnc_serverEvent;
+            systemChat format ["[FST] Filling — %1m, %2%3 density, %4%5 B2",
+                round _radius, round (_density*100), "%", round (_b2Ratio*100), "%"];
         },
         {},
         [_pos]

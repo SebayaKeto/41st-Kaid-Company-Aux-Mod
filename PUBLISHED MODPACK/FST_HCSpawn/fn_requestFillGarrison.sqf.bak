@@ -8,25 +8,10 @@
 //   2: NUMBER   — density (0.0-1.0)
 //   3: NUMBER   — B2 ratio (0.0-1.0)
 //   4: NUMBER   — requesting client owner ID
-//   5: STRING   — optional B1 replacement class; empty string keeps default B1 pool
 
 if (!isServer) exitWith {};
 
-params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2], ["_b1Replacement", "", [""]]];
-
-// Clamp user-facing values and validate client-provided classnames server-side.
-_radius = (_radius max 25) min 500;
-_density = (_density max 0.1) min 1;
-_b2Ratio = (_b2Ratio max 0) min 1;
-
-if !(_b1Replacement isEqualTo "") then {
-    if !([_b1Replacement] call FST_HCSpawn_fnc_isValidFSTOpforUnit) then {
-        private _msg = format ["[FST] Fill Garrison blocked invalid B1 replacement: %1", _b1Replacement];
-        _msg remoteExec ["systemChat", _callerID];
-        diag_log format ["[FST_HCSpawn] %1 requested invalid Fill Garrison B1 replacement: %2", _callerID, _b1Replacement];
-        _b1Replacement = "";
-    };
-};
+params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2]];
 
 // Ensure ground-level position for scanning (ZEN passes ASL)
 _center = [_center select 0, _center select 1, 0];
@@ -88,17 +73,13 @@ private _b2Pool = ["FST_B2","FST_B2","FST_B2_TL"];
 
 private _assignments = [];
 {
-    private _class = if (random 1 < _b2Ratio) then {
-        selectRandom _b2Pool
-    } else {
-        if (_b1Replacement isEqualTo "") then { selectRandom _b1Pool } else { _b1Replacement }
-    };
+    private _class = if (random 1 < _b2Ratio) then { selectRandom _b2Pool } else { selectRandom _b1Pool };
     _assignments pushBack [_x, _class];
 } forEach _positions;
 
 // --- Staggered dispatch ---
-[_assignments, _buildings, _callerID, _b1Replacement] spawn {
-    params ["_assignments", "_buildings", "_callerID", "_b1Replacement"];
+[_assignments, _buildings, _callerID] spawn {
+    params ["_assignments", "_buildings", "_callerID"];
     private _batchCount = 0;
 
     for "_i" from 0 to (count _assignments - 1) step 12 do {
@@ -124,9 +105,8 @@ private _assignments = [];
         sleep 0.3;
     };
 
-    private _replacementText = if (_b1Replacement isEqualTo "") then { "default B1 mix" } else { _b1Replacement };
-    private _msg = format ["[FST] Garrisoned %1 units, %2 buildings, %3 groups — B1: %4",
-        count _assignments, count _buildings, _batchCount, _replacementText];
+    private _msg = format ["[FST] Garrisoned %1 droids, %2 buildings, %3 groups",
+        count _assignments, count _buildings, _batchCount];
     _msg remoteExec ["systemChat", _callerID];
     diag_log _msg;
 };
