@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class 41st_Droids
 	{
-		requiredAddons[]={"A3_Soft_F","cba_main","cba_xeh"};
+		requiredAddons[]={"A3_Soft_F"};
 		units[]=
 		{
 			"FST_Droid_B1_E5",
@@ -558,25 +558,11 @@ class UniformSlotInfo
 	slotType=0;
 	linkProxy="-";
 };
-class CfgFunctions
-{
-	class FST
-	{
-		class droids
-		{
-			file="\41st_Droids\functions";
-			class disableAceMedicalDamageForDroid {};
-		};
-	};
-};
 class CfgVehicles
 {
 	class JLTS_B1_Backpack;
 	class JLTS_B1_antenna;
-	class WBK_3AS_B1_Rocket
-	{
-		class HitPoints;
-	};
+	class WBK_3AS_B1_Rocket;
 	class FST_Backpack_RTO_Hidden;
 	class JLTS_B1_jetpack_Rocket;
 	class 3AS_B_CloneGM_Base_F;
@@ -849,6 +835,7 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_E5: JLTS_Droid_B1_E5
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		scopecurator = 2;
 		side=0;
@@ -1008,38 +995,6 @@ class CfgVehicles
 				visual="injury_legs";
 				minimalHit=0.01;
 				depends="";
-			};
-			class HitLeftArm: HitHands
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.05;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg: HitLegs
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=0.8;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
 			};
 			class Incapacitated
 			{
@@ -1289,8 +1244,9 @@ class CfgVehicles
 		minTotalDamageThreshold=0.001;
 		impactDamageMultiplier=0.5;
 	};
-	class FST_Droid_B1_E5_Muddy: FST_Droid_B1_E5
+	class FST_Droid_B1_E5_Muddy: JLTS_Droid_B1_E5
 	{
+		ace_medical_enabled = 0;
 		author="Gold";
 		displayName="[41st] B1 Battledroid (Muddy)";
 		uniformClass="FST_DroidB1_Muddy";
@@ -1744,43 +1700,7 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Jetpack: WBK_3AS_B1_Rocket
 	{
-		class HitPoints: HitPoints
-		{
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.05;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=0.8;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
-
-
+		ace_medical_enabled = 0;
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_Backpack_Jetpack";
@@ -2181,49 +2101,10 @@ class CfgVehicles
 			"IDA_grenade_Detonator_mag"
 		};
 	};
-	class WBK_LS_BX
-	{
-		class HitPoints;
-	};
+	class WBK_LS_BX;
 	class FST_BX: WBK_LS_BX
 	{
-		class HitPoints: HitPoints
-		{
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.05;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=0.8;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
-
-
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2579,49 +2460,10 @@ class CfgVehicles
 			"41st_Droids\Data\Extras\FST_BX_Tukata_Body.paa"
 		};
 	};
-	class WBK_LS_B2
-	{
-		class HitPoints;
-	};
+	class WBK_LS_B2;
 	class FST_B2: WBK_LS_B2
 	{
-		class HitPoints: HitPoints
-		{
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0.05;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=0.8;
-				radius=0.1;
-				explosionShielding=1;
-				visual="injury_legs";
-				minimalHit=0.01;
-				depends="";
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
-
-
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2675,8 +2517,9 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_TL: FST_B2
+	class FST_B2_TL: WBK_LS_B2
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2734,8 +2577,9 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_Flame: FST_B2
+	class FST_B2_Flame: WBK_LS_B2
 	{
+		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -3127,6 +2971,7 @@ class CfgVehicles
 	};
 	class FST_Jorgetrooper: FST_CIS_Heavy_Base_F
 	{
+		ace_medical_enabled = 0;
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopecurator=2;
@@ -3681,23 +3526,6 @@ class CfgVehicles
 	class FST_B2_TL: FST_B2 {};
 	class FST_B2_Flame: FST_B2 {};
 };
-class Extended_InitPost_EventHandlers
-{
-	class FST_Droid_B1_E5
-	{
-		class FST_disableAceMedicalDamage
-		{
-			init="params ['_unit']; [_unit] call FST_fnc_disableAceMedicalDamageForDroid; if !(_unit getVariable ['FST_noAceDamageLocalEH', false]) then { _unit setVariable ['FST_noAceDamageLocalEH', true]; _unit addEventHandler ['Local', { params ['_unit', '_isLocal']; if (_isLocal) then { [_unit] call FST_fnc_disableAceMedicalDamageForDroid; }; }]; };";
-		};
-	};
-	class FST_Droid_B1_E5_Muddy: FST_Droid_B1_E5 {};
-	class FST_Droid_B1_Jetpack: FST_Droid_B1_E5 {};
-	class FST_BX: FST_Droid_B1_E5 {};
-	class FST_B2: FST_Droid_B1_E5 {};
-	class FST_B2_TL: FST_B2 {};
-	class FST_B2_Flame: FST_B2 {};
-};
-
 class FST_Commando_Jorge;
 class cfgGroups
 {
