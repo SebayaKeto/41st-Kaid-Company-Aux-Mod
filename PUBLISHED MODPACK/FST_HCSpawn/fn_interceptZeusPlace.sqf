@@ -57,11 +57,13 @@ if (missionNamespace getVariable ["FST_HC_ZeusInstantClone", true]) exitWith {
     ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, _vehData, _unitData, clientOwner]] call CBA_fnc_serverEvent;
 
     // Remove the Zeus-created original immediately, matching the old behavior.
+    // Mark originals so any delayed spawn-damage scripts can abort cleanly.
     if (count _vehData > 0) then {
+        { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _leaderVeh;
         { _leaderVeh deleteVehicleCrew _x; } forEach crew _leaderVeh;
         deleteVehicle _leaderVeh;
     } else {
-        { deleteVehicle _x; } forEach _units;
+        { _x setVariable ["FST_skipSpawnDamage", true, true]; deleteVehicle _x; } forEach _units;
     };
     _group deleteGroupWhenEmpty true;
 

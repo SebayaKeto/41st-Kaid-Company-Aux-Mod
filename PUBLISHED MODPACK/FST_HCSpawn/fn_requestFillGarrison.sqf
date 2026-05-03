@@ -19,6 +19,13 @@ _radius = (_radius max 25) min 500;
 _density = (_density max 0.1) min 1;
 _b2Ratio = (_b2Ratio max 0) min 1;
 
+// Garrison dispatch throttle. These can be overridden from debug/server init.
+// The old behavior was 12 units every 0.3s. That is very fast for 300+ AI fills.
+private _batchSize = missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8];
+private _batchDelay = missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 0.75];
+_batchSize = (_batchSize max 4) min 12;
+_batchDelay = (_batchDelay max 0.3) min 2;
+
 if !(_b1Replacement isEqualTo "") then {
     if !([_b1Replacement] call FST_HCSpawn_fnc_isValidFSTOpforUnit) then {
         private _msg = format ["[FST] Fill Garrison blocked invalid B1 replacement: %1", _b1Replacement];
@@ -60,10 +67,28 @@ private _cbaPoints = _center nearObjects ["CBA_BuildingPos", _radius];
 _buildingPositions = _buildingPositions call BIS_fnc_arrayShuffle;
 
 // Combine: priority first, then shuffled buildingPos
-private _allPositions = _priorityPositions + _buildingPositions;
+private _allPositionsRaw = _priorityPositions + _buildingPositions;
+private _rawPositionCount = count _allPositionsRaw;
+
+// Filter unsafe over-water/floating positions before we create anything.
+// This prevents fill garrison from spawning/deleting hundreds of units on invalid positions.
+private _allPositions = _allPositionsRaw select {
+    [_x] call FST_HCSpawn_fnc_isSafeGarrisonPos
+};
+private _rejectedWaterPositions = _rawPositionCount - count _allPositions;
+
+if (_rejectedWaterPositions > 0) then {
+    diag_log format ["[FST_HCSpawn] Fill Garrison skipped %1 unsafe/floating/over-water positions near %2", _rejectedWaterPositions, _center];
+};
 
 if (count _allPositions == 0) exitWith {
-    "[FST] No garrison positions found." remoteExec ["systemChat", _callerID];
+    private _msg = if (_rawPositionCount > 0) then {
+        format ["[FST] No safe garrison positions found. Skipped %1 unsafe/floating/over-water positions.", _rejectedWaterPositions]
+    } else {
+        "[FST] No garrison positions found."
+    };
+    _msg remoteExec ["systemChat", _callerID];
+    diag_log format ["[FST_HCSpawn] Fill Garrison aborted at %1: no safe positions. raw=%2 rejected=%3", _center, _rawPositionCount, _rejectedWaterPositions];
 };
 
 // --- Density filter (cuts from the end — buildingPos trimmed first) ---
@@ -97,12 +122,12 @@ private _assignments = [];
 } forEach _positions;
 
 // --- Staggered dispatch ---
-[_assignments, _buildings, _callerID, _b1Replacement] spawn {
-    params ["_assignments", "_buildings", "_callerID", "_b1Replacement"];
+[_assignments, _buildings, _callerID, _b1Replacement, _batchSize, _batchDelay] spawn {
+    params ["_assignments", "_buildings", "_callerID", "_b1Replacement", "_batchSize", "_batchDelay"];
     private _batchCount = 0;
 
-    for "_i" from 0 to (count _assignments - 1) step 12 do {
-        private _batch = _assignments select [_i, 12 min (count _assignments - _i)];
+    for "_i" from 0 to (count _assignments - 1) step _batchSize do {
+        private _batch = _assignments select [_i, _batchSize min (count _assignments - _i)];
 
         private _targetId = [] call FST_HCSpawn_fnc_getSpawnTarget;
         private _isOnHC = _targetId != 2;
@@ -121,7 +146,7 @@ private _assignments = [];
         };
         _batchCount = _batchCount + 1;
 
-        sleep 0.3;
+        sleep _batchDelay;
     };
 
     private _replacementText = if (_b1Replacement isEqualTo "") then { "default B1 mix" } else { _b1Replacement };

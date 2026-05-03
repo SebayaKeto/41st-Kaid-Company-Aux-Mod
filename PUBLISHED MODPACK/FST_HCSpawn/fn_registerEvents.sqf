@@ -72,6 +72,11 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_statusReport;
     }] call CBA_fnc_addEventHandler;
 
+    // Force immediate recount after HC-side cleanup deletes spawned units.
+    ["FST_HC_evt_recountUnits", {
+        [] call FST_HCSpawn_fnc_recountUnits;
+    }] call CBA_fnc_addEventHandler;
+
     // Debug snapshot request (from Zeus/admin client)
     ["FST_HC_evt_debugSnapshotRequest", {
         _this call FST_HCSpawn_fnc_requestDebugSnapshot;
