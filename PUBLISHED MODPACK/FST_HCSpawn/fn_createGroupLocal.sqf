@@ -21,11 +21,6 @@ if (count _vehData > 0) then {
     _veh setVectorUp _vehUp;
     createVehicleCrew _veh;
     (crew _veh) joinSilent _group;
-    {
-        _x setVariable ["FST_HC_created", true, true];
-        _x setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-        _x setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
-    } forEach crew _veh;
     _editableObjects pushBack _veh;
 } else {
     if (count _unitData > 0) then {
@@ -33,9 +28,6 @@ if (count _vehData > 0) then {
             _x params ["_class", ["_rel", [0,0,0]], ["_dir", 0], ["_rank", "PRIVATE"], ["_skill", 0.5], ["_unitPos", "AUTO"]];
             private _spawnPos = _pos vectorAdd _rel;
             private _unit = _group createUnit [_class, _spawnPos, [], 0, "CAN_COLLIDE"];
-            _unit setVariable ["FST_HC_created", true, true];
-            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
             _unit setPosATL _spawnPos;
             _unit setDir _dir;
             _unit setRank _rank;
@@ -51,9 +43,6 @@ if (count _vehData > 0) then {
         {
             private _offset = [(_pos select 0) + random 10 - 5, (_pos select 1) + random 10 - 5, 0];
             private _unit = _group createUnit [_x, _offset, [], 0, "NONE"];
-            _unit setVariable ["FST_HC_created", true, true];
-            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitClasses;
     };
@@ -102,17 +91,12 @@ if (count _editableObjects > 0) then {
             } forEach _buildings;
 
             _buildingPositions = _buildingPositions call BIS_fnc_arrayShuffle;
-            private _bldgPositionsRaw = _priorityPositions + _buildingPositions;
-            private _bldgPositions = _bldgPositionsRaw select { [_x] call FST_HCSpawn_fnc_isSafeGarrisonPos };
-            private _rejectedGarrisonPositions = (count _bldgPositionsRaw) - (count _bldgPositions);
-            if (_rejectedGarrisonPositions > 0 && {FST_HC_DebugLogging}) then {
-                diag_log format ["[FST_HCSpawn] Garrison behavior skipped %1 unsafe/floating/over-water positions near %2", _rejectedGarrisonPositions, _pos];
-            };
+            private _bldgPositions = _priorityPositions + _buildingPositions;
             private _units = units _group;
             {
                 if (_forEachIndex < count _bldgPositions) then {
                     private _bPos = _bldgPositions select _forEachIndex;
-                    _x setPosATL _bPos;
+                    _x setPos _bPos;
                     _x setVariable ["FST_HC_assignedPos", _bPos];
                     _x disableAI "PATH";
                     _x setUnitPos "UP";
@@ -128,7 +112,7 @@ if (count _editableObjects > 0) then {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
 
-            // Cleanup floating/unsafe positions after 10s
+            // Cleanup floaters after 3s
             [{
                 params ["_grp"];
                 if (isNull _grp) exitWith {};
@@ -136,18 +120,15 @@ if (count _editableObjects > 0) then {
                 {
                     private _ap = _x getVariable ["FST_HC_assignedPos", []];
                     if (count _ap == 0) then { continue };
-                    if ((abs ((getPosATL _x select 2) - (_ap select 2)) > 1) || {!([_ap] call FST_HCSpawn_fnc_isSafeGarrisonPos)}) then {
+                    if (abs ((getPosATL _x select 2) - (_ap select 2)) > 1) then {
                         _toDelete pushBack _x;
                     };
                 } forEach units _grp;
-                { _x setVariable ["FST_skipSpawnDamage", true, true]; deleteVehicle _x; } forEach _toDelete;
-                if (count _toDelete > 0) then {
-                    if (FST_HC_DebugLogging) then {
-                        diag_log format ["[FST_HCSpawn] Garrison cleanup: removed %1 floating/unsafe droids", count _toDelete];
-                    };
-                    if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };
+                { deleteVehicle _x; } forEach _toDelete;
+                if (count _toDelete > 0 && {FST_HC_DebugLogging}) then {
+                    diag_log format ["[FST_HCSpawn] Garrison cleanup: removed %1 floating droids", count _toDelete];
                 };
-            }, [_group], 10] call CBA_fnc_waitAndExecute;
+            }, [_group], 3] call CBA_fnc_waitAndExecute;
         };
         case "assault": {
             _group setBehaviourStrong "COMBAT";

@@ -57,7 +57,7 @@ private _toDelete = [];
 private _cleaned = 0;
 {
     if (!isNull _x && {count units _x > 0}) then {
-        { private _v = vehicle _x; _x setVariable ["FST_skipSpawnDamage", true, true]; if (_v != _x) then { deleteVehicle _v; }; deleteVehicle _x; } forEach units _x;
+        { private _v = vehicle _x; if (_v != _x) then { deleteVehicle _v; }; deleteVehicle _x; } forEach units _x;
         _cleaned = _cleaned + 1;
     };
     _x setVariable ["FST_HC_tracked", nil];
