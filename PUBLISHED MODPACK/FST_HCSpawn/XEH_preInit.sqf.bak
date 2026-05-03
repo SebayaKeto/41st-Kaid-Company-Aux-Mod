@@ -31,8 +31,14 @@
 
 [
     "FST_HC_PreserveLoadouts", "CHECKBOX",
-    ["Preserve Loadouts on Transfer", "Save and reapply unit loadouts after setGroupOwner (fixes naked unit bug)."],
+    ["Preserve Loadouts on Transfer", "Legacy setting retained for saved CBA profiles. Loadout preservation is now always enforced by the script."],
     ["FST HC Spawn", "HC System"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DebugLogging", "CHECKBOX",
+    ["Verbose RPT Logging", "Extra HC spawn/transfer logging. Leave off during live ops unless debugging."],
+    ["FST HC Spawn", "HC System"], false, true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -65,6 +71,30 @@
     "FST_HC_InterceptEnabled", "CHECKBOX",
     ["Intercept Zeus Placement", "Zeus-placed groups automatically move to HC."],
     ["FST HC Spawn", "Zeus"], true, true, {}, true
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_ZeusInstantClone", "CHECKBOX",
+    ["Instant Zeus Clone/Replace", "For Zeus placement, immediately serialize the placed group, delete the Zeus-created original, and recreate it directly on the least-loaded HC. This is the fastest path and matches the original instant behavior."],
+    ["FST HC Spawn", "Zeus"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_ZeusImmediateTransfer", "CHECKBOX",
+    ["Immediate Zeus setGroupOwner Transfer", "Alternative safer mode: transfer the real Zeus-placed group with setGroupOwner instead of clone/replacing it. Cleaner, but can take several seconds on some servers."],
+    ["FST HC Spawn", "Zeus"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_ZeusTransferSettleDelay", "SLIDER",
+    ["Zeus Transfer Settle Delay", "Small delay, in seconds, before transferring a newly Zeus-placed group. 0.15-0.35 is usually enough for the engine to finish creating the group."],
+    ["FST HC Spawn", "Zeus"], [0, 2, 0.2, 2], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_ZeusLegacyFallback", "CHECKBOX",
+    ["Legacy Clone Fallback", "If immediate setGroupOwner fails, fall back to the old delete-and-respawn-on-HC method. Leave off unless testing proves direct transfer does not work for your Zeus placement case."],
+    ["FST HC Spawn", "Zeus"], false, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [

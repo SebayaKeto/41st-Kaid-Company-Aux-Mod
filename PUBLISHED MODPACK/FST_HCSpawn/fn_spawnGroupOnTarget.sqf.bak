@@ -3,7 +3,7 @@
 
 if (!isServer) exitWith {};
 
-params ["_side", "_unitClasses", "_pos", ["_behavior", "garrison"], ["_radius", -1], ["_vehData", []]];
+params ["_side", "_unitClasses", "_pos", ["_behavior", "garrison"], ["_radius", -1], ["_vehData", []], ["_unitData", []], ["_sourceOwner", -1]];
 
 // AI cap check — inline
 private _cap = FST_HC_AICap;
@@ -30,11 +30,18 @@ private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 // Pre-increment unit counts so the NEXT call to getSpawnTarget
 // sees this HC as loaded. Prevents rapid-fire all going to HC1.
 // Periodic recountUnits corrects any drift from actual tracked groups.
-if (_hcIndex >= 0 && _hcIndex < count FST_HC_UnitCounts) then {
-    FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + count _unitClasses];
+private _spawnCount = if (count _unitData > 0) then { count _unitData } else { count _unitClasses };
+if (_spawnCount == 0 && {count _vehData > 0}) then { _spawnCount = -1; }; // vehicle crew count is unknown until HC creates it
+
+if (_hcIndex >= 0 && _hcIndex < count FST_HC_UnitCounts && {_spawnCount > 0}) then {
+    FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + _spawnCount];
 };
 
-private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex];
+private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, _unitData, _sourceOwner];
+
+if (count _unitData > 0 || {count _vehData > 0}) then {
+    FST_HC_ZeusInstantCloneRequests = (missionNamespace getVariable ["FST_HC_ZeusInstantCloneRequests", 0]) + 1;
+};
 
 if (_isOnHC) then {
     private _hcId = FST_HC_Ids select _hcIndex;

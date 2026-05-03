@@ -52,6 +52,7 @@ class CfgFunctions {
             class registerZenModules {};
             class getFSTOpforUnitOptions {};
             class isValidFSTOpforUnit {};
+            class isSafeGarrisonPos {};
         };
         class Objectives {
             file = "FST_HCSpawn";

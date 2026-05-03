@@ -212,4 +212,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-diag_log "[FST_HCSpawn] preInit complete";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "WATERFIX_INSTANT_RESTORE_2026-05-03", true];
+diag_log "[FST_HCSpawn] preInit complete - WATERFIX_INSTANT_RESTORE_2026-05-03";

@@ -22,6 +22,14 @@ FST_HC_TrackedCount = 0;
 // Transfer queue
 FST_HC_TransferQueue = [];
 
+// Debug/status counters
+FST_HC_TransferSuccesses = 0;
+FST_HC_TransferFailures = 0;
+FST_HC_ZeusImmediateRequests = 0;
+FST_HC_ZeusImmediateFallbacks = 0;
+FST_HC_ZeusLegacyFallbacksUsed = 0;
+FST_HC_ZeusInstantCloneRequests = 0;
+
 // State flags
 FST_HC_Transferring = false;
 FST_HC_EmergencyMode = false;
@@ -59,11 +67,12 @@ if (FST_HC_DespawnEnabled) then {
     }, 15, []] call CBA_fnc_addPerFrameHandler;
 };
 
-// Objectives (delayed to allow mission init.sqf to populate)
+// Objective checker. Start once even if objectives are added later by mission scripts/triggers.
 [{
-    if (count FST_HC_Objectives > 0) then {
+    if !(missionNamespace getVariable ["FST_HC_ObjectivePFHStarted", false]) then {
+        missionNamespace setVariable ["FST_HC_ObjectivePFHStarted", true];
         [] call FST_HCSpawn_fnc_checkObjectives;
-        diag_log format ["[FST_HCSpawn] Objective PFH started — %1 objectives", count FST_HC_Objectives];
+        diag_log "[FST_HCSpawn] Objective PFH started";
     };
 }, [], 3] call CBA_fnc_waitAndExecute;
 

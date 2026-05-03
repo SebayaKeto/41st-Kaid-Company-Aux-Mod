@@ -21,26 +21,27 @@ private _queued = 0;
     // Skip: held by Zeus
     if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) then { continue };
 
-    // Skip: already in transfer queue
+    // Skip: already pending or already in transfer queue
+    if (_grp getVariable ["FST_HC_pendingTransfer", false]) then { continue };
     if (_grp in FST_HC_TransferQueue) then { continue };
 
     // Skip: blacklisted (result cached on group)
     if ([_grp] call FST_HCSpawn_fnc_isBlacklisted) then { continue };
 
-    // Skip: already on an HC (owned by one of our HC IDs)
-    private _ownerID = owner leader _grp;
+    // Skip/register: already on an HC but not tracked
+    private _ownerID = groupOwner _grp;
     if (_ownerID in FST_HC_Ids) then {
-        // It's on an HC but not tracked — register it
         private _hcIdx = FST_HC_Ids find _ownerID;
         [_grp, _hcIdx] call FST_HCSpawn_fnc_trackGroup;
         continue;
     };
 
     // This group is server-owned AI — queue for transfer
-    FST_HC_TransferQueue pushBack _grp;
+    _grp setVariable ["FST_HC_pendingTransfer", true];
+    FST_HC_TransferQueue pushBackUnique _grp;
     _queued = _queued + 1;
 } forEach allGroups;
 
-if (_queued > 0) then {
+if (_queued > 0 && {FST_HC_DebugLogging}) then {
     diag_log format ["[FST_HCSpawn] Catch-all: queued %1 untracked groups for transfer", _queued];
 };

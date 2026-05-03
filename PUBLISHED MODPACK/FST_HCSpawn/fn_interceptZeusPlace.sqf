@@ -25,7 +25,9 @@ _group setVariable ["FST_HC_interceptQueued", true, true];
 
 // FAST PATH: legacy-style instant clone/replace. This avoids waiting for
 // setGroupOwner to settle and recreates the group directly on an HC.
-if (missionNamespace getVariable ["FST_HC_ZeusInstantClone", true]) exitWith {
+// HARD-RESTORED FAST PATH: always use instant clone/replace for Zeus placement.
+// This intentionally ignores the slower setGroupOwner transfer setting.
+if (true) exitWith {
     private _units = units _group;
     private _side = side _group;
     private _leader = leader _group;
@@ -57,11 +59,13 @@ if (missionNamespace getVariable ["FST_HC_ZeusInstantClone", true]) exitWith {
     ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, _vehData, _unitData, clientOwner]] call CBA_fnc_serverEvent;
 
     // Remove the Zeus-created original immediately, matching the old behavior.
+    // Mark originals so any delayed spawn-damage scripts can abort cleanly.
     if (count _vehData > 0) then {
+        { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _leaderVeh;
         { _leaderVeh deleteVehicleCrew _x; } forEach crew _leaderVeh;
         deleteVehicle _leaderVeh;
     } else {
-        { deleteVehicle _x; } forEach _units;
+        { _x setVariable ["FST_skipSpawnDamage", true, true]; deleteVehicle _x; } forEach _units;
     };
     _group deleteGroupWhenEmpty true;
 
