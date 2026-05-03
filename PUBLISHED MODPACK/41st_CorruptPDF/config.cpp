@@ -844,10 +844,6 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_High_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Squad Commander'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'DIAMOND';};";
-		};
 	};
 	class FST_CorruptPDF_RTO: FST_U_CorruptPDF
 	{
@@ -909,10 +905,6 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF RTO'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'LINE';};";
-		};
 	};
 	class FST_CorruptPDF_Standard: FST_U_CorruptPDF
 	{
@@ -973,10 +965,6 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Standard Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
 	};
 	class FST_CorruptPDF_Auto: FST_U_CorruptPDF
 	{
@@ -1036,10 +1024,6 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_blaster_battery_Yellow"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Autorifleman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CorruptPDF_Mark: FST_U_CorruptPDF
@@ -1102,10 +1086,6 @@ class CfgVehicles
 			"FST_blaster_cell_High_Yellow",
 			"FST_blaster_cell_low_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Marksman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
 	};
 	class FST_CorruptPDF_CQB: FST_U_CorruptPDF
 	{
@@ -1165,10 +1145,6 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_blaster_scatter_cell_SBB3_Yellow"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF CQB Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CorruptPDF_Gren: FST_U_CorruptPDF
@@ -1234,10 +1210,6 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"IDA_HE_LauncherGrenade"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Grenadier Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
 	};
 	class FST_CorruptPDF_AA: FST_U_CorruptPDF
 	{
@@ -1299,10 +1271,6 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow",
 			"FST_E60R_AA_mag_HD"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Antiair Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CorruptPDF_AT: FST_U_CorruptPDF
@@ -1366,10 +1334,6 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"3AS_MK41_AT"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Antitank Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
 	};
 	class FST_CorruptPDF_Medic: FST_U_CorruptPDF
 	{
@@ -1432,10 +1396,6 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_blaster_cell_low_Yellow_smg"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Medic'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_U_CorruptPDFTanker: FST_U_CIS_Light
@@ -1512,10 +1472,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_low_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Tanker'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_U_CorruptPDFCold: FST_U_CIS_Light
 	{
@@ -1596,10 +1553,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_High_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Squad Commander'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'DIAMOND';};";
-		};
+
 	};
 	class FST_CorruptPDFCold_RTO: FST_U_CorruptPDFCold
 	{
@@ -1659,10 +1613,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF RTO'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'LINE';};";
-		};
+
 	};
 	class FST_CorruptPDFCold_Standard: FST_U_CorruptPDFCold
 	{
@@ -1722,10 +1673,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Standard Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_CorruptPDFCold_Auto: FST_U_CorruptPDFCold
 	{
@@ -1785,10 +1733,7 @@ class CfgVehicles
 		{
 			"FST_blaster_battery_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Autorifleman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_CorruptPDFCold_Mark: FST_U_CorruptPDFCold
 	{
@@ -1847,10 +1792,6 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_High_Yellow",
 			"FST_blaster_cell_low_Yellow"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Marksman'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
 		};
 	};
 	class FST_CorruptPDFCold_CQB: FST_U_CorruptPDFCold
@@ -1911,10 +1852,7 @@ class CfgVehicles
 		{
 			"FST_blaster_scatter_cell_SBB3_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF CQB Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_CorruptPDFCold_Gren: FST_U_CorruptPDFCold
 	{
@@ -1978,10 +1916,7 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"IDA_HE_LauncherGrenade"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Grenadier Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_CorruptPDFCold_AA: FST_U_CorruptPDFCold
 	{
@@ -2042,10 +1977,7 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"FST_E60R_AA_mag_HD"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Antiair Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_CorruptPDFCold_AT: FST_U_CorruptPDFCold
 	{
@@ -2106,10 +2038,7 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"3AS_MK41_AT"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Antitank Trooper'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_CorruptPDFCold_Medic: FST_U_CorruptPDFCold
 	{
@@ -2171,10 +2100,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_low_Yellow_smg"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _u addItemToVest 'FST_blaster_cell_low_Yellow_smg'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Medic'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class JMSLLTE_ScumPilot_orange_F;
 	class FST_U_CorruptPDFPilot: JMSLLTE_ScumPilot_orange_F
@@ -2239,10 +2165,7 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_low_Yellow"
 		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'Knife_m3'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'Totharvis PDF Pilot'; [_unit, 0.2, 'body', 'bite'] call ace_medical_fnc_addDamageToUnit;}; _u setSkill ['aimingAccuracy',0.50]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.5]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.7]; _u setSkill ['reloadSpeed',0.4]; _u setSkill ['general',0.7];";
-		};
+
 	};
 	class FST_Droid_B1_E5;
 	class FST_SmugB1_E5: FST_Droid_B1_E5
