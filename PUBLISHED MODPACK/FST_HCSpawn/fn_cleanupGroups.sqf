@@ -10,6 +10,7 @@ private _engageRadius = FST_HC_DespawnEngageRadius;
 private _despawnRadius = FST_HC_DespawnRadius;
 private _staleTime = FST_HC_DespawnTimer;
 private _toDelete = [];
+if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
 
 // Build this once per cleanup tick. With 150 players and many groups this is
 // cheaper and steadier than running nearEntities around every AI group.
@@ -59,7 +60,7 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
             _grp setVariable ["FST_HC_staleStart", -1];
         };
     };
-} forEach allGroups;
+} forEach +FST_HC_TrackedGroups;
 
 private _cleaned = 0;
 {
@@ -102,6 +103,7 @@ private _cleaned = 0;
 
     _grp setVariable ["FST_HC_tracked", nil];
     _grp setVariable ["FST_HC_onHC", nil];
+    FST_HC_TrackedGroups = FST_HC_TrackedGroups - [_grp];
     _cleaned = _cleaned + 1;
 } forEach _toDelete;
 

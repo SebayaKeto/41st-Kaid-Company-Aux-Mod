@@ -18,6 +18,7 @@ FST_HC_UnitCounts = [];     // [count1, count2, ...] — bookkeeping
 // "FST_HC_heldBy" = zeusClientOwner on held groups
 // "FST_HC_onHC" = hcIndex (server-local, debug draw uses owner command)
 FST_HC_TrackedCount = 0;
+FST_HC_TrackedGroups = [];   // server-local cache; avoids scanning allGroups for routine cleanup/recount
 
 // Transfer queue
 FST_HC_TransferQueue = [];
@@ -47,6 +48,12 @@ addMissionEventHandler ["HandleDisconnect", {
 // START PROCESSORS
 // ============================================================
 
+// Dynamic simulation system: only affects objects/groups that are explicitly
+// enableDynamicSimulation true. This addon enables it on non-critical idle groups.
+if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]) then {
+    enableDynamicSimulationSystem true;
+};
+
 // Transfer queue processor
 [] spawn FST_HCSpawn_fnc_processTransfers;
 
@@ -58,13 +65,13 @@ addMissionEventHandler ["HandleDisconnect", {
 // Periodic unit recount (bookkeeping accuracy)
 [{
     [] call FST_HCSpawn_fnc_recountUnits;
-}, 30, []] call CBA_fnc_addPerFrameHandler;
+}, FST_HC_RecountInterval, []] call CBA_fnc_addPerFrameHandler;
 
 // Despawn cleanup (delete AI groups far from all players)
 if (FST_HC_DespawnEnabled) then {
     [{
         [] call FST_HCSpawn_fnc_cleanupGroups;
-    }, 15, []] call CBA_fnc_addPerFrameHandler;
+    }, FST_HC_CleanupInterval, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // Objective checker. Start once even if objectives are added later by mission scripts/triggers.

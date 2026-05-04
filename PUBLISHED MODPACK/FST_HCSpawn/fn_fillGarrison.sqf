@@ -49,6 +49,7 @@ _group deleteGroupWhenEmpty true;
 
 _group setBehaviourStrong "COMBAT";
 _group setCombatMode "RED";
+_group enableDynamicSimulation true;
 
 // Register Zeus editability on the server, not on the HC.
 private _editableObjects = units _group;

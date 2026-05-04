@@ -34,11 +34,30 @@ if (FST_HC_BlacklistVehicles && {vehicle leader _group != leader _group}) exitWi
 
 // splitString's second arg is a *set* of delimiter characters, not a delimiter
 // string. Using ", " would tokenize on every space too, breaking entries that
-// contain spaces. Split on comma only and trim each entry.
-private _badNames = (FST_HC_BlacklistNames splitString ",") apply { _x call BIS_fnc_trimString };
-private _badTypes = (FST_HC_BlacklistTypes splitString ",") apply { _x call BIS_fnc_trimString };
-_badNames = _badNames select { _x != "" };
-_badTypes = _badTypes select { _x != "" };
+// contain spaces. Split on comma only and trim each entry. Cache parsed settings
+// so catch-all/transfer sweeps do not re-tokenize the same strings per group.
+private _rawNames = missionNamespace getVariable ["FST_HC_BlacklistNames", ""];
+private _rawTypes = missionNamespace getVariable ["FST_HC_BlacklistTypes", ""];
+private _nameCache = missionNamespace getVariable ["FST_HC_BlacklistNamesCache", ["", []]];
+private _typeCache = missionNamespace getVariable ["FST_HC_BlacklistTypesCache", ["", []]];
+
+private _badNames = [];
+if ((_nameCache select 0) isEqualTo _rawNames) then {
+    _badNames = _nameCache select 1;
+} else {
+    _badNames = (_rawNames splitString ",") apply { _x call BIS_fnc_trimString };
+    _badNames = _badNames select { _x != "" };
+    missionNamespace setVariable ["FST_HC_BlacklistNamesCache", [_rawNames, _badNames]];
+};
+
+private _badTypes = [];
+if ((_typeCache select 0) isEqualTo _rawTypes) then {
+    _badTypes = _typeCache select 1;
+} else {
+    _badTypes = (_rawTypes splitString ",") apply { _x call BIS_fnc_trimString };
+    _badTypes = _badTypes select { _x != "" };
+    missionNamespace setVariable ["FST_HC_BlacklistTypesCache", [_rawTypes, _badTypes]];
+};
 
 // Check unit types
 if (count _badTypes > 0) then {

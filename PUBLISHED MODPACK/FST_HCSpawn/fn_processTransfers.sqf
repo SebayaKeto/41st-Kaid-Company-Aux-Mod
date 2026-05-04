@@ -14,13 +14,8 @@ while {true} do {
         FST_HC_Transferring = true;
 
         private _batchSize = FST_HC_TransferBatchSize min count FST_HC_TransferQueue;
-        private _batch = [];
-
-        while {count _batch < _batchSize && {count FST_HC_TransferQueue > 0}} do {
-            private _grp = FST_HC_TransferQueue select 0;
-            FST_HC_TransferQueue deleteAt 0;
-            if !(_grp in _batch) then { _batch pushBack _grp; };
-        };
+        private _batch = FST_HC_TransferQueue select [0, _batchSize];
+        FST_HC_TransferQueue = FST_HC_TransferQueue select [_batchSize, (count FST_HC_TransferQueue - _batchSize) max 0];
 
         {
             private _grp = _x;

@@ -18,6 +18,7 @@ if (_hcIdx != -1) exitWith {
     // HC). Two passes used to be visible at scale during the unscheduled
     // HandleDisconnect — the longer this blocks, the more chance of cascading
     // desync on already-shaky connections.
+    if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
     private _orphanedGroups = [];
     {
         private _data = _x getVariable ["FST_HC_tracked", []];
@@ -34,12 +35,13 @@ if (_hcIdx != -1) exitWith {
                 _x setVariable ["FST_HC_onHC", _oldIdx - 1];
             };
         };
-    } forEach allGroups;
+    } forEach +FST_HC_TrackedGroups;
 
     // Remove HC from tracking
     FST_HC_Array deleteAt _hcIdx;
     FST_HC_Ids deleteAt _hcIdx;
     FST_HC_UnitCounts deleteAt _hcIdx;
+    FST_HC_TrackedGroups = FST_HC_TrackedGroups - _orphanedGroups;
 
     publicVariable "FST_HC_Array";
     publicVariable "FST_HC_Ids";

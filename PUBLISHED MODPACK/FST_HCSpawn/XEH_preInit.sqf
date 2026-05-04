@@ -10,7 +10,11 @@
 
 missionNamespace setVariable ["FST_HC_TransferBatchSize", missionNamespace getVariable ["FST_HC_TransferBatchSize", 4]];
 missionNamespace setVariable ["FST_HC_TransferInterval", missionNamespace getVariable ["FST_HC_TransferInterval", 2.0]];
-missionNamespace setVariable ["FST_HC_CatchAllInterval", missionNamespace getVariable ["FST_HC_CatchAllInterval", 15]];
+// Catch-all is a safety net for third-party/server-created AI. Zeus/module spawns
+// are already tracked directly, so this does not need to sweep allGroups often.
+missionNamespace setVariable ["FST_HC_CatchAllInterval", missionNamespace getVariable ["FST_HC_CatchAllInterval", 30]];
+missionNamespace setVariable ["FST_HC_RecountInterval", missionNamespace getVariable ["FST_HC_RecountInterval", 60]];
+missionNamespace setVariable ["FST_HC_CleanupInterval", missionNamespace getVariable ["FST_HC_CleanupInterval", 20]];
 missionNamespace setVariable ["FST_HC_ZeusTransferSettleDelay", missionNamespace getVariable ["FST_HC_ZeusTransferSettleDelay", 0.2]];
 missionNamespace setVariable ["FST_HC_ZeusLegacyFallback", missionNamespace getVariable ["FST_HC_ZeusLegacyFallback", false]];
 missionNamespace setVariable ["FST_HC_GarrisonRadius", missionNamespace getVariable ["FST_HC_GarrisonRadius", 100]];
@@ -18,6 +22,7 @@ missionNamespace setVariable ["FST_HC_PatrolRadius", missionNamespace getVariabl
 missionNamespace setVariable ["FST_HC_TriggerActivationDist", missionNamespace getVariable ["FST_HC_TriggerActivationDist", 800]];
 missionNamespace setVariable ["FST_HC_FillGarrisonSingleActive", true];
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8]];
+missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
 missionNamespace setVariable ["FST_HC_InterceptEnabled", missionNamespace getVariable ["FST_HC_InterceptEnabled", true]];
@@ -210,5 +215,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_FINAL_REVIEW_2026-05-04", true];
-diag_log "[FST_HCSpawn] preInit complete - PREOP_FINAL_REVIEW_2026-05-04";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_EFFICIENCY_PASS_2026-05-04", true];
+diag_log "[FST_HCSpawn] preInit complete - PREOP_EFFICIENCY_PASS_2026-05-04";

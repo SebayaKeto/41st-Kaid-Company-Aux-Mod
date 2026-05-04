@@ -145,6 +145,7 @@ if (count _editableObjects > 0) then {
 
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
+            _group enableDynamicSimulation true;
 
             // Cleanup floating/unsafe positions after 10s
             [{
@@ -183,6 +184,7 @@ if (count _editableObjects > 0) then {
         case "static": {
             _group setBehaviourStrong "COMBAT";
             { _x setUnitPos "UP"; doStop _x; } forEach units _group;
+            _group enableDynamicSimulation true;
         };
         case "none": {};
     };

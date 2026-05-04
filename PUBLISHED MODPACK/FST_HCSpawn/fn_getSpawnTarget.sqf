@@ -11,12 +11,12 @@ if (count FST_HC_Array == 0 || {count FST_HC_Ids == 0}) exitWith { 2 };
 // Guard against transient registration/disconnect drift.
 private _validIndexes = [];
 {
-    private _hcObj = FST_HC_Array select _forEachIndex;
-    private _hcId = FST_HC_Ids select _forEachIndex;
+    private _hcObj = _x;
+    private _hcId = if (_forEachIndex < count FST_HC_Ids) then { FST_HC_Ids select _forEachIndex } else { -1 };
     if (!isNull _hcObj && {_hcId > 2}) then {
         _validIndexes pushBack _forEachIndex;
     };
-} forEach FST_HC_Ids;
+} forEach FST_HC_Array;
 
 if (count _validIndexes == 0) exitWith { 2 };
 
