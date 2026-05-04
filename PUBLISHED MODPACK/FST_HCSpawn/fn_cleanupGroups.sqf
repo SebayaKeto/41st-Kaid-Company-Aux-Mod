@@ -21,13 +21,14 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
 
 {
     private _grp = _x;
-    private _data = _grp getVariable ["FST_HC_tracked", []];
-    if (count _data == 0) then { continue };
 
     if (isNull _grp || {count units _grp == 0}) then {
         _toDelete pushBackUnique _grp;
         continue;
     };
+
+    private _data = _grp getVariable ["FST_HC_tracked", []];
+    if (count _data == 0) then { continue };
 
     private _leader = leader _grp;
     if (isNull _leader) then {

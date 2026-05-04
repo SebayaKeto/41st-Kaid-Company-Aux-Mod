@@ -8,17 +8,17 @@
 
 params ["_group"];
 
+// Empty / null first. Some callers pass groups that may have been deleted during cleanup/failover.
+if (isNull _group || {count units _group == 0}) exitWith { true };
+
+// Player group
+if (isPlayer leader _group) exitWith { true };
+
 // Already cached?
 private _cached = _group getVariable ["FST_HC_blResult", -1];
 if (_cached != -1) exitWith { _cached == 1 };
 
 private _exempt = false;
-
-// Player group
-if (isPlayer leader _group) exitWith { true };
-
-// Empty / null
-if (isNull _group || {count units _group == 0}) exitWith { true };
 
 // Explicitly blacklisted via variable
 if (_group getVariable ["FST_HC_blacklisted", false]) exitWith {

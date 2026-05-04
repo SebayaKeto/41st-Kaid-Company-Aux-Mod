@@ -11,7 +11,8 @@ class CfgPatches
 			"cba_keybinding",
 			"cba_settings",
 			"cba_xeh",
-			"ace_common"
+			"ace_common",
+			"ace_medical_engine"
 		};
 		requiredVersion = 0.1;
 		units[] = {};

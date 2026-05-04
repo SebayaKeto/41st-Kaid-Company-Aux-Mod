@@ -8,12 +8,31 @@
 
 params ["_args", "_id"];
 
-if (!hasInterface || {!(missionNamespace getVariable ["FST_jumppack_enabled", true])}) exitWith {
+if (!hasInterface) exitWith {
 	call FST_fnc_per_frame_EH_stop;
 };
 
 private _unit = player;
 if (_unit isEqualTo objNull) exitWith {};
+
+// If the addon is disabled mid-mission while a jump is active, restore damage
+// before stopping the PFH. The setting is restart-required, but this keeps the
+// safe direction even if an admin toggles it or a script changes it at runtime.
+if !(missionNamespace getVariable ["FST_jumppack_enabled", true]) exitWith {
+	if (_unit getVariable ["FST_jumppack_damageOverrideActive", false]) then {
+		private _protectEH = _unit getVariable ["FST_jumppack_protectEH", -1];
+		if (_protectEH >= 0) then {
+			_unit removeEventHandler ["HandleDamage", _protectEH];
+		};
+		_unit setVariable ["FST_jumppack_protectEH", -1];
+		_unit setVariable ["FST_jumppack_damageOverrideActive", false];
+		_unit setVariable ["ace_medical_allowDamage", true, true];
+		if (alive _unit) then {
+			_unit call FST_jumppack_fnc_remove_effects;
+		};
+	};
+	call FST_fnc_per_frame_EH_stop;
+};
 
 // Damage safety watchdog — deliberately lives in the existing 0.25s PFH so we
 // do not add another loop/callback per jump. This only touches the damage state

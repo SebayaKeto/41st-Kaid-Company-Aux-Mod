@@ -83,7 +83,7 @@ _unit setVariable ["ace_medical_allowDamage", false, true];
 call FST_fnc_per_frame_EH;
 
 private _protectEH = _unit addEventHandler ["HandleDamage", {
-	params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPartIndex", "_instigator", "_hitPoint"];
+	params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPartIndex", "_instigator", "_hitPoint", "_directHit", "_context"];
 
 	// Current damage for this hitpoint
 	private _oldDamage = if (_hitPoint isEqualTo "") then {
@@ -100,11 +100,17 @@ private _protectEH = _unit addEventHandler ["HandleDamage", {
 	private _mult = _unit getVariable ["FST_jumppack_cachedAirDamageMult", 0.5];
 	private _reducedDamage = _oldDamage + (_delta * _mult);
 
-	// Route reduced damage through ACE Medical.
-	// If the ACE call errors, allowDamage stays true — safe direction (full damage, not invulnerable).
+	// Route reduced damage through ACE Medical using the full current HandleDamage
+	// argument set. If ACE Medical is unavailable for any reason, fail safe by
+	// restoring ACE allowDamage and returning the reduced engine damage value.
+	if (isNil "ace_medical_engine_fnc_handleDamage") exitWith {
+		_unit setVariable ["ace_medical_allowDamage", true, true];
+		_reducedDamage
+	};
+
 	private _aceResult = _reducedDamage;
 	_unit setVariable ["ace_medical_allowDamage", true];
-	_aceResult = [_unit, _selection, _reducedDamage, _shooter, _ammo, _hitPartIndex, _instigator, _hitPoint] call ace_medical_engine_fnc_handleDamage;
+	_aceResult = [_unit, _selection, _reducedDamage, _shooter, _ammo, _hitPartIndex, _instigator, _hitPoint, _directHit, _context] call ace_medical_engine_fnc_handleDamage;
 	_unit setVariable ["ace_medical_allowDamage", false];
 
 	_aceResult

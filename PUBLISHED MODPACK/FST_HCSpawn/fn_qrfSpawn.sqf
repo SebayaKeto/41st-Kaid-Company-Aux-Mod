@@ -22,6 +22,9 @@ if (count _template == 0) exitWith {
 };
 _template params ["_side", "_unitClasses", "_desc"];
 
+_squadCount = round ((_squadCount max 1) min 4);
+_escortCount = round ((_escortCount max 0) min 4);
+
 // Transport class + capacity
 private _transportData = switch (toUpper _transportType) do {
     case "PAC": { ["FST_PAC_41st", 24] };
@@ -59,8 +62,13 @@ if ((missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]) &&
     diag_log format ["[FST_HCSpawn] QRF blocked with no HCs. template=%1 squads=%2 transport=%3", _templateKey, _squadCount, _transportType];
 };
 
-// AI cap check — use a real function exit.
+// AI cap check. Include an estimate for vehicle crews too; QRF vehicles use
+// createVehicleCrew and those crewmen are AI that will be tracked after handoff.
 private _totalInfantry = count _unitClasses * _squadCount;
+private _estimatedVehicleCrew = 0;
+if (_vehClass != "") then { _estimatedVehicleCrew = _estimatedVehicleCrew + 3; };
+if (_escortCount > 0) then { _estimatedVehicleCrew = _estimatedVehicleCrew + (3 * _escortCount); };
+private _totalAIForCap = _totalInfantry + _estimatedVehicleCrew;
 
 // Prevent half-loaded mounted QRFs. The UI labels suggest SAC=1 squad, PAC=2,
 // MTT=4, etc., but the squad slider still permits invalid combinations. If we
@@ -75,10 +83,10 @@ private _cap = missionNamespace getVariable ["FST_HC_AICap", 0];
 if (_cap > 0) then {
     private _current = 0;
     { _current = _current + _x; } forEach FST_HC_UnitCounts;
-    if ((_current + _totalInfantry) > _cap) then {
+    if ((_current + _totalAIForCap) > _cap) then {
         _capBlocked = true;
-        format ["[FST] AI cap — QRF blocked (%1 + %2 > %3).", _current, _totalInfantry, _cap] remoteExec ["systemChat", _callerID];
-        diag_log format ["[FST_HCSpawn] QRF blocked by AI cap. current=%1 requested=%2 cap=%3", _current, _totalInfantry, _cap];
+        format ["[FST] AI cap — QRF blocked (%1 + %2 > %3).", _current, _totalAIForCap, _cap] remoteExec ["systemChat", _callerID];
+        diag_log format ["[FST_HCSpawn] QRF blocked by AI cap. current=%1 requested=%2 infantry=%3 crewEstimate=%4 cap=%5", _current, _totalAIForCap, _totalInfantry, _estimatedVehicleCrew, _cap];
     };
 };
 if (_capBlocked) exitWith {};
@@ -125,15 +133,36 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
 
     for "_i" from 1 to _squadCount do {
         private _grp = createGroup [_side, true];
+        if (isNull _grp) exitWith {
+            diag_log format ["[FST_HCSpawn] QRF failed: createGroup returned grpNull at %1", _spawnPos];
+        };
+
         {
             private _offset = [(_spawnPos select 0) + random 6 - 3, (_spawnPos select 1) + random 6 - 3, 0];
             private _unit = _grp createUnit [_x, _offset, [], 0, "NONE"];
+            if (isNull _unit) then {
+                diag_log format ["[FST_HCSpawn] QRF unit spawn failed: createUnit returned null for %1", _x];
+                continue;
+            };
+            _unit setVariable ["FST_HC_created", true, true];
+            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
+            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
             if (_forEachIndex == 0) then { _grp selectLeader _unit; };
             _allInfantry pushBack _unit;
         } forEach _unitClasses;
-        _infantryGroups pushBack _grp;
-        { _x addCuratorEditableObjects [units _grp, true]; } forEach allCurators;
+
+        if (count units _grp > 0) then {
+            _infantryGroups pushBack _grp;
+            { _x addCuratorEditableObjects [units _grp, true]; } forEach allCurators;
+        } else {
+            deleteGroup _grp;
+        };
         sleep 0.3;
+    };
+
+    if (count _infantryGroups == 0) exitWith {
+        "[FST] QRF failed: no infantry groups could be created." remoteExec ["systemChat", _callerID];
+        diag_log "[FST_HCSpawn] QRF failed: no infantry groups could be created";
     };
 
     // --- ON FOOT ---
@@ -142,28 +171,43 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
         if (_escortCount > 0) then {
             // Escorts present — march together at matched pace
             _footConvoyGrp = createGroup [_side, true];
+            if (isNull _footConvoyGrp) exitWith {
+                diag_log "[FST_HCSpawn] QRF foot escort failed: createGroup returned grpNull";
+            };
+
             for "_e" from 1 to _escortCount do {
                 private _escOffset = [(_spawnPos select 0) + 15 * _e, (_spawnPos select 1), 0];
                 private _esc = createVehicle [_escortClass, _escOffset, [], 5, "NONE"];
+                if (isNull _esc) then {
+                    diag_log format ["[FST_HCSpawn] QRF escort createVehicle failed for %1", _escortClass];
+                    continue;
+                };
                 createVehicleCrew _esc;
                 sleep 0.1;  // wait past createVehicleCrew race frame before reading crew
                 (crew _esc) joinSilent _footConvoyGrp;
+                {
+                    _x setVariable ["FST_HC_created", true, true];
+                    _x setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
+                    _x setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+                } forEach crew _esc;
                 { _x addCuratorEditableObjects [[_esc], true]; } forEach allCurators;
             };
             { _x addCuratorEditableObjects [units _footConvoyGrp, true]; } forEach allCurators;
 
-            // Escorts at LIMITED so they don't outrun infantry
-            private _wp = _footConvoyGrp addWaypoint [_destination, 50];
-            _wp setWaypointType "MOVE";
-            _wp setWaypointBehaviour "COMBAT";
-            _wp setWaypointCombatMode "RED";
-            _wp setWaypointSpeed "LIMITED";
+            if (count units _footConvoyGrp > 0) then {
+                // Escorts at LIMITED so they don't outrun infantry
+                private _wp = _footConvoyGrp addWaypoint [_destination, 50];
+                _wp setWaypointType "MOVE";
+                _wp setWaypointBehaviour "COMBAT";
+                _wp setWaypointCombatMode "RED";
+                _wp setWaypointSpeed "LIMITED";
 
-            // Hold at destination — provide fire support
-            private _wpHold = _footConvoyGrp addWaypoint [_destination, 30];
-            _wpHold setWaypointType "HOLD";
-            _wpHold setWaypointBehaviour "COMBAT";
-            _wpHold setWaypointCombatMode "RED";
+                // Hold at destination — provide fire support
+                private _wpHold = _footConvoyGrp addWaypoint [_destination, 30];
+                _wpHold setWaypointType "HOLD";
+                _wpHold setWaypointBehaviour "COMBAT";
+                _wpHold setWaypointCombatMode "RED";
+            };
 
             // Infantry advances at same pace via waypoints, then assaults on arrival
             {
@@ -193,7 +237,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
         // QRF is created on the server because it needs coordinated waypoint/vehicle setup.
         // Once setup is complete, immediately hand AI groups to the HC manager.
         { [_x] call FST_HCSpawn_fnc_transferGroup; sleep 0.2; } forEach _infantryGroups;
-        if (_escortCount > 0 && {!isNull _footConvoyGrp}) then { [_footConvoyGrp] call FST_HCSpawn_fnc_transferGroup; };
+        if (_escortCount > 0 && {!isNull _footConvoyGrp} && {count units _footConvoyGrp > 0}) then { [_footConvoyGrp] call FST_HCSpawn_fnc_transferGroup; };
 
         private _escText = if (_escortCount > 0) then { format [" + %1 escorts", _escortCount] } else { "" };
         format ["[FST] QRF deployed — %1 squads on foot%2", _squadCount, _escText] remoteExec ["systemChat", _callerID];
@@ -201,6 +245,10 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
 
     // --- MOUNTED: single convoy group for ALL vehicles ---
     private _convoyGrp = createGroup [_side, true];
+    if (isNull _convoyGrp) exitWith {
+        "[FST] QRF failed: convoy group could not be created." remoteExec ["systemChat", _callerID];
+        diag_log "[FST_HCSpawn] QRF failed: convoy createGroup returned grpNull";
+    };
     private _allVehicles = [];
 
     // Create transport
@@ -211,9 +259,19 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
     };
 
     private _transport = createVehicle [_vehClass, _vehSpawnPos, [], 0, "NONE"];
+    if (isNull _transport) exitWith {
+        "[FST] QRF failed: transport could not be created." remoteExec ["systemChat", _callerID];
+        diag_log format ["[FST_HCSpawn] QRF transport createVehicle failed for %1", _vehClass];
+        deleteGroup _convoyGrp;
+    };
     createVehicleCrew _transport;
     sleep 0.1;  // wait past createVehicleCrew race frame before reading crew
     (crew _transport) joinSilent _convoyGrp;
+    {
+        _x setVariable ["FST_HC_created", true, true];
+        _x setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
+        _x setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+    } forEach crew _transport;
     _allVehicles pushBack _transport;
     { _x addCuratorEditableObjects [[_transport], true]; } forEach allCurators;
 
@@ -229,9 +287,18 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
         };
 
         private _esc = createVehicle [_escortClass, _escOffset, [], 5, "NONE"];
+        if (isNull _esc) then {
+            diag_log format ["[FST_HCSpawn] QRF escort createVehicle failed for %1", _escortClass];
+            continue;
+        };
         createVehicleCrew _esc;
         sleep 0.1;  // wait past createVehicleCrew race frame before reading crew
         (crew _esc) joinSilent _convoyGrp;
+        {
+            _x setVariable ["FST_HC_created", true, true];
+            _x setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
+            _x setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+        } forEach crew _esc;
         _allVehicles pushBack _esc;
         { _x addCuratorEditableObjects [[_esc], true]; } forEach allCurators;
 
@@ -245,7 +312,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
 
     // Load infantry into transport
     {
-        if (_transport emptyPositions "cargo" > 0) then {
+        if (!isNull _x && {_transport emptyPositions "cargo" > 0}) then {
             _x moveInCargo _transport;
         };
     } forEach _allInfantry;
@@ -268,8 +335,8 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
         params ["_args", "_handle"];
         _args params ["_allInfantry", "_infantryGroups", "_transport", "_destination"];
 
-        private _dismounted = _allInfantry findIf { vehicle _x == _x };
-        if (_dismounted == -1 && alive _transport) exitWith {};
+        private _dismounted = _allInfantry findIf { !isNull _x && {vehicle _x == _x} };
+        if (_dismounted == -1 && {alive _transport}) exitWith {};
 
         [_handle] call CBA_fnc_removePerFrameHandler;
 
@@ -285,7 +352,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
     }, 2, [_allInfantry, _infantryGroups, _transport, _destination]] call CBA_fnc_addPerFrameHandler;
 
     // Hand the vehicle/crew convoy group to HC after all waypoints are built.
-    [_convoyGrp] call FST_HCSpawn_fnc_transferGroup;
+    if (count units _convoyGrp > 0) then { [_convoyGrp] call FST_HCSpawn_fnc_transferGroup; };
 
     format ["[FST] QRF convoy en route — %1 squads + %2 vehicles",
         _squadCount, count _allVehicles] remoteExec ["systemChat", _callerID];
