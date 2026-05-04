@@ -41,10 +41,13 @@ if (hasInterface) then {
 
     // Hook CuratorGroupPlaced for Zeus intercept
     {
-        _x addEventHandler ["CuratorGroupPlaced", {
-            params ["_curator", "_group"];
-            [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
-        }];
+        if !(_x getVariable ["FST_HC_hooked", false]) then {
+            _x addEventHandler ["CuratorGroupPlaced", {
+                params ["_curator", "_group"];
+                [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
+            }];
+            _x setVariable ["FST_HC_hooked", true];
+        };
     } forEach allCurators;
 
     // Catch curators assigned mid-mission (periodic check — CuratorAssigned isn't a standard event)

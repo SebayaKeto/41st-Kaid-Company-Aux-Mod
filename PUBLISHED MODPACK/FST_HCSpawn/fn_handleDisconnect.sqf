@@ -9,25 +9,26 @@ params ["_unit", "_id", "_uid", "_name"];
 // HC DISCONNECT
 // ============================================================
 private _hcIdx = FST_HC_Array find _unit;
+if (_hcIdx == -1) then { _hcIdx = FST_HC_Ids find _id; };
 if (_hcIdx != -1) exitWith {
     diag_log format ["[FST_HCSpawn] HC disconnected: %1 (%2)", _name, _unit];
 
-    // Collect orphaned groups
+    // Single pass: collect orphans (groups on the disconnecting HC) and
+    // reindex remaining groups (decrement hcIndex for groups above the removed
+    // HC). Two passes used to be visible at scale during the unscheduled
+    // HandleDisconnect — the longer this blocks, the more chance of cascading
+    // desync on already-shaky connections.
     private _orphanedGroups = [];
     {
         private _data = _x getVariable ["FST_HC_tracked", []];
-        if (count _data > 0 && {(_data select 0) == _hcIdx}) then {
+        if (count _data == 0) then { continue };
+
+        private _oldIdx = _data select 0;
+        if (_oldIdx == _hcIdx) then {
             _orphanedGroups pushBack _x;
             _x setVariable ["FST_HC_tracked", nil];
             _x setVariable ["FST_HC_onHC", nil];
-        };
-    } forEach allGroups;
-
-    // Reindex remaining groups — decrement hcIndex for groups above the removed HC
-    {
-        private _data = _x getVariable ["FST_HC_tracked", []];
-        if (count _data > 0) then {
-            private _oldIdx = _data select 0;
+        } else {
             if (_oldIdx > _hcIdx) then {
                 _x setVariable ["FST_HC_tracked", [_oldIdx - 1, _data select 1]];
                 _x setVariable ["FST_HC_onHC", _oldIdx - 1];

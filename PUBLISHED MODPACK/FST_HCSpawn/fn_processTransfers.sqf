@@ -1,33 +1,48 @@
 // FST_HCSpawn_fnc_processTransfers
 // Server-side. Spawned loop that processes the transfer queue in batches.
-// Batched processing of the transfer queue.
+// Batched and throttled to avoid Zeus/object locality spikes.
 
 if (!isServer) exitWith {};
 
+// When idle, poll cheaply. When work exists, drain immediately and only throttle
+// BETWEEN batches. The previous version pre-slept FST_HC_TransferInterval before
+// every check, adding 3s of latency to every batch even with a full queue.
 while {true} do {
-    // Wait until there's work and HCs are available
-    waitUntil {
+    if (count FST_HC_TransferQueue == 0 || {count FST_HC_Array == 0} || {FST_HC_EmergencyMode}) then {
+        sleep 1;
+    } else {
+        FST_HC_Transferring = true;
+
+        private _batchSize = FST_HC_TransferBatchSize min count FST_HC_TransferQueue;
+        private _batch = [];
+
+        while {count _batch < _batchSize && {count FST_HC_TransferQueue > 0}} do {
+            private _grp = FST_HC_TransferQueue select 0;
+            FST_HC_TransferQueue deleteAt 0;
+            if !(_grp in _batch) then { _batch pushBack _grp; };
+        };
+
+        {
+            private _grp = _x;
+
+            if (isNull _grp) then { continue };
+            _grp setVariable ["FST_HC_pendingTransfer", nil];
+            _grp setVariable ["FST_HC_interceptQueued", nil, true];
+
+            if (count units _grp == 0) then { continue };
+            if (isPlayer leader _grp) then { continue };
+
+            if (count (_grp getVariable ["FST_HC_tracked", []]) > 0) then { continue };
+            if ([_grp] call FST_HCSpawn_fnc_isBlacklisted) then { continue };
+
+            [_grp] call FST_HCSpawn_fnc_transferGroup;
+
+            sleep 0.25;
+        } forEach _batch;
+
+        FST_HC_Transferring = false;
+
+        // Throttle between batches, not before them.
         sleep FST_HC_TransferInterval;
-        count FST_HC_TransferQueue > 0 && count FST_HC_Array > 0 && !FST_HC_EmergencyMode
     };
-
-    FST_HC_Transferring = true;
-
-    // Pull a batch
-    private _batchSize = FST_HC_TransferBatchSize min count FST_HC_TransferQueue;
-    private _batch = FST_HC_TransferQueue select [0, _batchSize];
-    FST_HC_TransferQueue deleteRange [0, _batchSize];
-
-    {
-        if (isNull _x || {count units _x == 0} || {isPlayer leader _x}) then { continue };
-
-        // Skip if already on an HC
-        if (count (_x getVariable ["FST_HC_tracked", []]) > 0) then { continue };
-
-        [_x] call FST_HCSpawn_fnc_transferGroup;
-
-        sleep 0.3; // brief pause between individual transfers within batch
-    } forEach _batch;
-
-    FST_HC_Transferring = false;
 };

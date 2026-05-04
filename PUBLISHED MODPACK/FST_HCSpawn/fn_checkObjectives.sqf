@@ -32,4 +32,6 @@ if (!isServer) exitWith {};
             };
         };
     } forEach FST_HC_Objectives;
-}, 3, []] call CBA_fnc_addPerFrameHandler;
+// 5s interval. Each tick does a nearEntities sweep at FST_HC_TriggerActivationDist
+// per objective. With 150 players and many objectives, 3s was tighter than needed.
+}, 5, []] call CBA_fnc_addPerFrameHandler;

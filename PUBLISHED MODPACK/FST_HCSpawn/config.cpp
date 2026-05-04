@@ -40,6 +40,8 @@ class CfgFunctions {
             file = "FST_HCSpawn";
             class zeusHold {};
             class interceptZeusPlace {};
+            class queueZeusGroup {};
+            class legacyRespawnGroup {};
         };
         class Spawn {
             file = "FST_HCSpawn";
@@ -48,6 +50,9 @@ class CfgFunctions {
             class fillGarrison {};
             class requestFillGarrison {};
             class registerZenModules {};
+            class getFSTOpforUnitOptions {};
+            class isValidFSTOpforUnit {};
+            class isSafeGarrisonPos {};
         };
         class Objectives {
             file = "FST_HCSpawn";
@@ -60,6 +65,7 @@ class CfgFunctions {
         class Debug {
             file = "FST_HCSpawn";
             class debugDraw {};
+            class requestDebugSnapshot {};
             class fpsMonitor {};
             class statusReport {};
         };

@@ -32,9 +32,13 @@ if (FST_HC_BlacklistVehicles && {vehicle leader _group != leader _group}) exitWi
     true
 };
 
-// Parse blacklists (comma-separated)
-private _badNames = FST_HC_BlacklistNames splitString ", ";
-private _badTypes = FST_HC_BlacklistTypes splitString ", ";
+// splitString's second arg is a *set* of delimiter characters, not a delimiter
+// string. Using ", " would tokenize on every space too, breaking entries that
+// contain spaces. Split on comma only and trim each entry.
+private _badNames = (FST_HC_BlacklistNames splitString ",") apply { _x call BIS_fnc_trimString };
+private _badTypes = (FST_HC_BlacklistTypes splitString ",") apply { _x call BIS_fnc_trimString };
+_badNames = _badNames select { _x != "" };
+_badTypes = _badTypes select { _x != "" };
 
 // Check unit types
 if (count _badTypes > 0) then {

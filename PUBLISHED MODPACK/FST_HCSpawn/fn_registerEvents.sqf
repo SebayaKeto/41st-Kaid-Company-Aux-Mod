@@ -23,6 +23,19 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_spawnGroupOnTarget;
     }] call CBA_fnc_addEventHandler;
 
+    // Zeus placed group handoff. Keeps the original group and transfers ownership instead of cloning.
+    ["FST_HC_evt_queueZeusGroup", {
+        _this call FST_HCSpawn_fnc_queueZeusGroup;
+    }] call CBA_fnc_addEventHandler;
+
+    // Register HC-created objects as editable by Zeus on the server.
+    ["FST_HC_evt_addEditableObjects", {
+        params [["_objects", []]];
+        private _valid = _objects select { !isNull _x };
+        if (count _valid == 0) exitWith {};
+        { _x addCuratorEditableObjects [_valid, true]; } forEach allCurators;
+    }] call CBA_fnc_addEventHandler;
+
     // Quick spawn template (from Zeus client) — resolves template inline
     ["FST_HC_evt_quickSpawn", {
         params ["_pos", "_templateKey", "_behavior", ["_radius", -1]];
@@ -58,6 +71,16 @@ if (isServer) then {
     ["FST_HC_evt_statusReport", {
         _this call FST_HCSpawn_fnc_statusReport;
     }] call CBA_fnc_addEventHandler;
+
+    // Force immediate recount after HC-side cleanup deletes spawned units.
+    ["FST_HC_evt_recountUnits", {
+        [] call FST_HCSpawn_fnc_recountUnits;
+    }] call CBA_fnc_addEventHandler;
+
+    // Debug snapshot request (from Zeus/admin client)
+    ["FST_HC_evt_debugSnapshotRequest", {
+        _this call FST_HCSpawn_fnc_requestDebugSnapshot;
+    }] call CBA_fnc_addEventHandler;
 };
 
 // ============================================================
@@ -65,8 +88,57 @@ if (isServer) then {
 // ============================================================
 
 // Create group locally (received by specific HC via ownerEvent)
+// Spawned because the function uses `sleep` past the createVehicleCrew race frame.
 ["FST_HC_evt_createGroupLocal", {
-    _this call FST_HCSpawn_fnc_createGroupLocal;
+    _this spawn FST_HCSpawn_fnc_createGroupLocal;
+}] call CBA_fnc_addEventHandler;
+
+// Loadout restore after locality transfer (received by target HC via ownerEvent)
+["FST_HC_evt_restoreLoadout", {
+    params ["_payload"];
+    [{
+        params ["_payload"];
+        {
+            _x params ["_unit", "_loadout"];
+            if (!isNull _unit && {local _unit} && {count _loadout > 0} && {uniform _unit == ""}) then {
+                _unit setUnitLoadout _loadout;
+            };
+        } forEach _payload;
+    }, [_payload], 1] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
+
+
+// Zeus instant clone original cleanup decision. Received by the Zeus client that
+// placed the original group. If rejected, the original remains and only markers clear.
+["FST_HC_evt_zeusOriginalDecision", {
+    params ["_originalPayload", "_accepted"];
+    _originalPayload params ["_group", "_units", "_vehicle"];
+
+    if (!_accepted) exitWith {
+        if (!isNull _group) then {
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+            _group setVariable ["FST_HC_pendingTransfer", nil];
+        };
+    };
+
+    if (!isNull _vehicle) then {
+        { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _vehicle;
+        { _vehicle deleteVehicleCrew _x; } forEach crew _vehicle;
+        deleteVehicle _vehicle;
+    } else {
+        {
+            if (!isNull _x) then {
+                _x setVariable ["FST_skipSpawnDamage", true, true];
+                deleteVehicle _x;
+            };
+        } forEach _units;
+    };
+
+    if (!isNull _group) then {
+        _group deleteGroupWhenEmpty true;
+        _group setVariable ["FST_HC_interceptQueued", nil, true];
+        _group setVariable ["FST_HC_pendingTransfer", nil];
+    };
 }] call CBA_fnc_addEventHandler;
 
 // Fill garrison batch (received by specific HC via ownerEvent)
@@ -77,6 +149,21 @@ if (isServer) then {
 // Reapply garrison after transfer (received by specific HC via ownerEvent)
 ["FST_HC_evt_reapplyGarrison", {
     _this call FST_HCSpawn_fnc_reapplyGarrison;
+}] call CBA_fnc_addEventHandler;
+
+// Debug ownership snapshot (received by Zeus/admin client via ownerEvent)
+["FST_HC_evt_debugSnapshot", {
+    params ["_snapshot", "_serverTick", "_hcIds", "_unitCounts", "_queueCount", "_successes", "_failures", "_zeusInstantClones", "_zeusFallbacks", "_legacyFallbacks"];
+    missionNamespace setVariable ["FST_HC_DebugSnapshot", _snapshot];
+    missionNamespace setVariable ["FST_HC_DebugServerTick", _serverTick];
+    missionNamespace setVariable ["FST_HC_DebugHCIds", _hcIds];
+    missionNamespace setVariable ["FST_HC_DebugUnitCounts", _unitCounts];
+    missionNamespace setVariable ["FST_HC_DebugQueueCount", _queueCount];
+    missionNamespace setVariable ["FST_HC_DebugTransferSuccesses", _successes];
+    missionNamespace setVariable ["FST_HC_DebugTransferFailures", _failures];
+    missionNamespace setVariable ["FST_HC_DebugZeusInstantClones", _zeusInstantClones];
+    missionNamespace setVariable ["FST_HC_DebugZeusFallbacks", _zeusFallbacks];
+    missionNamespace setVariable ["FST_HC_DebugLegacyFallbacks", _legacyFallbacks];
 }] call CBA_fnc_addEventHandler;
 
 diag_log "[FST_HCSpawn] CBA events registered";

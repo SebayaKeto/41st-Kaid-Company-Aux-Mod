@@ -8,32 +8,46 @@
 if (isServer && {count _this == 4}) exitWith {
     params ["_grp", "_zeusId", "_hold", "_zeusIdForEvent"];
 
+    if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {};
+
     if (_hold) then {
-        // HOLD: pull from HC to Zeus
+        // HOLD: pull from HC to Zeus client.
         _grp setVariable ["FST_HC_tracked", nil];
         _grp setVariable ["FST_HC_onHC", nil];
+        _grp setVariable ["FST_HC_pendingTransfer", nil];
+        _grp setVariable ["FST_HC_interceptQueued", nil, true];
 
         private _isGarrisoned = !(leader _grp checkAIFeature "PATH");
-        _grp setGroupOwner _zeusId;
+        private _moved = _grp setGroupOwner _zeusId;
+        if (!_moved && {groupOwner _grp != _zeusId}) exitWith {
+            _grp setVariable ["FST_HC_heldBy", -1, true];
+            if (FST_HC_DebugLogging) then {
+                diag_log format ["[FST_HCSpawn] Zeus hold failed: %1 to owner %2", _grp, _zeusId];
+            };
+        };
 
         if (_isGarrisoned) then {
             ["FST_HC_evt_reapplyGarrison", [_grp], _zeusId] call CBA_fnc_ownerEvent;
         };
 
         _grp setVariable ["FST_HC_heldBy", _zeusId, true];
-        diag_log format ["[FST_HCSpawn] Zeus %1 holding group %2", _zeusId, _grp];
+        if (FST_HC_DebugLogging) then { diag_log format ["[FST_HCSpawn] Zeus %1 holding group %2", _zeusId, _grp]; };
     } else {
-        // RELEASE: send back to transfer queue
+        // RELEASE: send back to transfer queue.
         _grp setVariable ["FST_HC_heldBy", -1, true];
+        _grp setVariable ["FST_HC_pendingTransfer", true];
         FST_HC_TransferQueue pushBackUnique _grp;
-        diag_log format ["[FST_HCSpawn] Zeus %1 released group %2", _zeusId, _grp];
+        if (FST_HC_DebugLogging) then { diag_log format ["[FST_HCSpawn] Zeus %1 released group %2", _zeusId, _grp]; };
     };
 };
+
+// Server (no interface) reaching this point with non-4-arg input would silently
+// fall into the client path. Guard explicitly.
+if (!hasInterface) exitWith {};
 
 // ============================================================
 // CLIENT PATH
 // ============================================================
-if (!hasInterface) exitWith {};
 if (!FST_HC_ZeusHoldEnabled) exitWith { systemChat "[FST] Zeus hold is disabled."; };
 
 private _curator = getAssignedCuratorLogic player;
