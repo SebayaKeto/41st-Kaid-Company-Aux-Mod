@@ -2,6 +2,9 @@
 // Starts the local recharge/watchdog PFH only when it is actually needed.
 // Idempotent: safe to call repeatedly from loadout changes, arsenal close, or jump start.
 
+if (!hasInterface) exitWith {-1};
+if !(missionNamespace getVariable ["FST_jumppack_enabled", true]) exitWith {-1};
+
 private _existing = missionNamespace getVariable ["FST_jumppack_rechargePFH", -1];
 if (_existing >= 0) exitWith { _existing };
 

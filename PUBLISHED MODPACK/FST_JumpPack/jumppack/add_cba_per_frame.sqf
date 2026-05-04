@@ -8,6 +8,10 @@
 
 params ["_args", "_id"];
 
+if (!hasInterface || {!(missionNamespace getVariable ["FST_jumppack_enabled", true])}) exitWith {
+	call FST_fnc_per_frame_EH_stop;
+};
+
 private _unit = player;
 if (_unit isEqualTo objNull) exitWith {};
 

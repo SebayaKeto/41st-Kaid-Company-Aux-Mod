@@ -5,6 +5,8 @@
 // Also starts/stops the recharge PFH so players without a jump pack have no
 // persistent 0.25s timer running.
 
+if !(missionNamespace getVariable ["FST_jumppack_enabled", true]) exitWith {};
+
 private _savedBackpack = player getVariable ["FST_jumppack_backpack_class", ""];
 private _currentBackpack = backpack player;
 

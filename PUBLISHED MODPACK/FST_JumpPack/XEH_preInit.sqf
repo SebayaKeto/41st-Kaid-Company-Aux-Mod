@@ -1,3 +1,17 @@
+// Mission-level hard disable. Set this false in CBA Addon Options for ops
+// where jump packs are not being used. It prevents client runtime hooks from
+// being registered in postInit while leaving backpack classes available.
+[
+	"FST_jumppack_enabled",
+	"CHECKBOX",
+	["Enable FST JumpPack", "Disable for ops with no jump packs. Requires mission restart. Stops runtime keybind/loadout/arsenal/PFH bootstrap."],
+	["41st Elite Corps", "JumpPack"],
+	true,
+	1,
+	{},
+	true
+] call CBA_fnc_addSetting;
+
 
 //jumppack
 	["FST_JumpPack\jumppack\add_arsenal_handlers.sqf","FST_jumppack_fnc_add_arsenal_handlers"] call CBA_fnc_compileFunction;

@@ -8,6 +8,8 @@ params
 	["_use_dir", false, [false]]
 ];
 
+if !(missionNamespace getVariable ["FST_jumppack_enabled", true]) exitWith {};
+
 // Use cached jumppack check (no config lookup)
 if !(player getVariable ["FST_jumppack_hasJumppack", false]) exitWith {};
 

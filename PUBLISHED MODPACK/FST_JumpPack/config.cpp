@@ -9,6 +9,7 @@ class CfgPatches
 			"cba_common",
 			"cba_events",
 			"cba_keybinding",
+			"cba_settings",
 			"cba_xeh",
 			"ace_common"
 		};
@@ -36,18 +37,9 @@ class Extended_PostInit_EventHandlers
 	};
 };
 
-class Extended_Deleted_EventHandlers
-{
-	class CAManBase
-	{
-		class FST_Jumppack_remove_effects
-		{
-			// Deleted EH still exists for safety, but it exits immediately for normal infantry.
-			// No scheduled thread is spawned unless this unit actually has jump-pack effects.
-			init = "private _unit = _this select 0; if ((count (_unit getVariable ['FST_jumppack_effects', []])) > 0) then {[_unit] call FST_jumppack_fnc_remove_effects};";
-		};
-	};
-};
+// Deleted-unit cleanup is handled by each local jump effect script and landing cleanup.
+// Avoid registering a CAManBase Deleted XEH, because that EH wakes up for every
+// deleted infantry unit in the mission, including non-jump-pack AI.
 
 // ─── Base Jumppack Backpack ──────────────────────────────────────────────────
 // Inherit from this in your main addon config to make any backpack a jumppack.
