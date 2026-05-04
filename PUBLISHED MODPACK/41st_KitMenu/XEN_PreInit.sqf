@@ -2858,42 +2858,186 @@ if (!isNull _disp) then {
 };
 
 Wbk_AddKit = {
-    _obj = _this select 0;
-    _nameOfKit = _this select 1;
-    _fullKit = _this select 2;
-    _text = _this select 3;
-    _condition = _this select 4;
-    _code = _this select 5;
-    _category = if (count _this > 6) then {_this select 6} else {"regular"};
+    params [
+        ["_obj", objNull, [objNull]],
+        ["_nameOfKit", "", [""]],
+        ["_fullKit", [], [[]]],
+        ["_text", [], [[]]],
+        ["_condition", "true", [""]],
+        ["_code", {}, [{}]],
+        ["_category", "regular", [""]]
+    ];
 
-    _kitToTransfer = [_nameOfKit, _fullKit, _text, _condition, _code, _category];
+    if (isNull _obj) exitWith {};
+
+    _category = toLower _category;
+
+    private _kitToTransfer = [
+        _nameOfKit,
+        _fullKit,
+        _text,
+        _condition,
+        _code,
+        _category
+    ];
 
     if (isNil "FST_AllKits") then { FST_AllKits = []; };
     if (isNil "FST_RegularKits") then { FST_RegularKits = []; };
     if (isNil "FST_AirborneKits") then { FST_AirborneKits = []; };
     if (isNil "FST_PilotKits") then { FST_PilotKits = []; };
     if (isNil "FST_RangerKits") then { FST_RangerKits = []; };
-    _kitNameExists = { (_x select 0) isEqualTo _nameOfKit };
 
-    if ((FST_AllKits findIf _kitNameExists) == -1) then {
+    private _sameKitAndCategory = {
+        ((_x select 0) isEqualTo _nameOfKit) &&
+        {((if ((count _x) > 5) then {_x select 5} else {"regular"}) isEqualTo _category)}
+    };
+
+    if ((FST_AllKits findIf _sameKitAndCategory) == -1) then {
         FST_AllKits pushBack _kitToTransfer;
     };
 
-switch (_category) do {
-        case "airborne": { if ((FST_AirborneKits findIf _kitNameExists) == -1) then { FST_AirborneKits pushBack _kitToTransfer; }; };
-        case "pilot":    { if ((FST_PilotKits    findIf _kitNameExists) == -1) then { FST_PilotKits    pushBack _kitToTransfer; }; };
-        case "ranger":   { if ((FST_RangerKits   findIf _kitNameExists) == -1) then { FST_RangerKits   pushBack _kitToTransfer; }; };
-        default          { if ((FST_RegularKits  findIf _kitNameExists) == -1) then { FST_RegularKits  pushBack _kitToTransfer; }; };
+    private _sameKitName = {
+        (_x select 0) isEqualTo _nameOfKit
     };
-    if (isNil {_obj getVariable "FST_ActualKits"}) exitWith {
-        _obj setVariable ["FST_ActualKits", [_kitToTransfer]];
+
+    switch (_category) do {
+        case "airborne": {
+            if ((FST_AirborneKits findIf _sameKitName) == -1) then {
+                FST_AirborneKits pushBack _kitToTransfer;
+            };
+        };
+        case "pilot": {
+            if ((FST_PilotKits findIf _sameKitName) == -1) then {
+                FST_PilotKits pushBack _kitToTransfer;
+            };
+        };
+        case "ranger": {
+            if ((FST_RangerKits findIf _sameKitName) == -1) then {
+                FST_RangerKits pushBack _kitToTransfer;
+            };
+        };
+        default {
+            if ((FST_RegularKits findIf _sameKitName) == -1) then {
+                FST_RegularKits pushBack _kitToTransfer;
+            };
+        };
+    };
+
+    private _hadKitArray = !isNil { _obj getVariable "FST_ActualKits" };
+    private _objectKits = _obj getVariable ["FST_ActualKits", []];
+
+    if ((_objectKits findIf _sameKitAndCategory) == -1) then {
+        _objectKits pushBack _kitToTransfer;
+        _obj setVariable ["FST_ActualKits", _objectKits, false];
+    };
+
+    if (!_hadKitArray) then {
         _obj spawn Wbk_equip_load;
     };
-    _array = _obj getVariable "FST_ActualKits";
-    _kitNameExistsObj = _array findIf { (_x select 0) isEqualTo _nameOfKit } > -1;
-    if (!_kitNameExistsObj) then {
-        _array pushBack _kitToTransfer;
-        _obj setVariable ["FST_ActualKits", _array];
+};
+FST_fnc_loadKitFile = {
+    params [
+        ["_box", objNull, [objNull]],
+        ["_kitSet", "current", [""]]
+    ];
+
+    if (isNull _box) exitWith {};
+
+    private _file = switch (toLower _kitSet) do {
+        case "snow": {
+            "\41st_KitMenu\kits\Snow_Kits.sqf"
+        };
+        case "p1": {
+            "\41st_KitMenu\kits\P1_Kits.sqf"
+        };
+        case "current": {
+            "\41st_KitMenu\kits\Current_Kits.sqf"
+        };
+        default {
+            "\41st_KitMenu\kits\Current_Kits.sqf"
+        };
     };
+
+    [_box] call compile preprocessFileLineNumbers _file;
 };
 
+FST_fnc_registerKitLocker = {
+    params [
+        ["_box", objNull, [objNull]],
+        ["_kitSet", "current", [""]]
+    ];
+
+    if (!hasInterface) exitWith {};
+    if (isNull _box) exitWith {};
+
+    _kitSet = toLower _kitSet;
+
+    private _loadedKey = format ["FST_KitMenu_Loaded_%1", _kitSet];
+
+    if (_box getVariable [_loadedKey, false]) exitWith {};
+
+    _box setVariable [_loadedKey, true, false];
+
+    [_box, _kitSet] call FST_fnc_loadKitFile;
+};
+
+FST_fnc_moduleSpawnKitLocker = {
+    params [
+        ["_logic", objNull, [objNull]],
+        ["_units", [], [[]]],
+        ["_activated", true, [true]]
+    ];
+
+    if (!_activated) exitWith {};
+    if (!isServer) exitWith {};
+    if (isNull _logic) exitWith {};
+
+    private _kitSet = getText (
+        configFile >> "CfgVehicles" >> typeOf _logic >> "FST_KitSet"
+    );
+
+    if (_kitSet isEqualTo "") then {
+        _kitSet = "current";
+    };
+
+private _pos = getPosATL _logic;
+private _dir = getDir _logic;
+
+private _locker = createVehicle [
+    "OPTRE_Furniture_Locker",
+    [0, 0, 0],
+    [],
+    0,
+    "CAN_COLLIDE"
+];
+
+_locker setDir _dir;
+_locker setPosATL _pos;
+
+// Raise object so the bottom of its model sits on the ground
+private _boundingBox = boundingBoxReal _locker;
+private _minZ = (_boundingBox select 0) select 2;
+
+_locker setPosATL [
+    _pos select 0,
+    _pos select 1,
+    (_pos select 2) - _minZ + 0.02
+];
+
+_locker allowDamage false;
+
+    _locker setVariable ["FST_KitSet", _kitSet, true];
+
+    private _jipId = format [
+        "FST_KitLocker_%1",
+        netId _locker
+    ];
+
+    [_locker, _kitSet] remoteExecCall [
+        "FST_fnc_registerKitLocker",
+        0,
+        _jipId
+    ];
+
+    deleteVehicle _logic;
+};

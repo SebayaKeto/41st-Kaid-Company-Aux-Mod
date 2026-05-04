@@ -1,5 +1,26 @@
+private _box = objNull;
+
+if (!isNil "_this") then {
+    if (_this isEqualType [] && {count _this > 0}) then {
+        if ((_this select 0) isEqualType objNull) then {
+            _box = _this select 0;
+        };
+    };
+
+    if (_this isEqualType objNull) then {
+        _box = _this;
+    };
+};
+
+if (isNull _box && {!isNil "this"}) then {
+    _box = this;
+};
+
+if (isNull _box) exitWith {
+    diag_log "[41st Kit Menu] ERROR: Kit file loaded without a valid kit object.";
+};
 [
-    this, 
+    _box, 
     "Rifleman", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -33,7 +54,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Ammo Bearer", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -72,7 +93,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Automatic Rifleman", 
     [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -109,7 +130,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Engineer", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -153,7 +174,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Medic", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -198,7 +219,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Grenadier", 
     [
         ["FST_DC15A_ugl","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],["FST_HE_LauncherGrenade",1],""],
@@ -245,7 +266,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Designated Marksman", 
     [
         ["FST_DC15LE","3AS_Muzzle_LE_DC15A","","",["FST_blaster_cell_LE_Blue",10],[],""],
@@ -283,7 +304,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Close Quarters Combatant", 
     [
         ["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],
@@ -325,7 +346,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Squad Leader", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -364,7 +385,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "RTO", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -411,7 +432,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Anti Tank",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -452,7 +473,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Rifleman", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -488,7 +509,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Automatic Rifleman",
     [
         ["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],
@@ -529,7 +550,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Designated Marksman",
     [
         ["FST_DC15LE","3AS_Muzzle_LE_DC15A","","",["FST_blaster_cell_LE_Blue",10],[],""],
@@ -567,7 +588,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Anti Tank",
     [
         ["FST_T15","","","FST_Optic_MRCO_T15",["FST_thermal_coil_LP_Blue",20],["FST_thermal_coil_T15_Blue",5],"3AS_bipod_VK38X_F"],
@@ -609,7 +630,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Engineer",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -657,7 +678,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Medic",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -706,7 +727,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Close Quarters Combatant",
     [
         ["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],
@@ -749,7 +770,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Squad Leader ",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -788,7 +809,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Grenadier",
     [
         ["FST_DC15A_ugl","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],["FST_HE_LauncherGrenade",1],""],
@@ -835,7 +856,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "RTO",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -882,7 +903,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Ammo Bearer ",
     [
         ["FST_DC15A", "", "", "FST_Attachment_Optic_Holo_DC15", ["FST_blaster_cell_High_Blue", 40], [], ""],
@@ -925,7 +946,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Emplaced Weapon",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -963,7 +984,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Pilot",
     [
         ["FST_DC15S","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_Blue",60],[],""],
@@ -1006,7 +1027,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Crew Chief",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1056,7 +1077,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Crewman", 
     [
         ["FST_DC15S","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_Blue",60],[],""], 
@@ -1107,7 +1128,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Howler", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -1143,7 +1164,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon RTO", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1190,7 +1211,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon RTO (UAV)", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1239,7 +1260,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Platoon RTO",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1286,7 +1307,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Platoon RTO (UAV)",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1335,7 +1356,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Medic", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -1382,7 +1403,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Medic", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["IDA_BactaBandage",20],
@@ -1429,7 +1450,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Sergeant", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1469,7 +1490,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Sergeant", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1509,7 +1530,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Commander", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1548,7 +1569,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Commander", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1587,7 +1608,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Crewman Medic",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -1650,7 +1671,7 @@
 
 
 [
-    this, 
+    _box, 
     "Rifleman", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["ItemcTabHCam",1],
@@ -1687,7 +1708,7 @@
 
 
 [
-    this, 
+    _box, 
     "Ammo Bearer", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["ItemcTabHCam",1],
@@ -1728,7 +1749,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Automatic Rifleman", 
     [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],[],[],["FST_Uniform_P1_41st",[
         ["ItemcTabHCam",1],
@@ -1767,7 +1788,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Engineer", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["ItemcTabHCam",1],
@@ -1813,7 +1834,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Medic", 
     [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],[],["FST_Uniform_P1_41st",[
         ["ItemcTabHCam",1],
@@ -1860,7 +1881,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Grenadier", 
     [
         ["FST_DC15A_ugl","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],["FST_HE_LauncherGrenade",1],""],
@@ -1909,7 +1930,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Designated Marksman", 
     [
         ["FST_DC15LE","3AS_Muzzle_LE_DC15A","","",["FST_blaster_cell_LE_Blue",10],[],""],
@@ -1949,7 +1970,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Close Quarters Combatant", 
     [
         ["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],
@@ -1993,7 +2014,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Squad Leader", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -2033,7 +2054,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "RTO", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -2081,7 +2102,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this,
+    _box,
     "Anti Tank",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -2124,7 +2145,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon RTO", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -2172,7 +2193,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon RTO (UAV)", 
     [
         ["FST_DC15A","","FST_Attachment_Optic_Holo_DC15","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
@@ -2222,7 +2243,7 @@
 ] spawn Wbk_AddKit;
 
 [
-    this, 
+    _box, 
     "Platoon Commander", 
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],

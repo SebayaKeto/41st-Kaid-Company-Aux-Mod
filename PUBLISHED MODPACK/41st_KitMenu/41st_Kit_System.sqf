@@ -14,12 +14,23 @@ WBK_fnc_populateKitList = {
             default { _iconButton ctrlShow false; };
         };
     };
-    private _kits = switch (FST_CurrentKitCategory) do {
-    case "airborne": { FST_AirborneKits };
-    case "pilot":    { FST_PilotKits };
-    case "ranger":   { FST_RangerKits };
-    default          { FST_RegularKits };
+private _kitBox = missionNamespace getVariable ["WBK_GlobalKitBoxRn", objNull];
+
+private _allKitsForBox = if (isNull _kitBox) then {
+    []
+} else {
+    _kitBox getVariable ["FST_ActualKits", []]
+};
+
+private _kits = _allKitsForBox select {
+    private _cat = if ((count _x) > 5) then {
+        _x select 5
+    } else {
+        "regular"
     };
+
+    _cat isEqualTo FST_CurrentKitCategory
+};
     _kits = +_kits;
     private _decorated = [];
     { _decorated pushBack [toLower (_x select 0), _forEachIndex]; } forEach _kits;

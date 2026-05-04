@@ -34,10 +34,22 @@ class CfgPatches
 {
 	class WBK_KitArsenal
 	{
-		units[] = {};
+		units[] =
+		{
+			"FST_Module_SpawnKitLocker_Current",
+			"FST_Module_SpawnKitLocker_Snow",
+			"FST_Module_SpawnKitLocker_P1"
+		};
+
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {};
+
+		requiredAddons[] =
+		{
+			"A3_Modules_F",
+			"A3_Modules_F_Curator",
+			"cba_xeh"
+		};
 	};
 };
 class WBK_RscListBox
@@ -596,7 +608,75 @@ class FST_CustomsOverlay
 		};
 	};
 };
+class CfgFactionClasses
+{
+	class FST_41st_KitModules
+	{
+		displayName = "[41st] Kit Menu";
+		priority = 2;
+		side = 7;
+	};
+};
 
+class CfgVehicles
+{
+	class Logic;
+
+	class Module_F: Logic
+	{
+		class AttributesBase;
+		class ModuleDescription;
+	};
+
+	class FST_Module_SpawnKitLocker_Base: Module_F
+	{
+		author = "41st";
+		category = "FST_41st_KitModules";
+		displayName = "Spawn Kit Locker";
+
+		scope = 1;
+		scopeCurator = 1;
+
+		function = "FST_fnc_moduleSpawnKitLocker";
+		functionPriority = 1;
+
+		isGlobal = 1;
+		isTriggerActivated = 0;
+		isDisposable = 1;
+		curatorCanAttach = 0;
+
+		FST_KitSet = "current";
+
+		class ModuleDescription: ModuleDescription
+		{
+			description = "Spawns an OPTRE locker and turns it into a 41st kit menu.";
+		};
+	};
+
+	class FST_Module_SpawnKitLocker_Current: FST_Module_SpawnKitLocker_Base
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Spawn Current Kit Locker";
+		FST_KitSet = "current";
+	};
+
+	class FST_Module_SpawnKitLocker_Snow: FST_Module_SpawnKitLocker_Base
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Spawn Snow Kit Locker";
+		FST_KitSet = "snow";
+	};
+
+	class FST_Module_SpawnKitLocker_P1: FST_Module_SpawnKitLocker_Base
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Spawn P1 Kit Locker";
+		FST_KitSet = "p1";
+	};
+};
 class Extended_PreInit_EventHandlers
 {
 	class WBK_Project_KitMenu_PreInit
