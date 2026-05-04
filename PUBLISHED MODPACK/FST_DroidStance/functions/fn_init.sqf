@@ -25,13 +25,25 @@ FST_DROID_STAND_CLASSES = [
     "FST_B2_TL",
     "FST_B2_Flame"
 ];
+FST_DROID_STAND_CLASS_SET = createHashMap;
+{
+    FST_DROID_STAND_CLASS_SET set [_x, true];
+} forEach FST_DROID_STAND_CLASSES;
 
 FST_DROID_STAND_UNITS = [];
 FST_DROID_STAND_INDEX = 0;
 FST_DROID_STAND_CHUNK = 75;
 
+fst_droidstance_fnc_isTrackedClass = {
+    params ["_entity"];
+    FST_DROID_STAND_CLASS_SET getOrDefault [typeOf _entity, false]
+};
+
 fst_droidstance_fnc_applyToUnit = {
     params ["_unit"];
+
+    if (_unit getVariable ["FST_DROID_STANCE_TRACKED", false]) exitWith {};
+    _unit setVariable ["FST_DROID_STANCE_TRACKED", true, false];
 
     // Safety First
     FST_DROID_STAND_UNITS pushBackUnique _unit;
@@ -49,11 +61,19 @@ fst_droidstance_fnc_applyToUnit = {
             _unit setUnitPosWeak "UP";
         };
     }];
+
+    _unit addEventHandler ["Local", {
+        params ["_unit", "_isLocal"];
+        if (_isLocal) then {
+            _unit setUnitPos "UP";
+            _unit setUnitPosWeak "UP";
+        };
+    }];
 };
 
 // Look for any droids preplaced on map
 {
-    if (typeOf _x in FST_DROID_STAND_CLASSES) then {
+    if ([_x] call fst_droidstance_fnc_isTrackedClass) then {
         [_x] call fst_droidstance_fnc_applyToUnit;
     };
 } forEach allUnits;
@@ -61,7 +81,7 @@ fst_droidstance_fnc_applyToUnit = {
 // Spawn Catcheroo
 addMissionEventHandler ["EntityCreated", {
     params ["_entity"];
-    if (typeOf _entity in FST_DROID_STAND_CLASSES) then {
+    if ([_entity] call fst_droidstance_fnc_isTrackedClass) then {
         [_entity] call fst_droidstance_fnc_applyToUnit;
     };
 }];
