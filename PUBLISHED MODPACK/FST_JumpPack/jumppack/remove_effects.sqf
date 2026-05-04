@@ -18,4 +18,4 @@ _attached_items=_unit getVariable ["FST_jumppack_effects",[]];
 	
 } forEach attachedObjects _unit;
 
-_unit setVariable ["FST_jumppack_effects",[],true];
+_unit setVariable ["FST_jumppack_effects", []];

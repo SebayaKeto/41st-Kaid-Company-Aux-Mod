@@ -1,14 +1,16 @@
 
 
 params["_curr_energy","_new_energy","_total_energy"];
-_old_ratio=_curr_energy/_total_energy;
-_new_ratio=_new_energy/_total_energy;
+if (_total_energy <= 0) exitWith {};
 
-_result=false;
-_thres=0;
-_threshold_list=[.125,.25,.375,.5,.625,.75,.875,1];
-_thres_color="#FFFFFF";
-_threshold_color_list=["#FF0000","#FF4500","#FF8500","#FFA500","#fff200","#aaff00","#55ff00","#00FFFF"];
+private _old_ratio = _curr_energy / _total_energy;
+private _new_ratio = _new_energy / _total_energy;
+
+private _result = false;
+private _thres = 0;
+private _threshold_list = [.125,.25,.375,.5,.625,.75,.875,1];
+private _thres_color = "#FFFFFF";
+private _threshold_color_list = ["#FF0000","#FF4500","#FF8500","#FFA500","#fff200","#aaff00","#55ff00","#00FFFF"];
 
 if(count _threshold_color_list != count _threshold_list) then 
 {

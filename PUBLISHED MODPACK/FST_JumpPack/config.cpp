@@ -42,7 +42,9 @@ class Extended_Deleted_EventHandlers
 	{
 		class FST_Jumppack_remove_effects
 		{
-			init = "[_this select 0] spawn FST_jumppack_fnc_remove_effects";
+			// Deleted EH still exists for safety, but it exits immediately for normal infantry.
+			// No scheduled thread is spawned unless this unit actually has jump-pack effects.
+			init = "private _unit = _this select 0; if ((count (_unit getVariable ['FST_jumppack_effects', []])) > 0) then {[_unit] call FST_jumppack_fnc_remove_effects};";
 		};
 	};
 };

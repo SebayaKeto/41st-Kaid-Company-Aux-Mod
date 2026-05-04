@@ -1,7 +1,6 @@
-
-
 params[
-["_unit",player,[player]]
+	["_unit",player,[player]]
 ];
 
-_unit setVariable ["FST_do_energy_recharge",false,true];
+// Local-only: only the local recharge PFH reads this flag.
+_unit setVariable ["FST_do_energy_recharge", false];

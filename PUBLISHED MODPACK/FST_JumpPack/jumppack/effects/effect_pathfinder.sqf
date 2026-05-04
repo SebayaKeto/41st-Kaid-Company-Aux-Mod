@@ -6,7 +6,7 @@ params["_unit","_effect_position_list"];
 private _attached_items = _unit getVariable ["FST_jumppack_effects",[]];
 
 {
-	_backpackObj = unitBackpack player;
+	_backpackObj = unitBackpack _unit;
 	_effect_position_data=_x;
 	_mem_point=_effect_position_data select 0;
 	_offset=_effect_position_data select 1;
@@ -41,8 +41,8 @@ private _attached_items = _unit getVariable ["FST_jumppack_effects",[]];
 
 } forEach _effect_position_list;
 
-// Single broadcast after all points processed (was inside forEach)
-_unit setVariable ["FST_jumppack_effects",_attached_items,true];
+// Store locally after all points processed
+_unit setVariable ["FST_jumppack_effects", _attached_items];
 
 sleep 1;
 

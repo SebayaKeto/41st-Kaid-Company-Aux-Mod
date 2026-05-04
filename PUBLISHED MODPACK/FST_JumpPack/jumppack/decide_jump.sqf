@@ -46,8 +46,16 @@ if (count _jumppackData == 0) exitWith {
 };
 
 // Energy check
-private _jumpIndex     = (unitBackpack _unit) getVariable ["FST_jumppack_selected_jump", 0];
-private _currentEnergy = (unitBackpack _unit) getVariable ["FST_jumppack_energy", 0];
+private _backpackObj    = unitBackpack _unit;
+if (_backpackObj isEqualTo objNull) exitWith {};
+
+private _jumpIndex     = _backpackObj getVariable ["FST_jumppack_selected_jump", 0];
+if (_jumpIndex < 0 || {_jumpIndex >= count _jumppackData}) then {
+	_jumpIndex = 0;
+	_backpackObj setVariable ["FST_jumppack_selected_jump", 0];
+};
+
+private _currentEnergy = _backpackObj getVariable ["FST_jumppack_energy", 0];
 private _selectedJump  = _jumppackData select _jumpIndex;
 private _cost          = (_selectedJump select 1) select 2;
 
@@ -77,13 +85,11 @@ if ((stance _unit == "PRONE") && !_canProneJump) exitWith {
 
 // Consume energy — broadcast this one since it's a meaningful state change
 private _newEnergy = _currentEnergy - _cost;
-(unitBackpack _unit) setVariable ["FST_jumppack_energy", _newEnergy, true];
+_backpackObj setVariable ["FST_jumppack_energy", _newEnergy, true];
 
 // Use cached capacity (no config lookup)
 private _energyCapacity = player getVariable ["FST_jumppack_cachedCapacity", 0];
 [_newEnergy, _energyCapacity] call FST_jumppack_fnc_show_current_energy;
-
-[_currentEnergy, _newEnergy, _energyCapacity] call FST_jumppack_fnc_show_energy_recharge;
 
 [_unit,
 _veloData select 0,

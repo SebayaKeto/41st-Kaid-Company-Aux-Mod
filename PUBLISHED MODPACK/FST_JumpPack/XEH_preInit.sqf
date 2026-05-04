@@ -32,3 +32,4 @@
 
 //per frame eh
 ["FST_JumpPack\per_frame_EH.sqf","FST_fnc_per_frame_EH"] call CBA_fnc_compileFunction;
+["FST_JumpPack\per_frame_EH_stop.sqf","FST_fnc_per_frame_EH_stop"] call CBA_fnc_compileFunction;

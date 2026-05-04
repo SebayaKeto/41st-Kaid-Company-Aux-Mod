@@ -21,6 +21,5 @@ call FST_jumppack_fnc_keybinds;
 	player setVariable ["FST_jumppack_backpack_class", ""];
 	call FST_jumppack_fnc_handle_loadout_change;
 
-	// Start the recharge timer (0.25s interval)
-	call FST_fnc_per_frame_EH;
+	// Recharge/watchdog PFH is demand-started by handle_loadout_change if needed.
 };

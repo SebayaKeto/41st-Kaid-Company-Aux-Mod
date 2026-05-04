@@ -12,7 +12,7 @@ params
 if !(player getVariable ["FST_jumppack_hasJumppack", false]) exitWith {};
 
 // Set jump velocity
-_v_hat = getCameraViewDirection _unit;
+private _v_hat = getCameraViewDirection _unit;
 if (!(_use_dir)) then
 {
 	_v_hat = vectorDir _unit;
@@ -26,7 +26,6 @@ if (!(_use_dir)) then
 }
 else
 {
-	_vertical_sign = (_v_hat select 2) / (abs (_v_hat select 2));
 	(_unit) setVelocity
 	[
 		((_v_hat select 0) * (_f_velo)),
@@ -37,7 +36,7 @@ else
 
 _jump_id = _unit getVariable ["FST_jumppack_jump_id", 0];
 _jump_id = _jump_id + 1;
-_unit setVariable ["FST_jumppack_jump_id", _jump_id, true];
+_unit setVariable ["FST_jumppack_jump_id", _jump_id];
 
 // Use cached sound paths
 private _soundPaths = player getVariable ["FST_jumppack_cachedSoundIgnite", []];
@@ -72,8 +71,14 @@ if (_existingEH >= 0) then {
 	_unit setVariable ["FST_jumppack_protectEH", -1];
 };
 
-// Block ACE's auto-processing (our EH calls ACE manually with modified damage)
+// Block ACE's auto-processing (our EH calls ACE manually with modified damage).
+// Mark ownership first so the recharge PFH watchdog can safely restore this if cleanup ever fails.
+_unit setVariable ["FST_jumppack_damageOverrideActive", true];
 _unit setVariable ["ace_medical_allowDamage", false, true];
+
+// Make sure the watchdog/recharge PFH is running for this jump. This is idempotent
+// and protects against edge cases where the pack was equipped after the idle PFH stopped.
+call FST_fnc_per_frame_EH;
 
 private _protectEH = _unit addEventHandler ["HandleDamage", {
 	params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPartIndex", "_instigator", "_hitPoint"];
@@ -138,6 +143,7 @@ _unit removeEventHandler ["HandleDamage", _protectEH];
 _unit setVariable ["FST_jumppack_protectEH", -1];
 
 // Restore ACE damage processing
+_unit setVariable ["FST_jumppack_damageOverrideActive", false];
 _unit setVariable ["ace_medical_allowDamage", true, true];
 
 // If dead, stop here
@@ -153,7 +159,7 @@ if ((surfaceIsWater getPos _unit) && (getPosASL _unit select 2 < 0)) then
 };
 
 // Landed — kill velocity to prevent engine fall-damage calc
-_unit setVariable ["FST_jumppack_last_jumptime", time, true];
+_unit setVariable ["FST_jumppack_last_jumptime", time];
 (_unit) setVelocity [0,0,0];
 
-_unit spawn FST_jumppack_fnc_remove_Effects;
+_unit call FST_jumppack_fnc_remove_effects;

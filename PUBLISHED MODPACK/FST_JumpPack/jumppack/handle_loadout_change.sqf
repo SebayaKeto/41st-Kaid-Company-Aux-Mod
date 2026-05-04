@@ -1,14 +1,21 @@
-
 // handle_loadout_change.sqf
 // Called by CBA "loadout" player event handler when player's loadout changes.
 // Caches all jumppack config values on the player so per-tick recharge and
 // jump logic never need to walk the config tree at runtime.
+// Also starts/stops the recharge PFH so players without a jump pack have no
+// persistent 0.25s timer running.
 
 private _savedBackpack = player getVariable ["FST_jumppack_backpack_class", ""];
 private _currentBackpack = backpack player;
 
-// If backpack class unchanged, nothing to do
-if (_savedBackpack isEqualTo _currentBackpack) exitWith {};
+// If backpack class unchanged, there is normally nothing to do. Still make sure
+// the PFH exists if this player is known to have a jump pack; this is cheap and
+// protects against respawn/arsenal edge cases without adding a permanent loop.
+if (_savedBackpack isEqualTo _currentBackpack) exitWith {
+	if (player getVariable ["FST_jumppack_hasJumppack", false]) then {
+		call FST_fnc_per_frame_EH;
+	};
+};
 
 // Store new backpack class
 player setVariable ["FST_jumppack_backpack_class", _currentBackpack];
@@ -28,6 +35,12 @@ if (!_isJumppack) exitWith {
 	player setVariable ["FST_jumppack_cachedSoundIgnite", []];
 	player setVariable ["FST_jumppack_cachedSoundLand", []];
 	player setVariable ["FST_jumppack_cachedAirDamageMult", 0.5];
+
+	// If the player removed/dropped the pack while airborne, keep the PFH alive
+	// until the damage watchdog restores ACE damage. Otherwise stop it entirely.
+	if !(player getVariable ["FST_jumppack_damageOverrideActive", false]) then {
+		call FST_fnc_per_frame_EH_stop;
+	};
 };
 
 // Cache all config values (these never change at runtime for a given backpack class)
@@ -58,3 +71,6 @@ player setVariable ["FST_jumppack_cachedAirDamageMult", _airDamageMult];
 
 // Reset recharge timer (original behavior preserved)
 player setVariable ["FST_jumppack_last_call_time", time];
+
+// Demand-start recharge/watchdog only for actual jump-pack users.
+call FST_fnc_per_frame_EH;
