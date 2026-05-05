@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class 41st_Droids
 	{
-		requiredAddons[]={"A3_Soft_F","cba_main","cba_xeh","WBK_Droids_3AS","WBK_Droids_LS"};
+		requiredAddons[]={"A3_Soft_F","ls_common"};
 		units[]=
 		{
 			"FST_Droid_B1_E5",
@@ -49,6 +49,21 @@ class CfgPatches
 	};
 	author="Daara";
 };
+
+class ls_biologies
+{
+	class biology_base;
+	class droid: biology_base
+	{
+		scope = 2;
+		type = "droid";
+		isOrganic = 0;
+		priority = 1;
+		condition = "call ls_common_fnc_biologyCondition_isDroid";
+		bloodModels[] = {};
+	};
+};
+
 class CfgWeapons
 {
 	class U_I_CombatUniform;
@@ -60,7 +75,6 @@ class CfgWeapons
 	{
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-		TAS_isDroid=1;
 		JLTS_hasEMPProtection=0;
 		JLTS_deathSounds="DeathDroid";
 		author="Runner";
@@ -84,7 +98,6 @@ class CfgWeapons
 		displayname="[41st] B1 Combat Uniform";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -102,7 +115,6 @@ class CfgWeapons
 		displayname="[41st] B1 Combat Uniform (Muddy)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -120,7 +132,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (Commander)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -138,7 +149,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (Sniper)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -156,7 +166,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (GAT)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -174,7 +183,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (AT)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -192,7 +200,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (LMG)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -210,7 +217,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (Jetpack)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -228,7 +234,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (AA)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -246,7 +251,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (Scorch)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -264,7 +268,6 @@ class CfgWeapons
 		displayName="[41st] B1 Combat Uniform (OOM)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -282,7 +285,6 @@ class CfgWeapons
 		displayname="[41st] B1 BMO";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -300,7 +302,6 @@ class CfgWeapons
 		displayname="[41st] B1 Rodger";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -318,7 +319,6 @@ class CfgWeapons
 		displayname="[41st] B1 Tumble";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -336,7 +336,6 @@ class CfgWeapons
 		displayname="[41st] B1 (PLAD)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -355,7 +354,6 @@ class CfgWeapons
 		displayName="[41st] Tactical Battledroid";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
 		hiddenSelections[]=
 		{
@@ -385,7 +383,6 @@ class CfgWeapons
 		displayname="[41st] BX Combat Uniform";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -404,7 +401,6 @@ class CfgWeapons
 		displayname="[41st] BX Combat Uniform (Rusty)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -423,7 +419,6 @@ class CfgWeapons
 		displayname="[41st] BX Combat Uniform (Tukata)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -442,7 +437,6 @@ class CfgWeapons
 		displayname="[41st] B2 Armor";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -461,7 +455,6 @@ class CfgWeapons
 		displayname="[41st] B2 Armor (TL)";
 		JLTS_isDroid=1;
 		ls_isDroid=1;
-        TAS_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -879,14 +872,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_E5: JLTS_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		scopecurator = 2;
 		side=0;
 		author="Runner";
 		displayName="[41st] B1 Battledroid";
-		armor=25;
+		armor=75; 
 		armorStructural=2;
 		explosionshielding=10;
 		backpack="FST_B1_backpack";
@@ -922,7 +913,8 @@ class CfgVehicles
 				radius=0.08;
 				explosionShielding=0.5;
 				minimalHit=0.01;
-				visual="";
+				visual="injury_head";
+    			depends="";
 			};
 			class HitNeck: HitFace
 			{
@@ -933,7 +925,8 @@ class CfgVehicles
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.01;
-				visual="";
+				visual="injury_head";
+    			depends="";
 			};
 			class HitHead: HitNeck
 			{
@@ -944,7 +937,7 @@ class CfgVehicles
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.01;
-    			visual="";
+    			visual="injury_head";
   				depends="HitFace max HitNeck";
 			};
 			class HitPelvis
@@ -955,8 +948,9 @@ class CfgVehicles
 				passThrough=0.8;
 				radius=0.24;
 				explosionShielding=3;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.01;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -966,7 +960,7 @@ class CfgVehicles
 				passThrough=0.8;
 				radius=0.16;
 				explosionShielding=3;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.01;
 			};
 			class HitDiaphragm: HitAbdomen
@@ -977,7 +971,7 @@ class CfgVehicles
 				passThrough=0.33;
 				radius=0.18;
 				explosionShielding=6;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.01;
 			};
 			class HitChest: HitDiaphragm
@@ -988,7 +982,7 @@ class CfgVehicles
 				passThrough=0.33;
 				radius=0.18;
 				explosionShielding=6;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.01;
 			};
 			class HitBody: HitChest
@@ -999,7 +993,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0;
 				explosionShielding=6;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.01;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
@@ -1011,8 +1005,9 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.1;
 				explosionShielding=1;
-				visual="";
+				visual="injury_hands";
 				minimalHit=0.01;
+				depends="";
 			};
 			class HitHands: HitArms
 			{
@@ -1022,7 +1017,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.05;
 				explosionShielding=1;
-				visual="";
+				visual="injury_hands";
 				minimalHit=0.01;
 			};
 			class HitLegs: HitHands
@@ -1033,8 +1028,9 @@ class CfgVehicles
 				passThrough=0.8;
 				radius=0.1;
 				explosionShielding=1;
-				visual="";
+				visual="injury_legs";
 				minimalHit=0.01;
+				depends="";
 			};
 			class HitLeftArm: HitHands
 			{
@@ -1042,9 +1038,9 @@ class CfgVehicles
 				material=-1;
 				name="hand_l";
 				passThrough=1;
-				radius=0.05;
+				radius=0.08;
 				explosionShielding=1;
-				visual="";
+				visual="injury_hands";
 				minimalHit=0.01;
 			};
 			class HitRightArm: HitLeftArm
@@ -1059,14 +1055,13 @@ class CfgVehicles
 				passThrough=0.8;
 				radius=0.1;
 				explosionShielding=1;
-				visual="";
+				visual="injury_legs";
 				minimalHit=0.01;
 			};
 			class HitRightLeg: HitLeftLeg
 			{
 				name="leg_r";
 			};
-
 			class Incapacitated
 			{
 				armor=1000;
@@ -1136,7 +1131,7 @@ class CfgVehicles
 			"\ls\core\addons\characters_mandalorian\uniforms\undersuit\data\undersuit_co.paa"
 		};
 		nakedUnifrom="U_BasicBody";
-		class HitPoints: O_Soldier_F
+		class HitPoints
 		{
 			class HitFace
 			{
@@ -1177,8 +1172,9 @@ class CfgVehicles
 				passThrough=0.80000001;
 				radius=0.23999999;
 				explosionShielding=3;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.0099999998;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -1188,7 +1184,7 @@ class CfgVehicles
 				passThrough=0.80000001;
 				radius=0.16;
 				explosionShielding=3;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitDiaphragm: HitAbdomen
@@ -1199,7 +1195,7 @@ class CfgVehicles
 				passThrough=0.33000001;
 				radius=0.18000001;
 				explosionShielding=6;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitChest: HitDiaphragm
@@ -1210,7 +1206,7 @@ class CfgVehicles
 				passThrough=0.33000001;
 				radius=0.18000001;
 				explosionShielding=6;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.0099999998;
 			};
 			class HitBody: HitChest
@@ -1221,7 +1217,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0;
 				explosionShielding=6;
-				visual="";
+				visual="injury_body";
 				minimalHit=0.0099999998;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
@@ -1233,7 +1229,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.1;
 				explosionShielding=3;
-				visual="";
+				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
@@ -1245,7 +1241,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.1;
 				explosionShielding=1;
-				visual="";
+				visual="injury_hands";
 				minimalHit=0.0099999998;
 				depends="HitArms";
 			};
@@ -1257,7 +1253,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.14;
 				explosionShielding=3;
-				visual="";
+				visual="injury_legs";
 				minimalHit=0.0099999998;
 				depends="0";
 			};
@@ -1280,7 +1276,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.079999998;
 				explosionShielding=3;
-				visual="";
+				visual="injury_hands";
 				minimalHit=0.0099999998;
 			};
 			class HitRightArm: HitLeftArm
@@ -1295,7 +1291,7 @@ class CfgVehicles
 				passThrough=1;
 				radius=0.1;
 				explosionShielding=3;
-				visual="";
+				visual="injury_legs";
 				minimalHit=0.0099999998;
 			};
 			class HitRightLeg: HitLeftLeg
@@ -1314,10 +1310,8 @@ class CfgVehicles
 		minTotalDamageThreshold=0.001;
 		impactDamageMultiplier=0.5;
 	};
-	class FST_Droid_B1_E5_Muddy: FST_Droid_B1_E5
+	class FST_Droid_B1_E5_Muddy: JLTS_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		author="Gold";
 		displayName="[41st] B1 Battledroid (Muddy)";
 		uniformClass="FST_DroidB1_Muddy";
@@ -1328,14 +1322,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Sniper: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		side=0;
 		author="Daara";
 		displayName="[41st] B1 Battledroid (Sniper)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		backpack="FST_B1_backpack";
 		uniformClass="FST_DroidB1_Sniper";
 		faction="FST_BattleDroids_Faction";
@@ -1405,13 +1397,11 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Commander: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Daara";
 		displayName="[41st] B1 Battledroid (Commander)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		Backpack="FST_B1_Antenna";
 		uniformClass="FST_DroidB1_Commander";
 		faction="FST_BattleDroids_Faction";
@@ -1479,14 +1469,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_GAT: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_backpack_gat_predef";
 		displayName="[41st] B1 Battledroid (Guided Anti-Tank)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		uniformClass="FST_DroidB1_GAT";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
@@ -1559,14 +1547,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_AT: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_backpack_at_predef";
 		displayName="[41st] B1 Battledroid (Anti-Tank)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		uniformClass="FST_DroidB1_AT";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
@@ -1639,14 +1625,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_AA: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_backpack_aa_predef";
 		displayName="[41st] B1 Battledroid (Anti-Air)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		uniformClass="FST_DroidB1_AA";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
@@ -1719,14 +1703,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_AR: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_backpack_support_predef";
 		displayName="[41st] B1 Battledroid (LMG)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		uniformClass="FST_DroidB1_AR";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
@@ -1783,183 +1765,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Jetpack: WBK_3AS_B1_Rocket
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
-		class HitPoints
-				{
-					class HitFace
-					{
-						armor=0.25;
-						material=-1;
-						name="face_hub";
-						passThrough=0.1;
-						radius=0.08;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-						visual="";
-					};
-					class HitNeck: HitFace
-					{
-						armor=0.25;
-						material=-1;
-						name="neck";
-						passThrough=0.1;
-						radius=0.1;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-						visual="";
-					};
-					class HitHead: HitNeck
-					{
-						armor=0.25;
-						material=-1;
-						name="head";
-						passThrough=0.1;
-						radius=0.2;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-		    			visual="";
-		  				depends="HitFace max HitNeck";
-					};
-					class HitPelvis
-					{
-						armor=1;
-						material=-1;
-						name="pelvis";
-						passThrough=0.8;
-						radius=0.24;
-						explosionShielding=3;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitAbdomen: HitPelvis
-					{
-						armor=1;
-						material=-1;
-						name="spine1";
-						passThrough=0.8;
-						radius=0.16;
-						explosionShielding=3;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitDiaphragm: HitAbdomen
-					{
-						armor=1;
-						material=-1;
-						name="spine2";
-						passThrough=0.33;
-						radius=0.18;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitChest: HitDiaphragm
-					{
-						armor=1;
-						material=-1;
-						name="spine3";
-						passThrough=0.33;
-						radius=0.18;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitBody: HitChest
-					{
-						armor=1;
-						material=-1;
-						name="body";
-						passThrough=1;
-						radius=0;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-						depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-					};
-					class HitArms: HitBody
-					{
-						armor=1;
-						material=-1;
-						name="hands";
-						passThrough=1;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitHands: HitArms
-					{
-						armor=1;
-						material=-1;
-						name="hands";
-						passThrough=1;
-						radius=0.05;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitLegs: HitHands
-					{
-						armor=1;
-						material=-1;
-						name="legs";
-						passThrough=0.8;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitLeftArm: HitHands
-					{
-						armor=1;
-						material=-1;
-						name="hand_l";
-						passThrough=1;
-						radius=0.05;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitRightArm: HitLeftArm
-					{
-						name="hand_r";
-					};
-					class HitLeftLeg: HitLegs
-					{
-						armor=1;
-						material=-1;
-						name="leg_l";
-						passThrough=0.8;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitRightLeg: HitLeftLeg
-					{
-						name="leg_r";
-					};
-		
-					class Incapacitated
-					{
-						armor=1000;
-						material=-1;
-						name="body";
-						passThrough=1;
-						radius=0;
-						explosionShielding=6;
-						minimalHit=0.01;
-						depends="HitFace max HitNeck max HitHead max HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-					};
-				};
-
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_Backpack_Jetpack";
 		displayName="[41st] B1 Battledroid (Jetpack)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		uniformClass="FST_DroidB1_Jetpack";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
@@ -2017,14 +1828,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Scorch: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_backpack_support_predef";
 		displayName="[41st] B1 Battledroid (Scorch)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		uniformClass="FST_DroidB1_Scorch";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
@@ -2081,13 +1890,11 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_OOM: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Viz";
 		displayName="[41st] B1 Battledroid (OOM)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		Backpack="FST_B1_Antenna";
 		uniformClass="FST_DroidB1_OOM";
 		faction="FST_BattleDroids_Faction";
@@ -2155,13 +1962,11 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_BMO: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Viz";
 		displayName="[41st] B1 Battledroid BMO";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		side=1;
 		Backpack="FST_B1_Antenna_Kaid";
 		uniformClass="FST_DroidB1_BMO";
@@ -2226,13 +2031,11 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Rodger: FST_Droid_B1_BMO
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Viz";
 		displayName="[41st] B1 Battledroid Rodger";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		Backpack="FST_B1_Antenna_Kaid";
 		uniformClass="FST_DroidB1_Rodger";
 		faction="FST_Faction";
@@ -2244,13 +2047,11 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Tumble: FST_Droid_B1_BMO
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		author="Gold";
 		displayName="[41st] B1 Battledroid Tumble";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		Backpack="FST_B1_Antenna_Kaid";
 		uniformClass="FST_DroidB1_Tumble";
 		faction="FST_Faction";
@@ -2262,14 +2063,12 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_PLAD: FST_Droid_B1_E5
 	{
-		impactEffectsBlood="ImpactMetal";
-		impactEffectsNoBlood="ImpactMetal";
 		scope=2;
 		side=2;
 		author="Gold";
 		displayName="[41st] B1 Battledroid (PLAD)";
-		armor=25;
-		armorStructural=2;
+		armor=4;
+		armorStructural=100;
 		Backpack="FST_B1_Backpack_PLAD";
 		uniformClass="FST_DroidB1_PLAD";
 		faction="FST_Independent_Faction";
@@ -2369,175 +2168,6 @@ class CfgVehicles
 	class WBK_LS_BX;
 	class FST_BX: WBK_LS_BX
 	{
-		class HitPoints
-				{
-					class HitFace
-					{
-						armor=0.25;
-						material=-1;
-						name="face_hub";
-						passThrough=0.1;
-						radius=0.08;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-						visual="";
-					};
-					class HitNeck: HitFace
-					{
-						armor=0.25;
-						material=-1;
-						name="neck";
-						passThrough=0.1;
-						radius=0.1;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-						visual="";
-					};
-					class HitHead: HitNeck
-					{
-						armor=0.25;
-						material=-1;
-						name="head";
-						passThrough=0.1;
-						radius=0.2;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-		    			visual="";
-		  				depends="HitFace max HitNeck";
-					};
-					class HitPelvis
-					{
-						armor=1;
-						material=-1;
-						name="pelvis";
-						passThrough=0.8;
-						radius=0.24;
-						explosionShielding=3;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitAbdomen: HitPelvis
-					{
-						armor=1;
-						material=-1;
-						name="spine1";
-						passThrough=0.8;
-						radius=0.16;
-						explosionShielding=3;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitDiaphragm: HitAbdomen
-					{
-						armor=1;
-						material=-1;
-						name="spine2";
-						passThrough=0.33;
-						radius=0.18;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitChest: HitDiaphragm
-					{
-						armor=1;
-						material=-1;
-						name="spine3";
-						passThrough=0.33;
-						radius=0.18;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitBody: HitChest
-					{
-						armor=1;
-						material=-1;
-						name="body";
-						passThrough=1;
-						radius=0;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-						depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-					};
-					class HitArms: HitBody
-					{
-						armor=1;
-						material=-1;
-						name="hands";
-						passThrough=1;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitHands: HitArms
-					{
-						armor=1;
-						material=-1;
-						name="hands";
-						passThrough=1;
-						radius=0.05;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitLegs: HitHands
-					{
-						armor=1;
-						material=-1;
-						name="legs";
-						passThrough=0.8;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitLeftArm: HitHands
-					{
-						armor=1;
-						material=-1;
-						name="hand_l";
-						passThrough=1;
-						radius=0.05;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitRightArm: HitLeftArm
-					{
-						name="hand_r";
-					};
-					class HitLeftLeg: HitLegs
-					{
-						armor=1;
-						material=-1;
-						name="leg_l";
-						passThrough=0.8;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitRightLeg: HitLeftLeg
-					{
-						name="leg_r";
-					};
-		
-					class Incapacitated
-					{
-						armor=1000;
-						material=-1;
-						name="body";
-						passThrough=1;
-						radius=0;
-						explosionShielding=6;
-						minimalHit=0.01;
-						depends="HitFace max HitNeck max HitHead max HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-					};
-				};
-
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2896,175 +2526,6 @@ class CfgVehicles
 	class WBK_LS_B2;
 	class FST_B2: WBK_LS_B2
 	{
-		class HitPoints
-				{
-					class HitFace
-					{
-						armor=0.25;
-						material=-1;
-						name="face_hub";
-						passThrough=0.1;
-						radius=0.08;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-						visual="";
-					};
-					class HitNeck: HitFace
-					{
-						armor=0.25;
-						material=-1;
-						name="neck";
-						passThrough=0.1;
-						radius=0.1;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-						visual="";
-					};
-					class HitHead: HitNeck
-					{
-						armor=0.25;
-						material=-1;
-						name="head";
-						passThrough=0.1;
-						radius=0.2;
-						explosionShielding=0.5;
-						minimalHit=0.01;
-		    			visual="";
-		  				depends="HitFace max HitNeck";
-					};
-					class HitPelvis
-					{
-						armor=1;
-						material=-1;
-						name="pelvis";
-						passThrough=0.8;
-						radius=0.24;
-						explosionShielding=3;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitAbdomen: HitPelvis
-					{
-						armor=1;
-						material=-1;
-						name="spine1";
-						passThrough=0.8;
-						radius=0.16;
-						explosionShielding=3;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitDiaphragm: HitAbdomen
-					{
-						armor=1;
-						material=-1;
-						name="spine2";
-						passThrough=0.33;
-						radius=0.18;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitChest: HitDiaphragm
-					{
-						armor=1;
-						material=-1;
-						name="spine3";
-						passThrough=0.33;
-						radius=0.18;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitBody: HitChest
-					{
-						armor=1;
-						material=-1;
-						name="body";
-						passThrough=1;
-						radius=0;
-						explosionShielding=6;
-						visual="";
-						minimalHit=0.01;
-						depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-					};
-					class HitArms: HitBody
-					{
-						armor=1;
-						material=-1;
-						name="hands";
-						passThrough=1;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitHands: HitArms
-					{
-						armor=1;
-						material=-1;
-						name="hands";
-						passThrough=1;
-						radius=0.05;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitLegs: HitHands
-					{
-						armor=1;
-						material=-1;
-						name="legs";
-						passThrough=0.8;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitLeftArm: HitHands
-					{
-						armor=1;
-						material=-1;
-						name="hand_l";
-						passThrough=1;
-						radius=0.05;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitRightArm: HitLeftArm
-					{
-						name="hand_r";
-					};
-					class HitLeftLeg: HitLegs
-					{
-						armor=1;
-						material=-1;
-						name="leg_l";
-						passThrough=0.8;
-						radius=0.1;
-						explosionShielding=1;
-						visual="";
-						minimalHit=0.01;
-					};
-					class HitRightLeg: HitLeftLeg
-					{
-						name="leg_r";
-					};
-		
-					class Incapacitated
-					{
-						armor=1000;
-						material=-1;
-						name="body";
-						passThrough=1;
-						radius=0;
-						explosionShielding=6;
-						minimalHit=0.01;
-						depends="HitFace max HitNeck max HitHead max HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-					};
-				};
-
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -3118,7 +2579,7 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_TL: FST_B2
+	class FST_B2_TL: WBK_LS_B2
 	{
 		scope=2;
 		identityTypes[]={};
@@ -3177,7 +2638,7 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_Flame: FST_B2
+	class FST_B2_Flame: WBK_LS_B2
 	{
 		scope=2;
 		identityTypes[]={};
@@ -3704,6 +3165,7 @@ class CfgVehicles
 				explosionShielding=3;
 				visual="injury_body";
 				minimalHit=0.0099999998;
+				depends="";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -4124,40 +3586,6 @@ class CfgVehicles
 	class FST_B2_Flame: FST_B2 {};
 };
 class FST_Commando_Jorge;
-
-class CfgFunctions
-{
-	class FST
-	{
-		class Droids
-		{
-			file="41st_Droids\functions";
-			class disableAceMedicalDamageForDroid {};
-			class droidPatchLoaded { preInit=1; };
-		};
-	};
-};
-
-
-class Extended_InitPost_EventHandlers
-{
-	class FST_Droid_B1_E5
-	{
-		class FST_disableAceMedicalDamage
-		{
-			init="params ['_unit']; [_unit] call FST_fnc_disableAceMedicalDamageForDroid; if !(_unit getVariable ['FST_noAceDamageLocalEH', false]) then { _unit setVariable ['FST_noAceDamageLocalEH', true]; _unit addEventHandler ['Local', { params ['_unit', '_isLocal']; if (_isLocal) then { [_unit] call FST_fnc_disableAceMedicalDamageForDroid; }; }]; };";
-		};
-	};
-	class FST_Droid_B1_E5_Muddy: FST_Droid_B1_E5 {};
-	class FST_Droid_B1_Jetpack: FST_Droid_B1_E5 {};
-	class FST_BX: FST_Droid_B1_E5 {};
-	class FST_BX_Rusty: FST_BX {};
-	class FST_BX_Tukata: FST_BX {};
-	class FST_B2: FST_Droid_B1_E5 {};
-	class FST_B2_TL: FST_B2 {};
-	class FST_B2_Flame: FST_B2 {};
-};
-
 class cfgGroups
 {
 	class EAST
