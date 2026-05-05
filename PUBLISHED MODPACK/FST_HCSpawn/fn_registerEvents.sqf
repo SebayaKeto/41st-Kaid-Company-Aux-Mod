@@ -99,9 +99,14 @@ if (isServer) then {
     [{
         params ["_payload"];
         {
-            _x params ["_unit", "_loadout"];
-            if (!isNull _unit && {local _unit} && {count _loadout > 0} && {uniform _unit == ""}) then {
-                _unit setUnitLoadout _loadout;
+            _x params ["_unit", "_loadout", ["_class", ""]];
+            if (_class isEqualTo "" && {!isNull _unit}) then { _class = typeOf _unit; };
+            if (!isNull _unit && {local _unit} && {count _loadout > 0}) then {
+                private _needsRestore = (uniform _unit isEqualTo "") ||
+                    {(primaryWeapon _unit isEqualTo "") && {secondaryWeapon _unit isEqualTo ""} && {handgunWeapon _unit isEqualTo ""}};
+                if (_needsRestore) then {
+                    [_unit, _loadout, _class, "setGroupOwner/restoreLoadout"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe;
+                };
             };
         } forEach _payload;
     }, [_payload], 1] call CBA_fnc_waitAndExecute;

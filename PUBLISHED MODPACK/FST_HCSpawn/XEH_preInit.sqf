@@ -16,6 +16,8 @@ missionNamespace setVariable ["FST_HC_CatchAllInterval", missionNamespace getVar
 missionNamespace setVariable ["FST_HC_RecountInterval", missionNamespace getVariable ["FST_HC_RecountInterval", 60]];
 missionNamespace setVariable ["FST_HC_CleanupInterval", missionNamespace getVariable ["FST_HC_CleanupInterval", 20]];
 missionNamespace setVariable ["FST_HC_ZeusTransferSettleDelay", missionNamespace getVariable ["FST_HC_ZeusTransferSettleDelay", 0.2]];
+// Delay Zeus instant-clone snapshots briefly so modded unit loadouts/weapon EHs can settle.
+missionNamespace setVariable ["FST_HC_ZeusLoadoutSnapshotDelay", missionNamespace getVariable ["FST_HC_ZeusLoadoutSnapshotDelay", 0.75]];
 missionNamespace setVariable ["FST_HC_ZeusLegacyFallback", missionNamespace getVariable ["FST_HC_ZeusLegacyFallback", false]];
 missionNamespace setVariable ["FST_HC_GarrisonRadius", missionNamespace getVariable ["FST_HC_GarrisonRadius", 100]];
 missionNamespace setVariable ["FST_HC_PatrolRadius", missionNamespace getVariable ["FST_HC_PatrolRadius", 150]];
@@ -215,5 +217,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_EFFICIENCY_PASS_2026-05-04", true];
-diag_log "[FST_HCSpawn] preInit complete - PREOP_EFFICIENCY_PASS_2026-05-04";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_WEAPON_RACE_FIX_2026-05-04", true];
+diag_log "[FST_HCSpawn] preInit complete - PREOP_WEAPON_RACE_FIX_2026-05-04";

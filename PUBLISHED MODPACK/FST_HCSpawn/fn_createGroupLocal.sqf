@@ -7,9 +7,6 @@ params ["_side", "_unitClasses", "_pos", "_behavior", "_radius", "_vehData", "_i
 _pos = [_pos select 0, _pos select 1, 0];
 
 private _group = createGroup [_side, true];
-if (isNull _group) exitWith {
-    diag_log format ["[FST_HCSpawn] createGroupLocal failed: createGroup returned grpNull for side %1 behavior %2 at %3", _side, _behavior, _pos];
-};
 private _editableObjects = [];
 
 if (count _vehData > 0) then {
@@ -60,7 +57,7 @@ if (count _vehData > 0) then {
             if (_unitPos != "AUTO") then { _unit setUnitPos _unitPos; };
             if (count _x > 6) then {
                 private _loadout = _x select 6;
-                if (count _loadout > 0) then { _unit setUnitLoadout _loadout; };
+                [_unit, _loadout, _class, "instantClone/createGroupLocal"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe;
             };
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitData;
@@ -78,13 +75,6 @@ if (count _vehData > 0) then {
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitClasses;
     };
-};
-
-if (count units _group == 0) exitWith {
-    if (FST_HC_DebugLogging) then {
-        diag_log format ["[FST_HCSpawn] createGroupLocal produced empty group for behavior %1 at %2; deleting empty group", _behavior, _pos];
-    };
-    deleteGroup _group;
 };
 
 _editableObjects append units _group;
