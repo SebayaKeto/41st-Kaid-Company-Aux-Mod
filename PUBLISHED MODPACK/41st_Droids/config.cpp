@@ -875,7 +875,7 @@ class CfgVehicles
 		scope=2;
 		scopecurator = 2;
 		side=0;
-		
+	
 		author="Runner";
 		displayName="[41st] B1 Battledroid";
 		armor=75; 
