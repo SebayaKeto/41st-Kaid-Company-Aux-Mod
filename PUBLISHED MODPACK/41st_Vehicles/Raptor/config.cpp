@@ -70,15 +70,17 @@ class CfgVehicles
 		memoryPointGun[]={};
 		uavCameraDriverPos="PiP0_pos";
 		uavCameraDriverDir="PiP0_dir";
+		armor=50;
+		armorStructural=1;
 		class HitPoints: HitPoints
 		{
 			class HitRFWheel
 			{
-				armor=1;
+				armor=0.25;
 				explosionShielding=4;
 				armorComponent="hit_fr_wheel";
 				material=-1;
-				passThrough=0.30000001;
+				passThrough=0.8; // 0.30000001 all
 				name="wheel_fr_point";
 				visual="wheel_fr_destruct";
 			};
@@ -105,9 +107,9 @@ class CfgVehicles
 				visual="engine_destruct";
 				name="engine_point";
 				armorComponent="hit_engine";
-				armor=0.5;
+				armor=1;
 				material=-1;
-				passThrough=0.30000001;
+				passThrough=0.8;
 			};
 			class HitFuel: HitFuel
 			{
@@ -117,9 +119,9 @@ class CfgVehicles
 			{
 				name="karoserie";
 				visual="zbytek";
-				armor=0.5;
+				armor=0.25;
 				material=-1;
-				passThrough=0.30000001;
+				passThrough=0.8;
 			};
 		};
 		class Components: Components
@@ -261,12 +263,12 @@ class CfgVehicles
 				{
 					class HitTurret
 					{
-						armor=0.5;
+						armor=0.25;
 						material=-1;
 						armorComponent="hit_main_turret";
 						name="hit_main_turret_point";
 						visual="OtocVez";
-						passThrough=0;
+						passThrough=0.8;
 						minimalHit=0.029999999;
 						explosionShielding=0.40000001;
 						radius=0.25;
@@ -274,12 +276,12 @@ class CfgVehicles
 					};
 					class HitGun
 					{
-						armor=0.5;
+						armor=0.25;
 						material=-1;
 						armorComponent="hit_main_gun";
 						name="hit_main_gun_point";
 						visual="OtocHlaven";
-						passThrough=0;
+						passThrough=0.8;
 						minimalHit=0.029999999;
 						explosionShielding=0.40000001;
 						radius=0.2;
@@ -1477,12 +1479,12 @@ class CfgVehicles
 				{
 					class HitTurret
 					{
-						armor=0.5;
+						armor=0.25;
 						material=-1;
 						armorComponent="hit_main_turret";
 						name="hit_main_turret_point";
 						visual="OtocVez";
-						passThrough=0;
+						passThrough=0.8;
 						minimalHit=0.029999999;
 						explosionShielding=0.40000001;
 						radius=0.25;
@@ -1490,12 +1492,12 @@ class CfgVehicles
 					};
 					class HitGun
 					{
-						armor=0.5;
+						armor=0.25;
 						material=-1;
 						armorComponent="hit_main_gun";
 						name="hit_main_gun_point";
 						visual="OtocHlaven";
-						passThrough=0;
+						passThrough=0.8;
 						minimalHit=0.029999999;
 						explosionShielding=0.40000001;
 						radius=0.2;
