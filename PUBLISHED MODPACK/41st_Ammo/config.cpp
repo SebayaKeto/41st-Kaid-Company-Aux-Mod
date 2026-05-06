@@ -100,7 +100,7 @@ class CfgAmmo
 		indirectHit=0;
 		explosive=0; // 1
 		indirectHitRange=0.1; // 0.5
-		caliber=1.6; //1.8
+		caliber=3.0; //1.8
 		coefGravity=0.02;
 		timetolive=6;
 		waterFriction=-0.0099999998;
@@ -629,7 +629,7 @@ class CfgAmmo
 		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
 		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=35;
-		caliber=2.2;
+		caliber=3; // 2.2
 		coefGravity=0.02;
 	};
 	class FST_blasterbolt_High_Green: FST_blasterbolt_High_Blue

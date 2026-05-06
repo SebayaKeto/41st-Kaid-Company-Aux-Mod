@@ -875,18 +875,15 @@ class CfgVehicles
 		scope=2;
 		scopecurator = 2;
 		side=0;
-	
 		author="Runner";
 		displayName="[41st] B1 Battledroid";
-		armor=75; 
+		armor=10; 
 		armorStructural=2;
 		explosionshielding=10;
 		backpack="FST_B1_backpack";
 		uniformClass="FST_DroidB1";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
-		impactEffectsBlood = "ImpactMetal";
-        impactEffectsNoBlood = "ImpactMetal";
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\DroidArmor\data\b1_co.paa"
@@ -921,7 +918,7 @@ class CfgVehicles
 			};
 			class HitNeck: HitFace
 			{
-				armor=0.25;
+				armor=0.5;
 				material=-1;
 				name="neck";
 				passThrough=0.1;
@@ -1002,7 +999,7 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=1;
+				armor=0.9;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -1014,7 +1011,7 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=1;
+				armor=0.8;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -1028,7 +1025,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="legs";
-				passThrough=0.8;
+				passThrough=1;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_legs";
@@ -1037,7 +1034,7 @@ class CfgVehicles
 			};
 			class HitLeftArm: HitHands
 			{
-				armor=1;
+				armor=0.9;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
@@ -1055,7 +1052,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="leg_l";
-				passThrough=0.8;
+				passThrough=1;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_legs";
