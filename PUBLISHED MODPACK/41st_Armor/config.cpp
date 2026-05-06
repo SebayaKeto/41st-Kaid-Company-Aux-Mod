@@ -4901,60 +4901,264 @@ class CfgWeapons
 	{
 		class ItemInfo;
 	};
-	class FST_cloneUniform_scout_Woodland: ls_cloneUniform_scout
+	class FST_cloneUniform_scout_Midnight: ls_cloneUniform_scout
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "Ruby";
-		displayname = "[41st] Scout Trooper Armor (Woodland)";
-		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		displayName = "[41st] Scout Trooper Armor (Midnight)";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		armor = 0.44927;
+		passthrough = 0.449085;
+		maximumLoad = 180;
+
 		class ItemInfo: UniformItem
 		{
-			uniformClass="FST_clone_scout_woodland";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
+			uniformClass = "FST_clone_scout_Midnight";
+			uniformType = "Neopren";
+			containerClass = "Supply180";
+			mass = 15;
+
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+			};
 		};
 	};
 	class FST_cloneUniform_scout_Desert: ls_cloneUniform_scout
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "Ruby";
-		displayname = "[41st] Scout Trooper Armor (Desert)";
-		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		displayName = "[41st] Scout Trooper Armor (Desert)";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		armor = 0.44927;
+		passthrough = 0.449085;
+		maximumLoad = 180;
+
 		class ItemInfo: UniformItem
 		{
-			uniformClass="FST_clone_scout_Desert";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
+			uniformClass = "FST_clone_scout_Desert";
+			uniformType = "Neopren";
+			containerClass = "Supply180";
+			mass = 15;
+
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+			};
 		};
 	};
-	class FST_cloneUniform_scout_Midnight: ls_cloneUniform_scout
+	class FST_cloneUniform_scout_Woodland: ls_cloneUniform_scout
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "Ruby";
-		displayname = "[41st] Scout Trooper Armor (Midnight)";
-		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		displayName = "[41st] Scout Trooper Armor (Woodland)";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		armor = 0.44927;
+		passthrough = 0.449085;
+		maximumLoad = 180;
+
 		class ItemInfo: UniformItem
 		{
-			uniformClass="FST_clone_scout_Midnight";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
+			uniformClass = "FST_clone_scout_Woodland";
+			uniformType = "Neopren";
+			containerClass = "Supply180";
+			mass = 15;
+
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+			};
 		};
 	};
 	class FST_cloneUniform_scout_Urban: ls_cloneUniform_scout
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "Ruby";
-		displayname = "[41st] Scout Trooper Armor (Urban)";
-		model="ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+		displayName = "[41st] Scout Trooper Armor (Urban)";
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		armor = 0.44927;
+		passthrough = 0.449085;
+		maximumLoad = 180;
+
 		class ItemInfo: UniformItem
 		{
-			uniformClass="FST_clone_scout_Urban";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
+			uniformClass = "FST_clone_scout_Urban";
+			uniformType = "Neopren";
+			containerClass = "Supply180";
+			mass = 15;
+
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 0.44927;
+					passThrough = 0.449085;
+				};
+
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 0.236746;
+					passThrough = 0.449085;
+				};
+			};
 		};
 	};
 	class FST_cloneUniform_scout_undersuit_woodland: FST_cloneUniform_scout_Woodland
@@ -20115,6 +20319,7 @@ class CfgVehicles
 	class B_AssaultPack_blk;
 	class JLTS_Clone_P2_DC15A;
 	class JLTS_Droid_B1_E5;
+	class ls_clone_scout_undersuit;
 	class JLTS_B1_Backpack;
 	class JLTS_B1_antenna;
 	class JLTS_Clone_RTO_pack;
@@ -27505,13 +27710,66 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_undersuit_woodland: FST_clone_scout_woodland
+	class FST_clone_scout_undersuit_Woodland: ls_clone_scout_undersuit
 	{
-		displayname = "[41st] Clone Scout Trooper Undersuit (Woodland)";
-		hiddenSelectionsTextures[]= 
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Ruby";
+		displayName = "[41st] Clone Scout Trooper Undersuit (Woodland)";
+
+		faction = "FST_Faction";
+		editorSubcategory = "FST_Subfaction";
+
+		uniformClass = "FST_cloneUniform_scout_undersuit_Woodland";
+		nakedUniform = "U_BasicBody";
+
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		hiddenSelections[] =
 		{
-			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Woodland.paa",
-			""
+			"camo1",
+			"camo2"
+		};
+
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Woodland.paa"
+		};
+
+		weapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		respawnWeapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		magazines[] = {};
+		respawnMagazines[] = {};
+		items[] = {};
+		respawnItems[] = {};
+
+		linkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+
+		respawnLinkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
 		};
 	};
 	class FST_clone_scout_Midnight: FST_Trooper_P2_DC15S
@@ -27821,13 +28079,66 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_undersuit_Midnight: FST_clone_scout_Midnight
+	class FST_clone_scout_undersuit_Midnight: ls_clone_scout_undersuit
 	{
-		displayname = "[41st] Clone Scout Trooper Undersuit (Midnight)";
-		hiddenSelectionsTextures[]= 
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Ruby";
+		displayName = "[41st] Clone Scout Trooper Undersuit (Midnight)";
+
+		faction = "FST_Faction";
+		editorSubcategory = "FST_Subfaction";
+
+		uniformClass = "FST_cloneUniform_scout_undersuit_Midnight";
+		nakedUniform = "U_BasicBody";
+
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		hiddenSelections[] =
 		{
-			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Midnight.paa",
-			""
+			"camo1",
+			"camo2"
+		};
+
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Midnight.paa"
+		};
+
+		weapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		respawnWeapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		magazines[] = {};
+		respawnMagazines[] = {};
+		items[] = {};
+		respawnItems[] = {};
+
+		linkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+
+		respawnLinkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
 		};
 	};
 	class FST_clone_scout_Desert: FST_Trooper_P2_DC15S
@@ -28137,13 +28448,66 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_undersuit_Desert: FST_clone_scout_Desert
+	class FST_clone_scout_undersuit_Desert: ls_clone_scout_undersuit
 	{
-		displayname = "[41st] Clone Scout Trooper Undersuit (Desert)";
-		hiddenSelectionsTextures[]= 
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Ruby";
+		displayName = "[41st] Clone Scout Trooper Undersuit (Desert)";
+
+		faction = "FST_Faction";
+		editorSubcategory = "FST_Subfaction";
+
+		uniformClass = "FST_cloneUniform_scout_undersuit_Desert";
+		nakedUniform = "U_BasicBody";
+
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		hiddenSelections[] =
 		{
-			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Desert.paa",
-			""
+			"camo1",
+			"camo2"
+		};
+
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Desert.paa"
+		};
+
+		weapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		respawnWeapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		magazines[] = {};
+		respawnMagazines[] = {};
+		items[] = {};
+		respawnItems[] = {};
+
+		linkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+
+		respawnLinkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
 		};
 	};
 	class FST_clone_scout_Urban: FST_Trooper_P2_DC15S
@@ -28453,14 +28817,67 @@ class CfgVehicles
 			};
 		};
 	};
-	class FST_clone_scout_undersuit_Urban: FST_clone_scout_Urban
+	class FST_clone_scout_undersuit_Urban: ls_clone_scout_undersuit
 	{
-		displayname = "[41st] Clone Scout Trooper Undersuit (Urban)";
-		hiddenSelectionsTextures[]= 
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Ruby";
+		displayName = "[41st] Clone Scout Trooper Undersuit (Urban)";
+
+		faction = "FST_Faction";
+		editorSubcategory = "FST_Subfaction";
+
+		uniformClass = "FST_cloneUniform_scout_undersuit_Urban";
+		nakedUniform = "U_BasicBody";
+
+		model = "ls\core\addons\characters_clone\uniforms\scout\ls_uniform_clone_scout.p3d";
+
+		hiddenSelections[] =
 		{
-			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Urban.paa",
-			""
+			"camo1",
+			"camo2"
 		};
+
+		hiddenSelectionsTextures[] =
+		{
+			"41st_Armor\Data\Uniforms\FST_Scout_Uniform_Urban.paa"
+		};
+
+		linkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+
+		respawnLinkedItems[] =
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+
+		weapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		respawnWeapons[] =
+		{
+			"Throw",
+			"Put"
+		};
+
+		magazines[] = {};
+		respawnMagazines[] = {};
+		items[] = {};
+		respawnItems[] = {};
 	};
 	class FST_Trooper_P2_DC15A: FST_Trooper_P2_DC15S
 	{
