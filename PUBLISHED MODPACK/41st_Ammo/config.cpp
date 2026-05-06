@@ -95,7 +95,6 @@ class CfgAmmo
 		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
 		ACE_damageType="plasma";
 		cartridge="";
-		lightcolor[]={0,0.30000001,1};
 		hit=28; //28
 		indirectHit=0;
 		explosive=0; // 1
