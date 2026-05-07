@@ -47,6 +47,7 @@ class CfgFunctions {
             file = "FST_HCSpawn";
             class spawnGroupOnTarget {};
             class createGroupLocal {};
+            class applyUnitLoadoutSafe {};
             class fillGarrison {};
             class requestFillGarrison {};
             class registerZenModules {};

@@ -18,8 +18,17 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class 3AS_PX10_Base_F;
-
+	class 3AS_PX10_Base_F
+    {
+        class HitPoints
+        {
+            class HitHull;
+            class HitFuel;
+            class HitEngine;
+            class HitLTrack;
+            class HitRTrack;
+        };
+    };
 	class FST_PX10_Tukata : 3AS_PX10_Base_F
 	{
 		animationList[] = {"HideAttachmentDozer",1,"HideAttachmentFuel",1,"HideAttachmentPlate",0,"HideAttachmentRepair",1};
@@ -46,6 +55,64 @@ class CfgVehicles
 		"3as\3as_rebel_armor\px10_cav\textures\px10cavintfront_co.paa",// interior front
 		"3as\3as_rebel_armor\px10_cav\textures\px10fuel_co.paa",       // fuel module
 		"3as\3as_rebel_armor\px10_cav\textures\px10crane_co.paa"       // repair module
+		};
+		armor=94;
+		armorStructural=1;
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				armor=4.5;
+				material=-1;
+				name="telo";
+				visual="zbytek";
+				passThrough=1;
+				minimalHit=0.2;
+				explosionShielding=0.2;
+				radius=0.12;
+			};
+			class HitEngine: HitEngine
+			{
+				armor=0.75;
+				material=-1;
+				name="motor";
+				convexComponent="Hit_engine";
+				passThrough=0.2;
+				minimalHit=0.23999999;
+				explosionShielding=0.2;
+				radius=0.33000001;
+			};
+			class HitLTrack: HitLTrack
+			{
+				armor=3;
+				material=-1;
+				name="pas_L";
+				passThrough=1;
+				minimalHit=0;
+				explosionShielding=1.4400001;
+				radius=0.30000001;
+			};
+			class HitRTrack: HitRTrack
+			{
+				armor=3;
+				material=-1;
+				name="pas_P";
+				convexComponent="Hit_Fuel";
+				passThrough=1;
+				minimalHit=0;
+				explosionShielding=1.4400001;
+				radius=0.30000001;
+			};
+			class HitFuel: HitFuel
+			{
+				armor=1.5;
+				material=-1;
+				name="palivo";
+				passThrough=0.1;
+				minimalHit=0.1;
+				explosionShielding=0.60000002;
+				radius=0.25;
+			};
 		};
 	};
 	class FST_PX10_CIS : FST_PX10_Tukata

@@ -74,17 +74,18 @@ if (_isGarrisoned) then {
     ["FST_HC_evt_reapplyGarrison", [_group], _targetId] call CBA_fnc_ownerEvent;
 };
 
-// Restore loadouts if locality caused gear oddities.
-[{
-    params ["_units"];
-    {
-        if (isNull _x) then { continue };
-        private _loadout = _x getVariable ["FST_HC_savedLoadout", []];
-        if (count _loadout > 0 && {uniform _x == ""}) then {
-            _x setUnitLoadout _loadout;
-        };
-    } forEach _units;
-}, [_units], 1] call CBA_fnc_waitAndExecute;
+// Restore loadouts on the machine that NOW owns the group. Running this on the
+// server (where the units are no longer local) silently fails — setUnitLoadout
+// is an effects-local command. Send the payload to the target owner; the HC
+// handler waits a beat for locality to settle before applying.
+private _payload = [];
+{
+    private _lo = _x getVariable ["FST_HC_savedLoadout", []];
+    if (count _lo > 0) then { _payload pushBack [_x, _lo, typeOf _x]; };
+} forEach _units;
+if (count _payload > 0) then {
+    ["FST_HC_evt_restoreLoadout", [_payload], _targetId] call CBA_fnc_ownerEvent;
+};
 
 // Unlock vehicle.
 if (!isNull _vehicle && {_vehicle != _leader}) then {

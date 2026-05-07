@@ -17,7 +17,7 @@ class CfgFunctions
     {
         class droidstance
         {
-            file = "fst_droidstance\functions";
+            file = "FST_DroidStance\functions";
             class init {};
         };
     };

@@ -18,7 +18,9 @@ private _hcOwnedAI = 0;
 private _serverOwnedGroups = 0;
 private _hcOwnedGroups = 0;
 private _heldCount = 0;
-private _pendingCount = count FST_HC_TransferQueue;
+private _pendingGroups = [];
+{ if (!isNull _x) then { _pendingGroups pushBackUnique _x; }; } forEach FST_HC_TransferQueue;
+private _pendingCount = 0;
 private _untrackedEligible = 0;
 
 {
@@ -26,7 +28,7 @@ private _untrackedEligible = 0;
     if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) then { continue };
 
     if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) then { _heldCount = _heldCount + 1; };
-    if (_grp getVariable ["FST_HC_pendingTransfer", false]) then { _pendingCount = _pendingCount + 1; };
+    if (_grp getVariable ["FST_HC_pendingTransfer", false]) then { _pendingGroups pushBackUnique _grp; };
 
     private _ownerID = groupOwner _grp;
     if (_ownerID in FST_HC_Ids) then {
@@ -70,13 +72,33 @@ if (count FST_HC_Array == 0) then {
 
 _lines pushBack format ["  HC-owned AI/groups: %1 AI, %2 groups", _hcOwnedAI, _hcOwnedGroups];
 _lines pushBack format ["  Server-owned AI/groups: %1 AI, %2 groups", _serverOwnedAI, _serverOwnedGroups];
+_pendingCount = count _pendingGroups;
 _lines pushBack format ["  Transfer queue/pending: %1", _pendingCount];
 _lines pushBack format ["  Zeus held: %1 groups", _heldCount];
 _lines pushBack format ["  Untracked eligible server groups: %1", _untrackedEligible];
 _lines pushBack format ["  Total tracked: %1 groups", FST_HC_TrackedCount];
+_lines pushBack format ["  Zeus mode: %1", missionNamespace getVariable ["FST_HC_ZeusMode", "instant"]];
 _lines pushBack format ["  Transfers OK/Fail: %1 / %2", missionNamespace getVariable ["FST_HC_TransferSuccesses", 0], missionNamespace getVariable ["FST_HC_TransferFailures", 0]];
 _lines pushBack format ["  Zeus instant clones: %1", missionNamespace getVariable ["FST_HC_ZeusInstantCloneRequests", 0]];
 _lines pushBack format ["  Zeus setGroupOwner immediate/fallback: %1 / %2", missionNamespace getVariable ["FST_HC_ZeusImmediateRequests", 0], missionNamespace getVariable ["FST_HC_ZeusImmediateFallbacks", 0]];
 _lines pushBack format ["  Legacy clone fallbacks used: %1", missionNamespace getVariable ["FST_HC_ZeusLegacyFallbacksUsed", 0]];
+_lines pushBack format [
+    "  Zeus original suppress/delete: %1 / %2 objects",
+    missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0],
+    missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]
+];
+_lines pushBack format [
+    "  Cleanup deleted: %1 groups, %2 units, %3 vehicles",
+    missionNamespace getVariable ["FST_HC_CleanupGroupsDeleted", 0],
+    missionNamespace getVariable ["FST_HC_CleanupUnitsDeleted", 0],
+    missionNamespace getVariable ["FST_HC_CleanupVehiclesDeleted", 0]
+];
+_lines pushBack format [
+    "  Reapply garrison req/ok/timeout/stale: %1 / %2 / %3 / %4",
+    missionNamespace getVariable ["FST_HC_ReapplyGarrisonRequests", 0],
+    missionNamespace getVariable ["FST_HC_ReapplyGarrisonSuccesses", 0],
+    missionNamespace getVariable ["FST_HC_ReapplyGarrisonTimeouts", 0],
+    missionNamespace getVariable ["FST_HC_ReapplyGarrisonStale", 0]
+];
 
 { _x remoteExec ["systemChat", _target]; } forEach _lines;

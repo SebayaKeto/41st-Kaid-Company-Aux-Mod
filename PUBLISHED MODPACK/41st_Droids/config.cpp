@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class 41st_Droids
 	{
-		requiredAddons[]={"A3_Soft_F"};
+		requiredAddons[]={"A3_Soft_F","ls_common"};
 		units[]=
 		{
 			"FST_Droid_B1_E5",
@@ -49,6 +49,21 @@ class CfgPatches
 	};
 	author="Daara";
 };
+
+class ls_biologies
+{
+	class biology_base;
+	class droid: biology_base
+	{
+		scope = 2;
+		type = "droid";
+		isOrganic = 0;
+		priority = 1;
+		condition = "call ls_common_fnc_biologyCondition_isDroid";
+		bloodModels[] = {};
+	};
+};
+
 class CfgWeapons
 {
 	class U_I_CombatUniform;
@@ -59,6 +74,7 @@ class CfgWeapons
 	class FST_DroidB1_Test: U_I_CombatUniform
 	{
 		JLTS_isDroid=1;
+		ls_isDroid=1;
 		JLTS_hasEMPProtection=0;
 		JLTS_deathSounds="DeathDroid";
 		author="Runner";
@@ -81,6 +97,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B1 Combat Uniform";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -97,6 +114,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B1 Combat Uniform (Muddy)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -113,6 +131,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (Commander)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -129,6 +148,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (Sniper)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -145,6 +165,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (GAT)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -161,6 +182,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (AT)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -177,6 +199,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (LMG)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -193,6 +216,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (Jetpack)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -209,6 +233,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (AA)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -225,6 +250,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (Scorch)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -241,6 +267,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] B1 Combat Uniform (OOM)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -257,6 +284,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B1 BMO";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -273,6 +301,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B1 Rodger";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -289,6 +318,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B1 Tumble";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -305,6 +335,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B1 (PLAD)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		class ItemInfo: UniformItem
 		{
@@ -322,6 +353,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] Tactical Battledroid";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		hiddenSelections[]=
 		{
@@ -350,6 +382,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] BX Combat Uniform";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -367,6 +400,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] BX Combat Uniform (Rusty)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -384,6 +418,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] BX Combat Uniform (Tukata)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -401,6 +436,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B2 Armor";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -418,6 +454,7 @@ class CfgWeapons
 		scope=2;
 		displayname="[41st] B2 Armor (TL)";
 		JLTS_isDroid=1;
+		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
         JLTS_deathSounds="";
 		class ItemInfo: UniformItem
@@ -570,7 +607,7 @@ class CfgVehicles
 	{
 		author = "Ruby";
 		scope = 2;
-		displayname = "[41st] B1 Battle Jetpack"
+		displayname = "[41st] B1 Battle Jetpack";
 		tf_dialog="JLTS_droid_lr_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_east_radio_code";
@@ -835,19 +872,20 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_E5: JLTS_Droid_B1_E5
 	{
-		ace_medical_enabled = 0;
 		scope=2;
 		scopecurator = 2;
 		side=0;
 		author="Runner";
 		displayName="[41st] B1 Battledroid";
-		armor=75; 
+		armor=10; 
 		armorStructural=2;
 		explosionshielding=10;
 		backpack="FST_B1_backpack";
 		uniformClass="FST_DroidB1";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
+		impactEffectsBlood = "ImpactMetal";
+        impactEffectsNoBlood = "ImpactMetal";
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\DroidArmor\data\b1_co.paa"
@@ -882,7 +920,7 @@ class CfgVehicles
 			};
 			class HitNeck: HitFace
 			{
-				armor=0.25;
+				armor=0.5;
 				material=-1;
 				name="neck";
 				passThrough=0.1;
@@ -963,7 +1001,7 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=1;
+				armor=0.9;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -975,7 +1013,7 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=1;
+				armor=0.8;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -989,12 +1027,42 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="legs";
-				passThrough=0.8;
+				passThrough=1;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_legs";
 				minimalHit=0.01;
 				depends="";
+			};
+			class HitLeftArm: HitHands
+			{
+				armor=0.9;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.08;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.01;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor=1;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_legs";
+				minimalHit=0.01;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
 			};
 			class Incapacitated
 			{
@@ -1065,7 +1133,7 @@ class CfgVehicles
 			"\ls\core\addons\characters_mandalorian\uniforms\undersuit\data\undersuit_co.paa"
 		};
 		nakedUnifrom="U_BasicBody";
-		class HitPoints: O_Soldier_F
+		class HitPoints
 		{
 			class HitFace
 			{
@@ -1246,7 +1314,6 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_E5_Muddy: JLTS_Droid_B1_E5
 	{
-		ace_medical_enabled = 0;
 		author="Gold";
 		displayName="[41st] B1 Battledroid (Muddy)";
 		uniformClass="FST_DroidB1_Muddy";
@@ -1700,7 +1767,6 @@ class CfgVehicles
 	};
 	class FST_Droid_B1_Jetpack: WBK_3AS_B1_Rocket
 	{
-		ace_medical_enabled = 0;
 		scope=2;
 		author="Daara";
 		backpack="FST_B1_Backpack_Jetpack";
@@ -2104,7 +2170,6 @@ class CfgVehicles
 	class WBK_LS_BX;
 	class FST_BX: WBK_LS_BX
 	{
-		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2463,7 +2528,6 @@ class CfgVehicles
 	class WBK_LS_B2;
 	class FST_B2: WBK_LS_B2
 	{
-		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2519,7 +2583,6 @@ class CfgVehicles
 	};
 	class FST_B2_TL: WBK_LS_B2
 	{
-		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2579,7 +2642,6 @@ class CfgVehicles
 	};
 	class FST_B2_Flame: WBK_LS_B2
 	{
-		ace_medical_enabled = 0;
 		scope=2;
 		identityTypes[]={};
 		author="Daara";
@@ -2971,7 +3033,6 @@ class CfgVehicles
 	};
 	class FST_Jorgetrooper: FST_CIS_Heavy_Base_F
 	{
-		ace_medical_enabled = 0;
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopecurator=2;

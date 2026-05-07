@@ -20,12 +20,20 @@ if (count _batch == 0) exitWith {
 };
 
 private _group = createGroup [EAST, true];
+if (isNull _group) exitWith {
+    diag_log format ["[FST_HCSpawn] Fill garrison batch failed: createGroup returned grpNull for %1 units", count _batch];
+    if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };
+};
 _group deleteGroupWhenEmpty true;
 
 {
     _x params ["_pos", "_class"];
 
     private _unit = _group createUnit [_class, _pos, [], 0, "NONE"];
+    if (isNull _unit) then {
+        diag_log format ["[FST_HCSpawn] Fill garrison unit failed: createUnit returned null for %1", _class];
+        continue;
+    };
     _unit setPosATL _pos;
     _unit setVariable ["FST_HC_created", true, true];
     _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
@@ -41,6 +49,7 @@ _group deleteGroupWhenEmpty true;
 
 _group setBehaviourStrong "COMBAT";
 _group setCombatMode "RED";
+_group enableDynamicSimulation true;
 
 // Register Zeus editability on the server, not on the HC.
 private _editableObjects = units _group;

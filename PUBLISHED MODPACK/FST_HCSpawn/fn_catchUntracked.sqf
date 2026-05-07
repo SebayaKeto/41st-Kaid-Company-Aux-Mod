@@ -4,6 +4,12 @@
 
 if (!isServer) exitWith {};
 if (count FST_HC_Array == 0) exitWith {}; // no HCs, nothing to offload
+if (FST_HC_EmergencyMode) exitWith {}; // do not sweep while failover is moving groups
+
+// If the transfer queue is already backed up, let the processor drain it instead
+// of doing another allGroups sweep and adding more scheduler work.
+private _queueSoftLimit = (missionNamespace getVariable ["FST_HC_TransferBatchSize", 4]) * 6;
+if (count FST_HC_TransferQueue >= _queueSoftLimit) exitWith {};
 
 private _queued = 0;
 

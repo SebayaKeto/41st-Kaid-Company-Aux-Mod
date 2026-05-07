@@ -16,10 +16,20 @@ if (count _vehData > 0) then {
     private _vehUp = if (count _vehData > 3) then { _vehData select 3 } else { [0,0,1] };
 
     private _veh = _vehType createVehicle _vehPos;
+    if (isNull _veh) exitWith {
+        diag_log format ["[FST_HCSpawn] Vehicle clone failed: createVehicle returned null for %1", _vehType];
+    };
     _veh setPosATL _vehPos;
     _veh setDir _vehDir;
     _veh setVectorUp _vehUp;
     createVehicleCrew _veh;
+
+    // crew _veh is empty for ~1 frame after createVehicleCrew on a dedicated
+    // server/HC. joinSilent + setVariable on an empty crew silently does
+    // nothing, leaving the group with zero units when the rest of the function
+    // tries to track/edit it. Sleep past the frame.
+    sleep 0.1;
+
     (crew _veh) joinSilent _group;
     {
         _x setVariable ["FST_HC_created", true, true];
@@ -33,6 +43,10 @@ if (count _vehData > 0) then {
             _x params ["_class", ["_rel", [0,0,0]], ["_dir", 0], ["_rank", "PRIVATE"], ["_skill", 0.5], ["_unitPos", "AUTO"]];
             private _spawnPos = _pos vectorAdd _rel;
             private _unit = _group createUnit [_class, _spawnPos, [], 0, "CAN_COLLIDE"];
+            if (isNull _unit) then {
+                diag_log format ["[FST_HCSpawn] Unit clone failed: createUnit returned null for %1", _class];
+                continue;
+            };
             _unit setVariable ["FST_HC_created", true, true];
             _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
             _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
@@ -43,7 +57,7 @@ if (count _vehData > 0) then {
             if (_unitPos != "AUTO") then { _unit setUnitPos _unitPos; };
             if (count _x > 6) then {
                 private _loadout = _x select 6;
-                if (count _loadout > 0) then { _unit setUnitLoadout _loadout; };
+                [_unit, _loadout, _class, "instantClone/createGroupLocal"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe;
             };
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitData;
@@ -51,6 +65,10 @@ if (count _vehData > 0) then {
         {
             private _offset = [(_pos select 0) + random 10 - 5, (_pos select 1) + random 10 - 5, 0];
             private _unit = _group createUnit [_x, _offset, [], 0, "NONE"];
+            if (isNull _unit) then {
+                diag_log format ["[FST_HCSpawn] Unit spawn failed: createUnit returned null for %1", _x];
+                continue;
+            };
             _unit setVariable ["FST_HC_created", true, true];
             _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
             _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
@@ -127,6 +145,7 @@ if (count _editableObjects > 0) then {
 
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
+            _group enableDynamicSimulation true;
 
             // Cleanup floating/unsafe positions after 10s
             [{
@@ -165,6 +184,7 @@ if (count _editableObjects > 0) then {
         case "static": {
             _group setBehaviourStrong "COMBAT";
             { _x setUnitPos "UP"; doStop _x; } forEach units _group;
+            _group enableDynamicSimulation true;
         };
         case "none": {};
     };

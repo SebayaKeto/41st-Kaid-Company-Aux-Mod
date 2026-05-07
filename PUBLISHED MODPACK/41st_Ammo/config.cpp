@@ -89,60 +89,56 @@ class CfgAmmo
 	class BulletBase;
 	class 101st_PlasmaBase_Turret: BulletBase {};
 	class 101st_Sniper_Ammo_Red: BulletBase {};
-	class IDA_blasterbolt;
-	class FST_blasterbolt: IDA_Blasterbolt
+	class 3AS_PlasmaBase;
+	class FST_blasterbolt: 3AS_PlasmaBase
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
 		ACE_damageType="plasma";
 		cartridge="";
-		lightcolor[]={0,0.30000001,1};
 		hit=28; //28
 		indirectHit=0;
-		explosive=1;
+		explosive=0; // 1
 		indirectHitRange=0.1; // 0.5
-		caliber=1.6; //1.8
+		caliber=3.0; //1.8
 		coefGravity=0.02;
 		timetolive=6;
 		waterFriction=-0.0099999998;
 		deflecting=0;
 		airfriction=0;
-		tracerstarttime=0.050000001;
-		tracerendtime=10;
+		tracerStartTime = 0;
+		tracerEndTime = 6;
+		tracerScale = 1;
 		nvgonly=0;
 		airlock=1;
 		irtarget=1;
-		brightness=1000;
-		flaresize=5;
-		tracerscale=1;
-		effectflare="FlareShell";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="IDA_ImpactEffect";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
+		ExplosionEffects="3AS_ImpactPlasma";
 		cratereffects="";
 		class HitEffects
 		{
-			Hit_Foliage_Green="IDA_ImpactEffect";
-			Hit_Foliage_Dead="IDA_ImpactEffect";
-			Hit_Foliage_Green_big="IDA_ImpactEffect";
-			Hit_Foliage_Palm="IDA_ImpactEffect";
-			Hit_Foliage_Pine="IDA_ImpactEffect";
-			hitFoliage="IDA_ImpactEffect";
-			hitGlass="IDA_ImpactEffect";
-			hitGlassArmoRed="IDA_ImpactEffect";
-			hitWood="IDA_ImpactEffect";
-			hitMetal="IDA_ImpactEffect";
-			hitMetalPlate="IDA_ImpactEffect";
-			hitBuilding="IDA_ImpactEffect";
-			hitPlastic="IDA_ImpactEffect";
-			hitRubber="IDA_ImpactEffect";
-			hitTyre="IDA_ImpactEffect";
-			hitConcrete="IDA_ImpactEffect";
-			hitMan="IDA_ImpactEffect";
-			hitGroundSoft="IDA_ImpactEffect";
-			hitGroundRed="IDA_ImpactEffect";
-			hitGroundHard="IDA_ImpactEffect";
-			hitWater="IDA_ImpactEffect";
-			hitVirtual="IDA_ImpactEffect";
-			default_mat="IDA_ImpactEffect";
+			Hit_Foliage_green="3AS_ImpactPlasma";
+			Hit_Foliage_Dead="3AS_ImpactPlasma";
+			Hit_Foliage_Green_big="3AS_ImpactPlasma";
+			Hit_Foliage_Palm="3AS_ImpactPlasma";
+			Hit_Foliage_Pine="3AS_ImpactPlasma";
+			hitFoliage="3AS_ImpactPlasma";
+			hitGlass="3AS_ImpactPlasma";
+			hitGlassArmored="3AS_ImpactPlasma";
+			hitWood="3AS_ImpactPlasma";
+			hitMetal="3AS_ImpactPlasma";
+			hitMetalPlate="3AS_ImpactPlasma";
+			hitBuilding="3AS_ImpactPlasma";
+			hitPlastic="3AS_ImpactPlasma";
+			hitRubber="3AS_ImpactPlasma";
+			hitTyre="3AS_ImpactPlasma";
+			hitConcrete="3AS_ImpactPlasma";
+			hitMan="3AS_ImpactPlasma";
+			hitGroundSoft="3AS_ImpactPlasma";
+			hitGroundRed="3AS_ImpactPlasma";
+			hitGroundHard="3AS_ImpactPlasma";
+			hitWater="3AS_ImpactPlasma";
+			hitVirtual="3AS_ImpactPlasma";
+			default_mat="3AS_ImpactPlasma";
 		};
 		soundHitBody1[]=
 		{
@@ -518,57 +514,9 @@ class CfgAmmo
 			"soundMetal5",
 			0.066600002,
 		};
-		bulletFly1[]=
-		{
-			"\Indecisive_Armoury_Sounds\plasma_flyby_1.wss",
-			2.2387211,
-			1,
-			100
-		};
-		bulletFly2[]=
-		{
-			"\Indecisive_Armoury_Sounds\plasma_flyby_2.wss",
-			2.2387211,
-			1,
-			100
-		};
-		bulletFly3[]=
-		{
-			"\Indecisive_Armoury_Sounds\plasma_flyby_3.wss",
-			2.2387211,
-			1,
-			100
-		};
-		bulletFly4[]=
-		{
-			"\Indecisive_Armoury_Sounds\plasma_flyby_4.wss",
-			2.2387211,
-			1,
-			100
-		};
-		bulletFly5[]=
-		{
-			"\Indecisive_Armoury_Sounds\plasma_flyby_5.wss",
-			2.2387211,
-			1,
-			100
-		};
-		bulletFly[]=
-		{
-			"bulletFly1",
-			0.2,
-			"bulletFly2",
-			0.2,
-			"bulletFly3",
-			0.2,
-			"bulletFly4",
-			0.2,
-			"bulletFly5",
-			0.2
-		};
 		soundSetBulletFly[]=
 		{
-			"IDA_plasma_bullet_flyby_soundSet"
+			"3AS_Plasma_Flyby_SoundSet"
 		};
 		supersoniccracknear[]={};
 		supersoniccrackfar[]={};
@@ -578,7 +526,7 @@ class CfgAmmo
 	{
 		// what the hell is this Ruby!!! T-15 blaster bolts have a submunition of the FST Blaster-Bolt, and if you remove it the T-15 has more damage.  However the time to live would be correct, so to counter that, I'm remaking this but with a shorter time to live.
 
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
 		ACE_damageType="plasma";
 		cartridge="";
 		lightcolor[]={0,0.30000001,1};
@@ -601,104 +549,104 @@ class CfgAmmo
 		flaresize=5;
 		tracerscale=1;
 		effectflare="FlareShell";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="IDA_ImpactEffect";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
+		ExplosionEffects="3AS_ImpactPlasma";
 		cratereffects="";
 	};
 	class FST_blasterbolt_Green: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 		hit=28; //28
 		caliber=1.6; //1.6
 	};
 	class FST_blasterbolt_Yellow: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 		hit=28; //28
 		caliber=1.6; //1.6
 	};
 	class FST_blasterbolt_Red: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 		hit=28; //28
 		caliber=1.6; //1.6
 	};
 	class FST_LV13_blasterbolt_Blue: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=50;
 		caliber=2.2;
 		coefGravity=0;
 	};
 	class FST_LV13_blasterbolt_Green: FST_LV13_blasterbolt_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 	};
 	class FST_LV13_blasterbolt_Yellow: FST_LV13_blasterbolt_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 	};
 	class FST_LV13_blasterbolt_Red: FST_LV13_blasterbolt_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 	};
 	class FST_B54_blasterbolt_Blue: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=60;
 		caliber=2.2;
 		coefGravity=0;
 	};
 	class FST_B54_blasterbolt_Green: FST_B54_blasterbolt_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 	};
 	class FST_B54_blasterbolt_Yellow: FST_B54_blasterbolt_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 	};
 	class FST_B54_blasterbolt_Red: FST_B54_blasterbolt_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 	};
 	class FST_blasterbolt_High_Blue: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=35;
-		caliber=2.2;
+		caliber=3; // 2.2
 		coefGravity=0.02;
 	};
 	class FST_blasterbolt_High_Green: FST_blasterbolt_High_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 	};
 	class FST_blasterbolt_High_Yellow: FST_blasterbolt_High_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		mmodel="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 	};
 	class FST_blasterbolt_High_Red: FST_blasterbolt_High_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 	};
 	class FST_blasterbolt_Overcharged_Blue: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=100;
 		caliber=2.2;
 		indirectHit=5;
@@ -719,47 +667,47 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_Overcharged_Green: FST_blasterbolt_Overcharged_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 	};
 	class FST_blasterbolt_Overcharged_Yellow: FST_blasterbolt_Overcharged_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 	};
 	class FST_blasterbolt_Overcharged_Red: FST_blasterbolt_Overcharged_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 		coefGravity=0.1;
 	};
 	class FST_blasterbolt_DMR_Blue: FST_blasterbolt
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=55;
 		caliber=2.2;
 		coefGravity=0.02;
 	};
 	class FST_blasterbolt_DMR_Green: FST_blasterbolt_DMR_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 	};
 	class FST_blasterbolt_DMR_Yellow: FST_blasterbolt_DMR_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 	};
 	class FST_blasterbolt_DMR_Red: FST_blasterbolt_DMR_Blue
 	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 	};	
 	class FST_blasterbolt_scatter_Blue: FST_blasterbolt
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=30;
 		submunitionAmmo="FST_blasterbolt";
 		submunitionConeType[]=
@@ -772,20 +720,20 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_scatter_Green: FST_blasterbolt_scatter_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 		submunitionAmmo="FST_blasterbolt_Green";
 	};
 	class FST_blasterbolt_scatter_Yellow: FST_blasterbolt_scatter_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 		submunitionAmmo="FST_blasterbolt_Yellow";
 	};
 	class FST_blasterbolt_scatter_Red: FST_blasterbolt_scatter_Blue
 	{
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 		submunitionAmmo="FST_blasterbolt_Red";
 	};
 	class FST_blasterbolt_scatter_flechette_Blue: FST_Blasterbolt
@@ -806,8 +754,8 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_scatter_DP23_Blue: FST_blasterbolt
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=25;
 		submunitionAmmo="FST_blasterbolt_scatter_flechette_Blue";
 		submunitionConeType[]=
@@ -820,8 +768,8 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_scatter_DP23_Green: FST_blasterbolt_Green
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 		hit=25;
 		submunitionAmmo="FST_blasterbolt_scatter_flechette_Green";
 		submunitionConeType[]=
@@ -834,8 +782,8 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_scatter_DP23_Yellow: FST_blasterbolt_Yellow
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 		hit=25;
 		submunitionAmmo="FST_blasterbolt_scatter_flechette_Yellow";
 		submunitionConeType[]=
@@ -848,8 +796,8 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_scatter_DP23_Red: FST_blasterbolt_Red
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 		hit=25;
 		submunitionAmmo="FST_blasterbolt_scatter_flechette_Red";
 		submunitionConeType[]=
@@ -862,8 +810,8 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_Underbarel_scatter_Blue: FST_blasterbolt
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		hit=10;
 		submunitionAmmo="FST_blasterbolt";
 		submunitionConeType[]=
@@ -876,26 +824,26 @@ class CfgAmmo
 	};
 	class FST_blasterbolt_Underbarel_scatter_Green: FST_blasterbolt_Underbarel_scatter_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Green_Fly";
 		submunitionAmmo="FST_blasterbolt_Green";
 	};
 	class FST_blasterbolt_Underbarel_scatter_Yellow: FST_blasterbolt_Underbarel_scatter_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Yellow_Fly";
 		submunitionAmmo="FST_blasterbolt_Yellow";
 	};
 	class FST_blasterbolt_Underbarel_scatter_Red: FST_blasterbolt_Underbarel_scatter_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Red_Fly";
 		submunitionAmmo="FST_blasterbolt_Red";
 	};
 	class FST_thermal_slug_Blue: FST_blasterbolt
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
+		mmodel="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Blue_Fly";
 		ACE_damageType="plasma";
 		hit=200;
 		indirectHit=1;
@@ -906,23 +854,23 @@ class CfgAmmo
 	};
 	class FST_thermal_slug_Green: FST_thermal_slug_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Green_Fly";
 	};
 	class FST_thermal_slug_Yellow: FST_thermal_slug_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Yellow_Fly";
 	};
 	class FST_thermal_slug_Red: FST_thermal_slug_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Red_Fly";
 	};
-	class FST_thermal_shell_LP_Blue: IDA_Blasterbolt
+	class FST_thermal_shell_LP_Blue: 3AS_PlasmaBase
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Medium_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Medium_Blue_Fly";
 		ACE_damageType="plasma";
 		hit=120; // Initial hit before submunitions trigger
 		indirectHit=1;
@@ -941,18 +889,18 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_LP_Green: FST_thermal_shell_LP_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Medium_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Medium_Green_Fly";
 	};
 	class FST_thermal_shell_LP_Yellow: FST_thermal_shell_LP_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Medium_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Medium_Yellow_Fly";
 	};
 	class FST_thermal_shell_LP_Red: FST_thermal_shell_LP_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Medium_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Medium_Red_Fly";
 		hit=30;
 		caliber=2;
 		submunitionAmmo="FST_blasterbolt"; // Submunition ammo class
@@ -966,8 +914,8 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_T15_Blue: FST_blasterbolt
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Blue_Fly";
+		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Blue_Fly";
 		ACE_damageType="plasma";
 		timeToLive = 0.9;
 		hit=400;
@@ -978,18 +926,18 @@ class CfgAmmo
 	};
 	class FST_thermal_shell_T15_Green: FST_thermal_shell_T15_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Green_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_green.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Green_Fly";
 	};
 	class FST_thermal_shell_T15_Yellow: FST_thermal_shell_T15_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Yellow_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_yellow.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Yellow_Fly";
 	};
 	class FST_thermal_shell_T15_Red: FST_thermal_shell_T15_Blue
 	{
-		model="Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
-		effectfly="IDA_BlasterBoltGlow_Large_Red_Fly";
+		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
+		effectfly="3AS_PlasmaBolt_Large_Red_Fly";
 	};
 	class GrenadeHand_stone;
 	class G_40mm_HE;
@@ -999,7 +947,7 @@ class CfgAmmo
 		indirectHitRange=5;
 		indirectHit=30;
 		effectflare="FlareShell";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		fuseDistance=7;
 		ExplosionEffects="GrenadeExplosion";
 		CraterEffects="GrenadeCrater";
@@ -1013,7 +961,7 @@ class CfgAmmo
 		indirectHitRange=5;
 		indirectHit=30;
 		effectflare="FlareShell";
-		effectfly="IDA_BlasterBoltGlow_Blue_Fly";
+		effectfly="3AS_PlasmaBolt_Blue_Fly";
 		ExplosionEffects="GrenadeExplosion";
 		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};

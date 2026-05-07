@@ -44,10 +44,10 @@ if (FST_HC_DebugLogging) then {
     diag_log format ["[FST_HCSpawn] Zeus group accepted from owner %1: %2 (%3 units), current owner %4", _zeusOwner, _group, count units _group, _ownerID];
 };
 
-// Keep the 'instant Zeus placement' feel. We do not clone/delete; we wait a tiny
-// settle delay, then try setGroupOwner immediately. If the engine refuses, the
-// group falls back to the normal batched queue.
-if (missionNamespace getVariable ["FST_HC_ZeusImmediateTransfer", true]) then {
+// In setGroupOwner Zeus mode, wait a tiny settle delay, then try immediate
+// transfer. If the engine refuses, fall back to the normal batched queue.
+private _zeusMode = missionNamespace getVariable ["FST_HC_ZeusMode", "instant"];
+if (_zeusMode isEqualTo "transfer") then {
     FST_HC_ZeusImmediateRequests = (missionNamespace getVariable ["FST_HC_ZeusImmediateRequests", 0]) + 1;
 
     [{

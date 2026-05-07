@@ -1,3 +1,2 @@
-// This Postinit dedicated to Tooka
-
-call fst_droidstance_fnc_init;
+// Intentionally empty.
+// PostInit is registered in config.cpp through Extended_PostInit_EventHandlers.

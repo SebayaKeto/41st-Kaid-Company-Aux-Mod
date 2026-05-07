@@ -1,162 +1,183 @@
 // FST_HCSpawn — preInit
-// All CBA settings + template definitions
+// CBA settings + defaults + template definitions
 
 // ============================================================
-// HC SYSTEM SETTINGS
+// HIDDEN DEFAULTS / INTERNAL TUNING
+// ============================================================
+// These are intentionally not all exposed in CBA. Fewer visible settings means
+// fewer bad live-op combinations, while mission/server code can still override
+// them before use if needed.
+
+missionNamespace setVariable ["FST_HC_TransferBatchSize", missionNamespace getVariable ["FST_HC_TransferBatchSize", 4]];
+missionNamespace setVariable ["FST_HC_TransferInterval", missionNamespace getVariable ["FST_HC_TransferInterval", 2.0]];
+// Catch-all is a safety net for third-party/server-created AI. Zeus/module spawns
+// are already tracked directly, so this does not need to sweep allGroups often.
+missionNamespace setVariable ["FST_HC_CatchAllInterval", missionNamespace getVariable ["FST_HC_CatchAllInterval", 30]];
+missionNamespace setVariable ["FST_HC_RecountInterval", missionNamespace getVariable ["FST_HC_RecountInterval", 60]];
+missionNamespace setVariable ["FST_HC_CleanupInterval", missionNamespace getVariable ["FST_HC_CleanupInterval", 20]];
+missionNamespace setVariable ["FST_HC_ZeusTransferSettleDelay", missionNamespace getVariable ["FST_HC_ZeusTransferSettleDelay", 0.2]];
+// Delay Zeus instant-clone snapshots briefly so modded unit loadouts/weapon EHs can settle.
+missionNamespace setVariable ["FST_HC_ZeusLoadoutSnapshotDelay", missionNamespace getVariable ["FST_HC_ZeusLoadoutSnapshotDelay", 0.75]];
+missionNamespace setVariable ["FST_HC_ZeusLegacyFallback", missionNamespace getVariable ["FST_HC_ZeusLegacyFallback", false]];
+missionNamespace setVariable ["FST_HC_GarrisonRadius", missionNamespace getVariable ["FST_HC_GarrisonRadius", 100]];
+missionNamespace setVariable ["FST_HC_PatrolRadius", missionNamespace getVariable ["FST_HC_PatrolRadius", 150]];
+missionNamespace setVariable ["FST_HC_TriggerActivationDist", missionNamespace getVariable ["FST_HC_TriggerActivationDist", 800]];
+missionNamespace setVariable ["FST_HC_FillGarrisonSingleActive", true];
+missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8]];
+missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
+// Zeus instant-clone cleanup: hide/freeze original units immediately, then delete after a short grace period.
+// This reduces network "Object not found" churn from deleting newly Zeus-created client-owned units too quickly.
+missionNamespace setVariable ["FST_HC_ZeusHideOriginalBeforeDelete", missionNamespace getVariable ["FST_HC_ZeusHideOriginalBeforeDelete", true]];
+missionNamespace setVariable ["FST_HC_ZeusOriginalDeleteDelay", missionNamespace getVariable ["FST_HC_ZeusOriginalDeleteDelay", 2.0]];
+
+// Lightweight diagnostics counters. These are only reported through status/debug logs;
+// they do not run any extra per-frame work.
+missionNamespace setVariable ["FST_HC_ZeusOriginalSuppressions", missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0]];
+missionNamespace setVariable ["FST_HC_ZeusOriginalDeletes", missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]];
+missionNamespace setVariable ["FST_HC_CleanupGroupsDeleted", missionNamespace getVariable ["FST_HC_CleanupGroupsDeleted", 0]];
+missionNamespace setVariable ["FST_HC_CleanupUnitsDeleted", missionNamespace getVariable ["FST_HC_CleanupUnitsDeleted", 0]];
+missionNamespace setVariable ["FST_HC_CleanupVehiclesDeleted", missionNamespace getVariable ["FST_HC_CleanupVehiclesDeleted", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonRequests", missionNamespace getVariable ["FST_HC_ReapplyGarrisonRequests", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonSuccesses", missionNamespace getVariable ["FST_HC_ReapplyGarrisonSuccesses", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonTimeouts", missionNamespace getVariable ["FST_HC_ReapplyGarrisonTimeouts", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonStale", missionNamespace getVariable ["FST_HC_ReapplyGarrisonStale", 0]];
+
+// Backward-compatible defaults for older saved CBA profiles / scripts.
+missionNamespace setVariable ["FST_HC_InterceptEnabled", missionNamespace getVariable ["FST_HC_InterceptEnabled", true]];
+missionNamespace setVariable ["FST_HC_ZeusInstantClone", missionNamespace getVariable ["FST_HC_ZeusInstantClone", true]];
+missionNamespace setVariable ["FST_HC_ZeusImmediateTransfer", missionNamespace getVariable ["FST_HC_ZeusImmediateTransfer", false]];
+missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamespace getVariable ["FST_HC_BlockFillGarrisonWithoutHC", true]];
+
+// ============================================================
+// CORE SETTINGS
 // ============================================================
 
 [
     "FST_HC_Enabled", "CHECKBOX",
-    ["Enable HC System", "Enable headless client offloading"],
-    ["FST HC Spawn", "HC System"], true, true, {}, true
+    ["Enable HC System", "Enable headless client offloading."],
+    ["FST HC Spawn", "Core"], true, true, {}, true
 ] call CBA_fnc_addSetting;
 
 [
-    "FST_HC_TransferBatchSize", "SLIDER",
-    ["Transfer Batch Size", "Groups transferred per batch cycle. Higher = faster but more server load."],
-    ["FST HC Spawn", "HC System"], [1, 20, 5, 0], true, {}, false
+    "FST_HC_ZeusMode", "LIST",
+    ["Zeus Placement Mode", "Instant clone/replace is the live-op default. setGroupOwner is cleaner but can take several seconds. Off leaves Zeus-placed AI on the server."],
+    ["FST HC Spawn", "Core"],
+    [["instant", "transfer", "off"], ["Instant clone/replace", "setGroupOwner transfer", "Off"], 0],
+    true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
-    "FST_HC_TransferInterval", "SLIDER",
-    ["Transfer Interval", "Seconds between transfer batch cycles."],
-    ["FST HC Spawn", "HC System"], [1, 30, 3, 0], true, {}, false
+    "FST_HC_AICap", "SLIDER",
+    ["AI Cap", "Max tracked AI units across all HCs. 0 = no cap. For 150-player ops, keep this conservative."],
+    ["FST HC Spawn", "Core"], [0, 3000, 900, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
-    "FST_HC_CatchAllInterval", "SLIDER",
-    ["Catch-All Scan Interval", "Seconds between scans for untracked groups. Higher = less server load."],
-    ["FST HC Spawn", "HC System"], [5, 60, 10, 0], true, {}, false
+    "FST_HC_BlockHeavySpawnsWithoutHC", "CHECKBOX",
+    ["Block Heavy Spawns Without HCs", "Prevents Fill Garrison, Frontline, and QRF mass spawns from falling back onto the dedicated server if all HCs are disconnected."],
+    ["FST HC Spawn", "Core"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
-    "FST_HC_PreserveLoadouts", "CHECKBOX",
-    ["Preserve Loadouts on Transfer", "Legacy setting retained for saved CBA profiles. Loadout preservation is now always enforced by the script."],
-    ["FST HC Spawn", "HC System"], true, true, {}, false
+    "FST_HC_EmergencyRedistributeDelay", "SLIDER",
+    ["HC Death Redistribute Delay", "Seconds between group transfers after an HC disconnects. Higher is safer during live ops."],
+    ["FST HC Spawn", "Core"], [0.2, 2, 1.0, 2], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
     "FST_HC_DebugLogging", "CHECKBOX",
     ["Verbose RPT Logging", "Extra HC spawn/transfer logging. Leave off during live ops unless debugging."],
-    ["FST HC Spawn", "HC System"], false, true, {}, false
+    ["FST HC Spawn", "Core"], false, true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
-// BLACKLISTS
+// ZEUS / BLACKLIST
 // ============================================================
+
+[
+    "FST_HC_ZeusHoldEnabled", "CHECKBOX",
+    ["Enable Zeus Hold", "Allow Zeus to pull groups from HC to local/server ownership with Shift+F2."],
+    ["FST HC Spawn", "Zeus / Blacklist"], true, true, {}, false
+] call CBA_fnc_addSetting;
 
 [
     "FST_HC_BlacklistNames", "EDITBOX",
     ["Blacklisted Names", "Variable names to exclude from offloading. Format: name1,name2,..."],
-    ["FST HC Spawn", "Blacklist"], "ignore", true, {}, false
+    ["FST HC Spawn", "Zeus / Blacklist"], "ignore", true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
     "FST_HC_BlacklistTypes", "EDITBOX",
     ["Blacklisted Types", "Classnames to exclude. Format: type1,type2,..."],
-    ["FST HC Spawn", "Blacklist"], "", true, {}, false
+    ["FST HC Spawn", "Zeus / Blacklist"], "", true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
     "FST_HC_BlacklistVehicles", "CHECKBOX",
-    ["Blacklist All Vehicles", "Prevent offloading groups in vehicles."],
-    ["FST HC Spawn", "Blacklist"], false, true, {}, false
+    ["Blacklist All Vehicles", "Prevent offloading groups currently in vehicles."],
+    ["FST HC Spawn", "Zeus / Blacklist"], false, true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
-// ZEUS SETTINGS
+// CLEANUP
 // ============================================================
-
-[
-    "FST_HC_InterceptEnabled", "CHECKBOX",
-    ["Intercept Zeus Placement", "Zeus-placed groups automatically move to HC."],
-    ["FST HC Spawn", "Zeus"], true, true, {}, true
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_ZeusInstantClone", "CHECKBOX",
-    ["Instant Zeus Clone/Replace", "For Zeus placement, immediately serialize the placed group, delete the Zeus-created original, and recreate it directly on the least-loaded HC. This is the fastest path and matches the original instant behavior."],
-    ["FST HC Spawn", "Zeus"], true, true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_ZeusImmediateTransfer", "CHECKBOX",
-    ["Immediate Zeus setGroupOwner Transfer", "Alternative safer mode: transfer the real Zeus-placed group with setGroupOwner instead of clone/replacing it. Cleaner, but can take several seconds on some servers."],
-    ["FST HC Spawn", "Zeus"], false, true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_ZeusTransferSettleDelay", "SLIDER",
-    ["Zeus Transfer Settle Delay", "Small delay, in seconds, before transferring a newly Zeus-placed group. 0.15-0.35 is usually enough for the engine to finish creating the group."],
-    ["FST HC Spawn", "Zeus"], [0, 2, 0.2, 2], true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_ZeusLegacyFallback", "CHECKBOX",
-    ["Legacy Clone Fallback", "If immediate setGroupOwner fails, fall back to the old delete-and-respawn-on-HC method. Leave off unless testing proves direct transfer does not work for your Zeus placement case."],
-    ["FST HC Spawn", "Zeus"], false, true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_ZeusHoldEnabled", "CHECKBOX",
-    ["Enable Zeus Hold", "Allow Zeus to pull groups from HC to local machine."],
-    ["FST HC Spawn", "Zeus"], true, true, {}, false
-] call CBA_fnc_addSetting;
-
-// ============================================================
-// SPAWN SETTINGS
-// ============================================================
-
-[
-    "FST_HC_GarrisonRadius", "SLIDER",
-    ["Garrison Radius", "LAMBS garrison radius for quick-spawn."],
-    ["FST HC Spawn", "Quick Spawn"], [25, 300, 100, 0], true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_PatrolRadius", "SLIDER",
-    ["Patrol Radius", "LAMBS patrol radius for quick-spawn."],
-    ["FST HC Spawn", "Quick Spawn"], [25, 500, 150, 0], true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_TriggerActivationDist", "SLIDER",
-    ["Trigger Activation Distance", "Distance for baseline objective spawns."],
-    ["FST HC Spawn", "Objectives"], [100, 2000, 800, 0], true, {}, false
-] call CBA_fnc_addSetting;
-
-// ============================================================
-// PERFORMANCE / SCALE SETTINGS
-// ============================================================
-
-[
-    "FST_HC_AICap", "SLIDER",
-    ["AI Cap", "Max total AI units across all HCs. 0 = no cap. Prevents spawning beyond this limit."],
-    ["FST HC Spawn", "Performance"], [0, 3000, 1000, 0], true, {}, false
-] call CBA_fnc_addSetting;
 
 [
     "FST_HC_DespawnEnabled", "CHECKBOX",
-    ["Enable Despawn Cleanup", "Delete AI groups after players have engaged and left the area."],
-    ["FST HC Spawn", "Performance"], true, true, {}, false
+    ["Enable Despawn Cleanup", "Delete tracked AI groups after players have engaged and then left the area."],
+    ["FST HC Spawn", "Cleanup"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
     "FST_HC_DespawnEngageRadius", "SLIDER",
-    ["Engagement Radius", "Ground players must come within this range to activate a group for despawn eligibility."],
-    ["FST HC Spawn", "Performance"], [50, 1000, 300, 0], true, {}, false
+    ["Engagement Radius", "Ground players must come within this range before a group becomes eligible for later despawn."],
+    ["FST HC Spawn", "Cleanup"], [50, 1000, 300, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
     "FST_HC_DespawnRadius", "SLIDER",
     ["Despawn Radius", "After activation, groups start the stale timer when no ground players are within this range."],
-    ["FST HC Spawn", "Performance"], [200, 3000, 1000, 0], true, {}, false
+    ["FST HC Spawn", "Cleanup"], [200, 3000, 1000, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
     "FST_HC_DespawnTimer", "SLIDER",
-    ["Despawn Timer", "Seconds with no ground players nearby before an activated group is deleted. Default 600 (10 min)."],
-    ["FST HC Spawn", "Performance"], [60, 1800, 600, 0], true, {}, false
+    ["Despawn Timer", "Seconds with no ground players nearby before an activated group is deleted."],
+    ["FST HC Spawn", "Cleanup"], [60, 1800, 600, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+// ============================================================
+// FILL GARRISON SAFETY
+// ============================================================
+
+[
+    "FST_HC_FillGarrisonMaxUnits", "SLIDER",
+    ["Max Units Per Fill", "Hard cap for one Fill Garrison click. Large bases are sampled instead of fully filled."],
+    ["FST HC Spawn", "Fill Garrison"], [24, 600, 160, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_FillGarrisonMaxDuration", "SLIDER",
+    ["Hard Timeout", "Maximum seconds a Fill Garrison job may keep dispatching batches before it stops."],
+    ["FST HC Spawn", "Fill Garrison"], [30, 120, 60, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_FillGarrisonMaxScanPositions", "SLIDER",
+    ["Scan Position Cap", "Maximum candidate positions collected from one scan before sampling/filtering."],
+    ["FST HC Spawn", "Fill Garrison"], [240, 2400, 700, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_FillGarrisonCooldown", "SLIDER",
+    ["Cooldown", "Seconds after a Fill Garrison job finishes before another one may start."],
+    ["FST HC Spawn", "Fill Garrison"], [0, 60, 20, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_FillGarrisonBatchDelay", "SLIDER",
+    ["Batch Delay", "Seconds between Fill Garrison batches. Higher is gentler on the server."],
+    ["FST HC Spawn", "Fill Garrison"], [0.3, 2, 1.0, 2], true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -212,5 +233,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "WATERFIX_INSTANT_RESTORE_2026-05-03", true];
-diag_log "[FST_HCSpawn] preInit complete - WATERFIX_INSTANT_RESTORE_2026-05-03";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_REAPPLY_DIAGNOSTICS_FIX_2026-05-07", true];
+diag_log "[FST_HCSpawn] preInit complete - PREOP_REAPPLY_DIAGNOSTICS_FIX_2026-05-07";

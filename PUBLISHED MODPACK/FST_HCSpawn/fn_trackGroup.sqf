@@ -15,6 +15,9 @@ if (_hcIndex < 0 || {_hcIndex >= count FST_HC_Ids}) exitWith {};
 private _unitCount = count units _group;
 if (_unitCount == 0) exitWith {};
 
+if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
+FST_HC_TrackedGroups pushBackUnique _group;
+
 private _existing = _group getVariable ["FST_HC_tracked", []];
 private _wasTracked = count _existing > 0;
 private _oldIdx = if (_wasTracked) then { _existing select 0 } else { -1 };

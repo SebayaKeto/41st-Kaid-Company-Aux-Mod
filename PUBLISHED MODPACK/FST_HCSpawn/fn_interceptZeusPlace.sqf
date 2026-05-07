@@ -6,7 +6,8 @@
 
 params ["_curator", "_group"];
 
-if (!FST_HC_InterceptEnabled) exitWith {};
+private _zeusMode = missionNamespace getVariable ["FST_HC_ZeusMode", "instant"];
+if (_zeusMode isEqualTo "off") exitWith {};
 if (isNull _group) exitWith {};
 
 // No HCs connected — leave units where Zeus placed them.
@@ -15,6 +16,11 @@ if (count _hcIds == 0) exitWith {};
 
 if (count units _group == 0) exitWith {};
 if (isPlayer leader _group) exitWith {};
+private _units = units _group;
+
+// Respect blacklist before instant clone. The instant path deletes the original
+// client-side, so we must not bypass blacklist settings here.
+if ([_group] call FST_HCSpawn_fnc_isBlacklisted) exitWith {};
 
 // Prevent duplicate CuratorGroupPlaced handlers or rapid retries from handling
 // the same Zeus placement twice.
@@ -23,55 +29,71 @@ if (_group getVariable ["FST_HC_interceptQueued", false]) exitWith {};
 if (count (_group getVariable ["FST_HC_tracked", []]) > 0) exitWith {};
 _group setVariable ["FST_HC_interceptQueued", true, true];
 
-// FAST PATH: legacy-style instant clone/replace. This avoids waiting for
-// setGroupOwner to settle and recreates the group directly on an HC.
-// HARD-RESTORED FAST PATH: always use instant clone/replace for Zeus placement.
-// This intentionally ignores the slower setGroupOwner transfer setting.
-if (true) exitWith {
-    private _units = units _group;
-    private _side = side _group;
-    private _leader = leader _group;
-    private _leaderVeh = vehicle _leader;
-    private _unitClasses = [];
-    private _unitData = [];
-    private _vehData = [];
-    private _origin = getPosATL _leader;
+// Vehicle groups are not safe to instant-clone: the old clone path only captured
+// the leader vehicle and would lose multi-vehicle groups, custom cargo, crew state,
+// and some modded vehicle setup. Preserve them with setGroupOwner instead.
+private _hasVehicle = (_units findIf { vehicle _x != _x }) >= 0;
+if ((_zeusMode isEqualTo "instant") && {_hasVehicle}) exitWith {
+    ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
+};
 
-    if (!isNull _leaderVeh && {_leaderVeh != _leader}) then {
-        _vehData = [typeOf _leaderVeh, getPosATL _leaderVeh, getDir _leaderVeh, vectorUp _leaderVeh];
-        _origin = getPosATL _leaderVeh;
-    } else {
+// FAST PATH: instant clone/replace. We delay the snapshot slightly so
+// modded units have time to finish post-create weapon/loadout assignment. This
+// fixes the rapid-spawn race where getUnitLoadout could capture an empty weapon
+// array and the HC clone would be forced unarmed.
+if (_zeusMode isEqualTo "instant") exitWith {
+    private _snapshotDelay = missionNamespace getVariable ["FST_HC_ZeusLoadoutSnapshotDelay", 0.75];
+
+    [{
+        params ["_group"];
+
+        if (isNull _group) exitWith {};
+        if (count units _group == 0) exitWith {
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+        };
+        if (isPlayer leader _group) exitWith {
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+        };
+
+        // If HCs disappeared while we waited, leave the original Zeus group alive.
+        private _hcIds = missionNamespace getVariable ["FST_HC_Ids", []];
+        if (count _hcIds == 0) exitWith {
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+        };
+
+        private _units = units _group;
+        private _hasVehicle = (_units findIf { vehicle _x != _x }) >= 0;
+        if (_hasVehicle) exitWith {
+            ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
+        };
+
+        private _side = side _group;
+        private _leader = leader _group;
+        private _unitClasses = [];
+        private _unitData = [];
+        private _origin = getPosATL _leader;
+
         {
             private _uPos = getPosATL _x;
             private _rel = _uPos vectorDiff _origin;
             private _entry = [typeOf _x, _rel, getDir _x, rank _x, skill _x, unitPos _x];
 
-            // Mandatory: preserve exact Zeus/unit loadout during instant clone.
+            // Preserve exact Zeus/unit loadout, but only after the unit has had
+            // a short time to settle. The HC side also validates this snapshot
+            // before applying it, so a still-bad empty loadout cannot strip weapons.
             _entry pushBack (getUnitLoadout _x);
 
             _unitClasses pushBack (typeOf _x);
             _unitData pushBack _entry;
         } forEach _units;
-    };
 
-    // Route replacement to server, which chooses the least-loaded HC and orders
-    // that HC to create the group locally.
-    ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, _vehData, _unitData, clientOwner]] call CBA_fnc_serverEvent;
+        private _originalPayload = [_group, _units, objNull];
 
-    // Remove the Zeus-created original immediately, matching the old behavior.
-    // Mark originals so any delayed spawn-damage scripts can abort cleanly.
-    if (count _vehData > 0) then {
-        { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _leaderVeh;
-        { _leaderVeh deleteVehicleCrew _x; } forEach crew _leaderVeh;
-        deleteVehicle _leaderVeh;
-    } else {
-        { _x setVariable ["FST_skipSpawnDamage", true, true]; deleteVehicle _x; } forEach _units;
-    };
-    _group deleteGroupWhenEmpty true;
+        ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, [], _unitData, clientOwner, _originalPayload]] call CBA_fnc_serverEvent;
 
-    missionNamespace setVariable ["FST_HC_ZeusInstantCloneClientCount", (missionNamespace getVariable ["FST_HC_ZeusInstantCloneClientCount", 0]) + 1];
+        missionNamespace setVariable ["FST_HC_ZeusInstantCloneClientCount", (missionNamespace getVariable ["FST_HC_ZeusInstantCloneClientCount", 0]) + 1];
+    }, [_group], _snapshotDelay] call CBA_fnc_waitAndExecute;
 };
 
-// SLOW/CLEAN PATH: transfer the actual Zeus-created group. Kept for testing,
-// but not the recommended live-op default for this unit.
+// SLOW/CLEAN PATH: transfer the actual Zeus-created group.
 ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
