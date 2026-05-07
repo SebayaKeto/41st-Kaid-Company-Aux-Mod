@@ -79,6 +79,7 @@ class CfgMusic
 		"FST_Halo2_MjolnirMix",
 		"FST_HaloReach_DeadAhead",
 		"FST_Destiny_TheLastArray",
+		"FST_Destiny_Immortal",
 		"FST_Destiny_UntoldLegends",
 		"FST_TFFOC_MainTheme",
 		"FST_WT_WaltzoftheTornado",		
@@ -159,6 +160,7 @@ class CfgMusic
 		"FST_Clair_NosVies",
 		"FST_Destiny_TheList",
 		"FST_Destiny_ClashOfWills",
+		"FST_PHM_Fishing",
 	
 		
 		//Misc tracks
@@ -748,6 +750,30 @@ class CfgMusic
 			1
 		};
 		duration="415";
+	};
+	class FST_PHM_Fishing
+	{
+		name="(Project Hail Mary) Time Go Fishing";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\PHM_Fishing.ogg",
+			1,
+			1
+		};
+		duration="431";
+	};
+	class FST_Destiny_Immortal
+	{
+		name="(Destiny) The Immortal";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Destiny_Immortal.ogg",
+			1,
+			1
+		};
+		duration="231";
 	};
 	class FST_Destiny_TheList
 	{
