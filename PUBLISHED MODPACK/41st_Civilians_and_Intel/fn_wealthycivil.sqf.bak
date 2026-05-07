@@ -3,8 +3,6 @@ params ["_unit"];
 
 if (!local _unit) exitWith {}; 
 
-[_unit, "Civilian"] remoteExec ["setName", 0, _unit];
-
 [_unit] spawn {
 
 params ["_unit"];
@@ -434,6 +432,7 @@ private _chosenload = selectRandom (_chosen select 1);
 
 [_unit, _chosenhead] remoteExec ["setFace", 0, _unit];
 [_unit, "ACE_NoVoice"] remoteExec ["setSpeaker", 0, _unit];
+[_unit, "Civilian"] remoteExec ["setName", 0, _unit];
 _unit setUnitLoadout _chosenload;
 
 

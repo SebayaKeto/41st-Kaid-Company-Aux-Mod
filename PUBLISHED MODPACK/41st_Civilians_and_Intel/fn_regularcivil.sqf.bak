@@ -3,8 +3,6 @@ params ["_unit"];
 
 if (!local _unit) exitWith {}; 
 
-[_unit, "Civilian"] remoteExec ["setName", 0, _unit];
-
 [_unit] spawn {
 
 params ["_unit"];
@@ -180,7 +178,7 @@ private _list_41civintelitems = [
 	"FST_CivFlimsiFile_Law", 0.05,
 	"FST_CivFlimsiFile_Transport", 0.05,
 	"FST_CivFlimsiFile_Record", 0.1,
-	"", 0.2
+	"", 0.05
 
 ];
 
@@ -578,6 +576,7 @@ private _chosenload = selectRandom (_chosen select 1);
 
 [_unit, _chosenhead] remoteExec ["setFace", 0, _unit];
 [_unit, "ACE_NoVoice"] remoteExec ["setSpeaker", 0, _unit];
+[_unit, "Civilian"] remoteExec ["setName", 0, _unit];
 _unit setUnitLoadout _chosenload;
 
 
