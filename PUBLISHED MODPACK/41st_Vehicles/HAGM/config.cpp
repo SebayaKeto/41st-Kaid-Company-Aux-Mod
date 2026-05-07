@@ -191,9 +191,9 @@ class CfgVehicles
 	class FST_HAGM: Tank_F
 	{
 		author="Daara";
-		scope=1;
-		scopecurator=0;
-		displayname="[41st] HAG-M Artillery Tank (OLD)";
+		scope=2;
+		scopecurator=2;
+		displayname="[41st] HAG-M Artillery Tank";
 		model="3AS\3AS_HAGM\3AS_HAGM.p3d";
 		icon="3as\3AS_HAGM\data\ui\HAGM_top_ca.paa";
 		side=0;
