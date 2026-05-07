@@ -57,7 +57,7 @@ if (count _vehData > 0) then {
             if (_unitPos != "AUTO") then { _unit setUnitPos _unitPos; };
             if (count _x > 6) then {
                 private _loadout = _x select 6;
-                [_unit, _loadout, _class, "instantClone/createGroupLocal"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe;
+                if (count _loadout > 0) then { _unit setUnitLoadout _loadout; };
             };
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitData;

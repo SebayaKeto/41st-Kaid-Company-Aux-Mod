@@ -37,62 +37,92 @@ if ((_zeusMode isEqualTo "instant") && {_hasVehicle}) exitWith {
     ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
 };
 
-// FAST PATH: instant clone/replace. We delay the snapshot slightly so
-// modded units have time to finish post-create weapon/loadout assignment. This
-// fixes the rapid-spawn race where getUnitLoadout could capture an empty weapon
-// array and the HC clone would be forced unarmed.
+// FAST PATH: instant clone/replace. This avoids waiting for setGroupOwner
+// to settle and recreates the group directly on an HC. The server now validates
+// cap/HC availability before telling this client to delete the original.
 if (_zeusMode isEqualTo "instant") exitWith {
-    private _snapshotDelay = missionNamespace getVariable ["FST_HC_ZeusLoadoutSnapshotDelay", 0.75];
+    private _side = side _group;
+    private _leader = leader _group;
+    private _leaderVeh = vehicle _leader;
+    private _unitClasses = [];
+    private _unitData = [];
+    private _vehData = [];
+    private _origin = getPosATL _leader;
 
-    [{
-        params ["_group"];
-
-        if (isNull _group) exitWith {};
-        if (count units _group == 0) exitWith {
-            _group setVariable ["FST_HC_interceptQueued", nil, true];
-        };
-        if (isPlayer leader _group) exitWith {
-            _group setVariable ["FST_HC_interceptQueued", nil, true];
-        };
-
-        // If HCs disappeared while we waited, leave the original Zeus group alive.
-        private _hcIds = missionNamespace getVariable ["FST_HC_Ids", []];
-        if (count _hcIds == 0) exitWith {
-            _group setVariable ["FST_HC_interceptQueued", nil, true];
-        };
-
-        private _units = units _group;
-        private _hasVehicle = (_units findIf { vehicle _x != _x }) >= 0;
-        if (_hasVehicle) exitWith {
-            ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
-        };
-
-        private _side = side _group;
-        private _leader = leader _group;
-        private _unitClasses = [];
-        private _unitData = [];
-        private _origin = getPosATL _leader;
-
+    if (!isNull _leaderVeh && {_leaderVeh != _leader}) then {
+        _vehData = [typeOf _leaderVeh, getPosATL _leaderVeh, getDir _leaderVeh, vectorUp _leaderVeh];
+        _origin = getPosATL _leaderVeh;
+    } else {
         {
             private _uPos = getPosATL _x;
             private _rel = _uPos vectorDiff _origin;
             private _entry = [typeOf _x, _rel, getDir _x, rank _x, skill _x, unitPos _x];
 
-            // Preserve exact Zeus/unit loadout, but only after the unit has had
-            // a short time to settle. The HC side also validates this snapshot
-            // before applying it, so a still-bad empty loadout cannot strip weapons.
+            // Mandatory: preserve exact Zeus/unit loadout during instant clone.
             _entry pushBack (getUnitLoadout _x);
 
             _unitClasses pushBack (typeOf _x);
             _unitData pushBack _entry;
         } forEach _units;
+    };
 
-        private _originalPayload = [_group, _units, objNull];
+    // Route replacement to server, which chooses the least-loaded HC and orders
+    // that HC to create the group locally.
+    private _originalVehicle = if (count _vehData > 0) then { _leaderVeh } else { objNull };
+    private _originalPayload = [_group, _units, _originalVehicle];
 
-        ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, [], _unitData, clientOwner, _originalPayload]] call CBA_fnc_serverEvent;
+    ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, _vehData, _unitData, clientOwner, _originalPayload]] call CBA_fnc_serverEvent;
 
-        missionNamespace setVariable ["FST_HC_ZeusInstantCloneClientCount", (missionNamespace getVariable ["FST_HC_ZeusInstantCloneClientCount", 0]) + 1];
-    }, [_group], _snapshotDelay] call CBA_fnc_waitAndExecute;
+    // UX fix: hide/freeze the original immediately so Zeus sees the old fast
+    // "blink out" behavior. The server still decides whether the clone is valid.
+    // If cap/no-HC validation rejects the clone, the decision event restores this
+    // original group instead of deleting it.
+    private _suppressObjects = [];
+    if (!isNull _originalVehicle) then {
+        _suppressObjects pushBackUnique _originalVehicle;
+        { _suppressObjects pushBackUnique _x; } forEach crew _originalVehicle;
+    } else {
+        { _suppressObjects pushBackUnique _x; } forEach _units;
+    };
+
+    {
+        if (!isNull _x) then {
+            _x setVariable ["FST_HC_originalSuppressed", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x hideObjectGlobal true;
+            _x enableSimulationGlobal false;
+        };
+    } forEach _suppressObjects;
+
+    // Failsafe: if the server never answers, restore the hidden original rather
+    // than leaving a Zeus-spawned group invisible forever.
+    [{
+        params ["_payload"];
+        _payload params ["_group", "_units", "_vehicle"];
+        if (isNull _group || {!(_group getVariable ["FST_HC_interceptQueued", false])}) exitWith {};
+
+        private _restoreObjects = [];
+        if (!isNull _vehicle) then {
+            _restoreObjects pushBackUnique _vehicle;
+            { _restoreObjects pushBackUnique _x; } forEach crew _vehicle;
+        } else {
+            { _restoreObjects pushBackUnique _x; } forEach _units;
+        };
+
+        {
+            if (!isNull _x) then {
+                _x hideObjectGlobal false;
+                _x enableSimulationGlobal true;
+                _x setVariable ["FST_HC_originalSuppressed", nil, true];
+            };
+        } forEach _restoreObjects;
+
+        _group setVariable ["FST_HC_interceptQueued", nil, true];
+        _group setVariable ["FST_HC_pendingTransfer", nil];
+        systemChat "[FST] HC clone did not confirm in time — restored original Zeus group.";
+    }, [_originalPayload], 8] call CBA_fnc_waitAndExecute;
+
+    missionNamespace setVariable ["FST_HC_ZeusInstantCloneClientCount", (missionNamespace getVariable ["FST_HC_ZeusInstantCloneClientCount", 0]) + 1];
 };
 
 // SLOW/CLEAN PATH: transfer the actual Zeus-created group.

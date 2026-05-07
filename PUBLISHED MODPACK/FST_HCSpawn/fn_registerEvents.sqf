@@ -81,31 +81,6 @@ if (isServer) then {
     ["FST_HC_evt_debugSnapshotRequest", {
         _this call FST_HCSpawn_fnc_requestDebugSnapshot;
     }] call CBA_fnc_addEventHandler;
-
-    // Lightweight diagnostics counters reported by Zeus clients / HCs.
-    ["FST_HC_evt_objectChurnDiag", {
-        params [["_kind", ""], ["_count", 0]];
-        private _var = switch (_kind) do {
-            case "suppressed": { "FST_HC_ZeusOriginalSuppressions" };
-            case "deleted": { "FST_HC_ZeusOriginalDeletes" };
-            default { "" };
-        };
-        if (_var isEqualTo "") exitWith {};
-        missionNamespace setVariable [_var, (missionNamespace getVariable [_var, 0]) + (_count max 0)];
-    }] call CBA_fnc_addEventHandler;
-
-    ["FST_HC_evt_reapplyGarrisonDiag", {
-        params [["_state", ""]];
-        private _var = switch (_state) do {
-            case "request": { "FST_HC_ReapplyGarrisonRequests" };
-            case "success": { "FST_HC_ReapplyGarrisonSuccesses" };
-            case "timeout": { "FST_HC_ReapplyGarrisonTimeouts" };
-            case "stale": { "FST_HC_ReapplyGarrisonStale" };
-            default { "" };
-        };
-        if (_var isEqualTo "") exitWith {};
-        missionNamespace setVariable [_var, (missionNamespace getVariable [_var, 0]) + 1];
-    }] call CBA_fnc_addEventHandler;
 };
 
 // ============================================================
@@ -124,14 +99,9 @@ if (isServer) then {
     [{
         params ["_payload"];
         {
-            _x params ["_unit", "_loadout", ["_class", ""]];
-            if (_class isEqualTo "" && {!isNull _unit}) then { _class = typeOf _unit; };
-            if (!isNull _unit && {local _unit} && {count _loadout > 0}) then {
-                private _needsRestore = (uniform _unit isEqualTo "") ||
-                    {(primaryWeapon _unit isEqualTo "") && {secondaryWeapon _unit isEqualTo ""} && {handgunWeapon _unit isEqualTo ""}};
-                if (_needsRestore) then {
-                    [_unit, _loadout, _class, "setGroupOwner/restoreLoadout"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe;
-                };
+            _x params ["_unit", "_loadout"];
+            if (!isNull _unit && {local _unit} && {count _loadout > 0} && {uniform _unit == ""}) then {
+                _unit setUnitLoadout _loadout;
             };
         } forEach _payload;
     }, [_payload], 1] call CBA_fnc_waitAndExecute;
@@ -144,111 +114,56 @@ if (isServer) then {
     params ["_originalPayload", "_accepted"];
     _originalPayload params ["_group", "_units", "_vehicle"];
 
+    private _originalObjects = [];
+    if (!isNull _vehicle) then {
+        _originalObjects pushBackUnique _vehicle;
+        { _originalObjects pushBackUnique _x; } forEach crew _vehicle;
+    } else {
+        { _originalObjects pushBackUnique _x; } forEach _units;
+    };
+
     if (!_accepted) exitWith {
+        // Server rejected the HC clone after the client had already hidden the
+        // original. Bring it back cleanly.
+        {
+            if (!isNull _x) then {
+                _x hideObjectGlobal false;
+                _x enableSimulationGlobal true;
+                _x setVariable ["FST_HC_originalSuppressed", nil, true];
+            };
+        } forEach _originalObjects;
+
         if (!isNull _group) then {
             _group setVariable ["FST_HC_interceptQueued", nil, true];
             _group setVariable ["FST_HC_pendingTransfer", nil];
         };
     };
 
-    private _deleteDelay = missionNamespace getVariable ["FST_HC_ZeusOriginalDeleteDelay", 2.0];
-    private _hideFirst = missionNamespace getVariable ["FST_HC_ZeusHideOriginalBeforeDelete", true];
-
-    private _objectsToSuppress = [];
-    if (!isNull _vehicle) then {
-        _objectsToSuppress pushBack _vehicle;
-        _objectsToSuppress append (crew _vehicle);
-    } else {
-        _objectsToSuppress = _units select { !isNull _x };
-    };
-
-    private _validSuppressions = _objectsToSuppress select { !isNull _x };
-    if (count _validSuppressions > 0) then {
-        if (isServer) then {
-            missionNamespace setVariable [
-                "FST_HC_ZeusOriginalSuppressions",
-                (missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0]) + count _validSuppressions
-            ];
-        } else {
-            ["FST_HC_evt_objectChurnDiag", ["suppressed", count _validSuppressions]] call CBA_fnc_serverEvent;
-        };
-    };
-
-    if ((missionNamespace getVariable ["FST_HC_DebugLogging", false]) && {count _validSuppressions > 0}) then {
-        diag_log format [
-            "[FST_HCSpawn] Zeus original suppressed before delayed delete: group=%1 objects=%2 vehicle=%3 delay=%4",
-            _group,
-            count _validSuppressions,
-            !isNull _vehicle,
-            _deleteDelay
-        ];
-    };
-
-    {
-        if (!isNull _x) then {
-            _x setVariable ["FST_skipSpawnDamage", true, true];
-
-            // The HC clone has already been accepted. Suppress the short-lived Zeus
-            // original immediately, but do not delete it until the engine has had a
-            // moment to finish processing create/sync messages for that network ID.
-            if (_hideFirst) then {
-                if (_x isKindOf "CAManBase") then { _x disableAI "ALL"; };
-                _x enableSimulationGlobal false;
-                _x hideObjectGlobal true;
-            };
-        };
-    } forEach _objectsToSuppress;
-
-    if (!isNull _group) then {
-        _group deleteGroupWhenEmpty true;
-        _group setVariable ["FST_HC_interceptQueued", nil, true];
-        _group setVariable ["FST_HC_pendingTransfer", nil];
-    };
-
+    // Accepted: keep the original hidden/frozen for a short grace period before
+    // deletion. This preserves the fast Zeus feel while reducing the worst
+    // immediate delete/network-object churn.
     [{
         params ["_group", "_units", "_vehicle"];
 
-        private _deleted = 0;
-
         if (!isNull _vehicle) then {
             { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _vehicle;
-            {
-                if (!isNull _x) then {
-                    _vehicle deleteVehicleCrew _x;
-                    _deleted = _deleted + 1;
-                };
-            } forEach crew _vehicle;
-            deleteVehicle _vehicle;
-            _deleted = _deleted + 1;
+            { _vehicle deleteVehicleCrew _x; } forEach crew _vehicle;
+            if (!isNull _vehicle) then { deleteVehicle _vehicle; };
         } else {
             {
                 if (!isNull _x) then {
                     _x setVariable ["FST_skipSpawnDamage", true, true];
                     deleteVehicle _x;
-                    _deleted = _deleted + 1;
                 };
             } forEach _units;
         };
 
-        if (_deleted > 0) then {
-            if (isServer) then {
-                missionNamespace setVariable [
-                    "FST_HC_ZeusOriginalDeletes",
-                    (missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]) + _deleted
-                ];
-            } else {
-                ["FST_HC_evt_objectChurnDiag", ["deleted", _deleted]] call CBA_fnc_serverEvent;
-            };
-        };
-
-        if ((missionNamespace getVariable ["FST_HC_DebugLogging", false]) && {_deleted > 0}) then {
-            diag_log format ["[FST_HCSpawn] Zeus original delayed delete complete: group=%1 objects=%2", _group, _deleted];
-        };
-
         if (!isNull _group) then {
             _group deleteGroupWhenEmpty true;
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+            _group setVariable ["FST_HC_pendingTransfer", nil];
         };
-    }, [_group, _units, _vehicle], _deleteDelay] call CBA_fnc_waitAndExecute;
+    }, [_group, _units, _vehicle], 2] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 // Fill garrison batch (received by specific HC via ownerEvent)

@@ -16,8 +16,6 @@ missionNamespace setVariable ["FST_HC_CatchAllInterval", missionNamespace getVar
 missionNamespace setVariable ["FST_HC_RecountInterval", missionNamespace getVariable ["FST_HC_RecountInterval", 60]];
 missionNamespace setVariable ["FST_HC_CleanupInterval", missionNamespace getVariable ["FST_HC_CleanupInterval", 20]];
 missionNamespace setVariable ["FST_HC_ZeusTransferSettleDelay", missionNamespace getVariable ["FST_HC_ZeusTransferSettleDelay", 0.2]];
-// Delay Zeus instant-clone snapshots briefly so modded unit loadouts/weapon EHs can settle.
-missionNamespace setVariable ["FST_HC_ZeusLoadoutSnapshotDelay", missionNamespace getVariable ["FST_HC_ZeusLoadoutSnapshotDelay", 0.75]];
 missionNamespace setVariable ["FST_HC_ZeusLegacyFallback", missionNamespace getVariable ["FST_HC_ZeusLegacyFallback", false]];
 missionNamespace setVariable ["FST_HC_GarrisonRadius", missionNamespace getVariable ["FST_HC_GarrisonRadius", 100]];
 missionNamespace setVariable ["FST_HC_PatrolRadius", missionNamespace getVariable ["FST_HC_PatrolRadius", 150]];
@@ -25,22 +23,6 @@ missionNamespace setVariable ["FST_HC_TriggerActivationDist", missionNamespace g
 missionNamespace setVariable ["FST_HC_FillGarrisonSingleActive", true];
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8]];
 missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
-// Zeus instant-clone cleanup: hide/freeze original units immediately, then delete after a short grace period.
-// This reduces network "Object not found" churn from deleting newly Zeus-created client-owned units too quickly.
-missionNamespace setVariable ["FST_HC_ZeusHideOriginalBeforeDelete", missionNamespace getVariable ["FST_HC_ZeusHideOriginalBeforeDelete", true]];
-missionNamespace setVariable ["FST_HC_ZeusOriginalDeleteDelay", missionNamespace getVariable ["FST_HC_ZeusOriginalDeleteDelay", 2.0]];
-
-// Lightweight diagnostics counters. These are only reported through status/debug logs;
-// they do not run any extra per-frame work.
-missionNamespace setVariable ["FST_HC_ZeusOriginalSuppressions", missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0]];
-missionNamespace setVariable ["FST_HC_ZeusOriginalDeletes", missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]];
-missionNamespace setVariable ["FST_HC_CleanupGroupsDeleted", missionNamespace getVariable ["FST_HC_CleanupGroupsDeleted", 0]];
-missionNamespace setVariable ["FST_HC_CleanupUnitsDeleted", missionNamespace getVariable ["FST_HC_CleanupUnitsDeleted", 0]];
-missionNamespace setVariable ["FST_HC_CleanupVehiclesDeleted", missionNamespace getVariable ["FST_HC_CleanupVehiclesDeleted", 0]];
-missionNamespace setVariable ["FST_HC_ReapplyGarrisonRequests", missionNamespace getVariable ["FST_HC_ReapplyGarrisonRequests", 0]];
-missionNamespace setVariable ["FST_HC_ReapplyGarrisonSuccesses", missionNamespace getVariable ["FST_HC_ReapplyGarrisonSuccesses", 0]];
-missionNamespace setVariable ["FST_HC_ReapplyGarrisonTimeouts", missionNamespace getVariable ["FST_HC_ReapplyGarrisonTimeouts", 0]];
-missionNamespace setVariable ["FST_HC_ReapplyGarrisonStale", missionNamespace getVariable ["FST_HC_ReapplyGarrisonStale", 0]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
 missionNamespace setVariable ["FST_HC_InterceptEnabled", missionNamespace getVariable ["FST_HC_InterceptEnabled", true]];
@@ -233,5 +215,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_REAPPLY_DIAGNOSTICS_FIX_2026-05-07", true];
-diag_log "[FST_HCSpawn] preInit complete - PREOP_REAPPLY_DIAGNOSTICS_FIX_2026-05-07";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_INSTANT_HIDE_FIX_2026-05-07", true];
+diag_log "[FST_HCSpawn] preInit complete - PREOP_INSTANT_HIDE_FIX_2026-05-07";

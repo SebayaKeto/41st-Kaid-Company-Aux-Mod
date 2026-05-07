@@ -63,8 +63,6 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
 } forEach +FST_HC_TrackedGroups;
 
 private _cleaned = 0;
-private _deletedUnits = 0;
-private _deletedVehicles = 0;
 {
     private _grp = _x;
     if (isNull _grp) then { continue };
@@ -91,18 +89,15 @@ private _deletedVehicles = 0;
             if (!isNull _x) then {
                 _x setVariable ["FST_skipSpawnDamage", true, true];
                 _veh deleteVehicleCrew _x;
-                _deletedUnits = _deletedUnits + 1;
             };
         } forEach crew _veh;
         deleteVehicle _veh;
-        _deletedVehicles = _deletedVehicles + 1;
     } forEach _vehicles;
 
     {
         if (!isNull _x) then {
             _x setVariable ["FST_skipSpawnDamage", true, true];
             deleteVehicle _x;
-            _deletedUnits = _deletedUnits + 1;
         };
     } forEach _looseUnits;
 
@@ -113,24 +108,6 @@ private _deletedVehicles = 0;
 } forEach _toDelete;
 
 if (_cleaned > 0) then {
-    missionNamespace setVariable [
-        "FST_HC_CleanupGroupsDeleted",
-        (missionNamespace getVariable ["FST_HC_CleanupGroupsDeleted", 0]) + _cleaned
-    ];
-    missionNamespace setVariable [
-        "FST_HC_CleanupUnitsDeleted",
-        (missionNamespace getVariable ["FST_HC_CleanupUnitsDeleted", 0]) + _deletedUnits
-    ];
-    missionNamespace setVariable [
-        "FST_HC_CleanupVehiclesDeleted",
-        (missionNamespace getVariable ["FST_HC_CleanupVehiclesDeleted", 0]) + _deletedVehicles
-    ];
-
-    diag_log format [
-        "[FST_HCSpawn] Cleanup: despawned %1 groups (%2 units, %3 vehicles)",
-        _cleaned,
-        _deletedUnits,
-        _deletedVehicles
-    ];
+    diag_log format ["[FST_HCSpawn] Cleanup: despawned %1 groups", _cleaned];
     [] call FST_HCSpawn_fnc_recountUnits;
 };

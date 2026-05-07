@@ -81,7 +81,7 @@ if (_isGarrisoned) then {
 private _payload = [];
 {
     private _lo = _x getVariable ["FST_HC_savedLoadout", []];
-    if (count _lo > 0) then { _payload pushBack [_x, _lo, typeOf _x]; };
+    if (count _lo > 0) then { _payload pushBack [_x, _lo]; };
 } forEach _units;
 if (count _payload > 0) then {
     ["FST_HC_evt_restoreLoadout", [_payload], _targetId] call CBA_fnc_ownerEvent;

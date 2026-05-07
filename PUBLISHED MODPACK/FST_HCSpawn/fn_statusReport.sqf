@@ -82,23 +82,5 @@ _lines pushBack format ["  Transfers OK/Fail: %1 / %2", missionNamespace getVari
 _lines pushBack format ["  Zeus instant clones: %1", missionNamespace getVariable ["FST_HC_ZeusInstantCloneRequests", 0]];
 _lines pushBack format ["  Zeus setGroupOwner immediate/fallback: %1 / %2", missionNamespace getVariable ["FST_HC_ZeusImmediateRequests", 0], missionNamespace getVariable ["FST_HC_ZeusImmediateFallbacks", 0]];
 _lines pushBack format ["  Legacy clone fallbacks used: %1", missionNamespace getVariable ["FST_HC_ZeusLegacyFallbacksUsed", 0]];
-_lines pushBack format [
-    "  Zeus original suppress/delete: %1 / %2 objects",
-    missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0],
-    missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]
-];
-_lines pushBack format [
-    "  Cleanup deleted: %1 groups, %2 units, %3 vehicles",
-    missionNamespace getVariable ["FST_HC_CleanupGroupsDeleted", 0],
-    missionNamespace getVariable ["FST_HC_CleanupUnitsDeleted", 0],
-    missionNamespace getVariable ["FST_HC_CleanupVehiclesDeleted", 0]
-];
-_lines pushBack format [
-    "  Reapply garrison req/ok/timeout/stale: %1 / %2 / %3 / %4",
-    missionNamespace getVariable ["FST_HC_ReapplyGarrisonRequests", 0],
-    missionNamespace getVariable ["FST_HC_ReapplyGarrisonSuccesses", 0],
-    missionNamespace getVariable ["FST_HC_ReapplyGarrisonTimeouts", 0],
-    missionNamespace getVariable ["FST_HC_ReapplyGarrisonStale", 0]
-];
 
 { _x remoteExec ["systemChat", _target]; } forEach _lines;
