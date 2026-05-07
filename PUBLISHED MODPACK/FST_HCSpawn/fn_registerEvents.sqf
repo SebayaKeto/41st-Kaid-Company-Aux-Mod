@@ -81,6 +81,31 @@ if (isServer) then {
     ["FST_HC_evt_debugSnapshotRequest", {
         _this call FST_HCSpawn_fnc_requestDebugSnapshot;
     }] call CBA_fnc_addEventHandler;
+
+    // Lightweight diagnostics counters reported by Zeus clients / HCs.
+    ["FST_HC_evt_objectChurnDiag", {
+        params [["_kind", ""], ["_count", 0]];
+        private _var = switch (_kind) do {
+            case "suppressed": { "FST_HC_ZeusOriginalSuppressions" };
+            case "deleted": { "FST_HC_ZeusOriginalDeletes" };
+            default { "" };
+        };
+        if (_var isEqualTo "") exitWith {};
+        missionNamespace setVariable [_var, (missionNamespace getVariable [_var, 0]) + (_count max 0)];
+    }] call CBA_fnc_addEventHandler;
+
+    ["FST_HC_evt_reapplyGarrisonDiag", {
+        params [["_state", ""]];
+        private _var = switch (_state) do {
+            case "request": { "FST_HC_ReapplyGarrisonRequests" };
+            case "success": { "FST_HC_ReapplyGarrisonSuccesses" };
+            case "timeout": { "FST_HC_ReapplyGarrisonTimeouts" };
+            case "stale": { "FST_HC_ReapplyGarrisonStale" };
+            default { "" };
+        };
+        if (_var isEqualTo "") exitWith {};
+        missionNamespace setVariable [_var, (missionNamespace getVariable [_var, 0]) + 1];
+    }] call CBA_fnc_addEventHandler;
 };
 
 // ============================================================
@@ -137,6 +162,28 @@ if (isServer) then {
         _objectsToSuppress = _units select { !isNull _x };
     };
 
+    private _validSuppressions = _objectsToSuppress select { !isNull _x };
+    if (count _validSuppressions > 0) then {
+        if (isServer) then {
+            missionNamespace setVariable [
+                "FST_HC_ZeusOriginalSuppressions",
+                (missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0]) + count _validSuppressions
+            ];
+        } else {
+            ["FST_HC_evt_objectChurnDiag", ["suppressed", count _validSuppressions]] call CBA_fnc_serverEvent;
+        };
+    };
+
+    if ((missionNamespace getVariable ["FST_HC_DebugLogging", false]) && {count _validSuppressions > 0}) then {
+        diag_log format [
+            "[FST_HCSpawn] Zeus original suppressed before delayed delete: group=%1 objects=%2 vehicle=%3 delay=%4",
+            _group,
+            count _validSuppressions,
+            !isNull _vehicle,
+            _deleteDelay
+        ];
+    };
+
     {
         if (!isNull _x) then {
             _x setVariable ["FST_skipSpawnDamage", true, true];
@@ -161,17 +208,41 @@ if (isServer) then {
     [{
         params ["_group", "_units", "_vehicle"];
 
+        private _deleted = 0;
+
         if (!isNull _vehicle) then {
             { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _vehicle;
-            { _vehicle deleteVehicleCrew _x; } forEach crew _vehicle;
+            {
+                if (!isNull _x) then {
+                    _vehicle deleteVehicleCrew _x;
+                    _deleted = _deleted + 1;
+                };
+            } forEach crew _vehicle;
             deleteVehicle _vehicle;
+            _deleted = _deleted + 1;
         } else {
             {
                 if (!isNull _x) then {
                     _x setVariable ["FST_skipSpawnDamage", true, true];
                     deleteVehicle _x;
+                    _deleted = _deleted + 1;
                 };
             } forEach _units;
+        };
+
+        if (_deleted > 0) then {
+            if (isServer) then {
+                missionNamespace setVariable [
+                    "FST_HC_ZeusOriginalDeletes",
+                    (missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]) + _deleted
+                ];
+            } else {
+                ["FST_HC_evt_objectChurnDiag", ["deleted", _deleted]] call CBA_fnc_serverEvent;
+            };
+        };
+
+        if ((missionNamespace getVariable ["FST_HC_DebugLogging", false]) && {_deleted > 0}) then {
+            diag_log format ["[FST_HCSpawn] Zeus original delayed delete complete: group=%1 objects=%2", _group, _deleted];
         };
 
         if (!isNull _group) then {

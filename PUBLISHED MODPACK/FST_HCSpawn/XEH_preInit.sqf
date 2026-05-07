@@ -30,6 +30,18 @@ missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNam
 missionNamespace setVariable ["FST_HC_ZeusHideOriginalBeforeDelete", missionNamespace getVariable ["FST_HC_ZeusHideOriginalBeforeDelete", true]];
 missionNamespace setVariable ["FST_HC_ZeusOriginalDeleteDelay", missionNamespace getVariable ["FST_HC_ZeusOriginalDeleteDelay", 2.0]];
 
+// Lightweight diagnostics counters. These are only reported through status/debug logs;
+// they do not run any extra per-frame work.
+missionNamespace setVariable ["FST_HC_ZeusOriginalSuppressions", missionNamespace getVariable ["FST_HC_ZeusOriginalSuppressions", 0]];
+missionNamespace setVariable ["FST_HC_ZeusOriginalDeletes", missionNamespace getVariable ["FST_HC_ZeusOriginalDeletes", 0]];
+missionNamespace setVariable ["FST_HC_CleanupGroupsDeleted", missionNamespace getVariable ["FST_HC_CleanupGroupsDeleted", 0]];
+missionNamespace setVariable ["FST_HC_CleanupUnitsDeleted", missionNamespace getVariable ["FST_HC_CleanupUnitsDeleted", 0]];
+missionNamespace setVariable ["FST_HC_CleanupVehiclesDeleted", missionNamespace getVariable ["FST_HC_CleanupVehiclesDeleted", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonRequests", missionNamespace getVariable ["FST_HC_ReapplyGarrisonRequests", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonSuccesses", missionNamespace getVariable ["FST_HC_ReapplyGarrisonSuccesses", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonTimeouts", missionNamespace getVariable ["FST_HC_ReapplyGarrisonTimeouts", 0]];
+missionNamespace setVariable ["FST_HC_ReapplyGarrisonStale", missionNamespace getVariable ["FST_HC_ReapplyGarrisonStale", 0]];
+
 // Backward-compatible defaults for older saved CBA profiles / scripts.
 missionNamespace setVariable ["FST_HC_InterceptEnabled", missionNamespace getVariable ["FST_HC_InterceptEnabled", true]];
 missionNamespace setVariable ["FST_HC_ZeusInstantClone", missionNamespace getVariable ["FST_HC_ZeusInstantClone", true]];
@@ -221,5 +233,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_WEAPON_OBJECT_CHURN_FIX_2026-05-04", true];
-diag_log "[FST_HCSpawn] preInit complete - PREOP_WEAPON_OBJECT_CHURN_FIX_2026-05-04";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_REAPPLY_DIAGNOSTICS_FIX_2026-05-07", true];
+diag_log "[FST_HCSpawn] preInit complete - PREOP_REAPPLY_DIAGNOSTICS_FIX_2026-05-07";
