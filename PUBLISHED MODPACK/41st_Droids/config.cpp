@@ -884,6 +884,8 @@ class CfgVehicles
 		uniformClass="FST_DroidB1";
 		faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
+		impactEffectsBlood = "ImpactMetal";
+        impactEffectsNoBlood = "ImpactMetal";
 		hiddenSelectionsTextures[]=
 		{
 			"\MRC\JLTS\characters\DroidArmor\data\b1_co.paa"
