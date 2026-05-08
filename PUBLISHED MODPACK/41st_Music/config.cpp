@@ -38,6 +38,10 @@ class CfgMusicClasses
 	{
 		displayName="41st - Kpop Demon Hunters Tracks";
 	};
+	class FST_MD_Music
+	{
+		displayName="41st - Murder Drones Tracks";
+	};
 };
 
 // With Thanks to Splice for all his help.
@@ -79,7 +83,6 @@ class CfgMusic
 		"FST_Halo2_MjolnirMix",
 		"FST_HaloReach_DeadAhead",
 		"FST_Destiny_TheLastArray",
-		"FST_Destiny_Immortal",
 		"FST_Destiny_UntoldLegends",
 		"FST_TFFOC_MainTheme",
 		"FST_WT_WaltzoftheTornado",		
@@ -160,7 +163,13 @@ class CfgMusic
 		"FST_Clair_NosVies",
 		"FST_Destiny_TheList",
 		"FST_Destiny_ClashOfWills",
-		"FST_PHM_Fishing",
+		"FST_DeusEx_HongKongHelipad_Combat",
+		"FST_DeusEx_BatteryPark_Combat",
+		"FST_DeusEx_VersaLife_Combat",
+		"FST_DeusEx_Area51_Conversation",
+		"FST_LobotomyCorp_Neutral01",
+		"FST_KingsField_Decline_Extended",
+		"FST_DOOM_TheOnlyThingTheyFearIsYou",
 	
 		
 		//Misc tracks
@@ -192,6 +201,9 @@ class CfgMusic
 		"FST_PaganFuryTopic_GoingToWar",
 		"FST_AlortaMusic_OneLastMission",
 		"FST_AlortaMusic_MightyRush2",
+		"FST_Pirates_TheKraken",
+		"FST_Caramelldansen",
+		"FST_Trivium_KirisuteGomen",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -225,6 +237,36 @@ class CfgMusic
 		"FST_WhatItSoundsLike",
 		"FST_YourIdol",
 		"FST_SodaPop",
+
+		//Murder Drones
+		"FST_DisassemblyRequired",
+		"FST_DisassemblyRequired_Cynthwave",
+		"FST_EldritchJXD",
+		"FST_TheKnifeDance",
+		"FST_KnifeDance_Cynthwave",
+		"FST_98_7",
+		"FST_camping_mp3",
+		"FST_ImConfused",
+		"FST_SolverUzi",
+		"FST_MagicSchoolBus",
+		"FST_HuggieWuggies",
+		"FST_ThatsANiceHallwayYouEverSeeAHallwayThatNice",
+		"FST_HehNothingPersonalKid",
+		"FST_EternalDream",
+		"FST_GamerMom",
+		"FST_run",
+		"FST_UrAight",
+		"FST_Nori",
+		"FST_YoureFreakinGrounded",
+		"FST_HangOut",
+		"FST_DieMad",
+		"FST_IfUALilB",
+		"FST_FallingWithYou",
+		"FST_EternalDestroyer",
+		"FST_UziAndN_TheDroneKillers",
+		"FST_BiteMe",
+		"FST_HahaYeaDudeThatsSick",
+		"FST_Forever_FullVersion",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -750,30 +792,6 @@ class CfgMusic
 			1
 		};
 		duration="415";
-	};
-	class FST_PHM_Fishing
-	{
-		name="(Project Hail Mary) Time Go Fishing";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\PHM_Fishing.ogg",
-			1,
-			1
-		};
-		duration="431";
-	};
-	class FST_Destiny_Immortal
-	{
-		name="(Destiny) The Immortal";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Destiny_Immortal.ogg",
-			1,
-			1
-		};
-		duration="231";
 	};
 	class FST_Destiny_TheList
 	{
@@ -1736,17 +1754,17 @@ class CfgMusic
 		duration="176";
 	};
 	class FST_Clair_Osquio
-    {
-        name="(Clair Obscur) Osquio - Verso's Draft";
-        musicClass="FST_OtherGames";
-        sound[]=
-        {
-            "41st_Music\GameTracks\Clair33_Osquio_VersoDrafts.ogg",
-            1,
-            1
-        };
-        duration="282";
-    };
+    	{
+        	name="(Clair Obscur) Osquio - Verso's Draft";
+        	musicClass="FST_OtherGames";
+        	sound[]=
+        	{
+            		"41st_Music\GameTracks\Clair33_Osquio_VersoDrafts.ogg",
+            		1,
+            		1
+        	};
+        	duration="282";
+    	};
 	class FST_Clair_NosVies
 	{
 		name="(Clair Obscur) Nos vies en Lumiere";
@@ -1758,6 +1776,90 @@ class CfgMusic
 			1
 		};
 		duration="1980";
+	};
+	class FST_DeusEx_HongKongHelipad_Combat
+	{
+		name="(Deus Ex) Hong Kong Helipad - Combat";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Deus Ex - Hong Kong Helipad Combat.ogg",
+			1,
+			1
+		};
+		duration="139";
+	};
+	class FST_DeusEx_BatteryPark_Combat
+	{
+		name="(Deus Ex) Battery Park - Combat";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Deus Ex - Battery Park Combat.ogg",
+			1,
+			1
+		};
+		duration="144";
+	};
+	class FST_DeusEx_VersaLife_Combat
+	{
+		name="(Deus Ex) VersaLife - Combat";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Deus Ex - VersaLife Combat.ogg",
+			1,
+			1
+		};
+		duration="144";
+	};
+	class FST_DeusEx_Area51_Conversation
+	{
+		name="(Deus Ex) Area 51 - Conversation";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Deus Ex - Area 51 Conversation.ogg",
+			1,
+			1
+		};
+		duration="117";
+	};
+	class FST_LobotomyCorp_Neutral01
+	{
+		name="(Lobotomy Corp) Neutral 01";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\LobotomyCorp Neutral01.ogg",
+			1,
+			1
+		};
+		duration="244";
+	};
+	class FST_KingsField_Decline_Extended
+	{
+		name="(King's Field) Decline - Extended";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\King's Field - Decline-Extended.ogg",
+			1,
+			1
+		};
+		duration="356";
+	};
+	class FST_DOOM_TheOnlyThingTheyFearIsYou
+	{
+		name="(DOOM) The Only Thing They Fear Is You";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\TheOnlyThingTheyFearIsYou.ogg",
+			1,
+			1
+		};
+		duration="412";
 	};
 
 	//Films
@@ -1798,7 +1900,19 @@ class CfgMusic
 		};
 		duration="294";
 	};
-	
+	class FST_Pirates_TheKraken
+	{
+		name="(Pirates of the Caribbean) The Kraken";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\The Kraken.ogg",
+			1,
+			1
+		};
+		duration="414";
+	};
+
 	//Other
 	
 	class FST_banana
@@ -1993,18 +2107,6 @@ class CfgMusic
 		};
 		duration="250";
 	};
-	class FST_Disassembly_Industrial_Metal_Remix
-	{
-		name="Disassembly Required Industrial Metal Remix";
-		musicClass="FST_Misc";
-		sound[]=
-		{
-			"41st_Music\MiscTracks\DisassemblyRequiredIndustrialMetalRemix.ogg",
-			1,
-			1
-		};
-		duration="120";
-	};
 	class FST_AlortaMusic_04
 	{
 		name="(Alorta Music) Epic Trailer 04";
@@ -2113,6 +2215,31 @@ class CfgMusic
 		};
 		duration="128";
 	};
+	class FST_Caramelldansen
+	{
+		name="Caramella Girls - Caramelldansen";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Caramelldansen.ogg",
+			1,
+			1
+		};
+		duration="175";
+	};
+	class FST_Trivium_KirisuteGomen
+	{
+		name="Trivium - Kirisute Gomen";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Trivium - Kirisute Gomen.ogg",
+			1,
+			1
+		};
+		duration="387";
+	};
+
 	// Christmas
 		
 	class FST_WhiteChristmas
@@ -2309,6 +2436,357 @@ class CfgMusic
 			1
 		};
 		duration="210";
+	};	
+
+	//Murder Drones
+
+	class FST_DisassemblyRequired
+	{
+		name="Liam Vickers - Disassembly Required";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Disassembly Required.ogg",
+			1,
+			1
+		};
+		duration="120";
+	};	
+	class FST_DisassemblyRequired_Cynthwave
+	{
+		name="Leslie Mag - Disassembly Required (Cynthwave)";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Disassembly Required Cynthwave.ogg",
+			1,
+			1
+		};
+		duration="378";
+	};
+	class FST_Disassembly_Industrial_Metal_Remix
+	{
+		name="Disassembly Required Industrial Metal Remix";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\DisassemblyRequiredIndustrialMetalRemix.ogg",
+			1,
+			1
+		};
+		duration="120";
+	};
+	class FST_EldritchJXD
+	{
+		name="AJ DiSpirito - Eldritch J XD";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Eldritch J XD.ogg",
+			1,
+			1
+		};
+		duration="102";
+	};	
+	class FST_TheKnifeDance
+	{
+		name="AJ DiSpirito - The Knife Dance";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\The Knife Dance.ogg",
+			1,
+			1
+		};
+		duration="71";
+	};	
+	class FST_KnifeDance_Cynthwave
+	{
+		name="Faraday Cage - Knife Dance Cynth Metal";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Knife Dance Cynth Metal.ogg",
+			1,
+			1
+		};
+		duration="179";
+	};	
+	class FST_98_7
+	{
+		name="AJ DiSpirito - 98.7";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\98_7.ogg",
+			1,
+			1
+		};
+		duration="209";
+	};	
+	class FST_camping_mp3
+	{
+		name="AJ DiSpirito - camping.mp3";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\camping_mp3.ogg",
+			1,
+			1
+		};
+		duration="67";
+	};	
+	class FST_ImConfused
+	{
+		name="AJ DiSpirito - I'm Confused";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\I'm Confused.ogg",
+			1,
+			1
+		};
+		duration="159";
+	};	
+	class FST_SolverUzi
+	{
+		name="AJ DiSpirito - Solver Uzi";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Solver Uzi.ogg",
+			1,
+			1
+		};
+		duration="205";
+	};	
+	class FST_MagicSchoolBus
+	{
+		name="AJ DiSpirito - Magic School Bus";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Magic School Bus.ogg",
+			1,
+			1
+		};
+		duration="96";
+	};	
+	class FST_HuggieWuggies
+	{
+		name="AJ DiSpirito - Huggie Wuggies";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Huggie Wuggies.ogg",
+			1,
+			1
+		};
+		duration="46";
+	};	
+	class FST_ThatsANiceHallwayYouEverSeeAHallwayThatNice
+	{
+		name="AJ DiSpirito - that's a nice hallway, you ever see a hallway that nice?";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\thats a nice hallway you ever see a hallway that nice.ogg",
+			1,
+			1
+		};
+		duration="62";
+	};	
+	class FST_HehNothingPersonalKid
+	{
+		name="AJ DiSpirito - Heh, Nothing Personal Kid";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Heh Nothing Personal Kid.ogg",
+			1,
+			1
+		};
+		duration="152";
+	};	
+	class FST_EternalDream
+	{
+		name="AJ DiSpirito - Eternal Dream";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Eternal Dream.ogg",
+			1,
+			1
+		};
+		duration="100";
+	};	
+	class FST_GamerMom
+	{
+		name="AJ DiSpirito - Gamer Mom";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Gamer Mom.ogg",
+			1,
+			1
+		};
+		duration="62";
+	};	
+	class FST_run
+	{
+		name="AJ DiSpirito - ....run";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\run.ogg",
+			1,
+			1
+		};
+		duration="72";
+	};	
+	class FST_UrAight
+	{
+		name="AJ DiSpirito - ur aight";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\ur aight.ogg",
+			1,
+			1
+		};
+		duration="136";
+	};	
+	class FST_Nori
+	{
+		name="AJ DiSpirito - Nori";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Nori.ogg",
+			1,
+			1
+		};
+		duration="68";
+	};	
+	class FST_YoureFreakinGrounded
+	{
+		name="AJ DiSpirito - YOU'RE FREAKIN' GROUNDED";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\YOURE FREAKIN GROUNDED.ogg",
+			1,
+			1
+		};
+		duration="118";
+	};	
+	class FST_HangOut
+	{
+		name="AJ DiSpirito - Hang Out?";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Hang Out.ogg",
+			1,
+			1
+		};
+		duration="53";
+	};	
+	class FST_DieMad
+	{
+		name="AJ DiSpirito - Die Mad >:D";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Die Mad.ogg",
+			1,
+			1
+		};
+		duration="85";
+	};	
+	class FST_IfUALilB
+	{
+		name="AJ DiSpirito - IF U A LIL B-";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\IF U A LIL B.ogg",
+			1,
+			1
+		};
+		duration="62";
+	};	
+	class FST_FallingWithYou
+	{
+		name="AJ DiSpirito - Falling With You";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Falling With You.ogg",
+			1,
+			1
+		};
+		duration="84";
+	};	
+	class FST_EternalDestroyer
+	{
+		name="AJ DiSpirito - Eternal DESTROYER";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Eternal DESTROYER.ogg",
+			1,
+			1
+		};
+		duration="148";
+	};	
+	class FST_UziAndN_TheDroneKillers
+	{
+		name="AJ DiSpirito - Uzi and N: The Drone Killers";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Uzi and N_The Drone Killers.ogg",
+			1,
+			1
+		};
+		duration="35";
+	};	
+	class FST_BiteMe
+	{
+		name="AJ DiSpirito - BITE ME";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\BITE ME.ogg",
+			1,
+			1
+		};
+		duration="183";
+	};	
+	class FST_HahaYeaDudeThatsSick
+	{
+		name="AJ DiSpirito - haha yea dude, that's sick";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\haha yea dude thats sick.ogg",
+			1,
+			1
+		};
+		duration="79";
+	};	
+	class FST_Forever_FullVersion
+	{
+		name="AJ DiSpirito - FOREVER (The Full Version)";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\FOREVER Full Version.ogg",
+			1,
+			1
+		};
+		duration="311";
 	};	
 };
 
