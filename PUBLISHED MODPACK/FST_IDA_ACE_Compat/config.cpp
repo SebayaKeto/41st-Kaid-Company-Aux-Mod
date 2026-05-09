@@ -1,5 +1,5 @@
 /*
-    FST IDA ACE Medical Compatibility Patch v3 DEBUG
+    FST IDA ACE Medical Compatibility Patch v2
 
     Purpose:
     - Temporary aux-side patch while IDA is being phased out.
@@ -8,17 +8,13 @@
       woundHandlers class that does NOT inherit the global/default handler chain.
     - Bias plasma wounds back toward ThermalBurn / Avulsion and away from
       Contusion-only results.
-    - DEBUG BUILD: route plasma/plasmashell through a tiny wrapper around
-      ace_medical_damage_fnc_woundsHandlerBase so remaining ACE spam can be
-      tied back to exact unit classnames/ammo/bodypart without adding loops.
 
-    Why v3 exists:
-    - v2 reduced the ACE wound-handler spam heavily, but the third test op still
-      produced some remaining:
-        [ACE] (medical_damage) ERROR: Return for handler
-        'ace_medical_damage_woundsHandlerBase' invalid - '[]'
-    - ACE wound handlers are called from config per damage type. This build keeps
-      the same base handler behavior, but logs throttled metadata before calling it.
+    Why v2 exists:
+    - v1 used `class woundHandlers: woundHandlers`, which can inherit handler
+      entries added by other addons. If ace_medical_damage_fnc_woundsHandlerBase
+      is not the final handler, ACE logs:
+      Return for handler 'ace_medical_damage_woundsHandlerBase' invalid - '[]'
+    - v2 uses a local `class woundHandlers` with only ACE's base wound handler.
 */
 
 class CfgPatches
@@ -26,7 +22,7 @@ class CfgPatches
     class FST_IDA_ACE_Compat
     {
         author = "41st / FST";
-        name = "FST IDA ACE Medical Compatibility v3 DEBUG";
+        name = "FST IDA ACE Medical Compatibility v2";
         requiredVersion = 0.1;
         requiredAddons[] =
         {
@@ -36,20 +32,6 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         magazines[] = {};
-    };
-};
-
-class CfgFunctions
-{
-    class FST_IDA_ACE_Compat
-    {
-        tag = "FSTIDA";
-
-        class Debug
-        {
-            file = "\FST_IDA_ACE_Compat\functions";
-            class debugWoundsHandler {};
-        };
     };
 };
 
@@ -72,10 +54,10 @@ class ACE_Medical_Injuries
             selectionSpecific = 1;
 
             // IMPORTANT: Do not inherit from root woundHandlers here.
-            // We want only our debug wrapper, which then calls ACE's base wound creator.
+            // We want only the base ACE wound creator for this IDA plasma type.
             class woundHandlers
             {
-                ace_medical_damage = "FSTIDA_fnc_debugWoundsHandler";
+                ace_medical_damage = "ace_medical_damage_fnc_woundsHandlerBase";
             };
 
             // Plasma should feel like hot penetrating energy, not mostly blunt trauma.
@@ -142,7 +124,7 @@ class ACE_Medical_Injuries
             // Same local handler protection for shell/splash-style plasma.
             class woundHandlers
             {
-                ace_medical_damage = "FSTIDA_fnc_debugWoundsHandler";
+                ace_medical_damage = "ace_medical_damage_fnc_woundsHandlerBase";
             };
 
             class ThermalBurn
