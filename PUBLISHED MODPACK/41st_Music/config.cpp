@@ -170,6 +170,7 @@ class CfgMusic
 		"FST_LobotomyCorp_Neutral01",
 		"FST_KingsField_Decline_Extended",
 		"FST_DOOM_TheOnlyThingTheyFearIsYou",
+		"FST_CigaretteWife",
 	
 		
 		//Misc tracks
@@ -191,7 +192,6 @@ class CfgMusic
 		"FST_LA_ATer_Saints_Ofthe41st",
 		"FST_IntoTheFire",
 		"FST_Screaming_Eagles",
-		"FST_Disassembly_Industrial_Metal_Remix",
 		"FST_AlortaMusic_04",
 		"FST_Combat_4",
 		"FST_Combat_3",
@@ -205,7 +205,7 @@ class CfgMusic
 		"FST_Caramelldansen",
 		"FST_Trivium_KirisuteGomen",
 		"FST_TheOneWhosRunningTheShow",
-		"FST_CigaretteWife",
+		"FST_PacificRim",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -242,6 +242,7 @@ class CfgMusic
 
 		//Murder Drones
 		"FST_DisassemblyRequired",
+		"FST_Disassembly_Industrial_Metal_Remix",
 		"FST_DisassemblyRequired_Cynthwave",
 		"FST_EldritchJXD",
 		"FST_TheKnifeDance",
@@ -2265,6 +2266,18 @@ class CfgMusic
 			1
 		};
 		duration="134";
+	};
+	class FST_PacificRim
+	{
+		name="Pacific Rim Theme";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Pacific Rim Theme.ogg",
+			1,
+			1
+		};
+		duration="296";
 	};
 
 	// Christmas
