@@ -60,6 +60,72 @@ class CfgEditorSubcategories
 		displayName = "Smuggled B1 Units"; 
 	};
 };
+class CfgFunctions
+{
+	class FST_PDFRandomizers
+	{
+		class FST_PDFStandard
+		{
+			file="41st_CorruptPDF";
+			class pdfstandard {};
+		};
+		class FST_PDFOfficer
+		{
+			file="41st_CorruptPDF";
+			class pdfofficer {};
+		};
+		class FST_PDFRTO
+		{
+			file="41st_CorruptPDF";
+			class pdfrto {};
+		};
+		class FST_PDFAutorifle
+		{
+			file="41st_CorruptPDF";
+			class pdfautorifle {};
+		};
+		class FST_PDFMarksman
+		{
+			file="41st_CorruptPDF";
+			class pdfmarksman {};
+		};
+		class FST_PDFCQB
+		{
+			file="41st_CorruptPDF";
+			class pdfcqb {};
+		};
+		class FST_PDFGren
+		{
+			file="41st_CorruptPDF";
+			class pdfgrenadier {};
+		};
+		class FST_PDFAA
+		{
+			file="41st_CorruptPDF";
+			class pdfantiair {};
+		};
+		class FST_PDFAT
+		{
+			file="41st_CorruptPDF";
+			class pdfantitank {};
+		};
+		class FST_PDFMedic
+		{
+			file="41st_CorruptPDF";
+			class pdfmedic {};
+		};
+		class FST_PDFTanker
+		{
+			file="41st_CorruptPDF";
+			class pdftanker {};
+		};
+		class FST_PDFPilot
+		{
+			file="41st_CorruptPDF";
+			class pdfpilot {};
+		};
+	};
+};
 class CowsSlot;
 class UnderBarrelSlot;
 class MuzzleSlot;
@@ -816,16 +882,7 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_credits_100",
-			"JLTS_credit_card",
-			"JLTS_intel_datacard",
 			"JLTS_intel_holoProjector",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -843,6 +900,10 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_blaster_cell_High_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfofficer;";
 		};
 	};
 	class FST_CorruptPDF_RTO: FST_U_CorruptPDF
@@ -882,11 +943,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -904,6 +960,10 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_blaster_cell_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfrto;";
 		};
 	};
 	class FST_CorruptPDF_Standard: FST_U_CorruptPDF
@@ -943,11 +1003,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_drugs_deathstick",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -959,11 +1014,16 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemGPS",
 			"ItemMap",
+			"G_JMSLLTE_None",
 			"JMSLLTE_PlastHv_bl_helmet"
 		};
 		magazines[]=
 		{
 			"FST_blaster_cell_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfstandard;";
 		};
 	};
 	class FST_CorruptPDF_Auto: FST_U_CorruptPDF
@@ -1003,10 +1063,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow",
 			"ACE_Chemlight_HiRed"
@@ -1019,11 +1075,16 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemGPS",
 			"ItemMap",
+			"G_JMSLLTE_None",
 			"JMSLLTE_PlastHv_bl_helmet"
 		};
 		magazines[]=
 		{
 			"FST_blaster_battery_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfautorifle;";
 		};
 	};
 	class FST_CorruptPDF_Mark: FST_U_CorruptPDF
@@ -1063,10 +1124,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1085,6 +1142,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_High_Yellow",
 			"FST_blaster_cell_low_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmarksman;";
 		};
 	};
 	class FST_CorruptPDF_CQB: FST_U_CorruptPDF
@@ -1124,11 +1185,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_drugs_deathstick",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1140,11 +1196,16 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemGPS",
 			"ItemMap",
+			"G_JMSLLTE_None",
 			"JMSLLTE_PlastHv_bl_helmet"
 		};
 		magazines[]=
 		{
 			"FST_blaster_scatter_cell_SBB3_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfcqb;";
 		};
 	};
 	class FST_CorruptPDF_Gren: FST_U_CorruptPDF
@@ -1184,14 +1245,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_drugs_deathstick",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1203,12 +1256,17 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemGPS",
 			"ItemMap",
+			"G_JMSLLTE_None",
 			"JMSLLTE_PlastHv_bl_helmet"
 		};
 		magazines[]=
 		{
 			"FST_blaster_cell_Yellow",
 			"IDA_HE_LauncherGrenade"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfgrenadier;";
 		};
 	};
 	class FST_CorruptPDF_AA: FST_U_CorruptPDF
@@ -1249,10 +1307,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1271,6 +1325,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow",
 			"FST_E60R_AA_mag_HD"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantiair;";
 		};
 	};
 	class FST_CorruptPDF_AT: FST_U_CorruptPDF
@@ -1311,10 +1369,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1333,6 +1387,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow",
 			"3AS_MK41_AT"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantitank;";
 		};
 	};
 	class FST_CorruptPDF_Medic: FST_U_CorruptPDF
@@ -1372,13 +1430,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_credits_100",
-			"JLTS_credits_100",
-			"JLTS_credits_500",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1396,6 +1447,10 @@ class CfgVehicles
 		magazines[]=
 		{
 			"FST_blaster_cell_low_Yellow_smg"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmedic;";
 		};
 	};
 	class FST_U_CorruptPDFTanker: FST_U_CIS_Light
@@ -1452,9 +1507,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1466,13 +1518,17 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemGPS",
 			"ItemMap",
+			"G_JMSLLTE_None",
 			"JMSLLTE_Desert_1_helmet"
 		};
 		magazines[]=
 		{
 			"FST_blaster_cell_low_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdftanker;";
+		};
 	};
 	class FST_U_CorruptPDFCold: FST_U_CIS_Light
 	{
@@ -1525,16 +1581,7 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_credits_100",
-			"JLTS_credit_card",
-			"JLTS_intel_datacard",
 			"JLTS_intel_holoProjector",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1553,7 +1600,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_High_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfofficer;";
+		};
 	};
 	class FST_CorruptPDFCold_RTO: FST_U_CorruptPDFCold
 	{
@@ -1590,11 +1640,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1613,7 +1658,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfrto;";
+		};
 	};
 	class FST_CorruptPDFCold_Standard: FST_U_CorruptPDFCold
 	{
@@ -1650,11 +1698,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_drugs_deathstick",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1673,7 +1716,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfstandard;";
+		};
 	};
 	class FST_CorruptPDFCold_Auto: FST_U_CorruptPDFCold
 	{
@@ -1710,10 +1756,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow",
 			"ACE_Chemlight_HiRed"
@@ -1733,7 +1775,10 @@ class CfgVehicles
 		{
 			"FST_blaster_battery_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfautorifle;";
+		};
 	};
 	class FST_CorruptPDFCold_Mark: FST_U_CorruptPDFCold
 	{
@@ -1770,10 +1815,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1792,6 +1833,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_High_Yellow",
 			"FST_blaster_cell_low_Yellow"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmarksman;";
 		};
 	};
 	class FST_CorruptPDFCold_CQB: FST_U_CorruptPDFCold
@@ -1829,11 +1874,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_drugs_deathstick",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1852,7 +1892,10 @@ class CfgVehicles
 		{
 			"FST_blaster_scatter_cell_SBB3_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfcqb;";
+		};
 	};
 	class FST_CorruptPDFCold_Gren: FST_U_CorruptPDFCold
 	{
@@ -1889,14 +1932,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_drugs_deathstick",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1916,7 +1951,10 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"IDA_HE_LauncherGrenade"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfgrenadier;";
+		};
 	};
 	class FST_CorruptPDFCold_AA: FST_U_CorruptPDFCold
 	{
@@ -1954,10 +1992,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -1977,7 +2011,10 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"FST_E60R_AA_mag_HD"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantiair;";
+		};
 	};
 	class FST_CorruptPDFCold_AT: FST_U_CorruptPDFCold
 	{
@@ -2015,10 +2052,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -2038,7 +2071,10 @@ class CfgVehicles
 			"FST_blaster_cell_Yellow",
 			"3AS_MK41_AT"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantitank;";
+		};
 	};
 	class FST_CorruptPDFCold_Medic: FST_U_CorruptPDFCold
 	{
@@ -2075,13 +2111,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_credits_100",
-			"JLTS_credits_100",
-			"JLTS_credits_500",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -2100,7 +2129,10 @@ class CfgVehicles
 		{
 			"FST_blaster_cell_low_Yellow_smg"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmedic;";
+		};
 	};
 	class JMSLLTE_ScumPilot_orange_F;
 	class FST_U_CorruptPDFPilot: JMSLLTE_ScumPilot_orange_F
@@ -2144,10 +2176,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
@@ -2159,13 +2187,17 @@ class CfgVehicles
 			"ItemWatch",
 			"ItemGPS",
 			"ItemMap",
+			"G_JMSLLTE_None",
 			"JMSLLTE_Xwing_zev_helmet"
 		};
 		magazines[]=
 		{
 			"FST_blaster_cell_low_Yellow"
 		};
-
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfpilot;";
+		};
 	};
 	class FST_Droid_B1_E5;
 	class FST_SmugB1_E5: FST_Droid_B1_E5

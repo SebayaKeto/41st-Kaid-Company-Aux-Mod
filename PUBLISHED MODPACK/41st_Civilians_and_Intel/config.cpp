@@ -141,6 +141,7 @@ class CfgPatches
 			"FST_CivFlimsiW_Picture",
 			"FST_CivFlimsiW_Receipt",
 			"FST_CivFlimsiW_Stick",
+			"FST_CivFlimsiW_Stick2",
 			"FST_CivFlimsiW_Starchart",
 			"FST_CivFlimsiW_Trash",
 			"FST_CivFlimsiW_Wanted",
@@ -306,6 +307,7 @@ class CfgPatches
 			"FST_CivFlimsi_Receipt",
 			"FST_CivFlimsi_Starchart",
 			"FST_CivFlimsi_Stick",
+			"FST_CivFlimsi_Stick2",
 			"FST_CivFlimsi_Trash",
 			"FST_CivFlimsi_Wanted",
 			"FST_CivFlimsi_Work",
@@ -819,7 +821,7 @@ class CfgWeapons
 		author="Tooka";
 		scope=1;
 		displayName="[41st] Datapad";
-		descriptionShort="A datapad with a paired stylus. On this pad there are a large number of operations checklists for pre-, mid- and post-flight of a civilian starcraft used by a pilot.";
+		descriptionShort="A datapad with a paired stylus. On this pad there are a large number of operations checklists for pre-, mid- and post-flight of a starcraft used by a pilot.";
 	};
 	class FST_StylusData_Note: FST_StylusData_Normal
 	{
@@ -1295,6 +1297,13 @@ class CfgWeapons
 		scope=1;
 		displayName="[41st] Flimsi";
 		descriptionShort="A piece of flimsiplast. Has a crude drawing of a stick figure clone shooting a stick figure battledroid on it.";
+	};
+	class FST_CivFlimsi_Stick2: FST_CivFlimsi_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Flimsi";
+		descriptionShort="A piece of flimsiplast. Has a crude drawing of a stick figure battledroid shooting a stick figure clone on it.";
 	};
 	class FST_CivFlimsi_Receipt: FST_CivFlimsi_Normal
 	{
@@ -3578,7 +3587,7 @@ class CfgVehicles
 	class FST_CivFlimsiW_Stick: Weapon_Base_F
 	{
 		author="Tooka";
-		displayName="[41st] Flimsi (Stickfigure)";
+		displayName="[41st] Flimsi (Stickfigure GAR)";
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
@@ -3589,6 +3598,23 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_CivFlimsi_Stick";
+			};
+		};
+	};
+	class FST_CivFlimsiW_Stick2: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Flimsi (Stickfigure CIS)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivFlimsi_Stick2
+			{
+				count=1;
+				name="FST_CivFlimsi_Stick2";
 			};
 		};
 	};
