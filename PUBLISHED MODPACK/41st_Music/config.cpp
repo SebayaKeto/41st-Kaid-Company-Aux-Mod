@@ -204,6 +204,8 @@ class CfgMusic
 		"FST_Pirates_TheKraken",
 		"FST_Caramelldansen",
 		"FST_Trivium_KirisuteGomen",
+		"FST_TheOneWhosRunningTheShow",
+		"FST_CigaretteWife",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -267,6 +269,7 @@ class CfgMusic
 		"FST_BiteMe",
 		"FST_HahaYeaDudeThatsSick",
 		"FST_Forever_FullVersion",
+		"FST_FightTillImGoodEnough",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -1861,6 +1864,18 @@ class CfgMusic
 		};
 		duration="412";
 	};
+	class FST_CigaretteWife
+	{
+		name="(Signalis) Cigarette Wife";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Cigarette Wife.ogg",
+			1,
+			1
+		};
+		duration="79";
+	};
 
 	//Films
 	
@@ -2238,6 +2253,18 @@ class CfgMusic
 			1
 		};
 		duration="387";
+	};
+	class FST_TheOneWhosRunningTheShow
+	{
+		name="The One Who's Running The Show";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\The One Who's Running the Show.ogg",
+			1,
+			1
+		};
+		duration="134";
 	};
 
 	// Christmas
@@ -2787,6 +2814,18 @@ class CfgMusic
 			1
 		};
 		duration="311";
+	};	
+	class FST_FightTillImGoodEnough
+	{
+		name="The Living Tombstone - Fight Til' I'm Good Enough";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Fight Til I'm Good Enough.ogg",
+			1,
+			1
+		};
+		duration="202";
 	};	
 };
 
