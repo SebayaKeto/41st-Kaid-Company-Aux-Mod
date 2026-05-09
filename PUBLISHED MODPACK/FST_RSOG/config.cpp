@@ -601,6 +601,7 @@ class CfgWeapons
 	// 41st/FST bases first; specialized model bases remain public-mod bases, not SOG aux bases.
 	class FST_P2_Helmet_Base;
 	class FST_Trooper_Uniform;
+	class FST_Uniform_Merrik_BC;
 	class FST_Vest_Base;
 	class HeadgearItem;
 	class JLTS_CloneArmor;
@@ -4020,62 +4021,70 @@ class CfgWeapons
 			};
 		};
 
-	class FST_RSOG_Rep_Intel_MC_Armor_BaseV1: FST_Trooper_Uniform
+	class FST_RSOG_Rep_Intel_MC_Armor_BaseV1: FST_Uniform_Merrik_BC
 		{
 			author="Apathy";
 			scope=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commanders Armor (V1)";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 			picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 			class ItemInfo: UniformItem
 			{
 				uniformModel="-";
 				uniformClass="FST_RSOG_Republic_Intel_MC_V1";
-				containerClass="Supply150";
+				uniformType="Neopren";
+				containerClass="Supply180";
 				mass=40;
 			};
 		};
 
-	class FST_RSOG_Rep_Intel_MC_Armor_BaseV2: FST_Trooper_Uniform
+	class FST_RSOG_Rep_Intel_MC_Armor_BaseV2: FST_Uniform_Merrik_BC
 		{
 			author="Apathy";
 			scope=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commanders Armor (V2)";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 			picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 			class ItemInfo: UniformItem
 			{
 				uniformModel="-";
 				uniformClass="FST_RSOG_Republic_Intel_MC_V2";
-				containerClass="Supply150";
+				uniformType="Neopren";
+				containerClass="Supply180";
 				mass=40;
 			};
 		};
 
-	class FST_RSOG_Rep_Intel_MC_Armor_BaseV3: FST_Trooper_Uniform
+	class FST_RSOG_Rep_Intel_MC_Armor_BaseV3: FST_Uniform_Merrik_BC
 		{
 			author="Apathy";
 			scope=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commanders Armor (V3)";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 			picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 			class ItemInfo: UniformItem
 			{
 				uniformModel="-";
 				uniformClass="FST_RSOG_Republic_Intel_MC_V3";
-				containerClass="Supply150";
+				uniformType="Neopren";
+				containerClass="Supply180";
 				mass=40;
 			};
 		};
 
-	class FST_RSOG_Rep_Intel_MC_Armor_BaseV4: FST_Trooper_Uniform
+	class FST_RSOG_Rep_Intel_MC_Armor_BaseV4: FST_Uniform_Merrik_BC
 		{
 			author="Apathy";
 			scope=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commanders Armor (V4)";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 			picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 			class ItemInfo: UniformItem
 			{
 				uniformModel="-";
 				uniformClass="FST_RSOG_Republic_Intel_MC_V4";
-				containerClass="Supply150";
+				uniformType="Neopren";
+				containerClass="Supply180";
 				mass=40;
 			};
 		};
@@ -10500,6 +10509,9 @@ class CfgVehicles
 			displayName="Marshall Commander V1";
 			faction="FST_RSOG_Faction";
 			editorSubcategory="FST_RSOG_Republic_Intel";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+			icon="JLTS_iconManMarshalCMDR";
+			editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_marshalcommander.jpg";
 			uniformclass="FST_RSOG_Rep_Intel_MC_Armor_BaseV1";
 			nakedUniform="FST_RSOG_Rep_Intel_MC_Armor_BaseV1";
 			hiddenSelections[]=
@@ -10513,6 +10525,11 @@ class CfgVehicles
 				"\FST_RSOG\Data\Chest\Rep_Intel_Upper_MC_V1.paa",
 				"\FST_RSOG\Data\Legs\Rep_Intel_Lower_V1.paa",
 				"\FST_RSOG\Data\Rank\MC_Rank.paa"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"41st_Armor\Data\Other\Clone_armor1_mc.rvmat",
+				"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat"
 			};
 			linkedItems[]=
 			{
@@ -10545,6 +10562,9 @@ class CfgVehicles
 			displayName="Marshall Commander V2";
 			faction="FST_RSOG_Faction";
 			editorSubcategory="FST_RSOG_Republic_Intel";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+			icon="JLTS_iconManMarshalCMDR";
+			editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_marshalcommander.jpg";
 			uniformclass="FST_RSOG_Rep_Intel_MC_Armor_BaseV2";
 			nakedUniform="FST_RSOG_Rep_Intel_MC_Armor_BaseV2";
 			hiddenSelections[]=
@@ -10558,6 +10578,11 @@ class CfgVehicles
 				"\FST_RSOG\Data\Chest\Rep_Intel_Upper_MC_V1_1.paa",
 				"\FST_RSOG\Data\Legs\Rep_Intel_Lower_V1.paa",
 				"\FST_RSOG\Data\Rank\MC_Rank.paa"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"41st_Armor\Data\Other\Clone_armor1_mc.rvmat",
+				"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat"
 			};
 			linkedItems[]=
 			{
@@ -10590,6 +10615,9 @@ class CfgVehicles
 			displayName="Marshall Commander V3";
 			faction="FST_RSOG_Faction";
 			editorSubcategory="FST_RSOG_Republic_Intel";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+			icon="JLTS_iconManMarshalCMDR";
+			editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_marshalcommander.jpg";
 			uniformclass="FST_RSOG_Rep_Intel_MC_Armor_BaseV3";
 			nakedUniform="FST_RSOG_Rep_Intel_MC_Armor_BaseV3";
 			hiddenSelections[]=
@@ -10603,6 +10631,11 @@ class CfgVehicles
 				"\FST_RSOG\Data\Chest\Rep_Intel_Upper_MC_V2.paa",
 				"\FST_RSOG\Data\Legs\Rep_Intel_Lower_V1.paa",
 				"\FST_RSOG\Data\Rank\MC_Rank.paa"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"41st_Armor\Data\Other\Clone_armor1_mc.rvmat",
+				"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat"
 			};
 			linkedItems[]=
 			{
@@ -10635,6 +10668,9 @@ class CfgVehicles
 			displayName="Marshall Commander V4";
 			faction="FST_RSOG_Faction";
 			editorSubcategory="FST_RSOG_Republic_Intel";
+			model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+			icon="JLTS_iconManMarshalCMDR";
+			editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_marshalcommander.jpg";
 			uniformclass="FST_RSOG_Rep_Intel_MC_Armor_BaseV4";
 			nakedUniform="FST_RSOG_Rep_Intel_MC_Armor_BaseV4";
 			hiddenSelections[]=
@@ -10648,6 +10684,11 @@ class CfgVehicles
 				"\FST_RSOG\Data\Chest\Rep_Intel_Upper_MC_V2_1.paa",
 				"\FST_RSOG\Data\Legs\Rep_Intel_Lower_V1.paa",
 				"\FST_RSOG\Data\Rank\MC_Rank.paa"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"41st_Armor\Data\Other\Clone_armor1_mc.rvmat",
+				"41st_Armor\Data\Other\Clone_Armor_P2_Lower.rvmat"
 			};
 			linkedItems[]=
 			{
