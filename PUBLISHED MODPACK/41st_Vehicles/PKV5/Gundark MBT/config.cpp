@@ -1506,5 +1506,40 @@ class CfgVehicles
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Cannon_Turret_Plain.paa"
 		};
 	};
+	class FST_PKV5_UP_Stormer: FST_PKV5_Main_UP
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Gundark' Light Tank";
+		accuracy=1000;
+		side=1;
+		faction = "FST_Faction";
+		crew = "FST_Trooper_P2_DC15S";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"FST_Trooper_P2_DC15S"
+		};
+	};
+	class FST_PKV5_UP_Selene: FST_PKV5_Main_UP
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Gundark' (Selene)";
+		accuracy=1000;
+		side=1;
+		faction = "FST_Faction";
+		crew = "FST_P2_Recruit";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"FST_P2_Recruit"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Selene.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Cannon_Turret_Plain.paa"
+		};
+	};
 };
 
