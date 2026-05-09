@@ -171,6 +171,7 @@ class CfgMusic
 		"FST_KingsField_Decline_Extended",
 		"FST_DOOM_TheOnlyThingTheyFearIsYou",
 		"FST_Souls_Manus",
+		"FST_CigaretteWife",
 	
 		
 		//Misc tracks
@@ -192,7 +193,6 @@ class CfgMusic
 		"FST_LA_ATer_Saints_Ofthe41st",
 		"FST_IntoTheFire",
 		"FST_Screaming_Eagles",
-		"FST_Disassembly_Industrial_Metal_Remix",
 		"FST_AlortaMusic_04",
 		"FST_Combat_4",
 		"FST_Combat_3",
@@ -205,6 +205,8 @@ class CfgMusic
 		"FST_Pirates_TheKraken",
 		"FST_Caramelldansen",
 		"FST_Trivium_KirisuteGomen",
+		"FST_TheOneWhosRunningTheShow",
+		"FST_PacificRim",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -241,6 +243,7 @@ class CfgMusic
 
 		//Murder Drones
 		"FST_DisassemblyRequired",
+		"FST_Disassembly_Industrial_Metal_Remix",
 		"FST_DisassemblyRequired_Cynthwave",
 		"FST_EldritchJXD",
 		"FST_TheKnifeDance",
@@ -268,6 +271,7 @@ class CfgMusic
 		"FST_BiteMe",
 		"FST_HahaYeaDudeThatsSick",
 		"FST_Forever_FullVersion",
+		"FST_FightTillImGoodEnough",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -1874,6 +1878,18 @@ class CfgMusic
 		};
 		duration="412";
 	};
+	class FST_CigaretteWife
+	{
+		name="(Signalis) Cigarette Wife";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Cigarette Wife.ogg",
+			1,
+			1
+		};
+		duration="79";
+	};
 
 	//Films
 	
@@ -2251,6 +2267,30 @@ class CfgMusic
 			1
 		};
 		duration="387";
+	};
+	class FST_TheOneWhosRunningTheShow
+	{
+		name="The One Who's Running The Show";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\The One Who's Running the Show.ogg",
+			1,
+			1
+		};
+		duration="134";
+	};
+	class FST_PacificRim
+	{
+		name="Pacific Rim Theme";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Pacific Rim Theme.ogg",
+			1,
+			1
+		};
+		duration="296";
 	};
 
 	// Christmas
@@ -2800,6 +2840,18 @@ class CfgMusic
 			1
 		};
 		duration="311";
+	};	
+	class FST_FightTillImGoodEnough
+	{
+		name="The Living Tombstone - Fight Til' I'm Good Enough";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\Fight Til I'm Good Enough.ogg",
+			1,
+			1
+		};
+		duration="202";
 	};	
 };
 
