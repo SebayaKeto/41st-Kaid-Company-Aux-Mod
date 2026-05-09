@@ -170,6 +170,7 @@ class CfgMusic
 		"FST_LobotomyCorp_Neutral01",
 		"FST_KingsField_Decline_Extended",
 		"FST_DOOM_TheOnlyThingTheyFearIsYou",
+		"FST_Souls_Manus",
 	
 		
 		//Misc tracks
@@ -804,6 +805,18 @@ class CfgMusic
 			1
 		};
 		duration="219";
+	};
+	class FST_Souls_Manus
+	{
+		name="(Dark Souls) Manus Theme";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Souls_Manus.ogg",
+			1,
+			1
+		};
+		duration="200";
 	};
 	class FST_Destiny_ClashOfWills
 	{
