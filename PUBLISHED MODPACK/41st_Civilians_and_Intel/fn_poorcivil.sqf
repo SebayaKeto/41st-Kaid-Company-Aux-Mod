@@ -9,7 +9,7 @@ if (!local _unit) exitWith {};
 
 params ["_unit"];
 
-sleep 0.1;
+sleep 0.05;
 
 private _lowrollarray = [1, 0.4, 2, 0.4, 3, 0.2];
 private _midrollarray = [3, 0.4, 4, 0.4, 5, 0.2];

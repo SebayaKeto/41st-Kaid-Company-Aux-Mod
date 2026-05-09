@@ -9,7 +9,7 @@ if (!local _unit) exitWith {};
 
 params ["_unit"];
 
-sleep 0.1;
+sleep 0.05;
 
 [_unit, "FST_clone_Default_head"] remoteExec ["setFace", 0, _unit];
 [_unit, "Male04ENGB"] remoteExec ["setSpeaker", 0, _unit];

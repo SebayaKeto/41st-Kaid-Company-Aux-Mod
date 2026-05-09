@@ -9,7 +9,7 @@ if (!local _unit) exitWith {};
 
 params ["_unit"];
 
-sleep 0.1;
+sleep 0.05;
 
 list_41allheads = [
 	"TCGM_Fem_Zhu",
