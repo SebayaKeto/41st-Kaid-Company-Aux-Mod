@@ -12,7 +12,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"FST_Z95_Republic"
+			"FST_Z95_Republic",
+			"FST_Z95_Qball"
 		};
 		weapons[]={};
 		author="Adapted from 3AS by Viz";
@@ -312,6 +313,38 @@ class CfgVehicles
 		hiddenselectionstextures[]=
 		{
 			"41st_Vehicles\Z-95\Data\green_co.paa",
+			"3AS\3AS_Z95\Data\cockpit_co.paa",
+			"3AS\3AS_Z95\data\glass\glass_ca"
+		};
+	};
+	class FST_Z95_Qball: FST_Z95_Republic
+	{
+		author="Vengence";
+		_generalMacro="O_T_VTOL_02_infantry_dynamicLoadout_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] Z-95 Qball";
+		side=1;
+		crew="FST_Pilot_P1";
+		typicalCargo[]=
+		{
+			"FST_Pilot_P1"
+		};
+		faction="FST_Faction";
+		availableForSupportTypes[]=
+		{
+			"CAS_Bombing"
+		};
+		editorPreview="";
+		hiddenselections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\Z-95\Data\FST_Qball_Z95_co.paa",
 			"3AS\3AS_Z95\Data\cockpit_co.paa",
 			"3AS\3AS_Z95\data\glass\glass_ca"
 		};
