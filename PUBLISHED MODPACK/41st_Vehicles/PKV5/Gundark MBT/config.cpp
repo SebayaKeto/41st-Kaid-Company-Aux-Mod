@@ -2,9 +2,11 @@ class CfgPatches
 {
 	class FST_PKV5_MainCannonUP
 	{
+		author="41st";
 		requiredAddons[]=
 		{
-			"A3_Armor_F_Beta"
+			"A3_Armor_F_Beta",
+			"ls_vehicles_pkv5"
 		};
 		units[]=
 		{
@@ -15,64 +17,130 @@ class CfgPatches
 		weapons[]={};
 	};
 };
+
 class CfgVehicles
 {
 	class LandVehicle;
 	class Tank: LandVehicle
 	{
 		class NewTurret;
-		class Sounds;
 		class HitPoints;
 	};
 	class Tank_F: Tank
 	{
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
-		class AnimationSources;
-		class ViewPilot;
 		class ViewOptics;
-		class ViewCargo;
-		class HeadLimits;
 		class HitPoints: HitPoints
 		{
 			class HitHull;
 			class HitEngine;
+		};
+		class Turrets
+		{
+			class MainTurret;
+		};
+		class CommanderOptics;
+		class ViewCargo;
+	};
+
+	// Legion base actually contains the model, proxies, driver, cargo, gunner, and commander layout.
+	// Declare its nested classes so our derived class can inherit and patch them instead of replacing them.
+	class ls_vehicle_pkv5_base: Tank_F
+	{
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitEngine;
+			class HitFuel;
 			class HitLTrack;
 			class HitRTrack;
 		};
-		class Sounds: Sounds
+		class Turrets: Turrets
 		{
-			class Engine;
-			class Movement;
+			class MainTurret: MainTurret
+			{
+				class HitPoints
+				{
+					class HitTurret;
+					class HitGun;
+				};
+			};
+			class CommanderOptics: CommanderOptics
+			{
+				class HitPoints
+				{
+					class HitComGun;
+					class HitComTurret;
+				};
+			};
 		};
 	};
-	class FST_PKV5_Main_UP: Tank_F
+
+	class FST_PKV5_Main_UP: ls_vehicle_pkv5_base
 	{
-		vehicleClass="Armored";
+		scope=0;
+		scopeCurator=0;
+		author="41st";
 		displayName="PK-V5 Main Cannon";
-		accuracy=0.30000001;
-		model="\PKV5\Up-PK-V5 Main Cannon\PKV5_Main_Cannon.p3d";
-		picture="\A3\armor_f_gamma\MBT_02\Data\UI\MBT_02_Base_ca.paa";
-		icon="\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
-		driverAction="mbt2_slot2a_out";
+		vehicleClass="Armored";
+		accuracy=1000;
+
+		// Legion model uses lowercase selections. The 41st and Legion UVs match.
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Cannon.paa"
+		};
+
+		textureList[]=
+		{
+			"FST_41st_Gundark", 1,
+			"FST_41st_Gundark_Gray", 0,
+			"FST_41st_Gundark_PDF", 0
+		};
+		class TextureSources
+		{
+			class FST_41st_Gundark
+			{
+				displayName="41st";
+				author="41st";
+				factions[]={"FST_Faction"};
+				textures[]=
+				{
+					"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull.paa",
+					"\41st_Vehicles\PKV5\Data\FST_PKV5_Cannon.paa"
+				};
+			};
+			class FST_41st_Gundark_Gray: FST_41st_Gundark
+			{
+				displayName="41st Gray";
+				textures[]=
+				{
+					"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Plain.paa",
+					"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Cannon_Turret_Plain.paa"
+				};
+			};
+			class FST_41st_Gundark_PDF: FST_41st_Gundark
+			{
+				displayName="PDF";
+				textures[]=
+				{
+					"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_PDF.paa",
+					"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Cannon_Turret_Plain.paa"
+				};
+			};
+		};
+
 		maximumLoad=5000;
 		ace_cargo_space=30;
 		ace_cargo_hasCargo=1;
-		driverInAction="mbt2_slot2a_in";
-		memoryPointsGetInDriver="pos driver";
-		memoryPointsGetInDriverDir="pos driver dir";
-		memoryPointsGetInCommander="pos driver";
-		memoryPointsGetInCommanderDir="pos driver dir";
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-3.7,-7.8]]], [0], [0]]";
+
 		class TransportItems
 		{
 			class _xx_IDA_Cauterizer
@@ -87,14 +155,12 @@ class CfgVehicles
 			};
 			class _xx_ToolKit
 			{
-				name="Toolkit";
+				name="ToolKit";
 				count=1;
 			};
 		};
-		weapon[]=
-		{
-			"TruckHorn2"
-		};
+
+		// Restored 41st/3AS TX-130-style engine and movement sound profile from the original Gundark.
 		attenuationEffectType="TankAttenuation";
 		soundGetIn[]=
 		{
@@ -855,86 +921,31 @@ class CfgVehicles
 			};
 		};
 		simulation="tankX";
-		enginePower=1650; //1500
+
+		// 41st handling/tuning values layered onto Legion's smaller model.
+		enginePower=1650;
 		maxOmega=320;
-		peakTorque=7700; //7000
-		maxSpeed=90; //80
-		torqueCurve[]=
-		{
-			{0,0},
-			
-			{
-				"(1600/2640)",
-				"(2650/2850)"
-			},
-			
-			{
-				"(1800/2640)",
-				"(2800/2850)"
-			},
-			
-			{
-				"(1900/2640)",
-				"(2850/2850)"
-			},
-			
-			{
-				"(2000/2640)",
-				"(2800/2850)"
-			},
-			
-			{
-				"(2200/2640)",
-				"(2750/2850)"
-			},
-			
-			{
-				"(2400/2640)",
-				"(2600/2850)"
-			},
-			
-			{
-				"(2640/2640)",
-				"(2350/2850)"
-			}
-		};
-		thrustDelay=0.1;
-		clutchStrength=180;
+		peakTorque=7700;
+		maxSpeed=90;
 		fuelCapacity=1885;
 		brakeIdleSpeed=1.78;
-		latency=0.1;
-		tankTurnForce=600000;
-		idleRpm=700;
-		redRpm=6640;
-		engineLosses=25;
-		transmissionLosses=15;
 		class complexGearbox
 		{
 			GearboxRatios[]=
 			{
-				"R2",
-				-2.2000001,
-				"N",
-				0,
-				"D1",
-				4.6999998,
-				"D2",
-				3.5,
-				"D3",
-				2.5999999,
-				"D4",
-				2,
-				"D5",
-				1.5,
-				"D6",
-				1.125,
-				"D7",
-				0.85000002
+				"R2", -2.2000001,
+				"N", 0,
+				"D1", 4.6999998,
+				"D2", 3.5,
+				"D3", 2.5999999,
+				"D4", 2,
+				"D5", 1.5,
+				"D6", 1.125,
+				"D7", 0.85000002
 			};
 			TransmissionRatios[]=
 			{
-				"High",
-				15
+				"High", 15
 			};
 			gearBoxMode="auto";
 			moveOffGear=1;
@@ -943,114 +954,15 @@ class CfgVehicles
 			reverseString="R";
 			transmissionDelay=0.1;
 		};
-		class Wheels
-		{
-			class L2
-			{
-				boneName="Wheel_podkoloL1";
-				center="Wheel_1_2_axis";
-				boundary="Wheel_1_2_bound";
-				damping=75;
-				steering=0;
-				side="left";
-				weight=150;
-				mass=150;
-				MOI=25;
-				latStiffX=25;
-				latStiffY=280;
-				longitudinalStiffnessPerUnitGravity=100000;
-				maxBrakeTorque=40000;
-				sprungMass=4000;
-				springStrength=324000;
-				springDamperRate=36000;
-				dampingRate=1;
-				dampingRateInAir=8830;
-				dampingRateDamaged=10;
-				dampingRateDestroyed=10000;
-				maxDroop=0.15000001;
-				maxCompression=0.15000001;
-			};
-			class L3: L2
-			{
-				boneName="Wheel_podkoloL2";
-				center="Wheel_1_3_axis";
-				boundary="Wheel_1_3_bound";
-			};
-			class L4: L2
-			{
-				boneName="Wheel_podkoloL3";
-				center="Wheel_1_4_axis";
-				boundary="Wheel_1_4_bound";
-			};
-			class L5: L2
-			{
-				boneName="Wheel_podkoloL4";
-				center="Wheel_1_5_axis";
-				boundary="Wheel_1_5_bound";
-			};
-			class L6: L2
-			{
-				boneName="Wheel_podkoloL5";
-				center="Wheel_1_6_axis";
-				boundary="Wheel_1_6_bound";
-			};
-			class L7: L2
-			{
-				boneName="Wheel_podkoloL6";
-				center="Wheel_1_7_axis";
-				boundary="Wheel_1_7_bound";
-			};
-			class R2: L2
-			{
-				boneName="Wheel_podkoloP1";
-				center="Wheel_2_2_axis";
-				boundary="Wheel_2_2_bound";
-				side="right";
-			};
-			class R3: R2
-			{
-				boneName="Wheel_podkoloP2";
-				center="Wheel_2_3_axis";
-				boundary="Wheel_2_3_bound";
-			};
-			class R4: R2
-			{
-				boneName="Wheel_podkoloP3";
-				center="Wheel_2_4_axis";
-				boundary="Wheel_2_4_bound";
-			};
-			class R5: R2
-			{
-				boneName="Wheel_podkoloP4";
-				center="Wheel_2_5_axis";
-				boundary="Wheel_2_5_bound";
-			};
-			class R6: R2
-			{
-				boneName="Wheel_podkoloP5";
-				center="Wheel_2_6_axis";
-				boundary="Wheel_2_6_bound";
-			};
-			class R7: R2
-			{
-				boneName="Wheel_podkoloP6";
-				center="Wheel_2_7_axis";
-				boundary="Wheel_2_7_bound";
-			};
-		};
-		cost=1500000;
-		damageResistance=0.02;
-		crewVulnerable="false";
+
 		armor=500;
 		armorStructural=3.5;
+		crewVulnerable=0;
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
 			{
 				armor=4.5;
-				material=-1;
-				name="telo";
-				visual="zbytek";
 				passThrough=1;
 				minimalHit=0.14;
 				explosionShielding=2;
@@ -1059,18 +971,22 @@ class CfgVehicles
 			class HitEngine: HitEngine
 			{
 				armor=1;
-				material=-1;
-				name="motor";
 				passThrough=0;
 				minimalHit=0.079999998;
 				explosionShielding=1.4400001;
 				radius=0.33000001;
 			};
+			class HitFuel: HitFuel
+			{
+				armor=0.30000001;
+				passThrough=0.1;
+				minimalHit=0.1;
+				explosionShielding=0.60000002;
+				radius=0.30000001;
+			};
 			class HitLTrack: HitLTrack
 			{
 				armor=1;
-				material=-1;
-				name="pas_L";
 				passThrough=0;
 				minimalHit=0.079999998;
 				explosionShielding=1.4400001;
@@ -1079,378 +995,97 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor=1;
-				material=-1;
-				name="pas_P";
 				passThrough=0;
 				minimalHit=0.079999998;
 				explosionShielding=1.4400001;
 				radius=0.30000001;
 			};
 		};
+
+		smokeLauncherGrenadeCount=8;
+		smokeLauncherVelocity=14;
+		smokeLauncherOnTurret=0;
+		smokeLauncherAngle=120;
+
+		// Patch Legion's inherited turret classes. Do not replace them with bare classes,
+		// or Arma drops the gunner/commander seat metadata inherited from Tank_F/Legion.
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
-				class Turrets: Turrets
-				{
-					class CommanderOptics: CommanderOptics
-					{
-						body="obsTurret";
-						gun="obsGun";
-						animationSourceBody="obsTurret";
-						animationSourceGun="obsGun";
-						maxHorizontalRotSpeed=1.8;
-						maxVerticalRotSpeed=1.8;
-						stabilizedInAxes="StabilizedInAxesBoth";
-						soundServo[]=
-						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_best",
-							0.0099999998,
-							1,
-							50
-						};
-						minElev=-25;
-						maxElev=60;
-						initElev=0;
-						minTurn=-360;
-						maxTurn=360;
-						initTurn=0;
-						memoryPointGun="usti hlavne3";
-						gunBeg="usti hlavne3";
-						gunEnd="konec hlavne3";
-						weapons[]=
-						{
-							"SmokeLauncher",
-							"Laserdesignator_vehicle"
-						};
-						magazines[]=
-						{
-							"SmokeLauncherMag",
-							"SmokeLauncherMag",
-							"Laserbatteries"
-						};
-						turretInfoType="RscWeaponRangeZeroing";
-						discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
-						discreteDistanceInitIndex=2;
-						memoryPointGunnerOutOptics="commanderview";
-						memoryPointGunnerOptics="commanderview";
-						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
-						gunnerOutOpticsModel="";
-						gunnerOpticsEffect[]={};
-						gunnerHasFlares=1;
-						class ViewOptics: ViewOptics
-						{
-							initAngleX=0;
-							minAngleX=-30;
-							maxAngleX=30;
-							initAngleY=0;
-							minAngleY=-100;
-							maxAngleY=100;
-							initFov=0.255;
-							minFov=0.034000002;
-							maxFov=0.45500001;
-							visionMode[]=
-							{
-								"Normal",
-								"TI",
-								"NVG"
-							};
-							thermalMode[]={0,1};
-						};
-						gunnerAction="mbt2_slot2b_out";
-						gunnerInAction="mbt2_slot2b_in";
-						gunnerGetInAction="GetInHigh";
-						gunnerGetOutAction="GetOutHigh";
-						startEngine=0;
-						viewGunnerInExternal=1;
-						outGunnerMayFire=1;
-						inGunnerMayFire=1;
-						class HitPoints
-						{
-							class HitTurret
-							{
-								armor=2;
-								material=-1;
-								name="vezVelitele";
-								visual="vezVelitele";
-								passThrough=0;
-								minimalHit=0.2; //0.029999999
-								explosionShielding=0.60000002;
-								radius=0.25;
-							};
-							class HitGun
-							{
-								armor=2;
-								material=-1;
-								name="zbranVelitele";
-								visual="zbranVelitele";
-								passThrough=0;
-								minimalHit=0.5; //0.029999999
-								explosionShielding=0.60000002;
-								radius=0.25;
-							};
-						};
-						selectionFireAnim="zasleh3";
-					};
-				};
-				memoryPointGun="usti hlavne2";
-				selectionFireAnim="zasleh2";
-				gunBeg="usti hlavne";
-				gunEnd="konec hlavne";
+				// Keep Legion's animated turret layout, but force Arma to use the Legion muzzle/direction memory points
+				// for shot origin/tracer/smoke instead of falling back to the inherited/static origin.
+				memoryPointGun="machinegun";
+				gunBeg="machinegun";
+				gunEnd="pip1_dir";
+				selectionFireAnim="";
+
 				weapons[]=
 				{
-					"FST_Sabre_Cannons_Super",
+					"FST_PKV5_Sabre_Cannons_Super_NoSmoke",
 					"Laserdesignator_vehicle"
 				};
 				magazines[]=
 				{
-					"FST_25rnd_Sabre_Super_Mag",
-					"FST_25rnd_Sabre_Super_Mag",
-					"FST_25rnd_Sabre_Super_Mag",
-					"FST_25rnd_Sabre_Super_Mag",
+					"FST_25rnd_Gundark_Mag",
+					"FST_25rnd_Gundark_Mag",
+					"FST_25rnd_Gundark_Mag_HE",
+					"FST_25rnd_Gundark_Mag_HE",
 					"Laserbatteries"
 				};
 				minElev=-6;
 				maxElev=20;
 				initElev=0;
-				soundServo[]=
-				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_best",
-					0.0099999998,
-					1,
-					50
-				};
 				turretInfoType="RscWeaponRangeZeroing";
 				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400};
 				discreteDistanceInitIndex=5;
-				memoryPointGunnerOptics="gunnerview";
-				gunnerOutOpticsModel="";
-				gunnerOutOpticsEffect[]={};
-				gunnerOpticsEffect[]={};
-				gunnerForceOptics=1;
-				class OpticsIn
+				gunnerForceOptics=0;
+				class HitPoints: HitPoints
 				{
-					class Wide: ViewOptics
-					{
-						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
-						initAngleY=0;
-						minAngleY=-100;
-						maxAngleY=100;
-						initFov=0.30000001;
-						minFov=0.30000001;
-						maxFov=0.30000001;
-						visionMode[]=
-						{
-							"Normal",
-							"Ti",
-							"NVG"
-						};
-						thermalMode[]={4,5};
-						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MTB_02_w_F.p3d";
-						gunnerOpticsEffect[]={};
-					};
-					class Medium: Wide
-					{
-						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MTB_02_m_F.p3d";
-						initFov=0.07;
-						minFov=0.07;
-						maxFov=0.07;
-					};
-					class Narrow: Wide
-					{
-						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MTB_02_n_F.p3d";
-						initFov=0.028000001;
-						minFov=0.028000001;
-						maxFov=0.028000001;
-					};
-				};
-				gunnerAction="mbt2_slot2a_out";
-				gunnerInAction="mbt2_slot2a_in";
-				forceHideGunner=0;
-				inGunnerMayFire=1;
-				viewGunnerInExternal=1;
-				startEngine=0;
-				class HitPoints
-				{
-					class HitTurret
+					class HitTurret: HitTurret
 					{
 						armor=0.80000001;
-						material=-1;
-						name="vez";
-						visual="vez";
 						passThrough=0;
-						minimalHit=0.2; //0.02
+						minimalHit=0.2;
 						explosionShielding=0.30000001;
 						radius=0.25;
 					};
-					class HitGun
+					class HitGun: HitGun
 					{
 						armor=0.30000001;
-						material=-1;
-						name="zbran";
-						visual="";
 						passThrough=0;
-						minimalHit=0.5; //0
+						minimalHit=0.5;
 						explosionShielding=1;
 						radius=0.25;
 					};
 				};
 			};
-		};
-		class AnimationSources: AnimationSources
-		{
-			class muzzle_rot_cannon
+			class CommanderOptics: CommanderOptics
 			{
-				source="ammorandom";
-				weapon="FST_Sabre_Cannons_Super";
-			};
-/* 			class muzzle_rot_coax
-			{
-				source="ammorandom";
-				weapon="AMT_Coax";
-			}; */
-			class recoil_source
-			{
-				source="reload";
-				weapon="FST_Sabre_Cannons_Super";
-			};
-		};
-		class Damage
-		{
-			tex[]={};
-			mat[]=
-			{
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_damage.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_destruct.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_body.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_body_damage.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_body_destruct.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_tracks.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_tracks_damage.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_tracks_destruct.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_turret.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_turret_damage.rvmat",
-				"A3\Armor_F_Gamma\MBT_02\Data\MBT_02_turret_destruct.rvmat",
-				"A3\Armor_F_Gamma\MBT_01\Data\MBT_01_scorcher.rvmat",
-				"A3\Armor_F_Gamma\MBT_01\Data\MBT_01_scorcher_damage.rvmat",
-				"A3\Armor_F_Gamma\MBT_01\Data\MBT_01_scorcher_destruct.rvmat"
-			};
-		};
-		smokeLauncherGrenadeCount=8;
-		smokeLauncherVelocity=14;
-		smokeLauncherOnTurret=1;
-		smokeLauncherAngle=120;
-		class ViewOptics: ViewOptics
-		{
-			visionMode[]=
-			{
-				"Normal",
-				"NVG",
-				"TI"
-			};
-		};
-		dustFrontLeftPos="Wheel_1_2_bound";
-		dustFrontRightPos="Wheel_2_2_bound";
-		dustBackLeftPos="Wheel_1_7_bound";
-		dustBackRightPos="Wheel_2_7_bound";
-		class Exhausts
-		{
-			class Exhaust1
-			{
-				position="exhaust";
-				direction="exhaust_dir";
-				effect="ExhaustEffectTankBack";
-			};
-		};
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull.paa",
-			"\41st_Vehicles\PKV5\Data\FST_PKV5_Cannon.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"\PKV5\Data\Fighter_Tank_Chassis.rvmat",
-			"\PKV5\Data\Cannon_Turret.rvmat"
-		};
-		class TextureSources
-		{
-			class AMT_Republic_Main
-			{
-				displayName="Republic";
-				author="Genetic";
-				textures[]=
+				weapons[]=
 				{
-					"\PKV5\Data\Fighter_Tank_Chassis_co.paa",
-					"\PKV5\Data\Cannon_Turret_co.paa"
+					"SmokeLauncher",
+					"Laserdesignator_vehicle"
 				};
-				factions[]={};
-			};
-		};
-		class Reflectors
-		{
-			class Left
-			{
-				color[]={1900,1300,950};
-				ambient[]={5,5,5};
-				position="Light_L";
-				direction="Light_L_end";
-				hitpoint="Light_L";
-				selection="";
-				size=1;
-				innerAngle=100;
-				outerAngle=179;
-				coneFadeCoef=10;
-				intensity=1;
-				useFlare=0;
-				dayLight=0;
-				flareSize=1;
-				class Attenuation
+				magazines[]=
 				{
-					start=1;
-					constant=0;
-					linear=0;
-					quadratic=0.25;
-					hardLimitStart=30;
-					hardLimitEnd=60;
+					"SmokeLauncherMag",
+					"SmokeLauncherMag",
+					"Laserbatteries"
 				};
+				minElev=-25;
+				maxElev=60;
+				initElev=0;
+				minTurn=-360;
+				maxTurn=360;
+				initTurn=0;
+				turretInfoType="RscWeaponRangeZeroing";
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				discreteDistanceInitIndex=2;
 			};
-			class Right: Left
-			{
-				position="Light_R";
-				direction="Light_R_end";
-				hitpoint="Light_R";
-				selection="";
-			};
-			class Right2: Right
-			{
-				position="light_R_flare";
-				useFlare=1;
-			};
-			class Left2: Left
-			{
-				position="light_L_flare";
-				useFlare=1;
-			};
-		};
-		aggregateReflectors[]=
-		{
-			
-			{
-				"Left",
-				"Right",
-				"Left2",
-				"Right2"
-			}
 		};
 	};
+
 	class FST_PKV5_UP_Stormer: FST_PKV5_Main_UP
 	{
 		scope=2;
@@ -1458,14 +1093,18 @@ class CfgVehicles
 		displayName="[41st] PK-V5 'Gundark' Light Tank";
 		accuracy=1000;
 		side=1;
-		faction = "FST_Faction";
-		crew = "FST_Trooper_P2_DC15S";
-		editorSubcategory = "FST_Ground_Vehicle";
-		typicalCargo[]=
+		faction="FST_Faction";
+		crew="FST_Trooper_P2_DC15S";
+		typicalCrew[]={"FST_Trooper_P2_DC15S"};
+		typicalCargo[]={"FST_Trooper_P2_DC15S"};
+		editorSubcategory="FST_Ground_Vehicle";
+		hiddenSelectionsTextures[]=
 		{
-			"FST_Trooper_P2_DC15S"
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Cannon.paa"
 		};
 	};
+
 	class FST_PKV5_UP_Stormer_Gray: FST_PKV5_Main_UP
 	{
 		scope=2;
@@ -1473,19 +1112,18 @@ class CfgVehicles
 		displayName="[41st] PK-V5 'Gundark' Light Tank/Gray";
 		accuracy=1000;
 		side=1;
-		faction = "FST_Faction";
-		crew = "FST_P2_Recruit";
-		editorSubcategory = "FST_Ground_Vehicle";
-		typicalCargo[]=
-		{
-			"FST_P2_Recruit"
-		};
+		faction="FST_Faction";
+		crew="FST_P2_Recruit";
+		typicalCrew[]={"FST_P2_Recruit"};
+		typicalCargo[]={"FST_P2_Recruit"};
+		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Plain.paa",
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Cannon_Turret_Plain.paa"
 		};
 	};
+
 	class FST_PKV5_UP_Stormer_PDF: FST_PKV5_Main_UP
 	{
 		scope=2;
@@ -1493,13 +1131,11 @@ class CfgVehicles
 		displayName="[41st] PK-V5 'Gundark' Light Tank/PDF";
 		accuracy=1000;
 		side=0;
-		faction = "FST_Faction";
-		crew = "JLTS_Droid_B1_Prototype";
-		editorSubcategory = "FST_Ground_Vehicle";
-		typicalCargo[]=
-		{
-			"JLTS_Droid_B1_Prototype"
-		};
+		faction="FST_Faction";
+		crew="JLTS_Droid_B1_Prototype";
+		typicalCrew[]={"JLTS_Droid_B1_Prototype"};
+		typicalCargo[]={"JLTS_Droid_B1_Prototype"};
+		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_PDF.paa",
@@ -1542,4 +1178,3 @@ class CfgVehicles
 		};
 	};
 };
-
