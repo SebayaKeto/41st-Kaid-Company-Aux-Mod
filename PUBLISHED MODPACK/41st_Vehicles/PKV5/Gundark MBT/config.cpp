@@ -12,7 +12,8 @@ class CfgPatches
 		{
 			"FST_PKV5_UP_Stormer",
 			"FST_PKV5_UP_Stormer_Gray",
-			"FST_PKV5_UP_Stormer_PDF"
+			"FST_PKV5_UP_Stormer_PDF",
+			"FST_PKV5_UP_Stormer_Selene"
 		};
 		weapons[]={"FST_PKV5_Sabre_Cannons_Super_NoSmoke"};
 	};
@@ -1067,16 +1068,16 @@ class CfgVehicles
 				{
 					class HitTurret: HitTurret
 					{
-						armor=2;              // was 0.8
+						armor=1.5;              // was 0.8
 						passThrough=0;
 						minimalHit=0.2;
-						explosionShielding=0.60000002; // was 0.3
+						explosionShielding=0.50000002; // was 0.3
 						radius=0.25;
 					};
 
 					class HitGun: HitGun
 					{
-						armor=2;              // was 0.3
+						armor=0.5;              // was 0.3
 						passThrough=0;
 						minimalHit=0.5;
 						explosionShielding=1;
