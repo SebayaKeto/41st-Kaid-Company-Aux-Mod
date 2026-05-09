@@ -1598,7 +1598,7 @@ class CfgAmmo
 	{
 		hit=30;
 		indirecthit=30;
-		indirecthitrange=12;
+		indirecthitrange=8;
 		warheadName="HE";
 		caliber=10;
 		explosive=0.2;
@@ -1806,20 +1806,6 @@ class CfgWeapons
 				positionName="Usti hlavne";
 				directionName="Konec hlavne";
 			};
-		};
-	};
-	class FST_PKV5_Sabre_Cannons_Super_NoSmoke: FST_Sabre_Cannons_Super
-	{
-		scope=1;
-		displayName="Sabre Cannons";
-		shotFromTurret=1;
-		magazines[]=
-		{
-			"FST_25rnd_Gundark_Mag",
-			"FST_25rnd_Gundark_Mag_HE",
-		};
-		class GunParticles
-		{
 		};
 	};
 	class FST_Medium_twin_laser_turret: LMG_RCWS

@@ -11743,7 +11743,8 @@ class CfgWeapons
 	{
 		author="Vengence";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Smoke/Dirty]"
+		displayName="[41st] P2 Helmet [Smoke/Dirty]";
+		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Smoke_Dirty.paa",
 		};
@@ -15518,7 +15519,6 @@ class CfgWeapons
 			containerClass="Supply180";
 			mass=15;
 		};
-	};
 	};
 	class FST_Uniform_Mixer_Dirty: JLTS_CloneArmor
 	{

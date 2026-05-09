@@ -14,7 +14,31 @@ class CfgPatches
 			"FST_PKV5_UP_Stormer_Gray",
 			"FST_PKV5_UP_Stormer_PDF"
 		};
-		weapons[]={};
+		weapons[]={"FST_PKV5_Sabre_Cannons_Super_NoSmoke"};
+	};
+};
+
+
+class CfgWeapons
+{
+	class FST_Sabre_Cannons_Super;
+	class FST_PKV5_Sabre_Cannons_Super_NoSmoke: FST_Sabre_Cannons_Super
+	{
+		scope=1;
+		displayName="Sabre Cannons";
+		// PK-V5 Legion-model weapon wrapper. Do not alter FST_Sabre_Cannons_Super globally,
+		// because other 41st vehicles still use its original GunParticles memory points.
+		// IMPORTANT: Do not set shotFromTurret=1 here. Legion's PK-V5 turret is built around
+		// memoryPointGun="machinegun"; forcing legacy gunBeg/gunEnd behavior can make the
+		// projectile/effect spawn from model center when those points are not valid for this model.
+		magazines[]=
+		{
+			"FST_25rnd_Gundark_Mag",
+			"FST_25rnd_Gundark_Mag_HE"
+		};
+		class GunParticles
+		{
+		};
 	};
 };
 
@@ -1013,11 +1037,10 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
-				// Keep Legion's animated turret layout, but force Arma to use the Legion muzzle/direction memory points
-				// for shot origin/tracer/smoke instead of falling back to the inherited/static origin.
+				// Keep Legion's animated turret layout exactly where it matters for projectile origin.
+				// Legion's model exposes the muzzle as "machinegun"; do not force legacy gunBeg/gunEnd here,
+				// because shotFromTurret/gunBeg/gunEnd can fall back to model center on this model.
 				memoryPointGun="machinegun";
-				gunBeg="machinegun";
-				gunEnd="pip1_dir";
 				selectionFireAnim="";
 
 				weapons[]=
@@ -1044,15 +1067,16 @@ class CfgVehicles
 				{
 					class HitTurret: HitTurret
 					{
-						armor=0.80000001;
+						armor=2;              // was 0.8
 						passThrough=0;
 						minimalHit=0.2;
-						explosionShielding=0.30000001;
+						explosionShielding=0.60000002; // was 0.3
 						radius=0.25;
 					};
+
 					class HitGun: HitGun
 					{
-						armor=0.30000001;
+						armor=2;              // was 0.3
 						passThrough=0;
 						minimalHit=0.5;
 						explosionShielding=1;
@@ -1142,35 +1166,19 @@ class CfgVehicles
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Cannon_Turret_Plain.paa"
 		};
 	};
-	class FST_PKV5_UP_Stormer: FST_PKV5_Main_UP
+
+	class FST_PKV5_UP_Stormer_Selene: FST_PKV5_Main_UP
 	{
 		scope=2;
 		scopeCurator=2;
-		displayName="[41st] PK-V5 'Gundark' Light Tank";
+		displayName="[41st] PK-V5 'Gundark' Light Tank (Selene)";
 		accuracy=1000;
 		side=1;
-		faction = "FST_Faction";
-		crew = "FST_Trooper_P2_DC15S";
-		editorSubcategory = "FST_Ground_Vehicle";
-		typicalCargo[]=
-		{
-			"FST_Trooper_P2_DC15S"
-		};
-	};
-	class FST_PKV5_UP_Selene: FST_PKV5_Main_UP
-	{
-		scope=2;
-		scopeCurator=2;
-		displayName="[41st] PK-V5 'Gundark' (Selene)";
-		accuracy=1000;
-		side=1;
-		faction = "FST_Faction";
-		crew = "FST_P2_Recruit";
-		editorSubcategory = "FST_Ground_Vehicle";
-		typicalCargo[]=
-		{
-			"FST_P2_Recruit"
-		};
+		faction="FST_Faction";
+		crew="FST_P2_Recruit";
+		typicalCrew[]={"FST_P2_Recruit"};
+		typicalCargo[]={"FST_P2_Recruit"};
+		editorSubcategory="FST_Ground_Vehicle";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Selene.paa",
