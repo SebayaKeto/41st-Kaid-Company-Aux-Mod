@@ -1813,7 +1813,11 @@ class CfgWeapons
 		scope=1;
 		displayName="Sabre Cannons";
 		shotFromTurret=1;
-
+		magazines[]=
+		{
+			"FST_25rnd_Gundark_Mag",
+			"FST_25rnd_Gundark_Mag_HE",
+		};
 		class GunParticles
 		{
 		};
