@@ -113,6 +113,9 @@ format ["[FST] QRF: %1x %2 via %3%4, %5m out",
 diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spawn %6 → dest %7",
     _squadCount, _templateKey, _transportType, _escortCount, _escortType, _spawnPos, _destination];
 
+// Treat QRF as heavy spawn work so despawn cleanup does not run during setup/transfer.
+missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+
 // --- Dispatch ---
 [_spawnPos, _destination, _side, _unitClasses, _squadCount,
  _vehClass, _vehCapacity, _escortClass, _escortCount, _isAir, _callerID] spawn {
@@ -128,6 +131,12 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
         {
             private _offset = [(_spawnPos select 0) + random 6 - 3, (_spawnPos select 1) + random 6 - 3, 0];
             private _unit = _grp createUnit [_x, _offset, [], 0, "NONE"];
+            if (isNull _unit) then {
+                diag_log format ["[FST_HCSpawn] QRF infantry createUnit failed for %1", _x];
+                continue;
+            };
+            _unit setVariable ["FST_HC_created", true, true];
+            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
             if (_forEachIndex == 0) then { _grp selectLeader _unit; };
             _allInfantry pushBack _unit;
         } forEach _unitClasses;
@@ -178,7 +187,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
 
                 // On completion — switch to assault
                 _wpInf setWaypointStatements ["true",
-                    "group this setBehaviourStrong 'COMBAT'; [group this, getPos this, 200] call lambs_wp_fnc_taskRush;"
+                    "group this setBehaviourStrong 'COMBAT'; [group this, 200, 15, [], getPos this] spawn lambs_wp_fnc_taskRush;"
                 ];
             } forEach _infantryGroups;
         } else {
@@ -186,7 +195,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
             {
                 _x setBehaviourStrong "COMBAT";
                 _x setCombatMode "RED";
-                [_x, _destination, 200] call lambs_wp_fnc_taskRush;
+                [_x, 200, 15, [], _destination] spawn lambs_wp_fnc_taskRush;
             } forEach _infantryGroups;
         };
 
@@ -277,7 +286,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
             if (count units _x > 0) then {
                 _x setBehaviourStrong "COMBAT";
                 _x setCombatMode "RED";
-                [_x, _destination, 200] call lambs_wp_fnc_taskRush;
+                [_x, 200, 15, [], _destination] spawn lambs_wp_fnc_taskRush;
                 [_x] call FST_HCSpawn_fnc_transferGroup;
             };
         } forEach _infantryGroups;

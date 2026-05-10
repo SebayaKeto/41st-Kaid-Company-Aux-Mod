@@ -9,7 +9,7 @@ private _isValidatedZeusClone = (_sourceOwner > 2) && {count _originalPayload ==
 private _clearOriginal = {
     params ["_accepted"];
     if (_isValidatedZeusClone) then {
-        ["FST_HC_evt_zeusOriginalDecision", [_originalPayload, _accepted], _sourceOwner] call CBA_fnc_ownerEvent;
+        [_originalPayload, _accepted] call FST_HCSpawn_fnc_handleZeusOriginalDecision;
     };
 };
 
@@ -59,7 +59,50 @@ if (_hcIndex >= 0 && _hcIndex < count FST_HC_UnitCounts && {_spawnCount > 0}) th
     FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + _spawnCount];
 };
 
-private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, _unitData, _sourceOwner];
+// Server-authoritative suppression of the original Zeus group.
+// Do this only after cap/HC validation succeeds. The original is restored by
+// handleZeusOriginalDecision if the HC clone later fails.
+if (_isValidatedZeusClone) then {
+    _originalPayload params ["_origGroup", "_origUnits", "_origVehicle"];
+
+    // Server is authoritative once it accepts the instant-clone request.
+    // Reassert this marker here so a slow serverEvent cannot be invalidated by
+    // the client-side 8s failsafe clearing its earlier local/public marker.
+    if (!isNull _origGroup) then {
+        _origGroup setVariable ["FST_HC_interceptQueued", true, true];
+    };
+
+    private _origObjects = [];
+    if (!isNull _origVehicle) then {
+        _origObjects pushBackUnique _origVehicle;
+        { _origObjects pushBackUnique _x; } forEach crew _origVehicle;
+    } else {
+        { _origObjects pushBackUnique _x; } forEach _origUnits;
+    };
+
+    {
+        if (!isNull _x) then {
+            _x setVariable ["FST_HC_originalSuppressed", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x hideObjectGlobal true;
+            _x enableSimulationGlobal false;
+        };
+    } forEach _origObjects;
+
+    // Server-side failsafe: if the HC/server confirmation path never resolves,
+    // restore the hidden original instead of leaving invisible frozen AI behind.
+    [{
+        params ["_payload"];
+        _payload params ["_grp", "_u", "_v"];
+        if (!isNull _grp && {_grp getVariable ["FST_HC_interceptQueued", false]}) then {
+            [_payload, false] call FST_HCSpawn_fnc_handleZeusOriginalDecision;
+            diag_log format ["[FST_HCSpawn] Zeus instant clone server failsafe restored original group %1", _grp];
+        };
+    }, [_originalPayload], 12] call CBA_fnc_waitAndExecute;
+};
+
+private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, _unitData, _sourceOwner, _originalPayload];
+missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
 
 if (count _unitData > 0 || {count _vehData > 0}) then {
     FST_HC_ZeusInstantCloneRequests = (missionNamespace getVariable ["FST_HC_ZeusInstantCloneRequests", 0]) + 1;
@@ -73,6 +116,7 @@ if (_isOnHC) then {
     _args spawn FST_HCSpawn_fnc_createGroupLocal;
 };
 
-// Only now, after server-side cap/HC validation and dispatch, tell the Zeus
-// client to remove the original placement. This prevents "AI cap ate my squad".
-[true] call _clearOriginal;
+// Do NOT accept/delete the original here for validated Zeus instant clones.
+// The target HC confirms success from fn_createGroupLocal after replacement units
+// exist and editable registration has been queued. Premature acceptance was leaving
+// stale curator/object references, especially for single-unit placements.

@@ -13,7 +13,8 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_registerHC;
     }] call CBA_fnc_addEventHandler;
 
-    // Group tracking (from HC after creating a group)
+    // Group tracking (from HC after creating a group). HCs send group netIds so
+    // the server can retry if the group object has not resolved yet.
     ["FST_HC_evt_trackGroup", {
         _this call FST_HCSpawn_fnc_trackGroup;
     }] call CBA_fnc_addEventHandler;
@@ -30,10 +31,12 @@ if (isServer) then {
 
     // Register HC-created objects as editable by Zeus on the server.
     ["FST_HC_evt_addEditableObjects", {
-        params [["_objects", []]];
-        private _valid = _objects select { !isNull _x };
-        if (count _valid == 0) exitWith {};
-        { _x addCuratorEditableObjects [_valid, true]; } forEach allCurators;
+        _this call FST_HCSpawn_fnc_addEditableObjects;
+    }] call CBA_fnc_addEventHandler;
+
+    // Server-authoritative cleanup/restore of original Zeus-placed groups after instant clone validation.
+    ["FST_HC_evt_zeusOriginalDecisionServer", {
+        _this call FST_HCSpawn_fnc_handleZeusOriginalDecision;
     }] call CBA_fnc_addEventHandler;
 
     // Quick spawn template (from Zeus client) — resolves template inline
@@ -87,10 +90,41 @@ if (isServer) then {
 // HC / CLIENT EVENTS (fired from server, handled on HC or Zeus)
 // ============================================================
 
+
+// Start FPS monitor on a target machine without direct remoteExec of an addon function.
+["FST_HC_evt_startFpsMonitor", {
+    _this call FST_HCSpawn_fnc_fpsMonitor;
+}] call CBA_fnc_addEventHandler;
+
 // Create group locally (received by specific HC via ownerEvent)
 // Spawned because the function uses `sleep` past the createVehicleCrew race frame.
 ["FST_HC_evt_createGroupLocal", {
     _this spawn FST_HCSpawn_fnc_createGroupLocal;
+}] call CBA_fnc_addEventHandler;
+
+
+// Delete a rejected HC clone locally on the owner machine after the server restores the original.
+["FST_HC_evt_deleteRejectedClone", {
+    params ["_groupRef"];
+    private _grp = grpNull;
+    if (_groupRef isEqualType grpNull) then {
+        _grp = _groupRef;
+    } else {
+        if (_groupRef isEqualType "") then {
+            _grp = groupFromNetId _groupRef;
+        };
+    };
+    if (isNull _grp) exitWith {
+        ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent;
+    };
+    {
+        if (!isNull _x) then {
+            _x setVariable ["FST_skipSpawnDamage", true, true];
+            deleteVehicle _x;
+        };
+    } forEach units _grp;
+    deleteGroup _grp;
+    ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addEventHandler;
 
 // Loadout restore after locality transfer (received by target HC via ownerEvent)
@@ -108,62 +142,10 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 
-// Zeus instant clone original cleanup decision. Received by the Zeus client that
-// placed the original group. If rejected, the original remains and only markers clear.
+// Legacy compatibility only. v5 moved Zeus-original hide/restore/delete to the server
+// because hideObjectGlobal / enableSimulationGlobal are server-exec commands.
 ["FST_HC_evt_zeusOriginalDecision", {
-    params ["_originalPayload", "_accepted"];
-    _originalPayload params ["_group", "_units", "_vehicle"];
-
-    private _originalObjects = [];
-    if (!isNull _vehicle) then {
-        _originalObjects pushBackUnique _vehicle;
-        { _originalObjects pushBackUnique _x; } forEach crew _vehicle;
-    } else {
-        { _originalObjects pushBackUnique _x; } forEach _units;
-    };
-
-    if (!_accepted) exitWith {
-        // Server rejected the HC clone after the client had already hidden the
-        // original. Bring it back cleanly.
-        {
-            if (!isNull _x) then {
-                _x hideObjectGlobal false;
-                _x enableSimulationGlobal true;
-                _x setVariable ["FST_HC_originalSuppressed", nil, true];
-            };
-        } forEach _originalObjects;
-
-        if (!isNull _group) then {
-            _group setVariable ["FST_HC_interceptQueued", nil, true];
-            _group setVariable ["FST_HC_pendingTransfer", nil];
-        };
-    };
-
-    // Accepted: keep the original hidden/frozen for a short grace period before
-    // deletion. This preserves the fast Zeus feel while reducing the worst
-    // immediate delete/network-object churn.
-    [{
-        params ["_group", "_units", "_vehicle"];
-
-        if (!isNull _vehicle) then {
-            { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _vehicle;
-            { _vehicle deleteVehicleCrew _x; } forEach crew _vehicle;
-            if (!isNull _vehicle) then { deleteVehicle _vehicle; };
-        } else {
-            {
-                if (!isNull _x) then {
-                    _x setVariable ["FST_skipSpawnDamage", true, true];
-                    deleteVehicle _x;
-                };
-            } forEach _units;
-        };
-
-        if (!isNull _group) then {
-            _group deleteGroupWhenEmpty true;
-            _group setVariable ["FST_HC_interceptQueued", nil, true];
-            _group setVariable ["FST_HC_pendingTransfer", nil];
-        };
-    }, [_group, _units, _vehicle], 2] call CBA_fnc_waitAndExecute;
+    // Intentionally no-op; retained so old queued events do not error during hot testing.
 }] call CBA_fnc_addEventHandler;
 
 // Fill garrison batch (received by specific HC via ownerEvent)

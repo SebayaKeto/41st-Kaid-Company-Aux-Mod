@@ -22,6 +22,8 @@ missionNamespace setVariable ["FST_HC_PatrolRadius", missionNamespace getVariabl
 missionNamespace setVariable ["FST_HC_TriggerActivationDist", missionNamespace getVariable ["FST_HC_TriggerActivationDist", 800]];
 missionNamespace setVariable ["FST_HC_FillGarrisonSingleActive", true];
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8]];
+missionNamespace setVariable ["FST_HC_FillGarrisonBatchDelay", missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 1.25]];
+missionNamespace setVariable ["FST_HC_CleanupPostSpawnGrace", missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60]];
 missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
@@ -135,7 +137,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 [
     "FST_HC_FillGarrisonMaxUnits", "SLIDER",
     ["Max Units Per Fill", "Hard cap for one Fill Garrison click. Large bases are sampled instead of fully filled."],
-    ["FST HC Spawn", "Fill Garrison"], [24, 600, 160, 0], true, {}, false
+    ["FST HC Spawn", "Fill Garrison"], [24, 600, 120, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
@@ -159,7 +161,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 [
     "FST_HC_FillGarrisonBatchDelay", "SLIDER",
     ["Batch Delay", "Seconds between Fill Garrison batches. Higher is gentler on the server."],
-    ["FST HC Spawn", "Fill Garrison"], [0.3, 2, 1.0, 2], true, {}, false
+    ["FST HC Spawn", "Fill Garrison"], [0.5, 2.5, 1.25, 2], true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -215,5 +217,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_INSTANT_HIDE_FIX_2026-05-07", true];
-diag_log "[FST_HCSpawn] preInit complete - PREOP_INSTANT_HIDE_FIX_2026-05-07";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V10_SERVER_MARKER_REVIEW_2026-05-10", true];
+diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V10_SERVER_MARKER_REVIEW_2026-05-10";

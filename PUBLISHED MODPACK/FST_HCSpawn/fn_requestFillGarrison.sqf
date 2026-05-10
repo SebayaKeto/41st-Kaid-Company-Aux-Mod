@@ -26,13 +26,13 @@ params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2], ["_b1Re
 // These are CBA settings from preInit, but missionNamespace defaults let this
 // function survive if an old CBA profile has not saved the new values yet.
 
-private _maxUnits = missionNamespace getVariable ["FST_HC_FillGarrisonMaxUnits", 240];
+private _maxUnits = missionNamespace getVariable ["FST_HC_FillGarrisonMaxUnits", 120];
 private _maxDuration = missionNamespace getVariable ["FST_HC_FillGarrisonMaxDuration", 90];
 private _maxScanPositions = missionNamespace getVariable ["FST_HC_FillGarrisonMaxScanPositions", 900];
 private _singleActive = missionNamespace getVariable ["FST_HC_FillGarrisonSingleActive", true];
 private _cooldown = missionNamespace getVariable ["FST_HC_FillGarrisonCooldown", 10];
 
-_maxUnits = round ((_maxUnits max 24) min 600);
+_maxUnits = round ((_maxUnits max 24) min 120);
 _maxDuration = (_maxDuration max 30) min 120;
 _maxScanPositions = round ((_maxScanPositions max _maxUnits) min 2400);
 _cooldown = (_cooldown max 0) min 60;
@@ -50,9 +50,9 @@ _b2Ratio = (_b2Ratio max 0) min 1;
 
 // Garrison dispatch throttle. These can be overridden from CBA/debug/server init.
 private _batchSize = missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8];
-private _batchDelay = missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 0.75];
-_batchSize = round ((_batchSize max 4) min 12);
-_batchDelay = (_batchDelay max 0.3) min 2;
+private _batchDelay = missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 1.25];
+_batchSize = round ((_batchSize max 4) min 8);
+_batchDelay = (_batchDelay max 0.5) min 2.5;
 
 private _now = time;
 private _existingActive = missionNamespace getVariable ["FST_HC_FillGarrisonActive", false];
@@ -93,6 +93,7 @@ private _clearJob = {
         missionNamespace setVariable ["FST_HC_FillGarrisonActive", false, true];
         missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1, true];
         missionNamespace setVariable ["FST_HC_FillGarrisonNextAllowed", time + _cooldown, true];
+        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
     };
 };
 
@@ -275,6 +276,8 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
             diag_log format ["[FST_HCSpawn] Fill Garrison job %1 stopped because all HCs disconnected at %2/%3 units", _jobId, _queuedUnits, count _assignments];
         };
 
+        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+
         private _targetId = [] call FST_HCSpawn_fnc_getSpawnTarget;
         private _isOnHC = _targetId != 2;
         private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
@@ -301,6 +304,7 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
         missionNamespace setVariable ["FST_HC_FillGarrisonActive", false, true];
         missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1, true];
         missionNamespace setVariable ["FST_HC_FillGarrisonNextAllowed", time + _cooldown, true];
+        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
     };
 
     private _replacementText = if (_b1Replacement isEqualTo "") then { "default B1 mix" } else { _b1Replacement };
