@@ -6,11 +6,28 @@
 if (!isServer) exitWith {};
 if (!FST_HC_DespawnEnabled) exitWith {};
 
+// Do not run despawn cleanup while heavy spawn/JIP-sensitive work has just happened.
+// Deleting freshly networked HC-owned groups during/just after Fill Garrison was
+// producing object-not-found churn and desync spikes.
+if (missionNamespace getVariable ["FST_HC_FillGarrisonActive", false]) exitWith {};
+private _cleanupGrace = missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60];
+private _lastHeavySpawn = missionNamespace getVariable ["FST_HC_LastHeavySpawnTime", -9999];
+if ((time - _lastHeavySpawn) < _cleanupGrace) exitWith {};
+
 private _engageRadius = FST_HC_DespawnEngageRadius;
 private _despawnRadius = FST_HC_DespawnRadius;
 private _staleTime = FST_HC_DespawnTimer;
 private _toDelete = [];
 if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
+
+// Keep the tracking cache clean. Previously grpNull/empty groups could stay in
+// FST_HC_TrackedGroups because the delete loop skipped null groups before
+// removing them from the cache.
+private _beforeCompact = count FST_HC_TrackedGroups;
+FST_HC_TrackedGroups = FST_HC_TrackedGroups select { !isNull _x && {count units _x > 0} };
+if (FST_HC_DebugLogging && {_beforeCompact != count FST_HC_TrackedGroups}) then {
+    diag_log format ["[FST_HCSpawn] Cleanup compacted tracked group cache: %1 -> %2", _beforeCompact, count FST_HC_TrackedGroups];
+};
 
 // Build this once per cleanup tick. With 150 players and many groups this is
 // cheaper and steadier than running nearEntities around every AI group.
@@ -34,6 +51,10 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
         _toDelete pushBackUnique _grp;
         continue;
     };
+
+    // Fresh HC-spawned groups need time for object ownership, curator editability,
+    // and JIP/network identity to settle before any despawn cleanup is allowed.
+    if (time < (_grp getVariable ["FST_HC_spawnProtectedUntil", -1])) then { continue };
 
     private _pos = getPosATL _leader;
     private _activated = _grp getVariable ["FST_HC_activated", false];

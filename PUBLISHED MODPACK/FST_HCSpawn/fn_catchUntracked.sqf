@@ -27,6 +27,13 @@ private _queued = 0;
     // Skip: held by Zeus
     if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) then { continue };
 
+    // Skip: Zeus instant-clone originals currently waiting on server/HC confirmation.
+    // These originals are intentionally hidden/frozen briefly; catch-all must not
+    // queue them for setGroupOwner while the replacement handoff is still resolving.
+    if (_grp getVariable ["FST_HC_interceptQueued", false]) then { continue };
+    private _suppressedOriginal = (units _grp) findIf { !isNull _x && {_x getVariable ["FST_HC_originalSuppressed", false]} };
+    if (_suppressedOriginal >= 0) then { continue };
+
     // Skip: already pending or already in transfer queue
     if (_grp getVariable ["FST_HC_pendingTransfer", false]) then { continue };
     if (_grp in FST_HC_TransferQueue) then { continue };

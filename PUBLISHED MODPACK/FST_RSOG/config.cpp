@@ -12,6 +12,8 @@
       undefined nested base-class errors on SEA/JLTS gear that does not expose ItemInfo in the child inheritance chain.
     - v4 also remaps several old linkedItems/backpack references from the source unit config that did not have
       matching equipment definitions in the supplied equipment config.
+    - v6 fixes RSOG P1/P2/custom helmet Arsenal visibility when inheriting from hidden 41st bases and restores
+      the missing RSOG pilot/Henderson helmet classes from the source equipment config.
 */
 class CfgPatches
 {
@@ -288,6 +290,9 @@ class CfgPatches
 			"FST_RSOG_P2_Helmet_Custom_Freezy",
 			"FST_RSOG_P2_Helmet_Custom_Phoenix",
 			"FST_RSOG_BARC_Helmet_Custom_Gabriel",
+			"FST_RSOG_P2_Helmet_Pilot_V1",
+			"FST_RSOG_P2_Helmet_Pilot_V2",
+			"FST_RSOG_P2_Helmet_Custom_Henderson",
 			"FST_RSOG_Covert_Officer_V1",
 			"FST_RSOG_Covert_Officer_V2",
 			"FST_RSOG_Covert_Heavy_NCO",
@@ -613,6 +618,7 @@ class CfgWeapons
 	class JLTS_CloneHelmetBARC;
 	class JLTS_CloneHelmetP2;
 	class JLTS_CloneHelmetP2MC;
+	class 3as_P2_Pilot_helmet;
 	class JLTS_CloneNVG;
 	class JLTS_CloneNVGCC;
 	class JLTS_CloneNVGMC;
@@ -868,6 +874,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_AB_Helmet_Intel_V1: JLTS_CloneHelmetAB
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Airborne Helmet V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -877,6 +889,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_AB_Helmet_Intel_V2: JLTS_CloneHelmetAB
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Airborne Helmet V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -886,6 +904,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_BARC_Helmet_Intel_V1: JLTS_CloneHelmetBARC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. BARC Helmet V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -895,6 +919,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_BARC_Helmet_Intel_V2: JLTS_CloneHelmetBARC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. BARC Helmet V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -904,6 +934,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_ARF_V1: SEA_Helmet_ARF_base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. ARF Helmet V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -915,6 +951,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_ARF_V2: SEA_Helmet_ARF_base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. ARF Helmet V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -926,6 +968,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_ARF_V3: SEA_Helmet_ARF_base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. ARF Helmet V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -937,6 +985,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_ARF_V4: SEA_Helmet_ARF_base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. ARF Helmet V4";
 			hiddenSelectionsTextures[]=
 			{
@@ -948,6 +1002,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_Base: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet";
 			hiddenSelectionsTextures[]=
 			{
@@ -958,6 +1018,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V1: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -968,6 +1034,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V2: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -978,6 +1050,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V3: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -988,6 +1066,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V4: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V4";
 			hiddenSelectionsTextures[]=
 			{
@@ -998,6 +1082,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V5: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V5";
 			hiddenSelectionsTextures[]=
 			{
@@ -1008,6 +1098,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V6: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V6";
 			hiddenSelectionsTextures[]=
 			{
@@ -1018,6 +1114,12 @@ class CfgWeapons
 
 	class FST_RSOG_P1_Helmet_Intel_V7: SEA_Helmet_P1_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 1 Helmet V7";
 			hiddenSelectionsTextures[]=
 			{
@@ -1028,6 +1130,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_Base: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet";
 			hiddenSelectionsTextures[]=
 			{
@@ -1037,6 +1145,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V1: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -1046,6 +1160,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V2: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -1055,6 +1175,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V3: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -1064,6 +1190,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V4: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V4";
 			hiddenSelectionsTextures[]=
 			{
@@ -1073,6 +1205,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V5: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V5";
 			hiddenSelectionsTextures[]=
 			{
@@ -1082,6 +1220,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V6: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V6";
 			hiddenSelectionsTextures[]=
 			{
@@ -1091,6 +1235,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V7: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V7";
 			hiddenSelectionsTextures[]=
 			{
@@ -1100,6 +1250,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_V8: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Phase 2 Helmet V8";
 			hiddenSelectionsTextures[]=
 			{
@@ -1109,6 +1265,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_MC_V3: JLTS_CloneHelmetP2MC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commander Helmet V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -1118,6 +1280,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_MC_V1: JLTS_CloneHelmetP2MC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commander Helmet V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -1127,6 +1295,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Intel_MC_V2: JLTS_CloneHelmetP2MC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commander Helmet V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -1136,6 +1310,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_White: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  White Phase 2 Helmet";
 			hiddenSelectionsTextures[]=
 			{
@@ -1145,6 +1325,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Custom_Baron: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Custom P2 Helmet (Baron)";
 			hiddenSelectionsTextures[]=
 			{
@@ -1154,6 +1340,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Custom_Apathy: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Custom P2 Helmet (Apathy)";
 			hiddenSelectionsTextures[]=
 			{
@@ -1163,6 +1355,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Custom_Bendable: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Custom P2 Helmet (Bendable)";
 			hiddenSelectionsTextures[]=
 			{
@@ -1172,6 +1370,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Custom_Freezy: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Custom P2 Helmet (Freezy)";
 			hiddenSelectionsTextures[]=
 			{
@@ -1181,6 +1385,12 @@ class CfgWeapons
 
 	class FST_RSOG_P2_Helmet_Custom_Phoenix: FST_P2_Helmet_Base
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Custom P2 Helmet (Phoenix)";
 			hiddenSelectionsTextures[]=
 			{
@@ -1190,10 +1400,64 @@ class CfgWeapons
 
 	class FST_RSOG_BARC_Helmet_Custom_Gabriel: JLTS_CloneHelmetBARC
 		{
+			scope=2;
+			scopeCurator=2;
+			scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Custom BARC Helmet (Gabriel)";
 			hiddenSelectionsTextures[]=
 			{
 				"\FST_RSOG\Data\Helmet\Customs\RSOG_BARC_Gabriel.paa"
+			};
+		};
+
+	class FST_RSOG_P2_Helmet_Pilot_V1: 3as_P2_Pilot_helmet
+		{
+			author="Apathy";
+			scope=2;
+			scopeCurator=2;
+			scopeArsenal=2;
+			displayName="[41st/RSOG] R.I. Pilot Helmet V1";
+			hiddenSelectionsTextures[]=
+			{
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V1.paa",
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V1.paa",
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V1.paa",
+				"",
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V1.paa"
+			};
+		};
+
+	class FST_RSOG_P2_Helmet_Pilot_V2: 3as_P2_Pilot_helmet
+		{
+			author="Apathy";
+			scope=2;
+			scopeCurator=2;
+			scopeArsenal=2;
+			displayName="[41st/RSOG] R.I. Pilot Helmet V2";
+			hiddenSelectionsTextures[]=
+			{
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V2.paa",
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V2.paa",
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V2.paa",
+				"",
+				"\FST_RSOG\Data\Helmet\RSOG_P2_Helmet_Pilot_V2.paa"
+			};
+		};
+
+	class FST_RSOG_P2_Helmet_Custom_Henderson: 3as_P2_Pilot_helmet
+		{
+			author="Apathy";
+			scope=2;
+			scopeCurator=2;
+			scopeArsenal=2;
+			displayName="[41st/RSOG] R.I. Custom Helmet (Henderson)";
+			hiddenSelectionsTextures[]=
+			{
+				"\FST_RSOG\Data\Helmet\Customs\RSOG_Pilot_Henderson.paa",
+				"\FST_RSOG\Data\Helmet\Customs\RSOG_Pilot_Henderson.paa",
+				"\FST_RSOG\Data\Helmet\Customs\RSOG_Pilot_Henderson.paa",
+				"",
+				"\FST_RSOG\Data\Helmet\Customs\RSOG_Pilot_Henderson.paa"
 			};
 		};
 
@@ -4361,6 +4625,12 @@ class CfgWeapons
 
 	class FST_RSOG_Covert_NVG: JLTS_CloneNVG
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  Cov.Ops. Visor";
 			hiddenSelectionsTextures[]=
 			{
@@ -4370,6 +4640,12 @@ class CfgWeapons
 
 	class FST_RSOG_Covert_NVG_Spec: JLTS_CloneNVG_spec
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  Cov.Ops. Specialist Visor";
 			hiddenSelectionsTextures[]=
 			{
@@ -4379,6 +4655,12 @@ class CfgWeapons
 
 	class FST_RSOG_Covert_Rangefinder: JLTS_CloneNVGRange
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  Cov.Ops. Rangefinger";
 			hiddenSelectionsTextures[]=
 			{
@@ -4388,6 +4670,12 @@ class CfgWeapons
 
 	class FST_RSOG_Covert_NVGCC: JLTS_CloneNVGCC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  Cov.Ops. Commander Visor";
 			hiddenSelectionsTextures[]=
 			{
@@ -4397,6 +4685,12 @@ class CfgWeapons
 
 	class FST_RSOG_Covert_NVGMC: JLTS_CloneNVGMC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  Cov.Ops. Marshall Commander Visor";
 			hiddenSelectionsTextures[]=
 			{
@@ -4406,6 +4700,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V1: JLTS_CloneNVG
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Visor V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -4415,6 +4715,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V2: JLTS_CloneNVG
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Visor V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -4424,6 +4730,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V3: JLTS_CloneNVG
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Visor V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -4433,6 +4745,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V4: JLTS_CloneNVG
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Visor V4";
 			hiddenSelectionsTextures[]=
 			{
@@ -4442,6 +4760,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V1_Spec: JLTS_CloneNVG_spec
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Specialist Visor V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -4451,6 +4775,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V2_Spec: JLTS_CloneNVG_spec
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Specialist Visor V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -4460,6 +4790,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V3_Spec: JLTS_CloneNVG_spec
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Specialist Visor V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -4469,6 +4805,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Visor_V4_Spec: JLTS_CloneNVG_spec
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Specialist Visor V4";
 			hiddenSelectionsTextures[]=
 			{
@@ -4478,6 +4820,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Rangefinder_V1: JLTS_CloneNVGRange
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Rangefinger V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -4487,6 +4835,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Rangefinder_V2: JLTS_CloneNVGRange
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Rangefinger V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -4496,6 +4850,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Rangefinder_V3: JLTS_CloneNVGRange
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Rangefinger V3";
 			hiddenSelectionsTextures[]=
 			{
@@ -4505,6 +4865,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_Rangefinder_V4: JLTS_CloneNVGRange
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Rangefinger V4";
 			hiddenSelectionsTextures[]=
 			{
@@ -4514,6 +4880,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_MC_Visor_V1: JLTS_CloneNVGMC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commander Visor V1";
 			hiddenSelectionsTextures[]=
 			{
@@ -4523,6 +4895,12 @@ class CfgWeapons
 
 	class FST_RSOG_Rep_Intel_MC_Visor_V2: JLTS_CloneNVGMC
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			displayName="[41st/RSOG]  R.I. Marshall Commander Visor V2";
 			hiddenSelectionsTextures[]=
 			{
@@ -4532,12 +4910,24 @@ class CfgWeapons
 
 	class FST_RSOG_RSOG_NVG_Chip: JLTS_NVG_droid_chip_1
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			author="Apathy";
 			displayName="[41st/RSOG] Clone NVG Helmet Chip";
 		};
 
 	class FST_RSOG_RSOG_NVG_ChipThermal: JLTS_NVG_droid_chip_2
 		{
+
+				scope=2;
+
+				scopeCurator=2;
+
+				scopeArsenal=2;
 			author="Apathy";
 			displayName="[41st/RSOG] Clone NVG Chip (Thermal)";
 			thermalMode[]={1};

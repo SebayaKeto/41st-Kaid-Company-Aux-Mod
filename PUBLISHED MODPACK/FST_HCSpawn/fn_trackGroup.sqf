@@ -7,9 +7,24 @@
 
 if (!isServer) exitWith {};
 
-params ["_group", ["_hcIndex", -1], ["_preCounted", false]];
+params ["_group", ["_hcIndex", -1], ["_preCounted", false], ["_attempt", 0], ["_protectionSeconds", 30]];
 
-if (isNull _group) exitWith {};
+private _groupRef = _group;
+if (_group isEqualType "") then {
+    _group = groupFromNetId _group;
+};
+
+if (isNull _group) exitWith {
+    if (_attempt < 10) then {
+        [{
+            params ["_groupRef", "_hcIndex", "_preCounted", "_attempt", "_protectionSeconds"];
+            [_groupRef, _hcIndex, _preCounted, _attempt + 1, _protectionSeconds] call FST_HCSpawn_fnc_trackGroup;
+        }, [_groupRef, _hcIndex, _preCounted, _attempt, _protectionSeconds], 0.5] call CBA_fnc_waitAndExecute;
+    } else {
+        diag_log format ["[FST_HCSpawn] TrackGroup failed: unresolved group ref %1 for HC index %2", _groupRef, _hcIndex];
+        [] call FST_HCSpawn_fnc_recountUnits;
+    };
+};
 if (_hcIndex < 0 || {_hcIndex >= count FST_HC_Ids}) exitWith {};
 
 private _unitCount = count units _group;
@@ -28,6 +43,9 @@ _group setVariable ["FST_HC_tracked", [_hcIndex, _unitCount]];
 _group setVariable ["FST_HC_onHC", _hcIndex];
 _group setVariable ["FST_HC_pendingTransfer", nil];
 _group setVariable ["FST_HC_interceptQueued", nil, true];
+if ((_group getVariable ["FST_HC_spawnProtectedUntil", -1]) < time) then {
+    _group setVariable ["FST_HC_spawnProtectedUntil", time + (_protectionSeconds max 0)];
+};
 
 if (!_wasTracked) then {
     FST_HC_TrackedCount = FST_HC_TrackedCount + 1;

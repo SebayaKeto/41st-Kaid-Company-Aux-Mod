@@ -10,9 +10,9 @@ private _zeusMode = missionNamespace getVariable ["FST_HC_ZeusMode", "instant"];
 if (_zeusMode isEqualTo "off") exitWith {};
 if (isNull _group) exitWith {};
 
-// No HCs connected — leave units where Zeus placed them.
-private _hcIds = missionNamespace getVariable ["FST_HC_Ids", []];
-if (count _hcIds == 0) exitWith {};
+// Do not trust the Zeus client's local HC list here. In JIP/multi-Zeus ops
+// publicVariable state can be stale for a few seconds. Always send the request
+// to the server and let the server decide whether HCs are actually available.
 
 if (count units _group == 0) exitWith {};
 if (isPlayer leader _group) exitWith {};
@@ -34,6 +34,14 @@ _group setVariable ["FST_HC_interceptQueued", true, true];
 // and some modded vehicle setup. Preserve them with setGroupOwner instead.
 private _hasVehicle = (_units findIf { vehicle _x != _x }) >= 0;
 if ((_zeusMode isEqualTo "instant") && {_hasVehicle}) exitWith {
+    ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
+};
+
+// Single-unit Zeus placements are much more sensitive to clone/delete races: one
+// stale object ref is the whole group, which can show up to curators as a yellow
+// empty-object AI. Preserve object identity for lone infantry by using the
+// setGroupOwner transfer path instead of instant clone/delete.
+if ((_zeusMode isEqualTo "instant") && {(count _units) == 1}) exitWith {
     ["FST_HC_evt_queueZeusGroup", [_group, clientOwner]] call CBA_fnc_serverEvent;
 };
 
@@ -73,53 +81,29 @@ if (_zeusMode isEqualTo "instant") exitWith {
 
     ["FST_HC_evt_spawn", [_side, _unitClasses, _origin, "none", 0, _vehData, _unitData, clientOwner, _originalPayload]] call CBA_fnc_serverEvent;
 
-    // UX fix: hide/freeze the original immediately so Zeus sees the old fast
-    // "blink out" behavior. The server still decides whether the clone is valid.
-    // If cap/no-HC validation rejects the clone, the decision event restores this
-    // original group instead of deleting it.
-    private _suppressObjects = [];
-    if (!isNull _originalVehicle) then {
-        _suppressObjects pushBackUnique _originalVehicle;
-        { _suppressObjects pushBackUnique _x; } forEach crew _originalVehicle;
-    } else {
-        { _suppressObjects pushBackUnique _x; } forEach _units;
-    };
-
-    {
-        if (!isNull _x) then {
-            _x setVariable ["FST_HC_originalSuppressed", true, true];
-            _x setVariable ["FST_skipSpawnDamage", true, true];
-            _x hideObjectGlobal true;
-            _x enableSimulationGlobal false;
-        };
-    } forEach _suppressObjects;
-
-    // Failsafe: if the server never answers, restore the hidden original rather
-    // than leaving a Zeus-spawned group invisible forever.
+    // Do not hide/delete the original on the Zeus client. hideObjectGlobal and
+    // enableSimulationGlobal are server-exec commands; the server suppresses the
+    // original only after cap/HC validation succeeds, then restores/deletes it.
+    // Client-side failsafe only clears the queue marker if the server never answers.
     [{
         params ["_payload"];
         _payload params ["_group", "_units", "_vehicle"];
         if (isNull _group || {!(_group getVariable ["FST_HC_interceptQueued", false])}) exitWith {};
 
-        private _restoreObjects = [];
+        // Only clear the client marker if the server never suppressed the original.
+        // If the server did suppress it, the server-side failsafe must be allowed to restore/delete it.
+        private _suppressed = false;
         if (!isNull _vehicle) then {
-            _restoreObjects pushBackUnique _vehicle;
-            { _restoreObjects pushBackUnique _x; } forEach crew _vehicle;
+            _suppressed = _vehicle getVariable ["FST_HC_originalSuppressed", false];
         } else {
-            { _restoreObjects pushBackUnique _x; } forEach _units;
+            _suppressed = (_units findIf { !isNull _x && {_x getVariable ["FST_HC_originalSuppressed", false]} }) >= 0;
         };
 
-        {
-            if (!isNull _x) then {
-                _x hideObjectGlobal false;
-                _x enableSimulationGlobal true;
-                _x setVariable ["FST_HC_originalSuppressed", nil, true];
-            };
-        } forEach _restoreObjects;
-
-        _group setVariable ["FST_HC_interceptQueued", nil, true];
-        _group setVariable ["FST_HC_pendingTransfer", nil];
-        systemChat "[FST] HC clone did not confirm in time — restored original Zeus group.";
+        if (!_suppressed) then {
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+            _group setVariable ["FST_HC_pendingTransfer", nil];
+            systemChat "[FST] HC clone request did not reach server — left original Zeus group in place.";
+        };
     }, [_originalPayload], 8] call CBA_fnc_waitAndExecute;
 
     missionNamespace setVariable ["FST_HC_ZeusInstantCloneClientCount", (missionNamespace getVariable ["FST_HC_ZeusInstantCloneClientCount", 0]) + 1];
