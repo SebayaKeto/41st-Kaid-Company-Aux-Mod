@@ -6,6 +6,11 @@ if (!isServer) exitWith {};
 params ["_side", "_unitClasses", "_pos", ["_behavior", "garrison"], ["_radius", -1], ["_vehData", []], ["_unitData", []], ["_sourceOwner", -1], ["_originalPayload", []]];
 
 private _isValidatedZeusClone = (_sourceOwner > 2) && {count _originalPayload == 3};
+
+// Free dead OPFOR groups before cap/spawn routing. This protects against Arma's
+// per-side group limit being exhausted by systems that leave all-dead groups behind.
+private _deadGroupsCleaned = [true] call FST_HCSpawn_fnc_cleanupDeadGroups;
+if (_deadGroupsCleaned > 0) then { [] call FST_HCSpawn_fnc_recountUnits; };
 private _clearOriginal = {
     params ["_accepted"];
     if (_isValidatedZeusClone) then {
@@ -33,6 +38,12 @@ if (_radius < 0) then {
     _radius = switch (_behavior) do {
         case "garrison": { FST_HC_GarrisonRadius };
         case "patrol":   { FST_HC_PatrolRadius };
+        // LAMBS taskRush/taskHunt only actively orders movement after it finds
+        // an enemy inside this radius. The old 100m default made assault squads
+        // appear frozen if the nearest BLUFOR/player was just outside the tiny
+        // search bubble.
+        case "assault": { 2000 };
+        case "hunt":    { 2000 };
         default          { 100 };
     };
 };

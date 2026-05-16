@@ -28,6 +28,7 @@ class CfgFunctions {
             class trackGroup {};
             class catchUntracked {};
             class recountUnits {};
+            class cleanupDeadGroups {};
         };
         class Transfer {
             file = "FST_HCSpawn";

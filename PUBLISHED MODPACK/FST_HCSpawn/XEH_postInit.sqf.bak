@@ -39,28 +39,40 @@ if (!isServer && !hasInterface) then {
 // ============================================================
 if (hasInterface) then {
 
-    // Hook CuratorGroupPlaced for Zeus intercept
-    {
-        if !(_x getVariable ["FST_HC_hooked", false]) then {
-            _x addEventHandler ["CuratorGroupPlaced", {
+    // Hook only the curator assigned to the local player. The old allCurators loop
+    // was safe in many cases, but in multi-Zeus ops it risked duplicate local EHs
+    // or clients trying to react to another Zeus's placement. Each Zeus client only
+    // needs to intercept its own curator logic.
+    private _hookLocalCurator = {
+        private _curator = getAssignedCuratorLogic player;
+        if (isNull _curator) exitWith {};
+        if !(_curator getVariable ["FST_HC_hookedLocal", false]) then {
+            _curator addEventHandler ["CuratorGroupPlaced", {
                 params ["_curator", "_group"];
                 [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
             }];
-            _x setVariable ["FST_HC_hooked", true];
+            _curator setVariable ["FST_HC_hookedLocal", true];
+            if (missionNamespace getVariable ["FST_HC_DebugLogging", false]) then {
+                diag_log format ["[FST_HCSpawn] Hooked local curator %1 for player %2", _curator, player];
+            };
         };
-    } forEach allCurators;
+    };
+    call _hookLocalCurator;
 
     // Catch curators assigned mid-mission (periodic check — CuratorAssigned isn't a standard event)
     [{
-        {
-            if !(_x getVariable ["FST_HC_hooked", false]) then {
-                _x addEventHandler ["CuratorGroupPlaced", {
-                    params ["_curator", "_group"];
-                    [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
-                }];
-                _x setVariable ["FST_HC_hooked", true];
+        private _curator = getAssignedCuratorLogic player;
+        if (isNull _curator) exitWith {};
+        if !(_curator getVariable ["FST_HC_hookedLocal", false]) then {
+            _curator addEventHandler ["CuratorGroupPlaced", {
+                params ["_curator", "_group"];
+                [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
+            }];
+            _curator setVariable ["FST_HC_hookedLocal", true];
+            if (missionNamespace getVariable ["FST_HC_DebugLogging", false]) then {
+                diag_log format ["[FST_HCSpawn] Hooked local curator %1 for player %2", _curator, player];
             };
-        } forEach allCurators;
+        };
     }, 30, []] call CBA_fnc_addPerFrameHandler;
 
     // Register ZEN modules (requires ZEN — Zeus Enhanced)

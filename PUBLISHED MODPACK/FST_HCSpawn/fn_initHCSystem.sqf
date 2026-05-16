@@ -67,6 +67,13 @@ if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true])
     [] call FST_HCSpawn_fnc_recountUnits;
 }, FST_HC_RecountInterval, []] call CBA_fnc_addPerFrameHandler;
 
+// Periodic dead OPFOR group cleanup. Munificent/drop-pod systems can leave many
+// all-dead groups behind; those still consume Arma side group slots until deleteGroup.
+[{
+    private _cleaned = [false] call FST_HCSpawn_fnc_cleanupDeadGroups;
+    if (_cleaned > 0) then { [] call FST_HCSpawn_fnc_recountUnits; };
+}, 10, []] call CBA_fnc_addPerFrameHandler;
+
 // Despawn cleanup (delete AI groups far from all players)
 if (FST_HC_DespawnEnabled) then {
     [{

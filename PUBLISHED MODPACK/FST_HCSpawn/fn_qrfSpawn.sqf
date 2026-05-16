@@ -22,6 +22,11 @@ if (count _template == 0) exitWith {
 };
 _template params ["_side", "_unitClasses", "_desc"];
 
+// Free dead OPFOR groups before heavy module cap checks. Dead groups consume
+// Arma side group slots even when our tracked AI unit cap looks safe.
+private _deadGroupsCleaned = [true] call FST_HCSpawn_fnc_cleanupDeadGroups;
+if (_deadGroupsCleaned > 0) then { [] call FST_HCSpawn_fnc_recountUnits; };
+
 // Transport class + capacity
 private _transportData = switch (toUpper _transportType) do {
     case "PAC": { ["FST_PAC_41st", 24] };
@@ -187,7 +192,7 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
 
                 // On completion — switch to assault
                 _wpInf setWaypointStatements ["true",
-                    "group this setBehaviourStrong 'COMBAT'; [group this, 200, 15, [], getPos this] spawn lambs_wp_fnc_taskRush;"
+                    "group this setBehaviourStrong 'COMBAT'; [group this, 200, 15, [], getPos this, false] spawn lambs_wp_fnc_taskRush;"
                 ];
             } forEach _infantryGroups;
         } else {
@@ -195,7 +200,7 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
             {
                 _x setBehaviourStrong "COMBAT";
                 _x setCombatMode "RED";
-                [_x, 200, 15, [], _destination] spawn lambs_wp_fnc_taskRush;
+                [_x, 200, 15, [], _destination, false] spawn lambs_wp_fnc_taskRush;
             } forEach _infantryGroups;
         };
 
@@ -286,7 +291,7 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
             if (count units _x > 0) then {
                 _x setBehaviourStrong "COMBAT";
                 _x setCombatMode "RED";
-                [_x, 200, 15, [], _destination] spawn lambs_wp_fnc_taskRush;
+                [_x, 200, 15, [], _destination, false] spawn lambs_wp_fnc_taskRush;
                 [_x] call FST_HCSpawn_fnc_transferGroup;
             };
         } forEach _infantryGroups;

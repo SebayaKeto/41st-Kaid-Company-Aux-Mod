@@ -4,6 +4,12 @@
 
 if (!isServer) exitWith {};
 if (count FST_HC_Array == 0) exitWith {}; // no HCs, nothing to offload
+if (FST_HC_EmergencyMode) exitWith {}; // do not sweep while failover is moving groups
+
+// If the transfer queue is already backed up, let the processor drain it instead
+// of doing another allGroups sweep and adding more scheduler work.
+private _queueSoftLimit = (missionNamespace getVariable ["FST_HC_TransferBatchSize", 4]) * 6;
+if (count FST_HC_TransferQueue >= _queueSoftLimit) exitWith {};
 
 private _queued = 0;
 
@@ -20,6 +26,13 @@ private _queued = 0;
 
     // Skip: held by Zeus
     if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) then { continue };
+
+    // Skip: Zeus instant-clone originals currently waiting on server/HC confirmation.
+    // These originals are intentionally hidden/frozen briefly; catch-all must not
+    // queue them for setGroupOwner while the replacement handoff is still resolving.
+    if (_grp getVariable ["FST_HC_interceptQueued", false]) then { continue };
+    private _suppressedOriginal = (units _grp) findIf { !isNull _x && {_x getVariable ["FST_HC_originalSuppressed", false]} };
+    if (_suppressedOriginal >= 0) then { continue };
 
     // Skip: already pending or already in transfer queue
     if (_grp getVariable ["FST_HC_pendingTransfer", false]) then { continue };

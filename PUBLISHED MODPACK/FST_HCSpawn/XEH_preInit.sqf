@@ -24,6 +24,8 @@ missionNamespace setVariable ["FST_HC_FillGarrisonSingleActive", true];
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8]];
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchDelay", missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 1.25]];
 missionNamespace setVariable ["FST_HC_CleanupPostSpawnGrace", missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupEnabled", missionNamespace getVariable ["FST_HC_DeadGroupCleanupEnabled", true]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespace getVariable ["FST_HC_DeadGroupCleanupInterval", 20]];
 missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
@@ -130,6 +132,18 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
     ["FST HC Spawn", "Cleanup"], [60, 1800, 600, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
+[
+    "FST_HC_DeadGroupCleanupEnabled", "CHECKBOX",
+    ["Dead OPFOR Group Cleanup", "Deletes OPFOR groups with zero alive units to free Arma side group slots. Does not delete living AI or player groups."],
+    ["FST HC Spawn", "Cleanup"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupCleanupInterval", "SLIDER",
+    ["Dead Group Cleanup Interval", "Seconds between automatic dead OPFOR group sweeps. Heavy spawn modules force one before they check caps."],
+    ["FST HC Spawn", "Cleanup"], [5, 120, 20, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
 // ============================================================
 // FILL GARRISON SAFETY
 // ============================================================
@@ -217,5 +231,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V10_SERVER_MARKER_REVIEW_2026-05-10", true];
-diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V10_SERVER_MARKER_REVIEW_2026-05-10";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V12_DEAD_GROUP_CLEANUP_REVIEW_2026-05-10", true];
+diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V12_DEAD_GROUP_CLEANUP_REVIEW_2026-05-10";

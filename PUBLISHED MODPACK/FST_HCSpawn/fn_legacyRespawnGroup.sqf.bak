@@ -31,10 +31,11 @@ if (!isNull _leaderVeh && {_leaderVeh != _leader}) then {
 private _pos = if (count _vehData > 0) then { _vehData select 1 } else { getPosATL _leader };
 
 if (count _vehData > 0) then {
+    { _x setVariable ["FST_skipSpawnDamage", true, true]; } forEach crew _leaderVeh;
     { _leaderVeh deleteVehicleCrew _x; } forEach crew _leaderVeh;
     deleteVehicle _leaderVeh;
 } else {
-    { deleteVehicle _x; } forEach _units;
+    { _x setVariable ["FST_skipSpawnDamage", true, true]; deleteVehicle _x; } forEach _units;
 };
 _group deleteGroupWhenEmpty true;
 

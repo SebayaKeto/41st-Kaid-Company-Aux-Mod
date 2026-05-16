@@ -237,12 +237,12 @@ if (count _editableObjects > 0) then {
         case "assault": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, _radius, 15, [], _pos] spawn lambs_wp_fnc_taskRush;
+            [_group, _radius, 15, [], _pos, false] spawn lambs_wp_fnc_taskRush;
         };
         case "hunt": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, _radius, 15, [], _pos] spawn lambs_wp_fnc_taskHunt;
+            [_group, _radius, 15, [], _pos, false] spawn lambs_wp_fnc_taskHunt;
         };
         case "patrol":  {
             [_group, _pos, _radius] call lambs_wp_fnc_taskPatrol;

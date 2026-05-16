@@ -41,10 +41,13 @@ if (isServer && {count _this == 4}) exitWith {
     };
 };
 
+// Server (no interface) reaching this point with non-4-arg input would silently
+// fall into the client path. Guard explicitly.
+if (!hasInterface) exitWith {};
+
 // ============================================================
 // CLIENT PATH
 // ============================================================
-if (!hasInterface) exitWith {};
 if (!FST_HC_ZeusHoldEnabled) exitWith { systemChat "[FST] Zeus hold is disabled."; };
 
 private _curator = getAssignedCuratorLogic player;

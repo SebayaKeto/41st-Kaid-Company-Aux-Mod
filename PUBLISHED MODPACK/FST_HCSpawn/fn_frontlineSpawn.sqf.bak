@@ -22,17 +22,27 @@ if (count _template == 0) exitWith {
 
 _template params ["_side", "_unitClasses", "_desc"];
 
-// AI cap check
+// Heavy module safety.
+if ((missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]) && {count FST_HC_Array == 0}) exitWith {
+    "[FST] Frontline blocked: no headless clients are connected." remoteExec ["systemChat", _callerID];
+    diag_log format ["[FST_HCSpawn] Frontline blocked with no HCs. template=%1 waves=%2", _templateKey, _waveCount];
+};
+
+// AI cap check — use a real function exit.
 private _totalUnits = count _unitClasses * _waveCount;
-private _cap = FST_HC_AICap;
+private _capBlocked = false;
+private _cap = missionNamespace getVariable ["FST_HC_AICap", 0];
 if (_cap > 0) then {
     private _current = 0;
     { _current = _current + _x; } forEach FST_HC_UnitCounts;
-    if (_current + _totalUnits > _cap) exitWith {
+    if ((_current + _totalUnits) > _cap) then {
+        _capBlocked = true;
         format ["[FST] AI cap — frontline blocked (%1 + %2 > %3)", _current, _totalUnits, _cap]
             remoteExec ["systemChat", _callerID];
+        diag_log format ["[FST_HCSpawn] Frontline blocked by AI cap. current=%1 requested=%2 cap=%3", _current, _totalUnits, _cap];
     };
 };
+if (_capBlocked) exitWith {};
 
 format ["[FST] Frontline: %1x %2 — waves every %3s", _waveCount, _desc, _waveDelay]
     remoteExec ["systemChat", _callerID];

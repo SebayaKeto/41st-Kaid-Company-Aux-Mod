@@ -20,6 +20,11 @@ if (!isServer) exitWith {};
 
 params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2], ["_b1Replacement", "", [""]]];
 
+// Free dead OPFOR groups before heavy module cap checks. Dead groups consume
+// Arma side group slots even when our tracked AI unit cap looks safe.
+private _deadGroupsCleaned = [true] call FST_HCSpawn_fnc_cleanupDeadGroups;
+if (_deadGroupsCleaned > 0) then { [] call FST_HCSpawn_fnc_recountUnits; };
+
 // ============================================================
 // HARD SAFETY SETTINGS
 // ============================================================
