@@ -64,64 +64,20 @@ class CfgFunctions
 {
 	class FST_PDFRandomizers
 	{
-		class FST_PDFStandard
+		class FST_RandomPDFScripts
 		{
-			file="41st_CorruptPDF";
+			file="41st_CorruptPDF\Scripts";
 			class pdfstandard {};
-		};
-		class FST_PDFOfficer
-		{
-			file="41st_CorruptPDF";
 			class pdfofficer {};
-		};
-		class FST_PDFRTO
-		{
-			file="41st_CorruptPDF";
 			class pdfrto {};
-		};
-		class FST_PDFAutorifle
-		{
-			file="41st_CorruptPDF";
 			class pdfautorifle {};
-		};
-		class FST_PDFMarksman
-		{
-			file="41st_CorruptPDF";
 			class pdfmarksman {};
-		};
-		class FST_PDFCQB
-		{
-			file="41st_CorruptPDF";
 			class pdfcqb {};
-		};
-		class FST_PDFGren
-		{
-			file="41st_CorruptPDF";
 			class pdfgrenadier {};
-		};
-		class FST_PDFAA
-		{
-			file="41st_CorruptPDF";
 			class pdfantiair {};
-		};
-		class FST_PDFAT
-		{
-			file="41st_CorruptPDF";
 			class pdfantitank {};
-		};
-		class FST_PDFMedic
-		{
-			file="41st_CorruptPDF";
 			class pdfmedic {};
-		};
-		class FST_PDFTanker
-		{
-			file="41st_CorruptPDF";
 			class pdftanker {};
-		};
-		class FST_PDFPilot
-		{
-			file="41st_CorruptPDF";
 			class pdfpilot {};
 		};
 	};
@@ -883,7 +839,6 @@ class CfgVehicles
 		Items[]=
 		{
 			"JLTS_intel_holoProjector",
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -943,7 +898,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1003,7 +957,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1063,7 +1016,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow",
 			"ACE_Chemlight_HiRed"
 		};
@@ -1124,7 +1076,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1185,7 +1136,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1245,7 +1195,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1307,7 +1256,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1369,7 +1317,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1430,7 +1377,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1507,7 +1453,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1582,7 +1527,6 @@ class CfgVehicles
 		Items[]=
 		{
 			"JLTS_intel_holoProjector",
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1640,7 +1584,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1698,7 +1641,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1756,7 +1698,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow",
 			"ACE_Chemlight_HiRed"
 		};
@@ -1815,7 +1756,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1874,7 +1814,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1932,7 +1871,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1992,7 +1930,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2052,7 +1989,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2111,7 +2047,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2176,7 +2111,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=

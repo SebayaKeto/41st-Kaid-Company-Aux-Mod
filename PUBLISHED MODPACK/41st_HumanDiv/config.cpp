@@ -60,99 +60,27 @@ class CfgFunctions
 {
 	class FST_HDRandomizers
 	{
-		class FST_HDStandard
+		class FST_RandomHumanDivScripts
 		{
-			file="41st_HumanDiv";
+			file="41st_HumanDiv\Scripts";
 			class hdstandard {};
-		};
-		class FST_HDAmmoB
-		{
-			file="41st_HumanDiv";
 			class hdammobearer {};
-		};
-		class FST_HDRTO
-		{
-			file="41st_HumanDiv";
 			class hdrto {};
-		};
-		class FST_HDCQC
-		{
-			file="41st_HumanDiv";
 			class hdcqc {};
-		};
-		class FST_HDEOD
-		{
-			file="41st_HumanDiv";
 			class hdeod {};
-		};
-		class FST_HDMark
-		{
-			file="41st_HumanDiv";
 			class hdmarksman {};
-		};
-		class FST_HDGren
-		{
-			file="41st_HumanDiv";
 			class hdgrenadier {};
-		};
-		class FST_HDDroidOp
-		{
-			file="41st_HumanDiv";
 			class hddrone {};
-		};
-		class FST_HDMedic
-		{
-			file="41st_HumanDiv";
 			class hdmedic {};
-		};
-		class FST_HDAuto
-		{
-			file="41st_HumanDiv";
 			class hdauto {};
-		};
-		class FST_HDAT
-		{
-			file="41st_HumanDiv";
 			class hdantitank {};
-		};
-		class FST_HDAA
-		{
-			file="41st_HumanDiv";
 			class hdantiair {};
-		};
-		class FST_HDOfficer
-		{
-			file="41st_HumanDiv";
 			class hdofficer {};
-		};
-		class FST_NOfficer
-		{
-			file="41st_HumanDiv";
 			class nofficer {};
-		};
-		class FST_NPerson
-		{
-			file="41st_HumanDiv";
 			class nperson {};
-		};
-		class FST_NEngi
-		{
-			file="41st_HumanDiv";
 			class nengi {};
-		};
-		class FST_NCaptain
-		{
-			file="41st_HumanDiv";
 			class ncaptain {};
-		};
-		class FST_BCommander
-		{
-			file="41st_HumanDiv";
 			class bcommander {};
-		};
-		class FST_BStaff
-		{
-			file="41st_HumanDiv";
 			class bstaff {};
 		};
 	};
@@ -2018,7 +1946,7 @@ class CfgVehicles
 				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
-			class _xx_FST_blaster_cell_low_Red
+			class _xx_FST_blaster_cell_SSP_Red
 			{
 				name="FST_blaster_cell_SSP_Red";
 				count=15;
@@ -2055,7 +1983,7 @@ class CfgVehicles
 			};
 			class _xx_FST_blaster_cell_SSP_Red
 			{
-				name="FST_blaster_cell_low_Red";
+				name="FST_blaster_cell_SSP_Red";
 				count=15;
 			};
 			class _xx_ACE_Banana
@@ -3513,7 +3441,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3587,10 +3514,7 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]=
-		{
-			"JLTS_intel_holoProjector"
-		};
+		Items[]={};
 		linkedItems[]=
 		{
 			"FST_CIS_NavyHolster",
