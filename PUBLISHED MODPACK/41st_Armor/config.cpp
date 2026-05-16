@@ -929,6 +929,16 @@ class CfgWeapons
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Major.paa"
 		};
 	};
+ 	class FST_CloneVestARC_Dilham: FST_CloneVestARC
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Dilham]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Dilham.paa"
+		};
+	};
  	class FST_CloneVestARC_Mono: FST_CloneVestARC
 	{
 		author="Daara";
@@ -7763,6 +7773,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Harlequin_Dirty.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Trips: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Daara";
+		displayName="[41st] Crewman Helmet Mk2 (Trips)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Trips.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Trips.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Nova: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -8831,6 +8852,102 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Major.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+ 	class FST_P2_ARC_Helmet_Dilham: JLTS_CloneHelmetP2
+	{
+		author="Daara";
+		displayName="[41st] P2 ARC Trooper Helmet (Dilham)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Dilham.paa"
+		};
+		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"camo1",
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+ 	class FST_P2_ARC_Helmet_Dilham_Dirty: JLTS_CloneHelmetP2
+	{
+		author="Daara";
+		displayName="[41st] P2 ARC Trooper Helmet (Dilham/Dirty)";
+		scope=2;
+		ace_hearing_protection=1;
+        ace_hearing_lowerVolume=0;
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		hiddenSelectionsMaterials[]=
+		{
+			"41st_Armor\data\Other\Clone_Helmet_ARC.rvmat"
+		};
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P2_ARC_Helmet_Dilham_Dirty.paa"
 		};
 		model="\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
 		class Iteminfo: HeadgearItem
@@ -12685,7 +12802,7 @@ class CfgWeapons
 	{
 		author="Steel";
 		scope=2; 
-		displayName="[41st] P2 Helmet [Razor]";
+		displayName="[41st] P2 Helmet [Hotshot]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Razor.paa",
@@ -15055,6 +15172,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Sigs";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
+ 	class FST_Uniform_Bard: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Bard]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Bard";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -35165,6 +35296,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Sigs",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+ 	class FST_P2_Bard: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1010 'Bard'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Bard";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Bard.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Bard.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Bard",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Bard",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
