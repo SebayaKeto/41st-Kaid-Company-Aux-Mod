@@ -293,15 +293,15 @@ class CfgVehicles
 		};
 		soundLocked[]=
 		{
-			"\A3\Sounds_F\weapons\Rockets\locked_1",
-			"db-20",
+			"3as\3as_laat\sounds\Missile_Lock",
+			1,
 			1
 		};
 		soundIncommingMissile[]=
 		{
-			"\A3\Sounds_F\weapons\Rockets\locked_3",
-			"db-20",
-			1.5
+			"3as\3as_laat\sounds\Missile_incoming",
+			1,
+			1.2
 		};
 		soundGearUp[]=
 		{
