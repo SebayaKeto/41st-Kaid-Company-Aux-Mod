@@ -838,7 +838,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_intel_holoProjector",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -1453,7 +1452,8 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"WBK_HeadLampItem_Narrow"
+			"WBK_HeadLampItem_Narrow",
+			"FST_LargeToolkit"
 		};
 		linkedItems[]=
 		{
@@ -1526,7 +1526,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_intel_holoProjector",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2111,7 +2110,8 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"WBK_HeadLampItem_Narrow"
+			"WBK_HeadLampItem_Narrow",
+			"FST_LargeToolkit"
 		};
 		linkedItems[]=
 		{

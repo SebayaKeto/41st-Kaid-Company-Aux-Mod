@@ -1866,6 +1866,11 @@ class CfgVehicles
 				name="FST_blaster_cell_low_Red";
 				count=15;
 			};
+			class _xx_FST_SmallToolkit
+			{
+				name="FST_SmallToolkit";
+				count=1;
+			};
 		};
 	};
 	class FST_HumDivBack_BStaff: FST_CIS_Officer_Legbag
@@ -2001,9 +2006,9 @@ class CfgVehicles
 		scopeArsenal = 0;
 		class TransportItems
 		{
-			class _xx_Toolkit
+			class _xx_FST_LargeToolkit
 			{
-				name="Toolkit";
+				name="FST_LargeToolkit";
 				count=1;
 			};
 			class _xx_IDA_grenade_Sonic_mag
@@ -3717,11 +3722,7 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]=
-		{
-			"JLTS_droidCaller",
-			"JLTS_intel_holoProjector"
-		};
+		Items[]={};
 		linkedItems[]=
 		{
 			"FST_CIS_OfficerVestL",
@@ -3771,11 +3772,7 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]=
-		{
-			"JLTS_droidCaller",
-			"JLTS_intel_holoProjector"
-		};
+		Items[]={};
 		linkedItems[]=
 		{
 			"FST_CIS_CaptainHolster",

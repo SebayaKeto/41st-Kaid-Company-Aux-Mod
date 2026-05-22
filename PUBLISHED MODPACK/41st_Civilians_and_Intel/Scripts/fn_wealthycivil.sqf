@@ -209,7 +209,17 @@ private _list_41civintelitems = [
 	"FST_CivHoloprojector_Record", 0.05,
 	"FST_CivHoloprojector_Route", 0.05,
 	"FST_CivHoloprojector_Sport", 0.3,
-	"FST_CivHoloprojector_Video", 0.1
+	"FST_CivHoloprojector_Video", 0.1,
+	"FST_TrackingFob_Normal", 0.1,
+	"FST_TrackingFob_Abnormal", 0.04,
+	"FST_TrackingFob_Here", 0.05,
+	"FST_TrackingFob_Huh", 0.05,
+	"FST_TrackingFob_Items", 0.3,
+	"FST_TrackingFob_Orbit", 0.05,
+	"FST_TrackingFob_Partner", 0.3,
+	"FST_TrackingFob_Pet", 0.3,
+	"FST_TrackingFob_Planet", 0.05,
+	"FST_TrackingFob_Range", 0.05
 
 ];
 
