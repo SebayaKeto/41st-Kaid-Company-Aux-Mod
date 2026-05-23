@@ -413,6 +413,52 @@ class CfgPatches
 			"FST_CivHoloprojector_Sport",
 			"FST_CivHoloprojector_Video",
 			"FST_CivHoloprojector_Weird",
+			"FST_BountyDisk_Normal",
+			"FST_BountyDisk_Abnormal",
+			"FST_BountyDisk_Addict",
+			"FST_BountyDisk_Catboy",
+			"FST_BountyDisk_CEO",
+			"FST_BountyDisk_Child",
+			"FST_BountyDisk_Done",
+			"FST_BountyDisk_Droid",
+			"FST_BountyDisk_Gamble",
+			"FST_BountyDisk_Jedi",
+			"FST_BountyDisk_Jump",
+			"FST_BountyDisk_Leader",
+			"FST_BountyDisk_Murder",
+			"FST_BountyDisk_Mystery",
+			"FST_BountyDisk_Politic",
+			"FST_BountyDisk_Revenge",
+			"FST_BountyDisk_Smug",
+			"FST_BountyDisk_Stalk",
+			"FST_BountyDisk_Thief",
+			"FST_BountyDisk_Traitor",
+			"FST_TrackingFob_Normal",
+			"FST_TrackingFob_Abnormal",
+			"FST_TrackingFob_Bothan",
+			"FST_TrackingFob_Broken",
+			"FST_TrackingFob_Capital",
+			"FST_TrackingFob_Cardinal",
+			"FST_TrackingFob_Cargo",
+			"FST_TrackingFob_Chandrila",
+			"FST_TrackingFob_Core",
+			"FST_TrackingFob_Here",
+			"FST_TrackingFob_Huh",
+			"FST_TrackingFob_Inner",
+			"FST_TrackingFob_Items",
+			"FST_TrackingFob_Ithor",
+			"FST_TrackingFob_Orbit",
+			"FST_TrackingFob_Partner",
+			"FST_TrackingFob_Pet",
+			"FST_TrackingFob_Planet",
+			"FST_TrackingFob_Range",
+			"FST_TrackingFob_Rodia",
+			"FST_TrackingFob_Sector",
+			"FST_TrackingFob_Shaddaa",
+			"FST_TrackingFob_Ship",
+			"FST_TrackingFob_Spine",
+			"FST_TrackingFob_Tatooine",
+			"FST_TrackingFob_Wookiee",
 			"FST_HoloComm_Normal",
 			"FST_HoloComm_Abnormal",
 			"FST_HandComm_Normal",
@@ -1947,6 +1993,332 @@ class CfgWeapons
 		scope=1;
 		displayName="[41st] Holoprojector";
 		descriptionShort="A handheld holoprojector unit. There is recordings of several Grav-ball games on this device. Not useful intel.";
+	};
+	class FST_BountyDisk_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This device is used by bounty hunters to keep track of active jobs. This one is blank.";
+		model="\MRC\JLTS\contraband\Intel\bountypuck.p3d";
+		picture="\MRC\JLTS\contraband\Intel\data\ui\bountypuck_ui_ca.paa";
+	};
+	class FST_BountyDisk_Abnormal: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Bounty Puck (Suspicious)";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on someone of interest.";
+	};
+	class FST_BountyDisk_Catboy: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a member of the Republic Navy, a cathar, wanted alive and unharmed for 5000 credits.";
+	};
+	class FST_BountyDisk_Smug: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a small-time smuggler, wanted alive for 250 credits.";
+	};
+	class FST_BountyDisk_Thief: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a thief, wanted alive for 1000 credits, dead for 500.";
+	};
+	class FST_BountyDisk_Gamble: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a gambler, wanted alive or dead for 2700 credits.";
+	};
+	class FST_BountyDisk_Jedi: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a jedi, wanted dead for 8950 credits.";
+	};
+	class FST_BountyDisk_CEO: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a business owner, wanted 'mysteriously disappeared' for 3300 credits.";
+	};
+	class FST_BountyDisk_Murder: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a murderer, wanted alive for 15000 credits, dead for 2000.";
+	};
+	class FST_BountyDisk_Addict: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a spice addict, wanted alive or dead for 600 credits.";
+	};
+	class FST_BountyDisk_Stalk: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a holocelebrity, wanted alive and unharmed for 20000 credits.";
+	};
+	class FST_BountyDisk_Mystery: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on an unknown individual, with a general description and list of their crimes, wanted alive for 17630 credits to stand trial.";
+	};
+	class FST_BountyDisk_Revenge: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on an individual, wanted dead for 9420 credits in a very specific manner as revenge.";
+	};
+	class FST_BountyDisk_Traitor: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a traitor, wanted alive for 6500 credits, dead for 650.";
+	};
+	class FST_BountyDisk_Done: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying inactive bounty information on an individual who has already been collected on.";
+	};
+	class FST_BountyDisk_Leader: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a criminal leader, wanted dead for 45000 credits.";
+	};
+	class FST_BountyDisk_Politic: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a politician, wanted dead 'in an accidental manner' for 9400 credits.";
+	};
+	class FST_BountyDisk_Jump: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a bail jumper, wanted alive for 2000 credits, dead for 100.";
+	};
+	class FST_BountyDisk_Child: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a young heir, wanted captured alive and minimally harmed for 32780 credits.";
+	};
+	class FST_BountyDisk_Droid: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on an escaped droid, wanted decommisioned for 3500 credits.";
+	};
+	class FST_TrackingFob_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. These can use the Holonet to track items across the galaxy. This one is inactive.";
+		model="\MRC\JLTS\contraband\Intel\trackingfob.p3d";
+		picture="\MRC\JLTS\contraband\Intel\data\ui\trackingfob_ui_ca.paa";
+	};
+	class FST_TrackingFob_Abnormal: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Tracking Fob (Suspicious)";
+		descriptionShort="Used to find a paired tracking device. This tracker is pinging off something of interest to you.";
+	};
+	class FST_TrackingFob_Cardinal: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. On the back of this tracker it says 'CARDINAL TRACKING DEVICE IF FOUND RETURN TO MERRIK IMMEDIATELY'.";
+	};
+	class FST_TrackingFob_Cargo: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently tracking a ship travelling the Hydian Way, deep into the Outer Rim.";
+	};
+	class FST_TrackingFob_Capital: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the device is pinging as being on Coruscant.";
+	};
+	class FST_TrackingFob_Ship: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. This device is keeping track of a civilian starship landed on-planet.";
+	};
+	class FST_TrackingFob_Pet: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Apparently this device tracks the owner's pet. Given they appear to be several kilometers away from the tracker right now they must have escaped again.";
+	};
+	class FST_TrackingFob_Bothan: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently pinging a tracking device located in Bothan space.";
+	};
+	class FST_TrackingFob_Shaddaa: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the fob is locating a tracking device somewhere on Nar Shaddaa.";
+	};
+	class FST_TrackingFob_Broken: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. It does not turn on, and there is a rattling sound as you move it.";
+	};
+	class FST_TrackingFob_Range: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Tracking device is listed as 'OUT OF RANGE'.";
+	};
+	class FST_TrackingFob_Inner: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The paired tracking device is located on a planet in the Inner Rim.";
+	};
+	class FST_TrackingFob_Planet: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The device is tracking something on the other side of the planet. Not useful intel.";
+	};
+	class FST_TrackingFob_Partner: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Tracking device is labled as 'Idiot' and is currently located at a bar nearby.";
+	};
+	class FST_TrackingFob_Spine: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Tracking history shows the device travelling along the Correlian Trade Spine, and has made many stops along the way.";
+	};
+	class FST_TrackingFob_Rodia: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the device is pinging as being within the vicinity of Rodia.";
+	};
+	class FST_TrackingFob_Items: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The owner of this is using it to track their datapad, keys and wallet, all of which they appear to lose frequently.";
+	};
+	class FST_TrackingFob_Ithor: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the tracking device appears to be on its way to Ithor.";
+	};
+	class FST_TrackingFob_Tatooine: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device appears to have recently left Tatooine.";
+	};
+	class FST_TrackingFob_Core: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device is pinging as being located in the Core Worlds.";
+	};
+	class FST_TrackingFob_Wookiee: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the device is pinging somewhere past Kashyyyk in the Mid Rim.";
+	};
+	class FST_TrackingFob_Huh: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. You have no idea where the location listed for the tracking device is.";
+	};
+	class FST_TrackingFob_Sector: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the tracking device is pinging as being located all the way out in the Corperate Sector.";
+	};
+	class FST_TrackingFob_Orbit: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The device is tracking something in orbit above the planet. Not useful intel.";
+	};
+	class FST_TrackingFob_Chandrila: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device is currently located on the planet Chandrila.";
+	};
+	class FST_TrackingFob_Here: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device is pinging your exact location. This would be because the device is still attached to the fob.";
 	};
 	class FST_HoloComm_Normal: FST_CivData_Normal
 	{

@@ -280,12 +280,24 @@ private _list_41hdintelitems = [
 
 ];
 
-private _selectdatapad = selectRandomWeighted _list_41hddatapad;
-_unit addItemToUniform _selectdatapad;
+private _list_41hdcomms = [
+	"FST_HoloComm_Normal", 0.5,
+	"FST_HoloComm_Abnormal", 0.3,
+	"FST_HandComm_Normal", 0.5,
+	"FST_HandComm_Abnormal", 0.3,
+	"FST_FlatComm_Normal", 0.5,
+	"FST_FlatComm_Abnormal", 0.3,
+	"", 2
 
+];
+
+private _selectdatapad = selectRandomWeighted _list_41hddatapad;
+private _selectcomm = selectRandomWeighted _list_41hdcomms;
 private _intel0 = selectRandomWeighted _list_41hdintelitems;
 private _intel1 = selectRandomWeighted _list_41hdintelitems;
 private _intel2 = selectRandomWeighted _list_41hdintelitems;
+_unit addItemToUniform _selectdatapad;
+_unit addItemToUniform _selectcomm;
 _unit addItemToUniform _intel0;
 _unit addItemToUniform _intel1;
 _unit addItemToUniform _intel2;
@@ -315,7 +327,9 @@ _unit addItemToVest 'ACE_tourniquet';
 _unit addItemToVest 'ACE_tourniquet';
 _unit addItemToVest 'IDA_VibroKnife';
 _unit addItemToVest 'ACE_M26_Clacker';
+_unit addItemToVest 'ACE_DefusalKit';
 _unit addItemToVest 'MineDetector';
+_unit addItemToVest 'FST_SmallToolkit';
 
 _unit setSkill ['aimingAccuracy',0.5];
 _unit setSkill ['aimingShake',0.6];

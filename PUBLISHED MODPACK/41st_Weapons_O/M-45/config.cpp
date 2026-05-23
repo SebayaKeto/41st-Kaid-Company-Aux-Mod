@@ -29,10 +29,10 @@ class CfgWeapons
 		model="JMSLLTE_weapons\M45\M45.p3d";
 		magazines[]=
 		{
-			"FST_blaster_cell_High_Blue",
-			"FST_blaster_cell_High_Green",
-			"FST_blaster_cell_High_Yellow",
-			"FST_blaster_cell_High_Red"
+			"FST_blaster_battery_DC15L_Blue",
+			"FST_blaster_battery_DC15L_Green",
+			"FST_blaster_battery_DC15L_Yellow",
+			"FST_blaster_battery_DC15L_Red"
 		};
 		class Single: Mode_SemiAuto
 		{

@@ -185,6 +185,9 @@ private _list_41civintelitems = [
 	"FST_CivHoloprojector_Sport", 0.05,
 	"FST_CivHoloprojector_Video", 0.05,
 	"FST_CivHoloprojector_Weird", 0.3,
+	"FST_TrackingFob_Abnormal", 0.04,
+	"FST_TrackingFob_Broken", 0.3,
+	"FST_TrackingFob_Huh", 0.05,
 	"", 0.2
 
 ];
@@ -388,71 +391,69 @@ private _list_41alienheads = [
 ];
 
 private _list_41civloads_female = [
-	[[],[],[],["U_C_Mechanic_01_F",[[ _pocket0, _rolllow0],[ _datapad0,1],[ _intelitem0,1]]],[],[],"H_Hat_Tinfoil_F","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_Mechanic_01_F",[[ _pocket0, _rolllow0],[ _datapad0,1],[ _intelitem0,1],[ _comm0,1]]],[],[],"H_Hat_Tinfoil_F","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_bg_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_bg_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _comm0,1],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_white_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],["ACE_Sunflower_Seeds", _rollmid0],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_white_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _comm0,1],["ACE_Sunflower_Seeds", _rollmid0],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_ScumTroopHeavy_wood_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _rich0,1]]],[],[],"H_Cap_oli","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_ScumTroopHeavy_wood_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],[],"H_Cap_oli","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_BG_Guerilla3_1",[[ _pocket0, _rollhigh0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1]]],[],["B_Kitbag_cbr",[["JLTS_drugs_medikit",1],["JLTS_sabacc_deck",1],["IDA_BattleStim",2],["IDA_BactaBandage",2],["ACE_Canteen",1],["ACE_Can_RedGull",2],["ACE_MRE_SteakVegetables",1],["ACE_Banana",2],["WBK_LampItem_Green",1],["dev_enzymeCapsule",2]]],"JMSLLTE_PathL_brown_cap","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_BG_Guerilla3_1",[[ _pocket0, _rollhigh0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1]]],[],["B_Kitbag_cbr",[["JLTS_drugs_medikit",1],["JLTS_sabacc_deck",1],["IDA_BattleStim",2],["IDA_BactaBandage",2],["ACE_Canteen",1],["ACE_Can_RedGull",2],["ACE_MRE_SteakVegetables",1],["ACE_Banana",2],["WBK_LampItem_Green",1],["dev_enzymeCapsule",2]]],"JMSLLTE_PathL_brown_cap","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_red_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _rich0,1],[ _datapad0,1],["JLTS_sabacc_deck",1]]],["JMSLLTE_TermoRifleVest_armor",[["ACE_Canteen",1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_red_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _rich0,1],[ _datapad0,1],[ _comm0,1],["JLTS_sabacc_deck",1]]],["JMSLLTE_TermoRifleVest_armor",[["ACE_Canteen",1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_ScumAlCommando_desert_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebpack_v1_desert",[["ACE_WaterBottle", _rolllow1],["ACE_MRE_SteakVegetables",2],["ACE_MRE_MeatballsPasta",2],["ACE_MRE_LambCurry",2],["ACE_MRE_CreamTomatoSoup",1],["ACE_MRE_CreamChickenSoup",3],["ACE_MRE_ChickenHerbDumplings",1],["ACE_MRE_ChickenTikkaMasala",1],["ACE_MRE_BeefStew",1],["ACE_Can_Spirit",2],["ACE_Can_Franta",2],["ACE_Can_RedGull",1],["ACE_Banana",2],["ACE_Sunflower_Seeds", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_ScumAlCommando_desert_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebpack_v1_desert",[["ACE_WaterBottle", _rolllow1],["ACE_MRE_SteakVegetables",2],["ACE_MRE_MeatballsPasta",2],["ACE_MRE_LambCurry",2],["ACE_MRE_CreamTomatoSoup",1],["ACE_MRE_CreamChickenSoup",3],["ACE_MRE_ChickenHerbDumplings",1],["ACE_MRE_ChickenTikkaMasala",1],["ACE_MRE_BeefStew",1],["ACE_Can_Spirit",2],["ACE_Can_Franta",2],["ACE_Can_RedGull",1],["ACE_Banana",2],["ACE_Sunflower_Seeds", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_WorkerCoveralls",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _pocket2, _rolllow1],[ _datapad0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebsmall_v1",[[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["ACE_Can_RedGull",1],["ACE_Banana",1],["ACE_WaterBottle",1],["JLTS_drugs_protein", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_WorkerCoveralls",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _pocket2, _rolllow1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebsmall_v1",[[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["ACE_Can_RedGull",1],["ACE_Banana",1],["ACE_WaterBottle",1],["JLTS_drugs_protein", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirtS_blue_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _pocket2, _rolllow0]]],["JMSLLTE_CommandoBelt_armor",[[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirtS_blue_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _pocket2, _rolllow0]]],["JMSLLTE_CommandoBelt_armor",[[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_O_R_Gorka_01_F",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _rich0,1]]],[],[],"JMSLLTE_PirSkiff_helmet","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_O_R_Gorka_01_F",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],[],"JMSLLTE_PirSkiff_helmet","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_HuttSkiff_blue_F_CombatUniform",[[ _datapad0,1],[ _intelitem0,1],[ _pocket0, _rolllow0],["IDA_BactaBandage", _rolllow1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
+	[[],[],[],["JMSLLTE_HuttSkiff_blue_F_CombatUniform",[[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _pocket0, _rolllow0],["IDA_BactaBandage", _rolllow1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
 
 ];
 
 private _list_41civloads_male = [
-	
-	[[],[],[],["U_C_Mechanic_01_F",[[ _pocket0, _rolllow0],[ _datapad0,1],[ _intelitem0,1]]],[],[],"H_Hat_Tinfoil_F","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_Mechanic_01_F",[[ _pocket0, _rolllow0],[ _datapad0,1],[ _intelitem0,1],[ _comm0,1]]],[],[],"H_Hat_Tinfoil_F","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_bg_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_bg_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _comm0,1],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_white_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],["ACE_Sunflower_Seeds", _rollmid0],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_white_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _comm0,1],["ACE_Sunflower_Seeds", _rollmid0],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_ScumTroopHeavy_wood_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _rich0,1]]],[],[],"H_Cap_oli","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_ScumTroopHeavy_wood_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],[],"H_Cap_oli","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_BG_Guerilla3_1",[[ _pocket0, _rollhigh0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1]]],[],["B_Kitbag_cbr",[["JLTS_drugs_medikit",1],["JLTS_sabacc_deck",1],["IDA_BattleStim",2],["IDA_BactaBandage",2],["ACE_Canteen",1],["ACE_Can_RedGull",2],["ACE_MRE_SteakVegetables",1],["ACE_Banana",2],["WBK_LampItem_Green",1],["dev_enzymeCapsule",2]]],"JMSLLTE_PathL_brown_cap","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_BG_Guerilla3_1",[[ _pocket0, _rollhigh0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1]]],[],["B_Kitbag_cbr",[["JLTS_drugs_medikit",1],["JLTS_sabacc_deck",1],["IDA_BattleStim",2],["IDA_BactaBandage",2],["ACE_Canteen",1],["ACE_Can_RedGull",2],["ACE_MRE_SteakVegetables",1],["ACE_Banana",2],["WBK_LampItem_Green",1],["dev_enzymeCapsule",2]]],"JMSLLTE_PathL_brown_cap","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_red_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _rich0,1],[ _datapad0,1],["JLTS_sabacc_deck",1]]],["JMSLLTE_TermoRifleVest_armor",[["ACE_Canteen",1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_red_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _rich0,1],[ _datapad0,1],[ _comm0,1],["JLTS_sabacc_deck",1]]],["JMSLLTE_TermoRifleVest_armor",[["ACE_Canteen",1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_ScumAlCommando_desert_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebpack_v1_desert",[["ACE_WaterBottle", _rolllow1],["ACE_MRE_SteakVegetables",2],["ACE_MRE_MeatballsPasta",2],["ACE_MRE_LambCurry",2],["ACE_MRE_CreamTomatoSoup",1],["ACE_MRE_CreamChickenSoup",3],["ACE_MRE_ChickenHerbDumplings",1],["ACE_MRE_ChickenTikkaMasala",1],["ACE_MRE_BeefStew",1],["ACE_Can_Spirit",2],["ACE_Can_Franta",2],["ACE_Can_RedGull",1],["ACE_Banana",2],["ACE_Sunflower_Seeds", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_ScumAlCommando_desert_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebpack_v1_desert",[["ACE_WaterBottle", _rolllow1],["ACE_MRE_SteakVegetables",2],["ACE_MRE_MeatballsPasta",2],["ACE_MRE_LambCurry",2],["ACE_MRE_CreamTomatoSoup",1],["ACE_MRE_CreamChickenSoup",3],["ACE_MRE_ChickenHerbDumplings",1],["ACE_MRE_ChickenTikkaMasala",1],["ACE_MRE_BeefStew",1],["ACE_Can_Spirit",2],["ACE_Can_Franta",2],["ACE_Can_RedGull",1],["ACE_Banana",2],["ACE_Sunflower_Seeds", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_WorkerCoveralls",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _pocket2, _rolllow1],[ _datapad0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebsmall_v1",[[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["ACE_Can_RedGull",1],["ACE_Banana",1],["ACE_WaterBottle",1],["JLTS_drugs_protein", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_WorkerCoveralls",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _pocket2, _rolllow1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebsmall_v1",[[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["ACE_Can_RedGull",1],["ACE_Banana",1],["ACE_WaterBottle",1],["JLTS_drugs_protein", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirtS_blue_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _pocket2, _rolllow0]]],["JMSLLTE_CommandoBelt_armor",[[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirtS_blue_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _pocket2, _rolllow0]]],["JMSLLTE_CommandoBelt_armor",[[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_O_R_Gorka_01_F",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _rich0,1]]],[],[],"JMSLLTE_PirSkiff_helmet","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_O_R_Gorka_01_F",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _intelitem0,1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],[],"JMSLLTE_PirSkiff_helmet","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_HuttSkiff_blue_F_CombatUniform",[[ _datapad0,1],[ _intelitem0,1],[ _pocket0, _rolllow0],["IDA_BactaBandage", _rolllow1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
-
+	[[],[],[],["JMSLLTE_HuttSkiff_blue_F_CombatUniform",[[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _pocket0, _rolllow0],["IDA_BactaBandage", _rolllow1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
 ];
 
 private _list_41civloads_alien = [
 
-	[[],[],[],["JMSLLTE_PirShirt_bg_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_bg_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _comm0,1],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_white_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],["ACE_Sunflower_Seeds", _rollmid0],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_white_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _comm0,1],["ACE_Sunflower_Seeds", _rollmid0],[ _intelitem0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirt_red_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _rich0,1],[ _datapad0,1],["JLTS_sabacc_deck",1]]],["JMSLLTE_TermoRifleVest_armor",[["ACE_Canteen",1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirt_red_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _rich0,1],[ _datapad0,1],[ _comm0,1],["JLTS_sabacc_deck",1]]],["JMSLLTE_TermoRifleVest_armor",[["ACE_Canteen",1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_ScumAlCommando_desert_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebpack_v1_desert",[["ACE_WaterBottle", _rolllow1],["ACE_MRE_SteakVegetables",2],["ACE_MRE_MeatballsPasta",2],["ACE_MRE_LambCurry",2],["ACE_MRE_CreamTomatoSoup",1],["ACE_MRE_CreamChickenSoup",3],["ACE_MRE_ChickenHerbDumplings",1],["ACE_MRE_ChickenTikkaMasala",1],["ACE_MRE_BeefStew",1],["ACE_Can_Spirit",2],["ACE_Can_Franta",2],["ACE_Can_RedGull",1],["ACE_Banana",2],["ACE_Sunflower_Seeds", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_ScumAlCommando_desert_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebpack_v1_desert",[["ACE_WaterBottle", _rolllow1],["ACE_MRE_SteakVegetables",2],["ACE_MRE_MeatballsPasta",2],["ACE_MRE_LambCurry",2],["ACE_MRE_CreamTomatoSoup",1],["ACE_MRE_CreamChickenSoup",3],["ACE_MRE_ChickenHerbDumplings",1],["ACE_MRE_ChickenTikkaMasala",1],["ACE_MRE_BeefStew",1],["ACE_Can_Spirit",2],["ACE_Can_Franta",2],["ACE_Can_RedGull",1],["ACE_Banana",2],["ACE_Sunflower_Seeds", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_WorkerCoveralls",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _pocket2, _rolllow1],[ _datapad0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebsmall_v1",[[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["ACE_Can_RedGull",1],["ACE_Banana",1],["ACE_WaterBottle",1],["JLTS_drugs_protein", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_WorkerCoveralls",[[ _pocket0, _rollmid0],[ _pocket1, _rolllow0],[ _pocket2, _rolllow1],[ _datapad0,1],[ _comm0,1],[ _rich0,1]]],[],["JMSLLTE_back_rebsmall_v1",[[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["ACE_Can_RedGull",1],["ACE_Banana",1],["ACE_WaterBottle",1],["JLTS_drugs_protein", _rolllow2]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_PirShirtS_blue_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _pocket2, _rolllow0]]],["JMSLLTE_CommandoBelt_armor",[[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["JMSLLTE_PirShirtS_blue_F_CombatUniform",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _pocket2, _rolllow0]]],["JMSLLTE_CommandoBelt_armor",[[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _intelitem1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["JMSLLTE_HuttSkiff_blue_F_CombatUniform",[[ _datapad0,1],[ _intelitem0,1],[ _pocket0, _rolllow0],["IDA_BactaBandage", _rolllow1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
+	[[],[],[],["JMSLLTE_HuttSkiff_blue_F_CombatUniform",[[ _datapad0,1],[ _comm0,1],[ _intelitem0,1],[ _pocket0, _rolllow0],["IDA_BactaBandage", _rolllow1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
 
 ];
 
