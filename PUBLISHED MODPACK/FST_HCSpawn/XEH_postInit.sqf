@@ -28,6 +28,7 @@ if (isServer) then {
 // HEADLESS CLIENT
 // ============================================================
 if (!isServer && !hasInterface) then {
+    missionNamespace setVariable ["FST_HC_LastDeadGroupCleanup", time];
     [{
         ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
         diag_log format ["[FST_HCSpawn] HC registering — owner %1", clientOwner];

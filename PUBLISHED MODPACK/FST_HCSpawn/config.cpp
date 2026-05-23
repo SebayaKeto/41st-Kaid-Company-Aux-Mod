@@ -29,6 +29,8 @@ class CfgFunctions {
             class catchUntracked {};
             class recountUnits {};
             class cleanupDeadGroups {};
+            class requestDeadGroupCleanup {};
+            class enforceDroidStance {};
         };
         class Transfer {
             file = "FST_HCSpawn";

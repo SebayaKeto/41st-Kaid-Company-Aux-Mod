@@ -75,6 +75,12 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_statusReport;
     }] call CBA_fnc_addEventHandler;
 
+
+    // Manual/rare dead-group maintenance cleanup (from Zeus/admin client).
+    ["FST_HC_evt_manualDeadGroupCleanup", {
+        _this call FST_HCSpawn_fnc_requestDeadGroupCleanup;
+    }] call CBA_fnc_addEventHandler;
+
     // Force immediate recount after HC-side cleanup deletes spawned units.
     ["FST_HC_evt_recountUnits", {
         [] call FST_HCSpawn_fnc_recountUnits;
@@ -90,6 +96,16 @@ if (isServer) then {
 // HC / CLIENT EVENTS (fired from server, handled on HC or Zeus)
 // ============================================================
 
+
+
+// Local dead-group cleanup request. deleteGroup is locality-sensitive, so the server
+// uses this ownerEvent to make each HC clean only its own local dead groups.
+["FST_HC_evt_cleanupDeadGroupsLocal", {
+    private _deleted = _this call FST_HCSpawn_fnc_cleanupDeadGroups;
+    if (_deleted > 0) then {
+        ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent;
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Start FPS monitor on a target machine without direct remoteExec of an addon function.
 ["FST_HC_evt_startFpsMonitor", {

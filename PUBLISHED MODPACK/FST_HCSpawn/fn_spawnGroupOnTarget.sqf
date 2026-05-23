@@ -7,10 +7,7 @@ params ["_side", "_unitClasses", "_pos", ["_behavior", "garrison"], ["_radius", 
 
 private _isValidatedZeusClone = (_sourceOwner > 2) && {count _originalPayload == 3};
 
-// Free dead OPFOR groups before cap/spawn routing. This protects against Arma's
-// per-side group limit being exhausted by systems that leave all-dead groups behind.
-private _deadGroupsCleaned = [true] call FST_HCSpawn_fnc_cleanupDeadGroups;
-if (_deadGroupsCleaned > 0) then { [] call FST_HCSpawn_fnc_recountUnits; };
+// V14: no automatic dead-group cleanup in the live spawn path. Run manual/rare maintenance cleanup during lulls.
 private _clearOriginal = {
     params ["_accepted"];
     if (_isValidatedZeusClone) then {

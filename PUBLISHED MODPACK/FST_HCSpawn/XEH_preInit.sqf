@@ -25,7 +25,13 @@ missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace g
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchDelay", missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 1.25]];
 missionNamespace setVariable ["FST_HC_CleanupPostSpawnGrace", missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60]];
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupEnabled", missionNamespace getVariable ["FST_HC_DeadGroupCleanupEnabled", true]];
-missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespace getVariable ["FST_HC_DeadGroupCleanupInterval", 20]];
+missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespace getVariable ["FST_HC_DeadGroupCleanupInterval", 1200]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMinAge", 300]];
+missionNamespace setVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", 900]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupMaxPerPass", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMaxPerPass", 25]];
+missionNamespace setVariable ["FST_HC_DroidStanceEnabled", missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]];
+missionNamespace setVariable ["FST_HC_DroidStanceInterval", missionNamespace getVariable ["FST_HC_DroidStanceInterval", 4]];
 missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
@@ -134,14 +140,38 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 
 [
     "FST_HC_DeadGroupCleanupEnabled", "CHECKBOX",
-    ["Dead OPFOR Group Cleanup", "Deletes OPFOR groups with zero alive units to free Arma side group slots. Does not delete living AI or player groups."],
+    ["Enable Manual Dead OPFOR Cleanup", "Allows the manual dead-group cleanup event to delete local dead OPFOR groups during controlled lulls. Manual cleanup bypasses the automatic interval."],
     ["FST HC Spawn", "Cleanup"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
+    "FST_HC_DeadGroupAutoCleanupEnabled", "CHECKBOX",
+    ["Enable Automatic Dead OPFOR Cleanup", "Disabled in this build. Dead-group cleanup is manual-only to avoid combat-time delete storms."],
+    ["FST HC Spawn", "Cleanup"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
     "FST_HC_DeadGroupCleanupInterval", "SLIDER",
-    ["Dead Group Cleanup Interval", "Seconds between automatic dead OPFOR group sweeps. Heavy spawn modules force one before they check caps."],
-    ["FST HC Spawn", "Cleanup"], [5, 120, 20, 0], true, {}, false
+    ["Dead Group Cleanup Interval", "Seconds between automatic dead OPFOR group sweeps. Default is 20 minutes; use manual cleanup during lulls if needed."],
+    ["FST HC Spawn", "Cleanup"], [300, 1800, 1200, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupCleanupMinAge", "SLIDER",
+    ["Dead Group Minimum Age", "Seconds an OPFOR group must have zero alive units before the dead-group sweeper may delete it."],
+    ["FST HC Spawn", "Cleanup"], [60, 900, 300, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadTrackedGroupCleanupMinAge", "SLIDER",
+    ["Tracked Dead Group Minimum Age", "Extra-safe delay for FST-tracked groups with zero alive units. Higher values reduce object/reference churn during intense combat."],
+    ["FST HC Spawn", "Cleanup"], [300, 1800, 900, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupCleanupMaxPerPass", "SLIDER",
+    ["Dead Groups Max Per Sweep", "Maximum dead OPFOR groups deleted in one automatic sweep. Keep low; manual cleanup can be requested separately during lulls."],
+    ["FST HC Spawn", "Cleanup"], [1, 60, 25, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -231,5 +261,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V12_DEAD_GROUP_CLEANUP_REVIEW_2026-05-10", true];
-diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V12_DEAD_GROUP_CLEANUP_REVIEW_2026-05-10";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V19_MANUAL_ONLY_DROIDSTANCE_REVIEW_2026-05-16", true];
+diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V19_MANUAL_ONLY_DROIDSTANCE_REVIEW_2026-05-16";

@@ -22,10 +22,7 @@ if (count _template == 0) exitWith {
 
 _template params ["_side", "_unitClasses", "_desc"];
 
-// Free dead OPFOR groups before heavy module cap checks. Dead groups consume
-// Arma side group slots even when our tracked AI unit cap looks safe.
-private _deadGroupsCleaned = [true] call FST_HCSpawn_fnc_cleanupDeadGroups;
-if (_deadGroupsCleaned > 0) then { [] call FST_HCSpawn_fnc_recountUnits; };
+// V14: no automatic dead-group cleanup in heavy spawn paths. Run manual/rare maintenance cleanup during lulls.
 
 // Heavy module safety.
 if ((missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]) && {count FST_HC_Array == 0}) exitWith {
