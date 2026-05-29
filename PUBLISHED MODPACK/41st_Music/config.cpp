@@ -171,6 +171,7 @@ class CfgMusic
 		"FST_KingsField_Decline_Extended",
 		"FST_DOOM_TheOnlyThingTheyFearIsYou",
 		"FST_CigaretteWife",
+		"FST_DragonRisingMenu",
 	
 		
 		//Misc tracks
@@ -206,6 +207,7 @@ class CfgMusic
 		"FST_Trivium_KirisuteGomen",
 		"FST_TheOneWhosRunningTheShow",
 		"FST_PacificRim",
+		"FST_VoodooChild",
 		
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -1877,6 +1879,18 @@ class CfgMusic
 		};
 		duration="79";
 	};
+	class FST_DragonRisingMenu
+	{
+		name="(Op. Flashpoint 2) Dragon Rising Menu";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Operation Flashpoint 2 - Dragon Rising Menu Theme.ogg",
+			1,
+			1
+		};
+		duration="358";
+	};
 
 	//Films
 	
@@ -2278,6 +2292,18 @@ class CfgMusic
 			1
 		};
 		duration="296";
+	};
+	class FST_VoodooChild
+	{
+		name="S.R. Vaughn - Voodoo Child";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Voodoo Child.ogg",
+			1,
+			1
+		};
+		duration="479";
 	};
 
 	// Christmas
