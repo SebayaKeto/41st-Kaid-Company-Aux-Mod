@@ -94,6 +94,24 @@ class CfgPatches
 			"FST_ReadDataW_Tabloid",
 			"FST_ReadDataW_Text",
 			"FST_ReadDataW_Youth",
+			"FST_CivMiniDataW_Normal",
+			"FST_CivMiniDataW_Abnormal",
+			"FST_CivMiniDataW_Atmos",
+			"FST_CivMiniDataW_Bio",
+			"FST_CivMiniDataW_Broken",
+			"FST_CivMiniDataW_Built",
+			"FST_CivMiniDataW_Camera",
+			"FST_CivMiniDataW_Chem",
+			"FST_CivMiniDataW_Diagnose",
+			"FST_CivMiniDataW_Droid",
+			"FST_CivMiniDataW_Drug",
+			"FST_CivMiniDataW_GPS",
+			"FST_CivMiniDataW_Huh",
+			"FST_CivMiniDataW_Music",
+			"FST_CivMiniDataW_Notes",
+			"FST_CivMiniDataW_Radio",
+			"FST_CivMiniDataW_Shot",
+			"FST_CivMiniDataW_Track",
 			"FST_CivDatacardW_Normal",
 			"FST_CivDatacardW_Abnormal",
 			"FST_CivDatacardW_Blueprint",
@@ -141,6 +159,7 @@ class CfgPatches
 			"FST_CivFlimsiW_Picture",
 			"FST_CivFlimsiW_Receipt",
 			"FST_CivFlimsiW_Stick",
+			"FST_CivFlimsiW_Stick2",
 			"FST_CivFlimsiW_Starchart",
 			"FST_CivFlimsiW_Trash",
 			"FST_CivFlimsiW_Wanted",
@@ -165,6 +184,29 @@ class CfgPatches
 			"FST_CivFlimsiFileW_Transport",
 			"FST_CivFlimsiFileW_Um",
 			"FST_CivFlimsiFileW_Work",
+			"FST_CivHoloprojectorW_Normal",
+			"FST_CivHoloprojectorW_Abnormal",
+			"FST_CivHoloprojectorW_Alien",
+			"FST_CivHoloprojectorW_Anatomy",
+			"FST_CivHoloprojectorW_Beast",
+			"FST_CivHoloprojectorW_Blueprint",
+			"FST_CivHoloprojectorW_Broken",
+			"FST_CivHoloprojectorW_Design",
+			"FST_CivHoloprojectorW_Empty",
+			"FST_CivHoloprojectorW_Galaxy",
+			"FST_CivHoloprojectorW_Game",
+			"FST_CivHoloprojectorW_Ha",
+			"FST_CivHoloprojectorW_Land",
+			"FST_CivHoloprojectorW_Manual",
+			"FST_CivHoloprojectorW_Map",
+			"FST_CivHoloprojectorW_Movie",
+			"FST_CivHoloprojectorW_OwO",
+			"FST_CivHoloprojectorW_Record",
+			"FST_CivHoloprojectorW_Route",
+			"FST_CivHoloprojectorW_Solar",
+			"FST_CivHoloprojectorW_Sport",
+			"FST_CivHoloprojectorW_Video",
+			"FST_CivHoloprojectorW_Weird",
 			"FST_CreditCaseW_Low",
 			"FST_CreditCaseW_Med",
 			"FST_CreditCaseW_High",
@@ -258,6 +300,24 @@ class CfgPatches
 			"FST_ReadData_Tabloid",
 			"FST_ReadData_Text",
 			"FST_ReadData_Youth",
+			"FST_CivMiniData_Normal",
+			"FST_CivMiniData_Abnormal",
+			"FST_CivMiniData_Atmos",
+			"FST_CivMiniData_Bio",
+			"FST_CivMiniData_Broken",
+			"FST_CivMiniData_Built",
+			"FST_CivMiniData_Camera",
+			"FST_CivMiniData_Chem",
+			"FST_CivMiniData_Diagnose",
+			"FST_CivMiniData_Droid",
+			"FST_CivMiniData_Drug",
+			"FST_CivMiniData_GPS",
+			"FST_CivMiniData_Huh",
+			"FST_CivMiniData_Music",
+			"FST_CivMiniData_Notes",
+			"FST_CivMiniData_Radio",
+			"FST_CivMiniData_Shot",
+			"FST_CivMiniData_Track",
 			"FST_CivDatacard_Normal",
 			"FST_CivDatacard_Abnormal",
 			"FST_CivDatacard_Blueprint",
@@ -306,6 +366,7 @@ class CfgPatches
 			"FST_CivFlimsi_Receipt",
 			"FST_CivFlimsi_Starchart",
 			"FST_CivFlimsi_Stick",
+			"FST_CivFlimsi_Stick2",
 			"FST_CivFlimsi_Trash",
 			"FST_CivFlimsi_Wanted",
 			"FST_CivFlimsi_Work",
@@ -329,13 +390,98 @@ class CfgPatches
 			"FST_CivFlimsiFile_Transport",
 			"FST_CivFlimsiFile_Um",
 			"FST_CivFlimsiFile_Work",
+			"FST_CivHoloprojector_Normal",
+			"FST_CivHoloprojector_Abnormal",
+			"FST_CivHoloprojector_Alien",
+			"FST_CivHoloprojector_Anatomy",
+			"FST_CivHoloprojector_Beast",
+			"FST_CivHoloprojector_Blueprint",
+			"FST_CivHoloprojector_Broken",
+			"FST_CivHoloprojector_Design",
+			"FST_CivHoloprojector_Empty",
+			"FST_CivHoloprojector_Galaxy",
+			"FST_CivHoloprojector_Game",
+			"FST_CivHoloprojector_Ha",
+			"FST_CivHoloprojector_Land",
+			"FST_CivHoloprojector_Manual",
+			"FST_CivHoloprojector_Map",
+			"FST_CivHoloprojector_Movie",
+			"FST_CivHoloprojector_OwO",
+			"FST_CivHoloprojector_Record",
+			"FST_CivHoloprojector_Route",
+			"FST_CivHoloprojector_Solar",
+			"FST_CivHoloprojector_Sport",
+			"FST_CivHoloprojector_Video",
+			"FST_CivHoloprojector_Weird",
+			"FST_BountyDisk_Normal",
+			"FST_BountyDisk_Abnormal",
+			"FST_BountyDisk_Addict",
+			"FST_BountyDisk_Catboy",
+			"FST_BountyDisk_CEO",
+			"FST_BountyDisk_Child",
+			"FST_BountyDisk_Done",
+			"FST_BountyDisk_Droid",
+			"FST_BountyDisk_Gamble",
+			"FST_BountyDisk_Jedi",
+			"FST_BountyDisk_Jump",
+			"FST_BountyDisk_Leader",
+			"FST_BountyDisk_Murder",
+			"FST_BountyDisk_Mystery",
+			"FST_BountyDisk_Politic",
+			"FST_BountyDisk_Revenge",
+			"FST_BountyDisk_Smug",
+			"FST_BountyDisk_Stalk",
+			"FST_BountyDisk_Thief",
+			"FST_BountyDisk_Traitor",
+			"FST_TrackingFob_Normal",
+			"FST_TrackingFob_Abnormal",
+			"FST_TrackingFob_Bothan",
+			"FST_TrackingFob_Broken",
+			"FST_TrackingFob_Capital",
+			"FST_TrackingFob_Cardinal",
+			"FST_TrackingFob_Cargo",
+			"FST_TrackingFob_Chandrila",
+			"FST_TrackingFob_Core",
+			"FST_TrackingFob_Here",
+			"FST_TrackingFob_Huh",
+			"FST_TrackingFob_Inner",
+			"FST_TrackingFob_Items",
+			"FST_TrackingFob_Ithor",
+			"FST_TrackingFob_Orbit",
+			"FST_TrackingFob_Partner",
+			"FST_TrackingFob_Pet",
+			"FST_TrackingFob_Planet",
+			"FST_TrackingFob_Range",
+			"FST_TrackingFob_Rodia",
+			"FST_TrackingFob_Sector",
+			"FST_TrackingFob_Shaddaa",
+			"FST_TrackingFob_Ship",
+			"FST_TrackingFob_Spine",
+			"FST_TrackingFob_Tatooine",
+			"FST_TrackingFob_Wookiee",
+			"FST_HoloComm_Normal",
+			"FST_HoloComm_Abnormal",
+			"FST_HandComm_Normal",
+			"FST_HandComm_Abnormal",
+			"FST_FlatComm_Normal",
+			"FST_FlatComm_Abnormal",
 			"FST_CreditCase_Low",
 			"FST_CreditCase_Med",
 			"FST_CreditCase_High",
 			"FST_CreditCase_Rare",
 			"FST_CreditCase_Lock",
 			"FST_CreditCase_Chip",
-			"FST_CreditChip"
+			"FST_CreditChip",
+			"FST_BreathingGas_Ammonia",
+			"FST_BreathingGas_Chlorine",
+			"FST_BreathingGas_Corrosive",
+			"FST_BreathingGas_Dioxide",
+			"FST_BreathingGas_Flammable",
+			"FST_BreathingGas_Noble",
+			"FST_BreathingGas_Oxygen",
+			"FST_BreathingGas_Ozone",
+			"FST_BreathingGas_Phosphine",
+			"FST_BreathingGas_Sulfur"
 		};
 	};
 	author="Tooka";
@@ -386,34 +532,20 @@ class CfgFunctions
 {
 	class FST_CivilRandomizers
 	{
-		class FST_RandomPrisonCiv
+		
+		class FST_IdentitySetter
 		{
-			file="41st_Civilians_and_Intel";
+			file="41st_Civilians_and_Intel\Scripts";
+			class applyidentity {postInit=1;};
+		};
+		class FST_RandomCivsScripts
+		{
+			file="41st_Civilians_and_Intel\Scripts";
 			class prisonercivil {};
-		};
-		class FST_RandomPrisonClone
-		{
-			file="41st_Civilians_and_Intel";
 			class prisonerclone {};
-		};
-		class FST_RandomRegularCiv
-		{
-			file="41st_Civilians_and_Intel";
 			class regularcivil {};
-		};
-		class FST_RandomPoorCiv
-		{
-			file="41st_Civilians_and_Intel";
 			class poorcivil {};
-		};
-		class FST_RandomWealthyCiv
-		{
-			file="41st_Civilians_and_Intel";
 			class wealthycivil {};
-		};
-		class FST_RandomSpacerCiv
-		{
-			file="41st_Civilians_and_Intel";
 			class spacercivil {};
 		};
 	};
@@ -819,7 +951,7 @@ class CfgWeapons
 		author="Tooka";
 		scope=1;
 		displayName="[41st] Datapad";
-		descriptionShort="A datapad with a paired stylus. On this pad there are a large number of operations checklists for pre-, mid- and post-flight of a civilian starcraft used by a pilot.";
+		descriptionShort="A datapad with a paired stylus. On this pad there are a large number of operations checklists for pre-, mid- and post-flight of a starcraft used by a pilot.";
 	};
 	class FST_StylusData_Note: FST_StylusData_Normal
 	{
@@ -1061,6 +1193,134 @@ class CfgWeapons
 		displayName="[41st] Reading Datapad";
 		descriptionShort="A cheap datapad optimized for text display. The contents technically would be classified as a novel. It is very poorly written; the author clearly had no idea what they were doing.";
 	};
+	class FST_CivMiniData_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Does not appear to have anything on it of importance.";
+		model="\MRC\JLTS\contraband\Core_contraband\scanner_bounty.p3d";
+		picture="\MRC\JLTS\contraband\Core_contraband\data\ui\icon_scanner_bounty_ca.paa";
+	};
+	class FST_CivMiniData_Abnormal: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Mini Datapad (Suspicious)";
+		descriptionShort="A small utility datapad. You have noticed something about this one is important.";
+	};
+	class FST_CivMiniData_Shot: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This one has a blaster hole melted clean through its center.";
+	};
+	class FST_CivMiniData_Broken: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Its screen is missing, exposing its interior components, and its battery pack has been removed. Not useful intel.";
+	};
+	class FST_CivMiniData_Built: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Used to scan and analyze structures in construction to see inside walls. Not useful intel.";
+	};
+	class FST_CivMiniData_Droid: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. It is designed for interfacing with droids for quick maintenance. Not useful intel.";
+	};
+	class FST_CivMiniData_Music: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This one is a music player, and the owner seems to like jizz music.";
+	};
+	class FST_CivMiniData_Notes: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Filled with quick notes taken by someone documenting something. Not useful intel.";
+	};
+	class FST_CivMiniData_Bio: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This is a bioscanner used in medical professions to analyze and diagnose patients.";
+	};
+	class FST_CivMiniData_Chem: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Used to scan and analyze chemical compounds.";
+	};
+	class FST_CivMiniData_Camera: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This one is used for both 2D and 3D high definition image capturing. Not useful intel.";
+	};
+	class FST_CivMiniData_Huh: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Whatever this is designed for is beyond your ability to discern. Not useful intel.";
+	};
+	class FST_CivMiniData_Drug: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This device is used to scan people for substances, most commonly used by police.";
+	};
+	class FST_CivMiniData_Diagnose: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This scanning device is used to analyze and diagnose issues with vehicle components.";
+	};
+	class FST_CivMiniData_Radio: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. This datapad is used to detect and warn the user of ionizing radiation.";
+	};
+	class FST_CivMiniData_Atmos: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Seems to be used to analyze environmental conditions around the datapad like weather, temperature, pressure and composition. Not useful intel.";
+	};
+	class FST_CivMiniData_GPS: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. Appears to be intended as a Planetary Positioning System. Not useful intel.";
+	};
+	class FST_CivMiniData_Track: FST_CivMiniData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Mini Datapad";
+		descriptionShort="A small utility datapad. The screen is displaying an active signal tracking something. The something is offplanet however, so not useful intel.";
+	};
 	class FST_CivDatacard_Normal: FST_CivData_Normal
 	{
 		author="Tooka";
@@ -1295,6 +1555,13 @@ class CfgWeapons
 		scope=1;
 		displayName="[41st] Flimsi";
 		descriptionShort="A piece of flimsiplast. Has a crude drawing of a stick figure clone shooting a stick figure battledroid on it.";
+	};
+	class FST_CivFlimsi_Stick2: FST_CivFlimsi_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Flimsi";
+		descriptionShort="A piece of flimsiplast. Has a crude drawing of a stick figure battledroid shooting a stick figure clone on it.";
 	};
 	class FST_CivFlimsi_Receipt: FST_CivFlimsi_Normal
 	{
@@ -1564,6 +1831,543 @@ class CfgWeapons
 		displayName="[41st] Flimsi Folder";
 		descriptionShort="A bunch of flimsiplast in a folder. The documentation within seems to be related to the operations of a commercial spacecraft such as logs, fuel expenditures, cargo manifests and courses. Not useful intel.";
 	};
+	class FST_CivHoloprojector_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. It displays nothing of interest when turned on.";
+		model="\ls\core\addons\holoprojector\bountyPuck\ls_holoprojector_bountyPuck.p3d";
+		picture="\ls\core\addons\holoprojector\data\ui\bountyPuck_ui_ca.paa";
+	};
+	class FST_CivHoloprojector_Abnormal: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Holoprojector (Suspicious)";
+		descriptionShort="A handheld holoprojector unit. The images displayed when turned on have caught your attention as being important.";
+	};
+	class FST_CivHoloprojector_Map: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Has a map of some large city. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Movie: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Has a couple holomovies in its memory.";
+	};
+	class FST_CivHoloprojector_Blueprint: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Displays a blueprint for a building. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Game: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. There is an interactive hologame on it.";
+	};
+	class FST_CivHoloprojector_Galaxy: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. A model of the galaxy is displayed when you turn it on. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Route: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Displays a sector map with hyperspace routes for navigation. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Video: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Contains multiple recordings taken by a holocamera of mundane civilian activities like birthday celebrations.";
+	};
+	class FST_CivHoloprojector_Solar: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Is storing multiple star systems with interactive displays that allow you to press the celestial objects and learn about them. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Beast: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. It is an interactive beastiary containing displays of flora and fauna with encyclopedic entries about them. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Manual: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Has an interactive model of a civilian speeder for use as a user manual.";
+	};
+	class FST_CivHoloprojector_Design: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Appears to be used for an engineering project and has a partially complete design on it. Not useful intel.";
+	};
+	class FST_CivHoloprojector_OwO: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. It works, and you regret testing that; you did not expect it to display what it did.";
+	};
+	class FST_CivHoloprojector_Land: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Contains a land navigation map with roads and various locations marked out. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Record: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Has various security holorecordings. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Weird: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Whatever this thing is displaying is either corrupted data, or intended for some alien perception. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Broken: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. The display surface sparks a little the first time you try to turn it on, then it stops doing anything. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Empty: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. It is lighter than you expect. Turning it over you see it has been gutted and has no internals.";
+	};
+	class FST_CivHoloprojector_Ha: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. When you turn it on a loud screaming roar plays and a large projection of a charging rancor appears. You heartrate may take a moment to calm back down.";
+	};
+	class FST_CivHoloprojector_Alien: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. You are unclear what exactly it is displaying, but it is very loud and very colorful. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Anatomy: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. Has interactive anatomical displays of various sapient alien species used for medical purposes. Not useful intel.";
+	};
+	class FST_CivHoloprojector_Sport: FST_CivHoloprojector_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Holoprojector";
+		descriptionShort="A handheld holoprojector unit. There is recordings of several Grav-ball games on this device. Not useful intel.";
+	};
+	class FST_BountyDisk_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This device is used by bounty hunters to keep track of active jobs. This one is blank.";
+		model="\MRC\JLTS\contraband\Intel\bountypuck.p3d";
+		picture="\MRC\JLTS\contraband\Intel\data\ui\bountypuck_ui_ca.paa";
+	};
+	class FST_BountyDisk_Abnormal: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Bounty Puck (Suspicious)";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on someone of interest.";
+	};
+	class FST_BountyDisk_Catboy: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a member of the Republic Navy, a cathar, wanted alive and unharmed for 5000 credits.";
+	};
+	class FST_BountyDisk_Smug: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a small-time smuggler, wanted alive for 250 credits.";
+	};
+	class FST_BountyDisk_Thief: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a thief, wanted alive for 1000 credits, dead for 500.";
+	};
+	class FST_BountyDisk_Gamble: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a gambler, wanted alive or dead for 2700 credits.";
+	};
+	class FST_BountyDisk_Jedi: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a jedi, wanted dead for 8950 credits.";
+	};
+	class FST_BountyDisk_CEO: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a business owner, wanted 'mysteriously disappeared' for 3300 credits.";
+	};
+	class FST_BountyDisk_Murder: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a murderer, wanted alive for 15000 credits, dead for 2000.";
+	};
+	class FST_BountyDisk_Addict: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a spice addict, wanted alive or dead for 600 credits.";
+	};
+	class FST_BountyDisk_Stalk: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a holocelebrity, wanted alive and unharmed for 20000 credits.";
+	};
+	class FST_BountyDisk_Mystery: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on an unknown individual, with a general description and list of their crimes, wanted alive for 17630 credits to stand trial.";
+	};
+	class FST_BountyDisk_Revenge: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on an individual, wanted dead for 9420 credits in a very specific manner as revenge.";
+	};
+	class FST_BountyDisk_Traitor: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a traitor, wanted alive for 6500 credits, dead for 650.";
+	};
+	class FST_BountyDisk_Done: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying inactive bounty information on an individual who has already been collected on.";
+	};
+	class FST_BountyDisk_Leader: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a criminal leader, wanted dead for 45000 credits.";
+	};
+	class FST_BountyDisk_Politic: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a politician, wanted dead 'in an accidental manner' for 9400 credits.";
+	};
+	class FST_BountyDisk_Jump: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a bail jumper, wanted alive for 2000 credits, dead for 100.";
+	};
+	class FST_BountyDisk_Child: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on a young heir, wanted captured alive and minimally harmed for 32780 credits.";
+	};
+	class FST_BountyDisk_Droid: FST_BountyDisk_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Bounty Puck";
+		descriptionShort="A standard bounty puck. This puck is displaying active bounty information on an escaped droid, wanted decommisioned for 3500 credits.";
+	};
+	class FST_TrackingFob_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. These can use the Holonet to track items across the galaxy. This one is inactive.";
+		model="\MRC\JLTS\contraband\Intel\trackingfob.p3d";
+		picture="\MRC\JLTS\contraband\Intel\data\ui\trackingfob_ui_ca.paa";
+	};
+	class FST_TrackingFob_Abnormal: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Tracking Fob (Suspicious)";
+		descriptionShort="Used to find a paired tracking device. This tracker is pinging off something of interest to you.";
+	};
+	class FST_TrackingFob_Cardinal: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. On the back of this tracker it says 'CARDINAL TRACKING DEVICE IF FOUND RETURN TO MERRIK IMMEDIATELY'.";
+	};
+	class FST_TrackingFob_Cargo: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently tracking a ship travelling the Hydian Way, deep into the Outer Rim.";
+	};
+	class FST_TrackingFob_Capital: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the device is pinging as being on Coruscant.";
+	};
+	class FST_TrackingFob_Ship: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. This device is keeping track of a civilian starship landed on-planet.";
+	};
+	class FST_TrackingFob_Pet: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Apparently this device tracks the owner's pet. Given they appear to be several kilometers away from the tracker right now they must have escaped again.";
+	};
+	class FST_TrackingFob_Bothan: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently pinging a tracking device located in Bothan space.";
+	};
+	class FST_TrackingFob_Shaddaa: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the fob is locating a tracking device somewhere on Nar Shaddaa.";
+	};
+	class FST_TrackingFob_Broken: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. It does not turn on, and there is a rattling sound as you move it.";
+	};
+	class FST_TrackingFob_Range: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Tracking device is listed as 'OUT OF RANGE'.";
+	};
+	class FST_TrackingFob_Inner: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The paired tracking device is located on a planet in the Inner Rim.";
+	};
+	class FST_TrackingFob_Planet: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The device is tracking something on the other side of the planet. Not useful intel.";
+	};
+	class FST_TrackingFob_Partner: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Tracking device is labled as 'Idiot' and is currently located at a bar nearby.";
+	};
+	class FST_TrackingFob_Spine: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Tracking history shows the device travelling along the Correlian Trade Spine, and has made many stops along the way.";
+	};
+	class FST_TrackingFob_Rodia: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the device is pinging as being within the vicinity of Rodia.";
+	};
+	class FST_TrackingFob_Items: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The owner of this is using it to track their datapad, keys and wallet, all of which they appear to lose frequently.";
+	};
+	class FST_TrackingFob_Ithor: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the tracking device appears to be on its way to Ithor.";
+	};
+	class FST_TrackingFob_Tatooine: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device appears to have recently left Tatooine.";
+	};
+	class FST_TrackingFob_Core: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device is pinging as being located in the Core Worlds.";
+	};
+	class FST_TrackingFob_Wookiee: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the device is pinging somewhere past Kashyyyk in the Mid Rim.";
+	};
+	class FST_TrackingFob_Huh: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. You have no idea where the location listed for the tracking device is.";
+	};
+	class FST_TrackingFob_Sector: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. Currently the tracking device is pinging as being located all the way out in the Corperate Sector.";
+	};
+	class FST_TrackingFob_Orbit: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The device is tracking something in orbit above the planet. Not useful intel.";
+	};
+	class FST_TrackingFob_Chandrila: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device is currently located on the planet Chandrila.";
+	};
+	class FST_TrackingFob_Here: FST_TrackingFob_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Tracking Fob";
+		descriptionShort="Used to find a paired tracking device. The tracking device is pinging your exact location. This would be because the device is still attached to the fob.";
+	};
+	class FST_HoloComm_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Holocommunicator";
+		descriptionShort="A standard handheld holographic communicator. It uses the HoloNet to communicate across the galaxy.";
+		model="\MRC\JLTS\contraband\Intel\holo.p3d";
+		picture="\MRC\JLTS\contraband\Intel\data\ui\holoprojector_ui_ca.paa";
+	};
+	class FST_HoloComm_Abnormal: FST_HoloComm_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Holocommunicator (Suspicious)";
+		descriptionShort="A standard handheld holographic communicator. This device in particular seems to have something important.";
+	};
+	class FST_HandComm_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Handheld Communicator";
+		descriptionShort="A standard handheld communicator. It uses the HoloNet to communicate across the galaxy.";
+		model="\MRC\JLTS\drones\mse6\caller.p3d";
+		picture="\MRC\JLTS\drones\mse6\data\ui\icon_caller_ca.paa";
+	};
+	class FST_HandComm_Abnormal: FST_HandComm_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Handheld Communicator (Suspicious)";
+		descriptionShort="A standard handheld communicator. This device seems to have something notable about it.";
+	};
+	class FST_FlatComm_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Handheld Communicator";
+		descriptionShort="A standard handheld communicator. It uses the HoloNet to communicate across the galaxy.";
+		model="\MRC\JLTS\drones\mse6\caller.p3d";
+		picture="\ls\core\addons\radios\data\ui\hush98_ui_ca.paa";
+	};
+	class FST_FlatComm_Abnormal: FST_FlatComm_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Handheld Communicator (Suspicious)";
+		descriptionShort="A standard handheld communicator. This device seems important when you look it over.";
+	};
 	class FST_CreditCase_Low: FST_CivData_Normal
 	{
 		author="Tooka";
@@ -1626,6 +2430,120 @@ class CfgWeapons
 		descriptionShort="A standard credit chip. It contains a variable amount of Republic Dataries (credits), and is used to perform digital transfers of the currency.";
 		model="\MRC\JLTS\contraband\Credits\credit_card.p3d";
 		picture="\MRC\JLTS\contraband\Credits\data\ui\credit_card_ui_ca.paa";
+	};
+	class ToolKit;
+	class ToolKitItem;
+	class FST_SmallToolkit: ToolKit
+	{
+		author="Tooka";
+		scope=2;
+		ACE_isTool=1;
+		displayName="[41st] Small Toolkit";
+		descriptionShort="A small container of tools useful for repair, maintenance and other tasks.";
+		model="\MRC\JLTS\weapons\Core\repairkit_mini.p3d";
+		picture="\MRC\JLTS\weapons\Core\data\ui\repairkit_mini_ui_ca.paa";
+		class ItemInfo: ToolKitItem
+		{
+			mass=20;
+		};
+	};
+	class FST_LargeToolkit: ToolKit
+	{
+		author="Tooka";
+		scope=2;
+		ACE_isTool=1;
+		displayName="[41st] Toolbox";
+		descriptionShort="A large container of tools useful for repair, maintenance and other tasks.";
+		model="\MRC\JLTS\weapons\Core\repairkit.p3d";
+		picture="\MRC\JLTS\weapons\Core\data\ui\repairkit_ui_ca.paa";
+		class ItemInfo: ToolKitItem
+		{
+			mass=50;
+		};
+	};
+	class FST_BreathingGas_Flammable: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Methane Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed CH4 gas.";
+		model="\kobra\442_misc\bottle\bottle1.p3d";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_flamer.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Civilians_and_Intel\Data\bottle2_co.paa"
+		};
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=20;
+		};
+	};
+	class FST_BreathingGas_Oxygen: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Compressed Oxygen Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed O2.";
+	};
+	class FST_BreathingGas_Ozone: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Ozone Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed O3.";
+	};
+	class FST_BreathingGas_Dioxide: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Carbon Dioxide Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed CO2.";
+	};
+	class FST_BreathingGas_Ammonia: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Ammonia Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed NH3 gas.";
+	};
+	class FST_BreathingGas_Noble: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Noble Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is a compressed noble gas.";
+	};
+	class FST_BreathingGas_Corrosive: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Fluoride Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed HF gas.";
+	};
+	class FST_BreathingGas_Sulfur: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Sulfiric Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is either compressed SO2 or H2S gas.";
+	};
+	class FST_BreathingGas_Chlorine: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Chlorine Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed Cl2 gas.";
+	};
+	class FST_BreathingGas_Phosphine: FST_BreathingGas_Flammable
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Compressed Phosphine Breathing Gas";
+		descriptionShort="A container of gas used to maintain a breathable atmosphere in spacesuits. This type is compressed PH3 gas.";
 	};
 };
 class UniformSlotInfo
@@ -3031,6 +3949,312 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_CivMiniDataW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Normal
+			{
+				count=1;
+				name="FST_CivMiniData_Normal";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Abnormal
+			{
+				count=1;
+				name="FST_CivMiniData_Abnormal";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Shot: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Shot Through)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Shot
+			{
+				count=1;
+				name="FST_CivMiniData_Shot";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Broken: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Broken)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Broken
+			{
+				count=1;
+				name="FST_CivMiniData_Broken";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Built: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Building Scanner)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Built
+			{
+				count=1;
+				name="FST_CivMiniData_Built";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Droid: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Droid Scanner)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Droid
+			{
+				count=1;
+				name="FST_CivMiniData_Droid";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Music: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Music Player)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Music
+			{
+				count=1;
+				name="FST_CivMiniData_Music";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Notes: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Notepad)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Notes
+			{
+				count=1;
+				name="FST_CivMiniData_Notes";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Bio: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Medical Bioscanner)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Bio
+			{
+				count=1;
+				name="FST_CivMiniData_Bio";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Chem: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Chemical Analyzer)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Chem
+			{
+				count=1;
+				name="FST_CivMiniData_Chem";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Camera: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (HD Camera)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Camera
+			{
+				count=1;
+				name="FST_CivMiniData_Camera";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Huh: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Incomprehensible)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Huh
+			{
+				count=1;
+				name="FST_CivMiniData_Huh";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Drug: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Drug Scanner)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Drug
+			{
+				count=1;
+				name="FST_CivMiniData_Drug";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Diagnose: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Vehicle Maintenance)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Diagnose
+			{
+				count=1;
+				name="FST_CivMiniData_Diagnose";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Radio: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Geiger Counter)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Radio
+			{
+				count=1;
+				name="FST_CivMiniData_Radio";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Atmos: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Weather Scanner)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Atmos
+			{
+				count=1;
+				name="FST_CivMiniData_Atmos";
+			};
+		};
+	};
+	class FST_CivMiniDataW_GPS: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (GPS)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_GPS
+			{
+				count=1;
+				name="FST_CivMiniData_GPS";
+			};
+		};
+	};
+	class FST_CivMiniDataW_Track: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Mini Datapad (Tracking Device)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivMiniData_Track
+			{
+				count=1;
+				name="FST_CivMiniData_Track";
+			};
+		};
+	};
 	class FST_CivDatacardW_Normal: Weapon_Base_F
 	{
 		author="Tooka";
@@ -3578,7 +4802,7 @@ class CfgVehicles
 	class FST_CivFlimsiW_Stick: Weapon_Base_F
 	{
 		author="Tooka";
-		displayName="[41st] Flimsi (Stickfigure)";
+		displayName="[41st] Flimsi (Stickfigure GAR)";
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
@@ -3589,6 +4813,23 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_CivFlimsi_Stick";
+			};
+		};
+	};
+	class FST_CivFlimsiW_Stick2: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Flimsi (Stickfigure CIS)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivFlimsi_Stick2
+			{
+				count=1;
+				name="FST_CivFlimsi_Stick2";
 			};
 		};
 	};
@@ -4235,6 +5476,397 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_CivFlimsiFile_Starship";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Normal
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Normal";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Abnormal
+			{
+				count=1;
+				name="FST_CivHoloprojector_Abnormal";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Map: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (City Map)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Map
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Map";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Movie: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Holomovie)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Movie
+			{
+				count=1;
+				name="FST_CivHoloprojector_Movie";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Blueprint: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Building Blueprint)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Blueprint
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Blueprint";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Game: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Hologame)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Game
+			{
+				count=1;
+				name="FST_CivHoloprojector_Game";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Galaxy: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Galaxy Projection)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Galaxy
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Galaxy";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Route: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Spacetravel Routes)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Route
+			{
+				count=1;
+				name="FST_CivHoloprojector_Route";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Video: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Family Movies)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Video
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Video";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Solar: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Star Systems)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Solar
+			{
+				count=1;
+				name="FST_CivHoloprojector_Solar";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Beast: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Beastiary)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Beast
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Beast";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Manual: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Speeder Manual)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Manual
+			{
+				count=1;
+				name="FST_CivHoloprojector_Manual";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Design: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Engineering Project)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Design
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Design";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_OwO: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Scarring Images)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_OwO
+			{
+				count=1;
+				name="FST_CivHoloprojector_OwO";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Land: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Land Map)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Land
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Land";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Record: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Security Recordings)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Record
+			{
+				count=1;
+				name="FST_CivHoloprojector_Record";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Weird: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Incomprehensible)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Weird
+			{
+				count=1;
+				name="FST_CivHoloprojector_Weird";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Broken: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Broken)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Broken
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Broken";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Empty: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Disassembled)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Empty
+			{
+				count=1;
+				name="FST_CivHoloprojector_Empty";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Ha: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Jumpscare)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Ha
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Ha";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Alien: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Confusing)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Alien
+			{
+				count=1;
+				name="FST_CivHoloprojector_Alien";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Anatomy: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Anatomical Models)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Anatomy
+			{
+				count=1;
+				name= "FST_CivHoloprojector_Anatomy";
+			};
+		};
+	};
+	class FST_CivHoloprojectorW_Sport: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holoprojector (Sports Recordings)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivHoloprojector_Sport
+			{
+				count=1;
+				name="FST_CivHoloprojector_Sport";
 			};
 		};
 	};

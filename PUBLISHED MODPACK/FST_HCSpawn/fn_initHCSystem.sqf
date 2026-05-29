@@ -67,6 +67,23 @@ if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true])
     [] call FST_HCSpawn_fnc_recountUnits;
 }, FST_HC_RecountInterval, []] call CBA_fnc_addPerFrameHandler;
 
+// Dead OPFOR group cleanup is manual-only in this build. Munificent/drop-pod systems
+// can leave all-dead groups behind, but V12 proved that automatic combat-time sweeping
+// can create dangerous object/network churn. Use FST_HC_evt_manualDeadGroupCleanup during
+// controlled lulls instead.
+missionNamespace setVariable ["FST_HC_LastDeadGroupCleanup", time];
+missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false, true];
+diag_log "[FST_HCSpawn] Automatic dead-group cleanup disabled; manual cleanup event available.";
+
+
+// Local droid stance keeper. Runs on server/HC only, only affects local FST B1/B2 droids,
+// and does not use doStop, so Assault/Patrol/Hunt movement remains under LAMBS/AI control.
+if (missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) then {
+    [{
+        [] call FST_HCSpawn_fnc_enforceDroidStance;
+    }, (missionNamespace getVariable ["FST_HC_DroidStanceInterval", 4]) max 2, []] call CBA_fnc_addPerFrameHandler;
+};
+
 // Despawn cleanup (delete AI groups far from all players)
 if (FST_HC_DespawnEnabled) then {
     [{

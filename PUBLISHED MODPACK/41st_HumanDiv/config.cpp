@@ -56,6 +56,35 @@ class CfgEditorSubcategories
 		displayName = "Base Staff"; 
 	};
 };
+class CfgFunctions
+{
+	class FST_HDRandomizers
+	{
+		class FST_RandomHumanDivScripts
+		{
+			file="41st_HumanDiv\Scripts";
+			class hdstandard {};
+			class hdammobearer {};
+			class hdrto {};
+			class hdcqc {};
+			class hdeod {};
+			class hdmarksman {};
+			class hdgrenadier {};
+			class hddrone {};
+			class hdmedic {};
+			class hdauto {};
+			class hdantitank {};
+			class hdantiair {};
+			class hdofficer {};
+			class nofficer {};
+			class nperson {};
+			class nengi {};
+			class ncaptain {};
+			class bcommander {};
+			class bstaff {};
+		};
+	};
+};
 class CfgMagazines
 {
 	class IDA_grenade_Smoke_mag;
@@ -1837,6 +1866,11 @@ class CfgVehicles
 				name="FST_blaster_cell_low_Red";
 				count=15;
 			};
+			class _xx_FST_SmallToolkit
+			{
+				name="FST_SmallToolkit";
+				count=1;
+			};
 		};
 	};
 	class FST_HumDivBack_BStaff: FST_CIS_Officer_Legbag
@@ -1917,7 +1951,7 @@ class CfgVehicles
 				name="FST_grenade_smoke_orange_mag";
 				count=1;
 			};
-			class _xx_FST_blaster_cell_low_Red
+			class _xx_FST_blaster_cell_SSP_Red
 			{
 				name="FST_blaster_cell_SSP_Red";
 				count=15;
@@ -1954,7 +1988,7 @@ class CfgVehicles
 			};
 			class _xx_FST_blaster_cell_SSP_Red
 			{
-				name="FST_blaster_cell_low_Red";
+				name="FST_blaster_cell_SSP_Red";
 				count=15;
 			};
 			class _xx_ACE_Banana
@@ -1972,9 +2006,9 @@ class CfgVehicles
 		scopeArsenal = 0;
 		class TransportItems
 		{
-			class _xx_Toolkit
+			class _xx_FST_LargeToolkit
 			{
-				name="Toolkit";
+				name="FST_LargeToolkit";
 				count=1;
 			};
 			class _xx_IDA_grenade_Sonic_mag
@@ -2153,13 +2187,6 @@ class CfgVehicles
 	class FST_CIS_Heavy_Base_F: FST_Droid_B1_E5
 	{
 		author="Tooka";
-		identityTypes[]=
-		{
-			"LanguageENG_F",
-			"Head_NATO",
-			"G_NATO_default"
-		};
-		faceType="Man_A3";
 		backpack="";
 		side=0;
 		faction="FST_HumanDiv_Faction";
@@ -2233,7 +2260,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=4;
+				armor=3;
 				material=-1;
 				name="head";
 				passThrough=0.5;
@@ -2244,7 +2271,7 @@ class CfgVehicles
 			};
 			class HitPelvis
 			{
-				armor=6;
+				armor=2;
 				material=-1;
 				name="pelvis";
 				passThrough=0.9;
@@ -2255,7 +2282,7 @@ class CfgVehicles
 			};
 			class HitAbdomen
 			{
-				armor=6;
+				armor=2;
 				material=-1;
 				name="spine1";
 				passThrough=0.8;
@@ -2266,7 +2293,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm
 			{
-				armor=7;
+				armor=3;
 				material=-1;
 				name="spine2";
 				passThrough=0.7;
@@ -2277,7 +2304,7 @@ class CfgVehicles
 			};
 			class HitChest
 			{
-				armor=8;
+				armor=3;
 				material=-1;
 				name="spine3";
 				passThrough=0.7;
@@ -2288,7 +2315,7 @@ class CfgVehicles
 			};
 			class HitBody
 			{
-				armor=15;
+				armor=4;
 				material=-1;
 				name="body";
 				passThrough=0.99;
@@ -2365,8 +2392,6 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
-		armor=8; 
-		armorStructural=12;
 		explosionshielding=45;
 		ace_medical_allowDamage = 0;
 		HiddenSelections[]=
@@ -2419,6 +2444,11 @@ class CfgVehicles
 	};
 	class FST_CIS_HumanDiv_Auto: FST_CIS_Heavy_Base_F
 	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopeCurator=2;
@@ -2448,11 +2478,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2472,11 +2497,16 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; [_u, -1] call ace_advanced_fatigue_fnc_addLoadFactor; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Autorifleman';  _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdauto;";
 		};
 	};
 	class FST_CIS_HumanDiv_AT: FST_CIS_Heavy_Base_F
 	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopeCurator=2;
@@ -2507,11 +2537,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2530,11 +2555,16 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Antitank';  _u setSkill ['aimingAccuracy',0.6]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.7]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdantitank;";
 		};
 	};
 	class FST_CIS_HumanDiv_AA: FST_CIS_Heavy_Base_F
 	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
 		scopeCurator=2;
@@ -2565,11 +2595,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2588,7 +2613,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Antiair';  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.8]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdantiair;";
 		};
 	};
 	class O_soldier_base_F;
@@ -2658,7 +2683,7 @@ class CfgVehicles
 			};
 			class HitHead: HitNeck
 			{
-				armor=5;
+				armor=1;
 				material=-1;
 				name="head";
 				passThrough=0.5;
@@ -2669,7 +2694,7 @@ class CfgVehicles
 			};
 			class HitPelvis
 			{
-				armor=5;
+				armor=1;
 				material=-1;
 				name="pelvis";
 				passThrough=0.9;
@@ -2680,7 +2705,7 @@ class CfgVehicles
 			};
 			class HitAbdomen
 			{
-				armor=5;
+				armor=1;
 				material=-1;
 				name="spine1";
 				passThrough=0.8;
@@ -2691,7 +2716,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm
 			{
-				armor=6;
+				armor=2;
 				material=-1;
 				name="spine2";
 				passThrough=0.7;
@@ -2702,7 +2727,7 @@ class CfgVehicles
 			};
 			class HitChest
 			{
-				armor=7;
+				armor=2;
 				material=-1;
 				name="spine3";
 				passThrough=0.7;
@@ -2713,7 +2738,7 @@ class CfgVehicles
 			};
 			class HitBody
 			{
-				armor=13;
+				armor=3;
 				material=-1;
 				name="body";
 				passThrough=0.99;
@@ -2725,7 +2750,7 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=1;
 				material=-1;
 				name="arms";
 				passThrough=1;
@@ -2737,7 +2762,7 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=1;
 				material=-1;
 				name="hands";
 				passThrough=1;
@@ -2749,7 +2774,7 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=1;
 				material=-1;
 				name="legs";
 				passThrough=1;
@@ -2761,7 +2786,7 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=6;
+				armor=1;
 				material=-1;
 				name="hand_l";
 				passThrough=1;
@@ -2776,7 +2801,7 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=6;
+				armor=1;
 				material=-1;
 				name="leg_l";
 				passThrough=1;
@@ -2790,8 +2815,6 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
-		armor=7; 
-		armorStructural=12;
 		explosionshielding=45;
 		model="3AS\3AS_CIS_Infantry\Model\CIS_Inf.p3d";
 		class UniformInfo
@@ -2842,7 +2865,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_Standard";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -2872,11 +2894,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2893,7 +2910,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Standard Trooper';  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdstandard;";
 		};
 	};
 	class FST_CIS_HumanDiv_AmmoB: FST_U_CIS_Light
@@ -2903,7 +2920,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_CISCloneAmmoPack";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -2933,11 +2949,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -2955,7 +2966,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _u addItemToVest 'FST_Droid_blaster_cell_red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Ammo Bearer';   _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.65]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdammobearer;";
 		};
 	};
 	class FST_U_CIS_Light_Veteran: FST_U_CIS_Light
@@ -2984,7 +2995,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_Radio";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3014,11 +3024,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3036,7 +3041,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division RTO';  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.75]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdrto;";
 		};
 	};
 	class FST_CIS_HumanDiv_CQC: FST_U_CIS_Light
@@ -3046,7 +3051,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_CQC";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3076,11 +3080,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3096,7 +3095,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division CQC';  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.8]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdcqc;";
 		};
 	};
 	class FST_CIS_HumanDiv_Gren: FST_U_CIS_Light
@@ -3106,7 +3105,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_Gren";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3136,11 +3134,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3160,7 +3153,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; (_this select 0) addItemToVest 'ACE_tourniquet'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Grenadier';  _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdgrenadier;";
 		};
 	};
 	class FST_CIS_HumanDiv_Mark: FST_U_CIS_Light
@@ -3170,7 +3163,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_Mark";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3200,11 +3192,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3222,7 +3209,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Marksman';  _u setSkill ['aimingAccuracy',0.85]; _u setSkill ['aimingShake',0.8]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.65]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdmarksman;";
 		};
 	};
 	class FST_CIS_HumanDiv_EOD: FST_U_CIS_Light
@@ -3232,7 +3219,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_EOD";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3256,18 +3242,13 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_Maalras_SMG_Standard",
+			"FST_EE4",
 			"FST_SE14R",
 			"Throw",
 			"Put"
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3284,7 +3265,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToVest 'ACE_M26_Clacker'; _u addItemToVest 'MineDetector'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division EOD';   _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.75]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdeod;";
 		};
 	};
 	class FST_CIS_HumanDiv_DroneOp: FST_U_CIS_Light
@@ -3294,7 +3275,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_DroneOp";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3324,11 +3304,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow",
 			"JLTS_droidCaller"
 		};
@@ -3347,7 +3322,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Droid Operator';  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.75]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.75]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hddrone;";
 		};
 	};
 	class FST_U_CIS_Medic: FST_U_CIS_Light
@@ -3368,7 +3343,6 @@ class CfgVehicles
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_Medic";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		scope=2;
@@ -3392,18 +3366,13 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_Maalras_SMG_Standard",
+			"FST_EE4",
 			"FST_SE14R",
 			"Throw",
 			"Put"
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3423,7 +3392,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red_smg'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _u addItemToVest 'FST_blaster_cell_low_Red'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Medic';  _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.5]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.85]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdmedic;";
 		};
 	};
 	class FST_U_CIS_Combat_Officer: FST_U_CIS_Light
@@ -3439,16 +3408,15 @@ class CfgVehicles
 	};
 	class FST_CIS_HumanDiv_Officer: FST_U_CIS_Light
 	{
-		author="Tooka";
-		displayName="[41st] CIS Human Division (Officer)";
-		scope=2;
-		scopeCurator=2;
 		identityTypes[]=
 		{
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
+		author="Tooka";
+		displayName="[41st] CIS Human Division (Officer)";
+		scope=2;
+		scopeCurator=2;
 		backpack="FST_HumDivBack_Radio";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		uniformClass="FST_U_CIS_Officer_Armor";
@@ -3474,15 +3442,6 @@ class CfgVehicles
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_100",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"ls_holoprojector_bountyPuck",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -3499,7 +3458,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Human Division Commander';  _u setSkill ['aimingAccuracy',0.55]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.8]; _u setSkill ['courage',0.8]; _u setSkill ['commanding',0.9]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7]; if (local _u && (leader group _u) isEqualTo _u) then {(group _u) setFormation 'DIAMOND';};";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdofficer;";
 		};
 	};
 	class JMSLLTE_EmpOfficer_black_F;
@@ -3525,17 +3484,16 @@ class CfgVehicles
 	};
 	class FST_HumanDiv_NOfficer: FST_EmpOfficer_black_Base
 	{
-		author="Tooka";
-		displayName="[41st] CIS Naval Officer";
-		uniformClass="FST_CIS_OfficerUnifoirm";
-		scope=2;
-		scopeCurator=2;
 		identityTypes[]=
 		{
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
+		author="Tooka";
+		displayName="[41st] CIS Naval Officer";
+		uniformClass="FST_CIS_OfficerUnifoirm";
+		scope=2;
+		scopeCurator=2;
 		backpack="FST_HumDivBack_Navy";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
@@ -3557,20 +3515,7 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]=
-		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_100",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
-			"JLTS_credit_card",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"JLTS_intel_holoProjector",
-		};
+		Items[]={};
 		linkedItems[]=
 		{
 			"FST_CIS_NavyHolster",
@@ -3585,22 +3530,21 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Naval Officer';};  _u setSkill ['aimingAccuracy',0.35]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.6]; _u setSkill ['commanding',0.8]; _u setSkill ['reloadSpeed',0.5]; _u setSkill ['general',0.5];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_nofficer;";
 		};
 	};
 	class FST_HumanDiv_BComm: FST_EmpOfficer_black_Base
 	{
-		author="Tooka";
-		displayName="[41st] CIS Base Commander";
-		uniformClass="FST_CIS_OfficerUniformCommander";
-		scope=2;
-		scopeCurator=2;
 		identityTypes[]=
 		{
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
+		author="Tooka";
+		displayName="[41st] CIS Base Commander";
+		uniformClass="FST_CIS_OfficerUniformCommander";
+		scope=2;
+		scopeCurator=2;
 		backpack="FST_HumDivBack_BComm";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
@@ -3622,325 +3566,6 @@ class CfgVehicles
 			class HitHead: HitFace
 			{
 				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.9;
-				radius=0.12;
-				explosionShielding=0.5;
-				minimalHit=0.002;
-				depends="HitFace";
-			};
-			class HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="pelvis";
-				passThrough=0.9;
-				radius=0.3;
-				explosionShielding=3;
-				visual="injury_body";
-				minimalHit=0.005;
-			};
-			class HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.9;
-				radius=0.2;
-				explosionShielding=3;
-				visual="injury_body";
-				minimalHit=0.005;
-			};
-			class HitDiaphragm
-			{
-				armor=7;
-				material=-1;
-				name="spine2";
-				passThrough=0.7;
-				radius=0.2;
-				explosionShielding=6;
-				visual="injury_body";
-				minimalHit=0.009;
-			};
-			class HitChest
-			{
-				armor=7;
-				material=-1;
-				name="spine3";
-				passThrough=0.7;
-				radius=0.18;
-				explosionShielding=6;
-				visual="injury_body";
-				minimalHit=0.009;
-			};
-			class HitNeck: HitChest
-			{
-				armor=7;
-				material=-1;
-				name="neck";
-				passThrough=0.7;
-				radius=0.08;
-				explosionShielding=0.5;
-				minimalHit=0;
-			};
-			class HitBody
-			{
-				armor=6;
-				material=-1;
-				name="body";
-				passThrough=0.99;
-				radius=0;
-				explosionShielding=6;
-				visual="injury_body";
-				minimalHit=0;
-				depends="HitDiaphragm max HitChest max HitNeck";
-			};
-			class HitArms: HitBody
-			{
-				armor=1;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0;
-				explosionShielding=3;
-				visual="injury_hands";
-				minimalHit=0.009;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=1;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="injury_hands";
-				minimalHit=0.009;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=1;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=3;
-				visual="injury_legs";
-				minimalHit=0.009;
-				depends="0";
-			};
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0;
-				explosionShielding=3;
-				visual="injury_hands";
-				minimalHit=0.009;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.06;
-				explosionShielding=3;
-				visual="injury_legs";
-				minimalHit=0.009;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
-			};
-		};
-		armor=5; 
-		armorStructural=12;
-		hiddenSelections[]=
-		{
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
-		};
-		weapons[]=
-		{
-			"FST_Relbyk25_Pistol",
-			"IDA_Electrobinoculars_Rep",
-			"Throw",
-			"Put"
-		};
-		Items[]=
-		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_100",
-			"JLTS_credits_100",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_credits_500",
-			"JLTS_intel_datapad_civ",
-			"JLTS_credit_card",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"JLTS_droidCaller",
-			"JLTS_intel_holoProjector",
-		};
-		linkedItems[]=
-		{
-			"FST_CIS_OfficerVestL",
-			"JLTS_droid_comlink",
-			"JLTS_NVG_droid_chip_2",
-			"FST_OfficerCap_CIS",
-			"ItemMap"
-		};
-		magazines[]=
-		{
-			"FST_blaster_cell_SSP_Red"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToUniform '3AS_RepublicDatapadPistol'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Base Commander';}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.5]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.8]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.9]; _u setSkill ['commanding',1.0]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.7];;";
-		};
-	};
-	class FST_HumanDiv_NCaptain: FST_EmpOfficer_black_Base
-	{
-		author="Tooka";
-		displayName="[41st] CIS Ship Captain";
-		uniformClass="FST_CIS_OfficerUnifoirm";
-		scope=2;
-		scopeCurator=2;
-		identityTypes[]=
-		{
-			"LanguageENG_F",
-			"Head_NATO",
-		};
-		faceType="Man_A3";
-		backpack="FST_HumDivBack_NCap";
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
-		nakedUniform="U_BasicBody";
-		role="Rifleman";
-		faction="FST_HumanDiv_Faction";
-		editorSubcategory="FST_NavalStaff";
-		hiddenSelections[]=
-		{
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
-		};
-		weapons[]=
-		{
-			"FST_Relbyk25_Pistol",
-			"Throw",
-			"Put"
-		};
-		Items[]=
-		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_100",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_credits_500",
-			"JLTS_credits_500",
-			"JLTS_credits_1000",
-			"JLTS_intel_datapad_civ",
-			"JLTS_credit_card",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"JLTS_intel_datacard",
-			"JLTS_droidCaller",
-			"JLTS_intel_holoProjector",
-			"3AS_Intel_DataChip",
-			"3AS_Intel_DataChip",
-			"3AS_Intel_DataChip",
-		};
-		linkedItems[]=
-		{
-			"FST_CIS_CaptainHolster",
-			"3AS_G_RTO_1_F",
-			"JLTS_droid_comlink",
-			"JLTS_NVG_droid_chip_2",
-			"FST_OfficerCap_CIS",
-		};
-		magazines[]=
-		{
-			"FST_blaster_cell_SSP_Red"
-		};
-		class EventHandlers
-		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _u addItemToUniform '3AS_RepublicDatapadPistol'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Ship Captain';}; _u setSkill ['aimingAccuracy',0.45]; _u setSkill ['aimingShake',0.6]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.95]; _u setSkill ['reloadSpeed',0.5]; _u setSkill ['general',0.65];";
-		};
-	};
-	class FST_CIS_StandardUniformBase: FST_EmpOfficer_black_Base
-	{
-		author="Tooka";
-		scope=1;
-		modelSides[]={6};
-		model="\JMSLLTE_empire_m\officer.p3d";
-		nakedUniform="U_BasicBody";
-		hiddenSelections[]=
-		{
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"JMSLLTE_empire\data\body\of_body_CISs_co.paa"
-		};
-	};
-	class FST_HumanDiv_BStaff: FST_EmpOfficer_black_Base
-	{
-		author="Tooka";
-		displayName="[41st] CIS Base Staff";
-		uniformClass="FST_CIS_BaseStaffArmor";
-		scope=2;
-		scopeCurator=2;
-		identityTypes[]=
-		{
-			"LanguageENG_F",
-			"Head_NATO",
-		};
-		faceType="Man_A3";
-		backpack="FST_HumDivBack_BStaff";
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
-		nakedUniform="U_BasicBody";
-		role="Rifleman";
-		faction="FST_HumanDiv_Faction";
-		editorSubcategory="FST_BaseStaff";
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.9;
-				radius=0.08;
-				explosionShielding=0.1;
-				minimalHit=0;
-			};
-			class HitHead: HitFace
-			{
-				armor=6;
 				material=-1;
 				name="head";
 				passThrough=0.5;
@@ -3973,7 +3598,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm
 			{
-				armor=7;
+				armor=3;
 				material=-1;
 				name="spine2";
 				passThrough=0.7;
@@ -3984,7 +3609,7 @@ class CfgVehicles
 			};
 			class HitChest
 			{
-				armor=7;
+				armor=3;
 				material=-1;
 				name="spine3";
 				passThrough=0.7;
@@ -3995,7 +3620,7 @@ class CfgVehicles
 			};
 			class HitNeck: HitChest
 			{
-				armor=7;
+				armor=2;
 				material=-1;
 				name="neck";
 				passThrough=0.7;
@@ -4005,7 +3630,7 @@ class CfgVehicles
 			};
 			class HitBody
 			{
-				armor=6;
+				armor=3;
 				material=-1;
 				name="body";
 				passThrough=0.99;
@@ -4082,8 +3707,279 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
-		armor=5; 
-		armorStructural=12;
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_Relbyk25_Pistol",
+			"IDA_Electrobinoculars_Rep",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]=
+		{
+			"FST_CIS_OfficerVestL",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_OfficerCap_CIS",
+			"ItemMap"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_SSP_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_bcommander;";
+		};
+	};
+	class FST_HumanDiv_NCaptain: FST_EmpOfficer_black_Base
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		author="Tooka";
+		displayName="[41st] CIS Ship Captain";
+		uniformClass="FST_CIS_OfficerUnifoirm";
+		scope=2;
+		scopeCurator=2;
+		backpack="FST_HumDivBack_NCap";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_NavalStaff";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CIS_co.paa"
+		};
+		weapons[]=
+		{
+			"FST_Relbyk25_Pistol",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]=
+		{
+			"FST_CIS_CaptainHolster",
+			"3AS_G_RTO_1_F",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2",
+			"FST_OfficerCap_CIS",
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_SSP_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_ncaptain;";
+		};
+	};
+	class FST_CIS_StandardUniformBase: FST_EmpOfficer_black_Base
+	{
+		author="Tooka";
+		scope=1;
+		modelSides[]={6};
+		model="\JMSLLTE_empire_m\officer.p3d";
+		nakedUniform="U_BasicBody";
+		hiddenSelections[]=
+		{
+			"Camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"JMSLLTE_empire\data\body\of_body_CISs_co.paa"
+		};
+	};
+	class FST_HumanDiv_BStaff: FST_EmpOfficer_black_Base
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		author="Tooka";
+		displayName="[41st] CIS Base Staff";
+		uniformClass="FST_CIS_BaseStaffArmor";
+		scope=2;
+		scopeCurator=2;
+		backpack="FST_HumDivBack_BStaff";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		nakedUniform="U_BasicBody";
+		role="Rifleman";
+		faction="FST_HumanDiv_Faction";
+		editorSubcategory="FST_BaseStaff";
+		class HitPoints
+		{
+			class HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.9;
+				radius=0.08;
+				explosionShielding=0.1;
+				minimalHit=0;
+			};
+			class HitHead: HitFace
+			{
+				armor=2;
+				material=-1;
+				name="head";
+				passThrough=0.5;
+				radius=0.12;
+				explosionShielding=0.5;
+				minimalHit=0.002;
+				depends="HitFace";
+			};
+			class HitPelvis
+			{
+				armor=1;
+				material=-1;
+				name="pelvis";
+				passThrough=0.9;
+				radius=0.3;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.005;
+			};
+			class HitAbdomen
+			{
+				armor=1;
+				material=-1;
+				name="spine1";
+				passThrough=0.9;
+				radius=0.2;
+				explosionShielding=3;
+				visual="injury_body";
+				minimalHit=0.005;
+			};
+			class HitDiaphragm
+			{
+				armor=3;
+				material=-1;
+				name="spine2";
+				passThrough=0.7;
+				radius=0.2;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.009;
+			};
+			class HitChest
+			{
+				armor=3;
+				material=-1;
+				name="spine3";
+				passThrough=0.7;
+				radius=0.18;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0.009;
+			};
+			class HitNeck: HitChest
+			{
+				armor=3;
+				material=-1;
+				name="neck";
+				passThrough=0.7;
+				radius=0.08;
+				explosionShielding=0.5;
+				minimalHit=0;
+			};
+			class HitBody
+			{
+				armor=3;
+				material=-1;
+				name="body";
+				passThrough=0.99;
+				radius=0;
+				explosionShielding=6;
+				visual="injury_body";
+				minimalHit=0;
+				depends="HitDiaphragm max HitChest max HitNeck";
+			};
+			class HitArms: HitBody
+			{
+				armor=1;
+				material=-1;
+				name="arms";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.009;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=1;
+				material=-1;
+				name="hands";
+				passThrough=1;
+				radius=0;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.009;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=1;
+				material=-1;
+				name="legs";
+				passThrough=1;
+				radius=0.14;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.009;
+				depends="0";
+			};
+			class HitLeftArm
+			{
+				armor=1;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.009;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor=1;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.06;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.009;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
 		hiddenSelections[]=
 		{
 			"Camo1"
@@ -4094,19 +3990,13 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"FST_Maalras_SMG_Standard",
+			"FST_EE4",
 			"FST_SE14R",
 			"Throw",
 			"Put"
 		};
 		Items[]=
 		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
-			"JLTS_intel_datacard",
 			"WBK_HeadLampItem_Narrow"
 		};
 		linkedItems[]=
@@ -4123,22 +4013,21 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Base Staff';}; _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.6]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.6];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_bstaff;";
 		};
 	};
 	class FST_HumanDiv_NPerson: FST_EmpOfficer_black_Base
 	{
-		author="Tooka";
-		displayName="[41st] CIS Naval Personnel";
-		uniformClass="FST_CIS_StandardUniform";
-		scope=2;
-		scopeCurator=2;
 		identityTypes[]=
 		{
 			"LanguageENG_F",
 			"Head_NATO",
 		};
-		faceType="Man_A3";
+		author="Tooka";
+		displayName="[41st] CIS Naval Personnel";
+		uniformClass="FST_CIS_StandardUniform";
+		scope=2;
+		scopeCurator=2;
 		backpack="FST_HumDivBack_Navy";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
@@ -4160,17 +4049,7 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]=
-		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_50",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
-			"JLTS_credit_card",
-			"JLTS_intel_datacard",
-		};
+		Items[]={};
 		linkedItems[]=
 		{
 			"FST_CIS_NavyHolster",
@@ -4185,23 +4064,22 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Naval Personnel';}; _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.7]; _u setSkill ['spotTime',0.6]; _u setSkill ['courage',0.75]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.7]; _u setSkill ['general',0.6];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_nperson;";
 		};
 	};
 	class FST_HumanDiv_NEngi: FST_EmpOfficer_black_Base
 	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
 		author="Tooka";
 		displayName="[41st] CIS Naval Engineer";
 		uniformClass="FST_CIS_StandardUniform";
 		scope=2;
 		scopeCurator=2;
 		engineer=1;
-		identityTypes[]=
-		{
-			"LanguageENG_F",
-			"Head_NATO",
-		};
-		faceType="Man_A3";
 		backpack="FST_HumDivBack_Engi";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
 		nakedUniform="U_BasicBody";
@@ -4223,15 +4101,7 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]=
-		{
-			"JLTS_credits_10",
-			"JLTS_credits_10",
-			"JLTS_credits_100",
-			"JLTS_credits_50",
-			"JLTS_intel_datapad_civ",
-			"JLTS_credit_card",
-		};
+		Items[]={};
 		linkedItems[]=
 		{
 			"FST_CIS_NavyHolster",
@@ -4247,7 +4117,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "private _u = _this select 0; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BactaBandage'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'IDA_BattleStim'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_splint'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'ACE_tourniquet'; _u addItemToVest 'IDA_VibroKnife'; _this spawn {params ['_unit']; sleep 1; _unit setName 'CIS Naval Engineer';}; _u setSkill ['aimingAccuracy',0.5]; _u setSkill ['aimingShake',0.55]; _u setSkill ['aimingSpeed',0.65]; _u setSkill ['spotDistance',0.65]; _u setSkill ['spotTime',0.7]; _u setSkill ['courage',0.7]; _u setSkill ['commanding',0.5]; _u setSkill ['reloadSpeed',0.5]; _u setSkill ['general',0.6];";
+			init= "(_this select 0) spawn FST_HDRandomizers_fnc_nengi;";
 		};
 	};
 };

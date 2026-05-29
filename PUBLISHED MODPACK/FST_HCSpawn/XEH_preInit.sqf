@@ -22,6 +22,16 @@ missionNamespace setVariable ["FST_HC_PatrolRadius", missionNamespace getVariabl
 missionNamespace setVariable ["FST_HC_TriggerActivationDist", missionNamespace getVariable ["FST_HC_TriggerActivationDist", 800]];
 missionNamespace setVariable ["FST_HC_FillGarrisonSingleActive", true];
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8]];
+missionNamespace setVariable ["FST_HC_FillGarrisonBatchDelay", missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 1.25]];
+missionNamespace setVariable ["FST_HC_CleanupPostSpawnGrace", missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupEnabled", missionNamespace getVariable ["FST_HC_DeadGroupCleanupEnabled", true]];
+missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespace getVariable ["FST_HC_DeadGroupCleanupInterval", 1200]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMinAge", 300]];
+missionNamespace setVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", 900]];
+missionNamespace setVariable ["FST_HC_DeadGroupCleanupMaxPerPass", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMaxPerPass", 25]];
+missionNamespace setVariable ["FST_HC_DroidStanceEnabled", missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]];
+missionNamespace setVariable ["FST_HC_DroidStanceInterval", missionNamespace getVariable ["FST_HC_DroidStanceInterval", 4]];
 missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
@@ -128,6 +138,42 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
     ["FST HC Spawn", "Cleanup"], [60, 1800, 600, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
+[
+    "FST_HC_DeadGroupCleanupEnabled", "CHECKBOX",
+    ["Enable Manual Dead OPFOR Cleanup", "Allows the manual dead-group cleanup event to delete local dead OPFOR groups during controlled lulls. Manual cleanup bypasses the automatic interval."],
+    ["FST HC Spawn", "Cleanup"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupAutoCleanupEnabled", "CHECKBOX",
+    ["Enable Automatic Dead OPFOR Cleanup", "Disabled in this build. Dead-group cleanup is manual-only to avoid combat-time delete storms."],
+    ["FST HC Spawn", "Cleanup"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupCleanupInterval", "SLIDER",
+    ["Dead Group Cleanup Interval", "Seconds between automatic dead OPFOR group sweeps. Default is 20 minutes; use manual cleanup during lulls if needed."],
+    ["FST HC Spawn", "Cleanup"], [300, 1800, 1200, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupCleanupMinAge", "SLIDER",
+    ["Dead Group Minimum Age", "Seconds an OPFOR group must have zero alive units before the dead-group sweeper may delete it."],
+    ["FST HC Spawn", "Cleanup"], [60, 900, 300, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadTrackedGroupCleanupMinAge", "SLIDER",
+    ["Tracked Dead Group Minimum Age", "Extra-safe delay for FST-tracked groups with zero alive units. Higher values reduce object/reference churn during intense combat."],
+    ["FST HC Spawn", "Cleanup"], [300, 1800, 900, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DeadGroupCleanupMaxPerPass", "SLIDER",
+    ["Dead Groups Max Per Sweep", "Maximum dead OPFOR groups deleted in one automatic sweep. Keep low; manual cleanup can be requested separately during lulls."],
+    ["FST HC Spawn", "Cleanup"], [1, 60, 25, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
 // ============================================================
 // FILL GARRISON SAFETY
 // ============================================================
@@ -135,7 +181,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 [
     "FST_HC_FillGarrisonMaxUnits", "SLIDER",
     ["Max Units Per Fill", "Hard cap for one Fill Garrison click. Large bases are sampled instead of fully filled."],
-    ["FST HC Spawn", "Fill Garrison"], [24, 600, 160, 0], true, {}, false
+    ["FST HC Spawn", "Fill Garrison"], [24, 600, 120, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
@@ -159,7 +205,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 [
     "FST_HC_FillGarrisonBatchDelay", "SLIDER",
     ["Batch Delay", "Seconds between Fill Garrison batches. Higher is gentler on the server."],
-    ["FST HC Spawn", "Fill Garrison"], [0.3, 2, 1.0, 2], true, {}, false
+    ["FST HC Spawn", "Fill Garrison"], [0.5, 2.5, 1.25, 2], true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -215,5 +261,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "PREOP_INSTANT_HIDE_FIX_2026-05-07", true];
-diag_log "[FST_HCSpawn] preInit complete - PREOP_INSTANT_HIDE_FIX_2026-05-07";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V19_MANUAL_ONLY_DROIDSTANCE_REVIEW_2026-05-16", true];
+diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V19_MANUAL_ONLY_DROIDSTANCE_REVIEW_2026-05-16";

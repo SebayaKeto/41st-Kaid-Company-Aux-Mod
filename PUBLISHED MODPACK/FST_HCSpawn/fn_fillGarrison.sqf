@@ -19,12 +19,16 @@ if (count _batch == 0) exitWith {
     if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };
 };
 
+missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+
 private _group = createGroup [EAST, true];
+private _requestedUnitCount = count _batch;
 if (isNull _group) exitWith {
     diag_log format ["[FST_HCSpawn] Fill garrison batch failed: createGroup returned grpNull for %1 units", count _batch];
     if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };
 };
 _group deleteGroupWhenEmpty true;
+_group setVariable ["FST_HC_spawnProtectedUntil", time + 90];
 
 {
     _x params ["_pos", "_class"];
@@ -47,23 +51,76 @@ _group deleteGroupWhenEmpty true;
     if (_forEachIndex == 0) then { _group selectLeader _unit; };
 } forEach _batch;
 
+if (count units _group == 0) exitWith {
+    diag_log format ["[FST_HCSpawn] Fill garrison batch produced zero units from %1 assignments", count _batch];
+    if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };
+    deleteGroup _group;
+};
+
+private _createdUnitCount = count units _group;
+private _partialBatch = _createdUnitCount < _requestedUnitCount;
+if (_partialBatch) then {
+    diag_log format ["[FST_HCSpawn] Fill garrison partial batch: created %1/%2 units", _createdUnitCount, _requestedUnitCount];
+    // Do NOT recount before this fresh HC group has been tracked. The server
+    // pre-counted the requested batch; an early recount would wipe that reservation,
+    // then trackGroup(preCounted=true) would not add the actually-created units.
+    // A delayed recount is scheduled after the track request below.
+};
+
 _group setBehaviourStrong "COMBAT";
 _group setCombatMode "RED";
 _group enableDynamicSimulation true;
 
-// Register Zeus editability on the server, not on the HC.
+// Register Zeus editability on the server, not on the HC. Send netIds from HCs
+// and let the server retry because fresh HC-spawned objects can arrive one beat late.
 private _editableObjects = units _group;
 if (count _editableObjects > 0) then {
     if (isServer) then {
         { _x addCuratorEditableObjects [_editableObjects, true]; } forEach allCurators;
     } else {
-        ["FST_HC_evt_addEditableObjects", [_editableObjects]] call CBA_fnc_serverEvent;
+        [_editableObjects] spawn {
+            params ["_editableObjects"];
+            private _expectedEditableCount = count _editableObjects;
+            private _deadline = time + 4.0;
+            private _editableNetIds = [];
+            waitUntil {
+                _editableObjects = _editableObjects select { !isNull _x };
+                _editableNetIds = (_editableObjects apply { netId _x }) select { !(_x isEqualTo "") };
+                ((count _editableNetIds) >= _expectedEditableCount) || {time >= _deadline}
+            };
+            if ((count _editableNetIds) < _expectedEditableCount) then {
+                diag_log format ["[FST_HCSpawn] Fill garrison editable registration partial: %1/%2 objects had netIds before deadline", count _editableNetIds, _expectedEditableCount];
+            };
+            if (count _editableNetIds > 0) then {
+                ["FST_HC_evt_addEditableObjects", [_editableNetIds, 0]] call CBA_fnc_serverEvent;
+            };
+        };
     };
 };
 
-// Track on server
+// Track on server. Use group netId + retry on server to avoid racing fresh HC groups.
 if (_isOnHC) then {
-    ["FST_HC_evt_trackGroup", [_group, _hcIndex, true]] call CBA_fnc_serverEvent;
+    [_group, _hcIndex, _partialBatch] spawn {
+        params ["_group", "_hcIndex", "_partialBatch"];
+        private _deadline = time + 3.5;
+        private _groupRef = "";
+        waitUntil {
+            if (!isNull _group) then { _groupRef = netId _group; };
+            isNull _group || {!(_groupRef isEqualTo "") || {time >= _deadline}}
+        };
+        if (isNull _group) exitWith { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; };
+        if (_groupRef isEqualTo "") exitWith {
+            diag_log format ["[FST_HCSpawn] Fill garrison track delayed: group %1 had no netId after wait; relying on catch-all/recount", _group];
+            ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent;
+        };
+        ["FST_HC_evt_trackGroup", [_groupRef, _hcIndex, true, 0, 90]] call CBA_fnc_serverEvent;
+
+        // If the batch partially failed, let the server track the group first,
+        // then recount so FST_HC_UnitCounts converges to the actual created count.
+        if (_partialBatch) then {
+            [{ ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; }, [], 1] call CBA_fnc_waitAndExecute;
+        };
+    };
 };
 
 // Floating/unsafe droid cleanup

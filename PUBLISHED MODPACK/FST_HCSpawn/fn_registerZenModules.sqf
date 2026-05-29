@@ -96,7 +96,7 @@ if (!hasInterface) exitWith {};
             ]],
             ["SLIDER", "Number of Waves", [1, 20, 3, 0]],
             ["SLIDER", "Seconds Between Waves", [1, 30, 5, 0]],
-            ["SLIDER", "Assault Radius", [100, 2000, 500, 0]]
+            ["SLIDER", "Assault Radius", [100, 2000, 2000, 0]]
         ],
         {
             params ["_values", "_args"];

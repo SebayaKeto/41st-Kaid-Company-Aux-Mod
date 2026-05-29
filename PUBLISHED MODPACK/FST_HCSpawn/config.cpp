@@ -28,6 +28,9 @@ class CfgFunctions {
             class trackGroup {};
             class catchUntracked {};
             class recountUnits {};
+            class cleanupDeadGroups {};
+            class requestDeadGroupCleanup {};
+            class enforceDroidStance {};
         };
         class Transfer {
             file = "FST_HCSpawn";
@@ -42,6 +45,7 @@ class CfgFunctions {
             class interceptZeusPlace {};
             class queueZeusGroup {};
             class legacyRespawnGroup {};
+            class handleZeusOriginalDecision {};
         };
         class Spawn {
             file = "FST_HCSpawn";
@@ -51,8 +55,10 @@ class CfgFunctions {
             class requestFillGarrison {};
             class registerZenModules {};
             class getFSTOpforUnitOptions {};
+            class addEditableObjects {};
             class isValidFSTOpforUnit {};
             class isSafeGarrisonPos {};
+            class applyUnitLoadoutSafe {};
         };
         class Objectives {
             file = "FST_HCSpawn";

@@ -34,6 +34,10 @@ class CfgWeapons
 			"FST_blaster_cell_Yellow",
 			"FST_blaster_cell_Red"
 		};
+		modes[]=
+		{
+			"FullAuto"
+		};
 		class FullAuto: Mode_FullAuto
 		{
 			sounds[]=

@@ -22,6 +22,8 @@ if (count _template == 0) exitWith {
 
 _template params ["_side", "_unitClasses", "_desc"];
 
+// V14: no automatic dead-group cleanup in heavy spawn paths. Run manual/rare maintenance cleanup during lulls.
+
 // Heavy module safety.
 if ((missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]) && {count FST_HC_Array == 0}) exitWith {
     "[FST] Frontline blocked: no headless clients are connected." remoteExec ["systemChat", _callerID];

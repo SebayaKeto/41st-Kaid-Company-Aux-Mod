@@ -1535,6 +1535,122 @@ class CfgAmmo
 			0.25
 		};
 	};
+	class FST_Sabre_AT_PKV5: 3AS_Sabre_HE
+	{
+		hit=400;
+		indirecthit=4;
+		indirecthitrange=1;
+		warheadName="AT";
+		submunitionAmmo="ammo_Penetrator_120mm";
+		submunitionDirectionType="SubmunitionModelDirection";
+		caliber=25;
+		explosive=0.2;
+		model="\ls\core\addons\data\effects\ls_laser_green.p3d";
+		effectFly="ls_plasma_green";
+		soundFly[]=
+		{
+			"",
+			1,
+			1,
+			50
+		};
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_01",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_02",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_03",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_04",
+			1.7782794,
+			1,
+			1600
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+	};
+	class FST_Sabre_AT_PKV5_HE: 3AS_Sabre_HE
+	{
+		hit=30;
+		indirecthit=30;
+		indirecthitrange=8;
+		warheadName="HE";
+		caliber=10;
+		explosive=0.2;
+		model="\ls\core\addons\data\effects\ls_laser_blue.p3d";
+		effectFly="ls_plasma_blue";
+		soundFly[]=
+		{
+			"",
+			1,
+			1,
+			50
+		};
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_01",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_02",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_03",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_04",
+			1.7782794,
+			1,
+			1600
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+	};
 };
 class CfgMagazines
 {
@@ -1572,6 +1688,34 @@ class CfgMagazines
 		displayName="25 Round Magazine";
 		displayNameShort="AT";
 		ammo="FST_Sabre_AT";
+		count=25;
+		initSpeed=1000;
+		maxLeadSpeed=83.333298;
+		nameSound="mg";
+		tracersEvery=1;
+		muzzleImpulseFactor[]={0.5,0.5};
+	};
+	class FST_25rnd_Gundark_Mag: VehicleMagazine
+	{
+		author="Daara";
+		scope=2;
+		displayName="25 Round Magazine";
+		displayNameShort="AT";
+		ammo="FST_Sabre_AT_PKV5";
+		count=25;
+		initSpeed=1000;
+		maxLeadSpeed=83.333298;
+		nameSound="mg";
+		tracersEvery=1;
+		muzzleImpulseFactor[]={0.5,0.5};
+	};
+	class FST_25rnd_Gundark_Mag_HE: VehicleMagazine
+	{
+		author="Daara";
+		scope=2;
+		displayName="25 Round Magazine";
+		displayNameShort="HE";
+		ammo="FST_Sabre_AT_PKV5_HE";
 		count=25;
 		initSpeed=1000;
 		maxLeadSpeed=83.333298;

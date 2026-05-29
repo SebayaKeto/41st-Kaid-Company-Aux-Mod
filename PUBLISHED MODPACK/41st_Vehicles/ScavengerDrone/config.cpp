@@ -37,6 +37,7 @@ class CfgVehicles
         author = "Ruby";
         displayname = "[41st] Scavenger Drone";
         side = 0
+		crew = "O_UAV_AI";
         faction="FST_BattleDroids_Faction";
 		editorSubcategory="FST_BattleDroids_Subfaction";
         hiddenSelections[]=

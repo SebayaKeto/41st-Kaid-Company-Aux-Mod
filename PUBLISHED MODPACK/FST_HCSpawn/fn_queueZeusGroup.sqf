@@ -47,7 +47,8 @@ if (FST_HC_DebugLogging) then {
 // In setGroupOwner Zeus mode, wait a tiny settle delay, then try immediate
 // transfer. If the engine refuses, fall back to the normal batched queue.
 private _zeusMode = missionNamespace getVariable ["FST_HC_ZeusMode", "instant"];
-if (_zeusMode isEqualTo "transfer") then {
+private _forceImmediateTransfer = (count units _group) == 1;
+if ((_zeusMode isEqualTo "transfer") || {_forceImmediateTransfer}) then {
     FST_HC_ZeusImmediateRequests = (missionNamespace getVariable ["FST_HC_ZeusImmediateRequests", 0]) + 1;
 
     [{

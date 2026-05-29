@@ -489,6 +489,31 @@ class WBK_KITArsenalAlike
 			};
 	};
 };
+class FST_CustomsCategoryButton: WBK_RscButton
+{
+	type = 1;
+	style = 2;
+
+	font = "PuristaMedium";
+	sizeEx = "0.018 / (getResolution select 5)";
+
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {0.5,0.5,0.5,1};
+
+	colorBackground[] = {0,0,0,0.75};
+	colorBackgroundActive[] = {0.15,0.15,0.2,1};
+	colorBackgroundDisabled[] = {0,0,0,0.5};
+	colorFocused[] = {0.15,0.15,0.2,1};
+
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,1};
+
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	borderSize = 0;
+};
 class FST_CustomsOverlay
 {
 	idd = 4100;
@@ -519,7 +544,7 @@ class FST_CustomsOverlay
 
 	class controls
 	{
-		class FST_Btn_Helmets: WBK_RscButton
+		class FST_Btn_Helmets: FST_CustomsCategoryButton
 		{
 			idc = 4201;
 			text = "Helmets";
@@ -529,7 +554,7 @@ class FST_CustomsOverlay
 			h = "0.035 * safezoneH";
 			tooltip = "Show helmets";
 		};
-		class FST_Btn_NVGs: WBK_RscButton
+		class FST_Btn_NVGs: FST_CustomsCategoryButton
 		{
 			idc = 4206;
 			text = "NVGs";
@@ -539,7 +564,7 @@ class FST_CustomsOverlay
 			h = "0.035 * safezoneH";
 			tooltip = "Show night vision";
 		};
-		class FST_Btn_Facewear: WBK_RscButton
+		class FST_Btn_Facewear: FST_CustomsCategoryButton
 		{
 			idc = 4202;
 			text = "Facewear";
@@ -549,7 +574,7 @@ class FST_CustomsOverlay
 			h = "0.035 * safezoneH";
 			tooltip = "Show masks & goggles";
 		};
-		class FST_Btn_Vests: WBK_RscButton
+		class FST_Btn_Vests: FST_CustomsCategoryButton
 		{
 			idc = 4203;
 			text = "Vests";
@@ -559,7 +584,7 @@ class FST_CustomsOverlay
 			h = "0.035 * safezoneH";
 			tooltip = "Show vests";
 		};
-		class FST_Btn_Uniforms: WBK_RscButton
+		class FST_Btn_Uniforms: FST_CustomsCategoryButton
 		{
 			idc = 4204;
 			text = "Uniforms";
@@ -569,7 +594,7 @@ class FST_CustomsOverlay
 			h = "0.035 * safezoneH";
 			tooltip = "Show uniforms";
 		};
-		class FST_Btn_Backpacks: WBK_RscButton
+		class FST_Btn_Backpacks: FST_CustomsCategoryButton
 		{
 			idc = 4205;
 			text = "Backpacks";
@@ -584,16 +609,25 @@ class FST_CustomsOverlay
 			idc = 4103;
 			type = 2;
 			style = 0;
+
 			x = 0.30 * safezoneW + safezoneX;
 			y = 0.25 * safezoneH + safezoneY;
 			w = 0.40 * safezoneW;
 			h = 0.04 * safezoneH;
+
+			text = "";
 			font = "PuristaMedium";
-			sizeEx = 0.035;
+			sizeEx = "0.020 / (getResolution select 5)";
+			shadow = 0;
+
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.5};
-			colorDisabled[] = {0.5, 0.5, 0.5, 1};
+			colorDisabled[] = {0.5,0.5,0.5,1};
+			colorSelection[] = {0.95,0.95,0.95,0.25};
+
 			autocomplete = "";
+			canModify = 1;
+
 			onKeyUp = "[] spawn FST_fnc_filterHelmets;";
 		};
 		class HelmetList: WBK_RscListBox
