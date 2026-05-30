@@ -9926,6 +9926,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Deso.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Terra: FST_Airborne_Helmet
+	{
+		author="Daara";
+		displayName="[41st] Airborne Helmet (Terra)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Terra.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Ordo: FST_Airborne_Helmet
 	{
 		author="Daara";
