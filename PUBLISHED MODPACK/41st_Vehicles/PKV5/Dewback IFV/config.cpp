@@ -10,7 +10,8 @@ class CfgPatches
 		{
 			"FST_PKV5_UP_Sickle",
 			"FST_PKV5_UP_Sickle_Gray",
-			"FST_PKV5_UP_Sickle_PDF"
+			"FST_PKV5_UP_Sickle_PDF",
+			"FST_PKV5_UP_Sickle_Dracarys"
 		};
 		weapons[]={};
 	};
@@ -1580,6 +1581,26 @@ class CfgVehicles
 		{
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_PDF.paa",
 			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Multi_purpose_Plain.paa"
+		};
+	};
+	class FST_PKV5_UP_Sickle_Dracarys: FST_PKV5_Sickle_Base
+	{
+		scope=2;
+		scopeCurator=2;
+		displayName="[41st] PK-V5 'Dewback' IFV/'Dracarys'";
+		accuracy=1.3;
+		side=1;
+		faction = "FST_Faction";
+		crew = "FST_Trooper_P2_DC15S";
+		editorSubcategory = "FST_Ground_Vehicle";
+		typicalCargo[]=
+		{
+			"FST_Trooper_P2_DC15S"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Hull_Dracarys.paa",
+			"\41st_Vehicles\PKV5\Data\FST_PKV5_Weapons_Dracarys.paa"
 		};
 	};
 };
