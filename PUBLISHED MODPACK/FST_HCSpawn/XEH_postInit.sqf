@@ -11,6 +11,8 @@ if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
+diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V23_SAFE_DISCONNECT_AUTO_EXPDIAG_2026-05-23";
+
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;
 
@@ -33,6 +35,13 @@ if (!isServer && !hasInterface) then {
         ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
         diag_log format ["[FST_HCSpawn] HC registering — owner %1", clientOwner];
     }, [], 1 + random 2] call CBA_fnc_waitAndExecute;
+};
+
+// ============================================================
+// SERVER / HEADLESS CLIENT DIAGNOSTICS
+// ============================================================
+if (isServer || {!hasInterface}) then {
+    [] call FST_HCSpawn_fnc_initExplosionDiag;
 };
 
 // ============================================================

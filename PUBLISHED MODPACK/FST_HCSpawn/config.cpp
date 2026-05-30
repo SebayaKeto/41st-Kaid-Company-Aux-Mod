@@ -30,7 +30,6 @@ class CfgFunctions {
             class recountUnits {};
             class cleanupDeadGroups {};
             class requestDeadGroupCleanup {};
-            class enforceDroidStance {};
         };
         class Transfer {
             file = "FST_HCSpawn";
@@ -74,6 +73,7 @@ class CfgFunctions {
             class requestDebugSnapshot {};
             class fpsMonitor {};
             class statusReport {};
+            class initExplosionDiag {};
         };
     };
 };

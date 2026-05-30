@@ -27003,13 +27003,11 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"IDA_DC15S",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"IDA_DC15S",
 			"Throw",
 			"Put"
 		};
@@ -27653,7 +27651,6 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"FST_P2_Helmet",
-			"IDA_Vest_DC15S",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
@@ -27663,7 +27660,6 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet",
-			"IDA_Vest_DC15S",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
@@ -27672,13 +27668,11 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"IDA_DC15S",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"IDA_DC15S",
 			"Throw",
 			"Put"
 		};
@@ -27696,7 +27690,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		respawnMagazines[]=
 		{
@@ -27712,7 +27705,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		items[]=
 		{
@@ -27986,7 +27978,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		respawnMagazines[]=
 		{
@@ -28002,7 +27993,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		items[]=
 		{
@@ -28354,7 +28344,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		respawnMagazines[]=
 		{
@@ -28370,7 +28359,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		items[]=
 		{
@@ -28723,7 +28711,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		respawnMagazines[]=
 		{
@@ -28739,7 +28726,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		items[]=
 		{
@@ -29092,7 +29078,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		respawnMagazines[]=
 		{
@@ -29108,7 +29093,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		items[]=
 		{
@@ -29467,7 +29451,6 @@ class CfgVehicles
 		};
 		respawnWeapons[]=
 		{
-			"IDA_DC15S",
 			"Throw",
 			"Put"
 		};
@@ -29485,7 +29468,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		respawnMagazines[]=
 		{
@@ -29501,7 +29483,6 @@ class CfgVehicles
 			"IDA_grenade_Smoke_mag",
 			"IDA_grenade_Smoke_mag",
 			"FST_grenade_Detonator_mag",
-			"IDA_blaster_cell",
 		};
 		items[]=
 		{
@@ -29576,14 +29557,12 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"IDA_DC15S",
 			"JLTS_CloneBinocular",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"IDA_DC15S",
 			"JLTS_CloneBinocular",
 			"Throw",
 			"Put"
@@ -29591,7 +29570,6 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"FST_Pilot_P1_Helmet",
-			"IDA_Vest_DC15S",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
@@ -29601,7 +29579,6 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_Pilot_P1_Helmet",
-			"IDA_Vest_DC15S",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",

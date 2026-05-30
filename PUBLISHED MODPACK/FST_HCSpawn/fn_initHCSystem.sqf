@@ -76,13 +76,7 @@ missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false, true]
 diag_log "[FST_HCSpawn] Automatic dead-group cleanup disabled; manual cleanup event available.";
 
 
-// Local droid stance keeper. Runs on server/HC only, only affects local FST B1/B2 droids,
-// and does not use doStop, so Assault/Patrol/Hunt movement remains under LAMBS/AI control.
-if (missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) then {
-    [{
-        [] call FST_HCSpawn_fnc_enforceDroidStance;
-    }, (missionNamespace getVariable ["FST_HC_DroidStanceInterval", 4]) max 2, []] call CBA_fnc_addPerFrameHandler;
-};
+// Droid stance keeper removed in V20. Standalone FST_DroidStance.pbo remains responsible for B1/B2 stance behavior.
 
 // Despawn cleanup (delete AI groups far from all players)
 if (FST_HC_DespawnEnabled) then {

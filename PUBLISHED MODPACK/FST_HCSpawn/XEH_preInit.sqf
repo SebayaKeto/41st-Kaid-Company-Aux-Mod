@@ -30,9 +30,16 @@ missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespac
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMinAge", 300]];
 missionNamespace setVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", 900]];
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupMaxPerPass", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMaxPerPass", 25]];
-missionNamespace setVariable ["FST_HC_DroidStanceEnabled", missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]];
-missionNamespace setVariable ["FST_HC_DroidStanceInterval", missionNamespace getVariable ["FST_HC_DroidStanceInterval", 4]];
 missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
+missionNamespace setVariable ["FST_HC_RedistributeOnHCDisconnect", missionNamespace getVariable ["FST_HC_RedistributeOnHCDisconnect", false]];
+missionNamespace setVariable ["FST_HC_HCDisconnectSafeModeSeconds", missionNamespace getVariable ["FST_HC_HCDisconnectSafeModeSeconds", 120]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagEnabled", missionNamespace getVariable ["FST_HC_ExplosionDiagEnabled", true]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagInterval", missionNamespace getVariable ["FST_HC_ExplosionDiagInterval", 10]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagExplosionSpikeThreshold", missionNamespace getVariable ["FST_HC_ExplosionDiagExplosionSpikeThreshold", 75]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagKilledSpikeThreshold", missionNamespace getVariable ["FST_HC_ExplosionDiagKilledSpikeThreshold", 20]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagImmediateCooldown", missionNamespace getVariable ["FST_HC_ExplosionDiagImmediateCooldown", 5]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagLogBelowFPS", missionNamespace getVariable ["FST_HC_ExplosionDiagLogBelowFPS", 15]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagRecentLimit", missionNamespace getVariable ["FST_HC_ExplosionDiagRecentLimit", 40]];
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
 missionNamespace setVariable ["FST_HC_InterceptEnabled", missionNamespace getVariable ["FST_HC_InterceptEnabled", true]];
@@ -77,9 +84,33 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 ] call CBA_fnc_addSetting;
 
 [
+    "FST_HC_RedistributeOnHCDisconnect", "CHECKBOX",
+    ["Redistribute AI After HC Crash", "OFF by default. If an HC crashes, do not immediately shove its tracked groups onto the remaining HC during a live object/network storm."],
+    ["FST HC Spawn", "Core"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_HCDisconnectSafeModeSeconds", "SLIDER",
+    ["HC Crash Safe Mode Seconds", "Seconds to pause transfer/catch-all activity after an HC disconnects. This reduces server/HC ownership churn during crash recovery."],
+    ["FST HC Spawn", "Core"], [0, 300, 120, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
     "FST_HC_DebugLogging", "CHECKBOX",
     ["Verbose RPT Logging", "Extra HC spawn/transfer logging. Leave off during live ops unless debugging."],
     ["FST HC Spawn", "Core"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_ExplosionDiagEnabled", "CHECKBOX",
+    ["Automatic Explosion Diagnostics", "Logs HC/server explosive ammo, explosion hit spikes, killed-unit spikes, FPS, and local AI counts. Leave enabled until the crash cause is isolated."],
+    ["FST HC Spawn", "Diagnostics"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_ExplosionDiagInterval", "SLIDER",
+    ["Explosion Diagnostic Interval", "Seconds between automatic explosion diagnostic RPT summaries."],
+    ["FST HC Spawn", "Diagnostics"], [5, 30, 10, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -261,5 +292,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V19_MANUAL_ONLY_DROIDSTANCE_REVIEW_2026-05-16", true];
-diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V19_MANUAL_ONLY_DROIDSTANCE_REVIEW_2026-05-16";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V23_SAFE_DISCONNECT_AUTO_EXPDIAG_2026-05-23", true];
+diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V23_SAFE_DISCONNECT_AUTO_EXPDIAG_2026-05-23";
