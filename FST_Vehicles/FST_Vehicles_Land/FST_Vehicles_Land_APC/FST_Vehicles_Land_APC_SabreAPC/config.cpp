@@ -78,14 +78,13 @@ class CfgVehicles
 	class FST_Vehicle_Land_Base: Tank_F
 	{
 		author="Maldova";
-		mapSize=8.51;
+		mapSize=8.751;
 		simulation="tankX";
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
-		maxSpeed=90;
+		maxSpeed=95;
 		normalSpeedForwardCoef=0.69999999;
 		slowSpeedForwardCoef=0.34999999;
-		waterResistanceCoef=0.25;
 		engineMOI=9;
 		enginePower=1400;
 		maxOmega=345.57501;
@@ -132,7 +131,7 @@ class CfgVehicles
 				"(2350/2850)"
 			}
 		};
-		thrustDelay=0.050000001;
+		thrustDelay=0.040000001;
 		dampingRateFullThrottle=0.30000001;
 		dampingRateZeroThrottleClutchEngaged=3;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
@@ -2447,6 +2446,10 @@ class CfgVehicles
 		crewVulnerable=0;
 		epeImpulseDamageCoef=18;
 		waterPPInVehicle=0;
+		waterLinearDampingCoefY= 3;		
+		waterLinearDampingCoefX= 3.0;		
+		waterAngularDampingCoef= 1.5;		
+		waterResistanceCoef= 0.015;	
 		wheelCircumference=2.1500001;
 		tracksSpeed=1.4;
 		model="FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\FST_Vehicles_Land_APC_SabreAPC_Model.p3d";
@@ -2502,53 +2505,6 @@ class CfgVehicles
 				minimalHit=0.1;
 				explosionShielding=0.60000002;
 				radius=0.30000001;
-			};
-			class HitSLAT_Left_1
-			{
-				simulation="Armor_SLAT";
-				armorComponent="cage_left_1_geo";
-				name="cage_left_1_point";
-				armor=-200;
-				minimalHit=0.30000001;
-				passThrough=0;
-				visual="-";
-				explosionShielding=2;
-				radius=0.25;
-			};
-			class HitSLAT_Left_2: HitSLAT_Left_1
-			{
-				armorComponent="cage_left_2_geo";
-				name="cage_left_2_point";
-			};
-			class HitSLAT_Left_3: HitSLAT_Left_1
-			{
-				armorComponent="cage_left_3_geo";
-				name="cage_left_3_point";
-			};
-			class HitSLAT_Right_1: HitSLAT_Left_1
-			{
-				armorComponent="cage_right_1_geo";
-				name="cage_right_1_point";
-			};
-			class HitSLAT_Right_2: HitSLAT_Left_1
-			{
-				armorComponent="cage_right_2_geo";
-				name="cage_right_2_point";
-			};
-			class HitSLAT_Right_3: HitSLAT_Left_1
-			{
-				armorComponent="cage_right_3_geo";
-				name="cage_right_3_point";
-			};
-			class HitSLAT_back: HitSLAT_Left_1
-			{
-				armorComponent="cage_back_geo";
-				name="cage_back_point";
-			};
-			class HitSLAT_front: HitSLAT_Left_1
-			{
-				armorComponent="cage_front_geo";
-				name="cage_front_point";
 			};
 			class HitLFWheel: HitLFWheel
 			{
@@ -2885,7 +2841,7 @@ class CfgVehicles
 							1,
 							30
 						};
-						outGunnerMayFire=0;
+						outGunnerMayFire=1;
 						inGunnerMayFire=1;
 						gunnerAction="Commander_MBT_01_cannon_F_out";
 						gunnerInAction="Commander_MBT_01_cannon_F_in";
@@ -3082,7 +3038,8 @@ class CfgVehicles
 					"200Rnd_762x51_Belt_Red",
 					"200Rnd_762x51_Belt_Red"
 				};
-				forceHideGunner=1;
+				forceHideGunner=0;
+				outGunnerMayFire=1;
 				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600,2700,2800,2900,3000,3100,3200,3300,3400,3500,3600,3700,3800,3900,4000};
 				discreteDistanceInitIndex=5;
 				memoryPointGunnerOptics="gunnerview";
@@ -3830,15 +3787,23 @@ class CfgVehicles
 			verticalOffsetWorld=-0.20900001;
 			postinit="[this, '', []] call bis_fnc_initVehicle";
 		};
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\FST_Vehicle_Land_SabreAPC_F.jpg";
-		_generalMacro="FST_Vehicle_Land_SabreAPC_F";
+		//editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\FST_Vehicle_Land_SabreAPC_F.jpg";
 		scope=2;
-		displayName="$STR_A3_CfgVehicles_MBT_01_cannon_base_F0";
+		displayName="PENGUIN";
 		hiddenSelections[]=
 		{
+			"Camo",
 			"Camo1",
 			"Camo2",
-			"CamoNet"
+			"Camo3",
+			"Camo4",
+			"Camo5",
+			"Camo6",
+			"Camo7",
+			"Camo8",
+			"Camo9",
+			"Camo10",
+			"Camo11"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -3879,32 +3844,51 @@ class CfgVehicles
 				};
 			};
 		};
+		class UserActions
+		{
+			class OpenRearDoor
+			{
+				displayName="Open Rear Door";
+				position="RearDoor";
+				radius=4;
+				priority=10;
+				onlyForPlayer=0;
+				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' < 0.5)";
+				statement="this animateSource ['rear_door_rotate',1,true]";
+			};
+			class CloseRearDoor: OpenRearDoor
+			{
+				displayName="Close Rear Door";
+				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' >= 0.5)";
+				statement="this animateSource ['rear_door_rotate',0,true]";
+			};
+			class OpenMainHatch: OpenRearDoor
+			{
+				displayName="Open Hatch";
+				position="MainHatch";
+				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
+				statement="this animateSource ['main_hatch_rotate',1,true]";
+			};
+			class CloseMainHatch: OpenMainHatch
+			{
+				displayName="Close Hatch";
+				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
+				statement="this animateSource ['main_hatch_rotate',0,true]";
+			};
+		};
 		class AnimationSources: AnimationSources
 		{
-			class muzzle_hide_cannon
+			class rear_door_rotate
 			{
-				source="reload";
-				weapon="cannon_120mm";
-			};
-			class muzzle_rot_cannon
-			{
-				source="ammorandom";
-				weapon="cannon_120mm";
-			};
-			class HitComTurret_src
-			{
-				source="Hit";
-				hitpoint="HitComTurret";
-				raw=1;
-			};
-			class showBags
-			{
-				displayName="Show Bags";
-				author="$STR_A3_Bohemia_Interactive";
 				source="user";
-				animPeriod=0.001;
+				animPeriod=1.5;
 				initPhase=0;
-				mass=-50;
+			};
+			class main_hatch_rotate
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
 			};
 		};
 	};
