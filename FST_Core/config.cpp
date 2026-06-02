@@ -127,6 +127,10 @@ class CfgEditorSubcategories
 	{
 		displayname = "Resupplies";
 	};
+	class FST_Catagory_Vehicles_Land_APC
+	{
+		displayname = "[FST] APCs";
+	};
 };
 class CfgFunctions
 {
