@@ -42,6 +42,10 @@ class CfgMusicClasses
 	{
 		displayName="41st - Murder Drones Tracks";
 	};
+	class FST_Invasion_Of_Belarus_Music
+	{
+		displayName="41st - Invasion Of Belarus Tracks";
+	};
 };
 
 // With Thanks to Splice for all his help.
@@ -274,6 +278,12 @@ class CfgMusic
 		"FST_HahaYeaDudeThatsSick",
 		"FST_Forever_FullVersion",
 		"FST_FightTillImGoodEnough",
+
+		//Invasion of Belarus
+		"FST_TheSummerWillEnd",
+		"FST_TheLastHero",
+		"FST_BloodGroup",
+		"FST_Tachanka",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -2879,5 +2889,56 @@ class CfgMusic
 		};
 		duration="202";
 	};	
+
+	//Invasion of Belarus
+
+	class FST_TheSummerWillEnd
+	{
+		name="Kino - The Summer Will End";
+		musicClass="FST_Invasion_Of_Belarus_Music";
+		sound[]=
+		{
+			"41st_Music\InvasionOfBelarusTracks\TheSummerWillEnd.ogg",
+			1,
+			1
+		};
+		duration="350";
+	};
+	class FST_TheLastHero
+	{
+		name="Kino - The Last Hero";
+		musicClass="FST_Invasion_Of_Belarus_Music";
+		sound[]=
+		{
+			"41st_Music\InvasionOfBelarusTracks\TheLastHero.ogg",
+			1,
+			1
+		};
+		duration="184";
+	};
+	class FST_BloodGroup
+	{
+		name="Kino - Blood Group";
+		musicClass="FST_Invasion_Of_Belarus_Music";
+		sound[]=
+		{
+			"41st_Music\InvasionOfBelarusTracks\BloodGroup.ogg",
+			1,
+			1
+		};
+		duration="284";
+	};
+	class FST_Tachanka
+	{
+		name="Oktoberklub - Tachanka";
+		musicClass="FST_Invasion_Of_Belarus_Music";
+		sound[]=
+		{
+			"41st_Music\InvasionOfBelarusTracks\Tachanka.ogg",
+			1,
+			1
+		};
+		duration="168";
+	};
 };
 
