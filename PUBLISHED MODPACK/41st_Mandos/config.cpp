@@ -17,7 +17,19 @@ class CfgPatches
 			"FST_MandoV_AA",
 			"FST_MandoV_EOD",
 			"FST_MandoV_Grenadier",
-			"FST_MandoV_Flame"
+			"FST_MandoV_Flame",
+			"FST_MandoO_Commander",
+			"FST_MandoO_Standard",
+			"FST_MandoO_RTO",
+			"FST_MandoO_Auto",
+			"FST_MandoO_CQB",
+			"FST_MandoO_Marksman",
+			"FST_MandoO_Sniper",
+			"FST_MandoO_AT",
+			"FST_MandoO_AA",
+			"FST_MandoO_EOD",
+			"FST_MandoO_Grenadier",
+			"FST_MandoO_Flame"
 
 		};
 		weapons[]={};
@@ -64,6 +76,18 @@ class CfgFunctions
 			class varadbomber {};
 			class varadgrenadier {};
 			class varadflamer {};
+			class ordoleader {};
+			class ordosoldier {};
+			class ordocoordinator {};
+			class ordosuppressor {};
+			class ordorusher {};
+			class ordohunter {};
+			class ordoassassin {};
+			class ordodestroyer {};
+			class ordolauncher {};
+			class ordobomber {};
+			class ordogrenadier {};
+			class ordoflamer {};
 		};
 	};
 };
@@ -226,6 +250,36 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_MandoOBack_SC: FST_MandoJumppack
+	{
+		author = "Tooka";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_FST_grenade_smoke_orange_mag
+			{
+				name="FST_grenade_smoke_orange_mag";
+				count=1;
+			};
+			class _xx_IDA_grenade_Detonator_mag
+			{
+				name="IDA_grenade_Detonator_mag";
+				count=1;
+			};
+			class _xx_FST_blaster_cell_Westar_Green
+			{
+				name="FST_blaster_cell_Westar_Green";
+				count=15;
+			};
+			class _xx_FST_pistol_westar35sa_Mag_Green
+			{
+				name="FST_pistol_westar35sa_Mag_Green";
+				count=15;
+			};
+		};
+	};
 	class JMSLLTE_back_stormband_v2;
 	class FST_MandoVBack_Gren: JMSLLTE_back_stormband_v2
 	{
@@ -248,6 +302,31 @@ class CfgVehicles
 			class _xx_FST_blaster_cell_Westar_Red
 			{
 				name="FST_blaster_cell_Westar_Red";
+				count=15;
+			};
+		};
+	};
+	class FST_MandoOBack_Gren: JMSLLTE_back_stormband_v2
+	{
+		author = "Tooka";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 0;
+		class TransportItems
+		{
+			class _xx_3AS_1UGL_MK54_HE_shell
+			{
+				name="3AS_1UGL_MK54_HE_shell";
+				count=2;
+			};
+			class _xx_FST_HE_LauncherGrenade
+			{
+				name="FST_HE_LauncherGrenade";
+				count=2;
+			};
+			class _xx_FST_blaster_cell_Westar_Green
+			{
+				name="FST_blaster_cell_Westar_Green";
 				count=15;
 			};
 		};
@@ -890,6 +969,451 @@ class CfgVehicles
 			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadflamer;";
 		};
 	};
+	class FST_MandoO_Commander: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		backpack="FST_MandoOBack_SC";
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Leader";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"WBK_HeadLampItem_Double"
+		};
+		linkedItems[]=
+		{
+			"ls_mandalorianVest_ordoSergeant",
+			"ls_radios_hush98_aurebesh",
+			"ls_mandalorian_rangefinder",
+			"ItemGPS",
+			"ItemMap",
+			"ls_mandalorianHelmet_ordoSergeant"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Westar_Green",
+			"FST_pistol_westar35sa_Mag_Green"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordoleader;";
+		};
+	};
+	class FST_MandoO_RTO: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Coordinator";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordocoordinator;";
+		};
+	};
+	class FST_MandoO_Standard: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Soldier";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordosoldier;";
+		};
+	};
+	class FST_MandoO_Auto: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Suppressor";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordosuppressor;";
+		};
+	};
+	class FST_MandoO_CQB: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Rusher";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordorusher;";
+		};
+	};
+	class FST_MandoO_Marksman: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Hunter";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordohunter;";
+		};
+	};
+	class FST_MandoO_Sniper: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Assassin";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordoassassin;";
+		};
+	};
+	class FST_MandoO_AT: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Destroyer";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordodestroyer;";
+		};
+	};
+	class FST_MandoO_AA: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Launcher";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordolauncher;";
+		};
+	};
+	class FST_MandoO_EOD: FST_U_MandoUndersuit
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Bomber";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_Scoped",
+			"FST_WestarPistol_Light",
+			"Throw",
+			"Put"
+		};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordobomber;";
+		};
+	};
+	class FST_MandoO_Grenadier: FST_MandoV_Commander
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		backpack="FST_MandoOBack_Gren";
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Grenadier";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_Westar_M5_UGL",
+			"3AS_FE20_GrenadeLauncherPistol",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"WBK_HeadLampItem_Double"
+		};
+		linkedItems[]=
+		{
+			"ls_mandalorianVest_ordoGrunt",
+			"ls_radios_hush98_aurebesh",
+			"ls_mandalorian_rangefinder",
+			"ItemWatch",
+			"ItemGPS",
+			"ItemMap",
+			"ls_mandalorianHelmet_ordoGrunt"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Westar_Green",
+			"3AS_1UGL_MK54_HE_shell",
+			"FST_HE_LauncherGrenade"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordogrenadier;";
+		};
+	};
+	class FST_MandoO_Flame: FST_MandoV_Commander
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		backpack="FST_MandoVBack_Fire";
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] Clan Ordo Flamer";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_MandoUndersuitUni";
+		role="Rifleman";
+		faction="FST_Mando_Faction";
+		editorSubcategory="FST_ClanOrdo";
+		weapons[]=
+		{
+			"FST_MandoWristFlamer",
+			"FST_Westar35",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"WBK_HeadLampItem_Double"
+		};
+		linkedItems[]=
+		{
+			"ls_mandalorianVest_ordoGrunt",
+			"ls_radios_hush98_aurebesh",
+			"ls_mandalorian_rangefinder",
+			"ItemGPS",
+			"ItemMap",
+			"ls_mandalorianHelmet_ordoGrunt"
+		};
+		magazines[]=
+		{
+			"DBA_B2Flamer_Mag"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordoflamer;";
+		};
+	};
 };
 class cfgGroups
 {
@@ -1196,6 +1720,316 @@ class cfgGroups
 					{
 						side=0;
 						vehicle="FST_MandoV_AA";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+				};
+			};
+		};
+	};
+	class WEST
+	{
+		name="BLUFOR";
+		
+		class FST_Mando_Faction
+		{
+			name="41st Mandalorians";
+			
+			class FST_ClanOrdo
+			{
+				name = "Clan Ordo";
+				
+				class FST_S_MandoO_Assault
+				{
+					name="[41st] Clan Ordo Assault Squad";
+					faction="FST_Mando_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_MandoO_Commander";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_MandoO_CQB";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_MandoO_Auto";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_MandoO_RTO";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit7
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit8
+					{
+						side=1;
+						vehicle="FST_MandoO_Auto";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+				};
+				class FST_S_MandoO_Guard
+				{
+					name="[41st] Clan Ordo Guard Squad";
+					faction="FST_Mando_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_MandoO_Commander";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_MandoO_CQB";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_MandoO_CQB";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_MandoO_Flame";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_MandoO_Auto";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_MandoO_RTO";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit7
+					{
+						side=1;
+						vehicle="FST_MandoO_Marksman";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit8
+					{
+						side=1;
+						vehicle="FST_MandoO_AA";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+				};
+				class FST_S_MandoO_Suppress
+				{
+					name="[41st] Clan Ordo Suppression Squad";
+					faction="FST_Mando_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_MandoO_Commander";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_MandoO_Auto";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_MandoO_Auto";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_MandoO_Auto";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_MandoO_RTO";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_MandoO_Standard";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_MandoO_Explosive
+				{
+					name="[41st] Clan Ordo Explosive Squad";
+					faction="FST_Mando_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_MandoO_Commander";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_MandoO_EOD";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_MandoO_AT";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_MandoO_AT";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_MandoO_RTO";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_MandoO_Grenadier";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_MandoO_CQB";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_MandoO_Sniper
+				{
+					name="[41st] Clan Ordo Sniper Team";
+					faction="FST_Mando_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_MandoO_RTO";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_MandoO_Marksman";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_MandoO_Sniper";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_MandoO_AA
+				{
+					name="[41st] Clan Ordo Antiar Pair";
+					faction="FST_Mando_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_MandoO_AA";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_MandoO_AA";
 						rank="PRIVATE";
 						position[]={0,-1,0};
 					};

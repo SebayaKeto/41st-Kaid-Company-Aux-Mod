@@ -7,7 +7,7 @@ if (!local _unit) exitWith {};
 if (_unit getVariable ["FST_Initialized", false]) exitWith {};
 _unit setVariable ["FST_Initialized", true, true];
 
-["FST_applyName", [ _unit, "Clan Varad Bomber"]] call CBA_fnc_globalEvent;
+["FST_applyName", [ _unit, "Clan Ordo Grenadier"]] call CBA_fnc_globalEvent;
 
 [_unit] spawn {
 
@@ -175,19 +175,8 @@ private _list_41mandoheads = [
 
 ];
 
-private _list_41mandohelmets = [
-	"ls_mandalorianHelmet_elite", 1,
-	"ls_mandalorianHelmet_armorer", 0.05,
-	"ls_mandalorianHelmet_executioner", 0.1,
-	"ls_mandalorianHelmet_nightowl", 1,
-	"ls_mandalorianHelmet_stalker", 0.2,
-	"ls_mandalorianHelmet_traditional", 1
-
-];
-
 private _list_41mandodatapad = [
-	"FST_CivData_Normal", 0.5, 
-	"FST_CivData_Abnormal", 0.3,
+	"FST_CivData_Normal", 0.5,
 	"FST_CivData_Betting", 0.02,
 	"FST_CivData_Bulge", 0.02,
 	"FST_CivData_Cat", 0.02,
@@ -208,7 +197,6 @@ private _list_41mandodatapad = [
 	"FST_CivData_UV", 0.02,
 	"FST_CivData_Virus", 0.02,
 	"FST_SpaceData_Normal", 0.5,
-	"FST_SpaceData_Abnormal", 0.3,
 	"FST_SpaceData_Aqua", 0.1,
 	"FST_SpaceData_Blast", 0.3,
 	"FST_SpaceData_Brick", 0.02,
@@ -222,7 +210,6 @@ private _list_41mandodatapad = [
 	"FST_SpaceData_SPACE", 0.3,
 	"FST_SpaceData_Squish", 0.02,
 	"FST_StylusData_Normal", 0.5,
-	"FST_StylusData_Abnormal", 0.3,
 	"FST_StylusData_Alien", 0.02,
 	"FST_StylusData_Check", 0.02,
 	"FST_StylusData_Engine", 0.1,
@@ -233,7 +220,6 @@ private _list_41mandodatapad = [
 	"FST_StylusData_Note", 0.02,
 	"FST_StylusData_Scratch", 0.02,
 	"FST_CivMiniData_Normal", 0.5,
-	"FST_CivMiniData_Abnormal", 0.3,
 	"FST_CivMiniData_Atmos", 0.02,
 	"FST_CivMiniData_Bio", 0.02,
 	"FST_CivMiniData_Broken", 0.02,
@@ -255,7 +241,6 @@ private _list_41mandodatapad = [
 
 private _list_41mandointelitems = [
 	"FST_ReadData_Normal", 0.5,
-	"FST_ReadData_Abnormal", 0.3,
 	"FST_ReadData_Action", 0.1,
 	"FST_ReadData_Alien", 0.1,
 	"FST_ReadData_Bad", 0.1,
@@ -274,7 +259,6 @@ private _list_41mandointelitems = [
 	"FST_ReadData_Text", 0.02,
 	"FST_ReadData_Youth", 0.1,
 	"FST_CivDatacard_Normal", 0.5,
-	"FST_CivDatacard_Abnormal", 0.3,
 	"FST_CivDatacard_Blueprint", 0.3,
 	"FST_CivDatacard_Broken", 0.02,
 	"FST_CivDatacard_Calendar", 0.1,
@@ -319,7 +303,6 @@ private _list_41mandointelitems = [
 	"FST_CivFlimsi_Wanted", 0.1,
 	"FST_CivFlimsi_Work", 0.3,
 	"FST_CivFlimsiFile_Normal", 0.5,
-	"FST_CivFlimsiFile_Abnormal", 0.3,
 	"FST_CivFlimsiFile_Alien", 0.02,
 	"FST_CivFlimsiFile_Law", 0.02,
 	"FST_CivFlimsiFile_Photo", 0.1,
@@ -333,7 +316,6 @@ private _list_41mandointelitems = [
 	"FST_CivFlimsiFile_Transport", 0.02,
 	"FST_CivFlimsiFile_Work", 0.1,
 	"FST_CivHoloprojector_Normal", 0.5,
-	"FST_CivHoloprojector_Abnormal", 0.3,
 	"FST_CivHoloprojector_Alien", 0.02,
 	"FST_CivHoloprojector_Anatomy", 0.02,
 	"FST_CivHoloprojector_Beast", 0.1,
@@ -350,13 +332,13 @@ private _list_41mandointelitems = [
 	"FST_CivHoloprojector_Record", 0.3,
 	"FST_CivHoloprojector_Route", 0.02,
 	"FST_CivHoloprojector_Solar", 0.02,
-	"FST_CivHoloprojector_Sport", 0.02
+	"FST_CivHoloprojector_Sport", 0.02,
+	"", 6
 
 ];
 
 private _list_41mandodevices = [
 	"FST_BountyDisk_Normal", 0.5,
-	"FST_BountyDisk_Abnormal", 0.02,
 	"FST_BountyDisk_Addict", 0.3,
 	"FST_BountyDisk_Catboy", 0.02,
 	"FST_BountyDisk_CEO", 0.1,
@@ -376,7 +358,6 @@ private _list_41mandodevices = [
 	"FST_BountyDisk_Thief", 0.3,
 	"FST_BountyDisk_Traitor", 0.3,
 	"FST_TrackingFob_Normal", 0.5,
-	"FST_TrackingFob_Abnormal", 0.02,
 	"FST_TrackingFob_Bothan", 0.1,
 	"FST_TrackingFob_Broken", 0.05,
 	"FST_TrackingFob_Capital", 0.1,
@@ -403,7 +384,6 @@ private _list_41mandodevices = [
 
 private _list_41mandocomms = [
 	"FST_HoloComm_Normal", 0.6,
-	"FST_HoloComm_Abnormal", 0.2,
 	"", 2
 
 ];
@@ -427,6 +407,8 @@ private _list_41creditsitemshigh = [
 	"JLTS_credits_5000", 0.05
 ];
 
+_unit forceAddUniform "FST_MandoUndersuitUni";
+
 private _case0 = selectRandomWeighted _list_41creditcases;
 private _rich0 = selectRandomWeighted _list_41creditsitemshigh;
 private _rich1 = selectRandomWeighted _list_41creditsitemshigh;
@@ -439,28 +421,47 @@ private _selectcomm = selectRandomWeighted _list_41mandocomms;
 private _intel0 = selectRandomWeighted _list_41mandointelitems;
 private _intel1 = selectRandomWeighted _list_41mandointelitems;
 private _intel2 = selectRandomWeighted _list_41mandointelitems;
-private _chosenhelmet = selectRandomWeighted _list_41mandohelmets;
+_unit addItemToUniform _case0;
+_unit addItemToUniform _rich0;
+_unit addItemToUniform _rich1;
+_unit addItemToUniform _rich2;
+_unit addItemToUniform _datapad0;
+_unit addItemToUniform _datapad1;
+_unit addItemToUniform _device0;
+_unit addItemToUniform _device1;
+_unit addItemToUniform _selectcomm;
+_unit addItemToUniform _intel0;
+_unit addItemToUniform _intel1;
+_unit addItemToUniform _intel2;
 
 private _10array = [0, 0.1, 1, 0.4, 2, 0.3, 3, 0.2];
 private _50array = [0, 0.4, 1, 0.4, 2, 0.2];
-private _padarray = [0, 0.4, 1, 0.6];
 private _dsarray = [0, 0.7, 1, 0.3];
 
 private _10amount = selectRandomWeighted _10array;
 private _50amount = selectRandomWeighted _50array;
-private _padchoice = selectRandomWeighted _padarray;
-private _intelchoice0 = selectRandomWeighted _padarray;
-private _intelchoice1 = selectRandomWeighted _dsarray;
 private _dschoice = selectRandomWeighted _dsarray;
 
-private _loadoutarray = [1,2,3,4];
+while { _10amount > 0} do { _unit addItemToUniform "JLTS_credits_10"; _10amount = _10amount - 1;};
+while { _50amount > 0} do { _unit addItemToUniform "JLTS_credits_50"; _50amount = _50amount - 1;};
+if ( _dschoice == 1) then { _unit addItemToUniform "JLTS_drugs_deathstick"};
 
-private _loadoutchoice = selectRandom _loadoutarray;
-
-if ( _loadoutchoice == 1) then { _unit setUnitLoadout [["FST_SE28","","","",["FST_blaster_cell_low_Red_smg",120],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Red",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_standard",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["FST_MandoBackpack_Heavy",[["MineDetector",1],["ACE_Clacker",1],["ACE_DefusalKit",1],["JMSLLTE_Detonitecharge_imp_Mag",3,1],["APERSMineDispenser_Mag",1,1],["FST_blaster_cell_low_Red",15,30],["FST_blaster_cell_low_Red_smg",15,120]]], _chosenhelmet,"ls_imperial_chestRigPouch",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 2) then { _unit setUnitLoadout [["FST_TL50","","JMSLLTE_acc_flashlight","",["FST_blaster_cell_Red",60],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Red",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_standard",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["FST_MandoBackpack_Heavy",[["MineDetector",1],["ACE_Clacker",1],["ACE_DefusalKit",1],["JMSLLTE_Detonitecharge_imp_Mag",3,1],["APERSMineDispenser_Mag",1,1],["FST_blaster_cell_low_Red",15,30],["FST_blaster_cell_Red",15,60]]], _chosenhelmet,"ls_imperial_chestRigPouch",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 3) then { _unit setUnitLoadout [["FST_ACPR","","","",["FST_ACPR_Mag_Red",60],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Red",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_standard",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["FST_MandoBackpack_Heavy",[["MineDetector",1],["ACE_Clacker",1],["ACE_DefusalKit",1],["JMSLLTE_Detonitecharge_imp_Mag",3,1],["APERSMineDispenser_Mag",1,1],["FST_blaster_cell_low_Red",15,30],["FST_ACPR_Mag_Red",15,60]]], _chosenhelmet,"ls_imperial_chestRigPouch",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 4) then { _unit setUnitLoadout [["FST_Arkanian_Stock_F","","","",["FST_blaster_cell_Red",60],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Red",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_standard",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["FST_MandoBackpack_Heavy",[["MineDetector",1],["ACE_Clacker",1],["ACE_DefusalKit",1],["JMSLLTE_Detonitecharge_imp_Mag",3,1],["APERSMineDispenser_Mag",1,1],["FST_blaster_cell_low_Red",15,30],["FST_blaster_cell_Red",15,60]]], _chosenhelmet,"ls_imperial_chestRigPouch",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BactaBandage';
+_unit addItemToVest 'IDA_BattleStim';
+_unit addItemToVest 'IDA_BattleStim';
+_unit addItemToVest 'ACE_splint';
+_unit addItemToVest 'ACE_splint';
+_unit addItemToVest 'ACE_tourniquet';
+_unit addItemToVest 'ACE_tourniquet';
 
 _unit setSkill ['aimingAccuracy',0.7];
 _unit setSkill ['aimingShake',0.7];
@@ -476,5 +477,6 @@ _unit allowFleeing 0.1;
 private _chosenhead = selectRandom _list_41mandoheads;
 
 ["FST_applyIdentity", [ _unit, _chosenhead, "ACE_NoVoice"]] call CBA_fnc_globalEvent;
+_unit disableAI "RADIOPROTOCOL";
 
 };
