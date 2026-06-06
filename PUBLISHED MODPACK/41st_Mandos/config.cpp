@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 41st_CorruptPDF
+	class 41st_Mandos
 	{
 		requiredAddons[]={"A3_Soft_F"};
 		units[]=
