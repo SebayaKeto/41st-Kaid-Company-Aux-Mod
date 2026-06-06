@@ -10986,6 +10986,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Snoob: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Snoob]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Snoob.paa",
+		};
+	};
 	class FST_P2_Helmet_Emerald: FST_P2_Helmet_Base
 	{
 		author="Steel";
