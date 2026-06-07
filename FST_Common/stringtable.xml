@@ -525,66 +525,6 @@
                 <Czech>Prave vnejsi sedadlo 1</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_10">
-                <Original>Right Exterior Seat 2</Original>
-                <English>Right Exterior Seat 2</English>
-                <German>Rechter Aussensitz 2</German>
-                <French>Siege exterieur droit 2</French>
-                <Spanish>Asiento exterior derecho 2</Spanish>
-                <Italian>Sedile esterno destro 2</Italian>
-                <Polish>Prawe zewnetrzne siedzenie 2</Polish>
-                <Portuguese>Assento externo direito 2</Portuguese>
-                <Russian>Правое внешнее сиденье 2</Russian>
-                <Czech>Prave vnejsi sedadlo 2</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_11">
-                <Original>Top Right Exterior Seat 1</Original>
-                <English>Top Right Exterior Seat 1</English>
-                <German>Oberer rechter Aussensitz 1</German>
-                <French>Siege exterieur superieur droit 1</French>
-                <Spanish>Asiento exterior superior derecho 1</Spanish>
-                <Italian>Sedile esterno superiore destro 1</Italian>
-                <Polish>Prawe gorne zewnetrzne siedzenie 1</Polish>
-                <Portuguese>Assento externo superior direito 1</Portuguese>
-                <Russian>Верхнее правое внешнее сиденье 1</Russian>
-                <Czech>Horni prave vnejsi sedadlo 1</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_12">
-                <Original>Top Right Exterior Seat 2</Original>
-                <English>Top Right Exterior Seat 2</English>
-                <German>Oberer rechter Aussensitz 2</German>
-                <French>Siege exterieur superieur droit 2</French>
-                <Spanish>Asiento exterior superior derecho 2</Spanish>
-                <Italian>Sedile esterno superiore destro 2</Italian>
-                <Polish>Prawe gorne zewnetrzne siedzenie 2</Polish>
-                <Portuguese>Assento externo superior direito 2</Portuguese>
-                <Russian>Верхнее правое внешнее сиденье 2</Russian>
-                <Czech>Horni prave vnejsi sedadlo 2</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_13">
-                <Original>Top Right Exterior Seat 3</Original>
-                <English>Top Right Exterior Seat 3</English>
-                <German>Oberer rechter Aussensitz 3</German>
-                <French>Siege exterieur superieur droit 3</French>
-                <Spanish>Asiento exterior superior derecho 3</Spanish>
-                <Italian>Sedile esterno superiore destro 3</Italian>
-                <Polish>Prawe gorne zewnetrzne siedzenie 3</Polish>
-                <Portuguese>Assento externo superior direito 3</Portuguese>
-                <Russian>Верхнее правое внешнее сиденье 3</Russian>
-                <Czech>Horni prave vnejsi sedadlo 3</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_14">
-                <Original>Top Right Exterior Seat 4</Original>
-                <English>Top Right Exterior Seat 4</English>
-                <German>Oberer rechter Aussensitz 4</German>
-                <French>Siege exterieur superieur droit 4</French>
-                <Spanish>Asiento exterior superior derecho 4</Spanish>
-                <Italian>Sedile esterno superiore destro 4</Italian>
-                <Polish>Prawe gorne zewnetrzne siedzenie 4</Polish>
-                <Portuguese>Assento externo superior direito 4</Portuguese>
-                <Russian>Верхнее правое внешнее сиденье 4</Russian>
-                <Czech>Horni prave vnejsi sedadlo 4</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_15">
                 <Original>Top Left Exterior Seat 1</Original>
                 <English>Top Left Exterior Seat 1</English>
                 <German>Oberer linker Aussensitz 1</German>
@@ -595,6 +535,66 @@
                 <Portuguese>Assento externo superior esquerdo 1</Portuguese>
                 <Russian>Верхнее левое внешнее сиденье 1</Russian>
                 <Czech>Horni leve vnejsi sedadlo 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_11">
+                <Original>Top Left Exterior Seat 2</Original>
+                <English>Top Left Exterior Seat 2</English>
+                <German>Oberer linker Aussensitz 2</German>
+                <French>Siege exterieur superieur gauche 2</French>
+                <Spanish>Asiento exterior superior izquierdo 2</Spanish>
+                <Italian>Sedile esterno superiore sinistro 2</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 2</Polish>
+                <Portuguese>Assento externo superior esquerdo 2</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 2</Russian>
+                <Czech>Horni leve vnejsi sedadlo 2</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_12">
+                <Original>Top Left Exterior Seat 3</Original>
+                <English>Top Left Exterior Seat 3</English>
+                <German>Oberer linker Aussensitz 3</German>
+                <French>Siege exterieur superieur gauche 3</French>
+                <Spanish>Asiento exterior superior izquierdo 3</Spanish>
+                <Italian>Sedile esterno superiore sinistro 3</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 3</Polish>
+                <Portuguese>Assento externo superior esquerdo 3</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 3</Russian>
+                <Czech>Horni leve vnejsi sedadlo 3</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_13">
+                <Original>Top Left Exterior Seat 4</Original>
+                <English>Top Left Exterior Seat 4</English>
+                <German>Oberer linker Aussensitz 4</German>
+                <French>Siege exterieur superieur gauche 4</French>
+                <Spanish>Asiento exterior superior izquierdo 4</Spanish>
+                <Italian>Sedile esterno superiore sinistro 4</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 4</Polish>
+                <Portuguese>Assento externo superior esquerdo 4</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 4</Russian>
+                <Czech>Horni leve vnejsi sedadlo 4</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_14">
+                <Original>Lower Left Exterior Seat 1</Original>
+                <English>Lower Left Exterior Seat 1</English>
+                <German>Unterer linker Aussensitz 1</German>
+                <French>Siege exterieur inferieur gauche 1</French>
+                <Spanish>Asiento exterior inferior izquierdo 1</Spanish>
+                <Italian>Sedile esterno inferiore sinistro 1</Italian>
+                <Polish>Lewe dolne zewnetrzne siedzenie 1</Polish>
+                <Portuguese>Assento externo inferior esquerdo 1</Portuguese>
+                <Russian>Нижнее левое внешнее сиденье 1</Russian>
+                <Czech>Spodni leve vnejsi sedadlo 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_15">
+                <Original>Lower Left Exterior Seat 2</Original>
+                <English>Lower Left Exterior Seat 2</English>
+                <German>Unterer linker Aussensitz 2</German>
+                <French>Siege exterieur inferieur gauche 2</French>
+                <Spanish>Asiento exterior inferior izquierdo 2</Spanish>
+                <Italian>Sedile esterno inferiore sinistro 2</Italian>
+                <Polish>Lewe dolne zewnetrzne siedzenie 2</Polish>
+                <Portuguese>Assento externo inferior esquerdo 2</Portuguese>
+                <Russian>Нижнее левое внешнее сиденье 2</Russian>
+                <Czech>Spodni leve vnejsi sedadlo 2</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_16">
                 <Original>Top Left Exterior Seat 2</Original>
@@ -643,6 +643,18 @@
                 <Portuguese>Assento externo superior traseiro</Portuguese>
                 <Russian>Верхнее заднее внешнее сиденье</Russian>
                 <Czech>Horni zadni vnejsi sedadlo</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_20">
+                <Original>Infantry Commander Seat</Original>
+                <English>Infantry Commander Seat</English>
+                <German>Infanteriekommandantensitz</German>
+                <French>Siege commandant d'infanterie</French>
+                <Spanish>Asiento de comandante de infanteria</Spanish>
+                <Italian>Sedile comandante di fanteria</Italian>
+                <Polish>Siedzenie dowodcy piechoty</Polish>
+                <Portuguese>Assento do comandante de infantaria</Portuguese>
+                <Russian>Сиденье командира пехоты</Russian>
+                <Czech>Sedadlo velitele pechoty</Czech>
             </Key>
         </Container>
     </Package>

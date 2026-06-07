@@ -6,6 +6,7 @@ class CfgPatches
 		{
 			"FST_Common",
 			"FST_Core",
+			"FST_Vehicles_Weapons",
 			"A3_Armor_F_Gamma"
 		};
 		requiredVersion=0.1;
@@ -62,6 +63,7 @@ class CfgVehicles
 		class ViewPilot;
 		class ViewOptics;
 		class ViewCargo;
+		class ACE_SelfActions;
 		class HeadLimits;
 		class HitPoints: HitPoints
 		{
@@ -725,8 +727,11 @@ class CfgVehicles
 		hideWeaponsCargo=1;
 		weapons[]=
 		{
+			"FST_Horn_RepulsorPulse",
 			"SmokeLauncher"
 		};
+		memoryPointGun="Smoke_Launcher_POS";
+		memoryPointGunDir="Smoke_Launcher_Dir";
 		magazines[]=
 		{
 			"SmokeLauncherMag",
@@ -810,6 +815,48 @@ class CfgVehicles
 		};
 		insideSoundCoef=0.89999998;
 		threat[]={0.80000001,1,0.30000001};
+		TFAR_hasIntercom=1;
+		TFAR_defaultIntercomSlot=-1;
+		class ACE_SelfActions: ACE_SelfActions
+		{
+			class TFAR_IntercomChannel
+			{
+				displayName="$STR_tfar_core_Intercom_ACESelfAction_Name";
+				condition="true";
+				statement="";
+				icon="";
+				class TFAR_IntercomChannel_disabled
+				{
+					displayName="Disabled";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 0";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];";
+				};
+				class TFAR_IntercomChannel_Crew
+				{
+					displayName="Crew";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != -1";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];";
+				};
+				class TFAR_IntercomChannel_Command
+				{
+					displayName="Command";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 1";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];";
+				};
+				class TFAR_IntercomChannel_Passengers
+				{
+					displayName="Passengers";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 2";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];";
+				};
+				class TFAR_IntercomChannel_Misc
+				{
+					displayName="Misc";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 3";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],3,true];";
+				};
+			};
+		};
 		class RenderTargets
 		{
 			class commander_display
@@ -853,10 +900,22 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
+				primaryGunner=1;
+				commanding=1;
+				proxyIndex=2;
 				class Turrets: Turrets
 				{
 					class CommanderOptics: CommanderOptics
 					{
+						primaryObserver=1;
+						commanding=2;
+						proxyIndex=3;
+						body="CommanderTurret";
+						gun="Yaw_CommanderTurret";
+						animationSourceBody="CommanderTurret";
+						animationSourceGun="Yaw_CommanderTurret";
+						AnimationSourceHatch="main_hatch_rotate";
+						enabledByAnimationSource="main_hatch_rotate";
 						memoryPointGunnerOutOptics="commanderview";
 						memoryPointGunnerOptics="commanderview";
 						minElev=-25;
@@ -869,6 +928,8 @@ class CfgVehicles
 						{
 							"SmokeLauncher"
 						};
+						memoryPointGun="Smoke_Launcher_POS";
+						memoryPointGunDir="Smoke_Launcher_Dir";
 						magazines[]=
 						{
 							"SmokeLauncherMag"
@@ -907,6 +968,7 @@ class CfgVehicles
 						viewGunnerShadowAmb=0.5;
 						viewGunnerShadowDiff=0.050000001;
 						isPersonTurret=1;
+						forceHideGunner=0;
 						personTurretAction="vehicle_turnout_2";
 						minOutElev=-10;
 						maxOutElev=25;
@@ -1002,10 +1064,16 @@ class CfgVehicles
 				viewGunnerShadowDiff=0.050000001;
 				memoryPointGun[]=
 				{
-					"usti hlavne3"
+					"z_gunL_Muzzle",
+					"z_gunR_Muzzle"
 				};
-				gunBeg="Usti hlavne";
-				gunEnd="Konec hlavne";
+				memoryPointLRocket="MissilesL_Start";
+				memoryPointRRocket="MissilesR_Start";
+				memoryPointLMissile="MissilesL_Start";
+				memoryPointRMissile="MissilesR_Start";
+				minTurn=-20;
+				maxTurn=20;
+				initTurn=0;
 				gunnerAction="mbt1_slot2_out";
 				gunnerInAction="Gunner_MBT_01_cannon_F_in";
 				gunnerGetInAction="GetInLow";
@@ -1026,43 +1094,27 @@ class CfgVehicles
 				};
 				weapons[]=
 				{
-					"cannon_120mm",
-					"LMG_coax"
+					"FST_Vehicle_Cannon_30mm",
+					"FST_Vehicle_Launcher_Concussion"
 				};
 				magazines[]=
 				{
-					"24Rnd_120mm_APFSDS_shells_Tracer_Red",
-					"12Rnd_120mm_HE_shells_Tracer_Red",
-					"12Rnd_120mm_HEAT_MP_T_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red",
-					"200Rnd_762x51_Belt_Red"
+					"FST_Vehicle_Mag_140Rnd_30mm_MP",
+					"FST_Vehicle_Mag_140Rnd_30mm_MP",
+					"FST_Vehicle_Mag_140Rnd_30mm_MP",
+					"FST_Vehicle_Mag_140Rnd_30mm_MP",
+					"FST_Vehicle_Mag_60Rnd_30mm_APFSDS",
+					"FST_Vehicle_Mag_60Rnd_30mm_APFSDS",
+					"FST_Vehicle_Mag_4Rnd_Concussion"
 				};
 				forceHideGunner=0;
 				outGunnerMayFire=1;
 				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600,2700,2800,2900,3000,3100,3200,3300,3400,3500,3600,3700,3800,3900,4000};
 				discreteDistanceInitIndex=5;
 				memoryPointGunnerOptics="gunnerview";
-				minElev=-7;
-				maxElev=20;
-				initElev=10;
+				minElev=-10;
+				maxElev=35;
+				initElev=0;
 				gunnerOutOpticsModel="";
 				gunnerOutOpticsEffect[]={};
 				gunnerOpticsEffect[]={};
@@ -1215,6 +1267,16 @@ class CfgVehicles
 				proxyIndex = 19;
 				playerPosition = 13;
 			};
+			class CargoTurret_20: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_20";
+				proxyIndex = 20;
+				playerPosition = 14;
+				weapons[]= {"SmokeLauncher"};
+				memoryPointGun="Smoke_Launcher_POS";
+				memoryPointGunDir="Smoke_Launcher_Dir";
+				magazines[]= {"SmokeLauncherMag"};
+			};
 		};
 		class Damage
 		{
@@ -1239,6 +1301,16 @@ class CfgVehicles
 				weapon="LMG_M200";
 			};
 			class recoil_source
+			{
+				source="reload";
+				weapon="cannon_120mm";
+			};
+			class LeftMainGun_Recoil_source
+			{
+				source="reload";
+				weapon="cannon_120mm";
+			};
+			class RightMainGun_Recoil_source
 			{
 				source="reload";
 				weapon="cannon_120mm";
@@ -1307,7 +1379,7 @@ class CfgVehicles
 	{
 		class EventHandlers: DefaultEventHandlers
 		{
-			init="params ['_veh']; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];};";
+			init="params ['_veh']; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _missileActive = !isNull _gunner && {currentWeapon _gunner isEqualTo 'FST_Vehicle_Launcher_Concussion'}; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};};";
 		};
 		class SimpleObject
 		{
@@ -1988,6 +2060,12 @@ class CfgVehicles
 			{
 				source="user";
 				animPeriod=1;
+				initPhase=0;
+			};
+			class MissilePods
+			{
+				source="user";
+				animPeriod=0.2;
 				initPhase=0;
 			};
 		};
