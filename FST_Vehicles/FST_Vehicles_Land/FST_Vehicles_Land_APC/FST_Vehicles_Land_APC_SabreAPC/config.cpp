@@ -626,9 +626,10 @@ class CfgVehicles
 		editorcategory="FST_Catagory_Vehicles_Land";
 		editorSubcategory="FST_Catagory_Vehicles_Land_APC";
 		scope=0;
+		memoryPointDriverOptics[]={"driverview"};
 		driverOpticsModel="\A3\weapons_f\reticle\optics_empty";
 		driverForceOptics=0;
-		driverInfoPanelCameraPos="driverview_old";
+		driverInfoPanelCameraPos="driverview";
 		driverLeftHandAnimName="drivewheel";
 		driverRightHandAnimName="drivewheel";
 		driverLeftLegAnimName="pedal_brake";
@@ -636,8 +637,11 @@ class CfgVehicles
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
 		transportSoldier=6;
-		memoryPointsGetInDriver="MainHatch";
-		memoryPointsGetInDriverDir="PIP0_dir";
+		cargoProxyIndexes[]={4,5,6,7,8,9};
+		memoryPointsGetInDriver="pos driver";
+		memoryPointsGetInDriverDir="pos driver dir";
+		memoryPointsGetInCargo="pos driver";
+		memoryPointsGetInCargoDir="pos driver dir";
 		getInAction="GetInLow";
 		getOutAction="GetOutLow";
 		cargoGetInAction[]=
@@ -667,6 +671,7 @@ class CfgVehicles
 		driverInAction="Driver_MBT_03_cannon_F_in";
 		extCameraPosition[]={0,3,-9};
 		forceHideDriver=1;
+		forceHideCargo=0;
 		viewDriverInExternal=1;
 		class ViewOptics: ViewOptics
 		{
@@ -1300,6 +1305,10 @@ class CfgVehicles
 	};
 	class FST_Vehicle_Land_SabreAPC: FST_Vehicle_Land_SabreAPC_base_F
 	{
+		class EventHandlers: DefaultEventHandlers
+		{
+			init="params ['_veh']; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];};";
+		};
 		class SimpleObject
 		{
 			eden=1;

@@ -161,7 +161,7 @@ class Extended_HitPart_EventHandlers
 class CfgCloudlets
 {
 	class Default;
-	class ExhaustSmoke: Default;
+	class ExhaustSmoke: Default{};
 
 	class FST_Exhaust_IonBlue_Small: ExhaustSmoke
 	{
@@ -173,7 +173,6 @@ class CfgCloudlets
 		color[] = {{0.3,0.6,1,0.5},{0.35,0.7,1,0.28},{0.45,0.8,1,0.04}};
 		rubbing = 0.06;
 	};
-
 	class FST_Exhaust_IonBlue_Large: ExhaustSmoke
 	{
 		interval = 0.013;
@@ -184,7 +183,6 @@ class CfgCloudlets
 		color[] = {{0.22,0.52,1,0.6},{0.3,0.68,1,0.35},{0.45,0.82,1,0.06}};
 		rubbing = 0.05;
 	};
-
 	class FST_Exhaust_IonWhiteHot: ExhaustSmoke
 	{
 		interval = 0.015;
@@ -195,7 +193,6 @@ class CfgCloudlets
 		color[] = {{1,0.98,0.9,0.62},{0.75,0.9,1,0.26},{0.6,0.85,1,0.02}};
 		rubbing = 0.045;
 	};
-
 	class FST_Exhaust_CISRed_Small: ExhaustSmoke
 	{
 		interval = 0.02;
@@ -206,7 +203,6 @@ class CfgCloudlets
 		color[] = {{1,0.28,0.22,0.48},{1,0.42,0.3,0.25},{1,0.5,0.35,0.03}};
 		rubbing = 0.06;
 	};
-
 	class FST_Exhaust_RepulsorDust_Blue: ExhaustSmoke
 	{
 		interval = 0.02;
@@ -217,7 +213,6 @@ class CfgCloudlets
 		color[] = {{0.5,0.57,0.68,0.32},{0.55,0.62,0.74,0.2},{0.65,0.72,0.82,0}};
 		rubbing = 0.14;
 	};
-
 	class FST_Exhaust_TurbineHeat_HighFlow: ExhaustSmoke
 	{
 		interval = 0.01;
@@ -228,7 +223,6 @@ class CfgCloudlets
 		color[] = {{0.9,0.95,1,0.26},{0.8,0.9,1,0.11},{0.75,0.86,1,0.01}};
 		rubbing = 0.03;
 	};
-
 	class FST_Exhaust_HeavyBlack_Soot: ExhaustSmoke
 	{
 		interval = 0.025;
@@ -238,8 +232,7 @@ class CfgCloudlets
 		MoveVelocityVar[] = {0.35,0.2,0.35};
 		color[] = {{0.08,0.08,0.08,0.64},{0.13,0.13,0.13,0.44},{0.2,0.2,0.2,0.08}};
 		rubbing = 0.09;
-	};
-
+	};	
 	class FST_Exhaust_DamagedEngine_Sputter: ExhaustSmoke
 	{
 		interval = 0.045;
