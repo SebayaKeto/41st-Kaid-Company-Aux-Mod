@@ -915,7 +915,6 @@ class CfgVehicles
 						animationSourceBody="CommanderTurret";
 						animationSourceGun="Yaw_CommanderTurret";
 						AnimationSourceHatch="main_hatch_rotate";
-						enabledByAnimationSource="main_hatch_rotate";
 						memoryPointGunnerOutOptics="commanderview";
 						memoryPointGunnerOptics="commanderview";
 						minElev=-25;
