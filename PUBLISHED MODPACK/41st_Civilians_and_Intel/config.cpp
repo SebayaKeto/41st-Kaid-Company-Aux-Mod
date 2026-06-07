@@ -207,13 +207,77 @@ class CfgPatches
 			"FST_CivHoloprojectorW_Sport",
 			"FST_CivHoloprojectorW_Video",
 			"FST_CivHoloprojectorW_Weird",
+			"FST_BountyDiskW_Normal",
+			"FST_BountyDiskW_Abnormal",
+			"FST_BountyDiskW_Addict",
+			"FST_BountyDiskW_Catboy",
+			"FST_BountyDiskW_CEO",
+			"FST_BountyDiskW_Child",
+			"FST_BountyDiskW_Done",
+			"FST_BountyDiskW_Droid",
+			"FST_BountyDiskW_Gamble",
+			"FST_BountyDiskW_Jedi",
+			"FST_BountyDiskW_Jump",
+			"FST_BountyDiskW_Leader",
+			"FST_BountyDiskW_Murder",
+			"FST_BountyDiskW_Mystery",
+			"FST_BountyDiskW_Politic",
+			"FST_BountyDiskW_Revenge",
+			"FST_BountyDiskW_Smug",
+			"FST_BountyDiskW_Stalk",
+			"FST_BountyDiskW_Thief",
+			"FST_BountyDiskW_Traitor",
+			"FST_TrackingFobW_Normal",
+			"FST_TrackingFobW_Abnormal",
+			"FST_TrackingFobW_Bothan",
+			"FST_TrackingFobW_Broken",
+			"FST_TrackingFobW_Capital",
+			"FST_TrackingFobW_Cardinal",
+			"FST_TrackingFobW_Cargo",
+			"FST_TrackingFobW_Chandrila",
+			"FST_TrackingFobW_Core",
+			"FST_TrackingFobW_Here",
+			"FST_TrackingFobW_Huh",
+			"FST_TrackingFobW_Inner",
+			"FST_TrackingFobW_Items",
+			"FST_TrackingFobW_Ithor",
+			"FST_TrackingFobW_Orbit",
+			"FST_TrackingFobW_Partner",
+			"FST_TrackingFobW_Pet",
+			"FST_TrackingFobW_Planet",
+			"FST_TrackingFobW_Range",
+			"FST_TrackingFobW_Rodia",
+			"FST_TrackingFobW_Sector",
+			"FST_TrackingFobW_Shaddaa",
+			"FST_TrackingFobW_Ship",
+			"FST_TrackingFobW_Spine",
+			"FST_TrackingFobW_Tatooine",
+			"FST_TrackingFobW_Wookiee",
+			"FST_HoloCommW_Normal",
+			"FST_HoloCommW_Abnormal",
+			"FST_HandCommW_Normal",
+			"FST_HandCommW_Abnormal",
+			"FST_FlatCommW_Normal",
+			"FST_FlatCommW_Abnormal",
 			"FST_CreditCaseW_Low",
 			"FST_CreditCaseW_Med",
 			"FST_CreditCaseW_High",
 			"FST_CreditCaseW_Rare",
 			"FST_CreditCaseW_Lock",
 			"FST_CreditCaseW_Chip",
-			"FST_CreditChipW"
+			"FST_CreditChipW",
+			"FST_SmallToolkitW",
+			"FST_LargeToolkitW",
+			"FST_BreathingGasW_Ammonia",
+			"FST_BreathingGasW_Chlorine",
+			"FST_BreathingGasW_Corrosive",
+			"FST_BreathingGasW_Dioxide",
+			"FST_BreathingGasW_Flammable",
+			"FST_BreathingGasW_Noble",
+			"FST_BreathingGasW_Oxygen",
+			"FST_BreathingGasW_Ozone",
+			"FST_BreathingGasW_Phosphine",
+			"FST_BreathingGasW_Sulfur"
 
 		};
 		weapons[]=
@@ -472,6 +536,8 @@ class CfgPatches
 			"FST_CreditCase_Lock",
 			"FST_CreditCase_Chip",
 			"FST_CreditChip",
+			"FST_SmallToolkit",
+			"FST_LargeToolkit",
 			"FST_BreathingGas_Ammonia",
 			"FST_BreathingGas_Chlorine",
 			"FST_BreathingGas_Corrosive",
@@ -500,7 +566,7 @@ class CfgEditorCategories
 {
 	class FST_Intel_Catagory
 	{
-		displayname="[41st] Intel Items";
+		displayname="[41st] Inventory Items";
 		priority=8;
 		side=7;
 	};
@@ -526,6 +592,10 @@ class CfgEditorSubcategories
 	class FST_IntelItems
 	{
 		displayName = "Intel Items"; 
+	};
+	class FST_MiscItems
+	{
+		displayName = "Other Items"; 
 	};
 };
 class CfgFunctions
@@ -5870,6 +5940,890 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_BountyDiskW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Normal
+			{
+				count=1;
+				name= "FST_BountyDisk_Normal";
+			};
+		};
+	};
+	class FST_BountyDiskW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Abnormal
+			{
+				count=1;
+				name="FST_BountyDisk_Abnormal";
+			};
+		};
+	};
+	class FST_BountyDiskW_Catboy: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Tooka)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Catboy
+			{
+				count=1;
+				name= "FST_BountyDisk_Catboy";
+			};
+		};
+	};
+	class FST_BountyDiskW_Smug: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Smuggler)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Smug
+			{
+				count=1;
+				name="FST_BountyDisk_Smug";
+			};
+		};
+	};
+	class FST_BountyDiskW_Thief: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Thief)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Thief
+			{
+				count=1;
+				name= "FST_BountyDisk_Thief";
+			};
+		};
+	};
+	class FST_BountyDiskW_Gamble: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Gambler)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Gamble
+			{
+				count=1;
+				name="FST_BountyDisk_Gamble";
+			};
+		};
+	};
+	class FST_BountyDiskW_Jedi: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Jedi)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Jedi
+			{
+				count=1;
+				name= "FST_BountyDisk_Jedi";
+			};
+		};
+	};
+	class FST_BountyDiskW_CEO: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (CEO)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_CEO
+			{
+				count=1;
+				name="FST_BountyDisk_CEO";
+			};
+		};
+	};
+	class FST_BountyDiskW_Murder: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Murderer)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Murder
+			{
+				count=1;
+				name= "FST_BountyDisk_Murder";
+			};
+		};
+	};
+	class FST_BountyDiskW_Addict: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Spice Addict)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Addict
+			{
+				count=1;
+				name="FST_BountyDisk_Addict";
+			};
+		};
+	};
+	class FST_BountyDiskW_Stalk: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Celebrity)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Stalk
+			{
+				count=1;
+				name= "FST_BountyDisk_Stalk";
+			};
+		};
+	};
+	class FST_BountyDiskW_Mystery: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Unknown Person)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Mystery
+			{
+				count=1;
+				name="FST_BountyDisk_Mystery";
+			};
+		};
+	};
+	class FST_BountyDiskW_Revenge: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Revenge)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Revenge
+			{
+				count=1;
+				name= "FST_BountyDisk_Revenge";
+			};
+		};
+	};
+	class FST_BountyDiskW_Traitor: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Traitor)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Traitor
+			{
+				count=1;
+				name="FST_BountyDisk_Traitor";
+			};
+		};
+	};
+	class FST_BountyDiskW_Done: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Completed)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Done
+			{
+				count=1;
+				name= "FST_BountyDisk_Done";
+			};
+		};
+	};
+	class FST_BountyDiskW_Leader: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Criminal Leader)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Leader
+			{
+				count=1;
+				name="FST_BountyDisk_Leader";
+			};
+		};
+	};
+	class FST_BountyDiskW_Politic: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Politician)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Politic
+			{
+				count=1;
+				name= "FST_BountyDisk_Politic";
+			};
+		};
+	};
+	class FST_BountyDiskW_Jump: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Bail Jumper)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Jump
+			{
+				count=1;
+				name="FST_BountyDisk_Jump";
+			};
+		};
+	};
+	class FST_BountyDiskW_Child: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Heir)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Child
+			{
+				count=1;
+				name= "FST_BountyDisk_Child";
+			};
+		};
+	};
+	class FST_BountyDiskW_Droid: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Bounty Puck (Droid)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_BountyDisk_Droid
+			{
+				count=1;
+				name="FST_BountyDisk_Droid";
+			};
+		};
+	};
+	class FST_TrackingFobW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Normal
+			{
+				count=1;
+				name= "FST_TrackingFob_Normal";
+			};
+		};
+	};
+	class FST_TrackingFobW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Abnormal
+			{
+				count=1;
+				name="FST_TrackingFob_Abnormal";
+			};
+		};
+	};
+	class FST_TrackingFobW_Cardinal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Cardinal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Cardinal
+			{
+				count=1;
+				name= "FST_TrackingFob_Cardinal";
+			};
+		};
+	};
+	class FST_TrackingFobW_Cargo: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Hydian Way)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Cargo
+			{
+				count=1;
+				name="FST_TrackingFob_Cargo";
+			};
+		};
+	};
+	class FST_TrackingFobW_Capital: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Coruscant)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Capital
+			{
+				count=1;
+				name= "FST_TrackingFob_Capital";
+			};
+		};
+	};
+	class FST_TrackingFobW_Ship: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Personal Ship)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Ship
+			{
+				count=1;
+				name="FST_TrackingFob_Ship";
+			};
+		};
+	};
+	class FST_TrackingFobW_Pet: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Pet)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Pet
+			{
+				count=1;
+				name= "FST_TrackingFob_Pet";
+			};
+		};
+	};
+	class FST_TrackingFobW_Bothan: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Bothan Space)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Bothan
+			{
+				count=1;
+				name="FST_TrackingFob_Bothan";
+			};
+		};
+	};
+	class FST_TrackingFobW_Shaddaa: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Nar Shaddaa)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Shaddaa
+			{
+				count=1;
+				name= "FST_TrackingFob_Shaddaa";
+			};
+		};
+	};
+	class FST_TrackingFobW_Broken: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Broken)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Broken
+			{
+				count=1;
+				name="FST_TrackingFob_Broken";
+			};
+		};
+	};
+	class FST_TrackingFobW_Range: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Out Of Range)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Range
+			{
+				count=1;
+				name= "FST_TrackingFob_Range";
+			};
+		};
+	};
+	class FST_TrackingFobW_Inner: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Inner Rim)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Inner
+			{
+				count=1;
+				name="FST_TrackingFob_Inner";
+			};
+		};
+	};
+	class FST_TrackingFobW_Planet: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (On Planet)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Planet
+			{
+				count=1;
+				name= "FST_TrackingFob_Planet";
+			};
+		};
+	};
+	class FST_TrackingFobW_Partner: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Partner Tracker)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Partner
+			{
+				count=1;
+				name="FST_TrackingFob_Partner";
+			};
+		};
+	};
+	class FST_TrackingFobW_Spine: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Correlian Trade Spine)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Spine
+			{
+				count=1;
+				name= "FST_TrackingFob_Spine";
+			};
+		};
+	};
+	class FST_TrackingFobW_Rodia: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Rodia Space)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Rodia
+			{
+				count=1;
+				name="FST_TrackingFob_Rodia";
+			};
+		};
+	};
+	class FST_TrackingFobW_Items: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Personal Items)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Items
+			{
+				count=1;
+				name= "FST_TrackingFob_Items";
+			};
+		};
+	};
+	class FST_TrackingFobW_Ithor: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Ithor Space)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Ithor
+			{
+				count=1;
+				name="FST_TrackingFob_Ithor";
+			};
+		};
+	};
+	class FST_TrackingFobW_Tatooine: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Tatooine)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Tatooine
+			{
+				count=1;
+				name= "FST_TrackingFob_Tatooine";
+			};
+		};
+	};
+	class FST_TrackingFobW_Core: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Core Worlds)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Core
+			{
+				count=1;
+				name="FST_TrackingFob_Core";
+			};
+		};
+	};
+	class FST_TrackingFobW_Wookiee: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Kashyyyk)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Wookiee
+			{
+				count=1;
+				name= "FST_TrackingFob_Wookiee";
+			};
+		};
+	};
+	class FST_TrackingFobW_Huh: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Unknown Location)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Huh
+			{
+				count=1;
+				name="FST_TrackingFob_Huh";
+			};
+		};
+	};
+	class FST_TrackingFobW_Sector: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Corperate Sector)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Sector
+			{
+				count=1;
+				name= "FST_TrackingFob_Sector";
+			};
+		};
+	};
+	class FST_TrackingFobW_Orbit: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (In Orbit)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Orbit
+			{
+				count=1;
+				name="FST_TrackingFob_Orbit";
+			};
+		};
+	};
+	class FST_TrackingFobW_Chandrila: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Chandrila)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Chandrila
+			{
+				count=1;
+				name= "FST_TrackingFob_Chandrila";
+			};
+		};
+	};
+	class FST_TrackingFobW_Here: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Tracking Fob (Unused Tracker)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_TrackingFob_Here
+			{
+				count=1;
+				name="FST_TrackingFob_Here";
+			};
+		};
+	};
+	class FST_HoloCommW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holocommunicator (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_HoloComm_Normal
+			{
+				count=1;
+				name= "FST_HoloComm_Normal";
+			};
+		};
+	};
+	class FST_HoloCommW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Holocommunicator (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_HoloComm_Abnormal
+			{
+				count=1;
+				name="FST_HoloComm_Abnormal";
+			};
+		};
+	};
+	class FST_HandCommW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Handheld Communicator (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_HandComm_Normal
+			{
+				count=1;
+				name= "FST_HandComm_Normal";
+			};
+		};
+	};
+	class FST_HandCommW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Handheld Communicator (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_HandComm_Abnormal
+			{
+				count=1;
+				name="FST_HandComm_Abnormal";
+			};
+		};
+	};
+	class FST_FlatCommW_Normal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Handheld Communicator (Normal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_FlatComm_Normal
+			{
+				count=1;
+				name= "FST_FlatComm_Normal";
+			};
+		};
+	};
+	class FST_FlatCommW_Abnormal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Handheld Communicator (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_FlatComm_Abnormal
+			{
+				count=1;
+				name="FST_FlatComm_Abnormal";
+			};
+		};
+	};
 	class FST_CreditCaseW_Low: Weapon_Base_F
 	{
 		author="Tooka";
@@ -5877,7 +6831,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditCase_Low
@@ -5894,7 +6848,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditCase_Med
@@ -5911,7 +6865,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditCase_High
@@ -5928,7 +6882,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditCase_Rare
@@ -5945,7 +6899,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditCase_Lock
@@ -5962,7 +6916,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditCase_Chip
@@ -5979,13 +6933,217 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_IntelItems";
+		editorSubcategory="FST_MiscItems";
 		class TransportItems
 		{
 			class FST_CreditChip
 			{
 				count=1;
 				name="FST_CreditChip";
+			};
+		};
+	};
+	class FST_SmallToolkitW: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Small Toolkit";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_SmallToolkit
+			{
+				count=1;
+				name="FST_SmallToolkit";
+			};
+		};
+	};
+	class FST_LargeToolkitW: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Toolbox";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_LargeToolkit
+			{
+				count=1;
+				name="FST_LargeToolkit";
+			};
+		};
+	};
+	class FST_BreathingGasW_Ammonia: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Ammonia Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Ammonia
+			{
+				count=1;
+				name="FST_BreathingGas_Ammonia";
+			};
+		};
+	};
+	class FST_BreathingGasW_Chlorine: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Chlorine Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Chlorine
+			{
+				count=1;
+				name="FST_BreathingGas_Chlorine";
+			};
+		};
+	};
+	class FST_BreathingGasW_Corrosive: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Fluoride Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Corrosive
+			{
+				count=1;
+				name="FST_BreathingGas_Corrosive";
+			};
+		};
+	};
+	class FST_BreathingGasW_Dioxide: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Carbon Dioxide Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Dioxide
+			{
+				count=1;
+				name="FST_BreathingGas_Dioxide";
+			};
+		};
+	};
+	class FST_BreathingGasW_Flammable: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Methane Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Flammable
+			{
+				count=1;
+				name="FST_BreathingGas_Flammable";
+			};
+		};
+	};
+	class FST_BreathingGasW_Noble: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Noble Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Noble
+			{
+				count=1;
+				name="FST_BreathingGas_Noble";
+			};
+		};
+	};
+	class FST_BreathingGasW_Oxygen: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Oxygen Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Oxygen
+			{
+				count=1;
+				name="FST_BreathingGas_Oxygen";
+			};
+		};
+	};
+	class FST_BreathingGasW_Ozone: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Ozone Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Ozone
+			{
+				count=1;
+				name="FST_BreathingGas_Ozone";
+			};
+		};
+	};
+	class FST_BreathingGasW_Phosphine: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Phosphine Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Phosphine
+			{
+				count=1;
+				name="FST_BreathingGas_Phosphine";
+			};
+		};
+	};
+	class FST_BreathingGasW_Sulfur: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Compressed Sulfiric Breathing Gas";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BreathingGas_Sulfur
+			{
+				count=1;
+				name="FST_BreathingGas_Sulfur";
 			};
 		};
 	};
