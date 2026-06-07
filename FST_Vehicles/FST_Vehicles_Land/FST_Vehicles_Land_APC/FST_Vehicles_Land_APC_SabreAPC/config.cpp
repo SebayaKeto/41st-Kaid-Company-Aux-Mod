@@ -4,6 +4,7 @@ class CfgPatches
 	{
 		requiredAddons[]=
 		{
+			"FST_Common",
 			"FST_Core",
 			"A3_Armor_F_Gamma"
 		};
@@ -56,6 +57,7 @@ class CfgVehicles
 				};
 			};
 		};
+		class CargoTurret;
 		class AnimationSources;
 		class ViewPilot;
 		class ViewOptics;
@@ -77,8 +79,12 @@ class CfgVehicles
 	};
 	class FST_Vehicle_Land_Base: Tank_F
 	{
+		//3AS Declerations
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0,-4,-4]]], [0.1], [-0.5]]";
+		//Regular Configurations
 		author="Maldova";
-		mapSize=8.751;
+		mapSize=25.0001;
 		simulation="tankX";
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
@@ -181,6 +187,309 @@ class CfgVehicles
 		accelAidForceCoef=1;
 		accelAidForceYOffset=-2;
 		accelAidForceSpd=1.6;
+		class Sounds
+		{
+			class Idle_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1,1,480};
+				frequency = "0.95 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
+				volume = "engineOn*camPos*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
+			};
+			class Engine
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.1,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
+				volume = "engineOn*camPos*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
+			};
+			class Engine1_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.4,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
+				volume = "engineOn*camPos*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
+			};
+			class Engine2_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
+				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
+			};
+			class Engine3_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
+				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
+			};
+			class Engine4_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
+				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
+			};
+			class Engine5_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
+				volume = "engineOn*camPos*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
+			};
+			class IdleThrust
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",2.8,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
+			};
+			class EngineThrust
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
+			};
+			class Engine1_Thrust_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
+			};
+			class Engine2_Thrust_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
+			};
+			class Engine3_Thrust_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
+			};
+			class Engine4_Thrust_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
+			};
+			class Engine5_Thrust_ext
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idle.ogg",1.5,1,550};
+				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
+				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
+			};
+			class Idle_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1.5,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
+				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
+			};
+			class Engine_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
+				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
+			};
+			class Engine1_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
+				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
+			};
+			class Engine2_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
+				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
+			};
+			class Engine3_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
+				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
+			};
+			class Engine4_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1.1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
+				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
+			};
+			class Engine5_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1.25,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
+				volume = "engineOn*(1-camPos)*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
+			};
+			class IdleThrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1.25,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
+			};
+			class EngineThrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
+			};
+			class Engine1_Thrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
+			};
+			class Engine2_Thrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",1,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
+			};
+			class Engine3_Thrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",2,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
+			};
+			class Engine4_Thrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",2.24404,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
+			};
+			class Engine5_Thrust_int
+			{
+				sound[] = {"3as\3as_saber\Sounds\tx130idlein.ogg",2.51785,1};
+				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
+				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
+			};
+			class NoiseInt
+			{
+				sound[] = {"A3\sounds_f\vehicles\armor\noises\noise_tank_int_1",0.501187,1};
+				frequency = "1";
+				volume = "(1-camPos)*(angVelocity max 0.04)*(speed factor[4, 15])";
+			};
+			class NoiseExt
+			{
+				sound[] = {"A3\sounds_f\vehicles\armor\noises\noise_tank_ext_1",0.891251,1,50};
+				frequency = "1";
+				volume = "camPos*(angVelocity max 0.04)*(speed factor[4, 15])";
+			};
+			class ThreadsOutH0
+			{
+				sound[] = {"",0.398107,1,140};
+				frequency = "1";
+				volume = "engineOn*camPos*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-0) max 0)/ 60),(((-5) max 5)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-15) max 15)/ 60),(((-10) max 10)/ 60)]))";
+			};
+			class ThreadsOutH1
+			{
+				sound[] = {"",0.446684,1,160};
+				frequency = "1";
+				volume = "engineOn*camPos*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-10) max 10)/ 60),(((-15) max 15)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-30) max 30)/ 60),(((-25) max 25)/ 60)]))";
+			};
+			class ThreadsOutH2
+			{
+				sound[] = {"",0.501187,1,180};
+				frequency = "1";
+				volume = "engineOn*camPos*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-25) max 25)/ 60),(((-30) max 30)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-45) max 45)/ 60),(((-40) max 40)/ 60)]))";
+			};
+			class ThreadsOutH3
+			{
+				sound[] = {"",0.562341,1,200};
+				frequency = "1";
+				volume = "engineOn*camPos*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-40) max 40)/ 60),(((-45) max 45)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-55) max 55)/ 60),(((-50) max 50)/ 60)]))";
+			};
+			class ThreadsOutH4
+			{
+				sound[] = {"",0.562341,1,220};
+				frequency = "1";
+				volume = "engineOn*camPos*(1-grass)*((((-speed*3.6) max speed*3.6)/ 60) factor[(((-49) max 49)/ 60),(((-53) max 53)/ 60)])";
+			};
+			class ThreadsOutS0
+			{
+				sound[] = {"",0.316228,1,120};
+				frequency = "1";
+				volume = "engineOn*(camPos)*(grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-0) max 0)/ 60),(((-5) max 5)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-15) max 15)/ 60),(((-10) max 10)/ 60)]))";
+			};
+			class ThreadsOutS1
+			{
+				sound[] = {"",0.354813,1,140};
+				frequency = "1";
+				volume = "engineOn*(camPos)*(grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-10) max 10)/ 60),(((-15) max 15)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-30) max 30)/ 60),(((-25) max 25)/ 60)]))";
+			};
+			class ThreadsOutS2
+			{
+				sound[] = {"",0.398107,1,160};
+				frequency = "1";
+				volume = "engineOn*(camPos)*(grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-25) max 25)/ 60),(((-30) max 30)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-45) max 45)/ 60),(((-40) max 40)/ 60)]))";
+			};
+			class ThreadsOutS3
+			{
+				sound[] = {"",0.446684,1,180};
+				frequency = "1";
+				volume = "engineOn*(camPos)*(grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-40) max 40)/ 60),(((-45) max 45)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-55) max 55)/ 60),(((-50) max 50)/ 60)]))";
+			};
+			class ThreadsOutS4
+			{
+				sound[] = {"",0.501187,1,200};
+				frequency = "1";
+				volume = "engineOn*(camPos)*(grass)*((((-speed*3.6) max speed*3.6)/ 60) factor[(((-49) max 49)/ 60),(((-53) max 53)/ 60)])";
+			};
+			class ThreadsInH0
+			{
+				sound[] = {"",0.251189,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-0) max 0)/ 60),(((-5) max 5)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-15) max 15)/ 60),(((-10) max 10)/ 60)]))";
+			};
+			class ThreadsInH1
+			{
+				sound[] = {"",0.281838,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-10) max 10)/ 60),(((-15) max 15)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-30) max 30)/ 60),(((-25) max 25)/ 60)]))";
+			};
+			class ThreadsInH2
+			{
+				sound[] = {"",0.316228,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-25) max 25)/ 60),(((-30) max 30)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-45) max 45)/ 60),(((-40) max 40)/ 60)]))";
+			};
+			class ThreadsInH3
+			{
+				sound[] = {"",0.354813,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*(1-grass)*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-40) max 40)/ 60),(((-45) max 45)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-55) max 55)/ 60),(((-50) max 50)/ 60)]))";
+			};
+			class ThreadsInH4
+			{
+				sound[] = {"",0.398107,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*(1-grass)*((((-speed*3.6) max speed*3.6)/ 60) factor[(((-49) max 49)/ 60),(((-53) max 53)/ 60)])";
+			};
+			class ThreadsInS0
+			{
+				sound[] = {"",0.316228,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*grass*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-0) max 0)/ 60),(((-5) max 5)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-15) max 15)/ 60),(((-10) max 10)/ 60)]))";
+			};
+			class ThreadsInS1
+			{
+				sound[] = {"",0.316228,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*grass*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-10) max 10)/ 60),(((-15) max 15)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-30) max 30)/ 60),(((-25) max 25)/ 60)]))";
+			};
+			class ThreadsInS2
+			{
+				sound[] = {"",0.354813,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*grass*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-25) max 25)/ 60),(((-30) max 30)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-45) max 45)/ 60),(((-40) max 40)/ 60)]))";
+			};
+			class ThreadsInS3
+			{
+				sound[] = {"",0.354813,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*grass*(((((-speed*3.6) max speed*3.6)/ 60) factor[(((-40) max 40)/ 60),(((-45) max 45)/ 60)]) * ((((-speed*3.6) max speed*3.6)/ 60) factor[(((-55) max 55)/ 60),(((-50) max 50)/ 60)]))";
+			};
+			class ThreadsInS4
+			{
+				sound[] = {"",0.398107,1};
+				frequency = "1";
+				volume = "engineOn*(1-camPos)*grass*((((-speed*3.6) max speed*3.6)/ 60) factor[(((-49) max 49)/ 60),(((-53) max 53)/ 60)])";
+			};
+		};
 		class Wheels
 		{
 			class L2
@@ -314,6 +623,7 @@ class CfgVehicles
 				maxCompression=0;
 			};
 		};
+		editorcategory="FST_Catagory_Vehicles_Land";
 		editorSubcategory="FST_Catagory_Vehicles_Land_APC";
 		scope=0;
 		driverOpticsModel="\A3\weapons_f\reticle\optics_empty";
@@ -325,7 +635,9 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=15;
+		transportSoldier=6;
+		memoryPointsGetInDriver="MainHatch";
+		memoryPointsGetInDriverDir="PIP0_dir";
 		getInAction="GetInLow";
 		getOutAction="GetOutLow";
 		cargoGetInAction[]=
@@ -338,7 +650,12 @@ class CfgVehicles
 		};
 		cargoAction[]=
 		{
-			""
+			"passenger_apc_narrow_generic01",
+			"passenger_apc_narrow_generic02",
+			"passenger_apc_narrow_generic03",
+			"passenger_apc_narrow_generic01",
+			"passenger_apc_narrow_generic02",
+			"passenger_apc_narrow_generic03"
 		};
 		maxFordingDepth=-0.80000001;
 		waterResistance=1;
@@ -346,8 +663,8 @@ class CfgVehicles
 		LODDriverTurnedin=1100;
 		LODDriverTurnedOut=0;
 		LODDriverOpticsIn=1202;
-		driverAction="";
-		driverInAction="";
+		driverAction="Driver_MBT_03_cannon_F_out";
+		driverInAction="Driver_MBT_03_cannon_F_in";
 		extCameraPosition[]={0,3,-9};
 		forceHideDriver=1;
 		viewDriverInExternal=1;
@@ -415,7 +732,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor=2.300001;
+				armor=5.300001;
 				material=-1;
 				armorComponent="hit_hull";
 				name="hit_hull_point";
@@ -449,61 +766,41 @@ class CfgVehicles
 				explosionShielding=0.60000002;
 				radius=0.30000001;
 			};
-			class HitLFWheel
+			class HitLTrack: HitLTrack
 			{
-				radius=0.33000001;
-				visual="wheel_1_1_hide";
-				armorComponent="wheel_1_1_hide";
-				armor=-250;
-				minimalHit=-0.016000001;
-				explosionShielding=4;
-				passThrough=0;
+				armor = -250;
+				material = -1;
+				name = "track_l_hit";
+				passThrough = 0;
+				minimalHit = 0.08;
+				explosionShielding = 0.8;
+				radius = 0.3;
 			};
-			class HitLBWheel
+			class HitRTrack: HitRTrack
 			{
-				radius=0.33000001;
-				visual="wheel_1_4_hide";
-				armorComponent="wheel_1_4_hide";
-				armor=-250;
-				minimalHit=-0.016000001;
-				explosionShielding=4;
-				passThrough=0;
-			};
-			class HitRFWheel
-			{
-				radius=0.33000001;
-				visual="wheel_2_1_hide";
-				armorComponent="wheel_2_1_hide";
-				armor=-250;
-				minimalHit=-0.016000001;
-				explosionShielding=4;
-				passThrough=0;
-			};
-			class HitRBWheel
-			{
-				radius=0.33000001;
-				visual="wheel_2_4_hide";
-				armorComponent="wheel_2_4_hide";
-				armor=-250;
-				minimalHit=-0.016000001;
-				explosionShielding=4;
-				passThrough=0;
+				armor = -250;
+				material = -1;
+				name = "track_r_hit";
+				passThrough = 0;
+				minimalHit = 0.08;
+				explosionShielding = 0.8;
+				radius = 0.3;
 			};
 		};
-		animationSourceHatch="";
+		animationSourceHatch="main_hatch_rotate";
 		class Exhausts
 		{
 			class Exhaust1
 			{
-				position="exhaustRight";
-				direction="exhaust_dirright";
-				effect="ExhaustEffectTankSide";
+				position="exhaust_1_pos";
+				direction="exhaust_1_dir";
+				effect="FST_ExhaustEffect_IonWhiteHot";
 			};
 			class Exhaust2
 			{
-				position="exhaustLeft";
-				direction="exhaust_dirleft";
-				effect="ExhaustEffectTankSide";
+				position="exhaust_2_pos";
+				direction="exhaust_2_dir";
+				effect="FST_ExhaustEffect_IonWhiteHot";
 			};
 		};
 		insideSoundCoef=0.89999998;
@@ -528,26 +825,6 @@ class CfgVehicles
 					"PIP_COM_TR",
 					"PIP_COM_BL",
 					"PIP_COM_BR"
-				};
-			};
-			class driver_display
-			{
-				renderTarget="rendertarget1";
-				class CameraView1
-				{
-					pointPosition="PIP0_pos";
-					pointDirection="PIP0_dir";
-					renderVisionMode=0;
-					renderQuality=2;
-					fov=0.80000001;
-					turret[]={-1};
-				};
-				BBoxes[]=
-				{
-					"PIP_DRV_TL",
-					"PIP_DRV_TR",
-					"PIP_DRV_BL",
-					"PIP_DRV_BR"
 				};
 			};
 		};
@@ -615,7 +892,7 @@ class CfgVehicles
 						gunnerOutOpticsModel="";
 						gunnerOpticsEffect[]={};
 						turretFollowFreeLook=2;
-						gunnerforceoptics=0;
+						gunnerForceOptics=0;
 						usePip=2;
 						animationSourceStickX="com_turret_control_x";
 						animationSourceStickY="com_turret_control_y";
@@ -688,35 +965,6 @@ class CfgVehicles
 						maxHorizontalRotSpeed=1.8;
 						maxVerticalRotSpeed=1.8;
 						viewGunnerInExternal=1;
-						class HitPoints
-						{
-							class HitComTurret
-							{
-								armor=0.1;
-								material=-1;
-								armorComponent="hit_com_turret";
-								name="hit_com_turret_point";
-								visual="-";
-								passThrough=0;
-								minimalHit=0.1;
-								explosionShielding=1;
-								radius=0.15000001;
-								isTurret=1;
-							};
-							class HitComGun
-							{
-								armor=0.1;
-								material=-1;
-								armorComponent="hit_com_gun";
-								name="hit_com_gun_point";
-								visual="-";
-								passThrough=0;
-								minimalHit=0.1;
-								explosionShielding=1;
-								radius=0.15000001;
-								isGun=1;
-							};
-						};
 					};
 				};
 				class ViewGunner: ViewGunner
@@ -737,7 +985,7 @@ class CfgVehicles
 					minMoveZ=0;
 					maxMoveZ=0;
 				};
-				gunnerforceoptics=0;
+				gunnerForceOptics=0;
 				usePip=2;
 				LODTurnedIn=1100;
 				LODOpticsIn=0;
@@ -859,6 +1107,108 @@ class CfgVehicles
 						isGun=1;
 					};
 				};
+			};
+			class CargoTurret_07: CargoTurret
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment2";
+				memoryPointsGetInGunner = "pos driver";
+				memoryPointsGetInGunnerDir = "pos driver dir";
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_07";
+				proxyIndex = 7;
+				soundAttenuationTurret = "HeliAttenuationGunner";
+				isPersonTurret = 1;
+				ejectDeadGunner = 1;
+				canHideGunner = 0;
+				playerPosition = 1;
+				gunnerGetInAction = "GetInHeli_Light_01bench";
+				gunnerGetOutAction = "GetOutLow";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
+				minTurn = -90;
+				maxTurn = 90;
+				initTurn = 0;
+				minElev = -35;
+				maxElev = 55;
+				initElev = 0;
+				minOutTurn = -90;
+				maxOutTurn = 90;
+				initOutTurn = 0;
+				minOutElev = -35;
+				maxOutElev = 55;
+				initOutElev = 0;
+			};
+			class CargoTurret_08: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_08";
+				proxyIndex = 8;
+				playerPosition = 2;
+			};
+			class CargoTurret_09: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_09";
+				proxyIndex = 9;
+				playerPosition = 3;
+			};
+			class CargoTurret_10: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_10";
+				proxyIndex = 10;
+				playerPosition = 4;
+			};
+			class CargoTurret_11: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_11";
+				proxyIndex = 11;
+				playerPosition = 5;
+			};
+			class CargoTurret_12: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_12";
+				proxyIndex = 12;
+				playerPosition = 6;
+			};
+			class CargoTurret_13: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_13";
+				proxyIndex = 13;
+				playerPosition = 7;
+			};
+			class CargoTurret_14: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_14";
+				proxyIndex = 14;
+				playerPosition = 8;
+			};
+			class CargoTurret_15: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_15";
+				proxyIndex = 15;
+				playerPosition = 9;
+			};
+			class CargoTurret_16: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_16";
+				proxyIndex = 16;
+				playerPosition = 10;
+			};
+			class CargoTurret_17: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_17";
+				proxyIndex = 17;
+				playerPosition = 11;
+			};
+			class CargoTurret_18: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_18";
+				proxyIndex = 18;
+				playerPosition = 12;
+			};
+			class CargoTurret_19: CargoTurret_07
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_19";
+				proxyIndex = 19;
+				playerPosition = 13;
 			};
 		};
 		class Damage
@@ -1539,7 +1889,7 @@ class CfgVehicles
 		};
 		editorPreview="FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Icons\FST_Vehicles_Land_APC_SabreAPC_EditorPreview.jpg";
 		scope=2;
-		displayName="PENGUIN";
+		displayName="$STR_FST_SABER_APC_DISPLAYNAME";
 		hiddenSelections[]=
 		{
 			"Camo",
@@ -1589,7 +1939,7 @@ class CfgVehicles
 		{
 			class OpenRearDoor
 			{
-				displayName="Open Rear Door";
+				displayName="$STR_FST_SABER_APC_ACTION_OPEN_REAR_DOOR";
 				position="RearDoor";
 				radius=4;
 				priority=10;
@@ -1599,20 +1949,20 @@ class CfgVehicles
 			};
 			class CloseRearDoor: OpenRearDoor
 			{
-				displayName="Close Rear Door";
+				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR";
 				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' >= 0.5)";
 				statement="this animateSource ['rear_door_rotate',0,true]";
 			};
 			class OpenMainHatch: OpenRearDoor
 			{
-				displayName="Open Hatch";
+				displayName="$STR_FST_SABER_APC_ACTION_OPEN_HATCH";
 				position="MainHatch";
 				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
 				statement="this animateSource ['main_hatch_rotate',1,true]";
 			};
 			class CloseMainHatch: OpenMainHatch
 			{
-				displayName="Close Hatch";
+				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_HATCH";
 				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
 				statement="this animateSource ['main_hatch_rotate',0,true]";
 			};

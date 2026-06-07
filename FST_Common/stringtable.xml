@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="FST Common">
+    <Package name="Core">
+        <Container name="EditorCategories">
+            <Key ID="STR_FST_CORE_CAT_STRUCTURES_GAR">
+                <Original>[FST] GAR Structures</Original>
+                <English>[FST] GAR Structures</English>
+                <German>[FST] GAR Strukturen</German>
+                <French>[FST] Structures GAR</French>
+                <Spanish>[FST] Estructuras GAR</Spanish>
+                <Italian>[FST] Strutture GAR</Italian>
+                <Polish>[FST] Struktury GAR</Polish>
+                <Portuguese>[FST] Estruturas GAR</Portuguese>
+                <Russian>[FST] Структуры GAR</Russian>
+                <Czech>[FST] Struktury GAR</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_BARRICADES">
+                <Original>[FST] GAR Barricades</Original>
+                <English>[FST] GAR Barricades</English>
+                <German>[FST] GAR Barrikaden</German>
+                <French>[FST] Barricades GAR</French>
+                <Spanish>[FST] Barricadas GAR</Spanish>
+                <Italian>[FST] Barricate GAR</Italian>
+                <Polish>[FST] Barykady GAR</Polish>
+                <Portuguese>[FST] Barricadas GAR</Portuguese>
+                <Russian>[FST] Баррикады GAR</Russian>
+                <Czech>[FST] Barikády GAR</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_TRENCHES">
+                <Original>[FST] GAR Trenches</Original>
+                <English>[FST] GAR Trenches</English>
+                <German>[FST] GAR Schuetzengraeben</German>
+                <French>[FST] Tranchees GAR</French>
+                <Spanish>[FST] Trincheras GAR</Spanish>
+                <Italian>[FST] Trincee GAR</Italian>
+                <Polish>[FST] Okopy GAR</Polish>
+                <Portuguese>[FST] Trincheiras GAR</Portuguese>
+                <Russian>[FST] Окопы GAR</Russian>
+                <Czech>[FST] Zakopy GAR</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_OUTPOST_MAJOR">
+                <Original>[FST] Outposts (Major Factions)</Original>
+                <English>[FST] Outposts (Major Factions)</English>
+                <German>[FST] Aussenposten (Grosse Fraktionen)</German>
+                <French>[FST] Avant-postes (Factions majeures)</French>
+                <Spanish>[FST] Puestos avanzados (Facciones principales)</Spanish>
+                <Italian>[FST] Avamposti (Fazioni principali)</Italian>
+                <Polish>[FST] Placowki (Glowne frakcje)</Polish>
+                <Portuguese>[FST] Postos avancados (Faccoes principais)</Portuguese>
+                <Russian>[FST] Форпосты (Крупные фракции)</Russian>
+                <Czech>[FST] Predsunute zakladny (Hlavni frakce)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_OUTPOST_MINOR">
+                <Original>[FST] Outposts (Minor Factions)</Original>
+                <English>[FST] Outposts (Minor Factions)</English>
+                <German>[FST] Aussenposten (Kleine Fraktionen)</German>
+                <French>[FST] Avant-postes (Factions mineures)</French>
+                <Spanish>[FST] Puestos avanzados (Facciones menores)</Spanish>
+                <Italian>[FST] Avamposti (Fazioni minori)</Italian>
+                <Polish>[FST] Placowki (Mniejsze frakcje)</Polish>
+                <Portuguese>[FST] Postos avancados (Faccoes secundarias)</Portuguese>
+                <Russian>[FST] Форпосты (Малые фракции)</Russian>
+                <Czech>[FST] Predsunute zakladny (Mensi frakce)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_KASHYYYK_VEGETATION">
+                <Original>[FST] Kashyyyk Vegetation</Original>
+                <English>[FST] Kashyyyk Vegetation</English>
+                <German>[FST] Kashyyyk-Vegetation</German>
+                <French>[FST] Vegetation de Kashyyyk</French>
+                <Spanish>[FST] Vegetacion de Kashyyyk</Spanish>
+                <Italian>[FST] Vegetazione di Kashyyyk</Italian>
+                <Polish>[FST] Roslinnosc Kashyyyku</Polish>
+                <Portuguese>[FST] Vegetacao de Kashyyyk</Portuguese>
+                <Russian>[FST] Растительность Кашиика</Russian>
+                <Czech>[FST] Vegetace Kashyyyku</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_CEC_TYPE1_CRATES">
+                <Original>[FST] CEC Type-1 Storage Crates</Original>
+                <English>[FST] CEC Type-1 Storage Crates</English>
+                <German>[FST] CEC Lagerkisten Typ 1</German>
+                <French>[FST] Caisses de stockage CEC Type 1</French>
+                <Spanish>[FST] Cajas de almacenamiento CEC Tipo 1</Spanish>
+                <Italian>[FST] Casse di stoccaggio CEC Tipo 1</Italian>
+                <Polish>[FST] Skrzynie magazynowe CEC Typ 1</Polish>
+                <Portuguese>[FST] Caixas de armazenamento CEC Tipo 1</Portuguese>
+                <Russian>[FST] Складские ящики CEC Тип 1</Russian>
+                <Czech>[FST] Skladovaci bedny CEC Typ 1</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_CEC_TYPE2_CRATES">
+                <Original>[FST] CEC Type-2 Storage Crates</Original>
+                <English>[FST] CEC Type-2 Storage Crates</English>
+                <German>[FST] CEC Lagerkisten Typ 2</German>
+                <French>[FST] Caisses de stockage CEC Type 2</French>
+                <Spanish>[FST] Cajas de almacenamiento CEC Tipo 2</Spanish>
+                <Italian>[FST] Casse di stoccaggio CEC Tipo 2</Italian>
+                <Polish>[FST] Skrzynie magazynowe CEC Typ 2</Polish>
+                <Portuguese>[FST] Caixas de armazenamento CEC Tipo 2</Portuguese>
+                <Russian>[FST] Складские ящики CEC Тип 2</Russian>
+                <Czech>[FST] Skladovaci bedny CEC Typ 2</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_VEHICLES_LAND">
+                <Original>[FST] Land Vehicles</Original>
+                <English>[FST] Land Vehicles</English>
+                <German>[FST] Landfahrzeuge</German>
+                <French>[FST] Vehicules terrestres</French>
+                <Spanish>[FST] Vehiculos terrestres</Spanish>
+                <Italian>[FST] Veicoli terrestri</Italian>
+                <Polish>[FST] Pojazdy ladowe</Polish>
+                <Portuguese>[FST] Veiculos terrestres</Portuguese>
+                <Russian>[FST] Наземная техника</Russian>
+                <Czech>[FST] Pozemni vozidla</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_CAT_VEHICLES_APC">
+                <Original>[FST] APCs</Original>
+                <English>[FST] APCs</English>
+                <German>[FST] APCs</German>
+                <French>[FST] APC</French>
+                <Spanish>[FST] APC</Spanish>
+                <Italian>[FST] APC</Italian>
+                <Polish>[FST] APC</Polish>
+                <Portuguese>[FST] APC</Portuguese>
+                <Russian>[FST] БТР</Russian>
+                <Czech>[FST] APC</Czech>
+            </Key>
+        </Container>
+        <Container name="EditorSubcategories">
+            <Key ID="STR_FST_CORE_SUBCAT_SECURITY_BARRICADES">
+                <Original>Security Barricades</Original>
+                <English>Security Barricades</English>
+                <German>Sicherheitsbarrikaden</German>
+                <French>Barricades de securite</French>
+                <Spanish>Barricadas de seguridad</Spanish>
+                <Italian>Barricate di sicurezza</Italian>
+                <Polish>Barykady ochronne</Polish>
+                <Portuguese>Barricadas de seguranca</Portuguese>
+                <Russian>Охранные баррикады</Russian>
+                <Czech>Bezpecnostni barikady</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_TRENCHES_ENTRENCHING">
+                <Original>Trenches (Entrenching Tool)</Original>
+                <English>Trenches (Entrenching Tool)</English>
+                <German>Schuetzengraeben (Spaten)</German>
+                <French>Tranchees (Outil de retranchement)</French>
+                <Spanish>Trincheras (Herramienta de zapador)</Spanish>
+                <Italian>Trincee (Attrezzo da trincea)</Italian>
+                <Polish>Okopy (Saperka)</Polish>
+                <Portuguese>Trincheiras (Ferramenta de entrincheiramento)</Portuguese>
+                <Russian>Окопы (Саперная лопатка)</Russian>
+                <Czech>Zakopy (Polni lopatka)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_TRENCHES_ENGINEERED">
+                <Original>Trenches (Engineered)</Original>
+                <English>Trenches (Engineered)</English>
+                <German>Schuetzengraeben (Technisch)</German>
+                <French>Tranchees (Genie)</French>
+                <Spanish>Trincheras (Ingenieria)</Spanish>
+                <Italian>Trincee (Ingegnerizzate)</Italian>
+                <Polish>Okopy (Inzynieryjne)</Polish>
+                <Portuguese>Trincheiras (Engenharia)</Portuguese>
+                <Russian>Окопы (Инженерные)</Russian>
+                <Czech>Zakopy (Inzenyrske)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_TRENCHES_BASTION">
+                <Original>Trenches (Bastion)</Original>
+                <English>Trenches (Bastion)</English>
+                <German>Schuetzengraeben (Bastion)</German>
+                <French>Tranchees (Bastion)</French>
+                <Spanish>Trincheras (Bastion)</Spanish>
+                <Italian>Trincee (Bastione)</Italian>
+                <Polish>Okopy (Bastion)</Polish>
+                <Portuguese>Trincheiras (Bastiao)</Portuguese>
+                <Russian>Окопы (Бастион)</Russian>
+                <Czech>Zakopy (Bastion)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_NEUTRAL_LIGHT">
+                <Original>Light Walls (Neutral)</Original>
+                <English>Light Walls (Neutral)</English>
+                <German>Leichte Mauern (Neutral)</German>
+                <French>Murs legers (Neutre)</French>
+                <Spanish>Muros ligeros (Neutral)</Spanish>
+                <Italian>Muri leggeri (Neutrale)</Italian>
+                <Polish>Lekkie mury (Neutralne)</Polish>
+                <Portuguese>Muros leves (Neutro)</Portuguese>
+                <Russian>Легкие стены (Нейтральные)</Russian>
+                <Czech>Lehke zdi (Neutralni)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_NEUTRAL_MEDIUM">
+                <Original>Medium Walls (Neutral)</Original>
+                <English>Medium Walls (Neutral)</English>
+                <German>Mittlere Mauern (Neutral)</German>
+                <French>Murs moyens (Neutre)</French>
+                <Spanish>Muros medianos (Neutral)</Spanish>
+                <Italian>Muri medi (Neutrale)</Italian>
+                <Polish>Srednie mury (Neutralne)</Polish>
+                <Portuguese>Muros medios (Neutro)</Portuguese>
+                <Russian>Средние стены (Нейтральные)</Russian>
+                <Czech>Stredni zdi (Neutralni)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_GAR">
+                <Original>Light Walls (GAR)</Original>
+                <English>Light Walls (GAR)</English>
+                <German>Leichte Mauern (GAR)</German>
+                <French>Murs legers (GAR)</French>
+                <Spanish>Muros ligeros (GAR)</Spanish>
+                <Italian>Muri leggeri (GAR)</Italian>
+                <Polish>Lekkie mury (GAR)</Polish>
+                <Portuguese>Muros leves (GAR)</Portuguese>
+                <Russian>Легкие стены (GAR)</Russian>
+                <Czech>Lehke zdi (GAR)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_CIS">
+                <Original>Light Walls (CIS)</Original>
+                <English>Light Walls (CIS)</English>
+                <German>Leichte Mauern (CIS)</German>
+                <French>Murs legers (CIS)</French>
+                <Spanish>Muros ligeros (CIS)</Spanish>
+                <Italian>Muri leggeri (CIS)</Italian>
+                <Polish>Lekkie mury (CIS)</Polish>
+                <Portuguese>Muros leves (CIS)</Portuguese>
+                <Russian>Легкие стены (CIS)</Russian>
+                <Czech>Lehke zdi (CIS)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_PIRATES">
+                <Original>Light Walls (Pirates)</Original>
+                <English>Light Walls (Pirates)</English>
+                <German>Leichte Mauern (Piraten)</German>
+                <French>Murs legers (Pirates)</French>
+                <Spanish>Muros ligeros (Piratas)</Spanish>
+                <Italian>Muri leggeri (Pirati)</Italian>
+                <Polish>Lekkie mury (Piraci)</Polish>
+                <Portuguese>Muros leves (Piratas)</Portuguese>
+                <Russian>Легкие стены (Пираты)</Russian>
+                <Czech>Lehke zdi (Pirati)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_BLACKSUN">
+                <Original>Light Walls (Black Sun)</Original>
+                <English>Light Walls (Black Sun)</English>
+                <German>Leichte Mauern (Black Sun)</German>
+                <French>Murs legers (Soleil Noir)</French>
+                <Spanish>Muros ligeros (Sol Negro)</Spanish>
+                <Italian>Muri leggeri (Sole Nero)</Italian>
+                <Polish>Lekkie mury (Czarne Slonce)</Polish>
+                <Portuguese>Muros leves (Sol Negro)</Portuguese>
+                <Russian>Легкие стены (Черное Солнце)</Russian>
+                <Czech>Lehke zdi (Cerne Slunce)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_OUTPOST_WALLS_HUTTCARTEL">
+                <Original>Light Walls (Hutt Cartel)</Original>
+                <English>Light Walls (Hutt Cartel)</English>
+                <German>Leichte Mauern (Hutt-Kartell)</German>
+                <French>Murs legers (Cartel Hutt)</French>
+                <Spanish>Muros ligeros (Cartel Hutt)</Spanish>
+                <Italian>Muri leggeri (Cartello Hutt)</Italian>
+                <Polish>Lekkie mury (Kartel Huttow)</Polish>
+                <Portuguese>Muros leves (Cartel Hutt)</Portuguese>
+                <Russian>Легкие стены (Картель Хаттов)</Russian>
+                <Czech>Lehke zdi (Huttsky kartel)</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_KASHYYYK_VINES">
+                <Original>Kashyyyk Vines</Original>
+                <English>Kashyyyk Vines</English>
+                <German>Kashyyyk-Ranken</German>
+                <French>Lianes de Kashyyyk</French>
+                <Spanish>Enredaderas de Kashyyyk</Spanish>
+                <Italian>Liane di Kashyyyk</Italian>
+                <Polish>Pnacza Kashyyyku</Polish>
+                <Portuguese>Cipos de Kashyyyk</Portuguese>
+                <Russian>Лианы Кашиика</Russian>
+                <Czech>Liany Kashyyyku</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_CEC_GENERIC">
+                <Original>Generic</Original>
+                <English>Generic</English>
+                <German>Allgemein</German>
+                <French>Generique</French>
+                <Spanish>Generico</Spanish>
+                <Italian>Generico</Italian>
+                <Polish>Ogolne</Polish>
+                <Portuguese>Generico</Portuguese>
+                <Russian>Общее</Russian>
+                <Czech>Obecne</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_CEC_FORCE_SUPPRESSANT">
+                <Original>Force Suppresant</Original>
+                <English>Force Suppresant</English>
+                <German>Machtunterdruecker</German>
+                <French>Suppresseur de la Force</French>
+                <Spanish>Supresor de la Fuerza</Spanish>
+                <Italian>Soppressore della Forza</Italian>
+                <Polish>Tlumik Mocy</Polish>
+                <Portuguese>Supressor da Forca</Portuguese>
+                <Russian>Подавитель Силы</Russian>
+                <Czech>Potlacovac Sily</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_CEC_LIQUID">
+                <Original>Liquid</Original>
+                <English>Liquid</English>
+                <German>Fluessigkeit</German>
+                <French>Liquide</French>
+                <Spanish>Liquido</Spanish>
+                <Italian>Liquido</Italian>
+                <Polish>Plyn</Polish>
+                <Portuguese>Liquido</Portuguese>
+                <Russian>Жидкость</Russian>
+                <Czech>Kapalina</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_CEC_MEDICAL">
+                <Original>Medical</Original>
+                <English>Medical</English>
+                <German>Medizinisch</German>
+                <French>Medical</French>
+                <Spanish>Medico</Spanish>
+                <Italian>Medico</Italian>
+                <Polish>Medyczne</Polish>
+                <Portuguese>Medico</Portuguese>
+                <Russian>Медицина</Russian>
+                <Czech>Zdravotnicke</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_CEC_AMMUNITION">
+                <Original>Ammunition</Original>
+                <English>Ammunition</English>
+                <German>Munition</German>
+                <French>Munitions</French>
+                <Spanish>Municion</Spanish>
+                <Italian>Munizioni</Italian>
+                <Polish>Amunicja</Polish>
+                <Portuguese>Municao</Portuguese>
+                <Russian>Боеприпасы</Russian>
+                <Czech>Munice</Czech>
+            </Key>
+            <Key ID="STR_FST_CORE_SUBCAT_CEC_RESUPPLIES">
+                <Original>Resupplies</Original>
+                <English>Resupplies</English>
+                <German>Nachschub</German>
+                <French>Ravitaillements</French>
+                <Spanish>Reabastecimientos</Spanish>
+                <Italian>Rifornimenti</Italian>
+                <Polish>Uzupelnienia</Polish>
+                <Portuguese>Reabastecimentos</Portuguese>
+                <Russian>Пополнение запасов</Russian>
+                <Czech>Doplneni zasob</Czech>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Saber">
+        <Container name="VehicleDisplayNames">
+            <Key ID="STR_FST_SABER_TX130">
+                <Original>TX-180</Original>
+                <English>TX-180</English>
+                <German>TX-180</German>
+                <French>TX-180</French>
+                <Spanish>TX-180</Spanish>
+                <Italian>TX-180</Italian>
+                <Polish>TX-180</Polish>
+                <Portuguese>TX-180</Portuguese>
+                <Russian>TX-180</Russian>
+                <Czech>TX-180</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_DISPLAYNAME">
+                <Original>TX-180 APC</Original>
+                <English>TX-180 APC</English>
+                <German>TX-180 APC</German>
+                <French>TX-180 APC</French>
+                <Spanish>TX-180 APC</Spanish>
+                <Italian>TX-180 APC</Italian>
+                <Polish>TX-180 APC</Polish>
+                <Portuguese>TX-180 APC</Portuguese>
+                <Russian>TX-180 APC</Russian>
+                <Czech>TX-180 APC</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_ACTION_OPEN_REAR_DOOR">
+                <Original>Open Rear Door</Original>
+                <English>Open Rear Door</English>
+                <German>Heckklappe oeffnen</German>
+                <French>Ouvrir la porte arriere</French>
+                <Spanish>Abrir puerta trasera</Spanish>
+                <Italian>Apri portello posteriore</Italian>
+                <Polish>Otworz tylne drzwi</Polish>
+                <Portuguese>Abrir porta traseira</Portuguese>
+                <Russian>Открыть заднюю дверь</Russian>
+                <Czech>Otevrit zadni dvere</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR">
+                <Original>Close Rear Door</Original>
+                <English>Close Rear Door</English>
+                <German>Heckklappe schliessen</German>
+                <French>Fermer la porte arriere</French>
+                <Spanish>Cerrar puerta trasera</Spanish>
+                <Italian>Chiudi portello posteriore</Italian>
+                <Polish>Zamknij tylne drzwi</Polish>
+                <Portuguese>Fechar porta traseira</Portuguese>
+                <Russian>Закрыть заднюю дверь</Russian>
+                <Czech>Zavrit zadni dvere</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_ACTION_OPEN_HATCH">
+                <Original>Open Hatch</Original>
+                <English>Open Hatch</English>
+                <German>Luke oeffnen</German>
+                <French>Ouvrir la trappe</French>
+                <Spanish>Abrir escotilla</Spanish>
+                <Italian>Apri portello</Italian>
+                <Polish>Otworz wlaz</Polish>
+                <Portuguese>Abrir escotilha</Portuguese>
+                <Russian>Открыть люк</Russian>
+                <Czech>Otevrit poklop</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_ACTION_CLOSE_HATCH">
+                <Original>Close Hatch</Original>
+                <English>Close Hatch</English>
+                <German>Luke schliessen</German>
+                <French>Fermer la trappe</French>
+                <Spanish>Cerrar escotilla</Spanish>
+                <Italian>Chiudi portello</Italian>
+                <Polish>Zamknij wlaz</Polish>
+                <Portuguese>Fechar escotilha</Portuguese>
+                <Russian>Закрыть люк</Russian>
+                <Czech>Zavrit poklop</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_01">
+                <Original>Interior Passenger Seat 1</Original>
+                <English>Interior Passenger Seat 1</English>
+                <German>Innerer Passagiersitz 1</German>
+                <French>Siege passager interieur 1</French>
+                <Spanish>Asiento de pasajero interior 1</Spanish>
+                <Italian>Sedile passeggero interno 1</Italian>
+                <Polish>Wewnetrzne siedzenie pasazera 1</Polish>
+                <Portuguese>Assento de passageiro interno 1</Portuguese>
+                <Russian>Внутреннее пассажирское сиденье 1</Russian>
+                <Czech>Vnitrni sedadlo pro cestujici 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_02">
+                <Original>Interior Passenger Seat 2</Original>
+                <English>Interior Passenger Seat 2</English>
+                <German>Innerer Passagiersitz 2</German>
+                <French>Siege passager interieur 2</French>
+                <Spanish>Asiento de pasajero interior 2</Spanish>
+                <Italian>Sedile passeggero interno 2</Italian>
+                <Polish>Wewnetrzne siedzenie pasazera 2</Polish>
+                <Portuguese>Assento de passageiro interno 2</Portuguese>
+                <Russian>Внутреннее пассажирское сиденье 2</Russian>
+                <Czech>Vnitrni sedadlo pro cestujici 2</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_03">
+                <Original>Interior Passenger Seat 3</Original>
+                <English>Interior Passenger Seat 3</English>
+                <German>Innerer Passagiersitz 3</German>
+                <French>Siege passager interieur 3</French>
+                <Spanish>Asiento de pasajero interior 3</Spanish>
+                <Italian>Sedile passeggero interno 3</Italian>
+                <Polish>Wewnetrzne siedzenie pasazera 3</Polish>
+                <Portuguese>Assento de passageiro interno 3</Portuguese>
+                <Russian>Внутреннее пассажирское сиденье 3</Russian>
+                <Czech>Vnitrni sedadlo pro cestujici 3</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_04">
+                <Original>Interior Passenger Seat 4</Original>
+                <English>Interior Passenger Seat 4</English>
+                <German>Innerer Passagiersitz 4</German>
+                <French>Siege passager interieur 4</French>
+                <Spanish>Asiento de pasajero interior 4</Spanish>
+                <Italian>Sedile passeggero interno 4</Italian>
+                <Polish>Wewnetrzne siedzenie pasazera 4</Polish>
+                <Portuguese>Assento de passageiro interno 4</Portuguese>
+                <Russian>Внутреннее пассажирское сиденье 4</Russian>
+                <Czech>Vnitrni sedadlo pro cestujici 4</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_05">
+                <Original>Interior Passenger Seat 5</Original>
+                <English>Interior Passenger Seat 5</English>
+                <German>Innerer Passagiersitz 5</German>
+                <French>Siege passager interieur 5</French>
+                <Spanish>Asiento de pasajero interior 5</Spanish>
+                <Italian>Sedile passeggero interno 5</Italian>
+                <Polish>Wewnetrzne siedzenie pasazera 5</Polish>
+                <Portuguese>Assento de passageiro interno 5</Portuguese>
+                <Russian>Внутреннее пассажирское сиденье 5</Russian>
+                <Czech>Vnitrni sedadlo pro cestujici 5</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_06">
+                <Original>Interior Passenger Seat 6</Original>
+                <English>Interior Passenger Seat 6</English>
+                <German>Innerer Passagiersitz 6</German>
+                <French>Siege passager interieur 6</French>
+                <Spanish>Asiento de pasajero interior 6</Spanish>
+                <Italian>Sedile passeggero interno 6</Italian>
+                <Polish>Wewnetrzne siedzenie pasazera 6</Polish>
+                <Portuguese>Assento de passageiro interno 6</Portuguese>
+                <Russian>Внутреннее пассажирское сиденье 6</Russian>
+                <Czech>Vnitrni sedadlo pro cestujici 6</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_07">
+                <Original>Left Side Seat 1</Original>
+                <English>Left Side Seat 1</English>
+                <German>Linker Seitensitz 1</German>
+                <French>Siege lateral gauche 1</French>
+                <Spanish>Asiento lateral izquierdo 1</Spanish>
+                <Italian>Sedile laterale sinistro 1</Italian>
+                <Polish>Lewe siedzenie boczne 1</Polish>
+                <Portuguese>Assento lateral esquerdo 1</Portuguese>
+                <Russian>Левое боковое сиденье 1</Russian>
+                <Czech>Leve bocni sedadlo 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_08">
+                <Original>Left Side Seat 2</Original>
+                <English>Left Side Seat 2</English>
+                <German>Linker Seitensitz 2</German>
+                <French>Siege lateral gauche 2</French>
+                <Spanish>Asiento lateral izquierdo 2</Spanish>
+                <Italian>Sedile laterale sinistro 2</Italian>
+                <Polish>Lewe siedzenie boczne 2</Polish>
+                <Portuguese>Assento lateral esquerdo 2</Portuguese>
+                <Russian>Левое боковое сиденье 2</Russian>
+                <Czech>Leve bocni sedadlo 2</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_09">
+                <Original>Right Exterior Seat 1</Original>
+                <English>Right Exterior Seat 1</English>
+                <German>Rechter Aussensitz 1</German>
+                <French>Siege exterieur droit 1</French>
+                <Spanish>Asiento exterior derecho 1</Spanish>
+                <Italian>Sedile esterno destro 1</Italian>
+                <Polish>Prawe zewnetrzne siedzenie 1</Polish>
+                <Portuguese>Assento externo direito 1</Portuguese>
+                <Russian>Правое внешнее сиденье 1</Russian>
+                <Czech>Prave vnejsi sedadlo 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_10">
+                <Original>Right Exterior Seat 2</Original>
+                <English>Right Exterior Seat 2</English>
+                <German>Rechter Aussensitz 2</German>
+                <French>Siege exterieur droit 2</French>
+                <Spanish>Asiento exterior derecho 2</Spanish>
+                <Italian>Sedile esterno destro 2</Italian>
+                <Polish>Prawe zewnetrzne siedzenie 2</Polish>
+                <Portuguese>Assento externo direito 2</Portuguese>
+                <Russian>Правое внешнее сиденье 2</Russian>
+                <Czech>Prave vnejsi sedadlo 2</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_11">
+                <Original>Top Right Exterior Seat 1</Original>
+                <English>Top Right Exterior Seat 1</English>
+                <German>Oberer rechter Aussensitz 1</German>
+                <French>Siege exterieur superieur droit 1</French>
+                <Spanish>Asiento exterior superior derecho 1</Spanish>
+                <Italian>Sedile esterno superiore destro 1</Italian>
+                <Polish>Prawe gorne zewnetrzne siedzenie 1</Polish>
+                <Portuguese>Assento externo superior direito 1</Portuguese>
+                <Russian>Верхнее правое внешнее сиденье 1</Russian>
+                <Czech>Horni prave vnejsi sedadlo 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_12">
+                <Original>Top Right Exterior Seat 2</Original>
+                <English>Top Right Exterior Seat 2</English>
+                <German>Oberer rechter Aussensitz 2</German>
+                <French>Siege exterieur superieur droit 2</French>
+                <Spanish>Asiento exterior superior derecho 2</Spanish>
+                <Italian>Sedile esterno superiore destro 2</Italian>
+                <Polish>Prawe gorne zewnetrzne siedzenie 2</Polish>
+                <Portuguese>Assento externo superior direito 2</Portuguese>
+                <Russian>Верхнее правое внешнее сиденье 2</Russian>
+                <Czech>Horni prave vnejsi sedadlo 2</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_13">
+                <Original>Top Right Exterior Seat 3</Original>
+                <English>Top Right Exterior Seat 3</English>
+                <German>Oberer rechter Aussensitz 3</German>
+                <French>Siege exterieur superieur droit 3</French>
+                <Spanish>Asiento exterior superior derecho 3</Spanish>
+                <Italian>Sedile esterno superiore destro 3</Italian>
+                <Polish>Prawe gorne zewnetrzne siedzenie 3</Polish>
+                <Portuguese>Assento externo superior direito 3</Portuguese>
+                <Russian>Верхнее правое внешнее сиденье 3</Russian>
+                <Czech>Horni prave vnejsi sedadlo 3</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_14">
+                <Original>Top Right Exterior Seat 4</Original>
+                <English>Top Right Exterior Seat 4</English>
+                <German>Oberer rechter Aussensitz 4</German>
+                <French>Siege exterieur superieur droit 4</French>
+                <Spanish>Asiento exterior superior derecho 4</Spanish>
+                <Italian>Sedile esterno superiore destro 4</Italian>
+                <Polish>Prawe gorne zewnetrzne siedzenie 4</Polish>
+                <Portuguese>Assento externo superior direito 4</Portuguese>
+                <Russian>Верхнее правое внешнее сиденье 4</Russian>
+                <Czech>Horni prave vnejsi sedadlo 4</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_15">
+                <Original>Top Left Exterior Seat 1</Original>
+                <English>Top Left Exterior Seat 1</English>
+                <German>Oberer linker Aussensitz 1</German>
+                <French>Siege exterieur superieur gauche 1</French>
+                <Spanish>Asiento exterior superior izquierdo 1</Spanish>
+                <Italian>Sedile esterno superiore sinistro 1</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 1</Polish>
+                <Portuguese>Assento externo superior esquerdo 1</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 1</Russian>
+                <Czech>Horni leve vnejsi sedadlo 1</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_16">
+                <Original>Top Left Exterior Seat 2</Original>
+                <English>Top Left Exterior Seat 2</English>
+                <German>Oberer linker Aussensitz 2</German>
+                <French>Siege exterieur superieur gauche 2</French>
+                <Spanish>Asiento exterior superior izquierdo 2</Spanish>
+                <Italian>Sedile esterno superiore sinistro 2</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 2</Polish>
+                <Portuguese>Assento externo superior esquerdo 2</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 2</Russian>
+                <Czech>Horni leve vnejsi sedadlo 2</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_17">
+                <Original>Top Left Exterior Seat 3</Original>
+                <English>Top Left Exterior Seat 3</English>
+                <German>Oberer linker Aussensitz 3</German>
+                <French>Siege exterieur superieur gauche 3</French>
+                <Spanish>Asiento exterior superior izquierdo 3</Spanish>
+                <Italian>Sedile esterno superiore sinistro 3</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 3</Polish>
+                <Portuguese>Assento externo superior esquerdo 3</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 3</Russian>
+                <Czech>Horni leve vnejsi sedadlo 3</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_18">
+                <Original>Top Left Exterior Seat 4</Original>
+                <English>Top Left Exterior Seat 4</English>
+                <German>Oberer linker Aussensitz 4</German>
+                <French>Siege exterieur superieur gauche 4</French>
+                <Spanish>Asiento exterior superior izquierdo 4</Spanish>
+                <Italian>Sedile esterno superiore sinistro 4</Italian>
+                <Polish>Lewe gorne zewnetrzne siedzenie 4</Polish>
+                <Portuguese>Assento externo superior esquerdo 4</Portuguese>
+                <Russian>Верхнее левое внешнее сиденье 4</Russian>
+                <Czech>Horni leve vnejsi sedadlo 4</Czech>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_19">
+                <Original>Top Rear Exterior Seat</Original>
+                <English>Top Rear Exterior Seat</English>
+                <German>Oberer hinterer Aussensitz</German>
+                <French>Siege exterieur superieur arriere</French>
+                <Spanish>Asiento exterior superior trasero</Spanish>
+                <Italian>Sedile esterno superiore posteriore</Italian>
+                <Polish>Tylne gorne zewnetrzne siedzenie</Polish>
+                <Portuguese>Assento externo superior traseiro</Portuguese>
+                <Russian>Верхнее заднее внешнее сиденье</Russian>
+                <Czech>Horni zadni vnejsi sedadlo</Czech>
+            </Key>
+        </Container>
+    </Package>
+</Project>

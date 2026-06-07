@@ -22,114 +22,118 @@ class CfgEditorCategories
 {
 	class FST_CatagoryStructures_GAR
 	{
-		displayname = "[FST] GAR Structures";
+		displayname = "$STR_FST_CORE_CAT_STRUCTURES_GAR";
 	};
 	class FST_CatagoryBarricades
 	{
-		displayname = "[FST] GAR Barricades";
+		displayname = "$STR_FST_CORE_CAT_BARRICADES";
 	};
 	class FST_CatagoryTrenches
 	{
-		displayname = "[FST] GAR Trenches";
+		displayname = "$STR_FST_CORE_CAT_TRENCHES";
 	};
 	class FST_CatagoryMajorOutpost
 	{
-		displayname = "[FST] Outposts (Major Factions)";
+		displayname = "$STR_FST_CORE_CAT_OUTPOST_MAJOR";
 	};
 	class FST_CatagoryMinorOutpost
 	{
-		displayname = "[FST] Outposts (Minor Factions)";
+		displayname = "$STR_FST_CORE_CAT_OUTPOST_MINOR";
 	};
 	class FST_CatagoryVegetationKashyyyk
 	{
-		displayname = "[FST] Kashyyyk Vegetation";
+		displayname = "$STR_FST_CORE_CAT_KASHYYYK_VEGETATION";
 	};
 	class FST_CatagoryCECTypeOneCratesRSU
 	{
-		displayname = "[FST] CEC Type-1 Storage Crates";
+		displayname = "$STR_FST_CORE_CAT_CEC_TYPE1_CRATES";
 	};
 	class FST_CatagoryCECTypeTwoCratesRSU
 	{
-		displayname = "[FST] CEC Type-2 Storage Crates";
+		displayname = "$STR_FST_CORE_CAT_CEC_TYPE2_CRATES";
+	};
+	class FST_Catagory_Vehicles_Land
+	{
+		displayname = "$STR_FST_CORE_CAT_VEHICLES_LAND";
 	};
 };
 class CfgEditorSubcategories
 {
 	class FST_Subcategory_SecurityBarricades
 	{
-		displayName = "Security Barricades";
+		displayName = "$STR_FST_CORE_SUBCAT_SECURITY_BARRICADES";
 	};
 	class FST_Subcategory_TrenchesEntrenchingTool
 	{
-		displayName = "Trenches (Entrenching Tool)";
+		displayName = "$STR_FST_CORE_SUBCAT_TRENCHES_ENTRENCHING";
 	};
 	class FST_Subcategory_TrenchesEngineered
 	{
-		displayName = "Trenches (Engineered)";
+		displayName = "$STR_FST_CORE_SUBCAT_TRENCHES_ENGINEERED";
 	};
 	class FST_Subcategory_TrenchesBastion
 	{
-		displayName = "Trenches (Bastion)";
+		displayName = "$STR_FST_CORE_SUBCAT_TRENCHES_BASTION";
 	};
 	class FST_Subcategory_OutpostWallsNeutral
 	{
-		displayName = "Light Walls (Neutral)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_NEUTRAL_LIGHT";
 	};
 	class FST_Subcategory_OutpostWallsNeutral_Medium
 	{
-		displayName = "Medium Walls (Neutral)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_NEUTRAL_MEDIUM";
 	};
 	class FST_Subcategory_OutpostWallsGAR
 	{
-		displayName = "Light Walls (GAR)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_GAR";
 	};
 	class FST_Subcategory_OutpostWallsCIS
 	{
-		displayName = "Light Walls (CIS)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_CIS";
 	};
 	class FST_Subcategory_OutpostWallsPirates
 	{
-		displayName = "Light Walls (Pirates)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_PIRATES";
 	};
 	class FST_Subcategory_OutpostWallsBlackSun
 	{
-		displayName = "Light Walls (Black Sun)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_BLACKSUN";
 	};
 	class FST_Subcategory_OutpostWallsHuttCartel
 	{
-		displayName = "Light Walls (Hutt Cartel)";
+		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_HUTTCARTEL";
 	};
 	class FST_Subcategory_KashyyykVines
 	{
-		displayName = "Kashyyyk Vines";
+		displayName = "$STR_FST_CORE_SUBCAT_KASHYYYK_VINES";
 	};
 	class FST_CatagoryCECGeneric
 	{
-		displayname = "Generic";
+		displayname = "$STR_FST_CORE_SUBCAT_CEC_GENERIC";
 	};
 	class FST_CatagoryCECForce
 	{
-		displayname = "Force Suppresant";
+		displayname = "$STR_FST_CORE_SUBCAT_CEC_FORCE_SUPPRESSANT";
 	};
 	class FST_CatagoryCECLiquid
 	{
-		displayname = "Liquid";
+		displayname = "$STR_FST_CORE_SUBCAT_CEC_LIQUID";
 	};
 	class FST_CatagoryCECMedical
 	{
-		displayname = "Medical";
+		displayname = "$STR_FST_CORE_SUBCAT_CEC_MEDICAL";
 	};
 	class FST_CatagoryCECAmmunition
 	{
-		displayname = "Ammunition";
+		displayname = "$STR_FST_CORE_SUBCAT_CEC_AMMUNITION";
 	};
 	class FST_CatagoryCECResupplies
 	{
-		displayname = "Resupplies";
+		displayname = "$STR_FST_CORE_SUBCAT_CEC_RESUPPLIES";
 	};
 	class FST_Catagory_Vehicles_Land_APC
 	{
-		displayname = "[FST] APCs";
+		displayname = "$STR_FST_CORE_CAT_VEHICLES_APC";
 	};
 };
 class CfgFunctions
@@ -152,5 +156,143 @@ class Extended_HitPart_EventHandlers
 	class CAManBase
 	{
 		hitPart = "(_this select 0) call FST_Weapon_fnc_onHit";
+	};
+};
+class CfgCloudlets
+{
+	class Default;
+	class ExhaustSmoke: Default;
+
+	class FST_Exhaust_IonBlue_Small: ExhaustSmoke
+	{
+		interval = 0.02;
+		lifeTime = 0.9;
+		size[] = {0.12,0.25,0.38};
+		moveVelocity[] = {0,0.8,0};
+		MoveVelocityVar[] = {0.2,0.35,0.2};
+		color[] = {{0.3,0.6,1,0.5},{0.35,0.7,1,0.28},{0.45,0.8,1,0.04}};
+		rubbing = 0.06;
+	};
+
+	class FST_Exhaust_IonBlue_Large: ExhaustSmoke
+	{
+		interval = 0.013;
+		lifeTime = 1.3;
+		size[] = {0.22,0.5,0.9};
+		moveVelocity[] = {0,1.6,0};
+		MoveVelocityVar[] = {0.35,0.5,0.35};
+		color[] = {{0.22,0.52,1,0.6},{0.3,0.68,1,0.35},{0.45,0.82,1,0.06}};
+		rubbing = 0.05;
+	};
+
+	class FST_Exhaust_IonWhiteHot: ExhaustSmoke
+	{
+		interval = 0.015;
+		lifeTime = 0.85;
+		size[] = {0.16,0.32,0.48};
+		moveVelocity[] = {0,1.2,0};
+		MoveVelocityVar[] = {0.25,0.42,0.25};
+		color[] = {{1,0.98,0.9,0.62},{0.75,0.9,1,0.26},{0.6,0.85,1,0.02}};
+		rubbing = 0.045;
+	};
+
+	class FST_Exhaust_CISRed_Small: ExhaustSmoke
+	{
+		interval = 0.02;
+		lifeTime = 1.0;
+		size[] = {0.13,0.3,0.44};
+		moveVelocity[] = {0,0.95,0};
+		MoveVelocityVar[] = {0.2,0.35,0.2};
+		color[] = {{1,0.28,0.22,0.48},{1,0.42,0.3,0.25},{1,0.5,0.35,0.03}};
+		rubbing = 0.06;
+	};
+
+	class FST_Exhaust_RepulsorDust_Blue: ExhaustSmoke
+	{
+		interval = 0.02;
+		lifeTime = 1.5;
+		size[] = {0.2,0.6,1.2};
+		moveVelocity[] = {0,0.45,0};
+		MoveVelocityVar[] = {0.5,0.25,0.5};
+		color[] = {{0.5,0.57,0.68,0.32},{0.55,0.62,0.74,0.2},{0.65,0.72,0.82,0}};
+		rubbing = 0.14;
+	};
+
+	class FST_Exhaust_TurbineHeat_HighFlow: ExhaustSmoke
+	{
+		interval = 0.01;
+		lifeTime = 0.65;
+		size[] = {0.12,0.2,0.28};
+		moveVelocity[] = {0,2.4,0};
+		MoveVelocityVar[] = {0.24,0.45,0.24};
+		color[] = {{0.9,0.95,1,0.26},{0.8,0.9,1,0.11},{0.75,0.86,1,0.01}};
+		rubbing = 0.03;
+	};
+
+	class FST_Exhaust_HeavyBlack_Soot: ExhaustSmoke
+	{
+		interval = 0.025;
+		lifeTime = 2.2;
+		size[] = {0.22,0.7,1.4};
+		moveVelocity[] = {0,0.62,0};
+		MoveVelocityVar[] = {0.35,0.2,0.35};
+		color[] = {{0.08,0.08,0.08,0.64},{0.13,0.13,0.13,0.44},{0.2,0.2,0.2,0.08}};
+		rubbing = 0.09;
+	};
+
+	class FST_Exhaust_DamagedEngine_Sputter: ExhaustSmoke
+	{
+		interval = 0.045;
+		lifeTime = 1.8;
+		size[] = {0.14,0.36,0.78};
+		moveVelocity[] = {0,0.56,0};
+		MoveVelocityVar[] = {0.38,0.18,0.38};
+		color[] = {{0.3,0.3,0.3,0.52},{0.42,0.42,0.42,0.3},{0.5,0.5,0.5,0.06}};
+		rubbing = 0.12;
+	};
+};
+class CfgVehicleExhausts
+{
+	class ExhaustsEffect;
+
+	class FST_ExhaustEffect_IonBlue_Small: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_IonBlue_Small";
+	};
+	class FST_ExhaustEffect_IonBlue_Large: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_IonBlue_Large";
+	};
+	class FST_ExhaustEffect_IonWhiteHot: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_IonWhiteHot";
+	};
+	class FST_ExhaustEffect_CISRed_Small: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_CISRed_Small";
+	};
+	class FST_ExhaustEffect_RepulsorDust_Blue: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_RepulsorDust_Blue";
+	};
+	class FST_ExhaustEffect_TurbineHeat_HighFlow: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_TurbineHeat_HighFlow";
+	};
+	class FST_ExhaustEffect_HeavyBlack_Soot: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_HeavyBlack_Soot";
+	};
+	class FST_ExhaustEffect_DamagedEngine_Sputter: ExhaustsEffect
+	{
+		simulation = "particles";
+		type = "FST_Exhaust_DamagedEngine_Sputter";
 	};
 };
