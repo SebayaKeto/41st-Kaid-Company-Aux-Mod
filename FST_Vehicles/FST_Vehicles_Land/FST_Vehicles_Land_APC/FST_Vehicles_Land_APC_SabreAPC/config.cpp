@@ -2059,7 +2059,8 @@ class CfgVehicles
 			"Camo9",
 			"Camo10",
 			"Camo11",
-			"Emissive"
+			"Emissive",
+			"Emissive_Gun"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -2075,7 +2076,8 @@ class CfgVehicles
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo9_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo10_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11_co.paa",
-			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_co.paa"
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_co.paa",
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo2_co.paa"
 
 		};
 		hiddenSelectionsMaterials[]=
@@ -2092,7 +2094,8 @@ class CfgVehicles
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo9.rvmat",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo10.rvmat",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11.rvmat",
-			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive.rvmat"
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive.rvmat",
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive_Gun.rvmat"
 		};
 		class UserActions
 		{
