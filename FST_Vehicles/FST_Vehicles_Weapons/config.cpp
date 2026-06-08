@@ -7,6 +7,7 @@ class CfgPatches
 		{
 			"A3_Data_F",
 			"A3_Weapons_F",
+			"FST_Core",
 			"FST_Weapons"
 		};
 		requiredVersion = 0.1;
@@ -16,17 +17,20 @@ class CfgPatches
 			"FST_Horn_RepulsorPulse",
 			"FST_Horn_CloneConvoy",
 			"FST_Vehicle_Launcher_Concussion",
-			"FST_Vehicle_Cannon_30mm"
+			"FST_Vehicle_Cannon_30mm",
+			"FST_Vehicle_HMG_50cal"
 		};
 		magazines[] =
 		{
 			"FST_Vehicle_Mag_4Rnd_Concussion",
 			"FST_Vehicle_Mag_140Rnd_30mm_MP",
-			"FST_Vehicle_Mag_60Rnd_30mm_APFSDS"
+			"FST_Vehicle_Mag_60Rnd_30mm_APFSDS",
+			"FST_Vehicle_Mag_500Rnd_50cal_Tracer"
 		};
 		ammo[] =
 		{
-			"FST_Vehicle_Ammo_ConcussionMissile"
+			"FST_Vehicle_Ammo_ConcussionMissile",
+			"FST_Vehicle_Ammo_50cal_Tracer"
 		};
 	};
 };
@@ -122,6 +126,9 @@ class CfgCloudlets
 class CfgAmmo
 {
 	class M_PG_AT;
+	class B_127x99_Ball_Tracer_Red;
+	class B_30mm_MP_Tracer_Red;
+	class B_30mm_APFSDS_Tracer_Red;
 	class FST_Vehicle_Ammo_ConcussionMissile: M_PG_AT
 	{
 		author = "Maldova";
@@ -145,6 +152,33 @@ class CfgAmmo
 		explosionEffects = "FST_Vehicle_MissileImpact_Concussion";
 		whistleDist = 10;
 	};
+
+	class FST_Vehicle_Ammo_50cal_Tracer: B_127x99_Ball_Tracer_Red
+	{
+		author = "Maldova";
+		displayName = "50 Cal Blue Tracer";
+		effectFly = "FST_Proj_Blue_Emissive_Small";
+		tracerColor[] = {0.15,0.55,1,1};
+		tracerColorR[] = {0.45,0.8,1,1};
+		tracerScale = 2.2;
+		tracerStartTime = 0.01;
+		tracerEndTime = 3.8;
+		nvgOnly = 0;
+	};
+
+	class FST_Vehicle_Ammo_30mm_MP_Emissive: B_30mm_MP_Tracer_Red
+	{
+		author = "Maldova";
+		displayName = "30mm MP Emissive";
+		effectFly = "FST_Proj_Blue_Emissive_Heavy";
+	};
+
+	class FST_Vehicle_Ammo_30mm_APFSDS_Emissive: B_30mm_APFSDS_Tracer_Red
+	{
+		author = "Maldova";
+		displayName = "30mm APFSDS Emissive";
+		effectFly = "FST_Proj_Blue_Emissive_Heavy";
+	};
 };
 
 class CfgMagazines
@@ -152,6 +186,7 @@ class CfgMagazines
 	class 4Rnd_Titan_long_missiles;
 	class 140Rnd_30mm_MP_shells_Tracer_Red;
 	class 60Rnd_30mm_APFSDS_shells_Tracer_Red;
+	class 500Rnd_127x99_mag;
 	class FST_Vehicle_Mag_4Rnd_Concussion: 4Rnd_Titan_long_missiles
 	{
 		author = "Maldova";
@@ -168,6 +203,7 @@ class CfgMagazines
 		author = "Maldova";
 		displayName = "140Rnd 30mm MP-T";
 		displayNameShort = "30mm MP";
+		ammo = "FST_Vehicle_Ammo_30mm_MP_Emissive";
 		count = 140;
 		mass = 220;
 	};
@@ -177,8 +213,19 @@ class CfgMagazines
 		author = "Maldova";
 		displayName = "60Rnd 30mm APFSDS-T";
 		displayNameShort = "30mm AP";
+		ammo = "FST_Vehicle_Ammo_30mm_APFSDS_Emissive";
 		count = 60;
 		mass = 180;
+	};
+
+	class FST_Vehicle_Mag_500Rnd_50cal_Tracer: 500Rnd_127x99_mag
+	{
+		author = "Maldova";
+		displayName = "500Rnd .50 Cal Tracer";
+		displayNameShort = ".50 Tracer";
+		ammo = "FST_Vehicle_Ammo_50cal_Tracer";
+		count = 500;
+		mass = 140;
 	};
 };
 
@@ -187,6 +234,7 @@ class CfgWeapons
 	class CarHorn;
 	class missiles_titan;
 	class autocannon_30mm;
+	class HMG_127_APC;
 
 	class FST_Horn_RepulsorPulse: CarHorn
 	{
@@ -232,10 +280,20 @@ class CfgWeapons
 		scope = 2;
 		displayName = "FST Twin 30mm Cannon";
 		displayNameShort = "Twin 30mm";
+		muzzleImpulseFactor[] = {0.0001,0.005};
 		magazines[] =
 		{
 			"FST_Vehicle_Mag_140Rnd_30mm_MP",
 			"FST_Vehicle_Mag_60Rnd_30mm_APFSDS"
 		};
+	};
+
+	class FST_Vehicle_HMG_50cal: HMG_127_APC
+	{
+		author = "Maldova";
+		scope = 2;
+		displayName = "FST Commander .50 Cal";
+		displayNameShort = "Commander .50";
+		magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
 	};
 };

@@ -813,6 +813,77 @@ class CfgVehicles
 				effect="FST_ExhaustEffect_IonWhiteHot";
 			};
 		};
+		aggregateReflectors[] = {"DriverLight_03","DriverLight_04","DriverLight_05"};
+		class Reflectors
+		{
+			class RedArea_01
+			{
+				color[]={800,40,40};
+				ambient[]={8,0.3,0.3};
+				position="Emissive_01";
+				direction="Emissive_01_Dir";
+				hitpoint="Light_L";
+				selection="Light_L";
+				size=1;
+				innerAngle=110;
+				outerAngle=179;
+				coneFadeCoef=8;
+				intensity=10;
+				useFlare=0;
+				dayLight=1;
+				flareSize=0.6;
+				class Attenuation
+				{
+					start=0.2;
+					constant=0;
+					linear=0;
+					quadratic=1;
+					hardLimitStart=20;
+					hardLimitEnd=40;
+				};
+			};
+			class RedArea_02: RedArea_01
+			{
+				position="Emissive_02";
+				direction="Emissive_02_Dir";
+			};
+			class DriverLight_03
+			{
+				color[]={1800,1700,1500};
+				ambient[]={5,5,4.5};
+				position="Emissive_03";
+				direction="Emissive_03_Dir";
+				hitpoint="Light_R";
+				selection="Light_R";
+				size=1;
+				innerAngle=70;
+				outerAngle=130;
+				coneFadeCoef=6;
+				intensity=45;
+				useFlare=1;
+				dayLight=0;
+				flareSize=0.8;
+				class Attenuation
+				{
+					start=1;
+					constant=0;
+					linear=0;
+					quadratic=0.2;
+					hardLimitStart=45;
+					hardLimitEnd=90;
+				};
+			};
+			class DriverLight_04: DriverLight_03
+			{
+				position="Emissive_04";
+				direction="Emissive_04_Dir";
+			};
+			class DriverLight_05: DriverLight_03
+			{
+				position="Emissive_05";
+				direction="Emissive_05_Dir";
+			};
+		};
 		insideSoundCoef=0.89999998;
 		threat[]={0.80000001,1,0.30000001};
 		TFAR_hasIntercom=1;
@@ -920,17 +991,21 @@ class CfgVehicles
 						minElev=-25;
 						maxElev=60;
 						initElev=0;
-						minTurn=-360;
-						maxTurn=360;
+						minTurn=-270;
+						maxTurn=270;
 						initTurn=0;
 						weapons[]=
 						{
+							"FST_Vehicle_HMG_50cal",
 							"SmokeLauncher"
 						};
-						memoryPointGun="Smoke_Launcher_POS";
-						memoryPointGunDir="Smoke_Launcher_Dir";
+						memoryPointGun="Commander_Muzzle";
+						memoryPointGunDir="Commander_Muzzle_Dir";
+						gunBeg="Commander_Muzzle";
+						gunEnd="Commander_Muzzle_Dir";
 						magazines[]=
 						{
+							"FST_Vehicle_Mag_500Rnd_50cal_Tracer",
 							"SmokeLauncherMag"
 						};
 						soundServo[]=
@@ -1302,17 +1377,17 @@ class CfgVehicles
 			class recoil_source
 			{
 				source="reload";
-				weapon="cannon_120mm";
+				weapon="FST_Vehicle_Cannon_30mm";
 			};
 			class LeftMainGun_Recoil_source
 			{
 				source="reload";
-				weapon="cannon_120mm";
+				weapon="FST_Vehicle_Cannon_30mm";
 			};
 			class RightMainGun_Recoil_source
 			{
 				source="reload";
-				weapon="cannon_120mm";
+				weapon="FST_Vehicle_Cannon_30mm";
 			};
 			class Smoke_source
 			{
@@ -1983,7 +2058,8 @@ class CfgVehicles
 			"Camo8",
 			"Camo9",
 			"Camo10",
-			"Camo11"
+			"Camo11",
+			"Emissive"
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -1998,7 +2074,9 @@ class CfgVehicles
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo8_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo9_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo10_co.paa",
-			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11_co.paa"
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11_co.paa",
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_co.paa"
+
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -2013,7 +2091,8 @@ class CfgVehicles
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo8.rvmat",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo9.rvmat",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo10.rvmat",
-			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11.rvmat"
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11.rvmat",
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive.rvmat"
 		};
 		class UserActions
 		{

@@ -162,6 +162,60 @@ class CfgCloudlets
 {
 	class Default;
 	class ExhaustSmoke: Default{};
+	class FST_Proj_Blue_Emissive: Default
+	{
+		interval = 0.004;
+		circleRadius = 0;
+		circleVelocity[] = {0,0,0};
+		particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
+		particleFSNtieth = 16;
+		particleFSIndex = 13;
+		particleFSFrameCount = 1;
+		particleFSLoop = 0;
+		angleVar = 1;
+		animationName = "";
+		particleType = "Billboard";
+		timerPeriod = 1;
+		lifeTime = 0.16;
+		moveVelocity[] = {0,0.8,0};
+		rotationVelocity = 1;
+		weight = 1;
+		volume = 0.9;
+		rubbing = 0.05;
+		size[] = {0.1,0.2,0.28};
+		color[] = {{0.2,0.6,1,0.9},{0.35,0.8,1,0.45},{0.55,0.9,1,0.02}};
+		animationSpeed[] = {1};
+		randomDirectionPeriod = 0.03;
+		randomDirectionIntensity = 0.02;
+		onTimerScript = "";
+		beforeDestroyScript = "";
+		lifeTimeVar = 0.05;
+		positionVar[] = {0.02,0.02,0.02};
+		moveVelocityVar[] = {0.08,0.08,0.08};
+		rotationVelocityVar = 1;
+		sizeVar = 0.04;
+		colorVar[] = {0.03,0.03,0.03,0.02};
+		randomDirectionPeriodVar = 0.01;
+		randomDirectionIntensityVar = 0.01;
+	};
+	class FST_Proj_Blue_Emissive_Small: FST_Proj_Blue_Emissive
+	{
+		interval = 0.005;
+		lifeTime = 0.12;
+		size[] = {0.06,0.12,0.18};
+		moveVelocity[] = {0,0.6,0};
+		color[] = {{0.2,0.58,1,0.78},{0.32,0.74,1,0.32},{0.5,0.86,1,0.01}};
+		sizeVar = 0.025;
+	};
+	class FST_Proj_Blue_Emissive_Heavy: FST_Proj_Blue_Emissive
+	{
+		interval = 0.003;
+		lifeTime = 0.22;
+		size[] = {0.16,0.32,0.46};
+		moveVelocity[] = {0,1.1,0};
+		color[] = {{0.22,0.65,1,1},{0.45,0.9,1,0.58},{0.7,0.97,1,0.04}};
+		sizeVar = 0.06;
+	};
 
 	class FST_Exhaust_IonBlue_Small: ExhaustSmoke
 	{
