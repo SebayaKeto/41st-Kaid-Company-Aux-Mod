@@ -17,6 +17,47 @@ class CfgPatches
 		weapons[]={};
 	};
 };
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftDriver: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightDriver: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftCommander: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightCommander: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftGunner: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightGunner: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class DefaultEventHandlers;
 class WeaponFireGun;
 class WeaponCloudsGun;
@@ -25,6 +66,12 @@ class WeaponCloudsMGun;
 class RCWSOptics;
 class Optics_Armored;
 class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_APC_01: Optics_Armored
 {
 	class Wide;
 	class Medium;
@@ -44,6 +91,7 @@ class CfgVehicles
 		class NewTurret;
 		class Sounds;
 		class HitPoints;
+		class ACE_SelfActions;
 	};
 	class Tank_F: Tank
 	{
@@ -51,27 +99,28 @@ class CfgVehicles
 		{
 			class MainTurret: NewTurret
 			{
-				class ViewGunner;
 				class Turrets
 				{
 					class CommanderOptics;
 				};
 			};
 		};
-		class CargoTurret;
+		class Components;
 		class AnimationSources;
 		class ViewPilot;
+		class CargoTurret;
 		class ViewOptics;
+		class ViewGunner;
 		class ViewCargo;
-		class ACE_SelfActions;
 		class HeadLimits;
+		class ACE_SelfActions: ACE_SelfActions{};
 		class HitPoints: HitPoints
 		{
 			class HitHull;
-			class HitFuel;
 			class HitEngine;
 			class HitLTrack;
 			class HitRTrack;
+			class HitFuel;
 		};
 		class Sounds: Sounds
 		{
@@ -90,16 +139,16 @@ class CfgVehicles
 		simulation="tankX";
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
-		maxSpeed=95;
+		maxSpeed=110;
 		normalSpeedForwardCoef=0.69999999;
 		slowSpeedForwardCoef=0.34999999;
 		engineMOI=9;
-		enginePower=1400;
+		enginePower=3200;
 		maxOmega=345.57501;
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=8000;
+		peakTorque=22000;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -141,7 +190,7 @@ class CfgVehicles
 		};
 		thrustDelay=0.040000001;
 		dampingRateFullThrottle=0.30000001;
-		dampingRateZeroThrottleClutchEngaged=3;
+		dampingRateZeroThrottleClutchEngaged=1.8;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
 		clutchStrength=200;
 		latency=0.1;
@@ -153,7 +202,7 @@ class CfgVehicles
 			GearboxRatios[]=
 			{
 				"R2",
-				-2.2000001,
+				-0.5,
 				"N",
 				0,
 				"D1",
@@ -174,7 +223,7 @@ class CfgVehicles
 			TransmissionRatios[]=
 			{
 				"High",
-				15
+				11
 			};
 			gearBoxMode="auto";
 			moveOffGear=1;
@@ -183,12 +232,16 @@ class CfgVehicles
 			reverseString="R";
 			transmissionDelay=0.1;
 		};
-		tankTurnForce=1280000;
-		tankTurnForceAngMinSpd=0.60000002;
-		tankTurnForceAngSpd=0.91000003;
-		accelAidForceCoef=1;
-		accelAidForceYOffset=-2;
-		accelAidForceSpd=1.6;
+		antiRollbarForceCoef=16;
+		antiRollbarForceLimit=30;
+		antiRollbarSpeedMin=8;
+		antiRollbarSpeedMax=70;
+		tankTurnForce=120000;
+		tankTurnForceAngMinSpd=0.1;
+		tankTurnForceAngSpd=0.25;
+		accelAidForceCoef=0.05;
+		accelAidForceYOffset=-0.5;
+		accelAidForceSpd=0.25;
 		class Sounds
 		{
 			class Idle_ext
@@ -496,138 +549,110 @@ class CfgVehicles
 		{
 			class L2
 			{
-				side="left";
-				suspTravelDirection[]={-0.125,-1,0};
-				boneName="wheel_podkoloL1";
-				center="wheel_1_2_axis";
-				boundary="wheel_1_2_bound";
-				steering=0;
-				width=0.5;
-				mass=150;
-				MOI=33.452999;
-				dampingRate=590;
-				dampingRateInAir=590;
-				dampingRateDestroyed=3400;
-				maxDroop=0.18000001;
-				maxCompression=0.18000001;
-				sprungMass=-1;
-				springStrength=350000;
-				springDamperRate=15514;
-				maxBrakeTorque=23000;
-				latStiffX=2;
-				latStiffY=33;
-				longitudinalStiffnessPerUnitGravity=10000;
-				frictionVsSlipGraph[]=
+				boneName = "wheel_podkoloL1";
+				center = "wheel_1_2_axis";
+				boundary = "wheel_1_2_bound";
+				suspTravelDirection[] = {0,-1,0};
+				damping = 90;
+				steering = 0;
+				side = "left";
+				weight = 90;
+				mass = 180;
+				MOI = 12;
+				latStiffX = 2;
+				latStiffY = 24;
+				longitudinalStiffnessPerUnitGravity = 7800;
+				maxBrakeTorque = 13000;
+				sprungMass = -1;
+				springStrength = 22000;
+				springDamperRate = 26000;
+				dampingRate = 4;
+				dampingRateInAir = 450;
+				dampingRateDamaged = 8;
+				dampingRateDestroyed = 400;
+				maxDroop = 0.06;
+				maxCompression = 0.06;
+				frictionVsSlipGraph[] =
 				{
-					{0,0.55000001},
-					{0.30000001,1.28},
-					{0.64999998,0.55000001}
+					{0,0.6},
+					{0.5,1},
+					{1,0.75}
 				};
 			};
 			class L3: L2
 			{
-				boneName="wheel_podkolol2";
-				center="wheel_1_3_axis";
-				boundary="wheel_1_3_bound";
+				boneName = "wheel_podkolol2";
+				center = "wheel_1_3_axis";
+				boundary = "wheel_1_3_bound";
 			};
 			class L4: L2
 			{
-				boneName="wheel_podkolol3";
-				center="wheel_1_4_axis";
-				boundary="wheel_1_4_bound";
+				boneName = "wheel_podkolol3";
+				center = "wheel_1_4_axis";
+				boundary = "wheel_1_4_bound";
 			};
 			class L5: L2
 			{
-				boneName="wheel_podkolol4";
-				center="wheel_1_5_axis";
-				boundary="wheel_1_5_bound";
+				boneName = "wheel_podkolol4";
+				center = "wheel_1_5_axis";
+				boundary = "wheel_1_5_bound";
 			};
 			class L6: L2
 			{
-				boneName="wheel_podkolol5";
-				center="wheel_1_6_axis";
-				boundary="wheel_1_6_bound";
+				boneName = "wheel_podkolol5";
+				center = "wheel_1_6_axis";
+				boundary = "wheel_1_6_bound";
 			};
 			class L7: L2
 			{
-				boneName="wheel_podkolol6";
-				center="wheel_1_7_axis";
-				boundary="wheel_1_7_bound";
-			};
-			class L9: L2
-			{
-				boneName="wheel_podkolol9";
-				center="wheel_1_9_axis";
-				boundary="wheel_1_9_bound";
-				maxDroop=0;
-				maxCompression=0;
-			};
-			class L1: L2
-			{
-				boneName="";
-				center="wheel_1_1_axis";
-				boundary="wheel_1_1_bound";
-				maxDroop=0;
-				maxCompression=0;
+				boneName = "wheel_podkolol6";
+				center = "wheel_1_7_axis";
+				boundary = "wheel_1_7_bound";
 			};
 			class R2: L2
 			{
-				side="right";
-				suspTravelDirection[]={0.125,-1,0};
-				boneName="wheel_podkolop1";
-				center="wheel_2_2_axis";
-				boundary="wheel_2_2_bound";
+				boneName = "wheel_podkolop1";
+				center = "wheel_2_2_axis";
+				boundary = "wheel_2_2_bound";
+				side = "right";
 			};
 			class R3: R2
 			{
-				boneName="wheel_podkolop2";
-				center="wheel_2_3_axis";
-				boundary="wheel_2_3_bound";
+				boneName = "wheel_podkolop2";
+				center = "wheel_2_3_axis";
+				boundary = "wheel_2_3_bound";
 			};
 			class R4: R2
 			{
-				boneName="wheel_podkolop3";
-				center="wheel_2_4_axis";
-				boundary="wheel_2_4_bound";
+				boneName = "wheel_podkolop3";
+				center = "wheel_2_4_axis";
+				boundary = "wheel_2_4_bound";
 			};
 			class R5: R2
 			{
-				boneName="wheel_podkolop4";
-				center="wheel_2_5_axis";
-				boundary="wheel_2_5_bound";
+				boneName = "wheel_podkolop4";
+				center = "wheel_2_5_axis";
+				boundary = "wheel_2_5_bound";
 			};
 			class R6: R2
 			{
-				boneName="wheel_podkolop5";
-				center="wheel_2_6_axis";
-				boundary="wheel_2_6_bound";
+				boneName = "wheel_podkolop5";
+				center = "wheel_2_6_axis";
+				boundary = "wheel_2_6_bound";
 			};
 			class R7: R2
 			{
-				boneName="wheel_podkolop6";
-				center="wheel_2_7_axis";
-				boundary="wheel_2_7_bound";
-			};
-			class R9: R2
-			{
-				boneName="wheel_podkolop9";
-				center="wheel_2_9_axis";
-				boundary="wheel_2_9_bound";
-				maxDroop=0;
-				maxCompression=0;
-			};
-			class R1: R2
-			{
-				boneName="";
-				center="wheel_2_1_axis";
-				boundary="wheel_2_1_bound";
-				maxDroop=0;
-				maxCompression=0;
+				boneName = "wheel_podkolop6";
+				center = "wheel_2_7_axis";
+				boundary = "wheel_2_7_bound";
 			};
 		};
 		editorcategory="FST_Catagory_Vehicles_Land";
 		editorSubcategory="FST_Catagory_Vehicles_Land_APC";
 		scope=0;
+		hasCommander=1;
+		commanderCanSee=31;
+		commanderForceOptics=0;
 		memoryPointDriverOptics[]={"driverview"};
 		driverOpticsModel="\A3\weapons_f\reticle\optics_empty";
 		driverForceOptics=0;
@@ -638,8 +663,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=6;
-		cargoProxyIndexes[]={4,5,6,7,8,9};
+		transportSoldier=19;
+		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -725,19 +750,10 @@ class CfgVehicles
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		hideWeaponsDriver=1;
 		hideWeaponsCargo=1;
-		weapons[]=
-		{
-			"FST_Horn_RepulsorPulse",
-			"SmokeLauncher"
-		};
-		memoryPointGun="Smoke_Launcher_POS";
-		memoryPointGunDir="Smoke_Launcher_Dir";
-		magazines[]=
-		{
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag"
-		};
+		weapons[]={};
+		memoryPointGun="";
+		memoryPointGunDir="";
+		magazines[]={};
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
@@ -778,7 +794,7 @@ class CfgVehicles
 			};
 			class HitLTrack: HitLTrack
 			{
-				armor = -250;
+				armor = 0.8;
 				material = -1;
 				name = "track_l_hit";
 				passThrough = 0;
@@ -788,7 +804,7 @@ class CfgVehicles
 			};
 			class HitRTrack: HitRTrack
 			{
-				armor = -250;
+				armor = 0.8;
 				material = -1;
 				name = "track_r_hit";
 				passThrough = 0;
@@ -940,7 +956,7 @@ class CfgVehicles
 					renderVisionMode=0;
 					renderQuality=2;
 					fov=0.305731;
-					turret[]={0,0};
+					turret[]={1};
 				};
 				BBoxes[]=
 				{
@@ -974,140 +990,11 @@ class CfgVehicles
 				primaryGunner=1;
 				commanding=1;
 				proxyIndex=2;
-				class Turrets: Turrets
-				{
-					class CommanderOptics: CommanderOptics
-					{
-						primaryObserver=1;
-						commanding=2;
-						proxyIndex=3;
-						body="CommanderTurret";
-						gun="Yaw_CommanderTurret";
-						animationSourceBody="CommanderTurret";
-						animationSourceGun="Yaw_CommanderTurret";
-						AnimationSourceHatch="main_hatch_rotate";
-						memoryPointGunnerOutOptics="commanderview";
-						memoryPointGunnerOptics="commanderview";
-						minElev=-25;
-						maxElev=60;
-						initElev=0;
-						minTurn=-270;
-						maxTurn=270;
-						initTurn=0;
-						weapons[]=
-						{
-							"FST_Vehicle_HMG_50cal",
-							"SmokeLauncher"
-						};
-						memoryPointGun="Commander_Muzzle";
-						memoryPointGunDir="Commander_Muzzle_Dir";
-						gunBeg="Commander_Muzzle";
-						gunEnd="Commander_Muzzle_Dir";
-						magazines[]=
-						{
-							"FST_Vehicle_Mag_500Rnd_50cal_Tracer",
-							"SmokeLauncherMag"
-						};
-						soundServo[]=
-						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
-							0.56234133,
-							1,
-							30
-						};
-						soundServoVertical[]=
-						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
-							0.56234133,
-							1,
-							30
-						};
-						outGunnerMayFire=1;
-						inGunnerMayFire=0;
-						gunnerAction="Commander_MBT_01_cannon_F_out";
-						gunnerInAction="Commander_MBT_01_cannon_F_in";
-						gunnerGetInAction="GetInLow";
-						gunnerGetOutAction="GetOutLow";
-						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
-						gunnerOutOpticsModel="";
-						gunnerOpticsEffect[]={};
-						turretFollowFreeLook=2;
-						gunnerForceOptics=0;
-						usePip=2;
-						animationSourceStickX="com_turret_control_x";
-						animationSourceStickY="com_turret_control_y";
-						gunnerRightHandAnimName="com_turret_control";
-						LODTurnedIn=1100;
-						LODOpticsIn=0;
-						viewGunnerShadowAmb=0.5;
-						viewGunnerShadowDiff=0.050000001;
-						isPersonTurret=1;
-						forceHideGunner=0;
-						personTurretAction="vehicle_turnout_2";
-						minOutElev=-10;
-						maxOutElev=25;
-						initOutElev=0;
-						minOutTurn=-95;
-						maxOutTurn=95;
-						initOutTurn=0;
-						class ViewGunner: ViewGunner
-						{
-							initAngleX=-10;
-							initAngleY=0;
-							initFov=0.89999998;
-							minFov=0.25;
-							maxFov=1.25;
-							minAngleX=-65;
-							maxAngleX=85;
-							minAngleY=-150;
-							maxAngleY=150;
-							minMoveX=-0.075000003;
-							maxMoveX=0.075000003;
-							minMoveY=-0.075000003;
-							maxMoveY=0.075000003;
-							minMoveZ=-0.075000003;
-							maxMoveZ=0.1;
-						};
-						class ViewOptics: ViewOptics
-						{
-							initAngleX=0;
-							minAngleX=-30;
-							maxAngleX=30;
-							initAngleY=0;
-							minAngleY=-100;
-							maxAngleY=100;
-							initFov=0.31;
-							minFov=0.034000002;
-							maxFov=0.31;
-							visionMode[]=
-							{
-								"Normal",
-								"TI"
-							};
-							thermalMode[]={2,3};
-						};
-						class OpticsIn: Optics_Commander_01
-						{
-							class Wide: Wide
-							{
-							};
-							class Medium: Medium
-							{
-							};
-							class Narrow: Narrow
-							{
-							};
-						};
-						turretInfoType="RscOptics_MBT_01_commander";
-						showCrewAim=1;
-						startEngine=0;
-						gunnerHasFlares=1;
-						stabilizedInAxes=3;
-						maxHorizontalRotSpeed=1.8;
-						maxVerticalRotSpeed=1.8;
-						viewGunnerInExternal=1;
-					};
-				};
+				body="mainTurret";
+				gun="mainGun";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				class Turrets{};
 				class ViewGunner: ViewGunner
 				{
 					initAngleX=-17;
@@ -1141,8 +1028,6 @@ class CfgVehicles
 					"z_gunL_Muzzle",
 					"z_gunR_Muzzle"
 				};
-				memoryPointLRocket="MissilesL_Start";
-				memoryPointRRocket="MissilesR_Start";
 				memoryPointLMissile="MissilesL_Start";
 				memoryPointRMissile="MissilesR_Start";
 				minTurn=-20;
@@ -1239,6 +1124,132 @@ class CfgVehicles
 					};
 				};
 			};
+			class CommanderTurret: MainTurret
+			{
+				primaryObserver = 1;
+				startEngine = 0;
+				hideWeaponsGunner = 1;
+				showCrewAim = 2;
+				stabilizedInAxes = 3;
+				weapons[] = {};
+				magazines[] = {};
+				turretInfoType = "RscWeaponRangeZeroing";
+				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				selectionFireAnim = "zasleh2";
+				flash = "gunfire";
+				animationSourceBody = "obTurret";
+				animationSourceGun = "obGun";
+				body = "obTurret";
+				gun = "obGun";
+				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
+				discreteDistanceInitIndex = 2;
+				memoryPointGunnerOptics = "commanderview";
+				gunnerOpticsEffect[] = {};
+				gunnerForceOptics = 0;
+				visionMode[] = {"Normal"};
+				thermalMode[] = {};
+				missileBeg = "missleEnd";
+				missileEnd = "missleBeg";
+				gunnerInOpticsShowCursor = 1;
+				usepip = 2;
+				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				gunnerOutOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				class OpticsIn: Optics_Gunner_APC_01
+				{
+					class Wide: Wide{};
+					class Medium: Medium{};
+					class Narrow: Narrow{};
+				};
+				gunnerAction = "Saber_Commander_OUT";
+				forceHideGunner = 0;
+				outGunnerMayFire = 0;
+				gunnerInAction = "Saber_Commander_In";
+				gunnerRightHandAnimName = "";
+				gunnerLeftHandAnimName = "";
+				gunnerFireAlsoInInternalCamera = 1;
+				gunnerOutFireAlsoInInternalCamera = 1;
+				proxyIndex = 3;
+				viewGunnerInExternal = 1;
+				proxytype = "CPGunner";
+				gunnername = "Commander";
+				commanding = 2;
+				personTurretAction = "vehicle_turnout_2";
+				minOutElev = -10;
+				maxOutElev = 15;
+				initOutElev = 0;
+				minOutTurn = -45;
+				maxOutTurn = 90;
+				initOutTurn = 0;
+				minTurn = -15;
+				maxTurn = 15;
+				initTurn = 0;
+				minElev = -8;
+				maxElev = 20;
+				initElev = 0;
+				inGunnerMayFire = 0;
+				LODTurnedOut = 1000;
+				LODTurnedIn = 1000;
+				gunnerGetInAction = "GetInHigh";
+				gunnerGetOutAction = "GetOutHigh";
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor = 1.2;
+						material = -1;
+						name = "vez";
+						visual = "vez";
+						passThrough = 0;
+						minimalHit = 0.02;
+						explosionShielding = 0.3;
+						radius = 0.25;
+					};
+					class HitGun
+					{
+						armor = 1.2;
+						material = -1;
+						name = "zbran";
+						visual = "";
+						passThrough = 0;
+						minimalHit = 0;
+						explosionShielding = 1;
+						radius = 0.25;
+					};
+				};
+				class ViewOptics: RCWSOptics
+				{
+					visionMode[] = {"Normal","TI"};
+				};
+				class Components: Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						class Components: components
+						{
+							class SensorDisplay
+							{
+								componentType = "SensorsDisplayComponent";
+								range[] = {800,400,200,1600};
+								resource = "RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						defaultDisplay = "SensorDisplay";
+						class Components: components
+						{
+							class SensorDisplay
+							{
+								componentType = "SensorsDisplayComponent";
+								range[] = {800,400,200,1600};
+								resource = "RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+				class Turrets{};
+			};
 			class CargoTurret_07: CargoTurret
 			{
 				gunnerAction = "passenger_bench_1";
@@ -1286,70 +1297,149 @@ class CfgVehicles
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_10";
 				proxyIndex = 10;
 				playerPosition = 4;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_11: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_11";
 				proxyIndex = 11;
 				playerPosition = 5;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_12: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_12";
 				proxyIndex = 12;
 				playerPosition = 6;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_13: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_13";
 				proxyIndex = 13;
 				playerPosition = 7;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_14: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_14";
 				proxyIndex = 14;
 				playerPosition = 8;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_15: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_15";
 				proxyIndex = 15;
 				playerPosition = 9;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_16: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_16";
 				proxyIndex = 16;
 				playerPosition = 10;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_17: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_17";
 				proxyIndex = 17;
 				playerPosition = 11;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_18: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_18";
 				proxyIndex = 18;
 				playerPosition = 12;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_19: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_19";
 				proxyIndex = 19;
 				playerPosition = 13;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 			class CargoTurret_20: CargoTurret_07
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_20";
 				proxyIndex = 20;
 				playerPosition = 14;
-				weapons[]= {"SmokeLauncher"};
-				memoryPointGun="Smoke_Launcher_POS";
-				memoryPointGunDir="Smoke_Launcher_Dir";
-				magazines[]= {"SmokeLauncherMag"};
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
+				minOutElev = -35;
+				maxOutElev = 55;
+				weapons[]={};
+				memoryPointGun="";
+				memoryPointGunDir="";
+				magazines[]={};
+			};
+			class CargoTurret_21: CargoTurret_10
+			{
+				gunnerName = "Passenger Seat 21";
+				proxyIndex = 21;
+				playerPosition = 15;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
+			};
+			class CargoTurret_22: CargoTurret_10
+			{
+				gunnerName = "Passenger Seat 22";
+				proxyIndex = 22;
+				playerPosition = 16;
+				personTurretAction = "vehicle_turnout_2";
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 		};
 		class Damage
@@ -1453,7 +1543,7 @@ class CfgVehicles
 	{
 		class EventHandlers: DefaultEventHandlers
 		{
-			init="params ['_veh']; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _missileActive = !isNull _gunner && {currentWeapon _gunner isEqualTo 'FST_Vehicle_Launcher_Concussion'}; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};};";
+			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _missileActive = !isNull _gunner && {currentWeapon _gunner isEqualTo 'FST_Vehicle_Launcher_Concussion'}; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;};";
 		};
 		class SimpleObject
 		{
@@ -2134,13 +2224,13 @@ class CfgVehicles
 			class rear_door_rotate
 			{
 				source="user";
-				animPeriod=1.5;
+				animPeriod=3;
 				initPhase=0;
 			};
 			class main_hatch_rotate
 			{
 				source="user";
-				animPeriod=1;
+				animPeriod=2;
 				initPhase=0;
 			};
 			class MissilePods
