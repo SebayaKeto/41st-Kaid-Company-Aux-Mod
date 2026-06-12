@@ -236,28 +236,41 @@ class CfgWeapons
 	class autocannon_30mm;
 	class HMG_127_APC;
 
-	class FST_Horn_RepulsorPulse: CarHorn
+	class TruckHorn2;
+	class FST_SabreAPC_Horn: TruckHorn2
 	{
-		author = "Maldova";
-		scope = 2;
-		displayName = "Repulsor Pulse Horn";
-		drySound[] = {"\a3\sounds_f\vehicles\soft\noises\horn_big_car.wss",1,0.8,220};
-		hornSound[] = {"\FST\FST_Weapons\FST_Sounds\General\B2BattleDroidGlitch.ogg",2.4,0.92,260};
-		reloadTime = 1.2;
-		autoFire = 0;
-		canLock = 0;
-	};
-
-	class FST_Horn_CloneConvoy: CarHorn
-	{
-		author = "Maldova";
-		scope = 2;
-		displayName = "Clone Convoy Horn";
-		drySound[] = {"\a3\sounds_f\vehicles\soft\noises\horn_big_car.wss",1,0.75,220};
-		hornSound[] = {"\FST\FST_Weapons\FST_Sounds\General\TSeriesGlitch.ogg",2.1,0.86,240};
-		reloadTime = 1.35;
-		autoFire = 0;
-		canLock = 0;
+		displayName="[FST] Sabre APC Horn";
+		begin1[]=
+		{
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Sounds\Horns_01.ogg",
+			1,
+			1,
+			200
+		};
+		begin2[]=
+		{
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Sounds\Horns_02.ogg",
+			1,
+			1,
+			200
+		};
+		begin3[]=
+		{
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Sounds\Horns_03.ogg",
+			1,
+			1,
+			200
+		};
+		soundBegin[]=
+		{
+			"begin1",
+			0.33333334,
+			"begin2",
+			0.33333334,
+			"begin3",
+			0.33333334
+		};
+		reloadTime=1.2;
 	};
 
 	class FST_Vehicle_Launcher_Concussion: missiles_titan

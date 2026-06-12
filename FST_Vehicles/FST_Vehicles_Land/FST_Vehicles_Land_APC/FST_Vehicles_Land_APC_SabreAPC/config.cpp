@@ -141,7 +141,7 @@ class CfgVehicles
 		simulation="tankX";
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
-		maxSpeed=110;
+		maxSpeed=175;
 		normalSpeedForwardCoef=0.69999999;
 		slowSpeedForwardCoef=0.34999999;
 		engineMOI=9;
@@ -150,7 +150,7 @@ class CfgVehicles
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=22000;
+		peakTorque=24000;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -731,7 +731,7 @@ class CfgVehicles
 			minMoveZ=-0.075000003;
 			maxMoveZ=0.1;
 		};
-		armor=900;
+		armor=500;
 		armorLights=0.1;
 		armorStructural=6;
 		crewExplosionProtection=0.99989998;
@@ -752,7 +752,7 @@ class CfgVehicles
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		hideWeaponsDriver=1;
 		hideWeaponsCargo=1;
-		weapons[]={};
+		weapons[]={"FST_SabreAPC_Horn"};
 		memoryPointGun="";
 		memoryPointGunDir="";
 		magazines[]={};
@@ -2218,16 +2218,6 @@ class CfgVehicles
 		};
 		class UserActions
 		{
-			class SoundHorn
-			{
-				displayName = "Sound Horn";
-				position = "pos driver";
-				radius = 1;
-				priority = 5;
-				onlyForPlayer = 1;
-				condition = "(alive this) && (driver this == player)";
-				statement = "private _sounds = ['FST_SabreAPC_Horn_01','FST_SabreAPC_Horn_02','FST_SabreAPC_Horn_03']; (vehicle player) say3D (_sounds select (floor (random 3)));";
-			};
 			class OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_OPEN_REAR_DOOR";
