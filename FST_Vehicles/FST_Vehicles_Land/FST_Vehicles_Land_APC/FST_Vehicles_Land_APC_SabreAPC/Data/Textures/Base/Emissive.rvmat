@@ -13,7 +13,7 @@ emmisive[] = {100,100,100,0};
 
 specular[] = {0.3,0.3,0.3,1};
 
-specularPower = 75;
+specularPower = 90;
 
 PixelShaderID = "Super";
 
@@ -23,7 +23,7 @@ class Stage1
 
 {
 
-	texture = "FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_nohq.paa";
+	texture = "FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo1_nohq.paa";
 
 	uvSource = "tex";
 
@@ -95,7 +95,7 @@ class Stage4
 
 {
 
-	texture = "FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_as.paa";
+	texture = "FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo1_as.paa";
 
 	uvSource = "tex";
 
@@ -119,7 +119,7 @@ class Stage5
 
 {
 
-	texture = "FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_smdi.paa";
+	texture = "FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo1_smdi.paa";
 
 	uvSource = "tex";
 

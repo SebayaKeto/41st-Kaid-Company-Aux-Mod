@@ -1,3 +1,5 @@
+#include "Sounds\FST_Vehicles_Land_APC_SabreAPC_Sounds.hpp"
+
 class CfgPatches
 {
 	class FST_Vehicles_Land_SabreAPC
@@ -663,8 +665,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=19;
-		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
+		transportSoldier=20;
+		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -985,165 +987,26 @@ class CfgVehicles
 		smokeLauncherAngle=150;
 		class Turrets: Turrets
 		{
-			class MainTurret: MainTurret
+			class MainTurret_Gunner: MainTurret
 			{
-				primaryGunner=1;
-				commanding=1;
-				proxyIndex=2;
-				body="mainTurret";
-				gun="mainGun";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				class Turrets{};
-				class ViewGunner: ViewGunner
-				{
-					initAngleX=-17;
-					initAngleY=0;
-					initFov=0.89999998;
-					minFov=0.25;
-					maxFov=1.25;
-					minAngleX=-95;
-					maxAngleX=95;
-					minAngleY=-250;
-					maxAngleY=250;
-					minMoveX=0;
-					maxMoveX=0;
-					minMoveY=0;
-					maxMoveY=0;
-					minMoveZ=0;
-					maxMoveZ=0;
-				};
-				gunnerForceOptics=0;
-				usePip=2;
-				LODTurnedIn=1100;
-				LODOpticsIn=0;
-				animationSourceStickX="turret_control_x";
-				animationSourceStickY="turret_control_y";
-				gunnerLeftHandAnimName="turret_control_y";
-				gunnerRightHandAnimName="turret_control_y";
-				viewGunnerShadowAmb=0.5;
-				viewGunnerShadowDiff=0.050000001;
-				memoryPointGun[]=
-				{
-					"z_gunL_Muzzle",
-					"z_gunR_Muzzle"
-				};
-				memoryPointLMissile="MissilesL_Start";
-				memoryPointRMissile="MissilesR_Start";
-				minTurn=-20;
-				maxTurn=20;
-				initTurn=0;
-				gunnerAction="mbt1_slot2_out";
-				gunnerInAction="Gunner_MBT_01_cannon_F_in";
-				gunnerGetInAction="GetInLow";
-				gunnerGetOutAction="GetOutLow";
-				soundServo[]=
-				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
-					0.15848932,
-					1,
-					50
-				};
-				soundServoVertical[]=
-				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
-					0.15848932,
-					1,
-					50
-				};
-				weapons[]=
-				{
-					"FST_Vehicle_Cannon_30mm",
-					"FST_Vehicle_Launcher_Concussion"
-				};
-				magazines[]=
-				{
-					"FST_Vehicle_Mag_140Rnd_30mm_MP",
-					"FST_Vehicle_Mag_140Rnd_30mm_MP",
-					"FST_Vehicle_Mag_140Rnd_30mm_MP",
-					"FST_Vehicle_Mag_140Rnd_30mm_MP",
-					"FST_Vehicle_Mag_60Rnd_30mm_APFSDS",
-					"FST_Vehicle_Mag_60Rnd_30mm_APFSDS",
-					"FST_Vehicle_Mag_4Rnd_Concussion"
-				};
-				forceHideGunner=0;
-				outGunnerMayFire=1;
-				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600,2700,2800,2900,3000,3100,3200,3300,3400,3500,3600,3700,3800,3900,4000};
-				discreteDistanceInitIndex=5;
-				memoryPointGunnerOptics="gunnerview";
-				minElev=-10;
-				maxElev=35;
-				initElev=0;
-				gunnerOutOpticsModel="";
-				gunnerOutOpticsEffect[]={};
-				gunnerOpticsEffect[]={};
-				startEngine=0;
-				inGunnerMayFire=1;
-				viewGunnerInExternal=1;
-				class OpticsIn: Optics_Gunner_MBT_01
-				{
-					class Wide: Wide
-					{
-					};
-					class Medium: Medium
-					{
-					};
-					class Narrow: Narrow
-					{
-					};
-				};
-				turretInfoType="RscOptics_MBT_01_gunner";
-				showCrewAim=2;
-				class HitPoints
-				{
-					class HitTurret
-					{
-						armor=0.30000001;
-						material=-1;
-						armorComponent="hit_main_turret";
-						name="hit_main_turret_point";
-						visual="-";
-						passThrough=0;
-						minimalHit=0.1;
-						explosionShielding=0.2;
-						radius=0.25;
-						isTurret=1;
-					};
-					class HitGun
-					{
-						armor=0.60000002;
-						material=-1;
-						armorComponent="hit_main_gun";
-						name="hit_main_gun_point";
-						visual="-";
-						passThrough=0;
-						minimalHit=0.1;
-						explosionShielding=0.40000001;
-						radius=0.2;
-						isGun=1;
-					};
-				};
-			};
-			class CommanderTurret: MainTurret
-			{
-				primaryObserver = 1;
 				startEngine = 0;
 				hideWeaponsGunner = 1;
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
-				weapons[] = {};
-				magazines[] = {};
+				memoryPointGun[] = {"z_gunL_Muzzle","z_gunR_Muzzle"};
+				weapons[] = {"3AS_Sabre_Cannons","SmokeLauncher","Missiles_DAGR"};
+				magazines[] = {"3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","12Rnd_PG_Missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
 				flash = "gunfire";
-				animationSourceBody = "obTurret";
-				animationSourceGun = "obGun";
-				body = "obTurret";
-				gun = "obGun";
+				animationSourceBody = "mainGun";
+				animationSourceGun = "mainGun";
+				body = "mainGun";
+				gun = "mainGun";
 				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
 				discreteDistanceInitIndex = 2;
-				memoryPointGunnerOptics = "commanderview";
+				memoryPointGunnerOptics = "gunnerview";
 				gunnerOpticsEffect[] = {};
 				gunnerForceOptics = 0;
 				visionMode[] = {"Normal"};
@@ -1160,9 +1023,133 @@ class CfgVehicles
 					class Medium: Medium{};
 					class Narrow: Narrow{};
 				};
+				gunnerAction = "Saber_Driver";
+				forceHideGunner = 1;
+				outGunnerMayFire = 0;
+				gunnerInAction = "Saber_Driver";
+				gunnerRightHandAnimName = "";
+				gunnerLeftHandAnimName = "";
+				gunnerFireAlsoInInternalCamera = 1;
+				gunnerOutFireAlsoInInternalCamera = 1;
+				proxyIndex = 2;
+				viewGunnerInExternal = 1;
+				proxytype = "CPGunner";
+				gunnername = "Gunner";
+				commanding = 1;
+				personTurretAction = "vehicle_turnout_1";
+				minOutElev = -10;
+				maxOutElev = 15;
+				initOutElev = 0;
+				minOutTurn = -45;
+				maxOutTurn = 90;
+				initOutTurn = 0;
+				minTurn = -15;
+				maxTurn = 15;
+				initTurn = 0;
+				minElev = -8;
+				maxElev = 20;
+				initElev = 0;
+				inGunnerMayFire = 1;
+				LODTurnedOut = 1000;
+				LODTurnedIn = 1000;
+				gunnerGetInAction = "GetInHigh";
+				gunnerGetOutAction = "GetOutHigh";
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor = 1.2;
+						material = -1;
+						name = "vez";
+						visual = "vez";
+						passThrough = 0;
+						minimalHit = 0.02;
+						explosionShielding = 0.3;
+						radius = 0.25;
+					};
+					class HitGun
+					{
+						armor = 1.2;
+						material = -1;
+						name = "zbran";
+						visual = "";
+						passThrough = 0;
+						minimalHit = 0;
+						explosionShielding = 1;
+						radius = 0.25;
+					};
+				};
+				class ViewOptics: RCWSOptics
+				{
+					visionMode[] = {"Normal","TI"};
+				};
+				class Components: Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						class Components: components
+						{
+							class SensorDisplay
+							{
+								componentType = "SensorsDisplayComponent";
+								range[] = {800,400,200,1600};
+								resource = "RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						defaultDisplay = "SensorDisplay";
+						class Components: components
+						{
+							class SensorDisplay
+							{
+								componentType = "SensorsDisplayComponent";
+								range[] = {800,400,200,1600};
+								resource = "RscCustomInfoSensors";
+							};
+						};
+					};
+				};
+				class Turrets{};
+			};
+			class CommanderTurret: MainTurret
+			{
+				primaryObserver = 1;
+				startEngine = 0;
+				hideWeaponsGunner = 0;
+				showCrewAim = 2;
+				stabilizedInAxes = 3;
+				weapons[] = {"FST_Vehicle_HMG_50cal"};
+				magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
+				turretInfoType = "RscWeaponRangeZeroing";
+				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				selectionFireAnim = "zasleh2";
+				flash = "gunfire";
+				animationSourceBody = "CommanderTurret";
+				animationSourceGun = "Yaw_CommanderTurret";
+				body = "CommanderTurret";
+				gun = "Yaw_CommanderTurret";
+				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
+				discreteDistanceInitIndex = 2;
+				memoryPointGunnerOptics = "commanderview";
+				gunnerOpticsEffect[] = {};
+				gunnerForceOptics = 0;
+				visionMode[] = {"Normal"};
+				thermalMode[] = {};
+				gunnerInOpticsShowCursor = 1;
+				usepip = 2;
+				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				gunnerOutOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				class OpticsIn: Optics_Gunner_APC_01
+				{
+					class Wide: Wide{};
+					class Medium: Medium{};
+					class Narrow: Narrow{};
+				};
 				gunnerAction = "Saber_Commander_OUT";
 				forceHideGunner = 0;
-				outGunnerMayFire = 0;
+				outGunnerMayFire = 1;
 				gunnerInAction = "Saber_Commander_In";
 				gunnerRightHandAnimName = "";
 				gunnerLeftHandAnimName = "";
@@ -1175,13 +1162,13 @@ class CfgVehicles
 				commanding = 2;
 				personTurretAction = "vehicle_turnout_2";
 				minOutElev = -10;
-				maxOutElev = 15;
+				maxOutElev = 20;
 				initOutElev = 0;
-				minOutTurn = -45;
+				minOutTurn = -90;
 				maxOutTurn = 90;
 				initOutTurn = 0;
-				minTurn = -15;
-				maxTurn = 15;
+				minTurn = -90;
+				maxTurn = 90;
 				initTurn = 0;
 				minElev = -8;
 				maxElev = 20;
@@ -1250,19 +1237,62 @@ class CfgVehicles
 				};
 				class Turrets{};
 			};
-			class CargoTurret_07: CargoTurret
+			// Internal seats (proxy 4-8): no shooting
+			class CargoTurret_04: CargoTurret
 			{
 				gunnerAction = "passenger_bench_1";
 				gunnerCompartments = "Compartment2";
 				memoryPointsGetInGunner = "pos driver";
 				memoryPointsGetInGunnerDir = "pos driver dir";
-				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_07";
-				proxyIndex = 7;
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_01";
+				proxyIndex = 4;
 				soundAttenuationTurret = "HeliAttenuationGunner";
 				isPersonTurret = 1;
 				ejectDeadGunner = 1;
 				canHideGunner = 0;
 				playerPosition = 1;
+				gunnerGetInAction = "GetInLow";
+				gunnerGetOutAction = "GetOutLow";
+				inGunnerMayFire = 0;
+				outGunnerMayFire = 0;
+				weapons[] = {};
+				magazines[] = {};
+			};
+			class CargoTurret_05: CargoTurret_04
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_02";
+				proxyIndex = 5;
+				playerPosition = 2;
+			};
+			class CargoTurret_06: CargoTurret_04
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_03";
+				proxyIndex = 6;
+				playerPosition = 3;
+			};
+			class CargoTurret_07: CargoTurret_04
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_04";
+				proxyIndex = 7;
+				playerPosition = 4;
+			};
+			class CargoTurret_08: CargoTurret_04
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_05";
+				proxyIndex = 8;
+				playerPosition = 5;
+			};
+			// Exterior turret seats (proxy 9+): passengers can fire
+			class CargoTurret_BaseTurret: CargoTurret
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment2";
+				memoryPointsGetInGunner = "pos driver";
+				memoryPointsGetInGunnerDir = "pos driver dir";
+				soundAttenuationTurret = "HeliAttenuationGunner";
+				isPersonTurret = 1;
+				ejectDeadGunner = 1;
+				canHideGunner = 0;
 				gunnerGetInAction = "GetInHeli_Light_01bench";
 				gunnerGetOutAction = "GetOutLow";
 				inGunnerMayFire = 1;
@@ -1280,133 +1310,119 @@ class CfgVehicles
 				maxOutElev = 55;
 				initOutElev = 0;
 			};
-			class CargoTurret_08: CargoTurret_07
-			{
-				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_08";
-				proxyIndex = 8;
-				playerPosition = 2;
-			};
-			class CargoTurret_09: CargoTurret_07
+			class CargoTurret_09: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_09";
 				proxyIndex = 9;
-				playerPosition = 3;
+				playerPosition = 1;
+				memoryPointsGetInGunner = "pos driver";
+				memoryPointsGetInGunnerDir = "pos driver dir";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
+				minTurn = -90;
+				maxTurn = 90;
+				initTurn = 0;
+				minElev = -35;
+				maxElev = 55;
+				initElev = 0;
+				minOutTurn = -90;
+				maxOutTurn = 90;
+				initOutTurn = 0;
+				minOutElev = -35;
+				maxOutElev = 55;
+				initOutElev = 0;
 			};
-			class CargoTurret_10: CargoTurret_07
+			// Upper Left Exterior seats (proxy 10-13): left side entry
+			class CargoTurret_10: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_10";
 				proxyIndex = 10;
-				playerPosition = 4;
+				playerPosition = 2;
+				memoryPointsGetInGunner = "leftsideentry";
+				memoryPointsGetInGunnerDir = "leftsideentry_dir";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
 				personTurretAction = "vehicle_turnout_2";
 				minTurn = -85;
 				maxTurn = 85;
 				minOutTurn = -85;
 				maxOutTurn = 85;
 			};
-			class CargoTurret_11: CargoTurret_07
+			class CargoTurret_11: CargoTurret_10
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_11";
 				proxyIndex = 11;
-				playerPosition = 5;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 3;
 			};
-			class CargoTurret_12: CargoTurret_07
+			class CargoTurret_12: CargoTurret_10
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_12";
 				proxyIndex = 12;
-				playerPosition = 6;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 4;
 			};
-			class CargoTurret_13: CargoTurret_07
+			class CargoTurret_13: CargoTurret_10
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_13";
 				proxyIndex = 13;
-				playerPosition = 7;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 5;
 			};
-			class CargoTurret_14: CargoTurret_07
+			// Lower Left Exterior seats (proxy 14-15): left side entry
+			class CargoTurret_14: CargoTurret_10
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_14";
 				proxyIndex = 14;
-				playerPosition = 8;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 6;
 			};
-			class CargoTurret_15: CargoTurret_07
+			class CargoTurret_15: CargoTurret_10
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_15";
 				proxyIndex = 15;
-				playerPosition = 9;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 7;
 			};
-			class CargoTurret_16: CargoTurret_07
+			// Upper Right Exterior seats (proxy 16-19): right side entry
+			class CargoTurret_16: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_16";
 				proxyIndex = 16;
-				playerPosition = 10;
+				playerPosition = 8;
+				memoryPointsGetInGunner = "rightsideentry";
+				memoryPointsGetInGunnerDir = "rightsideentry_dir";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
 				personTurretAction = "vehicle_turnout_2";
 				minTurn = -85;
 				maxTurn = 85;
 				minOutTurn = -85;
 				maxOutTurn = 85;
 			};
-			class CargoTurret_17: CargoTurret_07
+			class CargoTurret_17: CargoTurret_16
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_17";
 				proxyIndex = 17;
-				playerPosition = 11;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 9;
 			};
-			class CargoTurret_18: CargoTurret_07
+			class CargoTurret_18: CargoTurret_16
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_18";
 				proxyIndex = 18;
-				playerPosition = 12;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 10;
 			};
-			class CargoTurret_19: CargoTurret_07
+			class CargoTurret_19: CargoTurret_16
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_19";
 				proxyIndex = 19;
-				playerPosition = 13;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				playerPosition = 11;
 			};
-			class CargoTurret_20: CargoTurret_07
+			// Upper Rear Exterior seat (proxy 20): original entry
+			class CargoTurret_20: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_20";
 				proxyIndex = 20;
-				playerPosition = 14;
+				playerPosition = 12;
+				memoryPointsGetInGunner = "pos driver";
+				memoryPointsGetInGunnerDir = "pos driver dir";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
 				personTurretAction = "vehicle_turnout_2";
 				minTurn = -85;
 				maxTurn = 85;
@@ -1414,32 +1430,45 @@ class CfgVehicles
 				maxOutTurn = 85;
 				minOutElev = -35;
 				maxOutElev = 55;
-				weapons[]={};
-				memoryPointGun="";
-				memoryPointGunDir="";
-				magazines[]={};
+				// Rear exterior -- passengers use personal weapons (isPersonTurret)
 			};
-			class CargoTurret_21: CargoTurret_10
+			// Lower Left Exterior seats cont. (proxy 21-22): left side entry
+			class CargoTurret_21: CargoTurret_BaseTurret
 			{
-				gunnerName = "Passenger Seat 21";
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_21";
 				proxyIndex = 21;
-				playerPosition = 15;
+				playerPosition = 13;
+				memoryPointsGetInGunner = "leftsideentry";
+				memoryPointsGetInGunnerDir = "leftsideentry_dir";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
 				personTurretAction = "vehicle_turnout_2";
 				minTurn = -85;
 				maxTurn = 85;
 				minOutTurn = -85;
 				maxOutTurn = 85;
 			};
-			class CargoTurret_22: CargoTurret_10
+			class CargoTurret_22: CargoTurret_21
 			{
-				gunnerName = "Passenger Seat 22";
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_22";
 				proxyIndex = 22;
-				playerPosition = 16;
+				playerPosition = 14;
+			};
+			// Infantry Commander seat (proxy 23): original entry
+			class CargoTurret_23: CargoTurret_BaseTurret
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
+				proxyIndex = 23;
+				playerPosition = 15;
+				memoryPointsGetInGunner = "pos driver";
+				memoryPointsGetInGunnerDir = "pos driver dir";
+				inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
 				personTurretAction = "vehicle_turnout_2";
-				minTurn = -85;
-				maxTurn = 85;
-				minOutTurn = -85;
-				maxOutTurn = 85;
+				minTurn = -180;
+				maxTurn = 180;
+				minOutTurn = -180;
+				maxOutTurn = 180;
 			};
 		};
 		class Damage
@@ -2189,6 +2218,16 @@ class CfgVehicles
 		};
 		class UserActions
 		{
+			class SoundHorn
+			{
+				displayName = "Sound Horn";
+				position = "pos driver";
+				radius = 1;
+				priority = 5;
+				onlyForPlayer = 1;
+				condition = "(alive this) && (driver this == player)";
+				statement = "private _sounds = ['FST_SabreAPC_Horn_01','FST_SabreAPC_Horn_02','FST_SabreAPC_Horn_03']; (vehicle player) say3D (_sounds select (floor (random 3)));";
+			};
 			class OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_OPEN_REAR_DOOR";
@@ -2197,26 +2236,26 @@ class CfgVehicles
 				priority=10;
 				onlyForPlayer=0;
 				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' < 0.5)";
-				statement="this animateSource ['rear_door_rotate',1,true]";
+				statement="this animateSource ['rear_door_rotate',1,false]";
 			};
 			class CloseRearDoor: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR";
 				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' >= 0.5)";
-				statement="this animateSource ['rear_door_rotate',0,true]";
+				statement="this animateSource ['rear_door_rotate',0,false]";
 			};
 			class OpenMainHatch: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_OPEN_HATCH";
 				position="MainHatch";
 				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
-				statement="this animateSource ['main_hatch_rotate',1,true]";
+				statement="this animateSource ['main_hatch_rotate',1,false]";
 			};
 			class CloseMainHatch: OpenMainHatch
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_HATCH";
 				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
-				statement="this animateSource ['main_hatch_rotate',0,true]";
+				statement="this animateSource ['main_hatch_rotate',0,false]";
 			};
 		};
 		class AnimationSources: AnimationSources
