@@ -137,11 +137,11 @@ class CfgVehicles
 		tas_liftVars = "[[[[0,-4,-4]]], [0.1], [-0.5]]";
 		//Regular Configurations
 		author="Maldova";
-		mapSize=25.0001;
+		mapSize=30.0001;
 		simulation="tankX";
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
-		maxSpeed=175;
+		maxSpeed=110;
 		normalSpeedForwardCoef=0.69999999;
 		slowSpeedForwardCoef=0.34999999;
 		engineMOI=9;
@@ -225,7 +225,7 @@ class CfgVehicles
 			TransmissionRatios[]=
 			{
 				"High",
-				11
+				5.5
 			};
 			gearBoxMode="auto";
 			moveOffGear=1;
@@ -665,8 +665,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=20;
-		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+		transportSoldier=19;
+		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -731,7 +731,7 @@ class CfgVehicles
 			minMoveZ=-0.075000003;
 			maxMoveZ=0.1;
 		};
-		armor=500;
+		armor=900;
 		armorLights=0.1;
 		armorStructural=6;
 		crewExplosionProtection=0.99989998;
@@ -831,77 +831,6 @@ class CfgVehicles
 				effect="FST_ExhaustEffect_IonWhiteHot";
 			};
 		};
-		aggregateReflectors[] = {"DriverLight_03","DriverLight_04","DriverLight_05"};
-		class Reflectors
-		{
-			class RedArea_01
-			{
-				color[]={800,40,40};
-				ambient[]={8,0.3,0.3};
-				position="Emissive_01";
-				direction="Emissive_01_Dir";
-				hitpoint="Light_L";
-				selection="Light_L";
-				size=1;
-				innerAngle=110;
-				outerAngle=179;
-				coneFadeCoef=8;
-				intensity=10;
-				useFlare=0;
-				dayLight=1;
-				flareSize=0.6;
-				class Attenuation
-				{
-					start=0.2;
-					constant=0;
-					linear=0;
-					quadratic=1;
-					hardLimitStart=20;
-					hardLimitEnd=40;
-				};
-			};
-			class RedArea_02: RedArea_01
-			{
-				position="Emissive_02";
-				direction="Emissive_02_Dir";
-			};
-			class DriverLight_03
-			{
-				color[]={1800,1700,1500};
-				ambient[]={5,5,4.5};
-				position="Emissive_03";
-				direction="Emissive_03_Dir";
-				hitpoint="Light_R";
-				selection="Light_R";
-				size=1;
-				innerAngle=70;
-				outerAngle=130;
-				coneFadeCoef=6;
-				intensity=45;
-				useFlare=1;
-				dayLight=0;
-				flareSize=0.8;
-				class Attenuation
-				{
-					start=1;
-					constant=0;
-					linear=0;
-					quadratic=0.2;
-					hardLimitStart=45;
-					hardLimitEnd=90;
-				};
-			};
-			class DriverLight_04: DriverLight_03
-			{
-				position="Emissive_04";
-				direction="Emissive_04_Dir";
-			};
-			class DriverLight_05: DriverLight_03
-			{
-				position="Emissive_05";
-				direction="Emissive_05_Dir";
-			};
-		};
 		insideSoundCoef=0.89999998;
 		threat[]={0.80000001,1,0.30000001};
 		TFAR_hasIntercom=1;
@@ -994,22 +923,24 @@ class CfgVehicles
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
 				memoryPointGun[] = {"z_gunL_Muzzle","z_gunR_Muzzle"};
+				gunBeg = "z_gunL_muzzle";
+				gunEnd = "z_gunL_chamber";
 				weapons[] = {"3AS_Sabre_Cannons","SmokeLauncher","Missiles_DAGR"};
 				magazines[] = {"3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","12Rnd_PG_Missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
 				flash = "gunfire";
-				animationSourceBody = "mainGun";
-				animationSourceGun = "mainGun";
-				body = "mainGun";
-				gun = "mainGun";
+				animationSourceBody = "MainGun";
+				animationSourceGun = "MainGun";
+				body = "MainGun";
+				gun = "MainGun";
 				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
 				discreteDistanceInitIndex = 2;
 				memoryPointGunnerOptics = "gunnerview";
 				gunnerOpticsEffect[] = {};
 				gunnerForceOptics = 0;
-				visionMode[] = {"Normal"};
+				visionMode[] = {"Normal","NVG"};
 				thermalMode[] = {};
 				missileBeg = "missleEnd";
 				missileEnd = "missleBeg";
@@ -1040,7 +971,7 @@ class CfgVehicles
 				minOutElev = -10;
 				maxOutElev = 15;
 				initOutElev = 0;
-				minOutTurn = -45;
+				minOutTurn = -90;
 				maxOutTurn = 90;
 				initOutTurn = 0;
 				minTurn = -15;
@@ -1054,6 +985,8 @@ class CfgVehicles
 				LODTurnedIn = 1000;
 				gunnerGetInAction = "GetInHigh";
 				gunnerGetOutAction = "GetOutHigh";
+				gunnerOutOpticsShowCursor = 1;
+				maxHorizontalRotSpeed = 0.720001;
 				class HitPoints
 				{
 					class HitTurret
@@ -1120,6 +1053,7 @@ class CfgVehicles
 				hideWeaponsGunner = 0;
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
+				memoryPointGun[] = {"CommanderMuzzle"};
 				weapons[] = {"FST_Vehicle_HMG_50cal"};
 				magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
 				turretInfoType = "RscWeaponRangeZeroing";
@@ -1147,25 +1081,27 @@ class CfgVehicles
 					class Medium: Medium{};
 					class Narrow: Narrow{};
 				};
-				gunnerAction = "Saber_Commander_OUT";
+				gunnerAction = "Saber_Commander_In";
 				forceHideGunner = 0;
+				canHideGunner = 1;
 				outGunnerMayFire = 1;
 				gunnerInAction = "Saber_Commander_In";
+				gunnerOutAction = "Saber_Commander_OUT";
 				gunnerRightHandAnimName = "";
 				gunnerLeftHandAnimName = "";
 				gunnerFireAlsoInInternalCamera = 1;
 				gunnerOutFireAlsoInInternalCamera = 1;
 				proxyIndex = 3;
 				viewGunnerInExternal = 1;
-				proxytype = "CPGunner";
+				proxytype = "CPCommander";
 				gunnername = "Commander";
 				commanding = 2;
 				personTurretAction = "vehicle_turnout_2";
 				minOutElev = -10;
-				maxOutElev = 20;
+				maxOutElev = 25;
 				initOutElev = 0;
-				minOutTurn = -90;
-				maxOutTurn = 90;
+				minOutTurn = -135;
+				maxOutTurn = 135;
 				initOutTurn = 0;
 				minTurn = -90;
 				maxTurn = 90;
@@ -1453,22 +1389,6 @@ class CfgVehicles
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_22";
 				proxyIndex = 22;
 				playerPosition = 14;
-			};
-			// Infantry Commander seat (proxy 23): original entry
-			class CargoTurret_23: CargoTurret_BaseTurret
-			{
-				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
-				proxyIndex = 23;
-				playerPosition = 15;
-				memoryPointsGetInGunner = "pos driver";
-				memoryPointsGetInGunnerDir = "pos driver dir";
-				inGunnerMayFire = 1;
-				outGunnerMayFire = 1;
-				personTurretAction = "vehicle_turnout_2";
-				minTurn = -180;
-				maxTurn = 180;
-				minOutTurn = -180;
-				maxOutTurn = 180;
 			};
 		};
 		class Damage
@@ -1816,7 +1736,7 @@ class CfgVehicles
 				},
 				
 				{
-					"maingun",
+					"MainGun",
 					0.17
 				},
 				
@@ -2195,7 +2115,7 @@ class CfgVehicles
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo9_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo10_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11_co.paa",
-			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo_co.paa",
+			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo1_co.paa",
 			"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo2_co.paa"
 
 		};
@@ -2225,13 +2145,13 @@ class CfgVehicles
 				radius=4;
 				priority=10;
 				onlyForPlayer=0;
-				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' < 0.5)";
+				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' < 0.5)";
 				statement="this animateSource ['rear_door_rotate',1,false]";
 			};
 			class CloseRearDoor: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR";
-				condition="(alive this) && ((player == driver this) || (effectiveCommander this == player)) && (this animationSourcePhase 'rear_door_rotate' >= 0.5)";
+				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' >= 0.5)";
 				statement="this animateSource ['rear_door_rotate',0,false]";
 			};
 			class OpenMainHatch: OpenRearDoor

@@ -7,8 +7,7 @@ class CfgPatches
 		{
 			"A3_Data_F",
 			"A3_Weapons_F",
-			"FST_Core",
-			"FST_Weapons"
+			"FST_Core"
 		};
 		requiredVersion = 0.1;
 		units[] = {};

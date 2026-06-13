@@ -136,28 +136,6 @@ class CfgEditorSubcategories
 		displayname = "$STR_FST_CORE_CAT_VEHICLES_APC";
 	};
 };
-class CfgFunctions
-{
-	class FST_Weapon
-	{
-		file = "FST\FST_Weapons\FST_Functions";
-		class scripts
-		{
-			class onHit{};
-			class onHitStun{};
-			class onHitConcussion{};
-			class onHitIon{};
-			class onHitIncendiary{};
-		};
-	};
-};
-class Extended_HitPart_EventHandlers
-{
-	class CAManBase
-	{
-		hitPart = "(_this select 0) call FST_Weapon_fnc_onHit";
-	};
-};
 class CfgCloudlets
 {
 	class Default;
