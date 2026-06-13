@@ -213,6 +213,7 @@ class CfgPatches
 			"FST_P2_Hugger",
 			"FST_P2_Alfour",
 			"FST_P2_Marcus",
+			"FST_P2_Marcus_Dirty",
 			"FST_P2_Nori",
 			"FST_P2_Nori_Dirty",
 			"FST_P2_Nori_V2",
@@ -378,6 +379,7 @@ class CfgPatches
 			"FST_P2_Bees",
 			"FST_P2_Dilham",
 			"FST_P2_Dilham_Dirty",
+			"FST_P2_Apollon",
 			"FST_P2_Vex",
 			"FST_P2_Cait",
 			"FST_P2_Rick",
@@ -11116,6 +11118,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Marcus.paa",
 		};
 	};	
+	class FST_P2_Helmet_Marcus_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Marcus/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Marcus_Dirty.paa",
+		};
+	};	
 	class FST_P2_Helmet_Blood: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -16315,6 +16327,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Apollon: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Apollon]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Apollon";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Vex: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -17542,6 +17568,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Marcus";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Marcus_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Marcus/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Marcus_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -39072,6 +39112,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Apollon: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-2856 'Apollon'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Apollon";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Apollon.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Apollon.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Apollon",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Apollon",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Vex: FST_Trooper_P2_DC15S
 	{
 		author="Steel";
@@ -44619,6 +44714,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Marcus",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Marcus_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-1551 'Marcus/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Marcus_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Marcus_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Marcus_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Marcus_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Marcus_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -53088,6 +53238,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Claw";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Claw.paa";
+		};
+		class FST_Clone_Head_Ares: FST_clone_Default_head
+		{
+			author="Steel";
+			name="Clone Trooper Ares";
+			displayName="[41st] Clone Trooper - Ares";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Ares.paa";
 		};
 		class FST_Clone_Head_Mono: FST_clone_Default_head
 		{
