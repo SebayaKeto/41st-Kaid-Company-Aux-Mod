@@ -740,6 +740,7 @@ class CfgVehicles
 		crewVulnerable=0;
 		epeImpulseDamageCoef=18;
 		waterPPInVehicle=0;
+		canFloat=1;
 		waterLinearDampingCoefY= 3;		
 		waterLinearDampingCoefX= 3.0;		
 		waterAngularDampingCoef= 1.5;		
@@ -2145,13 +2146,13 @@ class CfgVehicles
 				radius=4;
 				priority=10;
 				onlyForPlayer=0;
-				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' < 0.5)";
+				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' < 0.5))";
 				statement="this animateSource ['rear_door_rotate',1,false]";
 			};
 			class CloseRearDoor: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR";
-				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' >= 0.5)";
+				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' >= 0.5))";
 				statement="this animateSource ['rear_door_rotate',0,false]";
 			};
 			class OpenMainHatch: OpenRearDoor
