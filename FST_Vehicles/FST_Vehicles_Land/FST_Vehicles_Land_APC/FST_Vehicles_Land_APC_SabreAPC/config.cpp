@@ -192,7 +192,7 @@ class CfgVehicles
 		};
 		thrustDelay=0.040000001;
 		dampingRateFullThrottle=0.30000001;
-		dampingRateZeroThrottleClutchEngaged=1.8;
+		dampingRateZeroThrottleClutchEngaged=1.2;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
 		clutchStrength=200;
 		latency=0.1;
@@ -234,14 +234,14 @@ class CfgVehicles
 			reverseString="R";
 			transmissionDelay=0.1;
 		};
-		antiRollbarForceCoef=16;
-		antiRollbarForceLimit=30;
-		antiRollbarSpeedMin=8;
-		antiRollbarSpeedMax=70;
-		tankTurnForce=120000;
-		tankTurnForceAngMinSpd=0.1;
-		tankTurnForceAngSpd=0.25;
-		accelAidForceCoef=0.05;
+		antiRollbarForceCoef=10;
+		antiRollbarForceLimit=22;
+		antiRollbarSpeedMin=5;
+		antiRollbarSpeedMax=55;
+		tankTurnForce=100000;
+		tankTurnForceAngMinSpd=0.05;
+		tankTurnForceAngSpd=0.2;
+		accelAidForceCoef=0.03;
 		accelAidForceYOffset=-0.5;
 		accelAidForceSpd=0.25;
 		class Sounds
@@ -566,14 +566,14 @@ class CfgVehicles
 				longitudinalStiffnessPerUnitGravity = 7800;
 				maxBrakeTorque = 13000;
 				sprungMass = -1;
-				springStrength = 22000;
-				springDamperRate = 26000;
+				springStrength = 20000;
+				springDamperRate = 18000;
 				dampingRate = 4;
 				dampingRateInAir = 450;
 				dampingRateDamaged = 8;
 				dampingRateDestroyed = 400;
-				maxDroop = 0.06;
-				maxCompression = 0.06;
+				maxDroop = 0.09;
+				maxCompression = 0.09;
 				frictionVsSlipGraph[] =
 				{
 					{0,0.6},
@@ -690,7 +690,7 @@ class CfgVehicles
 			"passenger_apc_narrow_generic02",
 			"passenger_apc_narrow_generic03"
 		};
-		maxFordingDepth=-0.80000001;
+		maxFordingDepth= 0.1;
 		waterResistance=1;
 		waterDamageEngine=0;
 		LODDriverTurnedin=1100;
@@ -1737,10 +1737,30 @@ class CfgVehicles
 				},
 				
 				{
-					"MainGun",
-					0.17
+					"LeftMainGun",
+					0
 				},
-				
+
+				{
+					"RightMainGun",
+					0
+				},
+
+				{
+					"LeftMainGun_Recoil",
+					0
+				},
+
+				{
+					"RightMainGun_Recoil",
+					0
+				},
+
+				{
+					"MissilePods",
+					0
+				},
+
 				{
 					"hatchcommander",
 					0
@@ -2180,7 +2200,7 @@ class CfgVehicles
 			class main_hatch_rotate
 			{
 				source="user";
-				animPeriod=2;
+				animPeriod=4;
 				initPhase=0;
 			};
 			class MissilePods
