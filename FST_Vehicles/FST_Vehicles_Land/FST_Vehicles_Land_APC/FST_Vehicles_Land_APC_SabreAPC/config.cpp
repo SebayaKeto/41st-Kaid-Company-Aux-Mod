@@ -932,9 +932,9 @@ class CfgVehicles
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
 				flash = "gunfire";
-				animationSourceBody = "MainGun";
+				animationSourceBody = "MainTurret";
 				animationSourceGun = "MainGun";
-				body = "MainGun";
+				body = "MainTurret";
 				gun = "MainGun";
 				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
 				discreteDistanceInitIndex = 2;
