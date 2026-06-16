@@ -195,6 +195,26 @@ class CfgCloudlets
 		sizeVar = 0.06;
 	};
 
+	class FST_Proj_DarkBlue_Emissive_Medium: FST_Proj_Blue_Emissive
+	{
+		interval = 0.004;
+		lifeTime = 0.18;
+		size[] = {0.12,0.24,0.36};
+		moveVelocity[] = {0,0.9,0};
+		color[] = {{0.1,0.35,0.8,0.95},{0.25,0.6,1,0.5},{0.45,0.75,1,0.02}};
+		sizeVar = 0.05;
+	};
+
+	class FST_Proj_LightBlue_Emissive_Medium: FST_Proj_Blue_Emissive
+	{
+		interval = 0.004;
+		lifeTime = 0.18;
+		size[] = {0.12,0.24,0.36};
+		moveVelocity[] = {0,0.9,0};
+		color[] = {{0.4,0.75,1,0.95},{0.6,0.9,1,0.55},{0.8,0.98,1,0.02}};
+		sizeVar = 0.05;
+	};
+
 	class FST_Exhaust_IonBlue_Small: ExhaustSmoke
 	{
 		interval = 0.02;

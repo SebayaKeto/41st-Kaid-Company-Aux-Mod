@@ -17,6 +17,7 @@ class CfgPatches
 			"FST_Horn_CloneConvoy",
 			"FST_Vehicle_Launcher_Concussion",
 			"FST_Vehicle_Cannon_30mm",
+			"FST_Vehicle_Cannon_25mm",
 			"FST_Vehicle_HMG_50cal"
 		};
 		magazines[] =
@@ -24,12 +25,16 @@ class CfgPatches
 			"FST_Vehicle_Mag_4Rnd_Concussion",
 			"FST_Vehicle_Mag_140Rnd_30mm_MP",
 			"FST_Vehicle_Mag_60Rnd_30mm_APFSDS",
-			"FST_Vehicle_Mag_500Rnd_50cal_Tracer"
+			"FST_Vehicle_Mag_500Rnd_50cal_Tracer",
+			"FST_Vehicle_Mag_120Rnd_25mm_HE",
+			"FST_Vehicle_Mag_120Rnd_25mm_AP"
 		};
 		ammo[] =
 		{
 			"FST_Vehicle_Ammo_ConcussionMissile",
-			"FST_Vehicle_Ammo_50cal_Tracer"
+			"FST_Vehicle_Ammo_50cal_Tracer",
+			"FST_Vehicle_Ammo_25mm_HE_Emissive",
+			"FST_Vehicle_Ammo_25mm_AP_Emissive"
 		};
 	};
 };
@@ -78,7 +83,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar = 0.02;
 		randomDirectionIntensityVar = 0.01;
 	};
-
 	class FST_Vehicle_MissileImpact_Concussion: Default
 	{
 		interval = 0.008;
@@ -128,6 +132,8 @@ class CfgAmmo
 	class B_127x99_Ball_Tracer_Red;
 	class B_30mm_MP_Tracer_Red;
 	class B_30mm_APFSDS_Tracer_Red;
+	class B_25mm_APFSDS_Tracer_Green;
+	class B_25mm_HE_Tracer_Green;
 	class FST_Vehicle_Ammo_ConcussionMissile: M_PG_AT
 	{
 		author = "Maldova";
@@ -178,6 +184,24 @@ class CfgAmmo
 		displayName = "30mm APFSDS Emissive";
 		effectFly = "FST_Proj_Blue_Emissive_Heavy";
 	};
+
+	class FST_Vehicle_Ammo_25mm_HE_Emissive: B_25mm_HE_Tracer_Green
+	{
+		author = "Maldova";
+		displayName = "25mm HE Emissive";
+		effectFly = "FST_Proj_LightBlue_Emissive_Medium";
+		tracerColor[] = {0.4,0.75,1,1};
+		tracerColorR[] = {0.6,0.9,1,1};
+	};
+
+	class FST_Vehicle_Ammo_25mm_AP_Emissive: B_25mm_APFSDS_Tracer_Green
+	{
+		author = "Maldova";
+		displayName = "25mm APFSDS Emissive";
+		effectFly = "FST_Proj_DarkBlue_Emissive_Medium";
+		tracerColor[] = {0.1,0.35,0.8,1};
+		tracerColorR[] = {0.25,0.6,1,1};
+	};
 };
 
 class CfgMagazines
@@ -186,6 +210,8 @@ class CfgMagazines
 	class 140Rnd_30mm_MP_shells_Tracer_Red;
 	class 60Rnd_30mm_APFSDS_shells_Tracer_Red;
 	class 500Rnd_127x99_mag;
+	class 120Rnd_25mm_HE_shells_Tracer_Green;
+	class 120Rnd_25mm_APFSDS_shells_Tracer_Green;
 	class FST_Vehicle_Mag_4Rnd_Concussion: 4Rnd_Titan_long_missiles
 	{
 		author = "Maldova";
@@ -200,6 +226,7 @@ class CfgMagazines
 	class FST_Vehicle_Mag_140Rnd_30mm_MP: 140Rnd_30mm_MP_shells_Tracer_Red
 	{
 		author = "Maldova";
+		scope = 2;
 		displayName = "140Rnd 30mm MP-T";
 		displayNameShort = "30mm MP";
 		ammo = "FST_Vehicle_Ammo_30mm_MP_Emissive";
@@ -210,6 +237,7 @@ class CfgMagazines
 	class FST_Vehicle_Mag_60Rnd_30mm_APFSDS: 60Rnd_30mm_APFSDS_shells_Tracer_Red
 	{
 		author = "Maldova";
+		scope = 2;
 		displayName = "60Rnd 30mm APFSDS-T";
 		displayNameShort = "30mm AP";
 		ammo = "FST_Vehicle_Ammo_30mm_APFSDS_Emissive";
@@ -220,11 +248,44 @@ class CfgMagazines
 	class FST_Vehicle_Mag_500Rnd_50cal_Tracer: 500Rnd_127x99_mag
 	{
 		author = "Maldova";
+		scope = 2;
 		displayName = "500Rnd .50 Cal Tracer";
 		displayNameShort = ".50 Tracer";
 		ammo = "FST_Vehicle_Ammo_50cal_Tracer";
 		count = 500;
 		mass = 140;
+	};
+
+	class FST_Vehicle_Mag_120Rnd_25mm_HE: 120Rnd_25mm_HE_shells_Tracer_Green
+	{
+		author = "Maldova";
+		scope = 2;
+		displayName = "120Rnd 25mm HE-T";
+		displayNameShort = "25mm HE";
+		ammo = "FST_Vehicle_Ammo_25mm_HE_Emissive";
+		count = 120;
+		initSpeed = 1430;
+		maxLeadSpeed = 83.333298;
+		nameSound = "cannon";
+		tracersEvery = 1;
+		muzzleImpulseFactor[] = {0.05,0.05};
+		mass = 165;
+	};
+
+	class FST_Vehicle_Mag_120Rnd_25mm_AP: 120Rnd_25mm_APFSDS_shells_Tracer_Green
+	{
+		author = "Maldova";
+		scope = 2;
+		displayName = "120Rnd 25mm APFSDS-T";
+		displayNameShort = "25mm AP";
+		ammo = "FST_Vehicle_Ammo_25mm_AP_Emissive";
+		count = 120;
+		initSpeed = 1430;
+		maxLeadSpeed = 83.333298;
+		nameSound = "cannon";
+		tracersEvery = 1;
+		muzzleImpulseFactor[] = {0.05,0.05};
+		mass = 175;
 	};
 };
 
@@ -307,5 +368,19 @@ class CfgWeapons
 		displayName = "FST Commander .50 Cal";
 		displayNameShort = "Commander .50";
 		magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
+	};
+
+	class FST_Vehicle_Cannon_25mm: autocannon_30mm
+	{
+		author = "Maldova";
+		scope = 2;
+		displayName = "FST 25mm Cannon";
+		displayNameShort = "25mm Cannon";
+		muzzleImpulseFactor[] = {0.0001,0.004};
+		magazines[] =
+		{
+			"FST_Vehicle_Mag_120Rnd_25mm_HE",
+			"FST_Vehicle_Mag_120Rnd_25mm_AP"
+		};
 	};
 };

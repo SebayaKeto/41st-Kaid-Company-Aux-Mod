@@ -690,8 +690,8 @@ class CfgVehicles
 			"passenger_apc_narrow_generic02",
 			"passenger_apc_narrow_generic03"
 		};
-		maxFordingDepth= 0.1;
-		waterResistance=1;
+		maxFordingDepth=0.5;
+		waterResistance=9.9999997e-005;
 		waterDamageEngine=0;
 		LODDriverTurnedin=1100;
 		LODDriverTurnedOut=0;
@@ -741,10 +741,13 @@ class CfgVehicles
 		epeImpulseDamageCoef=18;
 		waterPPInVehicle=0;
 		canFloat=1;
-		waterLinearDampingCoefY= 3;		
-		waterLinearDampingCoefX= 3.0;		
-		waterAngularDampingCoef= 1.5;		
-		waterResistanceCoef= 0.015;	
+		waterPPInVehicle=0;
+		waterResistanceCoef=1e-010;
+		waterLeakiness=0.0099999998;
+		waterSpeedFactor=10;
+		waterAngularDampingCoef=5;
+		waterLinearDampingCoefX=10;
+		waterLinearDampingCoefY=10;
 		wheelCircumference=2.1500001;
 		tracksSpeed=1.4;
 		model="FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\FST_Vehicles_Land_APC_SabreAPC_Model.p3d";
@@ -926,8 +929,8 @@ class CfgVehicles
 				memoryPointGun[] = {"z_gunL_Muzzle","z_gunR_Muzzle"};
 				gunBeg = "z_gunL_muzzle";
 				gunEnd = "z_gunL_chamber";
-				weapons[] = {"3AS_Sabre_Cannons","SmokeLauncher","Missiles_DAGR"};
-				magazines[] = {"3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","3AS_50Rnd_Sabre_Mag","12Rnd_PG_Missiles"};
+				weapons[] = {"FST_Vehicle_Cannon_25mm","SmokeLauncher","FST_Vehicle_Launcher_Concussion"};
+				magazines[] = {"FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","SmokeLauncherMag","FST_Vehicle_Launcher_Concussion"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
@@ -1056,7 +1059,7 @@ class CfgVehicles
 				stabilizedInAxes = 3;
 				memoryPointGun[] = {"CommanderMuzzle"};
 				weapons[] = {"FST_Vehicle_HMG_50cal"};
-				magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
+				magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
@@ -1068,6 +1071,7 @@ class CfgVehicles
 				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
 				discreteDistanceInitIndex = 2;
 				memoryPointGunnerOptics = "commanderview";
+				memoryPointGunnerOutOptics = "commanderview";
 				gunnerOpticsEffect[] = {};
 				gunnerForceOptics = 0;
 				visionMode[] = {"Normal"};
@@ -1097,7 +1101,7 @@ class CfgVehicles
 				proxytype = "CPCommander";
 				gunnername = "Commander";
 				commanding = 2;
-				personTurretAction = "vehicle_turnout_2";
+				personTurretAction = "vehicle_turnout_1";
 				minOutElev = -10;
 				maxOutElev = 25;
 				initOutElev = 0;
