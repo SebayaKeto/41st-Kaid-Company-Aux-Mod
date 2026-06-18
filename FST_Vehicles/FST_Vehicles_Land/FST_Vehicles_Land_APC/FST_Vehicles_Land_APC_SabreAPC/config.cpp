@@ -8,7 +8,6 @@ class CfgPatches
 		{
 			"FST_Common",
 			"FST_Core",
-			"FST_Vehicles_Weapons",
 			"A3_Armor_F_Gamma"
 		};
 		requiredVersion=0.1;
@@ -741,7 +740,6 @@ class CfgVehicles
 		epeImpulseDamageCoef=18;
 		waterPPInVehicle=0;
 		canFloat=1;
-		waterPPInVehicle=0;
 		waterResistanceCoef=1e-010;
 		waterLeakiness=0.0099999998;
 		waterSpeedFactor=10;
@@ -929,8 +927,8 @@ class CfgVehicles
 				memoryPointGun[] = {"z_gunL_Muzzle","z_gunR_Muzzle"};
 				gunBeg = "z_gunL_muzzle";
 				gunEnd = "z_gunL_chamber";
-				weapons[] = {"FST_Vehicle_Cannon_25mm","SmokeLauncher","FST_Vehicle_Launcher_Concussion"};
-				magazines[] = {"FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","FST_Vehicle_Mag_120Rnd_25mm_HE","FST_Vehicle_Mag_120Rnd_25mm_AP","SmokeLauncherMag","FST_Vehicle_Launcher_Concussion"};
+				weapons[] = {"3AS_Sabre_Cannons","SmokeLauncher","3AS_Sabre_Missiles"};
+				magazines[] = {"3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","SmokeLauncherMag","4Rnd_120mm_LG_cannon_missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
@@ -1058,8 +1056,8 @@ class CfgVehicles
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
 				memoryPointGun[] = {"CommanderMuzzle"};
-				weapons[] = {"FST_Vehicle_HMG_50cal"};
-				magazines[] = {"FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer","FST_Vehicle_Mag_500Rnd_50cal_Tracer"};
+				weapons[] = {"3AS_Sabre_MG"};
+				magazines[] = {"3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
