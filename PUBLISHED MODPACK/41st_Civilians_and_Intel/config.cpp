@@ -12,6 +12,8 @@ class CfgPatches
 			"FST_Civilian_Poor",
 			"FST_Civilian_Wealthy",
 			"FST_Civilian_Spacer",
+			"FST_ATM",
+			"FST_IDB",
 			"FST_CivDataW_Normal", 
 			"FST_CivDataW_Abnormal", 
 			"FST_CivDataW_Betting", 
@@ -163,6 +165,7 @@ class CfgPatches
 			"FST_CivFlimsiW_Starchart",
 			"FST_CivFlimsiW_Trash",
 			"FST_CivFlimsiW_Wanted",
+			"FST_CivFlimsiW_Wanted2",
 			"FST_CivFlimsiW_Work",
 			"FST_CivFlimsiFileW_Normal",
 			"FST_CivFlimsiFileW_Abnormal",
@@ -266,8 +269,31 @@ class CfgPatches
 			"FST_CreditCaseW_Lock",
 			"FST_CreditCaseW_Chip",
 			"FST_CreditChipW",
+			"FST_CamtonoW_Sealed",
+			"FST_CamtonoW_Suspicious",
+			"FST_CamtonoW_Art",
+			"FST_CamtonoW_Aurodium",
+			"FST_CamtonoW_Beskar",
+			"FST_CamtonoW_Blaster",
+			"FST_CamtonoW_Corusca",
+			"FST_CamtonoW_Data",
+			"FST_CamtonoW_Deed",
+			"FST_CamtonoW_Firegem",
+			"FST_CamtonoW_Gemstones",
+			"FST_CamtonoW_Glitterstim",
+			"FST_CamtonoW_Junk",
+			"FST_CamtonoW_Kyber",
+			"FST_CamtonoW_Liquor",
+			"FST_CamtonoW_Metal",
+			"FST_CamtonoW_Nova",
+			"FST_CamtonoW_Pearl",
+			"FST_CamtonoW_Rainbow",
+			"FST_CamtonoW_Vertex",
+			"FST_CamtonoW_Whiskey",
 			"FST_SmallToolkitW",
 			"FST_LargeToolkitW",
+			"FST_TSeriesHeadW",
+			"FST_BXChipW",
 			"FST_BreathingGasW_Ammonia",
 			"FST_BreathingGasW_Chlorine",
 			"FST_BreathingGasW_Corrosive",
@@ -433,6 +459,7 @@ class CfgPatches
 			"FST_CivFlimsi_Stick2",
 			"FST_CivFlimsi_Trash",
 			"FST_CivFlimsi_Wanted",
+			"FST_CivFlimsi_Wanted2",
 			"FST_CivFlimsi_Work",
 			"FST_CivFlimsiFile_Normal",
 			"FST_CivFlimsiFile_Abnormal",
@@ -536,8 +563,31 @@ class CfgPatches
 			"FST_CreditCase_Lock",
 			"FST_CreditCase_Chip",
 			"FST_CreditChip",
+			"FST_Camtono_Sealed",
+			"FST_Camtono_Suspicious",
+			"FST_Camtono_Art",
+			"FST_Camtono_Aurodium",
+			"FST_Camtono_Beskar",
+			"FST_Camtono_Blaster",
+			"FST_Camtono_Corusca",
+			"FST_Camtono_Data",
+			"FST_Camtono_Deed",
+			"FST_Camtono_Firegem",
+			"FST_Camtono_Gemstones",
+			"FST_Camtono_Glitterstim",
+			"FST_Camtono_Junk",
+			"FST_Camtono_Kyber",
+			"FST_Camtono_Liquor",
+			"FST_Camtono_Metal",
+			"FST_Camtono_Nova",
+			"FST_Camtono_Pearl",
+			"FST_Camtono_Rainbow",
+			"FST_Camtono_Vertex",
+			"FST_Camtono_Whiskey",
 			"FST_SmallToolkit",
 			"FST_LargeToolkit",
+			"FST_TSeriesHead",
+			"FST_BXChip",
 			"FST_BreathingGas_Ammonia",
 			"FST_BreathingGas_Chlorine",
 			"FST_BreathingGas_Corrosive",
@@ -603,10 +653,13 @@ class CfgFunctions
 	class FST_CivilRandomizers
 	{
 		
-		class FST_IdentitySetter
+		class FST_OtherScripts
 		{
 			file="41st_Civilians_and_Intel\Scripts";
 			class applyidentity {postInit=1;};
+			class deposit {};
+			class intel {};
+			class displaytotal {};
 		};
 		class FST_RandomCivsScripts
 		{
@@ -1575,6 +1628,36 @@ class CfgWeapons
 		displayName="[41st] Datacard";
 		descriptionShort="A standard datacard. Contains a single file with a single link to a holonet site. The site linked is just a picture of an alien pointing and laughing at you for falling for it.";
 	};
+	class FST_CivDataCrystal_Normal: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing data. This one has nothing of interest encoded on it.";
+		model="\WebKnight_StarWars_Items\cyberCrystal.p3d";
+		picture="\WebKnight_StarWars_Items\CyberCrystal_pic.paa";
+	};
+	class FST_CivDataCrystal_Abnormal: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Data Crystal (Suspicious)";
+		descriptionShort="A crystal used for storing data. The encoded data on this crystal seems to be important.";
+	};
+	class FST_CivDataCrystal_Blueprint: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing data. This crystal has a complex blueprint encoded on it. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Galaxy: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing data. This crystal has an in-depth map of the galaxy on it. Not useful intel.";
+	};
 	class FST_CivFlimsi_Normal: FST_CivData_Normal
 	{
 		author="Tooka";
@@ -1758,6 +1841,13 @@ class CfgWeapons
 		scope=1;
 		displayName="[41st] Flimsi";
 		descriptionShort="A piece of flimsiplast. This is an old wanted notice distributed by Tuk'ata for clone 1227, aka Cardinal, wanted dead or alive. Too bad they no longer exist to cash in.";
+	};
+	class FST_CivFlimsi_Wanted2: FST_CivFlimsi_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Flimsi";
+		descriptionShort="A piece of flimsiplast. This is a wanted notice for the Vornskr team distributed by the Nyvar Uprisers. They especially seem interested in clone 7662.";
 	};
 	class FST_CivFlimsiFile_Normal: FST_CivData_Normal
 	{
@@ -2501,6 +2591,227 @@ class CfgWeapons
 		model="\MRC\JLTS\contraband\Credits\credit_card.p3d";
 		picture="\MRC\JLTS\contraband\Credits\data\ui\credit_card_ui_ca.paa";
 	};
+	class FST_Camtono_Sealed: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This one is sealed tight and you are not getting into it anytime soon as they are highly resistant to being broken into.";
+		model="\MRC\JLTS\contraband\Credits\icecream.p3d";
+		picture="\MRC\JLTS\contraband\Credits\data\ui\icecream_ui_ca.paa";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=15;
+		};
+	};
+	class FST_Camtono_Suspicious: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Camtono (Suspicious)";
+		descriptionShort="A reinforced container for expensive valuables. This one contains useful intelligence contents you should return to your command.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Corusca: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This one is storing several corusca gems inside, extremely valuable gemstones that glow like they are on fire.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Rainbow: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This container has multiple rainbow gems inside, a highly valuable gemstone from the planet Gallinore.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Vertex: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This one is filled with crystalline vertex, a valuable currency mineral most commonly used by the Corporate Sector.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=25;
+		};
+	};
+	class FST_Camtono_Gemstones: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This container has multiple different generic gemstones stored inside.";
+	};
+	class FST_Camtono_Firegem: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. Contains an illegal firegem; if this gem is right next to a hyperdrive as a ship enters hyperspace it will cause the ship to explode.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Nova: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. Inside this one are nova crystals, glowing with absorbed starlight.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=17;
+		};
+	};
+	class FST_Camtono_Pearl: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. You are surprised to discover an extremely valuable krayt dragon pearl inside this container.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=20;
+		};
+	};
+	class FST_Camtono_Aurodium: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This container has several ingots of aurodium, a vaulable metal often used for currency in the outer rim.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=25;
+		};
+	};
+	class FST_Camtono_Kyber: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. You are surprised to find a couple kyber crystals inside this container, usually used to be a focusing crystal of a lightsaber.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Beskar: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. Contained in this one are what at first appear to be a few iron ingots, but on closer inspection are actually beskar iron.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=25;
+		};
+	};
+	class FST_Camtono_Metal: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. Several precious metal ingots are stored inside this one.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=25;
+		};
+	};
+	class FST_Camtono_Whiskey: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This one contains a bottle of Whyren's Reserve, a rare expensive corellian whiskey.";
+	};
+	class FST_Camtono_Liquor: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This one contains a small bottle of Namana liquor, a rare expensive bakurian alcohol made from namana fruit.";
+	};
+	class FST_Camtono_Data: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. This one contains multiple data storage devices; although the data is inherently valuable, it is not useful intelligence.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Blaster: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. You are surprised to find a custom blaster pistol inside, elaborately decorated with expensive finishes.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Deed: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. The contents turn out to be deeds for land somewhere.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=10;
+		};
+	};
+	class FST_Camtono_Art: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. Has a statue of some sort inside, you are uncertain of its actual value.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=20;
+		};
+	};
+	class FST_Camtono_Glitterstim: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. There are several blackout vials of extremely illigal glitterstim inside this container, an addictive photosensitve spice.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=18;
+		};
+	};
+	class FST_Camtono_Junk: FST_Camtono_Sealed
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Camtono";
+		descriptionShort="A reinforced container for expensive valuables. The container appears to be full of junk; the contents are probably only actually valuable to the owner.";
+		class ItemInfo: InventoryWeapon_Base_F
+		{
+			mass=30;
+		};
+	};
 	class ToolKit;
 	class ToolKitItem;
 	class FST_SmallToolkit: ToolKit
@@ -2530,6 +2841,24 @@ class CfgWeapons
 		{
 			mass=50;
 		};
+	};
+	class FST_TSeriesHead: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] T-Series Head";
+		descriptionShort="A head torn off of a T-Series Tactical Droid. Turn this in to Republic Intelligence to analyze for intel.";
+		model="\kobra\442_misc\t_series\t_series_head.p3d";
+		picture="";
+	};
+	class FST_BXChip: FST_CivData_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] BX Data Chip";
+		descriptionShort="A data chip scavanged from a BX Droid. Turn this in to Republic Intelligence to analyze for intel.";
+		model="\A3\Structures_F_EPA\Items\Electronics\Battery_F.p3d";
+		picture="\MRC\JLTS\Core_mod\data\ui\nvg_chip_2_ui_ca.paa";
 	};
 	class FST_BreathingGas_Flammable: FST_CivData_Normal
 	{
@@ -5209,6 +5538,23 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_CivFlimsiW_Wanted2: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Flimsi (Wanted Poster 2)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_IntelItems";
+		class TransportItems
+		{
+			class FST_CivFlimsi_Wanted2
+			{
+				count=1;
+				name="FST_CivFlimsi_Wanted2";
+			};
+		};
+	};
 	class FST_CivFlimsiFileW_Normal: Weapon_Base_F
 	{
 		author="Tooka";
@@ -6943,6 +7289,363 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_CamtonoW_Sealed: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Sealed)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Sealed
+			{
+				count=1;
+				name="FST_Camtono_Sealed";
+			};
+		};
+	};
+	class FST_CamtonoW_Suspicious: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Suspicious)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Suspicious
+			{
+				count=1;
+				name="FST_Camtono_Suspicious";
+			};
+		};
+	};
+	class FST_CamtonoW_Corusca: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Corusca Gems)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Corusca
+			{
+				count=1;
+				name="FST_Camtono_Corusca";
+			};
+		};
+	};
+	class FST_CamtonoW_Rainbow: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Rainbow Gems)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Rainbow
+			{
+				count=1;
+				name="FST_Camtono_Rainbow";
+			};
+		};
+	};
+	class FST_CamtonoW_Vertex: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Crystalline Vertex)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Vertex
+			{
+				count=1;
+				name="FST_Camtono_Vertex";
+			};
+		};
+	};
+	class FST_CamtonoW_Gemstones: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Common Gemstones)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Gemstones
+			{
+				count=1;
+				name="FST_Camtono_Gemstones";
+			};
+		};
+	};
+	class FST_CamtonoW_Firegem: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Illegal Firegem)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Firegem
+			{
+				count=1;
+				name="FST_Camtono_Firegem";
+			};
+		};
+	};
+	class FST_CamtonoW_Nova: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Nova Crystals)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Nova
+			{
+				count=1;
+				name="FST_Camtono_Nova";
+			};
+		};
+	};
+	class FST_CamtonoW_Pearl: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Krayt Dragon Pearl)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Pearl
+			{
+				count=1;
+				name="FST_Camtono_Pearl";
+			};
+		};
+	};
+	class FST_CamtonoW_Aurodium: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Aurodium Metal)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Aurodium
+			{
+				count=1;
+				name="FST_Camtono_Aurodium";
+			};
+		};
+	};
+	class FST_CamtonoW_Kyber: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Kyber Crystals)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Kyber
+			{
+				count=1;
+				name="FST_Camtono_Kyber";
+			};
+		};
+	};
+	class FST_CamtonoW_Beskar: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Beskar Ingots)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Beskar
+			{
+				count=1;
+				name="FST_Camtono_Beskar";
+			};
+		};
+	};
+	class FST_CamtonoW_Metal: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Precious Metals)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Metal
+			{
+				count=1;
+				name="FST_Camtono_Metal";
+			};
+		};
+	};
+	class FST_CamtonoW_Whiskey: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Whyren's Reserve)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Whiskey
+			{
+				count=1;
+				name="FST_Camtono_Whiskey";
+			};
+		};
+	};
+	class FST_CamtonoW_Liquor: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Namana Liquor)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Liquor
+			{
+				count=1;
+				name="FST_Camtono_Liquor";
+			};
+		};
+	};
+	class FST_CamtonoW_Data: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Useless Data)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Data
+			{
+				count=1;
+				name="FST_Camtono_Data";
+			};
+		};
+	};
+	class FST_CamtonoW_Blaster: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Custom Blaster)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Blaster
+			{
+				count=1;
+				name="FST_Camtono_Blaster";
+			};
+		};
+	};
+	class FST_CamtonoW_Deed: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Land Deeds)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Deed
+			{
+				count=1;
+				name="FST_Camtono_Deed";
+			};
+		};
+	};
+	class FST_CamtonoW_Art: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Sculpture)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Art
+			{
+				count=1;
+				name="FST_Camtono_Art";
+			};
+		};
+	};
+	class FST_CamtonoW_Glitterstim: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Glitterstim)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Glitterstim
+			{
+				count=1;
+				name="FST_Camtono_Glitterstim";
+			};
+		};
+	};
+	class FST_CamtonoW_Junk: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] Camtono (Useless Junk)";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_Camtono_Junk
+			{
+				count=1;
+				name="FST_Camtono_Junk";
+			};
+		};
+	};
 	class FST_SmallToolkitW: Weapon_Base_F
 	{
 		author="Tooka";
@@ -6974,6 +7677,40 @@ class CfgVehicles
 			{
 				count=1;
 				name="FST_LargeToolkit";
+			};
+		};
+	};
+	class FST_TSeriesHeadW: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] T-Series Head";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_TSeriesHead
+			{
+				count=1;
+				name="FST_TSeriesHead";
+			};
+		};
+	};
+	class FST_BXChipW: Weapon_Base_F
+	{
+		author="Tooka";
+		displayName="[41st] BX Chip";
+		scope=2;
+		scopeCurator=2;
+		editorCategory="FST_Intel_Catagory";
+		editorSubcategory="FST_MiscItems";
+		class TransportItems
+		{
+			class FST_BXChip
+			{
+				count=1;
+				name="FST_BXChip";
 			};
 		};
 	};
@@ -7145,6 +7882,64 @@ class CfgVehicles
 				count=1;
 				name="FST_BreathingGas_Sulfur";
 			};
+		};
+	};
+	class NonStrategic;
+	class FST_ATM: NonStrategic
+	{
+		scope=2;
+		scopeCurator=2;
+		author="Tooka";
+		displayName="[41st] Automated Credit Deposit";
+		editorcategory="FST_Crates";
+		editorsubcategory="FST_Supplies";
+		model="\ls\core\addons\props\terminals\ls_prop_terminal_01.p3d";
+		hiddenselections[]=
+		{
+			"camo1",
+			"screen"
+		};
+		hiddenselectionstextures[]=
+		{
+			"\ls\core\addons\props\terminals\01\data\camo1_co.paa",
+			"41st_Civilians_and_Intel\Data\screen_atm_co.paa"
+		};
+		editorPreview="\ls\core\addons\props\data\ui\editorPreviews\ls_prop_terminal_01.jpg";
+		SLX_XEH_DISABLED=0;
+		class EventHandlers
+		{
+			init= "(_this select 0) addAction ['Deposit', {[_this select 0, _this select 1] call FST_CivilRandomizers_fnc_deposit;}]; (_this select 0) addAction ['View Deposit Total', { _funds = missionNamespace getVariable ['FST_CollectedDeposit', 0]; hint format ['Current Recovered Credits: %1', [_funds] call BIS_fnc_numberText];}];";
+		};
+	};
+	class FST_IDB: NonStrategic
+	{
+		scope=2;
+		scopeCurator=2;
+		author="Tooka";
+		displayName="[41st] Intel Deposit Box";
+		editorcategory="FST_Crates";
+		editorsubcategory="FST_Supplies";
+		model="FST\FST_Props\FST_Crates\RepublicStandardUnits\RSUStandardCECOne.p3d";
+		hiddenselections[]=
+		{
+			"Camo",
+			"Camo1"
+		};
+		hiddenselectionstextures[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_HV_co.paa",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo_CEC1.rvmat",
+			"FST\FST_Props\FST_Crates\RepublicStandardUnits\Data\Textures\Camo1_CEC1.rvmat"
+		};
+		editorPreview="\3as\3as_props\Crates\EditorPreviews\3AS_Supply_Large_Red_Prop.jpg";
+		SLX_XEH_DISABLED=0;
+		class EventHandlers
+		{
+			init= "(_this select 0) addAction ['Store Useful Intel', {[_this select 0, _this select 1] call FST_CivilRandomizers_fnc_intel;}]; (_this select 0) addAction ['View Total Recovered Intel', {[ _this select 1] call FST_CivilRandomizers_fnc_displaytotal;}];";
 		};
 	};
 	class C_man_1;

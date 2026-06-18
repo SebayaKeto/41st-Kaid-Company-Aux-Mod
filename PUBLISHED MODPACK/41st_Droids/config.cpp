@@ -1911,8 +1911,14 @@ class CfgVehicles
 			"Throw",
 			"Put"
 		};
-		Items[]={};
-		respawnItems[]={};
+		Items[]=
+		{
+			"FST_TSeriesHead"
+		};
+		respawnItems[]=
+		{
+			"FST_TSeriesHead"
+		};
 		linkedItems[]=
 		{
 			"FST_HUD",
@@ -2004,8 +2010,14 @@ class CfgVehicles
 			"GoG_HolsterSwordVestBack",
 			"FST_HUD",
 		};
-		Items[]={};
-		respawnItems[]={};
+		Items[]=
+		{
+			"FST_BXChip"
+		};
+		respawnItems[]=
+		{
+			"FST_BXChip"
+		};
 		magazines[]=
 		{
 			"FST_Droid_blaster_cell_red",
@@ -2065,8 +2077,14 @@ class CfgVehicles
 			"GoG_HolsterSwordVestBack",
 			"FST_HUD",
 		};
-		Items[]={};
-		respawnItems[]={};
+		Items[]=
+		{
+			"FST_BXChip"
+		};
+		respawnItems[]=
+		{
+			"FST_BXChip"
+		};
 		magazines[]=
 		{
 			"FST_Droid_blaster_cell_overcharged_red",
@@ -2127,8 +2145,14 @@ class CfgVehicles
 			"GoG_HolsterSwordVestBack",
 			"FST_HUD",
 		};
-		Items[]={};
-		respawnItems[]={};
+		Items[]=
+		{
+			"FST_BXChip"
+		};
+		respawnItems[]=
+		{
+			"FST_BXChip"
+		};
 		magazines[]=
 		{
 			"FST_Droid_blaster_cell_red",
@@ -2189,8 +2213,14 @@ class CfgVehicles
 			"GoG_HolsterSwordVestBack",
 			"FST_HUD",
 		};
-		Items[]={};
-		respawnItems[]={};
+		Items[]=
+		{
+			"FST_BXChip"
+		};
+		respawnItems[]=
+		{
+			"FST_BXChip"
+		};
 		magazines[]=
 		{
 			"FST_Droid_blaster_cell_red",
