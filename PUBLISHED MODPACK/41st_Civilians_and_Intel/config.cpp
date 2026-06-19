@@ -2850,6 +2850,16 @@ class CfgWeapons
 		descriptionShort="A head torn off of a T-Series Tactical Droid. Turn this in to Republic Intelligence to analyze for intel.";
 		model="\kobra\442_misc\t_series\t_series_head.p3d";
 		picture="";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"lights"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\kobra\442_misc\t_series\data\camo1_co.paa",
+			"\kobra\442_misc\t_series\data\lights_co.paa"
+		};
 	};
 	class FST_BXChip: FST_CivData_Normal
 	{
@@ -2954,6 +2964,7 @@ class CfgVehicles
 {
 	class SimpleObject;
 	class Weapon_Base_F;
+	class Items_base_F;
 	class FST_CivDataW_Normal: Weapon_Base_F
 	{
 		author="Tooka";
@@ -7687,7 +7698,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_MiscItems";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_TSeriesHead
@@ -7704,7 +7715,7 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		editorCategory="FST_Intel_Catagory";
-		editorSubcategory="FST_MiscItems";
+		editorSubcategory="FST_IntelItems";
 		class TransportItems
 		{
 			class FST_BXChip

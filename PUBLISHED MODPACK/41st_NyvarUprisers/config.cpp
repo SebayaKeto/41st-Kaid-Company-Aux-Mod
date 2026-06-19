@@ -9,7 +9,8 @@ class CfgPatches
 			"FST_Nyvar_Weak",
 			"FST_Nyvar_Standard",
 			"FST_Nyvar_Trained",
-			"FST_Nyvar_Tukata_Transport"
+			"FST_Nyvar_Tukata_Transport",
+			"FST_PX10_Nyvar"
 		};
 		weapons[]={};
 	};
@@ -728,10 +729,10 @@ class CfgVehicles
 			1
 		};
 	};
-	class FST_PX10_Tukata
-	class FST_PX10_Nyvar : FST_PX10_Tukata
+	class FST_PX10_Tukata;
+	class FST_PX10_Nyvar: FST_PX10_Tukata
 	{
-		displayName = "PX-10 CIS";
+		displayName = "PX-10 Nyvar";
 		author = "Tooka";
 		faction = "FST_NyvarUpriser_Faction";
 		editorSubcategory = "FST_Ground_Vehicle";
