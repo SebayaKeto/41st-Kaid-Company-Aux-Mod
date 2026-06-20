@@ -8495,6 +8495,18 @@ class CfgWeapons
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Kwike: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Kwike]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Kwike.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Kwike.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_Pilot_P1_Helmet_Cursed: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
@@ -9475,6 +9487,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cowboy.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Smiley: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Smiley)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Smiley.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Gecko: FST_Airborne_Helmet
