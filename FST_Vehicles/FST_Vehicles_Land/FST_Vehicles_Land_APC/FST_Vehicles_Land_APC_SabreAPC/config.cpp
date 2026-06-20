@@ -824,14 +824,77 @@ class CfgVehicles
 			{
 				position="exhaust_1_pos";
 				direction="exhaust_1_dir";
-				effect="FST_ExhaustEffect_IonWhiteHot";
+				effect="ExhaustsEffectAMV";
 			};
 			class Exhaust2
 			{
 				position="exhaust_2_pos";
 				direction="exhaust_2_dir";
-				effect="FST_ExhaustEffect_IonWhiteHot";
+				effect="ExhaustsEffectAMV";
 			};
+		};
+		class Reflectors
+		{
+			class DriverLongBeam
+			{
+				color[]={1900,1300,950};
+				ambient[]={5,5,5};
+				position="Emissive_03";
+				direction="Emissive_03_Dir";
+				hitpoint="Emissive_03";
+				selection="Emissive_03";
+				size=1;
+				innerAngle=12;
+				outerAngle=30;
+				coneFadeCoef=10;
+				intensity=8;
+				useFlare=1;
+				dayLight=0;
+				flareSize=1;
+				class Attenuation
+				{
+					start=1;
+					constant=0;
+					linear=0;
+					quadratic=0.05;
+					hardLimitStart=75;
+					hardLimitEnd=180;
+				};
+			};
+			class DriverLeft: DriverLongBeam
+			{
+				position="Emissive_04";
+				direction="Emissive_04_Dir";
+				hitpoint="Emissive_04";
+				selection="Emissive_04";
+				innerAngle=60;
+				outerAngle=120;
+				intensity=2;
+				class Attenuation
+				{
+					start=1;
+					constant=0;
+					linear=0;
+					quadratic=0.2;
+					hardLimitStart=35;
+					hardLimitEnd=90;
+				};
+			};
+			class DriverRight: DriverLeft
+			{
+				position="Emissive_05";
+				direction="Emissive_05_Dir";
+				hitpoint="Emissive_05";
+				selection="Emissive_05";
+			};
+		};
+		aggregateReflectors[]=
+		{
+			{
+				"DriverLongBeam",
+				"DriverLeft",
+				"DriverRight"
+			}
 		};
 		insideSoundCoef=0.89999998;
 		threat[]={0.80000001,1,0.30000001};
@@ -924,19 +987,19 @@ class CfgVehicles
 				hideWeaponsGunner = 1;
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
-				memoryPointGun[] = {"z_gunL_Muzzle","z_gunR_Muzzle"};
-				gunBeg = "z_gunL_muzzle";
-				gunEnd = "z_gunL_chamber";
+				memoryPointGun[] = {"z_gunl_muzzle","z_gunr_muzzle"};
+				gunBeg = "z_gunl_chamber";
+				gunEnd = "z_gunl_muzzle";
 				weapons[] = {"3AS_Sabre_Cannons","SmokeLauncher","3AS_Sabre_Missiles"};
-				magazines[] = {"3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","SmokeLauncherMag","4Rnd_120mm_LG_cannon_missiles"};
+				magazines[] = {"3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","SmokeLauncherMag","SmokeLauncherMag","4Rnd_120mm_LG_cannon_missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
 				flash = "gunfire";
-				animationSourceBody = "MainTurret";
-				animationSourceGun = "MainGun";
-				body = "MainTurret";
-				gun = "MainGun";
+				animationSourceBody = "obturret";
+				animationSourceGun = "obgun";
+				body = "obturret";
+				gun = "obgun";
 				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
 				discreteDistanceInitIndex = 2;
 				memoryPointGunnerOptics = "gunnerview";
