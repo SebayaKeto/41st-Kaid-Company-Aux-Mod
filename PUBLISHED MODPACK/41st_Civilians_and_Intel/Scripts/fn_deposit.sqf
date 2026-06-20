@@ -161,6 +161,7 @@ while {"FST_Camtono_Metal" in items _player} do
     _count = _count + ((2410 + floor (random 130)) * 10);
 };
 
-private _totalfunds = missionNamespace getVariable "FST_CollectedDeposit";
-_totalfunds = _totalfunds + _count;
-missionNamespace setVariable ["FST_CollectedDeposit", _totalfunds]; 
+if ( _count != 0) then 
+{
+    ["FST_depositCredits", [_count]] call CBA_fnc_serverEvent;
+};

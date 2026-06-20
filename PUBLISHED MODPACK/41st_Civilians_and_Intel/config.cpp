@@ -657,6 +657,7 @@ class CfgFunctions
 		{
 			file="41st_Civilians_and_Intel\Scripts";
 			class applyidentity {postInit=1;};
+			class servercounting {postInit=1;};
 			class deposit {};
 			class intel {};
 			class displaytotal {};
