@@ -8,6 +8,7 @@ class CfgPatches
 		{
 			"FST_Common",
 			"FST_Core",
+			"FST_Vehicles_Weapons",
 			"A3_Armor_F_Gamma"
 		};
 		requiredVersion=0.1;
@@ -136,20 +137,21 @@ class CfgVehicles
 		tas_liftVars = "[[[[0,-4,-4]]], [0.1], [-0.5]]";
 		//Regular Configurations
 		author="Maldova";
-		mapSize=30.0001;
+		mapSize=35.0001;
 		simulation="tankX";
+		mass=20000;
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
-		maxSpeed=110;
-		normalSpeedForwardCoef=0.69999999;
-		slowSpeedForwardCoef=0.34999999;
+		maxSpeed=90;
+		normalSpeedForwardCoef=0.62;
+		slowSpeedForwardCoef=0.31;
 		engineMOI=9;
-		enginePower=3200;
+		enginePower=2500;
 		maxOmega=345.57501;
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=24000;
+		peakTorque=19500;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -189,7 +191,7 @@ class CfgVehicles
 				"(2350/2850)"
 			}
 		};
-		thrustDelay=0.040000001;
+		thrustDelay=0.12;
 		dampingRateFullThrottle=0.30000001;
 		dampingRateZeroThrottleClutchEngaged=1.2;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
@@ -237,12 +239,12 @@ class CfgVehicles
 		antiRollbarForceLimit=22;
 		antiRollbarSpeedMin=5;
 		antiRollbarSpeedMax=55;
-		tankTurnForce=100000;
+		tankTurnForce=70000;
 		tankTurnForceAngMinSpd=0.05;
 		tankTurnForceAngSpd=0.2;
-		accelAidForceCoef=0.03;
+		accelAidForceCoef=0.02;
 		accelAidForceYOffset=-0.5;
-		accelAidForceSpd=0.25;
+		accelAidForceSpd=0.2;
 		class Sounds
 		{
 			class Idle_ext
@@ -847,7 +849,7 @@ class CfgVehicles
 				innerAngle=12;
 				outerAngle=30;
 				coneFadeCoef=10;
-				intensity=8;
+				intensity=6;
 				useFlare=1;
 				dayLight=0;
 				flareSize=1;
@@ -856,7 +858,7 @@ class CfgVehicles
 					start=1;
 					constant=0;
 					linear=0;
-					quadratic=0.05;
+					quadratic=0.1;
 					hardLimitStart=75;
 					hardLimitEnd=180;
 				};
@@ -899,7 +901,7 @@ class CfgVehicles
 		insideSoundCoef=0.89999998;
 		threat[]={0.80000001,1,0.30000001};
 		TFAR_hasIntercom=1;
-		TFAR_defaultIntercomSlot=-1;
+		TFAR_defaultIntercomSlot=2;
 		class ACE_SelfActions: ACE_SelfActions
 		{
 			class TFAR_IntercomChannel
@@ -937,6 +939,12 @@ class CfgVehicles
 					displayName="Misc";
 					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 3";
 					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],3,true];";
+				};
+				class TFAR_IntercomChannel_SeraphsSearchHistory
+				{
+					displayName="Seraphs Search History";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 4";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],4,true];";
 				};
 			};
 		};
@@ -987,25 +995,25 @@ class CfgVehicles
 				hideWeaponsGunner = 1;
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
-				memoryPointGun[] = {"z_gunl_muzzle","z_gunr_muzzle"};
-				gunBeg = "z_gunl_chamber";
-				gunEnd = "z_gunl_muzzle";
-				weapons[] = {"3AS_Sabre_Cannons","SmokeLauncher","3AS_Sabre_Missiles"};
-				magazines[] = {"3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","3AS_50Rnd_Sabre_mag","SmokeLauncherMag","SmokeLauncherMag","4Rnd_120mm_LG_cannon_missiles"};
+				gunBeg[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
+				gunEnd[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
+				memoryPointGun[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
+				weapons[] = {"FST_VW_Sabre_30mm_Cannon","SmokeLauncher","FST_VW_Sabre_LG_MissileLauncher"};
+				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","FST_VW_4Rnd_AT_LG_Missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
 				flash = "gunfire";
-				animationSourceBody = "obturret";
-				animationSourceGun = "obgun";
-				body = "obturret";
-				gun = "obgun";
+				animationSourceBody = "LeftMainGun_Yaw";
+				animationSourceGun = "LeftMainGun_Pitch";
+				body = "LeftMainGun_Yaw";
+				gun = "LeftMainGun_Pitch";
 				soundServo[] = {"A3\Sounds_F\vehicles\armor\noises\servo_best",0.01,1,50};
 				discreteDistanceInitIndex = 2;
 				memoryPointGunnerOptics = "gunnerview";
 				gunnerOpticsEffect[] = {};
 				gunnerForceOptics = 0;
-				visionMode[] = {"Normal","NVG"};
+				visionMode[] = {"Normal","NVG", "TI"};
 				thermalMode[] = {};
 				missileBeg = "missleEnd";
 				missileEnd = "missleBeg";
@@ -1119,8 +1127,8 @@ class CfgVehicles
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
 				memoryPointGun[] = {"CommanderMuzzle"};
-				weapons[] = {"3AS_Sabre_MG"};
-				magazines[] = {"3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag"};
+				weapons[] = {"3AS_Sabre_MG","SmokeLauncher"};
+				magazines[] = {"3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","SmokeLauncherMag","SmokeLauncherMag"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";

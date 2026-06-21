@@ -694,4 +694,328 @@
             </Key>
         </Container>
     </Package>
+    <Package name="VehicleWeapons">
+        <Container name="AmmoDisplayNames">
+            <Key ID="STR_FST_VW_AMMO_10MM_BALL">
+                <Original>10mm Ball Bolt</Original>
+                <English>10mm Ball Bolt</English>
+                <German>10mm Ball Bolt</German>
+                <French>10mm Ball Bolt</French>
+                <Spanish>10mm Ball Bolt</Spanish>
+                <Italian>10mm Ball Bolt</Italian>
+                <Polish>10mm Ball Bolt</Polish>
+                <Portuguese>10mm Ball Bolt</Portuguese>
+                <Russian>10mm Ball Bolt</Russian>
+                <Czech>10mm Ball Bolt</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_20MM_AP">
+                <Original>20mm AP Bolt</Original>
+                <English>20mm AP Bolt</English>
+                <German>20mm AP Bolt</German>
+                <French>20mm AP Bolt</French>
+                <Spanish>20mm AP Bolt</Spanish>
+                <Italian>20mm AP Bolt</Italian>
+                <Polish>20mm AP Bolt</Polish>
+                <Portuguese>20mm AP Bolt</Portuguese>
+                <Russian>20mm AP Bolt</Russian>
+                <Czech>20mm AP Bolt</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_30MM_HE">
+                <Original>30mm HE Bolt</Original>
+                <English>30mm HE Bolt</English>
+                <German>30mm HE Bolt</German>
+                <French>30mm HE Bolt</French>
+                <Spanish>30mm HE Bolt</Spanish>
+                <Italian>30mm HE Bolt</Italian>
+                <Polish>30mm HE Bolt</Polish>
+                <Portuguese>30mm HE Bolt</Portuguese>
+                <Russian>30mm HE Bolt</Russian>
+                <Czech>30mm HE Bolt</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_30MM_AP">
+                <Original>30mm AP Bolt</Original>
+                <English>30mm AP Bolt</English>
+                <German>30mm AP Bolt</German>
+                <French>30mm AP Bolt</French>
+                <Spanish>30mm AP Bolt</Spanish>
+                <Italian>30mm AP Bolt</Italian>
+                <Polish>30mm AP Bolt</Polish>
+                <Portuguese>30mm AP Bolt</Portuguese>
+                <Russian>30mm AP Bolt</Russian>
+                <Czech>30mm AP Bolt</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_40MM_HEI">
+                <Original>40mm HEI Bolt</Original>
+                <English>40mm HEI Bolt</English>
+                <German>40mm HEI Bolt</German>
+                <French>40mm HEI Bolt</French>
+                <Spanish>40mm HEI Bolt</Spanish>
+                <Italian>40mm HEI Bolt</Italian>
+                <Polish>40mm HEI Bolt</Polish>
+                <Portuguese>40mm HEI Bolt</Portuguese>
+                <Russian>40mm HEI Bolt</Russian>
+                <Czech>40mm HEI Bolt</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_AT_MISSILE">
+                <Original>AT Missile</Original>
+                <English>AT Missile</English>
+                <German>AT Missile</German>
+                <French>AT Missile</French>
+                <Spanish>AT Missile</Spanish>
+                <Italian>AT Missile</Italian>
+                <Polish>AT Missile</Polish>
+                <Portuguese>AT Missile</Portuguese>
+                <Russian>AT Missile</Russian>
+                <Czech>AT Missile</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_AT_LG_MISSILE">
+                <Original>Laser-Guided AT Missile</Original>
+                <English>Laser-Guided AT Missile</English>
+                <German>Laser-Guided AT Missile</German>
+                <French>Laser-Guided AT Missile</French>
+                <Spanish>Laser-Guided AT Missile</Spanish>
+                <Italian>Laser-Guided AT Missile</Italian>
+                <Polish>Laser-Guided AT Missile</Polish>
+                <Portuguese>Laser-Guided AT Missile</Portuguese>
+                <Russian>Laser-Guided AT Missile</Russian>
+                <Czech>Laser-Guided AT Missile</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_ATGM_TANDEM_MISSILE">
+                <Original>ATGM Tandem Missile</Original>
+                <English>ATGM Tandem Missile</English>
+                <German>ATGM Tandem Missile</German>
+                <French>ATGM Tandem Missile</French>
+                <Spanish>ATGM Tandem Missile</Spanish>
+                <Italian>ATGM Tandem Missile</Italian>
+                <Polish>ATGM Tandem Missile</Polish>
+                <Portuguese>ATGM Tandem Missile</Portuguese>
+                <Russian>ATGM Tandem Missile</Russian>
+                <Czech>ATGM Tandem Missile</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_AA_MISSILE">
+                <Original>AA Missile</Original>
+                <English>AA Missile</English>
+                <German>AA Missile</German>
+                <French>AA Missile</French>
+                <Spanish>AA Missile</Spanish>
+                <Italian>AA Missile</Italian>
+                <Polish>AA Missile</Polish>
+                <Portuguese>AA Missile</Portuguese>
+                <Russian>AA Missile</Russian>
+                <Czech>AA Missile</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_CRUISE_MISSILE">
+                <Original>Cruise Missile</Original>
+                <English>Cruise Missile</English>
+                <German>Cruise Missile</German>
+                <French>Cruise Missile</French>
+                <Spanish>Cruise Missile</Spanish>
+                <Italian>Cruise Missile</Italian>
+                <Polish>Cruise Missile</Polish>
+                <Portuguese>Cruise Missile</Portuguese>
+                <Russian>Cruise Missile</Russian>
+                <Czech>Cruise Missile</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_HE_ROCKET">
+                <Original>HE Rocket</Original>
+                <English>HE Rocket</English>
+                <German>HE Rocket</German>
+                <French>HE Rocket</French>
+                <Spanish>HE Rocket</Spanish>
+                <Italian>HE Rocket</Italian>
+                <Polish>HE Rocket</Polish>
+                <Portuguese>HE Rocket</Portuguese>
+                <Russian>HE Rocket</Russian>
+                <Czech>HE Rocket</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_AT_ROCKET">
+                <Original>AT Rocket</Original>
+                <English>AT Rocket</English>
+                <German>AT Rocket</German>
+                <French>AT Rocket</French>
+                <Spanish>AT Rocket</Spanish>
+                <Italian>AT Rocket</Italian>
+                <Polish>AT Rocket</Polish>
+                <Portuguese>AT Rocket</Portuguese>
+                <Russian>AT Rocket</Russian>
+                <Czech>AT Rocket</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_THERMOBARIC_ROCKET">
+                <Original>Thermobaric Rocket</Original>
+                <English>Thermobaric Rocket</English>
+                <German>Thermobaric Rocket</German>
+                <French>Thermobaric Rocket</French>
+                <Spanish>Thermobaric Rocket</Spanish>
+                <Italian>Thermobaric Rocket</Italian>
+                <Polish>Thermobaric Rocket</Polish>
+                <Portuguese>Thermobaric Rocket</Portuguese>
+                <Russian>Thermobaric Rocket</Russian>
+                <Czech>Thermobaric Rocket</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_ILLUM_ROCKET">
+                <Original>Illum Rocket</Original>
+                <English>Illum Rocket</English>
+                <German>Illum Rocket</German>
+                <French>Illum Rocket</French>
+                <Spanish>Illum Rocket</Spanish>
+                <Italian>Illum Rocket</Italian>
+                <Polish>Illum Rocket</Polish>
+                <Portuguese>Illum Rocket</Portuguese>
+                <Russian>Illum Rocket</Russian>
+                <Czech>Illum Rocket</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_40MM_HE_GRENADE">
+                <Original>40mm HE Grenade</Original>
+                <English>40mm HE Grenade</English>
+                <German>40mm HE Grenade</German>
+                <French>40mm HE Grenade</French>
+                <Spanish>40mm HE Grenade</Spanish>
+                <Italian>40mm HE Grenade</Italian>
+                <Polish>40mm HE Grenade</Polish>
+                <Portuguese>40mm HE Grenade</Portuguese>
+                <Russian>40mm HE Grenade</Russian>
+                <Czech>40mm HE Grenade</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_40MM_HEDP_GRENADE">
+                <Original>40mm HEDP Grenade</Original>
+                <English>40mm HEDP Grenade</English>
+                <German>40mm HEDP Grenade</German>
+                <French>40mm HEDP Grenade</French>
+                <Spanish>40mm HEDP Grenade</Spanish>
+                <Italian>40mm HEDP Grenade</Italian>
+                <Polish>40mm HEDP Grenade</Polish>
+                <Portuguese>40mm HEDP Grenade</Portuguese>
+                <Russian>40mm HEDP Grenade</Russian>
+                <Czech>40mm HEDP Grenade</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_40MM_AIRBURST_GRENADE">
+                <Original>40mm Airburst Grenade</Original>
+                <English>40mm Airburst Grenade</English>
+                <German>40mm Airburst Grenade</German>
+                <French>40mm Airburst Grenade</French>
+                <Spanish>40mm Airburst Grenade</Spanish>
+                <Italian>40mm Airburst Grenade</Italian>
+                <Polish>40mm Airburst Grenade</Polish>
+                <Portuguese>40mm Airburst Grenade</Portuguese>
+                <Russian>40mm Airburst Grenade</Russian>
+                <Czech>40mm Airburst Grenade</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_40MM_SMOKE_GRENADE">
+                <Original>40mm Smoke Grenade</Original>
+                <English>40mm Smoke Grenade</English>
+                <German>40mm Smoke Grenade</German>
+                <French>40mm Smoke Grenade</French>
+                <Spanish>40mm Smoke Grenade</Spanish>
+                <Italian>40mm Smoke Grenade</Italian>
+                <Polish>40mm Smoke Grenade</Polish>
+                <Portuguese>40mm Smoke Grenade</Portuguese>
+                <Russian>40mm Smoke Grenade</Russian>
+                <Czech>40mm Smoke Grenade</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_82MM_MORTAR">
+                <Original>82mm Mortar Shell</Original>
+                <English>82mm Mortar Shell</English>
+                <German>82mm Mortar Shell</German>
+                <French>82mm Mortar Shell</French>
+                <Spanish>82mm Mortar Shell</Spanish>
+                <Italian>82mm Mortar Shell</Italian>
+                <Polish>82mm Mortar Shell</Polish>
+                <Portuguese>82mm Mortar Shell</Portuguese>
+                <Russian>82mm Mortar Shell</Russian>
+                <Czech>82mm Mortar Shell</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_SMOKE_ROUND">
+                <Original>Smoke Round</Original>
+                <English>Smoke Round</English>
+                <German>Smoke Round</German>
+                <French>Smoke Round</French>
+                <Spanish>Smoke Round</Spanish>
+                <Italian>Smoke Round</Italian>
+                <Polish>Smoke Round</Polish>
+                <Portuguese>Smoke Round</Portuguese>
+                <Russian>Smoke Round</Russian>
+                <Czech>Smoke Round</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_AMMO_UTILITY_SHELL">
+                <Original>Utility Shell</Original>
+                <English>Utility Shell</English>
+                <German>Utility Shell</German>
+                <French>Utility Shell</French>
+                <Spanish>Utility Shell</Spanish>
+                <Italian>Utility Shell</Italian>
+                <Polish>Utility Shell</Polish>
+                <Portuguese>Utility Shell</Portuguese>
+                <Russian>Utility Shell</Russian>
+                <Czech>Utility Shell</Czech>
+            </Key>
+        </Container>
+        <Container name="MagazineDisplayNames">
+            <Key ID="STR_FST_VW_MAG_2000_10MM_BALL">
+                <Original>2000Rnd 10mm Ball Bolts</Original>
+                <English>2000Rnd 10mm Ball Bolts</English>
+                <German>2000Rnd 10mm Ball Bolts</German>
+                <French>2000Rnd 10mm Ball Bolts</French>
+                <Spanish>2000Rnd 10mm Ball Bolts</Spanish>
+                <Italian>2000Rnd 10mm Ball Bolts</Italian>
+                <Polish>2000Rnd 10mm Ball Bolts</Polish>
+                <Portuguese>2000Rnd 10mm Ball Bolts</Portuguese>
+                <Russian>2000Rnd 10mm Ball Bolts</Russian>
+                <Czech>2000Rnd 10mm Ball Bolts</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_MAG_900_20MM_AP">
+                <Original>900Rnd 20mm AP Bolts</Original>
+                <English>900Rnd 20mm AP Bolts</English>
+                <German>900Rnd 20mm AP Bolts</German>
+                <French>900Rnd 20mm AP Bolts</French>
+                <Spanish>900Rnd 20mm AP Bolts</Spanish>
+                <Italian>900Rnd 20mm AP Bolts</Italian>
+                <Polish>900Rnd 20mm AP Bolts</Polish>
+                <Portuguese>900Rnd 20mm AP Bolts</Portuguese>
+                <Russian>900Rnd 20mm AP Bolts</Russian>
+                <Czech>900Rnd 20mm AP Bolts</Czech>
+            </Key>
+            <Key ID="STR_FST_VW_MAG_120_30MM_HE"><Original>120Rnd 30mm HE Bolts</Original><English>120Rnd 30mm HE Bolts</English><German>120Rnd 30mm HE Bolts</German><French>120Rnd 30mm HE Bolts</French><Spanish>120Rnd 30mm HE Bolts</Spanish><Italian>120Rnd 30mm HE Bolts</Italian><Polish>120Rnd 30mm HE Bolts</Polish><Portuguese>120Rnd 30mm HE Bolts</Portuguese><Russian>120Rnd 30mm HE Bolts</Russian><Czech>120Rnd 30mm HE Bolts</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_120_30MM_AP"><Original>120Rnd 30mm AP Bolts</Original><English>120Rnd 30mm AP Bolts</English><German>120Rnd 30mm AP Bolts</German><French>120Rnd 30mm AP Bolts</French><Spanish>120Rnd 30mm AP Bolts</Spanish><Italian>120Rnd 30mm AP Bolts</Italian><Polish>120Rnd 30mm AP Bolts</Polish><Portuguese>120Rnd 30mm AP Bolts</Portuguese><Russian>120Rnd 30mm AP Bolts</Russian><Czech>120Rnd 30mm AP Bolts</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_60_40MM_HEI"><Original>60Rnd 40mm HEI Bolts</Original><English>60Rnd 40mm HEI Bolts</English><German>60Rnd 40mm HEI Bolts</German><French>60Rnd 40mm HEI Bolts</French><Spanish>60Rnd 40mm HEI Bolts</Spanish><Italian>60Rnd 40mm HEI Bolts</Italian><Polish>60Rnd 40mm HEI Bolts</Polish><Portuguese>60Rnd 40mm HEI Bolts</Portuguese><Russian>60Rnd 40mm HEI Bolts</Russian><Czech>60Rnd 40mm HEI Bolts</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_4_AT"><Original>4Rnd AT Missiles</Original><English>4Rnd AT Missiles</English><German>4Rnd AT Missiles</German><French>4Rnd AT Missiles</French><Spanish>4Rnd AT Missiles</Spanish><Italian>4Rnd AT Missiles</Italian><Polish>4Rnd AT Missiles</Polish><Portuguese>4Rnd AT Missiles</Portuguese><Russian>4Rnd AT Missiles</Russian><Czech>4Rnd AT Missiles</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_4_AT_LG"><Original>4Rnd Laser-Guided AT Missiles</Original><English>4Rnd Laser-Guided AT Missiles</English><German>4Rnd Laser-Guided AT Missiles</German><French>4Rnd Laser-Guided AT Missiles</French><Spanish>4Rnd Laser-Guided AT Missiles</Spanish><Italian>4Rnd Laser-Guided AT Missiles</Italian><Polish>4Rnd Laser-Guided AT Missiles</Polish><Portuguese>4Rnd Laser-Guided AT Missiles</Portuguese><Russian>4Rnd Laser-Guided AT Missiles</Russian><Czech>4Rnd Laser-Guided AT Missiles</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_2_ATGM_TANDEM"><Original>2Rnd ATGM Tandem Missiles</Original><English>2Rnd ATGM Tandem Missiles</English><German>2Rnd ATGM Tandem Missiles</German><French>2Rnd ATGM Tandem Missiles</French><Spanish>2Rnd ATGM Tandem Missiles</Spanish><Italian>2Rnd ATGM Tandem Missiles</Italian><Polish>2Rnd ATGM Tandem Missiles</Polish><Portuguese>2Rnd ATGM Tandem Missiles</Portuguese><Russian>2Rnd ATGM Tandem Missiles</Russian><Czech>2Rnd ATGM Tandem Missiles</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_8_AA"><Original>8Rnd AA Missiles</Original><English>8Rnd AA Missiles</English><German>8Rnd AA Missiles</German><French>8Rnd AA Missiles</French><Spanish>8Rnd AA Missiles</Spanish><Italian>8Rnd AA Missiles</Italian><Polish>8Rnd AA Missiles</Polish><Portuguese>8Rnd AA Missiles</Portuguese><Russian>8Rnd AA Missiles</Russian><Czech>8Rnd AA Missiles</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_1_CRUISE"><Original>1Rnd Cruise Missile</Original><English>1Rnd Cruise Missile</English><German>1Rnd Cruise Missile</German><French>1Rnd Cruise Missile</French><Spanish>1Rnd Cruise Missile</Spanish><Italian>1Rnd Cruise Missile</Italian><Polish>1Rnd Cruise Missile</Polish><Portuguese>1Rnd Cruise Missile</Portuguese><Russian>1Rnd Cruise Missile</Russian><Czech>1Rnd Cruise Missile</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_12_HE_ROCKET"><Original>12Rnd HE Rockets</Original><English>12Rnd HE Rockets</English><German>12Rnd HE Rockets</German><French>12Rnd HE Rockets</French><Spanish>12Rnd HE Rockets</Spanish><Italian>12Rnd HE Rockets</Italian><Polish>12Rnd HE Rockets</Polish><Portuguese>12Rnd HE Rockets</Portuguese><Russian>12Rnd HE Rockets</Russian><Czech>12Rnd HE Rockets</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_8_AT_ROCKET"><Original>8Rnd AT Rockets</Original><English>8Rnd AT Rockets</English><German>8Rnd AT Rockets</German><French>8Rnd AT Rockets</French><Spanish>8Rnd AT Rockets</Spanish><Italian>8Rnd AT Rockets</Italian><Polish>8Rnd AT Rockets</Polish><Portuguese>8Rnd AT Rockets</Portuguese><Russian>8Rnd AT Rockets</Russian><Czech>8Rnd AT Rockets</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_6_THERMOBARIC_ROCKET"><Original>6Rnd Thermobaric Rockets</Original><English>6Rnd Thermobaric Rockets</English><German>6Rnd Thermobaric Rockets</German><French>6Rnd Thermobaric Rockets</French><Spanish>6Rnd Thermobaric Rockets</Spanish><Italian>6Rnd Thermobaric Rockets</Italian><Polish>6Rnd Thermobaric Rockets</Polish><Portuguese>6Rnd Thermobaric Rockets</Portuguese><Russian>6Rnd Thermobaric Rockets</Russian><Czech>6Rnd Thermobaric Rockets</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_12_ILLUM_ROCKET"><Original>12Rnd Illum Rockets</Original><English>12Rnd Illum Rockets</English><German>12Rnd Illum Rockets</German><French>12Rnd Illum Rockets</French><Spanish>12Rnd Illum Rockets</Spanish><Italian>12Rnd Illum Rockets</Italian><Polish>12Rnd Illum Rockets</Polish><Portuguese>12Rnd Illum Rockets</Portuguese><Russian>12Rnd Illum Rockets</Russian><Czech>12Rnd Illum Rockets</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_96_40MM_HE"><Original>96Rnd 40mm HE Grenades</Original><English>96Rnd 40mm HE Grenades</English><German>96Rnd 40mm HE Grenades</German><French>96Rnd 40mm HE Grenades</French><Spanish>96Rnd 40mm HE Grenades</Spanish><Italian>96Rnd 40mm HE Grenades</Italian><Polish>96Rnd 40mm HE Grenades</Polish><Portuguese>96Rnd 40mm HE Grenades</Portuguese><Russian>96Rnd 40mm HE Grenades</Russian><Czech>96Rnd 40mm HE Grenades</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_64_40MM_HEDP"><Original>64Rnd 40mm HEDP Grenades</Original><English>64Rnd 40mm HEDP Grenades</English><German>64Rnd 40mm HEDP Grenades</German><French>64Rnd 40mm HEDP Grenades</French><Spanish>64Rnd 40mm HEDP Grenades</Spanish><Italian>64Rnd 40mm HEDP Grenades</Italian><Polish>64Rnd 40mm HEDP Grenades</Polish><Portuguese>64Rnd 40mm HEDP Grenades</Portuguese><Russian>64Rnd 40mm HEDP Grenades</Russian><Czech>64Rnd 40mm HEDP Grenades</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_48_40MM_AIRBURST"><Original>48Rnd 40mm Airburst Grenades</Original><English>48Rnd 40mm Airburst Grenades</English><German>48Rnd 40mm Airburst Grenades</German><French>48Rnd 40mm Airburst Grenades</French><Spanish>48Rnd 40mm Airburst Grenades</Spanish><Italian>48Rnd 40mm Airburst Grenades</Italian><Polish>48Rnd 40mm Airburst Grenades</Polish><Portuguese>48Rnd 40mm Airburst Grenades</Portuguese><Russian>48Rnd 40mm Airburst Grenades</Russian><Czech>48Rnd 40mm Airburst Grenades</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_48_40MM_SMOKE"><Original>48Rnd 40mm Smoke Grenades</Original><English>48Rnd 40mm Smoke Grenades</English><German>48Rnd 40mm Smoke Grenades</German><French>48Rnd 40mm Smoke Grenades</French><Spanish>48Rnd 40mm Smoke Grenades</Spanish><Italian>48Rnd 40mm Smoke Grenades</Italian><Polish>48Rnd 40mm Smoke Grenades</Polish><Portuguese>48Rnd 40mm Smoke Grenades</Portuguese><Russian>48Rnd 40mm Smoke Grenades</Russian><Czech>48Rnd 40mm Smoke Grenades</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_8_82MM_MORTAR"><Original>8Rnd 82mm Mortar Shells</Original><English>8Rnd 82mm Mortar Shells</English><German>8Rnd 82mm Mortar Shells</German><French>8Rnd 82mm Mortar Shells</French><Spanish>8Rnd 82mm Mortar Shells</Spanish><Italian>8Rnd 82mm Mortar Shells</Italian><Polish>8Rnd 82mm Mortar Shells</Polish><Portuguese>8Rnd 82mm Mortar Shells</Portuguese><Russian>8Rnd 82mm Mortar Shells</Russian><Czech>8Rnd 82mm Mortar Shells</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_6_SMOKE"><Original>6Rnd Smoke</Original><English>6Rnd Smoke</English><German>6Rnd Smoke</German><French>6Rnd Smoke</French><Spanish>6Rnd Smoke</Spanish><Italian>6Rnd Smoke</Italian><Polish>6Rnd Smoke</Polish><Portuguese>6Rnd Smoke</Portuguese><Russian>6Rnd Smoke</Russian><Czech>6Rnd Smoke</Czech></Key>
+            <Key ID="STR_FST_VW_MAG_20_UTILITY"><Original>20Rnd Utility Shells</Original><English>20Rnd Utility Shells</English><German>20Rnd Utility Shells</German><French>20Rnd Utility Shells</French><Spanish>20Rnd Utility Shells</Spanish><Italian>20Rnd Utility Shells</Italian><Polish>20Rnd Utility Shells</Polish><Portuguese>20Rnd Utility Shells</Portuguese><Russian>20Rnd Utility Shells</Russian><Czech>20Rnd Utility Shells</Czech></Key>
+        </Container>
+        <Container name="WeaponDisplayNames">
+            <Key ID="STR_FST_VW_WPN_BOLT_10"><Original>FST 10mm Bolt Cannon</Original><English>FST 10mm Bolt Cannon</English><German>FST 10mm Bolt Cannon</German><French>FST 10mm Bolt Cannon</French><Spanish>FST 10mm Bolt Cannon</Spanish><Italian>FST 10mm Bolt Cannon</Italian><Polish>FST 10mm Bolt Cannon</Polish><Portuguese>FST 10mm Bolt Cannon</Portuguese><Russian>FST 10mm Bolt Cannon</Russian><Czech>FST 10mm Bolt Cannon</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_BOLT_20"><Original>FST 20mm Bolt Cannon</Original><English>FST 20mm Bolt Cannon</English><German>FST 20mm Bolt Cannon</German><French>FST 20mm Bolt Cannon</French><Spanish>FST 20mm Bolt Cannon</Spanish><Italian>FST 20mm Bolt Cannon</Italian><Polish>FST 20mm Bolt Cannon</Polish><Portuguese>FST 20mm Bolt Cannon</Portuguese><Russian>FST 20mm Bolt Cannon</Russian><Czech>FST 20mm Bolt Cannon</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_BOLT_30"><Original>FST 30mm Bolt Cannon</Original><English>FST 30mm Bolt Cannon</English><German>FST 30mm Bolt Cannon</German><French>FST 30mm Bolt Cannon</French><Spanish>FST 30mm Bolt Cannon</Spanish><Italian>FST 30mm Bolt Cannon</Italian><Polish>FST 30mm Bolt Cannon</Polish><Portuguese>FST 30mm Bolt Cannon</Portuguese><Russian>FST 30mm Bolt Cannon</Russian><Czech>FST 30mm Bolt Cannon</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_SABRE_30"><Original>FST Sabre 30mm Cannon</Original><English>FST Sabre 30mm Cannon</English><German>FST Sabre 30mm Cannon</German><French>FST Sabre 30mm Cannon</French><Spanish>FST Sabre 30mm Cannon</Spanish><Italian>FST Sabre 30mm Cannon</Italian><Polish>FST Sabre 30mm Cannon</Polish><Portuguese>FST Sabre 30mm Cannon</Portuguese><Russian>FST Sabre 30mm Cannon</Russian><Czech>FST Sabre 30mm Cannon</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_BOLT_40"><Original>FST 40mm Bolt Cannon</Original><English>FST 40mm Bolt Cannon</English><German>FST 40mm Bolt Cannon</German><French>FST 40mm Bolt Cannon</French><Spanish>FST 40mm Bolt Cannon</Spanish><Italian>FST 40mm Bolt Cannon</Italian><Polish>FST 40mm Bolt Cannon</Polish><Portuguese>FST 40mm Bolt Cannon</Portuguese><Russian>FST 40mm Bolt Cannon</Russian><Czech>FST 40mm Bolt Cannon</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_AT_MISSILE"><Original>FST AT Missile Launcher</Original><English>FST AT Missile Launcher</English><German>FST AT Missile Launcher</German><French>FST AT Missile Launcher</French><Spanish>FST AT Missile Launcher</Spanish><Italian>FST AT Missile Launcher</Italian><Polish>FST AT Missile Launcher</Polish><Portuguese>FST AT Missile Launcher</Portuguese><Russian>FST AT Missile Launcher</Russian><Czech>FST AT Missile Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_SABRE_LG"><Original>FST Sabre Laser-Guided Missiles</Original><English>FST Sabre Laser-Guided Missiles</English><German>FST Sabre Laser-Guided Missiles</German><French>FST Sabre Laser-Guided Missiles</French><Spanish>FST Sabre Laser-Guided Missiles</Spanish><Italian>FST Sabre Laser-Guided Missiles</Italian><Polish>FST Sabre Laser-Guided Missiles</Polish><Portuguese>FST Sabre Laser-Guided Missiles</Portuguese><Russian>FST Sabre Laser-Guided Missiles</Russian><Czech>FST Sabre Laser-Guided Missiles</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_ATGM_TANDEM"><Original>FST ATGM Tandem Launcher</Original><English>FST ATGM Tandem Launcher</English><German>FST ATGM Tandem Launcher</German><French>FST ATGM Tandem Launcher</French><Spanish>FST ATGM Tandem Launcher</Spanish><Italian>FST ATGM Tandem Launcher</Italian><Polish>FST ATGM Tandem Launcher</Polish><Portuguese>FST ATGM Tandem Launcher</Portuguese><Russian>FST ATGM Tandem Launcher</Russian><Czech>FST ATGM Tandem Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_AA"><Original>FST AA Missile Launcher</Original><English>FST AA Missile Launcher</English><German>FST AA Missile Launcher</German><French>FST AA Missile Launcher</French><Spanish>FST AA Missile Launcher</Spanish><Italian>FST AA Missile Launcher</Italian><Polish>FST AA Missile Launcher</Polish><Portuguese>FST AA Missile Launcher</Portuguese><Russian>FST AA Missile Launcher</Russian><Czech>FST AA Missile Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_CRUISE"><Original>FST Cruise Launcher</Original><English>FST Cruise Launcher</English><German>FST Cruise Launcher</German><French>FST Cruise Launcher</French><Spanish>FST Cruise Launcher</Spanish><Italian>FST Cruise Launcher</Italian><Polish>FST Cruise Launcher</Polish><Portuguese>FST Cruise Launcher</Portuguese><Russian>FST Cruise Launcher</Russian><Czech>FST Cruise Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_HE_ROCKET"><Original>FST HE Rocket Pods</Original><English>FST HE Rocket Pods</English><German>FST HE Rocket Pods</German><French>FST HE Rocket Pods</French><Spanish>FST HE Rocket Pods</Spanish><Italian>FST HE Rocket Pods</Italian><Polish>FST HE Rocket Pods</Polish><Portuguese>FST HE Rocket Pods</Portuguese><Russian>FST HE Rocket Pods</Russian><Czech>FST HE Rocket Pods</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_AT_ROCKET"><Original>FST AT Rocket Pods</Original><English>FST AT Rocket Pods</English><German>FST AT Rocket Pods</German><French>FST AT Rocket Pods</French><Spanish>FST AT Rocket Pods</Spanish><Italian>FST AT Rocket Pods</Italian><Polish>FST AT Rocket Pods</Polish><Portuguese>FST AT Rocket Pods</Portuguese><Russian>FST AT Rocket Pods</Russian><Czech>FST AT Rocket Pods</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_THERMOBARIC_ROCKET"><Original>FST Thermobaric Rocket Pods</Original><English>FST Thermobaric Rocket Pods</English><German>FST Thermobaric Rocket Pods</German><French>FST Thermobaric Rocket Pods</French><Spanish>FST Thermobaric Rocket Pods</Spanish><Italian>FST Thermobaric Rocket Pods</Italian><Polish>FST Thermobaric Rocket Pods</Polish><Portuguese>FST Thermobaric Rocket Pods</Portuguese><Russian>FST Thermobaric Rocket Pods</Russian><Czech>FST Thermobaric Rocket Pods</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_ILLUM_ROCKET"><Original>FST Illum Rocket Pods</Original><English>FST Illum Rocket Pods</English><German>FST Illum Rocket Pods</German><French>FST Illum Rocket Pods</French><Spanish>FST Illum Rocket Pods</Spanish><Italian>FST Illum Rocket Pods</Italian><Polish>FST Illum Rocket Pods</Polish><Portuguese>FST Illum Rocket Pods</Portuguese><Russian>FST Illum Rocket Pods</Russian><Czech>FST Illum Rocket Pods</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_GL_HE"><Original>FST 40mm Grenade Launcher</Original><English>FST 40mm Grenade Launcher</English><German>FST 40mm Grenade Launcher</German><French>FST 40mm Grenade Launcher</French><Spanish>FST 40mm Grenade Launcher</Spanish><Italian>FST 40mm Grenade Launcher</Italian><Polish>FST 40mm Grenade Launcher</Polish><Portuguese>FST 40mm Grenade Launcher</Portuguese><Russian>FST 40mm Grenade Launcher</Russian><Czech>FST 40mm Grenade Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_GL_HEDP"><Original>FST 40mm HEDP Grenade Launcher</Original><English>FST 40mm HEDP Grenade Launcher</English><German>FST 40mm HEDP Grenade Launcher</German><French>FST 40mm HEDP Grenade Launcher</French><Spanish>FST 40mm HEDP Grenade Launcher</Spanish><Italian>FST 40mm HEDP Grenade Launcher</Italian><Polish>FST 40mm HEDP Grenade Launcher</Polish><Portuguese>FST 40mm HEDP Grenade Launcher</Portuguese><Russian>FST 40mm HEDP Grenade Launcher</Russian><Czech>FST 40mm HEDP Grenade Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_GL_AIRBURST"><Original>FST 40mm Airburst Grenade Launcher</Original><English>FST 40mm Airburst Grenade Launcher</English><German>FST 40mm Airburst Grenade Launcher</German><French>FST 40mm Airburst Grenade Launcher</French><Spanish>FST 40mm Airburst Grenade Launcher</Spanish><Italian>FST 40mm Airburst Grenade Launcher</Italian><Polish>FST 40mm Airburst Grenade Launcher</Polish><Portuguese>FST 40mm Airburst Grenade Launcher</Portuguese><Russian>FST 40mm Airburst Grenade Launcher</Russian><Czech>FST 40mm Airburst Grenade Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_GL_SMOKE"><Original>FST 40mm Smoke Grenade Launcher</Original><English>FST 40mm Smoke Grenade Launcher</English><German>FST 40mm Smoke Grenade Launcher</German><French>FST 40mm Smoke Grenade Launcher</French><Spanish>FST 40mm Smoke Grenade Launcher</Spanish><Italian>FST 40mm Smoke Grenade Launcher</Italian><Polish>FST 40mm Smoke Grenade Launcher</Polish><Portuguese>FST 40mm Smoke Grenade Launcher</Portuguese><Russian>FST 40mm Smoke Grenade Launcher</Russian><Czech>FST 40mm Smoke Grenade Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_MORTAR"><Original>FST 82mm Mortar Launcher</Original><English>FST 82mm Mortar Launcher</English><German>FST 82mm Mortar Launcher</German><French>FST 82mm Mortar Launcher</French><Spanish>FST 82mm Mortar Launcher</Spanish><Italian>FST 82mm Mortar Launcher</Italian><Polish>FST 82mm Mortar Launcher</Polish><Portuguese>FST 82mm Mortar Launcher</Portuguese><Russian>FST 82mm Mortar Launcher</Russian><Czech>FST 82mm Mortar Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_SMOKE"><Original>FST Smoke Launcher</Original><English>FST Smoke Launcher</English><German>FST Smoke Launcher</German><French>FST Smoke Launcher</French><Spanish>FST Smoke Launcher</Spanish><Italian>FST Smoke Launcher</Italian><Polish>FST Smoke Launcher</Polish><Portuguese>FST Smoke Launcher</Portuguese><Russian>FST Smoke Launcher</Russian><Czech>FST Smoke Launcher</Czech></Key>
+            <Key ID="STR_FST_VW_WPN_UTILITY"><Original>FST Utility Launcher</Original><English>FST Utility Launcher</English><German>FST Utility Launcher</German><French>FST Utility Launcher</French><Spanish>FST Utility Launcher</Spanish><Italian>FST Utility Launcher</Italian><Polish>FST Utility Launcher</Polish><Portuguese>FST Utility Launcher</Portuguese><Russian>FST Utility Launcher</Russian><Czech>FST Utility Launcher</Czech></Key>
+        </Container>
+    </Package>
 </Project>
