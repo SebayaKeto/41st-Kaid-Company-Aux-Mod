@@ -139,19 +139,19 @@ class CfgVehicles
 		author="Maldova";
 		mapSize=35.0001;
 		simulation="tankX";
-		mass=20000;
+		mass=23500;
 		fuelCapacity=60;
 		brakeIdleSpeed=0.2;
 		maxSpeed=90;
 		normalSpeedForwardCoef=0.62;
 		slowSpeedForwardCoef=0.31;
-		engineMOI=9;
-		enginePower=2500;
+		engineMOI=14;
+		enginePower=2150;
 		maxOmega=345.57501;
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=19500;
+		peakTorque=17500;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -191,12 +191,12 @@ class CfgVehicles
 				"(2350/2850)"
 			}
 		};
-		thrustDelay=0.12;
-		dampingRateFullThrottle=0.30000001;
-		dampingRateZeroThrottleClutchEngaged=1.2;
+		thrustDelay=0.2;
+		dampingRateFullThrottle=0.42;
+		dampingRateZeroThrottleClutchEngaged=1.45;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
-		clutchStrength=200;
-		latency=0.1;
+		clutchStrength=170;
+		latency=0.14;
 		switchTime=0;
 		changeGearType="rpmratio";
 		changeGearOmegaRatios[]={1,0.42424199,0.45454499,0.33333299,0.939394,0.42424199,0.909091,0.63636398,0.84848499,0.66666698,1,0.66666698};
@@ -233,16 +233,16 @@ class CfgVehicles
 			driveString="D";
 			neutralString="N";
 			reverseString="R";
-			transmissionDelay=0.1;
+			transmissionDelay=0.25;
 		};
 		antiRollbarForceCoef=10;
 		antiRollbarForceLimit=22;
 		antiRollbarSpeedMin=5;
 		antiRollbarSpeedMax=55;
-		tankTurnForce=70000;
-		tankTurnForceAngMinSpd=0.05;
-		tankTurnForceAngSpd=0.2;
-		accelAidForceCoef=0.02;
+		tankTurnForce=56000;
+		tankTurnForceAngMinSpd=0;
+		tankTurnForceAngSpd=0.07;
+		accelAidForceCoef=0.009;
 		accelAidForceYOffset=-0.5;
 		accelAidForceSpd=0.2;
 		class Sounds
@@ -567,9 +567,9 @@ class CfgVehicles
 				longitudinalStiffnessPerUnitGravity = 7800;
 				maxBrakeTorque = 13000;
 				sprungMass = -1;
-				springStrength = 20000;
-				springDamperRate = 18000;
-				dampingRate = 4;
+				springStrength = 17000;
+				springDamperRate = 15000;
+				dampingRate = 4.8;
 				dampingRateInAir = 450;
 				dampingRateDamaged = 8;
 				dampingRateDestroyed = 400;
