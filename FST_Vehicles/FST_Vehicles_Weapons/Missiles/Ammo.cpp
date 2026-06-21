@@ -23,18 +23,20 @@ class FST_VW_AT_LG_Missile: FST_VW_AT_Missile
     hit = 390;
     indirectHit = 32;
     indirectHitRange = 1.6;
-    maxSpeed = 460;
-    maneuvrability = 20;
+    maxSpeed = 480;
+    maneuvrability = 30;
+    thrustTime = 3.2;
+    thrust = 210;
     laserLock = 1;
     irLock = 0;
     airLock = 1;
     nvLock = 0;
-    missileLockCone = 35;
+    missileLockCone = 45;
     missileLockMaxDistance = 5000;
     missileLockMinDistance = 100;
     weaponLockSystem = 2;
-    trackOversteer = 1;
-    trackLead = 0.9;
+    trackOversteer = 0.85;
+    trackLead = 1.1;
 };
 
 class FST_VW_ATGM_Tandem_Missile: MissileBase

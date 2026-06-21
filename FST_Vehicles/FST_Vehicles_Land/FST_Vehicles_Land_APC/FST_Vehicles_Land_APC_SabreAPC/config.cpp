@@ -1015,8 +1015,8 @@ class CfgVehicles
 				gunnerForceOptics = 0;
 				visionMode[] = {"Normal","NVG", "TI"};
 				thermalMode[] = {};
-				missileBeg = "missleEnd";
-				missileEnd = "missleBeg";
+				missileBeg[] = {"missilebeg_left","missilebeg_right"};
+				missileEnd[] = {"missileend_left","missileend_right"};
 				gunnerInOpticsShowCursor = 1;
 				usepip = 2;
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";

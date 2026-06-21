@@ -22,6 +22,9 @@ class FST_VW_BoltCannon_30mm: CannonCore
 class FST_VW_Sabre_30mm_Cannon: FST_VW_BoltCannon_30mm
 {
     displayName = "FST Sabre 30mm Cannon";
+    autoFire = 1;
+    reloadTime = 1;
+    burst = 1;
     magazines[] =
     {
         "FST_VW_120Rnd_30mm_HE_Bolts",
