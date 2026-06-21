@@ -15,6 +15,20 @@ class CfgPatches
     };
 };
 
+class CfgLights
+{
+    #include "EmissiveEffects\Lights.cpp"
+};
+
+class CfgCloudlets
+{
+    class Default;
+
+    #include "EmissiveEffects\Cloudlets.cpp"
+};
+
+#include "EmissiveEffects\Effects.cpp"
+
 class CfgAmmo
 {
     // Common Arma ammo bases used by this module.

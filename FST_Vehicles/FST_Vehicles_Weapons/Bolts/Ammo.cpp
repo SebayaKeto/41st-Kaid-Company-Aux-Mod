@@ -1,5 +1,12 @@
 class FST_VW_Bolt_10mm_Ball: BulletBase
 {
+    effectFly = "FST_VW_FX_Emissive_Bolt_10mm";
+    tracerStartTime = 0;
+    tracerEndTime = 8;
+    tracerScale = 1.1;
+    tracerColor[] = {0.2, 0.5, 0.9, 0.9};
+    tracerColorR[] = {0.2, 0.5, 0.9, 0.9};
+    lightColor[] = {0.18, 0.46, 0.86};
     hit = 18;
     indirectHit = 0;
     indirectHitRange = 0;
@@ -15,6 +22,13 @@ class FST_VW_Bolt_10mm_Ball: BulletBase
 
 class FST_VW_Bolt_20mm_AP: BulletBase
 {
+    effectFly = "FST_VW_FX_Emissive_Bolt_20mm";
+    tracerStartTime = 0;
+    tracerEndTime = 10;
+    tracerScale = 1.2;
+    tracerColor[] = {0.22, 0.62, 1, 0.92};
+    tracerColorR[] = {0.22, 0.62, 1, 0.92};
+    lightColor[] = {0.2, 0.58, 0.98};
     hit = 42;
     indirectHit = 2;
     indirectHitRange = 0.2;
@@ -30,6 +44,13 @@ class FST_VW_Bolt_20mm_AP: BulletBase
 
 class FST_VW_Bolt_30mm_HE: BulletBase
 {
+    effectFly = "FST_VW_FX_Emissive_Bolt_30mm";
+    tracerStartTime = 0;
+    tracerEndTime = 10;
+    tracerScale = 1.3;
+    tracerColor[] = {0.3, 0.74, 1, 0.9};
+    tracerColorR[] = {0.3, 0.74, 1, 0.9};
+    lightColor[] = {0.28, 0.7, 1};
     hit = 75;
     indirectHit = 14;
     indirectHitRange = 1.8;
@@ -49,6 +70,13 @@ class FST_VW_Bolt_30mm_HE: BulletBase
 
 class FST_VW_Bolt_30mm_AP: BulletBase
 {
+    effectFly = "FST_VW_FX_Emissive_Bolt_30mm";
+    tracerStartTime = 0;
+    tracerEndTime = 10;
+    tracerScale = 1.3;
+    tracerColor[] = {0.28, 0.68, 1, 0.9};
+    tracerColorR[] = {0.28, 0.68, 1, 0.9};
+    lightColor[] = {0.24, 0.64, 1};
     hit = 105;
     indirectHit = 3;
     indirectHitRange = 0.2;
@@ -64,6 +92,13 @@ class FST_VW_Bolt_30mm_AP: BulletBase
 
 class FST_VW_Bolt_40mm_HEI: BulletBase
 {
+    effectFly = "FST_VW_FX_Emissive_Bolt_40mm";
+    tracerStartTime = 0;
+    tracerEndTime = 9;
+    tracerScale = 1.4;
+    tracerColor[] = {0.45, 0.84, 1, 0.88};
+    tracerColorR[] = {0.45, 0.84, 1, 0.88};
+    lightColor[] = {0.42, 0.8, 1};
     hit = 120;
     indirectHit = 26;
     indirectHitRange = 3.2;

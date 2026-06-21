@@ -1,5 +1,10 @@
 class FST_VW_40mm_HE_Grenade: GrenadeBase
 {
+    effectFly = "FST_VW_FX_Emissive_Ordnance";
+    lightColor[] = {0.95, 0.8, 0.3};
+    tracerStartTime = 0;
+    tracerEndTime = 2;
+    tracerScale = 0.8;
     hit = 80;
     indirectHit = 20;
     indirectHitRange = 4;
@@ -12,6 +17,11 @@ class FST_VW_40mm_HE_Grenade: GrenadeBase
 
 class FST_VW_40mm_HEDP_Grenade: GrenadeBase
 {
+    effectFly = "FST_VW_FX_Emissive_Ordnance";
+    lightColor[] = {1, 0.72, 0.24};
+    tracerStartTime = 0;
+    tracerEndTime = 2;
+    tracerScale = 0.8;
     hit = 110;
     indirectHit = 14;
     indirectHitRange = 2.6;
@@ -24,6 +34,11 @@ class FST_VW_40mm_HEDP_Grenade: GrenadeBase
 
 class FST_VW_40mm_Airburst_Grenade: GrenadeBase
 {
+    effectFly = "FST_VW_FX_Emissive_Ordnance";
+    lightColor[] = {1, 0.88, 0.44};
+    tracerStartTime = 0;
+    tracerEndTime = 2;
+    tracerScale = 0.8;
     hit = 62;
     indirectHit = 45;
     indirectHitRange = 6;
@@ -36,6 +51,11 @@ class FST_VW_40mm_Airburst_Grenade: GrenadeBase
 
 class FST_VW_40mm_Smoke_Grenade: GrenadeBase
 {
+    effectFly = "FST_VW_FX_Emissive_Ordnance";
+    lightColor[] = {0.9, 0.9, 0.9};
+    tracerStartTime = 0;
+    tracerEndTime = 2;
+    tracerScale = 0.6;
     hit = 1;
     indirectHit = 0;
     indirectHitRange = 0;
