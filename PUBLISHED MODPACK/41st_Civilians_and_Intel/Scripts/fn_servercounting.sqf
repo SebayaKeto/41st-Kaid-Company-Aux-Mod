@@ -6,7 +6,7 @@
 }] call CBA_fnc_addEventHandler;
 
 ["FST_depositIntel", {
-    params ["_intel", "_comms", "_hcomm", "_datacard", "_datacrystal", "_datapad", "_sdatapad", "_mdatapad", "_rugdatapad", "_readdatapad", "_projector", "_bounty", "_tracking", "_flimsi", "_ffolder", "_camtono", "_thead", "_bxchip"];
+    params ["_intel", "_comms", "_hcomm", "_datacard", "_datacrystal", "_datapad", "_sdatapad", "_mdatapad", "_rugdatapad", "_readdatapad", "_projector", "_bounty", "_tracking", "_flimsi", "_ffolder", "_camtono", "_thead", "_bxchip", "_hackdata"];
 
 if ( _intel != 0) then
 {
@@ -124,7 +124,7 @@ if ( _thead != 0) then
 {
 private _totalthead = missionNamespace getVariable "FST_SusTHead";
 _totalthead = _totalthead + _thead;
-missionNamespace setVariable ["FST_SusTHead", _totalthead, true;]; 
+missionNamespace setVariable ["FST_SusTHead", _totalthead, true]; 
 };
 
 if ( _bxchip != 0) then
@@ -132,6 +132,13 @@ if ( _bxchip != 0) then
 private _totalbxchip = missionNamespace getVariable "FST_SusBXChip";
 _totalbxchip = _totalbxchip + _bxchip;
 missionNamespace setVariable ["FST_SusBXChip", _totalbxchip, true]; 
+};
+
+if ( _hackdata != 0) then
+{
+private _totalhackdata = missionNamespace getVariable "FST_HackDatacard";
+_totalhackdata = _totalhackdata + _hackdata;
+missionNamespace setVariable ["FST_HackDatacard", _totalhackdata, true]; 
 };
 
 }] call CBA_fnc_addEventHandler;

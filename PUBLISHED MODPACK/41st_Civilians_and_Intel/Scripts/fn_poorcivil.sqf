@@ -138,6 +138,7 @@ private _list_41civintelitems = [
 	"FST_CivDatacard_Program", 0.1,
 	"FST_CivDatacard_Troll", 0.1,
 	"FST_CivDatacard_Virus", 0.3,
+	"FST_CivDataCrystal_Rock", 0.3,
 	"FST_CivFlimsi_Normal", 0.6,
 	"FST_CivFlimsi_Abnormal", 0.02,
 	"FST_CivFlimsi_Ad", 0.1,

@@ -236,6 +236,24 @@ private _list_41hdintelitems = [
 	"FST_CivDatacard_Program", 0.02,
 	"FST_CivDatacard_Troll", 0.02,
 	"FST_CivDatacard_Virus", 0.1,
+	"FST_CivDataCrystal_Normal", 0.3,
+	"FST_CivDataCrystal_Abnormal", 2,
+	"FST_CivDataCrystal_Alien", 0.1,
+	"FST_CivDataCrystal_Archive", 0.1,
+	"FST_CivDataCrystal_Blueprint", 0.02,
+	"FST_CivDataCrystal_Data", 0.1,
+	"FST_CivDataCrystal_Droid", 0.1,
+	"FST_CivDataCrystal_Format", 0.1,
+	"FST_CivDataCrystal_Galaxy", 0.5,
+	"FST_CivDataCrystal_Library", 0.1,
+	"FST_CivDataCrystal_Media", 0.1,
+	"FST_CivDataCrystal_Melt", 0.3,
+	"FST_CivDataCrystal_Old", 0.1,
+	"FST_CivDataCrystal_Planet", 0.5,
+	"FST_CivDataCrystal_Records", 0.1,
+	"FST_CivDataCrystal_Shattered", 0.3,
+	"FST_CivDataCrystal_Ship", 0.5,
+	"FST_CivDataCrystal_Stun", 0.5,
 	"FST_CivFlimsi_Normal", 0.3,
 	"FST_CivFlimsi_Abnormal", 2,
 	"FST_CivFlimsi_Blank", 0.1,
@@ -294,6 +312,27 @@ private _list_41creditcases = [
 	"FST_CreditCase_Rare", 0.05
 ];
 
+private _list_41camtonos = [
+	"", 0.05,
+	"FST_Camtono_Sealed", 0.05,
+	"FST_Camtono_Suspicious", 0.5,
+	"FST_Camtono_Aurodium", 0.1,
+	"FST_Camtono_Beskar", 0.1,
+	"FST_Camtono_Blaster", 0.6,
+	"FST_Camtono_Corusca", 0.05,
+	"FST_Camtono_Gemstones", 0.4,
+	"FST_Camtono_Glitterstim", 0.01,
+	"FST_Camtono_Kyber", 0.05,
+	"FST_Camtono_Liquor", 0.6,
+	"FST_Camtono_Metal", 0.1,
+	"FST_Camtono_Nova", 0.05,
+	"FST_Camtono_Pearl", 0.05,
+	"FST_Camtono_Rainbow", 0.0001,
+	"FST_Camtono_Vertex", 0.1,
+	"FST_Camtono_Whiskey", 0.6
+
+];
+
 private _list_41hdcomms = [
 	"FST_HoloComm_Normal", 0.3,
 	"FST_HoloComm_Abnormal", 2,
@@ -307,6 +346,7 @@ private _list_41hdcomms = [
 private _selectdatapad = selectRandomWeighted _list_41hddatapad;
 private _selectcomm = selectRandomWeighted _list_41hdcomms;
 private _case0 = selectRandomWeighted _list_41creditcases;
+private _cam0 = selectRandomWeighted _list_41camtonos;
 private _intel0 = selectRandomWeighted _list_41hdintelitems;
 private _intel1 = selectRandomWeighted _list_41hdintelitems;
 private _intel2 = selectRandomWeighted _list_41hdintelitems;
@@ -314,6 +354,7 @@ private _intel3 = selectRandomWeighted _list_41hdintelitems;
 _unit addItemToUniform _selectdatapad;
 _unit addItemToUniform _selectcomm;
 _unit addItemToUniform _case0;
+_unit addItemToUniform _cam0;
 _unit addItemToUniform _intel0;
 _unit addItemToUniform _intel1;
 _unit addItemToUniform _intel2;

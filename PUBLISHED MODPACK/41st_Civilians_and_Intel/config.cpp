@@ -308,6 +308,7 @@ class CfgPatches
 		};
 		weapons[]=
 		{
+			"FST_Hacking_Datapad",
 			"FST_CivData_Normal", 
 			"FST_CivData_Abnormal", 
 			"FST_CivData_Betting", 
@@ -434,6 +435,25 @@ class CfgPatches
 			"FST_CivDatacard_Tax",
 			"FST_CivDatacard_Troll",
 			"FST_CivDatacard_Virus",
+			"FST_CivDataCrystal_Normal",
+			"FST_CivDataCrystal_Abnormal",
+			"FST_CivDataCrystal_Alien",
+			"FST_CivDataCrystal_Archive",
+			"FST_CivDataCrystal_Blueprint",
+			"FST_CivDataCrystal_Data",
+			"FST_CivDataCrystal_Droid",
+			"FST_CivDataCrystal_Format",
+			"FST_CivDataCrystal_Galaxy",
+			"FST_CivDataCrystal_Library",
+			"FST_CivDataCrystal_Media",
+			"FST_CivDataCrystal_Melt",
+			"FST_CivDataCrystal_Old",
+			"FST_CivDataCrystal_Planet",
+			"FST_CivDataCrystal_Records",
+			"FST_CivDataCrystal_Rock",
+			"FST_CivDataCrystal_Shattered",
+			"FST_CivDataCrystal_Ship",
+			"FST_CivDataCrystal_Stun",
 			"FST_CivFlimsi_Normal",
 			"FST_CivFlimsi_Abnormal",
 			"FST_CivFlimsi_Ad",
@@ -599,6 +619,15 @@ class CfgPatches
 			"FST_BreathingGas_Phosphine",
 			"FST_BreathingGas_Sulfur"
 		};
+		magazines[]=
+		{
+			"FST_HackDatacard_Abnormal",
+			"FST_HackDatacard_Normal",
+			"FST_HackDatacard_Corrupt",
+			"FST_HackDatacard_Empty",
+			"FST_HackDatacard_Troll",
+			"FST_HackDatacard_Virus"
+		};
 	};
 	author="Tooka";
 };
@@ -658,6 +687,7 @@ class CfgFunctions
 			file="41st_Civilians_and_Intel\Scripts";
 			class applyidentity {postInit=1;};
 			class servercounting {postInit=1;};
+			class hackingterminal {};
 			class deposit {};
 			class intel {};
 			class displaytotal {};
@@ -672,6 +702,53 @@ class CfgFunctions
 			class wealthycivil {};
 			class spacercivil {};
 		};
+	};
+};
+class CfgMagazines
+{
+	class 3AS_Datapad_Base_Mag;
+	class FST_HackDatacard_Empty: 3AS_Datapad_Base_Mag
+	{
+		author="Tooka";
+		scope=2;
+		displayName="[41st] Republic Datacard (Empty)";
+		descriptionShort="A datacard used by the Republic for storing data from hacking. This card is empty and awaiting data.";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_data.paa";
+		model="\MRC\JLTS\contraband\Intel\datacard.p3d";
+		ammo="3AS_Datapad_Base";
+		count=1000;
+		mass=1;
+		initSpeed=306;
+	};
+	class FST_HackDatacard_Abnormal: FST_HackDatacard_Empty
+	{
+		scope=1;
+		displayName="[41st] Republic Datacard (Intel)";
+		descriptionShort="A datacard used by the Republic for storing data from hacking. This card has useful recovered data on it.";
+	};
+	class FST_HackDatacard_Normal: FST_HackDatacard_Empty
+	{
+		scope=1;
+		displayName="[41st] Republic Datacard (Junk)";
+		descriptionShort="A datacard used by the Republic for storing data from hacking. This card has no useful data on it.";
+	};
+	class FST_HackDatacard_Corrupt: FST_HackDatacard_Empty
+	{
+		scope=1;
+		displayName="[41st] Republic Datacard (Corrupt)";
+		descriptionShort="A datacard used by the Republic for storing data from hacking. This card's data has been corrupted and is unusable.";
+	};
+	class FST_HackDatacard_Virus: FST_HackDatacard_Empty
+	{
+		scope=1;
+		displayName="[41st] Republic Datacard (Virus)";
+		descriptionShort="A datacard used by the Republic for storing data from hacking. Your datapad screams complaints about viruses being on this datacard. It is unusable.";
+	};
+	class FST_HackDatacard_Troll: FST_HackDatacard_Empty
+	{
+		scope=1;
+		displayName="[41st] Republic Datacard (""Intel"")";
+		descriptionShort="A datacard used by the Republic for storing data from hacking. You downloaded what appeared to be intel, but upon analysis it is all fake. A counterinformation officer is laughing somewhere at your misfortune.";
 	};
 };
 class CfgWeapons
@@ -717,6 +794,34 @@ class CfgWeapons
 		displayName="[41st] Civilian Head Protection Field";
 		picture="\JMSLLTE_empire\helmets\data\ico\ico_h_isb.paa";
 		descriptionShort="The invisible energy field surrounding unhelmeted civilian heads that stops blasters (sometimes)";
+	};
+	class FST_Vest_Base;
+	class FST_CivInvisVest: FST_Vest_Base
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Vest Pockets";
+		descriptionShort="More pockets for you to search on the NPC.";
+	};
+	class 3AS_RepublicDatapadPistol;
+	class FST_Hacking_Datapad: 3AS_RepublicDatapadPistol
+	{
+		scope=2;
+		author="Tooka";
+		displayName="[41st] Republic Cyberwarfare Datapad";
+		model="\3AS\3AS_Weapons\Roleplay\RepublicDatapadpistol.p3d";
+		picture="\3AS\3AS_Weapons\Roleplay\data\UI\3as_datapad.paa";
+		weaponInfoType="RscWeaponZeroing";
+		magazines[]=
+		{
+			"FST_HackDatacard_Empty",
+			"FST_HackDatacard_Normal",
+			"FST_HackDatacard_Abnormal",
+			"FST_HackDatacard_Corrupt",
+			"FST_HackDatacard_Virus",
+			"FST_HackDatacard_Troll"
+		};
+		magazineWell[]={};
 	};
 	class InventoryWeapon_Base_F;
 	class FST_CivData_Normal: ItemCore
@@ -1634,7 +1739,7 @@ class CfgWeapons
 		author="Tooka";
 		scope=2;
 		displayName="[41st] Data Crystal";
-		descriptionShort="A crystal used for storing data. This one has nothing of interest encoded on it.";
+		descriptionShort="A crystal used for storing large data. This one has nothing of interest encoded on it.";
 		model="\WebKnight_StarWars_Items\cyberCrystal.p3d";
 		picture="\WebKnight_StarWars_Items\CyberCrystal_pic.paa";
 	};
@@ -1643,21 +1748,126 @@ class CfgWeapons
 		author="Tooka";
 		scope=2;
 		displayName="[41st] Data Crystal (Suspicious)";
-		descriptionShort="A crystal used for storing data. The encoded data on this crystal seems to be important.";
+		descriptionShort="A crystal used for storing large data. The encoded data on this crystal seems to be important.";
 	};
 	class FST_CivDataCrystal_Blueprint: FST_CivDataCrystal_Normal
 	{
 		author="Tooka";
 		scope=1;
 		displayName="[41st] Data Crystal";
-		descriptionShort="A crystal used for storing data. This crystal has a complex blueprint encoded on it. Not useful intel.";
+		descriptionShort="A crystal used for storing large data. This crystal has a complex construction blueprint encoded on it. Not useful intel.";
 	};
 	class FST_CivDataCrystal_Galaxy: FST_CivDataCrystal_Normal
 	{
 		author="Tooka";
 		scope=1;
 		displayName="[41st] Data Crystal";
-		descriptionShort="A crystal used for storing data. This crystal has an in-depth map of the galaxy on it. Not useful intel.";
+		descriptionShort="A crystal used for storing large data. This crystal has an in-depth map of the galaxy on it.";
+	};
+	class FST_CivDataCrystal_Archive: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal contains a security holorecording archive. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Library: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal contains a massive library of novels stored within it of a wide variety of genres.";
+	};
+	class FST_CivDataCrystal_Records: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal contains a records archive of digital filed documentaion. You got bored after just skimming the first few. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Droid: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal appears to have the programming of a complex droid neuroprocessor stored on it. It is not for a CIS model, so not of use.";
+	};
+	class FST_CivDataCrystal_Alien: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal has data stored in an alien language you do not recognize. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Shattered: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal has been shattered, rendering it useless.";
+	};
+	class FST_CivDataCrystal_Melt: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal has been melted by a blaster, rendering it useless.";
+	};
+	class FST_CivDataCrystal_Rock: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] ""Data Crystal""";
+		descriptionShort="Should be a crystal used for storing large data. This crystal however is not actually a data crystal, but just a very pretty rock you mistook for one.";
+	};
+	class FST_CivDataCrystal_Stun: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal contains meaningless nonsense data most likely cause by an electrical surge rearanging the crystal contents, rendering it useless.";
+	};
+	class FST_CivDataCrystal_Media: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal appears to be storing a massive quantity of pictures and videos someone has collected over time. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Old: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal appears to be storing a large volume of old records. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Data: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal appears to have a large data file on it, but you do not know what it is. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Planet: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal has a highly detailed map of a specific planet.";
+	};
+	class FST_CivDataCrystal_Ship: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal has an extremely detailed blueprint of a spacecraft. Not useful intel.";
+	};
+	class FST_CivDataCrystal_Format: FST_CivDataCrystal_Normal
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Data Crystal";
+		descriptionShort="A crystal used for storing large data. This crystal has a data storage format your reader cannot understand. Not useful intel.";
 	};
 	class FST_CivFlimsi_Normal: FST_CivData_Normal
 	{
@@ -9067,6 +9277,546 @@ class cfgGroups
 					{
 						side=3;
 						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={5,-2,0};
+					};
+				};
+				class FST_S_TownCivs_Small
+				{
+					name="[41st] Town Civs (Small)";
+					faction="FST_Civilian_Faction";
+					side=3;
+					class Unit0
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit4
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit5
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_TownCivs_Medium
+				{
+					name="[41st] Town Civs";
+					faction="FST_Civilian_Faction";
+					side=3;
+					class Unit0
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit4
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit5
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit6
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-0,0};
+					};
+					class Unit7
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-1,0};
+					};
+					class Unit8
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-2,0};
+					};
+					class Unit9
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-0,0};
+					};
+					class Unit10
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={3,-1,0};
+					};
+					class Unit11
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={3,-2,0};
+					};
+				};
+				class FST_S_TownCivs_Large
+				{
+					name="[41st] Town Civs (Large)";
+					faction="FST_Civilian_Faction";
+					side=3;
+					class Unit0
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit4
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit5
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit6
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-0,0};
+					};
+					class Unit7
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-1,0};
+					};
+					class Unit8
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-2,0};
+					};
+					class Unit9
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-0,0};
+					};
+					class Unit10
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-1,0};
+					};
+					class Unit11
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-2,0};
+					};
+					class Unit12
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={4,-0,0};
+					};
+					class Unit13
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={4,-1,0};
+					};
+					class Unit14
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={4,-2,0};
+					};
+					class Unit15
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={5,-0,0};
+					};
+					class Unit16
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={5,-1,0};
+					};
+					class Unit17
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={5,-2,0};
+					};
+				};
+				class FST_S_CityCivs_Small
+				{
+					name="[41st] City Civs (Small)";
+					faction="FST_Civilian_Faction";
+					side=3;
+					class Unit0
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit4
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit5
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_CityCivs_Medium
+				{
+					name="[41st] City Civs";
+					faction="FST_Civilian_Faction";
+					side=3;
+					class Unit0
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit4
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit5
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit6
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-0,0};
+					};
+					class Unit7
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-1,0};
+					};
+					class Unit8
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-2,0};
+					};
+					class Unit9
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-0,0};
+					};
+					class Unit10
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={3,-1,0};
+					};
+					class Unit11
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={3,-2,0};
+					};
+				};
+				class FST_S_CityCivs_Large
+				{
+					name="[41st] City Civs (Large)";
+					faction="FST_Civilian_Faction";
+					side=3;
+					class Unit0
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=3;
+						vehicle="FST_Civilian_Wealthy";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit4
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit5
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit6
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-0,0};
+					};
+					class Unit7
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-1,0};
+					};
+					class Unit8
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={2,-2,0};
+					};
+					class Unit9
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-0,0};
+					};
+					class Unit10
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-1,0};
+					};
+					class Unit11
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={3,-2,0};
+					};
+					class Unit12
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={4,-0,0};
+					};
+					class Unit13
+					{
+						side=3;
+						vehicle="FST_Civilian_Basic";
+						rank="PRIVATE";
+						position[]={4,-1,0};
+					};
+					class Unit14
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={4,-2,0};
+					};
+					class Unit15
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={5,-0,0};
+					};
+					class Unit16
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
+						rank="PRIVATE";
+						position[]={5,-1,0};
+					};
+					class Unit17
+					{
+						side=3;
+						vehicle="FST_Civilian_Poor";
 						rank="PRIVATE";
 						position[]={5,-2,0};
 					};

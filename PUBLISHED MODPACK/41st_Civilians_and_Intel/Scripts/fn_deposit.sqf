@@ -161,7 +161,17 @@ while {"FST_Camtono_Metal" in items _player} do
     _count = _count + ((2410 + floor (random 130)) * 10);
 };
 
+private _text = "";
+
 if ( _count != 0) then 
 {
+    _text = "<t color='#7ebd00'>You have deposited all acceptable credit items!</t>";
+    hintSilent parseText _text;
     ["FST_depositCredits", [_count]] call CBA_fnc_serverEvent;
+};
+
+if ( _count == 0 ) then 
+{
+    _text = "<t color='#990000'>You do not have anything acceptable to deposit.</t>";
+    hintSilent parseText _text;
 };

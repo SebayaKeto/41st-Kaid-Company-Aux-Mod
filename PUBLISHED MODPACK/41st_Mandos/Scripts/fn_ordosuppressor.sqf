@@ -280,6 +280,23 @@ private _list_41mandointelitems = [
 	"FST_CivDatacard_Program", 0.02,
 	"FST_CivDatacard_Troll", 0.02,
 	"FST_CivDatacard_Virus", 0.1,
+	"FST_CivDataCrystal_Normal", 0.5,
+	"FST_CivDataCrystal_Alien", 0.02,
+	"FST_CivDataCrystal_Archive", 0.3,
+	"FST_CivDataCrystal_Blueprint", 0.3,
+	"FST_CivDataCrystal_Data", 0.1,
+	"FST_CivDataCrystal_Droid", 0.02,
+	"FST_CivDataCrystal_Format", 0.1,
+	"FST_CivDataCrystal_Galaxy", 0.1,
+	"FST_CivDataCrystal_Library", 0.1,
+	"FST_CivDataCrystal_Media", 0.1,
+	"FST_CivDataCrystal_Melt", 0.5,
+	"FST_CivDataCrystal_Old", 0.02,
+	"FST_CivDataCrystal_Planet", 0.5,
+	"FST_CivDataCrystal_Rock", 0.02,
+	"FST_CivDataCrystal_Shattered", 0.5,
+	"FST_CivDataCrystal_Ship", 0.5,
+	"FST_CivDataCrystal_Stun", 0.1,
 	"FST_CivFlimsi_Normal", 0.5,
 	"FST_CivFlimsi_Ad", 0.02,
 	"FST_CivFlimsi_BCard", 0.3,
@@ -396,6 +413,26 @@ private _list_41creditcases = [
 	"FST_CreditCase_Rare", 0.05
 ];
 
+private _list_41camtonos = [
+	"", 0.05,
+	"FST_Camtono_Sealed", 0.05,
+	"FST_Camtono_Aurodium", 0.1,
+	"FST_Camtono_Beskar", 0.6,
+	"FST_Camtono_Blaster", 0.6,
+	"FST_Camtono_Corusca", 0.05,
+	"FST_Camtono_Gemstones", 0.4,
+	"FST_Camtono_Glitterstim", 0.01,
+	"FST_Camtono_Kyber", 0.05,
+	"FST_Camtono_Liquor", 0.6,
+	"FST_Camtono_Metal", 0.1,
+	"FST_Camtono_Nova", 0.05,
+	"FST_Camtono_Pearl", 0.05,
+	"FST_Camtono_Rainbow", 0.0001,
+	"FST_Camtono_Vertex", 0.1,
+	"FST_Camtono_Whiskey", 0.6
+
+];
+
 private _list_41creditsitemshigh = [
 	"", 0.5,
 	"FST_CreditChip", 0.8,
@@ -406,6 +443,7 @@ private _list_41creditsitemshigh = [
 ];
 
 private _case0 = selectRandomWeighted _list_41creditcases;
+private _cam0 = selectRandomWeighted _list_41camtonos;
 private _rich0 = selectRandomWeighted _list_41creditsitemshigh;
 private _rich1 = selectRandomWeighted _list_41creditsitemshigh;
 private _rich2 = selectRandomWeighted _list_41creditsitemshigh;
@@ -434,12 +472,12 @@ private _loadoutarray = [1, 1, 2, 1, 3, 0.4, 4, 1, 5, 0.6, 6, 0.6];
 
 private _loadoutchoice = selectRandomWeighted _loadoutarray;
 
-if ( _loadoutchoice == 1) then { _unit setUnitLoadout [["FST_M45_BlasterRifle","","","",["FST_blaster_battery_DC15L_Green",120],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_DC15L_Green",15,120]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 2) then { _unit setUnitLoadout [["FST_RT97C_BlasterRifle","","","",["FST_blaster_battery_DC15L_Green",120],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_DC15L_Green",15,120]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 3) then { _unit setUnitLoadout [["ls_weapon_ls150","","","",["ls_magazine_ls150",500],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["ls_magazine_ls150",2,500]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 4) then { _unit setUnitLoadout [["FST_WristBlaster","","","",["FST_Droid_blaster_battery_Red",300],["FST_HE_LauncherWristRocket",1],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_HE_LauncherWristRocket",3,1],["FST_Droid_blaster_battery_Red",2,300]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 5) then { _unit setUnitLoadout [["FST_M41","","","",["FST_blaster_battery_Green",300],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_Green",9,300]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
-if ( _loadoutchoice == 6) then { _unit setUnitLoadout [["FST_Z6","","","",["FST_blaster_battery_Green",300],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_Green",9,300]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+if ( _loadoutchoice == 1) then { _unit setUnitLoadout [["FST_M45_BlasterRifle","","","",["FST_blaster_battery_DC15L_Green",120],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _cam0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_DC15L_Green",15,120]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+if ( _loadoutchoice == 2) then { _unit setUnitLoadout [["FST_RT97C_BlasterRifle","","","",["FST_blaster_battery_DC15L_Green",120],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _cam0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_DC15L_Green",15,120]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+if ( _loadoutchoice == 3) then { _unit setUnitLoadout [["ls_weapon_ls150","","","",["ls_magazine_ls150",500],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _cam0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["ls_magazine_ls150",2,500]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+if ( _loadoutchoice == 4) then { _unit setUnitLoadout [["FST_WristBlaster","","","",["FST_Droid_blaster_battery_Red",300],["FST_HE_LauncherWristRocket",1],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _cam0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_HE_LauncherWristRocket",3,1],["FST_Droid_blaster_battery_Red",2,300]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+if ( _loadoutchoice == 5) then { _unit setUnitLoadout [["FST_M41","","","",["FST_blaster_battery_Green",300],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _cam0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_Green",9,300]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
+if ( _loadoutchoice == 6) then { _unit setUnitLoadout [["FST_Z6","","","",["FST_blaster_battery_Green",300],[],""],[],["FST_Westar35","","","",["FST_blaster_cell_low_Green",30],[],""],["FST_MandoUndersuitUni",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],[ _rich0,1],[ _rich1,1],[ _rich2,1],[ _case0,1],[ _cam0,1],[ _datapad0,1],[ _datapad1, _padchoice],[ _device0,1],[ _device1,1],[ _intel0,1],[ _intel1, _intelchoice0],[ _intel2, _intelchoice1],["WBK_HeadLampItem_Double",1],[ _selectcomm,1],["JLTS_drugs_deathstick", _dschoice]]],["ls_mandalorianVest_ordoGrunt",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_tourniquet",2],["ACE_splint",2]]],["ls_mandalorianBackpack_heavy",[["FST_blaster_cell_low_Green",15,30],["FST_blaster_battery_Green",9,300]]],"ls_mandalorianHelmet_ordoGrunt","",[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","","","ls_mandalorian_rangefinder"]]};
 
 _unit setSkill ['aimingAccuracy',0.5];
 _unit setSkill ['aimingShake',0.5];

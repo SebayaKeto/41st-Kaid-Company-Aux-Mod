@@ -22,6 +22,7 @@ if !(missionNamespace getVariable ["FST_IntelInitialized", false]) then
     missionNamespace setVariable ["FST_SusCamtono", 0, true];
     missionNamespace setVariable ["FST_SusTHead", 0, true];
     missionNamespace setVariable ["FST_SusBXChip", 0, true];
+    missionNamespace setVariable ["FST_HackDatacard", 0, true];
 };
 
 private _depositcount = 0;
@@ -42,6 +43,7 @@ private _ffolder = 0;
 private _camtono = 0;
 private _thead = 0;
 private _bxchip = 0;
+private _hackdata = 0;
 
 while {"FST_FlatComm_Abnormal" in items _player} do 
 {
@@ -169,7 +171,24 @@ while {"FST_BXChip" in items _player} do
     _bxchip = _bxchip + 1;
 };
 
+while {"FST_HackDatacard_Abnormal" in items _player} do 
+{
+    _player removeItem "FST_HackDatacard_Abnormal";
+    _depositcount = _depositcount + 1;
+    _hackdata = _hackdata + 1;
+};
+
+private _text = "";
+
 if ( _depositcount != 0 ) then 
 {
-    ["FST_depositIntel", [_depositcount, _comms, _hcomm, _datacard, _datacrystal, _datapad, _sdatapad, _mdatapad, _rugdatapad, _readdatapad, _projector, _bounty, _tracking, _flimsi, _ffolder, _camtono, _thead, _bxchip]] call CBA_fnc_serverEvent;
+    _text = "<t color='#7ebd00'>You have stored your usable intel!</t>";
+    hintSilent parseText _text;
+    ["FST_depositIntel", [_depositcount, _comms, _hcomm, _datacard, _datacrystal, _datapad, _sdatapad, _mdatapad, _rugdatapad, _readdatapad, _projector, _bounty, _tracking, _flimsi, _ffolder, _camtono, _thead, _bxchip, _hackdata]] call CBA_fnc_serverEvent;
+};
+
+if ( _depositcount == 0 ) then 
+{
+    _text = "<t color='#990000'>You do not have anything usable to store.</t>";
+    hintSilent parseText _text;
 };

@@ -58,11 +58,32 @@ private _rich2 = selectRandomWeighted _list_41creditsitemshigh;
 private _list_41creditcases = [
 	"", 0.2,
 	"FST_CreditCase_Lock", 0.6,
-	"FST_CreditCase_Chip", 0.1,
+	"FST_CreditCase_Chip", 0.4,
 	"FST_CreditCase_Low", 0.4,
 	"FST_CreditCase_Med", 0.3,
 	"FST_CreditCase_High", 0.1,
-	"FST_CreditCase_Rare", 0.05
+	"FST_CreditCase_Rare", 0.05,
+	"FST_Camtono_Sealed", 0.6,
+	"FST_Camtono_Suspicious", 0.005,
+	"FST_Camtono_Art", 0.6,
+	"FST_Camtono_Aurodium", 0.1,
+	"FST_Camtono_Beskar", 0.1,
+	"FST_Camtono_Blaster", 0.6,
+	"FST_Camtono_Corusca", 0.05,
+	"FST_Camtono_Data", 0.6,
+	"FST_Camtono_Deed", 0.6,
+	"FST_Camtono_Gemstones", 0.4,
+	"FST_Camtono_Glitterstim", 0.01,
+	"FST_Camtono_Junk", 0.6,
+	"FST_Camtono_Kyber", 0.05,
+	"FST_Camtono_Liquor", 0.6,
+	"FST_Camtono_Metal", 0.1,
+	"FST_Camtono_Nova", 0.05,
+	"FST_Camtono_Pearl", 0.05,
+	"FST_Camtono_Rainbow", 0.0001,
+	"FST_Camtono_Vertex", 0.1,
+	"FST_Camtono_Whiskey", 0.6
+
 ];
 
 private _case0 = selectRandomWeighted _list_41creditcases;
@@ -157,6 +178,20 @@ private _list_41civintelitems = [
 	"FST_CivDatacard_Program", 0.05,
 	"FST_CivDatacard_Report", 0.3,
 	"FST_CivDatacard_Tax", 0.3,
+	"FST_CivDataCrystal_Normal", 0.6,
+	"FST_CivDataCrystal_Abnormal", 0.04,
+	"FST_CivDataCrystal_Alien", 0.1,
+	"FST_CivDataCrystal_Blueprint", 0.3,
+	"FST_CivDataCrystal_Data", 0.1,
+	"FST_CivDataCrystal_Droid", 0.05,
+	"FST_CivDataCrystal_Format", 0.1,
+	"FST_CivDataCrystal_Galaxy", 0.05,
+	"FST_CivDataCrystal_Library", 0.1,
+	"FST_CivDataCrystal_Media", 0.3,
+	"FST_CivDataCrystal_Old", 0.3,
+	"FST_CivDataCrystal_Planet", 0.05,
+	"FST_CivDataCrystal_Records", 0.3,
+	"FST_CivDataCrystal_Ship", 0.1,
 	"FST_CivFlimsi_Normal", 0.3,
 	"FST_CivFlimsi_Abnormal", 0.04,
 	"FST_CivFlimsi_BCard", 0.3,
@@ -426,9 +461,9 @@ private _list_41civloads_female = [
 	
 	[[],[],[],["JMSLLTE_PirCapt_black_F_CombatUniform",[[ _pocket0, _rollhigh0],[ _pocket1, _rollhigh1],[ _pocket2, _rollmid0],[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1],[ _comm0,1],[ _case0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_FormalSuit_01_tshirt_gray_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollhigh0],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["FST_CreditChip",1],[ _comm0,1]]],[],[],"FST_Invisible_Civ_Helm","G_Squares_Tinted",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_FormalSuit_01_tshirt_gray_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollhigh0],[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["FST_CreditChip",1],[ _comm0,1]]],["FST_CivInvisVest",[[ _rich0, _rolllow0],[ _rich1, _rolllow1]]],[],"FST_Invisible_Civ_Helm","G_Squares_Tinted",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_FormalSuit_01_tshirt_black_F",[[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _comm0,1]]],["FST_Vest_Base",[[ _case0,1],[ _case1,1]]],[],"FST_Invisible_Civ_Helm","OPTRE_HUD_r_Glasses",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_FormalSuit_01_tshirt_black_F",[[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _comm0,1]]],["FST_CivInvisVest",[[ _case0,1],[ _case1,1]]],[],"FST_Invisible_Civ_Helm","OPTRE_HUD_r_Glasses",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
 	[[],[],[],["OPTRE_Ins_ER_rolled_OD_crimson",[[ _datapad0,1],["JLTS_drugs_deathstick", _rolllow0],[ _intelitem0,1],[ _comm0,1]]],[],["JLTS_Clone_belt_bag",[["JLTS_sabacc_deck",1],["JLTS_pazaak_deck",1],[ _rich0, _rollmid0],[ _rich1, _rollmid1],[ _pocket0, _rollhigh0],[ _pocket1, _rollhigh1],[ _pocket2, _rollmid2],[ _case0,1]]],"FST_Invisible_Civ_Helm","G_JMSLLTE_WeqGlas",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
@@ -438,7 +473,7 @@ private _list_41civloads_female = [
 
 	[[],[],[],["JMSLLTE_RoyalG_black_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _comm0,1]]],[],[],"FST_Invisible_Civ_Helm","G_Bandanna_blk",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_E_LooterJacket_01_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ "FST_CreditChip",1],["JLTS_drugs_protein", _rollhigh0],[ _comm0,1],[["Knife_m3","","","",[],[],""],1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
+	[[],[],[],["U_C_E_LooterJacket_01_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _datapad0,1],[ "FST_CreditChip",1],["JLTS_drugs_protein", _rollhigh0],[ _comm0,1]]],["FST_CivInvisVest",[[ _rich0, _rolllow0],[ _rich1, _rolllow1],[["Knife_m3","","","",[],[],""],1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
 
 ];
 
@@ -448,9 +483,9 @@ private _list_41civloads_male = [
 	
 	[[],[],[],["JMSLLTE_PirCapt_black_F_CombatUniform",[[ _pocket0, _rollhigh0],[ _pocket1, _rollhigh1],[ _pocket2, _rollmid0],[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1],[ _comm0,1],[ _case0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_FormalSuit_01_tshirt_gray_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollhigh0],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["FST_CreditChip",1],[ _comm0,1]]],[],[],"FST_Invisible_Civ_Helm","G_Squares_Tinted",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_FormalSuit_01_tshirt_gray_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollhigh0],[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["FST_CreditChip",1],[ _comm0,1]]],["FST_CivInvisVest",[[ _rich0, _rolllow0],[ _rich1, _rolllow1]]],[],"FST_Invisible_Civ_Helm","G_Squares_Tinted",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_FormalSuit_01_tshirt_black_F",[[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _comm0,1]]],["FST_Vest_Base",[[ _case0,1],[ _case1,1]]],[],"FST_Invisible_Civ_Helm","OPTRE_HUD_r_Glasses",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_FormalSuit_01_tshirt_black_F",[[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _comm0,1]]],["FST_CivInvisVest",[[ _case0,1],[ _case1,1]]],[],"FST_Invisible_Civ_Helm","OPTRE_HUD_r_Glasses",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
 	[[],[],[],["OPTRE_Ins_ER_rolled_OD_crimson",[[ _datapad0,1],["JLTS_drugs_deathstick", _rolllow0],[ _intelitem0,1],[ _comm0,1]]],[],["JLTS_Clone_belt_bag",[["JLTS_sabacc_deck",1],["JLTS_pazaak_deck",1],[ _rich0, _rollmid0],[ _rich1, _rollmid1],[ _pocket0, _rollhigh0],[ _pocket1, _rollhigh1],[ _pocket2, _rollmid2],[ _case0,1]]],"FST_Invisible_Civ_Helm","G_JMSLLTE_WeqGlas",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
@@ -460,7 +495,7 @@ private _list_41civloads_male = [
 
 	[[],[],[],["JMSLLTE_RoyalG_black_F_CombatUniform",[[ _pocket0, _rolllow0],[ _pocket1, _rolllow1],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _comm0,1]]],[],[],"FST_Invisible_Civ_Helm","G_Bandanna_blk",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_E_LooterJacket_01_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ "FST_CreditChip",1],["JLTS_drugs_protein", _rollhigh0],[ _comm0,1],[["Knife_m3","","","",[],[],""],1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
+	[[],[],[],["U_C_E_LooterJacket_01_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _datapad0,1],[ "FST_CreditChip",1],["JLTS_drugs_protein", _rollhigh0],[ _comm0,1]]],["FST_CivInvisVest",[[ _rich0, _rolllow0],[ _rich1, _rolllow1],[["Knife_m3","","","",[],[],""],1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
 
 ];
 
@@ -470,13 +505,13 @@ private _list_41civloads_alien = [
 	
 	[[],[],[],["JMSLLTE_PirCapt_black_F_CombatUniform",[[ _pocket0, _rollhigh0],[ _pocket1, _rollhigh1],[ _pocket2, _rollmid0],[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],[ _intelitem3,1],[ _comm0,1],[ _case0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_FormalSuit_01_tshirt_gray_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollhigh0],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["FST_CreditChip",1],[ _comm0,1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_FormalSuit_01_tshirt_gray_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollhigh0],[ _datapad0,1],[ _intelitem0,1],[ _intelitem1,1],[ _intelitem2,1],["FST_CreditChip",1],[ _comm0,1]]],["FST_CivInvisVest",[[ _rich0, _rolllow0],[ _rich1, _rolllow1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_FormalSuit_01_tshirt_black_F",[[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _comm0,1]]],["FST_Vest_Base",[[ _case0,1],[ _case1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
+	[[],[],[],["U_C_FormalSuit_01_tshirt_black_F",[[ _datapad0,1],[ _datapad1,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ _comm0,1]]],["FST_CivInvisVest",[[ _case0,1],[ _case1,1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
 	[[],[],[],["OPTRE_Ins_ER_rolled_OD_crimson",[[ _datapad0,1],["JLTS_drugs_deathstick", _rolllow0],[ _intelitem0,1],[ _comm0,1]]],[],["JLTS_Clone_belt_bag",[["JLTS_sabacc_deck",1],["JLTS_pazaak_deck",1],[ _rich0, _rollmid0],[ _rich1, _rollmid1],[ _pocket0, _rollhigh0],[ _pocket1, _rollhigh1],[ _pocket2, _rollmid2],[ _case0,1]]],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]],
 
-	[[],[],[],["U_C_E_LooterJacket_01_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _datapad0,1],[ _rich0, _rolllow0],[ _rich1, _rolllow1],[ "FST_CreditChip",1],["JLTS_drugs_protein", _rollhigh0],[ _comm0,1],[["Knife_m3","","","",[],[],""],1]]],[],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
+	[[],[],[],["U_C_E_LooterJacket_01_F",[[ _pocket0, _rollmid0],[ _pocket1, _rollmid1],[ _datapad0,1],[ "FST_CreditChip",1],["JLTS_drugs_protein", _rollhigh0],[ _comm0,1]]],["FST_CivInvisVest",[[ _rich0, _rolllow0],[ _rich1, _rolllow1],[["Knife_m3","","","",[],[],""],1]]],[],"FST_Invisible_Civ_Helm","",[],["ItemMap","","","ItemCompass","ItemWatch","k_nvg_ti"]]
 
 ];
 
