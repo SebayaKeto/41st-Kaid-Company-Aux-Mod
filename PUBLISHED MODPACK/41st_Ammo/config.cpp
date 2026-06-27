@@ -536,7 +536,7 @@ class CfgAmmo
 		indirectHitRange=0.5;
 		caliber=1.8; //1.6
 		coefGravity=0.02;
-		timetolive=0.5;
+		timetolive=2;
 		waterFriction=-0.0099999998;
 		deflecting=0;
 		airfriction=0;
