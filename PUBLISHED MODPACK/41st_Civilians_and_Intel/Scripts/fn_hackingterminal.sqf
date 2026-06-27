@@ -6,7 +6,7 @@ private _text = "";
 if (_term getVariable ["FST_DeviceInUse", false]) exitWith {_text = "<t color='#990000'>This device is currently being interacted with</t>"; hintSilent parseText _text;};
 if (_user getVariable ["FST_PlayerIsMeching", false]) exitWith {_text = "<t color='#990000'>You are already working on something else</t>"; hintSilent parseText _text;};
 if (_term getVariable ["FST_DeviceFullBroken", false]) exitWith {_text = "<t color='#990000'>This device no longer functions and is beyond repair</t>"; hintSilent parseText _text;};
-if (_term getVariable ["FST_DeviceBroken", false] && !(("FST_LargeToolkit" in items _user) or ("FST_SmallToolkit" in items _user))) exitWith {_text = "<t color='#990000'>This device currently no longer functions<br/>You require a toolbox to attempt repairs</t>"; hintSilent parseText _text;};
+if (_term getVariable ["FST_DeviceBroken", false] && !(("FST_LargeToolkit" in items _user) or ("FST_SmallToolkit" in items _user))) exitWith {_text = "<t color='#990000'>This device currently does not function<br/>You require a toolbox to attempt repairs</t>"; hintSilent parseText _text;};
 if (_term getVariable ["FST_DeviceBroken", false] && (("FST_LargeToolkit" in items _user) or ("FST_SmallToolkit" in items _user))) exitWith
 {
 	
@@ -36,7 +36,7 @@ if (_term getVariable ["FST_DeviceBroken", false] && (("FST_LargeToolkit" in ite
 			};
 			if ( _outcome == 5) then
 			{
-				private _itfucked = "<t color='#990000'>The device is beyond repair</t>"; 
+				private _itfucked = "<t color='#990000'>The device is beyond your ability to repair</t>"; 
 				hintSilent parseText _itfucked;
 				_term setVariable ["FST_DeviceFullBroken",true,true];
 				_term setVariable ["FST_DeviceInUse",false,true];

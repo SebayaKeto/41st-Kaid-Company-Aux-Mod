@@ -171,7 +171,7 @@ while {"FST_BXChip" in items _player} do
     _bxchip = _bxchip + 1;
 };
 
-while {"FST_HackDatacard_Abnormal" in items _player} do 
+while {"FST_HackDatacard_Abnormal" in magazines _player} do 
 {
     _player removeItem "FST_HackDatacard_Abnormal";
     _depositcount = _depositcount + 1;
