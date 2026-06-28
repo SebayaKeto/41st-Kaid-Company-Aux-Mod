@@ -666,8 +666,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=19;
-		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
+		transportSoldier=20;
+		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -732,9 +732,9 @@ class CfgVehicles
 			minMoveZ=-0.075000003;
 			maxMoveZ=0.1;
 		};
-		armor=900;
-		armorLights=0.1;
-		armorStructural=6;
+		armor=1600;
+		armorLights=0.2;
+		armorStructural=7;
 		crewExplosionProtection=0.99989998;
 		damageResistance=0.0054700002;
 		cost=2500000;
@@ -742,12 +742,13 @@ class CfgVehicles
 		epeImpulseDamageCoef=18;
 		waterPPInVehicle=0;
 		canFloat=1;
-		waterResistanceCoef=0.02;
-		waterLeakiness=0.02;
+		waterResistanceCoef=0.001;
+		waterLeakiness=0;
 		waterSpeedFactor=1.2;
-		waterAngularDampingCoef=12;
+		waterAngularDampingCoef=15;
 		waterLinearDampingCoefX=10;
-		waterLinearDampingCoefY=10;
+		waterLinearDampingCoefY=15;
+		engineShiftY=0.8;
 		wheelCircumference=2.1500001;
 		tracksSpeed=1.4;
 		model="FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\FST_Vehicles_Land_APC_SabreAPC_Model.p3d";
@@ -1247,7 +1248,7 @@ class CfgVehicles
 				};
 				class Turrets{};
 			};
-			// Internal seats (proxy 4-8): no shooting
+			// Internal seats (proxy 4-9): no shooting
 			class CargoTurret_04: CargoTurret
 			{
 				gunnerAction = "passenger_bench_1";
@@ -1292,7 +1293,19 @@ class CfgVehicles
 				proxyIndex = 8;
 				playerPosition = 5;
 			};
-			// Exterior turret seats (proxy 9+): passengers can fire
+			class CargoTurret_09: CargoTurret_04
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_06";
+				proxyIndex = 9;
+				playerPosition = 6;
+			};
+			class CargoTurret_23: CargoTurret_04
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
+				proxyIndex = 23;
+				playerPosition = 7;
+			};
+			// Exterior turret seats (proxy 10+): passengers can fire
 			class CargoTurret_BaseTurret: CargoTurret
 			{
 				gunnerAction = "passenger_bench_1";
@@ -1305,28 +1318,6 @@ class CfgVehicles
 				canHideGunner = 0;
 				gunnerGetInAction = "GetInHeli_Light_01bench";
 				gunnerGetOutAction = "GetOutLow";
-				inGunnerMayFire = 1;
-				outGunnerMayFire = 1;
-				minTurn = -90;
-				maxTurn = 90;
-				initTurn = 0;
-				minElev = -35;
-				maxElev = 55;
-				initElev = 0;
-				minOutTurn = -90;
-				maxOutTurn = 90;
-				initOutTurn = 0;
-				minOutElev = -35;
-				maxOutElev = 55;
-				initOutElev = 0;
-			};
-			class CargoTurret_09: CargoTurret_BaseTurret
-			{
-				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_09";
-				proxyIndex = 9;
-				playerPosition = 1;
-				memoryPointsGetInGunner = "pos driver";
-				memoryPointsGetInGunnerDir = "pos driver dir";
 				inGunnerMayFire = 1;
 				outGunnerMayFire = 1;
 				minTurn = -90;
@@ -1423,7 +1414,7 @@ class CfgVehicles
 				proxyIndex = 19;
 				playerPosition = 11;
 			};
-			// Upper Rear Exterior seat (proxy 20): original entry
+			// Rear external passenger seat (proxy 20)
 			class CargoTurret_20: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_20";
@@ -1442,14 +1433,14 @@ class CfgVehicles
 				maxOutElev = 55;
 				// Rear exterior -- passengers use personal weapons (isPersonTurret)
 			};
-			// Lower Left Exterior seats cont. (proxy 21-22): left side entry
+			// Lower Right Exterior seats (proxy 21-22): right side entry
 			class CargoTurret_21: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_21";
 				proxyIndex = 21;
 				playerPosition = 13;
-				memoryPointsGetInGunner = "leftsideentry";
-				memoryPointsGetInGunnerDir = "leftsideentry_dir";
+				memoryPointsGetInGunner = "rightsideentry";
+				memoryPointsGetInGunnerDir = "rightsideentry_dir";
 				inGunnerMayFire = 1;
 				outGunnerMayFire = 1;
 				personTurretAction = "vehicle_turnout_2";

@@ -488,41 +488,17 @@
                 <Russian>Внутреннее пассажирское сиденье 6</Russian>
                 <Czech>Vnitrni sedadlo pro cestujici 6</Czech>
             </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_07">
-                <Original>Left Side Seat 1</Original>
-                <English>Left Side Seat 1</English>
-                <German>Linker Seitensitz 1</German>
-                <French>Siege lateral gauche 1</French>
-                <Spanish>Asiento lateral izquierdo 1</Spanish>
-                <Italian>Sedile laterale sinistro 1</Italian>
-                <Polish>Lewe siedzenie boczne 1</Polish>
-                <Portuguese>Assento lateral esquerdo 1</Portuguese>
-                <Russian>Левое боковое сиденье 1</Russian>
-                <Czech>Leve bocni sedadlo 1</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_08">
-                <Original>Left Side Seat 2</Original>
-                <English>Left Side Seat 2</English>
-                <German>Linker Seitensitz 2</German>
-                <French>Siege lateral gauche 2</French>
-                <Spanish>Asiento lateral izquierdo 2</Spanish>
-                <Italian>Sedile laterale sinistro 2</Italian>
-                <Polish>Lewe siedzenie boczne 2</Polish>
-                <Portuguese>Assento lateral esquerdo 2</Portuguese>
-                <Russian>Левое боковое сиденье 2</Russian>
-                <Czech>Leve bocni sedadlo 2</Czech>
-            </Key>
-            <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_09">
-                <Original>Right Exterior Seat 1</Original>
-                <English>Right Exterior Seat 1</English>
-                <German>Rechter Aussensitz 1</German>
-                <French>Siege exterieur droit 1</French>
-                <Spanish>Asiento exterior derecho 1</Spanish>
-                <Italian>Sedile esterno destro 1</Italian>
-                <Polish>Prawe zewnetrzne siedzenie 1</Polish>
-                <Portuguese>Assento externo direito 1</Portuguese>
-                <Russian>Правое внешнее сиденье 1</Russian>
-                <Czech>Prave vnejsi sedadlo 1</Czech>
+            <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_07">
+                <Original>Infantry Commander Seat</Original>
+                <English>Infantry Commander Seat</English>
+                <German>Infanteriekommandantensitz</German>
+                <French>Siege du commandant d'infanterie</French>
+                <Spanish>Asiento del comandante de infanteria</Spanish>
+                <Italian>Sedile del comandante di fanteria</Italian>
+                <Polish>Siedzenie dowodcy piechoty</Polish>
+                <Portuguese>Assento do comandante de infantaria</Portuguese>
+                <Russian>Сиденье командира пехоты</Russian>
+                <Czech>Sedadlo velitele pechoty</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_10">
                 <Original>Top Left Exterior Seat 1</Original>
@@ -645,8 +621,8 @@
                 <Czech>Horni prave vnejsi sedadlo 4</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_20">
-                <Original>Upper Rear Exterior Seat</Original>
-                <English>Upper Rear Exterior Seat</English>
+                <Original>Rear External Passenger Seat</Original>
+                <English>Rear External Passenger Seat</English>
                 <German>Oberer hinterer Aussensitz</German>
                 <French>Siege exterieur superieur arriere</French>
                 <Spanish>Asiento exterior superior trasero</Spanish>
@@ -657,8 +633,8 @@
                 <Czech>Horni zadni vnejsi sedadlo</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_21">
-                <Original>Lower Left Exterior Seat 1</Original>
-                <English>Lower Left Exterior Seat 1</English>
+                <Original>Lower Right Exterior Seat 1</Original>
+                <English>Lower Right Exterior Seat 1</English>
                 <German>Unterer linker Aussensitz 1</German>
                 <French>Siege exterieur inferieur gauche 1</French>
                 <Spanish>Asiento exterior inferior izquierdo 1</Spanish>
@@ -669,8 +645,8 @@
                 <Czech>Spodni leve vnejsi sedadlo 1</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_GUNNER_SEAT_22">
-                <Original>Lower Left Exterior Seat 2</Original>
-                <English>Lower Left Exterior Seat 2</English>
+                <Original>Lower Right Exterior Seat 2</Original>
+                <English>Lower Right Exterior Seat 2</English>
                 <German>Unterer linker Aussensitz 2</German>
                 <French>Siege exterieur inferieur gauche 2</French>
                 <Spanish>Asiento exterior inferior izquierdo 2</Spanish>
