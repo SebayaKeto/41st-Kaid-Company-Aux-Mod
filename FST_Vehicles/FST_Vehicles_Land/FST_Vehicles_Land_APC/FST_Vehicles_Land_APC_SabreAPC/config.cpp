@@ -140,7 +140,7 @@ class CfgVehicles
 		mapSize=35.0001;
 		simulation="tankX";
 		mass=23500;
-		fuelCapacity=60;
+		fuelCapacity=80;
 		brakeIdleSpeed=0.2;
 		maxSpeed=90;
 		normalSpeedForwardCoef=0.62;
@@ -666,8 +666,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=20;
-		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+		transportSoldier=0;
+		cargoProxyIndexes[]={};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -732,7 +732,7 @@ class CfgVehicles
 			minMoveZ=-0.075000003;
 			maxMoveZ=0.1;
 		};
-		armor=1600;
+		armor=1750;
 		armorLights=0.2;
 		armorStructural=7;
 		crewExplosionProtection=0.99989998;
@@ -756,7 +756,7 @@ class CfgVehicles
 		Icon="FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Icons\FST_Vehicles_Land_APC_SabreAPC_Icon.paa";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		hideWeaponsDriver=1;
-		hideWeaponsCargo=1;
+		hideWeaponsCargo=0;
 		weapons[]={"FST_SabreAPC_Horn"};
 		memoryPointGun="";
 		memoryPointGunDir="";
@@ -943,7 +943,7 @@ class CfgVehicles
 				};
 				class TFAR_IntercomChannel_SeraphsSearchHistory
 				{
-					displayName="Seraphs Search History";
+					displayName="Seraph's Search History";
 					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 4";
 					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],4,true];";
 				};
@@ -1156,12 +1156,12 @@ class CfgVehicles
 					class Medium: Medium{};
 					class Narrow: Narrow{};
 				};
-				gunnerAction = "Saber_Commander_In";
+				gunnerAction = "Commander_MBT_01_cannon_F_out";
 				forceHideGunner = 0;
 				canHideGunner = 1;
 				outGunnerMayFire = 1;
 				gunnerInAction = "Saber_Commander_In";
-				gunnerOutAction = "Saber_Commander_OUT";
+				gunnerOutAction = "Commander_MBT_01_cannon_F_out";
 				gunnerRightHandAnimName = "";
 				gunnerLeftHandAnimName = "";
 				gunnerFireAlsoInInternalCamera = 1;
@@ -1271,36 +1271,42 @@ class CfgVehicles
 			};
 			class CargoTurret_05: CargoTurret_04
 			{
+				gunnerAction = "passenger_apc_narrow_generic02";
 				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_02";
 				proxyIndex = 5;
 				playerPosition = 2;
 			};
 			class CargoTurret_06: CargoTurret_04
 			{
+				gunnerAction = "passenger_apc_narrow_generic03";
 				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_03";
 				proxyIndex = 6;
 				playerPosition = 3;
 			};
 			class CargoTurret_07: CargoTurret_04
 			{
+				gunnerAction = "passenger_apc_narrow_generic01";
 				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_04";
 				proxyIndex = 7;
 				playerPosition = 4;
 			};
 			class CargoTurret_08: CargoTurret_04
 			{
+				gunnerAction = "passenger_apc_narrow_generic02";
 				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_05";
 				proxyIndex = 8;
 				playerPosition = 5;
 			};
 			class CargoTurret_09: CargoTurret_04
 			{
+				gunnerAction = "passenger_apc_narrow_generic03";
 				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_06";
 				proxyIndex = 9;
 				playerPosition = 6;
 			};
 			class CargoTurret_23: CargoTurret_04
 			{
+				gunnerAction = "passenger_apc_narrow_generic01";
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
 				proxyIndex = 23;
 				playerPosition = 7;
@@ -1308,7 +1314,7 @@ class CfgVehicles
 			// Exterior turret seats (proxy 10+): passengers can fire
 			class CargoTurret_BaseTurret: CargoTurret
 			{
-				gunnerAction = "passenger_bench_1";
+				gunnerAction = "passenger_inside_1";
 				gunnerCompartments = "Compartment2";
 				memoryPointsGetInGunner = "pos driver";
 				memoryPointsGetInGunnerDir = "pos driver dir";
