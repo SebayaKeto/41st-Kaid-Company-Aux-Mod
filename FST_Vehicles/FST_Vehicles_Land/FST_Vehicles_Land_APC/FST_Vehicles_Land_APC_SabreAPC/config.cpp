@@ -205,7 +205,7 @@ class CfgVehicles
 			GearboxRatios[]=
 			{
 				"R2",
-				-0.5,
+				-0.8,
 				"N",
 				0,
 				"D1",
@@ -742,10 +742,10 @@ class CfgVehicles
 		epeImpulseDamageCoef=18;
 		waterPPInVehicle=0;
 		canFloat=1;
-		waterResistanceCoef=1e-010;
-		waterLeakiness=0.0099999998;
-		waterSpeedFactor=10;
-		waterAngularDampingCoef=5;
+		waterResistanceCoef=0.02;
+		waterLeakiness=0.02;
+		waterSpeedFactor=1.2;
+		waterAngularDampingCoef=12;
 		waterLinearDampingCoefX=10;
 		waterLinearDampingCoefY=10;
 		wheelCircumference=2.1500001;
