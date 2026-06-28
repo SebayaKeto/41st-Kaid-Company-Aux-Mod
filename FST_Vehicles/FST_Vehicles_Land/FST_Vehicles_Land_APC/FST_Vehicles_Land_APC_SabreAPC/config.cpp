@@ -1018,6 +1018,8 @@ class CfgVehicles
 				thermalMode[] = {};
 				missileBeg = "missilebeg_left";
 				missileEnd = "missileend_left";
+				rocketBeg = "missilebeg_left";
+				rocketEnd = "missileend_left";
 				gunnerInOpticsShowCursor = 1;
 				usepip = 2;
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
