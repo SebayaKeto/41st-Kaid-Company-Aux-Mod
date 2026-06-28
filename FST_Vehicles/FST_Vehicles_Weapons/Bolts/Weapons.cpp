@@ -25,6 +25,18 @@ class FST_VW_Sabre_30mm_Cannon: FST_VW_BoltCannon_30mm
     autoFire = 1;
     reloadTime = 1;
     burst = 1;
+    discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+    discreteDistanceInitIndex = 2;
+    discreteDistanceCameraPoint = "eye";
+    class manual: manual
+    {
+        sounds[] = {"StandardSound"};
+        class BaseSoundModeType;
+        class StandardSound: BaseSoundModeType
+        {
+            soundSetShot[] = {"3AS_saber30_Shot_SoundSet"};
+        };
+    };
     magazines[] =
     {
         "FST_VW_120Rnd_30mm_HE_Bolts",

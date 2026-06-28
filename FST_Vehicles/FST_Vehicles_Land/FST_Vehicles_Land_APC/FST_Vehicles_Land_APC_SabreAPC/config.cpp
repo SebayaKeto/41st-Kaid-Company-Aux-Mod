@@ -1016,8 +1016,8 @@ class CfgVehicles
 				gunnerForceOptics = 0;
 				visionMode[] = {"Normal","NVG", "TI"};
 				thermalMode[] = {};
-				missileBeg[] = {"missilebeg_left","missilebeg_right"};
-				missileEnd[] = {"missileend_left","missileend_right"};
+				missileBeg = "missilebeg_left";
+				missileEnd = "missileend_left";
 				gunnerInOpticsShowCursor = 1;
 				usepip = 2;
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
@@ -1252,6 +1252,7 @@ class CfgVehicles
 			class CargoTurret_04: CargoTurret
 			{
 				gunnerAction = "passenger_bench_1";
+				proxyType = "CPCargo";
 				gunnerCompartments = "Compartment2";
 				memoryPointsGetInGunner = "pos driver";
 				memoryPointsGetInGunnerDir = "pos driver dir";
@@ -1315,6 +1316,7 @@ class CfgVehicles
 			class CargoTurret_BaseTurret: CargoTurret
 			{
 				gunnerAction = "passenger_inside_1";
+				proxyType = "CPCargo";
 				gunnerCompartments = "Compartment2";
 				memoryPointsGetInGunner = "pos driver";
 				memoryPointsGetInGunnerDir = "pos driver dir";
