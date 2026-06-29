@@ -29,6 +29,16 @@ class CfgCloudlets
 
 #include "EmissiveEffects\Effects.cpp"
 
+class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
+class BaseSoundModeType;
+class SlotInfo;
+class CowsSlot;
+class MuzzleSlot;
+class PointerSlot;
+class UnderBarrelSlot;
+
 class CfgAmmo
 {
     // Common Arma ammo bases used by this module.

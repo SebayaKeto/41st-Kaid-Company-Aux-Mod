@@ -30,8 +30,8 @@ class FST_VW_Bolt_20mm_AP: BulletBase
     tracerColorR[] = {0.22, 0.62, 1, 0.92};
     lightColor[] = {0.2, 0.58, 0.98};
     hit = 42;
-    indirectHit = 2;
-    indirectHitRange = 0.2;
+    indirectHit = 0;
+    indirectHitRange = 0;
     caliber = 1.6;
     typicalSpeed = 1030;
     airFriction = -0.00095;
@@ -78,8 +78,8 @@ class FST_VW_Bolt_30mm_AP: BulletBase
     tracerColorR[] = {0.28, 0.68, 1, 0.9};
     lightColor[] = {0.24, 0.64, 1};
     hit = 105;
-    indirectHit = 3;
-    indirectHitRange = 0.2;
+    indirectHit = 0;
+    indirectHitRange = 0;
     caliber = 4.8;
     typicalSpeed = 1180;
     airFriction = -0.00068;

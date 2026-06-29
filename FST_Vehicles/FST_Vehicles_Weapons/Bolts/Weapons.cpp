@@ -28,7 +28,7 @@ class FST_VW_Sabre_30mm_Cannon: FST_VW_BoltCannon_30mm
     discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
     discreteDistanceInitIndex = 2;
     discreteDistanceCameraPoint = "eye";
-    class manual: manual
+    class manual: Mode_FullAuto
     {
         sounds[] = {"StandardSound"};
         class BaseSoundModeType;
