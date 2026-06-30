@@ -1,6 +1,7 @@
 class FST_VW_HE_Rocket: RocketBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.46, 0.15};
     hit = 180;
     indirectHit = 30;
@@ -17,6 +18,7 @@ class FST_VW_HE_Rocket: RocketBase
 class FST_VW_AT_Rocket: RocketBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.5, 0.16};
     hit = 280;
     indirectHit = 16;
@@ -33,6 +35,7 @@ class FST_VW_AT_Rocket: RocketBase
 class FST_VW_Thermobaric_Rocket: RocketBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.58, 0.2};
     hit = 230;
     indirectHit = 95;

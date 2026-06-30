@@ -10,7 +10,8 @@ class CfgPatches
         requiredAddons[] =
         {
             "A3_Data_F",
-            "A3_Weapons_F"
+            "A3_Weapons_F",
+            "3AS_VehicleWeapons"
         };
     };
 };
@@ -49,6 +50,10 @@ class CfgAmmo
     class Sh_120mm_HE;
     class SmokeShell;
     class GrenadeBase;
+    class 3AS_PlasmaBase;
+    class 3AS_Sabre_HE;
+    class 3AS_Sabre_AT;
+    class 3as_saber_GMG_ammo;
 
     #include "Bolts\Ammo.cpp"
     #include "Missiles\Ammo.cpp"
@@ -67,6 +72,10 @@ class CfgWeapons
     class RocketPods;
     class GrenadeLauncher;
     class SmokeLauncher;
+    class 3AS_Sabre_MG;
+    class 3AS_Sabre_Cannons;
+    class 3as_saber_gmg_40mm;
+    class 3AS_Sabre_Missiles;
 
     #include "Bolts\Weapons.cpp"
     #include "Missiles\Weapons.cpp"

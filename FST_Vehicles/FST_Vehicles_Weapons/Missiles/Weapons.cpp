@@ -1,4 +1,4 @@
-class FST_VW_AT_MissileLauncher: MissileLauncher
+class FST_VW_AT_MissileLauncher: 3AS_Sabre_Missiles
 {
     scope = 1;
     displayName = "FST AT Missile Launcher";

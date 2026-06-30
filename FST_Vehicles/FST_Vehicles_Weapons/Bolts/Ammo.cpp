@@ -1,6 +1,7 @@
-class FST_VW_Bolt_10mm_Ball: BulletBase
+class FST_VW_Bolt_10mm_Ball: 3AS_PlasmaBase
 {
     effectFly = "FST_VW_FX_Emissive_Bolt_10mm";
+    explosionEffects = "3AS_ImpactPlasma";
     tracerStartTime = 0;
     tracerEndTime = 8;
     tracerScale = 1.1;
@@ -20,9 +21,10 @@ class FST_VW_Bolt_10mm_Ball: BulletBase
     ACE_barrelLengths[] = {254, 368, 508};
 };
 
-class FST_VW_Bolt_20mm_AP: BulletBase
+class FST_VW_Bolt_20mm_AP: 3AS_PlasmaBase
 {
     effectFly = "FST_VW_FX_Emissive_Bolt_20mm";
+    explosionEffects = "3AS_ImpactPlasma";
     tracerStartTime = 0;
     tracerEndTime = 10;
     tracerScale = 1.2;
@@ -42,7 +44,7 @@ class FST_VW_Bolt_20mm_AP: BulletBase
     ACE_barrelLengths[] = {700, 900, 1200};
 };
 
-class FST_VW_Bolt_30mm_HE: BulletBase
+class FST_VW_Bolt_30mm_HE: 3AS_Sabre_HE
 {
     effectFly = "FST_VW_FX_Emissive_Bolt_30mm";
     tracerStartTime = 0;
@@ -68,7 +70,7 @@ class FST_VW_Bolt_30mm_HE: BulletBase
     ace_frag_gurney_c = 2440;
 };
 
-class FST_VW_Bolt_30mm_AP: BulletBase
+class FST_VW_Bolt_30mm_AP: 3AS_Sabre_AT
 {
     effectFly = "FST_VW_FX_Emissive_Bolt_30mm";
     tracerStartTime = 0;
@@ -90,7 +92,7 @@ class FST_VW_Bolt_30mm_AP: BulletBase
     ACE_barrelLengths[] = {1200, 1600, 2000};
 };
 
-class FST_VW_Bolt_40mm_HEI: BulletBase
+class FST_VW_Bolt_40mm_HEI: 3as_saber_GMG_ammo
 {
     effectFly = "FST_VW_FX_Emissive_Bolt_40mm";
     tracerStartTime = 0;

@@ -1,6 +1,7 @@
 class FST_VW_AT_Missile: MissileBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.45, 0.12};
     hit = 350;
     indirectHit = 40;
@@ -42,6 +43,7 @@ class FST_VW_AT_LG_Missile: FST_VW_AT_Missile
 class FST_VW_ATGM_Tandem_Missile: MissileBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.48, 0.16};
     hit = 520;
     indirectHit = 36;
@@ -62,6 +64,7 @@ class FST_VW_ATGM_Tandem_Missile: MissileBase
 class FST_VW_AA_Missile: MissileBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.5, 0.2};
     hit = 180;
     indirectHit = 18;
@@ -82,6 +85,7 @@ class FST_VW_AA_Missile: MissileBase
 class FST_VW_Cruise_Missile: MissileBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
     lightColor[] = {1, 0.55, 0.2};
     hit = 900;
     indirectHit = 130;

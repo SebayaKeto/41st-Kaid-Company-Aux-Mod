@@ -666,8 +666,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=0;
-		cargoProxyIndexes[]={};
+		transportSoldier=7;
+		cargoProxyIndexes[]={4,5,6,7,8,9,23};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -689,7 +689,8 @@ class CfgVehicles
 			"passenger_apc_narrow_generic03",
 			"passenger_apc_narrow_generic01",
 			"passenger_apc_narrow_generic02",
-			"passenger_apc_narrow_generic03"
+			"passenger_apc_narrow_generic03",
+			"passenger_apc_narrow_generic01"
 		};
 		maxFordingDepth=0.5;
 		waterResistance=9.9999997e-005;
@@ -1016,10 +1017,10 @@ class CfgVehicles
 				gunnerForceOptics = 0;
 				visionMode[] = {"Normal","NVG", "TI"};
 				thermalMode[] = {};
-				missileBeg = "missilebeg_left";
-				missileEnd = "missileend_left";
-				rocketBeg = "missilebeg_left";
-				rocketEnd = "missileend_left";
+				missileBeg = "LeftGunnerTurret_Muzzle";
+				missileEnd = "LeftGunnerTurret_Muzzle_Dir";
+				rocketBeg = "LeftGunnerTurret_Muzzle";
+				rocketEnd = "LeftGunnerTurret_Muzzle_Dir";
 				gunnerInOpticsShowCursor = 1;
 				usepip = 2;
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
@@ -1250,70 +1251,7 @@ class CfgVehicles
 				};
 				class Turrets{};
 			};
-			// Internal seats (proxy 4-9): no shooting
-			class CargoTurret_04: CargoTurret
-			{
-				gunnerAction = "passenger_bench_1";
-				proxyType = "CPCargo";
-				gunnerCompartments = "Compartment2";
-				memoryPointsGetInGunner = "pos driver";
-				memoryPointsGetInGunnerDir = "pos driver dir";
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_01";
-				proxyIndex = 4;
-				soundAttenuationTurret = "HeliAttenuationGunner";
-				isPersonTurret = 1;
-				ejectDeadGunner = 1;
-				canHideGunner = 0;
-				playerPosition = 1;
-				gunnerGetInAction = "GetInLow";
-				gunnerGetOutAction = "GetOutLow";
-				inGunnerMayFire = 0;
-				outGunnerMayFire = 0;
-				weapons[] = {};
-				magazines[] = {};
-			};
-			class CargoTurret_05: CargoTurret_04
-			{
-				gunnerAction = "passenger_apc_narrow_generic02";
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_02";
-				proxyIndex = 5;
-				playerPosition = 2;
-			};
-			class CargoTurret_06: CargoTurret_04
-			{
-				gunnerAction = "passenger_apc_narrow_generic03";
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_03";
-				proxyIndex = 6;
-				playerPosition = 3;
-			};
-			class CargoTurret_07: CargoTurret_04
-			{
-				gunnerAction = "passenger_apc_narrow_generic01";
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_04";
-				proxyIndex = 7;
-				playerPosition = 4;
-			};
-			class CargoTurret_08: CargoTurret_04
-			{
-				gunnerAction = "passenger_apc_narrow_generic02";
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_05";
-				proxyIndex = 8;
-				playerPosition = 5;
-			};
-			class CargoTurret_09: CargoTurret_04
-			{
-				gunnerAction = "passenger_apc_narrow_generic03";
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_06";
-				proxyIndex = 9;
-				playerPosition = 6;
-			};
-			class CargoTurret_23: CargoTurret_04
-			{
-				gunnerAction = "passenger_apc_narrow_generic01";
-				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
-				proxyIndex = 23;
-				playerPosition = 7;
-			};
+			// Internal seats (proxy 4-9,23) are configured as standard cargo seats above.
 			// Exterior turret seats (proxy 10+): passengers can fire
 			class CargoTurret_BaseTurret: CargoTurret
 			{
