@@ -155,7 +155,7 @@ if (isNull _box) exitWith {
         ["IDA_grenade_Smoke_Purple_mag",1,1]
     ]],
     ["FST_Clone_backpack_EOD",[
-        ["ToolKit",1],
+        ["FST_LargeToolkit",1],
         ["ACE_M26_Clacker",1],
         ["ACE_DefusalKit",1],
         ["MineDetector",1],
@@ -659,7 +659,7 @@ if (isNull _box) exitWith {
             ["IDA_grenade_Smoke_Purple_mag",1,1]
         ]],
         ["FST_Backpack_Jumppack_EOD",[
-            ["ToolKit",1],
+            ["FST_LargeToolkit",1],
             ["ACE_M26_Clacker",1],
             ["ACE_DefusalKit",1],
             ["MineDetector",1],
@@ -1013,7 +1013,7 @@ if (isNull _box) exitWith {
             ["FST_blaster_cell_Blue",16,60]
         ]],
         ["FST_Clone_LR_attachment",[
-            ["ToolKit",1]
+            ["FST_LargeToolkit",1]
         ]],
         "FST_Pilot_P1_Helmet",
         "FST_Fynock_LowLight",
@@ -1058,7 +1058,7 @@ if (isNull _box) exitWith {
             ["IDA_grenade_Smoke_Purple_mag",1,1]
         ]],
         ["FST_Backpack_Antenna",[
-            ["ToolKit",1],
+            ["FST_LargeToolkit",1],
             ["FST_Bacta_Tank",1],
             ["IDA_Cauterizer",1],
             ["IDA_BactaBandage",80],
@@ -1113,7 +1113,7 @@ if (isNull _box) exitWith {
         [
             "FST_Backpack_Antenna",
             [
-                ["ToolKit",1]
+                ["FST_LargeToolkit",1]
             ]
         ],
         "FST_P1_41st", 
@@ -1653,7 +1653,7 @@ if (isNull _box) exitWith {
                 ["ACE_plasmaIV_500",8],
                 ["ACE_splint",6],
                 ["ACE_tourniquet",6],
-                ["ToolKit",1]
+                ["FST_LargeToolkit",1]
             ]
         ],
         "FST_P1_41st",
@@ -1815,7 +1815,7 @@ if (isNull _box) exitWith {
         ["IDA_grenade_Smoke_Purple_mag",1,1]
     ]],
     ["FST_Clone_backpack_EOD",[
-        ["ToolKit",1],
+        ["FST_LargeToolkit",1],
         ["ACE_M26_Clacker",1],
         ["ACE_DefusalKit",1],
         ["MineDetector",1],
