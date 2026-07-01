@@ -1,4 +1,4 @@
-kohaiistrashprivate _box = objNull;
+private _box = objNull;
 if (!isNil "_this") then {
     if (_this isEqualType [] && {count _this > 0}) then {
         if ((_this select 0) isEqualType objNull) then {
