@@ -191,9 +191,9 @@ class CfgVehicles
 				"(2350/2850)"
 			}
 		};
-		thrustDelay=0.35;
-		dampingRateFullThrottle=0.42;
-		dampingRateZeroThrottleClutchEngaged=1.45;
+		thrustDelay=0.45;
+		dampingRateFullThrottle=0.52;
+		dampingRateZeroThrottleClutchEngaged=1.8;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
 		clutchStrength=170;
 		latency=0.14;
@@ -242,8 +242,8 @@ class CfgVehicles
 		tankTurnForce=56000;
 		tankTurnForceAngMinSpd=0;
 		tankTurnForceAngSpd=0.07;
-		accelAidForceCoef=0.0065;
-		accelAidForceYOffset=-0.5;
+		accelAidForceCoef=0.0055;
+		accelAidForceYOffset=-0.15;
 		accelAidForceSpd=0.2;
 		class Sounds
 		{
@@ -552,7 +552,7 @@ class CfgVehicles
 		{
 			class L2
 			{
-				boneName = "wheel_podkoloL1";
+				boneName = "wheel_podkolol1";
 				center = "wheel_1_2_axis";
 				boundary = "wheel_1_2_bound";
 				suspTravelDirection[] = {0,-1,0};
@@ -567,14 +567,14 @@ class CfgVehicles
 				longitudinalStiffnessPerUnitGravity = 7800;
 				maxBrakeTorque = 13000;
 				sprungMass = -1;
-				springStrength = 19500;
-				springDamperRate = 17500;
-				dampingRate = 4.8;
+				springStrength = 20500;
+				springDamperRate = 21500;
+				dampingRate = 7;
 				dampingRateInAir = 450;
 				dampingRateDamaged = 8;
 				dampingRateDestroyed = 400;
-				maxDroop = 0.07;
-				maxCompression = 0.07;
+				maxDroop = 0.06;
+				maxCompression = 0.06;
 				frictionVsSlipGraph[] =
 				{
 					{0,0.6},
