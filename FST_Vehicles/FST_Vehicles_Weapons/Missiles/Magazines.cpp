@@ -16,6 +16,15 @@ class FST_VW_4Rnd_AT_LG_Missiles: VehicleMagazine
     initSpeed = 70;
 };
 
+class FST_VW_4Rnd_SabreAPC_LG_Missiles: VehicleMagazine
+{
+    scope = 2;
+    displayName = "4Rnd Sabre APC Hunter-Killer Missiles";
+    ammo = "FST_VW_SabreAPC_LG_Missile";
+    count = 4;
+    initSpeed = 75;
+};
+
 class FST_VW_2Rnd_ATGM_Tandem_Missiles: VehicleMagazine
 {
     scope = 2;

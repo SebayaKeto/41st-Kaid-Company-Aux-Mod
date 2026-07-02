@@ -40,6 +40,57 @@ class FST_VW_AT_LG_Missile: FST_VW_AT_Missile
     trackLead = 1.1;
 };
 
+class FST_VW_SabreAPC_LG_Submunition: Sh_120mm_HE
+{
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
+    hit = 300;
+    indirectHit = 50;
+    indirectHitRange = 3;
+    caliber = 11;
+    timeToLive = 0.2;
+};
+
+class FST_VW_SabreAPC_LG_Missile: MissileBase
+{
+    effectFly = "FST_VW_FX_Emissive_Missile";
+    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
+    lightColor[] = {0.92, 0.72, 0.22};
+    hit = 560;
+    indirectHit = 72;
+    indirectHitRange = 2.4;
+    maxSpeed = 520;
+    thrustTime = 3.4;
+    thrust = 225;
+    maneuvrability = 34;
+    ace_frag_enabled = 1;
+    ace_frag_metal = 3200;
+    ace_frag_charge = 1220;
+    ace_frag_gurney_c = 2440;
+    manualControl = 1;
+    maxControlRange = 5200;
+    missileManualControlCone = 180;
+    laserLock = 1;
+    irLock = 0;
+    airLock = 1;
+    nvLock = 0;
+    missileLockCone = 50;
+    missileLockMaxDistance = 5200;
+    missileLockMinDistance = 80;
+    weaponLockSystem = 2;
+    trackOversteer = 0.82;
+    trackLead = 1.15;
+    triggerOnImpact = 1;
+    deleteParentWhenTriggered = 1;
+    submunitionAmmo = "FST_VW_SabreAPC_LG_Submunition";
+    submunitionDirectionType = "SubmunitionModelDirection";
+    submunitionInitSpeed = 140;
+    submunitionParentSpeedCoef = 0;
+    submunitionConeType[] = {"randomcenter",6};
+    submunitionConeAngle = 20;
+    submunitionConeRadius = 1.4;
+    submunitionConeHeight = 0.6;
+};
+
 class FST_VW_ATGM_Tandem_Missile: MissileBase
 {
     effectFly = "FST_VW_FX_Emissive_Missile";
