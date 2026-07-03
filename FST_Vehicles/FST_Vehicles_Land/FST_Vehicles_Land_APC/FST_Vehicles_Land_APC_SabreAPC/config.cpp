@@ -770,7 +770,7 @@ class CfgVehicles
 				material=-1;
 				armorComponent="FrontArmor";
 				name="hit_front_armor";
-				visual="zbytek";
+				visual="-";
 				passThrough=0.2;
 				minimalHit=0.08;
 				explosionShielding=1;
@@ -778,11 +778,11 @@ class CfgVehicles
 			};
 			class HitSideArmor: HitHull
 			{
-				armor=7;
+				armor=8;
 				material=-1;
 				armorComponent="SideArmor";
 				name="hit_side_armor";
-				visual="zbytek";
+				visual="-";
 				passThrough=0.35;
 				minimalHit=0.08;
 				explosionShielding=0.8;
@@ -794,7 +794,7 @@ class CfgVehicles
 				material=-1;
 				armorComponent="RearArmor";
 				name="hit_rear_armor";
-				visual="zbytek";
+				visual="-";
 				passThrough=0.55;
 				minimalHit=0.08;
 				explosionShielding=0.55;
@@ -806,7 +806,7 @@ class CfgVehicles
 				material=-1;
 				armorComponent="BottomArmor";
 				name="hit_bottom_armor";
-				visual="zbytek";
+				visual="-";
 				passThrough=0.55;
 				minimalHit=0.08;
 				explosionShielding=0.35;
@@ -814,7 +814,7 @@ class CfgVehicles
 			};
 			class HitEngine: HitEngine
 			{
-				armor=0.60000001;
+				armor=1.60000001;
 				material=-1;
 				armorComponent="hit_engine";
 				name="hit_engine_point";
@@ -826,11 +826,11 @@ class CfgVehicles
 			};
 			class HitFuel: HitFuel
 			{
-				armor=0.50000001;
+				armor=1.2000001;
 				material=-1;
 				armorComponent="hit_fuel";
 				name="hit_fuel_point";
-				visual="-";
+				visual="fuel_tank";
 				passThrough=0.1;
 				minimalHit=0.1;
 				explosionShielding=0.60000002;
@@ -838,10 +838,10 @@ class CfgVehicles
 			};
 			class HitLTrack: HitLTrack
 			{
-				armor = 0.8;
+				armor = 2.2000001;
 				material = -1;
 				armorComponent = "LeftTrackArmor";
-				name = "track_l_hit";
+				name = "hit_trackl_point";
 				visual = "track_l";
 				passThrough = 0;
 				minimalHit = 0.08;
@@ -850,10 +850,10 @@ class CfgVehicles
 			};
 			class HitRTrack: HitRTrack
 			{
-				armor = 0.8;
+				armor = 2.2000001;
 				material = -1;
 				armorComponent = "RightTrackArmor";
-				name = "track_r_hit";
+				name = "hit_trackr_point";
 				visual = "track_r";
 				passThrough = 0;
 				minimalHit = 0.08;
@@ -1546,6 +1546,18 @@ class CfgVehicles
 			{
 				source="Hit";
 				hitpoint="HitHull";
+				raw=1;
+			};
+			class HitLTrack_src
+			{
+				source="Hit";
+				hitpoint="HitLTrack";
+				raw=1;
+			};
+			class HitRTrack_src
+			{
+				source="Hit";
+				hitpoint="HitRTrack";
 				raw=1;
 			};
 			class HitMainGun_src
