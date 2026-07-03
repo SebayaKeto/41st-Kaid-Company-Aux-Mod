@@ -9,11 +9,11 @@ class FST_VW_AT_MissileLauncher: 3AS_Sabre_Missiles
 class FST_VW_Sabre_LG_MissileLauncher: MissileLauncher
 {
     scope = 1;
-    displayName = "FST Sabre Laser-Guided Missiles";
+    displayName = "FST Sabre Manual-Guided Missiles";
     muzzles[] = {"this"};
     magazines[] = {"FST_VW_4Rnd_SabreAPC_LG_Missiles"};
-    canLock = 2;
-    weaponLockSystem = 2;
+    canLock = 0;
+    weaponLockSystem = 0;
 };
 
 class FST_VW_ATGM_Tandem_Launcher: MissileLauncher

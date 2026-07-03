@@ -800,18 +800,6 @@ class CfgVehicles
 				explosionShielding=0.55;
 				radius=0.30000001;
 			};
-			class HitTopArmor: HitHull
-			{
-				armor=4.5;
-				material=-1;
-				armorComponent="TopArmor";
-				name="hit_top_armor";
-				visual="zbytek";
-				passThrough=0.55;
-				minimalHit=0.08;
-				explosionShielding=0.55;
-				radius=0.30000001;
-			};
 			class HitBottomArmor: HitHull
 			{
 				armor=4.5;
@@ -821,7 +809,7 @@ class CfgVehicles
 				visual="zbytek";
 				passThrough=0.55;
 				minimalHit=0.08;
-				explosionShielding=0.55;
+				explosionShielding=0.35;
 				radius=0.30000001;
 			};
 			class HitEngine: HitEngine
@@ -852,7 +840,9 @@ class CfgVehicles
 			{
 				armor = 0.8;
 				material = -1;
+				armorComponent = "LeftTrackArmor";
 				name = "track_l_hit";
+				visual = "track_l";
 				passThrough = 0;
 				minimalHit = 0.08;
 				explosionShielding = 0.8;
@@ -862,7 +852,9 @@ class CfgVehicles
 			{
 				armor = 0.8;
 				material = -1;
+				armorComponent = "RightTrackArmor";
 				name = "track_r_hit";
+				visual = "track_r";
 				passThrough = 0;
 				minimalHit = 0.08;
 				explosionShielding = 0.8;
@@ -1049,7 +1041,7 @@ class CfgVehicles
 				gunEnd[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
 				memoryPointGun[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
 				weapons[] = {"FST_VW_Sabre_30mm_Cannon","SmokeLauncher","FST_VW_Sabre_LG_MissileLauncher"};
-				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","FST_VW_4Rnd_SabreAPC_LG_Missiles"};
+				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","FST_VW_4Rnd_SabreAPC_LG_Missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
@@ -1455,7 +1447,51 @@ class CfgVehicles
 		class Damage
 		{
 			tex[]={};
-			mat[]={};
+			mat[]=
+			{
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo1.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo2.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo3.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo4.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo5.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo6.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo7.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo8.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo9.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo10.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Camo11.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_damage.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive_Gun.rvmat",
+				"FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Data\Textures\Base\Emissive_Gun.rvmat",
+				"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_destruct.rvmat"
+			};
 		};
 		class AnimationSources: AnimationSources
 		{
