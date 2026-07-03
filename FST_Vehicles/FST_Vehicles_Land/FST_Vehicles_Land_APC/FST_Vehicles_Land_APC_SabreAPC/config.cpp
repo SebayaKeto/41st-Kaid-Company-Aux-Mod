@@ -776,6 +776,18 @@ class CfgVehicles
 				explosionShielding=1;
 				radius=0.30000001;
 			};
+			class HitFrontArmorNOpen: HitHull
+			{
+				armor=16;
+				material=-1;
+				armorComponent="FrontArmorNOpen";
+				name="hit_front_armornopen";
+				visual="-";
+				passThrough=0.01;
+				minimalHit=0.08;
+				explosionShielding=1;
+				radius=0.30000001;
+			};
 			class HitSideArmor: HitHull
 			{
 				armor=8;
@@ -814,7 +826,7 @@ class CfgVehicles
 			};
 			class HitEngine: HitEngine
 			{
-				armor=1.60000001;
+				armor=1.90000001;
 				material=-1;
 				armorComponent="hit_engine";
 				name="hit_engine_point";
@@ -826,7 +838,7 @@ class CfgVehicles
 			};
 			class HitFuel: HitFuel
 			{
-				armor=1.2000001;
+				armor=2.2000001;
 				material=-1;
 				armorComponent="hit_fuel";
 				name="hit_fuel_point";
@@ -835,6 +847,18 @@ class CfgVehicles
 				minimalHit=0.1;
 				explosionShielding=0.60000002;
 				radius=0.30000001;
+			};
+			class HitRearDoor: HitHull
+			{
+				armor=4.25;
+				material=-1;
+				armorComponent="RearDoorArmor";
+				name="hit_rear_door";
+				visual="Door";
+				passThrough=0.4;
+				minimalHit=0.08;
+				explosionShielding=0.6;
+				radius=0.25;
 			};
 			class HitLTrack: HitLTrack
 			{
@@ -1540,6 +1564,12 @@ class CfgVehicles
 			{
 				source="Hit";
 				hitpoint="HitFuel";
+				raw=1;
+			};
+			class HitRearDoor_src
+			{
+				source="Hit";
+				hitpoint="HitRearDoor";
 				raw=1;
 			};
 			class HitHull_src
