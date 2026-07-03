@@ -677,6 +677,194 @@ class CfgEditorSubcategories
 		displayName = "Other Items"; 
 	};
 };
+class RscText;
+class RscButton;
+class RscStructuredText;
+class RscTitles {};
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+class FST_RepairDeviceDialog
+{
+	idd=6969;
+	movingEnable=false;
+	enableSimulation=true;
+	class ControlsBackground
+	{
+		class ButtonBackground: RscText
+		{
+			idc=-1;
+			x = 11.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 3.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 16 * GUI_GRID_CENTER_W;
+			h = 19.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0,0,0,0.8};
+		};
+		class DiagnosisBackground: RscText
+		{
+			idc=-1;
+			x = 2 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 9 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 6 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.459,0,0,0.8};
+		};
+		class AttemptBackground: RscText
+		{
+			idc=-1;
+			x = 28 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 9 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 6 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0,0.459,0,0.8};
+		};
+		class DiagnosisTextTitle: RscText
+		{
+			idc=-1;
+			text = "DIAGNOSTIC RESULT:";
+			font="RobotoCondensedBold";
+			style=2;
+			x = 2 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0,0,0,0.8};
+		};
+		class RepairTextTitle: RscText
+		{
+			idc=-1;
+			text = "REPAIR RESULT:"; 
+			font="RobotoCondensedBold";
+			style=2;
+			x = 28 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0,0,0,0.8};
+		};
+	};
+	class Controls
+	{
+		class FST_BtnDecorrupt: RscButton
+		{
+			idc=1600;
+			text= "DECORRUPT DRIVES";
+			x = 12.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 14 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
+			font="RobotoCondensedLight";
+			colorBorder[] = {0, 1, 0.298};
+			borderSize=0.01;
+			tooltip = "Attempt to run a system check software to correct drive issues.";
+		};
+		class FST_BtnDefragment: FST_BtnDecorrupt
+		{
+			idc=1601;
+			text= "DEFRAGMENT DRIVES";
+			y = 5.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {0, 1, 0.298};
+			tooltip = "Attempt to run a defragmentaion software to correct drive issues.";
+		};
+		class FST_BtnRestart: FST_BtnDecorrupt
+		{
+			idc=1607;
+			text= "RESTART DEVICE";
+			y = 7 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {0, 1, 0.298};
+			tooltip = "Everyone knows turning it off and back on again solves many issues.";
+		};
+		class FST_BtnDatalink: FST_BtnDecorrupt
+		{
+			idc=1602;
+			text= "REPAIR DATALINK";
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {0, 0.522, 0.157};
+			tooltip = "Attempt to physically repair the datalink component.";
+		};
+		class FST_BtnPSU: FST_BtnDecorrupt
+		{
+			idc=1603;
+			text= "REPAIR PSU";
+			y = 10 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;			
+			colorBorder[] = {0, 0.522, 0.157};
+			tooltip = "Attempt to physically repair the power supply.";
+		};
+		class FST_BtnCPU: FST_BtnDecorrupt
+		{
+			idc=1604;
+			text= "REPAIR CPU";
+			y = 11.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {0, 0.522, 0.157};
+			tooltip = "Attempt to physically repair the central processor.";
+		};
+		class FST_BtnFuses: FST_BtnDecorrupt
+		{
+			idc=1605;
+			text= "REPLACE FUSES";
+			y = 13 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {0.682, 1, 0};
+			tooltip = "Pull out and replace the various fuses inside.";
+		};
+		class FST_BtnCapacitors: FST_BtnDecorrupt
+		{
+			idc=1606;
+			text= "REPLACE CAPACITORS";
+			y = 14.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {0.682, 1, 0};
+			tooltip = "Desolder capacitors and solder in new ones.";
+		};
+		class FST_BtnBypassCircuit: FST_BtnDecorrupt
+		{
+			idc=1608;
+			text= "BYPASS SUSPECTED DAMAGED CIRCUITRY";
+			y = 16 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {1, 0.968, 0};
+			tooltip = "Attempt to restructure the internal construction to go around what you think is broken."
+		};
+		class FST_BtnHotwire: FST_BtnDecorrupt
+		{
+			idc=1609;
+			text= "HOTWIRE";
+			y = 17.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {1, 0, 0};
+			tooltip = "...well, I think I can hotwire this thing."
+		};
+		class FST_BtnSmack: FST_BtnDecorrupt
+		{
+			idc=1610;
+			text= "PERFORM PERCUSSIVE MAINTENANCE";
+			y = 19 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {1, 0, 0};
+			tooltip = "Trust in the force. Kinetic force.";
+		};
+		class FST_BtnDeviceCancel: FST_BtnDecorrupt
+		{
+			idc=1611;
+			text= "CANCEL";
+			y = 21.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			colorBorder[] = {1, 1, 1};
+		};
+		class DiagosisText: RscStructuredText
+		{
+			idc=1612;
+			x = 2.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 9.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 8 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+			font="RobotoCondensedLight";
+			colorText[] = {0,0,0,1};
+		};
+		class AttemptText: RscStructuredText
+		{
+			idc=1613;
+			x = 28.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 9.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 8 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+			font="RobotoCondensedLight";
+			colorText[] = {0,0,0,1};
+		};
+	};
+};
 class CfgFunctions
 {
 	class FST_CivilRandomizers
@@ -687,7 +875,9 @@ class CfgFunctions
 			file="41st_Civilians_and_Intel\Scripts";
 			class applyidentity {postInit=1;};
 			class servercounting {postInit=1;};
+			class hackingterminalparts {postInit=1;};
 			class hackingterminal {};
+			class testingbuttons {};
 			class deposit {};
 			class intel {};
 			class displaytotal {};
