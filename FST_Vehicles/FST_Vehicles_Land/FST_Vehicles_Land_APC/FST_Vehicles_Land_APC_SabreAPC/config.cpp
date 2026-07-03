@@ -139,10 +139,10 @@ class CfgVehicles
 		author="Maldova";
 		mapSize=35.0001;
 		simulation="tankX";
-		mass=23500;
+		mass=22500;
 		fuelCapacity=80;
 		brakeIdleSpeed=0.2;
-		maxSpeed=90;
+		maxSpeed=85;
 		normalSpeedForwardCoef=0.62;
 		slowSpeedForwardCoef=0.31;
 		engineMOI=14;
@@ -151,52 +151,52 @@ class CfgVehicles
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=17500;
+		peakTorque=22000;
 		torqueCurve[]=
 		{
 			{0,0},
 
 			{
 				"(1600/2640)",
-				"(2650/2850)"
-			},
-
-			{
-				"(1800/2640)",
-				"(2800/2850)"
-			},
-
-			{
-				"(1900/2640)",
-				"(2850/2850)"
-			},
-
-			{
-				"(2000/2640)",
-				"(2800/2850)"
-			},
-
-			{
-				"(2200/2640)",
 				"(2750/2850)"
 			},
 
 			{
+				"(1800/2640)",
+				"(2925/2850)"
+			},
+
+			{
+				"(1900/2640)",
+				"(3000/2850)"
+			},
+
+			{
+				"(2000/2640)",
+				"(2950/2850)"
+			},
+
+			{
+				"(2200/2640)",
+				"(2875/2850)"
+			},
+
+			{
 				"(2400/2640)",
-				"(2600/2850)"
+				"(2725/2850)"
 			},
 
 			{
 				"(2640/2640)",
-				"(2350/2850)"
+				"(2475/2850)"
 			}
 		};
-		thrustDelay=0.45;
-		dampingRateFullThrottle=0.52;
+		thrustDelay=0.7;
+		dampingRateFullThrottle=0.85;
 		dampingRateZeroThrottleClutchEngaged=1.8;
 		dampingRateZeroThrottleClutchDisengaged=0.25;
 		clutchStrength=170;
-		latency=0.14;
+		latency=0.45;
 		switchTime=0;
 		changeGearType="rpmratio";
 		changeGearOmegaRatios[]={1,0.42424199,0.45454499,0.33333299,0.939394,0.42424199,0.909091,0.63636398,0.84848499,0.66666698,1,0.66666698};
@@ -235,16 +235,16 @@ class CfgVehicles
 			reverseString="R";
 			transmissionDelay=0.25;
 		};
-		antiRollbarForceCoef=10;
-		antiRollbarForceLimit=22;
+		antiRollbarForceCoef=18;
+		antiRollbarForceLimit=35;
 		antiRollbarSpeedMin=5;
 		antiRollbarSpeedMax=55;
-		tankTurnForce=56000;
+		tankTurnForce=32000;
 		tankTurnForceAngMinSpd=0;
-		tankTurnForceAngSpd=0.07;
-		accelAidForceCoef=0.0055;
-		accelAidForceYOffset=-0.15;
-		accelAidForceSpd=0.2;
+		tankTurnForceAngSpd=0.3;
+		accelAidForceCoef=0.0025;
+		accelAidForceYOffset=0;
+		accelAidForceSpd=0.12;
 		class Sounds
 		{
 			class Idle_ext
@@ -556,7 +556,7 @@ class CfgVehicles
 				center = "wheel_1_2_axis";
 				boundary = "wheel_1_2_bound";
 				suspTravelDirection[] = {0,-1,0};
-				damping = 90;
+				damping = 180;
 				steering = 0;
 				side = "left";
 				weight = 90;
@@ -567,14 +567,14 @@ class CfgVehicles
 				longitudinalStiffnessPerUnitGravity = 7800;
 				maxBrakeTorque = 13000;
 				sprungMass = -1;
-				springStrength = 20500;
-				springDamperRate = 21500;
-				dampingRate = 7;
-				dampingRateInAir = 450;
+				springStrength = 28000;
+				springDamperRate = 36000;
+				dampingRate = 12;
+				dampingRateInAir = 700;
 				dampingRateDamaged = 8;
 				dampingRateDestroyed = 400;
-				maxDroop = 0.06;
-				maxCompression = 0.06;
+				maxDroop = 0.02;
+				maxCompression = 0.02;
 				frictionVsSlipGraph[] =
 				{
 					{0,0.6},
@@ -733,7 +733,7 @@ class CfgVehicles
 			minMoveZ=-0.075000003;
 			maxMoveZ=0.1;
 		};
-		armor=1750;
+		armor=1000;
 		armorLights=0.2;
 		armorStructural=7;
 		crewExplosionProtection=0.99989998;
@@ -764,16 +764,64 @@ class CfgVehicles
 		magazines[]={};
 		class HitPoints: HitPoints
 		{
-			class HitHull: HitHull
+			class HitFrontArmor: HitHull
 			{
-				armor=5.300001;
+				armor=12;
 				material=-1;
-				armorComponent="hit_hull";
-				name="hit_hull_point";
+				armorComponent="FrontArmor";
+				name="hit_front_armor";
 				visual="zbytek";
-				passThrough=1;
-				minimalHit=0.2;
-				explosionShielding=0.2;
+				passThrough=0.2;
+				minimalHit=0.08;
+				explosionShielding=1;
+				radius=0.30000001;
+			};
+			class HitSideArmor: HitHull
+			{
+				armor=7;
+				material=-1;
+				armorComponent="SideArmor";
+				name="hit_side_armor";
+				visual="zbytek";
+				passThrough=0.35;
+				minimalHit=0.08;
+				explosionShielding=0.8;
+				radius=0.30000001;
+			};
+			class HitRearArmor: HitHull
+			{
+				armor=4.5;
+				material=-1;
+				armorComponent="RearArmor";
+				name="hit_rear_armor";
+				visual="zbytek";
+				passThrough=0.55;
+				minimalHit=0.08;
+				explosionShielding=0.55;
+				radius=0.30000001;
+			};
+			class HitTopArmor: HitHull
+			{
+				armor=4.5;
+				material=-1;
+				armorComponent="TopArmor";
+				name="hit_top_armor";
+				visual="zbytek";
+				passThrough=0.55;
+				minimalHit=0.08;
+				explosionShielding=0.55;
+				radius=0.30000001;
+			};
+			class HitBottomArmor: HitHull
+			{
+				armor=4.5;
+				material=-1;
+				armorComponent="BottomArmor";
+				name="hit_bottom_armor";
+				visual="zbytek";
+				passThrough=0.55;
+				minimalHit=0.08;
+				explosionShielding=0.55;
 				radius=0.30000001;
 			};
 			class HitEngine: HitEngine
