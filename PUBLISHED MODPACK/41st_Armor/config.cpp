@@ -425,6 +425,9 @@ class CfgPatches
 			"FST_P2_Smoke_Dirty",
 			"FST_P2_Talisman",
 			"FST_P2_Talisman_Dirty",
+			"FST_P2_Brop",
+			"FST_P2_Brop_Dirty",
+			"FST_P2_Kodiak",
 			"FST_BX_Womprat",
 			//////////OTHERS//////////
 			"FST_ReinsertTerminal",
@@ -7913,6 +7916,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Ace_Dirty: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="Vengence";
+		displayName="[41st] Crewman Helmet Mk2 (Ace)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace_Dirty.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Ace_Dirty.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Angel: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -11968,6 +11982,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Smoke_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Corpse: FST_P2_Helmet_Base
+	{
+		author="Vengence";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Corpse]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Corpse.paa",
+		};
+	};
 	class FST_P2_Helmet_Nahlens: FST_P2_Helmet_Base
 	{
 		author="Vengence";
@@ -15735,6 +15759,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Prangle: JLTS_CloneArmor
+	{
+		author="Gold";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Prangle]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Prangle";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Hijack: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -15800,6 +15838,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Brop";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Brop_Dirty: JLTS_CloneArmor
+	{
+		author="Vengence";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Brop/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Brop_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -37424,6 +37476,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Prangle: FST_Trooper_P2_DC15S
+	{
+		author="Vengence";
+		displayName="[41st] CT-0003 'Prangle'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Prangle";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Prangle.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Prangle.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Prangle",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Prangle",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Binary: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
@@ -37500,6 +37607,61 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Brop.Paa",
 			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Brop.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Brop",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Brop",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Brop_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Vengence";
+		displayName="[41st] CT-1999 'Brop (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Brop_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Brop_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Brop_Dirty.Paa",
 		};
 		weapons[]=
 		{
