@@ -416,6 +416,50 @@
                 <Russian>Закрыть люк</Russian>
                 <Czech>Zavrit poklop</Czech>
             </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_FRONT_ARMOR">
+                <Original>Front Armor</Original>
+                <English>Front Armor</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_FRONT_ARMOR_OPEN">
+                <Original>Front Armor (Open)</Original>
+                <English>Front Armor (Open)</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_LEFT_ARMOR">
+                <Original>Left Armor</Original>
+                <English>Left Armor</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_RIGHT_ARMOR">
+                <Original>Right Armor</Original>
+                <English>Right Armor</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_REAR_ARMOR">
+                <Original>Rear Armor</Original>
+                <English>Rear Armor</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_BOTTOM_ARMOR">
+                <Original>Bottom Armor</Original>
+                <English>Bottom Armor</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_ENGINE">
+                <Original>Engine</Original>
+                <English>Engine</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_FUEL">
+                <Original>Fuel Tank</Original>
+                <English>Fuel Tank</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_REAR_DOOR">
+                <Original>Rear Door</Original>
+                <English>Rear Door</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_LEFT_TRACK">
+                <Original>Left Track</Original>
+                <English>Left Track</English>
+            </Key>
+            <Key ID="STR_FST_SABER_APC_HIT_RIGHT_TRACK">
+                <Original>Right Track</Original>
+                <English>Right Track</English>
+            </Key>
             <Key ID="STR_FST_SABER_APC_PASSENGER_SEAT_01">
                 <Original>Interior Passenger Seat 1</Original>
                 <English>Interior Passenger Seat 1</English>

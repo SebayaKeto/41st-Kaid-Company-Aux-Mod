@@ -194,7 +194,7 @@ class CfgVehicles
 		thrustDelay=0.7;
 		dampingRateFullThrottle=0.85;
 		dampingRateZeroThrottleClutchEngaged=1.8;
-		dampingRateZeroThrottleClutchDisengaged=0.25;
+		dampingRateZeroThrottleClutchDisengaged=0.8;
 		clutchStrength=170;
 		latency=0.45;
 		switchTime=0;
@@ -562,10 +562,10 @@ class CfgVehicles
 				weight = 90;
 				mass = 180;
 				MOI = 12;
-				latStiffX = 2;
-				latStiffY = 24;
-				longitudinalStiffnessPerUnitGravity = 7800;
-				maxBrakeTorque = 13000;
+				latStiffX = 6;
+				latStiffY = 80;
+				longitudinalStiffnessPerUnitGravity = 14000;
+				maxBrakeTorque = 18000;
 				sprungMass = -1;
 				springStrength = 28000;
 				springDamperRate = 36000;
@@ -577,9 +577,9 @@ class CfgVehicles
 				maxCompression = 0.02;
 				frictionVsSlipGraph[] =
 				{
-					{0,0.6},
-					{0.5,1},
-					{1,0.75}
+					{0,1.0},
+					{0.5,1.35},
+					{1,1.05}
 				};
 			};
 			class L3: L2
@@ -700,7 +700,7 @@ class CfgVehicles
 		LODDriverOpticsIn=1202;
 		driverAction="Driver_MBT_03_cannon_F_out";
 		driverInAction="Driver_MBT_03_cannon_F_in";
-		extCameraPosition[]={0,3,-9};
+		extCameraPosition[]={0,3,-11};
 		forceHideDriver=1;
 		forceHideCargo=0;
 		viewDriverInExternal=1;
@@ -734,8 +734,8 @@ class CfgVehicles
 			maxMoveZ=0.1;
 		};
 		armor=1000;
-		armorLights=0.2;
-		armorStructural=7;
+		armorLights=1.2;
+		armorStructural=4;
 		crewExplosionProtection=0.99989998;
 		damageResistance=0.0054700002;
 		cost=2500000;
@@ -745,10 +745,10 @@ class CfgVehicles
 		canFloat=1;
 		waterResistanceCoef=0.001;
 		waterLeakiness=0;
-		waterSpeedFactor=1.2;
-		waterAngularDampingCoef=15;
-		waterLinearDampingCoefX=10;
-		waterLinearDampingCoefY=15;
+		waterSpeedFactor=2.4;
+		waterAngularDampingCoef=4;
+		waterLinearDampingCoefX=1.2;
+		waterLinearDampingCoefY=1.8;
 		engineShiftY=0.8;
 		wheelCircumference=2.1500001;
 		tracksSpeed=1.4;
@@ -766,46 +766,63 @@ class CfgVehicles
 		{
 			class HitFrontArmor: HitHull
 			{
-				armor=12;
+				armor=4;
 				material=-1;
 				armorComponent="FrontArmor";
 				name="hit_front_armor";
-				visual="-";
+				displayName="$STR_FST_SABER_APC_HIT_FRONT_ARMOR";
+				visual="Armor_FrontSide";
 				passThrough=0.2;
 				minimalHit=0.08;
-				explosionShielding=1;
+				explosionShielding=0.8;
 				radius=0.30000001;
 			};
 			class HitFrontArmorNOpen: HitHull
 			{
-				armor=16;
+				armor=7;
 				material=-1;
 				armorComponent="FrontArmorNOpen";
 				name="hit_front_armornopen";
+				displayName="$STR_FST_SABER_APC_HIT_FRONT_ARMOR_OPEN";
 				visual="-";
 				passThrough=0.01;
 				minimalHit=0.08;
 				explosionShielding=1;
 				radius=0.30000001;
 			};
-			class HitSideArmor: HitHull
+			class HitLSideArmor: HitHull
 			{
-				armor=8;
+				armor=2;
 				material=-1;
-				armorComponent="SideArmor";
-				name="hit_side_armor";
-				visual="-";
+				armorComponent="LSideArmor";
+				name="hit_lside_armor";
+				displayName="$STR_FST_SABER_APC_HIT_LEFT_ARMOR";
+				visual="Armor_LeftSide";
 				passThrough=0.35;
 				minimalHit=0.08;
-				explosionShielding=0.8;
+				explosionShielding=0.7;
+				radius=0.30000001;
+			};
+			class HitRSideArmor: HitHull
+			{
+				armor=2;
+				material=-1;
+				armorComponent="RSideArmor";
+				name="hit_rside_armor";
+				displayName="$STR_FST_SABER_APC_HIT_RIGHT_ARMOR";
+				visual="Armor_RightSide";
+				passThrough=0.35;
+				minimalHit=0.08;
+				explosionShielding=0.7;
 				radius=0.30000001;
 			};
 			class HitRearArmor: HitHull
 			{
-				armor=4.5;
+				armor=1.5;
 				material=-1;
 				armorComponent="RearArmor";
 				name="hit_rear_armor";
+				displayName="$STR_FST_SABER_APC_HIT_REAR_ARMOR";
 				visual="-";
 				passThrough=0.55;
 				minimalHit=0.08;
@@ -814,75 +831,81 @@ class CfgVehicles
 			};
 			class HitBottomArmor: HitHull
 			{
-				armor=4.5;
+				armor=1.25;
 				material=-1;
 				armorComponent="BottomArmor";
 				name="hit_bottom_armor";
+				displayName="$STR_FST_SABER_APC_HIT_BOTTOM_ARMOR";
 				visual="-";
 				passThrough=0.55;
 				minimalHit=0.08;
-				explosionShielding=0.35;
+				explosionShielding=0.19;
 				radius=0.30000001;
 			};
 			class HitEngine: HitEngine
 			{
-				armor=1.90000001;
+				armor=1.5;
 				material=-1;
 				armorComponent="hit_engine";
 				name="hit_engine_point";
+				displayName="$STR_FST_SABER_APC_HIT_ENGINE";
 				visual="-";
 				passThrough=0.2;
 				minimalHit=0.2;
-				explosionShielding=0.2;
+				explosionShielding=0.3;
 				radius=0.30000001;
 			};
 			class HitFuel: HitFuel
 			{
-				armor=2.2000001;
+				armor=1.1;
 				material=-1;
 				armorComponent="hit_fuel";
 				name="hit_fuel_point";
+				displayName="$STR_FST_SABER_APC_HIT_FUEL";
 				visual="fuel_tank";
 				passThrough=0.1;
 				minimalHit=0.1;
-				explosionShielding=0.60000002;
+				explosionShielding=0.4;
 				radius=0.30000001;
 			};
 			class HitRearDoor: HitHull
 			{
-				armor=4.25;
+				armor=1.25;
 				material=-1;
 				armorComponent="RearDoorArmor";
 				name="hit_rear_door";
+				displayName="$STR_FST_SABER_APC_HIT_REAR_DOOR";
 				visual="Door";
 				passThrough=0.4;
 				minimalHit=0.08;
-				explosionShielding=0.6;
+				explosionShielding=0.4;
 				radius=0.25;
 			};
 			class HitLTrack: HitLTrack
 			{
-				armor = 2.2000001;
+				armor = 1.25;
 				material = -1;
 				armorComponent = "LeftTrackArmor";
 				name = "hit_trackl_point";
+				displayName = "$STR_FST_SABER_APC_HIT_LEFT_TRACK";
 				visual = "track_l";
-				passThrough = 0;
+				passThrough = 0.2;
 				minimalHit = 0.08;
 				explosionShielding = 0.8;
-				radius = 0.3;
+				radius = 0.5;
 			};
 			class HitRTrack: HitRTrack
 			{
-				armor = 2.2000001;
+				armor = 1.25;
 				material = -1;
 				armorComponent = "RightTrackArmor";
 				name = "hit_trackr_point";
+				displayName = "$STR_FST_SABER_APC_HIT_RIGHT_TRACK";
 				visual = "track_r";
-				passThrough = 0;
+				passThrough = 0.2;
 				minimalHit = 0.08;
 				explosionShielding = 0.8;
-				radius = 0.3;
+				radius = 0.5;
 			};
 		};
 		animationSourceHatch="main_hatch_rotate";
@@ -1564,6 +1587,30 @@ class CfgVehicles
 			{
 				source="Hit";
 				hitpoint="HitFuel";
+				raw=1;
+			};
+			class HitFrontArmor_src
+			{
+				source="Hit";
+				hitpoint="HitFrontArmor";
+				raw=1;
+			};
+			class HitFrontArmorNOpen_src
+			{
+				source="Hit";
+				hitpoint="HitFrontArmorNOpen";
+				raw=1;
+			};
+			class HitLSideArmor_src
+			{
+				source="Hit";
+				hitpoint="HitLSideArmor";
+				raw=1;
+			};
+			class HitRSideArmor_src
+			{
+				source="Hit";
+				hitpoint="HitRSideArmor";
 				raw=1;
 			};
 			class HitRearDoor_src
