@@ -1108,6 +1108,7 @@ class CfgVehicles
 				missileEnd = "LeftGunnerTurret_Muzzle_Dir";
 				rocketBeg = "LeftGunnerTurret_Muzzle";
 				rocketEnd = "LeftGunnerTurret_Muzzle_Dir";
+				gunnerOpticsShowCursor = 1;
 				gunnerInOpticsShowCursor = 1;
 				usepip = 2;
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
