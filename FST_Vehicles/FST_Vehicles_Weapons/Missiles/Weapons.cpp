@@ -12,6 +12,8 @@ class FST_VW_Sabre_LG_MissileLauncher: MissileLauncher
     displayName = "FST Sabre Manual-Guided Missiles";
     muzzles[] = {"this"};
     magazines[] = {"FST_VW_4Rnd_SabreAPC_LG_Missiles"};
+    muzzlePos = "LeftGunnerTurret_Muzzle";
+    muzzleEnd = "LeftGunnerTurret_Muzzle_Dir";
     canLock = 2;
     weaponLockSystem = 2;
     cursor = "EmptyCursor";

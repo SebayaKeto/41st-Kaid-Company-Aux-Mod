@@ -141,7 +141,7 @@ class CfgVehicles
 		simulation="tankX";
 		mass=22500;
 		fuelCapacity=80;
-		brakeIdleSpeed=0.2;
+		brakeIdleSpeed=0.75;
 		maxSpeed=85;
 		normalSpeedForwardCoef=0.62;
 		slowSpeedForwardCoef=0.31;
@@ -193,8 +193,8 @@ class CfgVehicles
 		};
 		thrustDelay=0.7;
 		dampingRateFullThrottle=0.85;
-		dampingRateZeroThrottleClutchEngaged=1.8;
-		dampingRateZeroThrottleClutchDisengaged=0.8;
+		dampingRateZeroThrottleClutchEngaged=3;
+		dampingRateZeroThrottleClutchDisengaged=1.5;
 		clutchStrength=170;
 		latency=0.45;
 		switchTime=0;
@@ -239,12 +239,12 @@ class CfgVehicles
 		antiRollbarForceLimit=35;
 		antiRollbarSpeedMin=5;
 		antiRollbarSpeedMax=55;
-		tankTurnForce=32000;
-		tankTurnForceAngMinSpd=0;
-		tankTurnForceAngSpd=0.3;
+		tankTurnForce=10000;
+		tankTurnForceAngMinSpd=0.05;
+		tankTurnForceAngSpd=0.05;
 		accelAidForceCoef=0.0025;
 		accelAidForceYOffset=0;
-		accelAidForceSpd=0.12;
+		accelAidForceSpd=0.08;
 		class Sounds
 		{
 			class Idle_ext
@@ -733,7 +733,7 @@ class CfgVehicles
 			minMoveZ=-0.075000003;
 			maxMoveZ=0.1;
 		};
-		armor=1000;
+		armor=600;
 		armorLights=1.2;
 		armorStructural=4;
 		crewExplosionProtection=0.99989998;
@@ -818,7 +818,7 @@ class CfgVehicles
 			};
 			class HitRearArmor: HitHull
 			{
-				armor=1.5;
+				armor=1.25;
 				material=-1;
 				armorComponent="RearArmor";
 				name="hit_rear_armor";
@@ -831,7 +831,7 @@ class CfgVehicles
 			};
 			class HitBottomArmor: HitHull
 			{
-				armor=1.25;
+				armor=1.125;
 				material=-1;
 				armorComponent="BottomArmor";
 				name="hit_bottom_armor";
@@ -844,7 +844,7 @@ class CfgVehicles
 			};
 			class HitEngine: HitEngine
 			{
-				armor=1.5;
+				armor=1.25;
 				material=-1;
 				armorComponent="hit_engine";
 				name="hit_engine_point";
@@ -870,7 +870,7 @@ class CfgVehicles
 			};
 			class HitRearDoor: HitHull
 			{
-				armor=1.25;
+				armor=1.2;
 				material=-1;
 				armorComponent="RearDoorArmor";
 				name="hit_rear_door";
@@ -1344,12 +1344,15 @@ class CfgVehicles
 			class CargoTurret_BaseTurret: CargoTurret
 			{
 				gunnerAction = "passenger_inside_1";
+				gunnerInAction = "passenger_inside_1";
 				proxyType = "CPCargo";
 				gunnerCompartments = "Compartment2";
 				memoryPointsGetInGunner = "pos driver";
 				memoryPointsGetInGunnerDir = "pos driver dir";
 				soundAttenuationTurret = "HeliAttenuationGunner";
 				isPersonTurret = 1;
+				showAsCargo = 1;
+				hasGunner = 1;
 				ejectDeadGunner = 1;
 				canHideGunner = 0;
 				gunnerGetInAction = "GetInHeli_Light_01bench";
