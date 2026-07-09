@@ -678,7 +678,9 @@ class CfgEditorSubcategories
 	};
 };
 class RscText;
+class RscPicture;
 class RscButton;
+class RscActivePicture;
 class RscStructuredText;
 class RscTitles {};
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
@@ -862,6 +864,847 @@ class FST_RepairDeviceDialog
 			h = 5 * GUI_GRID_CENTER_H;
 			font="RobotoCondensedLight";
 			colorText[] = {0,0,0,1};
+		};
+	};
+};
+class FST_HackDeviceDialog
+{
+	idd=6970;
+	movingEnable=false;
+	enableSimulation=true;
+	class ControlsBackground
+	{
+		class FST_HackDeviceBackground: RscText
+		{
+			idc = 1800;
+			x = 3 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 34 * GUI_GRID_CENTER_W;
+			h = 25 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.408,0.408,1};
+		};
+		class FST_HackScreenBackground: RscText
+		{
+			idc = 1801;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 30 * GUI_GRID_CENTER_W;
+			h = 23 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.145,0.306,0.549,1};
+		};
+		class FST_HackAurabeshBackground: RscText
+		{
+			idc = 1802;
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 3.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 28 * GUI_GRID_CENTER_W;
+			h = 4 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+		};
+		class FST_BorderFrameHackScreenRight: RscText
+		{
+			idc = 1803;
+			x = 35 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 23 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameHackScreenLeft: RscText
+		{
+			idc = 1804;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 23 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameHackScreenTop: RscText
+		{
+			idc = 1805;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 30 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameHackScreenBottom: RscText
+		{
+			idc = 1806;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 30 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameHackButtonsRight: RscText
+		{
+			idc = 1807;
+			x = 25 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 13.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameHackButtonsLeft: RscText
+		{
+			idc = 1808;
+			x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 13.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameHackButtonsTop: RscText
+		{
+			idc = 1809;
+			x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 10 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameHackButtonsBottom: RscText
+		{
+			idc = 1810;
+			x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 10 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_AccessCounterBackground: RscText
+		{
+			idc = 1814;
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.149,0.149,0.149,1};
+		};
+		class FST_MineCounterBackground: RscText
+		{
+			idc = 1815;
+			x = 30 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.149,0.149,0.149,1};
+		};
+		class FST_BorderFrameAccessCounterRight: RscText
+		{
+			idc = 1816;
+			x = 10 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameAccessCounterLeft: RscText
+		{
+			idc = 1817;
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameAccessCounterTop: RscText
+		{
+			idc = 1818;
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameAccessCounterBottom: RscText
+		{
+			idc = 1819;
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameMineCounterRight: RscText
+		{
+			idc = 1820;
+			x = 34 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameMineCounterLeft: RscText
+		{
+			idc = 1821;
+			x = 30 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameMineCounterTop: RscText
+		{
+			idc = 1822;
+			x = 30 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameMineCounterBottom: RscText
+		{
+			idc = 1823;
+			x = 30 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+	};
+	class Controls
+	{
+		class FST_EasyHackGame: RscButton
+		{
+			idc = 1900;
+			text = "PERFORM SURFACE SCAN";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 9 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+			tooltip = "Easy Difficulty, Low Chance Of Useful Intel";
+		};
+		class FST_MedHackGame: RscButton
+		{
+			idc = 1901;
+			text = "PERFORM STANDARD SCAN";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+			tooltip = "Medium Difficulty, Standard Chance Of Useful Intel";
+		};
+		class FST_HardHackGame: RscButton
+		{
+			idc = 1902;
+			text = "PERFORM DEEP SCAN";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 15 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+			tooltip = "Hard Difficulty, Very High Chance Of Useful Intel";
+		};
+		class FST_CancelHackGame: RscButton
+		{
+			idc = 1903;
+			text = "EXIT PROGRAM";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+		};
+		class FST_HackScreenAurabesh: RscPicture
+		{
+			idc = 1904;
+			text = "\41st_Civilians_and_Intel\Data\HackScreenAurabesh.paa";
+			x = -0.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 3.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 41.5 * GUI_GRID_CENTER_W;
+			h = 4 * GUI_GRID_CENTER_H;
+		};
+		class FST_HackScreenEmblem: RscPicture
+		{
+			idc = 1905;
+			text = "\41st_Civilians_and_Intel\Data\EmblemGalacticRepublicWhite.paa";
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 4 * GUI_GRID_CENTER_H;
+		};
+		class FST_HackGameButtonBase: RscActivePicture
+		{
+			idc = 6000;
+			text = "\41st_Civilians_and_Intel\Data\DiamondIcon.paa";
+			x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 2 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+			colorText[] = {0.133,0.475,0.839,1};
+			colorBackgroundDisabled[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			periodFocus = 0;
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+		};
+		class FST_HackGameLeft2Up2: FST_HackGameButtonBase
+		{
+			idc = 1700;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Up2: FST_HackGameButtonBase
+		{
+			idc = 1701;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterUp2: FST_HackGameButtonBase
+		{
+			idc = 1702;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Up2: FST_HackGameButtonBase
+		{
+			idc = 1703;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Up2: FST_HackGameButtonBase
+		{
+			idc = 1704;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Up1: FST_HackGameButtonBase
+		{
+			idc = 1705;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Up1: FST_HackGameButtonBase
+		{
+			idc = 1706;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterUp1: FST_HackGameButtonBase
+		{
+			idc = 1707;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Up1: FST_HackGameButtonBase
+		{
+			idc = 1708;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Up1: FST_HackGameButtonBase
+		{
+			idc = 1709;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Center: FST_HackGameButtonBase
+		{
+			idc = 1710;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Center: FST_HackGameButtonBase
+		{
+			idc = 1711;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenter: FST_HackGameButtonBase
+		{
+			idc = 1712;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Center:FST_HackGameButtonBase
+		{
+			idc = 1713;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Center: FST_HackGameButtonBase
+		{
+			idc = 1714;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Down1: FST_HackGameButtonBase
+		{
+			idc = 1715;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Down1: FST_HackGameButtonBase
+		{
+			idc = 1716;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterDown1: FST_HackGameButtonBase
+		{
+			idc = 1717;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Down1: FST_HackGameButtonBase
+		{
+			idc = 1718;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Down1: FST_HackGameButtonBase
+		{
+			idc = 1719;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Down2: FST_HackGameButtonBase
+		{
+			idc = 1720;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Down2: FST_HackGameButtonBase
+		{
+			idc = 1721;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterDown2: FST_HackGameButtonBase
+		{
+			idc = 1722;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Down2: FST_HackGameButtonBase
+		{
+			idc = 1723;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Down2: FST_HackGameButtonBase
+		{
+			idc = 1724;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackButtonsEasyGrid: RscPicture
+		{
+			idc = 1811;
+			text = "\41st_Civilians_and_Intel\Data\EasyHackGrid.paa";
+			x = 14.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 10.1 * GUI_GRID_CENTER_W;
+			h = 10.1 * GUI_GRID_CENTER_H;
+		};
+		class FST_HackGameLeft3Up3: FST_HackGameButtonBase
+		{
+			idc = 1725;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Up3: FST_HackGameButtonBase
+		{
+			idc = 1726;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Up3: FST_HackGameButtonBase
+		{
+			idc = 1727;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterUp3: FST_HackGameButtonBase
+		{
+			idc = 1728;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Up3: FST_HackGameButtonBase
+		{
+			idc = 1729;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Up3: FST_HackGameButtonBase
+		{
+			idc = 1730;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Up3: FST_HackGameButtonBase
+		{
+			idc = 1731;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Up2: FST_HackGameButtonBase
+		{
+			idc = 1732;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Up2: FST_HackGameButtonBase
+		{
+			idc = 1733;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Up1: FST_HackGameButtonBase
+		{
+			idc = 1734;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Up1: FST_HackGameButtonBase
+		{
+			idc = 1735;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Center: FST_HackGameButtonBase
+		{
+			idc = 1736;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Center: FST_HackGameButtonBase
+		{
+			idc = 1737;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Down1: FST_HackGameButtonBase
+		{
+			idc = 1738;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Down1: FST_HackGameButtonBase
+		{
+			idc = 1739;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Down2: FST_HackGameButtonBase
+		{
+			idc = 1740;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Down2: FST_HackGameButtonBase
+		{
+			idc = 1741;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Down3: FST_HackGameButtonBase
+		{
+			idc = 1742;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Down3: FST_HackGameButtonBase
+		{
+			idc = 1743;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Down3: FST_HackGameButtonBase
+		{
+			idc = 1744;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterDown3: FST_HackGameButtonBase
+		{
+			idc = 1745;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Down3: FST_HackGameButtonBase
+		{
+			idc = 1746;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Down3: FST_HackGameButtonBase
+		{
+			idc = 1747;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Down3: FST_HackGameButtonBase
+		{
+			idc = 1748;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackButtonsStandardGrid: RscPicture
+		{
+			idc = 1812;
+			text = "\41st_Civilians_and_Intel\Data\MedHackGrid.paa";
+			x = 12.95 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.45 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 14.14 * GUI_GRID_CENTER_W;
+			h = 14.14 * GUI_GRID_CENTER_H;
+		};
+		class FST_HackGameLeft4Up4: FST_HackGameButtonBase
+		{
+			idc = 1749;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Up4: FST_HackGameButtonBase
+		{
+			idc = 1750;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Up4: FST_HackGameButtonBase
+		{
+			idc = 1751;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46  * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Up4: FST_HackGameButtonBase
+		{
+			idc = 1752;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterUp4: FST_HackGameButtonBase
+		{
+			idc = 1753;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Up4: FST_HackGameButtonBase
+		{
+			idc = 1754;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Up4: FST_HackGameButtonBase
+		{
+			idc = 1755;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Up4: FST_HackGameButtonBase
+		{
+			idc = 1756;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Up4: FST_HackGameButtonBase
+		{
+			idc = 1757;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.46 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Up3: FST_HackGameButtonBase
+		{
+			idc = 1758;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Up3: FST_HackGameButtonBase
+		{
+			idc = 1759;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 6.47 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Up2: FST_HackGameButtonBase
+		{
+			idc = 1760;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Up2: FST_HackGameButtonBase
+		{
+			idc = 1761;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.48 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Up1: FST_HackGameButtonBase
+		{
+			idc = 1762;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Up1: FST_HackGameButtonBase
+		{
+			idc = 1763;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 10.49 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Center: FST_HackGameButtonBase
+		{
+			idc = 1764;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Center: FST_HackGameButtonBase
+		{
+			idc = 1765;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Down1: FST_HackGameButtonBase
+		{
+			idc = 1766;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Down1: FST_HackGameButtonBase
+		{
+			idc = 1767;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 14.51 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Down2: FST_HackGameButtonBase
+		{
+			idc = 1768;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Down2: FST_HackGameButtonBase
+		{
+			idc = 1769;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 16.52 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Down3: FST_HackGameButtonBase
+		{
+			idc = 1770;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Down3: FST_HackGameButtonBase
+		{
+			idc = 1771;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 18.53 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft4Down4: FST_HackGameButtonBase
+		{
+			idc = 1772;
+			x = 10.96 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft3Down4: FST_HackGameButtonBase
+		{
+			idc = 1773;
+			x = 12.97 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft2Down4: FST_HackGameButtonBase
+		{
+			idc = 1774;
+			x = 14.98 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameLeft1Down4: FST_HackGameButtonBase
+		{
+			idc = 1775;
+			x = 16.99 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameCenterDown4: FST_HackGameButtonBase
+		{
+			idc = 1776;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight1Down4: FST_HackGameButtonBase
+		{
+			idc = 1777;
+			x = 21.01 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight2Down4: FST_HackGameButtonBase
+		{
+			idc = 1778;
+			x = 23.02 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight3Down4: FST_HackGameButtonBase
+		{
+			idc = 1779;
+			x = 25.03 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackGameRight4Down4: FST_HackGameButtonBase
+		{
+			idc = 1780;
+			x = 27.04 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.54 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+		};
+		class FST_HackButtonsHardGrid: RscPicture
+		{
+			idc = 1813;
+			text = "\41st_Civilians_and_Intel\Data\HardHackGrid.paa";
+			x = 10.94 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 4.44 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 18.18 * GUI_GRID_CENTER_W;
+			h = 18.18 * GUI_GRID_CENTER_H;
+		};
+		class FST_AccessCounter10s: RscPicture
+		{
+			idc = 1824;
+			text = "\41st_Civilians_and_Intel\Data\Green0.paa";
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 2 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+		};
+		class FST_AccessCounter1s: RscPicture
+		{
+			idc = 1825;
+			text = "\41st_Civilians_and_Intel\Data\Green2.paa";
+			x = 8 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 2 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+		};
+		class FST_MineCounter10s: RscPicture
+		{
+			idc = 1826;
+			text = "\41st_Civilians_and_Intel\Data\Red0.paa";
+			x = 30 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 2 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+		};
+		class FST_MineCounter1s: RscPicture
+		{
+			idc = 1827;
+			text = "\41st_Civilians_and_Intel\Data\Red2.paa";
+			x = 32 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 2 * GUI_GRID_CENTER_W;
+			h = 2 * GUI_GRID_CENTER_H;
+		};
+		class FST_MineButtonBlocker: RscActivePicture
+		{
+			idc = 6001;
+			x = 0;
+			y = 0;
+			w = safeZoneW;
+			h = safeZoneH;
 		};
 	};
 };
