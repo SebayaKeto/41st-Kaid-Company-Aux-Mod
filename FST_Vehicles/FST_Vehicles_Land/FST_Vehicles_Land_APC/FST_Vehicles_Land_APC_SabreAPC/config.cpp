@@ -91,7 +91,7 @@ class CfgFunctions
 	{
 		class VehiclesLandSabreAPC
 		{
-			file="Functions";
+			file="FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions";
 			class forceSabreWaterHover {};
 		};
 	};
