@@ -9,13 +9,13 @@ class FST_VW_AT_MissileLauncher: MissileLauncher
 class FST_VW_Sabre_LG_MissileLauncher: MissileLauncher
 {
     scope = 1;
-    displayName = "FST Sabre Manual-Guided Missiles";
+    displayName = "FST Sabre TOW Missile Launcher";
     muzzles[] = {"this"};
     magazines[] = {"FST_VW_4Rnd_SabreAPC_LG_Missiles"};
     muzzlePos = "LeftGunnerTurret_Muzzle";
     muzzleEnd = "LeftGunnerTurret_Muzzle_Dir";
-    canLock = 2;
-    weaponLockSystem = 2;
+    canLock = 0;
+    weaponLockSystem = 0;
     cursor = "EmptyCursor";
     cursorAim = "missile";
     showAimCursorInternal = 1;

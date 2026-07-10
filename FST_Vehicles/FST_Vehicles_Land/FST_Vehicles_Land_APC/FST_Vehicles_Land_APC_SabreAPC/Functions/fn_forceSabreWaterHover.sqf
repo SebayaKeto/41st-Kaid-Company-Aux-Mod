@@ -6,37 +6,41 @@ if (_veh getVariable ["FST_forceSabreWaterHover_running", false]) exitWith {};
 _veh setVariable ["FST_forceSabreWaterHover_running", true];
 
 private _targetWaterHeightASL = 2;
-private _smoothFactor = 0.35;
-private _vzOld = 0;
+private _hardResetDepth = 1.6;
+private _orientationBlend = 0.06;
+private _uprightMinZ = 0.75;
 
 while {alive _veh} do {
     if (surfaceIsWater (getPosWorld _veh)) then {
         private _posASL = getPosASL _veh;
         private _zNow = _posASL select 2;
-        private _delta = _targetWaterHeightASL - _zNow;
 
-        private _velMS = velocityModelSpace _veh;
-        private _vx = _velMS select 0;
-        private _vy = _velMS select 1;
+        // Keep the APC upright over water while preserving heading control.
+        private _upNow = vectorUp _veh;
+        if ((_upNow select 2) < _uprightMinZ) then {
+            _veh setVectorUp [
+                (_upNow select 0) * (1 - _orientationBlend),
+                (_upNow select 1) * (1 - _orientationBlend),
+                ((_upNow select 2) * (1 - _orientationBlend)) + _orientationBlend
+            ];
+        };
 
-        private _vzTarget = (_delta * 3) max -4 min 4;
-        private _vz = (_vzOld * (1 - _smoothFactor)) + (_vzTarget * _smoothFactor);
-        _vzOld = _vz;
-
-        _veh setVelocityModelSpace [_vx, _vy, _vz];
-
-        if (_zNow < (_targetWaterHeightASL - 0.75)) then {
+        if (_zNow < (_targetWaterHeightASL - _hardResetDepth)) then {
+            private _velBeforeReset = velocity _veh;
             _veh setPosASL [
                 _posASL select 0,
                 _posASL select 1,
                 _targetWaterHeightASL
             ];
+            _veh setVelocity _velBeforeReset;
+            if ((vectorUp _veh select 2) < 0.55) then {
+                _veh setVectorUp [0,0,1];
+            };
         };
 
-        uiSleep 0.05;
+        uiSleep 0.15;
     } else {
-        _vzOld = 0;
-        uiSleep 0.2;
+        uiSleep 0.25;
     };
 };
 

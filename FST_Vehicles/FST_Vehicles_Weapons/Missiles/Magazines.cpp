@@ -19,7 +19,7 @@ class FST_VW_4Rnd_AT_LG_Missiles: VehicleMagazine
 class FST_VW_4Rnd_SabreAPC_LG_Missiles: VehicleMagazine
 {
     scope = 2;
-    displayName = "4Rnd Sabre APC Hunter-Killer Missiles";
+    displayName = "4Rnd Sabre APC TOW Missiles";
     ammo = "FST_VW_SabreAPC_LG_Missile";
     count = 4;
     initSpeed = 75;
