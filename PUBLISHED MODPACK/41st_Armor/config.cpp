@@ -12004,6 +12004,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Mercer.paa",
 		};
 	};
+	class FST_P2_Helmet_Kernel: FST_P2_Helmet_Base
+	{
+		author="Vengence";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Kernel]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Kernel.paa",
+		};
+	};
 	class FST_P2_Helmet_Sevens: FST_P2_Helmet_Base
 	{
 		author="Vengence";
