@@ -845,6 +845,96 @@ class cfgGroups
 						position[]={0,-5,0};
 					};
 				};
+				class FST_S_Nyvar_Standard
+				{
+					name="[41st] Nyvar Insurgents Semi-Trained Squad";
+					faction="FST_NyvarUpriser_Faction";
+					side=0;
+					class Unit0
+					{
+						side=0;
+						vehicle="FST_Nyvar_Trained";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="FST_Nyvar_Standard";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=0;
+						vehicle="FST_Nyvar_Standard";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=0;
+						vehicle="FST_Nyvar_Standard";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=0;
+						vehicle="FST_Nyvar_Standard";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=0;
+						vehicle="FST_Nyvar_Standard";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=0;
+						vehicle="FST_Nyvar_Trained";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=0;
+						vehicle="FST_Nyvar_Standard";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=0;
+						vehicle="FST_Nyvar_Weak";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=0;
+						vehicle="FST_Nyvar_Weak";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=0;
+						vehicle="FST_Nyvar_B1";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=0;
+						vehicle="FST_Nyvar_B1";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
 			};
 		};
 	};

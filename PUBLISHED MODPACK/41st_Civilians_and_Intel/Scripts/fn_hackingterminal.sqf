@@ -12,7 +12,6 @@ if (_term getVariable ["FST_DeviceBroken", false] && (("FST_LargeToolkit" in ite
 	
 	_term setVariable ["FST_DeviceInUse",true,true];
 	_user setVariable ["FST_PlayerIsMeching",true,true];
-	if ((_term getVariable ["FST_GoodRepair", 0]) > 0) then {_term setVariable ["FST_GoodRepair",0,true];};
 	if !(_term getVariable ["FST_DeviceAssessed", false]) then 
 	{
 		[
@@ -6232,116 +6231,717 @@ if (_user getVariable ["FST_PlayerIsHacking", false]) exitWith {_text = "<t colo
 _term setVariable ["FST_DeviceInUse",true,true];
 _user setVariable ["FST_PlayerIsHacking",true,true];
 
-[
-	"HACKING TARGET...",
-	10,
-	{
-		params ["_arguments"];
-		_arguments params ["_term", "_user", "_origin"];
-		_user distance _term <= 3 && currentWeapon _user == "FST_Hacking_Datapad" && currentMagazine _user == "FST_HackDatacard_Empty"
-	},
-	{
-		params ["_arguments"];
-		_arguments params ["_term", "_user", "_origin"];
-		private _hackarray = [0, 10, 1, 6, 2, 3, 3, 1];
-		private _hackoutcome = selectRandomWeighted _hackarray;
-		if (_hackoutcome == 3) then 
+if (_term getVariable ["FST_DeviceAccessed", false]) exitWith 
+{
+	playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
+	[
+		"DOWNLOADING ACCESSED DATA, STANDBY",
+		15, 
 		{
-			_term setVariable ["FST_DeviceLocked",true,true]; 
+			params ["_arguments"];
+			_arguments params ["_term", "_user"];
+			_user distance _term <= 3 && currentWeapon _user == "FST_Hacking_Datapad" && currentMagazine _user == "FST_HackDatacard_Empty"
+		},
+		{
+			params ["_arguments"];
+			_arguments params ["_term", "_user"];
+			_user removeHandgunItem "FST_HackDatacard_Empty";
+			if ((_term getVariable ["FST_DiffPassed", 2]) == 2) then
+			{
+				_user addHandgunItem (selectRandomWeighted ["FST_HackDatacard_Abnormal", 4, "FST_HackDatacard_Normal", 4, "FST_HackDatacard_Corrupt", 4, "FST_HackDatacard_Virus", 4, "FST_HackDatacard_Troll", 4]); 
+			};
+			if ((_term getVariable ["FST_DiffPassed", 2]) == 6) then
+			{
+				_user addHandgunItem (selectRandomWeighted ["FST_HackDatacard_Abnormal", 14, "FST_HackDatacard_Normal", 3, "FST_HackDatacard_Corrupt", 1, "FST_HackDatacard_Virus", 1, "FST_HackDatacard_Troll", 1]); 
+			};
+			if ((_term getVariable ["FST_DiffPassed", 2]) == 10) then
+			{
+				_user addHandgunItem (selectRandomWeighted ["FST_HackDatacard_Abnormal", 19, "FST_HackDatacard_Troll", 1]); 
+			};
+			_term setVariable ["FST_DeviceHacked",true,true]; 
 			_term setVariable ["FST_DeviceInUse",false,true]; 
-			_user setVariable ["FST_PlayerIsHacking",false,true]; 
-			private _locktxt = "<t color='#990000'>The target device detected the hacking attempt and has locked down</t>"; 
-			hintSilent parseText _locktxt;
-		}; 
-		if ((_hackoutcome == 2) && !(_term getVariable ["FST_DeviceRepaired", false])) then 
+			_user setVariable ["FST_PlayerIsHacking",false,true];
+			hintSilent parseText "<t color='#0074cc'>Hack complete<br/> It is now safe to remove the datacard from your datapad</t>";
+		},
 		{
-			_term setVariable ["FST_DeviceBroken",true,true];
+			params ["_arguments", "_success", "_elapsedTime", "_totalTime", "_failureCode"];
+			_arguments params ["_term", "_user"]; 
+			if (_failureCode == 1) then 
+			{
+				hintSilent parseText "<t color='#d67e09'>Download cancelled</t>";
+			};
+			if (_failureCode == 2) then 
+			{
+				hintSilent parseText "<t color='#990000'>Could not complete the download<br/> Stay within 3 meters of the target and do not swap your datapad or datacard out</t>";
+			}; 
 			_term setVariable ["FST_DeviceInUse",false,true];
-			_user setVariable ["FST_PlayerIsHacking",false,true]; 
-			playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
-			_term removeAction _origin;
-			_term addAction ['Repair Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","true",3];
-			private _deadtxt = "<t color='#990000'>You failed the hack and damaged the target device in the proccess<br/>It will require repairs to try again</t>"; 
-			hintSilent parseText _deadtxt;
-		}
-		else
-		{
-			_term setVariable ["FST_DeviceInUse",false,true];
-			_user setVariable ["FST_PlayerIsHacking",false,true]; 
-			private _failtxt = "<t color='#d67e09'>You failed to get into the target device<br/> Another attempt is required</t>"; 
-			hintSilent parseText _failtxt;
-		}; 
-		if (_hackoutcome == 1) then 
-		{
-			_term setVariable ["FST_DeviceInUse",false,true];
-			_user setVariable ["FST_PlayerIsHacking",false,true]; 
-			private _failtxt = "<t color='#d67e09'>You failed to get into the target device<br/> Another attempt is required</t>"; 
-			hintSilent parseText _failtxt;
-		};
-		if (_hackoutcome == 0) then 
-		{
-			[
-				"ATTEMPTING TO EXTRACT DATA...",
-				15, 
-				{
-					params ["_arguments"];
-					_arguments params ["_term", "_user", "_origin"];
-					_user distance _term <= 3 && currentWeapon _user == "FST_Hacking_Datapad" && currentMagazine _user == "FST_HackDatacard_Empty"
-				},
-				{
-					params ["_arguments"];
-					_arguments params ["_term", "_user", "_origin"];
-					private _dataarray = ["FST_HackDatacard_Abnormal", 10, "FST_HackDatacard_Normal", 4, "FST_HackDatacard_Corrupt", 2, "FST_HackDatacard_Virus", 2, "FST_HackDatacard_Troll", 2]; 
-					private _data = selectRandomWeighted _dataarray;
-					_user removeHandgunItem "FST_HackDatacard_Empty"; 
-					_user addHandgunItem _data; 
-					_term setVariable ["FST_DeviceHacked",true,true]; 
-					_term setVariable ["FST_DeviceInUse",false,true]; 
-					_user setVariable ["FST_PlayerIsHacking",false,true]; 
-					private _didit = "<t color='#0074cc'>Hack complete<br/> It is now safe to remove the datacard from your datapad</t>"; 
-					hintSilent parseText _didit;
-				},
-				{
-					params ["_arguments", "_success", "_elapsedTime", "_totalTime", "_failureCode"];
-					_arguments params ["_term", "_user", "_origin"]; 
-					if (_failureCode == 1) then 
-					{
-						private _esctxt0 = "<t color='#d67e09'>Download cancelled</t>";
-						hintSilent parseText _esctxt0;
-					};
-					if (_failureCode == 2) then 
-					{
-						private _errortxt0 = "<t color='#990000'>Could not complete the download<br/> Stay within 3 meters of the target and do not swap your datapad or datacard out</t>"; 
-						hintSilent parseText _errortxt0;
-					}; 
-					_term setVariable ["FST_DeviceInUse",false,true];
-					_user setVariable ["FST_PlayerIsHacking",false,true];
-				},
-				[_term, _user, _origin],
-				false,
-				false
-			] call CBA_fnc_progressBar;
-		};
-	},
+			_user setVariable ["FST_PlayerIsHacking",false,true];
+		},
+		[_term, _user],
+		false,
+		false
+	] call CBA_fnc_progressBar;
+};
+createDialog "FST_HackDeviceDialog";
+private _display = findDisplay 6970;
+_display setVariable ["FST_HackingData", [_term, _user]];
+{
+	_x ctrlShow false;
+} forEach 
+[
+	_display displayCtrl 1811,
+	_display displayCtrl 1812,
+	_display displayCtrl 1813,
+	_display displayCtrl 1814,
+	_display displayCtrl 1815,
+	_display displayCtrl 1816,
+	_display displayCtrl 1817,
+	_display displayCtrl 1818,
+	_display displayCtrl 1819,
+	_display displayCtrl 1820,
+	_display displayCtrl 1821,
+	_display displayCtrl 1822,
+	_display displayCtrl 1823,
+	_display displayCtrl 1824,
+	_display displayCtrl 1825,
+	_display displayCtrl 1826,
+	_display displayCtrl 1827,
+	_display displayCtrl 6000,
+	_display displayCtrl 6001
+];
+{
+	_x ctrlShow false;
+	_x ctrlSetText (selectRandom ["\41st_Civilians_and_Intel\Data\CircleIcon.paa","\41st_Civilians_and_Intel\Data\DiamondIcon.paa","\41st_Civilians_and_Intel\Data\SquareIcon.paa","\41st_Civilians_and_Intel\Data\TriangleIcon.paa","\41st_Civilians_and_Intel\Data\TriangleIcon2.paa"]);
+} forEach 
+[
+	_display displayCtrl 1700,
+	_display displayCtrl 1701,
+	_display displayCtrl 1702,
+	_display displayCtrl 1703,
+	_display displayCtrl 1704,
+	_display displayCtrl 1705,
+	_display displayCtrl 1706,
+	_display displayCtrl 1707,
+	_display displayCtrl 1708,
+	_display displayCtrl 1709,
+	_display displayCtrl 1710,
+	_display displayCtrl 1711,
+	_display displayCtrl 1712,
+	_display displayCtrl 1713,
+	_display displayCtrl 1714,
+	_display displayCtrl 1715,
+	_display displayCtrl 1716,
+	_display displayCtrl 1717,
+	_display displayCtrl 1718,
+	_display displayCtrl 1719,
+	_display displayCtrl 1720,
+	_display displayCtrl 1721,
+	_display displayCtrl 1722,
+	_display displayCtrl 1723,
+	_display displayCtrl 1724,
+	_display displayCtrl 1725,
+	_display displayCtrl 1726,
+	_display displayCtrl 1727,
+	_display displayCtrl 1728,
+	_display displayCtrl 1729,
+	_display displayCtrl 1730,
+	_display displayCtrl 1731,
+	_display displayCtrl 1732,
+	_display displayCtrl 1733,
+	_display displayCtrl 1734,
+	_display displayCtrl 1735,
+	_display displayCtrl 1736,
+	_display displayCtrl 1737,
+	_display displayCtrl 1738,
+	_display displayCtrl 1739,
+	_display displayCtrl 1740,
+	_display displayCtrl 1741,
+	_display displayCtrl 1742,
+	_display displayCtrl 1743,
+	_display displayCtrl 1744,
+	_display displayCtrl 1745,
+	_display displayCtrl 1746,
+	_display displayCtrl 1747,
+	_display displayCtrl 1748,
+	_display displayCtrl 1749,
+	_display displayCtrl 1750,
+	_display displayCtrl 1751,
+	_display displayCtrl 1752,
+	_display displayCtrl 1753,
+	_display displayCtrl 1754,
+	_display displayCtrl 1755,
+	_display displayCtrl 1756,
+	_display displayCtrl 1757,
+	_display displayCtrl 1758,
+	_display displayCtrl 1759,
+	_display displayCtrl 1760,
+	_display displayCtrl 1761,
+	_display displayCtrl 1762,
+	_display displayCtrl 1763,
+	_display displayCtrl 1764,
+	_display displayCtrl 1765,
+	_display displayCtrl 1766,
+	_display displayCtrl 1767,
+	_display displayCtrl 1768,
+	_display displayCtrl 1769,
+	_display displayCtrl 1770,
+	_display displayCtrl 1771,
+	_display displayCtrl 1772,
+	_display displayCtrl 1773,
+	_display displayCtrl 1774,
+	_display displayCtrl 1775,
+	_display displayCtrl 1776,
+	_display displayCtrl 1777,
+	_display displayCtrl 1778,
+	_display displayCtrl 1779,
+	_display displayCtrl 1780
+];
+_display displayAddEventHandler
+[
+	"KeyDown",
 	{
-		params ["_arguments", "_success", "_elapsedTime", "_totalTime", "_failureCode"];
-		_arguments params ["_term", "_user", "_origin"]; 
-		if (_failureCode == 1) then 
+		params ["_display", "_key"];
+		private _hackingdata = _display getVariable "FST_HackingData";
+		_hackingdata params ["_term", "_user"];
+		if (_key in [1, 219, 220]) then 
 		{
-			private _esctxt1 = "<t color='#d67e09'>Hack cancelled</t>";
-			hintSilent parseText _esctxt1;
+			hintSilent parseText "<t color='#d67e09'>Hack cancelled</t>";
+			_term setVariable ["FST_DeviceInUse",false,true];
+			_user setVariable ["FST_PlayerIsHacking",false,true];
 		};
-		if (_failureCode == 2) then 
-		{
-			private _errortxt1 = "<t color='#990000'>You disrupted the hack<br/> Stay within 3 meters of the target and do not swap your datapad or datacard out</t>";
-			hintSilent parseText _errortxt1;
-		};
+	}
+];
+private _button1903 = _display displayCtrl 1903;
+_button1903 setVariable ["FST_HackingData", [_term, _user]];
+_button1903 ctrlAddEventHandler 
+[
+	"ButtonClick",
+	{
+		params ["_control"];
+		private _hackingdata = _control getVariable "FST_HackingData";
+		_hackingdata params ["_term", "_user"];
+		playsound (selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]);
+		hintSilent parseText "<t color='#d67e09'>Hack cancelled</t>";
 		_term setVariable ["FST_DeviceInUse",false,true];
 		_user setVariable ["FST_PlayerIsHacking",false,true];
-	},
-	[_term, _user, _origin],
-	false,
-	false
-] call CBA_fnc_progressBar;
-
-
+		closeDialog 2;
+	}
+];
+private _button1900 = _display displayCtrl 1900;
+_button1900 setVariable ["FST_HackingData", [_term, _user]];
+_button1900 ctrlAddEventHandler 
+[
+	"ButtonClick",
+	{
+		
+		params ["_control"];
+		private _hackingData = _control getVariable "FST_HackingData";
+		_hackingData params ["_term", "_user"];
+		if ((_term getVariable ["FST_AttemptsLeft",3]) == 3) then {_term setVariable ["FST_AttemptsLeft",2,true];};
+		playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+		private _display = findDisplay 6970;
+		{
+			_x ctrlShow false;
+		} forEach 
+		[
+			_display displayCtrl 1802,
+			_display displayCtrl 1807,
+			_display displayCtrl 1808,
+			_display displayCtrl 1809,
+			_display displayCtrl 1810,
+			_display displayCtrl 1900,
+			_display displayCtrl 1901,
+			_display displayCtrl 1902,
+			_display displayCtrl 1903,
+			_display displayCtrl 1904,
+			_display displayCtrl 1905
+		];
+		{
+			_x ctrlShow true;
+		} forEach 
+		[
+			_display displayCtrl 1811,
+			_display displayCtrl 1814,
+			_display displayCtrl 1815,
+			_display displayCtrl 1816,
+			_display displayCtrl 1817,
+			_display displayCtrl 1818,
+			_display displayCtrl 1819,
+			_display displayCtrl 1820,
+			_display displayCtrl 1821,
+			_display displayCtrl 1822,
+			_display displayCtrl 1823,
+			_display displayCtrl 1824,
+			_display displayCtrl 1825,
+			_display displayCtrl 1826,
+			_display displayCtrl 1827
+		];
+		["FST_setGridRelations", [_display, 0]] call CBA_fnc_localEvent;
+		["FST_setUpMinefieldGame", [_display, 0]] call CBA_fnc_localEvent;
+		{
+			_x ctrlShow true;
+			["FST_initializeMinefieldButton", [_term, _user, _x, 2]] call CBA_fnc_localEvent;
+		} forEach 
+		[
+			_display displayCtrl 1700,
+			_display displayCtrl 1701,
+			_display displayCtrl 1702,
+			_display displayCtrl 1703,
+			_display displayCtrl 1704,
+			_display displayCtrl 1705,
+			_display displayCtrl 1706,
+			_display displayCtrl 1707,
+			_display displayCtrl 1708,
+			_display displayCtrl 1709,
+			_display displayCtrl 1710,
+			_display displayCtrl 1711,
+			_display displayCtrl 1712,
+			_display displayCtrl 1713,
+			_display displayCtrl 1714,
+			_display displayCtrl 1715,
+			_display displayCtrl 1716,
+			_display displayCtrl 1717,
+			_display displayCtrl 1718,
+			_display displayCtrl 1719,
+			_display displayCtrl 1720,
+			_display displayCtrl 1721,
+			_display displayCtrl 1722,
+			_display displayCtrl 1723,
+			_display displayCtrl 1724
+		];
+		[
+			"TIME UNTIL FAILSAFE DISCONNECT",
+			120, 
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				!(_term getVariable ["FST_DeviceAccessed", false]) && _term getVariable ["FST_DeviceInUse", false] && !(_term getVariable ["FST_DeviceBroken", false]) && !(_term getVariable ["FST_DeviceLocked", false])
+			},
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				hintSilent parseText "<t color='#990000'>Session terminated by timeout failsafe, another attempt is required</t>";
+				_term setVariable ["FST_DeviceInUse",false,true];
+				_user setVariable ["FST_PlayerIsHacking",false,true];
+				closeDialog 0;
+			},
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				if (_term getVariable ["FST_DeviceAccessed", false]) then 
+				{
+					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
+					[
+						"DOWNLOADING ACCESSED DATA, STANDBY",
+						15, 
+						{
+							params ["_arguments"];
+							_arguments params ["_term", "_user"];
+							_user distance _term <= 3 && currentWeapon _user == "FST_Hacking_Datapad" && currentMagazine _user == "FST_HackDatacard_Empty"
+						},
+						{
+							params ["_arguments"];
+							_arguments params ["_term", "_user"];
+							_user removeHandgunItem "FST_HackDatacard_Empty";
+							_user addHandgunItem (selectRandomWeighted ["FST_HackDatacard_Abnormal", 4, "FST_HackDatacard_Normal", 4, "FST_HackDatacard_Corrupt", 4, "FST_HackDatacard_Virus", 4, "FST_HackDatacard_Troll", 4]); 
+							_term setVariable ["FST_DeviceHacked",true,true]; 
+							_term setVariable ["FST_DeviceInUse",false,true]; 
+							_user setVariable ["FST_PlayerIsHacking",false,true];
+							hintSilent parseText "<t color='#0074cc'>Hack complete<br/> It is now safe to remove the datacard from your datapad</t>";
+						},
+						{
+							params ["_arguments", "_success", "_elapsedTime", "_totalTime", "_failureCode"];
+							_arguments params ["_term", "_user"]; 
+							if (_failureCode == 1) then 
+							{
+								hintSilent parseText "<t color='#d67e09'>Download cancelled</t>";
+							};
+							if (_failureCode == 2) then 
+							{
+								hintSilent parseText "<t color='#990000'>Could not complete the download<br/> Stay within 3 meters of the target and do not swap your datapad or datacard out</t>";
+							}; 
+							_term setVariable ["FST_DeviceInUse",false,true];
+							_user setVariable ["FST_PlayerIsHacking",false,true];
+						},
+						[_term, _user],
+						false,
+						false
+					] call CBA_fnc_progressBar;
+				};
+			},
+			[_term, _user]
+		] call CBA_fnc_progressBar;
+	}
+];
+private _button1901 = _display displayCtrl 1901;
+_button1901 setVariable ["FST_HackingData", [_term, _user]];
+_button1901 ctrlAddEventHandler 
+[
+	"ButtonClick",
+	{
+		
+		params ["_control"];
+		private _hackingData = _control getVariable "FST_HackingData";
+		_hackingData params ["_term", "_user"];
+		if ((_term getVariable ["FST_AttemptsLeft",2]) > 1) then {_term setVariable ["FST_AttemptsLeft",1,true];};
+		playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+		private _display = findDisplay 6970;
+		{
+			_x ctrlShow false;
+		} forEach 
+		[
+			_display displayCtrl 1802,
+			_display displayCtrl 1807,
+			_display displayCtrl 1808,
+			_display displayCtrl 1809,
+			_display displayCtrl 1810,
+			_display displayCtrl 1900,
+			_display displayCtrl 1901,
+			_display displayCtrl 1902,
+			_display displayCtrl 1903,
+			_display displayCtrl 1904,
+			_display displayCtrl 1905
+		];
+		{
+			_x ctrlShow true;
+		} forEach 
+		[
+			_display displayCtrl 1812,
+			_display displayCtrl 1814,
+			_display displayCtrl 1815,
+			_display displayCtrl 1816,
+			_display displayCtrl 1817,
+			_display displayCtrl 1818,
+			_display displayCtrl 1819,
+			_display displayCtrl 1820,
+			_display displayCtrl 1821,
+			_display displayCtrl 1822,
+			_display displayCtrl 1823,
+			_display displayCtrl 1824,
+			_display displayCtrl 1825,
+			_display displayCtrl 1826,
+			_display displayCtrl 1827
+		];
+		["FST_setGridRelations", [_display, 1]] call CBA_fnc_localEvent;
+		["FST_setUpMinefieldGame", [_display, 1]] call CBA_fnc_localEvent;
+		{
+			_x ctrlShow true;
+			["FST_initializeMinefieldButton", [_term, _user, _x, 6]] call CBA_fnc_localEvent;
+		} forEach 
+		[
+			_display displayCtrl 1700,
+			_display displayCtrl 1701,
+			_display displayCtrl 1702,
+			_display displayCtrl 1703,
+			_display displayCtrl 1704,
+			_display displayCtrl 1705,
+			_display displayCtrl 1706,
+			_display displayCtrl 1707,
+			_display displayCtrl 1708,
+			_display displayCtrl 1709,
+			_display displayCtrl 1710,
+			_display displayCtrl 1711,
+			_display displayCtrl 1712,
+			_display displayCtrl 1713,
+			_display displayCtrl 1714,
+			_display displayCtrl 1715,
+			_display displayCtrl 1716,
+			_display displayCtrl 1717,
+			_display displayCtrl 1718,
+			_display displayCtrl 1719,
+			_display displayCtrl 1720,
+			_display displayCtrl 1721,
+			_display displayCtrl 1722,
+			_display displayCtrl 1723,
+			_display displayCtrl 1724,
+			_display displayCtrl 1725,
+			_display displayCtrl 1726,
+			_display displayCtrl 1727,
+			_display displayCtrl 1728,
+			_display displayCtrl 1729,
+			_display displayCtrl 1730,
+			_display displayCtrl 1731,
+			_display displayCtrl 1732,
+			_display displayCtrl 1733,
+			_display displayCtrl 1734,
+			_display displayCtrl 1735,
+			_display displayCtrl 1736,
+			_display displayCtrl 1737,
+			_display displayCtrl 1738,
+			_display displayCtrl 1739,
+			_display displayCtrl 1740,
+			_display displayCtrl 1741,
+			_display displayCtrl 1742,
+			_display displayCtrl 1743,
+			_display displayCtrl 1744,
+			_display displayCtrl 1745,
+			_display displayCtrl 1746,
+			_display displayCtrl 1747,
+			_display displayCtrl 1748
+		];
+		[
+			"TIME UNTIL FAILSAFE DISCONNECT",
+			105, 
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				!(_term getVariable ["FST_DeviceAccessed", false]) && _term getVariable ["FST_DeviceInUse", false] && !(_term getVariable ["FST_DeviceBroken", false]) && !(_term getVariable ["FST_DeviceLocked", false])
+			},
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				hintSilent parseText "<t color='#990000'>Session terminated by timeout failsafe, another attempt is required</t>";
+				_term setVariable ["FST_DeviceInUse",false,true];
+				_user setVariable ["FST_PlayerIsHacking",false,true];
+				closeDialog 0;
+			},
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				if (_term getVariable ["FST_DeviceAccessed", false]) then 
+				{
+					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
+					[
+						"DOWNLOADING ACCESSED DATA, STANDBY",
+						15, 
+						{
+							params ["_arguments"];
+							_arguments params ["_term", "_user"];
+							_user distance _term <= 3 && currentWeapon _user == "FST_Hacking_Datapad" && currentMagazine _user == "FST_HackDatacard_Empty"
+						},
+						{
+							params ["_arguments"];
+							_arguments params ["_term", "_user"];
+							_user removeHandgunItem "FST_HackDatacard_Empty";
+							_user addHandgunItem (selectRandomWeighted ["FST_HackDatacard_Abnormal", 14, "FST_HackDatacard_Normal", 3, "FST_HackDatacard_Corrupt", 1, "FST_HackDatacard_Virus", 1, "FST_HackDatacard_Troll", 1]); 
+							_term setVariable ["FST_DeviceHacked",true,true]; 
+							_term setVariable ["FST_DeviceInUse",false,true]; 
+							_user setVariable ["FST_PlayerIsHacking",false,true];
+							hintSilent parseText "<t color='#0074cc'>Hack complete<br/> It is now safe to remove the datacard from your datapad</t>";
+						},
+						{
+							params ["_arguments", "_success", "_elapsedTime", "_totalTime", "_failureCode"];
+							_arguments params ["_term", "_user"]; 
+							if (_failureCode == 1) then 
+							{
+								hintSilent parseText "<t color='#d67e09'>Download cancelled</t>";
+							};
+							if (_failureCode == 2) then 
+							{
+								hintSilent parseText "<t color='#990000'>Could not complete the download<br/> Stay within 3 meters of the target and do not swap your datapad or datacard out</t>";
+							}; 
+							_term setVariable ["FST_DeviceInUse",false,true];
+							_user setVariable ["FST_PlayerIsHacking",false,true];
+						},
+						[_term, _user],
+						false,
+						false
+					] call CBA_fnc_progressBar;
+				};
+			},
+			[_term, _user]
+		] call CBA_fnc_progressBar;
+	}
+];
+private _button1902 = _display displayCtrl 1902;
+_button1902 setVariable ["FST_HackingData", [_term, _user]];
+_button1902 ctrlAddEventHandler 
+[
+	"ButtonClick",
+	{
+		
+		params ["_control"];
+		private _hackingData = _control getVariable "FST_HackingData";
+		_hackingData params ["_term", "_user"];
+		if ((_term getVariable ["FST_AttemptsLeft",2]) > 0) then {_term setVariable ["FST_AttemptsLeft",0,true];};
+		playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+		private _display = findDisplay 6970;
+		{
+			_x ctrlShow false;
+		} forEach 
+		[
+			_display displayCtrl 1802,
+			_display displayCtrl 1807,
+			_display displayCtrl 1808,
+			_display displayCtrl 1809,
+			_display displayCtrl 1810,
+			_display displayCtrl 1900,
+			_display displayCtrl 1901,
+			_display displayCtrl 1902,
+			_display displayCtrl 1903,
+			_display displayCtrl 1904,
+			_display displayCtrl 1905
+		];
+		{
+			_x ctrlShow true;
+		} forEach 
+		[
+			_display displayCtrl 1813,
+			_display displayCtrl 1814,
+			_display displayCtrl 1815,
+			_display displayCtrl 1816,
+			_display displayCtrl 1817,
+			_display displayCtrl 1818,
+			_display displayCtrl 1819,
+			_display displayCtrl 1820,
+			_display displayCtrl 1821,
+			_display displayCtrl 1822,
+			_display displayCtrl 1823,
+			_display displayCtrl 1824,
+			_display displayCtrl 1825,
+			_display displayCtrl 1826,
+			_display displayCtrl 1827
+		];
+		["FST_setGridRelations", [_display, 2]] call CBA_fnc_localEvent;
+		["FST_setUpMinefieldGame", [_display, 2]] call CBA_fnc_localEvent;
+		{
+			_x ctrlShow true;
+			["FST_initializeMinefieldButton", [_term, _user, _x, 10]] call CBA_fnc_localEvent;
+		} forEach 
+		[
+			_display displayCtrl 1700,
+			_display displayCtrl 1701,
+			_display displayCtrl 1702,
+			_display displayCtrl 1703,
+			_display displayCtrl 1704,
+			_display displayCtrl 1705,
+			_display displayCtrl 1706,
+			_display displayCtrl 1707,
+			_display displayCtrl 1708,
+			_display displayCtrl 1709,
+			_display displayCtrl 1710,
+			_display displayCtrl 1711,
+			_display displayCtrl 1712,
+			_display displayCtrl 1713,
+			_display displayCtrl 1714,
+			_display displayCtrl 1715,
+			_display displayCtrl 1716,
+			_display displayCtrl 1717,
+			_display displayCtrl 1718,
+			_display displayCtrl 1719,
+			_display displayCtrl 1720,
+			_display displayCtrl 1721,
+			_display displayCtrl 1722,
+			_display displayCtrl 1723,
+			_display displayCtrl 1724,
+			_display displayCtrl 1725,
+			_display displayCtrl 1726,
+			_display displayCtrl 1727,
+			_display displayCtrl 1728,
+			_display displayCtrl 1729,
+			_display displayCtrl 1730,
+			_display displayCtrl 1731,
+			_display displayCtrl 1732,
+			_display displayCtrl 1733,
+			_display displayCtrl 1734,
+			_display displayCtrl 1735,
+			_display displayCtrl 1736,
+			_display displayCtrl 1737,
+			_display displayCtrl 1738,
+			_display displayCtrl 1739,
+			_display displayCtrl 1740,
+			_display displayCtrl 1741,
+			_display displayCtrl 1742,
+			_display displayCtrl 1743,
+			_display displayCtrl 1744,
+			_display displayCtrl 1745,
+			_display displayCtrl 1746,
+			_display displayCtrl 1747,
+			_display displayCtrl 1748,
+			_display displayCtrl 1749,
+			_display displayCtrl 1750,
+			_display displayCtrl 1751,
+			_display displayCtrl 1752,
+			_display displayCtrl 1753,
+			_display displayCtrl 1754,
+			_display displayCtrl 1755,
+			_display displayCtrl 1756,
+			_display displayCtrl 1757,
+			_display displayCtrl 1758,
+			_display displayCtrl 1759,
+			_display displayCtrl 1760,
+			_display displayCtrl 1761,
+			_display displayCtrl 1762,
+			_display displayCtrl 1763,
+			_display displayCtrl 1764,
+			_display displayCtrl 1765,
+			_display displayCtrl 1766,
+			_display displayCtrl 1767,
+			_display displayCtrl 1768,
+			_display displayCtrl 1769,
+			_display displayCtrl 1770,
+			_display displayCtrl 1771,
+			_display displayCtrl 1772,
+			_display displayCtrl 1773,
+			_display displayCtrl 1774,
+			_display displayCtrl 1775,
+			_display displayCtrl 1776,
+			_display displayCtrl 1777,
+			_display displayCtrl 1778,
+			_display displayCtrl 1779,
+			_display displayCtrl 1780
+		];
+		[
+			"TIME UNTIL FAILSAFE DISCONNECT",
+			90, 
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				!(_term getVariable ["FST_DeviceAccessed", false]) && _term getVariable ["FST_DeviceInUse", false] && !(_term getVariable ["FST_DeviceBroken", false]) && !(_term getVariable ["FST_DeviceLocked", false])
+			},
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				hintSilent parseText "<t color='#990000'>Session terminated by timeout failsafe, another attempt is required</t>";
+				_term setVariable ["FST_DeviceInUse",false,true];
+				_user setVariable ["FST_PlayerIsHacking",false,true];
+				closeDialog 0;
+			},
+			{
+				params ["_arguments"];
+				_arguments params ["_term", "_user"];
+				if (_term getVariable ["FST_DeviceAccessed", false]) then 
+				{
+					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
+					[
+						"DOWNLOADING ACCESSED DATA, STANDBY",
+						15, 
+						{
+							params ["_arguments"];
+							_arguments params ["_term", "_user"];
+							_user distance _term <= 3 && currentWeapon _user == "FST_Hacking_Datapad" && currentMagazine _user == "FST_HackDatacard_Empty"
+						},
+						{
+							params ["_arguments"];
+							_arguments params ["_term", "_user"];
+							_user removeHandgunItem "FST_HackDatacard_Empty";
+							_user addHandgunItem (selectRandomWeighted ["FST_HackDatacard_Abnormal", 19, "FST_HackDatacard_Troll", 1]); 
+							_term setVariable ["FST_DeviceHacked",true,true]; 
+							_term setVariable ["FST_DeviceInUse",false,true]; 
+							_user setVariable ["FST_PlayerIsHacking",false,true];
+							hintSilent parseText "<t color='#0074cc'>Hack complete<br/> It is now safe to remove the datacard from your datapad</t>";
+						},
+						{
+							params ["_arguments", "_success", "_elapsedTime", "_totalTime", "_failureCode"];
+							_arguments params ["_term", "_user"]; 
+							if (_failureCode == 1) then 
+							{
+								hintSilent parseText "<t color='#d67e09'>Download cancelled</t>";
+							};
+							if (_failureCode == 2) then 
+							{
+								hintSilent parseText "<t color='#990000'>Could not complete the download<br/> Stay within 3 meters of the target and do not swap your datapad or datacard out</t>";
+							}; 
+							_term setVariable ["FST_DeviceInUse",false,true];
+							_user setVariable ["FST_PlayerIsHacking",false,true];
+						},
+						[_term, _user],
+						false,
+						false
+					] call CBA_fnc_progressBar;
+				};
+			},
+			[_term, _user]
+		] call CBA_fnc_progressBar;
+	}
+];

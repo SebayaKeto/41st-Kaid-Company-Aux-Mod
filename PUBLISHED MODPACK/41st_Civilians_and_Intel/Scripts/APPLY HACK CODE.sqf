@@ -6,11 +6,13 @@ _this setVariable ["FST_DeviceHacked",false,true];
 _this setVariable ["FST_DeviceBroken",true,true];
 
 
-[_this,['Hack Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","true",3]] remoteExec ["addAction", 0, true];
 
-[_this,['Repair Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","true",3]] remoteExec ["addAction", 0, true];
+[_this,['Hack Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","!(_target getVariable ['FST_DeviceBroken', false])",3]] remoteExec ["addAction", 0, true];
+[_this,['Repair Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","_target getVariable ['FST_DeviceBroken', false]",3]] remoteExec ["addAction", 0, true];
 _this setVariable ["FST_DeviceBroken",true,true];
 
+
+[_this,['Reset Hack State', {[_this select 0, _this select 1] call FST_CivilRandomizers_fnc_testingbuttons;}, nil,5,true,true,"","true",3]] remoteExec ["addAction", 0, true];
 
 /* #Xodyqy
 $[
@@ -245,4 +247,209 @@ class RepairTextTitle: RscText
 				9		"There is a blaster hole in it.",
 				10		"It will not turn on.",
 				11		"One of the parts inside is radiating intense heat."
+
+/* #Covegu
+$[
+	1.063,
+	["HackingMinigame",[["(safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2)) / 2)","(safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2)) / 2)","((safeZoneW / safeZoneH) min 1.2)","(((safeZoneW / safeZoneH) min 1.2) / 1.2)"],"(((safeZoneW / safeZoneH) min 1.2) / 40)","((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)","GUI_GRID_CENTER"],0,0,0],
+	[-1000,"FST_HackStartBackground",[2,"",["3 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","0 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","34 * GUI_GRID_CENTER_W","25 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.408,0.408,0.408,1],[-1,-1,-1,-1],"","-1"],[]],
+	[-1001,"FST_ScreenBackground",[2,"",["5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","30 * GUI_GRID_CENTER_W","23 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.145,0.306,0.549,1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+
+/* #Sotezy
+$[
+	1.063,
+	["HackingMinigame",[["(safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2)) / 2)","(safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2)) / 2)","((safeZoneW / safeZoneH) min 1.2)","(((safeZoneW / safeZoneH) min 1.2) / 1.2)"],"(((safeZoneW / safeZoneH) min 1.2) / 40)","((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)","GUI_GRID_CENTER"],0,0,0],
+	[-1000,"FST_HackStartBackground",[2,"",["3 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","0 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","34 * GUI_GRID_CENTER_W","25 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.408,0.408,0.408,1],[-1,-1,-1,-1],"","-1"],[]],
+	[-1001,"FST_ScreenBackground",[2,"",["5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","30 * GUI_GRID_CENTER_W","23 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.145,0.306,0.549,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"FST_HackGameX0Y0",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"",[2,"0|0",["15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1602,"",[2,"0|0",["12.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1603,"",[2,"0|0",["21.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1604,"",[2,"0|0",["24.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1605,"",[2,"0|0",["27.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1606,"",[2,"0|0",["30.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1607,"",[2,"0|0",["9.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1608,"",[2,"0|0",["6.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1609,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","9 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1610,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","7 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1611,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1612,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","3 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1613,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","13 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1614,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","15 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1615,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","17 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1616,"",[2,"0|0",["19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X","19 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y","2.5 * GUI_GRID_CENTER_W","1.5 * GUI_GRID_CENTER_H"],[-1,-1,-1,-1],[0.133,0.475,0.839,1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+
+
+
+class FST_HackStartBackground: RscText
+{
+	idc = 1000;
+	x = 3.32 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = -0.05 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 33.5 * GUI_GRID_CENTER_W;
+	h = 25 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.408,0.408,0.408,1};
+};
+class FST_ScreenBackground: RscText
+{
+	idc = 1001;
+	x = 4.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 30.5 * GUI_GRID_CENTER_W;
+	h = 23 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.05,0.05,0.05,1};
+};
+class FST_BorderFrameHackScreenRight: RscText
+{
+	idc = 1002;
+	x = 35 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 0.333333 * GUI_GRID_CENTER_W;
+	h = 23 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.443,0.886,1,1};
+};
+class FST_BorderFrameHackScreenLeft: RscText
+{
+	idc = 1003;
+	x = 4.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 0.333333 * GUI_GRID_CENTER_W;
+	h = 23 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.443,0.886,1,1};
+};
+class FST_BorderFrameHackScreenTop: RscText
+{
+	idc = 1005;
+	x = 4.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 30.5 * GUI_GRID_CENTER_W;
+	h = 0.25 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.443,0.886,1,1};
+};
+class FST_BorderFrameHackScreenBottom: RscText
+{
+	idc = 1004;
+	x = 4.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 23.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 30.5 * GUI_GRID_CENTER_W;
+	h = 0.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.443,0.886,1,1};
+};
+class FST_HackAurabeshBackground: RscText
+{
+	idc = 1002;
+	x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 2.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 28 * GUI_GRID_CENTER_W;
+	h = 4 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.133,0.475,0.839,1};
+};
+class FST_EasyHackGame: RscButton
+{
+	idc = 1600;
+	text = "PERFORM SURFACE SCAN"; //--- ToDo: Localize;
+	x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 8 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 9 * GUI_GRID_CENTER_W;
+	h = 1.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.133,0.475,0.839,1};
+};
+class FST_MedHackGame: RscButton
+{
+	idc = 1601;
+	text = "PERFORM STANDARD SCAN"; //--- ToDo: Localize;
+	x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 9 * GUI_GRID_CENTER_W;
+	h = 1.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.133,0.475,0.839,1};
+};
+class FST_DeepHackGame: RscButton
+{
+	idc = 1602;
+	text = "PERFORM DEEP SCAN"; //--- ToDo: Localize;
+	x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 14 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 9 * GUI_GRID_CENTER_W;
+	h = 1.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.133,0.475,0.839,1};
+};
+class FST_CancelHackGame: RscButton
+{
+	idc = 1603;
+	text = "EXIT PROGRAM"; //--- ToDo: Localize;
+	x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 19 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 9 * GUI_GRID_CENTER_W;
+	h = 1.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.133,0.475,0.839,1};
+};
+class RscPicture_1200: RscPicture
+{
+	idc = 1200;
+	text = "\41st_Civilians_and_Intel\Data\HackScreenAurabesh.paa";
+	x = -0.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 2.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 41.5 * GUI_GRID_CENTER_W;
+	h = 4 * GUI_GRID_CENTER_H;
+};
+class RscPicture_1201: RscPicture
+{
+	idc = 1201;
+	text = "#(argb,8,8,3)color(1,1,1,1)";
+	x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 2.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 4 * GUI_GRID_CENTER_W;
+	h = 4 * GUI_GRID_CENTER_H;
+};
+class FST_BorderFrameHackButtonsRight: RscText
+{
+	idc = 1003;
+	x = 25 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 7.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 0.333333 * GUI_GRID_CENTER_W;
+	h = 13.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {1,1,1,1};
+};
+class FST_BorderFrameHackButtonsLeft: RscText
+{
+	idc = 1004;
+	x = 14.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 7.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 0.333333 * GUI_GRID_CENTER_W;
+	h = 13.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {1,1,1,1};
+};
+class FST_BorderFrameHackButtonsTop: RscText
+{
+	idc = 1005;
+	x = 14.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 7.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 11 * GUI_GRID_CENTER_W;
+	h = 0.25 * GUI_GRID_CENTER_H;
+	colorBackground[] = {1,1,1,1};
+};
+class FST_BorderFrameHackButtonsBottom: RscText
+{
+	idc = 1006;
+	x = 14.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 21 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 11 * GUI_GRID_CENTER_W;
+	h = 0.25 * GUI_GRID_CENTER_H;
+	colorBackground[] = {1,1,1,1};
+};
+class FST_HackGameX0Y0: RscButton
+{
+	idc = 1600;
+	text = "0|0"; //--- ToDo: Localize;
+	x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 11 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 2.5 * GUI_GRID_CENTER_W;
+	h = 1.5 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0.133,0.475,0.839,1};
+};
 

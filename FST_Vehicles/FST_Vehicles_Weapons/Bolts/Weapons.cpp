@@ -28,11 +28,19 @@ class FST_VW_Sabre_30mm_Cannon: FST_VW_BoltCannon_30mm
     discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
     discreteDistanceInitIndex = 2;
     discreteDistanceCameraPoint = "eye";
-    magazines[] =
-    {
-        "FST_VW_120Rnd_30mm_HE_Bolts",
-        "FST_VW_120Rnd_30mm_AP_Bolts"
-    };
+    magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts"};
+};
+
+class FST_VW_Sabre_30mm_AP_Cannon: FST_VW_BoltCannon_30mm
+{
+    displayName = "FST Sabre 30mm AP Cannon";
+    autoFire = 1;
+    reloadTime = 1;
+    burst = 1;
+    discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000};
+    discreteDistanceInitIndex = 2;
+    discreteDistanceCameraPoint = "eye";
+    magazines[] = {"FST_VW_120Rnd_30mm_AP_Bolts"};
 };
 
 class FST_VW_BoltCannon_40mm: 3as_saber_gmg_40mm
