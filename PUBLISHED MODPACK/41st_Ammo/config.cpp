@@ -536,7 +536,7 @@ class CfgAmmo
 		indirectHitRange=0.5;
 		caliber=1.8; //1.6
 		coefGravity=0.02;
-		timetolive=2;
+		timetolive=2.5;
 		waterFriction=-0.0099999998;
 		deflecting=0;
 		airfriction=0;
@@ -877,7 +877,7 @@ class CfgAmmo
 		explosive=1;
 		indirectHitRange=0.5;
 		caliber=5;
-		timeToLive = 0.9;
+		timeToLive = 2.5;
 		submunitionAmmo="FST_blasterbolt_T15"; // Submunition ammo class
 		submunitionConeType[]=
 		{
@@ -917,7 +917,7 @@ class CfgAmmo
 		model="3AS\3AS_Weapons\Data\tracer_blue.p3d";
 		effectfly="3AS_PlasmaBolt_Large_Blue_Fly";
 		ACE_damageType="plasma";
-		timeToLive = 0.9;
+		timeToLive = 2.5;
 		hit=400;
 		indirectHit=1;
 		explosive=1;
