@@ -1,17 +1,17 @@
-// FST_HCSpawn — postInit
+// FST_HCSpawn -- postInit
 // Server: init HC system
 // HC: register with server
 // Client: hook Zeus, register keybinds
 
 if (!isMultiplayer) exitWith {
-    diag_log "[FST_HCSpawn] Singleplayer — HC system disabled";
+    diag_log "[FST_HCSpawn] Singleplayer -- HC system disabled";
 };
 
 if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
-diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V23_SAFE_DISCONNECT_AUTO_EXPDIAG_2026-05-23";
+diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V26R2_STABILITY_MERGE_DYNSIM_OFF_STANCE_FIX_FG_SOFTCAP_2026-07-04";
 
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;
@@ -33,7 +33,7 @@ if (!isServer && !hasInterface) then {
     missionNamespace setVariable ["FST_HC_LastDeadGroupCleanup", time];
     [{
         ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
-        diag_log format ["[FST_HCSpawn] HC registering — owner %1", clientOwner];
+        diag_log format ["[FST_HCSpawn] HC registering -- owner %1", clientOwner];
     }, [], 1 + random 2] call CBA_fnc_waitAndExecute;
 };
 
@@ -42,6 +42,20 @@ if (!isServer && !hasInterface) then {
 // ============================================================
 if (isServer || {!hasInterface}) then {
     [] call FST_HCSpawn_fnc_initExplosionDiag;
+    [] call FST_HCSpawn_fnc_initEmergencyDroidBandaid;
+
+    // Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
+    // arguments-local command, so it only affects units local to the executing
+    // machine. A server-only stance script (standalone FST_DroidStance.pbo)
+    // silently stops covering droids once their groups move to an HC -- which is
+    // why B1s stopped standing upright whenever HCs were connected. The function
+    // itself filters on local/alive/side/class, so double coverage with the
+    // standalone PBO on server-local units is harmless (setUnitPos is idempotent).
+    if (missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) then {
+        [{
+            [] call FST_HCSpawn_fnc_enforceDroidStance;
+        }, missionNamespace getVariable ["FST_HC_DroidStanceInterval", 10], []] call CBA_fnc_addPerFrameHandler;
+    };
 };
 
 // ============================================================
@@ -69,7 +83,7 @@ if (hasInterface) then {
     };
     call _hookLocalCurator;
 
-    // Catch curators assigned mid-mission (periodic check — CuratorAssigned isn't a standard event)
+    // Catch curators assigned mid-mission (periodic check -- CuratorAssigned isn't a standard event)
     [{
         private _curator = getAssignedCuratorLogic player;
         if (isNull _curator) exitWith {};
@@ -85,12 +99,12 @@ if (hasInterface) then {
         };
     }, 30, []] call CBA_fnc_addPerFrameHandler;
 
-    // Register ZEN modules (requires ZEN — Zeus Enhanced)
+    // Register ZEN modules (requires ZEN -- Zeus Enhanced)
     if (!isNil "zen_custom_modules_fnc_register") then {
         [] call FST_HCSpawn_fnc_registerZenModules;
     } else {
-        diag_log "[FST_HCSpawn] ZEN not detected — spawn modules not registered";
-        systemChat "[FST] ZEN not loaded — spawn modules unavailable";
+        diag_log "[FST_HCSpawn] ZEN not detected -- spawn modules not registered";
+        systemChat "[FST] ZEN not loaded -- spawn modules unavailable";
     };
 
     // Keybind: Zeus Hold/Release (Shift+F2)

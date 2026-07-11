@@ -50,6 +50,7 @@ if (count _vehData > 0) then {
         _x setVariable ["FST_HC_created", true, true];
         _x setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
         _x setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+        [_x] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
     } forEach crew _veh;
     _editableObjects pushBack _veh;
 } else {
@@ -65,6 +66,7 @@ if (count _vehData > 0) then {
             _unit setVariable ["FST_HC_created", true, true];
             _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
             _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+            [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
             _unit setPosATL _spawnPos;
             _unit setDir _dir;
             _unit setRank _rank;
@@ -87,12 +89,14 @@ if (count _vehData > 0) then {
             _unit setVariable ["FST_HC_created", true, true];
             _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
             _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+            [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitClasses;
     };
 };
 
 _editableObjects append units _group;
+[_group] call FST_HCSpawn_fnc_emergencyStabilizeGroup;
 
 private _createdUnitCount = count units _group;
 private _expectedReplacementUnits = if (count _unitData > 0) then { count _unitData } else { count _unitClasses };
@@ -165,11 +169,11 @@ if (count _editableObjects > 0) then {
             private _priorityPositions = [];
             private _buildingPositions = [];
 
-            // 3AS garrison points (hand-placed — highest priority)
+            // 3AS garrison points (hand-placed -- highest priority)
             private _3asPoints = _pos nearObjects ["3as_GarrisonPoint", _radius];
             { _priorityPositions pushBack (getPosATL _x); } forEach _3asPoints;
 
-            // CBA building positions (hand-placed — high priority)
+            // CBA building positions (hand-placed -- high priority)
             private _cbaPoints = _pos nearObjects ["CBA_BuildingPos", _radius];
             { _priorityPositions pushBack (getPosATL _x); } forEach _cbaPoints;
 
@@ -211,7 +215,13 @@ if (count _editableObjects > 0) then {
 
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            _group enableDynamicSimulation true;
+            // Opt-in only. Note: when this runs on an HC the flag hits the HC's
+            // local dyn-sim manager, which the engine keeps inert in MP; only the
+            // server manager acts. Flagging would need to move server-side if the
+            // feature is ever revived.
+            if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
+                _group enableDynamicSimulation true;
+            };
 
             // Cleanup floating/unsafe positions after 10s
             [{
@@ -250,14 +260,16 @@ if (count _editableObjects > 0) then {
         case "static": {
             _group setBehaviourStrong "COMBAT";
             { _x setUnitPos "UP"; doStop _x; } forEach units _group;
-            _group enableDynamicSimulation true;
+            if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
+                _group enableDynamicSimulation true;
+            };
         };
         case "none": {};
     };
 }, [_group, _behavior, _radius, _pos], 1] call CBA_fnc_waitAndExecute;
 
-// Dynamic simulation only for mobile groups
-if (_behavior in ["patrol", "hunt"]) then {
+// Dynamic simulation only for mobile groups, and only when opted in.
+if ((_behavior in ["patrol", "hunt"]) && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {
     _group enableDynamicSimulation true;
 };
 

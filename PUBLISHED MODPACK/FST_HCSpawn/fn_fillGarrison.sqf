@@ -69,7 +69,9 @@ if (_partialBatch) then {
 
 _group setBehaviourStrong "COMBAT";
 _group setCombatMode "RED";
-_group enableDynamicSimulation true;
+if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
+    _group enableDynamicSimulation true;
+};
 
 // Register Zeus editability on the server, not on the HC. Send netIds from HCs
 // and let the server retry because fresh HC-spawned objects can arrive one beat late.

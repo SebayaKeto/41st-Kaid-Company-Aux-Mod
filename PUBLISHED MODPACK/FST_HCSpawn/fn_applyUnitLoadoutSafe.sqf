@@ -69,6 +69,7 @@ if (_hasClassWeapon && {!_capturedHasWeapon}) exitWith {
 };
 
 _unit setUnitLoadout _loadout;
+[_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
 
 // Post-apply guard: if a malformed captured loadout still leaves a class that
 // should be armed completely unarmed, restore class defaults after settle.

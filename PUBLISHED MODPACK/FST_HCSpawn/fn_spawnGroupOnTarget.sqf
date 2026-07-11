@@ -49,6 +49,12 @@ private _targetId = [] call FST_HCSpawn_fnc_getSpawnTarget;
 private _isOnHC = _targetId != 2;
 private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 
+if (!_isOnHC && {missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]}) exitWith {
+    private _reason = if (missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", false]) then {"no HC below soft cap or no HC available"} else {"no HC available"};
+    diag_log format ["[FST_HCSpawn][EMERGENCY] Spawn blocked instead of server fallback: %1. requested=%2 behavior=%3 pos=%4 hcCounts=%5", _reason, _spawnCountForCap, _behavior, _pos, FST_HC_UnitCounts];
+    [false] call _clearOriginal;
+};
+
 // For instant Zeus clone/replace, never delete the original if HCs disappeared
 // between the client click and server validation. Leave the original group alive.
 if (_isValidatedZeusClone && {!_isOnHC}) exitWith {

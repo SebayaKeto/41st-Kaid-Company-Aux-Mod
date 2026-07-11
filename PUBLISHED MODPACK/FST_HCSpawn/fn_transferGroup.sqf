@@ -20,7 +20,7 @@ private _leader = leader _group;
 private _units = units _group;
 private _vehicle = vehicle _leader;
 
-// Already owned by one of our HCs — just track it.
+// Already owned by one of our HCs -- just track it.
 private _currentOwner = groupOwner _group;
 if (_currentOwner in FST_HC_Ids) exitWith {
     private _idx = FST_HC_Ids find _currentOwner;
@@ -60,8 +60,12 @@ if (!_moved && {_afterOwner != _targetId}) exitWith {
 
 FST_HC_TransferSuccesses = (missionNamespace getVariable ["FST_HC_TransferSuccesses", 0]) + 1;
 
-// Dynamic simulation only for mobile groups.
-if (!_isGarrisoned) then {
+// Dynamic simulation only for mobile groups, and only when opted in.
+// This was the main freeze path: catchUntracked sweeps EVERY untracked AI group
+// (editor-placed, third-party scripts, everything) through here whenever HCs are
+// connected, and this call runs on the server, whose dyn-sim manager globally
+// disables any flagged group with no player inside its activation distance.
+if (!_isGarrisoned && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {
     _group enableDynamicSimulation true;
 };
 
@@ -75,7 +79,7 @@ if (_isGarrisoned) then {
 };
 
 // Restore loadouts on the machine that NOW owns the group. Running this on the
-// server (where the units are no longer local) silently fails — setUnitLoadout
+// server (where the units are no longer local) silently fails -- setUnitLoadout
 // is an effects-local command. Send the payload to the target owner; the HC
 // handler waits a beat for locality to settle before applying.
 private _payload = [];
@@ -86,6 +90,7 @@ private _payload = [];
 if (count _payload > 0) then {
     ["FST_HC_evt_restoreLoadout", [_payload], _targetId] call CBA_fnc_ownerEvent;
 };
+["FST_HC_evt_emergencyStabilizeGroupLocal", [_group], _targetId] call CBA_fnc_ownerEvent;
 
 // Unlock vehicle.
 if (!isNull _vehicle && {_vehicle != _leader}) then {

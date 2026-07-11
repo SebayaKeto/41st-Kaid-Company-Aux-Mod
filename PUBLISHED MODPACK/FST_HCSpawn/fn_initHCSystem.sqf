@@ -11,9 +11,9 @@ if (!isServer) exitWith {};
 // HC tracking
 FST_HC_Array = [];          // [hcObj1, hcObj2, ...]
 FST_HC_Ids = [];            // [ownerId1, ownerId2, ...]
-FST_HC_UnitCounts = [];     // [count1, count2, ...] — bookkeeping
+FST_HC_UnitCounts = [];     // [count1, count2, ...] -- bookkeeping
 
-// Group tracking — via setVariable on each group
+// Group tracking -- via setVariable on each group
 // "FST_HC_tracked" = [hcIndex, unitCount] on tracked groups
 // "FST_HC_heldBy" = zeusClientOwner on held groups
 // "FST_HC_onHC" = hcIndex (server-local, debug draw uses owner command)
@@ -50,7 +50,9 @@ addMissionEventHandler ["HandleDisconnect", {
 
 // Dynamic simulation system: only affects objects/groups that are explicitly
 // enableDynamicSimulation true. This addon enables it on non-critical idle groups.
-if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]) then {
+// Default OFF (see XEH_preInit). The manager's simulation changes are global and
+// activation is driven by player proximity only; Zeus does not wake units.
+if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
     enableDynamicSimulationSystem true;
 };
 

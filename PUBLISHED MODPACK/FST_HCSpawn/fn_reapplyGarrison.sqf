@@ -23,5 +23,10 @@ private _timeout = time + 15;
     {
         _x disableAI "PATH";
         _x forceSpeed 0;
+        // Reassert stance on the new owner. Like disableAI, setUnitPos is
+        // arguments-local and its effect does not reliably survive setGroupOwner,
+        // so garrisoned droids were dropping back to AUTO (prone/crouch) after
+        // transfer to an HC.
+        _x setUnitPos "UP";
     } forEach units _group;
 }, [_group, _timeout], 15] call CBA_fnc_waitUntilAndExecute;

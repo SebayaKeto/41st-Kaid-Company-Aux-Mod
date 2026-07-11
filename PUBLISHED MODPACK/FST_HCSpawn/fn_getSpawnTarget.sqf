@@ -25,6 +25,18 @@ while {count FST_HC_UnitCounts < count FST_HC_Ids} do {
     FST_HC_UnitCounts pushBack 0;
 };
 
+private _softCap = missionNamespace getVariable ["FST_HC_PerHCSoftCap", 0];
+if (_softCap > 0 && {missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", false]}) then {
+    private _belowCap = _validIndexes select { (FST_HC_UnitCounts select _x) < _softCap };
+    if (count _belowCap > 0) then {
+        _validIndexes = _belowCap;
+    } else {
+        diag_log format ["[FST_HCSpawn][EMERGENCY] All HCs are over soft cap %1. Blocking new HC target instead of overloading. counts=%2 ids=%3", _softCap, FST_HC_UnitCounts, FST_HC_Ids];
+        _validIndexes = [];
+    };
+};
+if (count _validIndexes == 0) exitWith { 2 };
+
 private _minIdx = _validIndexes select 0;
 private _minCount = FST_HC_UnitCounts select _minIdx;
 

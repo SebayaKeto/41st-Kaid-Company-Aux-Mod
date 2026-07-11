@@ -284,6 +284,16 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
         private _isOnHC = _targetId != 2;
         private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 
+        // getSpawnTarget returns 2 (server) when no HC is usable, including when
+        // every HC is over the soft cap. Falling through to the server here would
+        // silently mass-spawn the batch on the dedicated server, defeating both
+        // the soft cap and BlockHeavySpawnsWithoutHC. Stop the job instead.
+        if (!_isOnHC && {missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]}) exitWith {
+            _cancelled = true;
+            format ["[FST] Fill Garrison stopped at %1/%2 units: no HC available or all HCs over soft cap.", _queuedUnits, count _assignments] remoteExec ["systemChat", _callerID];
+            diag_log format ["[FST_HCSpawn][EMERGENCY] Fill Garrison job %1 stopped: no usable HC target (soft cap or none connected) at %2/%3 units. hcCounts=%4", _jobId, _queuedUnits, count _assignments, FST_HC_UnitCounts];
+        };
+
         if (_hcIndex >= 0 && _hcIndex < count FST_HC_UnitCounts) then {
             FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + count _batch];
         };

@@ -1,4 +1,4 @@
-// FST_HCSpawn — HC spawn & management system
+// FST_HCSpawn -- HC spawn & management system
 
 class CfgPatches {
     class FST_HCSpawn {
@@ -25,6 +25,7 @@ class CfgFunctions {
         };
         class GroupTracking {
             file = "FST_HCSpawn";
+            class enforceDroidStance {};
             class trackGroup {};
             class catchUntracked {};
             class recountUnits {};
@@ -74,6 +75,9 @@ class CfgFunctions {
             class fpsMonitor {};
             class statusReport {};
             class initExplosionDiag {};
+            class initEmergencyDroidBandaid {};
+            class emergencyStabilizeDroid {};
+            class emergencyStabilizeGroup {};
         };
     };
 };

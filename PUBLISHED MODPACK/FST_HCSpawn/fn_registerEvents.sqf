@@ -143,6 +143,17 @@ if (isServer) then {
     ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addEventHandler;
 
+// Emergency droid stabilization after locality transfer or HC-side creation.
+["FST_HC_evt_emergencyStabilizeGroupLocal", {
+    params ["_group"];
+    [{
+        params ["_group"];
+        if (!isNull _group) then {
+            [_group] call FST_HCSpawn_fnc_emergencyStabilizeGroup;
+        };
+    }, [_group], 0.25] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
+
 // Loadout restore after locality transfer (received by target HC via ownerEvent)
 ["FST_HC_evt_restoreLoadout", {
     params ["_payload"];
@@ -152,6 +163,7 @@ if (isServer) then {
             _x params ["_unit", "_loadout"];
             if (!isNull _unit && {local _unit} && {count _loadout > 0} && {uniform _unit == ""}) then {
                 _unit setUnitLoadout _loadout;
+                [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
             };
         } forEach _payload;
     }, [_payload], 1] call CBA_fnc_waitAndExecute;

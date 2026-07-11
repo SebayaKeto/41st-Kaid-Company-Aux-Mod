@@ -1,4 +1,4 @@
-// FST_HCSpawn — preInit
+// FST_HCSpawn -- preInit
 // CBA settings + defaults + template definitions
 
 // ============================================================
@@ -30,22 +30,83 @@ missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespac
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMinAge", 300]];
 missionNamespace setVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", 900]];
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupMaxPerPass", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMaxPerPass", 25]];
-missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", true]];
+// Dynamic simulation default OFF. When on, the server-side manager globally
+// disables simulation for any flagged group outside its activation distance of
+// a PLAYER (default 500m for "Group"; Zeus camera does not wake units). At our
+// AO scale this froze most of the mission's AI whenever HCs were connected,
+// because catchUntracked only sweeps groups (and transferGroup only flags them)
+// when at least one HC is registered. Disabled units cannot move, respond to
+// Zeus, or even be killed. Re-enable only with tuned activation distances.
+missionNamespace setVariable ["FST_HC_EnableDynamicSimulationSystem", missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]];
+missionNamespace setVariable ["FST_HC_DroidStanceEnabled", missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]];
+missionNamespace setVariable ["FST_HC_DroidStanceInterval", missionNamespace getVariable ["FST_HC_DroidStanceInterval", 10]];
 missionNamespace setVariable ["FST_HC_RedistributeOnHCDisconnect", missionNamespace getVariable ["FST_HC_RedistributeOnHCDisconnect", false]];
 missionNamespace setVariable ["FST_HC_HCDisconnectSafeModeSeconds", missionNamespace getVariable ["FST_HC_HCDisconnectSafeModeSeconds", 120]];
-missionNamespace setVariable ["FST_HC_ExplosionDiagEnabled", missionNamespace getVariable ["FST_HC_ExplosionDiagEnabled", true]];
+missionNamespace setVariable ["FST_HC_ExplosionDiagEnabled", missionNamespace getVariable ["FST_HC_ExplosionDiagEnabled", false]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagInterval", missionNamespace getVariable ["FST_HC_ExplosionDiagInterval", 10]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagExplosionSpikeThreshold", missionNamespace getVariable ["FST_HC_ExplosionDiagExplosionSpikeThreshold", 75]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagKilledSpikeThreshold", missionNamespace getVariable ["FST_HC_ExplosionDiagKilledSpikeThreshold", 20]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagImmediateCooldown", missionNamespace getVariable ["FST_HC_ExplosionDiagImmediateCooldown", 5]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagLogBelowFPS", missionNamespace getVariable ["FST_HC_ExplosionDiagLogBelowFPS", 15]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagRecentLimit", missionNamespace getVariable ["FST_HC_ExplosionDiagRecentLimit", 40]];
+missionNamespace setVariable ["FST_HC_EmergencyDroidBandaidEnabled", missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", true]];
+missionNamespace setVariable ["FST_HC_EmergencyDroidScanInterval", missionNamespace getVariable ["FST_HC_EmergencyDroidScanInterval", 1.5]];
+missionNamespace setVariable ["FST_HC_EmergencyDroidScanMaxPerPass", missionNamespace getVariable ["FST_HC_EmergencyDroidScanMaxPerPass", 250]];
+missionNamespace setVariable ["FST_HC_EmergencyKillWindow", missionNamespace getVariable ["FST_HC_EmergencyKillWindow", 10]];
+missionNamespace setVariable ["FST_HC_EmergencyKillSpikeThreshold", missionNamespace getVariable ["FST_HC_EmergencyKillSpikeThreshold", 12]];
+missionNamespace setVariable ["FST_HC_EmergencyDeadDeleteDelay", missionNamespace getVariable ["FST_HC_EmergencyDeadDeleteDelay", 0.25]];
+missionNamespace setVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", missionNamespace getVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", 20]];
+missionNamespace setVariable ["FST_HC_EmergencyMuteSentences", missionNamespace getVariable ["FST_HC_EmergencyMuteSentences", true]];
+missionNamespace setVariable ["FST_HC_PerHCSoftCap", missionNamespace getVariable ["FST_HC_PerHCSoftCap", 240]];
+missionNamespace setVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", true]];
+
 
 // Backward-compatible defaults for older saved CBA profiles / scripts.
 missionNamespace setVariable ["FST_HC_InterceptEnabled", missionNamespace getVariable ["FST_HC_InterceptEnabled", true]];
 missionNamespace setVariable ["FST_HC_ZeusInstantClone", missionNamespace getVariable ["FST_HC_ZeusInstantClone", true]];
 missionNamespace setVariable ["FST_HC_ZeusImmediateTransfer", missionNamespace getVariable ["FST_HC_ZeusImmediateTransfer", false]];
 missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamespace getVariable ["FST_HC_BlockFillGarrisonWithoutHC", true]];
+
+// ============================================================
+// EMERGENCY LIVE-OP BANDAID
+// ============================================================
+
+
+[
+    "FST_HC_EmergencyDroidBandaidEnabled", "CHECKBOX",
+    ["Emergency Droid Stability Bandaid", "Live-op bandaid: mutes droid radio protocol, dampens ACE medical AI state on local droids, and quickly deletes dead droid bodies on HCs/server. Use until the ACE/droid wound-handler issue is fixed in config."],
+    ["FST HC Spawn", "Emergency"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_EmergencyDeadDeleteDelay", "SLIDER",
+    ["Dead Droid Delete Delay", "Seconds before dead droids are deleted by the emergency bandaid. Lower is safer for crashes, higher preserves bodies longer."],
+    ["FST HC Spawn", "Emergency"], [0.05, 5, 0.25, 2], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_EmergencyDeadDeleteMaxPerPass", "SLIDER",
+    ["Dead Droid Deletes Per Pass", "Maximum dead droid bodies deleted every 0.5 seconds by the emergency bandaid."],
+    ["FST HC Spawn", "Emergency"], [1, 50, 20, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_EmergencyMuteSentences", "CHECKBOX",
+    ["Emergency Mute AI Radio Sentences", "Disables AI radio sentence playback on the dedicated server and HCs. This is heavy-handed, but it prevents missing droid radio protocol spam from hammering RPTs during combat."],
+    ["FST HC Spawn", "Emergency"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_PerHCSoftCap", "SLIDER",
+    ["Per-HC Soft AI Cap", "Emergency cap used when choosing an HC target. If every HC is over this count and blocking is enabled, heavy spawns are blocked instead of overloading one HC or falling back to the server."],
+    ["FST HC Spawn", "Core"], [100, 500, 240, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_BlockSpawnWhenAllHCSoftCapped", "CHECKBOX",
+    ["Block Spawns When All HCs Soft-Capped", "Emergency behavior: if all HCs are already over the per-HC soft cap, block new heavy AI spawns rather than risking another HC crash or server fallback."],
+    ["FST HC Spawn", "Core"], true, true, {}, false
+] call CBA_fnc_addSetting;
 
 // ============================================================
 // CORE SETTINGS
@@ -104,7 +165,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 [
     "FST_HC_ExplosionDiagEnabled", "CHECKBOX",
     ["Automatic Explosion Diagnostics", "Logs HC/server explosive ammo, explosion hit spikes, killed-unit spikes, FPS, and local AI counts. Leave enabled until the crash cause is isolated."],
-    ["FST HC Spawn", "Diagnostics"], true, true, {}, false
+    ["FST HC Spawn", "Diagnostics"], false, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
