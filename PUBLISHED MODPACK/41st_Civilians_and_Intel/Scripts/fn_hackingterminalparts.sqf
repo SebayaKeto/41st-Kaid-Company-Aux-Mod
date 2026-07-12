@@ -202,7 +202,7 @@
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
             } forEach _grelations; 
-            if ((_gtotal < 4) && (!_badspot)) then
+            if ((_gtotal < 4) && (!_badspot) && !((_display displayCtrl _goodbutton) getvariable ["FST_SetAsAccess", false])) then
             {
                 (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
                 _gnode = _gnode - 1;
@@ -225,7 +225,7 @@
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
             } forEach _brelations; 
-            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot)) then
+            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot) && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsMine", false])) then
             {
                 (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
                 _bnode = _bnode - 1;
@@ -277,7 +277,7 @@
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
             } forEach _grelations; 
-            if ((_gtotal < 4) && (!_badspot)) then
+            if ((_gtotal < 4) && (!_badspot) && !((_display displayCtrl _goodbutton) getvariable ["FST_SetAsAccess", false])) then
             {
                 (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
                 _gnode = _gnode - 1;
@@ -300,7 +300,7 @@
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
             } forEach _brelations; 
-            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot)) then
+            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot) && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsMine", false])) then
             {
                 (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
                 _bnode = _bnode - 1;
@@ -355,7 +355,7 @@
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
             } forEach _grelations; 
-            if ((_gtotal < 4) && (!_badspot)) then
+            if ((_gtotal < 4) && (!_badspot) && !((_display displayCtrl _goodbutton) getvariable ["FST_SetAsAccess", false])) then
             {
                 (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
                 _gnode = _gnode - 1;
@@ -378,7 +378,7 @@
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
                 if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
             } forEach _brelations; 
-            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot)) then
+            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot) && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsMine", false])) then
             {
                 (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
                 _bnode = _bnode - 1;

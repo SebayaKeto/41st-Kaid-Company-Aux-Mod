@@ -872,6 +872,7 @@ class FST_HackDeviceDialog
 	idd=6970;
 	movingEnable=false;
 	enableSimulation=true;
+	onUnload = "private _data = (_this select 0) getVariable ['FST_HackingData', 0]; _data params ['_term', '_user']; _term setVariable ['FST_DeviceInUse',false,true]; _user setVariable ['FST_PlayerIsHacking',false,true];";
 	class ControlsBackground
 	{
 		class FST_HackDeviceBackground: RscText

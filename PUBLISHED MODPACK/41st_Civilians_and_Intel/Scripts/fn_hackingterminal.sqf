@@ -6530,6 +6530,9 @@ _button1900 ctrlAddEventHandler
 				_arguments params ["_term", "_user"];
 				if (_term getVariable ["FST_DeviceAccessed", false]) then 
 				{
+					
+					_term setVariable ["FST_DeviceInUse",false,true]; 
+					_user setVariable ["FST_PlayerIsHacking",false,true];
 					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
 					[
 						"DOWNLOADING ACCESSED DATA, STANDBY",
@@ -6700,6 +6703,9 @@ _button1901 ctrlAddEventHandler
 				_arguments params ["_term", "_user"];
 				if (_term getVariable ["FST_DeviceAccessed", false]) then 
 				{
+					
+					_term setVariable ["FST_DeviceInUse",false,true]; 
+					_user setVariable ["FST_PlayerIsHacking",false,true];
 					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
 					[
 						"DOWNLOADING ACCESSED DATA, STANDBY",
@@ -6902,6 +6908,9 @@ _button1902 ctrlAddEventHandler
 				_arguments params ["_term", "_user"];
 				if (_term getVariable ["FST_DeviceAccessed", false]) then 
 				{
+					
+					_term setVariable ["FST_DeviceInUse",false,true]; 
+					_user setVariable ["FST_PlayerIsHacking",false,true];
 					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
 					[
 						"DOWNLOADING ACCESSED DATA, STANDBY",
