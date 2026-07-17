@@ -677,6 +677,7 @@ class CfgEditorSubcategories
 		displayName = "Other Items"; 
 	};
 };
+class RscDisplayEmpty;
 class RscText;
 class RscPicture;
 class RscButton;
@@ -867,11 +868,12 @@ class FST_RepairDeviceDialog
 		};
 	};
 };
-class FST_HackDeviceDialog
+class FST_HackDeviceDisplay: RscDisplayEmpty
 {
 	idd=6970;
 	movingEnable=false;
 	enableSimulation=true;
+	onUnload = "private _data = (_this select 0) getVariable ['FST_HackingData', 0]; _data params ['_term', '_user']; _term setVariable ['FST_DeviceInUse',false,true]; _user setVariable ['FST_PlayerIsHacking',false,true]; _user setVariable ['FST_SROn',false,true]; _user setVariable ['FST_LROn',false,true];";
 	class ControlsBackground
 	{
 		class FST_HackDeviceBackground: RscText
@@ -1059,6 +1061,51 @@ class FST_HackDeviceDialog
 			idc = 1823;
 			x = 30 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
 			y = 14.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_FlagCounterBackground: RscText
+		{
+			idc = 1828;
+			x = 18 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.149,0.149,0.149,1};
+		};
+		class FST_BorderFrameFlagCounterRight: RscText
+		{
+			idc = 1829;
+			x = 22 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameFlagCounterLeft: RscText
+		{
+			idc = 1830;
+			x = 18 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameFlagCounterTop: RscText
+		{
+			idc = 1831;
+			x = 18 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameFlagCounterBottom: RscText
+		{
+			idc = 1832;
+			x = 18 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 24.25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
 			w = 4 * GUI_GRID_CENTER_W;
 			h = 0.05 * GUI_GRID_CENTER_H;
 			colorBackground[] = {1,1,1,1};
@@ -1697,6 +1744,42 @@ class FST_HackDeviceDialog
 			y = 12.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
 			w = 2 * GUI_GRID_CENTER_W;
 			h = 2 * GUI_GRID_CENTER_H;
+		};
+		class FST_YellowIndicatorBox: RscText
+		{
+			idc = 1833;
+			x = 18.05 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.325 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.95 * GUI_GRID_CENTER_W;
+			h = 0.925 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,0.918,0,1};
+		};
+		class FST_OrangeIndicatorBox: RscText
+		{
+			idc = 1834;
+			x = 19 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.325 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 1 * GUI_GRID_CENTER_W;
+			h = 0.925 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,0.561,0.18,1};
+		};
+		class FST_RedIndicatorBox: RscText
+		{
+			idc = 1835;
+			x = 20 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.325 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 1 * GUI_GRID_CENTER_W;
+			h = 0.925 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,0,0,1};
+		};
+		class FST_WarningIndicatorBox: RscPicture
+		{
+			idc = 1836;
+			text = "\41st_Civilians_and_Intel\Data\BadTriangle.paa";
+			x = 21 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 23.25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 1 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
 		};
 		class FST_MineButtonBlocker: RscActivePicture
 		{

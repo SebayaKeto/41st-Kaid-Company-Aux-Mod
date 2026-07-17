@@ -151,7 +151,7 @@ class CfgVehicles
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=22000;
+		peakTorque=32000;
 		torqueCurve[]=
 		{
 			{0,0},

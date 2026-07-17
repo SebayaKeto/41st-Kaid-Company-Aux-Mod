@@ -175,399 +175,508 @@
     private _gnode = 2;
     private _bnode = 2;
 
-    if (_difficulty == 0) then
+    switch (_difficulty) do
     {
-        _display setVariable ["FST_GoodPoints", 2];
-        _display setVariable ["FST_BadPoints", 2];
-        private _up2xs = [1700,1701,1702,1703,1704];
-        private _up1xs = [1705,1706,1707,1708,1709];
-        private _cenxs = [1710,1711,1712,1713,1714];
-        private _dn1xs = [1715,1716,1717,1718,1719];
-        private _dn2xs = [1720,1721,1722,1723,1724];
-        private _yarrays = [_up2xs,_up1xs,_cenxs,_dn1xs,_dn2xs];
-        while { _gnode > 0 } do
+        case 0:
         {
-            private _goodbutton = (_yarrays select (floor (random 5))) select (floor (random 5));
-            private _grelations = (_display displayCtrl _goodbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
-            private _gtotal = 0;
-            private _badspot = false;
+            _display setVariable ["FST_GoodPoints", 2];
+            _display setVariable ["FST_BadPoints", 2];
+            private _up2xs = [1700,1701,1702,1703,1704];
+            private _up1xs = [1705,1706,1707,1708,1709];
+            private _cenxs = [1710,1711,1712,1713,1714];
+            private _dn1xs = [1715,1716,1717,1718,1719];
+            private _dn2xs = [1720,1721,1722,1723,1724];
+            private _yarrays = [_up2xs,_up1xs,_cenxs,_dn1xs,_dn2xs];
+            while { _gnode > 0 } do
             {
-                private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _outercheck = 0;
+                private _goodbutton = (_yarrays select (floor (random 5))) select (floor (random 5));
+                private _grelations = (_display displayCtrl _goodbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
+                private _gtotal = 0;
+                private _badspot = false;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
-                } forEach _outerrelations;
-                if (_outercheck >= 4 ) then {_badspot = true};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
-            } forEach _grelations; 
-            if ((_gtotal < 4) && (!_badspot)) then
-            {
-                (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
-                _gnode = _gnode - 1;
+                    private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _outercheck = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
+                    } forEach _outerrelations;
+                    if (_outercheck >= 4 ) then {_badspot = true};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
+                } forEach _grelations; 
+                if ((_gtotal < 4) && (!_badspot) && !((_display displayCtrl _goodbutton) getvariable ["FST_SetAsAccess", false])) then
+                {
+                    (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
+                    _gnode = _gnode - 1;
+                };
             };
-        };
-        while { _bnode > 0 } do
-        {
-            private _badbutton = (_yarrays select (floor (random 5))) select (floor (random 5));
-            private _brelations = (_display displayCtrl _badbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
-            private _btotal = 0;
-            private _badspot = false;
+            while { _bnode > 0 } do
             {
-                private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _outercheck = 0;
+                private _badbutton = (_yarrays select (floor (random 5))) select (floor (random 5));
+                private _brelations = (_display displayCtrl _badbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
+                private _btotal = 0;
+                private _badspot = false;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
-                } forEach _outerrelations;
-                if (_outercheck >= 4 ) then {_badspot = true};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
-            } forEach _brelations; 
-            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot)) then
-            {
-                (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
-                _bnode = _bnode - 1;
+                    private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _outercheck = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
+                    } forEach _outerrelations;
+                    if (_outercheck >= 4 ) then {_badspot = true};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
+                } forEach _brelations; 
+                if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot) && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsMine", false])) then
+                {
+                    (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
+                    _bnode = _bnode - 1;
+                };
             };
+            {
+                {
+                    private _relations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _gn = 0;
+                    private _rn = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gn = _gn + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _rn = _rn + 1;};
+                    } forEach _relations;
+                    (_display displayCtrl _x) setvariable ["FST_HintTotal", [_gn,_rn]];
+                } forEach _x;
+            } forEach _yarrays;
         };
+        case 1:
         {
+            _gnode = 6;
+            _bnode = 4;
+            _display setVariable ["FST_GoodPoints", 6];
+            _display setVariable ["FST_BadPoints", 4];
+            (_display displayCtrl 1825) ctrlSetText "\41st_Civilians_and_Intel\Data\Green6.paa";
+            (_display displayCtrl 1827) ctrlSetText "\41st_Civilians_and_Intel\Data\Red4.paa";
+            private _up3xs = [1725,1726,1727,1728,1729,1730,1731];
+            private _up2xs = [1732,1700,1701,1702,1703,1704,1733];
+            private _up1xs = [1734,1705,1706,1707,1708,1709,1735];
+            private _cenxs = [1736,1710,1711,1712,1713,1714,1737];
+            private _dn1xs = [1738,1715,1716,1717,1718,1719,1739];
+            private _dn2xs = [1740,1720,1721,1722,1723,1724,1741];
+            private _dn3xs = [1742,1743,1744,1745,1746,1747,1748];
+            private _yarrays = [_up3xs,_up2xs,_up1xs,_cenxs,_dn1xs,_dn2xs,_dn3xs];
+            while { _gnode > 0 } do
             {
-                private _relations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _gn = 0;
-                private _rn = 0;
+                private _goodbutton = (_yarrays select (floor (random 7))) select (floor (random 7));
+                private _grelations = (_display displayCtrl _goodbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
+                private _gtotal = 0;
+                private _badspot = false;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gn = _gn + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _rn = _rn + 1;};
-                } forEach _relations;
-                (_display displayCtrl _x) setvariable ["FST_HintTotal", [_gn,_rn]];
-            } forEach _x;
-        } forEach _yarrays;
-    };
-    if (_difficulty == 1) then
-    {
-        _gnode = 6;
-        _bnode = 4;
-        _display setVariable ["FST_GoodPoints", 6];
-        _display setVariable ["FST_BadPoints", 4];
-        (_display displayCtrl 1825) ctrlSetText "\41st_Civilians_and_Intel\Data\Green6.paa";
-        (_display displayCtrl 1827) ctrlSetText "\41st_Civilians_and_Intel\Data\Red4.paa";
-        private _up3xs = [1725,1726,1727,1728,1729,1730,1731];
-        private _up2xs = [1732,1700,1701,1702,1703,1704,1733];
-        private _up1xs = [1734,1705,1706,1707,1708,1709,1735];
-        private _cenxs = [1736,1710,1711,1712,1713,1714,1737];
-        private _dn1xs = [1738,1715,1716,1717,1718,1719,1739];
-        private _dn2xs = [1740,1720,1721,1722,1723,1724,1741];
-        private _dn3xs = [1742,1743,1744,1745,1746,1747,1748];
-        private _yarrays = [_up3xs,_up2xs,_up1xs,_cenxs,_dn1xs,_dn2xs,_dn3xs];
-        while { _gnode > 0 } do
-        {
-            private _goodbutton = (_yarrays select (floor (random 7))) select (floor (random 7));
-            private _grelations = (_display displayCtrl _goodbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
-            private _gtotal = 0;
-            private _badspot = false;
-            {
-                private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _outercheck = 0;
+                    private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _outercheck = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
+                    } forEach _outerrelations;
+                    if (_outercheck >= 4 ) then {_badspot = true};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
+                } forEach _grelations; 
+                if ((_gtotal < 4) && (!_badspot) && !((_display displayCtrl _goodbutton) getvariable ["FST_SetAsAccess", false])) then
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
-                } forEach _outerrelations;
-                if (_outercheck >= 4 ) then {_badspot = true};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
-            } forEach _grelations; 
-            if ((_gtotal < 4) && (!_badspot)) then
-            {
-                (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
-                _gnode = _gnode - 1;
+                    (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
+                    _gnode = _gnode - 1;
+                };
             };
-        };
-        while { _bnode > 0 } do
-        {
-            private _badbutton = (_yarrays select (floor (random 7))) select (floor (random 7));
-            private _brelations = (_display displayCtrl _badbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
-            private _btotal = 0;
-            private _badspot = false;
+            while { _bnode > 0 } do
             {
-                private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _outercheck = 0;
+                private _badbutton = (_yarrays select (floor (random 7))) select (floor (random 7));
+                private _brelations = (_display displayCtrl _badbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
+                private _btotal = 0;
+                private _badspot = false;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
-                } forEach _outerrelations;
-                if (_outercheck >= 4 ) then {_badspot = true};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
-            } forEach _brelations; 
-            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot)) then
-            {
-                (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
-                _bnode = _bnode - 1;
+                    private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _outercheck = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
+                    } forEach _outerrelations;
+                    if (_outercheck >= 4 ) then {_badspot = true};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
+                } forEach _brelations; 
+                if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot) && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsMine", false])) then
+                {
+                    (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
+                    _bnode = _bnode - 1;
+                };
             };
+            {
+                {
+                    private _relations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _gn = 0;
+                    private _rn = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gn = _gn + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _rn = _rn + 1;};
+                    } forEach _relations;
+                    (_display displayCtrl _x) setvariable ["FST_HintTotal", [_gn,_rn]];
+                } forEach _x;
+            } forEach _yarrays;
         };
+        case 2:
         {
+            _gnode = 10;
+            _bnode = 6;
+            _display setVariable ["FST_GoodPoints", 10];
+            _display setVariable ["FST_BadPoints", 6];
+            (_display displayCtrl 1824) ctrlSetText "\41st_Civilians_and_Intel\Data\Green1.paa";
+            (_display displayCtrl 1825) ctrlSetText "\41st_Civilians_and_Intel\Data\Green0.paa";
+            (_display displayCtrl 1827) ctrlSetText "\41st_Civilians_and_Intel\Data\Red6.paa";
+            private _up4xs = [1749,1750,1751,1752,1753,1754,1755,1756,1757];
+            private _up3xs = [1758,1725,1726,1727,1728,1729,1730,1731,1759];
+            private _up2xs = [1760,1732,1700,1701,1702,1703,1704,1733,1761];
+            private _up1xs = [1762,1734,1705,1706,1707,1708,1709,1735,1763];
+            private _cenxs = [1764,1736,1710,1711,1712,1713,1714,1737,1765];
+            private _dn1xs = [1766,1738,1715,1716,1717,1718,1719,1739,1767];
+            private _dn2xs = [1768,1740,1720,1721,1722,1723,1724,1741,1769];
+            private _dn3xs = [1770,1742,1743,1744,1745,1746,1747,1748,1771];
+            private _dn4xs = [1772,1773,1774,1775,1776,1777,1778,1779,1780];
+            private _yarrays = [_up4xs,_up3xs,_up2xs,_up1xs,_cenxs,_dn1xs,_dn2xs,_dn3xs,_dn4xs];
+            while { _gnode > 0 } do
             {
-                private _relations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _gn = 0;
-                private _rn = 0;
+                private _goodbutton = (_yarrays select (floor (random 9))) select (floor (random 9));
+                private _grelations = (_display displayCtrl _goodbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
+                private _gtotal = 0;
+                private _badspot = false;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gn = _gn + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _rn = _rn + 1;};
-                } forEach _relations;
-                (_display displayCtrl _x) setvariable ["FST_HintTotal", [_gn,_rn]];
-            } forEach _x;
-        } forEach _yarrays;
-    };
-    if (_difficulty == 2) then
-    {
-        _gnode = 10;
-        _bnode = 6;
-        _display setVariable ["FST_GoodPoints", 10];
-        _display setVariable ["FST_BadPoints", 6];
-        (_display displayCtrl 1824) ctrlSetText "\41st_Civilians_and_Intel\Data\Green1.paa";
-        (_display displayCtrl 1825) ctrlSetText "\41st_Civilians_and_Intel\Data\Green0.paa";
-        (_display displayCtrl 1827) ctrlSetText "\41st_Civilians_and_Intel\Data\Red6.paa";
-        private _up4xs = [1749,1750,1751,1752,1753,1754,1755,1756,1757];
-        private _up3xs = [1758,1725,1726,1727,1728,1729,1730,1731,1759];
-        private _up2xs = [1760,1732,1700,1701,1702,1703,1704,1733,1761];
-        private _up1xs = [1762,1734,1705,1706,1707,1708,1709,1735,1763];
-        private _cenxs = [1764,1736,1710,1711,1712,1713,1714,1737,1765];
-        private _dn1xs = [1766,1738,1715,1716,1717,1718,1719,1739,1767];
-        private _dn2xs = [1768,1740,1720,1721,1722,1723,1724,1741,1769];
-        private _dn3xs = [1770,1742,1743,1744,1745,1746,1747,1748,1771];
-        private _dn4xs = [1772,1773,1774,1775,1776,1777,1778,1779,1780];
-        private _yarrays = [_up4xs,_up3xs,_up2xs,_up1xs,_cenxs,_dn1xs,_dn2xs,_dn3xs,_dn4xs];
-        while { _gnode > 0 } do
-        {
-            private _goodbutton = (_yarrays select (floor (random 9))) select (floor (random 9));
-            private _grelations = (_display displayCtrl _goodbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
-            private _gtotal = 0;
-            private _badspot = false;
-            {
-                private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _outercheck = 0;
+                    private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _outercheck = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
+                    } forEach _outerrelations;
+                    if (_outercheck >= 4 ) then {_badspot = true};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
+                } forEach _grelations; 
+                if ((_gtotal < 4) && (!_badspot) && !((_display displayCtrl _goodbutton) getvariable ["FST_SetAsAccess", false])) then
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
-                } forEach _outerrelations;
-                if (_outercheck >= 4 ) then {_badspot = true};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gtotal = _gtotal + 1;};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _gtotal = _gtotal + 1;};
-            } forEach _grelations; 
-            if ((_gtotal < 4) && (!_badspot)) then
-            {
-                (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
-                _gnode = _gnode - 1;
+                    (_display displayCtrl _goodbutton) setVariable ["FST_SetAsAccess", true];
+                    _gnode = _gnode - 1;
+                };
             };
-        };
-        while { _bnode > 0 } do
-        {
-            private _badbutton = (_yarrays select (floor (random 9))) select (floor (random 9));
-            private _brelations = (_display displayCtrl _badbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
-            private _btotal = 0;
-            private _badspot = false;
+            while { _bnode > 0 } do
             {
-                private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _outercheck = 0;
+                private _badbutton = (_yarrays select (floor (random 9))) select (floor (random 9));
+                private _brelations = (_display displayCtrl _badbutton) getvariable ["FST_ButtonRelations", [20,20,20]];
+                private _btotal = 0;
+                private _badspot = false;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
-                } forEach _outerrelations;
-                if (_outercheck >= 4 ) then {_badspot = true};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
-                if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
-            } forEach _brelations; 
-            if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot)) then
-            {
-                (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
-                _bnode = _bnode - 1;
+                    private _outerrelations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _outercheck = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _outercheck = _outercheck + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _outercheck = _outercheck + 1;};
+                    } forEach _outerrelations;
+                    if (_outercheck >= 4 ) then {_badspot = true};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _btotal = _btotal + 1;};
+                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _btotal = _btotal + 1;};
+                } forEach _brelations; 
+                if (_btotal < 4 && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsAccess", false]) && (!_badspot) && !((_display displayCtrl _badbutton) getvariable ["FST_SetAsMine", false])) then
+                {
+                    (_display displayCtrl _badbutton) setVariable ["FST_SetAsMine", true];
+                    _bnode = _bnode - 1;
+                };
             };
-        };
-        {
             {
-                private _relations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
-                private _gn = 0;
-                private _rn = 0;
                 {
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gn = _gn + 1;};
-                    if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _rn = _rn + 1;};
-                } forEach _relations;
-                (_display displayCtrl _x) setvariable ["FST_HintTotal", [_gn,_rn]];
-            } forEach _x;
-        } forEach _yarrays;
+                    private _relations = (_display displayCtrl _x) getvariable ["FST_ButtonRelations", [20,20,20]];
+                    private _gn = 0;
+                    private _rn = 0;
+                    {
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsAccess", false]) then { _gn = _gn + 1;};
+                        if ((_display displayCtrl _x) getvariable ["FST_SetAsMine", false]) then { _rn = _rn + 1;};
+                    } forEach _relations;
+                    (_display displayCtrl _x) setvariable ["FST_HintTotal", [_gn,_rn]];
+                } forEach _x;
+            } forEach _yarrays;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
 ["FST_initializeMinefieldButton", {
     params ["_term", "_user", "_clicked", "_total"];
 
-		_clicked setVariable ["FST_HackingData", [_term, _user, _clicked, _total]];
-        _clicked ctrlAddEventHandler 
-		[
-			"ButtonClick",
-			{
-				params ["_control"];
-				private _hackingdata = _control getVariable "FST_HackingData";
-				_hackingdata params ["_term", "_user", "_clicked", "_total"];
-				if ((_clicked getVariable ["FST_RevealedButton", false]) or (_term getVariable ["FST_DeviceAccessed", false]) or (_term getVariable ["FST_DeviceLocked", false]) or (_term getVariable ["FST_DeviceBroken", false])) exitWith {};
+    _clicked setVariable ["FST_HackingData", [_term, _user, _clicked, _total]];
+    _clicked ctrlAddEventHandler 
+    [
+        "MouseButtonDown",
+        {
+            params ["_control", "_button"];
+            private _hackingdata = _control getVariable "FST_HackingData";
+            _hackingdata params ["_term", "_user", "_clicked", "_total"];
+            if ((_clicked getVariable ["FST_RevealedButton", false]) or (_term getVariable ["FST_DeviceAccessed", false]) or (_term getVariable ["FST_DeviceLocked", false]) or (_term getVariable ["FST_DeviceBroken", false])) exitWith {};
+            if (_button == 1) exitWith
+            {
                 if (_clicked getVariable ["FST_SetAsMine", false]) then
                 {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\BadTriangle.paa";
-                    if ((_term getVariable ["FST_AttemptsLeft",0]) > 0) exitWith
+                    playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\CoverFlag.paa";
+                    _clicked setVariable ["FST_RevealedButton", true];
+                    (findDisplay 6970) setVariable ["FST_BadPoints", (((findDisplay 6970) getVariable ["FST_BadPoints",0]) - 1)];
+                    ((findDisplay 6970) displayCtrl 1827) ctrlSetText (["\41st_Civilians_and_Intel\Data\Red0.paa","\41st_Civilians_and_Intel\Data\Red1.paa","\41st_Civilians_and_Intel\Data\Red2.paa","\41st_Civilians_and_Intel\Data\Red3.paa","\41st_Civilians_and_Intel\Data\Red4.paa","\41st_Civilians_and_Intel\Data\Red5.paa"] select ((findDisplay 6970) getVariable ["FST_BadPoints",0]));
+                } else 
+                {
+                    switch ((findDisplay 6970) getVariable ["FST_FlagErrors",3]) do
                     {
-                        _term setVariable ["FST_AttemptsLeft", ((_term getVariable ["FST_AttemptsLeft",0]) - 1), true];
-                        _term setVariable ["FST_DeviceInUse",false,true]; 
-                        _user setVariable ["FST_PlayerIsHacking",false,true];
-		            	playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
-                        hintSilent parseText "<t color='#990000'>The target device detected the hacking attempt and kicked you out<br/> You may try again</t>";
-                        ["FST_showTargets", []] call CBA_fnc_localEvent;
-                        ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
-                        [
+                        case 3:
+                        {
+                            playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+                            (findDisplay 6970) setVariable ["FST_FlagErrors", 2];
+                            ((findDisplay 6970) displayCtrl 1833) ctrlShow true;
+                        };
+                        case 2:
+                        {
+                            playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+                            (findDisplay 6970) setVariable ["FST_FlagErrors", 1];
+                            ((findDisplay 6970) displayCtrl 1834) ctrlShow true;
+                        };
+                        case 1:
+                        {
+                            playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+                            (findDisplay 6970) setVariable ["FST_FlagErrors", 0];
+                            ((findDisplay 6970) displayCtrl 1835) ctrlShow true;
+                            ["FST_flashWarning", [(findDisplay 6970),((findDisplay 6970) displayCtrl 1836)]] spawn CBA_fnc_localEvent;
+                        };
+                        case 0:
+                        {
+                            (findDisplay 6970) setVariable ["FST_FlagErrors", -1];
+                            ((findDisplay 6970) displayCtrl 1836) ctrlShow true;
+                            if ((_term getVariable ["FST_AttemptsLeft",0]) > 0) exitWith
                             {
-                                closeDialog 0;
-                            },
-                            [],
-                            5
-                        ] call CBA_fnc_waitAndExecute;
-                    };
-                    if (_term getVariable ["FST_DeviceRepaired", false]) then
-                    {
-                        _term setVariable ["FST_DeviceLocked", true, true];
-                        _term setVariable ["FST_DeviceInUse",false,true]; 
-                        _user setVariable ["FST_PlayerIsHacking",false,true];
-		            	playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
-                        hintSilent parseText "<t color='#990000'>The target device detected the hacking attempt and has locked down<br/> This is now beyond what you can break into in the field</t>";
-                        ["FST_showTargets", []] call CBA_fnc_localEvent;
-                        ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
-                        [
+                                _term setVariable ["FST_AttemptsLeft", ((_term getVariable ["FST_AttemptsLeft",0]) - 1), true];
+                                _term setVariable ["FST_DeviceInUse",false,true]; 
+                                _user setVariable ["FST_PlayerIsHacking",false,true];
+                                playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
+                                hintSilent parseText "<t color='#990000'>The target device detected the hacking attempt and kicked you out<br/> You may try again</t>";
+                                ["FST_showTargets", []] call CBA_fnc_localEvent;
+                                ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                                [
+                                    {
+                                        closeDialog 0;
+                                    },
+                                    [],
+                                    5
+                                ] call CBA_fnc_waitAndExecute;
+                            };
+                            if (_term getVariable ["FST_DeviceRepaired", false]) then
                             {
-                                closeDialog 0;
-                            },
-                            [],
-                            5
-                        ] call CBA_fnc_waitAndExecute;
-                    };
-                    if !(_term getVariable ["FST_DeviceRepaired", false]) then
-                    {
-                        _term setVariable ["FST_DeviceBroken", true, true];
-                        _term setVariable ["FST_DeviceInUse",false,true]; 
-                        _user setVariable ["FST_PlayerIsHacking",false,true];
-		            	playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
-                        hintSilent parseText "<t color='#990000'>You failed the hack and damaged the target device in the proccess<br/>It will require repairs to try again</t>";
-                        ["FST_showTargets", []] call CBA_fnc_localEvent;
-                        ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
-                        [
+                                _term setVariable ["FST_DeviceLocked", true, true];
+                                _term setVariable ["FST_DeviceInUse",false,true]; 
+                                _user setVariable ["FST_PlayerIsHacking",false,true];
+                                playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
+                                hintSilent parseText "<t color='#990000'>The target device detected the hacking attempt and has locked down<br/> This is now beyond what you can break into in the field</t>";
+                                ["FST_showTargets", []] call CBA_fnc_localEvent;
+                                ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                                [
+                                    {
+                                        closeDialog 0;
+                                    },
+                                    [],
+                                    5
+                                ] call CBA_fnc_waitAndExecute;
+                            };
+                            if !(_term getVariable ["FST_DeviceRepaired", false]) then
                             {
-                                closeDialog 0;
-                            },
-                            [],
-                            5
-                        ] call CBA_fnc_waitAndExecute;
+                                _term setVariable ["FST_DeviceBroken", true, true];
+                                _term setVariable ["FST_DeviceInUse",false,true]; 
+                                _user setVariable ["FST_PlayerIsHacking",false,true];
+                                playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
+                                hintSilent parseText "<t color='#990000'>You failed the hack and damaged the target device in the proccess<br/>It will require repairs to try again</t>";
+                                ["FST_showTargets", []] call CBA_fnc_localEvent;
+                                ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                                [
+                                    {
+                                        closeDialog 0;
+                                    },
+                                    [],
+                                    5
+                                ] call CBA_fnc_waitAndExecute;
+                            };
+                        };
                     };
                 };
-                if (_clicked getVariable ["FST_SetAsAccess", false]) then
+            };
+            if (_clicked getVariable ["FST_SetAsMine", false]) then
+            {
+                _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\BadTriangle.paa";
+                if ((_term getVariable ["FST_AttemptsLeft",0]) > 0) exitWith
                 {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\GoodDiamond.paa";
-                    private _runtotal = ((findDisplay 6970) getVariable ["FST_TotalAccessFound",0]) + 1;
-                    if (_runtotal == _total) then
-                    {
-                        _term setVariable ["FST_DeviceAccessed", true, true];
-                        _term setVariable ["FST_DiffPassed", _total, true];
-                        ((findDisplay 6970) displayCtrl 1825) ctrlSetText "\41st_Civilians_and_Intel\Data\Green0.paa";
-                        ["FST_showTargets", []] call CBA_fnc_localEvent;
-                        ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
-                        [
-                            {
-                                closeDialog 0;
-                            },
-                            [],
-                            5
-                        ] call CBA_fnc_waitAndExecute;
-                    }
-                    else
-                    {
-                        playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
-                        (findDisplay 6970) setVariable ["FST_TotalAccessFound", _runtotal];
-                        ((findDisplay 6970) displayCtrl 1824) ctrlSetText "\41st_Civilians_and_Intel\Data\Green0.paa";
-                        (findDisplay 6970) setVariable ["FST_GoodPoints", (((findDisplay 6970) getVariable ["FST_GoodPoints",0]) - 1)];
-                        ((findDisplay 6970) displayCtrl 1825) ctrlSetText (["\41st_Civilians_and_Intel\Data\Green0.paa","\41st_Civilians_and_Intel\Data\Green1.paa","\41st_Civilians_and_Intel\Data\Green2.paa","\41st_Civilians_and_Intel\Data\Green3.paa","\41st_Civilians_and_Intel\Data\Green4.paa","\41st_Civilians_and_Intel\Data\Green5.paa","\41st_Civilians_and_Intel\Data\Green6.paa","\41st_Civilians_and_Intel\Data\Green7.paa","\41st_Civilians_and_Intel\Data\Green8.paa","\41st_Civilians_and_Intel\Data\Green9.paa"] select ((findDisplay 6970) getVariable ["FST_GoodPoints",0]));
-			        	_clicked setVariable ["FST_RevealedButton", true];
-                    };
+                    _term setVariable ["FST_AttemptsLeft", ((_term getVariable ["FST_AttemptsLeft",0]) - 1), true];
+                    _term setVariable ["FST_DeviceInUse",false,true]; 
+                    _user setVariable ["FST_PlayerIsHacking",false,true];
+                    playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
+                    hintSilent parseText "<t color='#990000'>The target device detected the hacking attempt and kicked you out<br/> You may try again</t>";
+                    ["FST_showTargets", []] call CBA_fnc_localEvent;
+                    ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                    [
+                        {
+                            closeDialog 0;
+                        },
+                        [],
+                        5
+                    ] call CBA_fnc_waitAndExecute;
                 };
-                if ((_clicked getVariable ["FST_SetAsAccess", false]) or (_clicked getVariable ["FST_SetAsMine", false])) exitWith {};
-                playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
-				_clicked setVariable ["FST_RevealedButton", true];
-				private _hint = _clicked getVariable ["FST_HintTotal", [0,0]];
-                if ((_hint select 0) == 4) then {_clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_4_0.paa";};
-                if ((_hint select 1) == 4) then {_clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_4.paa";};
-                if ((_hint select 0) == 0) then
+                if (_term getVariable ["FST_DeviceRepaired", false]) then
                 {
-                    if ((_hint select 1) == 0) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_0.paa";
-                        ["FST_revealButtons", [_clicked]] call CBA_fnc_localEvent;
-                    };
-                    if ((_hint select 1) == 1) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_1.paa";
-                    };
-                    if ((_hint select 1) == 2) then
-                    { 
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_2.paa";
-                    };
-                    if ((_hint select 1) == 3) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_3.paa";
-                    };
+                    _term setVariable ["FST_DeviceLocked", true, true];
+                    _term setVariable ["FST_DeviceInUse",false,true]; 
+                    _user setVariable ["FST_PlayerIsHacking",false,true];
+                    playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
+                    hintSilent parseText "<t color='#990000'>The target device detected the hacking attempt and has locked down<br/> This is now beyond what you can break into in the field</t>";
+                    ["FST_showTargets", []] call CBA_fnc_localEvent;
+                    ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                    [
+                        {
+                            closeDialog 0;
+                        },
+                        [],
+                        5
+                    ] call CBA_fnc_waitAndExecute;
                 };
-                if ((_hint select 0) == 1) then
+                if !(_term getVariable ["FST_DeviceRepaired", false]) then
                 {
-                    if ((_hint select 1) == 0) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_0.paa";
-                    };
-                    if ((_hint select 1) == 1) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_1.paa";
-                    };
-                    if ((_hint select 1) == 2) then
-                    { 
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_2.paa";
-                    };
-                    if ((_hint select 1) == 3) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_3.paa";
-                    };
+                    _term setVariable ["FST_DeviceBroken", true, true];
+                    _term setVariable ["FST_DeviceInUse",false,true]; 
+                    _user setVariable ["FST_PlayerIsHacking",false,true];
+                    playSound3D ["a3\missions_f_bootcamp\data\sounds\vr_shutdown.wss", _term,false, getPosASL _term,5,1,20];
+                    hintSilent parseText "<t color='#990000'>You failed the hack and damaged the target device in the proccess<br/>It will require repairs to try again</t>";
+                    ["FST_showTargets", []] call CBA_fnc_localEvent;
+                    ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                    [
+                        {
+                            closeDialog 0;
+                        },
+                        [],
+                        5
+                    ] call CBA_fnc_waitAndExecute;
                 };
-                if ((_hint select 0) == 2) then
+            };
+            if (_clicked getVariable ["FST_SetAsAccess", false]) then
+            {
+                _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\GoodDiamond.paa";
+                private _runtotal = ((findDisplay 6970) getVariable ["FST_TotalAccessFound",0]) + 1;
+                if (_runtotal == _total) then
                 {
-                    if ((_hint select 1) == 0) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_0.paa";
-                    };
-                    if ((_hint select 1) == 1) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_1.paa";
-                    };
-                    if ((_hint select 1) == 2) then
-                    { 
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_2.paa";
-                    };
-                };
-                if ((_hint select 0) == 3) then
+                    _term setVariable ["FST_DeviceAccessed", true, true];
+                    _term setVariable ["FST_DiffPassed", _total, true];
+                    ((findDisplay 6970) displayCtrl 1825) ctrlSetText "\41st_Civilians_and_Intel\Data\Green0.paa";
+                    ["FST_showTargets", []] call CBA_fnc_localEvent;
+                    ((findDisplay 6970) displayCtrl 6001) ctrlShow true;
+                    [
+                        {
+                            closeDialog 0;
+                        },
+                        [],
+                        5
+                    ] call CBA_fnc_waitAndExecute;
+                }
+                else
                 {
-                    if ((_hint select 1) == 0) then
+                    playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+                    (findDisplay 6970) setVariable ["FST_TotalAccessFound", _runtotal];
+                    ((findDisplay 6970) displayCtrl 1824) ctrlSetText "\41st_Civilians_and_Intel\Data\Green0.paa";
+                    (findDisplay 6970) setVariable ["FST_GoodPoints", (((findDisplay 6970) getVariable ["FST_GoodPoints",0]) - 1)];
+                    ((findDisplay 6970) displayCtrl 1825) ctrlSetText (["\41st_Civilians_and_Intel\Data\Green0.paa","\41st_Civilians_and_Intel\Data\Green1.paa","\41st_Civilians_and_Intel\Data\Green2.paa","\41st_Civilians_and_Intel\Data\Green3.paa","\41st_Civilians_and_Intel\Data\Green4.paa","\41st_Civilians_and_Intel\Data\Green5.paa","\41st_Civilians_and_Intel\Data\Green6.paa","\41st_Civilians_and_Intel\Data\Green7.paa","\41st_Civilians_and_Intel\Data\Green8.paa","\41st_Civilians_and_Intel\Data\Green9.paa"] select ((findDisplay 6970) getVariable ["FST_GoodPoints",0]));
+                    _clicked setVariable ["FST_RevealedButton", true];
+                };
+            };
+            if ((_clicked getVariable ["FST_SetAsAccess", false]) or (_clicked getVariable ["FST_SetAsMine", false])) exitWith {};
+            playSoundUI [(selectRandom ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick1.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick2.ogg","3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\Clicks\DatapadClick3.ogg"]),4,1,true];
+            _clicked setVariable ["FST_RevealedButton", true];
+            private _hint = _clicked getVariable ["FST_HintTotal", [0,0]];
+            if ((_hint select 0) == 4) then {_clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_4_0.paa";};
+            if ((_hint select 1) == 4) then {_clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_4.paa";};
+            switch (_hint select 0) do
+            {
+                case 0:
+                {
+                    switch (_hint select 1) do
                     {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_0.paa";
-                    };
-                    if ((_hint select 1) == 1) then
-                    {
-                        _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_1.paa";
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_0.paa";
+                            ["FST_revealButtons", [_clicked]] call CBA_fnc_localEvent;
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_1.paa";
+                        };
+                        case 2: 
+                        { 
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_2.paa";
+                        };
+                        case 3: 
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_3.paa";
+                        };
                     };
                 };
-			}
-		];
+                case 1:
+                {
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_0.paa";
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_1.paa";
+                        };
+                        case 2:
+                        { 
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_2.paa";
+                        };
+                        case 3:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_3.paa";
+                        };
+                    };
+                };
+                case 2:
+                {
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_0.paa";
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_1.paa";
+                        };
+                        case 2:
+                        { 
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_2.paa";
+                        };
+                    };
+                };
+                case 3:
+                {
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_0.paa";
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_1.paa";
+                        };
+                    };
+                };
+            };
+        }
+    ];
 }] call CBA_fnc_addEventHandler;
 
 ["FST_showTargets", {
@@ -663,6 +772,28 @@
 
 }] call CBA_fnc_addEventHandler;
 
+["FST_flashWarning", {
+    params ["_display","_icon"];
+
+    while {_display getVariable ["FST_FlagErrors",0] == 0} do
+    {
+        switch (_icon getVariable ["FST_Blinker", true]) do
+        {
+            case true:
+            {
+                _icon ctrlShow false;
+                _icon setVariable ["FST_Blinker", false];
+            };
+            case false:
+            {
+                _icon ctrlShow true;
+                _icon setVariable ["FST_Blinker", true];
+            };
+        };
+        sleep 0.3;
+    };
+}] call CBA_fnc_addEventHandler;
+
 ["FST_revealButtons", {
     params ["_button"];
     private _display = findDisplay 6970;
@@ -674,69 +805,84 @@
             private _hint = _clicked getVariable ["FST_HintTotal", [0,0]];
             if ((_hint select 0) == 4) then {_clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_4_0.paa";};
             if ((_hint select 1) == 4) then {_clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_4.paa";};
-            if ((_hint select 0) == 0) then
+            switch (_hint select 0) do
             {
-                if ((_hint select 1) == 0) then
+                case 0:
                 {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_0.paa";
-                    ["FST_revealButtons", [_clicked]] call CBA_fnc_localEvent;
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_0.paa";
+                            ["FST_revealButtons", [_clicked]] call CBA_fnc_localEvent;
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_1.paa";
+                        };
+                        case 2: 
+                        { 
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_2.paa";
+                        };
+                        case 3: 
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_3.paa";
+                        };
+                    };
                 };
-                if ((_hint select 1) == 1) then
+                case 1:
                 {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_1.paa";
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_0.paa";
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_1.paa";
+                        };
+                        case 2:
+                        { 
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_2.paa";
+                        };
+                        case 3:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_3.paa";
+                        };
+                    };
                 };
-                if ((_hint select 1) == 2) then
-                { 
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_2.paa";
-                };
-                if ((_hint select 1) == 3) then
+                case 2:
                 {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_0_3.paa";
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_0.paa";
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_1.paa";
+                        };
+                        case 2:
+                        { 
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_2.paa";
+                        };
+                    };
                 };
-            };
-            if ((_hint select 0) == 1) then
-            {
-                if ((_hint select 1) == 0) then
+                case 3:
                 {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_0.paa";
-                };
-                if ((_hint select 1) == 1) then
-                {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_1.paa";
-                };
-                if ((_hint select 1) == 2) then
-                { 
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_2.paa";
-                };
-                if ((_hint select 1) == 3) then
-                {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_1_3.paa";
-                };
-            };
-            if ((_hint select 0) == 2) then
-            {
-                if ((_hint select 1) == 0) then
-                {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_0.paa";
-                };
-                if ((_hint select 1) == 1) then
-                {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_1.paa";
-                };
-                if ((_hint select 1) == 2) then
-                { 
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_2_2.paa";
-                };
-            };
-            if ((_hint select 0) == 3) then
-            {
-                if ((_hint select 1) == 0) then
-                {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_0.paa";
-                };
-                if ((_hint select 1) == 1) then
-                {
-                    _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_1.paa";
+                    switch (_hint select 1) do
+                    {
+                        case 0:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_0.paa";
+                        };
+                        case 1:
+                        {
+                            _clicked ctrlSetText "\41st_Civilians_and_Intel\Data\HackResult_3_1.paa";
+                        };
+                    };
                 };
             };
         };
@@ -786,3 +932,4 @@
     closeDialog 0;
 
 }] call CBA_fnc_addEventHandler;
+

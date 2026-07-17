@@ -6282,7 +6282,7 @@ if (_term getVariable ["FST_DeviceAccessed", false]) exitWith
 		false
 	] call CBA_fnc_progressBar;
 };
-createDialog "FST_HackDeviceDialog";
+createDialog "FST_HackDeviceDisplay";
 private _display = findDisplay 6970;
 _display setVariable ["FST_HackingData", [_term, _user]];
 {
@@ -6306,6 +6306,15 @@ _display setVariable ["FST_HackingData", [_term, _user]];
 	_display displayCtrl 1825,
 	_display displayCtrl 1826,
 	_display displayCtrl 1827,
+	_display displayCtrl 1828,
+	_display displayCtrl 1829,
+	_display displayCtrl 1830,
+	_display displayCtrl 1831,
+	_display displayCtrl 1832,
+	_display displayCtrl 1833,
+	_display displayCtrl 1834,
+	_display displayCtrl 1835,
+	_display displayCtrl 1836,
 	_display displayCtrl 6000,
 	_display displayCtrl 6001
 ];
@@ -6396,18 +6405,59 @@ _display setVariable ["FST_HackingData", [_term, _user]];
 	_display displayCtrl 1779,
 	_display displayCtrl 1780
 ];
+_display setVariable ["FST_TFARKeys", [["tfar", "NextRadio"] call CBA_fnc_getKeybind, ["tfar", "NextRadioSW"] call CBA_fnc_getKeybind]];
 _display displayAddEventHandler
 [
 	"KeyDown",
 	{
-		params ["_display", "_key"];
+		params ["_display", "_key", "_shift", "_ctrl", "_alt"];
 		private _hackingdata = _display getVariable "FST_HackingData";
 		_hackingdata params ["_term", "_user"];
+		private _keys = _display getVariable "FST_TFARKeys";
+		private _srData = _keys select 0;
+		private _lrData = _keys select 1;
+		private _srkey =  (_srData select 0) select 0;
+		private _srmods = [(_srData select 0) select 1, (_srData select 0) select 2, (_srData select 0) select 3];
+		private _lrkey =  (_lrData select 0) select 0;
+		private _lrmods = [(_lrData select 0) select 1, (_lrData select 0) select 2, (_lrData select 0) select 3];
+		if (_key == _srkey && ((_srmods isEqualTo [false,false,false]) or ((_shift isEqualTo (_srmods select 0)) && (_ctrl isEqualTo (_srmods select 1)) && (_alt isEqualTo (_srmods select 2))))) then {
+			if !(_user getVariable ["FST_SROn", false]) then {
+				_user setVariable ["FST_SROn",true,true];
+				[TFAR_currentUnit, false] call TFAR_fnc_processRadioOnKeyDown;
+			};
+		};
+		if (_key == _lrkey && ((_lrmods isEqualTo [false,false,false]) or ((_shift isEqualTo (_lrmods select 0)) && (_ctrl isEqualTo (_lrmods select 1)) && (_alt isEqualTo (_lrmods select 2))))) then {
+			if !(_user getVariable ["FST_LROn", false]) then {
+				_user setVariable ["FST_LROn",true,true];
+				[TFAR_currentUnit, true] call TFAR_fnc_processRadioOnKeyDown;
+			};
+		};
 		if (_key in [1, 219, 220]) then 
 		{
 			hintSilent parseText "<t color='#d67e09'>Hack cancelled</t>";
 			_term setVariable ["FST_DeviceInUse",false,true];
 			_user setVariable ["FST_PlayerIsHacking",false,true];
+		};
+	}
+];
+_display displayAddEventHandler
+[
+	"KeyUp",
+	{
+		params ["_display", "_key"];
+		private _hackingdata = _display getVariable "FST_HackingData";
+		_hackingdata params ["_term", "_user"];
+		private _srData = ["tfar", "NextRadio"] call CBA_fnc_getKeybind;
+		private _lrData = ["tfar", "NextRadioSW"] call CBA_fnc_getKeybind;
+		private _srkey =  (_srData select 0) select 0;
+		private _lrkey =  (_lrData select 0) select 0;
+		if (_key == _srkey) then {
+			_user setVariable ["FST_SROn",false,true];
+			[TFAR_currentUnit, false] call TFAR_fnc_processRadioOnKeyUp;
+		};
+		if (_key == _lrkey) then {
+			_user setVariable ["FST_LROn",false,true];
+			[TFAR_currentUnit, true] call TFAR_fnc_processRadioOnKeyUp;
 		};
 	}
 ];
@@ -6474,7 +6524,12 @@ _button1900 ctrlAddEventHandler
 			_display displayCtrl 1824,
 			_display displayCtrl 1825,
 			_display displayCtrl 1826,
-			_display displayCtrl 1827
+			_display displayCtrl 1827,
+			_display displayCtrl 1828,
+			_display displayCtrl 1829,
+			_display displayCtrl 1830,
+			_display displayCtrl 1831,
+			_display displayCtrl 1832
 		];
 		["FST_setGridRelations", [_display, 0]] call CBA_fnc_localEvent;
 		["FST_setUpMinefieldGame", [_display, 0]] call CBA_fnc_localEvent;
@@ -6528,6 +6583,8 @@ _button1900 ctrlAddEventHandler
 			{
 				params ["_arguments"];
 				_arguments params ["_term", "_user"];
+				_term setVariable ["FST_DeviceInUse",false,true]; 
+				_user setVariable ["FST_PlayerIsHacking",false,true];
 				if (_term getVariable ["FST_DeviceAccessed", false]) then 
 				{
 					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
@@ -6620,7 +6677,12 @@ _button1901 ctrlAddEventHandler
 			_display displayCtrl 1824,
 			_display displayCtrl 1825,
 			_display displayCtrl 1826,
-			_display displayCtrl 1827
+			_display displayCtrl 1827,
+			_display displayCtrl 1828,
+			_display displayCtrl 1829,
+			_display displayCtrl 1830,
+			_display displayCtrl 1831,
+			_display displayCtrl 1832
 		];
 		["FST_setGridRelations", [_display, 1]] call CBA_fnc_localEvent;
 		["FST_setUpMinefieldGame", [_display, 1]] call CBA_fnc_localEvent;
@@ -6698,6 +6760,8 @@ _button1901 ctrlAddEventHandler
 			{
 				params ["_arguments"];
 				_arguments params ["_term", "_user"];
+				_term setVariable ["FST_DeviceInUse",false,true]; 
+				_user setVariable ["FST_PlayerIsHacking",false,true];
 				if (_term getVariable ["FST_DeviceAccessed", false]) then 
 				{
 					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
@@ -6790,7 +6854,12 @@ _button1902 ctrlAddEventHandler
 			_display displayCtrl 1824,
 			_display displayCtrl 1825,
 			_display displayCtrl 1826,
-			_display displayCtrl 1827
+			_display displayCtrl 1827,
+			_display displayCtrl 1828,
+			_display displayCtrl 1829,
+			_display displayCtrl 1830,
+			_display displayCtrl 1831,
+			_display displayCtrl 1832
 		];
 		["FST_setGridRelations", [_display, 2]] call CBA_fnc_localEvent;
 		["FST_setUpMinefieldGame", [_display, 2]] call CBA_fnc_localEvent;
@@ -6900,6 +6969,8 @@ _button1902 ctrlAddEventHandler
 			{
 				params ["_arguments"];
 				_arguments params ["_term", "_user"];
+				_term setVariable ["FST_DeviceInUse",false,true]; 
+				_user setVariable ["FST_PlayerIsHacking",false,true];
 				if (_term getVariable ["FST_DeviceAccessed", false]) then 
 				{
 					playSoundUI ["3as\3AS_Weapons\Roleplay\sounds\RepublicDatapad\dataprocess\datapadprocess1.ogg",4,1,true];
