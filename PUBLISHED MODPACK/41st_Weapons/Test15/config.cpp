@@ -12,7 +12,9 @@ class CfgPatches
 		weapons[]=
 		{
 			"FST_T21",
-			"FST_Optic_MRCO_T21"
+			"FST_Optic_MRCO_T21",
+			"FST_T21B",
+			"FST_Optic_T21B"
 		};
 	};
 };
@@ -28,7 +30,18 @@ class PointerSlot;
 class CfgRecoils
 {
 	class FST_recoil_T15;
-	class FST_recoil_T21: FST_recoil_T15 {};
+	// Cowboys Op (Salt): T-21 recoil too heavy -- burst walked off after round 1
+	// and single pulled. The per-firemode "empty" recoil override didn't take in
+	// the modset, so recoil is lightened here at the WEAPON level (applies to both
+	// single and burst). FST_recoil_T15 uses muzzleOuter y=2 (heavy); these values
+	// sit just above the DC-15A trooper rifle (y=0.35) -- a controllable, weighty
+	// kick that keeps the 3-round burst on target.
+	class FST_recoil_T21: FST_recoil_T15
+	{
+		muzzleOuter[]={0,0.45,0.3,0.15};
+		kickBack[]={0.02,0.05};
+		temporary=0.012;
+	};
 };
 
 class CfgAmmo
@@ -41,22 +54,29 @@ class CfgAmmo
 		effectFly="IDA_BlasterBoltGlow_Medium_Blue_Fly";
 		ACE_damageType="plasma";
 
-		// Clean direct-fire LP-derived round.
-		// No submunitions, no splash, no hidden secondary projectile.
-		hit=115;
-		indirectHit=0;
-		indirectHitRange=0;
-		explosive=0;
+		// --- Cowboys Op (7/11/26) feedback tuning ---
+		// Was effectively a worse DC-15: ~250m range, wind-tossed, and near-zero
+		// damage vs AAT / N99 / B2 (26 rnds into an AAT did nothing). Given a small
+		// HE component + real penetration so it can actually chip armour and reliably
+		// kill B2s -- but still well short of the T-15 (caliber 20, hit 400, airburst),
+		// which stays the dedicated AT weapon.
+		hit=150;
+		indirectHit=8;        // small HE leak so rounds bite armour instead of pinging off
+		indirectHitRange=0.3; // tiny radius -- still a precise rifle, not an area weapon
+		explosive=1;
 
-		// Anti-material pressure without inheriting the current HP tank-delete behavior.
-		caliber=3;
+		// caliber 12: real penetration vs medium armour / components / B2s.
+		// Still below the T-15 HP round (caliber 20) and the T-21B AMR (caliber 14),
+		// so the damage hierarchy stays T-15 > T-21B > T-21.
+		caliber=12;
 
-		// Approximate Battlefront-style short damage falloff through velocity loss.
-		// There is no literal CfgAmmo "drop-off start/end" pair in Arma 3.
-		typicalSpeed=300;
-		airFriction=-0.01;
+		// Higher muzzle velocity fixes BOTH the range and the wind complaints:
+		// ~500 m/s roughly halves time-of-flight vs the old 300, cutting wind drift
+		// and required lead, and the longer TTL lets the round reach past 250m.
+		typicalSpeed=500;
+		airFriction=-0.005;
 
-		timeToLive=0.9;
+		timeToLive=1.5;       // ~500 m/s x 1.5s -> engages armour well beyond 250m
 		coefGravity=0.02;
 		waterFriction=-0.01;
 		deflecting=0;
@@ -80,6 +100,38 @@ class CfgAmmo
 	class FST_thermal_shell_T21_Green: FST_thermal_shell_T21_Blue {};
 	class FST_thermal_shell_T21_Yellow: FST_thermal_shell_T21_Blue {};
 	class FST_thermal_shell_T21_Red: FST_thermal_shell_T21_Blue {};
+
+	// ---------------------------------------------------------------
+	// T-21B: long-range, high-precision ANTI-MATERIAL round.
+	// Faster, flatter and far longer-lived than the T-21 battle round,
+	// with serious penetration (caliber 14) for materiel / components /
+	// light-medium armour at range -- but still below the T-15 HP
+	// tank-delete round (caliber 20), so the T-15 stays the top AT.
+	// Clean kinetic slug: no splash, no submunition (precision identity).
+	// ---------------------------------------------------------------
+	class FST_thermal_shell_T21B_Blue: FST_thermal_shell_T21_Blue
+	{
+		// --- Cowboys Op (T-21B / Assassin) feedback tuning ---
+		// Good vs B1s/turrets (1-2 shots) but ~20 shots to kill an AAT/Hellfire,
+		// and bolts curved in the wind at range. Response: more penetration + a
+		// modest HE component for materiel, and much higher muzzle velocity to
+		// flatten the trajectory and cut wind drift. Still below the T-15 HP round.
+		hit=300;
+		indirectHit=12;        // modest HE so it chews vehicles/materiel (was 0)
+		indirectHitRange=0.4;  // small radius -- still a precision AMR, not area
+		explosive=1;
+
+		caliber=16;            // up from 14; still below T-15 HP (20) -> T-15 leads AT
+
+		// High velocity fixes the wind-curve at range: flatter, faster, less drift.
+		typicalSpeed=750;      // up from 550
+		airFriction=-0.003;    // less drag -> holds velocity out to distance
+		timeToLive=3.0;
+		coefGravity=0.02;
+	};
+	class FST_thermal_shell_T21B_Green: FST_thermal_shell_T21B_Blue {};
+	class FST_thermal_shell_T21B_Yellow: FST_thermal_shell_T21B_Blue {};
+	class FST_thermal_shell_T21B_Red: FST_thermal_shell_T21B_Blue {};
 };
 
 class CfgMagazines
@@ -97,7 +149,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		ammo="FST_thermal_shell_T21_Blue";
 		count=12;
-		initSpeed=300;
+		initSpeed=500; // raised from 300 (Cowboys Op feedback: range + wind)
 		mass=35;
 	};
 
@@ -121,6 +173,36 @@ class CfgMagazines
 		displayNameShort="T-21 Coil (Red)";
 		ammo="FST_thermal_shell_T21_Red";
 	};
+
+	// T-21B anti-material coils: small precision magazine, high muzzle velocity.
+	class FST_thermal_coil_T21B_Blue: FST_thermal_coil_T21_Blue
+	{
+		displayName="[41st] T-21B AMR Coil (Blue)";
+		displayNameShort="T-21B Coil (Blue)";
+		descriptionShort="5 round capacity.";
+		ammo="FST_thermal_shell_T21B_Blue";
+		count=5;          // 5-round cap -- MUST force a reload; see op ammo-bug note
+		initSpeed=750;    // matched to the round's new velocity (was 550)
+		mass=20;
+	};
+	class FST_thermal_coil_T21B_Green: FST_thermal_coil_T21B_Blue
+	{
+		displayName="[41st] T-21B AMR Coil (Green)";
+		displayNameShort="T-21B Coil (Green)";
+		ammo="FST_thermal_shell_T21B_Green";
+	};
+	class FST_thermal_coil_T21B_Yellow: FST_thermal_coil_T21B_Blue
+	{
+		displayName="[41st] T-21B AMR Coil (Yellow)";
+		displayNameShort="T-21B Coil (Yellow)";
+		ammo="FST_thermal_shell_T21B_Yellow";
+	};
+	class FST_thermal_coil_T21B_Red: FST_thermal_coil_T21B_Blue
+	{
+		displayName="[41st] T-21B AMR Coil (Red)";
+		displayNameShort="T-21B Coil (Red)";
+		ammo="FST_thermal_shell_T21B_Red";
+	};
 };
 
 class CfgWeapons
@@ -136,6 +218,7 @@ class CfgWeapons
 	class IDA_T15;
 
 	class optic_MRCO;
+	class optic_LRPS;
 	class InventoryOpticsItem_Base_F;
 	class FST_Optic_MRCO_T21: optic_MRCO
 	{
@@ -308,8 +391,11 @@ class CfgWeapons
 
 			// Remove recoil only from burst mode.
 			// Single still uses the weapon-level FST_recoil_T21.
-			recoil="recoil_empty";
-			recoilProne="recoil_empty";
+			// "empty" is the vanilla zero-recoil class (from A3_Weapons_F).
+			// The previous "recoil_empty" was not a real class, so the engine
+			// fell back to the weapon-level FST_recoil_T21 and burst still kicked.
+			recoil="empty";
+			recoilProne="empty";
 
 			sounds[]=
 			{
@@ -430,6 +516,74 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 					"3AS_Bipod_VK38X_F"
+				};
+			};
+		};
+	};
+
+	// ===============================================================
+	// T-21B: long-range high-precision ANTI-MATERIAL rifle (scoped).
+	// Single fire only, very low dispersion, slow deliberate cadence,
+	// heavy. Ships with the dedicated FST_Optic_T21B long-range scope.
+	// Inherits model / sounds / recoil / slots from FST_T21; only the
+	// role-defining stats are overridden below.
+	// ===============================================================
+	class FST_Optic_T21B: optic_LRPS
+	{
+		author="41st";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[41st] T-21B AMR Scope";
+		descriptionShort="Long-range precision optic for the T-21B anti-material rifle.";
+		// Cowboys Op: the MRCO-based scope sat at ~1x (the nested zoom override
+		// never applied), so troopers said it felt like a holo. Re-based on the
+		// vanilla LRPS optic, which has real high magnification + long-range
+		// zeroing out of the box -- guaranteed to actually zoom. Cosmetically a
+		// vanilla scope for now; can be reskinned to an SW model later once the
+		// magnification is confirmed good in-game.
+	};
+
+	class FST_T21B: FST_T21
+	{
+		author="Gold";
+		scope=2;
+		scopeArsenal=2;
+		baseWeapon="FST_T21B";
+		displayName="[41st] T-21B Anti-Material Rifle";
+		descriptionShort="Long-range, high-precision anti-material blaster.";
+
+		// Precision AMR: single fire only, no burst.
+		modes[]={"Single"};
+
+		// Anti-material coils only.
+		magazines[]=
+		{
+			"FST_thermal_coil_T21B_Blue",
+			"FST_thermal_coil_T21B_Green",
+			"FST_thermal_coil_T21B_Yellow",
+			"FST_thermal_coil_T21B_Red"
+		};
+
+		// Re-open the inherited Single mode: slower cadence, tighter grouping.
+		class Single
+		{
+			reloadTime=0.85;   // ~70 RPM deliberate marksman cadence
+			dispersion=0.0004; // tight precision grouping
+		};
+
+		// Re-open the inherited slots: heavier, and add the AMR scope options.
+		class WeaponSlotsInfo
+		{
+			mass=120; // heavy anti-material rifle
+			class CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"FST_Optic_T21B",
+					"FST_Optic_MRCO_T21",
+					"FST_Attachment_Optic_Holo_DC15",
+					"optic_LRPS",
+					"optic_SOS"
 				};
 			};
 		};

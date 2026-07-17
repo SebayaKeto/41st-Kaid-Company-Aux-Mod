@@ -633,6 +633,46 @@ if (isNull _box) exitWith {
 
 [
     _box,
+    "Anti-Material",
+    [
+        ["FST_T21B","","","FST_Optic_T21B",["FST_thermal_coil_T21B_Blue",5],[],"3AS_bipod_VK38X_F"],
+        [],
+        ["IDA_Clone_Knife","","","",[],[],""],
+        ["FST_Trooper_Uniform",[
+            ["IDA_BactaBandage",20],
+            ["IDA_BattleStim",2],
+            ["ACE_splint",4],
+            ["ACE_tourniquet",5],
+            ["ACE_EntrenchingTool",1],
+            ["WBK_HeadLampItem_Double",1],
+            ["ACE_Flashlight_XL50",1],
+            ["ACE_IR_Strobe_Item",1],
+            ["ACE_CableTie",2]
+        ]],
+        ["FST_Vest_Base",[
+            ["FST_grenade_Detonator_mag",3,1],
+            ["IDA_grenade_Smoke_mag",3,1],
+            ["IDA_grenade_Smoke_Blue_mag",1,1],
+            ["ls_grenade_chemlightGreen_magazine",1,1],
+            ["IDA_grenade_Smoke_Purple_mag",1,1],
+            ["FST_thermal_coil_T21B_Blue",5,5]
+        ]],
+        ["FST_Backpack_Jumppack_RifleAT",[
+            ["FST_thermal_coil_T21B_Blue",8,5]
+        ]],
+        "FST_Airborne_Helmet",
+        "",
+        ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]
+    ],
+    ["FST_T21B","FST_Optic_T21B","FST_Vest_Base","FST_Vest_HeavyBag","FST_Vest_HeavyBag_Veteran"],
+    "true",
+    {},
+    "airborne"
+] spawn Wbk_AddKit;
+
+[
+    _box,
     "Engineer",
     [
         ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
