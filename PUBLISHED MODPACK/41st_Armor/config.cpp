@@ -145,6 +145,7 @@ class CfgPatches
 			"FST_P2_Hijack",
 			"FST_P2_Mixer",
 			"FST_P2_Vengence",
+			"FST_P2_Vengence_Dirty",
 			"FST_P2_Viper",
 			"FST_P2_Viper_Dirty",
 			"FST_P2_Rook",
@@ -290,12 +291,12 @@ class CfgPatches
 			"FST_P2_Rint_Dirty",
 			"FST_P2_Rint_V2",
 			"FST_P2_Rint_V2_Dirty",
-			"FST_P2_CosmicSmith",
 			"FST_P2_Tally",
 			"FST_P2_Church",
 			"FST_P2_Xeha",
 			"FST_P2_Xeha_Dirty",
 			"FST_P2_Ace",
+			"FST_P2_Ace_Dirty",
 			"FST_P2_Samurai",
 			"FST_P2_Samurai_Dirty",
 			"FST_P2_Ruby",
@@ -316,6 +317,7 @@ class CfgPatches
 			"FST_P2_Ajax",
 			"FST_P2_Vixen",
 			"FST_P2_Cosmic",
+			"FST_P2_Cosmic_Dirty",
 			"FST_P2_Mono",
 			"FST_P2_Mono_Dirty",
 			"FST_P2_Warlock",
@@ -399,7 +401,6 @@ class CfgPatches
 			"FST_P2_Buddhah",
 			"FST_P2_Buddhah_Dirty",
 			"FST_P2_Raz",
-			"FST_P2_Cosmic_Dirty",
 			"FST_P2_Phoenix",
 			"FST_P2_Blueeye",
 			"FST_P2_Arcus",
@@ -9966,7 +9967,17 @@ class CfgWeapons
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\data\Helmets\FST_AB_Helmet_Vengeance.paa",
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Vengence.paa",
+		};
+	}; 
+	class FST_Airborne_Helmet_Vengence_Dirty: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Vengence/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Vengence_Dirty.paa",
 		};
 	}; 
  	class FST_Airborne_Helmet_Brick: FST_Airborne_Helmet
@@ -11047,6 +11058,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Bogu: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Bogu]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bogu.paa",
 		};
 	};
 	class FST_P2_Helmet_Quill: FST_P2_Helmet_Base
@@ -13653,6 +13674,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Gunner.paa",
 		};
 	};
+	class FST_P2_Helmet_Cosmic: FST_P2_Helmet_Base
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] P2 Helmet [Cosmic]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cosmic.paa",
+		};
+	}; 
 	class FST_P2_Helmet_Cosmic_Dirty: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -13661,16 +13692,6 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cosmic_Dirty.paa",
-		};
-	};
-	class FST_P2_Helmet_CosmicSmith: FST_P2_Helmet_Base
-	{
-		author="Daara";
-		scope=2;
-		displayName="[41st] P2 Helmet [CosmicSmith]";
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Helmets\FST_P2_Helmet_Cosmic.paa",
 		};
 	};
 	class FST_P2_Helmet_Freezer: FST_P2_Helmet_Base
@@ -16004,6 +16025,20 @@ class CfgWeapons
 			mass=15;
 		};
 	}; 
+	class FST_Uniform_Vengence_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Vengence/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Vengence_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
  	class FST_Uniform_Rook: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -17259,6 +17294,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Ace";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Ace_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Ace/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Ace_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -18967,20 +19016,6 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Xeha";
-			uniformType="Neopren";
-			containerClass="Supply180";
-			mass=15;
-		};
-	}; 
- 	class FST_Uniform_CosmicSmith: JLTS_CloneArmor
-	{
-		author="Daara";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [CosmicSmith]";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="";
-			uniformClass="FST_P2_CosmicSmith";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -26693,6 +26728,15 @@ class CfgVehicles
 			}
 		};
 		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Vengence_Dirty: FST_Backpack_Jumppack_Ares
+	{
+		author="Steel";
+		displayname="[41st] Jump Pack (Vengence/Dirty)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vengence_Dirty.paa"
+		};
 	};
 	class FST_Backpack_Jumppack_Cowboy: FST_Backpack_Jumppack
 	{
@@ -38315,6 +38359,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Vengence_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-2325 'Vengence/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Vengence_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Vengence_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Vengence_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Vengence_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Vengence_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Rook: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -42387,6 +42486,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Ace",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Ace_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-4686 'Ace/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Ace_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Ace_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Ace_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Crewman_Helmet_Mk2_Ace_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Crewman_Helmet_Mk2_Ace_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -49804,61 +49958,6 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	}; 
-	class FST_P2_CosmicSmith: FST_Trooper_P2_DC15S
-	{
-		author="Daara";
-		displayName="[41st] CT-2112 'CosmicSmith'";
-		scope=2;
-		Backpack="";
-		side=1;
-		role="Rifleman";
-		faction="FST_Faction";
-		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_CosmicSmith";
-		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_CosmicSmith.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_CosmicSmith.Paa",
-		};
-		weapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_CloneBinocular",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]=
-		{
-			"FST_P2_Helmet_CosmicSmith",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-		respawnLinkedItems[]=
-		{
-			"FST_P2_Helmet_CosmicSmith",
-			"FST_base_Vest",
-			"ItemMap",
-			"ItemGPS",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_clone_comlink"
-		};
-	};
 	class FST_P2_Vulpes: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
