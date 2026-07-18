@@ -128,6 +128,13 @@ class CfgAmmo
 		airFriction=-0.003;    // less drag -> holds velocity out to distance
 		timeToLive=3.0;
 		coefGravity=0.02;
+
+		// WIND EXPERIMENT. Op: bolts drift with wind, but the server does NOT run
+		// ACE Advanced Ballistics -- and vanilla Arma does not wind-drift bullets.
+		// So the drift almost certainly comes from the base IDA/3AS plasma class
+		// using a wind-affected simulation type. Forcing a plain bullet sim here to
+		// test that theory. If it kills the drift, we roll it to the T-21 and T-15.
+		simulation="shotBullet";
 	};
 	class FST_thermal_shell_T21B_Green: FST_thermal_shell_T21B_Blue {};
 	class FST_thermal_shell_T21B_Yellow: FST_thermal_shell_T21B_Blue {};
@@ -219,6 +226,7 @@ class CfgWeapons
 
 	class optic_MRCO;
 	class optic_LRPS;
+	class optic_Nightstalker;
 	class InventoryOpticsItem_Base_F;
 	class FST_Optic_MRCO_T21: optic_MRCO
 	{
@@ -528,19 +536,19 @@ class CfgWeapons
 	// Inherits model / sounds / recoil / slots from FST_T21; only the
 	// role-defining stats are overridden below.
 	// ===============================================================
-	class FST_Optic_T21B: optic_LRPS
+	class FST_Optic_T21B: optic_Nightstalker
 	{
 		author="41st";
 		scope=2;
 		scopeArsenal=2;
 		displayName="[41st] T-21B AMR Scope";
-		descriptionShort="Long-range precision optic for the T-21B anti-material rifle.";
-		// Cowboys Op: the MRCO-based scope sat at ~1x (the nested zoom override
-		// never applied), so troopers said it felt like a holo. Re-based on the
-		// vanilla LRPS optic, which has real high magnification + long-range
-		// zeroing out of the box -- guaranteed to actually zoom. Cosmetically a
-		// vanilla scope for now; can be reskinned to an SW model later once the
-		// magnification is confirmed good in-game.
+		descriptionShort="Long-range precision optic with day/night/thermal for the T-21B.";
+		// Op feedback: the LRPS-based scope had no NVG/thermal, no reticle in the
+		// unzoomed state, and my custom overrides never applied. Re-based on the
+		// vanilla Nightstalker, which ships with a reticle, high magnification,
+		// zeroing, AND day/night/thermal modes out of the box -- no fragile
+		// overrides. NOTE: the scope MODEL not rendering / clipping on the rifle is
+		// a weapon-model (p3d) limitation, not fixable here -- see handoff notes.
 	};
 
 	class FST_T21B: FST_T21
@@ -564,26 +572,103 @@ class CfgWeapons
 			"FST_thermal_coil_T21B_Red"
 		};
 
-		// Re-open the inherited Single mode: slower cadence, tighter grouping.
-		class Single
+		// Fully-defined Single mode. Do NOT rely on re-opening the inherited
+		// Single -- in this build that dropped the parent's sound block, which is
+		// why the T-21B had no firing sound. The full StandardSound is inlined here.
+		class Single: Mode_SemiAuto
 		{
+			displayName="Single";
+			sounds[]={"StandardSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]={"\41st_Weapons\T15\Data\t15v1 2-177.ogg",1,1,1800};
+				begin2[]={"\41st_Weapons\T15\Data\t15v1 2-177.ogg",1.25,1.015,1800};
+				begin3[]={"\41st_Weapons\T15\Data\t15v1 2-177.ogg",1.25,0.98500001,1800};
+				begin4[]={"\41st_Weapons\T15\Data\t15v1 2-177.ogg",1.25,1.01,1800};
+				begin5[]={"\41st_Weapons\T15\Data\t15v1 2-177.ogg",1.25,0.995,1800};
+				soundBegin[]={"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+				beginwater1[]={"\41st_Weapons\T15\Data\t15v1 2-177.ogg",1,1,400};
+				soundBeginWater[]={"beginwater1",1};
+			};
 			reloadTime=0.85;   // ~70 RPM deliberate marksman cadence
 			dispersion=0.0004; // tight precision grouping
+			minRange=60;
+			minRangeProbab=1;
+			midRange=500;      // AMR: AI engages at longer ranges
+			midRangeProbab=0.85;
+			maxRange=10000;
+			maxRangeProbab=0.05;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=1;
+			aiRateOfFireDispersion=3;
 		};
 
-		// Re-open the inherited slots: heavier, and add the AMR scope options.
-		class WeaponSlotsInfo
+		// INTEGRATED SCOPE. The EPL2 weapon model has no working optic proxy, so
+		// attached scopes float/clip/don't render. Instead of an attachable optic,
+		// the magnification + day/night/thermal live on the weapon itself. Fully
+		// specified (not a bare re-open, which drops inherited data in this build).
+		class OpticsModes
+		{
+			class Scope
+			{
+				opticsID=1;
+				useModelOptics=0;
+				modelOptics="\A3\Weapons_f_beta\acc\reticle_MRCO_F";
+				opticsPPEffects[]={"OpticsCHAbera1","OpticsBlur1"};
+				opticsZoomMin=0.05;   // ~15x max magnification
+				opticsZoomMax=0.20;   // ~3.75x min -- always magnified, no 1x holo state
+				opticsZoomInit=0.12;  // ~6x on ADS
+				discreteDistance[]={100,300,500,800,1000};
+				discreteDistanceInitIndex=1;
+				distanceZoomMin=100;
+				distanceZoomMax=1000;
+				memoryPointCamera="eye";
+				visionMode[]={"Normal","NVG","Ti"};  // day / night / thermal
+				thermalMode[]={0,1,2,3,4,5,6};
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				cameraDir="";
+			};
+		};
+
+		// Full explicit slot list (bare re-open drops inherited slots in this build,
+		// which is why the bipod slot went missing). Optic slot intentionally empty
+		// -- the scope is integrated above.
+		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=120; // heavy anti-material rifle
-			class CowsSlot
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
 			{
 				compatibleItems[]=
 				{
-					"FST_Optic_T21B",
-					"FST_Optic_MRCO_T21",
-					"FST_Attachment_Optic_Holo_DC15",
-					"optic_LRPS",
-					"optic_SOS"
+					"FST_Attachment_Light_Normal_White",
+					"FST_Attachment_Light_Beam_White",
+					"FST_Attachment_Module_Light_Normal_White",
+					"FST_Attachment_Module_Light_Beam_White",
+					"acc_pointer_IR"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]=
+				{
+					"3AS_Bipod_VK38X_F"
 				};
 			};
 		};

@@ -635,7 +635,7 @@ if (isNull _box) exitWith {
     _box,
     "Anti-Material",
     [
-        ["FST_T21B","","","FST_Optic_T21B",["FST_thermal_coil_T21B_Blue",5],[],"3AS_bipod_VK38X_F"],
+        ["FST_T21B","","","",["FST_thermal_coil_T21B_Blue",5],[],"3AS_bipod_VK38X_F"],
         [],
         ["IDA_Clone_Knife","","","",[],[],""],
         ["FST_Trooper_Uniform",[
