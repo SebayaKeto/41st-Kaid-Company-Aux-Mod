@@ -6422,14 +6422,14 @@ _display displayAddEventHandler
 		private _lrmods = [(_lrData select 0) select 1, (_lrData select 0) select 2, (_lrData select 0) select 3];
 		if (_key == _srkey && ((_srmods isEqualTo [false,false,false]) or ((_shift isEqualTo (_srmods select 0)) && (_ctrl isEqualTo (_srmods select 1)) && (_alt isEqualTo (_srmods select 2))))) then {
 			if !(_user getVariable ["FST_SROn", false]) then {
-				_user setVariable ["FST_SROn",true,true];
-				[TFAR_currentUnit, false] call TFAR_fnc_processRadioOnKeyDown;
+				_user setVariable ["FST_SROn",true];
+				[_user, false] call TFAR_fnc_processRadioOnKeyDown;
 			};
 		};
 		if (_key == _lrkey && ((_lrmods isEqualTo [false,false,false]) or ((_shift isEqualTo (_lrmods select 0)) && (_ctrl isEqualTo (_lrmods select 1)) && (_alt isEqualTo (_lrmods select 2))))) then {
 			if !(_user getVariable ["FST_LROn", false]) then {
-				_user setVariable ["FST_LROn",true,true];
-				[TFAR_currentUnit, true] call TFAR_fnc_processRadioOnKeyDown;
+				_user setVariable ["FST_LROn",true];
+				[_user, true] call TFAR_fnc_processRadioOnKeyDown;
 			};
 		};
 		if (_key in [1, 219, 220]) then 
@@ -6452,12 +6452,12 @@ _display displayAddEventHandler
 		private _srkey =  (_srData select 0) select 0;
 		private _lrkey =  (_lrData select 0) select 0;
 		if (_key == _srkey) then {
-			_user setVariable ["FST_SROn",false,true];
-			[TFAR_currentUnit, false] call TFAR_fnc_processRadioOnKeyUp;
+			_user setVariable ["FST_SROn",false];
+			[_user, false] call TFAR_fnc_processRadioOnKeyUp;
 		};
 		if (_key == _lrkey) then {
-			_user setVariable ["FST_LROn",false,true];
-			[TFAR_currentUnit, true] call TFAR_fnc_processRadioOnKeyUp;
+			_user setVariable ["FST_LROn",false];
+			[_user, true] call TFAR_fnc_processRadioOnKeyUp;
 		};
 	}
 ];
