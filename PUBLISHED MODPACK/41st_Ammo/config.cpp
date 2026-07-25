@@ -84,25 +84,12 @@ class CfgCloudlets
 {
 	class 3AS_ImpactSparksPlasma1;
 	class 3AS_ImpactSparksPlasma2;
-
-	/*
-		Inherits the actual primary 3AS terrain spark.
-
-		The original moveVelocity contains inDir/inSpeed/surfNormal
-		expressions. setParticleClass cannot evaluate those expressions,
-		so only that property is replaced.
-	*/
 	class FST_ImpactSparksPlasma1_Scripted:
 		3AS_ImpactSparksPlasma1
 	{
 		position[] = {0, 0, 0};
 		moveVelocity[] = {0, 0, 0};
 	};
-
-	/*
-		The secondary 3AS spark contains no impact expressions,
-		but it is cloned to keep both scripted classes under FST.
-	*/
 	class FST_ImpactSparksPlasma2_Scripted:
 		3AS_ImpactSparksPlasma2
 	{
