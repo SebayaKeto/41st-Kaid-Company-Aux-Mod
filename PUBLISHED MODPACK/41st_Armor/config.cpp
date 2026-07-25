@@ -26004,6 +26004,7 @@ class CfgVehicles
 		};
 		class TransportItems{};
 	};
+
 	class FST_Backpack_Jumppack_Deso: FST_Backpack_Jumppack
 	{
 		author="Daara";
@@ -26021,6 +26022,66 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Deso.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems
+		{
+		};
+	};
+	class FST_Backpack_Jumppack_Butter: FST_Backpack_Jumppack
+	{
+		author="Laer";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Butter)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Butter.paa"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
