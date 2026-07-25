@@ -313,7 +313,6 @@ private _list_41standardwep = [
 	"FST_A260",
 	"FST_A280",
 	"FST_A280C",
-	"FST_A300",
 	"FST_Arkanian_F",
 	"FST_Arkanian_Stock_F",
 	"FST_DC15S",

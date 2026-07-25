@@ -640,6 +640,12 @@ class CfgFactionClasses
 		side=3;
 		icon="";
 	};
+	class FST_Minigames
+	{
+		displayName="[41st] Object Minigames";
+		priority=8;
+		side=7;
+	};
 };
 class CfgEditorCategories
 {
@@ -1791,6 +1797,186 @@ class FST_HackDeviceDisplay: RscDisplayEmpty
 		};
 	};
 };
+class FST_DigitalScreenHack
+{
+    idd=6967;
+	movingEnable=false;
+	enableSimulation=true;
+    class ControlsBackground
+	{
+		class FST_DigitalDeviceBackground: RscText
+		{
+			idc = 1800;
+			x = 3 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 34 * GUI_GRID_CENTER_W;
+			h = 25 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.408,0.408,1};
+		};
+		class FST_DigitalScreenBackground: RscText
+		{
+			idc = 1801;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 30 * GUI_GRID_CENTER_W;
+			h = 23 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.145,0.306,0.549,1};
+		};
+		class FST_BorderFrameDigitalScreenRight: RscText
+		{
+			idc = 1802;
+			x = 35 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 23 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameDigitalScreenLeft: RscText
+		{
+			idc = 1803;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 23 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameDigitalScreenTop: RscText
+		{
+			idc = 1804;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 30 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameDigitalScreenBottom: RscText
+		{
+			idc = 1805;
+			x = 5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 25 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 30 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.721,0.851,1};
+		};
+		class FST_BorderFrameButtonsRight: RscText
+		{
+			idc = 1807;
+			x = 25 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 13.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameButtonsLeft: RscText
+		{
+			idc = 1808;
+			x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 0.05 * GUI_GRID_CENTER_W;
+			h = 13.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameButtonsTop: RscText
+		{
+			idc = 1809;
+			x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 8.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 10 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_BorderFrameButtonsBottom: RscText
+		{
+			idc = 1810;
+			x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 10 * GUI_GRID_CENTER_W;
+			h = 0.05 * GUI_GRID_CENTER_H;
+			colorBackground[] = {1,1,1,1};
+		};
+		class FST_AurabeshBackground: RscText
+		{
+			idc = 1811;
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 3.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 28 * GUI_GRID_CENTER_W;
+			h = 4 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+		};
+    };
+	class Controls
+	{
+		class FST_ButtonTop: RscButton
+		{
+			idc = 1900;
+			text = "Button 1";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 9 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+			tooltip = "Tooka add details";
+		};
+		class FST_ButtonMiddle: RscButton
+		{
+			idc = 1901;
+			text = "Button 2";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+			tooltip = "Tooka add details";
+		};
+		class FST_ButtonBottom: RscButton
+		{
+			idc = 1902;
+			text = "Button 3";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 15 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+			tooltip = "Tooka add details";
+		};
+		class FST_CancelCurrentGame: RscButton
+		{
+			idc = 1903;
+			text = "EXIT PROGRAM";
+			x = 15.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 9 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.133,0.475,0.839,1};
+			colorFocused[] = {0.408,0.721,0.851,1};
+			colorBackgroundActive[] = {0.408,0.721,0.851,1};
+		};
+		class FST_TopScreenAurabesh: RscPicture
+		{
+			idc = 1904;
+			text = "\41st_Civilians_and_Intel\Data\HackScreenAurabesh.paa";
+			x = -0.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 3.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 41.5 * GUI_GRID_CENTER_W;
+			h = 4 * GUI_GRID_CENTER_H;
+		};
+		class FST_BottomScreenEmblem: RscPicture
+		{
+			idc = 1905;
+			text = "\41st_Civilians_and_Intel\Data\EmblemGalacticRepublicWhite.paa";
+			x = 6 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 20.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 4 * GUI_GRID_CENTER_W;
+			h = 4 * GUI_GRID_CENTER_H;
+		};
+	};
+};
 class CfgFunctions
 {
 	class FST_CivilRandomizers
@@ -1802,6 +1988,10 @@ class CfgFunctions
 			class applyidentity {postInit=1;};
 			class servercounting {postInit=1;};
 			class hackingterminalparts {postInit=1;};
+			class hackdoorpanelparts {postInit=1;};
+			class registerminigamemodules {postInit=1;};
+			class createscreen {};
+			class hackdoorpanel {};
 			class hackingterminal {};
 			class testingbuttons {};
 			class deposit {};
