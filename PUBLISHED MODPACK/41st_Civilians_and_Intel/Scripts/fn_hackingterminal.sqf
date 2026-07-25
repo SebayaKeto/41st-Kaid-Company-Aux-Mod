@@ -72,7 +72,7 @@ if (_term getVariable ["FST_DeviceBroken", false] && (("FST_LargeToolkit" in ite
 		"KeyDown",
 		{
 			params ["_display", "_key"];
-			if (_key == 1) then {true} else {false};
+			if (_key in [1, 219, 220]) then {true} else {false};
 		}
 	];
 	private _errortextarray = 

@@ -10,7 +10,13 @@ class CfgPatches
 			"FST_Nyvar_Standard",
 			"FST_Nyvar_Trained",
 			"FST_Nyvar_Tukata_Transport",
-			"FST_PX10_Nyvar"
+			"FST_PX10_Nyvar",
+			"FST_Nyvar_B1_Blue",
+			"FST_Nyvar_Weak_Fwend",
+			"FST_Nyvar_Standard_Fwend",
+			"FST_Nyvar_Trained_Fwend",
+			"FST_Nyvar_Tukata_Transport_Fwend",
+			"FST_PX10_Nyvar_Fwend"
 		};
 		weapons[]={};
 	};
@@ -44,6 +50,7 @@ class CfgFunctions
 			class nyvarstandard {};
 			class nyvartrained {};
 			class nyvarb1 {};
+			class nyvarb1fwend {};
 		};
 	};
 };
@@ -215,6 +222,25 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_U_Nyvar_B1";
+			containerClass="Supply200";
+			uniformType="Neopren";
+			modelSides[]={6};
+			mass=40;
+		};
+	};
+	class FST_U_Nyvar_B1_Armor_Blue: FST_DroidB1
+	{
+		author="Tooka";
+		scope=2;
+		displayname="[41st] Nyvar B1 Armor (Repainted)";
+		picture="\JMSGD_droids\data\ico\ico_u_B1_guard.paa";
+		JLTS_isDroid=1;
+		ls_isDroid=1;
+        JLTS_hasEMPProtection=0;
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_U_Nyvar_B1_Blue";
 			containerClass="Supply200";
 			uniformType="Neopren";
 			modelSides[]={6};
@@ -529,6 +555,22 @@ class CfgVehicles
 			};
 		};
 	};
+	class FST_U_Nyvar_B1_Blue: FST_U_Nyvar_B1
+	{
+		uniformClass="FST_U_Nyvar_B1_Armor_Blue";
+		hiddenSelections[]=
+		{
+			"Camo1",
+			"Camo2",
+			"Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_NyvarUprisers\Data\FST_b1_torso_friendly_co.paa",
+			"41st_NyvarUprisers\Data\FST_b1_limbs_friendly_co.paa",
+			"41st_NyvarUprisers\Data\FST_b1_head_friendly_co.paa"
+		};
+	};
 	class FST_Nyvar_B1: FST_U_Nyvar_B1
 	{
 		author="Tooka";
@@ -570,6 +612,50 @@ class CfgVehicles
 		class EventHandlers
 		{
 			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarb1;";
+		};
+	};
+	class FST_Nyvar_B1_Blue: FST_U_Nyvar_B1_Blue
+	{
+		author="Tooka";
+		scope=2;
+		scopecurator=2;
+		side=2;
+		displayName="[41st] Nyvar Reprogrammed B1 Battledroid";
+		nakedUniform="U_BasicBody";
+		uniformClass="FST_U_Nyvar_B1_Armor_Blue";
+		role="Rifleman";
+		faction="FST_NyvarUpriser_Faction";
+		editorSubcategory="FST_NyvarUpriser";
+		weapons[]=
+		{
+			"FST_E5",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]={};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"JLTS_droid_comlink",
+			"ItemCompass",
+			"JLTS_NVG_droid_chip_1"
+		};
+		respawnLinkedItems[]={};
+		magazines[]=
+		{
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red",
+			"FST_Droid_blaster_cell_red"
+		};
+		respawnMagazines[]={};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarb1fwend;";
 		};
 	};
 	class FST_Nyvar_Weak: FST_U_CIS_Light
@@ -707,6 +793,144 @@ class CfgVehicles
 			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvartrained;";
 		};
 	};
+	class FST_Nyvar_Weak_Fwend: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator=2;
+		side=2;
+		displayName="[41st] Nyvar Insurgent (Weak)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="JMSLLTE_PirShirt_red_F_CombatUniform";
+		role="Rifleman";
+		faction="FST_NyvarUpriser_Faction";
+		editorSubcategory="FST_NyvarUpriser";
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarweak;";
+		};
+	};
+	class FST_Nyvar_Standard_Fwend: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator=2;
+		side=2;
+		displayName="[41st] Nyvar Insurgent (Standard)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="JMSLLTE_PirShirt_red_F_CombatUniform";
+		role="Rifleman";
+		faction="FST_NyvarUpriser_Faction";
+		editorSubcategory="FST_NyvarUpriser";
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarstandard;";
+		};
+	};
+	class FST_Nyvar_Trained_Fwend: FST_U_CIS_Light
+	{
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Soldier_F.jpg";
+		scope=2;
+		scopeCurator=2;
+		side=2;
+		displayName="[41st] Nyvar Insurgent (Trained)";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="U_BasicBody";
+		uniformClass="JMSLLTE_PirShirt_red_F_CombatUniform";
+		role="Rifleman";
+		faction="FST_NyvarUpriser_Faction";
+		editorSubcategory="FST_NyvarUpriser";
+		weapons[]=
+		{
+			"FST_ValD_Standard",
+			"FST_SE14R",
+			"Throw",
+			"Put"
+		};
+		Items[]=
+		{
+			"WBK_HeadLampItem_Narrow"
+		};
+		linkedItems[]=
+		{
+			"FST_CIS_HolsterVest",
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_2"
+		};
+		magazines[]=
+		{
+			"FST_blaster_cell_Red",
+			"FST_blaster_cell_low_Red"
+		};
+		class EventHandlers
+		{
+			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvartrained;";
+		};
+	};
 	class FST_JMSLLTE_veh_ITT_base;
 	class FST_Nyvar_Tukata_Transport: FST_JMSLLTE_veh_ITT_base
 	{
@@ -729,6 +953,27 @@ class CfgVehicles
 			1
 		};
 	};
+	class FST_Nyvar_Tukata_Transport_Fwend: FST_JMSLLTE_veh_ITT_base
+	{
+		author="Tooka";
+		scope=2;
+		scopeCurator=2;
+		_generalMacro="JMSLLTE_B_veh_ITT_jinata_F";
+		side=2;
+		displayName="K79-S80 Tukata Troop Transport";
+		faction="FST_NyvarUpriser_Faction";
+		editorSubcategory="FST_Ground_Vehicle";
+		crew="FST_Nyvar_Standard_Fwend";
+		typicalCargo[]=
+		{
+			"FST_Nyvar_Standard_Fwend"
+		};
+		textureList[]=
+		{
+			"Tex_ITT_jinata",
+			1
+		};
+	};
 	class FST_PX10_Tukata;
 	class FST_PX10_Nyvar: FST_PX10_Tukata
 	{
@@ -739,6 +984,16 @@ class CfgVehicles
 		side = 0;
 		crew="FST_Nyvar_Standard";
 		typicalCargo[] = { "FST_Nyvar_Standard" };
+	};
+	class FST_PX10_Nyvar_Fwend: FST_PX10_Tukata
+	{
+		displayName = "PX-10 Nyvar";
+		author = "Tooka";
+		faction = "FST_NyvarUpriser_Faction";
+		editorSubcategory = "FST_Ground_Vehicle";
+		side = 2;
+		crew="FST_Nyvar_Standard_Fwend";
+		typicalCargo[] = { "FST_Nyvar_Standard_Fwend" };
 	};
 };
 class cfgGroups
@@ -931,6 +1186,199 @@ class cfgGroups
 					{
 						side=0;
 						vehicle="FST_Nyvar_B1";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+			};
+		};
+	};
+	class Indep
+	{
+		class FST_NyvarUpriser_Faction
+		{
+			name="41st Nyvar Uprisers";
+
+			class FST_NyvarUpriser
+			{
+				name = "Upriser Squads";
+				
+				class FST_S_Nyvar_Weak_Fwend
+				{
+					name="[41st] Nyvar Insurgents Recruit Squad";
+					faction="FST_NyvarUpriser_Faction";
+					side=2;
+					class Unit0
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=2;
+						vehicle="FST_Nyvar_B1_Blue";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=2;
+						vehicle="FST_Nyvar_B1_Blue";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=2;
+						vehicle="FST_Nyvar_B1_Blue";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=2;
+						vehicle="FST_Nyvar_B1_Blue";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+				};
+				class FST_S_Nyvar_Standard_Fwend
+				{
+					name="[41st] Nyvar Insurgents Semi-Trained Squad";
+					faction="FST_NyvarUpriser_Faction";
+					side=2;
+					class Unit0
+					{
+						side=2;
+						vehicle="FST_Nyvar_Trained_Fwend";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=2;
+						vehicle="FST_Nyvar_Trained_Fwend";
+						rank="CORPORAL";
+						position[]={0,-0,0};
+					};
+					class Unit7
+					{
+						side=2;
+						vehicle="FST_Nyvar_Standard_Fwend";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit8
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit9
+					{
+						side=2;
+						vehicle="FST_Nyvar_Weak_Fwend";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit10
+					{
+						side=2;
+						vehicle="FST_Nyvar_B1_Blue";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit11
+					{
+						side=2;
+						vehicle="FST_Nyvar_B1_Blue";
 						rank="PRIVATE";
 						position[]={0,-5,0};
 					};
