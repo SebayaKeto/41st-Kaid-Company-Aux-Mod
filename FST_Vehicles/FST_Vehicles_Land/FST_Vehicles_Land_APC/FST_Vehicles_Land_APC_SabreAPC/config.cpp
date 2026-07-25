@@ -143,8 +143,8 @@ class CfgVehicles
 		fuelCapacity=80;
 		brakeIdleSpeed=0.75;
 		maxSpeed=85;
-		normalSpeedForwardCoef=0.62;
-		slowSpeedForwardCoef=0.31;
+		normalSpeedForwardCoef=0.58;
+		slowSpeedForwardCoef=0.24;
 		engineMOI=14;
 		enginePower=2150;
 		maxOmega=345.57501;
@@ -235,16 +235,16 @@ class CfgVehicles
 			reverseString="R";
 			transmissionDelay=0.25;
 		};
-		antiRollbarForceCoef=18;
-		antiRollbarForceLimit=35;
-		antiRollbarSpeedMin=5;
-		antiRollbarSpeedMax=55;
-		tankTurnForce=5200;
-		tankTurnForceAngMinSpd=0.08;
-		tankTurnForceAngSpd=0.1;
-		accelAidForceCoef=0.0025;
+		antiRollbarForceCoef=24;
+		antiRollbarForceLimit=50;
+		antiRollbarSpeedMin=3;
+		antiRollbarSpeedMax=65;
+		tankTurnForce=800;
+		tankTurnForceAngMinSpd=0.28;
+		tankTurnForceAngSpd=0.35;
+		accelAidForceCoef=0.0018;
 		accelAidForceYOffset=0;
-		accelAidForceSpd=0.08;
+		accelAidForceSpd=0.06;
 		class Sounds
 		{
 			class Idle_ext
@@ -740,7 +740,7 @@ class CfgVehicles
 		damageResistance=0.0054700002;
 		cost=2500000;
 		crewVulnerable=0;
-		epeImpulseDamageCoef=18;
+		epeImpulseDamageCoef=5;
 		waterPPInVehicle=0;
 		canFloat=1;
 		waterResistanceCoef=0.00025;
