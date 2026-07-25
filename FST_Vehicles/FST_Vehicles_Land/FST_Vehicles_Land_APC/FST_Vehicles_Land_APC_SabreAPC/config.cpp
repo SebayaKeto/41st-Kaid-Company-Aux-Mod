@@ -239,9 +239,15 @@ class CfgVehicles
 		antiRollbarForceLimit=50;
 		antiRollbarSpeedMin=3;
 		antiRollbarSpeedMax=65;
+		steerAheadSimul=0.5;
+		steerAheadPlan=0.35;
+		predictTurnPlan=0.7;
+		predictTurnSimul=0.5;
+		turnCoef=0.6;
+		maxTurnAngularVelocity=0.25;
 		tankTurnForce=800;
-		tankTurnForceAngMinSpd=0.28;
-		tankTurnForceAngSpd=0.35;
+		tankTurnForceAngMinSpd=0;
+		tankTurnForceAngSpd=0.25;
 		accelAidForceCoef=0.0018;
 		accelAidForceYOffset=0;
 		accelAidForceSpd=0.06;
@@ -562,10 +568,10 @@ class CfgVehicles
 				weight = 90;
 				mass = 180;
 				MOI = 12;
-				latStiffX = 7;
-				latStiffY = 100;
-				longitudinalStiffnessPerUnitGravity = 16500;
-				maxBrakeTorque = 18000;
+				latStiffX = 6;
+				latStiffY = 95;
+				longitudinalStiffnessPerUnitGravity = 17000;
+				maxBrakeTorque = 14000;
 				sprungMass = -1;
 				springStrength = 28000;
 				springDamperRate = 36000;
@@ -577,9 +583,10 @@ class CfgVehicles
 				maxCompression = 0.02;
 				frictionVsSlipGraph[] =
 				{
-					{0,1.0},
-					{0.5,1.5},
-					{1,1.2}
+					{0,1.25},
+					{0.35,1.5},
+					{0.7,1.75},
+					{1,1.9}
 				};
 			};
 			class L3: L2
@@ -666,8 +673,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=20;
-		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+		transportSoldier=6;
+		cargoProxyIndexes[]={4,5,6,7,8,9};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -689,8 +696,7 @@ class CfgVehicles
 			"passenger_apc_narrow_generic03",
 			"passenger_apc_narrow_generic01",
 			"passenger_apc_narrow_generic02",
-			"passenger_apc_narrow_generic03",
-			"passenger_apc_narrow_generic01"
+			"passenger_apc_narrow_generic03"
 		};
 		maxFordingDepth=8;
 		waterResistance=9.9999997e-005;
@@ -2358,26 +2364,26 @@ class CfgVehicles
 				radius=4;
 				priority=10;
 				onlyForPlayer=0;
-				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' < 0.5))";
+				condition="(alive this) && ( (this animationSourcePhase 'rear_door_rotate' < 0.5))";
 				statement="this animateSource ['rear_door_rotate',1,false]";
 			};
 			class CloseRearDoor: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR";
-				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' >= 0.5))";
+				condition="(alive this) && ( (this animationSourcePhase 'rear_door_rotate' >= 0.5))";
 				statement="this animateSource ['rear_door_rotate',0,false]";
 			};
 			class OpenMainHatch: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_OPEN_HATCH";
 				position="MainHatch";
-				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
+				condition="(alive this) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
 				statement="this animateSource ['main_hatch_rotate',1,false]";
 			};
 			class CloseMainHatch: OpenMainHatch
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_HATCH";
-				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
+				condition="(alive this) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
 				statement="this animateSource ['main_hatch_rotate',0,false]";
 			};
 		};
