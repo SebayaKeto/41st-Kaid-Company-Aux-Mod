@@ -3072,6 +3072,270 @@ class CfgWeapons
 			};
 		};
 	};
+	class FST_pauldron_kama_reversed_Woodland: JLTS_CloneVestOfficer2
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama (Woodland)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Woodland.paa",
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_pauldron_kama_reversed_Urban: JLTS_CloneVestOfficer2
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama (Urban)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Urban.paa",
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_pauldron_kama_reversed_Desert: JLTS_CloneVestOfficer2
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama (Desert)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Desert.paa",
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_pauldron_kama_reversed_Midnight: JLTS_CloneVestOfficer2
+	{
+		author="Daara";
+		scope=2;
+		displayName="[41st] Senior NCO Pauldron w/ Kama (Midnight)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Vest_Midnight.paa",
+		};
+		class ItemInfo: VestItem
+		{
+			vesttype="Rebreather";
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+			containerClass="Supply200";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			mass=80;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					HitpointName="HitChest";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Diaphragm
+				{
+					HitpointName="HitDiaphragm";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					PassThrough=0.05;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Legs
+				{
+					hitpointName="Hitlegs";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
 	class FST_pauldron_kama_reversed_khaki: JLTS_CloneVestOfficer2
 	{
 		author="Daara";
