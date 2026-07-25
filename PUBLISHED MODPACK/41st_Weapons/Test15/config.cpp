@@ -60,24 +60,35 @@ class CfgAmmo
 		// HE component + real penetration so it can actually chip armour and reliably
 		// kill B2s -- but still well short of the T-15 (caliber 20, hit 400, airburst),
 		// which stays the dedicated AT weapon.
+		// Op round 3: transport tanked 9 rounds with nothing to show -- caliber 12
+		// + HE 8 wasn't crossing the armour threshold. Infantry feel (DMR-ish) is
+		// intentional per role, so hit stays 150; the AT buff is penetration + HE.
 		hit=150;
-		indirectHit=8;        // small HE leak so rounds bite armour instead of pinging off
-		indirectHitRange=0.3; // tiny radius -- still a precise rifle, not an area weapon
+		indirectHit=25;       // real HE bite vs vehicles -- chews hull/components even on partial pen
+		indirectHitRange=0.5; // still small -- a rifle, not an area weapon
 		explosive=1;
 
-		// caliber 12: real penetration vs medium armour / components / B2s.
-		// Still below the T-15 HP round (caliber 20) and the T-21B AMR (caliber 14),
-		// so the damage hierarchy stays T-15 > T-21B > T-21.
-		caliber=12;
+		// caliber 14: crosses light/medium armour plates the op showed 12 bouncing off.
+		// Hierarchy holds: T-15 HP (20) > T-21B (16) > T-21 (14).
+		caliber=14;
 
 		// Higher muzzle velocity fixes BOTH the range and the wind complaints:
 		// ~500 m/s roughly halves time-of-flight vs the old 300, cutting wind drift
 		// and required lead, and the longer TTL lets the round reach past 250m.
 		typicalSpeed=500;
-		airFriction=-0.005;
+		// airFriction=0 -> zero ACE Wind Deflection drift, exact DC-15A/S/C parity.
+		// (Wind Deflection scales with airFriction; the DC-15 rounds are all 0.)
+		airFriction=0;
 
 		timeToLive=1.5;       // ~500 m/s x 1.5s -> engages armour well beyond 250m
 		coefGravity=0.02;
+
+		// WIND FIX (same root cause as the T-21B). Server does not run ACE Advanced
+		// Ballistics, and vanilla Arma does not wind-drift bullets -- so the drift
+		// comes from the base IDA/3AS plasma class using a wind-affected simulation
+		// type. Forcing a plain bullet sim. This is also the likely cause of Salt's
+		// "consistent 7-8 degree left pull" on the T-21.
+		simulation="shotBullet";
 		waterFriction=-0.01;
 		deflecting=0;
 
@@ -125,7 +136,9 @@ class CfgAmmo
 
 		// High velocity fixes the wind-curve at range: flatter, faster, less drift.
 		typicalSpeed=750;      // up from 550
-		airFriction=-0.003;    // less drag -> holds velocity out to distance
+		// airFriction=0 -> zero ACE Wind Deflection drift (DC-15 parity); a precision
+		// AMR shouldn't wander in the wind.
+		airFriction=0;
 		timeToLive=3.0;
 		coefGravity=0.02;
 
