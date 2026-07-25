@@ -54,8 +54,8 @@ class FST_VW_Bolt_30mm_HE: 3AS_Sabre_HE
     tracerColorR[] = {0.3, 0.74, 1, 0.9};
     lightColor[] = {0.28, 0.7, 1};
     hit = 75;
-    indirectHit = 14;
-    indirectHitRange = 1.8;
+    indirectHit = 29;
+    indirectHitRange = 6;
     caliber = 3.2;
     typicalSpeed = 1100;
     airFriction = -0.00072;

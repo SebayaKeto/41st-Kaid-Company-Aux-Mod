@@ -143,8 +143,8 @@ class CfgVehicles
 		fuelCapacity=80;
 		brakeIdleSpeed=0.75;
 		maxSpeed=85;
-		normalSpeedForwardCoef=0.62;
-		slowSpeedForwardCoef=0.31;
+		normalSpeedForwardCoef=0.58;
+		slowSpeedForwardCoef=0.24;
 		engineMOI=14;
 		enginePower=2150;
 		maxOmega=345.57501;
@@ -235,16 +235,22 @@ class CfgVehicles
 			reverseString="R";
 			transmissionDelay=0.25;
 		};
-		antiRollbarForceCoef=18;
-		antiRollbarForceLimit=35;
-		antiRollbarSpeedMin=5;
-		antiRollbarSpeedMax=55;
-		tankTurnForce=5200;
-		tankTurnForceAngMinSpd=0.08;
-		tankTurnForceAngSpd=0.1;
-		accelAidForceCoef=0.0025;
+		antiRollbarForceCoef=24;
+		antiRollbarForceLimit=50;
+		antiRollbarSpeedMin=3;
+		antiRollbarSpeedMax=65;
+		steerAheadSimul=0.5;
+		steerAheadPlan=0.35;
+		predictTurnPlan=0.7;
+		predictTurnSimul=0.5;
+		turnCoef=0.6;
+		maxTurnAngularVelocity=0.25;
+		tankTurnForce=800;
+		tankTurnForceAngMinSpd=0;
+		tankTurnForceAngSpd=0.25;
+		accelAidForceCoef=0.0018;
 		accelAidForceYOffset=0;
-		accelAidForceSpd=0.08;
+		accelAidForceSpd=0.06;
 		class Sounds
 		{
 			class Idle_ext
@@ -562,10 +568,10 @@ class CfgVehicles
 				weight = 90;
 				mass = 180;
 				MOI = 12;
-				latStiffX = 7;
-				latStiffY = 100;
-				longitudinalStiffnessPerUnitGravity = 16500;
-				maxBrakeTorque = 18000;
+				latStiffX = 6;
+				latStiffY = 95;
+				longitudinalStiffnessPerUnitGravity = 17000;
+				maxBrakeTorque = 14000;
 				sprungMass = -1;
 				springStrength = 28000;
 				springDamperRate = 36000;
@@ -577,9 +583,10 @@ class CfgVehicles
 				maxCompression = 0.02;
 				frictionVsSlipGraph[] =
 				{
-					{0,1.0},
-					{0.5,1.5},
-					{1,1.2}
+					{0,1.25},
+					{0.35,1.5},
+					{0.7,1.75},
+					{1,1.9}
 				};
 			};
 			class L3: L2
@@ -666,8 +673,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=20;
-		cargoProxyIndexes[]={4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+		transportSoldier=6;
+		cargoProxyIndexes[]={4,5,6,7,8,9};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -689,8 +696,7 @@ class CfgVehicles
 			"passenger_apc_narrow_generic03",
 			"passenger_apc_narrow_generic01",
 			"passenger_apc_narrow_generic02",
-			"passenger_apc_narrow_generic03",
-			"passenger_apc_narrow_generic01"
+			"passenger_apc_narrow_generic03"
 		};
 		maxFordingDepth=8;
 		waterResistance=9.9999997e-005;
@@ -740,7 +746,7 @@ class CfgVehicles
 		damageResistance=0.0054700002;
 		cost=2500000;
 		crewVulnerable=0;
-		epeImpulseDamageCoef=18;
+		epeImpulseDamageCoef=5;
 		waterPPInVehicle=0;
 		canFloat=1;
 		waterResistanceCoef=0.00025;
@@ -1087,6 +1093,7 @@ class CfgVehicles
 				gunBeg[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
 				gunEnd[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
 				memoryPointGun[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
+				memoryPointGunDir[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
 				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_30mm_AP_Cannon","SmokeLauncher"};
 				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag"};
 				turretInfoType = "RscWeaponRangeZeroing";
@@ -2358,26 +2365,26 @@ class CfgVehicles
 				radius=4;
 				priority=10;
 				onlyForPlayer=0;
-				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' < 0.5))";
+				condition="(alive this) && ( (this animationSourcePhase 'rear_door_rotate' < 0.5))";
 				statement="this animateSource ['rear_door_rotate',1,false]";
 			};
 			class CloseRearDoor: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_REAR_DOOR";
-				condition="(alive this) && ((player == driver this) && (this animationSourcePhase 'rear_door_rotate' >= 0.5))";
+				condition="(alive this) && ( (this animationSourcePhase 'rear_door_rotate' >= 0.5))";
 				statement="this animateSource ['rear_door_rotate',0,false]";
 			};
 			class OpenMainHatch: OpenRearDoor
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_OPEN_HATCH";
 				position="MainHatch";
-				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
+				condition="(alive this) && (this animationSourcePhase 'main_hatch_rotate' < 0.5)";
 				statement="this animateSource ['main_hatch_rotate',1,false]";
 			};
 			class CloseMainHatch: OpenMainHatch
 			{
 				displayName="$STR_FST_SABER_APC_ACTION_CLOSE_HATCH";
-				condition="(alive this) && (effectiveCommander this == player) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
+				condition="(alive this) && (this animationSourcePhase 'main_hatch_rotate' >= 0.5)";
 				statement="this animateSource ['main_hatch_rotate',0,false]";
 			};
 		};

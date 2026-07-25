@@ -4,7 +4,12 @@ class CfgPatches
 	{
 		author="Gold";
 		name="FST Ammo";
-		requiRedAddons[]={"JLTS_weapons_core"};
+		requiredAddons[] =
+		{
+			"cba_xeh",
+			"JLTS_weapons_core",
+			"3AS_Main"
+		};
 		units[]={};
 		magazines[]={};
 		weapons[]={};
@@ -14,47 +19,38 @@ class CfgPatches
 // Fix broken vanilla impact particles triggered by explosive=1.
 // Uses lifeTime=0.001 (not 0) so engine composites initialize normally.
 // IDA's own cloudlets (IDA_ImpactSparks1, IDA_ImpactSparks2) are separate classes, unaffected.
-class CfgCloudlets {
-	class Default;
-	class impactsparks2: Default {
-		interval = 1;
-		lifeTime = 0.001;
-		size[] = {0};
-		color[] = {{0,0,0,0}};
-	};
-	class impactsmoke2: Default {
-		interval = 1;
-		lifeTime = 0.001;
-		size[] = {0};
-		color[] = {{0,0,0,0}};
-	};
-	class impactsmokemed2: Default {
-		interval = 1;
-		lifeTime = 0.001;
-		size[] = {0};
-		color[] = {{0,0,0,0}};
-	};
-	class impactsmokelow2: Default {
-		interval = 1;
-		lifeTime = 0.001;
-		size[] = {0};
-		color[] = {{0,0,0,0}};
+class CfgFunctions
+{
+	class FST
+	{
+		class EMP
+		{
+			file = "\41st_Ammo\functions";
+
+			class onHit {};
+			class onHitEMP {};
+		};
+
+		class ImpactFX
+		{
+			file = "\41st_Ammo\functions";
+
+			class impactSparks {};
+		};
 	};
 };
-class CfgFunctions {
-    class FST {
-        class EMP {
-            file = "\41st_Ammo\functions";
-            class onHit {};
-            class onHitEMP {};
-        };
-    };
-};
-class Extended_HitPart_EventHandlers {
-    class CAManBase {
+class Extended_HitPart_EventHandlers
+{
+	class CAManBase
+	{
 		JLTS_weapons_core = "";
-        FST_weapons_core = "if (JLTS_settings_EMP_mainSwitch == 1) then {(_this select 0) call FST_fnc_onHit;};";
-    };
+
+		FST_weapons_core =
+			"if (JLTS_settings_EMP_mainSwitch == 1) then {(_this select 0) call FST_fnc_onHit;};";
+
+		FST_impact_sparks =
+			"_this call FST_fnc_impactSparks;";
+	};
 };
 class CfgSoundShaders
 {
@@ -83,6 +79,22 @@ class CfgSoundSets
         doppler = 0;
         loop = 0;
     };
+};
+class CfgCloudlets
+{
+	class 3AS_ImpactSparksPlasma1;
+	class 3AS_ImpactSparksPlasma2;
+	class FST_ImpactSparksPlasma1_Scripted:
+		3AS_ImpactSparksPlasma1
+	{
+		position[] = {0, 0, 0};
+		moveVelocity[] = {0, 0, 0};
+	};
+	class FST_ImpactSparksPlasma2_Scripted:
+		3AS_ImpactSparksPlasma2
+	{
+		position[] = {0, 0, 0};
+	};
 };
 class CfgAmmo
 {
@@ -116,29 +128,33 @@ class CfgAmmo
 		cratereffects="";
 		class HitEffects
 		{
-			Hit_Foliage_green="3AS_ImpactPlasma";
-			Hit_Foliage_Dead="3AS_ImpactPlasma";
-			Hit_Foliage_Green_big="3AS_ImpactPlasma";
-			Hit_Foliage_Palm="3AS_ImpactPlasma";
-			Hit_Foliage_Pine="3AS_ImpactPlasma";
-			hitFoliage="3AS_ImpactPlasma";
-			hitGlass="3AS_ImpactPlasma";
-			hitGlassArmored="3AS_ImpactPlasma";
-			hitWood="3AS_ImpactPlasma";
-			hitMetal="3AS_ImpactPlasma";
-			hitMetalPlate="3AS_ImpactPlasma";
-			hitBuilding="3AS_ImpactPlasma";
-			hitPlastic="3AS_ImpactPlasma";
-			hitRubber="3AS_ImpactPlasma";
-			hitTyre="3AS_ImpactPlasma";
-			hitConcrete="3AS_ImpactPlasma";
-			hitMan="3AS_ImpactPlasma";
-			hitGroundSoft="3AS_ImpactPlasma";
-			hitGroundRed="3AS_ImpactPlasma";
-			hitGroundHard="3AS_ImpactPlasma";
-			hitWater="3AS_ImpactPlasma";
-			hitVirtual="3AS_ImpactPlasma";
-			default_mat="3AS_ImpactPlasma";
+			hitMan          = "3AS_ImpactPlasma";
+			hitArmor        = "3AS_ImpactPlasma";
+			hitArmorInt     = "3AS_ImpactPlasma";
+			hitMetal        = "3AS_ImpactPlasma";
+			hitMetalPlate   = "3AS_ImpactPlasma";
+			hitMetalInt     = "3AS_ImpactPlasma";
+			hitIron         = "3AS_ImpactPlasma";
+			hitBuilding     = "3AS_ImpactPlasma";
+			hitConcrete     = "3AS_ImpactPlasma";
+			hitWood         = "3AS_ImpactPlasma";
+			hitGlass        = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitPlastic      = "3AS_ImpactPlasma";
+			hitRubber       = "3AS_ImpactPlasma";
+			hitTyre         = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitGroundRed  = "3AS_ImpactPlasma";
+			hitWater        = "3AS_ImpactPlasma";
+			hitFoliage      = "3AS_ImpactPlasma";
+			hitVirtual      = "3AS_ImpactPlasma";
+			default_mat     = "3AS_ImpactPlasma";
+			Hit_Foliage_green    = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead     = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm     = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine     = "3AS_ImpactPlasma";
 		};
 		soundHitBody1[]=
 		{

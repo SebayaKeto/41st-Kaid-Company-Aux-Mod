@@ -80,55 +80,90 @@ FST_ApplyCamoPreset = {
 			};
 		};
 	};
-    private _curHmd = hmd _unit;
-    if (_curHmd != "") then {
-        private _newHmd = "";
-        if (_curHmd find "FST_Visor_" == 0) then {
-            _newHmd = format ["FST_Visor_%1", _camoCap];
-        } else {
-            if (_curHmd find "FST_NVG_" == 0) then {
-                _newHmd = format ["FST_NVG_%1", _camoCap];
-            };
-        };
-        if (_newHmd != "" && isClass (configFile >> "CfgWeapons" >> _newHmd)) then {
-            _unit unlinkItem _curHmd;
-            _unit linkItem   _newHmd;
-        };
-    };
-    private _curVest = vest _unit;
-	if (_curVest != "") then {
-		private _vestNew = "";
-		if (_curVest find "FST_Vest_NCO_Kama" == 0) then {
-			_vestNew = format ["FST_Vest_NCO_Kama_%1", _camoCap];
+	private _curHmd = hmd _unit;
+	if (_curHmd != "") then {
+		private _newHmd = "";
+
+		if (
+			_curHmd == "FST_Antenna" ||
+			{_curHmd find "FST_Antenna_" == 0}
+		) then {
+			_newHmd = format ["FST_Antenna_%1", _camoCap];
 		} else {
-			if (_curVest find "FST_Vest_NCO" == 0) then {
-				_vestNew = format ["FST_Vest_NCO_%1", _camoCap];
+			if (_curHmd find "FST_Visor_" == 0) then {
+				_newHmd = format ["FST_Visor_%1", _camoCap];
 			} else {
-				if (_curVest find "FST_pauldron_kama" == 0) then {
-					_vestNew = format ["FST_pauldron_kama_%1", _camoCap];
-				} else {
-					if (_curVest find "FST_CloneVestLieutenant" == 0) then {
-						_vestNew = format ["FST_CloneVestLieutenant_%1", _camoCap];
-					} else {
-						if (
-							_curVest == "FST_vest_holster" ||
-							_curVest == "FST_vest_Woodland_holster" ||
-							_curVest == "FST_vest_Midnight_holster" ||
-							_curVest == "FST_vest_Urban_holster" ||
-							_curVest == "FST_vest_Desert_holster"
-						) then {
-							_vestNew = format ["FST_vest_%1_holster", _camoCap];
-						};
-					};
+				if (_curHmd find "FST_NVG_" == 0) then {
+					_newHmd = format ["FST_NVG_%1", _camoCap];
 				};
 			};
 		};
-		if (_vestNew != "" && isClass (configFile >> "CfgWeapons" >> _vestNew)) then {
+
+		if (
+			_newHmd != "" &&
+			isClass (configFile >> "CfgWeapons" >> _newHmd)
+		) then {
+			_unit unlinkItem _curHmd;
+			_unit linkItem _newHmd;
+		};
+	};
+	private _curVest = vest _unit;
+	if (_curVest != "") then {
+		private _vestNew = "";
+
+		switch (true) do {
+			case (_curVest find "FST_Vest_NCO_Kama" == 0): {
+				_vestNew = format ["FST_Vest_NCO_Kama_%1", _camoCap];
+			};
+
+			case (_curVest find "FST_Vest_NCO" == 0): {
+				_vestNew = format ["FST_Vest_NCO_%1", _camoCap];
+			};
+
+			case (_curVest find "FST_pauldron_kama_reversed" == 0): {
+				_vestNew = format [
+					"FST_pauldron_kama_reversed_%1",
+					_camoCap
+				];
+			};
+
+			case (_curVest find "FST_pauldron_kama" == 0): {
+				_vestNew = format [
+					"FST_pauldron_kama_%1",
+					_camoCap
+				];
+			};
+
+			case (_curVest find "FST_CloneVestLieutenant" == 0): {
+				_vestNew = format [
+					"FST_CloneVestLieutenant_%1",
+					_camoCap
+				];
+			};
+
+			case (
+				_curVest == "FST_vest_holster" ||
+				_curVest == "FST_vest_Woodland_holster" ||
+				_curVest == "FST_vest_Midnight_holster" ||
+				_curVest == "FST_vest_Urban_holster" ||
+				_curVest == "FST_vest_Desert_holster"
+			): {
+				_vestNew = format [
+					"FST_vest_%1_holster",
+					_camoCap
+				];
+			};
+
+			default {};
+		};
+
+		if (
+			_vestNew != "" &&
+			isClass (configFile >> "CfgWeapons" >> _vestNew)
+		) then {
 			[_vestNew] call _swapVest;
 		};
 	};
-
-	private _curGoggles = goggles _unit;
 	if (_curGoggles != "") then {
 		private _gogglesNew = "";
 		if (
@@ -190,9 +225,12 @@ FST_fnc_updateAditionalListCamo = {
 		if (_item == "FST_Visor")         then { _new = format ["FST_Visor_%1", _camoCap]; };
 		if (_item find "FST_NVG_"   == 0) then { _new = format ["FST_NVG_%1",   _camoCap]; };
 		if (_item find "FST_Visor_" == 0) then { _new = format ["FST_Visor_%1", _camoCap]; };
+		if (_item == "FST_Antenna") then { _new = format ["FST_Antenna_%1", _camoCap];};
+		if (_item find "FST_Antenna_" == 0) then {_new = format ["FST_Antenna_%1", _camoCap];};
 		if (_item find "FST_Vest_NCO_Kama"      == 0) then { _new = format ["FST_Vest_NCO_Kama_%1", _camoCap]; };
 		if (_item find "FST_Vest_NCO"           == 0) then { _new = format ["FST_Vest_NCO_%1",      _camoCap]; };
 		if (_item find "FST_pauldron_kama"      == 0) then { _new = format ["FST_pauldron_kama_%1", _camoCap]; };
+		if (_item find "FST_pauldron_kama_reversed" == 0) then { _new = format ["FST_pauldron_kama_reversed_%1", _camoCap]; };
 
 		if (
 			_item == "FST_vest_holster" ||
@@ -456,11 +494,17 @@ private _isCQB = (count _lbData > 1) && {(_lbData select 1) == "CQB_MAGIC"};
 if ((missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger") then {
     private _camo = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
     switch (true) do {
+		case (_item == "FST_Antenna" ||{_item find "FST_Antenna_" == 0}): {_item = format ["FST_Antenna_%1", _camo];};
         case (_item == "FST_NVG"):              { _item = format ["FST_NVG_%1", _camo]; };
         case (_item == "FST_Visor"):            { _item = format ["FST_Visor_%1", _camo]; };
         case (_item == "FST_Vest_NCO"):         { _item = format ["FST_Vest_NCO_%1", _camo]; };
         case (_item == "FST_Vest_NCO_Kama"):    { _item = format ["FST_Vest_NCO_Kama_%1", _camo]; };
-        case (_item == "FST_pauldron_kama"):    { _item = format ["FST_pauldron_kama_%1", _camo]; };
+		case (_item == "FST_pauldron_kama_reversed" || {_item find "FST_pauldron_kama_reversed_" == 0}): {
+			_item = format ["FST_pauldron_kama_reversed_%1", _camo];
+		};
+		case (_item == "FST_pauldron_kama" || {_item find "FST_pauldron_kama_" == 0}): {
+			_item = format ["FST_pauldron_kama_%1", _camo];
+		};
 		case (_item == "FST_Backpack_Antenna"): {
 			private _isSL = (player getVariable ["WBK_Kit_Name",""]) in ["Squad Leader","Squad Leader "];
 			_item = if (_isSL && {(uniform player) isEqualTo "FST_Uniform_P1_41st"}) then {
@@ -501,16 +545,43 @@ switch true do {
 			};
 			playSoundUI ["41st_KitMenu\sounds\select_default.ogg", 0.85, 1];
 		};
-		case (_item == "FST_Antenna"): {
-			playSoundUI ["41st_KitMenu\sounds\select_nvg.ogg", 0.85, 1];
-			if (hmd player == "FST_Antenna") then {
-				player unlinkItem "FST_Antenna";
-			} else {
-				if !("FST_Antenna" in (assignedItems player)) then {
-					player linkItem "FST_Antenna";
-				} else {
-					player linkItem "FST_Antenna";
+		case (
+			_item == "FST_Antenna" ||
+			{_item find "FST_Antenna_" == 0}
+		): {
+			playSoundUI [
+				"41st_KitMenu\sounds\select_nvg.ogg",
+				0.85,
+				1
+			];
+			private _cls = _item;
+			if (_cls == "FST_Antenna") then {
+				private _camo = missionNamespace getVariable [
+					"FST_LastCamoPreset",
+					"Woodland"
+				];
+				private _candidate = format [
+					"FST_Antenna_%1",
+					_camo
+				];
+				if (
+					isClass (
+						configFile >>
+						"CfgWeapons" >>
+						_candidate
+					)
+				) then {
+					_cls = _candidate;
 				};
+			};
+			if (hmd player == _cls) then {
+				player unlinkItem _cls;
+			} else {
+				private _currentHmd = hmd player;
+				if (_currentHmd != "") then {
+					player unlinkItem _currentHmd;
+				};
+				player linkItem _cls;
 			};
 		};
 		case (_item == "FST_NVG" || {_item find "FST_NVG_" == 0}): {
