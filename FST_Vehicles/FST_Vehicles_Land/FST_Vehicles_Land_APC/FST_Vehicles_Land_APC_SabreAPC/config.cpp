@@ -764,10 +764,10 @@ class CfgVehicles
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		hideWeaponsDriver=1;
 		hideWeaponsCargo=0;
-		weapons[]={"FST_SabreAPC_Horn"};
+		weapons[]={"SmokeLauncher"};
 		memoryPointGun="";
 		memoryPointGunDir="";
-		magazines[]={};
+		magazines[]={"SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag"};
 		class HitPoints: HitPoints
 		{
 			class HitFrontArmor: HitHull
@@ -1094,8 +1094,8 @@ class CfgVehicles
 				gunEnd[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
 				memoryPointGun[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
 				memoryPointGunDir[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
-				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_30mm_AP_Cannon","SmokeLauncher"};
-				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag"};
+				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_30mm_AP_Cannon"};
+				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000};
 				selectionFireAnim = "zasleh2";
@@ -1226,8 +1226,8 @@ class CfgVehicles
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
 				memoryPointGun[] = {"CommanderMuzzle"};
-				weapons[] = {"3AS_Sabre_MG","SmokeLauncher"};
-				magazines[] = {"3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","SmokeLauncherMag","SmokeLauncherMag"};
+				weapons[] = {"3AS_Sabre_MG"};
+				magazines[] = {"3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
 				selectionFireAnim = "zasleh2";
