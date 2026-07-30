@@ -83,6 +83,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_NEUTRAL_MEDIUM";
 	};
+	class FST_Subcategory_OutpostInteriorGreebles
+	{
+		displayName = "Interior Greebles";
+	};
 	class FST_Subcategory_OutpostWallsGAR
 	{
 		displayName = "$STR_FST_CORE_SUBCAT_OUTPOST_WALLS_GAR";

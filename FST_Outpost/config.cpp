@@ -34,7 +34,9 @@ class CfgPatches
             "FST_OutpostWall_Entrance_Unmarked",
             "FST_OutpostWall_Entrance_Hutt",
             "FST_OutpostWall_Entrance_BlackSun",
-            "FST_OutpostWall_Entrance_GAROne"
+            "FST_OutpostWall_Entrance_GAROne",
+            "FST_Outpost_InteriorWallGreeble_1x1x3M",
+            "FST_Outpost_InteriorWallGreeble_End"
         };
 
         // No weapon definitions in this package.
@@ -67,6 +69,7 @@ class CfgVehicles
 
 	// Modular vehicle/object config includes.
 	// Keep includes grouped by asset family for maintainability.
-    #include "MediumWalls/MediumWalls.cpp"
+    //#include "MediumWalls/MediumWalls.cpp"
     #include "LightWalls/LightWalls.cpp"
+    #include "InteriorPassages/LightArmoredGreeble/LightArmoredGreeble.cpp"
 };

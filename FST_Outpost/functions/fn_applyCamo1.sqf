@@ -13,7 +13,7 @@ private _texturePath = "";
 private _colorTexture = "";
 
 if (_resolvedMode isEqualTo "texture") then {
-	_texturePath = "FST\\FST_Outpost\\MediumWalls\\Data\\Textures\\Walls\\Camo_co.paa";
+	_texturePath = "FST\\FST_Outpost\\MediumWalls\Data\Textures\Walls\Camo_co.paa";
 
 	_object setObjectTextureGlobal [1, _texturePath];
 	_object setVariable ["FST_Outpost_Camo1_Mode", "texture", true];
