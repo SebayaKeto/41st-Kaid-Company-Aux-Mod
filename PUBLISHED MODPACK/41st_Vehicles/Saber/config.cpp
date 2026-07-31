@@ -192,7 +192,14 @@ class cfgvehicles
 		brakeDistance=5;
 		acceleration=15;
 		maxSpeed=60;
+		slowSpeedForwardCoef=0.35;
 		turnCoef=2;
+		tankTurnForce=900000;
+		tankTurnForceAngMinSpd=0;
+		tankTurnForceAngSpd=0.35;
+		accelAidForceCoef=0.35;
+		accelAidForceYOffset=0;
+		accelAidForceSpd=0.45;
 		canFloat=1;
 		waterPPInVehicle=0;
 		waterResistance=9.9999997e-005;

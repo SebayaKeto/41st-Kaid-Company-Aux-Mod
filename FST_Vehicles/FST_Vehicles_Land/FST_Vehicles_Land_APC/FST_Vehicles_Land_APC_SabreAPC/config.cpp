@@ -239,15 +239,15 @@ class CfgVehicles
 		antiRollbarForceLimit=50;
 		antiRollbarSpeedMin=3;
 		antiRollbarSpeedMax=65;
-		steerAheadSimul=0.5;
-		steerAheadPlan=0.35;
-		predictTurnPlan=0.7;
-		predictTurnSimul=0.5;
-		turnCoef=0.6;
-		maxTurnAngularVelocity=0.25;
-		tankTurnForce=800;
+		steerAheadSimul=0.18;
+		steerAheadPlan=0.12;
+		predictTurnPlan=0.2;
+		predictTurnSimul=0.15;
+		turnCoef=0.18;
+		maxTurnAngularVelocity=0.08;
+		tankTurnForce=220;
 		tankTurnForceAngMinSpd=0;
-		tankTurnForceAngSpd=0.25;
+		tankTurnForceAngSpd=0.06;
 		accelAidForceCoef=0.0018;
 		accelAidForceYOffset=0;
 		accelAidForceSpd=0.06;
@@ -568,9 +568,9 @@ class CfgVehicles
 				weight = 90;
 				mass = 180;
 				MOI = 12;
-				latStiffX = 6;
-				latStiffY = 95;
-				longitudinalStiffnessPerUnitGravity = 17000;
+				latStiffX = 22;
+				latStiffY = 180;
+				longitudinalStiffnessPerUnitGravity = 18500;
 				maxBrakeTorque = 14000;
 				sprungMass = -1;
 				springStrength = 28000;
@@ -583,10 +583,10 @@ class CfgVehicles
 				maxCompression = 0.02;
 				frictionVsSlipGraph[] =
 				{
-					{0,1.25},
-					{0.35,1.5},
-					{0.7,1.75},
-					{1,1.9}
+					{0,100},
+					{0.2,130},
+					{0.55,200},
+					{1,300}
 				};
 			};
 			class L3: L2
@@ -1690,9 +1690,20 @@ class CfgVehicles
 	};
 	class FST_Vehicle_Land_SabreAPC: FST_Vehicle_Land_SabreAPC_base_F
 	{
+		// Force explicit drivetrain + turn behavior on the final spawned class.
+		differentialType="all_limited";
+		frontRearSplit=0.5;
+		frontBias=2.2;
+		rearBias=2.2;
+		centreBias=2.2;
+		turnCoef=0.12;
+		maxTurnAngularVelocity=0.04;
+		tankTurnForce=90;
+		tankTurnForceAngMinSpd=0.3;
+		tankTurnForceAngSpd=0.03;
 		class EventHandlers: DefaultEventHandlers
 		{
-			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;};";
+			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;};";
 		};
 		class SimpleObject
 		{
