@@ -3,7 +3,7 @@
 
 params ["_unit"];
 
-if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", true]) exitWith { false };
+if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith { false };
 if (isNull _unit) exitWith { false };
 if !(local _unit) exitWith { false };
 if (isPlayer _unit) exitWith { false };

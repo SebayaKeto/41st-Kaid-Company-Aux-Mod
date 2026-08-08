@@ -9984,6 +9984,20 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Cutlass_Dirty: FST_Airborne_Helmet
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Cutlass/Dirty)";
+		scope=2;
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass_Dirty.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Milton: FST_Airborne_Helmet
 	{
 		author="Gold";
@@ -22456,7 +22470,7 @@ class CfgVehicles
 	{
 		author="Daara";
 		displayName="[41st] Crew Chief Backpack";
-		maximumload=250;
+		maximumload=300;
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -22734,7 +22748,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
 		};
-		maximumload=170;
+		maximumload=200;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22751,7 +22765,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22772,7 +22786,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22793,7 +22807,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22814,7 +22828,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22835,7 +22849,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22845,7 +22859,7 @@ class CfgVehicles
 	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
 	{
-        maximumload=300;
+        maximumload=350;
 		displayName="[41st] Clone RTO Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTOStraps.p3d";
 	};
@@ -22971,7 +22985,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Woodland)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -22994,7 +23008,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Desert)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -23017,7 +23031,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Midnight)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -23040,7 +23054,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Urban)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -23063,7 +23077,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini ARF RTO Pack [Dirty]";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -25396,7 +25410,7 @@ class CfgVehicles
 		author="Schlabbie And Maxim";
 		scope=2;
 		scopecurator=2;
-		maximumload=320;
+		maximumload=400;
 		tf_range=50000;
 		displayName="[41st] Cold Weather RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
@@ -39655,7 +39669,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass",
+			"FST_Airborne_Helmet_Cutlass",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39665,7 +39679,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass",
+			"FST_Airborne_Helmet_Cutlass",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39710,7 +39724,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass_Dirty",
+			"FST_Airborne_Helmet_Cutlass_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39720,7 +39734,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass_Dirty",
+			"FST_Airborne_Helmet_Cutlass_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

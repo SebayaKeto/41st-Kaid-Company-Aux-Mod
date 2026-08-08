@@ -49,7 +49,10 @@ missionNamespace setVariable ["FST_HC_ExplosionDiagKilledSpikeThreshold", missio
 missionNamespace setVariable ["FST_HC_ExplosionDiagImmediateCooldown", missionNamespace getVariable ["FST_HC_ExplosionDiagImmediateCooldown", 5]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagLogBelowFPS", missionNamespace getVariable ["FST_HC_ExplosionDiagLogBelowFPS", 15]];
 missionNamespace setVariable ["FST_HC_ExplosionDiagRecentLimit", missionNamespace getVariable ["FST_HC_ExplosionDiagRecentLimit", 40]];
-missionNamespace setVariable ["FST_HC_EmergencyDroidBandaidEnabled", missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", true]];
+// Default false 2026-08-01 (team decision) -- must match the addSetting default
+// below; this raw seed runs first, so leaving it true would silently win over
+// CBA_fnc_addSetting's default regardless of that call's own value.
+missionNamespace setVariable ["FST_HC_EmergencyDroidBandaidEnabled", missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]];
 missionNamespace setVariable ["FST_HC_EmergencyDroidScanInterval", missionNamespace getVariable ["FST_HC_EmergencyDroidScanInterval", 1.5]];
 missionNamespace setVariable ["FST_HC_EmergencyDroidScanMaxPerPass", missionNamespace getVariable ["FST_HC_EmergencyDroidScanMaxPerPass", 250]];
 missionNamespace setVariable ["FST_HC_EmergencyKillWindow", missionNamespace getVariable ["FST_HC_EmergencyKillWindow", 10]];
@@ -72,10 +75,15 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 // ============================================================
 
 
+// Default flipped OFF 2026-08-01 per team decision: instant droid-death vanish
+// (hideObject+enableSimulation false fired synchronously on Killed) was reported
+// as a visible regression during ops. This setting is still the fast, no-repack
+// way to re-enable the bandaid live if HC crashes/FPS drops return -- flip it
+// back on in FST HC Spawn > Emergency, no code change needed.
 [
     "FST_HC_EmergencyDroidBandaidEnabled", "CHECKBOX",
     ["Emergency Droid Stability Bandaid", "Live-op bandaid: mutes droid radio protocol, dampens ACE medical AI state on local droids, and quickly deletes dead droid bodies on HCs/server. Use until the ACE/droid wound-handler issue is fixed in config."],
-    ["FST HC Spawn", "Emergency"], true, true, {}, false
+    ["FST HC Spawn", "Emergency"], false, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
