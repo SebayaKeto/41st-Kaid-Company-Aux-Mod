@@ -139,19 +139,22 @@ class CfgVehicles
 		author="Maldova";
 		mapSize=35.0001;
 		simulation="tankX";
-		mass=22500;
+		mass=80000;
 		fuelCapacity=80;
-		brakeIdleSpeed=0.75;
+		brakeIdleSpeed=0.95;
 		maxSpeed=85;
 		normalSpeedForwardCoef=0.58;
 		slowSpeedForwardCoef=0.24;
 		engineMOI=14;
+		dampingRateFullThrottle=0.35;
+		dampingRateZeroThrottleClutchEngaged=1.15;
+		dampingRateZeroThrottleClutchDisengaged=0.9;
 		enginePower=2150;
 		maxOmega=345.57501;
 		minOmega=146.608;
 		redRpm=7500;
 		idleRpm=850;
-		peakTorque=32000;
+		peakTorque=35000;
 		torqueCurve[]=
 		{
 			{0,0},
@@ -192,9 +195,6 @@ class CfgVehicles
 			}
 		};
 		thrustDelay=0.7;
-		dampingRateFullThrottle=0.85;
-		dampingRateZeroThrottleClutchEngaged=3;
-		dampingRateZeroThrottleClutchDisengaged=1.5;
 		clutchStrength=170;
 		latency=0.45;
 		switchTime=0;
@@ -205,7 +205,7 @@ class CfgVehicles
 			GearboxRatios[]=
 			{
 				"R2",
-				-0.25,
+				-0.6,
 				"N",
 				0,
 				"D1",
@@ -236,21 +236,18 @@ class CfgVehicles
 			transmissionDelay=0.25;
 		};
 		antiRollbarForceCoef=24;
-		antiRollbarForceLimit=50;
+		antiRollbarForceLimit=70;
 		antiRollbarSpeedMin=3;
 		antiRollbarSpeedMax=65;
-		steerAheadSimul=0.18;
-		steerAheadPlan=0.12;
-		predictTurnPlan=0.2;
-		predictTurnSimul=0.15;
-		turnCoef=0.18;
-		maxTurnAngularVelocity=0.08;
-		tankTurnForce=220;
-		tankTurnForceAngMinSpd=0;
-		tankTurnForceAngSpd=0.06;
-		accelAidForceCoef=0.0018;
+		steerAheadSimul=0.30000001;
+		steerAheadPlan=0.40000001;
+		turnCoef=3.9;
+		tankTurnForce=480000;
+		tankTurnForceAngMinSpd=0.7;
+		tankTurnForceAngSpd=0.7;
+		accelAidForceCoef=0.35;
 		accelAidForceYOffset=0;
-		accelAidForceSpd=0.06;
+		accelAidForceSpd=0.9;
 		class Sounds
 		{
 			class Idle_ext
@@ -565,28 +562,27 @@ class CfgVehicles
 				damping = 180;
 				steering = 0;
 				side = "left";
-				weight = 90;
+				weight = 100;
 				mass = 180;
 				MOI = 12;
-				latStiffX = 22;
-				latStiffY = 180;
-				longitudinalStiffnessPerUnitGravity = 18500;
-				maxBrakeTorque = 14000;
+				latStiffX = 100;
+				latStiffY = 1600;
+				longitudinalStiffnessPerUnitGravity = 65000;
+				maxBrakeTorque = 3000;
 				sprungMass = -1;
 				springStrength = 28000;
-				springDamperRate = 36000;
-				dampingRate = 12;
+				springDamperRate = 48000;
+				dampingRate = 16;
 				dampingRateInAir = 700;
 				dampingRateDamaged = 8;
 				dampingRateDestroyed = 400;
-				maxDroop = 0.02;
-				maxCompression = 0.02;
-				frictionVsSlipGraph[] =
+				maxDroop = 0.04;
+				maxCompression = 0.04;
+				frictionVsSlipGraph[]=
 				{
-					{0,100},
-					{0.2,130},
-					{0.55,200},
-					{1,300}
+					{0,2.0},
+					{0.1,2.5},
+					{0.8,2.05}
 				};
 			};
 			class L3: L2
@@ -625,6 +621,14 @@ class CfgVehicles
 				center = "wheel_2_2_axis";
 				boundary = "wheel_2_2_bound";
 				side = "right";
+				latStiffY = 1600;
+				longitudinalStiffnessPerUnitGravity = 65000;
+				frictionVsSlipGraph[]=
+				{
+					{0,2.0},
+					{0.1,2.5},
+					{0.8,2.05}
+				};
 			};
 			class R3: R2
 			{
@@ -1691,15 +1695,10 @@ class CfgVehicles
 	class FST_Vehicle_Land_SabreAPC: FST_Vehicle_Land_SabreAPC_base_F
 	{
 		differentialType="all_limited";
-		frontRearSplit=0.52;
-		frontBias=3.4;
-		rearBias=3.6;
-		centreBias=3.8;
-		turnCoef=0.08;
-		maxTurnAngularVelocity=0.025;
-		tankTurnForce=35;
-		tankTurnForceAngMinSpd=1.2;
-		tankTurnForceAngSpd=0.12;
+		frontRearSplit=0.5;
+		frontBias=1.35;
+		rearBias=1.35;
+		centreBias=1.4;
 		class EventHandlers: DefaultEventHandlers
 		{
 			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;};";
