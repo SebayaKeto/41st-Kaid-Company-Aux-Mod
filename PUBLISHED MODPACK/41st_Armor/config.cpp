@@ -397,6 +397,7 @@ class CfgPatches
 			"FST_P2_Bright",
 			"FST_P2_Jericho",
 			"FST_P2_Assassin",
+			"FST_P2_Assassin_Dirty",
 			"FST_P2_Adler",
 			"FST_P2_Buddhah",
 			"FST_P2_Buddhah_Dirty",
@@ -8776,6 +8777,30 @@ class CfgWeapons
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Ghost: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Ghost]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ghost.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Ghost.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
+	class FST_Pilot_P1_Helmet_Corpse: FST_Pilot_P1_Helmet
+	{
+		author="Steel";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Corpse]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Corpse.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Corpse.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
 	class FST_Pilot_P1_Helmet_Kwike: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
@@ -9984,6 +10009,20 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Cutlass_Dirty: FST_Airborne_Helmet
+	{
+		author="Gold";
+		displayName="[41st] Airborne Helmet (Cutlass/Dirty)";
+		scope=2;
+		hiddenselections[]=
+		{
+			"camo1",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Cutlass_Dirty.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Milton: FST_Airborne_Helmet
 	{
 		author="Gold";
@@ -10082,6 +10121,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Assassin.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Assassin_Dirty: FST_Airborne_Helmet
+	{
+		author="Steel";
+		displayName="[41st] Airborne Helmet (Assassin/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Assassin_Dirty.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Cait: FST_Airborne_Helmet
@@ -11322,6 +11371,36 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Dilham_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Hayes: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Hayes]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hayes.paa",
+		};
+	};
+	class FST_P2_Helmet_Hayes_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Hayes/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hayes_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Moto: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Moto]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Moto.paa",
 		};
 	};
 	class FST_P2_Helmet_Bogu: FST_P2_Helmet_Base
@@ -16746,6 +16825,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Assassin";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Assassin_Dirty: JLTS_CloneArmor
+	{
+		author="Steel";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Assassin/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Assassin_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -22456,7 +22549,7 @@ class CfgVehicles
 	{
 		author="Daara";
 		displayName="[41st] Crew Chief Backpack";
-		maximumload=250;
+		maximumload=300;
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -22734,7 +22827,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
 		};
-		maximumload=170;
+		maximumload=200;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22751,7 +22844,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Equipment\FST_Clone_backpack_co.paa"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22772,7 +22865,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22793,7 +22886,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22814,7 +22907,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22835,7 +22928,7 @@ class CfgVehicles
 		{
 			"41st_Armor\Data\Other\Camos\Clone_backpack.rvmat"
 		};
-		maximumload=300;
+		maximumload=350;
 		tf_dialog="JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -22845,7 +22938,7 @@ class CfgVehicles
 	};
 	class FST_Clone_backpack_s_RTO: FST_Clone_backpack_RTO
 	{
-        maximumload=300;
+        maximumload=350;
 		displayName="[41st] Clone RTO Backpack (Straps)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneBackpackRTOStraps.p3d";
 	};
@@ -22971,7 +23064,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Woodland)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -22994,7 +23087,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Desert)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -23017,7 +23110,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Midnight)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -23040,7 +23133,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini RTO Pack (Urban)";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -23063,7 +23156,7 @@ class CfgVehicles
 		scopecurator=2;
 		scopearsenal=2;
 		displayName="[41st] Mini ARF RTO Pack [Dirty]";
-		maximumload=250;
+		maximumload=300;
 		model="\MRC\JLTS\characters\CloneArmor\CloneRTOPack.p3d";
 		hiddenSelections[]=
 		{
@@ -25396,7 +25489,7 @@ class CfgVehicles
 		author="Schlabbie And Maxim";
 		scope=2;
 		scopecurator=2;
-		maximumload=320;
+		maximumload=400;
 		tf_range=50000;
 		displayName="[41st] Cold Weather RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
@@ -26969,7 +27062,7 @@ class CfgVehicles
 		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Appa/Dirty)"
@@ -26978,7 +27071,7 @@ class CfgVehicles
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa_Dirty.paa"
 		};
 	};
-	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Silhouette)"
@@ -26987,7 +27080,7 @@ class CfgVehicles
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Silhouette.paa"
 		};
 	};
-	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Sin)"
@@ -27054,7 +27147,7 @@ class CfgVehicles
 		};
 		class TransportItems{};
 	};
-	class FST_Backpack_Jumppack_Vengence_Dirty: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Vengence_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Vengence/Dirty)"
@@ -27829,7 +27922,7 @@ class CfgVehicles
 		{
 		};
 	};
-	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack_Ares
+	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Marek/Dirty)"
@@ -27837,8 +27930,8 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek_Dirty.paa"
 		};
-	}
-	class FST_Backpack_Jumppack_Bright: FST_Backpack_Jumppack_Ares
+	};
+	class FST_Backpack_Jumppack_Bright: FST_Backpack_Jumppack
 	{
 		author="Steel";
 		displayname="[41st] Jump Pack (Bright)"
@@ -27846,7 +27939,26 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumpack_Bright.paa"
 		};
-	}
+	};
+	class FST_Backpack_Jumppack_Assassin: FST_Backpack_Jumppack
+	{
+		author="Steel";
+		displayname="[41st] Jump Pack (Assassin)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Assassin.paa"
+		};
+	};
+	class FST_Backpack_Jumppack_Assassin_Dirty: FST_Backpack_Jumppack
+	{
+		author="Steel";
+		displayname="[41st] Jump Pack (Assassin/Dirty)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Assassin_Dirty.paa"
+		};
+	};
+	
 	//////////////Loadouts////////////////
 	class FST_bodyGlove: lsd_gar_bodyGlove_base
 	{
@@ -34899,7 +35011,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_ARF_Helmet_WhiteGreen_Hayes",
+			"FST_P2_Helmet_Hayes",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -34909,7 +35021,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_ARF_Helmet_WhiteGreen_Hayes",
+			"FST_P2_Helmet_Hayes",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -34954,7 +35066,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_ARF_Helmet_WhiteGreen_Hayes",
+			"FST_P2_Helmet_Hayes_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -34964,7 +35076,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_ARF_Helmet_WhiteGreen_Hayes",
+			"FST_P2_Helmet_Hayes_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39344,6 +39456,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Assassin_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Steel";
+		displayName="[41st] CT-3256 'Assassin/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Assassin_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Assassin_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Assassin_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Assassin_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Assassin_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Fire: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -39655,7 +39822,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass",
+			"FST_Airborne_Helmet_Cutlass",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39665,7 +39832,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass",
+			"FST_Airborne_Helmet_Cutlass",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39710,7 +39877,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass_Dirty",
+			"FST_Airborne_Helmet_Cutlass_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -39720,7 +39887,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Cutlass_Dirty",
+			"FST_Airborne_Helmet_Cutlass_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

@@ -2,7 +2,7 @@ if (!(isServer || {!hasInterface})) exitWith {};
 if (missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidStarted", false]) exitWith {};
 missionNamespace setVariable ["FST_HC_EmergencyDroidBandaidStarted", true];
 
-if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", true]) exitWith {
+if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith {
     diag_log "[FST_HCSpawn][EMERGENCY] Droid bandaid disabled";
 };
 
@@ -47,7 +47,7 @@ missionNamespace setVariable ["FST_HC_EmergencyKillTimes", []];
 }] call CBA_fnc_addClassEventHandler;
 
 [{
-    if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", true]) exitWith {};
+    if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith {};
     private _maxScan = missionNamespace getVariable ["FST_HC_EmergencyDroidScanMaxPerPass", 250];
     private _done = 0;
     {
@@ -61,7 +61,7 @@ missionNamespace setVariable ["FST_HC_EmergencyKillTimes", []];
 }, missionNamespace getVariable ["FST_HC_EmergencyDroidScanInterval", 1.5], []] call CBA_fnc_addPerFrameHandler;
 
 [{
-    if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", true]) exitWith {};
+    if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith {};
     private _queue = missionNamespace getVariable ["FST_HC_EmergencyDeadQueue", []];
     if (_queue isEqualTo []) exitWith {};
     private _maxDelete = missionNamespace getVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", 20];
