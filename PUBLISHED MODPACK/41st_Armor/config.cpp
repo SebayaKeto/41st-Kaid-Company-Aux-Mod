@@ -53595,8 +53595,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Quill.paa",
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Armor\Data\Uniforms\FST_P2_BodyLower_Quill.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Quill.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Quill.paa",
 		};
 		weapons[]=
 		{
