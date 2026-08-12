@@ -1,4 +1,4 @@
-class CfgPatches
+﻿class CfgPatches
 {
 	class 41st_Addon
 	{
@@ -10923,6 +10923,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Harribel.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Kol: FST_Airborne_Helmet
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] Airborne Helmet (Kol)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Kol.paa",
+		};
+	};
 	class FST_P2_Helmet_Skipjack: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -14438,6 +14448,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Coldstart.paa",
+		};
+	};
+	class FST_P2_Helmet_Valius_Dirty: FST_P2_Helmet_Base
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] P2 Helmet (Valius/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Valius_Dirty.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
@@ -20291,7 +20311,35 @@ class CfgWeapons
 			containerClass="Supply180";
 			mass=15;
 		};
-	}; 
+	};
+	class FST_Uniform_Valius_Dirty: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Valius/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Valius_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Draco: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Draco]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Draco";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	//////////////NVGs/////////////
 
 	class FST_NVG: JLTS_CloneNVG
@@ -21229,6 +21277,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Cooker.paa"
+		};
+	};
+	class FST_NVG_Valius_dirty: FST_NVG
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] NCO Macrobinoculars (Valius/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Valius_dirty.paa",
 		};
 	};
 	class FST_Marshal_Commander_Visor: JLTS_CloneNVGMC
@@ -53391,6 +53449,112 @@ class CfgVehicles
 		{
 			"FST_P2_Helmet_Dash",
 			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Valius_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-4545 'Valius' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Valius_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Valius_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Valius_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Valius",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Valius",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Draco: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-5010 'Draco'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Draco";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Draco.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Draco.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Draco",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Draco",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
