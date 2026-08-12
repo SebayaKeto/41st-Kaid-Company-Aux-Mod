@@ -3793,8 +3793,8 @@ class CfgVehicles
 		author="Bees";
 		hiddenselectionstextures[]=
 		{
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
@@ -4293,8 +4293,8 @@ class CfgVehicles
 		author="Bees";
 		hiddenselectionstextures[]=
 		{
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
@@ -4773,8 +4773,8 @@ class CfgVehicles
 		author="Bees";
 		hiddenselectionstextures[]=
 		{
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
@@ -5273,8 +5273,8 @@ class CfgVehicles
 		author="Bees";
 		hiddenselectionstextures[]=
 		{
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
-			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
