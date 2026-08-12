@@ -1,4 +1,4 @@
-class CfgPatches
+﻿class CfgPatches
 {
 	class FST_LAAT
 	{
@@ -3780,6 +3780,48 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
+	class FST_laati_Turret_Ouranos: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Ouranos)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_Turret_Cait: FST_laati_Turret
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Cait)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapon_Details_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Cait.paa"
+		};
+		textureList[]={};
+	};
 	class FST_laati_mk2_Daara: FST_laati_mk2
 	{
 		scope=2;
@@ -4238,6 +4280,48 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
+	class FST_laati_mk2_Ouranos: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Ouranos)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2_Cait: FST_laati_mk2
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Cait)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapon_Details_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Cait.paa"
+		};
+		textureList[]={};
+	};
 	// Start Lamps Customs
 	class FST_laati_mk1Lights_Daara: FST_laati_mk1Lights
 	{
@@ -4673,6 +4757,48 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Houdini.paa",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk1Lights_Ouranos: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Ouranos/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk1Lights_Cait: FST_laati_mk1Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk I Gunship (Cait/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapon_Details_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Cait.paa"
 		};
 		textureList[]={};
 	};
@@ -5131,6 +5257,48 @@ class CfgVehicles
 			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
 			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
 			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Houdini.paa",
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2Lights_Ouranos: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Ouranos/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Ouranos.paa",
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Ouranos.paa",
+			"3AS\3as_Laat\LAATI\data\Weapons_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Weapon_Details_CO.paa",
+			"3AS\3as_Laat\LAATI\data\Interior_CO.paa"
+		};
+		textureList[]={};
+	};
+	class FST_laati_mk2Lights_Cait: FST_laati_mk2Lights
+	{
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		side=1;
+		displayname="[41st] LAAT/i Mk II Gunship (Cait/Lamps)";
+		faction="FST_Faction";
+		editorSubcategory="FST_Air_Vehicle";
+		crew="FST_Pilot_P1";
+		author="Bees";
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\NEWLAAT\Data\Hull_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Wings_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapons_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Weapon_Details_CO_41st_Cait.paa",
+			"41st_Vehicles\NEWLAAT\Data\Interior_CO_41st_Cait.paa"
 		};
 		textureList[]={};
 	};
@@ -6519,4 +6687,4 @@ class Cfgweapons
 		displayName="[41st] Mine Dispenser"; reloadTime=0.1; aiRateOfFire=5;
 		magazines[]={ "FST_PylonMissile_1Rnd_Mine_Dispenser","FST_1Rnd_Mine_Dispenser" };
 	};
-};
+};
