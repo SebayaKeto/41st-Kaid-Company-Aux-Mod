@@ -20340,6 +20340,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Quill: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Quill]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Quill";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	//////////////NVGs/////////////
 
 	class FST_NVG: JLTS_CloneNVG
@@ -53555,6 +53569,59 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Draco",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Quill: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-2037 'Quill'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Quill";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Quill.paa",
+			"C:\Users\tecon\Documents\GitHub\41st-Kaid-Company-Aux-Mod\PUBLISHED MODPACK\41st_Armor\Data\Uniforms\FST_P2_BodyLower_Quill.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Quill",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Quill",
 			"ItemMap",
 			"ItemGPS",
 			"ItemCompass",
