@@ -10933,6 +10933,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Kol.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Hijack: FST_Airborne_Helmet
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] Airborne Helmet (Hijack)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Hijack.paa",
+		};
+	};
 	class FST_P2_Helmet_Skipjack: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -55270,6 +55280,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Sierra";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Sierra.paa";
+		};
+		class FST_Clone_Head_Pole: FST_clone_Default_head
+		{
+			author="Bees";
+			name="Clone Trooper Pole";
+			displayName="[41st] Clone Trooper - Pole";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Pole.paa";
 		};
 		class FST_BX_Face_Womprat: Default
 		{
