@@ -14480,6 +14480,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Five_Dirty.paa",
 		};
 	};
+	class FST_P2_Helmet_Bees: FST_P2_Helmet_Base
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] P2 Helmet (Bees)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bees.paa",
+		};
+	};
 	//////////////UNIFORMS//////////////
 	class FST_Uniform_Bodyglove: lsd_gar_bodyGlove_uniform
 	{
