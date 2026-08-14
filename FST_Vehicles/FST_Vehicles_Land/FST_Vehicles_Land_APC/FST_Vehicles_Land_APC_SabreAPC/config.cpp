@@ -205,7 +205,7 @@ class CfgVehicles
 			GearboxRatios[]=
 			{
 				"R2",
-				-0.6,
+				-5.5,
 				"N",
 				0,
 				"D1",
@@ -568,7 +568,7 @@ class CfgVehicles
 				latStiffX = 100;
 				latStiffY = 1600;
 				longitudinalStiffnessPerUnitGravity = 65000;
-				maxBrakeTorque = 3000;
+				maxBrakeTorque = 1500;
 				sprungMass = -1;
 				springStrength = 28000;
 				springDamperRate = 48000;
@@ -596,24 +596,28 @@ class CfgVehicles
 				boneName = "wheel_podkolol3";
 				center = "wheel_1_4_axis";
 				boundary = "wheel_1_4_bound";
+				maxBrakeTorque = 500;
 			};
 			class L5: L2
 			{
 				boneName = "wheel_podkolol4";
 				center = "wheel_1_5_axis";
 				boundary = "wheel_1_5_bound";
+				maxBrakeTorque = 500;
 			};
 			class L6: L2
 			{
 				boneName = "wheel_podkolol5";
 				center = "wheel_1_6_axis";
 				boundary = "wheel_1_6_bound";
+				maxBrakeTorque = 250;
 			};
 			class L7: L2
 			{
 				boneName = "wheel_podkolol6";
 				center = "wheel_1_7_axis";
 				boundary = "wheel_1_7_bound";
+				maxBrakeTorque = 250;
 			};
 			class R2: L2
 			{
@@ -641,24 +645,28 @@ class CfgVehicles
 				boneName = "wheel_podkolop3";
 				center = "wheel_2_4_axis";
 				boundary = "wheel_2_4_bound";
+				maxBrakeTorque = 500;
 			};
 			class R5: R2
 			{
 				boneName = "wheel_podkolop4";
 				center = "wheel_2_5_axis";
 				boundary = "wheel_2_5_bound";
+				maxBrakeTorque = 500;
 			};
 			class R6: R2
 			{
 				boneName = "wheel_podkolop5";
 				center = "wheel_2_6_axis";
 				boundary = "wheel_2_6_bound";
+				maxBrakeTorque = 250;
 			};
 			class R7: R2
 			{
 				boneName = "wheel_podkolop6";
 				center = "wheel_2_7_axis";
 				boundary = "wheel_2_7_bound";
+				maxBrakeTorque = 250;
 			};
 		};
 		editorcategory="FST_Catagory_Vehicles_Land";
@@ -1098,8 +1106,8 @@ class CfgVehicles
 				gunEnd[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
 				memoryPointGun[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
 				memoryPointGunDir[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
-				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_30mm_AP_Cannon"};
-				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts"};
+				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_LG_MissileLauncher"};
+				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_4Rnd_SabreAPC_LG_Missiles"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000};
 				selectionFireAnim = "zasleh2";
@@ -1115,8 +1123,8 @@ class CfgVehicles
 				gunnerForceOptics = 1;
 				visionMode[] = {"Normal","NVG", "TI"};
 				thermalMode[] = {};
-				missileBeg = "LeftGunnerTurret_Muzzle";
-				missileEnd = "LeftGunnerTurret_Muzzle_Dir";
+				missileBeg = "LeftGunnerTurret_Muzzle_Dir";
+				missileEnd = "LeftGunnerTurret_Muzzle";
 				rocketBeg = "LeftGunnerTurret_Muzzle";
 				rocketEnd = "LeftGunnerTurret_Muzzle_Dir";
 				gunnerOpticsShowCursor = 1;
