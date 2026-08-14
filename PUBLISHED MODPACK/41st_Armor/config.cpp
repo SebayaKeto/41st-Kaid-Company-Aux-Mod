@@ -1,4 +1,4 @@
-class CfgPatches
+﻿class CfgPatches
 {
 	class 41st_Addon
 	{
@@ -10923,6 +10923,26 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Harribel.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Kol: FST_Airborne_Helmet
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] Airborne Helmet (Kol)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Kol.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Hijack: FST_Airborne_Helmet
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] Airborne Helmet (Hijack)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Hijack.paa",
+		};
+	};
 	class FST_P2_Helmet_Skipjack: FST_P2_Helmet_Base
 	{
 		author="Gold";
@@ -14438,6 +14458,36 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Coldstart.paa",
+		};
+	};
+	class FST_P2_Helmet_Valius_Dirty: FST_P2_Helmet_Base
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] P2 Helmet (Valius/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Valius_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Five_Dirty: FST_P2_Helmet_Base
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] P2 Helmet (Five/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Five_Dirty.paa",
+		};
+	};
+	class FST_P2_Helmet_Bees: FST_P2_Helmet_Base
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] P2 Helmet (Bees)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bees.paa",
 		};
 	};
 	//////////////UNIFORMS//////////////
@@ -20291,7 +20341,91 @@ class CfgWeapons
 			containerClass="Supply180";
 			mass=15;
 		};
-	}; 
+	};
+	class FST_Uniform_Valius_Dirty: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Valius/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Valius_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Draco: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Draco]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Draco";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Quill: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Quill]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Quill";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Kwike: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Kwike]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Kwike";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Five_Dirty: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Five/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Five_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Persuade: JLTS_CloneArmor
+	{
+		author="Bees";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Persuade]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Persuade";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	//////////////NVGs/////////////
 
 	class FST_NVG: JLTS_CloneNVG
@@ -21229,6 +21363,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Cooker.paa"
+		};
+	};
+	class FST_NVG_Valius_dirty: FST_NVG
+	{
+		author="Bees";
+		scope=2;
+		displayName="[41st] NCO Macrobinoculars (Valius/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Valius_dirty.paa",
 		};
 	};
 	class FST_Marshal_Commander_Visor: JLTS_CloneNVGMC
@@ -53398,6 +53542,324 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Valius_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-4545 'Valius' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Valius_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Valius_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Valius_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Valius",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Valius",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Draco: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-5010 'Draco'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Draco";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Draco.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Draco.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Draco",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Draco",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Quill: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-2037 'Quill'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Quill";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Quill.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Quill.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Quill",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Quill",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Kwike: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-9227 'Kwike'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Kwike";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Kwike.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Kwike.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Kwike",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Kwike",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Five_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-5569 'Five' (Dirty)";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Five_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Five_Dirty.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Five_Dirty.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Five",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Five",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Persuade: FST_Trooper_P2_DC15S
+	{
+		author="Bees";
+		displayName="[41st] CT-7986 'Persuade'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Persuade";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Persuade.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Persuade.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Persuade",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Persuade",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class ls_gar_jediCommander;
 	class FST_Jedi: ls_gar_jediCommander
 	{
@@ -55039,6 +55501,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - Sierra";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_Sierra.paa";
+		};
+		class FST_Clone_Head_Pole: FST_clone_Default_head
+		{
+			author="Bees";
+			name="Clone Trooper Pole";
+			displayName="[41st] Clone Trooper - Pole";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Pole.paa";
 		};
 		class FST_BX_Face_Womprat: Default
 		{

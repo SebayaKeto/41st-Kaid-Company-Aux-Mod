@@ -1,4 +1,4 @@
-class CfgPatches
+﻿class CfgPatches
 {
 	class FST_SaberTank
 	{
@@ -833,6 +833,21 @@ class cfgvehicles
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_PDF_co.paa",
 		};
 	};
+	class FST_Saber_TheClawMachine: FST_Saber
+	{
+		author="Bees";
+		displayName="[41st] TX-130 Saber Tank (The Claw Machine)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_saber_hull_TheClawMachine_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_saber_Weapons_TheClawMachine_co.paa",
+		};
+	};
 	class FST_SuperSaber: FST_Saber
 	{
 		scope=2;
@@ -1037,6 +1052,21 @@ class cfgvehicles
 		{
 			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_PDF_co.paa",
 			"41st_Vehicles\Saber\Data\Weapons\41st_Saber_Weapons_PDF_co.paa",
+		};
+	};
+	class FST_SuperSaber_TheClawMachine: FST_SuperSaber
+	{
+		author="Bees";
+		displayName="[41st] TX-130 Super Saber Tank (The Claw Machine)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_saber_hull_TheClawMachine_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_saber_Weapons_TheClawMachine_co.paa",
 		};
 	};
 	class FST_Recon_Saber: FST_Saber
@@ -1466,6 +1496,21 @@ class cfgvehicles
 		{
 			"41st_Vehicles\Saber\Data\Hull\41st_Saber_Hull_PDF_co.paa",
 			"41st_Vehicles\Saber\Data\Weapons\FST_Saber_Weapons_recon_PDF_co.paa",
+		};
+	};
+	class FST_Recon_Saber_TheClawMachine: FST_Recon_Saber
+	{
+		author="Bees";
+		displayName="[41st] TX-130 Recon Saber Tank (The Claw Machine)";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Vehicles\Saber\Data\Hull\41st_saber_hull_TheClawMachine_co.paa",
+			"41st_Vehicles\Saber\Data\Weapons\41st_saber_Weapons_TheClawMachine_co.paa",
 		};
 	};
 };

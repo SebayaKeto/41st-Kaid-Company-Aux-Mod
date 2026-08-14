@@ -24,17 +24,35 @@
             ["CHECKBOX", ["Armed Ship?", "Should the Munificent have turrets spawned?"], [true]],
             ["CHECKBOX", ["Jump Ship Out Afterwards?", "The ship will leave after it has deployed the troops"], [true]],
 
-            // NEW: Number of Turrets
-            ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Munificent."], [0, 10, 2, 0]],
+            // Turret count
+            ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Munificent. Ignored if Custom Turrets + Custom Turret Positions are both enabled and at least one per-type count below is set."], [0, 10, 2, 0]],
 
-            // NEW: Custom turret classnames (pulls from CBA addon settings)
+            // Custom turret classnames
             ["CHECKBOX", ["Custom Turrets?", "If enabled, turret classnames will be pulled from the CBA addon settings instead of the faction default."], [false]],
 
-            // NEW: Ship HP pool
+            // Custom turret positions
+            ["CHECKBOX", ["Use Custom Turret Positions?", "If enabled, turrets spawn at fixed hand-placed mount points on the hull instead of being auto-spaced. Edit FST_Munificent_TurretPositions in Modules.sqf to tune them."], [false]],
+
+            // Per-type turret counts
+            ["SLIDER", ["DF9 Rocket Turrets", "Number of FST_DF9_Rocket turrets to spawn. Only used when Custom Turrets + Custom Turret Positions are both enabled."], [0, 10, 0, 0]],
+            ["SLIDER", ["Inverted PD Turrets", "Number of FST_CIS_PD_Turret_Inverted turrets to spawn. Only used when Custom Turrets + Custom Turret Positions are both enabled."], [0, 10, 0, 0]],
+            ["SLIDER", ["PD Turrets", "Number of FST_CIS_PD_Turret turrets to spawn. Only used when Custom Turrets + Custom Turret Positions are both enabled."], [0, 10, 0, 0]],
+
+            // Placement bias
+            ["COMBO", ["Placement Bias", "Which hull mount points are prioritised. Only affects turrets when Custom Turret Positions is enabled."], [
+                [0, 1, 2, 3, 4, 5],
+                ["Portside", "Starboard", "Underside", "TopSide", "Random", "Balanced"]
+            ]],
+
+            // Ship HP
             ["SLIDER", ["Ship HP", "HP pool for the ship. Stored as this value x100 internally (e.g. 25 = 2500 HP). Default is the CBA addon setting."], [1, 5000, 25, 0]],
 
-            // NEW: Death condition
-            ["TOOLBOX", ["Death Condition", "What happens when the ship is destroyed. Crash Ship = falls from the sky. Retreat = jumps out."], [0, 1, 2, ["Crash Ship", "Retreat (Jump Out)"], nil]]
+            // Death condition
+            ["TOOLBOX", ["Death Condition", "What happens when the ship is destroyed. Crash Ship = falls from the sky. Retreat = jumps out."], [0, 1, 2, ["Crash Ship", "Retreat (Jump Out)"], nil]],
+
+            // Timing
+            ["SLIDER", ["Deployment Delay", "Seconds before the ship jumps in. An early-warning message will broadcast a rounded ETA to all curators."], [0, 30, 0, 0]],
+            ["SLIDER", ["Arming Delay", "Seconds after jump-in before the ship's weapons come online."], [0, 30, 0, 0]]
 
             ], {
                 params ["_values", "_arguments"];
@@ -52,11 +70,20 @@
                 _ArmedShip         = _values select 8;
                 _EndWithJumpOut    = _values select 9;
 
-                // NEW: turret count, custom turret, HP, death condition
-                _NumberOfTurrets   = _values select 10;
-                _UseCustomTurret   = _values select 11;
-                _ShipHealthMult    = _values select 12;
-                _DeathCondition    = _values select 13;
+                // Turret / ship settings
+                _NumberOfTurrets          = _values select 10;
+                _UseCustomTurret          = _values select 11;
+                _UseCustomTurretPositions = _values select 12;
+                _DF9RocketCount           = _values select 13;
+                _InvertedPDCount          = _values select 14;
+                _PDCount                  = _values select 15;
+                _PlacementBias            = _values select 16;
+                _ShipHealthMult           = _values select 17;
+                _DeathCondition           = _values select 18;
+
+                // Timing
+                _DeploymentDelay = _values select 19;
+                _ArmingDelay     = _values select 20;
 
                 // Editor position
                 _position = _arguments select 0;
@@ -76,8 +103,15 @@
                     _EndWithJumpOut,
                     _NumberOfTurrets,
                     _UseCustomTurret,
+                    _UseCustomTurretPositions,
+                    _DF9RocketCount,
+                    _InvertedPDCount,
+                    _PDCount,
+                    _PlacementBias,
                     _ShipHealthMult,
-                    _DeathCondition
+                    _DeathCondition,
+                    _DeploymentDelay,
+                    _ArmingDelay
                 ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Munificent_QRF", 2];
 
             }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
@@ -85,6 +119,98 @@
     "\PHAN_ScifiSupportPlus\data\Droid.paa"
 ] call zen_custom_modules_fnc_register;
 
+
+// Turret mount points, per classname, in CoreOBJ model space [x, y, z]
+FST_Munificent_TurretPositions = [
+    ["FST_DF9_Rocket", [
+        [-41.0663, -58.5991, 377.5],
+        [-41.0664, -83.5784, 377.506],
+        [-68.7698, -83.5784, 376.765],
+        [-41.0664, -104.707, 377.506],
+        [-105.865, -83.5784, 376.245],
+        [40.0502, -58.599, 377.506],
+        [40.05, -83.5784, 377.506],
+        [40.05, -104.707, 377.506],
+        [-144.355, -83.5785, 375.633],
+        [71.9941, -83.5787, 376.768],
+        [-188.425, -66.4404, 375.133],
+        [-188.425, -66.5181, 370.383],
+        [-188.425, -90.4008, 375.133],
+        [-188.425, -90.4786, 370.383],
+        [109.09, -83.579, 376.245],
+        [0.753418, -179.967, 464.508],
+        [0.753418, -195.715, 464.508],
+        [-5.36218, 103.941, 412.151],
+        [4.88403, 103.941, 412.151],
+        [0.75354, -212.712, 464.508],
+        [-5.36206, 121.75, 412.151],
+        [4.88403, 121.75, 412.148],
+        [147.58, -83.579, 375.639],
+        [-5.36206, 138.935, 412.151],
+        [4.88416, 138.935, 412.151],
+        [190.46, -66.4404, 375.133],
+        [190.46, -66.5182, 370.383],
+        [190.46, -90.4007, 375.133],
+        [190.46, -90.4785, 370.383]
+    ]],
+    ["FST_CIS_PD_Turret_Inverted", [
+        [-65.6879, -54.9559, 368.815],
+        [-65.688, -99.2803, 368.765],
+        [-90.7169, -61.322, 369.29],
+        [-90.717, -95.1487, 369.29],
+        [-116.804, -63.6015, 369.804],
+        [-115.428, -92.9911, 369.79],
+        [61.6709, -59.3992, 368.957],
+        [-144.8, -66.9739, 370.345],
+        [-144.346, -92.9913, 370.237],
+        [61.8658, -99.2805, 368.775],
+        [-175.312, -67.025, 370.906],
+        [94.751, -61.4478, 369.797],
+        [-174.33, -95.1486, 370.618],
+        [95.6727, -96.5809, 369.326],
+        [122.747, -63.6014, 370.253],
+        [123.457, -94.0623, 369.719],
+        [149.499, -65.8668, 370.69],
+        [149.596, -94.0623, 370.142],
+        [-0.299438, -179.742, 235.221],
+        [-0.299561, -213.504, 235.221],
+        [176.28, -68.0126, 369.82],
+        [174.478, -94.0621, 370.772]
+    ]],
+    ["FST_CIS_PD_Turret", [
+        [-70.1268, -64.2123, 376.297],
+        [-70.1268, -101.737, 376.287],
+        [-105.006, -64.2123, 375.953],
+        [-105.006, -96.0816, 375.953],
+        [-132.466, -93.2921, 375.35],
+        [-140.728, -64.2123, 375.349],
+        [62.3228, -64.2124, 376.297],
+        [62.3229, -101.361, 376.297],
+        [-154.957, -97.7153, 375.085],
+        [-170.518, -64.2124, 375.095],
+        [-174.472, -93.5244, 375.095],
+        [101.202, -65.7638, 376.03],
+        [101.202, -95.3251, 376.03],
+        [131.818, -91.818, 375.389],
+        [140.178, -65.7638, 375.383],
+        [153.619, -100.037, 375.053],
+        [175.884, -65.7637, 375.053],
+        [175.884, -95.7954, 375.053],
+        [-0.365234, 170.301, 414.78],
+        [-0.365234, 209.548, 420.844],
+        [-8.24243, 278.423, 446.367],
+        [9.21265, 278.423, 446.36],
+        [-8.24231, 293.219, 446.363],
+        [9.21277, 293.218, 446.36]
+    ]]
+];
+
+// Per-class turret spawn Z correction
+FST_Munificent_TurretZCorrection = [
+    ["FST_DF9_Rocket", -339],
+    ["FST_CIS_PD_Turret_Inverted", -344],
+    ["FST_CIS_PD_Turret", -339]
+];
 
 FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
     // -------------------------------------------------
@@ -102,35 +228,26 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         "_VultureSkill",
         "_ArmedShip",
         "_EndWithJumpOut",
-        ["_NumberOfTurrets", 1],       // Default if not passed
-        ["_UseCustomTurret", false],   // Default if not passed
-        ["_ShipHealthMult", 25],       // Default if not passed (matches slider default, = 2500 HP internally)
-        ["_DeathCondition", 0]         // Default if not passed: 0 = crash, 1 = retreat
+        ["_NumberOfTurrets", 1],
+        ["_UseCustomTurret", false],
+        ["_UseCustomTurretPositions", false],
+        ["_DF9RocketCount", 0],
+        ["_InvertedPDCount", 0],
+        ["_PDCount", 0],
+        ["_PlacementBias", 4],               // 4 = Random
+        ["_ShipHealthMult", 25],             // x100 internally
+        ["_DeathCondition", 0],              // 0 = crash, 1 = retreat
+        ["_DeploymentDelay", 0],
+        ["_ArmingDelay", 0]
     ];
 
     // Convert ASL coords to ATL
     _position = ASLtoATL _position;
 
-    // Our chosen ship & altitude
-    _Ship     = "ls_munificent";
-    _Altitude = 900;
-
     // -------------------------------------------------
-    // 2) Spawn the ship in (no sleeps here!)
-    // -------------------------------------------------
-    _ReturnShip = [
-        _position,
-        _Ship_direction,
-        _Altitude,
-        _Ship,
-        _dropside
-    ] call SciFiSupportPLUS_fnc_JumpShipIn;
-
-    // -------------------------------------------------
-    // 3) Spawn a new scheduled block to handle sleeps
+    // 2) Spawn a scheduled block (deployment delay, jump-in, arming, sleeps)
     // -------------------------------------------------
     [
-        _ReturnShip,
         _position,
         _Ship_direction,
         _dropside,
@@ -144,12 +261,17 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         _ArmedShip,
         _NumberOfTurrets,
         _UseCustomTurret,
+        _UseCustomTurretPositions,
+        _DF9RocketCount,
+        _InvertedPDCount,
+        _PDCount,
+        _PlacementBias,
         _ShipHealthMult,
-        _DeathCondition
+        _DeathCondition,
+        _DeploymentDelay,
+        _ArmingDelay
     ] spawn {
-        // Re-parse in the scheduled environment
         params [
-            "_ReturnShip",
             "_position",
             "_Ship_direction",
             "_dropside",
@@ -163,21 +285,41 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
             "_ArmedShip",
             "_NumberOfTurrets",
             "_UseCustomTurret",
+            "_UseCustomTurretPositions",
+            "_DF9RocketCount",
+            "_InvertedPDCount",
+            "_PDCount",
+            "_PlacementBias",
             "_ShipHealthMult",
-            "_DeathCondition"
+            "_DeathCondition",
+            "_DeploymentDelay",
+            "_ArmingDelay"
         ];
+
+        // Early-warning broadcast then wait
+        if (_DeploymentDelay > 0) then {
+            private _roundedTime = (round (_DeploymentDelay / 10)) * 10;
+            private _etaStr = if (_roundedTime == 0) then {"imminent"} else {format ["%1 seconds", _roundedTime]};
+            [[format ["<t color='#109600'>Serenity Actual: Munificent-class warship detected on long-range sensors — ETA approximately %1. Fynock, prepare yourselves!</t>", _etaStr]]] remoteExec ["BIS_fnc_typeText", 0];
+            sleep _DeploymentDelay;
+        };
+
+        private _ReturnShip = [
+            _position,
+            _Ship_direction,
+            900,
+            "ls_munificent",
+            _dropside
+        ] call SciFiSupportPLUS_fnc_JumpShipIn;
 
         // Wait until the ship is fully spawned and alive before configuring it
         waitUntil { !isNull _ReturnShip && { alive _ReturnShip } };
 
-        // If we want an armed Munificent, configure its turrets, HP, and death behavior.
-        // Done here (in scheduled env) so the ship has fully initialized first.
+        // Arming delay — weapons held until this elapses
+        if (_ArmingDelay > 0) then { sleep _ArmingDelay; };
+
+        // Armed ship setup
         if (_ArmedShip) then {
-            // Pass AddTurret=false so FTL_SupportShip only sets up HP, death condition,
-            // and the missile targeting system -- we spawn turrets ourselves below so we
-            // can place them at explicit world positions outside the CoreOBJ hitbox.
-            // (FTL_SupportShip places all turrets at CoreOBJ origin [0,0,0] for count>1,
-            // inside the hull where they have no line of sight.)
             [
                 _ReturnShip,
                 false,               // targetInfantry
@@ -189,18 +331,11 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
                 _DeathCondition      // 0 = crash gracefully, 1 = retreat (jump out)
             ] call ScifiSupportPLUS_FTL_SupportShip;
 
-            // Spawn our own turrets at explicit world positions so they are:
-            // - Outside the CoreOBJ hitbox (which blocks line of sight when at [0,0,0])
-            // - Still inside the visual Munificent hull
-            // We create each turret at a world position offset from the CoreOBJ,
-            // then use BIS_fnc_attachToRelative with keepWorldPos=true so the
-            // attachment offset is calculated correctly from that spawn position.
-            // ls_munificent dirOffset=270: visual length runs along CoreOBJ X axis.
-            [_ReturnShip, _NumberOfTurrets, _UseCustomTurret, _dropside] spawn {
-                params ["_ship", "_count", "_useCustom", "_dropside"];
-                if (_count < 1) exitWith {};
+            // Turret spawning
+            [_ReturnShip, _NumberOfTurrets, _UseCustomTurret, _UseCustomTurretPositions, _DF9RocketCount, _InvertedPDCount, _PDCount, _PlacementBias, _dropside] spawn {
+                params ["_ship", "_count", "_useCustom", "_useCustomPositions", "_df9Count", "_invertedPDCount", "_pdCount", "_placementBias", "_dropside"];
 
-                // Prepare turret class list for per-turret selection
+                // Weighted turret class list
                 private _turretClassList = [];
                 if (_useCustom && (count ScifiSupportPlus_SupportShip_CustomTurretArray > 0)) then {
                     _turretClassList = ScifiSupportPlus_SupportShip_CustomTurretArray;
@@ -208,24 +343,116 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
                     _turretClassList = ["3AS_CIS_Naval_Gun_180"];
                 };
 
+                // Turret spawn queue
+                private _turretQueue = [];
+                if (_useCustom && _useCustomPositions && ((_df9Count + _invertedPDCount + _pdCount) > 0)) then {
+                    for "_n" from 1 to _df9Count do { _turretQueue pushBack "FST_DF9_Rocket"; };
+                    for "_n" from 1 to _invertedPDCount do { _turretQueue pushBack "FST_CIS_PD_Turret_Inverted"; };
+                    for "_n" from 1 to _pdCount do { _turretQueue pushBack "FST_CIS_PD_Turret"; };
+                } else {
+                    for "_n" from 1 to _count do { _turretQueue pushBack (selectRandom _turretClassList); };
+                };
+                if (count _turretQueue < 1) exitWith {};
+
+                // Placement bias helpers
+                private _fnc_isPort = { (_this select 0) < 0 };
+                private _fnc_isUnderside = {
+                    params ["_cls", "_pos"];
+                    switch (_cls) do {
+                        case "FST_CIS_PD_Turret_Inverted": { true };
+                        case "FST_DF9_Rocket": { (_pos select 2) < 400 };
+                        default { false };
+                    };
+                };
+
+                // Bias-ordered positions per class
+                private _biasedPositionsByClass = [];
+                {
+                    _x params ["_cls", "_positions"];
+                    private _ordered = switch (_placementBias) do {
+                        case 4: { +_positions call BIS_fnc_arrayShuffle }; // Random
+                        case 5: { // Balanced -- round robin across 4 quadrants
+                            private _quad = [[], [], [], []]; // PortTop, PortUnder, StarTop, StarUnder
+                            {
+                                private _port = _x call _fnc_isPort;
+                                private _under = [_cls, _x] call _fnc_isUnderside;
+                                private _qi = (if (_port) then {0} else {2}) + (if (_under) then {1} else {0});
+                                (_quad select _qi) pushBack _x;
+                            } forEach _positions;
+                            private _out = [];
+                            private _more = true;
+                            while {_more} do {
+                                _more = false;
+                                { if (count _x > 0) then { _out pushBack (_x deleteAt 0); _more = true; }; } forEach _quad;
+                            };
+                            _out
+                        };
+                        default { // Portside / Starboard / Underside / TopSide
+                            private _match = [];
+                            private _rest = [];
+                            {
+                                private _isMatch = switch (_placementBias) do {
+                                    case 0: { _x call _fnc_isPort };
+                                    case 1: { !(_x call _fnc_isPort) };
+                                    case 2: { [_cls, _x] call _fnc_isUnderside };
+                                    case 3: { !([_cls, _x] call _fnc_isUnderside) };
+                                    default { true };
+                                };
+                                if (_isMatch) then { _match pushBack _x } else { _rest pushBack _x };
+                            } forEach _positions;
+                            _match + _rest
+                        };
+                    };
+                    _biasedPositionsByClass pushBack [_cls, _ordered];
+                } forEach FST_Munificent_TurretPositions;
+
+                // Per-class position cursors
+                private _classCursors = [];
+
                 private _turrets = [];
-                for "_i" from 0 to (_count - 1) do {
-                    // Pick class per-turret so mixed arrays get variety
-                    private _turretClass = selectRandom _turretClassList;
+                for "_i" from 0 to ((count _turretQueue) - 1) do {
+                    private _turretClass = _turretQueue select _i;
 
-                    // Space turrets 80m apart along Y (ship length), centred on origin.
-                    // X alternates +/-25m for port/starboard stagger.
-                    // These offsets are in CoreOBJ model space; 25m+ clears the CoreOBJ hitbox.
-                    private _offsetY = (_i - (_count - 1) / 2) * 80;
-                    private _offsetX = [25, -25] select ((_i mod 2) != 0);
-                    private _spawnPos = _ship modelToWorld [_offsetX, _offsetY, 0];
+                    // Target local position
+                    private _localPos = [];
+                    private _placed = false;
+                    if (_useCustomPositions) then {
+                        private _classEntryIdx = _biasedPositionsByClass findIf {(_x select 0) == _turretClass};
+                        if (_classEntryIdx != -1) then {
+                            private _classPositions = (_biasedPositionsByClass select _classEntryIdx) select 1;
+                            if (count _classPositions > 0) then {
+                                private _cursorIdx = _classCursors findIf {(_x select 0) == _turretClass};
+                                private _cursor = 0;
+                                if (_cursorIdx != -1) then { _cursor = (_classCursors select _cursorIdx) select 1; };
 
-                    private _turret = createVehicle [_turretClass, _spawnPos, [], 0, "NONE"];
+                                _localPos = _classPositions select (_cursor mod (count _classPositions));
+                                _placed = true;
+
+                                if (_cursorIdx != -1) then {
+                                    (_classCursors select _cursorIdx) set [1, _cursor + 1];
+                                } else {
+                                    _classCursors pushBack [_turretClass, _cursor + 1];
+                                };
+                            };
+                        };
+                    };
+                    if (!_placed) then {
+                        // Auto-spacing fallback
+                        private _offsetY = (_i - ((count _turretQueue) - 1) / 2) * 80;
+                        private _offsetX = [25, -25] select ((_i mod 2) != 0);
+                        _localPos = [_offsetX, _offsetY, 0];
+                    };
+
+                    // Z correction
+                    private _zCorrIdx = FST_Munificent_TurretZCorrection findIf {(_x select 0) == _turretClass};
+                    if (_zCorrIdx != -1) then {
+                        _localPos = [_localPos#0, _localPos#1, (_localPos#2) + ((FST_Munificent_TurretZCorrection select _zCorrIdx) select 1)];
+                    };
+
+                    // Spawn and attach
+                    private _turret = createVehicle [_turretClass, (_ship modelToWorld _localPos), [], 0, "NONE"];
                     _turret setVectorUp [0, 0, 1];
-
-                    // Attach keeping world position -- offset is auto-calculated from
-                    // the spawn position we chose, so it lands where we want it.
-                    [_turret, _ship, true] call BIS_fnc_attachToRelative;
+                    _turret attachTo [_ship, _localPos];
                     [_turret, _ship] remoteExecCall ["disableCollisionWith", 0];
 
                     createVehicleCrew _turret;
@@ -441,6 +668,637 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
 };
 
 
+
+
+// =====================================================================
+// PROVIDENCE QRF DEPLOYMENT
+// =====================================================================
+
+["[41st] Droid Modules", "Providence QRF Deployment",
+    {
+        params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge", "B2"];
+
+        ["Quick Reaction Force Deployment (Providence)", [
+            // Direction / side / droid type
+            ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
+            ["sideS",   ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
+            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 3, 3, _options, nil]],
+
+            // Drop pods
+            ["SLIDER",  ["Drop pod Amount", "How many drop pods will be Deployed"], [0, 24, 8, 0]],
+            ["CHECKBOX", ["Linger", "Stays at the landing zone and spawns Droids unless destroyed."], [true]],
+
+            // Vultures
+            ["SLIDER",  ["Amount of Vultures", "How many Vultures will be Deployed"], [0, 16, 2, 0]],
+            ["TOOLBOX", ["Vulture Type", "Select the type of Vultures to deploy."], [0, ["Standard", "AA Mixed"]]],
+            ["TOOLBOX", ["Vulture Skill", "Select the skill level of the Vultures' crew."], [0, ["Default", "Maximum"]]],
+
+            // Ship behavior
+            ["CHECKBOX", ["Armed Ship?", "Should the Providence have turrets spawned?"], [true]],
+            ["CHECKBOX", ["Jump Ship Out Afterwards?", "The ship will leave after it has deployed the troops"], [true]],
+
+            // Turret count
+            ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Providence. Ignored if Custom Turrets + Custom Turret Positions are both enabled and at least one per-type count below is set."], [0, 15, 2, 0]],
+
+            // Custom turret classnames
+            ["CHECKBOX", ["Custom Turrets?", "If enabled, turret classnames will be pulled from the CBA addon settings instead of the faction default."], [false]],
+
+            // Custom turret positions
+            ["CHECKBOX", ["Use Custom Turret Positions?", "If enabled, turrets spawn at fixed hand-placed mount points on the hull instead of being auto-spaced. Edit FST_Providence_TurretPositions in Modules.sqf to tune them."], [false]],
+
+            // Per-type turret counts
+            ["SLIDER", ["DF9 Rocket Turrets", "Number of FST_DF9_Rocket turrets to spawn. Only used when Custom Turrets + Custom Turret Positions are both enabled."], [0, 15, 0, 0]],
+            ["SLIDER", ["Inverted PD Turrets", "Number of FST_CIS_PD_Turret_Inverted turrets to spawn. Only used when Custom Turrets + Custom Turret Positions are both enabled."], [0, 15, 0, 0]],
+            ["SLIDER", ["PD Turrets", "Number of FST_CIS_PD_Turret turrets to spawn. Only used when Custom Turrets + Custom Turret Positions are both enabled."], [0, 15, 0, 0]],
+
+            // Placement bias
+            ["COMBO", ["Placement Bias", "Which hull mount points are prioritised. Only affects turrets when Custom Turret Positions is enabled."], [
+                [0, 1, 2, 3, 4, 5],
+                ["Portside", "Starboard", "Underside", "TopSide", "Random", "Balanced"]
+            ]],
+
+            // Ship HP
+            ["SLIDER", ["Ship HP", "HP pool for the ship. Stored as this value x100 internally (e.g. 25 = 2500 HP). Default is the CBA addon setting."], [1, 5000, 25, 0]],
+
+            // Death condition
+            ["TOOLBOX", ["Death Condition", "What happens when the ship is destroyed. Crash Ship = falls from the sky. Retreat = jumps out."], [0, 1, 2, ["Crash Ship", "Retreat (Jump Out)"], nil]],
+
+            // Timing
+            ["SLIDER", ["Deployment Delay", "Seconds before the ship jumps in. An early-warning message will broadcast a rounded ETA to all curators."], [0, 30, 0, 0]],
+            ["SLIDER", ["Arming Delay", "Seconds after jump-in before the ship's weapons come online."], [0, 30, 0, 0]]
+
+            ], {
+                params ["_values", "_arguments"];
+
+                _direction         = _values # 0;
+                _Ship_direction    = [0, 45, 90, 135, 180, 225, 270, 315] # _direction;
+                _dropside          = _values select 1;
+                _LightPodSelection = _values select 2;
+                _AmountofLightPods = _values select 3;
+                _linger            = _values select 4;
+                _AmountofBanshees  = _values select 5;
+                _VultureType       = _values select 6;
+                _VultureSkill      = _values select 7;
+                _ArmedShip         = _values select 8;
+                _EndWithJumpOut    = _values select 9;
+
+                _NumberOfTurrets          = _values select 10;
+                _UseCustomTurret          = _values select 11;
+                _UseCustomTurretPositions = _values select 12;
+                _DF9RocketCount           = _values select 13;
+                _InvertedPDCount          = _values select 14;
+                _PDCount                  = _values select 15;
+                _PlacementBias            = _values select 16;
+                _ShipHealthMult           = _values select 17;
+                _DeathCondition           = _values select 18;
+
+                // Timing
+                _DeploymentDelay = _values select 19;
+                _ArmingDelay     = _values select 20;
+
+                _position = _arguments select 0;
+
+                [
+                    _position,
+                    _Ship_direction,
+                    _dropside,
+                    _LightPodSelection,
+                    _AmountofLightPods,
+                    _linger,
+                    _AmountofBanshees,
+                    _VultureType,
+                    _VultureSkill,
+                    _ArmedShip,
+                    _EndWithJumpOut,
+                    _NumberOfTurrets,
+                    _UseCustomTurret,
+                    _UseCustomTurretPositions,
+                    _DF9RocketCount,
+                    _InvertedPDCount,
+                    _PDCount,
+                    _PlacementBias,
+                    _ShipHealthMult,
+                    _DeathCondition,
+                    _DeploymentDelay,
+                    _ArmingDelay
+                ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Providence_QRF", 2];
+
+            }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
+    },
+    "\PHAN_ScifiSupportPlus\data\Droid.paa"
+] call zen_custom_modules_fnc_register;
+
+
+// Turret mount points for the Providence, per classname, in CoreOBJ model space [x, y, z]
+FST_Providence_TurretPositions = [
+    ["FST_DF9_Rocket", [
+        [0.114, 5.672, 405.527],
+        [0.114, -17.723, 403.989],
+        [0.114, -47.644, 402.946],
+        [0.114, -72.541, 402.415],
+        [0.114, -101.813, 401.921],
+        [0.114, -131.8, 401.8],
+        [0.114, -158.434, 401.956],
+        [0.114, -83.188, 533.54],
+        [0.114, -97.203, 533.535],
+        [0.114, -114.444, 533.541],
+        [0.114, -129.567, 533.541],
+        [0.114, -142.794, 533.541],
+        [0.114, -154.817, 533.54],
+        [0.114, -167.299, 533.538],
+        [0.114, -179.055, 533.541],
+        [0.114, -341.414, 685.978],
+        [0.114, -348.508, 685.978],
+        [0.114, -355.937, 685.978]
+    ]],
+    ["FST_CIS_PD_Turret_Inverted", [
+        [28.28, -1.308, 405.477],
+        [-30.395, -1.308, 405.477],
+        [29.466, -39.039, 403.454],
+        [-30.395, -39.039, 403.454],
+        [29.466, -72.296, 402.488],
+        [-30.395, -72.296, 402.488],
+        [29.466, -99.265, 401.918],
+        [-30.395, -99.265, 401.918],
+        [29.466, -131.43, 401.918],
+        [-30.395, -131.43, 401.918],
+        [29.466, -170.02, 402.124],
+        [-30.395, -170.02, 402.124],
+        [29.466, -201.287, 402.471],
+        [-30.396, -201.286, 402.471],
+        [29.466, -232.366, 403.041],
+        [-30.396, -232.366, 403.041],
+        [29.466, -259.201, 403.041],
+        [-30.396, -259.201, 403.041],
+        [29.465, -283.532, 403.558],
+        [-30.396, -283.532, 403.558],
+        [29.465, -311.049, 404.353],
+        [-30.396, -311.048, 404.353],
+        [29.465, -335.338, 405.004],
+        [-30.396, -335.338, 405.004],
+        [29.465, -353.669, 405.747],
+        [-30.396, -353.669, 405.747],
+        [29.465, -371.659, 406.361],
+        [-30.396, -371.659, 406.361]
+    ]],
+    ["FST_CIS_PD_Turret", [
+        [-18.825, -7.751, 531.181],
+        [19.297, -8.344, 531.181],
+        [22.402, 9.528, 531.181],
+        [-23.501, 9.7, 531.181],
+        [13.897, -59.081, 531.181],
+        [-14.336, -59.081, 531.181],
+        [13.897, -75.79, 531.181],
+        [-14.336, -75.79, 531.181],
+        [13.897, -93.548, 531.175],
+        [-14.336, -93.548, 531.181],
+        [13.896, -114.897, 531.176],
+        [-14.336, -114.897, 531.181],
+        [13.896, -136.717, 531.174],
+        [-14.336, -136.717, 531.181],
+        [13.896, -158.043, 531.181],
+        [-14.336, -158.043, 531.177],
+        [13.896, -179.366, 531.181],
+        [-14.336, -179.366, 531.181],
+        [12.816, -223.423, 531.179],
+        [-12.985, -223.423, 531.181],
+        [12.816, -243.032, 531.181],
+        [-12.985, -243.032, 531.171],
+        [12.816, -279.569, 531.181],
+        [-12.986, -279.569, 531.181],
+        [12.815, -299.912, 531.181],
+        [-12.986, -299.912, 531.181],
+        [-10.528, -330.966, 531.181],
+        [11.6, -330.967, 531.181],
+        [0.92, -338.67, 531.181],
+        [8.138, -311.651, 685.374],
+        [-8.181, -311.651, 685.374],
+        [8.138, -364.559, 685.374],
+        [-8.181, -364.559, 685.374]
+    ]]
+];
+
+// Per-class turret spawn Z correction
+FST_Providence_TurretZCorrection = [
+    ["FST_DF9_Rocket", -339],
+    ["FST_CIS_PD_Turret_Inverted", -344],
+    ["FST_CIS_PD_Turret", -339]
+];
+
+FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
+    // -------------------------------------------------
+    // 1) Parse all parameters
+    // -------------------------------------------------
+    params [
+        "_position",
+        "_Ship_direction",
+        "_dropside",
+        "_LightPodSelection",
+        "_AmountofLightPods",
+        "_linger",
+        "_AmountofBanshees",
+        "_VultureType",
+        "_VultureSkill",
+        "_ArmedShip",
+        "_EndWithJumpOut",
+        ["_NumberOfTurrets", 1],
+        ["_UseCustomTurret", false],
+        ["_UseCustomTurretPositions", false],
+        ["_DF9RocketCount", 0],
+        ["_InvertedPDCount", 0],
+        ["_PDCount", 0],
+        ["_PlacementBias", 4],
+        ["_ShipHealthMult", 25],
+        ["_DeathCondition", 0],
+        ["_DeploymentDelay", 0],
+        ["_ArmingDelay", 0]
+    ];
+
+    _position = ASLtoATL _position;
+
+    // -------------------------------------------------
+    // 2) Spawn a scheduled block (deployment delay, jump-in, arming, sleeps)
+    // -------------------------------------------------
+    [
+        _position,
+        _Ship_direction,
+        _dropside,
+        _LightPodSelection,
+        _AmountofLightPods,
+        _linger,
+        _AmountofBanshees,
+        _VultureType,
+        _VultureSkill,
+        _EndWithJumpOut,
+        _ArmedShip,
+        _NumberOfTurrets,
+        _UseCustomTurret,
+        _UseCustomTurretPositions,
+        _DF9RocketCount,
+        _InvertedPDCount,
+        _PDCount,
+        _PlacementBias,
+        _ShipHealthMult,
+        _DeathCondition,
+        _DeploymentDelay,
+        _ArmingDelay
+    ] spawn {
+        params [
+            "_position",
+            "_Ship_direction",
+            "_dropside",
+            "_LightPodSelection",
+            "_AmountofLightPods",
+            "_linger",
+            "_AmountofBanshees",
+            "_VultureType",
+            "_VultureSkill",
+            "_EndWithJumpOut",
+            "_ArmedShip",
+            "_NumberOfTurrets",
+            "_UseCustomTurret",
+            "_UseCustomTurretPositions",
+            "_DF9RocketCount",
+            "_InvertedPDCount",
+            "_PDCount",
+            "_PlacementBias",
+            "_ShipHealthMult",
+            "_DeathCondition",
+            "_DeploymentDelay",
+            "_ArmingDelay"
+        ];
+
+        // Early-warning broadcast then wait
+        if (_DeploymentDelay > 0) then {
+            private _roundedTime = (round (_DeploymentDelay / 10)) * 10;
+            private _etaStr = if (_roundedTime == 0) then {"imminent"} else {format ["%1 seconds", _roundedTime]};
+            [[format ["<t color='#109600'>Serenity Actual: Providence-class warship detected on long-range sensors — ETA approximately %1. Fynock, prepare yourselves!</t>", _etaStr]]] remoteExec ["BIS_fnc_typeText", 0];
+            sleep _DeploymentDelay;
+        };
+
+        private _ReturnShip = [
+            _position,
+            _Ship_direction,
+            900,
+            "ls_staticShip_providence_zeus",
+            _dropside
+        ] call SciFiSupportPLUS_fnc_JumpShipIn;
+
+        waitUntil { !isNull _ReturnShip && { alive _ReturnShip } };
+
+        // Arming delay — weapons held until this elapses
+        if (_ArmingDelay > 0) then { sleep _ArmingDelay; };
+
+        if (_ArmedShip) then {
+            [
+                _ReturnShip,
+                false,
+                true,
+                false,
+                _NumberOfTurrets,
+                false,
+                _ShipHealthMult,
+                _DeathCondition
+            ] call ScifiSupportPLUS_FTL_SupportShip;
+
+            [_ReturnShip, _NumberOfTurrets, _UseCustomTurret, _UseCustomTurretPositions, _DF9RocketCount, _InvertedPDCount, _PDCount, _PlacementBias, _dropside] spawn {
+                params ["_ship", "_count", "_useCustom", "_useCustomPositions", "_df9Count", "_invertedPDCount", "_pdCount", "_placementBias", "_dropside"];
+
+                private _turretClassList = [];
+                if (_useCustom && (count ScifiSupportPlus_SupportShip_CustomTurretArray > 0)) then {
+                    _turretClassList = ScifiSupportPlus_SupportShip_CustomTurretArray;
+                } else {
+                    _turretClassList = ["3AS_CIS_Naval_Gun_180"];
+                };
+
+                private _turretQueue = [];
+                if (_useCustom && _useCustomPositions && ((_df9Count + _invertedPDCount + _pdCount) > 0)) then {
+                    for "_n" from 1 to _df9Count do { _turretQueue pushBack "FST_DF9_Rocket"; };
+                    for "_n" from 1 to _invertedPDCount do { _turretQueue pushBack "FST_CIS_PD_Turret_Inverted"; };
+                    for "_n" from 1 to _pdCount do { _turretQueue pushBack "FST_CIS_PD_Turret"; };
+                } else {
+                    for "_n" from 1 to _count do { _turretQueue pushBack (selectRandom _turretClassList); };
+                };
+                if (count _turretQueue < 1) exitWith {};
+
+                private _fnc_isPort = { (_this select 0) < 0 };
+                private _fnc_isUnderside = {
+                    params ["_cls", "_pos"];
+                    switch (_cls) do {
+                        case "FST_CIS_PD_Turret_Inverted": { true };
+                        case "FST_DF9_Rocket": { (_pos select 2) < 400 };
+                        default { false };
+                    };
+                };
+
+                private _biasedPositionsByClass = [];
+                {
+                    _x params ["_cls", "_positions"];
+                    private _ordered = switch (_placementBias) do {
+                        case 4: { +_positions call BIS_fnc_arrayShuffle };
+                        case 5: {
+                            private _quad = [[], [], [], []];
+                            {
+                                private _port = _x call _fnc_isPort;
+                                private _under = [_cls, _x] call _fnc_isUnderside;
+                                private _qi = (if (_port) then {0} else {2}) + (if (_under) then {1} else {0});
+                                (_quad select _qi) pushBack _x;
+                            } forEach _positions;
+                            private _out = [];
+                            private _more = true;
+                            while {_more} do {
+                                _more = false;
+                                { if (count _x > 0) then { _out pushBack (_x deleteAt 0); _more = true; }; } forEach _quad;
+                            };
+                            _out
+                        };
+                        default {
+                            private _match = [];
+                            private _rest = [];
+                            {
+                                private _isMatch = switch (_placementBias) do {
+                                    case 0: { _x call _fnc_isPort };
+                                    case 1: { !(_x call _fnc_isPort) };
+                                    case 2: { [_cls, _x] call _fnc_isUnderside };
+                                    case 3: { !([_cls, _x] call _fnc_isUnderside) };
+                                    default { true };
+                                };
+                                if (_isMatch) then { _match pushBack _x } else { _rest pushBack _x };
+                            } forEach _positions;
+                            _match + _rest
+                        };
+                    };
+                    _biasedPositionsByClass pushBack [_cls, _ordered];
+                } forEach FST_Providence_TurretPositions;
+
+                private _classCursors = [];
+
+                private _turrets = [];
+                for "_i" from 0 to ((count _turretQueue) - 1) do {
+                    private _turretClass = _turretQueue select _i;
+
+                    private _localPos = [];
+                    private _placed = false;
+                    if (_useCustomPositions) then {
+                        private _classEntryIdx = _biasedPositionsByClass findIf {(_x select 0) == _turretClass};
+                        if (_classEntryIdx != -1) then {
+                            private _classPositions = (_biasedPositionsByClass select _classEntryIdx) select 1;
+                            if (count _classPositions > 0) then {
+                                private _cursorIdx = _classCursors findIf {(_x select 0) == _turretClass};
+                                private _cursor = 0;
+                                if (_cursorIdx != -1) then { _cursor = (_classCursors select _cursorIdx) select 1; };
+
+                                _localPos = _classPositions select (_cursor mod (count _classPositions));
+                                _placed = true;
+
+                                if (_cursorIdx != -1) then {
+                                    (_classCursors select _cursorIdx) set [1, _cursor + 1];
+                                } else {
+                                    _classCursors pushBack [_turretClass, _cursor + 1];
+                                };
+                            };
+                        };
+                    };
+                    if (!_placed) then {
+                        private _offsetY = (_i - ((count _turretQueue) - 1) / 2) * 80;
+                        private _offsetX = [25, -25] select ((_i mod 2) != 0);
+                        _localPos = [_offsetX, _offsetY, 0];
+                    };
+
+                    private _zCorrIdx = FST_Providence_TurretZCorrection findIf {(_x select 0) == _turretClass};
+                    if (_zCorrIdx != -1) then {
+                        _localPos = [_localPos#0, _localPos#1, (_localPos#2) + ((FST_Providence_TurretZCorrection select _zCorrIdx) select 1)];
+                    };
+
+                    private _turret = createVehicle [_turretClass, (_ship modelToWorld _localPos), [], 0, "NONE"];
+                    _turret setVectorUp [0, 0, 1];
+                    _turret attachTo [_ship, _localPos];
+                    [_turret, _ship] remoteExecCall ["disableCollisionWith", 0];
+
+                    createVehicleCrew _turret;
+                    [_turret] joinSilent (group _ship);
+                    _turret allowCrewInImmobile [true, true];
+
+                    _turret setVehicleRadar 15;
+                    vehicle _turret setVehicleReportRemoteTargets true;
+                    vehicle _turret setVehicleReceiveRemoteTargets true;
+                    vehicle _turret setVehicleReportOwnPosition true;
+                    { vehicle _turret enableVehicleSensor [(_x select 0), true]; } forEach (listVehicleSensors _turret);
+
+                    _turret setSkill ["courage", 1];
+                    _turret setSkill ["aimingAccuracy", 0];
+                    _turret setSkill ["aimingSpeed", 1];
+                    _turret setSkill ["spotDistance", 1];
+                    _turret setSkill ["spotTime", 1];
+
+                    [_turret, true] remoteExec ["enableDynamicSimulation", 0];
+                    { [_x, true] remoteExec ["enableDynamicSimulation", 0]; } forEach crew _turret;
+
+                    [_turret, _ship] spawn {
+                        params ["_turret", "_ship"];
+                        while {alive _turret} do {
+                            if (isNil {_ship getVariable "FTL_stopFiring"}) then {
+                                if (combatMode (group _turret) != "RED") then {
+                                    (group _turret) setCombatMode "RED";
+                                    (group _turret) setBehaviour "AWARE";
+                                    { [_x, "AUTOCOMBAT"] remoteExecCall ["enableAI", 0]; [_x, "AUTOTARGET"] remoteExecCall ["enableAI", 0]; [_x, "TARGET"] remoteExecCall ["enableAI", 0]; [_x, "FIREWEAPON"] remoteExecCall ["enableAI", 0]; } forEach crew _turret;
+                                };
+                            };
+                            sleep 1;
+                        };
+                    };
+
+                    _turrets pushBack _turret;
+                    sleep 0.1;
+                };
+
+                _ship setVariable ["FTL_ExtraTurretOBJ", _turrets, true];
+            };
+        };
+
+        sleep 6;
+
+        _PodLocation1  = [50.123,   -100.456,  -85.789];
+        _PodLocation2  = [-60.789,  -30.123,   -65.456];
+        _PodLocation3  = [90.456,   -70.789,   -80.123];
+        _PodLocation4  = [-110.789, -55.456,   -75.789];
+        _PodLocation5  = [5.789,    15.123,    -70.456];
+        _PodLocation6  = [-95.456,  -115.789,  -78.123];
+        _PodLocation7  = [65.789,   -35.456,   -72.789];
+        _PodLocation8  = [-20.456,  -80.789,   -85.456];
+        _PodLocation9  = [85.123,   50.456,    -70.789];
+        _PodLocation10 = [-75.789,  5.123,     -68.456];
+        _PodLocation11 = [35.456,   -20.789,   -76.789];
+        _PodLocation12 = [-70.123,  45.456,    -73.789];
+        _PodLocation13 = [120.789,  -10.456,   -79.456];
+        _PodLocation14 = [-40.456,  -90.789,   -81.123];
+        _PodLocation15 = [75.789,   -55.456,   -77.789];
+        _PodLocation16 = [-10.123,  80.789,    -69.456];
+
+        _PodArray = [];
+
+        createandAttachParticleSource = {
+            params ["_podobject", "_location"];
+            _modelData = _podobject modelToWorld _location;
+            _particleSource = "#particleSource" createVehicle _modelData;
+            _particleSource attachTo [_podobject, _location];
+            _particleSource
+        };
+
+        _podLocations = [
+            _PodLocation1, _PodLocation2, _PodLocation3, _PodLocation4,
+            _PodLocation5, _PodLocation6, _PodLocation7, _PodLocation8,
+            _PodLocation9, _PodLocation10,_PodLocation11,_PodLocation12,
+            _PodLocation13,_PodLocation14,_PodLocation15,_PodLocation16
+        ];
+
+        {
+            _PodArray pushBack ([_ReturnShip, _x] call createandAttachParticleSource);
+        } forEach _podLocations;
+
+        [_ReturnShip, _PodArray] spawn {
+            params ["_ReturnShip", "_PodArray"];
+            waitUntil {
+                sleep 1;
+                !alive _ReturnShip || isNull _ReturnShip
+            };
+            {
+                deleteVehicle _x;
+                sleep 0.01;
+            } forEach _PodArray;
+        };
+
+        // -------------------------------------------------
+        // 4) Drop pods if any
+        // -------------------------------------------------
+        if (_AmountofLightPods > 0) then {
+            for "_LightPoddropper" from 1 to _AmountofLightPods do {
+                _randomIndex = floor (random (count _PodArray));
+                _randomPodLocation = _PodArray select _randomIndex;
+                _PodArray deleteAt _randomIndex;
+
+                _currentposition = [
+                    (getPosATL _randomPodLocation select 0),
+                    (getPosATL _randomPodLocation select 1),
+                    0
+                ];
+
+                if (_linger) then {
+                    [_currentposition, _dropside, _LightPodSelection, true] call FST_Droid_Dispenser;
+                } else {
+                    [_currentposition, _dropside, _LightPodSelection, false] call FST_Droid_Dispenser;
+                };
+                sleep 1;
+            };
+        };
+
+        // -------------------------------------------------
+        // 5) Spawn Vultures if any
+        // -------------------------------------------------
+        if (_AmountofBanshees > 0) then {
+            private _vultureClasses = [];
+            if (_VultureType == 0) then {
+                for "_i" from 1 to _AmountofBanshees do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_F";
+                };
+            } else {
+                private _aaVultureCount = floor (_AmountofBanshees * 0.33);
+                private _standardVultureCount = _AmountofBanshees - _aaVultureCount;
+                for "_i" from 1 to _aaVultureCount do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_AA_F";
+                };
+                for "_i" from 1 to _standardVultureCount do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_F";
+                };
+                _vultureClasses = _vultureClasses call BIS_fnc_arrayShuffle;
+            };
+
+            {
+                private _vultureClass = _x;
+                [_ReturnShip, _dropside, _vultureClass, _VultureSkill] spawn {
+                    params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
+                    _currentPosition = getPosATL _ReturnShip;
+
+                    _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
+                    (_dropside select 0) createVehicleCrew _Banshee;
+
+                    sleep 3;
+
+                    if (_VultureSkill == 1) then {
+                        {
+                            _x setSkill 1.0;
+                        } forEach crew _Banshee;
+                    };
+                    (group _Banshee) setCombatMode "RED";
+                    (group _Banshee) setBehaviour "AWARE";
+                    _Banshee engineOn true;
+                };
+                sleep 5;
+            } forEach _vultureClasses;
+        };
+
+        // -------------------------------------------------
+        // 6) Wait, then optionally jump out
+        // -------------------------------------------------
+        sleep ((_AmountofLightPods * 1) + (_AmountofBanshees * 5) + 1);
+
+        if (_EndWithJumpOut) then {
+            [objNull, "Serenity Actual: Providence overhead, they've dropped droids and are retreating!"] call BIS_fnc_showCuratorFeedbackMessage;
+
+            private _turretArrayForCleanup = _ReturnShip getVariable ["FTL_ExtraTurretOBJ", []];
+            [_ReturnShip, _turretArrayForCleanup] spawn {
+                params ["_ship", "_turrets"];
+                waitUntil { sleep 1; isNull _ship };
+                { deleteVehicleCrew _x; deleteVehicle _x; } forEach _turrets;
+            };
+
+            [_ReturnShip] call SciFiSupportPLUS_fnc_JumpOut;
+        } else {
+            [objNull, "Serenity Actual: Providence overhead, they've dropped droid pods!"] call BIS_fnc_showCuratorFeedbackMessage;
+        };
+    };
+};
 
 
 FST_Droid_Dispenser =  {
