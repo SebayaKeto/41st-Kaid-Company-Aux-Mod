@@ -9,8 +9,7 @@
 			"A3_Data_F",
 			"A3_Air_F"
 		};
-		units[]=
-		{
+				{
 			"FST_laati_Turret",
 			"FST_laati_mk2",
 			"FST_laati_mk2Lights",
@@ -88,7 +87,15 @@
 			"FST_laati_mk2Lights_Jorge",
 			"FST_laati_mk2Lights_Red",
 			"FST_laati_mk2Lights_Houdini",
-			"FST_laati_Turret_RadarTestbed"
+			"FST_laati_Turret_RadarTestbed",
+			"FST_laati_Turret_Ouranos",
+			"FST_laati_Turret_Cait",
+			"FST_laati_mk2_Ouranos",
+			"FST_laati_mk2_Cait",
+			"FST_laati_mk1Lights_Ouranos",
+			"FST_laati_mk1Lights_Cait",
+			"FST_laati_mk2Lights_Ouranos",
+			"FST_laati_mk2Lights_Cait"
 		};
 		weapons[]=
 		{
