@@ -23,7 +23,11 @@
 			//"FST_Saber_Fly",
 			"FST_Recon_Saber",
 			"FST_Recon_Saber_PDF",
-			"FST_Recon_Saber_Gray"
+			"FST_Recon_Saber_Gray",
+			// Claw Customs
+			"FST_Saber_TheClawMachine",
+			"FST_SuperSaber_TheClawMachine",
+			"FST_Recon_Saber_TheClawMachine"
 		};
 		weapons[]={};
 	};
