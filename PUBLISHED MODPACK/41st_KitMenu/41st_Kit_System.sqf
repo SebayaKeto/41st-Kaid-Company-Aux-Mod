@@ -2,6 +2,11 @@ if (isNil "FST_CurrentKitCategory") then { FST_CurrentKitCategory = "regular"; }
 
 WBK_fnc_populateKitList = {
     private _display = findDisplay 2000;
+    // Perf fix: this is broadcast to every machine on every kit take. With the
+    // menu closed the display is null and every lb call silently no-ops -- but
+    // the full kit walk with a compile per kit still ran. Nothing to populate,
+    // so exit. (The menu-open path calls this with the display live.)
+    if (isNull _display) exitWith {};
     private _listbox = _display displayCtrl 1732;
     lbClear _listbox;
     private _iconButton = _display displayCtrl 1603;
@@ -45,7 +50,19 @@ private _kits = _allKitsForBox select {
         private _VAR_CondtitionToMeet  = _x select 3;
         private _VAR_FunctionToSpawn   = _x select 4;
         private _cond   = _VAR_CondtitionToMeet;
-        private _code   = compile _cond;
+        // Perf fix: conditions are static strings but were re-compiled for every
+        // kit on every populate (~80 compiles per update). Cache compiled code
+        // keyed by the condition string -- identical conditions dedupe too.
+        private _condCache = missionNamespace getVariable "FST_KitCondCache";
+        if (isNil "_condCache") then {
+            _condCache = createHashMap;
+            missionNamespace setVariable ["FST_KitCondCache", _condCache];
+        };
+        private _code = _condCache get _cond;
+        if (isNil "_code") then {
+            _code = compile _cond;
+            _condCache set [_cond, _code];
+        };
         private _outPut = call _code;
         if (_outPut isEqualTo true) then {
             _index = _listbox lbAdd _VAR_nameOfLoadout;
@@ -80,4 +97,6 @@ FST_ToggleKitCategory = {
     call WBK_fnc_populateKitList;
 };
 
-call WBK_fnc_populateKitList;
+// Perf fix: only repopulate when this machine actually has the kit menu open.
+// (WBK_fnc_populateKitList also self-guards; this just documents intent.)
+if (!isNull (findDisplay 2000)) then { call WBK_fnc_populateKitList; };

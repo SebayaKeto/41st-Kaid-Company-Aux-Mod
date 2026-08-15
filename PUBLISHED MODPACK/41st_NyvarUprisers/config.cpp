@@ -611,7 +611,7 @@ class CfgVehicles
 		respawnMagazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarb1;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvarb1;};";
 		};
 	};
 	class FST_Nyvar_B1_Blue: FST_U_Nyvar_B1_Blue
@@ -655,7 +655,7 @@ class CfgVehicles
 		respawnMagazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarb1fwend;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvarb1fwend;};";
 		};
 	};
 	class FST_Nyvar_Weak: FST_U_CIS_Light
@@ -700,7 +700,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarweak;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvarweak;};";
 		};
 	};
 	class FST_Nyvar_Standard: FST_U_CIS_Light
@@ -745,7 +745,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarstandard;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvarstandard;};";
 		};
 	};
 	class FST_Nyvar_Trained: FST_U_CIS_Light
@@ -790,7 +790,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvartrained;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvartrained;};";
 		};
 	};
 	class FST_Nyvar_Weak_Fwend: FST_U_CIS_Light
@@ -836,7 +836,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarweak;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvarweak;};";
 		};
 	};
 	class FST_Nyvar_Standard_Fwend: FST_U_CIS_Light
@@ -882,7 +882,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvarstandard;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvarstandard;};";
 		};
 	};
 	class FST_Nyvar_Trained_Fwend: FST_U_CIS_Light
@@ -928,7 +928,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_NURandomizers_fnc_nyvartrained;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_NURandomizers_fnc_nyvartrained;};";
 		};
 	};
 	class FST_JMSLLTE_veh_ITT_base;

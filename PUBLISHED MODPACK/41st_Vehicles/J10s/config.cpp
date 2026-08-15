@@ -172,7 +172,7 @@ class CfgVehicles
 				discreteDistance[]={100,200,300,400,600,800,1000,1200,1500,1600,1700,1800,1900,2000};
 				discreteDistanceInitIndex=2;
 				turretInfoType="RscOptics_Offroad_01";
-				minElev=-20;
+				minElev=-30;	// depression increased from -20 (turret can now point further downward)
 				maxElev=60;
 				minTurn=-360;
 				maxTurn=360;

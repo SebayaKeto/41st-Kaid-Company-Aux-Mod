@@ -79,6 +79,11 @@ call {
 	
 	_displayName = "cTab_mapSize_dsp";
 	cTabRscLayer cutRsc [_displayName,"PLAIN",0, false];
+	// REVERTED perf change (2026-08-08): the cutRsc display does NOT reliably
+	// resolve same-frame, and skipping the wait left _display nil -- the block
+	// errored and player_init aborted before registering any keybinds/handlers
+	// (cTab appeared completely dead). The original busy loop is proven; it is
+	// one-shot at client load. Do not "optimize" this line without testing.
 	while {isNull (uiNamespace getVariable _displayName)} do {};
 	_display = uiNamespace getVariable _displayName;
 	_mapCtrl = _display displayCtrl 1110;
@@ -312,7 +317,17 @@ _classNames = [];
 cTab_helmetClass_has_HCam = [] + _classNames;
 
 // add cTab_updatePulse event handler triggered periodically by the server
-["cTab_updatePulse",cTab_fnc_updateLists] call CBA_fnc_addEventHandler;
+// Perf fix: the list rebuild is a full allGroups + vehicles + allUnits sweep
+// executed in unscheduled context (lands in a single frame). Previously EVERY
+// client ran it on EVERY 30s pulse -- on the same frame server-wide -- whether
+// or not anyone had a tablet open. Now: skip entirely while no cTab interface
+// is open (the lists are only consumed by the draw handlers, and fn_onifopen
+// rebuilds on open), and jitter the rebuild by 0-3s so clients that DO have a
+// tablet open no longer all spike on the same frame.
+["cTab_updatePulse",{
+	if (isNil "cTabIfOpen") exitWith {};
+	[{call cTab_fnc_updateLists}, [], random 3] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
 
 // fnc to set various text and icon sizes
 cTab_fnc_update_txt_size = {

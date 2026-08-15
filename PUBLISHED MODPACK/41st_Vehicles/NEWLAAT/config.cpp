@@ -324,7 +324,8 @@ class CfgVehicles
 		smokeLauncherVelocity=20;
  		class EventHandlers: DefaultEventhandlers
 		{
-			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+			// Perf fix: was execVM per shot from the gunship's automatic cannons. Compile once, cache, spawn cached.
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired'); private _fn = missionNamespace getVariable 'FST_LaatFiredLaserFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf'; missionNamespace setVariable ['FST_LaatFiredLaserFn', _fn];}; _this spawn _fn;";
 		}; 
 		ace_cargo_hasCargo=1;
 		ace_cargo_space=1000
@@ -2358,7 +2359,8 @@ class CfgVehicles
 		side=1;
  		class EventHandlers: DefaultEventhandlers
 		{
-			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+			// Perf fix: was execVM per shot from the gunship's automatic cannons. Compile once, cache, spawn cached.
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired'); private _fn = missionNamespace getVariable 'FST_LaatFiredLaserFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf'; missionNamespace setVariable ['FST_LaatFiredLaserFn', _fn];}; _this spawn _fn;";
 		}; 
 		typicalcargo[]=
 		{
@@ -2849,7 +2851,8 @@ class CfgVehicles
 		side=1;
  		class EventHandlers: DefaultEventhandlers
 		{
-			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+			// Perf fix: was execVM per shot from the gunship's automatic cannons. Compile once, cache, spawn cached.
+			fired="_this call (uinamespace getvariable 'BIS_fnc_effectFired'); private _fn = missionNamespace getVariable 'FST_LaatFiredLaserFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf'; missionNamespace setVariable ['FST_LaatFiredLaserFn', _fn];}; _this spawn _fn;";
 		}; 
 		typicalcargo[]=
 		{

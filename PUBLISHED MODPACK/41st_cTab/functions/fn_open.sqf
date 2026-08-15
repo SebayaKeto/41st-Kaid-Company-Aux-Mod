@@ -120,8 +120,14 @@ if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {
 if (_isDialog) then {
 	// Check if map and / or a dialog is open and close them
 	if (visibleMap) then {openMap false};
-	while {dialog} do {
+	// Perf fix: bounded. closeDialog normally flips `dialog` immediately (the
+	// loop exists to close STACKED dialogs), but if the engine ever defers the
+	// flip this was an infinite busy loop; 20 stacked dialogs is far beyond any
+	// real case.
+	private _dlgGuard = 0;
+	while {dialog && {_dlgGuard < 20}} do {
  		closeDialog 0;
+		_dlgGuard = _dlgGuard + 1;
 	};
 	createDialog _displayName;
 } else {

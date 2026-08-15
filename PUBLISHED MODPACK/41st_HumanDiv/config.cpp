@@ -2497,7 +2497,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdauto;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdauto;};";
 		};
 	};
 	class FST_CIS_HumanDiv_AT: FST_CIS_Heavy_Base_F
@@ -2555,7 +2555,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdantitank;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdantitank;};";
 		};
 	};
 	class FST_CIS_HumanDiv_AA: FST_CIS_Heavy_Base_F
@@ -2613,7 +2613,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdantiair;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdantiair;};";
 		};
 	};
 	class O_soldier_base_F;
@@ -2910,7 +2910,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdstandard;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdstandard;};";
 		};
 	};
 	class FST_CIS_HumanDiv_AmmoB: FST_U_CIS_Light
@@ -2966,7 +2966,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="(_this select 0) spawn FST_HDRandomizers_fnc_hdammobearer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdammobearer;};";
 		};
 	};
 	class FST_U_CIS_Light_Veteran: FST_U_CIS_Light
@@ -3041,7 +3041,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdrto;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdrto;};";
 		};
 	};
 	class FST_CIS_HumanDiv_CQC: FST_U_CIS_Light
@@ -3095,7 +3095,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdcqc;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdcqc;};";
 		};
 	};
 	class FST_CIS_HumanDiv_Gren: FST_U_CIS_Light
@@ -3153,7 +3153,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdgrenadier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdgrenadier;};";
 		};
 	};
 	class FST_CIS_HumanDiv_Mark: FST_U_CIS_Light
@@ -3209,7 +3209,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdmarksman;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdmarksman;};";
 		};
 	};
 	class FST_CIS_HumanDiv_EOD: FST_U_CIS_Light
@@ -3265,7 +3265,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdeod;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdeod;};";
 		};
 	};
 	class FST_CIS_HumanDiv_DroneOp: FST_U_CIS_Light
@@ -3322,7 +3322,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hddrone;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hddrone;};";
 		};
 	};
 	class FST_U_CIS_Medic: FST_U_CIS_Light
@@ -3392,7 +3392,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdmedic;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdmedic;};";
 		};
 	};
 	class FST_U_CIS_Combat_Officer: FST_U_CIS_Light
@@ -3458,7 +3458,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_hdofficer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_hdofficer;};";
 		};
 	};
 	class JMSLLTE_EmpOfficer_black_F;
@@ -3530,7 +3530,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_nofficer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_nofficer;};";
 		};
 	};
 	class FST_HumanDiv_BComm: FST_EmpOfficer_black_Base
@@ -3737,7 +3737,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_bcommander;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_bcommander;};";
 		};
 	};
 	class FST_HumanDiv_NCaptain: FST_EmpOfficer_black_Base
@@ -3787,7 +3787,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_ncaptain;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_ncaptain;};";
 		};
 	};
 	class FST_CIS_StandardUniformBase: FST_EmpOfficer_black_Base
@@ -4013,7 +4013,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_bstaff;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_bstaff;};";
 		};
 	};
 	class FST_HumanDiv_NPerson: FST_EmpOfficer_black_Base
@@ -4064,7 +4064,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_nperson;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_nperson;};";
 		};
 	};
 	class FST_HumanDiv_NEngi: FST_EmpOfficer_black_Base
@@ -4117,7 +4117,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_HDRandomizers_fnc_nengi;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_HDRandomizers_fnc_nengi;};";
 		};
 	};
 };

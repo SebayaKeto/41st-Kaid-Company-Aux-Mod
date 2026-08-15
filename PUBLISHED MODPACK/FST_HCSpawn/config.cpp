@@ -76,6 +76,8 @@ class CfgFunctions {
             class statusReport {};
             class initExplosionDiag {};
             class initEmergencyDroidBandaid {};
+            class initDroidCorpseCleanup {};
+            class isDroidUnit {};
             class emergencyStabilizeDroid {};
             class emergencyStabilizeGroup {};
         };

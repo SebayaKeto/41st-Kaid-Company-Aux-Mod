@@ -812,7 +812,9 @@ class CfgVehicles
 		};
 		class EventHandlers: DefaultEventhandlers
 		{
-			Fired="_this ExecVM 'DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_TriDroidStatic\functions\Rotate.sqf';";
+			// Perf fix: was ExecVM per ROUND FIRED (automatic turret = compile storm at full RPM).
+			// Compile once, cache, spawn cached.
+			Fired="private _fn = missionNamespace getVariable 'FST_OctoRotateFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers 'DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_TriDroidStatic\functions\Rotate.sqf'; missionNamespace setVariable ['FST_OctoRotateFn', _fn];}; _this spawn _fn;";
 		};
 	};
 	class FST_OctoStatic: FST_Octo_BaseStatic

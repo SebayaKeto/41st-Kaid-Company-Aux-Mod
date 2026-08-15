@@ -104,6 +104,39 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
     ["FST HC Spawn", "Emergency"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
+// ============================================================
+// DROID CORPSE CLEANUP
+// ============================================================
+// Added 2026-08-08 after disabling the emergency droid bandaid's instant
+// hideObject/fast-delete. Without it, nothing else deletes dead droid bodies
+// while players remain engaged, and corpses were piling up during long
+// firefights. This sweeper leaves a corpse fully visible/simulated for a
+// while (a real death, not a vanish), then freezes its simulation, then
+// deletes it -- bounding the total corpse count without vanishing on kill.
+[
+    "FST_HC_DroidCorpseCleanupEnabled", "CHECKBOX",
+    ["Droid Corpse Cleanup", "Delayed cleanup of dead droid bodies (separate from the emergency bandaid). Prevents unbounded corpse accumulation during long droid firefights."],
+    ["FST HC Spawn", "Cleanup"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DroidCorpseSimOffDelay", "SLIDER",
+    ["Droid Corpse Sim-Off Delay", "Seconds after death before a droid corpse's simulation/physics is frozen. It stays visible as a static body."],
+    ["FST HC Spawn", "Cleanup"], [2, 60, 8, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DroidCorpseDeleteDelay", "SLIDER",
+    ["Droid Corpse Delete Delay", "Seconds after death before a droid corpse is deleted. Higher preserves bodies longer during a fight but allows more to accumulate."],
+    ["FST HC Spawn", "Cleanup"], [5, 180, 25, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_DroidCorpseDeleteMaxPerPass", "SLIDER",
+    ["Droid Corpse Deletes Per Pass", "Maximum dead droid bodies deleted per second by the corpse cleanup sweeper."],
+    ["FST HC Spawn", "Cleanup"], [1, 50, 10, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
 [
     "FST_HC_PerHCSoftCap", "SLIDER",
     ["Per-HC Soft AI Cap", "Emergency cap used when choosing an HC target. If every HC is over this count and blocking is enabled, heavy spawns are blocked instead of overloading one HC or falling back to the server."],

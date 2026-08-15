@@ -318,6 +318,11 @@ FST_fnc_toggleJumppack = {
     call WBK_UpdatePlayerKitOnMenu;
 };
 FST_fnc_gearIndex = {
+    // Perf fix: this is a full CfgWeapons + CfgVehicles + CfgGlasses sweep
+    // (tens of thousands of classes in a SW modpack) and was rebuilt from
+    // scratch on EVERY helmet-overlay open. The result depends only on config
+    // data, which cannot change during a session -- build once, reuse.
+    if (!isNil {uiNamespace getVariable "FST_GearIndex"}) exitWith {};
     private _idx = createHashMapFromArray [
         ["uniforms",  []],
         ["vests",     []],

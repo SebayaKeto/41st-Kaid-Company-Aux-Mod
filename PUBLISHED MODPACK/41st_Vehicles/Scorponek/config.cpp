@@ -326,7 +326,8 @@ class Extended_HitPart_EventHandlers
 	{
 		class FST_Scorponek_HitPart_Eh
 		{
-			hitpart="_this select 0 execVM 'DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_Scorponek\ScorponekShieldHit.sqf'";
+			// Perf fix: was execVM per projectile impact. Compile once, cache, spawn cached.
+			hitpart="private _fn = missionNamespace getVariable 'FST_ScorpShieldHitFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers 'DBA_CIS\Addons\DBA_Vehicles\DBA_GroundVehicles\DBA_Scorponek\ScorponekShieldHit.sqf'; missionNamespace setVariable ['FST_ScorpShieldHitFn', _fn];}; (_this select 0) spawn _fn;";
 		};
 	};
 };

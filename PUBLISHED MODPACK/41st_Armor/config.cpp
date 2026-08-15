@@ -27079,6 +27079,15 @@ class CfgVehicles
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Silhouette.paa"
 		};
+		// LR radio, matching FST_Backpack_Jumppack_LR / Vengence / Cowboy.
+		// Base FST_Backpack_Jumppack has these commented out + tf_hasLRradio=0;
+		// everything else (model, jump stats, sounds) still inherits from base.
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
 	};
 	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack
 	{
@@ -35121,7 +35130,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Helix",
+			"FST_Airborne_Helmet_Helix",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -35131,7 +35140,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Helix",
+			"FST_Airborne_Helmet_Helix",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -35176,7 +35185,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Helix_Dirty",
+			"FST_Airborne_Helmet_Helix_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -35186,7 +35195,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Helix_Dirty",
+			"FST_Airborne_Helmet_Helix_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -38832,7 +38841,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Vengence_Dirty",
+			"FST_Airborne_Helmet_Vengence_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -38842,7 +38851,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Vengence_Dirty",
+			"FST_Airborne_Helmet_Vengence_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41637,7 +41646,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Riley_Dirty",
+			"FST_Airborne_Helmet_Riley_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41647,7 +41656,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Riley_Dirty",
+			"FST_Airborne_Helmet_Riley_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41692,7 +41701,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Riley_V2",
+			"FST_Airborne_Helmet_Riley_V2",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41702,7 +41711,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Riley_V2",
+			"FST_Airborne_Helmet_Riley_V2",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41747,7 +41756,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Riley_V2_Dirty",
+			"FST_Airborne_Helmet_Riley_V2_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -41757,7 +41766,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Riley_V2_Dirty",
+			"FST_Airborne_Helmet_Riley_V2_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -44666,7 +44675,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Woods_Dirty",
+			"FST_Airborne_Helmet_Woods_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -44676,7 +44685,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Woods_Dirty",
+			"FST_Airborne_Helmet_Woods_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -47302,7 +47311,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Deso_Dirty",
+			"FST_Airborne_Helmet_Deso_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -47312,7 +47321,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Deso_Dirty",
+			"FST_Airborne_Helmet_Deso_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -51256,7 +51265,7 @@ class CfgVehicles
         };
         linkedItems[]=
         {
-            "FST_AB_Helmet_Delta_Dirty",
+            "FST_Airborne_Helmet_Delta_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -51266,7 +51275,7 @@ class CfgVehicles
         };
         respawnLinkedItems[]=
         {
-            "FST_AB_Helmet_Delta_Dirty",
+            "FST_Airborne_Helmet_Delta_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -51861,7 +51870,7 @@ class CfgVehicles
         };
         linkedItems[]=
         {
-            "FST_AB_Helmet_Viz_Dirty",
+            "FST_Airborne_Helmet_Viz_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -51871,7 +51880,7 @@ class CfgVehicles
         };
         respawnLinkedItems[]=
         {
-            "FST_AB_Helmet_Viz_Dirty",
+            "FST_Airborne_Helmet_Viz_Dirty",
             "FST_base_Vest",
             "ItemMap",
             "ItemGPS",
@@ -52719,7 +52728,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Atlas_Dirty",
+			"FST_Airborne_Helmet_Atlas_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -52729,7 +52738,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Atlas_Dirty",
+			"FST_Airborne_Helmet_Atlas_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",

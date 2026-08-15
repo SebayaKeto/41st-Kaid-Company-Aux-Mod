@@ -19,6 +19,12 @@ private _sendZeusCloneDecision = {
 _pos = [_pos select 0, _pos select 1, 0];
 
 private _group = createGroup [_side, true];
+// Engine-side removal of the empty group container once every member is dead
+// and deleted. Dead-group auto-cleanup is manual-only in this build, so without
+// this, wiped template/QRF/frontline groups linger as empty group objects for
+// the whole op (allGroups growth + scheduler load). fn_fillGarrison already
+// does the same.
+_group deleteGroupWhenEmpty true;
 _group setVariable ["FST_HC_spawnProtectedUntil", time + 90];
 private _editableObjects = [];
 
