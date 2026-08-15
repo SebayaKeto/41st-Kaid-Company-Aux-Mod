@@ -2,10 +2,14 @@ if (!(isServer || {!hasInterface})) exitWith {};
 if (missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidStarted", false]) exitWith {};
 missionNamespace setVariable ["FST_HC_EmergencyDroidBandaidStarted", true];
 
-if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith {
-    diag_log "[FST_HCSpawn][EMERGENCY] Droid bandaid disabled";
-};
-
+// NOTE: this function runs exactly once, at postInit (guarded by the Started
+// flag above). Previously the enabled-check was a top-level exitWith here,
+// which meant the event handlers below were only ever registered if the
+// setting was already true at mission start -- flipping the CBA checkbox
+// live later did NOTHING, since the handlers were simply never installed.
+// The checks are now inside each handler instead (matching the two per-frame
+// handlers below, which already did this correctly), so toggling the
+// setting live genuinely re-enables/disables behavior without a restart.
 if (missionNamespace getVariable ["FST_HC_EmergencyMuteSentences", true]) then {
     enableSentences false;
 };
@@ -15,6 +19,7 @@ missionNamespace setVariable ["FST_HC_EmergencyKillTimes", []];
 
 ["CAManBase", "InitPost", {
     params ["_unit"];
+    if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith {};
     if (!isNull _unit && {local _unit}) then {
         [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
     };
@@ -22,6 +27,7 @@ missionNamespace setVariable ["FST_HC_EmergencyKillTimes", []];
 
 ["CAManBase", "Killed", {
     params ["_unit", "_killer", "_instigator", "_useEffects"];
+    if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith {};
     if (isNull _unit) exitWith {};
     if !(local _unit) exitWith {};
     if !([_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid) exitWith {};
@@ -90,4 +96,4 @@ missionNamespace setVariable ["FST_HC_EmergencyKillTimes", []];
     missionNamespace setVariable ["FST_HC_EmergencyDeadQueue", _keep];
 }, 0.25, []] call CBA_fnc_addPerFrameHandler;
 
-diag_log format ["[FST_HCSpawn][EMERGENCY] V25 droid bandaid active on %1. HC AI stays enabled. AI radio sentences muted on server/HC=%2. Immediate droid stabilization + fast dead droid deletion enabled.", profileName, missionNamespace getVariable ["FST_HC_EmergencyMuteSentences", true]];
+diag_log format ["[FST_HCSpawn][EMERGENCY] V26 droid bandaid handlers registered on %1 (enabled=%2, live-togglable via FST_HC_EmergencyDroidBandaidEnabled). AI radio sentences muted on server/HC=%3.", profileName, missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false], missionNamespace getVariable ["FST_HC_EmergencyMuteSentences", true]];

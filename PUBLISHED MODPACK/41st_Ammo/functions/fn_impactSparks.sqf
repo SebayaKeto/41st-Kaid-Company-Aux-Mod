@@ -1,3 +1,9 @@
+// Perf fix: particle sparks only render on machines with a screen. Without
+// this guard the dedicated server and HCs paid the config walk, the particle
+// source and a scheduler thread for every AI-vs-AI blaster hit they can
+// never display.
+if (!hasInterface) exitWith {};
+
 private _handled = false;
 {
 	if (!_handled) then
@@ -21,20 +27,31 @@ private _handled = false;
 		private _ammoClass =
 			_ammoData param [4, ""];
 
-		private _ammoConfig =
-			configFile >> "CfgAmmo" >> _ammoClass;
-
-		private _isFSTBlaster =
-			_ammoClass != ""
-			&& {isClass _ammoConfig}
-			&&
-			{
-				_ammoClass isKindOf
-				[
-					"FST_blasterbolt",
-					configFile >> "CfgAmmo"
-				]
-			};
+		// Perf fix: the isKindOf/config verdict depends only on the ammo class,
+		// but this handler fires per HIT. Cache per classname so sustained fire
+		// costs one hashmap lookup instead of a config walk per impact.
+		private _cache = missionNamespace getVariable "FST_ImpactSparksAmmoCache";
+		if (isNil "_cache") then {
+			_cache = createHashMap;
+			missionNamespace setVariable ["FST_ImpactSparksAmmoCache", _cache];
+		};
+		private _isFSTBlaster = _cache get _ammoClass;
+		if (isNil "_isFSTBlaster") then {
+			private _ammoConfig =
+				configFile >> "CfgAmmo" >> _ammoClass;
+			_isFSTBlaster =
+				_ammoClass != ""
+				&& {isClass _ammoConfig}
+				&&
+				{
+					_ammoClass isKindOf
+					[
+						"FST_blasterbolt",
+						configFile >> "CfgAmmo"
+					]
+				};
+			_cache set [_ammoClass, _isFSTBlaster];
+		};
 
 		if (_isDirect && _isFSTBlaster) then
 		{
@@ -57,15 +74,13 @@ private _handled = false;
 			_sparks setParticleClass
 				"FST_ImpactSparksPlasma1_Scripted";
 			_sparks setDropInterval 0.012;
-			_sparks spawn
-			{
+			// Perf fix: was `spawn { sleep 0.2; deleteVehicle }` -- one scheduler
+			// thread per hit just to delete a particle source. waitAndExecute is
+			// an unscheduled timer with no thread cost.
+			[{
 				params ["_source"];
-				sleep 0.2;
-				if (!isNull _source) then
-				{
-					deleteVehicle _source;
-				};
-			};
+				if (!isNull _source) then { deleteVehicle _source; };
+			}, [_sparks], 0.2] call CBA_fnc_waitAndExecute;
 		};
 	};
 }

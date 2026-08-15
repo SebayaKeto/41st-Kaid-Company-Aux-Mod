@@ -297,7 +297,9 @@ class CfgVehicles
 		artilleryScanner=1;
 		class Eventhandlers
 		{
-			fired="[_this select 0,_this select 6,'missile_move','ShellBase'] spawn BIS_fnc_missileLaunchPositionFix;";
+			// Perf fix: call instead of spawn -- no scheduler thread per missile fired.
+			// Matches how DF9 and Juggernaut already invoke the same BIS function.
+			fired="[_this select 0,_this select 6,'missile_move','ShellBase'] call BIS_fnc_missileLaunchPositionFix;";
 		};
 		class AnimationSources: AnimationSources
 		{

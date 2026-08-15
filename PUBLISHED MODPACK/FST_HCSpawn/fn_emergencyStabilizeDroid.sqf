@@ -6,19 +6,11 @@ params ["_unit"];
 if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith { false };
 if (isNull _unit) exitWith { false };
 if !(local _unit) exitWith { false };
-if (isPlayer _unit) exitWith { false };
-if !(_unit isKindOf "CAManBase") exitWith { false };
 
-private _class = typeOf _unit;
-private _type = toLower _class;
-private _display = toLower getText (configFile >> "CfgVehicles" >> _class >> "displayName");
-private _faction = toLower getText (configFile >> "CfgVehicles" >> _class >> "faction");
-
-private _typeHits = {(_type find _x) >= 0} count ["droid", "fst_b1", "fst_b2", "b1_", "b2_", "_b1", "_b2", "bx_droid", "commando_droid"];
-private _displayHits = {(_display find _x) >= 0} count ["droid", "b1", "b2", "commando droid", "battle droid", "super battle"];
-private _isDroid = (_typeHits > 0) || {_displayHits > 0} || {((_faction find "cis") >= 0 || {(_faction find "separatist") >= 0}) && {(_type find "droid") >= 0}};
-
-if (!_isDroid) exitWith { false };
+// Classification moved to fn_isDroidUnit (cached per classname) so the 1.5s
+// periodic scan and Killed handlers pay one hash lookup per unit instead of
+// config reads + substring scans. Same detection logic as before.
+if !([_unit] call FST_HCSpawn_fnc_isDroidUnit) exitWith { false };
 
 _unit setVariable ["FST_HC_EmergencyDroidStabilized", true, false];
 _unit setVariable ["FST_HC_DroidEmergencyLocality", clientOwner, false];

@@ -612,14 +612,18 @@ class Extended_HitPart_EventHandlers
 	{
 		class FST_Deka_HitPart_Eh
 		{
-			hitpart = "_args = _this select 0; _args execVM '3AS\\3AS_deka\\DroidekaShieldHit.sqf'; _args call FST_fnc_onHit;";
+			// Perf fix: was execVM per projectile impact (file read + compile + new thread on EVERY hit).
+			// Compile once on first hit, cache in missionNamespace, spawn the cached function thereafter.
+			hitpart = "_args = _this select 0; private _fn = missionNamespace getVariable 'FST_DekaShieldHitFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers '3AS\3AS_deka\DroidekaShieldHit.sqf'; missionNamespace setVariable ['FST_DekaShieldHitFn', _fn];}; _args spawn _fn; _args call FST_fnc_onHit;";
 		};
 	};
 	class FST_Sniper_Deka
 	{
 		class FST_Deka_HitPart_Eh
 		{
-			hitpart = "_args = _this select 0; _args execVM '3AS\\3AS_deka\\DroidekaShieldHit.sqf'; _args call FST_fnc_onHit;";
+			// Perf fix: was execVM per projectile impact (file read + compile + new thread on EVERY hit).
+			// Compile once on first hit, cache in missionNamespace, spawn the cached function thereafter.
+			hitpart = "_args = _this select 0; private _fn = missionNamespace getVariable 'FST_DekaShieldHitFn'; if (isNil '_fn') then {_fn = compile preprocessFileLineNumbers '3AS\3AS_deka\DroidekaShieldHit.sqf'; missionNamespace setVariable ['FST_DekaShieldHitFn', _fn];}; _args spawn _fn; _args call FST_fnc_onHit;";
 		};
 	};
 };

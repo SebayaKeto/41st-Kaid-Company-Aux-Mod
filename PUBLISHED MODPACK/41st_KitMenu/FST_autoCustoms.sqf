@@ -118,25 +118,48 @@ private _openVariantSelector = {
     missionNamespace getVariable [_resVar, ""]
 };
 
+// Perf fix: each collector was a FULL CfgWeapons/CfgVehicles sweep (tens of
+// thousands of classes) and this script runs them up to 5 times per kit take.
+// The result depends only on config data + the prefix set, neither of which
+// changes during a session -- cache per prefix set in uiNamespace. Cached
+// arrays are returned as copies so callers cannot mutate the cache.
 private _collectWeaponsByPrefixes = {
     params ["_prefixes"];
+    private _cache = uiNamespace getVariable "FST_AutoCustomsWeaponCache";
+    if (isNil "_cache") then {
+        _cache = createHashMap;
+        uiNamespace setVariable ["FST_AutoCustomsWeaponCache", _cache];
+    };
+    private _key = str _prefixes;
+    private _cached = _cache get _key;
+    if (!isNil "_cached") exitWith { +_cached };
     private _out = [];
     {
         private _cls = configName _x;
         if (_prefixes findIf { _cls find _x == 0 } > -1) then { _out pushBackUnique _cls; };
     } forEach ("true" configClasses (configFile >> "CfgWeapons"));
     _out sort true;
-    _out
+    _cache set [_key, _out];
+    +_out
 };
 private _collectVehiclesByPrefixes = {
     params ["_prefixes"];
+    private _cache = uiNamespace getVariable "FST_AutoCustomsVehicleCache";
+    if (isNil "_cache") then {
+        _cache = createHashMap;
+        uiNamespace setVariable ["FST_AutoCustomsVehicleCache", _cache];
+    };
+    private _key = str _prefixes;
+    private _cached = _cache get _key;
+    if (!isNil "_cached") exitWith { +_cached };
     private _out = [];
     {
         private _cls = configName _x;
         if (_prefixes findIf { _cls find _x == 0 } > -1) then { _out pushBackUnique _cls; };
     } forEach ("true" configClasses (configFile >> "CfgVehicles"));
     _out sort true;
-    _out
+    _cache set [_key, _out];
+    +_out
 };
 private _filterByNameBoundary = {
     params ["_classes","_prefixes"];

@@ -29,7 +29,16 @@ _atrt addEventHandler
 
         _atrtHealth = _atrt getVariable ["FST_ATRT_Health", ATRT_BASE_HEALTH]; //Sets Variable to ATRT_BASE_HEALTH if Variable not Set
         _atrtHealth = _atrtHealth - _damage;
-        _atrt setVariable ["FST_ATRT_Health", _atrtHealth, true];
+        // Perf fix: HandleDamage fires once per hitpoint per impact, and this
+        // was a PUBLIC setVariable every time -- one burst = dozens of network
+        // broadcasts per AT-RT. Nothing reads the value remotely in real time;
+        // it only needs to survive locality transfers. So: local write per hit,
+        // public sync at most every 2s.
+        _atrt setVariable ["FST_ATRT_Health", _atrtHealth];
+        if ((time - (_atrt getVariable ["FST_ATRT_HealthSyncTime", -99])) > 2) then {
+            _atrt setVariable ["FST_ATRT_HealthSyncTime", time];
+            _atrt setVariable ["FST_ATRT_Health", _atrtHealth, true];
+        };
 
 		//Kill ATRT if health is 0 or less.
         if (_atrtHealth <= 0) then

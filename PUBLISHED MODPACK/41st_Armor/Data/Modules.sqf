@@ -3,7 +3,7 @@
 ["[41st] Droid Modules", "Munificent QRF Deployment",
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
-        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge", "B2"];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
 
         ["Quick Reaction Force Deployment (Munificent)", [
             // Direction / side / droid type
@@ -1322,21 +1322,33 @@ FST_Droid_Dispenser =  {
                                         
     [_mainprojectile, _position, _projectile] spawn {
         params ["_mainprojectile", "_position", "_projectile"];
+        // Perf fix: this loop had NO sleep -- each falling pod consumed the whole
+        // script scheduler budget for its entire ~10s descent (x10 pods on a full
+        // Munificent drop). 0.05s re-steer keeps the descent visually identical.
         while {alive _mainprojectile} do {
             _mainprojectile setVelocity ((_position vectorFromTo (getPosATL _mainprojectile)) vectorMultiply -100);
+            sleep 0.05;
         };
     };
                                         
     [[_projectile], {
         params ["_projectile"];
+        // Perf fix: lightpoints only render on machines with a screen -- the
+        // dedicated server and HCs were creating invisible lights and running
+        // the wait loop for nothing.
+        if (!hasInterface) exitWith {};
         _FloodLight = "#lightpoint" createVehicleLocal [0, 0, 0];
         _FloodLight attachTo [_projectile, [0, 0, 1]];
         _FloodLight setLightColor [1, 0.8, 0.25];
         _FloodLight setLightAmbient [1, 0.8, 0.25];
         _FloodLight setLightBrightness 0.75;
         _FloodLight setLightDayLight true;
-                                            
+
+        // Perf fix: was a sleepless waitUntil polling every frame on EVERY
+        // client for the pod's whole lifetime. 0.5s polling is invisible for
+        // a cleanup check.
         waitUntil {
+            sleep 0.5;
             !alive _projectile
         };
         deleteVehicle _FloodLight;
@@ -1346,8 +1358,11 @@ FST_Droid_Dispenser =  {
         params ["_mainprojectile", "_position", "_dropside", "_projectile", "_selection", "_linger"];
                                             
         _positionATL = _position;
-                    
+
+        // Perf fix: was a sleepless per-frame poll for the whole descent. At
+        // 100 m/s a 0.05s sample gives at most ~5m crater-position error.
         waitUntil {
+            sleep 0.05;
             if (alive _mainprojectile) then {
                 _positionATL = getPosATL _mainprojectile;
             };
@@ -1416,9 +1431,8 @@ FST_Droid_Dispenser =  {
             // 4
             ["FST_BX","FST_BX","FST_BX"],
             // 5
-            ["FST_Jorgetrooper","FST_Jorgetrooper_AT","FST_Jorgetrooper_AR"],
-            // 6
-            ["FST_B2_TL","FST_B2"]
+            ["FST_Jorgetrooper","FST_Jorgetrooper_AT","FST_Jorgetrooper_AR"]
+            // B2 (was index 6) removed -- B2 no longer offered as a drop pod option.
         ] # _selection;
                                             
         _listout = [];
@@ -1444,7 +1458,11 @@ FST_Droid_Dispenser =  {
                 _projectile allowDamage true;
                 while {alive _projectile} do {
                     _time = time;
+                    // Perf fix: was a sleepless waitUntil polled every frame,
+                    // forever, per lingering pod (Linger defaults ON). A 1s poll
+                    // against a 20s timer costs nothing perceptible.
                     waitUntil {
+                        sleep 1;
                         (time - _time) > 20 or !(alive _projectile)
                     };
                     if (alive _projectile) then {
@@ -1473,7 +1491,7 @@ FST_Droid_Dispenser =  {
 ["[41st] Droid Modules", "Droid Dispenser",
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
-        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge", "B2"];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
         
         ["spawn Droid Dispenser", [
             ["sideS", ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
@@ -1671,4 +1689,407 @@ if (_x!="" && (gettext (configFile >> "Cfgvehicles" >> _x >> "displayname")) != 
 	FST_SW_CIS_HMP_GV_listDISPLAY pushBack [(gettext (configFile >> "Cfgvehicles" >> _x >> "displayname")), "", (gettext (configFile >> "Cfgvehicles" >> _x >> "editorPreview")), _colour];
 }
 }forEach FST_SW_CIS_HMP_GV_list;
+
+// ===================================================================
+// PROVIDENCE QRF DEPLOYMENT
+// ===================================================================
+// Same shape as the Munificent QRF above, but built around the STATIC
+// Providence ship class (FST_staticShip_providence_Jorge, 41st_Vehicles/
+// Providence/config.cpp) instead of SciFiSupportPLUS_fnc_JumpShipIn.
+//
+// Why: JumpShipIn spawns ships by a hardcoded string key into an external
+// addon's internal registry ("ls_munificent" for the Munificent). We do not
+// have that addon's source in this repo and could not confirm a Providence
+// key exists or what it would be -- guessing wrong would silently fail to
+// spawn anything mid-op. The Providence classes that DO exist in this pack
+// are "static ship" objects, so there is also no jump-in/jump-out animation
+// available for them; the ship simply appears and (optionally) is removed
+// afterward, with no flight/animation in between.
+//
+// Turret placement and pod-drop scatter are both derived from the spawned
+// ship's own boundingBoxReal rather than hardcoded Munificent-specific
+// offsets, so this does not depend on knowing the Providence's exact
+// real-world dimensions or hull orientation.
+//
+// Turret and fighter (Vulture) caps are 2x the Munificent module's, per
+// request. Drop pod cap is unchanged (2x was not requested for pods).
+
+["[41st] Droid Modules", "Providence QRF Deployment",
+    {
+        params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
+        _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
+
+        ["Quick Reaction Force Deployment (Providence)", [
+            // Direction / side / droid type
+            ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
+            ["sideS",   ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
+            ["TOOLBOX", ["Type select", "What type of Droids to spawn."], [3, 3, 3, _options, nil]],
+
+            // Drop pods (unchanged cap -- not part of this request)
+            ["SLIDER",  ["Drop pod Amount", "How many drop pods will be Deployed"], [0, 24, 8, 0]],
+            ["CHECKBOX", ["Linger", "Stays at the landing zone and spawns Droids unless destroyed."], [true]],
+
+            // Fighters (2x Munificent's cap: 16 -> 32)
+            ["SLIDER",  ["Amount of Vultures", "How many Vultures will be Deployed"], [0, 32, 2, 0]],
+            ["TOOLBOX", ["Vulture Type", "Select the type of Vultures to deploy."], [0, ["Standard", "AA Mixed"]]],
+            ["TOOLBOX", ["Vulture Skill", "Select the skill level of the Vultures' crew."], [0, ["Default", "Maximum"]]],
+
+            // Ship behavior
+            ["CHECKBOX", ["Armed Ship?", "Should the Providence have turrets spawned?"], [true]],
+            ["CHECKBOX", ["Remove Ship Afterwards?", "The ship will be removed after it has deployed the troops (no jump-out animation -- static ship class)."], [true]],
+
+            // Turrets (2x Munificent's cap: 10 -> 20)
+            ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Providence."], [0, 20, 2, 0]],
+
+            // Custom turret classnames (pulls from CBA addon settings)
+            ["CHECKBOX", ["Custom Turrets?", "If enabled, turret classnames will be pulled from the CBA addon settings instead of the faction default."], [false]],
+
+            // Ship HP pool
+            ["SLIDER", ["Ship HP", "HP pool for the ship. Stored as this value x100 internally (e.g. 25 = 2500 HP). Default is the CBA addon setting."], [1, 5000, 25, 0]],
+
+            // Death condition. NOTE: "Retreat" was designed for jump-in-spawned
+            // ships (ScifiSupportPLUS_FTL_SupportShip may attempt a jump-out
+            // animation internally on death). Untested on the static Providence
+            // class -- verify before relying on it in a live op. "Crash Ship" has
+            // no such dependency and is the safer default.
+            ["TOOLBOX", ["Death Condition", "What happens when the ship is destroyed. Crash Ship = falls from the sky (safe default). Retreat = jumps out (untested on this ship class -- verify first)."], [0, 1, 2, ["Crash Ship", "Retreat (Jump Out)"], nil]]
+
+            ], {
+                params ["_values", "_arguments"];
+
+                _direction         = _values # 0;
+                _Ship_direction    = [0, 45, 90, 135, 180, 225, 270, 315] # _direction;
+                _dropside          = _values select 1;
+                _LightPodSelection = _values select 2;
+                _AmountofLightPods = _values select 3;
+                _linger            = _values select 4;
+                _AmountofBanshees  = _values select 5;
+                _VultureType       = _values select 6;
+                _VultureSkill      = _values select 7;
+                _ArmedShip         = _values select 8;
+                _EndWithJumpOut    = _values select 9;
+                _NumberOfTurrets   = _values select 10;
+                _UseCustomTurret   = _values select 11;
+                _ShipHealthMult    = _values select 12;
+                _DeathCondition    = _values select 13;
+
+                _position = _arguments select 0;
+
+                [
+                    _position,
+                    _Ship_direction,
+                    _dropside,
+                    _LightPodSelection,
+                    _AmountofLightPods,
+                    _linger,
+                    _AmountofBanshees,
+                    _VultureType,
+                    _VultureSkill,
+                    _ArmedShip,
+                    _EndWithJumpOut,
+                    _NumberOfTurrets,
+                    _UseCustomTurret,
+                    _ShipHealthMult,
+                    _DeathCondition
+                ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Providence_QRF", 2];
+
+            }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
+    },
+    "\PHAN_ScifiSupportPlus\data\Droid.paa"
+] call zen_custom_modules_fnc_register;
+
+FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
+    params [
+        "_position",
+        "_Ship_direction",
+        "_dropside",
+        "_LightPodSelection",
+        "_AmountofLightPods",
+        "_linger",
+        "_AmountofBanshees",
+        "_VultureType",
+        "_VultureSkill",
+        "_ArmedShip",
+        "_EndWithJumpOut",
+        ["_NumberOfTurrets", 1],
+        ["_UseCustomTurret", false],
+        ["_ShipHealthMult", 25],
+        ["_DeathCondition", 0]
+    ];
+
+    _position = ASLtoATL _position;
+
+    _Ship     = "FST_staticShip_providence_Jorge";
+    _Altitude = 900; // matches the Munificent module's hold altitude
+
+    // -------------------------------------------------
+    // Spawn the ship directly (no jump-in animation -- static ship class)
+    // -------------------------------------------------
+    _ReturnShip = createVehicle [_Ship, [_position select 0, _position select 1, _Altitude], [], 0, "NONE"];
+    _ReturnShip setDir _Ship_direction;
+    _ReturnShip setPosATL [_position select 0, _position select 1, _Altitude];
+    _ReturnShip enableSimulationGlobal true;
+    _ReturnShip setVehicleReceiveRemoteTargets false;
+
+    [
+        _ReturnShip,
+        _position,
+        _dropside,
+        _LightPodSelection,
+        _AmountofLightPods,
+        _linger,
+        _AmountofBanshees,
+        _VultureType,
+        _VultureSkill,
+        _EndWithJumpOut,
+        _ArmedShip,
+        _NumberOfTurrets,
+        _UseCustomTurret,
+        _ShipHealthMult,
+        _DeathCondition
+    ] spawn {
+        params [
+            "_ReturnShip",
+            "_position",
+            "_dropside",
+            "_LightPodSelection",
+            "_AmountofLightPods",
+            "_linger",
+            "_AmountofBanshees",
+            "_VultureType",
+            "_VultureSkill",
+            "_EndWithJumpOut",
+            "_ArmedShip",
+            "_NumberOfTurrets",
+            "_UseCustomTurret",
+            "_ShipHealthMult",
+            "_DeathCondition"
+        ];
+
+        waitUntil { !isNull _ReturnShip && { alive _ReturnShip } };
+
+        // Real dimensions of the spawned ship -- used for BOTH turret spacing
+        // and pod scatter below, so neither depends on hardcoded Munificent
+        // numbers or on knowing which local axis is "length" for this model.
+        private _bb = boundingBoxReal _ReturnShip;
+        private _bbMin = _bb select 0;
+        private _bbMax = _bb select 1;
+        private _extentX = (_bbMax select 0) - (_bbMin select 0);
+        private _extentY = (_bbMax select 1) - (_bbMin select 1);
+        // Long axis carries turret spacing / pod scatter range; short axis
+        // carries port/starboard stagger.
+        private _longAxisIsY = _extentY >= _extentX;
+        private _shipLength = if (_longAxisIsY) then {_extentY} else {_extentX};
+        private _shipWidth   = if (_longAxisIsY) then {_extentX} else {_extentY};
+
+        if (_ArmedShip) then {
+            [
+                _ReturnShip,
+                false,               // targetInfantry
+                true,                // targetVehicle
+                false,               // AddTurret: we handle this ourselves
+                _NumberOfTurrets,
+                false,               // AddTurret_UseCustom
+                _ShipHealthMult,
+                _DeathCondition
+            ] call ScifiSupportPLUS_FTL_SupportShip;
+
+            [_ReturnShip, _NumberOfTurrets, _UseCustomTurret, _dropside, _longAxisIsY, _shipLength, _shipWidth] spawn {
+                params ["_ship", "_count", "_useCustom", "_dropside", "_longAxisIsY", "_shipLength", "_shipWidth"];
+                if (_count < 1) exitWith {};
+
+                private _turretClassList = [];
+                if (_useCustom && (count ScifiSupportPlus_SupportShip_CustomTurretArray > 0)) then {
+                    _turretClassList = ScifiSupportPlus_SupportShip_CustomTurretArray;
+                } else {
+                    _turretClassList = ["3AS_CIS_Naval_Gun_180"];
+                };
+
+                // Spread turrets across 80% of hull length (keeps them off the
+                // bow/stern tips), staggered +/-15% of hull width port/starboard.
+                private _spacingSpan = _shipLength * 0.8;
+                private _stagger = (_shipWidth * 0.15) max 15; // never less than 15m -- clears a reasonably sized hull hitbox
+
+                private _turrets = [];
+                for "_i" from 0 to (_count - 1) do {
+                    private _turretClass = selectRandom _turretClassList;
+
+                    private _along = if (_count > 1) then {
+                        ((_i / (_count - 1)) - 0.5) * _spacingSpan
+                    } else { 0 };
+                    private _side = [_stagger, -_stagger] select ((_i mod 2) != 0);
+
+                    private _spawnPos = if (_longAxisIsY) then {
+                        _ship modelToWorld [_side, _along, 0]
+                    } else {
+                        _ship modelToWorld [_along, _side, 0]
+                    };
+
+                    private _turret = createVehicle [_turretClass, _spawnPos, [], 0, "NONE"];
+                    _turret setVectorUp [0, 0, 1];
+
+                    [_turret, _ship, true] call BIS_fnc_attachToRelative;
+                    [_turret, _ship] remoteExecCall ["disableCollisionWith", 0];
+
+                    createVehicleCrew _turret;
+                    [_turret] joinSilent (group _ship);
+                    _turret allowCrewInImmobile [true, true];
+
+                    _turret setVehicleRadar 15;
+                    vehicle _turret setVehicleReportRemoteTargets true;
+                    vehicle _turret setVehicleReceiveRemoteTargets true;
+                    vehicle _turret setVehicleReportOwnPosition true;
+                    { vehicle _turret enableVehicleSensor [(_x select 0), true]; } forEach (listVehicleSensors _turret);
+
+                    _turret setSkill ["courage", 1];
+                    _turret setSkill ["aimingAccuracy", 0];
+                    _turret setSkill ["aimingSpeed", 1];
+                    _turret setSkill ["spotDistance", 1];
+                    _turret setSkill ["spotTime", 1];
+
+                    [_turret, true] remoteExec ["enableDynamicSimulation", 0];
+                    { [_x, true] remoteExec ["enableDynamicSimulation", 0]; } forEach crew _turret;
+
+                    [_turret, _ship] spawn {
+                        params ["_turret", "_ship"];
+                        while {alive _turret} do {
+                            if (isNil {_ship getVariable "FTL_stopFiring"}) then {
+                                if (combatMode (group _turret) != "RED") then {
+                                    (group _turret) setCombatMode "RED";
+                                    (group _turret) setBehaviour "AWARE";
+                                    { [_x, "AUTOCOMBAT"] remoteExecCall ["enableAI", 0]; [_x, "AUTOTARGET"] remoteExecCall ["enableAI", 0]; [_x, "TARGET"] remoteExecCall ["enableAI", 0]; [_x, "FIREWEAPON"] remoteExecCall ["enableAI", 0]; } forEach crew _turret;
+                                };
+                            };
+                            sleep 1;
+                        };
+                    };
+
+                    _turrets pushBack _turret;
+                    sleep 0.1;
+                };
+
+                _ship setVariable ["FTL_ExtraTurretOBJ", _turrets, true];
+            };
+        };
+
+        sleep 6;
+
+        // -------------------------------------------------
+        // Pod scatter: generic random points under the hull, derived from
+        // boundingBoxReal (see block header). No fixed hangar-bay coordinates
+        // exist for this ship class, so pods do not emerge from specific
+        // hatches the way the Munificent's do -- they scatter under/around
+        // the hull footprint instead.
+        // -------------------------------------------------
+        private _podLocations = [];
+        for "_i" from 1 to 16 do {
+            private _alongOffset = (random _shipLength) - (_shipLength / 2);
+            private _sideOffset  = (random _shipWidth) - (_shipWidth / 2);
+            private _localPos = if (_longAxisIsY) then {
+                [_sideOffset, _alongOffset, -5]
+            } else {
+                [_alongOffset, _sideOffset, -5]
+            };
+            _podLocations pushBack _localPos;
+        };
+
+        createandAttachParticleSource = {
+            params ["_podobject", "_location"];
+            _modelData = _podobject modelToWorld _location;
+            _particleSource = "#particleSource" createVehicle _modelData;
+            _particleSource attachTo [_podobject, _location];
+            _particleSource
+        };
+
+        _PodArray = [];
+        {
+            _PodArray pushBack ([_ReturnShip, _x] call createandAttachParticleSource);
+        } forEach _podLocations;
+
+        [_ReturnShip, _PodArray] spawn {
+            params ["_ReturnShip", "_PodArray"];
+            waitUntil {
+                sleep 1;
+                !alive _ReturnShip || isNull _ReturnShip
+            };
+            {
+                deleteVehicle _x;
+                sleep 0.01;
+            } forEach _PodArray;
+        };
+
+        if (_AmountofLightPods > 0) then {
+            for "_LightPoddropper" from 1 to _AmountofLightPods do {
+                _randomIndex = floor (random (count _PodArray));
+                _randomPodLocation = _PodArray select _randomIndex;
+                _PodArray deleteAt _randomIndex;
+
+                _currentposition = [
+                    (getPosATL _randomPodLocation select 0),
+                    (getPosATL _randomPodLocation select 1),
+                    0
+                ];
+
+                if (_linger) then {
+                    [_currentposition, _dropside, _LightPodSelection, true] call FST_Droid_Dispenser;
+                } else {
+                    [_currentposition, _dropside, _LightPodSelection, false] call FST_Droid_Dispenser;
+                };
+                sleep 1;
+            };
+        };
+
+        if (_AmountofBanshees > 0) then {
+            private _vultureClasses = [];
+            if (_VultureType == 0) then {
+                for "_i" from 1 to _AmountofBanshees do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_F";
+                };
+            } else {
+                private _aaVultureCount = floor (_AmountofBanshees * 0.33);
+                private _standardVultureCount = _AmountofBanshees - _aaVultureCount;
+                for "_i" from 1 to _aaVultureCount do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_AA_F";
+                };
+                for "_i" from 1 to _standardVultureCount do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_F";
+                };
+                _vultureClasses = _vultureClasses call BIS_fnc_arrayShuffle;
+            };
+
+            {
+                private _vultureClass = _x;
+                [_ReturnShip, _dropside, _vultureClass, _VultureSkill] spawn {
+                    params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
+                    _currentPosition = getPosATL _ReturnShip;
+
+                    _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
+                    (_dropside select 0) createVehicleCrew _Banshee;
+
+                    sleep 3;
+
+                    if (_VultureSkill == 1) then {
+                        { _x setSkill 1.0; } forEach crew _Banshee;
+                    };
+                    (group _Banshee) setCombatMode "RED";
+                    (group _Banshee) setBehaviour "AWARE";
+                    _Banshee engineOn true;
+                };
+                sleep 5;
+            } forEach _vultureClasses;
+        };
+
+        sleep ((_AmountofLightPods * 1) + (_AmountofBanshees * 5) + 1);
+
+        if (_EndWithJumpOut) then {
+            [objNull, "Serenity Actual: Providence overhead, they've dropped droids and are withdrawing!"] call BIS_fnc_showCuratorFeedbackMessage;
+
+            private _turretArrayForCleanup = _ReturnShip getVariable ["FTL_ExtraTurretOBJ", []];
+            { deleteVehicleCrew _x; deleteVehicle _x; } forEach _turretArrayForCleanup;
+            deleteVehicle _ReturnShip;
+        } else {
+            [objNull, "Serenity Actual: Providence overhead, they've dropped droid pods!"] call BIS_fnc_showCuratorFeedbackMessage;
+        };
+    };
+};
 FST_SW_CIS_HMP_GV_listDISPLAY;

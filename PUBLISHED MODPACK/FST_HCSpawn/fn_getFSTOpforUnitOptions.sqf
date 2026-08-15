@@ -9,7 +9,10 @@ private _pairs = [];
 
 {
     private _class = configName _x;
-    if ([_class] call FST_HCSpawn_fnc_isValidFSTOpforUnit) then {
+    // B2s removed as a Fill Garrison option (team decision, 2026-08-08). Excluding
+    // by isKindOf "WBK_LS_B2" catches FST_B2/FST_B2_TL/FST_B2_Flame (and any future
+    // B2 variant) so they cannot be picked via the B1 Replacement dropdown either.
+    if ([_class] call FST_HCSpawn_fnc_isValidFSTOpforUnit && {!(_class isKindOf "WBK_LS_B2")}) then {
         private _displayName = getText (_x >> "displayName");
         if (_displayName isEqualTo "") then { _displayName = _class; };
         _pairs pushBack [format ["%1 — %2", _displayName, _class], _class];
@@ -19,7 +22,7 @@ private _pairs = [];
 _pairs sort true;
 
 private _values = [""];
-private _labels = ["Default B1/B2 Droid Mix"];
+private _labels = ["Default B1 Droid Mix"];
 {
     _labels pushBack (_x select 0);
     _values pushBack (_x select 1);

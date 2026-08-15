@@ -50,7 +50,10 @@ if (isNil "_mode") then {
 	// show "Loading" control to hide all the action while its going on
 	if (!isNull _loadingCtrl) then {
 		_loadingCtrl ctrlShow true;
-		while {!ctrlShown _loadingCtrl} do {};
+		// Perf fix: was an empty-body busy loop burning the scheduler slice.
+		// waitUntil yields once per frame; unscheduled context cannot wait at all
+		// (the flag cannot flip mid-frame), so skip there.
+		if (canSuspend) then { waitUntil {ctrlShown _loadingCtrl}; };
 	};
 };
 
@@ -393,7 +396,8 @@ if (isNil "_mode") then {
 				if (!ctrlShown _targetMapCtrl) then {
 					_targetMapCtrl ctrlShow true;
 					// wait until map control is shown, otherwise we can get in trouble with ctrlMapAnimCommit later on, depending on timing
-					while {!ctrlShown _targetMapCtrl} do {};
+					// Perf fix: frame-yielding wait instead of empty-body busy loop; skip in unscheduled context.
+					if (canSuspend) then { waitUntil {ctrlShown _targetMapCtrl}; };
 				};
 			};
 		};
@@ -536,7 +540,9 @@ if ((!isNil "_targetMapScale") || (!isNil "_targetMapWorldPos")) then {
 	};
 	_targetMapCtrl ctrlMapAnimAdd [0,_targetMapScale,_targetMapWorldPos];
 	ctrlMapAnimCommit _targetMapCtrl;
-	while {!(ctrlMapAnimDone _targetMapCtrl)} do {};
+	// Perf fix: frame-yielding wait instead of empty-body busy loop (0-duration
+	// anim completes immediately or next frame); skip in unscheduled context.
+	if (canSuspend) then { waitUntil {ctrlMapAnimDone _targetMapCtrl}; };
 };
 
 // now hide the "Loading" control since we are done
@@ -554,7 +560,8 @@ if (!isNull _loadingCtrl) then {
 	};
 	
 	_loadingCtrl ctrlShow false;
-	while {ctrlShown _loadingCtrl} do {};
+	// Perf fix: frame-yielding wait instead of empty-body busy loop; skip in unscheduled context.
+	if (canSuspend) then { waitUntil {!ctrlShown _loadingCtrl}; };
 };
 
 // call notification system

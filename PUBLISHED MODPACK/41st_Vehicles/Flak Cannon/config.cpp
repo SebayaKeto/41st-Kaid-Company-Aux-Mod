@@ -445,8 +445,15 @@ class CfgVehicles
 				maxElev=80;
 				minTurn=-360;
 				initelev=28;
-				maxVerticalRotSpeed=1.50000001;
-				maxHorizontalRotSpeed = 1.50000001;
+				// Turret tracking fix: was 1.5 rad/s (~86 deg/s), same as the base/live
+				// FlakCannon. Required angular tracking rate = target speed / slant
+				// range, so a 500+ kmph (~139 m/s) aircraft on a close/fast pass can
+				// demand well over 1.5 rad/s of lead-angle tracking -- the barrel
+				// physically could not keep up, so shots landed behind. Shell speed
+				// (1440 m/s muzzle velocity) was never the bottleneck. Raised to 4.0
+				// rad/s (~229 deg/s) here only, since this is the Test variant.
+				maxVerticalRotSpeed=4;
+				maxHorizontalRotSpeed = 4;
 				animationSourceBody="Mainturret";
 				Body="Mainturret";
 				animationSourceGun="Maingun";

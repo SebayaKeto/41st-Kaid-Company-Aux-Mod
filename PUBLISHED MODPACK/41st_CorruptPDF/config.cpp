@@ -857,7 +857,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfofficer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfofficer;};";
 		};
 	};
 	class FST_CorruptPDF_RTO: FST_U_CorruptPDF
@@ -916,7 +916,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfrto;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfrto;};";
 		};
 	};
 	class FST_CorruptPDF_Standard: FST_U_CorruptPDF
@@ -975,7 +975,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfstandard;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfstandard;};";
 		};
 	};
 	class FST_CorruptPDF_Auto: FST_U_CorruptPDF
@@ -1035,7 +1035,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfautorifle;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfautorifle;};";
 		};
 	};
 	class FST_CorruptPDF_Mark: FST_U_CorruptPDF
@@ -1095,7 +1095,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmarksman;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmarksman;};";
 		};
 	};
 	class FST_CorruptPDF_CQB: FST_U_CorruptPDF
@@ -1154,7 +1154,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfcqb;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfcqb;};";
 		};
 	};
 	class FST_CorruptPDF_Gren: FST_U_CorruptPDF
@@ -1214,7 +1214,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfgrenadier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfgrenadier;};";
 		};
 	};
 	class FST_CorruptPDF_AA: FST_U_CorruptPDF
@@ -1275,7 +1275,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantiair;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantiair;};";
 		};
 	};
 	class FST_CorruptPDF_AT: FST_U_CorruptPDF
@@ -1336,7 +1336,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantitank;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantitank;};";
 		};
 	};
 	class FST_CorruptPDF_Medic: FST_U_CorruptPDF
@@ -1395,7 +1395,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmedic;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmedic;};";
 		};
 	};
 	class FST_U_CorruptPDFTanker: FST_U_CIS_Light
@@ -1472,7 +1472,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdftanker;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdftanker;};";
 		};
 	};
 	class FST_U_CorruptPDFCold: FST_U_CIS_Light
@@ -1545,7 +1545,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfofficer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfofficer;};";
 		};
 	};
 	class FST_CorruptPDFCold_RTO: FST_U_CorruptPDFCold
@@ -1602,7 +1602,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfrto;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfrto;};";
 		};
 	};
 	class FST_CorruptPDFCold_Standard: FST_U_CorruptPDFCold
@@ -1659,7 +1659,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfstandard;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfstandard;};";
 		};
 	};
 	class FST_CorruptPDFCold_Auto: FST_U_CorruptPDFCold
@@ -1717,7 +1717,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfautorifle;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfautorifle;};";
 		};
 	};
 	class FST_CorruptPDFCold_Mark: FST_U_CorruptPDFCold
@@ -1775,7 +1775,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmarksman;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmarksman;};";
 		};
 	};
 	class FST_CorruptPDFCold_CQB: FST_U_CorruptPDFCold
@@ -1832,7 +1832,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfcqb;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfcqb;};";
 		};
 	};
 	class FST_CorruptPDFCold_Gren: FST_U_CorruptPDFCold
@@ -1890,7 +1890,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfgrenadier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfgrenadier;};";
 		};
 	};
 	class FST_CorruptPDFCold_AA: FST_U_CorruptPDFCold
@@ -1949,7 +1949,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantiair;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantiair;};";
 		};
 	};
 	class FST_CorruptPDFCold_AT: FST_U_CorruptPDFCold
@@ -2008,7 +2008,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantitank;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfantitank;};";
 		};
 	};
 	class FST_CorruptPDFCold_Medic: FST_U_CorruptPDFCold
@@ -2065,7 +2065,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmedic;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfmedic;};";
 		};
 	};
 	class JMSLLTE_ScumPilot_orange_F;
@@ -2130,7 +2130,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_PDFRandomizers_fnc_pdfpilot;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_PDFRandomizers_fnc_pdfpilot;};";
 		};
 	};
 	class FST_Droid_B1_E5;

@@ -16,12 +16,26 @@ private _fixed = 0;
     if !(side group _unit isEqualTo east) then { continue };
     if !(vehicle _unit isEqualTo _unit) then { continue };
 
-    private _class = toLowerANSI (typeOf _unit);
-    private _isDroid =
-        ((_class find "fst_droid_b1") >= 0) ||
-        ((_class find "fst_droid_b2") >= 0) ||
-        ((_class find "fst_b1") >= 0) ||
-        ((_class find "fst_b2") >= 0);
+    // Per-classname verdict cache: this sweep hits every local unit every 10s
+    // on the server AND each HC, and the substring scans only depend on the
+    // class. Deliberately narrower than fn_isDroidUnit (B1/B2 only) so BX and
+    // commando droids keep their own AI stance behavior.
+    private _class = typeOf _unit;
+    private _cache = missionNamespace getVariable "FST_HC_StanceClassCache";
+    if (isNil "_cache") then {
+        _cache = createHashMap;
+        missionNamespace setVariable ["FST_HC_StanceClassCache", _cache];
+    };
+    private _isDroid = _cache get _class;
+    if (isNil "_isDroid") then {
+        private _lc = toLowerANSI _class;
+        _isDroid =
+            ((_lc find "fst_droid_b1") >= 0) ||
+            ((_lc find "fst_droid_b2") >= 0) ||
+            ((_lc find "fst_b1") >= 0) ||
+            ((_lc find "fst_b2") >= 0);
+        _cache set [_class, _isDroid];
+    };
 
     if (!_isDroid) then { continue };
 

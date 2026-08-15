@@ -570,7 +570,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadleader;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadleader;};";
 		};
 	};
 	class FST_MandoV_RTO: FST_U_MandoUndersuit
@@ -603,7 +603,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadcoordinator;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadcoordinator;};";
 		};
 	};
 	class FST_MandoV_Standard: FST_U_MandoUndersuit
@@ -636,7 +636,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadsoldier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadsoldier;};";
 		};
 	};
 	class FST_MandoV_Auto: FST_U_MandoUndersuit
@@ -669,7 +669,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadsuppressor;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadsuppressor;};";
 		};
 	};
 	class FST_MandoV_CQB: FST_U_MandoUndersuit
@@ -702,7 +702,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadrusher;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadrusher;};";
 		};
 	};
 	class FST_MandoV_Marksman: FST_U_MandoUndersuit
@@ -735,7 +735,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadhunter;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadhunter;};";
 		};
 	};
 	class FST_MandoV_Sniper: FST_U_MandoUndersuit
@@ -768,7 +768,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadassassin;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadassassin;};";
 		};
 	};
 	class FST_MandoV_AT: FST_U_MandoUndersuit
@@ -801,7 +801,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varaddestroyer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varaddestroyer;};";
 		};
 	};
 	class FST_MandoV_AA: FST_U_MandoUndersuit
@@ -834,7 +834,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadlauncher;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadlauncher;};";
 		};
 	};
 	class FST_MandoV_EOD: FST_U_MandoUndersuit
@@ -867,7 +867,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadbomber;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadbomber;};";
 		};
 	};
 	class FST_MandoV_Grenadier: FST_MandoV_Commander
@@ -918,7 +918,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadgrenadier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadgrenadier;};";
 		};
 	};
 	class FST_MandoV_Flame: FST_MandoV_Commander
@@ -966,7 +966,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_varadflamer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_varadflamer;};";
 		};
 	};
 	class FST_MandoO_Commander: FST_U_MandoUndersuit
@@ -1015,7 +1015,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordoleader;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordoleader;};";
 		};
 	};
 	class FST_MandoO_RTO: FST_U_MandoUndersuit
@@ -1048,7 +1048,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordocoordinator;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordocoordinator;};";
 		};
 	};
 	class FST_MandoO_Standard: FST_U_MandoUndersuit
@@ -1081,7 +1081,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordosoldier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordosoldier;};";
 		};
 	};
 	class FST_MandoO_Auto: FST_U_MandoUndersuit
@@ -1114,7 +1114,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordosuppressor;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordosuppressor;};";
 		};
 	};
 	class FST_MandoO_CQB: FST_U_MandoUndersuit
@@ -1147,7 +1147,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordorusher;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordorusher;};";
 		};
 	};
 	class FST_MandoO_Marksman: FST_U_MandoUndersuit
@@ -1180,7 +1180,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordohunter;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordohunter;};";
 		};
 	};
 	class FST_MandoO_Sniper: FST_U_MandoUndersuit
@@ -1213,7 +1213,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordoassassin;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordoassassin;};";
 		};
 	};
 	class FST_MandoO_AT: FST_U_MandoUndersuit
@@ -1246,7 +1246,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordodestroyer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordodestroyer;};";
 		};
 	};
 	class FST_MandoO_AA: FST_U_MandoUndersuit
@@ -1279,7 +1279,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordolauncher;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordolauncher;};";
 		};
 	};
 	class FST_MandoO_EOD: FST_U_MandoUndersuit
@@ -1312,7 +1312,7 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordobomber;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordobomber;};";
 		};
 	};
 	class FST_MandoO_Grenadier: FST_MandoV_Commander
@@ -1363,7 +1363,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordogrenadier;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordogrenadier;};";
 		};
 	};
 	class FST_MandoO_Flame: FST_MandoV_Commander
@@ -1411,7 +1411,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_MandoRandomizers_fnc_ordoflamer;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_MandoRandomizers_fnc_ordoflamer;};";
 		};
 	};
 };

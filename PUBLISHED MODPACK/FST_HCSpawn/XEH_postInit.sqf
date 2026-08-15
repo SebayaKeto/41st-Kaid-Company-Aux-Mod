@@ -43,6 +43,7 @@ if (!isServer && !hasInterface) then {
 if (isServer || {!hasInterface}) then {
     [] call FST_HCSpawn_fnc_initExplosionDiag;
     [] call FST_HCSpawn_fnc_initEmergencyDroidBandaid;
+    [] call FST_HCSpawn_fnc_initDroidCorpseCleanup;
 
     // Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
     // arguments-local command, so it only affects units local to the executing

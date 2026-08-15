@@ -12,13 +12,15 @@
 //   0: POSITION — center
 //   1: NUMBER   — scan radius
 //   2: NUMBER   — density (0.0-1.0)
-//   3: NUMBER   — B2 ratio (0.0-1.0)
-//   4: NUMBER   — requesting client owner ID
-//   5: STRING   — optional B1 replacement class; empty string keeps default B1 pool
+//   3: NUMBER   — requesting client owner ID
+//   4: STRING   — optional B1 replacement class; empty string keeps default B1 pool
+//
+// B2s removed as a Fill Garrison option (team decision, 2026-08-08). Only the
+// B1 pool (or the B1 replacement unit, if set) is ever assigned.
 
 if (!isServer) exitWith {};
 
-params ["_center", "_radius", "_density", "_b2Ratio", ["_callerID", -2], ["_b1Replacement", "", [""]]];
+params ["_center", "_radius", "_density", ["_callerID", -2], ["_b1Replacement", "", [""]]];
 
 // V14: no automatic dead-group cleanup in heavy spawn paths. Run manual/rare maintenance cleanup during lulls.
 
@@ -48,7 +50,6 @@ if (_blockWithoutHC && {count FST_HC_Array == 0}) exitWith {
 // Clamp user-facing values and validate client-provided classnames server-side.
 _radius = (_radius max 25) min 500;
 _density = (_density max 0.1) min 1;
-_b2Ratio = (_b2Ratio max 0) min 1;
 
 // Garrison dispatch throttle. These can be overridden from CBA/debug/server init.
 private _batchSize = missionNamespace getVariable ["FST_HC_FillGarrisonBatchSize", 8];
@@ -227,17 +228,13 @@ if (_capAbort || {_fillCount <= 0}) exitWith {
 private _positions = _allPositions select [0, _fillCount];
 
 // --- Assign classes ---
+// B2s removed as an option (team decision, 2026-08-08) -- B1 pool / replacement only.
 private _b1Pool = ["FST_Droid_B1_E5","FST_Droid_B1_E5","FST_Droid_B1_E5","FST_Droid_B1_E5",
     "FST_Droid_B1_E5","FST_Droid_B1_E5","FST_Droid_B1_E5","FST_Droid_B1_AR"];
-private _b2Pool = ["FST_B2","FST_B2","FST_B2_TL"];
 
 private _assignments = [];
 {
-    private _class = if (random 1 < _b2Ratio) then {
-        selectRandom _b2Pool
-    } else {
-        if (_b1Replacement isEqualTo "") then { selectRandom _b1Pool } else { _b1Replacement }
-    };
+    private _class = if (_b1Replacement isEqualTo "") then { selectRandom _b1Pool } else { _b1Replacement };
     _assignments pushBack [_x, _class];
 } forEach _positions;
 

@@ -9494,7 +9494,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_regularcivil;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_regularcivil;};";
 		};
 	};
 	class FST_Civilian_Poor: C_man_1
@@ -9520,7 +9520,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_poorcivil;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_poorcivil;};";
 		};
 	};
 	class FST_Civilian_Wealthy: C_man_1
@@ -9546,7 +9546,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_wealthycivil;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_wealthycivil;};";
 		};
 	};
 	class FST_Civilian_Spacer: C_man_1
@@ -9572,7 +9572,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_spacercivil;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_spacercivil;};";
 		};
 	};
 	class FST_U_CIS_Prisoner: C_man_1
@@ -9643,7 +9643,7 @@ class CfgVehicles
 		identityTypes[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_prisonercivil;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_prisonercivil;};";
 		};
 	};
 	class FST_CIS_Clone_Prisoner: FST_U_CIS_Prisoner
@@ -9661,7 +9661,7 @@ class CfgVehicles
 		identityTypes[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_prisonerclone;";
+			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_prisonerclone;};";
 		};
 	};
 };
