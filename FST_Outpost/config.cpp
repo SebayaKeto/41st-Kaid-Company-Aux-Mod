@@ -36,7 +36,9 @@ class CfgPatches
             "FST_OutpostWall_Entrance_BlackSun",
             "FST_OutpostWall_Entrance_GAROne",
             "FST_Outpost_InteriorWallGreeble_1x1x3M",
-            "FST_Outpost_InteriorWallGreeble_End"
+            "FST_Outpost_InteriorWallGreeble_End",
+            "FST_Outpost_InteriorFloorGreeble_1x0_5x5M",
+            "FST_Outpost_InteriorFloorGreeble_1x0_5x5M_02"
         };
 
         // No weapon definitions in this package.

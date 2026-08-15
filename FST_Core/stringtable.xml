@@ -357,16 +357,16 @@
                 <Czech>TX-180</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_DISPLAYNAME">
-                <Original>TX-180 APC</Original>
-                <English>TX-180 APC</English>
-                <German>TX-180 APC</German>
-                <French>TX-180 APC</French>
-                <Spanish>TX-180 APC</Spanish>
-                <Italian>TX-180 APC</Italian>
-                <Polish>TX-180 APC</Polish>
-                <Portuguese>TX-180 APC</Portuguese>
-                <Russian>TX-180 APC</Russian>
-                <Czech>TX-180 APC</Czech>
+                <Original>TX-180 "Raider" APC</Original>
+                <English>TX-180 "Raider" APC</English>
+                <German>TX-180 "Raider" APC</German>
+                <French>TX-180 "Raider" APC</French>
+                <Spanish>TX-180 "Raider" APC</Spanish>
+                <Italian>TX-180 "Raider" APC</Italian>
+                <Polish>TX-180 "Raider" APC</Polish>
+                <Portuguese>TX-180 "Raider" APC</Portuguese>
+                <Russian>TX-180 "Raider" APC</Russian>
+                <Czech>TX-180 "Raider" APC</Czech>
             </Key>
             <Key ID="STR_FST_SABER_APC_ACTION_OPEN_REAR_DOOR">
                 <Original>Open Rear Door</Original>

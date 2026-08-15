@@ -69,6 +69,7 @@ class CfgWeapons
     // Common Arma weapon bases used by this module.
     class CannonCore;
     class MissileLauncher;
+    class missiles_titan;
     class RocketPods;
     class GrenadeLauncher;
     class SmokeLauncher;
@@ -91,6 +92,7 @@ class CfgMagazines
     // Common Arma magazine bases used by this module.
     class CA_Magazine;
     class VehicleMagazine: CA_Magazine {};
+    class 2Rnd_GAT_missiles;
 
     #include "Bolts\Magazines.cpp"
     #include "Missiles\Magazines.cpp"
