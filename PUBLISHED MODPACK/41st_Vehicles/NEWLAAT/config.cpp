@@ -9,7 +9,8 @@
 			"A3_Data_F",
 			"A3_Air_F"
 		};
-				{
+		units[]=
+		{
 			"FST_laati_Turret",
 			"FST_laati_mk2",
 			"FST_laati_mk2Lights",
