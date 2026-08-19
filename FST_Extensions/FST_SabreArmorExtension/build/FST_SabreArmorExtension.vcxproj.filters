@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="P:\FST\FST_Extensions\FST_SabreArmorExtension\src\SabreArmorExtension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="P:\FST\FST_Extensions\FST_SabreArmorExtension\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{96AFF881-297B-3F68-B16E-8C5E9444D536}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

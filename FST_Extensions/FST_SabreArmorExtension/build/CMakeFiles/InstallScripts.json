@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"P:/FST/FST_Extensions/FST_SabreArmorExtension/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

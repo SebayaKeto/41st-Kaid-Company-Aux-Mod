@@ -1,3 +1,4 @@
+
 #include "Sounds\FST_Vehicles_Land_APC_SabreAPC_Sounds.hpp"
 
 class CfgPatches
@@ -28,6 +29,7 @@ class SensorTemplateMan;
 class SensorTemplateLaser;
 class SensorTemplateNV;
 class SensorTemplateDataLink;
+class RscText;
 class DefaultVehicleSystemsDisplayManagerLeft
 {
 	class components;
@@ -84,6 +86,294 @@ class Optics_Gunner_MBT_01: Optics_Armored
 	class Wide;
 	class Medium;
 	class Narrow;
+};
+class RscTitles
+{
+	class FST_SabreArmorStatus
+	{
+		idd=-1;
+		duration=1e+011;
+		fadeIn=0;
+		fadeOut=0;
+		onLoad="uiNamespace setVariable ['FST_SabreArmorStatus', _this select 0]";
+		class controls
+		{
+			class ArmorPanel: RscText
+			{
+				idc=7098;
+				x="safeZoneX + safeZoneW - 0.345";
+				y="safeZoneY + safeZoneH - 0.365";
+				w=0.315;
+				h=0.285;
+				colorBackground[]={0.01,0.018,0.024,0.86};
+			};
+			class ArmorHeader: RscText
+			{
+				idc=7099;
+				text="SABRE // ARMOR MATRIX // MK-IV";
+				x="safeZoneX + safeZoneW - 0.325";
+				y="safeZoneY + safeZoneH - 0.345";
+				w=0.275;
+				h=0.022;
+				sizeEx=0.028;
+				colorText[]={0.38,0.82,1,1};
+			};
+			class ArmorSubHeader: ArmorHeader
+			{
+				text="TACTICAL DAMAGE TELEMETRY";
+				y="safeZoneY + safeZoneH - 0.326";
+				h=0.014;
+				sizeEx=0.016;
+				colorText[]={0.34,0.55,0.65,0.9};
+			};
+			class ArmorRule: ArmorHeader
+			{
+				text="";
+				y="safeZoneY + safeZoneH - 0.309";
+				h=0.003;
+				colorBackground[]={0.22,0.67,0.9,0.65};
+			};
+			class IntegrityLabel: ArmorHeader
+			{
+				idc=7108;
+				text="HULL INTEGRITY";
+				y="safeZoneY + safeZoneH - 0.294";
+				w=0.165;
+				h=0.018;
+				sizeEx=0.022;
+				colorText[]={0.68,0.75,0.8,0.95};
+			};
+			class IntegrityValue: IntegrityLabel
+			{
+				idc=7126;
+				text="100%";
+				x="safeZoneX + safeZoneW - 0.160";
+				w=0.110;
+				style=1;
+				sizeEx=0.025;
+				colorText[]={0.42,1,0.62,1};
+			};
+			class VehicleZone: RscText
+			{
+				text="";
+				colorBackground[]={0.12,0.8,0.2,0.9};
+			};
+			class FrontStatus: VehicleZone
+			{
+				idc=7101;
+				x="safeZoneX + safeZoneW - 0.235";
+				y="safeZoneY + safeZoneH - 0.262";
+				w=0.095;
+				h=0.035;
+			};
+			class HullStatus: VehicleZone
+			{
+				idc=7109;
+				x="safeZoneX + safeZoneW - 0.225";
+				y="safeZoneY + safeZoneH - 0.222";
+				w=0.075;
+				h=0.082;
+			};
+			class LeftStatus: VehicleZone
+			{
+				idc=7103;
+				x="safeZoneX + safeZoneW - 0.275";
+				y="safeZoneY + safeZoneH - 0.217";
+				w=0.045;
+				h=0.090;
+			};
+			class RightStatus: LeftStatus
+			{
+				idc=7105;
+				x="safeZoneX + safeZoneW - 0.145";
+			};
+			class RearStatus: FrontStatus
+			{
+				idc=7107;
+				y="safeZoneY + safeZoneH - 0.135";
+			};
+			class ZoneLabel: ArmorHeader
+			{
+				w=0.070;
+				h=0.016;
+				sizeEx=0.018;
+				colorText[]={0.75,0.84,0.88,0.95};
+			};
+			class FrontLabel: ZoneLabel
+			{
+				idc=7100;
+				text="FRONT";
+				x="safeZoneX + safeZoneW - 0.222";
+				y="safeZoneY + safeZoneH - 0.279";
+			};
+			class LeftLabel: ZoneLabel
+			{
+				idc=7102;
+				text="L";
+				x="safeZoneX + safeZoneW - 0.290";
+				y="safeZoneY + safeZoneH - 0.188";
+			};
+			class RightLabel: LeftLabel
+			{
+				idc=7104;
+				text="R";
+				x="safeZoneX + safeZoneW - 0.125";
+			};
+			class RearLabel: FrontLabel
+			{
+				idc=7106;
+				text="REAR";
+				y="safeZoneY + safeZoneH - 0.116";
+			};
+			class ZoneValue: ZoneLabel
+			{
+				w=0.052;
+				style=1;
+				sizeEx=0.019;
+				colorText[]={0.98,0.98,0.98,1};
+			};
+			class FrontValue: ZoneValue
+			{
+				idc=7122;
+				x="safeZoneX + safeZoneW - 0.112";
+				y="safeZoneY + safeZoneH - 0.253";
+			};
+			class LeftValue: FrontValue
+			{
+				idc=7123;
+				y="safeZoneY + safeZoneH - 0.218";
+			};
+			class RightValue: LeftValue
+			{
+				idc=7124;
+				y="safeZoneY + safeZoneH - 0.188";
+			};
+			class RearValue: RightValue
+			{
+				idc=7125;
+				y="safeZoneY + safeZoneH - 0.153";
+			};
+			class ArmorStateLabel: IntegrityLabel
+			{
+				text="SYSTEM STATE";
+				y="safeZoneY + safeZoneH - 0.094";
+			};
+			class ArmorStateValue: IntegrityValue
+			{
+				idc=7127;
+				text="NOMINAL";
+				y="safeZoneY + safeZoneH - 0.094";
+				colorText[]={0.42,1,0.62,1};
+			};
+			class ArmorReadout: ArmorSubHeader
+			{
+				text="FWD / PORT / STBD / AFT";
+				x="safeZoneX + safeZoneW - 0.325";
+				y="safeZoneY + safeZoneH - 0.073";
+				w=0.190;
+				h=0.012;
+				sizeEx=0.014;
+				colorText[]={0.34,0.55,0.65,0.85};
+			};
+			class ArmorSignal: ArmorReadout
+			{
+				text="[ LIVE TELEMETRY ]";
+				x="safeZoneX + safeZoneW - 0.170";
+				w=0.120;
+				style=1;
+				colorText[]={0.35,0.95,0.74,0.9};
+			};
+			class VehicleCrosshair: VehicleZone
+			{
+				text="";
+				x="safeZoneX + safeZoneW - 0.190";
+				y="safeZoneY + safeZoneH - 0.252";
+				w=0.005;
+				h=0.142;
+				colorBackground[]={0.5,0.85,1,0.24};
+			};
+			class VehicleCrosshairHorizontal: VehicleCrosshair
+			{
+				x="safeZoneX + safeZoneW - 0.295";
+				y="safeZoneY + safeZoneH - 0.200";
+				w=0.215;
+				h=0.003;
+			};
+			class LowHullBorderTop: VehicleZone
+			{
+				idc=7110;
+				x="safeZoneX + safeZoneW - 0.350";
+				y="safeZoneY + safeZoneH - 0.370";
+				w=0.325;
+				h=0.005;
+				colorBackground[]={1,0.02,0.02,0};
+			};
+			class LowHullBorderBottom: LowHullBorderTop
+			{
+				idc=7111;
+				y="safeZoneY + safeZoneH - 0.075";
+			};
+			class LowHullBorderLeft: LowHullBorderTop
+			{
+				idc=7112;
+				w=0.005;
+				h=0.295;
+			};
+			class LowHullBorderRight: LowHullBorderLeft
+			{
+				idc=7113;
+				x="safeZoneX + safeZoneW - 0.030";
+			};
+			class LowHullMidTop: LowHullBorderTop
+			{
+				idc=7114;
+				x="safeZoneX + safeZoneW - 0.345";
+				y="safeZoneY + safeZoneH - 0.365";
+				w=0.315;
+				h=0.003;
+			};
+			class LowHullMidBottom: LowHullMidTop
+			{
+				idc=7115;
+				y="safeZoneY + safeZoneH - 0.080";
+			};
+			class LowHullMidLeft: LowHullMidTop
+			{
+				idc=7116;
+				w=0.003;
+				h=0.285;
+			};
+			class LowHullMidRight: LowHullMidLeft
+			{
+				idc=7117;
+				x="safeZoneX + safeZoneW - 0.035";
+			};
+			class LowHullInnerTop: LowHullMidTop
+			{
+				idc=7118;
+				x="safeZoneX + safeZoneW - 0.340";
+				y="safeZoneY + safeZoneH - 0.360";
+				w=0.305;
+				h=0.002;
+			};
+			class LowHullInnerBottom: LowHullInnerTop
+			{
+				idc=7119;
+				y="safeZoneY + safeZoneH - 0.083";
+			};
+			class LowHullInnerLeft: LowHullInnerTop
+			{
+				idc=7120;
+				w=0.002;
+				h=0.277;
+			};
+			class LowHullInnerRight: LowHullInnerLeft
+			{
+				idc=7121;
+				x="safeZoneX + safeZoneW - 0.038";
+			};
+		};
+	};
 };
 class CfgVehicles
 {
@@ -1709,7 +1999,7 @@ class CfgVehicles
 		centreBias=1.4;
 		class EventHandlers: DefaultEventHandlers
 		{
-			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;};";
+			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;}; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_monitorSabreArmor.sqf'; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_showSabreArmorStatus.sqf';";
 		};
 		class SimpleObject
 		{
