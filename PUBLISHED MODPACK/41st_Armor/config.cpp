@@ -8825,11 +8825,11 @@ class CfgWeapons
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
-	class FST_Pilot_P1_Helmet_Ouranos: FST_Pilot_P1_Helmet
+	class FST_Pilot_P1_Helmet_Aether: FST_Pilot_P1_Helmet
 	{
 		author="Steel";
 		scope=2;
-		displayName="[41st] P1 Pilot Helmet [Ouranos]";
+		displayName="[41st] P1 Pilot Helmet [Aether]";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Ouranos.paa",
@@ -16488,15 +16488,15 @@ class CfgWeapons
 			mass=15;
 		};
 	};
- 	class FST_Uniform_Ouranos: JLTS_CloneArmor
+ 	class FST_Uniform_Aether: JLTS_CloneArmor
 	{
 		author="Vengence";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
-		displayName="[41st] P2 Armor [Ouranos]";
+		displayName="[41st] P2 Armor [Aether]";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="";
-			uniformClass="FST_P2_Ouranos";
+			uniformClass="FST_P2_Aether";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -44068,17 +44068,17 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
- 	class FST_P2_Ouranos: FST_Trooper_P2_DC15S
+ 	class FST_P2_Aether: FST_Trooper_P2_DC15S
 	{
 		author="Vengence";
-		displayName="[41st] CT-2008 'Ouranos'";
+		displayName="[41st] CT-2558 'Aether'";
 		scope=2;
 		Backpack="";
 		side=1;
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Ouranos";
+		uniformclass="FST_Uniform_Aether";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
@@ -44104,7 +44104,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Ouranos",
+			"FST_P2_Helmet_Aether",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -44114,7 +44114,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Ouranos",
+			"FST_P2_Helmet_Aether",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
