@@ -14330,6 +14330,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Five.paa"
 		};
 	};
+	/*
 	class FST_P2_Helmet_Hazzo: FST_P2_Helmet_Base
 	{
 		author="Viz";
@@ -14340,6 +14341,7 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Hazzo.paa"
 		};
 	};
+	*/
 	class FST_P2_Helmet_Chips: FST_P2_Helmet_Base
 	{
 		author="Viz";
@@ -17216,6 +17218,7 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	/*
 	class FST_Uniform_Hazzo: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -17230,6 +17233,7 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	*/
 	class FST_Uniform_Cowboy: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -20681,6 +20685,7 @@ class CfgWeapons
 			"41st_Armor\Data\Equipment\FST_NVG_Fixed_Hex.paa",
 		};
 	};
+	/*
 	class FST_NVG_Hazzo: FST_NVG
 	{
 		author="Gold";
@@ -20690,6 +20695,7 @@ class CfgWeapons
 			"41st_Armor\Data\Equipment\FST_NVG_Hazzo.paa",
 		};
 	};
+	*/
 	class FST_NVG_Azrael: FST_NVG
 	{
 		author="Gold";
@@ -41369,6 +41375,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	/*
 	class FST_P2_Hazzo: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -41424,6 +41431,7 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	*/
 	class FST_P2_Mav: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
