@@ -10,7 +10,12 @@ private _sabreProfile = [
     [7105, 7124, "HitRSideArmor"],
     [7107, 7125, "HitRearArmor"]
     ],
-    "HitHull"
+    "HitHull",
+    [
+        ["MOB", 7130, [["L", "HitLTrack"], ["R", "HitRTrack"]]],
+        ["PWR", 7131, [["ENG", "HitEngine"], ["FUEL", "HitFuel"]]],
+        ["WPN", 7132, [["TUR", "HitTurret"], ["GUN", "HitGun"]]]
+    ]
 ];
 
 [_vehicle, _sabreProfile] execVM "\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_showVehicleArmorStatus.sqf";

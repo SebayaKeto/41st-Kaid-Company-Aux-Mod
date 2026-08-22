@@ -102,10 +102,69 @@ class RscTitles
 			{
 				idc=7098;
 				x="safeZoneX + safeZoneW - 0.345";
-				y="safeZoneY + safeZoneH - 0.365";
+				y="safeZoneY + safeZoneH - 0.470";
 				w=0.315;
-				h=0.285;
+				h=0.390;
 				colorBackground[]={0.01,0.018,0.024,0.86};
+			};
+			class ArmorPriority: RscText
+			{
+				idc=7128;
+				text="PRIORITY: NONE";
+				x="safeZoneX + safeZoneW - 0.325";
+				y="safeZoneY + safeZoneH - 0.450";
+				w=0.275;
+				h=0.016;
+				sizeEx=0.018;
+				colorText[]={0.68,0.75,0.8,0.95};
+			};
+			class ArmorRepair: ArmorPriority
+			{
+				idc=7129;
+				text="REPAIR: NOT REQUIRED";
+				y="safeZoneY + safeZoneH - 0.431";
+			};
+			class ArmorSystemsHeader: ArmorPriority
+			{
+				text="SYSTEMS // LIVE STATUS";
+				y="safeZoneY + safeZoneH - 0.412";
+				h=0.012;
+				sizeEx=0.014;
+				colorText[]={0.34,0.55,0.65,0.9};
+			};
+			class ArmorSystemStatus: ArmorPriority
+			{
+				w=0.275;
+				h=0.014;
+				sizeEx=0.016;
+				colorText[]={0.42,1,0.62,1};
+			};
+			class MobilityStatus: ArmorSystemStatus
+			{
+				idc=7130;
+				text="MOB  L 100%  R 100%";
+				y="safeZoneY + safeZoneH - 0.394";
+			};
+			class PowerStatus: ArmorSystemStatus
+			{
+				idc=7131;
+				text="PWR  ENG 100%  FUEL 100%";
+				y="safeZoneY + safeZoneH - 0.377";
+			};
+			class WeaponStatus: ArmorSystemStatus
+			{
+				idc=7132;
+				text="WPN  TUR 100%  GUN 100%";
+				y="safeZoneY + safeZoneH - 0.360";
+			};
+			class ArmorRole: ArmorPriority
+			{
+				idc=7133;
+				text="CREW ROLE: DRIVER";
+				y="safeZoneY + safeZoneH - 0.467";
+				h=0.012;
+				sizeEx=0.014;
+				colorText[]={0.34,0.55,0.65,0.9};
 			};
 			class ArmorHeader: RscText
 			{
@@ -255,7 +314,7 @@ class RscTitles
 			};
 			class ArmorStateLabel: IntegrityLabel
 			{
-				text="SYSTEM STATE";
+				text="COMBAT STATE";
 				y="safeZoneY + safeZoneH - 0.094";
 			};
 			class ArmorStateValue: IntegrityValue
