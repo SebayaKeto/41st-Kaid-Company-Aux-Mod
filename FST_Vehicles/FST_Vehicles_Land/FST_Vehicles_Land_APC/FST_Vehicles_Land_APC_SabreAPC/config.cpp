@@ -288,7 +288,7 @@ class RscTitles
 				x="safeZoneX + safeZoneW - 0.222";
 				y="safeZoneY + safeZoneH - 0.279";
 			};
-			class LeftLabel: ZoneLabel
+			class LeftLabel: FST_SabreZoneLabel
 			{
 				idc=7102;
 				text="L";

@@ -111,9 +111,20 @@ while {alive _vehicle} do {
 
         if (_extensionEnabled && {diag_tickTime >= _nextExtensionUpdate}) then {
             _nextExtensionUpdate = diag_tickTime + 0.5;
-            private _response = _extensionName callExtension ["assess-v1", _damageValues apply {str _x}];
+            private _extensionResult = _extensionName callExtension ["assess-v1", _damageValues apply {str _x}];
+            private _response = if (_extensionResult isEqualType [] && {(count _extensionResult) >= 2} && {(_extensionResult select 0) isEqualType ""}) then {
+                _extensionResult select 0
+            } else {
+                ""
+            };
+            private _extensionResultCode = if (_extensionResult isEqualType [] && {(count _extensionResult) >= 2} && {(_extensionResult select 1) isEqualType 0}) then {
+                _extensionResult select 1
+            } else {
+                -1
+            };
             private _parts = _response splitString "|";
-            private _isValidResponse = (count _parts) isEqualTo 8
+            private _isValidResponse = _extensionResultCode isEqualTo 0
+                && {(count _parts) isEqualTo 8}
                 && {(_parts select 0) isEqualTo "v1"}
                 && {({[_x] call _isPercentage} count (_parts select [1, 5])) isEqualTo 5}
                 && {(_parts select 6) in ["NOMINAL", "DEGRADED", "CRITICAL"]}
@@ -213,7 +224,7 @@ while {alive _vehicle} do {
         } else {
             (_vehicle getHitPointDamage _hullHitpoint) max 0 min 1
         };
-        private _alertActive = _isCrew && {(_assessment select 6) || {_hullDamage > 0.4}};
+        private _alertActive = (call _isCrew) && {(_assessment select 6) || {_hullDamage > 0.4}};
         private _alertStrength = if (_alertActive) then {
             0.35 + ((sin (diag_tickTime * 720) + 1) * 0.325)
         } else {
