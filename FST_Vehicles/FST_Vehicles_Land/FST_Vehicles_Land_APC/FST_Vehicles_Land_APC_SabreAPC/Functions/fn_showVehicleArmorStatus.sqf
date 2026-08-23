@@ -25,8 +25,9 @@ private _alertWasActive = false;
 private _lastDamageReadings = [];
 private _damageEventText = "";
 private _damageEventUntil = 0;
-private _roleControlsVisible = nil;
-private _hudControlIds = [7098, 7099, 7100, 7101, 7102, 7103, 7104, 7105, 7106, 7107, 7108, 7109, 7110, 7111, 7112, 7113, 7114, 7115, 7116, 7117, 7118, 7119, 7120, 7121, 7122, 7123, 7124, 7125, 7126, 7127, 7128, 7129, 7130, 7131, 7132, 7133];
+private _isCrew = {
+    player isEqualTo driver _vehicle || {player isEqualTo commander _vehicle}
+};
 private _integrityState = {
     params ["_integrity"];
 
@@ -49,7 +50,7 @@ private _isPercentage = {
 while {alive _vehicle} do {
     waitUntil {
         uiSleep 0.25;
-        vehicle player isEqualTo _vehicle || {!alive _vehicle}
+        (vehicle player isEqualTo _vehicle && {call _isCrew}) || {!alive _vehicle}
     };
 
     if (!alive _vehicle) exitWith {};
@@ -61,19 +62,7 @@ while {alive _vehicle} do {
     };
 
     private _display = uiNamespace getVariable [_displayName, displayNull];
-    while {alive _vehicle && {vehicle player isEqualTo _vehicle} && {!isNull _display}} do {
-        private _isCrew = player isEqualTo driver _vehicle || {player isEqualTo gunner _vehicle} || {player isEqualTo commander _vehicle};
-        if (isNil "_roleControlsVisible" || {_isCrew isNotEqualTo _roleControlsVisible}) then {
-            {
-                (_display displayCtrl _x) ctrlShow _isCrew;
-            } forEach _hudControlIds;
-            _roleControlsVisible = _isCrew;
-        };
-
-        if (!_isCrew) then {
-            uiSleep 0.5;
-            continue;
-        };
+    while {alive _vehicle && {vehicle player isEqualTo _vehicle} && {call _isCrew} && {!isNull _display}} do {
 
         private _damageValues = (_zones apply {
             _x params ["_controlId", "_valueControlId", "_hitpoint"];

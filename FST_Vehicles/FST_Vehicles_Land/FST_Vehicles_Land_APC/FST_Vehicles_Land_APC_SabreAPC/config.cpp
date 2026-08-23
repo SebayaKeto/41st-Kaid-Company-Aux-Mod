@@ -89,6 +89,62 @@ class Optics_Gunner_MBT_01: Optics_Armored
 };
 class RscTitles
 {
+	class FST_SabreArmorPriority: RscText
+	{
+		text="PRIORITY: NONE";
+		x="safeZoneX + safeZoneW - 0.325";
+		y="safeZoneY + safeZoneH - 0.450";
+		w=0.275;
+		h=0.016;
+		sizeEx=0.018;
+		colorText[]={0.68,0.75,0.8,0.95};
+	};
+	class FST_SabreArmorHeader: RscText
+	{
+		text="SABRE // ARMOR MATRIX // RAIDER APC";
+		x="safeZoneX + safeZoneW - 0.325";
+		y="safeZoneY + safeZoneH - 0.345";
+		w=0.275;
+		h=0.022;
+		sizeEx=0.028;
+		colorText[]={0.38,0.82,1,1};
+	};
+	class FST_SabreArmorSystemStatus: FST_SabreArmorPriority
+	{
+		w=0.275;
+		h=0.014;
+		sizeEx=0.016;
+		colorText[]={0.42,1,0.62,1};
+	};
+	class FST_SabreVehicleZone: RscText
+	{
+		text="";
+		colorBackground[]={0.12,0.8,0.2,0.9};
+	};
+	class FST_SabreZoneLabel: FST_SabreArmorHeader
+	{
+		w=0.070;
+		h=0.016;
+		sizeEx=0.018;
+		colorText[]={0.75,0.84,0.88,0.95};
+	};
+	class FST_SabreZoneValue: FST_SabreZoneLabel
+	{
+		w=0.052;
+		style=1;
+		sizeEx=0.019;
+		colorText[]={0.98,0.98,0.98,1};
+	};
+	class FST_SabreArmorReadout: FST_SabreArmorHeader
+	{
+		text="FWD / PORT / STBD / AFT";
+		x="safeZoneX + safeZoneW - 0.325";
+		y="safeZoneY + safeZoneH - 0.073";
+		w=0.190;
+		h=0.012;
+		sizeEx=0.014;
+		colorText[]={0.34,0.55,0.65,0.85};
+	};
 	class FST_SabreArmorStatus
 	{
 		idd=-1;
@@ -107,24 +163,17 @@ class RscTitles
 				h=0.390;
 				colorBackground[]={0.01,0.018,0.024,0.86};
 			};
-			class ArmorPriority: RscText
+			class ArmorPriority: FST_SabreArmorPriority
 			{
 				idc=7128;
-				text="PRIORITY: NONE";
-				x="safeZoneX + safeZoneW - 0.325";
-				y="safeZoneY + safeZoneH - 0.450";
-				w=0.275;
-				h=0.016;
-				sizeEx=0.018;
-				colorText[]={0.68,0.75,0.8,0.95};
 			};
-			class ArmorRepair: ArmorPriority
+			class ArmorRepair: FST_SabreArmorPriority
 			{
 				idc=7129;
 				text="REPAIR: NOT REQUIRED";
 				y="safeZoneY + safeZoneH - 0.431";
 			};
-			class ArmorSystemsHeader: ArmorPriority
+			class ArmorSystemsHeader: FST_SabreArmorPriority
 			{
 				text="SYSTEMS // LIVE STATUS";
 				y="safeZoneY + safeZoneH - 0.412";
@@ -132,32 +181,25 @@ class RscTitles
 				sizeEx=0.014;
 				colorText[]={0.34,0.55,0.65,0.9};
 			};
-			class ArmorSystemStatus: ArmorPriority
-			{
-				w=0.275;
-				h=0.014;
-				sizeEx=0.016;
-				colorText[]={0.42,1,0.62,1};
-			};
-			class MobilityStatus: ArmorSystemStatus
+			class MobilityStatus: FST_SabreArmorSystemStatus
 			{
 				idc=7130;
 				text="MOB  L 100%  R 100%";
 				y="safeZoneY + safeZoneH - 0.394";
 			};
-			class PowerStatus: ArmorSystemStatus
+			class PowerStatus: FST_SabreArmorSystemStatus
 			{
 				idc=7131;
 				text="PWR  ENG 100%  FUEL 100%";
 				y="safeZoneY + safeZoneH - 0.377";
 			};
-			class WeaponStatus: ArmorSystemStatus
+			class WeaponStatus: FST_SabreArmorSystemStatus
 			{
 				idc=7132;
 				text="WPN  TUR 100%  GUN 100%";
 				y="safeZoneY + safeZoneH - 0.360";
 			};
-			class ArmorRole: ArmorPriority
+			class ArmorRole: FST_SabreArmorPriority
 			{
 				idc=7133;
 				text="CREW ROLE: DRIVER";
@@ -166,18 +208,11 @@ class RscTitles
 				sizeEx=0.014;
 				colorText[]={0.34,0.55,0.65,0.9};
 			};
-			class ArmorHeader: RscText
+			class ArmorHeader: FST_SabreArmorHeader
 			{
 				idc=7099;
-				text="SABRE // ARMOR MATRIX // MK-IV";
-				x="safeZoneX + safeZoneW - 0.325";
-				y="safeZoneY + safeZoneH - 0.345";
-				w=0.275;
-				h=0.022;
-				sizeEx=0.028;
-				colorText[]={0.38,0.82,1,1};
 			};
-			class ArmorSubHeader: ArmorHeader
+			class ArmorSubHeader: FST_SabreArmorHeader
 			{
 				text="TACTICAL DAMAGE TELEMETRY";
 				y="safeZoneY + safeZoneH - 0.326";
@@ -185,14 +220,14 @@ class RscTitles
 				sizeEx=0.016;
 				colorText[]={0.34,0.55,0.65,0.9};
 			};
-			class ArmorRule: ArmorHeader
+			class ArmorRule: FST_SabreArmorHeader
 			{
 				text="";
 				y="safeZoneY + safeZoneH - 0.309";
 				h=0.003;
 				colorBackground[]={0.22,0.67,0.9,0.65};
 			};
-			class IntegrityLabel: ArmorHeader
+			class IntegrityLabel: FST_SabreArmorHeader
 			{
 				idc=7108;
 				text="HULL INTEGRITY";
@@ -212,12 +247,7 @@ class RscTitles
 				sizeEx=0.025;
 				colorText[]={0.42,1,0.62,1};
 			};
-			class VehicleZone: RscText
-			{
-				text="";
-				colorBackground[]={0.12,0.8,0.2,0.9};
-			};
-			class FrontStatus: VehicleZone
+			class FrontStatus: FST_SabreVehicleZone
 			{
 				idc=7101;
 				x="safeZoneX + safeZoneW - 0.235";
@@ -225,7 +255,7 @@ class RscTitles
 				w=0.095;
 				h=0.035;
 			};
-			class HullStatus: VehicleZone
+			class HullStatus: FST_SabreVehicleZone
 			{
 				idc=7109;
 				x="safeZoneX + safeZoneW - 0.225";
@@ -233,7 +263,7 @@ class RscTitles
 				w=0.075;
 				h=0.082;
 			};
-			class LeftStatus: VehicleZone
+			class LeftStatus: FST_SabreVehicleZone
 			{
 				idc=7103;
 				x="safeZoneX + safeZoneW - 0.275";
@@ -251,14 +281,7 @@ class RscTitles
 				idc=7107;
 				y="safeZoneY + safeZoneH - 0.135";
 			};
-			class ZoneLabel: ArmorHeader
-			{
-				w=0.070;
-				h=0.016;
-				sizeEx=0.018;
-				colorText[]={0.75,0.84,0.88,0.95};
-			};
-			class FrontLabel: ZoneLabel
+			class FrontLabel: FST_SabreZoneLabel
 			{
 				idc=7100;
 				text="FRONT";
@@ -284,14 +307,7 @@ class RscTitles
 				text="REAR";
 				y="safeZoneY + safeZoneH - 0.116";
 			};
-			class ZoneValue: ZoneLabel
-			{
-				w=0.052;
-				style=1;
-				sizeEx=0.019;
-				colorText[]={0.98,0.98,0.98,1};
-			};
-			class FrontValue: ZoneValue
+			class FrontValue: FST_SabreZoneValue
 			{
 				idc=7122;
 				x="safeZoneX + safeZoneW - 0.112";
@@ -324,17 +340,9 @@ class RscTitles
 				y="safeZoneY + safeZoneH - 0.094";
 				colorText[]={0.42,1,0.62,1};
 			};
-			class ArmorReadout: ArmorSubHeader
-			{
-				text="FWD / PORT / STBD / AFT";
-				x="safeZoneX + safeZoneW - 0.325";
-				y="safeZoneY + safeZoneH - 0.073";
-				w=0.190;
-				h=0.012;
-				sizeEx=0.014;
-				colorText[]={0.34,0.55,0.65,0.85};
-			};
-			class ArmorSignal: ArmorReadout
+			class ArmorReadout: FST_SabreArmorReadout
+			{};
+			class ArmorSignal: FST_SabreArmorReadout
 			{
 				text="[ LIVE TELEMETRY ]";
 				x="safeZoneX + safeZoneW - 0.170";
@@ -342,7 +350,7 @@ class RscTitles
 				style=1;
 				colorText[]={0.35,0.95,0.74,0.9};
 			};
-			class VehicleCrosshair: VehicleZone
+			class VehicleCrosshair: FST_SabreVehicleZone
 			{
 				text="";
 				x="safeZoneX + safeZoneW - 0.190";
@@ -358,7 +366,7 @@ class RscTitles
 				w=0.215;
 				h=0.003;
 			};
-			class LowHullBorderTop: VehicleZone
+			class LowHullBorderTop: FST_SabreVehicleZone
 			{
 				idc=7110;
 				x="safeZoneX + safeZoneW - 0.350";
