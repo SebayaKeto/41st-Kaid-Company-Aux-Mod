@@ -1595,7 +1595,7 @@ class CfgVehicles
 				showCrewAim = 2;
 				stabilizedInAxes = 3;
 				memoryPointGun[] = {"CommanderMuzzle"};
-				weapons[] = {"3AS_Sabre_MG"};
+				weapons[] = {"FST_VW_Sabre_Commander_MG"};
 				magazines[] = {"3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag","3AS_300Rnd_SabreMG_Mag"};
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};

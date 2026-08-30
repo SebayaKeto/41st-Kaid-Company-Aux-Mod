@@ -43,6 +43,15 @@ class FST_VW_Sabre_30mm_AP_Cannon: FST_VW_BoltCannon_30mm
     magazines[] = {"FST_VW_120Rnd_30mm_AP_Bolts"};
 };
 
+class FST_VW_Sabre_Commander_MG: 3AS_Sabre_MG
+{
+    displayName = "FST Sabre Commander MG";
+    discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+    discreteDistanceInitIndex = 2;
+    discreteDistanceCameraPoint = "commanderview";
+    magazines[] = {"3AS_300Rnd_SabreMG_Mag"};
+};
+
 class FST_VW_BoltCannon_40mm: 3as_saber_gmg_40mm
 {
     scope = 1;
