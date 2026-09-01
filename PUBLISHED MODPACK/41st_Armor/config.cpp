@@ -143,6 +143,7 @@
 			"FST_P2_Cursed",
 			"FST_P2_Cursed_Dirty",
 			"FST_P2_Hijack",
+			"FST_P2_Hijack_Dirty",
 			"FST_P2_Mixer",
 			"FST_P2_Vengence",
 			"FST_P2_Vengence_Dirty",
@@ -153,6 +154,8 @@
 			"FST_P2_Rumble",
 			"FST_P2_Rumble_Dirty",
 			"FST_P2_Sunny",
+			"FST_P2_Cyanide",
+			"FST_P2_Cyanide_Dirty",
 			"FST_P2_Cowboy",
 			"FST_P2_Cutlass",
 			"FST_P2_Cutlass_Dirty",
@@ -213,6 +216,7 @@
 			"FST_P2_Peaches",
 			"FST_P2_Hugger",
 			"FST_P2_Alfour",
+			"FST_P2_Alfour_Dirty",
 			"FST_P2_Marcus",
 			"FST_P2_Marcus_Dirty",
 			"FST_P2_Nori",
@@ -402,6 +406,7 @@
 			"FST_P2_Buddhah",
 			"FST_P2_Buddhah_Dirty",
 			"FST_P2_Raz",
+			"FST_P2_Raz_Dirty",
 			"FST_P2_Phoenix",
 			"FST_P2_Blueeye",
 			"FST_P2_Arcus",
@@ -9855,6 +9860,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cyanide.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Cyanide_Dirty: FST_Airborne_Helmet
+	{
+		author="Laer";
+		displayName="[41st] Airborne Helmet (Cyanide/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Cyanide_Dirty.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Hinx: FST_Airborne_Helmet
 	{
 		author="Gold";
@@ -10941,6 +10956,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Hijack.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Hijack_Dirty: FST_Airborne_Helmet
+	{
+		author="Laer";
+		displayName="[41st] Airborne Helmet (Hijack/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Hijack_Dirty.paa",
 		};
 	};
 	class FST_P2_Helmet_Skipjack: FST_P2_Helmet_Base
@@ -13947,6 +13972,16 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Alfour.paa",
 		};
 	};
+	class FST_P2_Helmet_Alfour_Dirty: FST_P2_Helmet_Base
+	{
+		author="Laer";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Alfour/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Alfour_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Drifter: FST_P2_Helmet_Base
 	{
 		author="Daara";
@@ -16235,6 +16270,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Hijack_Dirty: JLTS_CloneArmor
+	{
+		author="Laer";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Hijack/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Hijack_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Mixer: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -18298,6 +18347,20 @@ class CfgWeapons
 			mass=15;
 		};
 	};
+	class FST_Uniform_Alfour_Dirty: JLTS_CloneArmor
+	{
+		author="Laer";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Alfour/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Alfour_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Marcus: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -20219,6 +20282,20 @@ class CfgWeapons
             mass=15;
         };
     };
+	class FST_Uniform_Raz_Dirty: JLTS_CloneArmor
+	{
+		author="Laer";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Raz/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Raz_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Chips: JLTS_CloneArmor
     {
         author="Viz";
@@ -20298,6 +20375,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Cyanide";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Cyanide_Dirty: JLTS_CloneArmor
+	{
+		author="Laer";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Cyanide/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Cyanide_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -26703,6 +26794,64 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vix.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Ordo: FST_Backpack_Jumppack
+	{
+		author="Laer";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Ordo)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ordo.paa"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -38072,6 +38221,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Hijack_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Laer";
+		displayName="[41st] CT-7170 'Hijack (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Hijack_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Hijack_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Hijack_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Hijack_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Hijack_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Mixer: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -46547,6 +46751,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Alfour_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Laer";
+		displayName="[41st] CT-1551 'Alfour/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Alfour_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Alfour_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Alfour_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Alfour_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Alfour_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Marcus: FST_Trooper_P2_DC15S
 	{
 		author="Steel";
@@ -53229,6 +53488,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Raz_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Laer";
+		displayName="[41st] CT-7170 'Raz (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Raz_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Raz_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Raz_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Raz",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Pilot_P1_Helmet_Raz",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Chips: FST_Trooper_P2_DC15S
 	{
 		author="Viz";
@@ -53496,6 +53810,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Cyanide",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Cyanide_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="Laer";
+		displayName="[41st] CT-7170 'Cyanide (Dirty)'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Cyanide_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Cyanide_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Cyanide_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_Airborne_Helmet_Cyanide_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_Airborne_Helmet_Cyanide_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
