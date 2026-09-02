@@ -89,13 +89,13 @@
 			"FST_laati_mk2Lights_Red",
 			"FST_laati_mk2Lights_Houdini",
 			"FST_laati_Turret_RadarTestbed",
-			"FST_laati_Turret_Ouranos",
+			"FST_laati_Turret_Aether",
 			"FST_laati_Turret_Cait",
-			"FST_laati_mk2_Ouranos",
+			"FST_laati_mk2_Aether",
 			"FST_laati_mk2_Cait",
-			"FST_laati_mk1Lights_Ouranos",
+			"FST_laati_mk1Lights_Aether",
 			"FST_laati_mk1Lights_Cait",
-			"FST_laati_mk2Lights_Ouranos",
+			"FST_laati_mk2Lights_Aether",
 			"FST_laati_mk2Lights_Cait"
 		};
 		weapons[]=
@@ -3788,13 +3788,13 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
-	class FST_laati_Turret_Ouranos: FST_laati_Turret
+	class FST_laati_Turret_Aether: FST_laati_Turret
 	{
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		side=1;
-		displayname="[41st] LAAT/i Mk I Gunship (Ouranos)";
+		displayname="[41st] LAAT/i Mk I Gunship (Aether)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Pilot_P1";
@@ -4288,13 +4288,13 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
-	class FST_laati_mk2_Ouranos: FST_laati_mk2
+	class FST_laati_mk2_Aether: FST_laati_mk2
 	{
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		side=1;
-		displayname="[41st] LAAT/i Mk II Gunship (Ouranos)";
+		displayname="[41st] LAAT/i Mk II Gunship (Aether)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Pilot_P1";
@@ -4768,13 +4768,13 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
-	class FST_laati_mk1Lights_Ouranos: FST_laati_mk1Lights
+	class FST_laati_mk1Lights_Aether: FST_laati_mk1Lights
 	{
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		side=1;
-		displayname="[41st] LAAT/i Mk I Gunship (Ouranos/Lamps)";
+		displayname="[41st] LAAT/i Mk I Gunship (Aether/Lamps)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Pilot_P1";
@@ -5268,13 +5268,13 @@ class CfgVehicles
 		};
 		textureList[]={};
 	};
-	class FST_laati_mk2Lights_Ouranos: FST_laati_mk2Lights
+	class FST_laati_mk2Lights_Aether: FST_laati_mk2Lights
 	{
 		scope=2;
 		scopecurator=2;
 		scopearsenal=2;
 		side=1;
-		displayname="[41st] LAAT/i Mk II Gunship (Ouranos/Lamps)";
+		displayname="[41st] LAAT/i Mk II Gunship (Aether/Lamps)";
 		faction="FST_Faction";
 		editorSubcategory="FST_Air_Vehicle";
 		crew="FST_Pilot_P1";
