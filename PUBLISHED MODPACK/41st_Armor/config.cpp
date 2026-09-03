@@ -10508,6 +10508,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Texas.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Gode: FST_Airborne_Helmet
+	{
+		author="Laer";
+		displayName="[41st] Airborne Helmet (Gode)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Gode.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Delta: FST_Airborne_Helmet
 	{
 		author="Daara";
