@@ -20,6 +20,7 @@ class FST_VW_4Rnd_SabreAPC_LG_Missiles: 2Rnd_GAT_missiles
 {
     scope = 2;
     displayName = "4Rnd Sabre APC TOW Missiles";
+    ammo = "FST_VW_SabreAPC_LG_Missile";
     count = 4;
 };
 

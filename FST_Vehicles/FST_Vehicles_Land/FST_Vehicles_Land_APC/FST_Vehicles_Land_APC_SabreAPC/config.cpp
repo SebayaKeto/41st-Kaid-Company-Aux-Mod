@@ -1042,8 +1042,8 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=6;
-		cargoProxyIndexes[]={4,5,6,7,8,9};
+		transportSoldier=0;
+		cargoProxyIndexes[]={};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -1717,7 +1717,6 @@ class CfgVehicles
 				};
 				class Turrets{};
 			};
-			// Internal seats (proxies 4-9) are configured as standard cargo seats above.
 			// Exterior turret seats (proxies 10-22): passengers can fire
 			class CargoTurret_BaseTurret: CargoTurret
 			{
@@ -1749,6 +1748,46 @@ class CfgVehicles
 				minOutElev = -35;
 				maxOutElev = 55;
 				initOutElev = 0;
+			};
+			// Interior passenger seats (proxies 4-9)
+			class CargoTurret_4: CargoTurret_BaseTurret
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_01";
+				proxyIndex = 4;
+				playerPosition = 16;
+				isPersonTurret = 0;
+				inGunnerMayFire = 0;
+				outGunnerMayFire = 0;
+			};
+			class CargoTurret_5: CargoTurret_4
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_02";
+				proxyIndex = 5;
+				playerPosition = 17;
+			};
+			class CargoTurret_6: CargoTurret_4
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_03";
+				proxyIndex = 6;
+				playerPosition = 18;
+			};
+			class CargoTurret_7: CargoTurret_4
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_04";
+				proxyIndex = 7;
+				playerPosition = 19;
+			};
+			class CargoTurret_8: CargoTurret_4
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_05";
+				proxyIndex = 8;
+				playerPosition = 20;
+			};
+			class CargoTurret_9: CargoTurret_4
+			{
+				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_06";
+				proxyIndex = 9;
+				playerPosition = 21;
 			};
 			// Upper Left Exterior seats (proxy 10-13): left side entry
 			class CargoTurret_10: CargoTurret_BaseTurret
@@ -2078,6 +2117,7 @@ class CfgVehicles
 		centreBias=1.4;
 		class EventHandlers: DefaultEventHandlers
 		{
+			fired="if ((_this select 1) isEqualTo 'FST_VW_Sabre_LG_MissileLauncher') then {private _vehicle = _this select 0; playSound3D ['\FST\FST_Sounds\Weapons\PLX-1Fire.ogg',_vehicle,false,getPosASL _vehicle,1.4,1,900]; playSound3D ['\FST\FST_Sounds\Weapons\PLX_LaunchMotor.ogg',_vehicle,false,getPosASL _vehicle,1,1,650];};";
 			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;}; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_monitorSabreArmor.sqf'; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_showSabreArmorStatus.sqf';";
 		};
 		class SimpleObject
