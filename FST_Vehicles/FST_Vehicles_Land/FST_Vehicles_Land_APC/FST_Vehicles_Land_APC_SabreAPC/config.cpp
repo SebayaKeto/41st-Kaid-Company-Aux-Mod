@@ -92,28 +92,28 @@ class RscTitles
 	class FST_SabreArmorPriority: RscText
 	{
 		text="PRIORITY: NONE";
-		x="safeZoneX + safeZoneW - 0.325";
-		y="safeZoneY + safeZoneH - 0.450";
-		w=0.275;
-		h=0.016;
-		sizeEx=0.018;
+		x="safeZoneX + safeZoneW - 0.4875";
+		y="safeZoneY + safeZoneH - 0.675";
+		w=0.4125;
+		h=0.024;
+		sizeEx=0.027;
 		colorText[]={0.68,0.75,0.8,0.95};
 	};
 	class FST_SabreArmorHeader: RscText
 	{
 		text="SABRE // ARMOR MATRIX // RAIDER APC";
-		x="safeZoneX + safeZoneW - 0.325";
-		y="safeZoneY + safeZoneH - 0.345";
-		w=0.275;
-		h=0.022;
-		sizeEx=0.028;
+		x="safeZoneX + safeZoneW - 0.4875";
+		y="safeZoneY + safeZoneH - 0.5175";
+		w=0.4125;
+		h=0.033;
+		sizeEx=0.042;
 		colorText[]={0.38,0.82,1,1};
 	};
 	class FST_SabreArmorSystemStatus: FST_SabreArmorPriority
 	{
-		w=0.275;
-		h=0.014;
-		sizeEx=0.016;
+		w=0.4125;
+		h=0.021;
+		sizeEx=0.024;
 		colorText[]={0.42,1,0.62,1};
 	};
 	class FST_SabreVehicleZone: RscText
@@ -123,26 +123,26 @@ class RscTitles
 	};
 	class FST_SabreZoneLabel: FST_SabreArmorHeader
 	{
-		w=0.070;
-		h=0.016;
-		sizeEx=0.018;
+		w=0.105;
+		h=0.024;
+		sizeEx=0.027;
 		colorText[]={0.75,0.84,0.88,0.95};
 	};
 	class FST_SabreZoneValue: FST_SabreZoneLabel
 	{
-		w=0.052;
+		w=0.078;
 		style=1;
-		sizeEx=0.019;
+		sizeEx=0.0285;
 		colorText[]={0.98,0.98,0.98,1};
 	};
 	class FST_SabreArmorReadout: FST_SabreArmorHeader
 	{
 		text="FWD / PORT / STBD / AFT";
-		x="safeZoneX + safeZoneW - 0.325";
-		y="safeZoneY + safeZoneH - 0.073";
-		w=0.190;
-		h=0.012;
-		sizeEx=0.014;
+		x="safeZoneX + safeZoneW - 0.4875";
+		y="safeZoneY + safeZoneH - 0.1095";
+		w=0.285;
+		h=0.018;
+		sizeEx=0.021;
 		colorText[]={0.34,0.55,0.65,0.85};
 	};
 	class FST_SabreArmorStatus
@@ -157,10 +157,10 @@ class RscTitles
 			class ArmorPanel: RscText
 			{
 				idc=7098;
-				x="safeZoneX + safeZoneW - 0.345";
-				y="safeZoneY + safeZoneH - 0.470";
-				w=0.315;
-				h=0.390;
+				x="safeZoneX + safeZoneW - 0.5175";
+				y="safeZoneY + safeZoneH - 0.705";
+				w=0.4725;
+				h=0.585;
 				colorBackground[]={0.01,0.018,0.024,0.86};
 			};
 			class ArmorPriority: FST_SabreArmorPriority
@@ -171,41 +171,41 @@ class RscTitles
 			{
 				idc=7129;
 				text="REPAIR: NOT REQUIRED";
-				y="safeZoneY + safeZoneH - 0.431";
+				y="safeZoneY + safeZoneH - 0.6465";
 			};
 			class ArmorSystemsHeader: FST_SabreArmorPriority
 			{
 				text="SYSTEMS // LIVE STATUS";
-				y="safeZoneY + safeZoneH - 0.412";
-				h=0.012;
-				sizeEx=0.014;
+				y="safeZoneY + safeZoneH - 0.618";
+				h=0.018;
+				sizeEx=0.021;
 				colorText[]={0.34,0.55,0.65,0.9};
 			};
 			class MobilityStatus: FST_SabreArmorSystemStatus
 			{
 				idc=7130;
 				text="MOB  L 100%  R 100%";
-				y="safeZoneY + safeZoneH - 0.394";
+				y="safeZoneY + safeZoneH - 0.591";
 			};
 			class PowerStatus: FST_SabreArmorSystemStatus
 			{
 				idc=7131;
 				text="PWR  ENG 100%  FUEL 100%";
-				y="safeZoneY + safeZoneH - 0.377";
+				y="safeZoneY + safeZoneH - 0.5655";
 			};
 			class WeaponStatus: FST_SabreArmorSystemStatus
 			{
 				idc=7132;
 				text="WPN  TUR 100%  GUN 100%";
-				y="safeZoneY + safeZoneH - 0.360";
+				y="safeZoneY + safeZoneH - 0.54";
 			};
 			class ArmorRole: FST_SabreArmorPriority
 			{
 				idc=7133;
 				text="CREW ROLE: DRIVER";
-				y="safeZoneY + safeZoneH - 0.467";
-				h=0.012;
-				sizeEx=0.014;
+				y="safeZoneY + safeZoneH - 0.7005";
+				h=0.018;
+				sizeEx=0.021;
 				colorText[]={0.34,0.55,0.65,0.9};
 			};
 			class ArmorHeader: FST_SabreArmorHeader
@@ -215,129 +215,129 @@ class RscTitles
 			class ArmorSubHeader: FST_SabreArmorHeader
 			{
 				text="TACTICAL DAMAGE TELEMETRY";
-				y="safeZoneY + safeZoneH - 0.326";
-				h=0.014;
-				sizeEx=0.016;
+				y="safeZoneY + safeZoneH - 0.489";
+				h=0.021;
+				sizeEx=0.024;
 				colorText[]={0.34,0.55,0.65,0.9};
 			};
 			class ArmorRule: FST_SabreArmorHeader
 			{
 				text="";
-				y="safeZoneY + safeZoneH - 0.309";
-				h=0.003;
+				y="safeZoneY + safeZoneH - 0.4635";
+				h=0.0045;
 				colorBackground[]={0.22,0.67,0.9,0.65};
 			};
 			class IntegrityLabel: FST_SabreArmorHeader
 			{
 				idc=7108;
 				text="HULL INTEGRITY";
-				y="safeZoneY + safeZoneH - 0.294";
-				w=0.165;
-				h=0.018;
-				sizeEx=0.022;
+				y="safeZoneY + safeZoneH - 0.441";
+				w=0.2475;
+				h=0.027;
+				sizeEx=0.033;
 				colorText[]={0.68,0.75,0.8,0.95};
 			};
 			class IntegrityValue: IntegrityLabel
 			{
 				idc=7126;
 				text="100%";
-				x="safeZoneX + safeZoneW - 0.160";
-				w=0.110;
+				x="safeZoneX + safeZoneW - 0.24";
+				w=0.165;
 				style=1;
-				sizeEx=0.025;
+				sizeEx=0.0375;
 				colorText[]={0.42,1,0.62,1};
 			};
 			class FrontStatus: FST_SabreVehicleZone
 			{
 				idc=7101;
-				x="safeZoneX + safeZoneW - 0.235";
-				y="safeZoneY + safeZoneH - 0.262";
-				w=0.095;
-				h=0.035;
+				x="safeZoneX + safeZoneW - 0.3525";
+				y="safeZoneY + safeZoneH - 0.393";
+				w=0.1425;
+				h=0.0525;
 			};
 			class HullStatus: FST_SabreVehicleZone
 			{
 				idc=7109;
-				x="safeZoneX + safeZoneW - 0.225";
-				y="safeZoneY + safeZoneH - 0.222";
-				w=0.075;
-				h=0.082;
+				x="safeZoneX + safeZoneW - 0.3375";
+				y="safeZoneY + safeZoneH - 0.333";
+				w=0.1125;
+				h=0.123;
 			};
 			class LeftStatus: FST_SabreVehicleZone
 			{
 				idc=7103;
-				x="safeZoneX + safeZoneW - 0.275";
-				y="safeZoneY + safeZoneH - 0.217";
-				w=0.045;
-				h=0.090;
+				x="safeZoneX + safeZoneW - 0.4125";
+				y="safeZoneY + safeZoneH - 0.3255";
+				w=0.0675;
+				h=0.135;
 			};
 			class RightStatus: LeftStatus
 			{
 				idc=7105;
-				x="safeZoneX + safeZoneW - 0.145";
+				x="safeZoneX + safeZoneW - 0.2175";
 			};
 			class RearStatus: FrontStatus
 			{
 				idc=7107;
-				y="safeZoneY + safeZoneH - 0.135";
+				y="safeZoneY + safeZoneH - 0.2025";
 			};
 			class FrontLabel: FST_SabreZoneLabel
 			{
 				idc=7100;
 				text="FRONT";
-				x="safeZoneX + safeZoneW - 0.222";
-				y="safeZoneY + safeZoneH - 0.279";
+				x="safeZoneX + safeZoneW - 0.333";
+				y="safeZoneY + safeZoneH - 0.4185";
 			};
 			class LeftLabel: FST_SabreZoneLabel
 			{
 				idc=7102;
 				text="L";
-				x="safeZoneX + safeZoneW - 0.290";
-				y="safeZoneY + safeZoneH - 0.188";
+				x="safeZoneX + safeZoneW - 0.435";
+				y="safeZoneY + safeZoneH - 0.282";
 			};
 			class RightLabel: LeftLabel
 			{
 				idc=7104;
 				text="R";
-				x="safeZoneX + safeZoneW - 0.125";
+				x="safeZoneX + safeZoneW - 0.1875";
 			};
 			class RearLabel: FrontLabel
 			{
 				idc=7106;
 				text="REAR";
-				y="safeZoneY + safeZoneH - 0.116";
+				y="safeZoneY + safeZoneH - 0.174";
 			};
 			class FrontValue: FST_SabreZoneValue
 			{
 				idc=7122;
-				x="safeZoneX + safeZoneW - 0.112";
-				y="safeZoneY + safeZoneH - 0.253";
+				x="safeZoneX + safeZoneW - 0.168";
+				y="safeZoneY + safeZoneH - 0.3795";
 			};
 			class LeftValue: FrontValue
 			{
 				idc=7123;
-				y="safeZoneY + safeZoneH - 0.218";
+				y="safeZoneY + safeZoneH - 0.327";
 			};
 			class RightValue: LeftValue
 			{
 				idc=7124;
-				y="safeZoneY + safeZoneH - 0.188";
+				y="safeZoneY + safeZoneH - 0.282";
 			};
 			class RearValue: RightValue
 			{
 				idc=7125;
-				y="safeZoneY + safeZoneH - 0.153";
+				y="safeZoneY + safeZoneH - 0.2295";
 			};
 			class ArmorStateLabel: IntegrityLabel
 			{
 				text="COMBAT STATE";
-				y="safeZoneY + safeZoneH - 0.094";
+				y="safeZoneY + safeZoneH - 0.141";
 			};
 			class ArmorStateValue: IntegrityValue
 			{
 				idc=7127;
 				text="NOMINAL";
-				y="safeZoneY + safeZoneH - 0.094";
+				y="safeZoneY + safeZoneH - 0.141";
 				colorText[]={0.42,1,0.62,1};
 			};
 			class ArmorReadout: FST_SabreArmorReadout
@@ -345,99 +345,99 @@ class RscTitles
 			class ArmorSignal: FST_SabreArmorReadout
 			{
 				text="[ LIVE TELEMETRY ]";
-				x="safeZoneX + safeZoneW - 0.170";
-				w=0.120;
+				x="safeZoneX + safeZoneW - 0.255";
+				w=0.18;
 				style=1;
 				colorText[]={0.35,0.95,0.74,0.9};
 			};
 			class VehicleCrosshair: FST_SabreVehicleZone
 			{
 				text="";
-				x="safeZoneX + safeZoneW - 0.190";
-				y="safeZoneY + safeZoneH - 0.252";
-				w=0.005;
-				h=0.142;
+				x="safeZoneX + safeZoneW - 0.285";
+				y="safeZoneY + safeZoneH - 0.378";
+				w=0.0075;
+				h=0.213;
 				colorBackground[]={0.5,0.85,1,0.24};
 			};
 			class VehicleCrosshairHorizontal: VehicleCrosshair
 			{
-				x="safeZoneX + safeZoneW - 0.295";
-				y="safeZoneY + safeZoneH - 0.200";
-				w=0.215;
-				h=0.003;
+				x="safeZoneX + safeZoneW - 0.4425";
+				y="safeZoneY + safeZoneH - 0.3";
+				w=0.3225;
+				h=0.0045;
 			};
 			class LowHullBorderTop: FST_SabreVehicleZone
 			{
 				idc=7110;
-				x="safeZoneX + safeZoneW - 0.350";
-				y="safeZoneY + safeZoneH - 0.370";
-				w=0.325;
-				h=0.005;
+				x="safeZoneX + safeZoneW - 0.525";
+				y="safeZoneY + safeZoneH - 0.555";
+				w=0.4875;
+				h=0.0075;
 				colorBackground[]={1,0.02,0.02,0};
 			};
 			class LowHullBorderBottom: LowHullBorderTop
 			{
 				idc=7111;
-				y="safeZoneY + safeZoneH - 0.075";
+				y="safeZoneY + safeZoneH - 0.1125";
 			};
 			class LowHullBorderLeft: LowHullBorderTop
 			{
 				idc=7112;
-				w=0.005;
-				h=0.295;
+				w=0.0075;
+				h=0.4425;
 			};
 			class LowHullBorderRight: LowHullBorderLeft
 			{
 				idc=7113;
-				x="safeZoneX + safeZoneW - 0.030";
+				x="safeZoneX + safeZoneW - 0.045";
 			};
 			class LowHullMidTop: LowHullBorderTop
 			{
 				idc=7114;
-				x="safeZoneX + safeZoneW - 0.345";
-				y="safeZoneY + safeZoneH - 0.365";
-				w=0.315;
-				h=0.003;
+				x="safeZoneX + safeZoneW - 0.5175";
+				y="safeZoneY + safeZoneH - 0.5475";
+				w=0.4725;
+				h=0.0045;
 			};
 			class LowHullMidBottom: LowHullMidTop
 			{
 				idc=7115;
-				y="safeZoneY + safeZoneH - 0.080";
+				y="safeZoneY + safeZoneH - 0.12";
 			};
 			class LowHullMidLeft: LowHullMidTop
 			{
 				idc=7116;
-				w=0.003;
-				h=0.285;
+				w=0.0045;
+				h=0.4275;
 			};
 			class LowHullMidRight: LowHullMidLeft
 			{
 				idc=7117;
-				x="safeZoneX + safeZoneW - 0.035";
+				x="safeZoneX + safeZoneW - 0.0525";
 			};
 			class LowHullInnerTop: LowHullMidTop
 			{
 				idc=7118;
-				x="safeZoneX + safeZoneW - 0.340";
-				y="safeZoneY + safeZoneH - 0.360";
-				w=0.305;
-				h=0.002;
+				x="safeZoneX + safeZoneW - 0.51";
+				y="safeZoneY + safeZoneH - 0.54";
+				w=0.4575;
+				h=0.003;
 			};
 			class LowHullInnerBottom: LowHullInnerTop
 			{
 				idc=7119;
-				y="safeZoneY + safeZoneH - 0.083";
+				y="safeZoneY + safeZoneH - 0.1245";
 			};
 			class LowHullInnerLeft: LowHullInnerTop
 			{
 				idc=7120;
-				w=0.002;
-				h=0.277;
+				w=0.003;
+				h=0.4155;
 			};
 			class LowHullInnerRight: LowHullInnerLeft
 			{
 				idc=7121;
-				x="safeZoneX + safeZoneW - 0.038";
+				x="safeZoneX + safeZoneW - 0.057";
 			};
 		};
 	};
@@ -925,7 +925,7 @@ class CfgVehicles
 				latStiffX = 100;
 				latStiffY = 1600;
 				longitudinalStiffnessPerUnitGravity = 65000;
-				maxBrakeTorque = 1500;
+				maxBrakeTorque = 900;
 				sprungMass = -1;
 				springStrength = 28000;
 				springDamperRate = 48000;
@@ -953,28 +953,28 @@ class CfgVehicles
 				boneName = "wheel_podkolol3";
 				center = "wheel_1_4_axis";
 				boundary = "wheel_1_4_bound";
-				maxBrakeTorque = 500;
+				maxBrakeTorque = 400;
 			};
 			class L5: L2
 			{
 				boneName = "wheel_podkolol4";
 				center = "wheel_1_5_axis";
 				boundary = "wheel_1_5_bound";
-				maxBrakeTorque = 500;
+				maxBrakeTorque = 400;
 			};
 			class L6: L2
 			{
 				boneName = "wheel_podkolol5";
 				center = "wheel_1_6_axis";
 				boundary = "wheel_1_6_bound";
-				maxBrakeTorque = 250;
+				maxBrakeTorque = 200;
 			};
 			class L7: L2
 			{
 				boneName = "wheel_podkolol6";
 				center = "wheel_1_7_axis";
 				boundary = "wheel_1_7_bound";
-				maxBrakeTorque = 250;
+				maxBrakeTorque = 200;
 			};
 			class R2: L2
 			{
@@ -1002,28 +1002,28 @@ class CfgVehicles
 				boneName = "wheel_podkolop3";
 				center = "wheel_2_4_axis";
 				boundary = "wheel_2_4_bound";
-				maxBrakeTorque = 500;
+				maxBrakeTorque = 400;
 			};
 			class R5: R2
 			{
 				boneName = "wheel_podkolop4";
 				center = "wheel_2_5_axis";
 				boundary = "wheel_2_5_bound";
-				maxBrakeTorque = 500;
+				maxBrakeTorque = 400;
 			};
 			class R6: R2
 			{
 				boneName = "wheel_podkolop5";
 				center = "wheel_2_6_axis";
 				boundary = "wheel_2_6_bound";
-				maxBrakeTorque = 250;
+				maxBrakeTorque = 200;
 			};
 			class R7: R2
 			{
 				boneName = "wheel_podkolop6";
 				center = "wheel_2_7_axis";
 				boundary = "wheel_2_7_bound";
-				maxBrakeTorque = 250;
+				maxBrakeTorque = 200;
 			};
 		};
 		editorcategory="FST_Catagory_Vehicles_Land";
@@ -1453,7 +1453,7 @@ class CfgVehicles
 		smokeLauncherAngle=150;
 		class Turrets: Turrets
 		{
-			class MainTurret_Gunner: MainTurret
+			class MainTurret: MainTurret
 			{
 				startEngine = 0;
 				hideWeaponsGunner = 1;
@@ -1530,8 +1530,9 @@ class CfgVehicles
 				maxHorizontalRotSpeed = 0.720001;
 				class HitPoints
 				{
-					class HitTurret
+					class HitCommanderTurret
 					{
+						isTurret = 1;
 						armor = 1.2;
 						material = -1;
 						name = "vez";
@@ -1541,8 +1542,9 @@ class CfgVehicles
 						explosionShielding = 0.3;
 						radius = 0.25;
 					};
-					class HitGun
+					class HitCommanderGun
 					{
+						isGun = 1;
 						armor = 1.2;
 						material = -1;
 						name = "zbran";
@@ -1715,8 +1717,8 @@ class CfgVehicles
 				};
 				class Turrets{};
 			};
-			// Internal seats (proxy 4-9,23) are configured as standard cargo seats above.
-			// Exterior turret seats (proxy 10+): passengers can fire
+			// Internal seats (proxies 4-9) are configured as standard cargo seats above.
+			// Exterior turret seats (proxies 10-22): passengers can fire
 			class CargoTurret_BaseTurret: CargoTurret
 			{
 				gunnerAction = "passenger_inside_1";
@@ -1872,6 +1874,16 @@ class CfgVehicles
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_22";
 				proxyIndex = 22;
 				playerPosition = 14;
+			};
+			// Internal infantry commander passenger seat (proxy 23)
+			class CargoTurret_23: CargoTurret_BaseTurret
+			{
+				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
+				proxyIndex = 23;
+				playerPosition = 15;
+				isPersonTurret = 0;
+				inGunnerMayFire = 0;
+				outGunnerMayFire = 0;
 			};
 		};
 		class Damage

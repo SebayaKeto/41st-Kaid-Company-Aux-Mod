@@ -64,10 +64,15 @@ while {alive _vehicle} do {
     private _display = uiNamespace getVariable [_displayName, displayNull];
     while {alive _vehicle && {vehicle player isEqualTo _vehicle} && {call _isCrew} && {!isNull _display}} do {
 
+        private _hullDamage = if (_hullHitpoint isEqualTo "") then {
+            (damage _vehicle) max 0 min 1
+        } else {
+            (_vehicle getHitPointDamage _hullHitpoint) max 0 min 1
+        };
         private _damageValues = (_zones apply {
             _x params ["_controlId", "_valueControlId", "_hitpoint"];
             (_vehicle getHitPointDamage _hitpoint) max 0 min 1
-        }) + [(damage _vehicle) max 0 min 1];
+        }) + [_hullDamage];
         private _systemReadings = _systems apply {
             _x params ["_systemName", "_controlId", "_components"];
             private _integrities = _components apply {
@@ -219,11 +224,6 @@ while {alive _vehicle} do {
             _lastRenderedAssessment = _renderedAssessment;
         };
 
-        private _hullDamage = if (_hullHitpoint isEqualTo "") then {
-            1 - ((_assessment select 4) / 100)
-        } else {
-            (_vehicle getHitPointDamage _hullHitpoint) max 0 min 1
-        };
         private _alertActive = (call _isCrew) && {(_assessment select 6) || {_hullDamage > 0.4}};
         private _alertStrength = if (_alertActive) then {
             0.35 + ((sin (diag_tickTime * 720) + 1) * 0.325)
