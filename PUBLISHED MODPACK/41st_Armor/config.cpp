@@ -27422,6 +27422,24 @@ class CfgVehicles
 		tf_range=50000;
 		tf_hasLRradio=1;
 	};
+	class FST_Backpack_Jumppack_Kortnul: FST_Backpack_Jumppack
+	{
+		author="House";
+		displayname="[41st] Jump Pack (Kortnul)"
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Kortnul.paa"
+		};
+		// LR radio, matching FST_Backpack_Jumppack_LR / Vengence / Cowboy.
+		// Base FST_Backpack_Jumppack has these commented out + tf_hasLRradio=0;
+		// everything else (model, jump stats, sounds) still inherits from base.
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+	};
 	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack
 	{
 		author="Steel";
