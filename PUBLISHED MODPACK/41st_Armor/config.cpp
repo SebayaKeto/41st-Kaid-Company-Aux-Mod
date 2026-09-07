@@ -21381,6 +21381,15 @@ class CfgWeapons
 			"41st_Armor\Data\Equipment\FST_NVG_Valius_dirty.paa",
 		};
 	};
+	class FST_NVG_Comedian: FST_NVG
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Comedian)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Comedian.paa",
+		};
+	};
 	class FST_Marshal_Commander_Visor: JLTS_CloneNVGMC
 	{
 		author="Daara";
