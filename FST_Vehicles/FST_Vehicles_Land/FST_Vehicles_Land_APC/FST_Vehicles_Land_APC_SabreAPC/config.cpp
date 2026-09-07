@@ -1133,10 +1133,10 @@ class CfgVehicles
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		hideWeaponsDriver=1;
 		hideWeaponsCargo=0;
-		weapons[]={"SmokeLauncher"};
-		memoryPointGun="";
-		memoryPointGunDir="";
-		magazines[]={"SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag"};
+		weapons[]={"FST_VW_SmokeLauncher"};
+		memoryPointGun="SmokeMuzzle";
+		memoryPointGunDir="SmokeMuzzleDir";
+		magazines[]={"FST_VW_6Rnd_Smoke","FST_VW_6Rnd_Smoke"};
 		class HitPoints: HitPoints
 		{
 			class HitFrontArmor: HitHull
@@ -1212,7 +1212,7 @@ class CfgVehicles
 				name="hit_bottom_armor";
 				displayName="$STR_FST_SABER_APC_HIT_BOTTOM_ARMOR";
 				visual="-";
-				passThrough=0.55;
+				passThrough=0.8;
 				minimalHit=0.08;
 				explosionShielding=0.19;
 				radius=0.30000001;
@@ -1617,8 +1617,10 @@ class CfgVehicles
 				thermalMode[] = {};
 				gunnerInOpticsShowCursor = 1;
 				usepip = 2;
-				gunnerOpticsModel = "\A3\weapons_f\reticle\optics_empty";
-				gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
+				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				gunnerOutOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				gunnerOutForceOptics = 0;
+				gunnerOutOpticsShowCursor = 1;
 				class OpticsIn: Optics_Gunner_APC_01
 				{
 					class Wide: Wide{};
