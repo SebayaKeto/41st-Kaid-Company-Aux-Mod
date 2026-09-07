@@ -1133,10 +1133,10 @@ class CfgVehicles
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		hideWeaponsDriver=1;
 		hideWeaponsCargo=0;
-		weapons[]={"FST_VW_SmokeLauncher"};
+		weapons[]={"SmokeLauncher"};
 		memoryPointGun="SmokeMuzzle";
 		memoryPointGunDir="SmokeMuzzleDir";
-		magazines[]={"FST_VW_6Rnd_Smoke","FST_VW_6Rnd_Smoke"};
+		magazines[]={"SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag","SmokeLauncherMag"};
 		class HitPoints: HitPoints
 		{
 			class HitFrontArmor: HitHull
@@ -1449,7 +1449,7 @@ class CfgVehicles
 		};
 		smokeLauncherGrenadeCount=12;
 		smokeLauncherVelocity=25;
-		smokeLauncherOnTurret=1;
+		smokeLauncherOnTurret=0;
 		smokeLauncherAngle=150;
 		class Turrets: Turrets
 		{
@@ -1996,17 +1996,17 @@ class CfgVehicles
 			class recoil_source
 			{
 				source="reload";
-				weapon="FST_Vehicle_Cannon_30mm";
+				weapon="FST_VW_Sabre_30mm_Cannon";
 			};
 			class LeftMainGun_Recoil_source
 			{
 				source="reload";
-				weapon="FST_Vehicle_Cannon_30mm";
+				weapon="FST_VW_Sabre_30mm_Cannon";
 			};
 			class RightMainGun_Recoil_source
 			{
 				source="reload";
-				weapon="FST_Vehicle_Cannon_30mm";
+				weapon="FST_VW_Sabre_30mm_Cannon";
 			};
 			class Smoke_source
 			{
@@ -2119,8 +2119,8 @@ class CfgVehicles
 		centreBias=1.4;
 		class EventHandlers: DefaultEventHandlers
 		{
-			fired="if ((_this select 1) isEqualTo 'FST_VW_Sabre_LG_MissileLauncher') then {private _vehicle = _this select 0; playSound3D ['\FST\FST_Sounds\Weapons\PLX-1Fire.ogg',_vehicle,false,getPosASL _vehicle,1.4,1,900]; playSound3D ['\FST\FST_Sounds\Weapons\PLX_LaunchMotor.ogg',_vehicle,false,getPosASL _vehicle,1,1,650];};";
-			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_AT_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;}; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_monitorSabreArmor.sqf'; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_showSabreArmorStatus.sqf';";
+			fired="_this call (uiNamespace getVariable 'BIS_fnc_effectFired'); if ((_this select 1) isEqualTo 'FST_VW_Sabre_LG_MissileLauncher') then {private _vehicle = _this select 0; playSound3D ['\FST\FST_Sounds\Weapons\PLX-1Fire.ogg',_vehicle,false,getPosASL _vehicle,1.4,1,900]; playSound3D ['\FST\FST_Sounds\Weapons\PLX_LaunchMotor.ogg',_vehicle,false,getPosASL _vehicle,1,1,650];};";
+			init="params ['_veh']; if (local _veh) then {_veh setVehicleAmmo 1; _veh forceSpeed -1;}; private _hookPos = _veh selectionPosition ['ACE_Refuel_Point','Memory']; if !(_hookPos isEqualTo [0,0,0]) then {_veh setVariable ['ace_refuel_hooks', [_hookPos], true];}; [_veh] spawn {params ['_v']; while {alive _v} do {private _cmd = effectiveCommander _v; if (!isNull _cmd && {isTurnedOut _cmd} && {_v animationSourcePhase 'main_hatch_rotate' < 0.5}) then {_v animateSource ['main_hatch_rotate',1,true];}; uiSleep 0.25;};}; [_veh] spawn {params ['_v']; while {alive _v} do {private _gunner = gunner _v; private _w = if (isNull _gunner) then {''} else {currentWeapon _gunner}; private _missileActive = _w in ['FST_VW_Sabre_LG_MissileLauncher']; private _missilePhase = if (_missileActive) then {1} else {0}; if ((_v animationSourcePhase 'MissilePods') != _missilePhase) then {_v animateSource ['MissilePods',_missilePhase,true];}; uiSleep 0.1;};}; [_veh] spawn {params ['_v']; if (!hasInterface) exitWith {}; private _mk = {params ['_vehObj','_mem']; private _l = '#lightpoint' createVehicleLocal [0,0,0]; _l setLightColor [1,0.08,0.08]; _l setLightAmbient [0.35,0.03,0.03]; _l setLightIntensity 2.5; _l setLightUseFlare false; _l setLightAttenuation [0,0,0,1,18,30]; _l lightAttachObject [_vehObj, _vehObj selectionPosition [_mem,'Memory']]; _l}; private _lp1 = [_v,'Emissive_01'] call _mk; private _lp2 = [_v,'Emissive_02'] call _mk; waitUntil {sleep 1; !alive _v}; deleteVehicle _lp1; deleteVehicle _lp2;}; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_monitorSabreArmor.sqf'; [_veh] execVM '\FST\FST_Vehicles\FST_Vehicles_Land\FST_Vehicles_Land_APC\FST_Vehicles_Land_APC_SabreAPC\Functions\fn_showSabreArmorStatus.sqf';";
 		};
 		class SimpleObject
 		{

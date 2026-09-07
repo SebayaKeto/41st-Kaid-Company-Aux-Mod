@@ -12,7 +12,7 @@ class CfgPatches
             "A3_Data_F",
             "A3_Weapons_F",
             "3AS_VehicleWeapons",
-            "FST_Sounds_Weapons"
+            "FST_Sounds"
         };
     };
 };
