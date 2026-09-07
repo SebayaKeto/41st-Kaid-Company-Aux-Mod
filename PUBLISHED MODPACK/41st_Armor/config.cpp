@@ -142,6 +142,7 @@
 			*/
 			"FST_P2_Cursed",
 			"FST_P2_Cursed_Dirty",
+			"FST_P2_Corpse",
 			"FST_P2_Hijack",
 			"FST_P2_Hijack_Dirty",
 			"FST_P2_Mixer",
@@ -15687,6 +15688,20 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_House";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Corpse: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Corpse]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Corpse";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -35899,6 +35914,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_House",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Corpse: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-2672 'Corpse'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Corpse";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Corpse.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Corpse.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P1_Pilot_Helmet_Corpse",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P1_Pilot_Helmet_Corpse",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
