@@ -11,7 +11,8 @@ class CfgPatches
         {
             "A3_Data_F",
             "A3_Weapons_F",
-            "3AS_VehicleWeapons"
+            "3AS_VehicleWeapons",
+            "FST_Sounds"
         };
     };
 };
@@ -45,6 +46,7 @@ class CfgAmmo
     // Common Arma ammo bases used by this module.
     class BulletBase;
     class MissileBase;
+    class M_Titan_AT_long;
     class RocketBase;
     class ShellBase;
     class Sh_120mm_HE;
@@ -68,6 +70,7 @@ class CfgWeapons
 {
     // Common Arma weapon bases used by this module.
     class CannonCore;
+    class MGun;
     class MissileLauncher;
     class missiles_titan;
     class RocketPods;

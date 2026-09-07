@@ -50,35 +50,10 @@ class FST_VW_SabreAPC_LG_Submunition: Sh_120mm_HE
     timeToLive = 0.2;
 };
 
-class FST_VW_SabreAPC_LG_Missile: MissileBase
+class FST_VW_SabreAPC_LG_Missile: M_Titan_AT_long
 {
-    effectFly = "FST_VW_FX_Emissive_Missile";
-    explosionEffects = "3AS_ImpactPlasmaExplosion_Blue";
-    lightColor[] = {0.92, 0.72, 0.22};
-    hit = 560;
-    indirectHit = 72;
-    indirectHitRange = 2.4;
-    maxSpeed = 360;
-    thrustTime = 4.6;
-    thrust = 120;
-    maneuvrability = 40;
-    ace_frag_enabled = 1;
-    ace_frag_metal = 3200;
-    ace_frag_charge = 1220;
-    ace_frag_gurney_c = 2440;
-    manualControl = 1;
-    maxControlRange = 4500;
-    missileManualControlCone = 360;
-    laserLock = 0;
-    irLock = 0;
-    airLock = 0;
-    nvLock = 0;
-    missileLockCone = 0;
-    missileLockMaxDistance = 0;
-    missileLockMinDistance = 0;
-    weaponLockSystem = 0;
-    trackOversteer = 1;
-    trackLead = 1;
+    soundFly[] = {"\FST\FST_Sounds\Weapons\PLX_MissileFly.ogg",1.4,1,900};
+    SoundSetExplosion[] = {"FST_Sabre_Missile_Explosion_SoundSet","Explosion_Debris_SoundSet"};
 };
 
 class FST_VW_ATGM_Tandem_Missile: MissileBase
