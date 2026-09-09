@@ -1343,7 +1343,7 @@ class CfgMagazines
 	};
 	class FST_LAAT_P_12rnd_M : VehicleMagazine  //Laat Parachute Flares
 	{
-		author = "Adapted from FIR Team by Viz"
+		author = "Adapted from FIR Team by Viz";
 		scope = 2;
 		displayName = "LAAT FLARE x 1";
 		displayNameShort = "LAAT FLARE";
@@ -1357,7 +1357,7 @@ class CfgMagazines
 	};
 	class FST_LAAT_Smoke_P_16rnd_M : VehicleMagazine //Laat Smoke Rockets
 	{
-		author = "Adapted from FIR Team by Viz"
+		author = "Adapted from FIR Team by Viz";
 		scope = 2;
 		displayName = "LAAT RP Smoke x 1";
 		displayNameShort = "LAAT RP Smoke";
@@ -2740,7 +2740,7 @@ class CfgWeapons
 	class RocketPods;
 	class FST_SUU25 : RocketPods //Laat Parachute Flares
 	{
-		author = "Adapted from FIR Team by Viz"
+		author = "Adapted from FIR Team by Viz";
 		ballisticsComputer = 8;
 		holdsterAnimValue = 1;
 		magazines[] = { "FST_LAAT_P_12rnd_M" };

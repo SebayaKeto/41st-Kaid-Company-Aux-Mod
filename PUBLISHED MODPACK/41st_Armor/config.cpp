@@ -865,7 +865,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat"
 		};
 	};
 	class FST_CloneVestARC_Midnight: FST_CloneVestARC
@@ -879,7 +879,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat"
 		};
 	};
 	class FST_CloneVestARC_Urban: FST_CloneVestARC
@@ -893,7 +893,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat"
 		};
 	};
 	class FST_CloneVestARC_Desert: FST_CloneVestARC
@@ -907,7 +907,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Vest_ARC.rvmat"
 		};
 	};
 	class FST_CloneVestARC_Tally: FST_CloneVestARC
@@ -1243,7 +1243,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -1312,7 +1312,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -1381,7 +1381,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -1450,7 +1450,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2450,7 +2450,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2520,7 +2520,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2590,7 +2590,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -3565,7 +3565,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -3632,7 +3632,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -3699,7 +3699,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -3766,7 +3766,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4574,7 +4574,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4644,7 +4644,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4714,7 +4714,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4784,7 +4784,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4854,7 +4854,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4924,7 +4924,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -4993,7 +4993,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -5063,7 +5063,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -5133,7 +5133,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		class ItemInfo: VestItem
 		{
@@ -5565,7 +5565,7 @@ class CfgWeapons
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat"
 		};
 		hiddenselections[]=
 		{
@@ -5622,7 +5622,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"";
+			""
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -5672,7 +5672,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat"
 		};
 	};	
 	class FST_P2_Helmet_Urban: FST_P2_Helmet_Base	
@@ -5686,7 +5686,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat"
 		};
 	};
 	class FST_P2_Helmet_Midnight: FST_P2_Helmet_Base
@@ -5700,7 +5700,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat"
 		};
 	};	
 	class FST_P2_Helmet_Desert: FST_P2_Helmet_Base
@@ -5714,7 +5714,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat"
 		};
 	};
 	class FST_Pilot_P1_Helmet: ls_gar_phase1Pilot_helmet
@@ -5877,7 +5877,7 @@ class CfgWeapons
 		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout.rvmat",
-			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat";
+			"41st_Armor\Data\Other\Camos\Clone_Helmet_Scout_visor.rvmat"
 		};
 		subItems[]=
 		{
@@ -5965,7 +5965,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6021,7 +6021,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6077,7 +6077,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6133,7 +6133,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6189,7 +6189,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6245,7 +6245,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6288,7 +6288,7 @@ class CfgWeapons
 		scope=2;
 		scopeCurator=2;
 		picture="";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -6335,7 +6335,7 @@ class CfgWeapons
 	class FST_ScoutHelmet_MarkedOne: FST_ScoutHelmet_Base
 	{
 		displayName="[41st] Scout Helmet (CT)";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -6350,7 +6350,7 @@ class CfgWeapons
 	class FST_ScoutHelmet_Woodland_Unmarked: FST_ScoutHelmet_Base
 	{
 		displayName="[41st] Scout Helmet (Woodland)";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -6365,7 +6365,7 @@ class CfgWeapons
 	class FST_ScoutHelmet_Woodland_MarkedOne: FST_ScoutHelmet_Base
 	{
 		displayName="[41st] Scout Helmet (CT Woodland)";
-		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d"
+		model="41st_Armor\Data\Helmets\FST_ScoutHelmet.p3d";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -6445,7 +6445,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6501,7 +6501,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6557,7 +6557,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6613,7 +6613,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6669,7 +6669,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6725,7 +6725,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6781,7 +6781,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6837,7 +6837,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6893,7 +6893,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -6949,7 +6949,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7005,7 +7005,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7061,7 +7061,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7117,7 +7117,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7173,7 +7173,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7281,7 +7281,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7337,7 +7337,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7393,7 +7393,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7449,7 +7449,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7505,7 +7505,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\helmet_arf.rvmat";
+			"41st_Armor\Data\Other\helmet_arf.rvmat"
 		};
 		subItems[]=
 		{
@@ -7559,7 +7559,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\characters\CloneArmor2\Data\Clone_helmet_BARC_co.paa";
+			"\MRC\JLTS\characters\CloneArmor2\Data\Clone_helmet_BARC_co.paa"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -8515,7 +8515,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat";
+			"41st_Armor\Data\Other\Clone_Helmet_AB.rvmat"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -11663,7 +11663,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -11705,7 +11705,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat";
+			"41st_Armor\Data\Other\Clone_Helmet_P2.rvmat"
 		};
 		class Iteminfo: HeadgearItem
 		{
@@ -21860,15 +21860,15 @@ class CfgVehicles
 		model="3AS\3AS_Props\Terminals\Terminal_Console.p3d";
 		hiddenSelections[]=
 		{
-			"camo1";
+			"camo1"
 		};
 		hiddenselectionstextures[]=
 		{
-			"3AS\3AS_Props\Terminals\data\base_co.paa";
-		};	
+			"3AS\3AS_Props\Terminals\data\base_co.paa"
+		};
 		hiddenSelectionsMaterials[]=
 		{
-			"3AS\3AS_Props\Terminals\data\base_co.paa";
+			"3AS\3AS_Props\Terminals\data\base_co.paa"
 		};
 		editorCategory="FST_Crates";
 		editorSubcategory="FST_Supplies";
@@ -21937,7 +21937,7 @@ class CfgVehicles
 			};
 			class _xx_FST_thermal_slugmag_DP23
 			{
-				count=20
+				count=20;
 				magazine="FST_thermal_slug_mag_Blue";
 			};
 			class _xx_FST_blaster_cell_LE
@@ -22267,7 +22267,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="[41st] Commando Backpack";
-		Picture="FST_212th_Armor\Data\Backpack\UI\Katarn_Backpack_Unmarked_UI_ca.paa"
+		Picture="FST_212th_Armor\Data\Backpack\UI\Katarn_Backpack_Unmarked_UI_ca.paa";
 		maximumLoad=250;
 		hiddenSelectionsTextures[]=
 		{
@@ -22278,7 +22278,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="[41st] Commando Backpack (Jorge)";
-		Picture="FST_212th_Armor\Data\Backpack\UI\Katarn_Backpack_Unmarked_UI_ca.paa"
+		Picture="FST_212th_Armor\Data\Backpack\UI\Katarn_Backpack_Unmarked_UI_ca.paa";
 		maximumLoad=250;
 		hiddenSelectionsTextures[]=
 		{
@@ -26308,7 +26308,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Ares_Dirty: FST_Backpack_Jumppack_Ares
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Ares/Dirty)"
+		displayname="[41st] Jump Pack (Ares/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ares_Dirty.paa"
@@ -26796,7 +26796,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Woods_Dirty: FST_Backpack_Jumppack_Woods
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Woods/Dirty)"
+		displayname="[41st] Jump Pack (Woods/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Woods_Dirty.paa"
@@ -26805,7 +26805,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Gustav: FST_Backpack_Jumppack_Woods
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Gustav)"
+		displayname="[41st] Jump Pack (Gustav)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Gustav.paa"
@@ -27398,7 +27398,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Appa_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Appa/Dirty)"
+		displayname="[41st] Jump Pack (Appa/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Appa_Dirty.paa"
@@ -27407,7 +27407,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Silhouette: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Silhouette)"
+		displayname="[41st] Jump Pack (Silhouette)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Silhouette.paa"
@@ -27425,7 +27425,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Kortnul: FST_Backpack_Jumppack
 	{
 		author="House";
-		displayname="[41st] Jump Pack (Kortnul)"
+		displayname="[41st] Jump Pack (Kortnul)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Kortnul.paa"
@@ -27443,7 +27443,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Sin: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Sin)"
+		displayname="[41st] Jump Pack (Sin)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Sin.paa"
@@ -27510,7 +27510,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Vengence_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Vengence/Dirty)"
+		displayname="[41st] Jump Pack (Vengence/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Vengence_Dirty.paa"
@@ -28285,7 +28285,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Marek_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Marek/Dirty)"
+		displayname="[41st] Jump Pack (Marek/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Marek_Dirty.paa"
@@ -28294,7 +28294,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Bright: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Bright)"
+		displayname="[41st] Jump Pack (Bright)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumpack_Bright.paa"
@@ -28303,7 +28303,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Assassin: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Assassin)"
+		displayname="[41st] Jump Pack (Assassin)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Assassin.paa"
@@ -28312,7 +28312,7 @@ class CfgVehicles
 	class FST_Backpack_Jumppack_Assassin_Dirty: FST_Backpack_Jumppack
 	{
 		author="Steel";
-		displayname="[41st] Jump Pack (Assassin/Dirty)"
+		displayname="[41st] Jump Pack (Assassin/Dirty)";
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Assassin_Dirty.paa"
@@ -54619,7 +54619,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -54645,7 +54645,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -54671,7 +54671,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -54697,7 +54697,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -54947,7 +54947,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
 		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
@@ -54974,7 +54974,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
 		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
@@ -55001,7 +55001,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
 		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
@@ -55028,7 +55028,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		ACE_Overlay="41st_Armor\Data\Equipment\FST_P2_HUD.paa";
 		ACE_OverlayDirt="41st_Armor\Data\Equipment\FST_P2_HUD_Dirty.paa";
@@ -55364,7 +55364,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55391,7 +55391,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55418,7 +55418,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55445,7 +55445,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55472,7 +55472,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55499,7 +55499,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55526,7 +55526,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55553,7 +55553,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55580,7 +55580,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_suspender.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55641,7 +55641,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55667,7 +55667,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55693,7 +55693,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;
@@ -55719,7 +55719,7 @@ class CfgGlasses
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat";
+			"41st_Armor\Data\Other\Clone_vest_pauldron.rvmat"
 		};
 		picture="\41st_Armor\Logo.paa";
 		scope=2;

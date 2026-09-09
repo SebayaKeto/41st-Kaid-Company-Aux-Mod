@@ -260,7 +260,7 @@ class CfgWeapons
     class FST_HumanDiv_Pouches_Base: V_rebreatherB
     {
         author="Ruby";
-        displayname="[41st] Human Divison Pouches Base"
+        displayname="[41st] Human Divison Pouches Base";
         model="kobra\442_equipment\vests\model\clone\scout_pouches.p3d";
         scope=0;
 		scopecurator=0;
@@ -312,7 +312,7 @@ class CfgWeapons
     class FST_HumanDiv_Pouches: FST_HumanDiv_Pouches_Base
     {
         author="Ruby";
-        displayname="[41st] CIS Ammo Bearer Pouches"
+        displayname="[41st] CIS Ammo Bearer Pouches";
         scope=2;
 		scopecurator=2;
 		scopearsenal=2;
@@ -1258,7 +1258,7 @@ class CfgVehicles
 	class FST_Backpack_HumanDiv: FST_Clone_Backpack_Invisible
     {
         author = "Ruby";
-        displayname = "[41st] CIS Human Divison Standard Backpack"
+        displayname = "[41st] CIS Human Divison Standard Backpack";
         model="\3AS\3AS_Republic_Characters\Backpacks\3AS_Clonetrooper_Backpack_GM.p3d";
         picture="\A3\Weapons_F\Ammoboxes\Bags\data\ui\backpack_CA.paa";
         hiddenSelections[]=
@@ -1273,18 +1273,18 @@ class CfgVehicles
 	class FST_CIS_Backpack_Invisible: FST_Clone_Backpack_Invisible
 	{
 		author = "Tooka";
-		displayname = "[41st] CIS Human Division Invisible Backpack"
-		maximumLoad = 400
-		mass = 5
+		displayname = "[41st] CIS Human Division Invisible Backpack";
+		maximumLoad = 400;
+		mass = 5;
 	};
     class FST_CIS_Drone_Backpack: FST_Clone_Backpack_Invisible
     {
         author = "Tooka";
-        displayname = "[41st] CIS Human Division Drone Backpack"
+        displayname = "[41st] CIS Human Division Drone Backpack";
         model = "3AS\3AS_Drones\H3NR1\model\3AS_H3NRI_Pack_F.p3d";
         picture = "\A3\Supplies_F_Orange\Bags\Data\UI\icon_C_IDAP_UAV_ca";
-        maximumLoad = 250
-        mass = 100
+        maximumLoad = 250;
+        mass = 100;
         hiddenSelectionsTextures[]=
         {
             "3AS\3AS_Drones\H3NR1\data\camo_h3_nr1_imp_co.paa"
@@ -2118,7 +2118,7 @@ class CfgVehicles
 				radius=0;
 				explosionShielding=0;
 				visual="injury_body";
-				minimalHit=0
+				minimalHit=0;
 				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody

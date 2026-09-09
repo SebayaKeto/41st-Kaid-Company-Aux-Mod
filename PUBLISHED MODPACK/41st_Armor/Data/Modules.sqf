@@ -506,36 +506,36 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         sleep 6;
 
         // Pod attachments
-        _PodLocation1  = [50.123,   -100.456,  -85.789];
-        _PodLocation2  = [-60.789,  -30.123,   -65.456];
-        _PodLocation3  = [90.456,   -70.789,   -80.123];
-        _PodLocation4  = [-110.789, -55.456,   -75.789];
-        _PodLocation5  = [5.789,    15.123,    -70.456];
-        _PodLocation6  = [-95.456,  -115.789,  -78.123];
-        _PodLocation7  = [65.789,   -35.456,   -72.789];
-        _PodLocation8  = [-20.456,  -80.789,   -85.456];
-        _PodLocation9  = [85.123,   50.456,    -70.789];
-        _PodLocation10 = [-75.789,  5.123,     -68.456];
-        _PodLocation11 = [35.456,   -20.789,   -76.789];
-        _PodLocation12 = [-70.123,  45.456,    -73.789];
-        _PodLocation13 = [120.789,  -10.456,   -79.456];
-        _PodLocation14 = [-40.456,  -90.789,   -81.123];
-        _PodLocation15 = [75.789,   -55.456,   -77.789];
-        _PodLocation16 = [-10.123,  80.789,    -69.456];
+        private _PodLocation1  = [50.123,   -100.456,  -85.789];
+        private _PodLocation2  = [-60.789,  -30.123,   -65.456];
+        private _PodLocation3  = [90.456,   -70.789,   -80.123];
+        private _PodLocation4  = [-110.789, -55.456,   -75.789];
+        private _PodLocation5  = [5.789,    15.123,    -70.456];
+        private _PodLocation6  = [-95.456,  -115.789,  -78.123];
+        private _PodLocation7  = [65.789,   -35.456,   -72.789];
+        private _PodLocation8  = [-20.456,  -80.789,   -85.456];
+        private _PodLocation9  = [85.123,   50.456,    -70.789];
+        private _PodLocation10 = [-75.789,  5.123,     -68.456];
+        private _PodLocation11 = [35.456,   -20.789,   -76.789];
+        private _PodLocation12 = [-70.123,  45.456,    -73.789];
+        private _PodLocation13 = [120.789,  -10.456,   -79.456];
+        private _PodLocation14 = [-40.456,  -90.789,   -81.123];
+        private _PodLocation15 = [75.789,   -55.456,   -77.789];
+        private _PodLocation16 = [-10.123,  80.789,    -69.456];
 
-        _PodArray = [];
+        private _PodArray = [];
 
         // Function to attach a particle source to each "pod" point
-        createandAttachParticleSource = {
+        private _fnc_createAndAttachParticleSource = {
             params ["_podobject", "_location"];
-            _modelData = _podobject modelToWorld _location;
-            _particleSource = "#particleSource" createVehicle _modelData;
+            private _modelData = _podobject modelToWorld _location;
+            private _particleSource = "#particleSource" createVehicle _modelData;
             _particleSource attachTo [_podobject, _location];
             _particleSource
         };
 
         // Put them in an array
-        _podLocations = [
+        private _podLocations = [
             _PodLocation1, _PodLocation2, _PodLocation3, _PodLocation4,
             _PodLocation5, _PodLocation6, _PodLocation7, _PodLocation8,
             _PodLocation9, _PodLocation10,_PodLocation11,_PodLocation12,
@@ -544,7 +544,7 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
 
         // Attach each effect
         {
-            _PodArray pushBack ([_ReturnShip, _x] call createandAttachParticleSource);
+            _PodArray pushBack ([_ReturnShip, _x] call _fnc_createAndAttachParticleSource);
         } forEach _podLocations;
 
         // Clean them up if the ship dies
@@ -565,11 +565,11 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         // -------------------------------------------------
         if (_AmountofLightPods > 0) then {
             for "_LightPoddropper" from 1 to _AmountofLightPods do {
-                _randomIndex = floor (random (count _PodArray));
-                _randomPodLocation = _PodArray select _randomIndex;
+                private _randomIndex = floor (random (count _PodArray));
+                private _randomPodLocation = _PodArray select _randomIndex;
                 _PodArray deleteAt _randomIndex;
 
-                _currentposition = [
+                private _currentposition = [
                     (getPosATL _randomPodLocation select 0),
                     (getPosATL _randomPodLocation select 1),
                     0
@@ -1159,34 +1159,34 @@ FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
 
         sleep 6;
 
-        _PodLocation1  = [50.123,   -100.456,  -85.789];
-        _PodLocation2  = [-60.789,  -30.123,   -65.456];
-        _PodLocation3  = [90.456,   -70.789,   -80.123];
-        _PodLocation4  = [-110.789, -55.456,   -75.789];
-        _PodLocation5  = [5.789,    15.123,    -70.456];
-        _PodLocation6  = [-95.456,  -115.789,  -78.123];
-        _PodLocation7  = [65.789,   -35.456,   -72.789];
-        _PodLocation8  = [-20.456,  -80.789,   -85.456];
-        _PodLocation9  = [85.123,   50.456,    -70.789];
-        _PodLocation10 = [-75.789,  5.123,     -68.456];
-        _PodLocation11 = [35.456,   -20.789,   -76.789];
-        _PodLocation12 = [-70.123,  45.456,    -73.789];
-        _PodLocation13 = [120.789,  -10.456,   -79.456];
-        _PodLocation14 = [-40.456,  -90.789,   -81.123];
-        _PodLocation15 = [75.789,   -55.456,   -77.789];
-        _PodLocation16 = [-10.123,  80.789,    -69.456];
+        private _PodLocation1  = [50.123,   -100.456,  -85.789];
+        private _PodLocation2  = [-60.789,  -30.123,   -65.456];
+        private _PodLocation3  = [90.456,   -70.789,   -80.123];
+        private _PodLocation4  = [-110.789, -55.456,   -75.789];
+        private _PodLocation5  = [5.789,    15.123,    -70.456];
+        private _PodLocation6  = [-95.456,  -115.789,  -78.123];
+        private _PodLocation7  = [65.789,   -35.456,   -72.789];
+        private _PodLocation8  = [-20.456,  -80.789,   -85.456];
+        private _PodLocation9  = [85.123,   50.456,    -70.789];
+        private _PodLocation10 = [-75.789,  5.123,     -68.456];
+        private _PodLocation11 = [35.456,   -20.789,   -76.789];
+        private _PodLocation12 = [-70.123,  45.456,    -73.789];
+        private _PodLocation13 = [120.789,  -10.456,   -79.456];
+        private _PodLocation14 = [-40.456,  -90.789,   -81.123];
+        private _PodLocation15 = [75.789,   -55.456,   -77.789];
+        private _PodLocation16 = [-10.123,  80.789,    -69.456];
 
-        _PodArray = [];
+        private _PodArray = [];
 
-        createandAttachParticleSource = {
+        private _fnc_createAndAttachParticleSource = {
             params ["_podobject", "_location"];
-            _modelData = _podobject modelToWorld _location;
-            _particleSource = "#particleSource" createVehicle _modelData;
+            private _modelData = _podobject modelToWorld _location;
+            private _particleSource = "#particleSource" createVehicle _modelData;
             _particleSource attachTo [_podobject, _location];
             _particleSource
         };
 
-        _podLocations = [
+        private _podLocations = [
             _PodLocation1, _PodLocation2, _PodLocation3, _PodLocation4,
             _PodLocation5, _PodLocation6, _PodLocation7, _PodLocation8,
             _PodLocation9, _PodLocation10,_PodLocation11,_PodLocation12,
@@ -1194,7 +1194,7 @@ FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
         ];
 
         {
-            _PodArray pushBack ([_ReturnShip, _x] call createandAttachParticleSource);
+            _PodArray pushBack ([_ReturnShip, _x] call _fnc_createAndAttachParticleSource);
         } forEach _podLocations;
 
         [_ReturnShip, _PodArray] spawn {
@@ -1214,11 +1214,11 @@ FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
         // -------------------------------------------------
         if (_AmountofLightPods > 0) then {
             for "_LightPoddropper" from 1 to _AmountofLightPods do {
-                _randomIndex = floor (random (count _PodArray));
-                _randomPodLocation = _PodArray select _randomIndex;
+                private _randomIndex = floor (random (count _PodArray));
+                private _randomPodLocation = _PodArray select _randomIndex;
                 _PodArray deleteAt _randomIndex;
 
-                _currentposition = [
+                private _currentposition = [
                     (getPosATL _randomPodLocation select 0),
                     (getPosATL _randomPodLocation select 1),
                     0
@@ -1301,20 +1301,616 @@ FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
 };
 
 
+
+
+// =====================================================================
+// DIAMOND CLASS CRUISER QRF DEPLOYMENT
+// =====================================================================
+
+["[41st] Droid Modules", "Diamond QRF Deployment",
+    {
+        params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
+
+        ["Quick Reaction Force Deployment (Diamond)", [
+            // Direction / side
+            ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
+            ["sideS",   ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
+
+            // Drop pods
+            ["SLIDER",  ["Drop pod Amount", "How many drop pods will be Deployed"], [0, 24, 8, 0]],
+            ["CHECKBOX", ["Linger", "Stays at the landing zone and spawns an OOM droid unless destroyed."], [true]],
+
+            // Vultures
+            ["SLIDER",  ["Amount of Vultures", "How many Vultures will be Deployed"], [0, 16, 2, 0]],
+            ["TOOLBOX", ["Vulture Type", "Select the type of Vultures to deploy."], [0, ["Standard", "AA Mixed"]]],
+            ["TOOLBOX", ["Vulture Skill", "Select the skill level of the Vultures' crew."], [0, ["Default", "Maximum"]]],
+
+            // Ship behavior
+            ["CHECKBOX", ["Armed Ship?", "Should the Diamond Class Cruiser have turrets spawned?"], [true]],
+            ["CHECKBOX", ["Jump Ship Out Afterwards?", "The ship will leave after it has deployed the troops"], [true]],
+
+            // Turret count
+            ["SLIDER", ["Number of Turrets", "Number of turrets that will spawn on the Diamond Class Cruiser. Ignored if Use Custom Turret Positions is enabled and at least one per-type count below is set."], [0, 10, 2, 0]],
+
+            // Custom turret classnames
+            ["CHECKBOX", ["Custom Turrets?", "If enabled, turret classnames for the AUTO-SPACED fallback (i.e. when Use Custom Turret Positions is off, or on with both per-type counts at 0) will be pulled from the CBA addon settings instead of the faction default. Has no effect on the hand-placed DF9/PD turrets below."], [false]],
+
+            // Custom turret positions
+            ["CHECKBOX", ["Use Custom Turret Positions?", "If enabled, turrets spawn at fixed hand-placed mount points on the hull instead of being auto-spaced. Edit FST_Diamond_TurretPositions in Modules.sqf to tune them."], [false]],
+
+            // Per-type turret counts
+            ["SLIDER", ["DF9 Rocket Turrets", "Number of FST_DF9_Rocket turrets to spawn at their hand-placed hull mounts. Only used when Use Custom Turret Positions is enabled."], [0, 10, 0, 0]],
+            ["SLIDER", ["PD Turrets", "Number of FST_CIS_PD_Turret turrets to spawn at their hand-placed hull mounts. Only used when Use Custom Turret Positions is enabled."], [0, 10, 0, 0]],
+
+            // Placement bias
+            ["COMBO", ["Placement Bias", "Which hull mount points are prioritised. Only affects turrets when Custom Turret Positions is enabled."], [
+                [0, 1, 2, 3, 4, 5],
+                ["Portside", "Starboard", "Underside", "TopSide", "Random", "Balanced"]
+            ]],
+
+            // Ship HP
+            ["SLIDER", ["Ship HP", "HP pool for the ship. Stored as this value x100 internally (e.g. 25 = 2500 HP). Default is the CBA addon setting."], [1, 5000, 25, 0]],
+
+            // Death condition
+            ["TOOLBOX", ["Death Condition", "What happens when the ship is destroyed. Crash Ship = falls from the sky. Retreat = jumps out."], [0, 1, 2, ["Crash Ship", "Retreat (Jump Out)"], nil]],
+
+            // Timing
+            ["SLIDER", ["Deployment Delay", "Seconds before the ship jumps in. An early-warning message will broadcast a rounded ETA to all curators."], [0, 30, 0, 0]],
+            ["SLIDER", ["Arming Delay", "Seconds after jump-in before the ship's weapons come online."], [0, 30, 0, 0]]
+
+            ], {
+                params ["_values", "_arguments"];
+
+                _direction         = _values # 0;
+                _Ship_direction    = [0, 45, 90, 135, 180, 225, 270, 315] # _direction;
+                _dropside          = _values select 1;
+                _AmountofLightPods = _values select 2;
+                _linger            = _values select 3;
+                _AmountofBanshees  = _values select 4;
+                _VultureType       = _values select 5;
+                _VultureSkill      = _values select 6;
+                _ArmedShip         = _values select 7;
+                _EndWithJumpOut    = _values select 8;
+
+                _NumberOfTurrets          = _values select 9;
+                _UseCustomTurret          = _values select 10;
+                _UseCustomTurretPositions = _values select 11;
+                _DF9RocketCount           = _values select 12;
+                _PDCount                  = _values select 13;
+                _PlacementBias            = _values select 14;
+                _ShipHealthMult           = _values select 15;
+                _DeathCondition           = _values select 16;
+
+                // Timing
+                _DeploymentDelay = _values select 17;
+                _ArmingDelay     = _values select 18;
+
+                _position = _arguments select 0;
+
+                [
+                    _position,
+                    _Ship_direction,
+                    _dropside,
+                    _AmountofLightPods,
+                    _linger,
+                    _AmountofBanshees,
+                    _VultureType,
+                    _VultureSkill,
+                    _ArmedShip,
+                    _EndWithJumpOut,
+                    _NumberOfTurrets,
+                    _UseCustomTurret,
+                    _UseCustomTurretPositions,
+                    _DF9RocketCount,
+                    _PDCount,
+                    _PlacementBias,
+                    _ShipHealthMult,
+                    _DeathCondition,
+                    _DeploymentDelay,
+                    _ArmingDelay
+                ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Diamond_QRF", 2];
+
+            }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
+    },
+    "\PHAN_ScifiSupportPlus\data\Droid.paa"
+] call zen_custom_modules_fnc_register;
+
+
+// Turret mount points for the Diamond Class Cruiser, per classname, in CoreOBJ model space [x, y, z]
+FST_Diamond_TurretPositions = [
+    ["FST_DF9_Rocket", [[-27.238,-61.224,11.801],[28.087,-61.225,18.252],[-27.238,-73.021,11.801],[31.37,-73.021,15.171],[-27.238,-84.37,11.801],[31.361,-84.374,15.181],[-27.18,-95.419,10.951],[31.447,-95.418,14.182],[-27.18,-105.664,10.951],[31.434,-105.663,14.195],[-27.18,-114.614,10.951],[31.428,-114.614,14.201],[21.742,-24.381,133.774],[-21.934,-24.381,133.824],[21.742,-33.077,144.245],[-21.934,-33.077,144.295],[21.742,-40.873,154.454],[-21.934,-40.873,154.504],[27.661,-61.442,188.323],[-26.556,-61.224,189.959],[27.654,-73.238,188.312],[-26.556,-73.021,189.959],[27.653,-84.587,188.297],[-26.556,-84.37,189.959],[28.388,-95.639,189.598],[-27.378,-95.419,190.56],[28.386,-105.88,189.588],[-27.378,-105.664,190.56],[28.385,-114.832,189.577],[-27.378,-114.614,190.56]]],
+    ["FST_CIS_PD_Turret", [[37.892,-63.28,29.333],[-38.032,-63.256,32.845],[39.356,-63.262,47.159],[-39.668,-63.256,47.694],[37.871,-82.212,29.305],[-40.999,-63.256,61.868],[-38.052,-82.187,32.802],[40.575,-63.246,63.177],[39.335,-82.194,47.13],[-39.687,-82.187,47.651],[-41.001,-82.187,61.84],[40.553,-82.178,63.149],[-38.579,-108.755,27.662],[38.77,-108.781,28.252],[-40.263,-108.755,45.216],[40.234,-108.763,46.077],[41.452,-108.747,62.096],[-41.893,-108.755,61.953],[-17.074,123.972,84.009],[16.741,123.842,84.825],[-40.842,-63.256,139.185],[40.668,-63.407,141.54],[-17.074,123.972,99.657],[16.741,123.842,100.473],[-40.859,-82.187,139.146],[40.64,-82.339,141.519],[-17.074,123.972,117.165],[16.741,123.842,117.981],[-38.985,-63.256,156.655],[-38.985,-63.256,156.853],[39.015,-63.407,158.581],[-39.002,-82.187,156.616],[-39.002,-82.187,156.814],[-41.842,-108.755,139.237],[38.987,-82.339,158.56],[41.697,-108.909,140.629],[-37.851,-63.256,171.796],[37.309,-63.407,174.235],[-37.868,-82.187,171.757],[-39.985,-108.755,156.707],[40.044,-108.909,157.671],[37.281,-82.339,174.214],[-38.851,-108.755,171.65],[38.338,-108.909,173.324]]]
+];
+
+// Per-class turret spawn Z correction
+FST_Diamond_TurretZCorrection = [
+    ["FST_DF9_Rocket", 0],
+    ["FST_CIS_PD_Turret", 0]
+];
+
+// Per-turret local [dir, up] rotation, index-aligned with FST_Diamond_TurretPositions
+// (position N for a class corresponds to rotation entry N in that same class's list
+// here).
+FST_Diamond_TurretRotations = [
+    ["FST_DF9_Rocket", [[[0,1,0],[-0.63,0,-0.776]],[[0,1,0],[0,0,1]],[[0,1,0],[-0.63,0,-0.776]],[[0,1,0],[0.639,0,-0.769]],[[0,1,0],[-0.63,0,-0.776]],[[0,1,0],[0.639,0,-0.769]],[[0,1,0],[-0.63,0,-0.776]],[[0,1,0],[0.639,0,-0.769]],[[0,1,0],[-0.63,0,-0.776]],[[0,1,0],[0.639,0,-0.769]],[[0,1,0],[-0.63,0,-0.776]],[[0,1,0],[0.639,0,-0.769]],[[0,1,0],[0,0,1]],[[0,1,0],[0,0,1]],[[0,1,0],[0,0,1]],[[0,1,0],[0,0,1]],[[0,1,0],[0,0,1]],[[0,1,0],[0,0,1]],[[0,1,0],[0.586,0,0.81]],[[0,1,0],[-0.613,0,0.79]],[[0,1,0],[0.586,0,0.81]],[[0,1,0],[-0.613,0,0.79]],[[0,1,0],[0.586,0,0.81]],[[0,1,0],[-0.613,0,0.79]],[[0,1,0],[0.612,0,0.791]],[[0,1,0],[-0.619,0,0.785]],[[0,1,0],[0.612,0,0.791]],[[0,1,0],[-0.619,0,0.785]],[[0,1,0],[0.612,0,0.791]],[[0,1,0],[-0.619,0,0.785]]]],
+    ["FST_CIS_PD_Turret", [[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.996,0,-0.085]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.996,0,-0.09]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.996,0,-0.091]],[[0,1,0],[-0.996,0,-0.085]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.996,0,-0.09]],[[0,1,0],[-0.996,0,-0.091]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.998,0,-0.068]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.998,0,-0.068]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,-0.001],[0.997,0,-0.075]],[[0,1,0],[-0.998,0,-0.068]],[[0,1,0],[-1,0,0]],[[0,1,0],[1,0,0]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[-1,0,0]],[[0,1,0],[1,0,0]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[-1,0,0]],[[0,1,0],[1,0,0]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[-0.994,0,0.108]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[-0.997,0,0.076]],[[0,1,0],[-0.994,0,0.108]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[0.995,0,0.102]],[[0,1,0],[-0.994,0,0.108]],[[0,1,0],[0.995,0,0.102]]]]
+];
+
+FST_ScifiSupportPlus_fnc_SW_Diamond_QRF = {
+    // -------------------------------------------------
+    // 1) Parse all parameters
+    // -------------------------------------------------
+    params [
+        "_position",
+        "_Ship_direction",
+        "_dropside",
+        "_AmountofLightPods",
+        "_linger",
+        "_AmountofBanshees",
+        "_VultureType",
+        "_VultureSkill",
+        "_ArmedShip",
+        "_EndWithJumpOut",
+        ["_NumberOfTurrets", 1],
+        ["_UseCustomTurret", false],
+        ["_UseCustomTurretPositions", false],
+        ["_DF9RocketCount", 0],
+        ["_PDCount", 0],
+        ["_PlacementBias", 4],
+        ["_ShipHealthMult", 25],
+        ["_DeathCondition", 0],
+        ["_DeploymentDelay", 0],
+        ["_ArmingDelay", 0]
+    ];
+
+    _position = ASLtoATL _position;
+
+    // -------------------------------------------------
+    // 2) Spawn a scheduled block (deployment delay, jump-in, arming, sleeps)
+    // -------------------------------------------------
+    [
+        _position,
+        _Ship_direction,
+        _dropside,
+        _AmountofLightPods,
+        _linger,
+        _AmountofBanshees,
+        _VultureType,
+        _VultureSkill,
+        _EndWithJumpOut,
+        _ArmedShip,
+        _NumberOfTurrets,
+        _UseCustomTurret,
+        _UseCustomTurretPositions,
+        _DF9RocketCount,
+        _PDCount,
+        _PlacementBias,
+        _ShipHealthMult,
+        _DeathCondition,
+        _DeploymentDelay,
+        _ArmingDelay
+    ] spawn {
+        params [
+            "_position",
+            "_Ship_direction",
+            "_dropside",
+            "_AmountofLightPods",
+            "_linger",
+            "_AmountofBanshees",
+            "_VultureType",
+            "_VultureSkill",
+            "_EndWithJumpOut",
+            "_ArmedShip",
+            "_NumberOfTurrets",
+            "_UseCustomTurret",
+            "_UseCustomTurretPositions",
+            "_DF9RocketCount",
+            "_PDCount",
+            "_PlacementBias",
+            "_ShipHealthMult",
+            "_DeathCondition",
+            "_DeploymentDelay",
+            "_ArmingDelay"
+        ];
+
+        // Early-warning broadcast then wait
+        if (_DeploymentDelay > 0) then {
+            private _roundedTime = (round (_DeploymentDelay / 10)) * 10;
+            private _etaStr = if (_roundedTime == 0) then {"imminent"} else {format ["%1 seconds", _roundedTime]};
+            [[format ["<t color='#109600'>Serenity Actual: Diamond-class warship detected on long-range sensors — ETA approximately %1. Fynock, prepare yourselves!</t>", _etaStr]]] remoteExec ["BIS_fnc_typeText", 0];
+            sleep _DeploymentDelay;
+        };
+
+        private _ReturnShip = [
+            _position,
+            _Ship_direction,
+            900,
+            "ls_staticShip_diamondClassCruiser_cis",
+            _dropside
+        ] call SciFiSupportPLUS_fnc_JumpShipIn;
+
+        waitUntil { !isNull _ReturnShip && { alive _ReturnShip } };
+
+        // Arming delay — weapons held until this elapses
+        if (_ArmingDelay > 0) then { sleep _ArmingDelay; };
+
+        if (_ArmedShip) then {
+            [
+                _ReturnShip,
+                false,
+                true,
+                false,
+                _NumberOfTurrets,
+                false,
+                _ShipHealthMult,
+                _DeathCondition
+            ] call ScifiSupportPLUS_FTL_SupportShip;
+
+            [_ReturnShip, _NumberOfTurrets, _UseCustomTurret, _UseCustomTurretPositions, _DF9RocketCount, _PDCount, _PlacementBias, _dropside] spawn {
+                params ["_ship", "_count", "_useCustom", "_useCustomPositions", "_df9Count", "_pdCount", "_placementBias", "_dropside"];
+
+                private _turretClassList = [];
+                if (_useCustom && (count ScifiSupportPlus_SupportShip_CustomTurretArray > 0)) then {
+                    _turretClassList = ScifiSupportPlus_SupportShip_CustomTurretArray;
+                } else {
+                    _turretClassList = ["3AS_CIS_Naval_Gun_180"];
+                };
+
+                private _turretQueue = [];
+                // Only _useCustomPositions gates the hand-placed DF9/PD turret list --
+                // "Custom Turrets?" is a separate concern (turret classname SOURCE for
+                // the auto-spaced fallback path below), not whether the hand-placed
+                // positions/rotations get used at all.
+                if (_useCustomPositions && ((_df9Count + _pdCount) > 0)) then {
+                    for "_n" from 1 to _df9Count do { _turretQueue pushBack "FST_DF9_Rocket"; };
+                    for "_n" from 1 to _pdCount do { _turretQueue pushBack "FST_CIS_PD_Turret"; };
+                } else {
+                    for "_n" from 1 to _count do { _turretQueue pushBack (selectRandom _turretClassList); };
+                };
+                if (count _turretQueue < 1) exitWith {};
+
+                private _fnc_isPort = { ((_this select 1)#0) < 0 };
+                private _fnc_isUnderside = {
+                    params ["_cls", "_entry"];
+                    private _pos = _entry select 1;
+                    switch (_cls) do {
+                        case "FST_DF9_Rocket": { (_pos select 2) < 400 };
+                        default { false };
+                    };
+                };
+
+                // Each entry carries its original index (paired [origIdx, pos]) so that,
+                // after placement-bias shuffles/filters reorder the list, a turret's
+                // rotation can still be looked up in FST_Diamond_TurretRotations at the
+                // SAME index it had in FST_Diamond_TurretPositions.
+                private _biasedPositionsByClass = [];
+                {
+                    _x params ["_cls", "_positions"];
+                    private _indexedPositions = [];
+                    { _indexedPositions pushBack [_forEachIndex, _x] } forEach _positions;
+                    private _ordered = switch (_placementBias) do {
+                        case 4: { +_indexedPositions call BIS_fnc_arrayShuffle };
+                        case 5: {
+                            private _quad = [[], [], [], []];
+                            {
+                                private _port = _x call _fnc_isPort;
+                                private _under = [_cls, _x] call _fnc_isUnderside;
+                                private _qi = (if (_port) then {0} else {2}) + (if (_under) then {1} else {0});
+                                (_quad select _qi) pushBack _x;
+                            } forEach _indexedPositions;
+                            private _out = [];
+                            private _more = true;
+                            while {_more} do {
+                                _more = false;
+                                { if (count _x > 0) then { _out pushBack (_x deleteAt 0); _more = true; }; } forEach _quad;
+                            };
+                            _out
+                        };
+                        default {
+                            private _match = [];
+                            private _rest = [];
+                            {
+                                private _isMatch = switch (_placementBias) do {
+                                    case 0: { _x call _fnc_isPort };
+                                    case 1: { !(_x call _fnc_isPort) };
+                                    case 2: { [_cls, _x] call _fnc_isUnderside };
+                                    case 3: { !([_cls, _x] call _fnc_isUnderside) };
+                                    default { true };
+                                };
+                                if (_isMatch) then { _match pushBack _x } else { _rest pushBack _x };
+                            } forEach _indexedPositions;
+                            _match + _rest
+                        };
+                    };
+                    _biasedPositionsByClass pushBack [_cls, _ordered];
+                } forEach FST_Diamond_TurretPositions;
+
+                private _classCursors = [];
+
+                private _turrets = [];
+                for "_i" from 0 to ((count _turretQueue) - 1) do {
+                    private _turretClass = _turretQueue select _i;
+
+                    private _localPos = [];
+                    private _origIdx = -1;
+                    private _placed = false;
+                    if (_useCustomPositions) then {
+                        private _classEntryIdx = _biasedPositionsByClass findIf {(_x select 0) == _turretClass};
+                        if (_classEntryIdx != -1) then {
+                            private _classPositions = (_biasedPositionsByClass select _classEntryIdx) select 1;
+                            if (count _classPositions > 0) then {
+                                private _cursorIdx = _classCursors findIf {(_x select 0) == _turretClass};
+                                private _cursor = 0;
+                                if (_cursorIdx != -1) then { _cursor = (_classCursors select _cursorIdx) select 1; };
+
+                                (_classPositions select (_cursor mod (count _classPositions))) params ["_pOrigIdx", "_pPos"];
+                                _origIdx = _pOrigIdx;
+                                _localPos = _pPos;
+                                _placed = true;
+
+                                if (_cursorIdx != -1) then {
+                                    (_classCursors select _cursorIdx) set [1, _cursor + 1];
+                                } else {
+                                    _classCursors pushBack [_turretClass, _cursor + 1];
+                                };
+                            };
+                        };
+                    };
+                    if (!_placed) then {
+                        private _offsetY = (_i - ((count _turretQueue) - 1) / 2) * 80;
+                        private _offsetX = [25, -25] select ((_i mod 2) != 0);
+                        _localPos = [_offsetX, _offsetY, 0];
+                    };
+
+                    private _zCorrIdx = FST_Diamond_TurretZCorrection findIf {(_x select 0) == _turretClass};
+                    if (_zCorrIdx != -1) then {
+                        _localPos = [_localPos#0, _localPos#1, (_localPos#2) + ((FST_Diamond_TurretZCorrection select _zCorrIdx) select 1)];
+                    };
+
+                    private _turret = createVehicle [_turretClass, (_ship modelToWorld _localPos), [], 0, "NONE"];
+
+                    // Apply the turret's captured local dir/up rotation if it exists in
+                    // FST_Diamond_TurretRotations at this same original index; otherwise
+                    // fall back to the previous world-up-only default.
+                    private _rotApplied = false;
+                    private _localDir = [0, 1, 0];
+                    private _localUp  = [0, 0, 1];
+                    if (_origIdx != -1) then {
+                        private _rotClassIdx = FST_Diamond_TurretRotations findIf {(_x select 0) == _turretClass};
+                        if (_rotClassIdx != -1) then {
+                            private _classRotations = (FST_Diamond_TurretRotations select _rotClassIdx) select 1;
+                            if (_origIdx < count _classRotations) then {
+                                (_classRotations select _origIdx) params ["_capturedDir", "_capturedUp"];
+                                // Mirror-correct the lateral (X) component of the captured
+                                // dir/up -- port and starboard mounts were consistently
+                                // coming out with each other's rotation, which points to a
+                                // left/right handedness mismatch between however this data
+                                // was captured and how it's reconstructed here, not a data
+                                // or lookup-index problem (both were verified correct).
+                                _localDir = [-(_capturedDir select 0), _capturedDir select 1, _capturedDir select 2];
+                                _localUp  = [-(_capturedUp select 0), _capturedUp select 1, _capturedUp select 2];
+                                _turret setVectorDirAndUp [(_ship vectorModelToWorld _localDir), (_ship vectorModelToWorld _localUp)];
+                                _rotApplied = true;
+                            };
+                        };
+                    };
+                    if (!_rotApplied) then {
+                        _turret setVectorUp [0, 0, 1];
+                    };
+
+                    _turret attachTo [_ship, _localPos];
+                    [_turret, _ship] remoteExecCall ["disableCollisionWith", 0];
+
+                    createVehicleCrew _turret;
+                    [_turret] joinSilent (group _ship);
+                    _turret allowCrewInImmobile [true, true];
+
+                    _turret setVehicleRadar 15;
+                    vehicle _turret setVehicleReportRemoteTargets true;
+                    vehicle _turret setVehicleReceiveRemoteTargets true;
+                    vehicle _turret setVehicleReportOwnPosition true;
+                    { vehicle _turret enableVehicleSensor [(_x select 0), true]; } forEach (listVehicleSensors _turret);
+
+                    _turret setSkill ["courage", 1];
+                    _turret setSkill ["aimingAccuracy", 0];
+                    _turret setSkill ["aimingSpeed", 1];
+                    _turret setSkill ["spotDistance", 1];
+                    _turret setSkill ["spotTime", 1];
+
+                    [_turret, true] remoteExec ["enableDynamicSimulation", 0];
+                    { [_x, true] remoteExec ["enableDynamicSimulation", 0]; } forEach crew _turret;
+
+                    [_turret, _ship, _localDir, _localUp, _rotApplied] spawn {
+                        params ["_turret", "_ship", "_localDir", "_localUp", "_rotApplied"];
+                        while {alive _turret} do {
+                            if (isNil {_ship getVariable "FTL_stopFiring"}) then {
+                                if (combatMode (group _turret) != "RED") then {
+                                    (group _turret) setCombatMode "RED";
+                                    (group _turret) setBehaviour "AWARE";
+                                    { [_x, "AUTOCOMBAT"] remoteExecCall ["enableAI", 0]; [_x, "AUTOTARGET"] remoteExecCall ["enableAI", 0]; [_x, "TARGET"] remoteExecCall ["enableAI", 0]; [_x, "FIREWEAPON"] remoteExecCall ["enableAI", 0]; } forEach crew _turret;
+                                };
+                            };
+                            // These static mounts never independently traverse, so there is
+                            // no legitimate reason for the hull orientation to drift -- keep
+                            // re-pinning the captured rotation for the turret's whole lifetime
+                            // rather than a one-shot apply that can silently get undone later
+                            // (crew seating / dynamic simulation toggling have been observed
+                            // to reset it after the initial apply).
+                            if (_rotApplied) then {
+                                _turret setVectorDirAndUp [(_ship vectorModelToWorld _localDir), (_ship vectorModelToWorld _localUp)];
+                            };
+                            sleep 1;
+                        };
+                    };
+
+                    _turrets pushBack _turret;
+                    sleep 0.1;
+                };
+
+                _ship setVariable ["FTL_ExtraTurretOBJ", _turrets, true];
+            };
+        };
+
+        sleep 6;
+
+        private _PodLocation1  = [50.123,   -100.456,  -185.789];
+        private _PodLocation2  = [-60.789,  -30.123,   -165.456];
+        private _PodLocation3  = [90.456,   -70.789,   -180.123];
+        private _PodLocation4  = [-110.789, -55.456,   -175.789];
+        private _PodLocation5  = [5.789,    15.123,    -170.456];
+        private _PodLocation6  = [-95.456,  -115.789,  -178.123];
+        private _PodLocation7  = [65.789,   -35.456,   -172.789];
+        private _PodLocation8  = [-20.456,  -80.789,   -185.456];
+        private _PodLocation9  = [85.123,   50.456,    -170.789];
+        private _PodLocation10 = [-75.789,  5.123,     -168.456];
+        private _PodLocation11 = [35.456,   -20.789,   -176.789];
+        private _PodLocation12 = [-70.123,  45.456,    -173.789];
+        private _PodLocation13 = [120.789,  -10.456,   -179.456];
+        private _PodLocation14 = [-40.456,  -90.789,   -181.123];
+        private _PodLocation15 = [75.789,   -55.456,   -177.789];
+        private _PodLocation16 = [-10.123,  80.789,    -169.456];
+
+        private _PodArray = [];
+
+        private _fnc_createAndAttachParticleSource = {
+            params ["_podobject", "_location"];
+            private _modelData = _podobject modelToWorld _location;
+            private _particleSource = "#particleSource" createVehicle _modelData;
+            _particleSource attachTo [_podobject, _location];
+            _particleSource
+        };
+
+        private _podLocations = [
+            _PodLocation1, _PodLocation2, _PodLocation3, _PodLocation4,
+            _PodLocation5, _PodLocation6, _PodLocation7, _PodLocation8,
+            _PodLocation9, _PodLocation10,_PodLocation11,_PodLocation12,
+            _PodLocation13,_PodLocation14,_PodLocation15,_PodLocation16
+        ];
+
+        {
+            _PodArray pushBack ([_ReturnShip, _x] call _fnc_createAndAttachParticleSource);
+        } forEach _podLocations;
+
+        [_ReturnShip, _PodArray] spawn {
+            params ["_ReturnShip", "_PodArray"];
+            waitUntil {
+                sleep 1;
+                !alive _ReturnShip || isNull _ReturnShip
+            };
+            {
+                deleteVehicle _x;
+                sleep 0.01;
+            } forEach _PodArray;
+        };
+
+        // -------------------------------------------------
+        // 4) Drop pods if any -- spawns a randomised group per pod via the same
+        //    shared dispenser the Providence and Munificent QRFs use (no "Type
+        //    select" UI on this module, so the selection is fixed to "Basic").
+        // -------------------------------------------------
+        if (_AmountofLightPods > 0) then {
+            for "_LightPoddropper" from 1 to _AmountofLightPods do {
+                private _randomIndex = floor (random (count _PodArray));
+                private _randomPodLocation = _PodArray select _randomIndex;
+                _PodArray deleteAt _randomIndex;
+
+                private _currentposition = [
+                    (getPosATL _randomPodLocation select 0),
+                    (getPosATL _randomPodLocation select 1),
+                    0
+                ];
+
+                if (_linger) then {
+                    [_currentposition, _dropside, 0, true] call FST_Droid_Dispenser;
+                } else {
+                    [_currentposition, _dropside, 0, false] call FST_Droid_Dispenser;
+                };
+                sleep 1;
+            };
+        };
+
+        // -------------------------------------------------
+        // 5) Spawn Vultures if any
+        // -------------------------------------------------
+        if (_AmountofBanshees > 0) then {
+            private _vultureClasses = [];
+            if (_VultureType == 0) then {
+                for "_i" from 1 to _AmountofBanshees do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_F";
+                };
+            } else {
+                private _aaVultureCount = floor (_AmountofBanshees * 0.33);
+                private _standardVultureCount = _AmountofBanshees - _aaVultureCount;
+                for "_i" from 1 to _aaVultureCount do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_AA_F";
+                };
+                for "_i" from 1 to _standardVultureCount do {
+                    _vultureClasses pushBack "3AS_CIS_Vulture_F";
+                };
+                _vultureClasses = _vultureClasses call BIS_fnc_arrayShuffle;
+            };
+
+            {
+                private _vultureClass = _x;
+                [_ReturnShip, _dropside, _vultureClass, _VultureSkill] spawn {
+                    params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
+                    _currentPosition = getPosATL _ReturnShip;
+
+                    _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
+                    (_dropside select 0) createVehicleCrew _Banshee;
+
+                    sleep 3;
+
+                    if (_VultureSkill == 1) then {
+                        {
+                            _x setSkill 1.0;
+                        } forEach crew _Banshee;
+                    };
+                    (group _Banshee) setCombatMode "RED";
+                    (group _Banshee) setBehaviour "AWARE";
+                    _Banshee engineOn true;
+                };
+                sleep 5;
+            } forEach _vultureClasses;
+        };
+
+        // -------------------------------------------------
+        // 6) Wait, then optionally jump out
+        // -------------------------------------------------
+        sleep ((_AmountofLightPods * 1) + (_AmountofBanshees * 5) + 1);
+
+        if (_EndWithJumpOut) then {
+            [objNull, "Serenity Actual: Diamond Class Cruiser overhead, they've dropped droids and are retreating!"] call BIS_fnc_showCuratorFeedbackMessage;
+
+            private _turretArrayForCleanup = _ReturnShip getVariable ["FTL_ExtraTurretOBJ", []];
+            [_ReturnShip, _turretArrayForCleanup] spawn {
+                params ["_ship", "_turrets"];
+                waitUntil { sleep 1; isNull _ship };
+                { deleteVehicleCrew _x; deleteVehicle _x; } forEach _turrets;
+            };
+
+            [_ReturnShip] call SciFiSupportPLUS_fnc_JumpOut;
+        } else {
+            [objNull, "Serenity Actual: Diamond Class Cruiser overhead, they've dropped droid pods!"] call BIS_fnc_showCuratorFeedbackMessage;
+        };
+    };
+};
+
+
 FST_Droid_Dispenser =  {
     params ["_position", "_dropside", "_selection", "_linger"];
-                        
+
     _position = ASLtoATL _position;
-                                        
-    _spawnpos = _position vectorAdd [random [-100, 0, 100], random [-100, 0, 100], 1000];
-                                        
-    _mainprojectile = createVehicle ["R_MRAAWS_HE_F", _spawnpos, [], 0, "NONE"];
-                        
+
+    private _spawnpos = _position vectorAdd [random [-100, 0, 100], random [-100, 0, 100], 1000];
+
+    private _mainprojectile = createVehicle ["R_MRAAWS_HE_F", _spawnpos, [], 0, "NONE"];
+
     _mainprojectile setShotParents [player, player];
-                                        
-    _angle = [(_position vectorFromTo _spawnpos)#0, (_position vectorFromTo _spawnpos)#1, ((_position vectorFromTo _spawnpos)#2)];
-                        
-    _projectile = createVehicle ["ls_droidDispenser", [0, 0, 0], [], 0, "NONE"];
+
+    private _angle = [(_position vectorFromTo _spawnpos)#0, (_position vectorFromTo _spawnpos)#1, ((_position vectorFromTo _spawnpos)#2)];
+
+    private _projectile = createVehicle ["ls_droidDispenser", [0, 0, 0], [], 0, "NONE"];
     [_projectile, 0, 0] call BIS_fnc_setPitchBank;
     _projectile setPosATL (getPosATL _mainprojectile);
     [_projectile, _mainprojectile] call BIS_fnc_attachToRelative;
@@ -1356,8 +1952,8 @@ FST_Droid_Dispenser =  {
                                         
     [_mainprojectile, _position, _dropside, _projectile, _selection, _linger] spawn {
         params ["_mainprojectile", "_position", "_dropside", "_projectile", "_selection", "_linger"];
-                                            
-        _positionATL = _position;
+
+        private _positionATL = _position;
 
         // Perf fix: was a sleepless per-frame poll for the whole descent. At
         // 100 m/s a 0.05s sample gives at most ~5m crater-position error.
@@ -1390,9 +1986,9 @@ FST_Droid_Dispenser =  {
             };
         }] remoteExec ["spawn"];
                                             
-        _craterpos = _positionATL;
+        private _craterpos = _positionATL;
         _craterpos set [2, 0];
-        _DroidPodCrater = createVehicle ["land_ShellCrater_02_small_F", _craterpos, [], 0, "CAN_COLLIDE"];
+        private _DroidPodCrater = createVehicle ["land_ShellCrater_02_small_F", _craterpos, [], 0, "CAN_COLLIDE"];
                                             
         deleteVehicle _projectile;
         _projectile = createVehicle ["ls_droidDispenser", [0, 0, 0], [], 0, "NONE"];
@@ -1411,15 +2007,15 @@ FST_Droid_Dispenser =  {
         _projectile setVectorDir [(random 1), (random 1), (random 1)]; 
         _projectile setPosWorld getPosWorld _projectile;
                     
-        _RotationNumber = (random 5);
+        private _RotationNumber = (random 5);
         [_DroidPodCrater, _RotationNumber, _RotationNumber] call BIS_fnc_setPitchBank;
         [_projectile, _RotationNumber, _RotationNumber] call BIS_fnc_setPitchBank;
                     
         _position = _craterpos;
                                             
-        _spawn = _position;
-        _side = (_dropside select 0);
-        _list = [
+        private _spawn = _position;
+        private _side = (_dropside select 0);
+        private _list = [
             // 0
             ["FST_Droid_B1_E5","FST_Droid_B1_E5","FST_Droid_B1_AR","FST_Droid_B1_Commander","FST_Droid_B1_AT"],
             // 1
@@ -1435,7 +2031,7 @@ FST_Droid_Dispenser =  {
             // B2 (was index 6) removed -- B2 no longer offered as a drop pod option.
         ] # _selection;
                                             
-        _listout = [];
+        private _listout = [];
         for "_i" from 1 to ((random 3) + 3) do {
             _listout pushBack (selectRandom _list);
         };
@@ -1443,21 +2039,21 @@ FST_Droid_Dispenser =  {
         [_spawn, _side, _listout, _DroidPodCrater] spawn {
             params ["_spawn", "_side", "_listout", "_DroidPodCrater"];
             sleep 0.1;
-            _FloodGroup = [_spawn, _side, _listout] call BIS_fnc_spawnGroup;    
+            private _FloodGroup = [_spawn, _side, _listout] call BIS_fnc_spawnGroup;
         };
-                    
+
         if (_linger) then {
             // Linger logic runs in its own spawn with all variables passed explicitly
-            // via params. The outer spawn's non-private variables (_craterpos, _spawn,
-            // _positionATL, etc.) can go stale inside deeply nested while/waitUntil
-            // blocks after prolonged execution -- passing them through params ensures
-            // they are properly scoped for the lifetime of this spawn.
+            // via params. Even declared private, locals from the outer spawn are not
+            // visible inside a nested spawn's own scope -- passing them through params
+            // here rebinds them for the lifetime of this separate, potentially
+            // long-running (many sleep/waitUntil cycles) spawn.
             [_craterpos, _spawn, _side, _projectile, _listout] spawn {
                 params ["_craterpos", "_spawn", "_side", "_projectile", "_listout"];
                 sleep 1;
                 _projectile allowDamage true;
                 while {alive _projectile} do {
-                    _time = time;
+                    private _time = time;
                     // Perf fix: was a sleepless waitUntil polled every frame,
                     // forever, per lingering pod (Linger defaults ON). A 1s poll
                     // against a 20s timer costs nothing perceptible.
@@ -1469,7 +2065,7 @@ FST_Droid_Dispenser =  {
                         [_spawn, _side, [selectRandom _listout]] call BIS_fnc_spawnGroup;
                     } else {
                         sleep 1;
-                        _munition = createVehicle ["M_Mo_82mm_AT_LG", _craterpos, [], 0, "CAN_COLLIDE"];
+                        private _munition = createVehicle ["M_Mo_82mm_AT_LG", _craterpos, [], 0, "CAN_COLLIDE"];
                         _munition setShotParents [player, player];
                         _munition setVectorDirAndUp ([[vectorDir _munition, vectorUp _munition], 0, -90, 0] call BIS_fnc_transformVectorDirAndUp);
                         _munition setVelocity [0, 0, -10];
@@ -1484,9 +2080,10 @@ FST_Droid_Dispenser =  {
         _projectile allowDamage true;
         sleep 1;
         deleteVehicle _projectile;
-                    
+
     };
 };
+
 
 ["[41st] Droid Modules", "Droid Dispenser",
     {
@@ -1714,12 +2311,12 @@ if (_x!="" && (gettext (configFile >> "Cfgvehicles" >> _x >> "displayname")) != 
 // Turret and fighter (Vulture) caps are 2x the Munificent module's, per
 // request. Drop pod cap is unchanged (2x was not requested for pods).
 
-["[41st] Droid Modules", "Providence QRF Deployment",
+["[41st] Droid Modules", "QRF Providence (Jorge) Deployment",
     {
         params [["_pos", [0, 0, 0], [[]], 3], ["_logic", objNull, [objNull]]];
         _options = ["Basic", "Basic Dumb", "Geonosis", "Geonosis Dumb", "Commandos", "Jorge"];
 
-        ["Quick Reaction Force Deployment (Providence)", [
+        ["Quick Reaction Force Deployment (Providence - Jorge)", [
             // Direction / side / droid type
             ["TOOLBOX", ["Direction", "Select one or more directions."], [0, 1, 8, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]]],
             ["sideS",   ["Side select (ONLY ONE!)", "The side the spawned dropped units will be on."], [east]],
@@ -1791,14 +2388,14 @@ if (_x!="" && (gettext (configFile >> "Cfgvehicles" >> _x >> "displayname")) != 
                     _UseCustomTurret,
                     _ShipHealthMult,
                     _DeathCondition
-                ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Providence_QRF", 2];
+                ] remoteExecCall ["FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF", 2];
 
             }, {}, [_pos, _logic]] call zen_dialog_fnc_create;
     },
     "\PHAN_ScifiSupportPlus\data\Droid.paa"
 ] call zen_custom_modules_fnc_register;
 
-FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
+FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF = {
     params [
         "_position",
         "_Ship_direction",
