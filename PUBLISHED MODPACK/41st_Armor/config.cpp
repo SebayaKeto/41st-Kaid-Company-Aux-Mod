@@ -354,6 +354,8 @@
 			"FST_P2_Creed",
 			"FST_P2_House",
 			"FST_P2_House_Dirty",
+			"FST_P2_Monk",
+			"FST_P2_Prime",
 			"FST_P2_Evox",
 			"FST_P2_Evox_Dirty",
 			"FST_P2_Hazzo",
@@ -8867,6 +8869,18 @@ class CfgWeapons
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
+	class FST_Pilot_P1_Helmet_Monk: FST_Pilot_P1_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P1 Pilot Helmet [Monk]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Monk.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
+		};
+	};
   	class FST_Pilot_P1_Helmet_Ripper: FST_Pilot_P1_Helmet
 	{
 		author="Daara";
@@ -10197,6 +10211,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ares_Dirty.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Mask: FST_Airborne_Helmet
+	{
+		author="House";
+		displayName="[41st] Airborne Helmet (Mask)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Mask.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Sparrow: FST_Airborne_Helmet
@@ -11842,6 +11866,16 @@ class CfgWeapons
         hiddenSelectionsTextures[]=
         {
             "41st_Armor\Data\Helmets\FST_P2_Helmet_Kate.paa",
+        };
+    };
+	class FST_P2_Helmet_Spec: FST_P2_Helmet_Base
+    {
+        author="House";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Spec]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Spec.paa",
         };
     };
 	class FST_P2_Helmet_Kate_V2: FST_P2_Helmet_Base
@@ -15688,6 +15722,34 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_House";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Monk: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Monk]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Monk";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Prime: JLTS_CloneArmor
+	{
+		author="Daara";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Prime]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Prime";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -35932,6 +35994,116 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_House",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Monk: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-1234 'Monk'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Monk";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Monk.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Monk.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P1_Pilot_Helmet_Monk",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P1_Pilot_Helmet_Monk",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Prime: FST_Trooper_P2_DC15S
+	{
+		author="Daara";
+		displayName="[41st] CT-3237 'Prime'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Monk";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Prime.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Prime.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Prime",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Prime",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
