@@ -10220,7 +10220,7 @@ class CfgWeapons
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\data\Helmets\FST_AB_Helmet_Mask.paa",
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Maska.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Sparrow: FST_Airborne_Helmet
