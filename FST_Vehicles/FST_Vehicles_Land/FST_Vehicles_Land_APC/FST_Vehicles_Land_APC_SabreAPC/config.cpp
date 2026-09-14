@@ -2083,6 +2083,8 @@ class CfgVehicles
 	{
 		// Prevent explosive splash damage from transferring to occupants.
 		crewExplosionProtection=1;
+		ace_cargo_space=90;
+		ace_cargo_hasCargo=1;
 		differentialType="all_limited";
 		frontRearSplit=0.5;
 		frontBias=1.35;
