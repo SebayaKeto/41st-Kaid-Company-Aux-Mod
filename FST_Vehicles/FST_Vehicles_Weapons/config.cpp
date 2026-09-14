@@ -46,7 +46,7 @@ class CfgAmmo
     // Common Arma ammo bases used by this module.
     class BulletBase;
     class MissileBase;
-    class M_Titan_AT_long;
+    class M_Titan_AT;
     class RocketBase;
     class ShellBase;
     class Sh_120mm_HE;

@@ -50,7 +50,7 @@ class FST_VW_SabreAPC_LG_Submunition: Sh_120mm_HE
     timeToLive = 0.2;
 };
 
-class FST_VW_SabreAPC_LG_Missile: M_Titan_AT_long
+class FST_VW_SabreAPC_LG_Missile: M_Titan_AT
 {
     soundFly[] = {"\FST\FST_Sounds\Weapons\PLX_MissileFly.ogg",1.4,1,900};
     SoundSetExplosion[] = {"FST_Sabre_Missile_Explosion_SoundSet","Explosion_Debris_SoundSet"};
