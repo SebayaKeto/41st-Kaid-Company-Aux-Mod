@@ -1045,9 +1045,9 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		transportSoldier=0;
-		// Passenger proxies are declared as CargoTurrets below rather than standard cargo seats.
-		cargoProxyIndexes[]={};
+		// Standard passenger seats use interior model proxies 4-9; proxy 23 remains a cargo turret.
+		transportSoldier=6;
+		cargoProxyIndexes[]={4,5,6,7,8,9};
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		memoryPointsGetInCargo="pos driver";
@@ -1758,54 +1758,6 @@ class CfgVehicles
 				minOutElev = -35;
 				maxOutElev = 55;
 				initOutElev = 0;
-			};
-			// Interior passenger seats (proxies 4-9)
-			class CargoTurret_4: CargoTurret_BaseTurret
-			{
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_01";
-				proxyIndex = 4;
-				playerPosition = 16;
-				isPersonTurret = 1;
-				inGunnerMayFire = 0;
-				outGunnerMayFire = 0;
-				minTurn = -180;
-				maxTurn = 180;
-				minElev = -90;
-				maxElev = 90;
-				minOutTurn = -180;
-				maxOutTurn = 180;
-				minOutElev = -90;
-				maxOutElev = 90;
-			};
-			class CargoTurret_5: CargoTurret_4
-			{
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_02";
-				proxyIndex = 5;
-				playerPosition = 17;
-			};
-			class CargoTurret_6: CargoTurret_4
-			{
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_03";
-				proxyIndex = 6;
-				playerPosition = 18;
-			};
-			class CargoTurret_7: CargoTurret_4
-			{
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_04";
-				proxyIndex = 7;
-				playerPosition = 19;
-			};
-			class CargoTurret_8: CargoTurret_4
-			{
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_05";
-				proxyIndex = 8;
-				playerPosition = 20;
-			};
-			class CargoTurret_9: CargoTurret_4
-			{
-				gunnerName = "$STR_FST_SABER_APC_PASSENGER_SEAT_06";
-				proxyIndex = 9;
-				playerPosition = 21;
 			};
 			// Upper Left Exterior seats (proxy 10-13): left side entry
 			class CargoTurret_10: CargoTurret_BaseTurret
