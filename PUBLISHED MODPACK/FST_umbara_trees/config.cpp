@@ -17,7 +17,7 @@ class CfgFunctions
 	{
 		class trees
 		{
-			file = "umbara_trees\functions";
+			file = "FST_umbara_trees\functions";
 			class moduleSwap {};
 			class moduleExclusion {};
 			class pointInArea {};
@@ -64,7 +64,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 
-		function = "umbara_trees_fnc_moduleSwap";
+		function = "FST_umbara_trees_fnc_moduleSwap";
 		functionPriority = 1;
 
 		isGlobal = 1;
@@ -148,7 +148,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 
-		function = "umbara_trees_fnc_moduleExclusion";
+		function = "FST_umbara_trees_fnc_moduleExclusion";
 		functionPriority = 1;
 
 		isGlobal = 1;
