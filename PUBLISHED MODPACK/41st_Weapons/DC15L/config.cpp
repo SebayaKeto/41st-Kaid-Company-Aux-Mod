@@ -78,7 +78,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]= 
 				{
-				//	"3as_Optic_DC15L_F",
+					//"3AS_optic_DC15L_F",
 					"FST_Optic_DC15L"
 				};
 			};
@@ -99,7 +99,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
 				compatibleItems[]= 
 				{
-					"FST_Bipod_DC15L_f"
+					"3AS_bipod_DC15L_F"
 				};
 			};
 		};
@@ -320,43 +320,43 @@ class CfgWeapons
 	class InventoryOpticsItem_Base_F;
 	class FST_Optic_DC15L: ItemCore
 	{
-		author="Gold";
-		scope=2;
-		displayName="[41st] DC-15L Scope";
-		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
-		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15L_Scope_F.p3d";
-		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15L_Scope_DesShort";
-		weaponInfoType="RscOptics_sos";
+		author = "Gold";
+		scope = 2;
+		displayName = "[41st] DC-15L Scope";
+		picture = "\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
+		model = "\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15L_Scope_F.p3d";
+		descriptionShort = "$STR_3AS_Weapons_Republic_Optic_DC15L_Scope_DesShort";
+		weaponInfoType = "RscOptics_sos";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
-			mass=8;
-			opticType=1;
-			optics=1;
-			modelOptics="\a3\weapons_f\acc\reticle_mrco_f";
+			mass = 8;
+			opticType = 1;
+			optics = 1;
+			modelOptics = "\a3\weapons_f\acc\reticle_mrco_f";
 			class OpticsModes
 			{
 				class cq
 				{
 					opticsID = 1;
 					useModelOptics = 0;
-					opticsPPEffects[] = { "Default" };
+					opticsPPEffects[] =
+					{
+						"Default"
+					};
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0;
-					opticsZoomMin=0.25;
-					opticsZoomMax=1.25;
-					opticsZoomInit=0.75;
-				/*	opticsZoomMin=0.25;
-					opticsZoomMax=1.25;
-					opticsZoomInit=0.75;*/
-					memoryPointCamera="opticView";
-				//	memoryPointCamera = "eye";
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					memoryPointCamera = "eye";
 					visionMode[] = {};
 					distanceZoomMin = 300;
 					distanceZoomMax = 300;
 				};
 			};
 		};
-		inertia=0.1;
+
+		inertia = 0.1;
 	};
 	class FST_DC15L_F: FST_DC15L_Base_F
 	{

@@ -95,7 +95,7 @@ if (isNull _box) exitWith {
 [
     _box, 
     "Automatic Rifleman", 
-    [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],[],["IDA_Clone_Knife","","","",[],[],""],["FST_Uniform_GM_Plastic",[
+    [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],"3AS_bipod_DC15L_F"],[],["IDA_Clone_Knife","","","",[],[],""],["FST_Uniform_GM_Plastic",[
         ["IDA_BactaBandage",20],
         ["IDA_BattleStim",2],
         ["ACE_splint",4],
@@ -515,7 +515,7 @@ if (isNull _box) exitWith {
     _box,
     "Automatic Rifleman",
     [
-        ["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],
+        ["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],"3AS_bipod_DC15L_F"],
         [],
         ["IDA_Clone_Knife","","","",[],[],""],
         ["FST_Uniform_GM_Plastic",[
@@ -1824,7 +1824,7 @@ if (isNull _box) exitWith {
 [
     _box, 
     "Automatic Rifleman", 
-    [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],[],["IDA_Clone_Knife","","","",[],[],""],["FST_Uniform_Woodland",[
+    [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],"3AS_bipod_DC15L_F"],[],["IDA_Clone_Knife","","","",[],[],""],["FST_Uniform_Woodland",[
         ["ItemcTabHCam",1],
         ["itemAndroid",1],
         ["IDA_BactaBandage",20],

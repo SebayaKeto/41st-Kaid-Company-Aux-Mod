@@ -1491,6 +1491,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						};
 					};
 					player addPrimaryWeaponItem "FST_Optic_DC15L";
+					player addPrimaryWeaponItem "3AS_bipod_DC15L_F";
 				};
 				case "FST_Valken38x": {
 					removeBackpack player;
