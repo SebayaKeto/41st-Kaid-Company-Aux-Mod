@@ -20836,6 +20836,15 @@ class CfgWeapons
 			"41st_Armor\Data\Equipment\FST_NVG_Demon.paa",
 		};
 	};
+	class FST_NVG_Fixed_Comedian: FST_NVG_Fixed
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Comedian/Fixed On)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Comedian.paa",
+		};
+	};
 	class FST_NVG_Fixed_Demon_Dirty: FST_NVG_Fixed
 	{
 		author="Steel";
