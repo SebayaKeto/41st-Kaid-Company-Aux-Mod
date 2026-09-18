@@ -16,7 +16,10 @@ class CfgFunctions
         class RepairRearmRefuel
         {
             file = "FST_ShipScripts\FST_RepairRearmRefuel";
-            class initTrigger { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_initTrigger.sqf"; };
+            class initTrigger    { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_initTrigger.sqf"; };
+            class RRR_addAction  { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_addAction.sqf"; };
+            class RRR_checkCondition { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_checkCondition.sqf"; };
+            class RRR_isInZone   { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_isInZone.sqf"; };
         };
 
         class TractorBeam

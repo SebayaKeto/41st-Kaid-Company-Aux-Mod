@@ -20,37 +20,38 @@ if (isNull _pad) exitWith {
     [_statusLbl, format ["> ERROR: PAD OBJECT '%1' NOT FOUND.", _varName], [0.95, 0.30, 0.30, 1.0]] call FST_fnc_setStatus;
 };
 
-private _preview      = uiNamespace getVariable ["GUI_PreviewVehicle", objNull];
-private _nearVehicles = (getPosASL _pad) nearEntities [["LandVehicle", "Air", "Ship"], 10];
-_nearVehicles = _nearVehicles select { alive _x && _x != _preview };
-
-if (count _nearVehicles == 0) exitWith {
-    [_statusLbl, format ["> NO UNITS DETECTED WITHIN 10M OF %1.", _padName], [0.95, 0.80, 0.15, 1.0]] call FST_fnc_setStatus;
-};
-
-private _stored      = 0;
-private _crewBlocked = 0;
+// A vehicle may have been deployed from a different pad and flown/landed here,
+// so search every pad's tracked vehicle for whichever one is actually near
+// the selected pad rather than requiring it to match this pad's own key.
+private _tracked      = objNull;
+private _storeKey     = "";
+private _bestDistance = 1e10;
 
 {
-    if (count crew _x > 0) then {
-        _crewBlocked = _crewBlocked + 1;
-    } else {
-        private _storeKey = format ["GUI_PadVehicle_%1", _varName];
-        private _tracked  = missionNamespace getVariable [_storeKey, objNull];
-        if (!isNull _tracked && { _tracked == _x }) then {
-            missionNamespace setVariable [_storeKey, objNull];
+    private _key  = format ["GUI_PadVehicle_%1", _x select 1];
+    private _veh  = missionNamespace getVariable [_key, objNull];
+    if (!isNull _veh && { alive _veh }) then {
+        private _dist = _veh distance2D _pad;
+        if (_dist <= 30 && { _dist < _bestDistance }) then {
+            _tracked      = _veh;
+            _storeKey     = _key;
+            _bestDistance = _dist;
         };
-        _x remoteExec ["deleteVehicle", 2];
-        _stored = _stored + 1;
     };
-} forEach _nearVehicles;
+} forEach _padList;
 
-if (_stored > 0 && _crewBlocked == 0) then {
-    [_statusLbl, format ["> %1 UNIT(S) RECALLED FROM %2.", _stored, _padName], [0.20, 0.90, 0.30, 1.0]] call FST_fnc_setStatus;
+if (isNull _tracked) exitWith {
+    [_statusLbl, format ["> NO TRACKED UNIT WITHIN 30M OF %1.", _padName], [0.95, 0.80, 0.15, 1.0]] call FST_fnc_setStatus;
 };
-if (_stored > 0 && _crewBlocked > 0) then {
-    [_statusLbl, format ["> %1 RECALLED. %2 SKIPPED — CREW STILL ABOARD.", _stored, _crewBlocked], [0.95, 0.75, 0.15, 1.0]] call FST_fnc_setStatus;
-};
-if (_stored == 0 && _crewBlocked > 0) then {
+
+if (count crew _tracked > 0) exitWith {
     [_statusLbl, "> RECALL DENIED — EVACUATE ALL CREW FIRST.", [0.95, 0.55, 0.10, 1.0]] call FST_fnc_setStatus;
 };
+
+if (isEngineOn _tracked) exitWith {
+    [_statusLbl, "> RECALL DENIED — POWER DOWN ENGINE FIRST.", [0.95, 0.55, 0.10, 1.0]] call FST_fnc_setStatus;
+};
+
+missionNamespace setVariable [_storeKey, objNull];
+_tracked remoteExec ["deleteVehicle", 2];
+[_statusLbl, format ["> UNIT RECALLED FROM %1.", _padName], [0.20, 0.90, 0.30, 1.0]] call FST_fnc_setStatus;
