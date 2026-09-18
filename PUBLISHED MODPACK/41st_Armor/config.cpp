@@ -354,6 +354,9 @@
 			"FST_P2_Creed",
 			"FST_P2_House",
 			"FST_P2_House_Dirty",
+			"FST_P2_Souls",
+			"FST_P2_Smiley",
+			"FST_P2_Hotshot",
 			"FST_P2_Monk",
 			"FST_P2_Prime",
 			"FST_P2_Evox",
@@ -8082,6 +8085,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Debt: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="House";
+		displayName="[41st] Crewman Helmet Mk2 (Debt)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Debt.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Debt.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Blades: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -11878,6 +11892,16 @@ class CfgWeapons
             "41st_Armor\Data\Helmets\FST_P2_Helmet_Spec.paa",
         };
     };
+	class FST_P2_Helmet_Souls: FST_P2_Helmet_Base
+    {
+        author="House";
+        scope=2; 
+        displayName="[41st] P2 Helmet [Souls]";
+        hiddenSelectionsTextures[]=
+        {
+            "41st_Armor\Data\Helmets\FST_P2_Helmet_Souls.paa",
+        };
+    };
 	class FST_P2_Helmet_Kate_V2: FST_P2_Helmet_Base
     {
         author="Steel";
@@ -14400,6 +14424,26 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_House_Dirty.paa"
 		};
 	};
+	class FST_P2_Helmet_Gold: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Gold]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Gold.paa"
+		};
+	};
+	class FST_P2_Helmet_Gold_Dirty: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Gold/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Gold_Dirty.paa"
+		};
+	};
 	class FST_P2_Helmet_Five: FST_P2_Helmet_Base
 	{
 		author="Viz";
@@ -15722,6 +15766,48 @@ class CfgWeapons
 		{
 			uniformModel="";
 			uniformClass="FST_P2_House";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Souls: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Souls]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Souls";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+		class FST_Uniform_Smiley: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Smiley]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Smiley";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+		class FST_Uniform_Hotshot: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Hotshot]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Hotshot";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -27645,6 +27731,64 @@ class CfgVehicles
 		};
 		class TransportItems{};
 	};
+	class FST_Backpack_Jumppack_Kodiak: FST_Backpack_Jumppack
+	{
+		author="House";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Kodiak)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Kodiak.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
 	class FST_Backpack_Jumppack_Starlet: FST_Backpack_Jumppack
 	{
 		author="Laer";
@@ -36003,6 +36147,171 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_House",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Souls: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-5415 'Souls'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Souls";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Souls.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Souls.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Souls",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Souls",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Smiley: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-1998 'Smiley'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Souls";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Smiley.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Smiley.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Smiley",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Smiley",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Hotshot: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-4144 'Hotshot'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Souls";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Hotshot.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Hotshot.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Hotshot",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Hotshot",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -56086,6 +56395,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - House";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_House.paa";
+		};
+		class FST_Clone_Head_Hayes: FST_clone_Default_head
+		{
+			author="House";
+			name="Clone Trooper Hayes";
+			displayName="[41st] Clone Trooper - Hayes";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Hayes.paa";
 		};
 		class FST_Clone_Head_ampersand: FST_clone_Default_head
 		{
