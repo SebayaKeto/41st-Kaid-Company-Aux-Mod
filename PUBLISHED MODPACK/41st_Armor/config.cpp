@@ -8085,6 +8085,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Bogu: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="House";
+		displayName="[41st] Crewman Helmet Mk2 (Nova)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Bogu.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Bogu.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Debt: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -9829,6 +9840,16 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cowboy.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Tokarev: FST_Airborne_Helmet
+	{
+		author="House";
+		displayName="[41st] Airborne Helmet (Tokarevy)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Tokarev.paa",
+		};
+	};
 	class FST_Airborne_Helmet_Smiley: FST_Airborne_Helmet
 	{
 		author="Steel";
@@ -11499,7 +11520,7 @@ class CfgWeapons
 	};
 	class FST_P2_Helmet_Bogu: FST_P2_Helmet_Base
 	{
-		author="Steel";
+		author="House";
 		scope=2; 
 		displayName="[41st] P2 Helmet [Bogu]";
 		hiddenSelectionsTextures[]=
