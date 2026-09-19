@@ -45,6 +45,8 @@ class CfgFunctions {
             class laatiAutoMount     {};   // → BUZZ_fnc_laatiAutoMount,     file fn_laatiAutoMount.sqf
             class laatiInstallDeploy {};   // → BUZZ_fnc_laatiInstallDeploy, file fn_laatiInstallDeploy.sqf
             class laatiDeployAction  {};   // → BUZZ_fnc_laatiDeployAction,  file fn_laatiDeployAction.sqf
+            class orbitalDropServer  {};   // → BUZZ_fnc_orbitalDropServer,  file fn_orbitalDropServer.sqf
+            class orbitalDropInit    { postInit = 1; };   // registers the Zeus module (client, needs ZEN)
         };
     };
 };

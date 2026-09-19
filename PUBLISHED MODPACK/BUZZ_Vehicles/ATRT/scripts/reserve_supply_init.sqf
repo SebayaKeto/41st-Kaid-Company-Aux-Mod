@@ -27,6 +27,6 @@ if (isServer) then {
         private _cargo  = getMagazineCargo _p;
         private _magIdx = (_cargo select 0) find "BUZZ_ATRT_T15ReserveMag";
         private _count  = if (_magIdx < 0) then { 0 } else { (_cargo select 1) select _magIdx };
-        if (_count <= 0) then { _p addMagazineCargoGlobal ["BUZZ_ATRT_T15ReserveMag", 9]; };
+        if (_count <= 0) then { _p addMagazineCargoGlobal ["BUZZ_ATRT_T15ReserveMag", 12]; };
     };
 };

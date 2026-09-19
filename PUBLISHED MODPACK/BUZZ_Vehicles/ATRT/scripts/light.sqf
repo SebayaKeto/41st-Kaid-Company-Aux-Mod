@@ -1,4 +1,17 @@
-
+// =============================================================================
+//  BUZZ AT-RT — light.sqf
+//  Rifle-style spotlight that follows the cannon's aim (i.e. the cursor).
+//  Called once per AT-RT on every client with an interface (see init.sqf).
+//
+//  The light is a local #lightreflector — each client draws its own copy, so
+//  nothing is networked except the on/off flag BUZZ_lightOn (set by the
+//  "Light On/Off" action and by Saddle Up at night).  Position and direction
+//  are refreshed every frame from the cannon's weaponDirection, which the
+//  engine syncs to all clients, so other players see the beam sweep too.
+//
+//  Tuning: LIGHT_INTENSITY / attenuation / cone below control how bright and
+//  how wide the beam is.
+// =============================================================================
 
 params ["_atrt"];
 
