@@ -8,7 +8,7 @@ private _rider = _atrt getVariable ["rider", objNull];
 if (isNull _rider) exitWith {};
 if (_atrt getVariable ["BUZZ_packing", false]) exitWith {};
 
-private _nearby = nearestObjects [_atrt, ["FST_laati_mk2"], 50];
+private _nearby = nearestObjects [_atrt, ["FST_laati_mk2"], 10];
 if (count _nearby == 0) exitWith { hint "No LAAT/i within range."; };
 private _laati = _nearby select 0;
 

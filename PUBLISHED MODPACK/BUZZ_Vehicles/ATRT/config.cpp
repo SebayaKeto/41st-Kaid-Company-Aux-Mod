@@ -175,7 +175,16 @@ class CfgWeapons {
                 compatibleItems[] = {};
             };
         };
-        linkedItems[] = {};
+
+        // Pre-attached light module. Replaces the former empty linkedItems[] —
+        // that property and class LinkedItems share a name (config names are
+        // case-insensitive), so both can't coexist on one class.
+        class LinkedItems {
+            class LinkedItemsAcc {
+                slot = "PointerSlot";
+                item = "FST_Attachment_Module_Light_Normal_White";
+            };
+        };
 
         modes[] = {"FullAuto"};
 

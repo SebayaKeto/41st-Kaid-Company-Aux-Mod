@@ -4,10 +4,6 @@
 // params: [_laati]
 params ["_l"];
 
-// Disabled for this build — parked alongside "Load into LAAT/i" in init.sqf
-// while work continues on another build. Remove this line to re-enable.
-if (true) exitWith {};
-
 // The LAAT/i is a foreign (FST) vehicle, not ours — FST's own postInit scripts may
 // re-stamp its actions at any time after mission load, same threat documented in
 // init.sqf for the AT-RT's own actions. Re-install periodically so "Deploy AT-RT"

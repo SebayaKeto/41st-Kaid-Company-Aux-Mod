@@ -41,6 +41,7 @@ if (_skipAnim) then {
     _atrt hideObjectGlobal false;
     _atrt allowDamage true;
     _atrt enableAI "ALL";
+    _atrt setVariable ["BUZZ_deployReady", true, true];   // no run-out to wait for
 
     [_atrt, _hp, _cell, _reserves] spawn {
         params ["_atrt", "_hp", "_cell", "_reserves"];
@@ -98,12 +99,21 @@ if (_skipAnim) then {
         // see fn_laatiDeployAction.sqf.
         detach _atrt;
         _atrt setDir _deployDir;
-        _atrt doMove (_laati modelToWorld [0, -16, 0]);
+        private _walkTarget = _laati modelToWorld [0, -16, 0];
+        _atrt doMove _walkTarget;
         _atrt allowDamage true;
 
-        sleep 0.1;  // let doMove propagate to AI queue before unitReady is checked
+        // Don't wait for unitReady (it only flips once the AI fully settles, which
+        // added several idle seconds after the loading bar finished) — the walker
+        // is clear of the ramp once it's near the target, or after 0.5 s at most.
         private _walkStart = time;
-        waitUntil { unitReady _atrt || time - _walkStart > 4 };
+        waitUntil { sleep 0.1; (_atrt distance2D _walkTarget) < 3 || time - _walkStart > 0.5 };
+
+        // Run-out finished: tell the deploying client it's now safe to teleport
+        // its player onto the AT-RT. Broadcast on the AT-RT itself (an object that
+        // client already tracks) — see the watcher in fn_laatiDeployAction.sqf.
+        _atrt setVariable ["BUZZ_deployReady", true, true];
+
         sleep 0.5;
         _laati animateSource ["ramp", 0, true];
         _laati setVariable ["BUZZ_animating", false, true];

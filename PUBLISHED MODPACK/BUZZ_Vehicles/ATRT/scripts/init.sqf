@@ -46,6 +46,12 @@ _atrt linkItem "ItemGPS";
 _atrt setVariable ["runSpeedScale",    1.40];
 _atrt setVariable ["sprintSpeedScale", 2.33];
 
+// Aim-following spotlight — local light per client, see light.sqf.
+if (hasInterface) then {
+    [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\light.sqf";
+    [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\disco.sqf";
+};
+
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -562,6 +568,9 @@ _v addAction [
 
         _atrt setVariable ["ace_unconscious", false, true];
 
+        // Aim-following light switches on automatically when mounting in the dark.
+        _atrt setVariable ["BUZZ_lightOn", sunOrMoon < 0.5, true];
+
         // Poll while mounted: evict ACE/engine stagger states and prevent prone.
         [_atrt] spawn {
             params ["_a"];
@@ -1017,11 +1026,8 @@ _v addAction [
 
 
 // ── LOAD INTO LAAT/i ──────────────────────────────────────────────────────────
-// Disabled for this build — the direct walk-in/walk-out LAAT/i loading system
-// (this action, fn_laatiLoadAction/Anim/Server + the "Deploy AT-RT" action
-// installed by fn_laatiInstallDeploy) is parked while work continues on
-// another build. Flip to `true` to re-enable; no other code needs to change.
-if (false) then {
+// Direct walk-in/walk-out LAAT/i loading system (this action, fn_laatiLoadAction/
+// Anim/Server + the "Deploy AT-RT" action installed by fn_laatiInstallDeploy).
 _v addAction [
     "Load into LAAT/i",
     "\BUZZ_Vehicles\ATRT\scripts\fn_laatiLoadAction.sqf",
@@ -1036,7 +1042,6 @@ _v addAction [
     "",
     ""
 ];
-};
 
 
     }; // end _fnInstall

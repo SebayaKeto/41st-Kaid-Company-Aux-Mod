@@ -20,7 +20,15 @@ if (!alive _atrt) exitWith {};
 if (!isNil { _atrt getVariable "rider" }) exitWith {};
 
 // Eject from LAAT/i before attaching to AT-RT
-if (vehicle player != player) then { moveOut player; };
+// moveOut is not instant — attaching in the same frame can be overridden when the
+// exit completes a frame later, dropping the player at the LAAT/i instead of on the
+// AT-RT. Wait for the exit to actually finish before attaching.
+if (vehicle player != player) then {
+    moveOut player;
+    private _exitTimeout = time + 2;
+    waitUntil { vehicle player == player || time > _exitTimeout };
+};
+if (!alive _atrt) exitWith {};
 
 private _rider = player;
 

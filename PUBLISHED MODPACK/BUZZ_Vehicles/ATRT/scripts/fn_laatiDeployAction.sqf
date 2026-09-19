@@ -66,19 +66,24 @@ private _before = nearestObjects [_deployPos, ["BUZZ_ATRT"], 150];
 [_deployPos, _before, _caller] spawn {
     params ["_deployPos", "_before", "_caller"];
 
-    private _atrt    = objNull;
-    private _timeout = time + 90;
+    private _atrt     = objNull;
+    private _timeout  = time + 90;
+    private _detachAt = -1;
     waitUntil {
         sleep 0.1;
         if (isNull _atrt) then {
             private _new = (nearestObjects [_deployPos, ["BUZZ_ATRT"], 150]) - _before;
             if (count _new > 0) then { _atrt = _new select 0; };
         };
-        // Wait for detach too: the server keeps the AT-RT attached (and hidden,
-        // for the full-animation case) inside the LAAT/i until the ramp/walk
-        // sequence reaches the point where it's actually ready to be mounted —
-        // detach happens at exactly that moment in fn_laatiDeployServer.sqf.
-        (!isNull _atrt && { isNull (attachedTo _atrt) }) || time > _timeout
+        // Detach means the AT-RT has slid out to the ramp exit, but it still has
+        // to walk clear of the LAAT/i — mounting at that instant teleported the
+        // player onto a walker that was mid-run. Wait for the server's
+        // BUZZ_deployReady flag (set once the run-out finishes) instead. The
+        // fallback caps the wait at 4 s after detach so a flag that never arrives
+        // can't strand the player in the LAAT/i.
+        if (!isNull _atrt && { isNull (attachedTo _atrt) } && { _detachAt < 0 }) then { _detachAt = time; };
+        (_detachAt >= 0 && { (_atrt getVariable ["BUZZ_deployReady", false]) || { time - _detachAt > 4 } })
+            || time > _timeout
     };
     if (isNull _atrt || { !isNull (attachedTo _atrt) }) exitWith {
         _caller setVariable ["BUZZ_deployWait", false];
