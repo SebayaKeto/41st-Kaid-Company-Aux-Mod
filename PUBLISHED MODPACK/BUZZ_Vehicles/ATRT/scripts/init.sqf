@@ -46,9 +46,10 @@ _atrt linkItem "ItemGPS";
 _atrt setVariable ["runSpeedScale",    1.40];
 _atrt setVariable ["sprintSpeedScale", 2.33];
 
-// Aim-following spotlight — local light per client, see light.sqf.
+// Aim-following spotlight (light.sqf) is disabled for now — the weapon's own light is used.
+// Re-enable by uncommenting the execVM below.
 if (hasInterface) then {
-    [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\light.sqf";
+    // [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\light.sqf";
     [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\disco.sqf";
 };
 
@@ -569,6 +570,7 @@ _v addAction [
         _atrt setVariable ["ace_unconscious", false, true];
 
         // Aim-following light switches on automatically when mounting in the dark.
+        // (No effect while light.sqf is disabled in the init above.)
         _atrt setVariable ["BUZZ_lightOn", sunOrMoon < 0.5, true];
 
         // Poll while mounted: evict ACE/engine stagger states and prevent prone.
