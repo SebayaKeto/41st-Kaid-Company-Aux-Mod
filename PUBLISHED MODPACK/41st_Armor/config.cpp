@@ -9060,6 +9060,57 @@ class CfgWeapons
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Ghostly.paa",
 		};
 	}; 
+		class FST_BARC_Helmet_WhiteGreen: FST_BARC_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] BARC Helmet [White/Green]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_Barc_Helmet_WhiteGreen.paa",
+		};
+	}; 	
+	class FST_BARC_Helmet_Woodland: FST_BARC_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] BARC Helmet [Woodland]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_Barc_Helmet_Woodland.paa",
+		};
+	}; 
+		class FST_BARC_Helmet_Urban: FST_BARC_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] BARC Helmet [Urban]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_Barc_Helmet_Urban.paa",
+		};
+	}; 
+		class FST_BARC_Helmet_Desert: FST_BARC_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] BARC Helmet [Desert]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_Barc_Helmet_Desert.paa",
+		};
+
+	}; 
+		class FST_BARC_Helmet_Midnight: FST_BARC_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] BARC Helmet [Midnight]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_Barc_Helmet_Midnight.paa",
+		};
+	};
 	class FST_P2_ARC_Helmet_Tally: JLTS_CloneHelmetP2
 	{
 		author="Daara";
