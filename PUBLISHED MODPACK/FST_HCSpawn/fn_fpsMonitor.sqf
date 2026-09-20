@@ -13,6 +13,14 @@ params ["_label", ["_interval", 10], ["_posIndex", 0]];
 private _spacing = worldSize * 0.016;
 private _markerName = format ["FST_fps_%1", _label];
 
+// Idempotent: the server re-sends the start event on every (re)registration of
+// an HC, and each call used to stack another PFH on top of the previous one.
+private _handleVar = format ["FST_HC_fpsMonitorPFH_%1", _label];
+private _oldHandle = missionNamespace getVariable [_handleVar, -1];
+if (_oldHandle >= 0) then {
+    [_oldHandle] call CBA_fnc_removePerFrameHandler;
+};
+
 // Clean up old marker if exists
 deleteMarker _markerName;
 
@@ -20,7 +28,7 @@ private _marker = createMarker [_markerName, [worldSize - _spacing, _spacing + (
 _marker setMarkerType "mil_start";
 _marker setMarkerSize [0.7, 0.7];
 
-[{
+private _handle = [{
     params ["_args"];
     _args params ["_marker", "_label"];
 
@@ -36,5 +44,6 @@ _marker setMarkerSize [0.7, 0.7];
     _marker setMarkerText format ["%1: %2 fps | %3 local AI", _label, round (_fps * 10) / 10, _localUnits];
 
 }, _interval, [_marker, _label]] call CBA_fnc_addPerFrameHandler;
+missionNamespace setVariable [_handleVar, _handle];
 
 diag_log format ["[FST_HCSpawn] FPS monitor started: %1 (interval %2s)", _label, _interval];

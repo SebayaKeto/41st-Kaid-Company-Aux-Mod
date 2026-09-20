@@ -114,3 +114,29 @@ Test checklist:
 - Fill Garrison with slider at 200 places up to 200 (was capped at 120).
 - Editor-placed OPFOR near players, then leave for > Despawn Timer: still there.
 - Zeus module "--- Cleanup Dead Groups ---" appears and reports counts.
+
+============================================================
+IN-GAME SMOKE TEST 2026-09-20 (dedicated server + 3 headless clients)
+============================================================
+Ran on Arma 3 2.22 with the full September V1 mod list, VR map, this build.
+Passed:
+- All 3 HCs register (owners 4/5/6). 9 quick spawns balance across them by
+  unit count (e.g. 23/28/21). quickSpawn from a fake owner ID is rejected
+  with the [AUTH] log line. Server-created droid group is caught and moved to
+  an HC. Zeus hold/release round trip keeps ownership and re-tracks. Frontline
+  path spawns and tracks. Recount matches real unit totals.
+- HC crash: process killed. Server saw the drop in 15s, cleared 4 orphaned
+  groups, ran the 120s safe mode, then the catch-all moved every orphan onto
+  the surviving HCs (35/36 units, 0 on server, 0 on the dead owner).
+Fixed from the test:
+- XEH_postInit: the 60s HC re-register PFH fired on the frame it was added
+  (CBA behaviour), racing the primary registration and double-registering.
+  The check is now armed 60s after postInit.
+- fn_fpsMonitor: each (re)registration stacked another PFH on the HC. The
+  function now removes its previous handler before adding a new one.
+Server config note (live server, not the addon):
+- kickClientsOnSlowNetwork[] 4th element must be 1 (or the entry absent) so
+  a crashed HC is actually dropped by the engine. With it set to 0 the engine
+  only logs "DisconnectTimeout too high" and HandleDisconnect never fires, so
+  the dead HC's droids stay frozen until it reconnects. disconnectTimeout
+  (5-90s) sets how fast that happens.

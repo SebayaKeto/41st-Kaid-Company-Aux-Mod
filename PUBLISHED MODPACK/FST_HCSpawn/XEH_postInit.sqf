@@ -50,12 +50,17 @@ if (!isServer && !hasInterface) then {
     // Periodic self-check: the server publishes FST_HC_Ids to every machine. If
     // this HC is not in it (lost registration, server-side reset, dropped event),
     // re-register. Cheap: one array lookup per minute.
+    // A CBA PFH runs its first tick on the frame it is added, which raced the
+    // primary registration above and double-registered the HC (smoke test
+    // 2026-09-20). Arm the check 60s after postInit instead.
     [{
-        if (isNull player) exitWith {};
-        if (clientOwner in (missionNamespace getVariable ["FST_HC_Ids", []])) exitWith {};
-        ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
-        diag_log format ["[FST_HCSpawn] HC re-registering -- owner %1 not present in FST_HC_Ids", clientOwner];
-    }, 60, []] call CBA_fnc_addPerFrameHandler;
+        [{
+            if (isNull player) exitWith {};
+            if (clientOwner in (missionNamespace getVariable ["FST_HC_Ids", []])) exitWith {};
+            ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
+            diag_log format ["[FST_HCSpawn] HC re-registering -- owner %1 not present in FST_HC_Ids", clientOwner];
+        }, 60, []] call CBA_fnc_addPerFrameHandler;
+    }, [], 60] call CBA_fnc_waitAndExecute;
 };
 
 // ============================================================
