@@ -213,7 +213,13 @@ class CfgMusic
 		"FST_TheOneWhosRunningTheShow",
 		"FST_PacificRim",
 		"FST_VoodooChild",
-		
+		"FST_BananaPhone",
+		"FST_NightCoreNightWitches",
+		"FST_NightCoreGhostDivision",
+		"FST_NightCoreDeuschland",
+		"FST_InvocationarrayFeralStrain",
+		"FST_RedAlert3Soviet",
+
 		//Mission Tracks
 		"FST_WhiteChristmas",
 		"FST_JingleBellRock",
@@ -2328,6 +2334,79 @@ class CfgMusic
 		};
 		duration="479";
 	};
+	class FST_BananaPhone
+	{
+		name="Banana Phone";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Banana_Phone.ogg",
+			1,
+			1
+		};
+		duration="192";
+	};
+		class FST_NightCoreNightWitches
+	{
+		name="NightCore Nigth Witches";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\NightCore-NightWitches.ogg",
+			1,
+			1
+		};
+		duration="145";
+	};
+			class FST_NightCoreGhostDivision
+	{
+		name="NightCore Ghost Division";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\NightCore-GhostDivision.ogg",
+			1,
+			1
+		};
+		duration="188";
+	};
+				class FST_NightCoreDeuschland
+	{
+		name="NightCore Deuschland";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\Rammstein_Nightcore_-_Deutschland_Female.ogg",
+			1,
+			1
+		};
+		duration="315";
+	};
+					class FST_InvocationarrayFeralStrain
+	{
+		name="InvocationArray Feral Strain";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\The_Feral_Strain.ogg",
+			1,
+			1
+		};
+		duration="255";
+	};
+						class FST_RedAlert3Soviet
+	{
+		name="red Alert 3 - Soviet March";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\RedAlert3-SovietMarch.ogg",
+			1,
+			1
+		};
+		duration="164";
+	};
+	
 
 	// Christmas
 		

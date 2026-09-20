@@ -9079,6 +9079,9 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Woodland.paa",
 		};
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
+		};
 	}; 
 		class FST_BARC_Helmet_Urban: FST_BARC_Helmet
 	{
@@ -9088,6 +9091,9 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Urban.paa",
+		};
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
 	}; 
 		class FST_BARC_Helmet_Desert: FST_BARC_Helmet
@@ -9099,7 +9105,9 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Desert.paa",
 		};
-
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
+		};
 	}; 
 		class FST_BARC_Helmet_Midnight: FST_BARC_Helmet
 	{
@@ -9109,6 +9117,9 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Midnight.paa",
+		};
+		{
+			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
 	};
 	class FST_P2_ARC_Helmet_Tally: JLTS_CloneHelmetP2
