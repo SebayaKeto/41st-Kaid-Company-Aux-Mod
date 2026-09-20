@@ -11,7 +11,7 @@ if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
-diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V26R2_STABILITY_MERGE_DYNSIM_OFF_STANCE_FIX_FG_SOFTCAP_2026-07-04";
+diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20";
 
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;
@@ -31,10 +31,31 @@ if (isServer) then {
 // ============================================================
 if (!isServer && !hasInterface) then {
     missionNamespace setVariable ["FST_HC_LastDeadGroupCleanup", time];
-    [{
+
+    // V27: register once the HC's player entity actually exists instead of a
+    // blind 1-3s delay. registerHC rejects a null object and never retried, so a
+    // slow-loading HC could silently stay unregistered for the whole op.
+    private _register = {
         ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
         diag_log format ["[FST_HCSpawn] HC registering -- owner %1", clientOwner];
-    }, [], 1 + random 2] call CBA_fnc_waitAndExecute;
+    };
+    [
+        { !isNull player },
+        { params ["_fnc"]; call _fnc; },
+        [_register],
+        30,
+        { diag_log "[FST_HCSpawn] HC player entity still null after 30s; registration will rely on the periodic re-register."; }
+    ] call CBA_fnc_waitUntilAndExecute;
+
+    // Periodic self-check: the server publishes FST_HC_Ids to every machine. If
+    // this HC is not in it (lost registration, server-side reset, dropped event),
+    // re-register. Cheap: one array lookup per minute.
+    [{
+        if (isNull player) exitWith {};
+        if (clientOwner in (missionNamespace getVariable ["FST_HC_Ids", []])) exitWith {};
+        ["FST_HC_evt_registerHC", [player, clientOwner]] call CBA_fnc_serverEvent;
+        diag_log format ["[FST_HCSpawn] HC re-registering -- owner %1 not present in FST_HC_Ids", clientOwner];
+    }, 60, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // ============================================================
@@ -47,11 +68,9 @@ if (isServer || {!hasInterface}) then {
 
     // Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
     // arguments-local command, so it only affects units local to the executing
-    // machine. A server-only stance script (standalone FST_DroidStance.pbo)
-    // silently stops covering droids once their groups move to an HC -- which is
-    // why B1s stopped standing upright whenever HCs were connected. The function
-    // itself filters on local/alive/side/class, so double coverage with the
-    // standalone PBO on server-local units is harmless (setUnitPos is idempotent).
+    // machine. This is the only stance system in the modpack (FST_DroidStance
+    // was retired and folded into this addon). The function filters on
+    // local/alive/side/class and skips units whose stance is already forced.
     if (missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) then {
         [{
             [] call FST_HCSpawn_fnc_enforceDroidStance;
@@ -85,20 +104,7 @@ if (hasInterface) then {
     call _hookLocalCurator;
 
     // Catch curators assigned mid-mission (periodic check -- CuratorAssigned isn't a standard event)
-    [{
-        private _curator = getAssignedCuratorLogic player;
-        if (isNull _curator) exitWith {};
-        if !(_curator getVariable ["FST_HC_hookedLocal", false]) then {
-            _curator addEventHandler ["CuratorGroupPlaced", {
-                params ["_curator", "_group"];
-                [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
-            }];
-            _curator setVariable ["FST_HC_hookedLocal", true];
-            if (missionNamespace getVariable ["FST_HC_DebugLogging", false]) then {
-                diag_log format ["[FST_HCSpawn] Hooked local curator %1 for player %2", _curator, player];
-            };
-        };
-    }, 30, []] call CBA_fnc_addPerFrameHandler;
+    [_hookLocalCurator, 30, []] call CBA_fnc_addPerFrameHandler;
 
     // Register ZEN modules (requires ZEN -- Zeus Enhanced)
     if (!isNil "zen_custom_modules_fnc_register") then {
@@ -106,6 +112,10 @@ if (hasInterface) then {
     } else {
         diag_log "[FST_HCSpawn] ZEN not detected -- spawn modules not registered";
         systemChat "[FST] ZEN not loaded -- spawn modules unavailable";
+    };
+
+    private _isAdminOrZeus = {
+        (serverCommandAvailable "#kick") || {!isNull (getAssignedCuratorLogic player)}
     };
 
     // Keybind: Zeus Hold/Release (Shift+F2)
@@ -127,9 +137,13 @@ if (hasInterface) then {
         }, {}, [0x3D, [true, false, false]]
     ] call CBA_fnc_addKeybind;
 
-    // Keybind: HC Status Report (Shift+F4)
+    // Keybind: HC Status Report (Shift+F4). V27: admin/Zeus only -- each report
+    // costs the server a recount plus a full allGroups pass.
     ["FST_HCSpawn", "StatusReport", ["HC Status Report", "Print HC unit counts and status to chat"],
         {
+            private _isAdmin = serverCommandAvailable "#kick";
+            private _isZeus = !isNull (getAssignedCuratorLogic player);
+            if (!_isAdmin && !_isZeus) exitWith { systemChat "[FST] Status report: admin or Zeus only."; };
             [] call FST_HCSpawn_fnc_statusReport;
         }, {}, [0x3E, [true, false, false]]
     ] call CBA_fnc_addKeybind;

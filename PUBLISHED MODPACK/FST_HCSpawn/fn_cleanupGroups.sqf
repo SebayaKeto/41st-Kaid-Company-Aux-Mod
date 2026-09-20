@@ -1,7 +1,11 @@
 // FST_HCSpawn_fnc_cleanupGroups
 // Server-side PFH. Two-phase despawn:
-// Phase 1 — group activates when ground players come within engagement range
-// Phase 2 — after activation, group deletes when no ground players nearby for stale timer
+// Phase 1 -- group activates when ground players come within engagement range
+// Phase 2 -- after activation, group deletes when no ground players nearby for stale timer
+//
+// V27: with FST_HC_DespawnOnlyManaged (default ON) only groups created by this
+// addon or placed by Zeus are eligible. The catch-all also offloads editor-placed
+// and mission-script AI to HCs, and those used to be despawned too.
 
 if (!isServer) exitWith {};
 if (!FST_HC_DespawnEnabled) exitWith {};
@@ -17,6 +21,7 @@ if ((time - _lastHeavySpawn) < _cleanupGrace) exitWith {};
 private _engageRadius = FST_HC_DespawnEngageRadius;
 private _despawnRadius = FST_HC_DespawnRadius;
 private _staleTime = FST_HC_DespawnTimer;
+private _onlyManaged = missionNamespace getVariable ["FST_HC_DespawnOnlyManaged", true];
 private _toDelete = [];
 if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
 
@@ -28,6 +33,7 @@ FST_HC_TrackedGroups = FST_HC_TrackedGroups select { !isNull _x && {count units 
 if (FST_HC_DebugLogging && {_beforeCompact != count FST_HC_TrackedGroups}) then {
     diag_log format ["[FST_HCSpawn] Cleanup compacted tracked group cache: %1 -> %2", _beforeCompact, count FST_HC_TrackedGroups];
 };
+if (count FST_HC_TrackedGroups == 0) exitWith {};
 
 // Build this once per cleanup tick. With 150 players and many groups this is
 // cheaper and steadier than running nearEntities around every AI group.
@@ -41,10 +47,7 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
     private _data = _grp getVariable ["FST_HC_tracked", []];
     if (count _data == 0) then { continue };
 
-    if (isNull _grp || {count units _grp == 0}) then {
-        _toDelete pushBackUnique _grp;
-        continue;
-    };
+    if (_onlyManaged && {!(_grp getVariable ["FST_HC_managed", false])}) then { continue };
 
     private _leader = leader _grp;
     if (isNull _leader) then {
@@ -60,7 +63,7 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
     private _activated = _grp getVariable ["FST_HC_activated", false];
     private _searchRadius = if (_activated) then { _despawnRadius } else { _engageRadius };
 
-    private _hasGroundPlayerNear = (_groundPlayers findIf { alive _x && {(_x distance2D _pos) <= _searchRadius} }) >= 0;
+    private _hasGroundPlayerNear = (_groundPlayers findIf { (_x distance2D _pos) <= _searchRadius }) >= 0;
 
     if (!_activated && {_hasGroundPlayerNear}) then {
         _grp setVariable ["FST_HC_activated", true];
@@ -81,7 +84,7 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
             _grp setVariable ["FST_HC_staleStart", -1];
         };
     };
-} forEach +FST_HC_TrackedGroups;
+} forEach FST_HC_TrackedGroups;
 
 private _cleaned = 0;
 {
@@ -93,7 +96,7 @@ private _cleaned = 0;
 
     {
         if (isNull _x) then { continue };
-        _x setVariable ["FST_skipSpawnDamage", true, true];
+        _x setVariable ["FST_skipSpawnDamage", true];
         private _veh = vehicle _x;
         if (!isNull _veh && {_veh != _x}) then {
             _vehicles pushBackUnique _veh;
@@ -108,7 +111,7 @@ private _cleaned = 0;
         if (isNull _veh) then { continue };
         {
             if (!isNull _x) then {
-                _x setVariable ["FST_skipSpawnDamage", true, true];
+                _x setVariable ["FST_skipSpawnDamage", true];
                 _veh deleteVehicleCrew _x;
             };
         } forEach crew _veh;
@@ -117,18 +120,18 @@ private _cleaned = 0;
 
     {
         if (!isNull _x) then {
-            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true];
             deleteVehicle _x;
         };
     } forEach _looseUnits;
 
     _grp setVariable ["FST_HC_tracked", nil];
     _grp setVariable ["FST_HC_onHC", nil];
-    FST_HC_TrackedGroups = FST_HC_TrackedGroups - [_grp];
     _cleaned = _cleaned + 1;
 } forEach _toDelete;
 
 if (_cleaned > 0) then {
+    FST_HC_TrackedGroups = FST_HC_TrackedGroups - _toDelete;
     diag_log format ["[FST_HCSpawn] Cleanup: despawned %1 groups", _cleaned];
     [] call FST_HCSpawn_fnc_recountUnits;
 };

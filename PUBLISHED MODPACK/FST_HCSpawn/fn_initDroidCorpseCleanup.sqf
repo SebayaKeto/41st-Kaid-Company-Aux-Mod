@@ -60,7 +60,7 @@ missionNamespace setVariable ["FST_HC_DroidCorpseQueue", []];
         private _age = _now - _deathTime;
 
         if (_age >= _deleteDelay && {_deleted < _maxDelete}) then {
-            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true];
             deleteVehicle _x;
             _deleted = _deleted + 1;
         } else {

@@ -17,8 +17,10 @@ FST_HC_UnitCounts = [];     // [count1, count2, ...] -- bookkeeping
 // "FST_HC_tracked" = [hcIndex, unitCount] on tracked groups
 // "FST_HC_heldBy" = zeusClientOwner on held groups
 // "FST_HC_onHC" = hcIndex (server-local, debug draw uses owner command)
+// "FST_HC_managed" = true on groups this addon or Zeus created (despawn eligibility)
 FST_HC_TrackedCount = 0;
 FST_HC_TrackedGroups = [];   // server-local cache; avoids scanning allGroups for routine cleanup/recount
+FST_HC_HeldGroups = [];      // server-local cache of Zeus-held groups; avoids allGroups scans on every disconnect
 
 // Transfer queue
 FST_HC_TransferQueue = [];
@@ -33,7 +35,9 @@ FST_HC_ZeusInstantCloneRequests = 0;
 
 // State flags
 FST_HC_Transferring = false;
-FST_HC_EmergencyMode = false;
+FST_HC_EmergencyMode = false;      // true only while emergencyRedistribute is moving groups
+FST_HC_SafeModeUntil = -1;         // HC-disconnect safe mode; transfers/catch-all pause while time < this
+FST_HC_RecountScheduled = false;   // debounce for HC-requested recounts
 
 // ============================================================
 // DISCONNECT HANDLER
@@ -71,21 +75,20 @@ if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]
 
 // Dead OPFOR group cleanup is manual-only in this build. Munificent/drop-pod systems
 // can leave all-dead groups behind, but V12 proved that automatic combat-time sweeping
-// can create dangerous object/network churn. Use FST_HC_evt_manualDeadGroupCleanup during
-// controlled lulls instead.
+// can create dangerous object/network churn. Zeus can run it from the
+// "--- Cleanup Dead Groups ---" module during controlled lulls.
 missionNamespace setVariable ["FST_HC_LastDeadGroupCleanup", time];
-missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false, true];
-diag_log "[FST_HCSpawn] Automatic dead-group cleanup disabled; manual cleanup event available.";
+missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false];
+diag_log "[FST_HCSpawn] Automatic dead-group cleanup disabled; manual cleanup module available.";
 
+// Droid stance keeper runs from XEH_postInit on the server and every HC.
 
-// Droid stance keeper removed in V20. Standalone FST_DroidStance.pbo remains responsible for B1/B2 stance behavior.
-
-// Despawn cleanup (delete AI groups far from all players)
-if (FST_HC_DespawnEnabled) then {
-    [{
-        [] call FST_HCSpawn_fnc_cleanupGroups;
-    }, FST_HC_CleanupInterval, []] call CBA_fnc_addPerFrameHandler;
-};
+// Despawn cleanup (delete AI groups far from all players). The PFH is always
+// registered and the function checks FST_HC_DespawnEnabled itself, so the CBA
+// checkbox can be toggled live.
+[{
+    [] call FST_HCSpawn_fnc_cleanupGroups;
+}, FST_HC_CleanupInterval, []] call CBA_fnc_addPerFrameHandler;
 
 // Objective checker. Start once even if objectives are added later by mission scripts/triggers.
 [{

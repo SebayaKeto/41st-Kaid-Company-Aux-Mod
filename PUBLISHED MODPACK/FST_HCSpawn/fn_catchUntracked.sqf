@@ -5,11 +5,22 @@
 if (!isServer) exitWith {};
 if (count FST_HC_Array == 0) exitWith {}; // no HCs, nothing to offload
 if (FST_HC_EmergencyMode) exitWith {}; // do not sweep while failover is moving groups
+if (time < (missionNamespace getVariable ["FST_HC_SafeModeUntil", -1])) exitWith {}; // HC-disconnect safe mode
 
 // If the transfer queue is already backed up, let the processor drain it instead
 // of doing another allGroups sweep and adding more scheduler work.
 private _queueSoftLimit = (missionNamespace getVariable ["FST_HC_TransferBatchSize", 4]) * 6;
 if (count FST_HC_TransferQueue >= _queueSoftLimit) exitWith {};
+
+// V27: if no HC can accept groups right now (all over the soft cap, or none
+// valid), skip the whole sweep. Previously every sweep re-queued the same groups,
+// the processor tried and failed each one, and they were re-queued 30s later.
+if (([] call FST_HCSpawn_fnc_getSpawnTarget) == 2) exitWith {};
+
+// Zeus mode "off" promises Zeus-placed AI are left where Zeus put them. Those
+// groups are local to the Zeus client, so anything not owned by the server or an
+// HC is skipped in that mode.
+private _zeusOff = (missionNamespace getVariable ["FST_HC_ZeusMode", "instant"]) isEqualTo "off";
 
 private _queued = 0;
 
@@ -30,9 +41,10 @@ private _queued = 0;
     // Skip: Zeus instant-clone originals currently waiting on server/HC confirmation.
     // These originals are intentionally hidden/frozen briefly; catch-all must not
     // queue them for setGroupOwner while the replacement handoff is still resolving.
+    // V27: the server marks the GROUP when it suppresses the original, so this no
+    // longer walks every unit of every untracked group each sweep.
     if (_grp getVariable ["FST_HC_interceptQueued", false]) then { continue };
-    private _suppressedOriginal = (units _grp) findIf { !isNull _x && {_x getVariable ["FST_HC_originalSuppressed", false]} };
-    if (_suppressedOriginal >= 0) then { continue };
+    if (_grp getVariable ["FST_HC_originalSuppressed", false]) then { continue };
 
     // Skip: already pending or already in transfer queue
     if (_grp getVariable ["FST_HC_pendingTransfer", false]) then { continue };
@@ -49,7 +61,10 @@ private _queued = 0;
         continue;
     };
 
-    // This group is server-owned AI — queue for transfer
+    // Zeus mode off: leave client-owned (Zeus-placed) groups alone.
+    if (_zeusOff && {_ownerID != 2}) then { continue };
+
+    // This group is server-owned AI -- queue for transfer
     _grp setVariable ["FST_HC_pendingTransfer", true];
     FST_HC_TransferQueue pushBackUnique _grp;
     _queued = _queued + 1;

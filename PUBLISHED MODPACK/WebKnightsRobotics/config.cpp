@@ -1267,37 +1267,37 @@ class CfgVehicles {
 class Extended_InitPost_EventHandlers {
 	class WBK_B1_Officer {
         class WBK_B1_Officer_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 	class WBK_B1_SquadLead {
         class WBK_B1_SquadLead_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 	class WBK_B1_Heavy {
         class WBK_B1_Heavy_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 	class WBK_B1_Shotgun {
         class WBK_B1_Shotgun_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 	class WBK_B1_standart {
         class WBK_B1_standart_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_WBK_B1_BattleDroid.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 	class WBK_B2_Mod_Standart {
         class WBK_B2_Mod_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_WBK_B2_BattleDroid.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_WBK_B2_BattleDroid.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 	class WBK_BX_Assasin_1 {
         class WBK_BX_Assasin_1_init {
-            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WebKnightsRobotics\AI\AI_Ims_CommandoDroidAI.sqf"";};";
+            init = "[_this select 0, ""\WebKnightsRobotics\AI\AI_Ims_CommandoDroidAI.sqf""] execVM ""\WebKnightsRobotics\AI\AI_localityHook.sqf"";";
         };
     };
 };

@@ -7,6 +7,10 @@ if (count _cached == 2) exitWith { _cached };
 
 private _pairs = [];
 
+// V27: pre-filter on the class name prefix inside configClasses. The old
+// "true" condition walked every CfgVehicles class (thousands with this modpack)
+// through isValidFSTOpforUnit, which does config reads plus isKindOf per class,
+// and caused a hitch the first time the Fill Garrison dialog opened.
 {
     private _class = configName _x;
     // B2s removed as a Fill Garrison option (team decision, 2026-08-08). Excluding
@@ -15,9 +19,9 @@ private _pairs = [];
     if ([_class] call FST_HCSpawn_fnc_isValidFSTOpforUnit && {!(_class isKindOf "WBK_LS_B2")}) then {
         private _displayName = getText (_x >> "displayName");
         if (_displayName isEqualTo "") then { _displayName = _class; };
-        _pairs pushBack [format ["%1 — %2", _displayName, _class], _class];
+        _pairs pushBack [format ["%1 -- %2", _displayName, _class], _class];
     };
-} forEach ("true" configClasses (configFile >> "CfgVehicles"));
+} forEach ("((configName _x) select [0, 4]) == 'FST_'" configClasses (configFile >> "CfgVehicles"));
 
 _pairs sort true;
 

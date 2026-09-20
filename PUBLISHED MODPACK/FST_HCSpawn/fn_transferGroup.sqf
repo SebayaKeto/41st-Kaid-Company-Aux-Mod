@@ -15,6 +15,8 @@ if (count units _group == 0) exitWith { false };
 if (isPlayer leader _group) exitWith { false };
 if (count FST_HC_Array == 0) exitWith { false };
 if ([_group] call FST_HCSpawn_fnc_isBlacklisted) exitWith { false };
+// V27: Zeus-held groups are never transferred by any path.
+if ((_group getVariable ["FST_HC_heldBy", -1]) != -1) exitWith { false };
 
 private _leader = leader _group;
 private _units = units _group;
@@ -39,8 +41,11 @@ private _isGarrisoned = !(_leader checkAIFeature "PATH");
 // Save loadouts. Mandatory because locality changes can strip/alter custom gear on some modded units.
 { _x setVariable ["FST_HC_savedLoadout", getUnitLoadout _x]; } forEach _units;
 
-// Lock crewed vehicle briefly during transfer.
-if (!isNull _vehicle && {_vehicle != _leader}) then { _vehicle lock true; };
+// Lock crewed vehicle briefly during transfer, then restore whatever lock state
+// Zeus/mission had set (the old code always ended with lock false).
+private _hasVehicle = !isNull _vehicle && {_vehicle != _leader};
+private _prevLock = if (_hasVehicle) then { locked _vehicle } else { 0 };
+if (_hasVehicle) then { _vehicle lock true; };
 
 private _beforeOwner = groupOwner _group;
 private _moved = _group setGroupOwner _targetId;
@@ -50,7 +55,7 @@ private _afterOwner = groupOwner _group;
 // Treat either a true return OR confirmed owner match as success, because some
 // edge cases report false even though ownership has already settled by the check.
 if (!_moved && {_afterOwner != _targetId}) exitWith {
-    if (!isNull _vehicle && {_vehicle != _leader}) then { _vehicle lock false; };
+    if (_hasVehicle) then { _vehicle lock _prevLock; };
     FST_HC_TransferFailures = (missionNamespace getVariable ["FST_HC_TransferFailures", 0]) + 1;
     if (FST_HC_DebugLogging) then {
         diag_log format ["[FST_HCSpawn] setGroupOwner failed for %1 to owner %2. Before: %3 After: %4", _group, _targetId, _beforeOwner, _afterOwner];
@@ -81,7 +86,7 @@ if (_isGarrisoned) then {
 // Restore loadouts on the machine that NOW owns the group. Running this on the
 // server (where the units are no longer local) silently fails -- setUnitLoadout
 // is an effects-local command. Send the payload to the target owner; the HC
-// handler waits a beat for locality to settle before applying.
+// handler waits a beat for locality to settle and only re-applies if gear was stripped.
 private _payload = [];
 {
     private _lo = _x getVariable ["FST_HC_savedLoadout", []];
@@ -90,11 +95,14 @@ private _payload = [];
 if (count _payload > 0) then {
     ["FST_HC_evt_restoreLoadout", [_payload], _targetId] call CBA_fnc_ownerEvent;
 };
-["FST_HC_evt_emergencyStabilizeGroupLocal", [_group], _targetId] call CBA_fnc_ownerEvent;
+// The stabilizer is a no-op when the bandaid is off; skip the network event entirely then.
+if (missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) then {
+    ["FST_HC_evt_emergencyStabilizeGroupLocal", [_group], _targetId] call CBA_fnc_ownerEvent;
+};
 
-// Unlock vehicle.
-if (!isNull _vehicle && {_vehicle != _leader}) then {
-    [{ params ["_v"]; if (!isNull _v) then { _v lock false; }; }, [_vehicle], 0.5] call CBA_fnc_waitAndExecute;
+// Restore vehicle lock state.
+if (_hasVehicle) then {
+    [{ params ["_v", "_l"]; if (!isNull _v) then { _v lock _l; }; }, [_vehicle, _prevLock], 0.5] call CBA_fnc_waitAndExecute;
 };
 
 if (FST_HC_DebugLogging) then {

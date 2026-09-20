@@ -8,7 +8,9 @@ if (!isServer) exitWith {};
 // BETWEEN batches. The previous version pre-slept FST_HC_TransferInterval before
 // every check, adding 3s of latency to every batch even with a full queue.
 while {true} do {
-    if (count FST_HC_TransferQueue == 0 || {count FST_HC_Array == 0} || {FST_HC_EmergencyMode}) then {
+    private _paused = FST_HC_EmergencyMode || {time < (missionNamespace getVariable ["FST_HC_SafeModeUntil", -1])};
+
+    if (count FST_HC_TransferQueue == 0 || {count FST_HC_Array == 0} || {_paused}) then {
         sleep 1;
     } else {
         FST_HC_Transferring = true;
@@ -22,10 +24,15 @@ while {true} do {
 
             if (isNull _grp) then { continue };
             _grp setVariable ["FST_HC_pendingTransfer", nil];
-            _grp setVariable ["FST_HC_interceptQueued", nil, true];
+            if (!isNil {_grp getVariable "FST_HC_interceptQueued"}) then {
+                _grp setVariable ["FST_HC_interceptQueued", nil, true];
+            };
 
             if (count units _grp == 0) then { continue };
             if (isPlayer leader _grp) then { continue };
+
+            // V27: never move a group Zeus is holding, even if it was queued before the hold.
+            if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) then { continue };
 
             if (count (_grp getVariable ["FST_HC_tracked", []]) > 0) then { continue };
             if ([_grp] call FST_HCSpawn_fnc_isBlacklisted) then { continue };

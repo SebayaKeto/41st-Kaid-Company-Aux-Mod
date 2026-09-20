@@ -2,7 +2,7 @@
 // Server-side. Returns the owner ID of the least-loaded HC.
 // Falls back to 2 (server) if no valid HCs are connected.
 //
-// Returns: NUMBER — owner ID
+// Returns: NUMBER -- owner ID
 
 if (!isServer) exitWith { 2 };
 
@@ -31,7 +31,13 @@ if (_softCap > 0 && {missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSo
     if (count _belowCap > 0) then {
         _validIndexes = _belowCap;
     } else {
-        diag_log format ["[FST_HCSpawn][EMERGENCY] All HCs are over soft cap %1. Blocking new HC target instead of overloading. counts=%2 ids=%3", _softCap, FST_HC_UnitCounts, FST_HC_Ids];
+        // Throttled: this is called per transfer attempt / per spawn, and while
+        // capped it used to write one EMERGENCY line per call.
+        private _last = missionNamespace getVariable ["FST_HC_SoftCapLastLog", -999];
+        if ((time - _last) >= 30) then {
+            missionNamespace setVariable ["FST_HC_SoftCapLastLog", time];
+            diag_log format ["[FST_HCSpawn][EMERGENCY] All HCs are over soft cap %1. Blocking new HC targets instead of overloading. counts=%2 ids=%3", _softCap, FST_HC_UnitCounts, FST_HC_Ids];
+        };
         _validIndexes = [];
     };
 };

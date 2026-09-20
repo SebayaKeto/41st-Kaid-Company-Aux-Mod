@@ -1,7 +1,10 @@
 // FST_HCSpawn_fnc_registerEvents
-// Registers all CBA custom events for server ↔ HC ↔ client communication.
+// Registers all CBA custom events for server <-> HC <-> client communication.
 // All inter-machine communication via CBA events.
 // Called on ALL machines (server, HC, clients) from postInit.
+//
+// V27: every client-originated request carries the client's clientOwner and the
+// server validates it with FST_HCSpawn_fnc_isAuthorizedCaller (curator or admin).
 
 // ============================================================
 // SERVER-SIDE EVENTS (fired from clients/HCs, handled on server)
@@ -19,13 +22,15 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_trackGroup;
     }] call CBA_fnc_addEventHandler;
 
-    // Spawn request (from Zeus client)
+    // Spawn request (from Zeus client). Arg 7 is the claimed source owner.
     ["FST_HC_evt_spawn", {
+        if !([_this param [7, -1], "spawn"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_spawnGroupOnTarget;
     }] call CBA_fnc_addEventHandler;
 
     // Zeus placed group handoff. Keeps the original group and transfers ownership instead of cloning.
     ["FST_HC_evt_queueZeusGroup", {
+        if !([_this param [1, -1], "queueZeusGroup"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_queueZeusGroup;
     }] call CBA_fnc_addEventHandler;
 
@@ -39,55 +44,71 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_handleZeusOriginalDecision;
     }] call CBA_fnc_addEventHandler;
 
-    // Quick spawn template (from Zeus client) — resolves template inline
+    // Quick spawn template (from Zeus client) -- resolves template inline
     ["FST_HC_evt_quickSpawn", {
-        params ["_pos", "_templateKey", "_behavior", ["_radius", -1]];
+        params ["_pos", "_templateKey", "_behavior", ["_radius", -1], ["_callerID", -1]];
+        if !([_callerID, "quickSpawn"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         private _template = FST_HC_Templates getOrDefault [_templateKey, []];
         if (count _template == 0) exitWith {
             diag_log format ["[FST_HCSpawn] Unknown template '%1'", _templateKey];
         };
         _template params ["_side", "_unitClasses", "_desc"];
-        [_side, _unitClasses, _pos, _behavior, _radius, []] call FST_HCSpawn_fnc_spawnGroupOnTarget;
+        // _callerID is passed as source owner so cap/no-HC feedback reaches the Zeus.
+        [_side, _unitClasses, _pos, _behavior, _radius, [], [], _callerID] call FST_HCSpawn_fnc_spawnGroupOnTarget;
     }] call CBA_fnc_addEventHandler;
 
     // Fill garrison request (from Zeus client)
     ["FST_HC_evt_fillGarrison", {
+        if !([_this param [3, -1], "fillGarrison"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_requestFillGarrison;
     }] call CBA_fnc_addEventHandler;
 
     // Frontline assault (from Zeus client)
     ["FST_HC_evt_frontline", {
+        if !([_this param [5, -1], "frontline"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_frontlineSpawn;
     }] call CBA_fnc_addEventHandler;
 
     // QRF (from Zeus client)
     ["FST_HC_evt_qrf", {
+        if !([_this param [6, -1], "qrf"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_qrfSpawn;
     }] call CBA_fnc_addEventHandler;
 
     // Zeus hold/release (from Zeus client)
     ["FST_HC_evt_zeusHold", {
+        if !([_this param [1, -1], "zeusHold"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_zeusHold;
     }] call CBA_fnc_addEventHandler;
 
-    // Status report request (from any client)
+    // Status report request (from Zeus/admin client)
     ["FST_HC_evt_statusReport", {
+        if !([_this param [0, -1], "statusReport"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_statusReport;
     }] call CBA_fnc_addEventHandler;
 
-
     // Manual/rare dead-group maintenance cleanup (from Zeus/admin client).
     ["FST_HC_evt_manualDeadGroupCleanup", {
+        if !([_this param [3, -1], "manualDeadGroupCleanup"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_requestDeadGroupCleanup;
     }] call CBA_fnc_addEventHandler;
 
-    // Force immediate recount after HC-side cleanup deletes spawned units.
+    // Force a recount after HC-side cleanup deletes spawned units.
+    // V27: debounced. Fill Garrison batches, floating-droid cleanups and clone
+    // rejections can fire this several times per second; one recount 0.5s later
+    // covers all of them.
     ["FST_HC_evt_recountUnits", {
-        [] call FST_HCSpawn_fnc_recountUnits;
+        if (missionNamespace getVariable ["FST_HC_RecountScheduled", false]) exitWith {};
+        missionNamespace setVariable ["FST_HC_RecountScheduled", true];
+        [{
+            missionNamespace setVariable ["FST_HC_RecountScheduled", false];
+            [] call FST_HCSpawn_fnc_recountUnits;
+        }, [], 0.5] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 
     // Debug snapshot request (from Zeus/admin client)
     ["FST_HC_evt_debugSnapshotRequest", {
+        if !([_this param [0, -1], "debugSnapshot"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
         _this call FST_HCSpawn_fnc_requestDebugSnapshot;
     }] call CBA_fnc_addEventHandler;
 };
@@ -95,8 +116,6 @@ if (isServer) then {
 // ============================================================
 // HC / CLIENT EVENTS (fired from server, handled on HC or Zeus)
 // ============================================================
-
-
 
 // Local dead-group cleanup request. deleteGroup is locality-sensitive, so the server
 // uses this ownerEvent to make each HC clean only its own local dead groups.
@@ -118,7 +137,6 @@ if (isServer) then {
     _this spawn FST_HCSpawn_fnc_createGroupLocal;
 }] call CBA_fnc_addEventHandler;
 
-
 // Delete a rejected HC clone locally on the owner machine after the server restores the original.
 ["FST_HC_evt_deleteRejectedClone", {
     params ["_groupRef"];
@@ -135,7 +153,7 @@ if (isServer) then {
     };
     {
         if (!isNull _x) then {
-            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true];
             deleteVehicle _x;
         };
     } forEach units _grp;
@@ -154,21 +172,39 @@ if (isServer) then {
     }, [_group], 0.25] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
-// Loadout restore after locality transfer (received by target HC via ownerEvent)
+// Loadout restore after locality transfer (received by target HC via ownerEvent).
+// V27: only re-applies when the locality change actually stripped something
+// (weapon, uniform, vest or backpack differs from the snapshot taken on the
+// server), and routes through applyUnitLoadoutSafe so the droid empty-loadout
+// guard applies here too. The old check only fired when the uniform was empty,
+// which is always true for droids and never true for uniformed units.
 ["FST_HC_evt_restoreLoadout", {
     params ["_payload"];
     [{
         params ["_payload"];
+        private _containerClass = {
+            if (_this isEqualType [] && {count _this > 0}) then { _this select 0 } else { "" }
+        };
         {
             _x params ["_unit", "_loadout"];
-            if (!isNull _unit && {local _unit} && {count _loadout > 0} && {uniform _unit == ""}) then {
-                _unit setUnitLoadout _loadout;
+            if (isNull _unit || {!local _unit} || {!alive _unit} || {count _loadout < 6}) then { continue };
+
+            private _stripped =
+                (primaryWeapon _unit) != ((_loadout select 0) call _containerClass) ||
+                {(secondaryWeapon _unit) != ((_loadout select 1) call _containerClass)} ||
+                {(handgunWeapon _unit) != ((_loadout select 2) call _containerClass)} ||
+                {(uniform _unit) != ((_loadout select 3) call _containerClass)} ||
+                {(vest _unit) != ((_loadout select 4) call _containerClass)} ||
+                {(backpack _unit) != ((_loadout select 5) call _containerClass)};
+
+            if (_stripped) then {
+                [_unit, _loadout, "", "transfer restore"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe;
+            } else {
                 [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
             };
         } forEach _payload;
     }, [_payload], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
-
 
 // Legacy compatibility only. v5 moved Zeus-original hide/restore/delete to the server
 // because hideObjectGlobal / enableSimulationGlobal are server-exec commands.

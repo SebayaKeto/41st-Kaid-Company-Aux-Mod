@@ -26,6 +26,8 @@ private _group = createGroup [_side, true];
 // does the same.
 _group deleteGroupWhenEmpty true;
 _group setVariable ["FST_HC_spawnProtectedUntil", time + 90];
+// Addon-created: eligible for despawn cleanup (server reads this).
+_group setVariable ["FST_HC_managed", true, true];
 private _editableObjects = [];
 
 if (count _vehData > 0) then {
@@ -53,9 +55,9 @@ if (count _vehData > 0) then {
 
     (crew _veh) joinSilent _group;
     {
-        _x setVariable ["FST_HC_created", true, true];
-        _x setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-        _x setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+        _x setVariable ["FST_HC_created", true];
+        _x setVariable ["FST_HC_spawnSettlingUntil", time + 10];
+        _x setVariable ["FST_spawnDamageDeferUntilLocal", true];
         [_x] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
     } forEach crew _veh;
     _editableObjects pushBack _veh;
@@ -69,9 +71,10 @@ if (count _vehData > 0) then {
                 diag_log format ["[FST_HCSpawn] Unit clone failed: createUnit returned null for %1", _class];
                 continue;
             };
-            _unit setVariable ["FST_HC_created", true, true];
-            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+            // Local markers only; nothing on other machines reads them.
+            _unit setVariable ["FST_HC_created", true];
+            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10];
+            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true];
             [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
             _unit setPosATL _spawnPos;
             _unit setDir _dir;
@@ -92,9 +95,10 @@ if (count _vehData > 0) then {
                 diag_log format ["[FST_HCSpawn] Unit spawn failed: createUnit returned null for %1", _x];
                 continue;
             };
-            _unit setVariable ["FST_HC_created", true, true];
-            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+            // Local markers only; nothing on other machines reads them.
+            _unit setVariable ["FST_HC_created", true];
+            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10];
+            _unit setVariable ["FST_spawnDamageDeferUntilLocal", true];
             [_unit] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
             if (_forEachIndex == 0) then { _group selectLeader _unit; };
         } forEach _unitClasses;
@@ -126,7 +130,7 @@ if (_isZeusClone && {_expectedReplacementUnits > 0} && {_createdUnitCount < _exp
     [false] call _sendZeusCloneDecision;
     {
         if (!isNull _x) then {
-            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true];
             deleteVehicle _x;
         };
     } forEach units _group;
@@ -241,7 +245,7 @@ if (count _editableObjects > 0) then {
                         _toDelete pushBack _x;
                     };
                 } forEach units _grp;
-                { _x setVariable ["FST_skipSpawnDamage", true, true]; deleteVehicle _x; } forEach _toDelete;
+                { _x setVariable ["FST_skipSpawnDamage", true]; deleteVehicle _x; } forEach _toDelete;
                 if (count _toDelete > 0) then {
                     if (FST_HC_DebugLogging) then {
                         diag_log format ["[FST_HCSpawn] Garrison cleanup: removed %1 floating/unsafe droids", count _toDelete];
@@ -286,8 +290,10 @@ if ((_behavior in ["patrol", "hunt"]) && {missionNamespace getVariable ["FST_HC_
 if (_isOnHC && {!_isZeusClone}) then {
     private _preCounted = true;
     if ((count _unitData == 0) && {count _vehData > 0}) then { _preCounted = false; };
-    [_group, _hcIndex, _preCounted] spawn {
-        params ["_group", "_hcIndex", "_preCounted"];
+    // The HC's owner ID is sent too (V27); the server resolves the index from it
+    // so an HC disconnect between dispatch and track cannot mis-file the group.
+    [_group, _hcIndex, _preCounted, _targetId] spawn {
+        params ["_group", "_hcIndex", "_preCounted", "_targetId"];
         private _deadline = time + 2.5;
         private _groupRef = "";
         waitUntil {
@@ -296,7 +302,7 @@ if (_isOnHC && {!_isZeusClone}) then {
         };
         if (isNull _group) exitWith { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; };
         if (_groupRef isEqualTo "") then { _groupRef = _group; };
-        ["FST_HC_evt_trackGroup", [_groupRef, _hcIndex, _preCounted, 0, 90]] call CBA_fnc_serverEvent;
+        ["FST_HC_evt_trackGroup", [_groupRef, _hcIndex, _preCounted, 0, 90, _targetId]] call CBA_fnc_serverEvent;
     };
 };
 

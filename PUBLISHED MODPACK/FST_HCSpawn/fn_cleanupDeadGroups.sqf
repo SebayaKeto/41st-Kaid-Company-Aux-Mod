@@ -35,6 +35,7 @@ if (!(missionNamespace getVariable ["FST_HC_DeadGroupCleanupEnabled", true]) && 
 // Do not delete groups while ownership is being redistributed after an HC loss.
 // This is exactly when object ownership and network state are most fragile.
 if (missionNamespace getVariable ["FST_HC_EmergencyMode", false]) exitWith {0};
+if (time < (missionNamespace getVariable ["FST_HC_SafeModeUntil", -1])) exitWith {0};
 
 private _now = time;
 private _interval = missionNamespace getVariable ["FST_HC_DeadGroupCleanupInterval", 1200];

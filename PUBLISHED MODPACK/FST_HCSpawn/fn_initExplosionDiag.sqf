@@ -19,6 +19,10 @@ missionNamespace setVariable ["FST_HC_EXPDIAG_recentAmmo", []];
 missionNamespace setVariable ["FST_HC_EXPDIAG_recentExplosions", []];
 missionNamespace setVariable ["FST_HC_EXPDIAG_recentDeaths", []];
 missionNamespace setVariable ["FST_HC_EXPDIAG_lastImmediateLog", -9999];
+// V27: per-ammo config cache. The fired handler runs for every round every local
+// AI fires; it used to do 4-7 config reads per shot. Now that happens once per
+// ammo class, then one hash lookup per shot.
+missionNamespace setVariable ["FST_HC_EXPDIAG_ammoCache", createHashMap];
 
 ["AllVehicles", "fired", {
     params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
@@ -27,39 +31,53 @@ missionNamespace setVariable ["FST_HC_EXPDIAG_lastImmediateLog", -9999];
     if (!local _unit) exitWith {};
     if (_ammo isEqualTo "") exitWith {};
 
-    private _cfg = configFile >> "CfgAmmo" >> _ammo;
-    if !(isClass _cfg) exitWith {};
-
-    private _hit = getNumber (_cfg >> "hit");
-    private _indirectHit = getNumber (_cfg >> "indirectHit");
-    private _indirectRange = getNumber (_cfg >> "indirectHitRange");
-    private _explosive = getNumber (_cfg >> "explosive");
-
-    if ((_indirectHit > 0) || {_indirectRange > 0} || {_explosive > 0}) then {
-        private _fired = missionNamespace getVariable ["FST_HC_EXPDIAG_firedAmmo", createHashMap];
-        _fired set [_ammo, (_fired getOrDefault [_ammo, 0]) + 1];
-        missionNamespace setVariable ["FST_HC_EXPDIAG_firedTotal", (missionNamespace getVariable ["FST_HC_EXPDIAG_firedTotal", 0]) + 1];
-
-        private _recentLimit = missionNamespace getVariable ["FST_HC_ExplosionDiagRecentLimit", 40];
-        private _recent = missionNamespace getVariable ["FST_HC_EXPDIAG_recentAmmo", []];
-        _recent pushBack [
-            round diag_tickTime,
-            typeOf _unit,
-            str (side group _unit),
-            _weapon,
-            _magazine,
-            _ammo,
-            _hit,
-            _indirectHit,
-            _indirectRange,
-            _explosive,
-            getText (_cfg >> "simulation"),
-            getText (_cfg >> "explosionEffects"),
-            getText (_cfg >> "craterEffects"),
-            getPosATL _unit
-        ];
-        while {count _recent > _recentLimit} do {_recent deleteAt 0;};
+    private _cache = missionNamespace getVariable ["FST_HC_EXPDIAG_ammoCache", createHashMap];
+    private _info = _cache get _ammo;
+    if (isNil "_info") then {
+        private _cfg = configFile >> "CfgAmmo" >> _ammo;
+        if (isClass _cfg) then {
+            private _hit = getNumber (_cfg >> "hit");
+            private _indirectHit = getNumber (_cfg >> "indirectHit");
+            private _indirectRange = getNumber (_cfg >> "indirectHitRange");
+            private _explosive = getNumber (_cfg >> "explosive");
+            private _isExplosive = (_indirectHit > 0) || {_indirectRange > 0} || {_explosive > 0};
+            _info = if (_isExplosive) then {
+                [true, _hit, _indirectHit, _indirectRange, _explosive, getText (_cfg >> "simulation"), getText (_cfg >> "explosionEffects"), getText (_cfg >> "craterEffects")]
+            } else {
+                [false]
+            };
+        } else {
+            _info = [false];
+        };
+        _cache set [_ammo, _info];
     };
+    if !(_info select 0) exitWith {};
+
+    _info params ["", "_hit", "_indirectHit", "_indirectRange", "_explosive", "_simulation", "_explosionEffects", "_craterEffects"];
+
+    private _fired = missionNamespace getVariable ["FST_HC_EXPDIAG_firedAmmo", createHashMap];
+    _fired set [_ammo, (_fired getOrDefault [_ammo, 0]) + 1];
+    missionNamespace setVariable ["FST_HC_EXPDIAG_firedTotal", (missionNamespace getVariable ["FST_HC_EXPDIAG_firedTotal", 0]) + 1];
+
+    private _recentLimit = missionNamespace getVariable ["FST_HC_ExplosionDiagRecentLimit", 40];
+    private _recent = missionNamespace getVariable ["FST_HC_EXPDIAG_recentAmmo", []];
+    _recent pushBack [
+        round diag_tickTime,
+        typeOf _unit,
+        str (side group _unit),
+        _weapon,
+        _magazine,
+        _ammo,
+        _hit,
+        _indirectHit,
+        _indirectRange,
+        _explosive,
+        _simulation,
+        _explosionEffects,
+        _craterEffects,
+        getPosATL _unit
+    ];
+    while {count _recent > _recentLimit} do {_recent deleteAt 0;};
 }] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "explosion", {

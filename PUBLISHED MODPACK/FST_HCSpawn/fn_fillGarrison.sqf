@@ -19,7 +19,7 @@ if (count _batch == 0) exitWith {
     if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };
 };
 
-missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+if (isServer) then { missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time]; };
 
 private _group = createGroup [EAST, true];
 private _requestedUnitCount = count _batch;
@@ -29,6 +29,9 @@ if (isNull _group) exitWith {
 };
 _group deleteGroupWhenEmpty true;
 _group setVariable ["FST_HC_spawnProtectedUntil", time + 90];
+// Addon-created: eligible for despawn cleanup. One broadcast per group (the
+// server reads it), instead of the three per-unit broadcasts this used to do.
+_group setVariable ["FST_HC_managed", true, true];
 
 {
     _x params ["_pos", "_class"];
@@ -39,9 +42,11 @@ _group setVariable ["FST_HC_spawnProtectedUntil", time + 90];
         continue;
     };
     _unit setPosATL _pos;
-    _unit setVariable ["FST_HC_created", true, true];
-    _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
-    _unit setVariable ["FST_spawnDamageDeferUntilLocal", true, true];
+    // Local markers only. Nothing on other machines reads these, and each public
+    // setVariable was one network message per unit per marker.
+    _unit setVariable ["FST_HC_created", true];
+    _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10];
+    _unit setVariable ["FST_spawnDamageDeferUntilLocal", true];
     _unit setVariable ["FST_HC_assignedPos", _pos];
     _unit disableAI "PATH";
     _unit setUnitPos "UP";
@@ -101,9 +106,11 @@ if (count _editableObjects > 0) then {
 };
 
 // Track on server. Use group netId + retry on server to avoid racing fresh HC groups.
+// V27: the HC's owner ID is sent too; the server resolves the index from it so a
+// disconnect between dispatch and track cannot mis-file the group.
 if (_isOnHC) then {
-    [_group, _hcIndex, _partialBatch] spawn {
-        params ["_group", "_hcIndex", "_partialBatch"];
+    [_group, _hcIndex, _partialBatch, _targetId] spawn {
+        params ["_group", "_hcIndex", "_partialBatch", "_targetId"];
         private _deadline = time + 3.5;
         private _groupRef = "";
         waitUntil {
@@ -115,7 +122,7 @@ if (_isOnHC) then {
             diag_log format ["[FST_HCSpawn] Fill garrison track delayed: group %1 had no netId after wait; relying on catch-all/recount", _group];
             ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent;
         };
-        ["FST_HC_evt_trackGroup", [_groupRef, _hcIndex, true, 0, 90]] call CBA_fnc_serverEvent;
+        ["FST_HC_evt_trackGroup", [_groupRef, _hcIndex, true, 0, 90, _targetId]] call CBA_fnc_serverEvent;
 
         // If the batch partially failed, let the server track the group first,
         // then recount so FST_HC_UnitCounts converges to the actual created count.
@@ -146,7 +153,7 @@ if (_isOnHC) then {
     } forEach units _group;
 
     {
-        _x setVariable ["FST_skipSpawnDamage", true, true];
+        _x setVariable ["FST_skipSpawnDamage", true];
         deleteVehicle _x;
         _removed = _removed + 1;
     } forEach _toDelete;

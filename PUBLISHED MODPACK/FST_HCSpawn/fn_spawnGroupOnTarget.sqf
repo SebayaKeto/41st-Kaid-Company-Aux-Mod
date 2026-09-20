@@ -1,7 +1,11 @@
 // FST_HCSpawn_fnc_spawnGroupOnTarget
 // Server-side. Routes spawn request to least-loaded HC or server.
+//
+// Returns: BOOL - true if the spawn was dispatched (to an HC or the server),
+// false if it was blocked (AI cap, no usable HC). Callers such as the objective
+// checker and frontline use this to avoid consuming their budget on a no-op.
 
-if (!isServer) exitWith {};
+if (!isServer) exitWith { false };
 
 params ["_side", "_unitClasses", "_pos", ["_behavior", "garrison"], ["_radius", -1], ["_vehData", []], ["_unitData", []], ["_sourceOwner", -1], ["_originalPayload", []]];
 
@@ -15,7 +19,7 @@ private _clearOriginal = {
     };
 };
 
-// AI cap check — keep this as an actual function exit, not a nested exitWith.
+// AI cap check -- keep this as an actual function exit, not a nested exitWith.
 private _spawnCountForCap = if (count _unitData > 0) then { count _unitData } else { count _unitClasses };
 private _capBlocked = false;
 private _cap = missionNamespace getVariable ["FST_HC_AICap", 0];
@@ -25,11 +29,11 @@ if (_cap > 0 && {_spawnCountForCap > 0}) then {
     if ((_total + _spawnCountForCap) > _cap) then {
         _capBlocked = true;
         private _targetMsg = if (_sourceOwner > 2) then { _sourceOwner } else { -2 };
-        format ["[FST] AI cap reached — spawn blocked (%1 + %2 > %3).", _total, _spawnCountForCap, _cap] remoteExec ["systemChat", _targetMsg];
+        format ["[FST] AI cap reached -- spawn blocked (%1 + %2 > %3).", _total, _spawnCountForCap, _cap] remoteExec ["systemChat", _targetMsg];
         diag_log format ["[FST_HCSpawn] Spawn blocked by AI cap. total=%1 requested=%2 cap=%3 behavior=%4", _total, _spawnCountForCap, _cap, _behavior];
     };
 };
-if (_capBlocked) exitWith { [false] call _clearOriginal; };
+if (_capBlocked) exitWith { [false] call _clearOriginal; false };
 
 if (_radius < 0) then {
     _radius = switch (_behavior) do {
@@ -52,7 +56,17 @@ private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 if (!_isOnHC && {missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]}) exitWith {
     private _reason = if (missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", false]) then {"no HC below soft cap or no HC available"} else {"no HC available"};
     diag_log format ["[FST_HCSpawn][EMERGENCY] Spawn blocked instead of server fallback: %1. requested=%2 behavior=%3 pos=%4 hcCounts=%5", _reason, _spawnCountForCap, _behavior, _pos, FST_HC_UnitCounts];
+    // V27: tell the requesting Zeus. Previously only the RPT knew.
+    if (_sourceOwner > 2) then {
+        private _msg = if (_isValidatedZeusClone) then {
+            "[FST] Zeus instant clone blocked: no HC available. Original group left in place."
+        } else {
+            format ["[FST] Spawn blocked (%1): %2.", _behavior, _reason]
+        };
+        _msg remoteExec ["systemChat", _sourceOwner];
+    };
     [false] call _clearOriginal;
+    false
 };
 
 // For instant Zeus clone/replace, never delete the original if HCs disappeared
@@ -61,6 +75,7 @@ if (_isValidatedZeusClone && {!_isOnHC}) exitWith {
     "[FST] Zeus instant clone blocked: no HC available. Original group left in place." remoteExec ["systemChat", _sourceOwner];
     diag_log format ["[FST_HCSpawn] Zeus instant clone blocked: no HC available for original %1", _originalPayload select 0];
     [false] call _clearOriginal;
+    false
 };
 
 // Pre-increment unit counts so the NEXT call to getSpawnTarget
@@ -84,6 +99,9 @@ if (_isValidatedZeusClone) then {
     // the client-side 8s failsafe clearing its earlier local/public marker.
     if (!isNull _origGroup) then {
         _origGroup setVariable ["FST_HC_interceptQueued", true, true];
+        // Group-level marker (server-local) so catch-all / dead-group cleanup can
+        // skip this original with one lookup instead of scanning its units.
+        _origGroup setVariable ["FST_HC_originalSuppressed", true];
     };
 
     private _origObjects = [];
@@ -96,8 +114,9 @@ if (_isValidatedZeusClone) then {
 
     {
         if (!isNull _x) then {
+            // Unit-level marker stays public: the Zeus client's failsafe reads it.
             _x setVariable ["FST_HC_originalSuppressed", true, true];
-            _x setVariable ["FST_skipSpawnDamage", true, true];
+            _x setVariable ["FST_skipSpawnDamage", true];
             _x hideObjectGlobal true;
             _x enableSimulationGlobal false;
         };
@@ -116,7 +135,11 @@ if (_isValidatedZeusClone) then {
 };
 
 private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, _unitData, _sourceOwner, _originalPayload];
-missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+
+// NOTE (V27): FST_HC_LastHeavySpawnTime is no longer touched here. Every single
+// Zeus placement used to postpone the despawn cleanup by 60s, so under steady
+// Zeus activity it never ran. Heavy callers (fill, frontline, QRF, objectives)
+// set it themselves.
 
 if (count _unitData > 0 || {count _vehData > 0}) then {
     FST_HC_ZeusInstantCloneRequests = (missionNamespace getVariable ["FST_HC_ZeusInstantCloneRequests", 0]) + 1;
@@ -134,3 +157,5 @@ if (_isOnHC) then {
 // The target HC confirms success from fn_createGroupLocal after replacement units
 // exist and editable registration has been queued. Premature acceptance was leaving
 // stale curator/object references, especially for single-unit placements.
+
+true

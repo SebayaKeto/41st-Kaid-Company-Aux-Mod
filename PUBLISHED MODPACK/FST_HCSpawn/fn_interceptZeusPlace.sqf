@@ -29,6 +29,10 @@ if (_group getVariable ["FST_HC_interceptQueued", false]) exitWith {};
 if (count (_group getVariable ["FST_HC_tracked", []]) > 0) exitWith {};
 _group setVariable ["FST_HC_interceptQueued", true, true];
 
+// Zeus-placed: eligible for despawn cleanup once offloaded (server reads this).
+// Instant clones inherit it through createGroupLocal on the replacement group.
+_group setVariable ["FST_HC_managed", true, true];
+
 // Vehicle groups are not safe to instant-clone: the old clone path only captured
 // the leader vehicle and would lose multi-vehicle groups, custom cargo, crew state,
 // and some modded vehicle setup. Preserve them with setGroupOwner instead.
@@ -48,6 +52,9 @@ if ((_zeusMode isEqualTo "instant") && {(count _units) == 1}) exitWith {
 // FAST PATH: instant clone/replace. This avoids waiting for setGroupOwner
 // to settle and recreates the group directly on an HC. The server now validates
 // cap/HC availability before telling this client to delete the original.
+// Known limitation: the clone carries class, position, direction, rank, skill,
+// stance and loadout. Unit identity (name/face/voice), variable names,
+// setVariable data and init-script hooks on the original are NOT preserved.
 if (_zeusMode isEqualTo "instant") exitWith {
     private _side = side _group;
     private _leader = leader _group;
@@ -102,7 +109,7 @@ if (_zeusMode isEqualTo "instant") exitWith {
         if (!_suppressed) then {
             _group setVariable ["FST_HC_interceptQueued", nil, true];
             _group setVariable ["FST_HC_pendingTransfer", nil];
-            systemChat "[FST] HC clone request did not reach server — left original Zeus group in place.";
+            systemChat "[FST] HC clone request did not reach server -- left original Zeus group in place.";
         };
     }, [_originalPayload], 8] call CBA_fnc_waitAndExecute;
 

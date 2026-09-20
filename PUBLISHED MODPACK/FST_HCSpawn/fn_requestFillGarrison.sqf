@@ -30,13 +30,16 @@ params ["_center", "_radius", "_density", ["_callerID", -2], ["_b1Replacement", 
 // These are CBA settings from preInit, but missionNamespace defaults let this
 // function survive if an old CBA profile has not saved the new values yet.
 
+// Fallbacks match the CBA defaults in XEH_preInit (they used to differ).
 private _maxUnits = missionNamespace getVariable ["FST_HC_FillGarrisonMaxUnits", 120];
-private _maxDuration = missionNamespace getVariable ["FST_HC_FillGarrisonMaxDuration", 90];
-private _maxScanPositions = missionNamespace getVariable ["FST_HC_FillGarrisonMaxScanPositions", 900];
+private _maxDuration = missionNamespace getVariable ["FST_HC_FillGarrisonMaxDuration", 60];
+private _maxScanPositions = missionNamespace getVariable ["FST_HC_FillGarrisonMaxScanPositions", 700];
 private _singleActive = missionNamespace getVariable ["FST_HC_FillGarrisonSingleActive", true];
-private _cooldown = missionNamespace getVariable ["FST_HC_FillGarrisonCooldown", 10];
+private _cooldown = missionNamespace getVariable ["FST_HC_FillGarrisonCooldown", 20];
 
-_maxUnits = round ((_maxUnits max 24) min 120);
+// V27: clamp to the CBA slider range (24..600). It was hard-clamped to 120, so
+// any higher slider value was silently ignored.
+_maxUnits = round ((_maxUnits max 24) min 600);
 _maxDuration = (_maxDuration max 30) min 120;
 _maxScanPositions = round ((_maxScanPositions max _maxUnits) min 2400);
 _cooldown = (_cooldown max 0) min 60;
@@ -63,9 +66,11 @@ private _existingDeadline = missionNamespace getVariable ["FST_HC_FillGarrisonDe
 private _nextAllowed = missionNamespace getVariable ["FST_HC_FillGarrisonNextAllowed", -1];
 
 // Clear stale active state if a previous job somehow died without cleanup.
+// Job-state variables are server-only (V27: no longer publicVariable'd on every
+// batch; nothing on clients or HCs reads them).
 if (_existingActive && {_now >= _existingDeadline}) then {
-    missionNamespace setVariable ["FST_HC_FillGarrisonActive", false, true];
-    missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1, true];
+    missionNamespace setVariable ["FST_HC_FillGarrisonActive", false];
+    missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1];
     _existingActive = false;
     diag_log format ["[FST_HCSpawn] Fill Garrison stale active state cleared at %1", _center];
 };
@@ -86,17 +91,17 @@ if (_singleActive && {_now < _nextAllowed}) exitWith {
 
 private _jobId = (missionNamespace getVariable ["FST_HC_FillGarrisonJobId", 0]) + 1;
 private _deadline = _now + _maxDuration;
-missionNamespace setVariable ["FST_HC_FillGarrisonJobId", _jobId, true];
-missionNamespace setVariable ["FST_HC_FillGarrisonActive", true, true];
-missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", _deadline, true];
+missionNamespace setVariable ["FST_HC_FillGarrisonJobId", _jobId];
+missionNamespace setVariable ["FST_HC_FillGarrisonActive", true];
+missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", _deadline];
 
 private _clearJob = {
     params ["_jobId", ["_cooldown", 0]];
     if ((missionNamespace getVariable ["FST_HC_FillGarrisonJobId", -1]) isEqualTo _jobId) then {
-        missionNamespace setVariable ["FST_HC_FillGarrisonActive", false, true];
-        missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1, true];
-        missionNamespace setVariable ["FST_HC_FillGarrisonNextAllowed", time + _cooldown, true];
-        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+        missionNamespace setVariable ["FST_HC_FillGarrisonActive", false];
+        missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1];
+        missionNamespace setVariable ["FST_HC_FillGarrisonNextAllowed", time + _cooldown];
+        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time];
     };
 };
 
@@ -275,7 +280,7 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
             diag_log format ["[FST_HCSpawn] Fill Garrison job %1 stopped because all HCs disconnected at %2/%3 units", _jobId, _queuedUnits, count _assignments];
         };
 
-        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time];
 
         private _targetId = [] call FST_HCSpawn_fnc_getSpawnTarget;
         private _isOnHC = _targetId != 2;
@@ -310,10 +315,10 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
     };
 
     if ((missionNamespace getVariable ["FST_HC_FillGarrisonJobId", -1]) isEqualTo _jobId) then {
-        missionNamespace setVariable ["FST_HC_FillGarrisonActive", false, true];
-        missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1, true];
-        missionNamespace setVariable ["FST_HC_FillGarrisonNextAllowed", time + _cooldown, true];
-        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+        missionNamespace setVariable ["FST_HC_FillGarrisonActive", false];
+        missionNamespace setVariable ["FST_HC_FillGarrisonDeadline", -1];
+        missionNamespace setVariable ["FST_HC_FillGarrisonNextAllowed", time + _cooldown];
+        missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time];
     };
 
     private _replacementText = if (_b1Replacement isEqualTo "") then { "default B1 mix" } else { _b1Replacement };

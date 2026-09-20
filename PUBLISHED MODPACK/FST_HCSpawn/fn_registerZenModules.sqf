@@ -4,9 +4,16 @@
 
 if (!hasInterface) exitWith {};
 
+private _icon = "\a3\Modules_F_Curator\Data\iconManual_ca.paa";
+
 // ============================================================
 // TEMPLATE MODULES
 // ============================================================
+// The module code is built with format: %1 = description (dialog title),
+// %2 = template key. Both are known here, so they are baked into the string;
+// only the behavior is a runtime value. (The old code used "%%1" inside the
+// inner format, but SQF format has no %% escape, so the chat line came out as
+// "Spawning %B1 Squad STD (12) (%b1_squad)".)
 {
     private _key = _x;
     private _data = _y;
@@ -23,8 +30,8 @@ if (!hasInterface) exitWith {};
             params ["_values", "_args"];
             _args params ["_pos", "_key"];
             private _behavior = ["assault","hunt","garrison","patrol","static","none"] select (_values select 0);
-            ["FST_HC_evt_quickSpawn", [_pos, _key, _behavior, -1]] call CBA_fnc_serverEvent;
-            systemChat format ["[FST] Spawning %%1 (%%2)", _key, _behavior];
+            ["FST_HC_evt_quickSpawn", [_pos, _key, _behavior, -1, clientOwner]] call CBA_fnc_serverEvent;
+            systemChat ("[FST] Spawning %2 (" + _behavior + ")");
         },
         {},
         [_pos, "%2"]
@@ -33,8 +40,7 @@ if (!hasInterface) exitWith {};
         _desc, _key
     ];
 
-    ["41st Kaid Modules", _desc, _code, "\a3\Modules_F_Curator\Data\iconManual_ca.paa"]
-        call zen_custom_modules_fnc_register;
+    ["41st Kaid Modules", _desc, _code, _icon] call zen_custom_modules_fnc_register;
 
 } forEach FST_HC_Templates;
 
@@ -67,14 +73,14 @@ if (!hasInterface) exitWith {};
             ["FST_HC_evt_fillGarrison", [_pos, _radius, _density, _caller, _b1Replacement]] call CBA_fnc_serverEvent;
 
             private _replacementText = if (_b1Replacement isEqualTo "") then { "Default B1 mix" } else { _b1Replacement };
-            systemChat format ["[FST] Filling — %1m, %2%3 density, B1: %4",
+            systemChat format ["[FST] Filling -- %1m, %2%3 density, B1: %4",
                 round _radius, round (_density*100), "%", _replacementText];
         },
         {},
         [_pos]
         ] call zen_dialog_fnc_create;
     },
-    "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
+    _icon
 ] call zen_custom_modules_fnc_register;
 
 // ============================================================
@@ -114,7 +120,7 @@ if (!hasInterface) exitWith {};
         [_pos]
         ] call zen_dialog_fnc_create;
     },
-    "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
+    _icon
 ] call zen_custom_modules_fnc_register;
 
 // ============================================================
@@ -164,7 +170,36 @@ if (!hasInterface) exitWith {};
         [_pos]
         ] call zen_dialog_fnc_create;
     },
-    "\a3\Modules_F_Curator\Data\iconManual_ca.paa"
+    _icon
 ] call zen_custom_modules_fnc_register;
 
-diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF", count FST_HC_Templates];
+// ============================================================
+// DEAD GROUP CLEANUP MODULE (V27)
+// ============================================================
+// Manual maintenance for controlled lulls. This event existed since V19 but had
+// no UI entry point; it was only reachable from the debug console.
+[
+    "41st Kaid Modules",
+    "--- Cleanup Dead Groups ---",
+    {
+        params ["_pos"];
+        ["Cleanup Dead Groups",
+        [
+            ["SLIDER", ["Max Groups To Delete", "Per machine (server and each HC)."], [10, 300, 150, 0]],
+            ["SLIDER", ["Tracked Group Min Dead Age (s)", "Extra caution for HC-tracked groups: only delete if every member has been dead at least this long."], [0, 600, 60, 0]]
+        ],
+        {
+            params ["_values", "_args"];
+            private _max = round (_values select 0);
+            private _trackedAge = round (_values select 1);
+            ["FST_HC_evt_manualDeadGroupCleanup", [_max, 0, _trackedAge, clientOwner]] call CBA_fnc_serverEvent;
+            systemChat "[FST] Dead group cleanup requested on server and all HCs.";
+        },
+        {},
+        [_pos]
+        ] call zen_dialog_fnc_create;
+    },
+    _icon
+] call zen_custom_modules_fnc_register;
+
+diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF + Dead Group Cleanup", count FST_HC_Templates];

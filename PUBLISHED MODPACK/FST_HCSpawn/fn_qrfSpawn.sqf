@@ -116,7 +116,7 @@ diag_log format ["[FST_HCSpawn] QRF: %1x '%2', transport %3, %4x %5 escort, spaw
     _squadCount, _templateKey, _transportType, _escortCount, _escortType, _spawnPos, _destination];
 
 // Treat QRF as heavy spawn work so despawn cleanup does not run during setup/transfer.
-missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
+missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time];
 
 // --- Dispatch ---
 [_spawnPos, _destination, _side, _unitClasses, _squadCount,
@@ -130,6 +130,7 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
 
     for "_i" from 1 to _squadCount do {
         private _grp = createGroup [_side, true];
+        _grp setVariable ["FST_HC_managed", true]; // addon-created: despawn-eligible
         {
             private _offset = [(_spawnPos select 0) + random 6 - 3, (_spawnPos select 1) + random 6 - 3, 0];
             private _unit = _grp createUnit [_x, _offset, [], 0, "NONE"];
@@ -137,8 +138,8 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
                 diag_log format ["[FST_HCSpawn] QRF infantry createUnit failed for %1", _x];
                 continue;
             };
-            _unit setVariable ["FST_HC_created", true, true];
-            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10, true];
+            _unit setVariable ["FST_HC_created", true];
+            _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10];
             if (_forEachIndex == 0) then { _grp selectLeader _unit; };
             _allInfantry pushBack _unit;
         } forEach _unitClasses;
@@ -153,6 +154,7 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
         if (_escortCount > 0) then {
             // Escorts present — march together at matched pace
             _footConvoyGrp = createGroup [_side, true];
+            _footConvoyGrp setVariable ["FST_HC_managed", true];
             for "_e" from 1 to _escortCount do {
                 private _escOffset = [(_spawnPos select 0) + 15 * _e, (_spawnPos select 1), 0];
                 private _esc = createVehicle [_escortClass, _escOffset, [], 5, "NONE"];
@@ -212,6 +214,7 @@ missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time, true];
 
     // --- MOUNTED: single convoy group for ALL vehicles ---
     private _convoyGrp = createGroup [_side, true];
+    _convoyGrp setVariable ["FST_HC_managed", true];
     private _allVehicles = [];
 
     // Create transport

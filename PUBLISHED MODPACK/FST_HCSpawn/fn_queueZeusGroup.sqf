@@ -13,7 +13,9 @@ if (isNull _group) exitWith { false };
 
 // If we reject the group, clear the client-visible intercept marker so Zeus is not left confused.
 private _clearIntercept = {
-    _group setVariable ["FST_HC_interceptQueued", nil, true];
+    if (!isNil {_group getVariable "FST_HC_interceptQueued"}) then {
+        _group setVariable ["FST_HC_interceptQueued", nil, true];
+    };
     _group setVariable ["FST_HC_pendingTransfer", nil];
 };
 
@@ -46,9 +48,14 @@ if (FST_HC_DebugLogging) then {
 
 // In setGroupOwner Zeus mode, wait a tiny settle delay, then try immediate
 // transfer. If the engine refuses, fall back to the normal batched queue.
+// V27: while transfers are paused (redistribute in progress or HC-disconnect
+// safe mode) the immediate path is skipped and the group waits in the queue
+// like everything else.
 private _zeusMode = missionNamespace getVariable ["FST_HC_ZeusMode", "instant"];
 private _forceImmediateTransfer = (count units _group) == 1;
-if ((_zeusMode isEqualTo "transfer") || {_forceImmediateTransfer}) then {
+private _paused = FST_HC_EmergencyMode || {time < (missionNamespace getVariable ["FST_HC_SafeModeUntil", -1])};
+
+if (!_paused && {(_zeusMode isEqualTo "transfer") || {_forceImmediateTransfer}}) then {
     FST_HC_ZeusImmediateRequests = (missionNamespace getVariable ["FST_HC_ZeusImmediateRequests", 0]) + 1;
 
     [{
@@ -57,7 +64,9 @@ if ((_zeusMode isEqualTo "transfer") || {_forceImmediateTransfer}) then {
         if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {
             if (!isNull _grp) then {
                 _grp setVariable ["FST_HC_pendingTransfer", nil];
-                _grp setVariable ["FST_HC_interceptQueued", nil, true];
+                if (!isNil {_grp getVariable "FST_HC_interceptQueued"}) then {
+                    _grp setVariable ["FST_HC_interceptQueued", nil, true];
+                };
             };
         };
 

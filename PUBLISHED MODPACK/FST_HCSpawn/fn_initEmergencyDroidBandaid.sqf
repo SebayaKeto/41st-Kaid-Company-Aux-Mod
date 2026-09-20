@@ -83,7 +83,7 @@ missionNamespace setVariable ["FST_HC_EmergencyKillTimes", []];
             } else {
                 private _deathTime = _x getVariable ["FST_HC_EmergencyQueuedDeathTime", _now];
                 if ((_now - _deathTime) >= _delay && {_deleted < _maxDelete}) then {
-                    _x setVariable ["FST_skipSpawnDamage", true, true];
+                    _x setVariable ["FST_skipSpawnDamage", true];
                     deleteVehicle _x;
                     _deleted = _deleted + 1;
                 } else {

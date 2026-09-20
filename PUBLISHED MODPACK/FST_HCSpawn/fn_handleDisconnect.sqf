@@ -16,7 +16,7 @@ if (_hcIdx != -1) exitWith {
     // Single pass: collect orphans (groups on the disconnecting HC) and
     // reindex remaining groups (decrement hcIndex for groups above the removed
     // HC). Two passes used to be visible at scale during the unscheduled
-    // HandleDisconnect — the longer this blocks, the more chance of cascading
+    // HandleDisconnect -- the longer this blocks, the more chance of cascading
     // desync on already-shaky connections.
     if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
     private _orphanedGroups = [];
@@ -46,18 +46,14 @@ if (_hcIdx != -1) exitWith {
     publicVariable "FST_HC_Array";
     publicVariable "FST_HC_Ids";
 
+    // V27: safe mode is its own deadline instead of borrowing FST_HC_EmergencyMode.
+    // emergencyRedistribute clears EmergencyMode when it finishes, which used to
+    // end the safe-mode window early; a stacked disconnect simply extends this.
     private _safeModeSeconds = missionNamespace getVariable ["FST_HC_HCDisconnectSafeModeSeconds", 120];
     if (_safeModeSeconds > 0) then {
-        FST_HC_EmergencyMode = true;
-        missionNamespace setVariable ["FST_HC_LastHCDisconnectTime", time, true];
-        missionNamespace setVariable ["FST_HC_HCDisconnectSafeModeUntil", time + _safeModeSeconds, true];
-        [{
-            params ["_until"];
-            if ((missionNamespace getVariable ["FST_HC_HCDisconnectSafeModeUntil", 0]) <= _until) then {
-                FST_HC_EmergencyMode = false;
-                diag_log "[FST_HCSpawn] HC disconnect safe mode ended; transfers/catch-all may resume.";
-            };
-        }, [time + _safeModeSeconds], _safeModeSeconds] call CBA_fnc_waitAndExecute;
+        FST_HC_SafeModeUntil = (missionNamespace getVariable ["FST_HC_SafeModeUntil", -1]) max (time + _safeModeSeconds);
+        missionNamespace setVariable ["FST_HC_LastHCDisconnectTime", time];
+        diag_log format ["[FST_HCSpawn] HC disconnect safe mode active for %1s; transfers/catch-all paused.", _safeModeSeconds];
     };
 
     private _redistribute = missionNamespace getVariable ["FST_HC_RedistributeOnHCDisconnect", false];
@@ -73,19 +69,22 @@ if (_hcIdx != -1) exitWith {
 };
 
 // ============================================================
-// ZEUS DISCONNECT — release held groups
+// ZEUS DISCONNECT -- release held groups
 // ============================================================
-private _zeusGroups = [];
-{
-    if ((_x getVariable ["FST_HC_heldBy", -1]) == _id) then {
-        _zeusGroups pushBack _x;
-    };
-} forEach allGroups;
+// V27: uses the server-side held-group cache instead of scanning allGroups on
+// every player disconnect (150 players leaving at op end = 150 full scans).
+if (isNil "FST_HC_HeldGroups") then { FST_HC_HeldGroups = []; };
+if (count FST_HC_HeldGroups == 0) exitWith {};
+
+FST_HC_HeldGroups = FST_HC_HeldGroups select { !isNull _x };
+private _zeusGroups = FST_HC_HeldGroups select { (_x getVariable ["FST_HC_heldBy", -1]) == _id };
 
 if (count _zeusGroups > 0) then {
     diag_log format ["[FST_HCSpawn] Zeus disconnected: %1, releasing %2 held groups", _name, count _zeusGroups];
     {
         _x setVariable ["FST_HC_heldBy", -1, true];
+        _x setVariable ["FST_HC_pendingTransfer", true];
         FST_HC_TransferQueue pushBackUnique _x;
     } forEach _zeusGroups;
+    FST_HC_HeldGroups = FST_HC_HeldGroups - _zeusGroups;
 };

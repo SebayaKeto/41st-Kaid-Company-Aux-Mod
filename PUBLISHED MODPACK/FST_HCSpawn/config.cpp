@@ -22,6 +22,7 @@ class CfgFunctions {
             class getSpawnTarget {};
             class isBlacklisted {};
             class registerEvents {};
+            class isAuthorizedCaller {};
         };
         class GroupTracking {
             file = "FST_HCSpawn";

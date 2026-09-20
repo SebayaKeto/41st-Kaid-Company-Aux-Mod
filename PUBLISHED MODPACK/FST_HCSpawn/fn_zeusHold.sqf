@@ -1,6 +1,6 @@
 // FST_HCSpawn_fnc_zeusHold
 // CLIENT (no args): reads curator selection, sends hold/release via serverEvent.
-// SERVER (4 args): [group, zeusOwnerID, holdBool, zeusOwnerID] — executes transfer.
+// SERVER (4 args): [group, zeusOwnerID, holdBool, zeusOwnerID] -- executes transfer.
 
 // ============================================================
 // SERVER PATH
@@ -9,18 +9,29 @@ if (isServer && {count _this == 4}) exitWith {
     params ["_grp", "_zeusId", "_hold", "_zeusIdForEvent"];
 
     if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {};
+    if (isNil "FST_HC_HeldGroups") then { FST_HC_HeldGroups = []; };
 
     if (_hold) then {
         // HOLD: pull from HC to Zeus client.
         _grp setVariable ["FST_HC_tracked", nil];
         _grp setVariable ["FST_HC_onHC", nil];
         _grp setVariable ["FST_HC_pendingTransfer", nil];
-        _grp setVariable ["FST_HC_interceptQueued", nil, true];
+        if (!isNil {_grp getVariable "FST_HC_interceptQueued"}) then {
+            _grp setVariable ["FST_HC_interceptQueued", nil, true];
+        };
+
+        // V27: a group that was already queued for HC transfer used to stay in the
+        // queue after being held. The processor then moved it to an HC a couple of
+        // seconds later while it was still flagged as held. Pull it out of the
+        // queue and record it in the held cache before touching ownership.
+        FST_HC_TransferQueue = FST_HC_TransferQueue - [_grp];
+        FST_HC_HeldGroups pushBackUnique _grp;
 
         private _isGarrisoned = !(leader _grp checkAIFeature "PATH");
         private _moved = _grp setGroupOwner _zeusId;
         if (!_moved && {groupOwner _grp != _zeusId}) exitWith {
             _grp setVariable ["FST_HC_heldBy", -1, true];
+            FST_HC_HeldGroups = FST_HC_HeldGroups - [_grp];
             if (FST_HC_DebugLogging) then {
                 diag_log format ["[FST_HCSpawn] Zeus hold failed: %1 to owner %2", _grp, _zeusId];
             };
@@ -35,6 +46,7 @@ if (isServer && {count _this == 4}) exitWith {
     } else {
         // RELEASE: send back to transfer queue.
         _grp setVariable ["FST_HC_heldBy", -1, true];
+        FST_HC_HeldGroups = FST_HC_HeldGroups - [_grp];
         _grp setVariable ["FST_HC_pendingTransfer", true];
         FST_HC_TransferQueue pushBackUnique _grp;
         if (FST_HC_DebugLogging) then { diag_log format ["[FST_HCSpawn] Zeus %1 released group %2", _zeusId, _grp]; };

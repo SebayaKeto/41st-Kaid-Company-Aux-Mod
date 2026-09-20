@@ -25,8 +25,10 @@ missionNamespace setVariable ["FST_HC_FillGarrisonBatchSize", missionNamespace g
 missionNamespace setVariable ["FST_HC_FillGarrisonBatchDelay", missionNamespace getVariable ["FST_HC_FillGarrisonBatchDelay", 1.25]];
 missionNamespace setVariable ["FST_HC_CleanupPostSpawnGrace", missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60]];
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupEnabled", missionNamespace getVariable ["FST_HC_DeadGroupCleanupEnabled", true]];
+// Automatic dead-group sweeping is manual-only in this build. The old
+// "Enable Automatic Dead OPFOR Cleanup" checkbox and interval slider were
+// never read by any code path, so they were removed from the CBA menu (V27).
 missionNamespace setVariable ["FST_HC_DeadGroupAutoCleanupEnabled", false];
-missionNamespace setVariable ["FST_HC_DeadGroupCleanupInterval", missionNamespace getVariable ["FST_HC_DeadGroupCleanupInterval", 1200]];
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMinAge", 300]];
 missionNamespace setVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", missionNamespace getVariable ["FST_HC_DeadTrackedGroupCleanupMinAge", 900]];
 missionNamespace setVariable ["FST_HC_DeadGroupCleanupMaxPerPass", missionNamespace getVariable ["FST_HC_DeadGroupCleanupMaxPerPass", 25]];
@@ -197,6 +199,17 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
     ["FST HC Spawn", "Core"], [0, 300, 120, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
+// V27: server-side sanity check on who is asking for spawns/holds. CBA events
+// do not carry a verified sender, so this validates the CLAIMED owner ID
+// against the live curator/admin list. It stops non-Zeus clients from firing
+// the spawn/hold events by accident or via a stray script, not a determined
+// spoofer. Turn off only if legitimate Zeus requests are being rejected.
+[
+    "FST_HC_EventAuthEnabled", "CHECKBOX",
+    ["Require Zeus/Admin For Spawn Events", "Server rejects spawn, fill, QRF, frontline, hold and cleanup requests whose claimed sender is not a current curator or logged-in admin."],
+    ["FST HC Spawn", "Core"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
 [
     "FST_HC_DebugLogging", "CHECKBOX",
     ["Verbose RPT Logging", "Extra HC spawn/transfer logging. Leave off during live ops unless debugging."],
@@ -271,22 +284,20 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
     ["FST HC Spawn", "Cleanup"], [60, 1800, 600, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
+// V27: the catch-all sweeps editor-placed and mission-script AI onto HCs too.
+// Before this flag, the despawn cleanup would delete those groups (HVTs, scripted
+// objective units) ten minutes after players left. Default ON restricts despawn
+// to groups this addon or Zeus created; OFF restores the old "everything" behavior.
 [
-    "FST_HC_DeadGroupCleanupEnabled", "CHECKBOX",
-    ["Enable Manual Dead OPFOR Cleanup", "Allows the manual dead-group cleanup event to delete local dead OPFOR groups during controlled lulls. Manual cleanup bypasses the automatic interval."],
+    "FST_HC_DespawnOnlyManaged", "CHECKBOX",
+    ["Despawn Only Addon/Zeus Groups", "Only despawn groups created by FST HC Spawn modules or placed by Zeus. Editor-placed and mission-script AI are left alone even after they are offloaded to an HC."],
     ["FST HC Spawn", "Cleanup"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
-    "FST_HC_DeadGroupAutoCleanupEnabled", "CHECKBOX",
-    ["Enable Automatic Dead OPFOR Cleanup", "Disabled in this build. Dead-group cleanup is manual-only to avoid combat-time delete storms."],
-    ["FST HC Spawn", "Cleanup"], false, true, {}, false
-] call CBA_fnc_addSetting;
-
-[
-    "FST_HC_DeadGroupCleanupInterval", "SLIDER",
-    ["Dead Group Cleanup Interval", "Seconds between automatic dead OPFOR group sweeps. Default is 20 minutes; use manual cleanup during lulls if needed."],
-    ["FST HC Spawn", "Cleanup"], [300, 1800, 1200, 0], true, {}, false
+    "FST_HC_DeadGroupCleanupEnabled", "CHECKBOX",
+    ["Enable Manual Dead OPFOR Cleanup", "Allows the manual dead-group cleanup (Zeus module '--- Cleanup Dead Groups ---') to delete local dead OPFOR groups during controlled lulls."],
+    ["FST HC Spawn", "Cleanup"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
@@ -394,5 +405,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V23_SAFE_DISCONNECT_AUTO_EXPDIAG_2026-05-23", true];
-diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V23_SAFE_DISCONNECT_AUTO_EXPDIAG_2026-05-23";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20", true];
+diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20";
