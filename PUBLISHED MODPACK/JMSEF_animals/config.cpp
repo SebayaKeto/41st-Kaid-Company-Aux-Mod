@@ -147,6 +147,12 @@ class CfgVehicles
 			{
 				init="[_this#0] spawn dev_fnc_varren_behave";
 			};
+			class dev_behave_local
+			{
+				// 41st: FST_HCSpawn transfers creature groups to headless clients; the
+				// behaviour loop above stops when locality is lost, so start it again here.
+				local="if (_this#1) then { [_this#0] spawn dev_fnc_varren_behave; };";
+			};
 		};
 	};
 	class FST_41st_Walker: Zombie_O_Walker_CSAT 
