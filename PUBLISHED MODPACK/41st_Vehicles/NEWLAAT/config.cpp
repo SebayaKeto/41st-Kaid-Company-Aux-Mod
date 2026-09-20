@@ -90,7 +90,7 @@
 			"FST_laati_mk2Lights_Talisman",
 			"FST_laati_mk2Lights_Jorge",
 			"FST_laati_mk2Lights_Red",
-			"FST_laati_mk2Lights_Oak"
+			"FST_laati_mk2Lights_Oak",
 			"FST_laati_mk2Lights_Houdini",
 			"FST_laati_Turret_RadarTestbed",
 			"FST_laati_Turret_Aether",
