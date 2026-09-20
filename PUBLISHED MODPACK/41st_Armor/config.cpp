@@ -9079,6 +9079,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Woodland.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9092,6 +9093,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Urban.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9105,6 +9107,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Desert.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9118,6 +9121,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Midnight.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
