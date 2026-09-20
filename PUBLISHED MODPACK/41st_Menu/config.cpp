@@ -96,6 +96,56 @@ class RscButtonTextOnly;
 class RscStandardDisplay;
 class RscPicture;
 class RscButton;
+// ---------------------------------------------------------------------------
+// Arma 3 2.22 main menu: the stock RscDisplayMain script now CREATES the centre
+// Spotlight tiles at runtime (ctrlCreate "RscMainMenuSpotlight" once per entry
+// in CfgMainMenuSpotlight whose condition passes, e.g. Bootcamp / East Wind /
+// Apex Protocol) and positions them from the config Spotlight group. Because
+// this display deletes that group, the created tile keeps the class default
+// position, which is the middle of the screen, on top of the menu video.
+// Deleting controls in RscDisplayMain cannot catch runtime-created ones, so:
+//  1. every stock spotlight entry gets a false condition (nothing is created),
+//  2. the tile class is collapsed to zero size and hidden as a safety net for
+//     anything BI or another mod still creates from it.
+// ---------------------------------------------------------------------------
+class CfgMainMenuSpotlight
+{
+	class Bootcamp      { condition = "false"; };
+	class EastWind      { condition = "false"; };
+	class ApexProtocol  { condition = "false"; };
+};
+class RscMainMenuSpotlight: RscControlsGroupNoScrollbars
+{
+	show = 0;
+	fade = 1;
+	x = 0;
+	y = 0;
+	w = 0;
+	h = 0;
+};
+
+// ---------------------------------------------------------------------------
+// The engine puts up the RscDisplayMainMenuBackground title layer behind the
+// main menu (0.1 grey background + backgroundGrey.jpg) and only fades it out
+// several seconds into the intro mission. That grey was visible between the
+// menu appearing and the video coming up. Make the layer pure black so the
+// only thing ever shown before the video is black, which the video itself
+// fades in from.
+// ---------------------------------------------------------------------------
+class RscTitles
+{
+	class RscDisplayMainMenuBackground
+	{
+		class Controls
+		{
+			class Background      { colorBackground[] = {0,0,0,1}; };
+			class BackgroundLeft  { colorBackground[] = {0,0,0,1}; };
+			class BackgroundRight { colorBackground[] = {0,0,0,1}; };
+			class Picture         { text = "#(argb,8,8,3)color(0,0,0,1)"; };
+		};
+	};
+};
+
 class RscDisplayMain: RscStandardDisplay
 {
 	idd=0;
@@ -132,14 +182,18 @@ class RscDisplayMain: RscStandardDisplay
 			x="safezoneX + safezoneW";
 			w=10;
 		};
+		// Solid black backdrop. Covers the VR world load and the video decoder
+		// start-up, and mainmenu.vr\initIntro.sqf fades it out once the video is
+		// running and back in just before each loop ends. The video itself opens
+		// from black, so the transitions read as its own fade rather than a swap.
 		class Picture: RscPicture
 		{
 			idc=102;
-			text="";
-			x="0 * safezoneW + safezoneX";
-			y="0 * safezoneH + safezoneY";
-			w="safezoneW * 1.1";
-			h="safezoneH * 1.1";
+			text="#(argb,8,8,3)color(0,0,0,1)";
+			x="safezoneX";
+			y="safezoneY";
+			w="safezoneW";
+			h="safezoneH";
 		};
 	};
 	class Controls
