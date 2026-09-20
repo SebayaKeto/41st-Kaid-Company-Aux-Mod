@@ -9083,7 +9083,7 @@ class CfgWeapons
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
 	}; 
-		class FST_BARC_Helmet_Urban: FST_BARC_Helmet
+	class FST_BARC_Helmet_Urban: FST_BARC_Helmet
 	{
 		author="House";
 		scope=2;
@@ -9096,7 +9096,7 @@ class CfgWeapons
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
 	}; 
-		class FST_BARC_Helmet_Desert: FST_BARC_Helmet
+	class FST_BARC_Helmet_Desert: FST_BARC_Helmet
 	{
 		author="House";
 		scope=2;
@@ -9109,7 +9109,7 @@ class CfgWeapons
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
 	}; 
-		class FST_BARC_Helmet_Midnight: FST_BARC_Helmet
+	class FST_BARC_Helmet_Midnight: FST_BARC_Helmet
 	{
 		author="House";
 		scope=2;
@@ -9120,6 +9120,16 @@ class CfgWeapons
 		};
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
+		};
+	};
+class FST_BARC_Helmet_Evox: FST_BARC_Helmet
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] BARC Helmet [Evox]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_Barc_Helmet_Evox.paa",
 		};
 	};
 	class FST_P2_ARC_Helmet_Tally: JLTS_CloneHelmetP2
