@@ -20,6 +20,7 @@ class CfgFunctions {
             class registerHC {};
             class handleDisconnect {};
             class getSpawnTarget {};
+            class getVehicleHC {};
             class isBlacklisted {};
             class registerEvents {};
             class isAuthorizedCaller {};
@@ -37,6 +38,8 @@ class CfgFunctions {
             file = "FST_HCSpawn";
             class processTransfers {};
             class transferGroup {};
+            class isVehicleTransferSafe {};
+            class sendToVehicleHC {};
             class reapplyGarrison {};
             class emergencyRedistribute {};
         };
@@ -51,6 +54,7 @@ class CfgFunctions {
         class Spawn {
             file = "FST_HCSpawn";
             class spawnGroupOnTarget {};
+            class spawnVehicleOnTarget {};
             class createGroupLocal {};
             class fillGarrison {};
             class requestFillGarrison {};
@@ -68,6 +72,7 @@ class CfgFunctions {
             class cleanupGroups {};
             class frontlineSpawn {};
             class qrfSpawn {};
+            class qrfBuildLocal {};
         };
         class Debug {
             file = "FST_HCSpawn";

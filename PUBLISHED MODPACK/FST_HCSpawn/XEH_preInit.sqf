@@ -63,6 +63,10 @@ missionNamespace setVariable ["FST_HC_EmergencyDeadDeleteDelay", missionNamespac
 missionNamespace setVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", missionNamespace getVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", 20]];
 missionNamespace setVariable ["FST_HC_EmergencyMuteSentences", missionNamespace getVariable ["FST_HC_EmergencyMuteSentences", true]];
 missionNamespace setVariable ["FST_HC_PerHCSoftCap", missionNamespace getVariable ["FST_HC_PerHCSoftCap", 240]];
+// V28: a mounted group may change owner only while every vehicle it occupies is
+// slower than this (m/s). Ownership hops on moving vehicles split crew and hull
+// across machines for a few frames and wreck multi-crew coordination.
+missionNamespace setVariable ["FST_HC_VehicleTransferMaxSpeed", missionNamespace getVariable ["FST_HC_VehicleTransferMaxSpeed", 1.5]];
 missionNamespace setVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", true]];
 
 
@@ -252,8 +256,30 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 
 [
     "FST_HC_BlacklistVehicles", "CHECKBOX",
-    ["Blacklist All Vehicles", "Prevent offloading groups currently in vehicles."],
+    ["Blacklist All Vehicles", "Prevent the catch-all and Zeus placement from offloading groups currently in vehicles. With a vehicle HC configured, Zeus can still send a stopped vehicle over with the '--- Send To Vehicle HC ---' module."],
     ["FST HC Spawn", "Zeus / Blacklist"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+// ============================================================
+// VEHICLE HC (V28)
+// ============================================================
+
+[
+    "FST_HC_VehicleHCEnabled", "CHECKBOX",
+    ["Dedicated Vehicle HC", "Route all AI vehicle spawns (vehicle quick spawn, QRF convoys, ship QRF vultures, script requests) to one HC and keep infantry balancing off it."],
+    ["FST HC Spawn", "Vehicle HC"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_VehicleHCSlot", "SLIDER",
+    ["Vehicle HC Slot", "Which registered HC is the vehicle HC (HC1 = 1). If that slot is not connected, vehicles fall back to the least-loaded HC."],
+    ["FST HC Spawn", "Vehicle HC"], [1, 8, 4, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_VehicleHCExclusive", "CHECKBOX",
+    ["Keep Infantry Off The Vehicle HC", "Infantry spawns and transfers never pick the vehicle HC while another HC is available. Dismounted QRF passengers are moved to an infantry HC."],
+    ["FST HC Spawn", "Vehicle HC"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -394,6 +420,21 @@ FST_HC_Templates = createHashMapFromArray [
     ["b2_flame_team", [EAST, ["FST_B2_TL","FST_B2_Flame","FST_B2_Flame","FST_B2"], "B2 Flame Team (4)"]]
 ];
 
+// --- VEHICLE TEMPLATES (V28) ---
+// key -> [side, class, description, default behaviour, isAir]
+FST_HC_VehicleTemplates = createHashMapFromArray [
+    ["aat",          [EAST, "FST_AAT",             "AAT Tank",                 "hunt",   false]],
+    ["n99",          [EAST, "FST_N99",             "N99 Tank",                 "hunt",   false]],
+    ["mtt",          [EAST, "FST_MTT",             "MTT (crew only)",          "move",   false]],
+    ["pac",          [EAST, "FST_PAC_41st",        "PAC Transport (crew only)","move",   false]],
+    ["sac",          [EAST, "FST_SAC_41st",        "SAC Transport (crew only)","move",   false]],
+    ["hmp",          [EAST, "FST_HMP_Transport",   "HMP Gunship",              "sad",    true]],
+    ["vulture",      [EAST, "FST_CIS_Vulture",     "Vulture Droid",            "sad",    true]],
+    ["vulture_aa",   [EAST, "FST_CIS_Vulture_AA",  "Vulture Droid (AA)",       "loiter", true]],
+    ["vulture_cas",  [EAST, "FST_CIS_Vulture_CAS", "Vulture Droid (CAS)",      "sad",    true]],
+    ["vulture_elite",[EAST, "FST_CIS_Vulture_Elite","Vulture Droid (Elite)",   "sad",    true]]
+];
+
 // Objective storage
 FST_HC_Objectives = [];
 FST_HC_ObjectivesFired = [];
@@ -405,5 +446,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20", true];
-diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "V28_VEHICLE_HC_2026-09-20", true];
+diag_log "[FST_HCSpawn] preInit complete - V28_VEHICLE_HC_2026-09-20";

@@ -71,6 +71,8 @@ _lines pushBack format ["  Zeus held: %1 groups", _heldCount];
 _lines pushBack format ["  Untracked eligible server groups: %1", _untrackedEligible];
 _lines pushBack format ["  Total tracked: %1 groups", FST_HC_TrackedCount];
 _lines pushBack format ["  Zeus mode: %1", missionNamespace getVariable ["FST_HC_ZeusMode", "instant"]];
+private _vehHC = [] call FST_HCSpawn_fnc_getVehicleHC;
+_lines pushBack (if ((_vehHC select 1) >= 0) then { format ["  Vehicle HC: HC%1 (owner %2)", (_vehHC select 1) + 1, _vehHC select 0] } else { "  Vehicle HC: none (vehicles use least-loaded HC)" });
 if (_safeModeLeft > 0 || {FST_HC_EmergencyMode}) then {
     _lines pushBack format ["  Transfers paused: safeMode=%1s redistribute=%2", ceil _safeModeLeft, FST_HC_EmergencyMode];
 };

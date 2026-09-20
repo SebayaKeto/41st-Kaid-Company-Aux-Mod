@@ -75,6 +75,37 @@ if (isServer) then {
         _this call FST_HCSpawn_fnc_qrfSpawn;
     }] call CBA_fnc_addEventHandler;
 
+    // V28: crewed AI vehicle spawn (from Zeus client or server script). Arg 6 is the claimed owner.
+    ["FST_HC_evt_spawnVehicle", {
+        if !([_this param [6, -1], "spawnVehicle"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
+        _this call FST_HCSpawn_fnc_spawnVehicleOnTarget;
+    }] call CBA_fnc_addEventHandler;
+
+    // V28: explicit Zeus request to move a placed vehicle group to the vehicle HC.
+    ["FST_HC_evt_sendToVehicleHC", {
+        if !([_this param [1, -1], "sendToVehicleHC"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
+        _this call FST_HCSpawn_fnc_sendToVehicleHC;
+    }] call CBA_fnc_addEventHandler;
+
+    // V28: an HC asks the server to move a (now dismounted) group it built off
+    // the vehicle HC. Goes through the normal queue; transferGroup honours the
+    // FST_HC_rehome marker only for foot groups sitting on the vehicle HC.
+    ["FST_HC_evt_requeueGroup", {
+        params ["_groupRef"];
+        private _grp = if (_groupRef isEqualType "") then { groupFromNetId _groupRef } else { _groupRef };
+        if (FST_HC_DebugLogging) then { diag_log format ["[FST_HCSpawn] Re-home request %1 -> %2 (owner %3)", _groupRef, _grp, groupOwner _grp]; };
+        if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {};
+        if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) exitWith {};
+        _grp setVariable ["FST_HC_rehome", true];
+        _grp setVariable ["FST_HC_tracked", nil];
+        _grp setVariable ["FST_HC_onHC", nil];
+        // Drop it from the tracked list too, or the next recount re-marks it as
+        // tracked before the transfer processor gets to it.
+        if (!isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = FST_HC_TrackedGroups - [_grp]; };
+        _grp setVariable ["FST_HC_pendingTransfer", true];
+        FST_HC_TransferQueue pushBackUnique _grp;
+    }] call CBA_fnc_addEventHandler;
+
     // Zeus hold/release (from Zeus client)
     ["FST_HC_evt_zeusHold", {
         if !([_this param [1, -1], "zeusHold"] call FST_HCSpawn_fnc_isAuthorizedCaller) exitWith {};
@@ -135,6 +166,10 @@ if (isServer) then {
 // Spawned because the function uses `sleep` past the createVehicleCrew race frame.
 ["FST_HC_evt_createGroupLocal", {
     _this spawn FST_HCSpawn_fnc_createGroupLocal;
+}] call CBA_fnc_addEventHandler;
+// V28: build a whole QRF on the vehicle HC (received via ownerEvent). Spawned: uses sleep.
+["FST_HC_evt_qrfBuildLocal", {
+    _this spawn FST_HCSpawn_fnc_qrfBuildLocal;
 }] call CBA_fnc_addEventHandler;
 
 // Delete a rejected HC clone locally on the owner machine after the server restores the original.

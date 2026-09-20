@@ -1,10 +1,21 @@
 // FST_HCSpawn_fnc_getSpawnTarget
-// Server-side. Returns the owner ID of the least-loaded HC.
-// Falls back to 2 (server) if no valid HCs are connected.
+// Server-side. Returns the owner ID of the HC that should receive a spawn or
+// transfer. Falls back to 2 (server) if no valid HCs are connected.
+//
+// Arguments (V28):
+//   0: STRING - "infantry" (default) or "vehicle"
+//
+// "infantry": least-loaded HC. When a dedicated vehicle HC is configured and
+//   FST_HC_VehicleHCExclusive is on, that HC is left out as long as at least
+//   one other HC is available.
+// "vehicle": the dedicated vehicle HC when it is connected, otherwise the
+//   least-loaded HC (same rules as infantry, so nothing breaks with 3 HCs).
 //
 // Returns: NUMBER -- owner ID
 
 if (!isServer) exitWith { 2 };
+
+params [["_kind", "infantry"]];
 
 if (count FST_HC_Array == 0 || {count FST_HC_Ids == 0}) exitWith { 2 };
 
@@ -23,6 +34,15 @@ if (count _validIndexes == 0) exitWith { 2 };
 // Ensure counts exists for every HC before select.
 while {count FST_HC_UnitCounts < count FST_HC_Ids} do {
     FST_HC_UnitCounts pushBack 0;
+};
+
+// V28: dedicated vehicle HC.
+private _vehHC = [] call FST_HCSpawn_fnc_getVehicleHC;
+_vehHC params ["_vehId", "_vehIdx"];
+if (_kind == "vehicle" && {_vehIdx >= 0} && {_vehIdx in _validIndexes}) exitWith { _vehId };
+if (_kind != "vehicle" && {_vehIdx >= 0} && {missionNamespace getVariable ["FST_HC_VehicleHCExclusive", true]}) then {
+    private _others = _validIndexes - [_vehIdx];
+    if (count _others > 0) then { _validIndexes = _others; };
 };
 
 private _softCap = missionNamespace getVariable ["FST_HC_PerHCSoftCap", 0];

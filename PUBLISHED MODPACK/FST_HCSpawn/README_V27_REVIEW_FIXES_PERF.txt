@@ -140,3 +140,52 @@ Server config note (live server, not the addon):
   only logs "DisconnectTimeout too high" and HandleDisconnect never fires, so
   the dead HC's droids stay frozen until it reconnects. disconnectTimeout
   (5-90s) sets how fast that happens.
+
+============================================================
+V28 -- DEDICATED VEHICLE HC (2026-09-20)
+============================================================
+Why: crewed AI vehicles handed to an HC mid-motion split crew and hull across
+machines for a few frames, which broke multi-crew coordination, so vehicle
+offload had to stay disabled. V28 creates vehicles on their final owner
+instead of moving them, and keeps that owner free of infantry.
+
+Settings (FST HC Spawn > Vehicle HC):
+- Dedicated Vehicle HC (default on)
+- Vehicle HC Slot (default 4 = the HC that registered as HC4). If that slot is
+  not connected, vehicles fall back to the least-loaded HC.
+- Keep Infantry Off The Vehicle HC (default on)
+Hidden: FST_HC_VehicleTransferMaxSpeed (1.5 m/s) for the transfer safety check.
+
+What goes to the vehicle HC:
+- "--- Vehicle Spawn ---" Zeus module (FST_HC_VehicleTemplates: AAT, N99, MTT,
+  PAC, SAC, HMP, Vulture/AA/CAS/Elite), count/behaviour/skill/airborne.
+- "--- QRF Response ---": any QRF with a transport or escort is built entirely
+  on the vehicle HC (fn_qrfBuildLocal via ownerEvent). Passengers are moved to
+  an infantry HC once every one of them has dismounted (re-home path).
+- Ship QRF vultures (41st_Armor Modules.sqf: Munificent, Providence, Diamond,
+  Providence Jorge) now call FST_HCSpawn_fnc_spawnVehicleOnTarget when the
+  addon and an HC are present; otherwise the old server-side spawn runs.
+- Any script: [side, class, pos, dir, behaviour, radius, callerOrMinusOne,
+  options] call FST_HCSpawn_fnc_spawnVehicleOnTarget, or the
+  FST_HC_evt_spawnVehicle server event from a Zeus client.
+- "--- Send To Vehicle HC ---" Zeus module for placed vehicles: moves the
+  selected group only when every vehicle is stopped, landed, fully crewed by
+  that group and has no player aboard. Bypasses "Blacklist All Vehicles".
+
+Transfers: fn_transferGroup routes mounted groups to the vehicle HC and refuses
+unsafe ones (fn_isVehicleTransferSafe), then verifies vehicle and crew ended
+up on the same owner and logs a [WARN] if not.
+
+Also fixed: QRF passengers never dismounted at the TR UNLOAD waypoint
+(moveInCargo assigns them to the vehicle; the waypoint only ejects unassigned
+cargo). They are now ejected on arrival.
+
+Smoke test 2026-09-20 (server + 3 HCs, slot 3 as vehicle HC): infantry only
+ever landed on HC1/HC2; AAT/PAC/vultures all created on HC3 with hull and crew
+on the same owner; ground vehicles drive MOVE orders and QRF convoy routes;
+vultures airborne at 150+ m/s; stationary AAT sent over, moving AAT refused;
+QRF passengers dismounted and re-homed to HC2.
+
+Live-server checklist for the vehicle HC: 4 HCs connected (HC4 = vehicle HC),
+mission has 4 HeadlessClient_F slots, server.cfg has localClient[] with the HC
+address, Per-HC Soft AI Cap raised (op log showed all 3 HCs over 240).

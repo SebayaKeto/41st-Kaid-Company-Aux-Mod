@@ -613,6 +613,17 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
                     params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
                     _currentPosition = getPosATL _ReturnShip;
 
+                    // 41st V28: create the vulture on the dedicated vehicle HC through FST_HCSpawn
+                    // when it is available, so it never changes owner mid-flight. Falls back to
+                    // the original server-side spawn if the addon or an HC is missing.
+                    private _viaHC = false;
+                    if (!isNil "FST_HCSpawn_fnc_spawnVehicleOnTarget" && {(["vehicle"] call FST_HCSpawn_fnc_getSpawnTarget) != 2}) then {
+                        _viaHC = [(_dropside select 0), _vultureClass, _currentPosition, getDir _ReturnShip, "none", -1, -1,
+                            [["flying", true], ["engineOn", true], ["skill", if (_VultureSkill == 1) then { 1 } else { -1 }],
+                             ["combatMode", "RED"], ["behaviour", "AWARE"], ["tag", "ship_qrf_vulture"]]
+                        ] call FST_HCSpawn_fnc_spawnVehicleOnTarget;
+                    };
+                    if (_viaHC) exitWith {};
                     _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
                     (_dropside select 0) createVehicleCrew _Banshee;
 
@@ -1260,6 +1271,17 @@ FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
                     params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
                     _currentPosition = getPosATL _ReturnShip;
 
+                    // 41st V28: create the vulture on the dedicated vehicle HC through FST_HCSpawn
+                    // when it is available, so it never changes owner mid-flight. Falls back to
+                    // the original server-side spawn if the addon or an HC is missing.
+                    private _viaHC = false;
+                    if (!isNil "FST_HCSpawn_fnc_spawnVehicleOnTarget" && {(["vehicle"] call FST_HCSpawn_fnc_getSpawnTarget) != 2}) then {
+                        _viaHC = [(_dropside select 0), _vultureClass, _currentPosition, getDir _ReturnShip, "none", -1, -1,
+                            [["flying", true], ["engineOn", true], ["skill", if (_VultureSkill == 1) then { 1 } else { -1 }],
+                             ["combatMode", "RED"], ["behaviour", "AWARE"], ["tag", "ship_qrf_vulture"]]
+                        ] call FST_HCSpawn_fnc_spawnVehicleOnTarget;
+                    };
+                    if (_viaHC) exitWith {};
                     _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
                     (_dropside select 0) createVehicleCrew _Banshee;
 
@@ -1856,6 +1878,17 @@ FST_ScifiSupportPlus_fnc_SW_Diamond_QRF = {
                     params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
                     _currentPosition = getPosATL _ReturnShip;
 
+                    // 41st V28: create the vulture on the dedicated vehicle HC through FST_HCSpawn
+                    // when it is available, so it never changes owner mid-flight. Falls back to
+                    // the original server-side spawn if the addon or an HC is missing.
+                    private _viaHC = false;
+                    if (!isNil "FST_HCSpawn_fnc_spawnVehicleOnTarget" && {(["vehicle"] call FST_HCSpawn_fnc_getSpawnTarget) != 2}) then {
+                        _viaHC = [(_dropside select 0), _vultureClass, _currentPosition, getDir _ReturnShip, "none", -1, -1,
+                            [["flying", true], ["engineOn", true], ["skill", if (_VultureSkill == 1) then { 1 } else { -1 }],
+                             ["combatMode", "RED"], ["behaviour", "AWARE"], ["tag", "ship_qrf_vulture"]]
+                        ] call FST_HCSpawn_fnc_spawnVehicleOnTarget;
+                    };
+                    if (_viaHC) exitWith {};
                     _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
                     (_dropside select 0) createVehicleCrew _Banshee;
 
@@ -2660,6 +2693,17 @@ FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF = {
                     params ["_ReturnShip", "_dropside", "_vultureClass", "_VultureSkill"];
                     _currentPosition = getPosATL _ReturnShip;
 
+                    // 41st V28: create the vulture on the dedicated vehicle HC through FST_HCSpawn
+                    // when it is available, so it never changes owner mid-flight. Falls back to
+                    // the original server-side spawn if the addon or an HC is missing.
+                    private _viaHC = false;
+                    if (!isNil "FST_HCSpawn_fnc_spawnVehicleOnTarget" && {(["vehicle"] call FST_HCSpawn_fnc_getSpawnTarget) != 2}) then {
+                        _viaHC = [(_dropside select 0), _vultureClass, _currentPosition, getDir _ReturnShip, "none", -1, -1,
+                            [["flying", true], ["engineOn", true], ["skill", if (_VultureSkill == 1) then { 1 } else { -1 }],
+                             ["combatMode", "RED"], ["behaviour", "AWARE"], ["tag", "ship_qrf_vulture"]]
+                        ] call FST_HCSpawn_fnc_spawnVehicleOnTarget;
+                    };
+                    if (_viaHC) exitWith {};
                     _Banshee = createVehicle [_vultureClass, _currentPosition, [], 0, "CAN_COLLIDE"];
                     (_dropside select 0) createVehicleCrew _Banshee;
 

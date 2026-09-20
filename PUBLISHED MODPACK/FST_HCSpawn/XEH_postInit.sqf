@@ -27,7 +27,7 @@ if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
-diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20";
+diag_log "[FST_HCSpawn] postInit starting - V28_VEHICLE_HC_2026-09-20";
 
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;

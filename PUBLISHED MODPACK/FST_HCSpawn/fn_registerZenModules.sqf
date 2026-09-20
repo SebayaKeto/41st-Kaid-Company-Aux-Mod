@@ -174,6 +174,76 @@ private _icon = "\a3\Modules_F_Curator\Data\iconManual_ca.paa";
 ] call zen_custom_modules_fnc_register;
 
 // ============================================================
+// VEHICLE SPAWN MODULE (V28)
+// ============================================================
+// Crewed AI vehicles are created on the dedicated vehicle HC (or the
+// least-loaded HC) by fn_spawnVehicleOnTarget, so they never change owner.
+[
+    "41st Kaid Modules",
+    "--- Vehicle Spawn ---",
+    {
+        params ["_pos"];
+        private _keys = keys FST_HC_VehicleTemplates;
+        private _labels = _keys apply { (FST_HC_VehicleTemplates get _x) select 2 };
+        ["Vehicle Spawn (vehicle HC)",
+        [
+            ["COMBO", "Vehicle", [_keys, _labels, 0]],
+            ["SLIDER", "Count", [1, 8, 1, 0]],
+            ["COMBO", ["Behaviour", "Template default: tanks hunt, transports move to the module position, vultures seek and destroy around it."], [
+                ["default", "none", "hold", "patrol", "hunt", "assault", "move", "sad", "loiter"],
+                ["Template default", "No orders", "Hold", "Patrol", "Hunt", "Assault", "Move here", "Seek & Destroy here", "Loiter here"],
+                0
+            ]],
+            ["SLIDER", ["Radius (m)", "Patrol/hunt/loiter radius. 0 = behaviour default."], [0, 2000, 0, 0]],
+            ["COMBO", "Crew Skill", [[-1, 0.5, 0.8, 1], ["Default", "Regular", "Veteran", "Maximum"], 0]],
+            ["CHECKBOX", ["Spawn Aircraft Airborne", "Aircraft start flying at 150m; ground vehicles ignore this."], true]
+        ],
+        {
+            params ["_values", "_args"];
+            _args params ["_pos"];
+            _values params ["_key", "_count", "_behaviorSel", "_radius", "_skill", "_airborne"];
+            private _tpl = FST_HC_VehicleTemplates getOrDefault [_key, []];
+            if (count _tpl == 0) exitWith { systemChat "[FST] Unknown vehicle template."; };
+            _tpl params ["_side", "_class", "_desc", "_defaultBehavior", "_isAir"];
+            private _behavior = if (_behaviorSel == "default") then { _defaultBehavior } else { _behaviorSel };
+            if (_radius <= 0) then { _radius = -1; };
+            _count = round _count;
+            for "_i" from 0 to (_count - 1) do {
+                private _spawnPos = _pos vectorAdd [(_i mod 4) * 30, floor (_i / 4) * 30, 0];
+                if (_isAir) then { _spawnPos set [2, 150 + _i * 20]; };
+                ["FST_HC_evt_spawnVehicle", [_side, _class, _spawnPos, 0, _behavior, _radius, clientOwner,
+                    [["skill", _skill], ["flying", _airborne && _isAir], ["target", _pos], ["tag", "zeus_vehicle_spawn"]]]] call CBA_fnc_serverEvent;
+            };
+            systemChat format ["[FST] Spawning %1x %2 (%3) on the vehicle HC", _count, _desc, _behavior];
+        },
+        {},
+        [_pos]
+        ] call zen_dialog_fnc_create;
+    },
+    _icon
+] call zen_custom_modules_fnc_register;
+
+// ============================================================
+// SEND TO VEHICLE HC MODULE (V28)
+// ============================================================
+// Acts on the current Zeus selection (Ctrl+click groups or vehicles). The
+// server only moves a group whose vehicles are stopped, landed and fully
+// crewed by that group, and tells the Zeus otherwise.
+[
+    "41st Kaid Modules",
+    "--- Send To Vehicle HC ---",
+    {
+        private _groups = +(curatorSelected select 1);
+        { _groups pushBackUnique (group _x); } forEach ((curatorSelected select 0) select { !isNull group _x });
+        _groups = _groups select { !isNull _x && {count units _x > 0} && {!isPlayer leader _x} };
+        if (count _groups == 0) exitWith { systemChat "[FST] Select the vehicle or its group first (Ctrl+click), then place this module."; };
+        { ["FST_HC_evt_sendToVehicleHC", [_x, clientOwner]] call CBA_fnc_serverEvent; } forEach _groups;
+        systemChat format ["[FST] Requested vehicle HC transfer for %1 group(s).", count _groups];
+    },
+    _icon
+] call zen_custom_modules_fnc_register;
+
+// ============================================================
 // DEAD GROUP CLEANUP MODULE (V27)
 // ============================================================
 // Manual maintenance for controlled lulls. This event existed since V19 but had
@@ -202,4 +272,4 @@ private _icon = "\a3\Modules_F_Curator\Data\iconManual_ca.paa";
     _icon
 ] call zen_custom_modules_fnc_register;
 
-diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF + Dead Group Cleanup", count FST_HC_Templates];
+diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF + Vehicle Spawn + Send To Vehicle HC + Dead Group Cleanup", count FST_HC_Templates];
