@@ -72,7 +72,11 @@ class CfgWeapons
     class CannonCore;
     class MGun;
     class MissileLauncher;
-    class missiles_titan;
+    class missiles_titan
+    {
+        class Player;
+        class TopDown;
+    };
     class RocketPods;
     class GrenadeLauncher;
     class SmokeLauncher;

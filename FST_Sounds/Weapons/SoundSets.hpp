@@ -119,6 +119,20 @@
 		doppler = 0;
 		loop = 0;
 	};
+	class FST_Sabre_Missile_Launch_SoundSet
+	{
+		soundShaders[] = {"FST_Sabre_Missile_PLXFire","FST_Sabre_Missile_LaunchMotor"};
+		volumeFactor = 1;
+		volumeCurve = "InverseSquare2Curve";
+		sound3DProcessingType = "WeaponMediumShot3DProcessingType";
+		distanceFilter = "weaponShotDistanceFreqAttenuationFilter";
+		occlusionFactor = 0.5;
+		obstructionFactor = 0.3;
+		spatial = 1;
+		doppler = 0;
+		loop = 0;
+		soundShadersLimit = 2;
+	};
 	class FST_Sabre_Missile_Explosion_SoundSet
 	{
 		soundShaders[] = {"FST_Sabre_Missile_Explosion"};

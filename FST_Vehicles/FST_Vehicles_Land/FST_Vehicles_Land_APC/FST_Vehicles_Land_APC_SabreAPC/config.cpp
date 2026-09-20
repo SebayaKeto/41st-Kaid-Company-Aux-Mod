@@ -493,7 +493,7 @@ class CfgVehicles
 	{
 		// Third-party airlift integration.
 		tas_canBlift = 1;
-		tas_liftVars = "[[[[0,0,0]]], [0.1], [-0.5]]";
+		tas_liftVars = "[[[[0, -3.7, -6]] ], [0], [0]]";
 		// Shared TankX chassis, mobility, and presentation settings for Sabre variants.
 		author="Maldova";
 		mapSize=35.0001;
@@ -1045,7 +1045,7 @@ class CfgVehicles
 		driverRightLegAnimName="pedal_thrust";
 		viewDriverShadowAmb=0.5;
 		viewDriverShadowDiff=0.050000001;
-		// Standard passenger seats use interior model proxies 4-9; proxy 23 remains a cargo turret.
+		// Standard passenger seats use interior model proxies 4-9; the named Infantry Commander seat uses proxy 23.
 		transportSoldier=6;
 		cargoProxyIndexes[]={4,5,6,7,8,9};
 		memoryPointsGetInDriver="pos driver";
@@ -1457,6 +1457,37 @@ class CfgVehicles
 		smokeLauncherVelocity=25;
 		smokeLauncherOnTurret=0;
 		smokeLauncherAngle=150;
+		class CargoTurret_BaseTurret: CargoTurret
+		{
+			gunnerAction = "passenger_inside_1";
+			gunnerInAction = "passenger_inside_1";
+			proxyType = "CPCargo";
+			gunnerCompartments = "Compartment2";
+			memoryPointsGetInGunner = "pos driver";
+			memoryPointsGetInGunnerDir = "pos driver dir";
+			soundAttenuationTurret = "HeliAttenuationGunner";
+			isPersonTurret = 1;
+			showAsCargo = 1;
+			hasGunner = 1;
+			ejectDeadGunner = 1;
+			canHideGunner = 0;
+			gunnerGetInAction = "GetInHeli_Light_01bench";
+			gunnerGetOutAction = "GetOutLow";
+			inGunnerMayFire = 1;
+			outGunnerMayFire = 1;
+			minTurn = -90;
+			maxTurn = 90;
+			initTurn = 0;
+			minElev = -35;
+			maxElev = 55;
+			initElev = 0;
+			minOutTurn = -90;
+			maxOutTurn = 90;
+			initOutTurn = 0;
+			minOutElev = -35;
+			maxOutElev = 55;
+			initOutElev = 0;
+		};
 		class Turrets: Turrets
 		{
 			// Primary gunner uses the dual-cannon parent axes and matching paired muzzle points.
@@ -1728,37 +1759,6 @@ class CfgVehicles
 				class Turrets{};
 			};
 			// Exterior turret seats (proxies 10-22): passengers can fire
-			class CargoTurret_BaseTurret: CargoTurret
-			{
-				gunnerAction = "passenger_inside_1";
-				gunnerInAction = "passenger_inside_1";
-				proxyType = "CPCargo";
-				gunnerCompartments = "Compartment2";
-				memoryPointsGetInGunner = "pos driver";
-				memoryPointsGetInGunnerDir = "pos driver dir";
-				soundAttenuationTurret = "HeliAttenuationGunner";
-				isPersonTurret = 1;
-				showAsCargo = 1;
-				hasGunner = 1;
-				ejectDeadGunner = 1;
-				canHideGunner = 0;
-				gunnerGetInAction = "GetInHeli_Light_01bench";
-				gunnerGetOutAction = "GetOutLow";
-				inGunnerMayFire = 1;
-				outGunnerMayFire = 1;
-				minTurn = -90;
-				maxTurn = 90;
-				initTurn = 0;
-				minElev = -35;
-				maxElev = 55;
-				initElev = 0;
-				minOutTurn = -90;
-				maxOutTurn = 90;
-				initOutTurn = 0;
-				minOutElev = -35;
-				maxOutElev = 55;
-				initOutElev = 0;
-			};
 			// Upper Left Exterior seats (proxy 10-13): left side entry
 			class CargoTurret_10: CargoTurret_BaseTurret
 			{
@@ -1884,15 +1884,19 @@ class CfgVehicles
 				proxyIndex = 22;
 				playerPosition = 14;
 			};
-			// Internal infantry commander passenger seat (proxy 23)
+			// Named internal passenger seat (proxy 23). CargoTurret_BaseTurret sets showAsCargo = 1.
 			class CargoTurret_23: CargoTurret_BaseTurret
 			{
 				gunnerName = "$STR_FST_SABER_APC_GUNNER_SEAT_23";
 				proxyIndex = 23;
 				playerPosition = 15;
-				isPersonTurret = 0;
+				isPersonTurret = 1;
 				inGunnerMayFire = 0;
 				outGunnerMayFire = 0;
+				minTurn = -85;
+				maxTurn = 85;
+				minOutTurn = -85;
+				maxOutTurn = 85;
 			};
 		};
 		class Damage
