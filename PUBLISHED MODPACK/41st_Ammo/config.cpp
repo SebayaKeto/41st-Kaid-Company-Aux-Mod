@@ -587,6 +587,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
 		effectfly="3AS_PlasmaBolt_Red_Fly";
+		aiAmmoUsageFlags="64 + 128 + 256 + 512"; // Infantry + Vehicle + Air + Armour. 3AS_PlasmaBase lacks 512, so droid rifles were never aimed at tanks.
 		hit=28; //28
 		caliber=1.6; //1.6
 	};
@@ -658,6 +659,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
 		effectfly="3AS_PlasmaBolt_Red_Fly";
+		aiAmmoUsageFlags="64 + 128 + 256 + 512"; // Infantry + Vehicle + Air + Armour. 3AS_PlasmaBase lacks 512, so droid rifles were never aimed at tanks.
 	};
 	class FST_blasterbolt_Overcharged_Blue: FST_blasterbolt
 	{
@@ -695,6 +697,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
 		effectfly="3AS_PlasmaBolt_Red_Fly";
+		aiAmmoUsageFlags="64 + 128 + 256 + 512"; // Infantry + Vehicle + Air + Armour. 3AS_PlasmaBase lacks 512, so droid rifles were never aimed at tanks.
 		coefGravity=0.1;
 	};
 	class FST_blasterbolt_DMR_Blue: FST_blasterbolt
@@ -719,6 +722,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
 		effectfly="3AS_PlasmaBolt_Red_Fly";
+		aiAmmoUsageFlags="64 + 128 + 256 + 512"; // Infantry + Vehicle + Air + Armour. 3AS_PlasmaBase lacks 512, so droid rifles were never aimed at tanks.
 	};	
 	class FST_blasterbolt_scatter_Blue: FST_blasterbolt
 	{
@@ -750,6 +754,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
 		effectfly="3AS_PlasmaBolt_Red_Fly";
+		aiAmmoUsageFlags="64 + 128 + 256 + 512"; // Infantry + Vehicle + Air + Armour. 3AS_PlasmaBase lacks 512, so droid rifles were never aimed at tanks.
 		submunitionAmmo="FST_blasterbolt_Red";
 	};
 	class FST_blasterbolt_scatter_flechette_Blue: FST_Blasterbolt
@@ -854,6 +859,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_red.p3d";
 		effectfly="3AS_PlasmaBolt_Red_Fly";
+		aiAmmoUsageFlags="64 + 128 + 256 + 512"; // Infantry + Vehicle + Air + Armour. 3AS_PlasmaBase lacks 512, so droid rifles were never aimed at tanks.
 		submunitionAmmo="FST_blasterbolt_Red";
 	};
 	class FST_thermal_slug_Blue: FST_blasterbolt
