@@ -165,6 +165,20 @@
 			{300,0.25}
 		};
 	};
+	class FST_Sabre_Missile_PLXFire
+	{
+		samples[] = {{"\FST\FST_Sounds\Weapons\PLX-1Fire.ogg",1}};
+		volume = 3.1622777;
+		range = 2000;
+		rangeCurve[] = {{0,1},{200,1},{800,0.55},{1600,0.15},{2000,0}};
+	};
+	class FST_Sabre_Missile_LaunchMotor
+	{
+		samples[] = {{"\FST\FST_Sounds\Weapons\PLX_LaunchMotor.ogg",1}};
+		volume = 3.1622777;
+		range = 2000;
+		rangeCurve[] = {{0,1},{200,1},{800,0.55},{1600,0.15},{2000,0}};
+	};
 	class FST_Sabre_Missile_Explosion
 	{
 		samples[] =

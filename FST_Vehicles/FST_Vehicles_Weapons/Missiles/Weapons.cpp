@@ -13,16 +13,20 @@ class FST_VW_Sabre_LG_MissileLauncher: missiles_titan
     muzzles[] = {"this"};
     magazines[] = {"FST_VW_4Rnd_SabreAPC_LG_Missiles"};
     showAimCursorInternal = 1;
-    class Single
+    class Player: Player
     {
         sounds[] = {"StandardSound"};
-        class BaseSoundModeType
+        class StandardSound
         {
+            soundSetShot[] = {"FST_Sabre_Missile_Launch_SoundSet"};
         };
-        class StandardSound: BaseSoundModeType
+    };
+    class TopDown: TopDown
+    {
+        sounds[] = {"StandardSound"};
+        class StandardSound
         {
-            begin1[] = {"3AS\3AS_Weapons\PLX1\Sounds\PLX_Fire.ogg",3.1622777,1,2000};
-            soundBegin[] = {"begin1",1};
+            soundSetShot[] = {"FST_Sabre_Missile_Launch_SoundSet"};
         };
     };
 };
