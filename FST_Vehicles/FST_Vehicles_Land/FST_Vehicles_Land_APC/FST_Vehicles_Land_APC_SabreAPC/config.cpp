@@ -493,7 +493,7 @@ class CfgVehicles
 	{
 		// Third-party airlift integration.
 		tas_canBlift = 1;
-		tas_liftVars = "[[[[0, -3.7, -6]] ], [0], [0]]";
+		tas_liftVars = "[[[[-10, 0, -6]] ], [0], [0]]";
 		// Shared TankX chassis, mobility, and presentation settings for Sabre variants.
 		author="Maldova";
 		mapSize=35.0001;
