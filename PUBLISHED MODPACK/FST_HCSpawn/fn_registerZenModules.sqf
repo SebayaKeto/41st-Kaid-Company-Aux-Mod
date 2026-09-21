@@ -1,10 +1,10 @@
 // FST_HCSpawn_fnc_registerZenModules
 // Client-side. Registers ZEN custom modules under "41st Kaid Modules".
-// Default behavior: Assault (LAMBS rush)
+// Default behavior: BURNS Assault
 
 if (!hasInterface) exitWith {};
 
-private _icon = "\a3\Modules_F_Curator\Data\iconManual_ca.paa";
+private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
 
 // ============================================================
 // TEMPLATE MODULES
@@ -273,3 +273,107 @@ private _icon = "\a3\Modules_F_Curator\Data\iconManual_ca.paa";
 ] call zen_custom_modules_fnc_register;
 
 diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF + Vehicle Spawn + Send To Vehicle HC + Dead Group Cleanup", count FST_HC_Templates];
+
+// BURNS task modules: same handler as the unit/group right-click actions.
+["BURNS", "Task Rush", {
+    params ["_pos",["_object",objNull]];
+    ["rush",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Hunt", {
+    params ["_pos",["_object",objNull]];
+    ["hunt",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Creep", {
+    params ["_pos",["_object",objNull]];
+    ["creep",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Assault", {
+    params ["_pos",["_object",objNull]];
+    ["assault",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Retreat", {
+    params ["_pos",["_object",objNull]];
+    ["retreat",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task CQB", {
+    params ["_pos",["_object",objNull]];
+    ["cqb",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Garrison", {
+    params ["_pos",["_object",objNull]];
+    ["garrison",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Camp", {
+    params ["_pos",["_object",objNull]];
+    ["camp",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Defend", {
+    params ["_pos",["_object",objNull]];
+    ["defend",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Patrol", {
+    params ["_pos",["_object",objNull]];
+    ["patrol",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Task Reset", {
+    params ["_pos",["_object",objNull]];
+    ["reset",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Set Task Target", {
+    params ["_pos",["_object",objNull]];
+    ["target",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Register Artillery", {
+    params ["_pos",["_object",objNull]];
+    ["artillery_register",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Unregister Artillery", {
+    params ["_pos",["_object",objNull]];
+    ["artillery_remove",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Artillery Fire Mission", {
+    params ["_pos",["_object",objNull]];
+    ["artillery_fire",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Enable Unit AI", {
+    params ["_pos",["_object",objNull]];
+    ["enable_unit",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Disable Unit AI", {
+    params ["_pos",["_object",objNull]];
+    ["disable_unit",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Enable Group AI", {
+    params ["_pos",["_object",objNull]];
+    ["enable_group",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Disable Group AI", {
+    params ["_pos",["_object",objNull]];
+    ["disable_group",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Enable Radio", {
+    params ["_pos",["_object",objNull]];
+    ["radio_on",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Disable Radio", {
+    params ["_pos",["_object",objNull]];
+    ["radio_off",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Enable Reinforcement", {
+    params ["_pos",["_object",objNull]];
+    ["reinforce_on",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+["BURNS", "Disable Reinforcement", {
+    params ["_pos",["_object",objNull]];
+    ["reinforce_off",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+
+["BURNS", "Configure Group AI", {
+    params ["_pos",["_object",objNull]];
+    ["configure",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;
+
+["BURNS", "Set Radio", {
+    params ["_pos",["_object",objNull]];
+    ["set_radio",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call zen_custom_modules_fnc_register;

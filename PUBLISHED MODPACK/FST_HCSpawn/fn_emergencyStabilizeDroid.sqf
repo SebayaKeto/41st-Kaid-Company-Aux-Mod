@@ -6,6 +6,9 @@ params ["_unit"];
 if !(missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) exitWith { false };
 if (isNull _unit) exitWith { false };
 if !(local _unit) exitWith { false };
+// WebKnight owns B2/BX health, animation and behavior even if an old mission
+// enables this legacy ACE workaround.
+if (([_unit] call FST_HCSpawn_fnc_burnsRole) == "webknight") exitWith { false };
 
 // Classification moved to fn_isDroidUnit (cached per classname) so the 1.5s
 // periodic scan and Killed handlers pay one hash lookup per unit instead of

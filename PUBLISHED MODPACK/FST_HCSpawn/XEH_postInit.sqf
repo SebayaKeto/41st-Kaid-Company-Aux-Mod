@@ -3,6 +3,8 @@
 // HC: register with server
 // Client: hook Zeus, register keybinds
 
+[] call FST_HCSpawn_fnc_initCombatTasks;
+
 // Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
 // arguments-local command, so it only affects units local to the executing
 // machine. This is the only stance system in the modpack (FST_DroidStance
@@ -11,12 +13,14 @@
 // The function filters on local/alive/side/class itself.
 private _startStanceKeeper = {
     if (hasInterface && {!isServer}) exitWith {};
-    if (missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) then {
+    if !(missionNamespace getVariable ["BURNS_stanceKeeperStarted", false]) then {
+        missionNamespace setVariable ["BURNS_stanceKeeperStarted", true];
         [{
             [] call FST_HCSpawn_fnc_enforceDroidStance;
         }, missionNamespace getVariable ["FST_HC_DroidStanceInterval", 10], []] call CBA_fnc_addPerFrameHandler;
     };
 };
+call _startStanceKeeper;
 
 if (!isMultiplayer) exitWith {
     diag_log "[FST_HCSpawn] Singleplayer -- HC system disabled (droid stance keeper still active)";
@@ -27,7 +31,7 @@ if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
-diag_log "[FST_HCSpawn] postInit starting - V28_VEHICLE_HC_2026-09-20";
+diag_log "[FST_HCSpawn] postInit starting - V30_BURNS_ZEUS_2026-09-21";
 
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;

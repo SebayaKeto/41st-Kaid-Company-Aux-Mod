@@ -37,6 +37,8 @@ if (_hcIdx != -1) exitWith {
         };
     } forEach +FST_HC_TrackedGroups;
 
+    deleteMarker format ["FST_fps_HC%1", _unit getVariable ["FST_HC_slot", _hcIdx + 1]];
+
     // Remove HC from tracking
     FST_HC_Array deleteAt _hcIdx;
     FST_HC_Ids deleteAt _hcIdx;

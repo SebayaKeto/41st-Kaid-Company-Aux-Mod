@@ -62,7 +62,8 @@ private _rebalance = {
 private _newGroup = {
     private _grp = createGroup [_side, true];
     _grp deleteGroupWhenEmpty true;
-    _grp setVariable ["FST_HC_managed", true, true]; // addon-created: despawn-eligible (server reads this)
+    _grp setVariable ["FST_HC_managed", true, true];
+    _grp setVariable ["FST_HC_keepActive", true, true]; // QRFs must reach their destination beyond player activation range. // addon-created: despawn-eligible (server reads this)
     _grp setVariable ["FST_HC_spawnProtectedUntil", time + 90];
     _grp
 };
@@ -135,7 +136,7 @@ if (_vehClass == "") exitWith {
 
             // On completion -- switch to assault
             _wpInf setWaypointStatements ["true",
-                "group this setBehaviourStrong 'COMBAT'; [group this, 200, 15, [], getPos this, false] spawn lambs_wp_fnc_taskRush;"
+                "group this setBehaviourStrong 'COMBAT'; [group this, 'assault', getPos this, 200] call FST_HCSpawn_fnc_setCombatTask;"
             ];
         } forEach _infantryGroups;
     } else {
@@ -143,7 +144,7 @@ if (_vehClass == "") exitWith {
         {
             _x setBehaviourStrong "COMBAT";
             _x setCombatMode "RED";
-            [_x, 200, 15, [], _destination, false] spawn lambs_wp_fnc_taskRush;
+            [_x, "assault", _destination, 200] call FST_HCSpawn_fnc_setCombatTask;
         } forEach _infantryGroups;
     };
 
@@ -252,7 +253,7 @@ _wpHold setWaypointCombatMode "RED";
         if (count units _x > 0) then {
             _x setBehaviourStrong "COMBAT";
             _x setCombatMode "RED";
-            [_x, 200, 15, [], _destination, false] spawn lambs_wp_fnc_taskRush;
+            [_x, "assault", _destination, 200] call FST_HCSpawn_fnc_setCombatTask;
             [_x] call _rebalance;
         };
     } forEach _infantryGroups;

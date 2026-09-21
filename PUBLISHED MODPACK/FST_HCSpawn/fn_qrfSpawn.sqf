@@ -64,6 +64,7 @@ if ((missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]) &&
 
 // AI cap check -- use a real function exit.
 private _totalInfantry = count _unitClasses * _squadCount;
+private _estimate = _totalInfantry + (if (_vehClass != "") then {2} else {0}) + (_escortCount * 3);
 
 // Prevent half-loaded mounted QRFs. The UI labels suggest SAC=1 squad, PAC=2,
 // MTT=4, etc., but the squad slider still permits invalid combinations. If we
@@ -78,7 +79,7 @@ private _cap = missionNamespace getVariable ["FST_HC_AICap", 0];
 if (_cap > 0) then {
     private _current = 0;
     { _current = _current + _x; } forEach FST_HC_UnitCounts;
-    if ((_current + _totalInfantry) > _cap) then {
+    if ((_current + _estimate) > _cap) then {
         _capBlocked = true;
         format ["[FST] AI cap -- QRF blocked (%1 + %2 > %3).", _current, _totalInfantry, _cap] remoteExec ["systemChat", _callerID];
         diag_log format ["[FST_HCSpawn] QRF blocked by AI cap. current=%1 requested=%2 cap=%3", _current, _totalInfantry, _cap];
@@ -126,13 +127,16 @@ private _args = [_spawnPos, _destination, _side, _unitClasses, _squadCount,
 // V28: any vehicle involved -> build on the vehicle HC (or least-loaded HC when
 // none is dedicated). Foot-only QRFs build on the server and transfer squads.
 private _hasVehicles = (_vehClass != "") || {_escortCount > 0};
-private _buildOwner = if (_hasVehicles) then { ["vehicle"] call FST_HCSpawn_fnc_getSpawnTarget } else { 2 };
+private _buildOwner = [if (_hasVehicles) then {"vehicle"} else {"infantry"}, _estimate] call FST_HCSpawn_fnc_getSpawnTarget;
+if (_buildOwner == 2 && {missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC", true]}) exitWith {
+    "[FST] QRF blocked: no eligible HC has capacity for the complete QRF." remoteExec ["systemChat", _callerID];
+    diag_log "[FST_HCSpawn] QRF blocked by HC capacity; no server fallback.";
+};
 
 if (_buildOwner != 2) then {
     // Pre-count the crews + passengers so back-to-back QRFs do not all land on one HC.
     private _hcIndex = FST_HC_Ids find _buildOwner;
     if (_hcIndex >= 0 && {_hcIndex < count FST_HC_UnitCounts}) then {
-        private _estimate = _totalInfantry + (if (_vehClass != "") then { 2 } else { 0 }) + (_escortCount * 3);
         FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + _estimate];
     };
     ["FST_HC_evt_qrfBuildLocal", _args, _buildOwner] call CBA_fnc_ownerEvent;

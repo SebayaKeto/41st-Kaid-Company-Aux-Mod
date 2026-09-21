@@ -116,7 +116,8 @@ while {alive _vehicle} do {
 
         if (_extensionEnabled && {diag_tickTime >= _nextExtensionUpdate}) then {
             _nextExtensionUpdate = diag_tickTime + 0.5;
-            private _extensionResult = _extensionName callExtension ["assess-v1", _damageValues apply {str _x}];
+            // callExtension serializes arguments; pass numbers to avoid quoted numeric strings.
+            private _extensionResult = _extensionName callExtension ["assess-v1", _damageValues];
             private _response = if (_extensionResult isEqualType [] && {(count _extensionResult) >= 2} && {(_extensionResult select 0) isEqualType ""}) then {
                 _extensionResult select 0
             } else {

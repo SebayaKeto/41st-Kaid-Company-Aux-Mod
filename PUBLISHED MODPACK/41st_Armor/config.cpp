@@ -1,4 +1,4 @@
-﻿class CfgPatches
+class CfgPatches
 {
 	class 41st_Addon
 	{
@@ -9135,6 +9135,11 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Evox.paa",
 		};
+	};
+	class FST_BARC_Helmet_Evox_Dirty: FST_BARC_Helmet_Evox
+	{
+		displayName="[41st] BARC Helmet [Evox/Dirty]";
+		hiddenSelectionsTextures[]={"41st_Armor\Data\Helmets\FST_Barc_Helmet_Evox_Dirty.paa"};
 	};
 	class FST_P2_ARC_Helmet_Tally: JLTS_CloneHelmetP2
 	{

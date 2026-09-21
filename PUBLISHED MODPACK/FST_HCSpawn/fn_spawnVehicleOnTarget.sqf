@@ -13,9 +13,9 @@
 //   4: STRING  - behaviour (default "none"):
 //                "none"    combat mode RED / AWARE, engine as requested, no orders
 //                "hold"    stay put, combat mode RED
-//                "patrol"  LAMBS taskPatrol around the position (ground)
-//                "hunt"    LAMBS taskHunt from the position
-//                "assault" LAMBS taskRush at the position
+//                "patrol"  BURNS native waypoint patrol (ground)
+//                "hunt"    BURNS approach/search around the position
+//                "assault" BURNS advance toward the position
 //                "move"    MOVE waypoint to the target position
 //                "sad"     SEEK AND DESTROY waypoint at the target, then loiter
 //                "loiter"  LOITER waypoint (aircraft) at the target
@@ -71,7 +71,7 @@ if (_cap > 0) then {
 };
 if (_capBlocked) exitWith { false };
 
-private _targetId = ["vehicle"] call FST_HCSpawn_fnc_getSpawnTarget;
+private _targetId = ["vehicle", _crewEstimate] call FST_HCSpawn_fnc_getSpawnTarget;
 private _isOnHC = _targetId != 2;
 private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 

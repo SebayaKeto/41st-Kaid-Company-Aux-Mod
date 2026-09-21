@@ -47,11 +47,14 @@ _group setVariable ["FST_HC_managed", true, true];
     _unit setVariable ["FST_HC_created", true];
     _unit setVariable ["FST_HC_spawnSettlingUntil", time + 10];
     _unit setVariable ["FST_spawnDamageDeferUntilLocal", true];
-    _unit setVariable ["FST_HC_assignedPos", _pos];
-    _unit disableAI "PATH";
-    _unit setUnitPos "UP";
-    doStop _unit;
-    _unit setFormDir (random 360);
+    private _role = [_unit] call FST_HCSpawn_fnc_burnsRole;
+    if (_role != "webknight") then {
+        _unit setVariable ["FST_HC_assignedPos", _pos];
+        _unit disableAI "PATH";
+        if (_role == "b1") then {_unit setUnitPos "UP"};
+        doStop _unit;
+        _unit setFormDir (random 360);
+    };
 
     if (_forEachIndex == 0) then { _group selectLeader _unit; };
 } forEach _batch;

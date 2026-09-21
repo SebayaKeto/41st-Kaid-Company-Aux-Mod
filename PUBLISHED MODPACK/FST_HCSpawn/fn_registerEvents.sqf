@@ -10,6 +10,32 @@
 // SERVER-SIDE EVENTS (fired from clients/HCs, handled on server)
 // ============================================================
 if (isServer) then {
+    ["BURNS_request", {_this call FST_HCSpawn_fnc_burnsRequest}] call CBA_fnc_addEventHandler;
+    ["BURNS_rerouteOrder", {
+        params ["_mode","_group","_pos","_radius","_options","_caller",["_hop",1]];
+        if (isNull _group || {_hop!=1} || {!([_caller,"BURNS order retry"] call FST_HCSpawn_fnc_isAuthorizedCaller)}) exitWith {};
+        private _owner=groupOwner _group;
+        if (_owner<2) exitWith {};
+        ["BURNS_order",[_mode,_group,_pos,_radius,_options,_caller,_hop],_owner] call CBA_fnc_ownerEvent;
+    }] call CBA_fnc_addEventHandler;
+    BURNS_ReinforcementGroups=[];
+    ["BURNS_support", {
+        params ["_source","_pos"];
+        if (isNull _source || {!(_source getVariable ["BURNS_hasRadio",false])} || {time<(missionNamespace getVariable ["BURNS_supportNext",-1])}) exitWith {};
+        if (time<(_source getVariable ["BURNS_supportNext",-1])) exitWith {};
+        BURNS_supportNext=time+5;
+        _source setVariable ["BURNS_supportNext",time+90];
+        BURNS_ReinforcementGroups=BURNS_ReinforcementGroups select {!isNull _x && {_x getVariable ["BURNS_reinforcement",false]}};
+        private _sent=0;
+        {
+            if (_sent>=2) exitWith {};
+            if (_x==_source || {side _x!=side _source} || {!alive leader _x} || {leader _x distance2D _pos>3000} || {(units _x findIf {isPlayer _x})>=0} || {time<(_x getVariable ["BURNS_supportBusy",-1])}) then {continue};
+            if (_x getVariable ["BURNS_exempt",false] || {(_x getVariable ["FST_HC_heldBy",-1])!=-1}) then {continue};
+            _x setVariable ["BURNS_supportBusy",time+120];
+            ["BURNS_order",["hunt",_x,_pos,500,[false,true,false],2,0],groupOwner _x] call CBA_fnc_ownerEvent;
+            _sent=_sent+1;
+        } forEach BURNS_ReinforcementGroups;
+    }] call CBA_fnc_addEventHandler;
 
     // HC registration
     ["FST_HC_evt_registerHC", {
@@ -147,6 +173,27 @@ if (isServer) then {
 // ============================================================
 // HC / CLIENT EVENTS (fired from server, handled on HC or Zeus)
 // ============================================================
+
+["BURNS_order", {
+    params ["_mode","_group","_pos","_radius","_options","_caller",["_hop",0]];
+    if (isNull _group) exitWith {};
+    if (!local _group) exitWith {
+        // A transfer may race dispatch. Only the server can resolve groupOwner.
+        // Send one retry through it; never use owner 0 or broadcast the order.
+        if (_hop<1) then {["BURNS_rerouteOrder",[_mode,_group,_pos,_radius,_options,_caller,1]] call CBA_fnc_serverEvent};
+    };
+    if (_mode=="artillery_fire") exitWith {[_group,_pos,_options,_caller] call FST_HCSpawn_fnc_burnsArtillery};
+    private _ok=[_mode,_group,_pos,_radius,_options] call FST_HCSpawn_fnc_burnsCommand;
+    if (!_ok) then {"[BURNS] Order declined: group held by Zeus, player controlled, or invalid task." remoteExec ["systemChat",_caller]};
+}] call CBA_fnc_addEventHandler;
+["BURNS_unitAI", {
+    params ["_unit","_enabled"];
+    if (!local _unit || {isPlayer _unit} || {([_unit] call FST_HCSpawn_fnc_burnsRole)=="webknight"}) exitWith {};
+    _unit setVariable ["BURNS_exempt",!_enabled,true];
+    if (_enabled) then {[group _unit] call FST_HCSpawn_fnc_burnsApplyRole} else {
+        [_unit] call FST_HCSpawn_fnc_burnsRestoreRole;
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Local dead-group cleanup request. deleteGroup is locality-sensitive, so the server
 // uses this ownerEvent to make each HC clean only its own local dead groups.

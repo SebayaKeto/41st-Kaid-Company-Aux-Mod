@@ -7,10 +7,10 @@ Native Arma 3 extension for the Sabre APC armor HUD. The extension evaluates nor
 SQF invokes the extension as follows:
 
 ```sqf
-"FST_SabreArmorExtension" callExtension ["assess-v1", ["0", "0", "0", "0", "0"]]
+"FST_SabreArmorExtension" callExtension ["assess-v1", [0, 0, 0, 0, 0]]
 ```
 
-Arguments are five decimal damage values in the inclusive range `0` to `1`, ordered as front armor, left armor, right armor, rear armor, and total vehicle damage.
+Arguments are five numeric damage values in the inclusive range `0` to `1`, ordered as front armor, left armor, right armor, rear armor, and total vehicle damage. Let `callExtension` serialize these numbers; applying `str` first produces quoted strings that the native parser rejects.
 
 The successful response format is:
 
@@ -33,7 +33,7 @@ This creates `build\Release\FST_SabreArmorExtension.dll`. Arma 3 is 64-bit, so d
 
 ## Deploy
 
-Place `FST_SabreArmorExtension.dll` beside the packed mod's PBO files, at the mod root where Arma can resolve the extension name. Do not pack the DLL inside a PBO. Every client that should use the enhanced armor assessment needs the DLL. Clients without it retain the local SQF assessment after one rejected response.
+Copy the 64-bit build to the mod root as `FST_SabreArmorExtension_x64.dll`, alongside the `Addons` directory. Keep the SQF extension name `FST_SabreArmorExtension`: Arma's 64-bit loader adds the `_x64.dll` suffix. Do not pack the DLL inside a PBO. Every client that should use the enhanced armor assessment needs the DLL. Clients without it retain the local SQF assessment after one rejected response. See the [Bohemia extension naming documentation](https://community.bistudio.com/wiki/Extensions).
 
 ## Extension Boundaries
 

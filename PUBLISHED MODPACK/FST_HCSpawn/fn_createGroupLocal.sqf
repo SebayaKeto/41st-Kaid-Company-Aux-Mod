@@ -97,7 +97,7 @@ if (count _vehData > 0) then {
             _unit setDir _dir;
             _unit setRank _rank;
             _unit setSkill _skill;
-            if (_unitPos != "AUTO") then { _unit setUnitPos _unitPos; };
+            if (_unitPos != "AUTO" && {([_unit] call FST_HCSpawn_fnc_burnsRole) != "webknight"}) then { _unit setUnitPos _unitPos; };
             if (count _x > 6) then {
                 private _loadout = _x select 6;
                 if (count _loadout > 0) then { [_unit, _loadout, _class, "instant clone"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe; };
@@ -238,50 +238,28 @@ if (count _editableObjects > 0) then {
             _wp setWaypointCombatMode "RED";
         };
         case "garrison": {
-            private _buildings = nearestObjects [_pos, ["House", "Building"], _radius];
-            private _priorityPositions = [];
-            private _buildingPositions = [];
-
-            // 3AS garrison points (hand-placed -- highest priority)
-            private _3asPoints = _pos nearObjects ["3as_GarrisonPoint", _radius];
-            { _priorityPositions pushBack (getPosATL _x); } forEach _3asPoints;
-
-            // CBA building positions (hand-placed -- high priority)
-            private _cbaPoints = _pos nearObjects ["CBA_BuildingPos", _radius];
-            { _priorityPositions pushBack (getPosATL _x); } forEach _cbaPoints;
-
-            // Standard buildingPos (fill remainder)
-            {
-                private _bldg = _x;
-                private _i = 0;
-                private _bp = _bldg buildingPos _i;
-                while { !(_bp isEqualTo [0,0,0]) } do {
-                    _buildingPositions pushBack _bp;
-                    _i = _i + 1;
-                    _bp = _bldg buildingPos _i;
-                };
-            } forEach _buildings;
-
-            _buildingPositions = _buildingPositions call BIS_fnc_arrayShuffle;
-            private _bldgPositionsRaw = _priorityPositions + _buildingPositions;
-            private _bldgPositions = _bldgPositionsRaw select { [_x] call FST_HCSpawn_fnc_isSafeGarrisonPos };
-            private _rejectedGarrisonPositions = (count _bldgPositionsRaw) - (count _bldgPositions);
-            if (_rejectedGarrisonPositions > 0 && {FST_HC_DebugLogging}) then {
-                diag_log format ["[FST_HCSpawn] Garrison behavior skipped %1 unsafe/floating/over-water positions near %2", _rejectedGarrisonPositions, _pos];
+            // Reuse the bounded cache used by BURNS building tasks. This creation
+            // path runs scheduled; wait briefly for its shared scan to finish.
+            private _scan = [_pos,_radius] call FST_HCSpawn_fnc_burnsPositions;
+            private _scanDeadline = time + 8;
+            if (canSuspend) then {
+                waitUntil {sleep 0.1; _scan=[_pos,_radius] call FST_HCSpawn_fnc_burnsPositions; (_scan select 0) || {time>=_scanDeadline}};
             };
+            private _bldgPositions = _scan select 1;
             private _units = units _group;
             {
+                if (([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight") then {continue};
                 if (_forEachIndex < count _bldgPositions) then {
                     private _bPos = _bldgPositions select _forEachIndex;
                     _x setPosATL _bPos;
                     _x setVariable ["FST_HC_assignedPos", _bPos];
                     _x disableAI "PATH";
-                    _x setUnitPos "UP";
+                    if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
                     doStop _x;
                     _x setFormDir (random 360);
                 } else {
                     _x disableAI "PATH";
-                    _x setUnitPos "UP";
+                    if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
                     doStop _x;
                 };
             } forEach _units;
@@ -293,7 +271,7 @@ if (count _editableObjects > 0) then {
             // server manager acts. Flagging would need to move server-side if the
             // feature is ever revived.
             if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
-                _group enableDynamicSimulation true;
+                if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) < 0) then {_group enableDynamicSimulation true};
             };
 
             // Cleanup floating/unsafe positions after 10s
@@ -320,21 +298,26 @@ if (count _editableObjects > 0) then {
         case "assault": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, _radius, 15, [], _pos, false] spawn lambs_wp_fnc_taskRush;
+            [_group, "assault", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
         case "hunt": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, _radius, 15, [], _pos, false] spawn lambs_wp_fnc_taskHunt;
+            [_group, "hunt", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
         case "patrol":  {
-            [_group, _pos, _radius] call lambs_wp_fnc_taskPatrol;
+            [_group, _pos, _radius] call FST_HCSpawn_fnc_burnsPatrol;
         };
         case "static": {
             _group setBehaviourStrong "COMBAT";
-            { _x setUnitPos "UP"; doStop _x; } forEach units _group;
+            {
+                private _role = [_x] call FST_HCSpawn_fnc_burnsRole;
+                if (_role == "webknight") then {continue};
+                if (_role == "b1") then {_x setUnitPos "UP"};
+                doStop _x;
+            } forEach units _group;
             if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
-                _group enableDynamicSimulation true;
+                if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) < 0) then {_group enableDynamicSimulation true};
             };
         };
         case "none": {};
@@ -343,7 +326,7 @@ if (count _editableObjects > 0) then {
 
 // Dynamic simulation only for mobile groups, and only when opted in.
 if ((_behavior in ["patrol", "hunt"]) && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {
-    _group enableDynamicSimulation true;
+    if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) < 0) then {_group enableDynamicSimulation true};
 };
 
 // Track on server. Wait briefly for a real group netId so the server does not

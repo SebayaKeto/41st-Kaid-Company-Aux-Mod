@@ -15,7 +15,8 @@
 
 if (!isServer) exitWith { 2 };
 
-params [["_kind", "infantry"]];
+params [["_kind", "infantry"], ["_requested", 0]];
+_requested = _requested max 0;
 
 if (count FST_HC_Array == 0 || {count FST_HC_Ids == 0}) exitWith { 2 };
 
@@ -39,7 +40,7 @@ while {count FST_HC_UnitCounts < count FST_HC_Ids} do {
 // V28: dedicated vehicle HC.
 private _vehHC = [] call FST_HCSpawn_fnc_getVehicleHC;
 _vehHC params ["_vehId", "_vehIdx"];
-if (_kind == "vehicle" && {_vehIdx >= 0} && {_vehIdx in _validIndexes}) exitWith { _vehId };
+if (_kind == "vehicle" && {_vehIdx >= 0} && {_vehIdx in _validIndexes}) then { _validIndexes = [_vehIdx]; };
 if (_kind != "vehicle" && {_vehIdx >= 0} && {missionNamespace getVariable ["FST_HC_VehicleHCExclusive", true]}) then {
     private _others = _validIndexes - [_vehIdx];
     if (count _others > 0) then { _validIndexes = _others; };
@@ -47,7 +48,7 @@ if (_kind != "vehicle" && {_vehIdx >= 0} && {missionNamespace getVariable ["FST_
 
 private _softCap = missionNamespace getVariable ["FST_HC_PerHCSoftCap", 0];
 if (_softCap > 0 && {missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", false]}) then {
-    private _belowCap = _validIndexes select { (FST_HC_UnitCounts select _x) < _softCap };
+    private _belowCap = _validIndexes select { ((FST_HC_UnitCounts select _x) < _softCap) && {((FST_HC_UnitCounts select _x) + _requested) <= _softCap} };
     if (count _belowCap > 0) then {
         _validIndexes = _belowCap;
     } else {

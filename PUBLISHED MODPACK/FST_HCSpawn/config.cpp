@@ -8,11 +8,18 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 2.18;
-        requiredAddons[] = {"cba_main", "cba_keybinding", "cba_settings", "lambs_wp"};
+        requiredAddons[] = {"cba_main", "cba_keybinding", "cba_settings"};
     };
 };
 
 class CfgFunctions {
+    class BURNS {
+        class Public {
+            class task { file = "FST_HCSpawn\fn_setCombatTask.sqf"; };
+            class patrol { file = "FST_HCSpawn\fn_burnsPatrol.sqf"; };
+            class role { file = "FST_HCSpawn\fn_burnsRole.sqf"; };
+        };
+    };
     class FST_HCSpawn {
         class HCManagement {
             file = "FST_HCSpawn";
@@ -56,6 +63,26 @@ class CfgFunctions {
             class spawnGroupOnTarget {};
             class spawnVehicleOnTarget {};
             class createGroupLocal {};
+            class setCombatTask {};
+            class initCombatTasks {};
+            class burnsTaskInterval {};
+            class burnsPositions {};
+            class burnsReservePositions {};
+            class burnsUseCover {};
+            class burnsVisibleContact {};
+            class initVisibility {};
+            class burnsSuppressed {};
+            class initSuppression {};
+            class burnsCommand {};
+            class burnsSpecialTick {};
+            class burnsDialog {};
+            class burnsRequest {};
+            class burnsArtillery {};
+            class combatTaskTick {};
+            class burnsRole {};
+            class burnsApplyRole {};
+            class burnsRestoreRole {};
+            class burnsPatrol {};
             class fillGarrison {};
             class requestFillGarrison {};
             class registerZenModules {};
@@ -91,5 +118,6 @@ class CfgFunctions {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "BURNS_CfgContext.hpp"
 
 // Zeus modules registered via ZEN in fn_registerZenModules.sqf
