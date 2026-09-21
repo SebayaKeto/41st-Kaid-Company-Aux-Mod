@@ -15,7 +15,7 @@ BURNS_SuppressionMaxMs=0;
         private _u=BURNS_SuppressedUnits select BURNS_SuppressionCursor;
         private _pulse=_u getVariable ["BURNS_suppressionPulse",[-10,0]];
         private _age=time-(_pulse select 0);
-        if (!_enabled || {isNull _u} || {!local _u} || {!alive _u} || {isPlayer _u} || {_age>=4} || {_u getVariable ["BURNS_exempt",false]} || {(group _u) getVariable ["BURNS_exempt",false]} || {!(_u checkAIFeature "SUPPRESSION")}) then {
+        if (!_enabled || {[group _u] call FST_HCSpawn_fnc_isProtectedVehicleGroup} || {isNull _u} || {!local _u} || {!alive _u} || {isPlayer _u} || {_age>=4} || {_u getVariable ["BURNS_exempt",false]} || {(group _u) getVariable ["BURNS_exempt",false]} || {!(_u checkAIFeature "SUPPRESSION")}) then {
             BURNS_SuppressedUnits deleteAt BURNS_SuppressionCursor;
         } else {
             _u setSuppression ((getSuppression _u) max ((_pulse select 1)*(1-_age/4)));

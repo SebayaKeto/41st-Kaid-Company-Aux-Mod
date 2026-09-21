@@ -2,6 +2,7 @@
 // nearTargets supplies perceived contact positions, not an allUnits enemy scan.
 params ["_group"];
 if (isNull _group || {!local _group}) exitWith {};
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
 if (_group getVariable ["BURNS_exempt", false]) exitWith {};
 private _task = _group getVariable ["FST_HC_combatTask", []];
 if (count _task != 3) exitWith {};

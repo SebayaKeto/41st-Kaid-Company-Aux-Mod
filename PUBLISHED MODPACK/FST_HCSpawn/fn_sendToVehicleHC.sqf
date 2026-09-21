@@ -21,6 +21,7 @@ private _say = {
 
 if (isNull _group || {count units _group == 0}) exitWith { ["[FST] Send to vehicle HC: empty group."] call _say; false };
 if (isPlayer leader _group) exitWith { ["[FST] Send to vehicle HC: player group skipped."] call _say; false };
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {["[FST] Player/BLUFOR vehicle group protected; left unchanged."] call _say; false};
 if ((_group getVariable ["FST_HC_heldBy", -1]) != -1) exitWith { ["[FST] Send to vehicle HC: release the Zeus hold first."] call _say; false };
 
 private _targetId = ["vehicle", count units _group] call FST_HCSpawn_fnc_getSpawnTarget;

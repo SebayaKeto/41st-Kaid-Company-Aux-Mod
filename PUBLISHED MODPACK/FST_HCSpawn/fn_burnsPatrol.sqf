@@ -1,6 +1,7 @@
 // Original native patrol route. Waypoints survive locality changes naturally.
 params ["_group", "_centre", ["_radius",150]];
 if (isNull _group || {!local _group}) exitWith {false};
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
 for "_i" from (count waypoints _group-1) to 0 step -1 do {
     if (waypointDescription [_group,_i]=="BURNS patrol") then {deleteWaypoint [_group,_i]};

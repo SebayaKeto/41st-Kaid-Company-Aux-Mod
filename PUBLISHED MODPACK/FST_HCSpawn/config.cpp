@@ -46,6 +46,7 @@ class CfgFunctions {
             class processTransfers {};
             class transferGroup {};
             class isVehicleTransferSafe {};
+            class isProtectedVehicleGroup {};
             class sendToVehicleHC {};
             class reapplyGarrison {};
             class emergencyRedistribute {};

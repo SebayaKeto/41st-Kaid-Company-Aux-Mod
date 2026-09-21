@@ -23,6 +23,7 @@ if (isServer) then {
         params ["_source","_pos"];
         if (isNull _source || {!(_source getVariable ["BURNS_hasRadio",false])} || {time<(missionNamespace getVariable ["BURNS_supportNext",-1])}) exitWith {};
         if (time<(_source getVariable ["BURNS_supportNext",-1])) exitWith {};
+        if ([_source] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
         BURNS_supportNext=time+5;
         _source setVariable ["BURNS_supportNext",time+90];
         BURNS_ReinforcementGroups=BURNS_ReinforcementGroups select {!isNull _x && {_x getVariable ["BURNS_reinforcement",false]}};
@@ -31,6 +32,7 @@ if (isServer) then {
             if (_sent>=2) exitWith {};
             if (_x==_source || {side _x!=side _source} || {!alive leader _x} || {leader _x distance2D _pos>3000} || {(units _x findIf {isPlayer _x})>=0} || {time<(_x getVariable ["BURNS_supportBusy",-1])}) then {continue};
             if (_x getVariable ["BURNS_exempt",false] || {(_x getVariable ["FST_HC_heldBy",-1])!=-1}) then {continue};
+            if ([_x] call FST_HCSpawn_fnc_isProtectedVehicleGroup) then {continue};
             _x setVariable ["BURNS_supportBusy",time+120];
             ["BURNS_order",["hunt",_x,_pos,500,[false,true,false],2,0],groupOwner _x] call CBA_fnc_ownerEvent;
             _sent=_sent+1;
@@ -189,6 +191,7 @@ if (isServer) then {
 ["BURNS_unitAI", {
     params ["_unit","_enabled"];
     if (!local _unit || {isPlayer _unit} || {([_unit] call FST_HCSpawn_fnc_burnsRole)=="webknight"}) exitWith {};
+    if ([group _unit] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
     _unit setVariable ["BURNS_exempt",!_enabled,true];
     if (_enabled) then {[group _unit] call FST_HCSpawn_fnc_burnsApplyRole} else {
         [_unit] call FST_HCSpawn_fnc_burnsRestoreRole;

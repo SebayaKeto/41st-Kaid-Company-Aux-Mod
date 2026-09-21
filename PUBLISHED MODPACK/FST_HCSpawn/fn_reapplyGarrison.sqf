@@ -17,6 +17,7 @@ params ["_group"];
     {
         params ["_group"];
         if (isNull _group) exitWith {};
+        if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
 
         {
             if (([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight") then {continue};

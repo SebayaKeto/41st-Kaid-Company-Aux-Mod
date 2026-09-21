@@ -530,5 +530,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "V30_1_BURNS_NETWORK_2026-09-21", true];
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "V30_2_BURNS_PLAYER_VEHICLES_2026-09-21", true];
 diag_log "[FST_HCSpawn] preInit complete - V30_BURNS_ZEUS_2026-09-21";

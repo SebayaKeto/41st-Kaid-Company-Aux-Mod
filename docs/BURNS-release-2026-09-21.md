@@ -1,4 +1,8 @@
-# BURNS V30.1 release
+# BURNS V30.2 release
+
+V30.2 protects every BLUFOR vehicle crew, any vehicle containing a player (including a player in a different group), and vehicles explicitly tagged `BURNS_playerVehicle`. HC transfer, forced vehicle-HC assignment, Zeus hold, BURNS combat/role/suppression orders, reinforcement dispatch and delayed garrison commands leave these groups alone. Empty vehicles are not adopted. BLUFOR infantry on foot and enemy AI vehicles remain eligible. This changes AI management only; player vehicle physics, weapons and HUD behavior are not altered by the guard.
+
+The combined-modpack dedicated fixture passed 19 checks with four HCs and no SQF expression errors across their five logs. It verified occupied Sabre refusal paths, an empty Sabre control, on-foot BLUFOR eligibility and enemy crew/hull ownership on HC4. No human client boarded a vehicle in that fixture; a real player crew and cross-group passenger check remains part of rehearsal. Earlier Sabre AI moveOut controls remained seated, so the empty-hull check used a separately spawned empty vehicle. The older V30.1 load and network evidence below remains historical evidence, not a rerun of those workloads on V30.2.
 
 Original BURNS behavior is integrated in FST_HCSpawn, with native weapon and turret profiles in FST_BURNS_Combat. Remove LAMBS Danger, Waypoints, RPG, Turrets, Suppression and LAMBS compatibility addons from server, HC and player presets. There is no LAMBS source or dependency in BURNS.
 

@@ -19,6 +19,7 @@
 params ["_group"];
 
 if (isNull _group) exitWith { [false, "null group"] };
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {[false,"protected player/BLUFOR vehicle group"]};
 
 private _units = units _group;
 private _vehicles = [];

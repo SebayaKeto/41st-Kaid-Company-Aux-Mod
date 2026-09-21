@@ -2,6 +2,7 @@
 params ["_group"];
 if (isNull _group || {!local _group} || {_group getVariable ["BURNS_exempt", false]}) exitWith {};
 if ((units _group findIf {isPlayer _x}) >= 0 || {side _group == civilian}) exitWith {};
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
 private _b1Only = true;
 private _any = false;
 {

@@ -12,6 +12,7 @@ if (!isServer) exitWith { false };
 params ["_group", ["_force", false]];
 
 if (isNull _group) exitWith { false };
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 if (count units _group == 0) exitWith { false };
 if (isPlayer leader _group) exitWith { false };
 if (count FST_HC_Array == 0) exitWith { false };

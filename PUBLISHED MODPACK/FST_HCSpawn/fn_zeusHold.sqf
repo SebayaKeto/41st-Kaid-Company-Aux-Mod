@@ -9,6 +9,7 @@ if (isServer && {count _this == 4}) exitWith {
     params ["_grp", "_zeusId", "_hold", "_zeusIdForEvent"];
 
     if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {};
+    if ([_grp] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
     if (isNil "FST_HC_HeldGroups") then { FST_HC_HeldGroups = []; };
 
     if (_hold) then {
@@ -81,6 +82,7 @@ private _who = clientOwner;
 {
     private _grp = _x;
     if (isNull _grp || {isPlayer leader _grp}) then { _skipped = _skipped + 1; continue };
+    if ([_grp] call FST_HCSpawn_fnc_isProtectedVehicleGroup) then { _skipped = _skipped + 1; continue };
 
     private _heldBy = _grp getVariable ["FST_HC_heldBy", -1];
 

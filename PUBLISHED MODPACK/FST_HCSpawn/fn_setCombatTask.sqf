@@ -2,6 +2,7 @@
 // Stores intent on the group so the new owner can resume after an HC transfer.
 params ["_group", ["_mode", "stop"], ["_pos", []], ["_radius", 500]];
 if (isNull _group || {!local _group}) exitWith {false};
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 if (_mode == "stop") exitWith {
     {
         if (local _x && {_x getVariable ["BURNS_ownsPath",false]} && {([_x] call FST_HCSpawn_fnc_burnsRole)!="webknight"}) then {

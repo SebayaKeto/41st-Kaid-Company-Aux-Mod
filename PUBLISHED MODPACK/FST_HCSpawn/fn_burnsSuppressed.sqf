@@ -1,6 +1,7 @@
 // Original human-only response to the engine's near-miss event. No world scan.
 params ["_unit",["_distance",0],"_shooter","_instigator","_projectile","_ammo",["_ammoConfig",configNull]];
 if (isNull _unit || {!local _unit} || {!alive _unit} || {isPlayer _unit}) exitWith {false};
+if ([group _unit] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 if !(missionNamespace getVariable ["BURNS_HumanSuppression",true]) exitWith {false};
 if !(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) exitWith {false};
 if (_unit getVariable ["BURNS_exempt",false] || {(group _unit) getVariable ["BURNS_exempt",false]}) exitWith {false};

@@ -7,6 +7,7 @@ if (count _pos<2) exitWith {false};
 _groups=+_groups;
 {private _g=group _x; if (isNull _g) then {_g=group effectiveCommander _x}; if (!isNull _g) then {_groups pushBackUnique _g}} forEach _objects;
 _groups=_groups select {!isNull _x && {count units _x>0} && {(units _x findIf {isPlayer _x})<0}};
+_groups=_groups select {!([_x] call FST_HCSpawn_fnc_isProtectedVehicleGroup)};
 _groups=_groups select [0,32];
 _radius=(_radius max 25) min 3000;
 if (_mode in ["reinforce_on","reinforce_off"]) then {

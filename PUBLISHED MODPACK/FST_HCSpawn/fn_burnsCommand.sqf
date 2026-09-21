@@ -1,6 +1,7 @@
 // Original BURNS owner-local command handler shared by Zeus modules and menus.
 params ["_mode","_group","_pos",["_radius",150],["_options",[]]];
 if (isNull _group || {!local _group} || {(units _group findIf {isPlayer _x})>=0}) exitWith {false};
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 if ((_group getVariable ["FST_HC_heldBy",-1])!=-1) exitWith {false};
 private _wbk=(units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0;
 if (_mode=="enable_group") exitWith {

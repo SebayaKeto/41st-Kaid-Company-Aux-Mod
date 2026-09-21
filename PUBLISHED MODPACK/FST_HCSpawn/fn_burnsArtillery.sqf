@@ -1,6 +1,7 @@
 // Native artillery execution on the gun's owner; no invented shells or rearming.
 params ["_group","_target",["_options",[]],["_caller",2]];
 if (!local _group) exitWith {0};
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {0};
 private _rounds=round (((_options param [0,4]) max 1) min 12);
 private _dispersion=((_options param [1,50]) max 0) min 300;
 private _guns=[];
