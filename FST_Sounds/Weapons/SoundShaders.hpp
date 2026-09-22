@@ -215,14 +215,13 @@
 		range = 450;
 		rangeCurve[] = {{0,1},{75,0.75},{225,0.3},{450,0}};
 	};
-	class FST_Sabre_MainCannon_EWEB
+	class FST_Sabre_MainCannon
 	{
 		samples[] =
 		{
-			{"\FST\FST_Sounds\Weapons\EWEB_Shot_-01.ogg",1},
-			{"\FST\FST_Sounds\Weapons\EWEB_Shot_-01-2.ogg",1},
-			{"\FST\FST_Sounds\Weapons\EWEB_Shot_-01-3.ogg",1},
-			{"\FST\FST_Sounds\Weapons\EWEB_Shot_-01-4.ogg",1}
+			{"\FST\FST_Sounds\Weapons\TX180_Cannon_01.ogg",1},
+			{"\FST\FST_Sounds\Weapons\TX180_Cannon_02.ogg",1},
+			{"\FST\FST_Sounds\Weapons\TX180_Cannon_03.ogg",1}
 		};
 		volume = 2.15;
 		range = 1400;

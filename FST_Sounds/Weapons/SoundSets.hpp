@@ -161,9 +161,9 @@
 		soundShadersLimit = 4;
 		frequencyRandomizer = 0.04;
 	};
-	class FST_Sabre_MainCannon_EWEB_SoundSet
+	class FST_Sabre_MainCannon_SoundSet
 	{
-		soundShaders[] = {"FST_Sabre_MainCannon_EWEB"};
+		soundShaders[] = {"FST_Sabre_MainCannon"};
 		volumeFactor = 1;
 		volumeCurve = "InverseSquare2Curve";
 		sound3DProcessingType = "WeaponMediumShot3DProcessingType";

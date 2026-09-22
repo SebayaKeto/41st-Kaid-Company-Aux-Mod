@@ -36,7 +36,7 @@ class FST_VW_Sabre_30mm_Cannon: FST_VW_BoltCannon_30mm
         sounds[] = {"StandardSound"};
         class StandardSound
         {
-            soundSetShot[] = {"FST_Sabre_MainCannon_EWEB_SoundSet"};
+            soundSetShot[] = {"FST_Sabre_MainCannon_SoundSet"};
         };
         soundContinuous = 0;
         soundBurst = 0;
