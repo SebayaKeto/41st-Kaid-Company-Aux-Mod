@@ -62,7 +62,11 @@ missionNamespace setVariable ["FST_HC_EmergencyKillSpikeThreshold", missionNames
 missionNamespace setVariable ["FST_HC_EmergencyDeadDeleteDelay", missionNamespace getVariable ["FST_HC_EmergencyDeadDeleteDelay", 0.25]];
 missionNamespace setVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", missionNamespace getVariable ["FST_HC_EmergencyDeadDeleteMaxPerPass", 20]];
 missionNamespace setVariable ["FST_HC_EmergencyMuteSentences", missionNamespace getVariable ["FST_HC_EmergencyMuteSentences", true]];
-missionNamespace setVariable ["FST_HC_PerHCSoftCap", missionNamespace getVariable ["FST_HC_PerHCSoftCap", 240]];
+missionNamespace setVariable ["FST_HC_PerHCSoftCap", missionNamespace getVariable ["FST_HC_PerHCSoftCap", 400]];
+// V28: a mounted group may change owner only while every vehicle it occupies is
+// slower than this (m/s). Ownership hops on moving vehicles split crew and hull
+// across machines for a few frames and wreck multi-crew coordination.
+missionNamespace setVariable ["FST_HC_VehicleTransferMaxSpeed", missionNamespace getVariable ["FST_HC_VehicleTransferMaxSpeed", 1.5]];
 missionNamespace setVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", missionNamespace getVariable ["FST_HC_BlockSpawnWhenAllHCSoftCapped", true]];
 
 
@@ -142,7 +146,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 [
     "FST_HC_PerHCSoftCap", "SLIDER",
     ["Per-HC Soft AI Cap", "Emergency cap used when choosing an HC target. If every HC is over this count and blocking is enabled, heavy spawns are blocked instead of overloading one HC or falling back to the server."],
-    ["FST HC Spawn", "Core"], [100, 500, 240, 0], true, {}, false
+    ["FST HC Spawn", "Core"], [100, 1000, 400, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
@@ -171,8 +175,8 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 
 [
     "FST_HC_AICap", "SLIDER",
-    ["AI Cap", "Max tracked AI units across all HCs. 0 = no cap. For 150-player ops, keep this conservative."],
-    ["FST HC Spawn", "Core"], [0, 3000, 900, 0], true, {}, false
+    ["AI Cap", "Max tracked AI units across all HCs. 0 = no cap. Default 1100 accommodates an 800-1000 AI op plus crew/reservation headroom; it is not a performance guarantee."],
+    ["FST HC Spawn", "Core"], [0, 3000, 1100, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
 [
@@ -252,8 +256,109 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 
 [
     "FST_HC_BlacklistVehicles", "CHECKBOX",
-    ["Blacklist All Vehicles", "Prevent offloading groups currently in vehicles."],
+    ["Blacklist All Vehicles", "Prevent the catch-all and Zeus placement from offloading groups currently in vehicles. With a vehicle HC configured, Zeus can still send a stopped vehicle over with the '--- Send To Vehicle HC ---' module."],
     ["FST HC Spawn", "Zeus / Blacklist"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+// ============================================================
+// INTEGRATED COMBAT TASKS (V29)
+// Original BURNS AI. No LAMBS source or runtime dependency.
+[
+    "BURNS_AIThinkOnlyLocal", "CHECKBOX",
+    ["Process AI On Its Owner", "Avoid duplicate remote-AI targeting work on server, HCs and players (Arma 2.20+). Scripts querying remote AI knowledge must run on the AI owner. Turn off if another system requires remote targeting data."],
+    ["BURNS", "Performance"], true, true, {
+        params ["_enabled"];
+        private _options = getMissionOptions;
+        if ("AIThinkOnlyLocal" in _options) then {
+            _options set ["AIThinkOnlyLocal", _enabled];
+            setMissionOptions _options;
+            diag_log format ["[BURNS] owner %1 AIThinkOnlyLocal=%2",clientOwner,getMissionOptions get "AIThinkOnlyLocal"];
+        };
+    }, false
+] call CBA_fnc_addSetting;
+[
+    "FST_HC_CombatTasksEnabled", "CHECKBOX",
+    ["Enable BURNS AI", "Original owner-local tactics and role profiles. B1 line infantry; B2/BX remain controlled by Workshop WebKnight. Off leaves existing native waypoints."],
+    ["BURNS", "Tactics"], true, true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "FST_HC_CombatTaskInterval", "SLIDER",
+    ["Combat Order Interval", "Seconds between nearby or engaged group tactical updates. Groups are staggered and only two are serviced per tick; loaded owners may take longer."],
+    ["BURNS", "Tactics"], [5, 60, 15, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "BURNS_HumanBuildingCover", "CHECKBOX",
+    ["Human building cover", "Supplement native cover movement after a known contact. Shared cached searches, at most two soldiers repositioned every 45 seconds."],
+    ["FST HC Spawn", "BURNS"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "BURNS_DistanceScheduling", "CHECKBOX",
+    ["Reduce Distant Tactical Updates", "Update distant groups less often while their native movement and combat continue. Nearby players or known enemies restore normal frequency. Disable to use the combat interval everywhere."],
+    ["BURNS", "Performance"], true, true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_NearDistance", "SLIDER",
+    ["Normal Update Distance", "Groups within this many metres of a living player use the combat interval. Any known enemy also keeps normal frequency, including AI-only battles."],
+    ["BURNS", "Performance"], [300, 3000, 1200, 0], true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_DistantInterval", "SLIDER",
+    ["Distant Order Interval", "Seconds between distant tactical updates, never faster than the combat interval. Does not pause reinforcements, pathfinding, weapons or WebKnight scripts."],
+    ["BURNS", "Performance"], [15, 120, 45, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "BURNS_HumanSkill", "SLIDER",
+    ["Non-Droid Tactical Skill", "Minimum commanding, courage, reload, spotting and general skills for hostile non-droid AI. Does not increase rifle accuracy to this value. Zeus can opt out with BURNS_exempt on the group."],
+    ["BURNS", "Role Profiles"], [0, 1, 0.7, 2], true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_HumanAccuracy", "SLIDER",
+    ["Non-Droid Accuracy", "Minimum aiming accuracy for hostile non-droid AI. Default 0.25 keeps skilled opponents from becoming perfect shots."],
+    ["BURNS", "Role Profiles"], [0, 1, 0.25, 2], true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_LowVisibilityAssist", "CHECKBOX",
+    ["Low Visibility B1 Sight Assist", "Opt-in mission aid for dense-fog grading. B1s require two unobstructed forward visual checks within the configured range. No changes to normal-map sight ranges; inactive below 0.4 fog."],
+    ["BURNS", "Mission Visibility"], false, true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_VisibleContactRange", "SLIDER",
+    ["Visible Contact Range", "Range for the optional B1 sight assist. Match what players can identify through the mission's gloom. Not a global AI firing or detection cap."],
+    ["BURNS", "Mission Visibility"], [50,250,125,0], true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_B1Reaction", "SLIDER",
+    ["B1 Reaction Skill", "Minimum reaction skill, with faster rifle handling capped at 0.75. Leaves spotting distance and shooting accuracy unchanged."],
+    ["BURNS", "Role Profiles"], [0,1,0.85,2], true, {}, false
+] call CBA_fnc_addSetting;
+[
+    "BURNS_B1MarchSpeed", "SLIDER",
+    ["B1 March Speed", "Metres per second while assembling and advancing. B1s retain standing LINE formation; terrain and pathfinding can temporarily separate the line."],
+    ["BURNS", "Role Profiles"], [1, 5, 2.5, 1], true, {}, false
+] call CBA_fnc_addSetting;
+
+// VEHICLE HC (V29)
+// ============================================================
+
+[
+    "FST_HC_VehicleHCEnabled", "CHECKBOX",
+    ["Dedicated Vehicle HC", "Route all AI vehicle spawns (vehicle quick spawn, QRF convoys, ship QRF vultures, script requests) to one HC and keep infantry balancing off it."],
+    ["FST HC Spawn", "Vehicle HC"], true, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_VehicleHCSlot", "SLIDER",
+    ["Vehicle HC Slot", "Mission HC entity number (HC4 = slot 4), independent of connection order. If that slot is not connected, vehicles fall back to the least-loaded HC."],
+    ["FST HC Spawn", "Vehicle HC"], [1, 8, 4, 0], true, {}, false
+] call CBA_fnc_addSetting;
+
+[
+    "FST_HC_VehicleHCExclusive", "CHECKBOX",
+    ["Keep Infantry Off The Vehicle HC", "Infantry spawns and transfers never pick the vehicle HC while another HC is available. Dismounted QRF passengers are moved to an infantry HC."],
+    ["FST HC Spawn", "Vehicle HC"], true, true, {}, false
 ] call CBA_fnc_addSetting;
 
 // ============================================================
@@ -354,6 +459,11 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 
 // ============================================================
 // TEMPLATES
+[
+    "BURNS_HumanSuppression", "CHECKBOX",
+    ["Human suppression recovery", "Near misses briefly disturb human aim. B1s and WebKnight droids are excluded. Bounded to 64 recent victims per AI owner; native suppression continues for overflow."],
+    ["FST HC Spawn", "BURNS Combat"], true, true, {}, false
+] call CBA_fnc_addSetting;
 // ============================================================
 
 FST_HC_Templates = createHashMapFromArray [
@@ -394,6 +504,21 @@ FST_HC_Templates = createHashMapFromArray [
     ["b2_flame_team", [EAST, ["FST_B2_TL","FST_B2_Flame","FST_B2_Flame","FST_B2"], "B2 Flame Team (4)"]]
 ];
 
+// --- VEHICLE TEMPLATES (V28) ---
+// key -> [side, class, description, default behaviour, isAir]
+FST_HC_VehicleTemplates = createHashMapFromArray [
+    ["aat",          [EAST, "FST_AAT",             "AAT Tank",                 "hunt",   false]],
+    ["n99",          [EAST, "FST_N99",             "N99 Tank",                 "hunt",   false]],
+    ["mtt",          [EAST, "FST_MTT",             "MTT (crew only)",          "move",   false]],
+    ["pac",          [EAST, "FST_PAC_41st",        "PAC Transport (crew only)","move",   false]],
+    ["sac",          [EAST, "FST_SAC_41st",        "SAC Transport (crew only)","move",   false]],
+    ["hmp",          [EAST, "FST_HMP_Transport",   "HMP Gunship",              "sad",    true]],
+    ["vulture",      [EAST, "FST_CIS_Vulture",     "Vulture Droid",            "sad",    true]],
+    ["vulture_aa",   [EAST, "FST_CIS_Vulture_AA",  "Vulture Droid (AA)",       "loiter", true]],
+    ["vulture_cas",  [EAST, "FST_CIS_Vulture_CAS", "Vulture Droid (CAS)",      "sad",    true]],
+    ["vulture_elite",[EAST, "FST_CIS_Vulture_Elite","Vulture Droid (Elite)",   "sad",    true]]
+];
+
 // Objective storage
 FST_HC_Objectives = [];
 FST_HC_ObjectivesFired = [];
@@ -405,5 +530,5 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20", true];
-diag_log "[FST_HCSpawn] preInit complete - HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "V30_2_BURNS_PLAYER_VEHICLES_2026-09-21", true];
+diag_log "[FST_HCSpawn] preInit complete - V30_BURNS_ZEUS_2026-09-21";

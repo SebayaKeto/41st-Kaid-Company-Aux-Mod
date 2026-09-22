@@ -40,6 +40,7 @@ if (_unitCount == 0) exitWith {};
 
 if (isNil "FST_HC_TrackedGroups") then { FST_HC_TrackedGroups = []; };
 FST_HC_TrackedGroups pushBackUnique _group;
+if (_group getVariable ["FST_HC_keepActive", false]) then { _group enableDynamicSimulation false; };
 
 private _existing = _group getVariable ["FST_HC_tracked", []];
 private _wasTracked = count _existing > 0;

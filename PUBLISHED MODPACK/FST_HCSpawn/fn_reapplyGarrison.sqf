@@ -17,8 +17,10 @@ params ["_group"];
     {
         params ["_group"];
         if (isNull _group) exitWith {};
+        if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
 
         {
+            if (([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight") then {continue};
             _x disableAI "PATH";
             // Reassert stance on the new owner. Like disableAI, setUnitPos is
             // arguments-local and its effect does not reliably survive setGroupOwner,
@@ -27,7 +29,7 @@ params ["_group"];
             // V27: forceSpeed 0 removed. PATH disabled already pins the unit, and
             // forceSpeed was never reverted, leaving units frozen if Zeus later
             // re-enabled movement.
-            _x setUnitPos "UP";
+            if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
         } forEach units _group;
     },
     [_group],

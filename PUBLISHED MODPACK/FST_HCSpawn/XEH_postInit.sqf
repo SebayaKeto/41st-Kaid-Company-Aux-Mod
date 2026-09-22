@@ -3,15 +3,35 @@
 // HC: register with server
 // Client: hook Zeus, register keybinds
 
+[] call FST_HCSpawn_fnc_initCombatTasks;
+
+// Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
+// arguments-local command, so it only affects units local to the executing
+// machine. This is the only stance system in the modpack (FST_DroidStance
+// was retired and folded into this addon), so it also has to run in
+// singleplayer / editor preview, where the rest of the HC system stays off.
+// The function filters on local/alive/side/class itself.
+private _startStanceKeeper = {
+    if (hasInterface && {!isServer}) exitWith {};
+    if !(missionNamespace getVariable ["BURNS_stanceKeeperStarted", false]) then {
+        missionNamespace setVariable ["BURNS_stanceKeeperStarted", true];
+        [{
+            [] call FST_HCSpawn_fnc_enforceDroidStance;
+        }, missionNamespace getVariable ["FST_HC_DroidStanceInterval", 10], []] call CBA_fnc_addPerFrameHandler;
+    };
+};
+call _startStanceKeeper;
+
 if (!isMultiplayer) exitWith {
-    diag_log "[FST_HCSpawn] Singleplayer -- HC system disabled";
+    diag_log "[FST_HCSpawn] Singleplayer -- HC system disabled (droid stance keeper still active)";
+    call _startStanceKeeper;
 };
 
 if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
-diag_log "[FST_HCSpawn] postInit starting - HANDOFF_V27_REVIEW_FIXES_PERF_2026-09-20";
+diag_log "[FST_HCSpawn] postInit starting - V30_BURNS_ZEUS_2026-09-21";
 
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;
@@ -71,16 +91,8 @@ if (isServer || {!hasInterface}) then {
     [] call FST_HCSpawn_fnc_initEmergencyDroidBandaid;
     [] call FST_HCSpawn_fnc_initDroidCorpseCleanup;
 
-    // Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
-    // arguments-local command, so it only affects units local to the executing
-    // machine. This is the only stance system in the modpack (FST_DroidStance
-    // was retired and folded into this addon). The function filters on
-    // local/alive/side/class and skips units whose stance is already forced.
-    if (missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) then {
-        [{
-            [] call FST_HCSpawn_fnc_enforceDroidStance;
-        }, missionNamespace getVariable ["FST_HC_DroidStanceInterval", 10], []] call CBA_fnc_addPerFrameHandler;
-    };
+    // Droid stance keeper (see _startStanceKeeper at the top of this file).
+    call _startStanceKeeper;
 };
 
 // ============================================================

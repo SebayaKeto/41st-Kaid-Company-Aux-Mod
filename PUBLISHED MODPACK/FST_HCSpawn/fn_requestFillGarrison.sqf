@@ -282,7 +282,7 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
 
         missionNamespace setVariable ["FST_HC_LastHeavySpawnTime", time];
 
-        private _targetId = [] call FST_HCSpawn_fnc_getSpawnTarget;
+        private _targetId = ["infantry", count _batch] call FST_HCSpawn_fnc_getSpawnTarget;
         private _isOnHC = _targetId != 2;
         private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 

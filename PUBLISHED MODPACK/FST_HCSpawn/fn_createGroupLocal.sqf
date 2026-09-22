@@ -31,12 +31,17 @@ _group setVariable ["FST_HC_managed", true, true];
 private _editableObjects = [];
 
 if (count _vehData > 0) then {
-    private _vehType = _vehData select 0;
-    private _vehPos = _vehData select 1;
-    private _vehDir = if (count _vehData > 2) then { _vehData select 2 } else { 0 };
-    private _vehUp = if (count _vehData > 3) then { _vehData select 3 } else { [0,0,1] };
+    // V28 extended form (from fn_spawnVehicleOnTarget):
+    // [class, pos, dir, up, flying, skill, engineOn, combatMode, behaviour, target, tag]
+    // The 4-element form is the Zeus instant-clone path and is unchanged.
+    _vehData params ["_vehType", "_vehPos", ["_vehDir", 0], ["_vehUp", [0,0,1]], ["_flying", false], ["_crewSkill", -1], ["_engineOn", true], ["_combatMode", ""], ["_aiBehaviour", ""], ["_vehTarget", []], ["_tag", ""]];
+    private _extended = count _vehData > 4;
 
-    private _veh = _vehType createVehicle _vehPos;
+    private _veh = if (_flying) then {
+        createVehicle [_vehType, _vehPos, [], 0, "FLY"]
+    } else {
+        _vehType createVehicle _vehPos
+    };
     if (isNull _veh) exitWith {
         diag_log format ["[FST_HCSpawn] Vehicle clone failed: createVehicle returned null for %1", _vehType];
         [false] call _sendZeusCloneDecision;
@@ -45,6 +50,9 @@ if (count _vehData > 0) then {
     _veh setPosATL _vehPos;
     _veh setDir _vehDir;
     _veh setVectorUp _vehUp;
+    if (_flying) then {
+        _veh setVelocity ((vectorDir _veh) vectorMultiply 60);
+    };
     createVehicleCrew _veh;
 
     // crew _veh is empty for ~1 frame after createVehicleCrew on a dedicated
@@ -59,7 +67,16 @@ if (count _vehData > 0) then {
         _x setVariable ["FST_HC_spawnSettlingUntil", time + 10];
         _x setVariable ["FST_spawnDamageDeferUntilLocal", true];
         [_x] call FST_HCSpawn_fnc_emergencyStabilizeDroid;
+        if (_crewSkill >= 0) then { _x setSkill _crewSkill; };
     } forEach crew _veh;
+    if (_extended) then {
+        _veh engineOn _engineOn;
+        if (_combatMode != "") then { _group setCombatMode _combatMode; };
+        if (_aiBehaviour != "") then { _group setBehaviourStrong _aiBehaviour; };
+        if (count _vehTarget > 0) then { _group setVariable ["FST_HC_vehTarget", _vehTarget]; };
+        if (_tag != "") then { _group setVariable ["FST_HC_spawnTag", _tag, true]; };
+        _group setVariable ["FST_HC_vehicleGroup", true];
+    };
     _editableObjects pushBack _veh;
 } else {
     if (count _unitData > 0) then {
@@ -80,7 +97,7 @@ if (count _vehData > 0) then {
             _unit setDir _dir;
             _unit setRank _rank;
             _unit setSkill _skill;
-            if (_unitPos != "AUTO") then { _unit setUnitPos _unitPos; };
+            if (_unitPos != "AUTO" && {([_unit] call FST_HCSpawn_fnc_burnsRole) != "webknight"}) then { _unit setUnitPos _unitPos; };
             if (count _x > 6) then {
                 private _loadout = _x select 6;
                 if (count _loadout > 0) then { [_unit, _loadout, _class, "instant clone"] call FST_HCSpawn_fnc_applyUnitLoadoutSafe; };
@@ -173,52 +190,76 @@ if (count _editableObjects > 0) then {
     params ["_group", "_behavior", "_radius", "_pos"];
     if (isNull _group || {count units _group == 0}) exitWith {};
 
+    // V28: vehicle groups never get the infantry garrison/static treatment
+    // (it teleports crews into buildings). Hold instead.
+    private _mounted = ((units _group) findIf { vehicle _x != _x }) >= 0;
+    if (_mounted && {_behavior in ["garrison", "static"]}) then { _behavior = "hold"; };
+    private _target = _group getVariable ["FST_HC_vehTarget", _pos];
+    if (count _target < 2) then { _target = _pos; };
+
     switch (_behavior) do {
-        case "garrison": {
-            private _buildings = nearestObjects [_pos, ["House", "Building"], _radius];
-            private _priorityPositions = [];
-            private _buildingPositions = [];
-
-            // 3AS garrison points (hand-placed -- highest priority)
-            private _3asPoints = _pos nearObjects ["3as_GarrisonPoint", _radius];
-            { _priorityPositions pushBack (getPosATL _x); } forEach _3asPoints;
-
-            // CBA building positions (hand-placed -- high priority)
-            private _cbaPoints = _pos nearObjects ["CBA_BuildingPos", _radius];
-            { _priorityPositions pushBack (getPosATL _x); } forEach _cbaPoints;
-
-            // Standard buildingPos (fill remainder)
-            {
-                private _bldg = _x;
-                private _i = 0;
-                private _bp = _bldg buildingPos _i;
-                while { !(_bp isEqualTo [0,0,0]) } do {
-                    _buildingPositions pushBack _bp;
-                    _i = _i + 1;
-                    _bp = _bldg buildingPos _i;
-                };
-            } forEach _buildings;
-
-            _buildingPositions = _buildingPositions call BIS_fnc_arrayShuffle;
-            private _bldgPositionsRaw = _priorityPositions + _buildingPositions;
-            private _bldgPositions = _bldgPositionsRaw select { [_x] call FST_HCSpawn_fnc_isSafeGarrisonPos };
-            private _rejectedGarrisonPositions = (count _bldgPositionsRaw) - (count _bldgPositions);
-            if (_rejectedGarrisonPositions > 0 && {FST_HC_DebugLogging}) then {
-                diag_log format ["[FST_HCSpawn] Garrison behavior skipped %1 unsafe/floating/over-water positions near %2", _rejectedGarrisonPositions, _pos];
+        case "hold": {
+            _group setCombatMode "RED";
+            _group setBehaviourStrong "COMBAT";
+            { doStop _x; } forEach units _group;
+        };
+        case "move": {
+            if (_radius < 0) then { _radius = 50; };
+            private _wp = _group addWaypoint [_target, _radius];
+            _wp setWaypointType "MOVE";
+            _wp setWaypointBehaviour "AWARE";
+            _wp setWaypointCombatMode "RED";
+            _wp setWaypointSpeed "FULL";
+        };
+        case "sad": {
+            if (_radius < 0) then { _radius = 300; };
+            private _wp = _group addWaypoint [_target, _radius];
+            _wp setWaypointType "SAD";
+            _wp setWaypointBehaviour "COMBAT";
+            _wp setWaypointCombatMode "RED";
+            private _after = _group addWaypoint [_target, _radius];
+            if (_mounted && {(vehicle leader _group) isKindOf "Air"}) then {
+                _after setWaypointType "LOITER";
+                _after setWaypointLoiterType "CIRCLE_L";
+                _after setWaypointLoiterRadius (_radius max 300);
+            } else {
+                _after setWaypointType "HOLD";
             };
+            _after setWaypointBehaviour "COMBAT";
+            _after setWaypointCombatMode "RED";
+        };
+        case "loiter": {
+            if (_radius < 0) then { _radius = 500; };
+            private _wp = _group addWaypoint [_target, 0];
+            _wp setWaypointType "LOITER";
+            _wp setWaypointLoiterType "CIRCLE_L";
+            _wp setWaypointLoiterRadius _radius;
+            _wp setWaypointBehaviour "AWARE";
+            _wp setWaypointCombatMode "RED";
+        };
+        case "garrison": {
+            // Reuse the bounded cache used by BURNS building tasks. This creation
+            // path runs scheduled; wait briefly for its shared scan to finish.
+            private _scan = [_pos,_radius] call FST_HCSpawn_fnc_burnsPositions;
+            private _scanDeadline = time + 8;
+            if (canSuspend) then {
+                waitUntil {sleep 0.1; _scan=[_pos,_radius] call FST_HCSpawn_fnc_burnsPositions; (_scan select 0) || {time>=_scanDeadline}};
+            };
+            private _bldgPositions = _scan select 1;
             private _units = units _group;
             {
+                if (([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight") then {continue};
                 if (_forEachIndex < count _bldgPositions) then {
                     private _bPos = _bldgPositions select _forEachIndex;
                     _x setPosATL _bPos;
                     _x setVariable ["FST_HC_assignedPos", _bPos];
                     _x disableAI "PATH";
-                    _x setUnitPos "UP";
+                    if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
                     doStop _x;
                     _x setFormDir (random 360);
                 } else {
                     _x disableAI "PATH";
-                    _x setUnitPos "UP";
+                    if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
                     doStop _x;
                 };
             } forEach _units;
@@ -230,7 +271,7 @@ if (count _editableObjects > 0) then {
             // server manager acts. Flagging would need to move server-side if the
             // feature is ever revived.
             if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
-                _group enableDynamicSimulation true;
+                if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) < 0) then {_group enableDynamicSimulation true};
             };
 
             // Cleanup floating/unsafe positions after 10s
@@ -257,21 +298,26 @@ if (count _editableObjects > 0) then {
         case "assault": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, _radius, 15, [], _pos, false] spawn lambs_wp_fnc_taskRush;
+            [_group, "assault", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
         case "hunt": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, _radius, 15, [], _pos, false] spawn lambs_wp_fnc_taskHunt;
+            [_group, "hunt", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
         case "patrol":  {
-            [_group, _pos, _radius] call lambs_wp_fnc_taskPatrol;
+            [_group, _pos, _radius] call FST_HCSpawn_fnc_burnsPatrol;
         };
         case "static": {
             _group setBehaviourStrong "COMBAT";
-            { _x setUnitPos "UP"; doStop _x; } forEach units _group;
+            {
+                private _role = [_x] call FST_HCSpawn_fnc_burnsRole;
+                if (_role == "webknight") then {continue};
+                if (_role == "b1") then {_x setUnitPos "UP"};
+                doStop _x;
+            } forEach units _group;
             if (missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]) then {
-                _group enableDynamicSimulation true;
+                if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) < 0) then {_group enableDynamicSimulation true};
             };
         };
         case "none": {};
@@ -280,7 +326,7 @@ if (count _editableObjects > 0) then {
 
 // Dynamic simulation only for mobile groups, and only when opted in.
 if ((_behavior in ["patrol", "hunt"]) && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {
-    _group enableDynamicSimulation true;
+    if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) < 0) then {_group enableDynamicSimulation true};
 };
 
 // Track on server. Wait briefly for a real group netId so the server does not

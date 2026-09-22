@@ -9,6 +9,7 @@ if (isServer && {count _this == 4}) exitWith {
     params ["_grp", "_zeusId", "_hold", "_zeusIdForEvent"];
 
     if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {};
+    if ([_grp] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
     if (isNil "FST_HC_HeldGroups") then { FST_HC_HeldGroups = []; };
 
     if (_hold) then {
@@ -28,7 +29,10 @@ if (isServer && {count _this == 4}) exitWith {
         FST_HC_HeldGroups pushBackUnique _grp;
 
         private _isGarrisoned = !(leader _grp checkAIFeature "PATH");
-        private _moved = _grp setGroupOwner _zeusId;
+        private _webknight = (units _grp findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0;
+        // Holding can exclude a group from HCSpawn without moving Workshop's
+        // owner-local B2/BX scripts away from the machine that started them.
+        private _moved = if (_webknight) then {true} else {_grp setGroupOwner _zeusId};
         if (!_moved && {groupOwner _grp != _zeusId}) exitWith {
             _grp setVariable ["FST_HC_heldBy", -1, true];
             FST_HC_HeldGroups = FST_HC_HeldGroups - [_grp];
@@ -37,7 +41,7 @@ if (isServer && {count _this == 4}) exitWith {
             };
         };
 
-        if (_isGarrisoned) then {
+        if (_isGarrisoned && {!_webknight}) then {
             ["FST_HC_evt_reapplyGarrison", [_grp], _zeusId] call CBA_fnc_ownerEvent;
         };
 
@@ -78,6 +82,7 @@ private _who = clientOwner;
 {
     private _grp = _x;
     if (isNull _grp || {isPlayer leader _grp}) then { _skipped = _skipped + 1; continue };
+    if ([_grp] call FST_HCSpawn_fnc_isProtectedVehicleGroup) then { _skipped = _skipped + 1; continue };
 
     private _heldBy = _grp getVariable ["FST_HC_heldBy", -1];
 

@@ -3,10 +3,21 @@ dev_fnc_varren_behave = {
 
 	if (!local _unit) exitWith {};
     if (dev_cba_killswitch) exitWith {};
-	
-	_unit setDamage (1 - varren_health);
 
-	while {alive _unit} do {
+	// 41st 2026-09-20: FST_HCSpawn moves creature groups between server and
+	// headless clients. This loop only works on the owning machine, so it now
+	// stops when locality is lost and the "Local" event handler in config.cpp
+	// restarts it on the new owner. One instance per machine.
+	if (_unit getVariable ["dev_behave_running", false]) exitWith {};
+	_unit setVariable ["dev_behave_running", true];
+
+	// Health modifier is applied once per unit, not again after every transfer.
+	if !(_unit getVariable ["dev_health_applied", false]) then {
+		_unit setVariable ["dev_health_applied", true, true];
+		_unit setDamage (1 - varren_health);
+	};
+
+	while {alive _unit && local _unit} do {
 		//-- Idle
 			_unit setVariable ["mode", 0];  //-- 0: idle, 1: hunt, 2: agro
 			[_unit, "JMSEF_animals_varren_spawn", 6, 300] call dev_fnc_say3D;  //-- IM BORED SOUND
@@ -14,7 +25,7 @@ dev_fnc_varren_behave = {
 			[_unit] spawn {  //-- Roaming/eating
 				params ["_unit"];
 				_initialPos = getPosATL _unit;				
-				while {dev_asymhuman_distance_roam > 0 && alive _unit && _unit getVariable "mode" == 0} do {
+				while {dev_asymhuman_distance_roam > 0 && alive _unit && local _unit && _unit getVariable "mode" == 0} do {
 					_bodies = [_unit, varren_distance_roam] call dev_fnc_getBodies;
 					if (count _bodies != 0) then {
 						_nearestBody = _bodies#0;
@@ -30,7 +41,8 @@ dev_fnc_varren_behave = {
 			};
 
 			//-- Wait
-			waitUntil {sleep 1; !alive _unit || count ([_unit, varren_distance_hunt, varren_distance_max] call dev_fnc_getEnemies) > 0};  //-- Wait until there are enemies in hunt distance
+			waitUntil {sleep 1; !alive _unit || !local _unit || count ([_unit, varren_distance_hunt, varren_distance_max] call dev_fnc_getEnemies) > 0};  //-- Wait until there are enemies in hunt distance
+			if (!local _unit) exitWith {};
 
 		//-- Hunt
 			_unit setVariable ["mode", 1];  //-- 0: idle, 1: hunt, 2: agro	
@@ -38,7 +50,7 @@ dev_fnc_varren_behave = {
 			(group _unit) setSpeedMode "LIMITED";	
 			[_unit] spawn {  //-- Find enemies and go close ish to them
 				params ["_unit"];
-				while {alive _unit && _unit getVariable "mode" == 1} do {
+				while {alive _unit && local _unit && _unit getVariable "mode" == 1} do {
 					_enemies = [_unit, varren_distance_hunt, varren_distance_hunt] call dev_fnc_getEnemies;
 					if (count _enemies != 0) then {[_unit, [[[getPosATL (_enemies#0), varren_distance_agro]],[]] call BIS_fnc_randomPos] call dev_fnc_move};  //-- Move to random location in radius of nearest enemy
 					sleep 10;
@@ -46,14 +58,15 @@ dev_fnc_varren_behave = {
 			};
 
 			//-- Wait
-			waitUntil {sleep 1; !alive _unit || count ([_unit, varren_distance_agro, varren_distance_max] call dev_fnc_getEnemies) > 0};  //-- Wait until there are enemies in agro distance
+			waitUntil {sleep 1; !alive _unit || !local _unit || count ([_unit, varren_distance_agro, varren_distance_max] call dev_fnc_getEnemies) > 0};  //-- Wait until there are enemies in agro distance
+			if (!local _unit) exitWith {};
 
 		//-- Agro
 			_unit setVariable ["mode", 2];  //-- 0: idle, 1: hunt, 2: agro	
 			[_unit, "JMSEF_animals_varren_attack", 6, 300] call dev_fnc_say3D;  //-- IM ANGRY SOUND
 			(group _unit) setSpeedMode "FULL"; _unit forceSpeed 15;
 			[_unit] spawn {params ["_unit"];
-				while {alive _unit && _unit getVariable "mode" == 2} do {
+				while {alive _unit && local _unit && _unit getVariable "mode" == 2} do {
 					_enemies = [_unit, varren_distance_agro, varren_distance_max, 5] call dev_fnc_getEnemies;
 					if (count _enemies != 0) then {
 						_nearestEnemy =_enemies#0;
@@ -67,8 +80,12 @@ dev_fnc_varren_behave = {
 			};
 
 			//-- Wait
-			waitUntil {sleep 1; !alive _unit || count ([_unit, varren_distance_agro, varren_distance_max] call dev_fnc_getEnemies) == 0};  //-- Wait until there are no more enemies in agro distance
+			waitUntil {sleep 1; !alive _unit || !local _unit || count ([_unit, varren_distance_agro, varren_distance_max] call dev_fnc_getEnemies) == 0};  //-- Wait until there are no more enemies in agro distance
 	};
+
+	// Locality lost (or dead): release the slot so the new owner can start its own loop.
+	_unit setVariable ["mode", -1];
+	_unit setVariable ["dev_behave_running", false];
 };
 
 dev_fnc_varren_eat = {

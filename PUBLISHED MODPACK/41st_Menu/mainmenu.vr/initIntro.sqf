@@ -18,6 +18,34 @@
 enableEnvironment false;
 showCinemaBorder false;
 
+// 2.22 spotlight strip guard. config.cpp deletes the Spotlight tiles and their
+// white backing strip from RscDisplayMain and disables the stock
+// CfgMainMenuSpotlight entries, but any mod that loads after 41st_Menu and
+// patches RscDisplayMain (or adds its own spotlight entry, e.g. an "EDITOR"
+// tile) puts them straight back, and the stock menu script also ctrlCreates
+// tiles at runtime. Hide every control in the main display whose config class
+// mentions "Spotlight" (Spotlight1/2/3, SpotlightPrev/Next, BackgroundSpotlight*,
+// and runtime-created RscMainMenuSpotlight tiles). Polled quickly while the
+// menu is settling, then slowly for the life of the menu; allControls on the
+// main display is a few dozen entries, so this costs nothing measurable.
+[] spawn {
+	private _hide = {
+		private _display = findDisplay 0;
+		if (isNull _display) then { _display = uiNamespace getVariable ["RscDisplayMain", displayNull]; };
+		if (isNull _display) exitWith {};
+		{
+			if ((toLower ctrlClassName _x) find "spotlight" >= 0 && {ctrlShown _x}) then {
+				_x ctrlShow false;
+			};
+		} forEach allControls _display;
+	};
+	private _t = time;
+	while {true} do {
+		call _hide;
+		sleep (if (time - _t < 30) then { 0.5 } else { 5 });
+	};
+};
+
 private _fnGetStill = {
 	private _display = findDisplay 0;
 	if (isNull _display) then { _display = uiNamespace getVariable ["RscDisplayMain", displayNull]; };

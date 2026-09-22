@@ -1,4 +1,4 @@
-﻿class CfgPatches
+class CfgPatches
 {
 	class 41st_Addon
 	{
@@ -983,6 +983,16 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Squatch.paa"
+		};
+	};
+	class FST_CloneVestARC_Evox: FST_CloneVestARC
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Evox]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Evox.paa"
 		};
 	};
 	class FST_Vest_GM_Base: JLTS_CloneVestOfficer
@@ -9079,6 +9089,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Woodland.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9092,6 +9103,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Urban.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9105,6 +9117,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Desert.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9118,6 +9131,7 @@ class CfgWeapons
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Midnight.paa",
 		};
+		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_helmet_BARC.rvmat"
 		};
@@ -9131,6 +9145,11 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		{
 			"41st_Armor\data\Helmets\FST_Barc_Helmet_Evox.paa",
 		};
+	};
+	class FST_BARC_Helmet_Evox_Dirty: FST_BARC_Helmet_Evox
+	{
+		displayName="[41st] BARC Helmet [Evox/Dirty]";
+		hiddenSelectionsTextures[]={"41st_Armor\Data\Helmets\FST_Barc_Helmet_Evox_Dirty.paa"};
 	};
 	class FST_P2_ARC_Helmet_Tally: JLTS_CloneHelmetP2
 	{

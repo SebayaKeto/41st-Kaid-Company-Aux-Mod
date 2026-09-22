@@ -59,12 +59,21 @@ missionNamespace setVariable ["FST_HC_DroidCorpseQueue", []];
         private _deathTime = _x getVariable ["FST_HC_CorpseDeathTime", _now];
         private _age = _now - _deathTime;
 
+        // Workshop B2/BX death animations must finish without our physics
+        // freeze. Retain their bodies for at least a minute; a bounded fallback
+        // handles a broken third-party animation without accumulating forever.
+        private _webknight = ([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight";
+        if (_webknight && {_age < (_deleteDelay max 60) || {animationState _x != "deadstate" && {_age < 180}}}) then {
+            _keep pushBack _x;
+            continue;
+        };
+
         if (_age >= _deleteDelay && {_deleted < _maxDelete}) then {
             _x setVariable ["FST_skipSpawnDamage", true];
             deleteVehicle _x;
             _deleted = _deleted + 1;
         } else {
-            if (_age >= _simOffDelay && {simulationEnabled _x}) then {
+            if (!_webknight && {_age >= _simOffDelay} && {simulationEnabled _x}) then {
                 _x enableSimulation false;
             };
             _keep pushBack _x;

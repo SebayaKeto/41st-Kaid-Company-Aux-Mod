@@ -1,56 +1,29 @@
-// FST_HCSpawn_fnc_enforceDroidStance
-// Server/HC-local low-frequency stance keeper for B1/B2 droids.
-// Prevents LAMBS/AI from leaving battle droids prone without interrupting movement.
-// No doStop, no waypoint changes, no remoteExec.
-//
-// V27 performance/behavior:
-// - Cheapest filters run first (local, alive) so remote units cost one check.
-// - Only units whose stance rule is still AUTO are touched. Units already forced
-//   UP by an earlier pass, by garrison/clone code, or deliberately set to another
-//   stance by Zeus are skipped. This removes ~N setUnitPos calls per pass and
-//   stops the keeper from overriding stances Zeus chose on purpose.
-
+// BURNS B1-only stance policy. B2/BX are exclusively WebKnight-controlled.
 if (hasInterface && {!isServer}) exitWith {0};
 if !(missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) exitWith {0};
-
-private _cache = missionNamespace getVariable "FST_HC_StanceClassCache";
-if (isNil "_cache") then {
-    _cache = createHashMap;
-    missionNamespace setVariable ["FST_HC_StanceClassCache", _cache];
-};
-
 private _fixed = 0;
 {
-    private _unit = _x;
-    if (!local _unit) then { continue };
-    if (!alive _unit) then { continue };
-    if (isPlayer _unit) then { continue };
-    if !((side _unit) isEqualTo east) then { continue };
-
-    // Per-classname verdict cache: this sweep hits every local unit every 10s
-    // on the server AND each HC, and the substring scans only depend on the
-    // class. Deliberately narrower than fn_isDroidUnit (B1/B2 only) so BX and
-    // commando droids keep their own AI stance behavior.
-    private _class = typeOf _unit;
-    private _isDroid = _cache get _class;
-    if (isNil "_isDroid") then {
-        private _lc = toLowerANSI _class;
-        _isDroid =
-            ((_lc find "fst_droid_b1") >= 0) ||
-            ((_lc find "fst_droid_b2") >= 0) ||
-            ((_lc find "fst_b1") >= 0) ||
-            ((_lc find "fst_b2") >= 0);
-        _cache set [_class, _isDroid];
+    if (!local _x || {!alive _x} || {isPlayer _x} || {vehicle _x != _x} || {lifeState _x == "INCAPACITATED"}) then {continue};
+    if ((group _x) getVariable ["BURNS_exempt", false]) then {continue};
+    if (_x getVariable ["BURNS_exempt",false]) then {continue};
+    if (([_x] call FST_HCSpawn_fnc_burnsRole) != "b1") then {continue};
+    if !(_x getVariable ["BURNS_stanceHook", false]) then {
+        _x setVariable ["BURNS_stanceHook", true];
+        _x addEventHandler ["AnimChanged", {
+            params ["_unit"];
+            if (!local _unit || {!alive _unit} || {isPlayer _unit} || {vehicle _unit != _unit} || {lifeState _unit == "INCAPACITATED"}) exitWith {};
+            if (!(missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) || {(group _unit) getVariable ["BURNS_exempt", false]}) exitWith {};
+            if (_unit getVariable ["BURNS_exempt",false]) exitWith {};
+            if (toUpper unitPos _unit != "UP" || {stance _unit != "STAND"}) then {
+                _unit setUnitPos "UP";
+                _unit setUnitPosWeak "UP";
+            };
+        }];
     };
-    if (!_isDroid) then { continue };
-
-    if !((vehicle _unit) isEqualTo _unit) then { continue };
-    if ((unitPos _unit) != "AUTO") then { continue };
-
-    // Forces standing but still allows movement: it only stops the unit from
-    // choosing crouch/prone stances on its own.
-    _unit setUnitPos "UP";
-    _fixed = _fixed + 1;
+    if (toUpper unitPos _x != "UP" || {stance _x != "STAND"}) then {
+        _x setUnitPos "UP";
+        _x setUnitPosWeak "UP";
+        _fixed = _fixed + 1;
+    };
 } forEach allUnits;
-
 _fixed

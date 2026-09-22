@@ -34,8 +34,11 @@ while {true} do {
             // V27: never move a group Zeus is holding, even if it was queued before the hold.
             if ((_grp getVariable ["FST_HC_heldBy", -1]) != -1) then { continue };
 
-            if (count (_grp getVariable ["FST_HC_tracked", []]) > 0) then { continue };
-            if ([_grp] call FST_HCSpawn_fnc_isBlacklisted) then { continue };
+            // V28: a re-home request (foot group leaving the vehicle HC) may still
+            // look tracked if a recount ran in between; let transferGroup decide.
+            if (count (_grp getVariable ["FST_HC_tracked", []]) > 0 && {!(_grp getVariable ["FST_HC_rehome", false])}) then { continue };
+            // A re-home (foot group leaving the vehicle HC) is never subject to the vehicle blacklist.
+            if (!(_grp getVariable ["FST_HC_rehome", false]) && {[_grp] call FST_HCSpawn_fnc_isBlacklisted}) then { continue };
 
             [_grp] call FST_HCSpawn_fnc_transferGroup;
 

@@ -43,6 +43,7 @@ _grpCounts resize _hcCount;
         _hcOwnedAI = _hcOwnedAI + _unitCount;
         if (_idx < _hcCount) then { _grpCounts set [_idx, (_grpCounts select _idx) + 1]; };
     } else {
+        if (_ownerID != 2) then { continue }; // Player/Zeus-owned AI is not server AI.
         _serverOwnedGroups = _serverOwnedGroups + 1;
         _serverOwnedAI = _serverOwnedAI + _unitCount;
         if (count (_grp getVariable ["FST_HC_tracked", []]) == 0 && {!([_grp] call FST_HCSpawn_fnc_isBlacklisted)}) then {
@@ -58,7 +59,7 @@ if (_hcCount == 0) then {
         private _hcId = FST_HC_Ids select _forEachIndex;
         private _units = FST_HC_UnitCounts select _forEachIndex;
         private _grps = _grpCounts select _forEachIndex;
-        _lines pushBack format ["  HC%1 (owner %2): %3 AI, %4 groups", _forEachIndex + 1, _hcId, _units, _grps];
+        _lines pushBack format ["  HC%1 (owner %2): %3 AI, %4 groups", _x getVariable ["FST_HC_slot", _forEachIndex + 1], _hcId, _units, _grps];
     } forEach FST_HC_Array;
 };
 
@@ -71,6 +72,8 @@ _lines pushBack format ["  Zeus held: %1 groups", _heldCount];
 _lines pushBack format ["  Untracked eligible server groups: %1", _untrackedEligible];
 _lines pushBack format ["  Total tracked: %1 groups", FST_HC_TrackedCount];
 _lines pushBack format ["  Zeus mode: %1", missionNamespace getVariable ["FST_HC_ZeusMode", "instant"]];
+private _vehHC = [] call FST_HCSpawn_fnc_getVehicleHC;
+_lines pushBack (if ((_vehHC select 1) >= 0) then { format ["  Vehicle HC: HC%1 (owner %2)", (FST_HC_Array select (_vehHC select 1)) getVariable ["FST_HC_slot", -1], _vehHC select 0] } else { "  Vehicle HC: none (vehicles use least-loaded HC)" });
 if (_safeModeLeft > 0 || {FST_HC_EmergencyMode}) then {
     _lines pushBack format ["  Transfers paused: safeMode=%1s redistribute=%2", ceil _safeModeLeft, FST_HC_EmergencyMode];
 };

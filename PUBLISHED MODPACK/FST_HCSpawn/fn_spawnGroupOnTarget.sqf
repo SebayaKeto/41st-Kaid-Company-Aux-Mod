@@ -39,17 +39,15 @@ if (_radius < 0) then {
     _radius = switch (_behavior) do {
         case "garrison": { FST_HC_GarrisonRadius };
         case "patrol":   { FST_HC_PatrolRadius };
-        // LAMBS taskRush/taskHunt only actively orders movement after it finds
-        // an enemy inside this radius. The old 100m default made assault squads
-        // appear frozen if the nearest BLUFOR/player was just outside the tiny
-        // search bubble.
+        // Perceived-contact search radius. BURNS also advances to its supplied
+        // objective when the group has no known contact.
         case "assault": { 2000 };
         case "hunt":    { 2000 };
         default          { 100 };
     };
 };
 
-private _targetId = [] call FST_HCSpawn_fnc_getSpawnTarget;
+private _targetId = [if (count _vehData > 0) then {"vehicle"} else {"infantry"}, _spawnCountForCap] call FST_HCSpawn_fnc_getSpawnTarget;
 private _isOnHC = _targetId != 2;
 private _hcIndex = if (_isOnHC) then { FST_HC_Ids find _targetId } else { -1 };
 
