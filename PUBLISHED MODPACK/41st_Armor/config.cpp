@@ -985,6 +985,16 @@ class CfgWeapons
 			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Squatch.paa"
 		};
 	};
+	class FST_CloneVestARC_Evox: FST_CloneVestARC
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] ARC Trooper Vest [Evox]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Vests\FST_Clone_vest_ARC_Evox.paa"
+		};
+	};
 	class FST_Vest_GM_Base: JLTS_CloneVestOfficer
 	{
 		displayName="[41st] Clonetrooper Cold Weather Vest";
