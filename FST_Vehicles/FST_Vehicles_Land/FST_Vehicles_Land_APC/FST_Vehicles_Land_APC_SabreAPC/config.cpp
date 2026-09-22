@@ -612,193 +612,193 @@ class CfgVehicles
 		{
 			class EngineOnExt
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineOn.ogg",1,1,600};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineOn.ogg",1,1,600};
 				frequency = "0.85 + ((rpm / 2640) factor[(0 / 2640),(850 / 2640)]) * 0.15";
 				volume = "camPos*((rpm / 2640) factor[(0 / 2640),(300 / 2640)])";
 			};
 			class EngineOnInt
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineOn.ogg",0.7,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineOn.ogg",0.7,1};
 				frequency = "0.78 + ((rpm / 2640) factor[(0 / 2640),(850 / 2640)]) * 0.12";
 				volume = "0.7*(1-camPos)*((rpm / 2640) factor[(0 / 2640),(300 / 2640)])";
 			};
 			class EngineOffExt
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineOff.ogg",1,1,600};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineOff.ogg",1,1,600};
 				frequency = "0.90 + ((rpm / 2640) factor[(0 / 2640),(850 / 2640)]) * 0.10";
 				volume = "camPos*((rpm / 2640) factor[(0 / 2640),(700 / 2640)])";
 			};
 			class EngineOffInt
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineOff.ogg",0.7,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineOff.ogg",0.7,1};
 				frequency = "0.80 + ((rpm / 2640) factor[(0 / 2640),(850 / 2640)]) * 0.10";
 				volume = "0.7*(1-camPos)*((rpm / 2640) factor[(0 / 2640),(700 / 2640)])";
 			};
 			class Idle_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1,1,480};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1,1,480};
 				frequency = "0.95 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
 			};
 			class Engine
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.1,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.1,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
 			};
 			class Engine1_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.4,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.4,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
 			};
 			class Engine2_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
 			};
 			class Engine3_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
 			};
 			class Engine4_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
 			};
 			class Engine5_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
 				volume = "engineOn*camPos*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
 			};
 			class IdleThrust
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",2.8,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",2.8,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
 			};
 			class EngineThrust
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
 			};
 			class Engine1_Thrust_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
 			};
 			class Engine2_Thrust_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
 			};
 			class Engine3_Thrust_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
 			};
 			class Engine4_Thrust_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
 			};
 			class Engine5_Thrust_ext
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdle.ogg",1.5,1,550};
 				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
 			};
 			class Idle_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.5,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.5,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
 				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
 			};
 			class Engine_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
 				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
 			};
 			class Engine1_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
 				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
 			};
 			class Engine2_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
 				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
 			};
 			class Engine3_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
 				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
 			};
 			class Engine4_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
 				volume = "engineOn*(1-camPos)*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
 			};
 			class Engine5_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.25,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.25,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
 				volume = "engineOn*(1-camPos)*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
 			};
 			class IdleThrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.25,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1.25,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
 			};
 			class EngineThrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
 			};
 			class Engine1_Thrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
 			};
 			class Engine2_Thrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",1,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
 			};
 			class Engine3_Thrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",2,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",2,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
 			};
 			class Engine4_Thrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",2.24404,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",2.24404,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
 			};
 			class Engine5_Thrust_int
 			{
-				sound[] = {"\FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",2.51785,1};
+				sound[] = {"FST\FST_Sounds\Weapons\TX180_EngineIdleInternal.ogg",2.51785,1};
 				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
 				volume = "engineOn*(1-camPos)*(0.4+(0.6*(thrust factor[0.1,1])))*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
 			};
