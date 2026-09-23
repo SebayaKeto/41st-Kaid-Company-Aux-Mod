@@ -31,9 +31,7 @@ class CfgPatches {
 
 // -----------------------------------------------------------------------------
 //  LAAT/i COMPATIBILITY TABLE
-//  Classnames the "Load into LAAT/i" action (fn_laatiLoadAction.sqf) will
-//  accept as a valid LAAT/i to load into. Add new reskins/variants here —
-//  no script changes needed.
+//  Classnames accepted by "Load into LAAT/i". Add new reskins here.
 // -----------------------------------------------------------------------------
 class CfgBUZZ_ATRT {
     laatiClasses[] = {
@@ -201,6 +199,50 @@ class CfgWeapons {
         };
     };
 
+    // AT-RT spotlight — longer-range clone of FST_Attachment_Light_Beam_White.
+    // Built from acc_flashlight directly rather than inherited, since FST's
+    // class isn't resolved yet at this point in load order.
+    class acc_flashlight;
+    class BUZZ_ATRT_Spotlight: acc_flashlight {
+        displayName  = "[41st] AT-RT Spotlight";
+        scope        = 2;
+        scopeArsenal = 2;
+        class Iteminfo {
+            allowedSlots[] = {801, 701, 901};
+            mass           = 4;
+            mountAction    = "MountSide";
+            scope          = 0;
+            type           = 301;
+            unmountAction  = "DismountSide";
+            class Flashlight {
+                ambient[]        = {0.9, 0.81, 0.7};
+                color[]          = {180, 160, 130};
+                coneFadeCoef     = 30;
+                dayLight         = 0;
+                direction        = "flash";
+                flareMaxDistance = 2000;  // was 500 — visible flare glow range
+                flareSize        = 4;
+                innerAngle       = 8;
+                intensity        = 140;
+                irLight          = 0;
+                outerAngle       = 25;
+                position         = "flash dir";
+                scale[]          = {1, 1, 1};
+                size             = 1;
+                useFlare         = 1;
+                volumeShape      = "a3\data_f\VolumeLightFlashlight.p3d";
+                class Attenuation {
+                    constant       = 0.2;
+                    hardLimitEnd   = 2000;  // was 540 — absolute max beam distance
+                    hardLimitStart = 120;   // was 27 — push full brightness out further too
+                    linear         = 0.2;
+                    quadratic      = 0.2;
+                    start          = 20;
+                };
+            };
+        };
+    };
+
     class BUZZ_ATRT_T15: FST_T15 {
         displayName = "[41st] AT-RT Cannon";
         author      = "BEES";
@@ -221,15 +263,21 @@ class CfgWeapons {
                 linkProxy         = "\A3\data_f\proxies\weapon_slots\TOP";
                 compatibleItems[] = {};
             };
+            // PointerSlot whitelist — FST_T15's own list doesn't know about our
+            // custom BUZZ_ATRT_Spotlight, so LinkedItems rejects it ("item does
+            // not match to this weapon!") without this override.
+            class PointerSlot: PointerSlot {
+                compatibleItems[] = {
+                    "BUZZ_ATRT_Spotlight",
+                };
+            };
         };
 
-        // Pre-attached light module. Replaces the former empty linkedItems[] —
-        // that property and class LinkedItems share a name (config names are
-        // case-insensitive), so both can't coexist on one class.
+        // Pre-attached light module (LinkedItems, not linkedItems[] — same name, can't coexist).
         class LinkedItems {
             class LinkedItemsAcc {
                 slot = "PointerSlot";
-                item = "FST_Attachment_Light_Beam_White";
+                item = "BUZZ_ATRT_Spotlight";
             };
         };
 
@@ -355,11 +403,7 @@ class CfgVehicles {
         editorSubcategory = "BUZZ_Vehicles";
         ace_cargo_size    = 1;
 
-        // ACE Dragging — explicit override so carrying stays independent of
-        // whatever 3AS_Small_Box_9_Black_Prop currently ships with upstream
-        // (an update there is what broke carrying in the first place).
-        // ignoreWeight/ignoreWeightCarry bypass ACE's weight gate entirely,
-        // so this no longer depends on the crate's mass at all.
+        // ACE Dragging — decouples carry/drag from upstream 3AS_Small_Box_9_Black_Prop's mass.
         ace_dragging_canDrag           = 1;
         ace_dragging_dragPosition[]    = {0, 1.2, 0};
         ace_dragging_dragDirection     = 0;
@@ -386,11 +430,7 @@ class CfgVehicles {
         editorSubcategory = "BUZZ_Vehicles";
         hiddenSelectionsTextures[] = {"BUZZ_Vehicles\ATRT\Data\wyrwulf_supply_large_CO.paa"};
 
-        // Config-level baseline load: guarantees the crate is never empty
-        // the instant it exists, regardless of spawn method (editor, Zeus,
-        // or the vehicle spawner's scripted createVehicle) or any timing
-        // race in reserve_supply_init.sqf's addMagazineCargoGlobal call.
-        // The script still runs on top of this to (re)stock on server start.
+        // Baseline magazine load — guarantees non-empty stock regardless of spawn method.
         class TransportMagazines {
             class _BUZZ_ATRT_T15ReserveMag {
                 magazine = "BUZZ_ATRT_T15ReserveMag";
