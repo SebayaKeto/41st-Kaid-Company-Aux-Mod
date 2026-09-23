@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "name": "patch BUZZ_ATRT",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "patch FST_ShipScripts",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "patch FST_umbara_trees",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "patch FST_HCSpawn",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "patch FST_BURNS_Combat",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "patch FST_BURNS_Gulanthar",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "function FST_fnc_recallVehicleServer",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "function FST_fnc_RRR_isInZone",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "function FST_umbara_trees_fnc_hideTick",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "function FST_umbara_trees_fnc_streamTick",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "function FST_HCSpawn_fnc_burnsArmorAssist",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "function FST_HCSpawn_fnc_burnsGulantharSlope",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "ATRT creates",
+      "passed": true,
+      "detail": "\"\"BUZZ_ATRT\"\"]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "ATRT spotlight exists",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "ATRT spotlight preattached",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:00"
+    },
+    {
+      "name": "ATRT remains alive",
+      "passed": true,
+      "detail": "[]]\"",
+      "time": "15:15:20"
+    }
+  ],
+  "completion": [
+    "15:15:20 \"[QUAL_FOLLOWUP_DONE] checks=16 failures=[]\""
+  ],
+  "scriptErrors": [],
+  "movementGraphErrors": [],
+  "logs": [
+    {
+      "file": "runs\\run20\\server\\arma3serverprofiling_x64_2026-09-23_15-14-26.rpt",
+      "sha256": "7cb7000fe9c9cbff85e4472a89a5ada3d4ecba70ec8cbe72b46f59f575f51ae6"
+    }
+  ],
+  "passed": 16,
+  "failed": []
+}
