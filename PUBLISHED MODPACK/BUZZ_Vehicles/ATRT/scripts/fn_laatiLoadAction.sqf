@@ -8,7 +8,10 @@ private _rider = _atrt getVariable ["rider", objNull];
 if (isNull _rider) exitWith {};
 if (_atrt getVariable ["BUZZ_packing", false]) exitWith {};
 
-private _nearby = nearestObjects [_atrt, ["FST_laati_mk2"], 10];
+// Accepted LAAT/i classes live in CfgBUZZ_ATRT >> laatiClasses (config.cpp) —
+// add new reskins there, not here.
+private _laatiClasses = getArray (configFile >> "CfgBUZZ_ATRT" >> "laatiClasses");
+private _nearby = nearestObjects [_atrt, _laatiClasses, 10];
 if (count _nearby == 0) exitWith { hint "No LAAT/i within range."; };
 private _laati = _nearby select 0;
 

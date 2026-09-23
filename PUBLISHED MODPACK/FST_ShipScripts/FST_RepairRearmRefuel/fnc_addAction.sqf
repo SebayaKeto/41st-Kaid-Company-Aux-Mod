@@ -1,20 +1,19 @@
 /*
     FST_fnc_RRR_addAction
-    Idempotently adds the repair/rearm/refuel action to _unit. Safe to call
-    repeatedly (e.g. on every respawn) - it only ever adds the action once
-    per unit object, tracked via VR_ActionAdded on that object.
-    params ["_unit"]
+    Adds the service action to a unit if it is missing.
 */
 params ["_unit"];
 
 if (isNull _unit) exitWith {};
-if (_unit getVariable ["VR_ActionAdded", false]) exitWith {};
 
-_unit setVariable ["VR_ActionAdded",  true];
+private _title = "<t color='#00ff00'>[Initiate Repairs]</t>";
+private _id    = _unit getVariable ["VR_ActionID", -1];
+if (_id in actionIDs _unit && {((_unit actionParams _id) select 0) isEqualTo _title}) exitWith {};
+
 _unit setVariable ["VR_RepairActive", false];
 
-_unit addAction [
-    "<t color='#00ff00'>[Initiate Repairs]</t>",
+private _newId = _unit addAction [
+    _title,
     {
         params ["_target", "_caller", "_id"];
 
@@ -161,3 +160,5 @@ _unit addAction [
     "",
     "[_this] call FST_fnc_RRR_checkCondition"
 ];
+
+_unit setVariable ["VR_ActionID", _newId];

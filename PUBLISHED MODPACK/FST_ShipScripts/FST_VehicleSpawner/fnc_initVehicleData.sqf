@@ -19,9 +19,9 @@ private _rotaryList = [
     ["LAAT/i Mk1 'Sierra'",             "FST_laati_Turret_Sierra"],
     ["LAAT/i Mk2 'Sierra'",             "FST_laati_mk2_Sierra"],
     ["LAAT/i Mk2 'Sierra' (Lamp)",      "FST_laati_mk2Lights_Sierra"],
-    ["LAAT/i Mk1 'Aether'",            "FST_laati_Turret_Ouranos"],
-    ["LAAT/i Mk2 'Aether'",            "FST_laati_mk2_Ouranos"],
-    ["LAAT/i Mk2 'Aether' (Lamps)",    "FST_laati_mk2Lights_Ouranos"],
+    ["LAAT/i Mk1 'Aether'",             "FST_laati_Turret_Aether"],
+    ["LAAT/i Mk2 'Aether'",             "FST_laati_mk2_Aether"],
+    ["LAAT/i Mk2 'Aether' (Lamps)",     "FST_laati_mk2Lights_Aether"],
     ["LAAT/i Mk1 'Cait'",               "FST_laati_Turret_Cait"],
     ["LAAT/i Mk2 'Cait'",               "FST_laati_mk2_Cait"],
     ["LAAT/i Mk2 'Cait' (Lamps)",       "FST_laati_mk2Lights_Cait"],
@@ -34,9 +34,9 @@ private _rotaryList = [
     ["LAAT/i Mk1 'Pole'",               "FST_laati_Turret_Pole"],
     ["LAAT/i Mk2 'Pole'",               "FST_laati_mk2_Pole"],
     ["LAAT/i Mk2 'Pole' (Lamps)",       "FST_laati_mk2Lights_Pole"],
-    ["LAAT/i Mk1 'Red'",                "FST_laati_Turret_Red"],
-    ["LAAT/i Mk2 'Red'",                "FST_laati_mk2_Red"],
-    ["LAAT/i Mk2 'Red' (Lamps)",        "FST_laati_mk2Lights_Red"]
+    ["LAAT/i Mk1 'Oak'",                "FST_laati_Turret_Oak"],
+    ["LAAT/i Mk2 'Oak'",                "FST_laati_mk2_Oak"],
+    ["LAAT/i Mk2 'Oak' (Lamps)",        "FST_laati_mk2Lights_Oak"]
 ];
 
 private _fixedList = [
@@ -70,7 +70,9 @@ private _battalionList = [
 
 private _co1List = [
     ["Republic Mortar",         "FST_Republic_Mortar"],
-    ["E-Web Blaster Turret",    "FST_EWEB"]
+    ["E-Web Blaster Turret",    "FST_EWEB"],
+    ["AT-RT Transport Crate",   "BUZZ_ATRT_TransportCrate"],
+    ["AT-RT Reserve Ammo Crate","BUZZ_ATRT_ReserveCrate"]
 ];
 
 private _co2List = [
@@ -89,11 +91,7 @@ private _co2List = [
     ["TX-130 Super Saber (TheClawMachine)", "FST_SuperSaber_TheClawMachine"],
     ["ISP Swamp Speeder",               "FST_ISP"],
     ["ISP Swamp Speeder (Transport)",   "FST_ISP_Transport"],
-    ["PK-V5 'Dewback' IFV",             "FST_PKV5_UP_Sickle"],
-    ["PK-V5 'Dianoga' MLRS",            "FST_PKV5_MLRS_Carrier"],
-    ["PK-V5 'Gundark' Light Tank",      "FST_PKV5_UP_Stormer"],
-    ["PK-V5 'Massif' SPG",              "FST_PKV5_UP_Sceptre"],
-    ["PK-V5 'Veractyl' SPAA",           "FST_PKV5_UP_Shredder"]
+    ["TX-180 'Raider' APC",             "FST_Vehicle_Land_SabreAPC"]
 ];
 
 private _padList = [

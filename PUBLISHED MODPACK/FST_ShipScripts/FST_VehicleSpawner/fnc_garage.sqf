@@ -48,10 +48,16 @@ if (count crew _tracked > 0) exitWith {
     [_statusLbl, "> RECALL DENIED — EVACUATE ALL CREW FIRST.", [0.95, 0.55, 0.10, 1.0]] call FST_fnc_setStatus;
 };
 
-if (isEngineOn _tracked) exitWith {
+// isEngineOn isn't reliable on objects with no engine simulation at all
+// (crates, static weapons/mortars in this same spawn list) — it can read
+// as "on" by default rather than false, wrongly blocking their recall.
+// Only enforce the power-down requirement on things that can actually
+// have an engine.
+private _hasEngine = _tracked isKindOf "Air" || _tracked isKindOf "LandVehicle" || _tracked isKindOf "Ship";
+if (_hasEngine && { isEngineOn _tracked }) exitWith {
     [_statusLbl, "> RECALL DENIED — POWER DOWN ENGINE FIRST.", [0.95, 0.55, 0.10, 1.0]] call FST_fnc_setStatus;
 };
 
 missionNamespace setVariable [_storeKey, objNull];
-_tracked remoteExec ["deleteVehicle", 2];
+[_tracked] remoteExec ["FST_fnc_recallVehicleServer", 2];
 [_statusLbl, format ["> UNIT RECALLED FROM %1.", _padName], [0.20, 0.90, 0.30, 1.0]] call FST_fnc_setStatus;

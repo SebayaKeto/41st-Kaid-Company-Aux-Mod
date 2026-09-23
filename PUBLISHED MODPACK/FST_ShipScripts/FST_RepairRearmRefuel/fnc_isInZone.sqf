@@ -1,9 +1,6 @@
 /*
     FST_fnc_RRR_isInZone
-    Returns true if _pos is inside any known repair/rearm/refuel trigger zone.
-    Checked live against FST_RRR_triggers instead of a cached per-player
-    position, so it stays correct across respawns and multiple pads.
-    params ["_pos"]
+    Returns true if a position is inside any registered service zone.
 */
 params ["_pos"];
 

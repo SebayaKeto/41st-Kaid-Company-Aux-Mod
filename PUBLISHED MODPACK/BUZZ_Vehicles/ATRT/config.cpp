@@ -30,6 +30,51 @@ class CfgPatches {
 
 
 // -----------------------------------------------------------------------------
+//  LAAT/i COMPATIBILITY TABLE
+//  Classnames the "Load into LAAT/i" action (fn_laatiLoadAction.sqf) will
+//  accept as a valid LAAT/i to load into. Add new reskins/variants here —
+//  no script changes needed.
+// -----------------------------------------------------------------------------
+class CfgBUZZ_ATRT {
+    laatiClasses[] = {
+        "FST_laati_Turret",
+        "FST_laati_mk2",
+        "FST_laati_mk2Lights",
+        "FST_laati_Turret_Qball",
+        "FST_laati_mk2_Qball",
+        "FST_laati_mk2Lights_Qball",
+        "FST_laati_Turret_Grim",
+        "FST_laati_mk2_Grim",
+        "FST_laati_mk2Lights_Grim",
+        "FST_laati_Turret_Sierra",
+        "FST_laati_mk2_Sierra",
+        "FST_laati_mk2Lights_Sierra",
+        "FST_laati_Turret_Aether",
+        "FST_laati_mk2_Aether",
+        "FST_laati_mk2Lights_Aether",
+        "FST_laati_Turret_Cait",
+        "FST_laati_mk2_Cait",
+        "FST_laati_mk2Lights_Cait",
+        "FST_laati_Turret_Fire",
+        "FST_laati_mk2_Fire",
+        "FST_laati_mk2Lights_Fire",
+        "FST_laati_Turret_Talisman",
+        "FST_laati_mk2_Talisman",
+        "FST_laati_mk2Lights_Talisman",
+        "FST_laati_Turret_Pole",
+        "FST_laati_mk2_Pole",
+        "FST_laati_mk2Lights_Pole",
+        "FST_laati_Turret_Red",
+        "FST_laati_mk2_Red",
+        "FST_laati_mk2Lights_Red",
+        "FST_laati_Turret_Oak",
+        "FST_laati_mk2_Oak",
+        "FST_laati_mk2Lights_Oak"
+    };
+};
+
+
+// -----------------------------------------------------------------------------
 //  SERVER FUNCTIONS
 // -----------------------------------------------------------------------------
 class CfgFunctions {
@@ -310,6 +355,21 @@ class CfgVehicles {
         editorSubcategory = "BUZZ_Vehicles";
         ace_cargo_size    = 1;
 
+        // ACE Dragging — explicit override so carrying stays independent of
+        // whatever 3AS_Small_Box_9_Black_Prop currently ships with upstream
+        // (an update there is what broke carrying in the first place).
+        // ignoreWeight/ignoreWeightCarry bypass ACE's weight gate entirely,
+        // so this no longer depends on the crate's mass at all.
+        ace_dragging_canDrag           = 1;
+        ace_dragging_dragPosition[]    = {0, 1.2, 0};
+        ace_dragging_dragDirection     = 0;
+        ace_dragging_ignoreWeight      = 1;
+
+        ace_dragging_canCarry          = 1;
+        ace_dragging_carryPosition[]   = {0, 1.2, 0};
+        ace_dragging_carryDirection    = 0;
+        ace_dragging_ignoreWeightCarry = 1;
+
         class EventHandlers {
             init = "(_this select 0) call compile preprocessFileLineNumbers '\BUZZ_Vehicles\ATRT\scripts\crate_init.sqf';";
         };
@@ -325,6 +385,18 @@ class CfgVehicles {
         editorCategory    = "BUZZ_Vehicles";
         editorSubcategory = "BUZZ_Vehicles";
         hiddenSelectionsTextures[] = {"BUZZ_Vehicles\ATRT\Data\wyrwulf_supply_large_CO.paa"};
+
+        // Config-level baseline load: guarantees the crate is never empty
+        // the instant it exists, regardless of spawn method (editor, Zeus,
+        // or the vehicle spawner's scripted createVehicle) or any timing
+        // race in reserve_supply_init.sqf's addMagazineCargoGlobal call.
+        // The script still runs on top of this to (re)stock on server start.
+        class TransportMagazines {
+            class _BUZZ_ATRT_T15ReserveMag {
+                magazine = "BUZZ_ATRT_T15ReserveMag";
+                count    = 16;
+            };
+        };
 
         class EventHandlers {
             init = "(_this select 0) call compile preprocessFileLineNumbers '\BUZZ_Vehicles\ATRT\scripts\reserve_supply_init.sqf';";
