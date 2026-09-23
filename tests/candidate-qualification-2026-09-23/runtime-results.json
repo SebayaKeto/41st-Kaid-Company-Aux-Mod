@@ -1,0 +1,2624 @@
+{
+  "run01": {
+    "checks": [],
+    "completion": [],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run01\\hc1\\arma3server_x64_2026-09-23_09-30-33.rpt",
+        "sha256": "2a55d357f8e10942b2752bb0dd994af96d6318b09ece0563bab0a2cc3479007a"
+      },
+      {
+        "file": "runs\\run01\\hc2\\arma3server_x64_2026-09-23_09-30-33.rpt",
+        "sha256": "a8ccb76fa1d83bbc6cdd3369e8979f9217e33532ddd535b0f64373e1658cccbd"
+      },
+      {
+        "file": "runs\\run01\\hc3\\arma3server_x64_2026-09-23_09-30-33.rpt",
+        "sha256": "82ec79d608f286d42d126946192fe5968e09795cb5e1144102944192e406aa21"
+      },
+      {
+        "file": "runs\\run01\\hc4\\arma3server_x64_2026-09-23_09-30-33.rpt",
+        "sha256": "c653eef3443683c32feb8171cc320afaccdf2fd35f785f316e9cee6dc4e45f4b"
+      },
+      {
+        "file": "runs\\run01\\server\\arma3server_x64_2026-09-23_09-30-17.rpt",
+        "sha256": "d109c01ca4ff8129b979cb317985e565f73273c9d4e371131f418881702ecc5d"
+      }
+    ],
+    "passed": 0,
+    "failed": []
+  },
+  "run02": {
+    "checks": [],
+    "completion": [],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run02\\hc1\\arma3server_x64_2026-09-23_09-32-30.rpt",
+        "sha256": "71415c7f5193edc87c09abac0a86396098030ec211be6909848b96f81ad578f1"
+      },
+      {
+        "file": "runs\\run02\\hc2\\arma3server_x64_2026-09-23_09-32-30.rpt",
+        "sha256": "66149b1529fe26836cb0a82c2387dc5cc3d6a50c39923308ffcb94310040f8e3"
+      },
+      {
+        "file": "runs\\run02\\hc3\\arma3server_x64_2026-09-23_09-32-30.rpt",
+        "sha256": "331deacc6471b1298bc2ee7ddb1a0a0899417611302ccc0788f0de19e1f8b040"
+      },
+      {
+        "file": "runs\\run02\\hc4\\arma3server_x64_2026-09-23_09-32-30.rpt",
+        "sha256": "5d61e5e1f49aaa52e011c4d49456b970acc8bfdd0ab4e63257f901859eb74c6c"
+      },
+      {
+        "file": "runs\\run02\\server\\arma3server_x64_2026-09-23_09-32-11.rpt",
+        "sha256": "8f84f04c39afb1a85e685cadb18c703a914a59cba6fa570685759a0fb4f5202f"
+      }
+    ],
+    "passed": 0,
+    "failed": []
+  },
+  "run03": {
+    "checks": [],
+    "completion": [],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run03\\hc1\\arma3serverprofiling_x64_2026-09-23_09-33-50.rpt",
+        "sha256": "982fc754e8a139a95a7f4bfadad72f9bfe93703615a18c975650e9101a7c3939"
+      },
+      {
+        "file": "runs\\run03\\hc2\\arma3serverprofiling_x64_2026-09-23_09-33-50.rpt",
+        "sha256": "153cd309421cedeeda33f75b3fd9f8ee8e64e9afea5f1f7efcd0bfcfb7cfa460"
+      },
+      {
+        "file": "runs\\run03\\hc3\\arma3serverprofiling_x64_2026-09-23_09-33-50.rpt",
+        "sha256": "fd1f5f15f47683c2aac9ea27b44cf4a4cfd9c3abecd2de79a9c5f272c41fdded"
+      },
+      {
+        "file": "runs\\run03\\hc4\\arma3serverprofiling_x64_2026-09-23_09-33-50.rpt",
+        "sha256": "8b7308a8f546f0c640ab6b3144b1565307761cbbeaa4585866fbb847e1290eaa"
+      },
+      {
+        "file": "runs\\run03\\server\\arma3serverprofiling_x64_2026-09-23_09-33-21.rpt",
+        "sha256": "e27b65a4ea72442859b228e12e2dad2839bc4456bdfbabce174c828f8de43a6f"
+      }
+    ],
+    "passed": 0,
+    "failed": []
+  },
+  "run04": {
+    "checks": [],
+    "completion": [],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run04\\hc1\\arma3serverprofiling_x64_2026-09-23_09-35-42.rpt",
+        "sha256": "ab8aa027dc06d22aead7f3f5d00c7dd5cb7d8425792213ca5f0a58c99472ac43"
+      },
+      {
+        "file": "runs\\run04\\hc2\\arma3serverprofiling_x64_2026-09-23_09-35-42.rpt",
+        "sha256": "6d3c2e9f63556baa8ef9c798d2b4db7c0ce8e11087cada43e938b9f59aa32c4c"
+      },
+      {
+        "file": "runs\\run04\\hc3\\arma3serverprofiling_x64_2026-09-23_09-35-42.rpt",
+        "sha256": "5bf618cccb022bdc5cf2749b39a475de24e1e3e267acb4698f2923dac4fe4a44"
+      },
+      {
+        "file": "runs\\run04\\hc4\\arma3serverprofiling_x64_2026-09-23_09-35-42.rpt",
+        "sha256": "731be7d201a9229505720d0f40ac9c6e662399613d9469cb15da9fd60652a1b8"
+      },
+      {
+        "file": "runs\\run04\\server\\arma3serverprofiling_x64_2026-09-23_09-35-04.rpt",
+        "sha256": "1facd601bf21c65707234bdb5972080d83524514dbf01268659f24b5a9c3a9d0"
+      }
+    ],
+    "passed": 0,
+    "failed": []
+  },
+  "run05": {
+    "checks": [
+      {
+        "name": "FST_HCSpawn",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_BURNS_Combat",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_BURNS_Gulanthar",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_AAT",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_HCSpawn_fnc_burnsArmorAssist",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_HCSpawn_fnc_burnsB1Advance",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_HCSpawn_fnc_burnsGulantharSlope",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_fnc_nextPodAnchor",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_Droid_Dispenser",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Munificent_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Providence_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Diamond_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "gait config JMSEF_animals_varren_o",
+        "passed": true,
+        "detail": "[\"\"CfgMovesBURNSGulanthar\"\",\"\"dev_mutant_form939\\anim\\walk1\"\"]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "gait config JMSEF_animals_var_bers_o",
+        "passed": true,
+        "detail": "[\"\"CfgMovesBURNSGulanthar\"\",\"\"dev_mutant_form939\\anim\\walk1\"\"]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "gait config JMSEF_animals_var_alpha_o",
+        "passed": true,
+        "detail": "[\"\"CfgMovesBURNSGulanthar\"\",\"\"dev_mutant_form939\\anim\\walk1\"\"]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "AAT cannon merged profile",
+        "passed": true,
+        "detail": "[1000,6,0]]\"",
+        "time": "9:36:58"
+      },
+      {
+        "name": "four real HCs registered",
+        "passed": false,
+        "detail": "[[\"\"HC1\"\",5,1],[\"\"HC3\"\",6,3],[\"\"HC2\"\",7,2]]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "vehicle HC is slot four",
+        "passed": false,
+        "detail": "[-1,-1]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded helper selects 24 from 16",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded helper first pass unique",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded helper second pass unique",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded helper empty rejection",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded helper deleted anchors",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 1",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 2",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 3",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 4",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 5",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "loaded dispenser reject 6",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "B1 classified and eligible",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "B1 starts COLUMN",
+        "passed": false,
+        "detail": "\"\"WEDGE\"\"]\"",
+        "time": "9:39:29"
+      },
+      {
+        "name": "B1 column actually advances",
+        "passed": true,
+        "detail": "[29.77,[[4000,4029.77,0.00143909],[4000.07,4025.77,0.00143909],[3999.99,4022.68,0.00143909],[4000.24,4019.64,0.00143909],[3999.99,4016.63,0.00143909],[3999.92,4013.35,0.00143909],[3999.84,4010.45,0.00143909],[4000.07,4006.19,0.00143909],[3999.86,4002.94,0.00143909],[4000.52,3999.23,0.00143909],[3999.92,3995.6,0.00143909],[4000.28,3991.83,0.00143909]]]]\"",
+        "time": "9:39:41"
+      },
+      {
+        "name": "B1 contact changes to LINE",
+        "passed": false,
+        "detail": "\"\"COLUMN\"\"]\"",
+        "time": "9:39:41"
+      },
+      {
+        "name": "B1 12 distinct line slots",
+        "passed": true,
+        "detail": "[[4000,4035.77,0],[4003.5,4035.77,0],[3996.5,4035.77,0],[4007,4035.77,0],[3993,4035.77,0],[4010.5,4035.77,0],[4000,4031.27,0],[4003.5,4031.27,0],[3996.5,4031.27,0],[4007,4031.27,0],[3993,4031.27,0],[4010.5,4031.27,0]]]\"",
+        "time": "9:39:41"
+      },
+      {
+        "name": "B1 deployment front stays fixed",
+        "passed": true,
+        "detail": "[197.48,[4000,4035.77,0],359.999]]\"",
+        "time": "9:39:42"
+      },
+      {
+        "name": "B1 stop releases movement speed",
+        "passed": true,
+        "detail": "[2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5]]\"",
+        "time": "9:40:07"
+      },
+      {
+        "name": "B1 exemption respected",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:40:07"
+      },
+      {
+        "name": "ownership roundtrip HC1",
+        "passed": false,
+        "detail": "[\"\"HC1\"\",5,true,0,12,\"\"LINE\"\"]]\"",
+        "time": "9:40:11"
+      },
+      {
+        "name": "ownership roundtrip HC3",
+        "passed": false,
+        "detail": "[\"\"HC3\"\",6,true,0,12,\"\"LINE\"\"]]\"",
+        "time": "9:40:28"
+      },
+      {
+        "name": "ownership roundtrip HC2",
+        "passed": false,
+        "detail": "[\"\"HC2\"\",7,true,0,12,\"\"LINE\"\"]]\"",
+        "time": "9:40:46"
+      },
+      {
+        "name": "AAT firing task=",
+        "passed": true,
+        "detail": "[[[\"\"FST_AAT_Cannon\"\",\"\"HP\"\",\"\"FST_thermal_shell_HP\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_re",
+        "time": "9:41:32"
+      },
+      {
+        "name": "AAT cannon firing task=",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"HP\"\",\"\"FST_thermal_shell_HP\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red",
+        "time": "9:41:32"
+      },
+      {
+        "name": "AAT pulse released task=",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:41:33"
+      },
+      {
+        "name": "AAT firing task=rush",
+        "passed": true,
+        "detail": "[[[\"\"FST_AAT_Cannon\"\",\"\"HP\"\",\"\"FST_thermal_shell_HP\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_re",
+        "time": "9:42:15"
+      },
+      {
+        "name": "AAT cannon firing task=rush",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"HP\"\",\"\"FST_thermal_shell_HP\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red",
+        "time": "9:42:15"
+      },
+      {
+        "name": "AAT pulse released task=rush",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:42:16"
+      },
+      {
+        "name": "AAT firing task=hunt",
+        "passed": true,
+        "detail": "[[[\"\"FST_AAT_Cannon\"\",\"\"HP\"\",\"\"FST_thermal_shell_HP\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_re",
+        "time": "9:42:58"
+      },
+      {
+        "name": "AAT cannon firing task=hunt",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"HP\"\",\"\"FST_thermal_shell_HP\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red\"\"],[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_127x99_red",
+        "time": "9:42:58"
+      },
+      {
+        "name": "AAT pulse released task=hunt",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:42:59"
+      },
+      {
+        "name": "24 real pod shells landed",
+        "passed": false,
+        "detail": "[0,[]]]\"",
+        "time": "9:43:41"
+      },
+      {
+        "name": "real pods produce living troops",
+        "passed": true,
+        "detail": "[93,93]]\"",
+        "time": "9:43:41"
+      }
+    ],
+    "completion": [
+      " 9:43:41 \"[QUAL_DONE] checks=53 failures=[[\"\"four real HCs registered\"\",false,[[\"\"HC1\"\",5,1],[\"\"HC3\"\",6,3],[\"\"HC2\"\",7,2]]],[\"\"vehicle HC is slot four\"\",false,[-1,-1]],[\"\"B1 starts COLUMN\"\",false,\"\"WEDGE\"\"],[\"\"B1 contact changes to LINE\"\",false,\"\"COLUMN\"\"],[\"\"ownership roundtrip HC1\"\",false,[\"\"HC1\"\",5,true,0,12,\"\"LINE\"\"]],[\"\"ownership roundtrip HC3\"\",false,[\"\"HC3\"\",6,true,0,12,\"\"LINE\"\"]],[\"\"ownership roundtrip HC2\"\",false,[\"\"HC2\"\",7,true,0,12,\"\"LINE\"\"]],[\"\"24 real pod shells landed\"\",false,[0,[]]]] fps=35.7942 engagementMaxMs=1.00708\""
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run05\\hc1\\arma3serverprofiling_x64_2026-09-23_09-36-56.rpt",
+        "sha256": "50a007783cd6de6b081c6c4329d5d2a8af4a0e55b4f14b1a92d034f04be6d79b"
+      },
+      {
+        "file": "runs\\run05\\hc1\\arma3serverprofiling_x64_2026-09-23_09-38-50.rpt",
+        "sha256": "39e603545fd6e5baf76c98992713e7892b8d443f6d45e214ef5a8110f38fe569"
+      },
+      {
+        "file": "runs\\run05\\hc2\\arma3serverprofiling_x64_2026-09-23_09-36-56.rpt",
+        "sha256": "9afafb08415e311611fc9cfd27f9ab3a327c52d5e10556cdfb5e37591ced43b3"
+      },
+      {
+        "file": "runs\\run05\\hc2\\arma3serverprofiling_x64_2026-09-23_09-41-01.rpt",
+        "sha256": "9f5c056f84fcea29cbafd5f40351005f6b888283cb590a7b1224377ec0e160e4"
+      },
+      {
+        "file": "runs\\run05\\hc3\\arma3serverprofiling_x64_2026-09-23_09-36-56.rpt",
+        "sha256": "f980997cad20cb99e83a4a6806f9e9a63a334e6fee5f96b9629677dda6706909"
+      },
+      {
+        "file": "runs\\run05\\hc4\\arma3serverprofiling_x64_2026-09-23_09-36-56.rpt",
+        "sha256": "6be695ebb89f9c1c5b02003c2f1e99ff20c3ae325d4402bcae74c6827b6e53f5"
+      },
+      {
+        "file": "runs\\run05\\server\\arma3serverprofiling_x64_2026-09-23_09-36-32.rpt",
+        "sha256": "daa659be4b7fe338f61ce3d16cfee0aaea4b33c0cfa05af316ad91cdaada8c75"
+      }
+    ],
+    "passed": 45,
+    "failed": [
+      "four real HCs registered",
+      "vehicle HC is slot four",
+      "B1 starts COLUMN",
+      "B1 contact changes to LINE",
+      "ownership roundtrip HC1",
+      "ownership roundtrip HC3",
+      "ownership roundtrip HC2",
+      "24 real pod shells landed"
+    ]
+  },
+  "run06": {
+    "checks": [
+      {
+        "name": "FST_HCSpawn",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_BURNS_Combat",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_BURNS_Gulanthar",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_AAT",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_HCSpawn_fnc_burnsArmorAssist",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_HCSpawn_fnc_burnsB1Advance",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_HCSpawn_fnc_burnsGulantharSlope",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_fnc_nextPodAnchor",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_Droid_Dispenser",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Munificent_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Providence_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Diamond_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "gait config JMSEF_animals_varren_o",
+        "passed": true,
+        "detail": "[\"\"CfgMovesBURNSGulanthar\"\",\"\"dev_mutant_form939\\anim\\walk1\"\"]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "gait config JMSEF_animals_var_bers_o",
+        "passed": true,
+        "detail": "[\"\"CfgMovesBURNSGulanthar\"\",\"\"dev_mutant_form939\\anim\\walk1\"\"]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "gait config JMSEF_animals_var_alpha_o",
+        "passed": true,
+        "detail": "[\"\"CfgMovesBURNSGulanthar\"\",\"\"dev_mutant_form939\\anim\\walk1\"\"]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "AAT cannon merged profile",
+        "passed": true,
+        "detail": "[1000,6,0]]\"",
+        "time": "9:44:57"
+      },
+      {
+        "name": "four real HCs registered",
+        "passed": true,
+        "detail": "[[\"\"HC1\"\",4,1],[\"\"HC2\"\",5,2],[\"\"HC3\"\",6,3],[\"\"HC4\"\",7,4]]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "vehicle HC is slot four",
+        "passed": true,
+        "detail": "[7,3]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded helper selects 24 from 16",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded helper first pass unique",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded helper second pass unique",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded helper empty rejection",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded helper deleted anchors",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 1",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 2",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 3",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 4",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 5",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "loaded dispenser reject 6",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "B1 classified and eligible",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:45:35"
+      },
+      {
+        "name": "B1 starts COLUMN",
+        "passed": true,
+        "detail": "\"\"COLUMN\"\"]\"",
+        "time": "9:45:36"
+      },
+      {
+        "name": "B1 column actually advances",
+        "passed": true,
+        "detail": "[30.1421,[[4000,4030.14,0.00143909],[4000.07,4026.79,0.00143909],[3999.7,4024.4,0.00143909],[3999.62,4021.32,0.00143909],[3999.73,4018.47,0.00143909],[4000.95,4015.04,0.00143909],[4000.1,4011.36,0.00143909],[3999.86,4008.42,0.00143909],[3999.89,4004.68,0.00143909],[4000.12,4000.44,0.00143909],[3999.98,3996.16,0.00143909],[3999.81,3991.33,0.00143909]]]]\"",
+        "time": "9:45:48"
+      },
+      {
+        "name": "B1 contact changes to LINE",
+        "passed": true,
+        "detail": "\"\"LINE\"\"]\"",
+        "time": "9:45:48"
+      },
+      {
+        "name": "B1 12 distinct line slots",
+        "passed": true,
+        "detail": "[[4000,4036.14,0],[4003.5,4036.14,0],[3996.5,4036.14,0],[4007,4036.14,0],[3993,4036.14,0],[4010.5,4036.14,0],[4000,4031.64,0],[4003.5,4031.64,0],[3996.5,4031.64,0],[4007,4031.64,0],[3993,4031.64,0],[4010.5,4031.64,0]]]\"",
+        "time": "9:45:48"
+      },
+      {
+        "name": "B1 deployment front stays fixed",
+        "passed": true,
+        "detail": "[84.958,[4000,4036.14,0],0.000207342]]\"",
+        "time": "9:45:49"
+      },
+      {
+        "name": "B1 stop releases movement speed",
+        "passed": true,
+        "detail": "[2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5]]\"",
+        "time": "9:46:13"
+      },
+      {
+        "name": "B1 exemption respected",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:46:13"
+      },
+      {
+        "name": "ownership roundtrip HC1",
+        "passed": true,
+        "detail": "[\"\"HC1\"\",4,true,0,12,\"\"LINE\"\"]]\"",
+        "time": "9:46:19"
+      },
+      {
+        "name": "ownership roundtrip HC2",
+        "passed": true,
+        "detail": "[\"\"HC2\"\",5,true,0,12,\"\"LINE\"\"]]\"",
+        "time": "9:46:24"
+      },
+      {
+        "name": "ownership roundtrip HC3",
+        "passed": true,
+        "detail": "[\"\"HC3\"\",6,true,0,12,\"\"LINE\"\"]]\"",
+        "time": "9:46:43"
+      },
+      {
+        "name": "ownership roundtrip HC4",
+        "passed": true,
+        "detail": "[\"\"HC4\"\",7,true,0,12,\"\"COLUMN\"\"]]\"",
+        "time": "9:47:02"
+      },
+      {
+        "name": "AAT firing task=",
+        "passed": true,
+        "detail": "[12,[4988.47,4993.82,-0.00533533],13.0854]]\"",
+        "time": "9:47:51"
+      },
+      {
+        "name": "AAT cannon firing task=",
+        "passed": true,
+        "detail": "3]\"",
+        "time": "9:47:51"
+      },
+      {
+        "name": "AAT pulse released task=",
+        "passed": false,
+        "detail": "[]]\"",
+        "time": "9:47:52"
+      },
+      {
+        "name": "AAT firing task=rush",
+        "passed": true,
+        "detail": "[168,[5000.71,5037.87,-0.00533247],37.8801]]\"",
+        "time": "9:48:34"
+      },
+      {
+        "name": "AAT cannon firing task=rush",
+        "passed": true,
+        "detail": "2]\"",
+        "time": "9:48:34"
+      },
+      {
+        "name": "AAT pulse released task=rush",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:48:35"
+      },
+      {
+        "name": "AAT firing task=hunt",
+        "passed": true,
+        "detail": "[96,[5000.52,5035.94,-0.00533485],35.9441]]\"",
+        "time": "9:49:18"
+      },
+      {
+        "name": "AAT cannon firing task=hunt",
+        "passed": true,
+        "detail": "3]\"",
+        "time": "9:49:18"
+      },
+      {
+        "name": "AAT pulse released task=hunt",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:49:19"
+      },
+      {
+        "name": "24 real pod impacts",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:50:01"
+      },
+      {
+        "name": "real pods produce living troops",
+        "passed": true,
+        "detail": "[99,99]]\"",
+        "time": "9:50:01"
+      },
+      {
+        "name": "E5 real ammunition at hostile crewed armor",
+        "passed": true,
+        "detail": "[11,60,49,1]]\"",
+        "time": "9:50:17"
+      },
+      {
+        "name": "active infantry takes priority over rifle armor assist",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:17"
+      },
+      {
+        "name": "hold-fire blocks engagement",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:17"
+      },
+      {
+        "name": "Zeus hold blocks engagement",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:17"
+      },
+      {
+        "name": "manual waypoint blocks engagement assist",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:18"
+      },
+      {
+        "name": "BLUFOR vehicle protected",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:18"
+      },
+      {
+        "name": "BLUFOR task rejected",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:18"
+      },
+      {
+        "name": "boarding clears B1 on-foot state",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:19"
+      },
+      {
+        "name": "boarding restores AUTOCOMBAT",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:19"
+      },
+      {
+        "name": "conscious unit is not down",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:19"
+      },
+      {
+        "name": "ACE unconscious recognized",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:19"
+      },
+      {
+        "name": "revive clears downed state",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:50:19"
+      },
+      {
+        "name": "test ramp has slope",
+        "passed": false,
+        "detail": "[0,0,1]]\"",
+        "time": "9:50:34"
+      },
+      {
+        "name": "natural uphill climb JMSEF_animals_varren_o",
+        "passed": false,
+        "detail": "[0,0,[[\"\"<none>\"\",0,[8050,8025,0],0,false],[\"\"<none>\"\",1,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[80",
+        "time": "9:51:04"
+      },
+      {
+        "name": "natural uphill progress JMSEF_animals_varren_o",
+        "passed": false,
+        "detail": "0]\"",
+        "time": "9:51:04"
+      },
+      {
+        "name": "disabled gait releases JMSEF_animals_varren_o",
+        "passed": false,
+        "detail": "\"\"burns_gulanthar_climb\"\"]\"",
+        "time": "9:51:05"
+      },
+      {
+        "name": "attack and eating states unchanged JMSEF_animals_varren_o",
+        "passed": true,
+        "detail": "[8,[]]]\"",
+        "time": "9:51:05"
+      },
+      {
+        "name": "natural uphill climb JMSEF_animals_var_bers_o",
+        "passed": false,
+        "detail": "[0,0,[[\"\"<none>\"\",0,[8050,8025,0],0,false],[\"\"<none>\"\",1,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[80",
+        "time": "9:51:37"
+      },
+      {
+        "name": "natural uphill progress JMSEF_animals_var_bers_o",
+        "passed": false,
+        "detail": "0]\"",
+        "time": "9:51:37"
+      },
+      {
+        "name": "disabled gait releases JMSEF_animals_var_bers_o",
+        "passed": false,
+        "detail": "\"\"burns_gulanthar_climb\"\"]\"",
+        "time": "9:51:38"
+      },
+      {
+        "name": "attack and eating states unchanged JMSEF_animals_var_bers_o",
+        "passed": true,
+        "detail": "[8,[]]]\"",
+        "time": "9:51:38"
+      },
+      {
+        "name": "natural uphill climb JMSEF_animals_var_alpha_o",
+        "passed": false,
+        "detail": "[0,0,[[\"\"<none>\"\",0,[8050,8025,0],0,false],[\"\"<none>\"\",0,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",1,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[80",
+        "time": "9:52:10"
+      },
+      {
+        "name": "natural uphill progress JMSEF_animals_var_alpha_o",
+        "passed": false,
+        "detail": "0]\"",
+        "time": "9:52:10"
+      },
+      {
+        "name": "disabled gait releases JMSEF_animals_var_alpha_o",
+        "passed": false,
+        "detail": "\"\"burns_gulanthar_climb\"\"]\"",
+        "time": "9:52:11"
+      },
+      {
+        "name": "attack and eating states unchanged JMSEF_animals_var_alpha_o",
+        "passed": true,
+        "detail": "[8,[]]]\"",
+        "time": "9:52:11"
+      },
+      {
+        "name": "ship 24 requests FST_ScifiSupportPlus_fnc_SW_Munificent_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:53:05"
+      },
+      {
+        "name": "ship 24 impact craters FST_ScifiSupportPlus_fnc_SW_Munificent_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:53:05"
+      },
+      {
+        "name": "ship living troop delivery FST_ScifiSupportPlus_fnc_SW_Munificent_QRF",
+        "passed": true,
+        "detail": "[90,90]]\"",
+        "time": "9:53:05"
+      },
+      {
+        "name": "pod coordinates follow elevated ground FST_ScifiSupportPlus_fnc_SW_Munificent_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:53:05"
+      },
+      {
+        "name": "ship 24 requests FST_ScifiSupportPlus_fnc_SW_Providence_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:54:29"
+      },
+      {
+        "name": "ship 24 impact craters FST_ScifiSupportPlus_fnc_SW_Providence_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:54:29"
+      },
+      {
+        "name": "ship living troop delivery FST_ScifiSupportPlus_fnc_SW_Providence_QRF",
+        "passed": true,
+        "detail": "[92,92]]\"",
+        "time": "9:54:29"
+      },
+      {
+        "name": "pod coordinates follow elevated ground FST_ScifiSupportPlus_fnc_SW_Providence_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:54:29"
+      },
+      {
+        "name": "ship 24 requests FST_ScifiSupportPlus_fnc_SW_Diamond_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:55:53"
+      },
+      {
+        "name": "ship 24 impact craters FST_ScifiSupportPlus_fnc_SW_Diamond_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:55:53"
+      },
+      {
+        "name": "ship living troop delivery FST_ScifiSupportPlus_fnc_SW_Diamond_QRF",
+        "passed": true,
+        "detail": "[92,92]]\"",
+        "time": "9:55:53"
+      },
+      {
+        "name": "pod coordinates follow elevated ground FST_ScifiSupportPlus_fnc_SW_Diamond_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:55:53"
+      },
+      {
+        "name": "ship 24 requests FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:57:17"
+      },
+      {
+        "name": "ship 24 impact craters FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "9:57:17"
+      },
+      {
+        "name": "ship living troop delivery FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF",
+        "passed": true,
+        "detail": "[81,81]]\"",
+        "time": "9:57:17"
+      },
+      {
+        "name": "pod coordinates follow elevated ground FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:57:17"
+      }
+    ],
+    "completion": [
+      " 9:50:01 \"[QUAL_DONE] checks=54 failures=[[\"\"AAT pulse released task=\"\",false,[]]] fps=35.5556 engagementMaxMs=1.00708\"",
+      " 9:50:19 \"[QUAL_GUARDS_DONE]\"",
+      " 9:57:49 \"[QUAL_EXTENDED_DONE] checks=29 failures=[[\"\"test ramp has slope\"\",false,[0,0,1]],[\"\"natural uphill climb JMSEF_animals_varren_o\"\",false,[0,0,[[\"\"<none>\"\",0,[8050,8025,0],0,false],[\"\"<none>\"\",1,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143909],0,true],[\"\"<none>\"\",2,[8050,8025,0.00143"
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_sprint",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_sprint",
+      " 9:50:34 Warning Message: No entry 'bin\\config.bin/CfgMovesBURNSGulanthar/Actions.NoActions'",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_sprint",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_sprint",
+      " 9:50:34 Warning Message: No entry 'bin\\config.bin/CfgMovesBURNSGulanthar/Actions.NoActions'",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_sprint",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_sprint",
+      " 9:50:34 Warning Message: No entry 'bin\\config.bin/CfgMovesBURNSGulanthar/Actions.NoActions'",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_sprint",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_sprint",
+      " 9:50:34 Warning Message: No entry 'bin\\config.bin/CfgMovesBURNSGulanthar/Actions.NoActions'",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.connectTo: Bad move form939_sprint",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die1",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_die2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_eat",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle2",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_idle3",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_walk",
+      " 9:50:34   bin\\config.bin/CfgMovesBURNSGulanthar/States/BURNS_gulanthar_climb.interpolateTo: Bad move form939_sprint",
+      " 9:50:34 Warning Message: No entry 'bin\\config.bin/CfgMovesBURNSGulanthar/Actions.NoActions'"
+    ],
+    "logs": [
+      {
+        "file": "runs\\run06\\hc1\\arma3serverprofiling_x64_2026-09-23_09-45-01.rpt",
+        "sha256": "7bf21bf4e7a1c5f807773ae432ab44924f389fc236a287c4231b384c069983d7"
+      },
+      {
+        "file": "runs\\run06\\hc2\\arma3serverprofiling_x64_2026-09-23_09-45-02.rpt",
+        "sha256": "4812c943c1f607292357ac4717263642d7efb217e88ee9a1fcaf5589f0135813"
+      },
+      {
+        "file": "runs\\run06\\hc3\\arma3serverprofiling_x64_2026-09-23_09-45-03.rpt",
+        "sha256": "7e10e9e03316c600a197c5728bde9499daa810124fc5b2aa1d1456c87486f903"
+      },
+      {
+        "file": "runs\\run06\\hc4\\arma3serverprofiling_x64_2026-09-23_09-45-04.rpt",
+        "sha256": "7b4f2136e49b2a3ee61dd37dd7453e44c724d788f53349a31468ef3d61922ff6"
+      },
+      {
+        "file": "runs\\run06\\server\\arma3serverprofiling_x64_2026-09-23_09-44-31.rpt",
+        "sha256": "015e7225444e812c6713afbf0589850a901322bcf4f5f10dac87db58ed500218"
+      }
+    ],
+    "passed": 84,
+    "failed": [
+      "AAT pulse released task=",
+      "test ramp has slope",
+      "natural uphill climb JMSEF_animals_varren_o",
+      "natural uphill progress JMSEF_animals_varren_o",
+      "disabled gait releases JMSEF_animals_varren_o",
+      "natural uphill climb JMSEF_animals_var_bers_o",
+      "natural uphill progress JMSEF_animals_var_bers_o",
+      "disabled gait releases JMSEF_animals_var_bers_o",
+      "natural uphill climb JMSEF_animals_var_alpha_o",
+      "natural uphill progress JMSEF_animals_var_alpha_o",
+      "disabled gait releases JMSEF_animals_var_alpha_o"
+    ]
+  },
+  "run07": {
+    "checks": [
+      {
+        "name": "four HCs in followup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:59:09"
+      },
+      {
+        "name": "clear natural slope found",
+        "passed": false,
+        "detail": "[[],[]]]\"",
+        "time": "9:59:09"
+      },
+      {
+        "name": "AAT bearing fires 0",
+        "passed": false,
+        "detail": "[359.288,[],0]]\"",
+        "time": "9:59:49"
+      },
+      {
+        "name": "AAT outstanding turn releases 0",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "9:59:51"
+      },
+      {
+        "name": "AAT native travel order protected 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "9:59:52"
+      },
+      {
+        "name": "AAT bearing fires 90",
+        "passed": false,
+        "detail": "[82.9292,[],0]]\"",
+        "time": "10:00:33"
+      },
+      {
+        "name": "AAT outstanding turn releases 90",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "10:00:35"
+      },
+      {
+        "name": "AAT native travel order protected 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:00:36"
+      },
+      {
+        "name": "AAT bearing fires 180",
+        "passed": false,
+        "detail": "[189.866,[],0]]\"",
+        "time": "10:01:17"
+      },
+      {
+        "name": "AAT outstanding turn releases 180",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "10:01:19"
+      },
+      {
+        "name": "AAT native travel order protected 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:01:20"
+      },
+      {
+        "name": "casualty protection ace_captives_isHandcuffed",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:01:23"
+      },
+      {
+        "name": "casualty protection ace_captives_isSurrendering",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:01:23"
+      },
+      {
+        "name": "casualty job acquired",
+        "passed": true,
+        "detail": "[O Alpha 1-1:1,B Alpha 1-1:1,\"\"casualty\"\",188.314,0,1,[0,0,0],-1,2,0]]\"",
+        "time": "10:01:23"
+      },
+      {
+        "name": "revival cancels casualty job",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:01:24"
+      },
+      {
+        "name": "group merge releases old rifle job",
+        "passed": false,
+        "detail": "[]]\"",
+        "time": "10:01:24"
+      },
+      {
+        "name": "pod fault reached partial",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:02:24"
+      },
+      {
+        "name": "pod fault request count partial",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "10:02:24"
+      },
+      {
+        "name": "elevated ship positions follow ground",
+        "passed": true,
+        "detail": "[-6.51006,[-1.96056,-5.33847,2.81651,2.28193,-1.37042,-5.85888,-9.49933,-5.60655,-5.85888,-9.49933,-5.33847,-1.96056,2.81651,2.28193,-5.60655,-1.37042,-5.85888,-5.33847,2.28193,-1.37042,2.81651,-1.96056,-9.49933,-5.60655]]]\"",
+        "time": "10:02:24"
+      },
+      {
+        "name": "partial anchors still deliver troops",
+        "passed": false,
+        "detail": "46]\"",
+        "time": "10:02:24"
+      },
+      {
+        "name": "pod fault reached all",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:03:26"
+      },
+      {
+        "name": "pod fault request count all",
+        "passed": true,
+        "detail": "0]\"",
+        "time": "10:03:26"
+      },
+      {
+        "name": "pod fault reached ship",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:04:28"
+      },
+      {
+        "name": "pod fault request count ship",
+        "passed": false,
+        "detail": "1]\"",
+        "time": "10:04:28"
+      },
+      {
+        "name": "concurrent ships submit 48",
+        "passed": true,
+        "detail": "48]\"",
+        "time": "10:05:30"
+      },
+      {
+        "name": "concurrent ships deliver living troops",
+        "passed": true,
+        "detail": "152]\"",
+        "time": "10:05:30"
+      }
+    ],
+    "completion": [
+      "10:05:30 \"[QUAL_EDGES_DONE]\"",
+      "10:05:31 \"[QUAL_FOLLOWUP_DONE] checks=26 failures=[[\"\"clear natural slope found\"\",false,[[],[]]],[\"\"AAT bearing fires 0\"\",false,[359.288,[],0]],[\"\"AAT bearing fires 90\"\",false,[82.9292,[],0]],[\"\"AAT bearing fires 180\"\",false,[189.866,[],0]],[\"\"group merge releases old rifle job\"\",false,[]],[\"\"partial anchors still deliver troops\"\",false,46],[\"\"pod fault request count ship\"\",false,1]] fps=35.7143 maxMs=1.00708\""
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run07\\hc1\\arma3serverprofiling_x64_2026-09-23_09-58-32.rpt",
+        "sha256": "2dd0db87538d4dac34e29cfa61f658f5b7a07edcbb91ec685800914f2fda6529"
+      },
+      {
+        "file": "runs\\run07\\hc2\\arma3serverprofiling_x64_2026-09-23_09-58-33.rpt",
+        "sha256": "61c41125e5196498270e24dcd06677ca9f7b7d3122f26967a01fcdbcd3a49b6e"
+      },
+      {
+        "file": "runs\\run07\\hc3\\arma3serverprofiling_x64_2026-09-23_09-58-34.rpt",
+        "sha256": "11519509483afe58eb5a86cb9824da0f9dd6640b810b172203c68e79e38ea0fe"
+      },
+      {
+        "file": "runs\\run07\\hc4\\arma3serverprofiling_x64_2026-09-23_09-58-36.rpt",
+        "sha256": "a2d6e7b342068ff5bdee7c205f7e0c25ab5e4ffaa9c7dbc6d2f46cac0136650a"
+      },
+      {
+        "file": "runs\\run07\\server\\arma3serverprofiling_x64_2026-09-23_09-58-21.rpt",
+        "sha256": "eeadc152d2a413f8e0fadfe724ebbb0c163fad025c335445965053e63460e0dd"
+      }
+    ],
+    "passed": 19,
+    "failed": [
+      "clear natural slope found",
+      "AAT bearing fires 0",
+      "AAT bearing fires 90",
+      "AAT bearing fires 180",
+      "group merge releases old rifle job",
+      "partial anchors still deliver troops",
+      "pod fault request count ship"
+    ]
+  },
+  "run08": {
+    "checks": [
+      {
+        "name": "clear natural slope found",
+        "passed": true,
+        "detail": "[[6500,18700,0],[0.363938,0.931423,0]]]\"",
+        "time": "10:01:03"
+      },
+      {
+        "name": "natural movement JMSEF_animals_varren_o flat",
+        "passed": true,
+        "detail": "[75.5263,0,[[\"\"form939_idle\"\",2,0,[14500,16000,0.00143242],true,0.153233],[\"\"form939_walk\"\",2,2.98212,[14500.1,16000.3,0.00143814],true,0.153233],[\"\"form939_walk\"\",2,4.45781,[14500.3,16001.5,0.00143242],true,0.153233],[\"\"form939_walk\"\",2,4.45781,[14500.6,16002.7,0.00144196],true,0.108352],[\"\"form939_walk\"\",2,4.45781,[14500.9,16004.1,0.00144196],true,0.108352],[\"\"form939_walk\"\",2,4.45781,[14501.1,16005.3,0.00144196],true,0.108352],[\"\"form939_idle\"\",2,0.358499,[14501.3,16006.1,0.00144005],true,0.108352],[\"\"form939_sprint\"\",2,8.66488,[14501.5,16006.6,0.00144386],true,0.108352],[\"\"form939_walk\"\",2",
+        "time": "10:01:37"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_varren_o flat",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:01:37"
+      },
+      {
+        "name": "flat gait stays native JMSEF_animals_varren_o",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:01:37"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_varren_o flat",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:01:39"
+      },
+      {
+        "name": "external attack transition JMSEF_animals_varren_o",
+        "passed": true,
+        "detail": "[\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_idle\"\",\"\"form939_idle\"\",\"\"form939_idle\"\",\"\"form939_attack6\"\",\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\"]]\"",
+        "time": "10:01:45"
+      },
+      {
+        "name": "natural movement JMSEF_animals_varren_o uphill",
+        "passed": true,
+        "detail": "[57.3936,5,[[\"\"form939_idle\"\",2,0,[6500,18700,0.000961304],true,12.1973],[\"\"form939_idle\"\",2,0,[6500.03,18700.1,0.000839233],true,12.1973],[\"\"form939_sprint\"\",2,8.6416,[6500.12,18700.7,0.000900269],true,12.1973],[\"\"form939_walk\"\",2,14.3269,[6501.12,18706.2,0.000717163],true,15.7414],[\"\"burns_gulanthar_climb\"\",2,8.04744,[6501.92,18708.3,0.000137329],true,23.925],[\"\"form939_idle\"\",2,2.6596,[6502.44,18709.9,0.000244141],true,23.925],[\"\"form939_walk\"\",2,1.4816,[6502.42,18710,0.000228882],true,23.925],[\"\"burns_gulanthar_climb\"\",2,8.02199,[6502.02,18711.7,0.000335693],true,23.925],[\"\"form939_idle\"\",",
+        "time": "10:02:20"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_varren_o uphill",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:02:20"
+      },
+      {
+        "name": "uphill gait observed JMSEF_animals_varren_o",
+        "passed": true,
+        "detail": "5]\"",
+        "time": "10:02:20"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_varren_o uphill",
+        "passed": true,
+        "detail": "\"\"form939_idle\"\"]\"",
+        "time": "10:02:21"
+      },
+      {
+        "name": "natural movement JMSEF_animals_varren_o downhill",
+        "passed": true,
+        "detail": "[46.7475,0,[[\"\"form939_walk\"\",2,4.25312,[6530.07,18778.4,0.00192261],true,19.5571],[\"\"form939_walk\"\",2,4.45708,[6529.12,18777.4,0.00183105],true,19.5571],[\"\"form939_walk\"\",2,4.38943,[6528.64,18776.4,0.00233459],true,19.1099],[\"\"form939_walk\"\",2,4.43262,[6528.69,18775.2,0.00244141],true,19.1099],[\"\"form939_walk\"\",2,4.06958,[6528.36,18774.1,0.00233459],true,19.1099],[\"\"form939_walk\"\",2,4.11324,[6528.28,18773,0.00241089],true,19.1099],[\"\"form939_walk\"\",2,4.46484,[6528.28,18771.7,0.00234985],true,19.9246],[\"\"form939_walk\"\",2,4.46484,[6528.28,18770.6,0.00234985],true,19.9246],[\"\"form939_walk\"\",2,4.",
+        "time": "10:02:56"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_varren_o downhill",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:02:56"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_varren_o downhill",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:02:58"
+      },
+      {
+        "name": "natural movement JMSEF_animals_var_bers_o flat",
+        "passed": true,
+        "detail": "[84.1739,0,[[\"\"form939_idle3\"\",2,0,[14500,16000,0.00143242],true,0.153233],[\"\"form939_sprint\"\",2,2.07811,[14500,16000.1,0.00143433],true,0.153233],[\"\"form939_sprint\"\",2,25.9574,[14499.6,16007.2,0.00144005],true,0.108352],[\"\"form939_idle\"\",2,2.06429,[14500.2,16011.5,0.00143242],true,0.153233],[\"\"form939_sprint\"\",2,2.07383,[14500.2,16011.6,0.0014286],true,0.153233],[\"\"form939_walk\"\",2,0,[14499.6,16013.6,0.00143242],true,0.153233],[\"\"form939_sprint\"\",2,2.08592,[14499.6,16013.8,0.00143242],true,0.153233],[\"\"form939_sprint\"\",2,8.66314,[14499.9,16016.3,0.00143814],true,0.153233],[\"\"form939_sprint\"\",",
+        "time": "10:03:33"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_var_bers_o flat",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:03:33"
+      },
+      {
+        "name": "flat gait stays native JMSEF_animals_var_bers_o",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:03:33"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_var_bers_o flat",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:03:34"
+      },
+      {
+        "name": "external attack transition JMSEF_animals_var_bers_o",
+        "passed": true,
+        "detail": "[\"\"form939_walk\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack6\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\"]]\"",
+        "time": "10:03:40"
+      },
+      {
+        "name": "natural movement JMSEF_animals_var_bers_o uphill",
+        "passed": true,
+        "detail": "[55.4634,6,[[\"\"form939_idle\"\",2,0,[6500,18700,0.000961304],true,12.1973],[\"\"form939_walk\"\",2,1.47447,[6500.04,18700.1,0.00123596],true,12.1973],[\"\"burns_gulanthar_climb\"\",2,8.01617,[6500.69,18701.5,0.00115967],true,12.1973],[\"\"form939_idle\"\",2,5.29839,[6501.56,18703.3,0.000869751],true,12.1973],[\"\"form939_walk\"\",2,0,[6501.57,18703.5,0.000900269],true,12.1973],[\"\"burns_gulanthar_climb\"\",2,8.03603,[6501.71,18704.4,0.000869751],true,12.1973],[\"\"form939_idle\"\",2,5.34325,[6502.07,18706.8,0.000228882],true,23.925],[\"\"form939_walk\"\",2,0,[6502.08,18707,0.000244141],true,23.925],[\"\"burns_gulanthar_clim",
+        "time": "10:04:15"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_var_bers_o uphill",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:04:15"
+      },
+      {
+        "name": "uphill gait observed JMSEF_animals_var_bers_o",
+        "passed": true,
+        "detail": "6]\"",
+        "time": "10:04:15"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_var_bers_o uphill",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:04:17"
+      },
+      {
+        "name": "natural movement JMSEF_animals_var_bers_o downhill",
+        "passed": true,
+        "detail": "[43.5055,0,[[\"\"form939_walk\"\",2,4.38777,[6530.57,18778.6,0.00242615],true,19.5571],[\"\"form939_walk\"\",2,4.44926,[6530.32,18777.5,0.00248718],true,19.5571],[\"\"form939_walk\"\",2,4.45132,[6530.07,18776.3,0.00236511],true,19.5571],[\"\"form939_walk\"\",2,4.46502,[6530.15,18775.1,0.00236511],true,19.5571],[\"\"form939_walk\"\",2,4.11328,[6530.16,18774,0.00233459],true,19.1099],[\"\"form939_walk\"\",2,4.11328,[6530.16,18772.9,0.00233459],true,19.1099],[\"\"form939_walk\"\",2,4.46484,[6530.16,18771.6,0.00236511],true,19.9246],[\"\"form939_walk\"\",2,4.46484,[6530.16,18770.5,0.00236511],true,19.9246],[\"\"form939_walk\"\",2,4.",
+        "time": "10:04:52"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_var_bers_o downhill",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:04:52"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_var_bers_o downhill",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:04:53"
+      },
+      {
+        "name": "natural movement JMSEF_animals_var_alpha_o flat",
+        "passed": true,
+        "detail": "[69.0363,0,[[\"\"form939_idle\"\",2,0,[14500,16000,0.00143242],true,0.153233],[\"\"form939_walk\"\",2,1.49155,[14500,16000.1,0.00143242],true,0.153233],[\"\"form939_walk\"\",2,4.45479,[14500.2,16001.2,0.00143433],true,0.153233],[\"\"form939_walk\"\",2,4.45479,[14500.4,16002.7,0.00144005],true,0.108352],[\"\"form939_walk\"\",2,4.4548,[14500.5,16003.9,0.00144005],true,0.108352],[\"\"form939_walk\"\",2,4.45479,[14500.7,16005.1,0.00143814],true,0.108352],[\"\"form939_idle\"\",2,1.49155,[14500.9,16006.1,0.00143814],true,0.108352],[\"\"form939_sprint\"\",2,2.07404,[14500.9,16006.2,0.00144196],true,0.108352],[\"\"form939_sprint\"\",2,1",
+        "time": "10:05:28"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_var_alpha_o flat",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:05:28"
+      },
+      {
+        "name": "flat gait stays native JMSEF_animals_var_alpha_o",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:05:28"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_var_alpha_o flat",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:05:30"
+      },
+      {
+        "name": "external attack transition JMSEF_animals_var_alpha_o",
+        "passed": true,
+        "detail": "[\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\",\"\"form939_walk\"\",\"\"form939_walk\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\",\"\"form939_attack4\"\"]]\"",
+        "time": "10:05:36"
+      },
+      {
+        "name": "natural movement JMSEF_animals_var_alpha_o uphill",
+        "passed": true,
+        "detail": "[60.4007,3,[[\"\"form939_idle\"\",2,0,[6500,18700,0.000961304],true,12.1973],[\"\"form939_idle\"\",2,0,[6500.03,18700.1,0.000839233],true,12.1973],[\"\"form939_sprint\"\",2,8.64158,[6500.12,18700.7,0.000900269],true,12.1973],[\"\"form939_walk\"\",2,14.3361,[6501.12,18706.2,0.000717163],true,15.7414],[\"\"burns_gulanthar_climb\"\",2,8.02627,[6502.08,18708.2,0.000778198],true,23.925],[\"\"form939_idle\"\",2,2.63973,[6502.8,18709.7,9.15527e-05],true,24.503],[\"\"form939_walk\"\",2,0.351664,[6502.8,18709.8,0.000198364],true,24.503],[\"\"burns_gulanthar_climb\"\",2,8.01686,[6502.78,18711.1,7.62939e-05],true,24.503],[\"\"form939_idl",
+        "time": "10:06:11"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_var_alpha_o uphill",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:06:11"
+      },
+      {
+        "name": "uphill gait observed JMSEF_animals_var_alpha_o",
+        "passed": true,
+        "detail": "3]\"",
+        "time": "10:06:11"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_var_alpha_o uphill",
+        "passed": true,
+        "detail": "\"\"form939_idle\"\"]\"",
+        "time": "10:06:12"
+      },
+      {
+        "name": "natural movement JMSEF_animals_var_alpha_o downhill",
+        "passed": true,
+        "detail": "[47.7385,0,[[\"\"form939_walk\"\",2,4.23615,[6529.72,18779,0.00190735],true,19.5571],[\"\"form939_walk\"\",2,4.43964,[6528.95,18778.2,0.00189209],true,19.5571],[\"\"form939_walk\"\",2,4.41814,[6528.61,18777.2,0.00241089],true,19.5571],[\"\"form939_walk\"\",2,4.43268,[6528.61,18776.1,0.00244141],true,19.1099],[\"\"form939_walk\"\",2,4.43537,[6528.27,18774.9,0.00233459],true,19.1099],[\"\"form939_walk\"\",2,4.46554,[6528.27,18773.7,0.00234985],true,19.1099],[\"\"form939_walk\"\",2,4.46483,[6528.28,18772.5,0.00231934],true,19.1099],[\"\"form939_walk\"\",2,4.46484,[6528.28,18771.1,0.00234985],true,19.9246],[\"\"form939_walk\"\",2,4.",
+        "time": "10:06:47"
+      },
+      {
+        "name": "valid movement graph JMSEF_animals_var_alpha_o downhill",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:06:47"
+      },
+      {
+        "name": "gait disable releases JMSEF_animals_var_alpha_o downhill",
+        "passed": true,
+        "detail": "\"\"form939_walk\"\"]\"",
+        "time": "10:06:49"
+      }
+    ],
+    "completion": [
+      "10:06:50 \"[QUAL_FOLLOWUP_DONE] checks=37 failures=[] fps=27.1186 maxMs=1.00708\""
+    ],
+    "scriptErrors": [
+      "10:01:42 Error in expression <0.004 * (hit interpolate [20,20.01,-1,1])>",
+      "10:01:42   Error position: <hit interpolate [20,20.01,-1,1])>",
+      "10:01:42   Error Undefined variable in expression: hit",
+      "10:01:42 Error in expression <(inDirX * 2 - surfNormalX / 4) * inSpeed >",
+      "10:01:42   Error position: <inDirX * 2 - surfNormalX / 4) * inSpeed >",
+      "10:01:42   Error Undefined variable in expression: indirx",
+      "10:01:42 Error in expression <(inDirY * 2 - surfNormalY / 4) * inSpeed >",
+      "10:01:42   Error position: <inDirY * 2 - surfNormalY / 4) * inSpeed >",
+      "10:01:42   Error Undefined variable in expression: indiry",
+      "10:01:42 Error in expression <(inDirZ * 2 - surfNormalZ / 4) * inSpeed >",
+      "10:01:42   Error position: <inDirZ * 2 - surfNormalZ / 4) * inSpeed >",
+      "10:01:42   Error Undefined variable in expression: indirz",
+      "10:01:42 Error in expression <(0.02 + 0.1/((hit interpolate [0.1,45,0.1,45])+0.001))>",
+      "10:01:42   Error position: <hit interpolate [0.1,45,0.1,45])+0.001))>",
+      "10:01:42   Error Undefined variable in expression: hit",
+      "10:01:42 Error in expression <1.8*((hit interpolate [0,45,0,45])/30)>",
+      "10:01:42   Error position: <hit interpolate [0,45,0,45])/30)>",
+      "10:01:42   Error Undefined variable in expression: hit",
+      "10:01:42 Error in expression <1.8*((hit interpolate [0,45,0,45])/30)>",
+      "10:01:42   Error position: <hit interpolate [0,45,0,45])/30)>",
+      "10:01:42   Error Undefined variable in expression: hit",
+      "10:01:42 Error in expression <1.8*((hit interpolate [0,45,0,45])/30)>",
+      "10:01:42   Error position: <hit interpolate [0,45,0,45])/30)>",
+      "10:01:42   Error Undefined variable in expression: hit"
+    ],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run08\\server\\arma3serverprofiling_x64_2026-09-23_10-00-29.rpt",
+        "sha256": "2bd0939db406769582c66c5d17fdd4afc822ca9bbc0dff52da6d122f0c9a77ce"
+      }
+    ],
+    "passed": 37,
+    "failed": []
+  },
+  "run09": {
+    "checks": [
+      {
+        "name": "AAT native scheduler firing 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:07:03"
+      },
+      {
+        "name": "AAT bearing fires 0",
+        "passed": true,
+        "detail": "[150.327,[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\"],47]]\"",
+        "time": "10:07:23"
+      },
+      {
+        "name": "AAT outstanding turn releases 0",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "10:07:25"
+      },
+      {
+        "name": "AAT native travel order protected 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:07:26"
+      },
+      {
+        "name": "AAT native scheduler firing 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:07:47"
+      },
+      {
+        "name": "AAT bearing fires 90",
+        "passed": true,
+        "detail": "[136.222,[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],5]]\"",
+        "time": "10:08:07"
+      },
+      {
+        "name": "AAT outstanding turn releases 90",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "10:08:09"
+      },
+      {
+        "name": "AAT native travel order protected 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:08:10"
+      },
+      {
+        "name": "AAT native scheduler firing 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:08:31"
+      },
+      {
+        "name": "AAT bearing fires 180",
+        "passed": true,
+        "detail": "[163.678,[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],8]]\"",
+        "time": "10:08:51"
+      },
+      {
+        "name": "AAT outstanding turn releases 180",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "10:08:53"
+      },
+      {
+        "name": "AAT native travel order protected 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:08:54"
+      },
+      {
+        "name": "casualty protection ace_captives_isHandcuffed",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:08:57"
+      },
+      {
+        "name": "casualty protection ace_captives_isSurrendering",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:08:57"
+      },
+      {
+        "name": "casualty job acquired",
+        "passed": true,
+        "detail": "[O Alpha 1-1:1,B Alpha 1-1:1,\"\"casualty\"\",175.31,0,1,[0,0,0],-1,2,0]]\"",
+        "time": "10:08:57"
+      },
+      {
+        "name": "revival cancels casualty job",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:08:57"
+      },
+      {
+        "name": "group merge releases old rifle job",
+        "passed": true,
+        "detail": "[-1,[],0]]\"",
+        "time": "10:08:58"
+      }
+    ],
+    "completion": [
+      "10:08:58 \"[QUAL_FOLLOWUP_DONE] checks=17 failures=[]\""
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run09\\hc1\\arma3serverprofiling_x64_2026-09-23_10-06-08.rpt",
+        "sha256": "d86021cc33621d253c4a34e0a87cf87c7f6e8e6b4684616cbc77f434e121a13b"
+      },
+      {
+        "file": "runs\\run09\\hc2\\arma3serverprofiling_x64_2026-09-23_10-06-09.rpt",
+        "sha256": "389dcf6267f3cfe3e14114a576cd83caebb278ae16bdb0c06ca87ef31c187c59"
+      },
+      {
+        "file": "runs\\run09\\hc3\\arma3serverprofiling_x64_2026-09-23_10-06-10.rpt",
+        "sha256": "3ac133f2e07445e49c83c2c0fc5895ec4e9226d8e3c2add99d5f7a58a6fc34fa"
+      },
+      {
+        "file": "runs\\run09\\hc4\\arma3serverprofiling_x64_2026-09-23_10-06-11.rpt",
+        "sha256": "6bbf814f58d7d8e681d5cce49e5db48454de18018fbe01df428b9dba89344d63"
+      },
+      {
+        "file": "runs\\run09\\server\\arma3serverprofiling_x64_2026-09-23_10-06-08.rpt",
+        "sha256": "6f11300b1d17550daaec4842095ba87171b297313c94601b4f47ef0df11950d6"
+      }
+    ],
+    "passed": 17,
+    "failed": []
+  },
+  "run10": {
+    "checks": [
+      {
+        "name": "elevated dry test ground",
+        "passed": true,
+        "detail": "[188.147,false]]\"",
+        "time": "10:08:47"
+      },
+      {
+        "name": "AAT native scheduler firing 0",
+        "passed": false,
+        "detail": "[]]\"",
+        "time": "10:09:08"
+      },
+      {
+        "name": "AAT bearing fires 0",
+        "passed": false,
+        "detail": "[358.515,[],0]]\"",
+        "time": "10:09:28"
+      },
+      {
+        "name": "AAT outstanding turn releases 0",
+        "passed": true,
+        "detail": "[[],true]]\"",
+        "time": "10:09:30"
+      },
+      {
+        "name": "AAT native travel order protected 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:09:31"
+      },
+      {
+        "name": "pod fault reached partial",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:09:48"
+      },
+      {
+        "name": "pod fault request count partial",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "10:09:48"
+      },
+      {
+        "name": "elevated ship positions follow ground",
+        "passed": true,
+        "detail": "[188.147,[172.311,190.989,215.834,187.17,191.218,177.212,186.614,196.693,191.218,177.212,186.614,187.17,172.311,196.693,215.834,190.989,191.218,186.614,172.311,196.693,177.212,215.834,190.989,187.17]]]\"",
+        "time": "10:09:48"
+      },
+      {
+        "name": "partial anchors still deliver troops",
+        "passed": true,
+        "detail": "101]\"",
+        "time": "10:09:48"
+      },
+      {
+        "name": "AAT native scheduler firing 90",
+        "passed": false,
+        "detail": "[]]\"",
+        "time": "10:09:52"
+      },
+      {
+        "name": "AAT bearing fires 90",
+        "passed": false,
+        "detail": "[0,[],13]]\"",
+        "time": "10:10:12"
+      },
+      {
+        "name": "AAT outstanding turn releases 90",
+        "passed": true,
+        "detail": "[[],false]]\"",
+        "time": "10:10:14"
+      },
+      {
+        "name": "AAT native travel order protected 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:10:15"
+      },
+      {
+        "name": "AAT native scheduler firing 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:10:36"
+      },
+      {
+        "name": "pod fault reached ship",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:10:50"
+      },
+      {
+        "name": "pod fault request count ship",
+        "passed": true,
+        "detail": "1]\"",
+        "time": "10:10:50"
+      },
+      {
+        "name": "AAT bearing fires 180",
+        "passed": false,
+        "detail": "[0,[],0]]\"",
+        "time": "10:10:57"
+      },
+      {
+        "name": "AAT outstanding turn releases 180",
+        "passed": true,
+        "detail": "[[],false]]\"",
+        "time": "10:10:59"
+      },
+      {
+        "name": "AAT native travel order protected 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:11:00"
+      },
+      {
+        "name": "concurrent ships submit 48",
+        "passed": true,
+        "detail": "48]\"",
+        "time": "10:11:52"
+      },
+      {
+        "name": "concurrent ships deliver living troops",
+        "passed": true,
+        "detail": "169]\"",
+        "time": "10:11:52"
+      }
+    ],
+    "completion": [
+      "10:11:52 \"[QUAL_EDGES_DONE]\"",
+      "10:12:08 \"[QUAL_FOLLOWUP_DONE] checks=21 failures=[[\"\"AAT native scheduler firing 0\"\",false,[]],[\"\"AAT bearing fires 0\"\",false,[358.515,[],0]],[\"\"AAT native scheduler firing 90\"\",false,[]],[\"\"AAT bearing fires 90\"\",false,[0,[],13]],[\"\"AAT bearing fires 180\"\",false,[0,[],0]]]\""
+    ],
+    "scriptErrors": [
+      "10:09:31 Error in expression <gagementAllowed)]call Q_check;",
+      "10:09:31   Error position: <Q_delete;[group driver _v]call Q_delete;>",
+      "10:09:31   Error Undefined variable in expression: q_delete",
+      "10:10:15 Error in expression <gagementAllowed)]call Q_check;",
+      "10:10:15   Error position: <Q_delete;[group driver _v]call Q_delete;>",
+      "10:10:15   Error Undefined variable in expression: q_delete",
+      "10:11:00 Error in expression <gagementAllowed)]call Q_check;",
+      "10:11:00   Error position: <Q_delete;[group driver _v]call Q_delete;>",
+      "10:11:00   Error Undefined variable in expression: q_delete",
+      "10:11:56 Error in expression <0.004 * (hit interpolate [20,20.01,-1,1])>",
+      "10:11:56   Error position: <hit interpolate [20,20.01,-1,1])>",
+      "10:11:56   Error Undefined variable in expression: hit",
+      "10:11:56 Error in expression <(inDirX * 2 - surfNormalX / 4) * inSpeed >",
+      "10:11:56   Error position: <inDirX * 2 - surfNormalX / 4) * inSpeed >",
+      "10:11:56   Error Undefined variable in expression: indirx",
+      "10:11:56 Error in expression <(inDirY * 2 - surfNormalY / 4) * inSpeed >",
+      "10:11:56   Error position: <inDirY * 2 - surfNormalY / 4) * inSpeed >",
+      "10:11:56   Error Undefined variable in expression: indiry",
+      "10:11:56 Error in expression <(inDirZ * 2 - surfNormalZ / 4) * inSpeed >",
+      "10:11:56   Error position: <inDirZ * 2 - surfNormalZ / 4) * inSpeed >",
+      "10:11:56   Error Undefined variable in expression: indirz",
+      "10:11:56 Error in expression <(0.02 + 0.1/((hit interpolate [0.1,45,0.1,45])+0.001))>",
+      "10:11:56   Error position: <hit interpolate [0.1,45,0.1,45])+0.001))>",
+      "10:11:56   Error Undefined variable in expression: hit",
+      "10:11:56 Error in expression <1.8*((hit interpolate [0,45,0,45])/30)>",
+      "10:11:56   Error position: <hit interpolate [0,45,0,45])/30)>",
+      "10:11:56   Error Undefined variable in expression: hit",
+      "10:11:56 Error in expression <1.8*((hit interpolate [0,45,0,45])/30)>",
+      "10:11:56   Error position: <hit interpolate [0,45,0,45])/30)>",
+      "10:11:56   Error Undefined variable in expression: hit",
+      "10:11:56 Error in expression <1.8*((hit interpolate [0,45,0,45])/30)>",
+      "10:11:56   Error position: <hit interpolate [0,45,0,45])/30)>",
+      "10:11:56   Error Undefined variable in expression: hit"
+    ],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run10\\server\\arma3serverprofiling_x64_2026-09-23_10-08-13.rpt",
+        "sha256": "78949682afeeab6de1f530914bd8b047f6e0861a49d2ab9c96c2e6b3c75b89d7"
+      }
+    ],
+    "passed": 16,
+    "failed": [
+      "AAT native scheduler firing 0",
+      "AAT bearing fires 0",
+      "AAT native scheduler firing 90",
+      "AAT bearing fires 90",
+      "AAT bearing fires 180"
+    ]
+  },
+  "run11": {
+    "checks": [
+      {
+        "name": "turn trial firing original 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:12:28"
+      },
+      {
+        "name": "turn trial latch release original 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:12:29"
+      },
+      {
+        "name": "turn trial firing original 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:12:51"
+      },
+      {
+        "name": "turn trial latch release original 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:12:52"
+      },
+      {
+        "name": "turn trial firing original 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:13:14"
+      },
+      {
+        "name": "turn trial latch release original 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:13:15"
+      },
+      {
+        "name": "turn trial firing feedback 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:13:37"
+      },
+      {
+        "name": "turn trial latch release feedback 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:13:38"
+      },
+      {
+        "name": "turn trial firing feedback 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:14:00"
+      },
+      {
+        "name": "turn trial latch release feedback 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:14:01"
+      },
+      {
+        "name": "turn trial firing feedback 180",
+        "passed": false,
+        "detail": "[]]\"",
+        "time": "10:14:23"
+      },
+      {
+        "name": "turn trial latch release feedback 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:14:24"
+      },
+      {
+        "name": "turn trial firing disabled 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:14:45"
+      },
+      {
+        "name": "turn trial latch release disabled 0",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:14:46"
+      },
+      {
+        "name": "turn trial firing disabled 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:15:08"
+      },
+      {
+        "name": "turn trial latch release disabled 90",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:15:09"
+      },
+      {
+        "name": "turn trial firing disabled 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:15:31"
+      },
+      {
+        "name": "turn trial latch release disabled 180",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:15:32"
+      }
+    ],
+    "completion": [
+      "10:15:33 \"[QUAL_FOLLOWUP_DONE] checks=18 failures=[[\"\"turn trial firing feedback 180\"\",false,[]]]\""
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run11\\server\\arma3serverprofiling_x64_2026-09-23_10-11-37.rpt",
+        "sha256": "bfdd805b796197a06bb4bd6c9fc999ce44f7cd820da4b4a5d4c7260f0a29faf3"
+      }
+    ],
+    "passed": 17,
+    "failed": [
+      "turn trial firing feedback 180"
+    ]
+  },
+  "run12": {
+    "checks": [
+      {
+        "name": "elevated dry test ground",
+        "passed": true,
+        "detail": "[188.147,false]]\"",
+        "time": "10:13:23"
+      },
+      {
+        "name": "pod fault reached partial",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:14:24"
+      },
+      {
+        "name": "pod fault request count partial",
+        "passed": true,
+        "detail": "24]\"",
+        "time": "10:14:24"
+      },
+      {
+        "name": "elevated ship positions follow ground",
+        "passed": true,
+        "detail": "[188.147,[190.988,177.21,172.309,187.168,215.831,191.216,186.611,196.69,172.309,196.69,191.216,186.611,215.831,177.21,187.168,190.988,191.216,215.831,187.168,196.69,172.309,186.611,177.21,190.988]]]\"",
+        "time": "10:14:24"
+      },
+      {
+        "name": "partial anchors still deliver troops",
+        "passed": true,
+        "detail": "79]\"",
+        "time": "10:14:24"
+      },
+      {
+        "name": "pod fault reached ship",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:15:26"
+      },
+      {
+        "name": "pod fault request count ship",
+        "passed": true,
+        "detail": "1]\"",
+        "time": "10:15:26"
+      },
+      {
+        "name": "concurrent ships submit 48",
+        "passed": true,
+        "detail": "48]\"",
+        "time": "10:16:28"
+      },
+      {
+        "name": "concurrent ships deliver living troops",
+        "passed": true,
+        "detail": "182]\"",
+        "time": "10:16:28"
+      }
+    ],
+    "completion": [
+      "10:16:28 \"[QUAL_EDGES_DONE]\"",
+      "10:16:28 \"[QUAL_FOLLOWUP_DONE] checks=9 failures=[]\""
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run12\\server\\arma3serverprofiling_x64_2026-09-23_10-12-50.rpt",
+        "sha256": "d81638f13550b758394ef8103990e73fadc56c4b0de3e49632708416e96914be"
+      }
+    ],
+    "passed": 9,
+    "failed": []
+  },
+  "run13": {
+    "checks": [
+      {
+        "name": "safe preset applied",
+        "passed": false,
+        "detail": "[]]\"",
+        "time": "10:18:03"
+      },
+      {
+        "name": "safe preset four HCs",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:18:03"
+      },
+      {
+        "name": "safe AAT  bearing 0 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\"],13.7031]]\"",
+        "time": "10:18:23"
+      },
+      {
+        "name": "safe AAT  bearing 0 front presented",
+        "passed": false,
+        "detail": "[0,[[0.00238037,[-0.000142488,-0.0156651,-0.0599095]],[0.00231934,[-0.00366474,-0.012333,-0.0120201]],[0.0022583,[-0.00299328,-0.010079,-0.00372334]],[0.00189209,[-0.00246434,-0.00829585,-0.00232148]],[0.000793457,[-0.00204515,-0.0069257,-0.00188619]],[0.000732422,[-0.00170181,-0.00576937,-0.00159063]],[0.178345,[-0.00276017,0.00319265,-0.00160331]],[6.28674,[0.00296418,0.0493174,-0.00469126]],[26.4318,[0.00935734,0.0198028,-0.00401748]],[54.0099,[0.020441,0.0151122,-0.00153322]],[84.1223,[-2.51693e-06,-8.19176e-06,-0.000155369]],[88.4752,[-7.16185e-06,-0.000609955,-0.000349711]],[87.7585,[0.0",
+        "time": "10:18:23"
+      },
+      {
+        "name": "safe AAT  bearing 0 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:18:23"
+      },
+      {
+        "name": "safe AAT  bearing 90 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],0.147102]]\"",
+        "time": "10:18:44"
+      },
+      {
+        "name": "safe AAT  bearing 90 front presented",
+        "passed": true,
+        "detail": "[20,[[90.0058,[-0.00015657,-0.0161293,-0.0750663]],[90.0126,[-0.00371981,-0.0127786,-0.0143732]],[90.0187,[-0.00310615,-0.010475,-0.00398406]],[88.3268,[-0.0211464,-0.0121276,-0.00929179]],[69.8523,[0.0236598,0.035342,-0.0130881]],[41.8022,[0.0366118,0.0968887,-0.00556776]],[12.2263,[0.0150709,0.137565,-0.00644416]],[13.6771,[-0.00486966,0.109306,-0.00417429]],[37.8773,[0.0188029,0.18545,-0.00863468]],[61.0588,[7.46183e-05,0.00086322,0.00509665]],[61.1036,[-1.09622e-05,-0.000422894,-0.000728902]],[61.1036,[0,0,0]],[60.5128,[-0.00118364,-0.00125768,-0.000262292]],[43.9032,[0.0107099,0.022962,-3",
+        "time": "10:18:44"
+      },
+      {
+        "name": "safe AAT  bearing 90 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:18:44"
+      }
+    ],
+    "completion": [],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run13\\hc1\\arma3serverprofiling_x64_2026-09-23_10-17-28.rpt",
+        "sha256": "db44393cfe3f2e084b4c78b23137f08d52774d2ca3bde83ea686cd9fc21218fe"
+      },
+      {
+        "file": "runs\\run13\\hc2\\arma3serverprofiling_x64_2026-09-23_10-17-29.rpt",
+        "sha256": "e5e7a2b31fa3c1406a63bf117f81da1b55270652efcc95d8824c8a55442afa70"
+      },
+      {
+        "file": "runs\\run13\\hc3\\arma3serverprofiling_x64_2026-09-23_10-17-30.rpt",
+        "sha256": "b5d5bc1534ceb81cdb81c41f4e01fa2ba1cb37d67faf1a9685351b5710ee39ef"
+      },
+      {
+        "file": "runs\\run13\\hc4\\arma3serverprofiling_x64_2026-09-23_10-17-31.rpt",
+        "sha256": "adb852401bcc7d2ca6f578c36f301d1cabbeb0a0b032a517f7314dfc490c2487"
+      },
+      {
+        "file": "runs\\run13\\server\\arma3serverprofiling_x64_2026-09-23_10-17-28.rpt",
+        "sha256": "c1c3570e41ef792290a8b5099acd3ea720ff2217489c5b9bf842ba66aca722b9"
+      }
+    ],
+    "passed": 6,
+    "failed": [
+      "safe preset applied",
+      "safe AAT  bearing 0 front presented"
+    ]
+  },
+  "run14": {
+    "checks": [
+      {
+        "name": "safe preset applied",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:19:49"
+      },
+      {
+        "name": "safe preset four HCs",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:19:49"
+      },
+      {
+        "name": "safe AAT  bearing 0 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\"],123.294]]\"",
+        "time": "10:20:10"
+      },
+      {
+        "name": "safe AAT  bearing 0 front presented",
+        "passed": false,
+        "detail": "[0,[[0.0022583,[-0.000137044,-0.0153439,-0.0553775]],[0.00219727,[-0.00361646,-0.0121551,-0.0108631]],[0.0020752,[-0.00295592,-0.00993767,-0.00354441]],[0.000854492,[-0.00242971,-0.00818635,-0.00228615]],[0.000488281,[-0.00202051,-0.00683962,-0.00182305]],[0.00158691,[-0.00166663,-0.00571329,-0.00152368]],[1.27209,[-0.0023959,0.00839789,-0.00414655]],[14.1971,[0.0116321,0.0339792,-0.00923483]],[40.5754,[0.118758,0.760893,-0.0578427]],[56.7432,[0.0571605,2.91496,-0.308499]],[52.1803,[0.0205052,4.03233,-0.321384]],[48.8506,[0.0129654,4.72273,-0.334299]],[48.074,[0.00318885,5.4315,-0.390556]],[48",
+        "time": "10:20:10"
+      },
+      {
+        "name": "safe AAT  bearing 0 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:20:10"
+      },
+      {
+        "name": "safe AAT  bearing 90 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\"],0.0695522]]\"",
+        "time": "10:20:31"
+      },
+      {
+        "name": "safe AAT  bearing 90 front presented",
+        "passed": false,
+        "detail": "[0,[[90.0058,[-0.00015657,-0.0161293,-0.0750663]],[90.0126,[-0.00371981,-0.0127786,-0.0143732]],[90.0187,[-0.00310615,-0.010475,-0.00398406]],[90.0247,[-0.00258545,-0.00874218,-0.00234166]],[90.0302,[-0.00216269,-0.00732286,-0.0018355]],[90.0352,[-0.00181837,-0.0061426,-0.00154757]],[90.0398,[-0.00152236,-0.00521779,-0.00129109]],[90.044,[-0.00130508,-0.00441748,-0.00114059]],[90.0475,[-0.00110319,-0.00376917,-0.000960736]],[90.0508,[-0.000909064,-0.00321335,-0.000800614]],[90.0535,[-0.000780665,-0.00274107,-0.000649003]],[90.0551,[0,0,0]],[90.0551,[0,0,0]],[90.0551,[0,0,0]],[90.0551,[0,0,0]],",
+        "time": "10:20:31"
+      },
+      {
+        "name": "safe AAT  bearing 90 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:20:31"
+      },
+      {
+        "name": "safe AAT  bearing 180 firing",
+        "passed": false,
+        "detail": "[[],0.0746496]]\"",
+        "time": "10:20:52"
+      },
+      {
+        "name": "safe AAT  bearing 180 front presented",
+        "passed": false,
+        "detail": "[0,[[179.996,[-0.000156672,-0.0160587,-0.075119]],[179.992,[-0.00366351,-0.0126996,-0.0148301]],[179.988,[-0.00307204,-0.0102979,-0.00408725]],[179.986,[-0.00252636,-0.00852372,-0.00241025]],[179.983,[-0.00210264,-0.00709487,-0.00190774]],[179.98,[-0.00175038,-0.00590783,-0.00153655]],[179.978,[-0.00143188,-0.00492239,-0.00135464]],[179.976,[-0.00121749,-0.00413644,-0.00115849]],[179.974,[-0.00101106,-0.00347657,-0.000910614]],[179.972,[-0.000867502,-0.00294565,-0.000724984]],[179.97,[-0.000714156,-0.00248078,-0.000657424]],[179.969,[-0.000594839,-0.00210485,-0.00057217]],[179.968,[-0.00051313",
+        "time": "10:20:52"
+      },
+      {
+        "name": "safe AAT  bearing 180 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:20:52"
+      },
+      {
+        "name": "safe AAT hunt bearing 0 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\"],70.8591]]\"",
+        "time": "10:21:13"
+      },
+      {
+        "name": "safe AAT hunt bearing 0 front presented",
+        "passed": false,
+        "detail": "[5,[[1.1333,[0.109159,1.85753,0.158397]],[4.13623,[0.0371383,3.14397,-0.53518]],[4.85254,[0.011179,4.25802,-0.235405]],[4.79596,[-0.00150296,4.94717,-0.350963]],[4.80981,[-0.00354084,5.56082,-0.385922]],[4.47229,[0.00425336,6.17726,-0.432231]],[4.15674,[0.00264081,6.7669,-0.472638]],[3.94495,[0.000274628,7.30763,-0.50627]],[3.71771,[-0.00134185,7.73096,-0.530136]],[3.57806,[0.00370687,8.16797,-0.551731]],[3.65271,[-0.000148028,8.68097,-0.587446]],[3.68481,[0.00177905,9.16186,-0.619842]],[3.61536,[0.00549674,9.6102,-0.651598]],[3.5238,[0.00374222,10.0113,-0.675025]],[3.48035,[0.0017032,10.3495,",
+        "time": "10:21:13"
+      },
+      {
+        "name": "safe AAT hunt bearing 0 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:21:13"
+      },
+      {
+        "name": "safe AAT hunt bearing 90 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"",
+        "time": "10:21:34"
+      },
+      {
+        "name": "safe AAT hunt bearing 90 front presented",
+        "passed": true,
+        "detail": "[20,[[86.9373,[-0.0103448,0.0241843,-0.0743983]],[66.4193,[-0.00543632,0.012954,-0.024792]],[41.8356,[0.260899,1.62769,0.077958]],[35.8189,[-0.0431416,3.26629,-0.472128]],[40.2123,[0.000902176,4.34914,-0.273398]],[36.6129,[-0.0684137,5.0381,-0.34891]],[28.5206,[-0.161963,5.52052,-0.315544]],[19.3813,[-0.153929,5.91981,-0.290968]],[12.811,[-0.0816019,6.21173,-0.284463]],[8.88721,[-0.0258414,6.64456,-0.348629]],[6.38544,[-0.0161783,7.06726,-0.404291]],[4.7973,[-0.0151644,7.47519,-0.452602]],[4.02118,[-0.00769112,7.80768,-0.487925]],[3.69446,[0.00226782,8.2376,-0.528176]],[3.33759,[-0.00720012,8.",
+        "time": "10:21:34"
+      },
+      {
+        "name": "safe AAT hunt bearing 90 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:21:34"
+      },
+      {
+        "name": "safe AAT hunt bearing 180 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\"],102.416]]\"",
+        "time": "10:21:56"
+      },
+      {
+        "name": "safe AAT hunt bearing 180 front presented",
+        "passed": true,
+        "detail": "[20,[[177.971,[-0.00750321,0.00665225,-0.080975]],[164.862,[-0.0240852,0.0141231,-0.0265299]],[138.503,[0.0139276,0.0109712,-0.00920434]],[109.206,[0.0281617,0.0570803,-0.00815522]],[78.6031,[0.00418113,0.1138,-0.00746685]],[53.6479,[0.331835,2.34387,-0.117651]],[47.9033,[0.00730908,3.41813,-0.352713]],[43.3676,[-0.0412667,4.32917,-0.314741]],[32.5474,[-0.191774,5.04631,-0.292469]],[18.7661,[-0.24338,5.12263,-0.217352]],[9.05328,[-0.087388,5.35536,-0.225698]],[6.88147,[0.0456315,5.87663,-0.320367]],[6.16815,[0.0168704,6.43639,-0.408586]],[5.28992,[-0.0106595,6.97185,-0.455932]],[4.4364,[-0.019",
+        "time": "10:21:56"
+      },
+      {
+        "name": "safe AAT hunt bearing 180 no turn lease",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:21:56"
+      }
+    ],
+    "completion": [
+      "10:21:57 \"[QUAL_FOLLOWUP_DONE] checks=20 failures=[[\"\"safe AAT  bearing 0 front presented\"\",false,[0,[[0.0022583,[-0.000137044,-0.0153439,-0.0553775]],[0.00219727,[-0.00361646,-0.0121551,-0.0108631]],[0.0020752,[-0.00295592,-0.00993767,-0.00354441]],[0.000854492,[-0.00242971,-0.00818635,-0.00228615]],[0.000488281,[-0.00202051,-0.00683962,-0.00182305]],[0.00158691,[-0.00166663,-0.00571329,-0.00152368]],[1.27209,[-0.0023959,0.00839789,-0.00414655]],[14.1971,[0.0116321,0.0339792,-0.00923483]],[40.5754,[0.118758,0.760893,-0.0578427]],[56.7432,[0.0571605,2.91496,-0.308499]],[52.1803,[0.0205052,4.03233,-0.321384]],[48.8506,[0.0129654,4.72273,-0.334299]],[48.074,[0.00318885,5.4315,-0.390556]],[48.1211,[0.000817776,6.04983,-0.433023]],[48.7954,[-0.00575399,6.64113,-0.46686]],[49.934,[-0.00896907,7.18166,-0.492582]],[51.1827,[-0.00689459,7.59643,-0.507229]],[52.4877,[-0.00147152,8.02845,-0.531038]],[54.1261,[-0.00265312,8.52886,-0.569441]],[55.8559,[-0.00398731,8.99043,-0.600163]],[57.6595,[-0.000412464,9.45159,-0.632081]],["
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run14\\hc1\\arma3serverprofiling_x64_2026-09-23_10-19-15.rpt",
+        "sha256": "352c9cf391045d2bf5e922bd5ab8383f7fd138ebaad978b076a6887d0cd9d9f2"
+      },
+      {
+        "file": "runs\\run14\\hc2\\arma3serverprofiling_x64_2026-09-23_10-19-16.rpt",
+        "sha256": "31874c749f1408e1132965a60f92e5368195a63690d8b805c6f4e2790e2f797a"
+      },
+      {
+        "file": "runs\\run14\\hc3\\arma3serverprofiling_x64_2026-09-23_10-19-17.rpt",
+        "sha256": "aad353ae94f0bbd572bcf90890dd6543025e61e729387a77eebdc8da7b0f6c49"
+      },
+      {
+        "file": "runs\\run14\\hc4\\arma3serverprofiling_x64_2026-09-23_10-19-18.rpt",
+        "sha256": "e7991f20c919af6c04b496873a788df532219ce52d66c0e5d47da0f95d86142e"
+      },
+      {
+        "file": "runs\\run14\\server\\arma3serverprofiling_x64_2026-09-23_10-19-15.rpt",
+        "sha256": "5796468b0ed472b20b02c61e9e644846cf77b031d352ea02e3c549baf35cbf81"
+      }
+    ],
+    "passed": 15,
+    "failed": [
+      "safe AAT  bearing 0 front presented",
+      "safe AAT  bearing 90 front presented",
+      "safe AAT  bearing 180 firing",
+      "safe AAT  bearing 180 front presented",
+      "safe AAT hunt bearing 0 front presented"
+    ]
+  },
+  "run15": {
+    "checks": [
+      {
+        "name": "hybrid preset applied",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:23:52"
+      },
+      {
+        "name": "hybrid preset four HCs",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:23:52"
+      },
+      {
+        "name": "hybrid AAT  bearing 0 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],4.19407]]\"",
+        "time": "10:24:28"
+      },
+      {
+        "name": "hybrid AAT  bearing 0 front presented",
+        "passed": false,
+        "detail": "[8,[[0.00238037,[-0.000145851,-0.0156461,-0.0630374]],[0.00231934,[-0.00367677,-0.0123783,-0.0123594]],[0.0020752,[-0.00298862,-0.0100358,-0.00366779]],[0.000976562,[-0.00247524,-0.0083408,-0.00231397]],[0.000366211,[-0.00203622,-0.00692392,-0.00187063]],[0.00183105,[-0.00170655,-0.00576731,-0.00153341]],[0.19165,[-0.0027315,-0.000122425,-0.00136914]],[14.1953,[-5.65061e-05,-0.000202717,-0.00425127]],[37.902,[-0.00454633,0.000318887,-0.00143722]],[62.1965,[-0.00603523,-0.00101067,-0.000188241]],[87.4292,[-0.0193185,0.0378944,-0.00267158]],[117.044,[-0.0268458,0.0598532,-0.00298758]],[148.749,[",
+        "time": "10:24:28"
+      },
+      {
+        "name": "hybrid AAT  bearing 0 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:24:29"
+      },
+      {
+        "name": "hybrid AAT  bearing 90 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\"],0.271095]]\"",
+        "time": "10:25:05"
+      },
+      {
+        "name": "hybrid AAT  bearing 90 front presented",
+        "passed": true,
+        "detail": "[20,[[90.0059,[-0.000153857,-0.0159427,-0.0715241]],[90.0121,[-0.00370181,-0.0126064,-0.0140724]],[90.0171,[-0.00303441,-0.0102317,-0.00395608]],[89.8317,[-0.00880656,-0.0109177,-0.00479465]],[76.8614,[0.0130676,0.0259675,-0.0132015]],[52.7047,[0.0081864,-0.00795537,0.00195754]],[30.0681,[-0.00515774,-0.00876048,-0.0003198]],[5.94379,[6.87613e-05,0.00025936,0.00430419]],[5.86011,[-8.73605e-06,0.000289235,-0.000583097]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0]],[5.86023,[0,0,0",
+        "time": "10:25:05"
+      },
+      {
+        "name": "hybrid AAT  bearing 90 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:25:06"
+      },
+      {
+        "name": "hybrid AAT  bearing 180 firing",
+        "passed": false,
+        "detail": "[[],0.426561]]\"",
+        "time": "10:25:42"
+      },
+      {
+        "name": "hybrid AAT  bearing 180 front presented",
+        "passed": true,
+        "detail": "[20,[[179.996,[-0.000152262,-0.0159563,-0.0697197]],[179.991,[-0.00372824,-0.0126423,-0.0132639]],[179.986,[-0.00306667,-0.0103459,-0.0037694]],[173.669,[-0.0108116,0.0145535,-0.0116445]],[150.192,[0.00201017,0.018063,-0.00451262]],[129.811,[0.00337672,0.0215309,-0.00174256]],[103.258,[0.0235924,0.017019,0.000332491]],[80.1777,[0.00637316,0.0203077,-0.0017935]],[53.3462,[0.025478,0.0144034,-0.000120178]],[30.6889,[0.00441217,0.0204596,-0.00227661]],[4.1344,[0.0240122,0.0155871,-0.000130898]],[11.064,[-3.40629e-05,-0.000351248,-0.00173513]],[11.0635,[0,0,0]],[11.0635,[0,0,0]],[11.0635,[0,0,0]],",
+        "time": "10:25:42"
+      },
+      {
+        "name": "hybrid AAT  bearing 180 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:25:43"
+      },
+      {
+        "name": "hybrid AAT rush bearing 0 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Cannon\"\"],3.20365]]\"",
+        "time": "10:26:20"
+      },
+      {
+        "name": "hybrid AAT rush bearing 0 front presented",
+        "passed": true,
+        "detail": "[20,[[0.144897,[0.0484228,2.11509,0.122856]],[1.8512,[0.0344959,3.2205,-0.514452]],[2.68213,[-0.0289775,0.370691,0.103821]],[2.6806,[-3.66982e-05,-0.0205984,-0.00349244]],[2.67444,[-6.49926e-05,-0.0172431,-0.0054892]],[2.6712,[-0.00116283,-0.0143109,-0.00396637]],[2.6687,[-0.000919667,-0.01181,-0.00312857]],[2.6665,[-0.000738941,-0.00984271,-0.00265718]],[2.66455,[-0.000595271,-0.00816266,-0.00212964]],[2.66266,[-0.000495387,-0.00685747,-0.0017595]],[2.66125,[-0.000412225,-0.00571768,-0.00149808]],[2.66101,[0,0,0]],[2.66101,[0,0,0]],[2.66101,[0,0,0]],[2.66101,[0,0,0]],[2.66101,[0,0,0]],[2.6610",
+        "time": "10:26:20"
+      },
+      {
+        "name": "hybrid AAT rush bearing 0 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:26:21"
+      },
+      {
+        "name": "hybrid AAT rush bearing 90 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\"],0.349129]]\"",
+        "time": "10:26:57"
+      },
+      {
+        "name": "hybrid AAT rush bearing 90 front presented",
+        "passed": true,
+        "detail": "[20,[[90.0061,[-0.000149198,-0.0157653,-0.0663432]],[90.0123,[-0.00370205,-0.0125153,-0.0133374]],[86.8612,[-0.00479205,0.0125838,-0.0147629]],[67.407,[0.010421,0.0194148,-0.0107412]],[44.615,[4.62113e-05,-0.0121144,0.000605972]],[19.0287,[-0.00124811,-0.0130243,0.000795352]],[3.05316,[2.26784e-05,9.44221e-05,0.00156911]],[26.123,[0.0270046,0.0831453,-0.00366346]],[47.6106,[0.00209074,-0.0204447,0.00366119]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411,[0,0,0]],[47.6411",
+        "time": "10:26:57"
+      },
+      {
+        "name": "hybrid AAT rush bearing 90 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:26:58"
+      },
+      {
+        "name": "hybrid AAT rush bearing 180 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],0.375679]]\"",
+        "time": "10:27:34"
+      },
+      {
+        "name": "hybrid AAT rush bearing 180 front presented",
+        "passed": true,
+        "detail": "[20,[[179.996,[-0.000153753,-0.0160145,-0.0714715]],[179.991,[-0.00369604,-0.0128221,-0.0147559]],[175.253,[-0.0031505,0.018825,-0.0150241]],[154.715,[-0.0102484,0.0404973,-0.00731188]],[135.985,[-0.00643867,0.0225912,-0.00236421]],[109.648,[0.0179776,0.0218307,0.000520511]],[88.025,[0.00350581,0.0209633,-0.00194095]],[62.2695,[0.0238106,0.0161379,1.41057e-05]],[39.2909,[0.00420644,0.0207282,-0.00241647]],[13.9104,[0.023263,0.0158638,-0.000174267]],[9.57367,[0.0016322,0.0199902,-0.00306725]],[34.2519,[0.0204393,0.014423,9.51641e-05]],[52.9971,[0.00015239,0.0182297,-0.00296866]],[53.0023,[0,0,0",
+        "time": "10:27:34"
+      },
+      {
+        "name": "hybrid AAT rush bearing 180 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:27:35"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 0 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"",
+        "time": "10:28:12"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 0 front presented",
+        "passed": true,
+        "detail": "[20,[[0.012085,[-0.000212486,-0.0129226,-0.0721284]],[0.0128784,[-6.2063e-05,-0.00948324,-0.013174]],[0.0140991,[-0.00290358,-0.00757275,-0.00322368]],[0.0153809,[-0.00239785,-0.00626137,-0.00175617]],[0.0167236,[-0.00199339,-0.00521592,-0.00143818]],[0.0175781,[-0.00178265,-0.00471112,-0.00128346]],[0.0180664,[-0.00144677,-0.00264224,-0.000130958]],[0.0189209,[-0.00139067,-0.00398386,-0.00131682]],[0.0195923,[-0.00118297,-0.00319788,-0.00089644]],[0.0200806,[0,0,0]],[0.0200806,[0,0,0]],[0.0200806,[0,0,0]],[0.020752,[-0.000929582,-0.00253075,-0.000752864]],[0.0211182,[0,0,0]],[0.0211182,[0,0,0",
+        "time": "10:28:12"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 0 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:28:13"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 90 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Cannon\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],0.1525]]\"",
+        "time": "10:28:49"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 90 front presented",
+        "passed": true,
+        "detail": "[20,[[90.0064,[-0.000149204,-0.0162847,-0.0663368]],[90.0136,[-0.00388599,-0.0133123,-0.013298]],[85.0164,[-0.0131975,-0.00601047,-0.0107274]],[61.9235,[0.0314029,0.0374775,-0.0145738]],[33.0571,[0.0401112,0.102236,-0.00538229]],[3.18933,[0.021214,0.14827,-0.00574084]],[19.2011,[0.00287566,0.0181835,-0.00281427]],[46.0853,[0.0246497,0.0702893,-0.00415132]],[59.9548,[3.73519e-06,0.000341244,0.000282241]],[59.9537,[0,0,0]],[59.9537,[0,0,0]],[58.6221,[-1.45997e-06,-6.38789e-06,-0.000107387]],[47.3964,[0.0020874,0.0403634,-0.000567689]],[30.9638,[-0.000297064,0.0502315,-0.00380388]],[9.60077,[0.01",
+        "time": "10:28:49"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 90 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:28:50"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 180 firing",
+        "passed": true,
+        "detail": "[[\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\",\"\"FST_AAT_Side\"\"],0.357593]]\"",
+        "time": "10:29:26"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 180 front presented",
+        "passed": true,
+        "detail": "[20,[[179.996,[-0.000156672,-0.0160587,-0.075119]],[179.992,[-0.00370181,-0.0126064,-0.0140724]],[178.444,[0.000252389,-0.024675,-0.00711627]],[163.805,[0.00274934,0.0205677,-0.00945645]],[144.013,[-0.00362411,0.0212105,-0.00587666]],[119.059,[0.0165631,0.020499,-9.11645e-05]],[95.8724,[-0.0019898,0.0172592,-0.00135674]],[73.4695,[0.0104276,-0.00272034,0.00106669]],[52.5725,[0.00174658,-0.0029593,-0.00227961]],[29.3374,[-0.0039794,0.0491841,-0.00177099]],[2.49805,[-0.00142236,-0.024037,0.00148699]],[19.3722,[0.00584708,0.0188013,-0.00114798]],[43.3749,[-0.00135673,0.0204458,-0.00416098]],[43.4",
+        "time": "10:29:26"
+      },
+      {
+        "name": "hybrid AAT hunt bearing 180 turn cleanup",
+        "passed": true,
+        "detail": "[]]\"",
+        "time": "10:29:27"
+      }
+    ],
+    "completion": [
+      "10:29:28 \"[QUAL_FOLLOWUP_DONE] checks=29 failures=[[\"\"hybrid AAT  bearing 0 front presented\"\",false,[8,[[0.00238037,[-0.000145851,-0.0156461,-0.0630374]],[0.00231934,[-0.00367677,-0.0123783,-0.0123594]],[0.0020752,[-0.00298862,-0.0100358,-0.00366779]],[0.000976562,[-0.00247524,-0.0083408,-0.00231397]],[0.000366211,[-0.00203622,-0.00692392,-0.00187063]],[0.00183105,[-0.00170655,-0.00576731,-0.00153341]],[0.19165,[-0.0027315,-0.000122425,-0.00136914]],[14.1953,[-5.65061e-05,-0.000202717,-0.00425127]],[37.902,[-0.00454633,0.000318887,-0.00143722]],[62.1965,[-0.00603523,-0.00101067,-0.000188241]],[87.4292,[-0.0193185,0.0378944,-0.00267158]],[117.044,[-0.0268458,0.0598532,-0.00298758]],[148.749,[-0.0256821,0.163007,-0.0102213]],[175.219,[-0.27908,2.09172,-0.0891494]],[179.687,[-0.0365621,0.28178,0.000549952]],[179.685,[-2.30014e-05,-0.0136501,-0.00170278]],[178.902,[-0.00896042,-0.0141194,-0.00963102]],[171.662,[-0.00010835,-0.0002817,-0.00777971]],[153.995,[0.00267817,-0.0198396,-0.0062191]],[131.259,[0.00679771,-0.0177"
+    ],
+    "scriptErrors": [],
+    "movementGraphErrors": [],
+    "logs": [
+      {
+        "file": "runs\\run15\\hc1\\arma3serverprofiling_x64_2026-09-23_10-23-17.rpt",
+        "sha256": "3d52b387144d638c548825b686cd049464203c769c7a0e95b2bafc30aff26e06"
+      },
+      {
+        "file": "runs\\run15\\hc2\\arma3serverprofiling_x64_2026-09-23_10-23-18.rpt",
+        "sha256": "71d220406b396a80b859223cc07bac06dc5b7cbe738e7cb9c75786338935a93f"
+      },
+      {
+        "file": "runs\\run15\\hc3\\arma3serverprofiling_x64_2026-09-23_10-23-19.rpt",
+        "sha256": "c47487cd1eb8af77abb1ed123971fe2026303a501943b754a4bc197fd75378d2"
+      },
+      {
+        "file": "runs\\run15\\hc4\\arma3serverprofiling_x64_2026-09-23_10-23-20.rpt",
+        "sha256": "527631220791e89547ae0f6e13444829b1907637bff40c65c51dfeb218d79c81"
+      },
+      {
+        "file": "runs\\run15\\server\\arma3serverprofiling_x64_2026-09-23_10-23-17.rpt",
+        "sha256": "394a20f3efb996b903909633641027504b521b161911b0f02e74f2644c50a81f"
+      }
+    ],
+    "passed": 27,
+    "failed": [
+      "hybrid AAT  bearing 0 front presented",
+      "hybrid AAT  bearing 180 firing"
+    ]
+  }
+}
