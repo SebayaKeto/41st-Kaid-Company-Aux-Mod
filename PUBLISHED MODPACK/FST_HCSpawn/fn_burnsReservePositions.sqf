@@ -6,7 +6,7 @@ if (isNil "BURNS_PositionBookings") then {BURNS_PositionBookings=createHashMap};
 {
     private _booking=BURNS_PositionBookings get _x;
     _booking params ["_g","_until"];
-    if (isNull _g || {_g==_group} || {count units _g==0} || {time>_until && {!(((_g getVariable ["FST_HC_combatTask",[]]) param [0,""]) in ["garrison","camp","defend"])}}) then {BURNS_PositionBookings deleteAt _x};
+    if (isNull _g || {_g==_group} || {count units _g==0} || {time>_until && {!(((([_g,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet)) param [0,""]) in ["garrison","camp","defend"])}}) then {BURNS_PositionBookings deleteAt _x};
 } forEach keys BURNS_PositionBookings;
 private _result=[];
 private _keyFor={str (_this apply {round (_x*10)})};

@@ -13,7 +13,7 @@
 params ["_unit"];
 
 if (isNull _unit) exitWith { false };
-if (isPlayer _unit) exitWith { false };
+if (([_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit)) exitWith { false };
 if !(_unit isKindOf "CAManBase") exitWith { false };
 
 private _class = typeOf _unit;

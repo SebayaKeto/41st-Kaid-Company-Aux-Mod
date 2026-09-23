@@ -3,7 +3,21 @@
 // HC: register with server
 // Client: hook Zeus, register keybinds
 
+[] call FST_HCSpawn_fnc_registerBurnsEvents;
 [] call FST_HCSpawn_fnc_initCombatTasks;
+if (hasInterface) then {
+    [] call FST_HCSpawn_fnc_registerBurnsModules;
+    // Keep native right-click waypoint placement when AI is selected.
+    // BURNS actions stay registered in ZEN; do not make its menu consume move orders.
+    private _enableSquadMenu={
+        if (!isNil "zen_context_menu_fnc_open") then {
+            zen_context_menu_enabled=2;
+            zen_context_menu_overrideWaypoints=false;
+        };
+    };
+    call _enableSquadMenu;
+    ["CBA_settingsInitialized",_enableSquadMenu] call CBA_fnc_addEventHandler;
+};
 
 // Droid stance keeper. Must run on the server AND every HC: setUnitPos is an
 // arguments-local command, so it only affects units local to the executing
@@ -31,7 +45,7 @@ if (!FST_HC_Enabled) exitWith {
     diag_log "[FST_HCSpawn] HC system disabled via CBA setting";
 };
 
-diag_log "[FST_HCSpawn] postInit starting - V30_BURNS_ZEUS_2026-09-21";
+diag_log "[FST_HCSpawn] postInit starting - V30_3_MOVEMENT_PREVIEW_2026-09-22";
 
 // Register CBA events on all machines before any other init
 [] call FST_HCSpawn_fnc_registerEvents;
@@ -124,7 +138,7 @@ if (hasInterface) then {
     [_hookLocalCurator, 30, []] call CBA_fnc_addPerFrameHandler;
 
     // Register ZEN modules (requires ZEN -- Zeus Enhanced)
-    if (!isNil "zen_custom_modules_fnc_register") then {
+    if (!isNil "zen_dialog_fnc_create") then {
         [] call FST_HCSpawn_fnc_registerZenModules;
     } else {
         diag_log "[FST_HCSpawn] ZEN not detected -- spawn modules not registered";

@@ -60,4 +60,4 @@ FST_HC_EmergencyMode = false;
 [] call FST_HCSpawn_fnc_recountUnits;
 
 ["Emergency redistribute complete"] remoteExec ["hint", -2];
-diag_log format ["[FST_HCSpawn] Emergency redistribute complete. moved=%1 delay=%2", _movedCount, _redistributeDelay];
+diag_log format ["[FST_HCSpawn] Emergency redistribute complete. accepted=%1 delay=%2", _movedCount, _redistributeDelay];

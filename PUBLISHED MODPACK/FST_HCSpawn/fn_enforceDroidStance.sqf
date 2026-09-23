@@ -3,7 +3,7 @@ if (hasInterface && {!isServer}) exitWith {0};
 if !(missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) exitWith {0};
 private _fixed = 0;
 {
-    if (!local _x || {!alive _x} || {isPlayer _x} || {vehicle _x != _x} || {lifeState _x == "INCAPACITATED"}) then {continue};
+    if (!local _x || {!alive _x} || {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)} || {vehicle _x != _x} || {lifeState _x == "INCAPACITATED"}) then {continue};
     if ((group _x) getVariable ["BURNS_exempt", false]) then {continue};
     if (_x getVariable ["BURNS_exempt",false]) then {continue};
     if (([_x] call FST_HCSpawn_fnc_burnsRole) != "b1") then {continue};
@@ -11,7 +11,7 @@ private _fixed = 0;
         _x setVariable ["BURNS_stanceHook", true];
         _x addEventHandler ["AnimChanged", {
             params ["_unit"];
-            if (!local _unit || {!alive _unit} || {isPlayer _unit} || {vehicle _unit != _unit} || {lifeState _unit == "INCAPACITATED"}) exitWith {};
+            if (!local _unit || {!alive _unit} || {([_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit)} || {vehicle _unit != _unit} || {lifeState _unit == "INCAPACITATED"}) exitWith {};
             if (!(missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) || {(group _unit) getVariable ["BURNS_exempt", false]}) exitWith {};
             if (_unit getVariable ["BURNS_exempt",false]) exitWith {};
             if (toUpper unitPos _unit != "UP" || {stance _unit != "STAND"}) then {

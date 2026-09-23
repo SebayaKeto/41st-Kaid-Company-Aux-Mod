@@ -49,8 +49,9 @@ _group setVariable ["FST_HC_managed", true, true];
     _unit setVariable ["FST_spawnDamageDeferUntilLocal", true];
     private _role = [_unit] call FST_HCSpawn_fnc_burnsRole;
     if (_role != "webknight") then {
-        _unit setVariable ["FST_HC_assignedPos", _pos];
-        _unit disableAI "PATH";
+        _unit setVariable ["FST_HC_assignedPos", _pos,true];
+        _unit setVariable ["FST_HC_ownsPath",true,true];
+                    _unit disableAI "PATH";
         if (_role == "b1") then {_unit setUnitPos "UP"};
         doStop _unit;
         _unit setFormDir (random 360);

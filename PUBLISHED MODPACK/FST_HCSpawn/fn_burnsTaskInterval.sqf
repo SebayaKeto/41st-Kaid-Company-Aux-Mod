@@ -2,6 +2,8 @@
 // Player positions are cached once per scan by initCombatTasks; no enemy scans
 // across allUnits and no revealed targets. Native group knowledge keeps combat fast.
 params ["_group", ["_playerPositions", []]];
+// Explicit rush/cohesion gets bounded frequent service on its owner.
+if (((([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet)) param [0,""])=="rush" || {(_group getVariable ["BURNS_b1GroupOwner",-1])==clientOwner}) exitWith {5};
 private _base = (missionNamespace getVariable ["FST_HC_CombatTaskInterval", 15]) max 5;
 if !(missionNamespace getVariable ["BURNS_DistanceScheduling", true]) exitWith {_base};
 private _leader = leader _group;

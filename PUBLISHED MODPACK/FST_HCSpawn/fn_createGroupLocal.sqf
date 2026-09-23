@@ -252,12 +252,14 @@ if (count _editableObjects > 0) then {
                 if (_forEachIndex < count _bldgPositions) then {
                     private _bPos = _bldgPositions select _forEachIndex;
                     _x setPosATL _bPos;
-                    _x setVariable ["FST_HC_assignedPos", _bPos];
+                    _x setVariable ["FST_HC_assignedPos", _bPos,true];
+                    _x setVariable ["FST_HC_ownsPath",true,true];
                     _x disableAI "PATH";
                     if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
                     doStop _x;
                     _x setFormDir (random 360);
                 } else {
+                    _x setVariable ["FST_HC_ownsPath",true,true];
                     _x disableAI "PATH";
                     if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
                     doStop _x;
@@ -298,7 +300,10 @@ if (count _editableObjects > 0) then {
         case "assault": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
-            [_group, "assault", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
+            // B1 Assault spawns must seek an enemy, not MOVE to their own
+            // spawn point while waiting for a contact they do not yet know.
+            private _b1Only=(units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1"})<0;
+            [_group, ["assault","rush"] select _b1Only, _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
         case "hunt": {
             _group setBehaviourStrong "COMBAT";
@@ -322,7 +327,7 @@ if (count _editableObjects > 0) then {
         };
         case "none": {};
     };
-}, [_group, _behavior, _radius, _pos], 1] call CBA_fnc_waitAndExecute;
+}, [_group, _behavior, _radius, _pos], if (_behavior=="assault") then {0} else {1}] call CBA_fnc_waitAndExecute;
 
 // Dynamic simulation only for mobile groups, and only when opted in.
 if ((_behavior in ["patrol", "hunt"]) && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {

@@ -4,12 +4,12 @@
 //
 // Arguments:
 //   0: GROUP
-// Returns: BOOL - true if already on/confirmed moved to an HC
+// Returns: BOOL - true if already on an HC, moved, or accepted for owner-state capture.
 
 if (!isServer) exitWith { false };
 // V28: _force (from the Zeus "Send To Vehicle HC" module) bypasses the vehicle
 // blacklist, never the vehicle safety check.
-params ["_group", ["_force", false]];
+params ["_group", ["_force", false], ["_snapshot",[]]];
 
 if (isNull _group) exitWith { false };
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
@@ -82,8 +82,17 @@ if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"})
     false
 };
 
-// Detect garrison state before locality changes.
-private _isGarrisoned = !(_leader checkAIFeature "PATH");
+// Capture every unit on the current owner, never infer a squad from its leader.
+if (count _snapshot==0 && {!local _group}) exitWith {
+    [_group,"transfer",[_force,_rehome]] call FST_HCSpawn_fnc_requestTransferState
+};
+if (count _snapshot==0) then {
+    private _serial=(_group getVariable ["FST_HC_stateSerial",0])+1;
+    _group setVariable ["FST_HC_stateSerial",_serial,true];
+    _snapshot=[groupOwner _group,_serial,units _group apply {[_x,_x checkAIFeature "PATH",_x checkAIFeature "MOVE",_x getVariable ["BURNS_ownsPath",false],([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet)]}];
+};
+if ((_snapshot select 0)!=groupOwner _group || {(_snapshot select 1)!=(_group getVariable ["FST_HC_stateSerial",-1])}) exitWith {false};
+private _isGarrisoned=((_snapshot select 2) findIf {!(_x select 1) || {!(_x select 2)}})>=0;
 
 // Save loadouts. Mandatory because locality changes can strip/alter custom gear on some modded units.
 { _x setVariable ["FST_HC_savedLoadout", getUnitLoadout _x]; } forEach _units;
@@ -132,7 +141,7 @@ if (!_isGarrisoned && {!(_group getVariable ["FST_HC_keepActive", false])} && {m
 
 // Reapply garrison on the machine that now owns the group.
 if (_isGarrisoned) then {
-    ["FST_HC_evt_reapplyGarrison", [_group], _targetId] call CBA_fnc_ownerEvent;
+    ["FST_HC_evt_reapplyGarrison", [_group,_snapshot,_targetId], _targetId] call CBA_fnc_ownerEvent;
 };
 
 // Restore loadouts on the machine that NOW owns the group. Running this on the

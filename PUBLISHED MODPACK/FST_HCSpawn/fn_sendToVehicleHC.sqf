@@ -48,7 +48,7 @@ private _ok = [_group, true] call FST_HCSpawn_fnc_transferGroup;
 private _idx = FST_HC_Ids find _targetId;
 private _slot = (FST_HC_Array select _idx) getVariable ["FST_HC_slot", _idx + 1];
 if (_ok) then {
-    [format ["[FST] %1 sent to vehicle HC (HC%2).", _group, _slot]] call _say;
+    [format ["[FST] %1 transfer requested to vehicle HC (HC%2).", _group, _slot]] call _say;
 } else {
     [format ["[FST] %1: transfer to HC%2 refused by the engine, left in place.", _group, _slot]] call _say;
 };

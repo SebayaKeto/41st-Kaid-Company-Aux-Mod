@@ -5,13 +5,24 @@
 // ============================================================
 // SERVER PATH
 // ============================================================
-if (isServer && {count _this == 4}) exitWith {
-    params ["_grp", "_zeusId", "_hold", "_zeusIdForEvent"];
+if (isServer && {count _this in [4,5]}) exitWith {
+    params ["_grp", "_zeusId", "_hold", "_zeusIdForEvent", ["_snapshot",[]]];
 
     if (isNull _grp || {count units _grp == 0} || {isPlayer leader _grp}) exitWith {};
     if ([_grp] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
     if (isNil "FST_HC_HeldGroups") then { FST_HC_HeldGroups = []; };
 
+    private _webknight=(units _grp findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0;
+    if (_hold && {!_webknight} && {count _snapshot==0} && {!local _grp}) exitWith {
+        _grp setVariable ["FST_HC_heldBy",_zeusId,true];
+        [_grp,"hold",[_zeusId,_zeusIdForEvent]] call FST_HCSpawn_fnc_requestTransferState;
+    };
+    if (_hold && {!_webknight} && {count _snapshot==0}) then {
+        private _serial=(_grp getVariable ["FST_HC_stateSerial",0])+1;
+    _grp setVariable ["FST_HC_stateSerial",_serial,true];
+    _snapshot=[groupOwner _grp,_serial,units _grp apply {[_x,_x checkAIFeature "PATH",_x checkAIFeature "MOVE",_x getVariable ["BURNS_ownsPath",false],([_grp,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet)]}];
+    };
+    if (_hold && {!_webknight} && {(_snapshot select 0)!=groupOwner _grp || {(_snapshot select 1)!=(_grp getVariable ["FST_HC_stateSerial",-1])}}) exitWith {};
     if (_hold) then {
         // HOLD: pull from HC to Zeus client.
         _grp setVariable ["FST_HC_tracked", nil];
@@ -28,8 +39,7 @@ if (isServer && {count _this == 4}) exitWith {
         FST_HC_TransferQueue = FST_HC_TransferQueue - [_grp];
         FST_HC_HeldGroups pushBackUnique _grp;
 
-        private _isGarrisoned = !(leader _grp checkAIFeature "PATH");
-        private _webknight = (units _grp findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0;
+        private _isGarrisoned=!_webknight && {((_snapshot select 2) findIf {!(_x select 1) || {!(_x select 2)}})>=0};
         // Holding can exclude a group from HCSpawn without moving Workshop's
         // owner-local B2/BX scripts away from the machine that started them.
         private _moved = if (_webknight) then {true} else {_grp setGroupOwner _zeusId};
@@ -42,13 +52,18 @@ if (isServer && {count _this == 4}) exitWith {
         };
 
         if (_isGarrisoned && {!_webknight}) then {
-            ["FST_HC_evt_reapplyGarrison", [_grp], _zeusId] call CBA_fnc_ownerEvent;
+            ["FST_HC_evt_reapplyGarrison", [_grp,_snapshot,_zeusId], _zeusId] call CBA_fnc_ownerEvent;
         };
 
         _grp setVariable ["FST_HC_heldBy", _zeusId, true];
         if (FST_HC_DebugLogging) then { diag_log format ["[FST_HCSpawn] Zeus %1 holding group %2", _zeusId, _grp]; };
     } else {
-        // RELEASE: send back to transfer queue.
+        // RELEASE: invalidate an unfinished hold request before queueing.
+        if (!isNil {_grp getVariable "FST_HC_stateRequest"}) then {
+            _grp setVariable ["FST_HC_stateRequest",nil];
+            _grp setVariable ["FST_HC_stateSerial",(_grp getVariable ["FST_HC_stateSerial",0])+1,true];
+        };
+        // Send back to transfer queue.
         _grp setVariable ["FST_HC_heldBy", -1, true];
         FST_HC_HeldGroups = FST_HC_HeldGroups - [_grp];
         _grp setVariable ["FST_HC_pendingTransfer", true];

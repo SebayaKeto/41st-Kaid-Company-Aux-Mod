@@ -1,6 +1,7 @@
 // Original cached classification, including inherited modded classes.
 params ["_unit"];
 if (isNull _unit || {!(_unit isKindOf "CAManBase")}) exitWith {"other"};
+if (_unit isKindOf "dev_mutant_base") exitWith {"webknight"}; // external creature controller, not human tactics
 private _class = typeOf _unit;
 private _cache = missionNamespace getVariable ["BURNS_roleCache", createHashMap];
 missionNamespace setVariable ["BURNS_roleCache", _cache];

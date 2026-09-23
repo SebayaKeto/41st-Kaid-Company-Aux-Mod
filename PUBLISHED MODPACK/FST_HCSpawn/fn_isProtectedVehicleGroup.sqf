@@ -4,8 +4,10 @@
 // side's vehicle when a player rides in another group's crew/cargo seat.
 params ["_group"];
 if (isNull _group) exitWith {false};
+// Shared entry-point guard also protects Zeus/module logic from AI offload.
+if (side _group==sideLogic || {leader _group isKindOf "Logic"}) exitWith {true};
 private _members = units _group;
-if ((_members findIf {isPlayer _x}) >= 0) exitWith {true};
+if ((_members findIf {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)}) >= 0) exitWith {true};
 private _checked = [];
 (_members findIf {
     private _v = vehicle _x;
@@ -14,6 +16,6 @@ private _checked = [];
         side _group == west ||
         {getNumber (configOf _v >> "side") == 1} ||
         {_v getVariable ["BURNS_playerVehicle",false]} ||
-        {(crew _v findIf {isPlayer _x}) >= 0}
+        {(crew _v findIf {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)}) >= 0}
     }
 }) >= 0

@@ -1,0 +1,64 @@
+// Generated from the BURNS/Kaid callback declarations. Uses no ZEN custom slots.
+class CfgFactionClasses {
+    class FST_BURNS_Modules { displayName="BURNS"; priority=1; side=7; };
+    class FST_Kaid_Modules { displayName="41st Kaid Modules"; priority=1; side=7; };
+};
+class CfgVehicles {
+    class Module_F;
+    class FST_HC_ModuleBase: Module_F {
+        scope=1;
+        scopeCurator=0;
+        author="41st Elite Corps";
+        function="";
+        curatorInfoType="";
+        curatorCanAttach=0;
+        icon="\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
+        class EventHandlers {
+            init="_this call FST_HCSpawn_fnc_queueNativeModule";
+        };
+    };
+    class FST_BURNS_Module_rush: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Rush"; FST_HC_callbackKey="BURNS|Task Rush"; };
+    class FST_BURNS_Module_hunt: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Hunt"; FST_HC_callbackKey="BURNS|Task Hunt"; };
+    class FST_BURNS_Module_creep: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Creep"; FST_HC_callbackKey="BURNS|Task Creep"; };
+    class FST_BURNS_Module_assault: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Assault"; FST_HC_callbackKey="BURNS|Task Assault"; };
+    class FST_BURNS_Module_retreat: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Retreat"; FST_HC_callbackKey="BURNS|Task Retreat"; };
+    class FST_BURNS_Module_cqb: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task CQB"; FST_HC_callbackKey="BURNS|Task CQB"; };
+    class FST_BURNS_Module_garrison: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Garrison"; FST_HC_callbackKey="BURNS|Task Garrison"; };
+    class FST_BURNS_Module_camp: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Camp"; FST_HC_callbackKey="BURNS|Task Camp"; };
+    class FST_BURNS_Module_defend: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Defend"; FST_HC_callbackKey="BURNS|Task Defend"; };
+    class FST_BURNS_Module_patrol: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Patrol"; FST_HC_callbackKey="BURNS|Task Patrol"; };
+    class FST_BURNS_Module_reset: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Reset"; FST_HC_callbackKey="BURNS|Task Reset"; };
+    class FST_BURNS_Module_target: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Set Task Target"; FST_HC_callbackKey="BURNS|Set Task Target"; };
+    class FST_BURNS_Module_artillery_register: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Register Artillery"; FST_HC_callbackKey="BURNS|Register Artillery"; };
+    class FST_BURNS_Module_artillery_remove: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Unregister Artillery"; FST_HC_callbackKey="BURNS|Unregister Artillery"; };
+    class FST_BURNS_Module_artillery_fire: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Artillery Fire Mission"; FST_HC_callbackKey="BURNS|Artillery Fire Mission"; };
+    class FST_BURNS_Module_enable_unit: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Enable Unit AI"; FST_HC_callbackKey="BURNS|Enable Unit AI"; };
+    class FST_BURNS_Module_disable_unit: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Disable Unit AI"; FST_HC_callbackKey="BURNS|Disable Unit AI"; };
+    class FST_BURNS_Module_enable_group: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Enable Group AI"; FST_HC_callbackKey="BURNS|Enable Group AI"; };
+    class FST_BURNS_Module_disable_group: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Disable Group AI"; FST_HC_callbackKey="BURNS|Disable Group AI"; };
+    class FST_BURNS_Module_radio_on: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Enable Radio"; FST_HC_callbackKey="BURNS|Enable Radio"; };
+    class FST_BURNS_Module_radio_off: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Disable Radio"; FST_HC_callbackKey="BURNS|Disable Radio"; };
+    class FST_BURNS_Module_reinforce_on: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Enable Reinforcement"; FST_HC_callbackKey="BURNS|Enable Reinforcement"; };
+    class FST_BURNS_Module_reinforce_off: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Disable Reinforcement"; FST_HC_callbackKey="BURNS|Disable Reinforcement"; };
+    class FST_BURNS_Module_configure: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Configure Group AI"; FST_HC_callbackKey="BURNS|Configure Group AI"; };
+    class FST_BURNS_Module_set_radio: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Set Radio"; FST_HC_callbackKey="BURNS|Set Radio"; };
+    class FST_HC_Module_b1_fireteam: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B1 Fire Team (4)"; FST_HC_callbackKey="41st Kaid Modules|B1 Fire Team (4)"; };
+    class FST_HC_Module_b1_squad: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B1 Squad STD (12)"; FST_HC_callbackKey="41st Kaid Modules|B1 Squad STD (12)"; };
+    class FST_HC_Module_b1_squad_at: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B1 Squad w/ AT (12)"; FST_HC_callbackKey="41st Kaid Modules|B1 Squad w/ AT (12)"; };
+    class FST_HC_Module_b1_squad_aa: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B1 Squad w/ AA (12)"; FST_HC_callbackKey="41st Kaid Modules|B1 Squad w/ AA (12)"; };
+    class FST_HC_Module_b1_squad_ataa: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B1 Squad AT/AA (12)"; FST_HC_callbackKey="41st Kaid Modules|B1 Squad AT/AA (12)"; };
+    class FST_HC_Module_b1_gat_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B1 Guided AT Team (4)"; FST_HC_callbackKey="41st Kaid Modules|B1 Guided AT Team (4)"; };
+    class FST_HC_Module_bx_killteam: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="BX Kill Team (4)"; FST_HC_callbackKey="41st Kaid Modules|BX Kill Team (4)"; };
+    class FST_HC_Module_bx_sniper_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="BX Sniper Team (2)"; FST_HC_callbackKey="41st Kaid Modules|BX Sniper Team (2)"; };
+    class FST_HC_Module_bx_at_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="BX Anti-Tank Team (2)"; FST_HC_callbackKey="41st Kaid Modules|BX Anti-Tank Team (2)"; };
+    class FST_HC_Module_bx_aa_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="BX Anti-Air Team (2)"; FST_HC_callbackKey="41st Kaid Modules|BX Anti-Air Team (2)"; };
+    class FST_HC_Module_b2_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B2 Team (4)"; FST_HC_callbackKey="41st Kaid Modules|B2 Team (4)"; };
+    class FST_HC_Module_b2_squad: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B2 Squad (8)"; FST_HC_callbackKey="41st Kaid Modules|B2 Squad (8)"; };
+    class FST_HC_Module_b2_flame_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B2 Flame Team (4)"; FST_HC_callbackKey="41st Kaid Modules|B2 Flame Team (4)"; };
+    class FST_HC_Module_fill: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Fill Garrison ---"; FST_HC_callbackKey="41st Kaid Modules|--- Fill Garrison ---"; };
+    class FST_HC_Module_frontline: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Frontline Assault ---"; FST_HC_callbackKey="41st Kaid Modules|--- Frontline Assault ---"; };
+    class FST_HC_Module_qrf: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- QRF Response ---"; FST_HC_callbackKey="41st Kaid Modules|--- QRF Response ---"; };
+    class FST_HC_Module_vehicle: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Vehicle Spawn ---"; FST_HC_callbackKey="41st Kaid Modules|--- Vehicle Spawn ---"; };
+    class FST_HC_Module_vehicle_transfer: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Send To Vehicle HC ---"; FST_HC_callbackKey="41st Kaid Modules|--- Send To Vehicle HC ---"; };
+    class FST_HC_Module_cleanup: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Cleanup Dead Groups ---"; FST_HC_callbackKey="41st Kaid Modules|--- Cleanup Dead Groups ---"; };
+};

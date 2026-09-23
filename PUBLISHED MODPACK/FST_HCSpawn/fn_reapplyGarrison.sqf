@@ -1,41 +1,27 @@
-// FST_HCSpawn_fnc_reapplyGarrison
-// Runs on HC. Waits until group is local, then re-disables PATH.
-// Called via CBA event from transferGroup.
-//
-// Arguments:
-//   0: GROUP
-
-params ["_group"];
-
-// Wait until local (15s timeout). Timeout code is the 5th argument of
-// CBA_fnc_waitUntilAndExecute; the statement only runs when the condition is met.
+// New owner: restore only the individual holds captured on the previous owner.
+// No leader-wide inference and no unconditional stance changes.
+params ["_group","_snapshot","_target"];
+_snapshot params ["_previousOwner","_serial","_rows"];
 [
     {
-        params ["_group"];
-        isNull _group || {local _group}
+        params ["_group","_serial","_rows","_target"];
+        isNull _group || {local _group && {(_group getVariable ["FST_HC_stateSerial",-1])>=_serial} && {(_rows findIf {private _unit=_x select 0;!isNull _unit && {group _unit==_group} && {!local _unit}})<0}}
     },
     {
-        params ["_group"];
-        if (isNull _group) exitWith {};
+        params ["_group","_serial","_rows","_target"];
+        // groupOwner is server-only; local plus clientOwner validate this owner.
+        if (isNull _group || {!local _group} || {clientOwner!=_target} || {(_group getVariable ["FST_HC_stateSerial",-1])!=_serial}) exitWith {};
         if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
-
         {
-            if (([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight") then {continue};
-            _x disableAI "PATH";
-            // Reassert stance on the new owner. Like disableAI, setUnitPos is
-            // arguments-local and its effect does not reliably survive setGroupOwner,
-            // so garrisoned droids were dropping back to AUTO (prone/crouch) after
-            // transfer to an HC.
-            // V27: forceSpeed 0 removed. PATH disabled already pins the unit, and
-            // forceSpeed was never reverted, leaving units frozen if Zeus later
-            // re-enabled movement.
-            if (([_x] call FST_HCSpawn_fnc_burnsRole) == "b1") then {_x setUnitPos "UP"};
-        } forEach units _group;
+            _x params ["_unit","_path","_move","_burnsOwned","_revision"];
+            if (isNull _unit || {!local _unit} || {group _unit!=_group} || {([_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit)} || {([_unit] call FST_HCSpawn_fnc_burnsRole)=="webknight"}) then {continue};
+            // A newer Stop/task owns the BURNS hold decision. External holds
+            // remain external and are not released by a BURNS task change.
+            private _sameBurnsHold=!_burnsOwned || {(_unit getVariable ["BURNS_ownsPath",false]) && {(([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet))==_revision}};
+            if (!_path && {_sameBurnsHold}) then {_unit disableAI "PATH"};
+            if (!_move) then {_unit disableAI "MOVE"};
+        } forEach _rows;
     },
-    [_group],
-    15,
-    {
-        params ["_group"];
-        diag_log format ["[FST_HCSpawn] reapplyGarrison timed out for %1", _group];
-    }
+    [_group,_serial,_rows,_target],15,
+    {params ["_group"];diag_log format ["[FST_HCSpawn] Per-unit movement restore timed out for %1",_group]}
 ] call CBA_fnc_waitUntilAndExecute;

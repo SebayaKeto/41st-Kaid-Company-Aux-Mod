@@ -1,0 +1,45 @@
+// Test-only fixtures; no humans are represented as having participated.
+if(!isServer)exitWith{};
+diag_log "[QUAL_GUARDS_BEGIN]";
+private _g=createGroup[east,true];_g setVariable["FST_HC_blacklisted",true,true];
+private _u=_g createUnit["FST_Droid_B1_E5",[4500,4500,0],[],0,"NONE"];
+_g setCombatMode "RED";_u setDir 0;_u allowDamage false;
+[_g]call FST_HCSpawn_fnc_burnsApplyRole;sleep 1;
+private _v=createVehicle["B_MRAP_01_hmg_F",[4500,4580,0],[],0,"NONE"];createVehicleCrew _v;
+_v allowDamage false;{_x allowDamage false;_x disableAI "ALL"}forEach crew _v;
+_g reveal[_v,4];
+_u setVariable["Q_rifleShots",0];_u addEventHandler["Fired",{params["_u","_w"];if(_w=="FST_E5")then{_u setVariable["Q_rifleShots",1+(_u getVariable["Q_rifleShots",0])]}}];
+private _startAmmo=_u ammo "FST_E5";sleep 15;
+["E5 real ammunition at hostile crewed armor",(_u getVariable["Q_rifleShots",0])>0,[_u getVariable["Q_rifleShots",0],_startAmmo,_u ammo "FST_E5",missionNamespace getVariable["BURNS_AssistShotRequests",0]]]call Q_check;
+[_g]call FST_HCSpawn_fnc_burnsReleasePointFire;
+private _tg=createGroup[west,true];private _t=_tg createUnit["B_Soldier_F",[4500,4550,0],[],0,"NONE"];
+_t allowDamage false;_t disableAI "ALL";_g reveal[_t,4];
+private _contacts=[[getPosATL _v,typeOf _v,west,1,_v],[getPosATL _t,typeOf _t,west,1,_t]];
+[_g,_contacts]call FST_HCSpawn_fnc_burnsAcquirePointFire;
+["active infantry takes priority over rifle armor assist",count(_g getVariable["BURNS_pointFire",[]])==0]call Q_check;
+deleteVehicle _t;deleteGroup _tg;
+_g setCombatMode "BLUE";sleep 0.2;
+["hold-fire blocks engagement",!([_g]call FST_HCSpawn_fnc_burnsEngagementAllowed)]call Q_check;
+_g setCombatMode "RED";_g setVariable["FST_HC_heldBy",99];
+["Zeus hold blocks engagement",!([_g]call FST_HCSpawn_fnc_burnsEngagementAllowed)]call Q_check;_g setVariable["FST_HC_heldBy",-1];
+private _wp=_g addWaypoint[[4700,4500,0],0];_wp setWaypointType "MOVE";_g setCurrentWaypoint _wp;sleep 0.2;
+["manual waypoint blocks engagement assist",!([_g]call FST_HCSpawn_fnc_burnsEngagementAllowed)]call Q_check;
+deleteWaypoint _wp;
+private _pg=group driver _v;
+["BLUFOR vehicle protected",[_pg]call FST_HCSpawn_fnc_isProtectedVehicleGroup]call Q_check;
+["BLUFOR task rejected",!([_pg,"rush",[4500,4500,0],500]call FST_HCSpawn_fnc_setCombatTask)]call Q_check;
+// On-foot B1 role must be released when boarding an AAT.
+private _aat=createVehicle["FST_AAT",[4550,4500,0],[],0,"NONE"];
+_u moveInDriver _aat;[_g]call FST_HCSpawn_fnc_burnsApplyRole;sleep 1;
+["boarding clears B1 on-foot state",isNil{_u getVariable"BURNS_b1Applied"},_u getVariable["BURNS_b1Applied",[]]]call Q_check;
+["boarding restores AUTOCOMBAT",_u checkAIFeature"AUTOCOMBAT"]call Q_check;
+deleteVehicle _u;deleteGroup _g;deleteVehicle _aat;{deleteVehicle _x}forEach crew _v;deleteVehicle _v;
+// Medical state detection and exclusions: AI fixtures exercise the real ACE variables.
+private _mg=createGroup[west,true];private _body=_mg createUnit["B_Soldier_F",[4400,4400,0],[],0,"NONE"];
+["conscious unit is not down",!([_body]call FST_HCSpawn_fnc_burnsIsDown)]call Q_check;
+_body setVariable["ACE_isUnconscious",true,true];
+["ACE unconscious recognized",[_body]call FST_HCSpawn_fnc_burnsIsDown]call Q_check;
+_body setVariable["ACE_isUnconscious",false,true];
+["revive clears downed state",!([_body]call FST_HCSpawn_fnc_burnsIsDown)]call Q_check;
+deleteVehicle _body;deleteGroup _mg;
+diag_log "[QUAL_GUARDS_DONE]";

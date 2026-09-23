@@ -283,7 +283,7 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 ] call CBA_fnc_addSetting;
 [
     "FST_HC_CombatTaskInterval", "SLIDER",
-    ["Combat Order Interval", "Seconds between nearby or engaged group tactical updates. Groups are staggered and only two are serviced per tick; loaded owners may take longer."],
+    ["Combat Order Interval", "Seconds between nearby or engaged group tactical updates. Groups are staggered under a measured work budget; loaded owners may take longer."],
     ["BURNS", "Tactics"], [5, 60, 15, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 
@@ -530,5 +530,27 @@ if (!isServer) then {
     FST_HC_Ids = [];
 };
 
-missionNamespace setVariable ["FST_HCSpawn_buildVersion", "V30_2_BURNS_PLAYER_VEHICLES_2026-09-21", true];
-diag_log "[FST_HCSpawn] preInit complete - V30_BURNS_ZEUS_2026-09-21";
+missionNamespace setVariable ["FST_HCSpawn_buildVersion", "V30_5_B1_DEPLOYMENT_PREVIEW_2026-09-22", true];
+diag_log "[FST_HCSpawn] preInit complete - V30_5_B1_DEPLOYMENT_PREVIEW_2026-09-22";
+
+
+
+
+
+
+
+
+
+
+
+
+
+["BURNS_RifleAssistEnabled","CHECKBOX",["B1 vehicle and casualty fire","Allow bounded E5 single-shot assistance against visible armored targets and downed enemies."],"BURNS",true,1] call CBA_fnc_addSetting;
+
+["BURNS_ArmorAssistEnabled","CHECKBOX",["AAT engagement and facing","Assist hostile AI AAT gunners and use short hull-turn corrections. Player vehicles are excluded."],"BURNS",true,1] call CBA_fnc_addSetting;
+
+["BURNS_GulantharSlopeEnabled","CHECKBOX",["Gulanthar uphill gait","Use a dedicated climbing gait during uphill pursuit without changing attack animation speed."],"BURNS",true,1] call CBA_fnc_addSetting;
+
+
+BURNS_sourceFingerprint="20e5363898734d4e09164508309fd7ef45ebd1e6d84a9747c4b9244dbf326e98";
+diag_log format ["[BURNS_SOURCE] %1",BURNS_sourceFingerprint];

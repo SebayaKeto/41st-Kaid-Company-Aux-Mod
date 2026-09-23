@@ -2,7 +2,11 @@
 params ["_group", "_centre", ["_radius",150]];
 if (isNull _group || {!local _group}) exitWith {false};
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
+if (!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) || {_group getVariable ["BURNS_exempt",false]}) exitWith {false};
 [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
+if !(_group getVariable ["FST_HC_keepActive",false]) then {_group setVariable ["BURNS_ownsKeepActive",true,true]};
+_group setVariable ["FST_HC_keepActive",true,true];
+[_group,true] call FST_HCSpawn_fnc_burnsSimulation;
 for "_i" from (count waypoints _group-1) to 0 step -1 do {
     if (waypointDescription [_group,_i]=="BURNS patrol") then {deleteWaypoint [_group,_i]};
 };
@@ -23,4 +27,5 @@ private _cycle = _group addWaypoint [waypointPosition [_group,_first], 0];
 _cycle setWaypointDescription "BURNS patrol";
 _cycle setWaypointType "CYCLE";
 _group setCurrentWaypoint [_group,_first];
+([_group,["BURNS_patrol",[+_centre,_radius],true]] call FST_HCSpawn_fnc_burnsStateSet);
 true

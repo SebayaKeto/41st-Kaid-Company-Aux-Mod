@@ -39,7 +39,7 @@ private _reason = "";
     if (_speed > _maxSpeed) exitWith { _reason = format ["%1 moving (%2 m/s)", typeOf _veh, round _speed]; };
     if ((_veh isKindOf "Air") && {!isTouchingGround _veh}) exitWith { _reason = format ["%1 airborne", typeOf _veh]; };
     private _crew = crew _veh;
-    if ((_crew findIf { isPlayer _x }) >= 0) exitWith { _reason = format ["player aboard %1", typeOf _veh]; };
+    if ((_crew findIf { ([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit) }) >= 0) exitWith { _reason = format ["player aboard %1", typeOf _veh]; };
     if ((_crew findIf { !(_x in _units) }) >= 0) exitWith { _reason = format ["%1 crewed by another group", typeOf _veh]; };
 } forEach _vehicles;
 

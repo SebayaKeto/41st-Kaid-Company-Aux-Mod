@@ -21,7 +21,7 @@ BURNS_VisibilityMaxMs=0;
         if (isNull _g || {!local _g} || {_g getVariable ["BURNS_exempt",false]} || {(_g getVariable ["FST_HC_heldBy",-1])!=-1}) then {continue};
         if ([_g] call FST_HCSpawn_fnc_isProtectedVehicleGroup) then {continue};
         private _leader=leader _g;
-        if (!alive _leader || {!simulationEnabled _leader} || {(units _g findIf {isPlayer _x})>=0}) then {continue};
+        if (!alive _leader || {!simulationEnabled _leader} || {(units _g findIf {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)})>=0}) then {continue};
         if ((units _g findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0) then {continue};
         private _observers=(units _g) select {
             alive _x && {local _x} && {!(_x getVariable ["BURNS_exempt",false])} &&
