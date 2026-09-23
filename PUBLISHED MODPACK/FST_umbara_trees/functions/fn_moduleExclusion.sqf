@@ -100,7 +100,7 @@ private _fnGenerate = {
 				UMBARA_EdenExclChunkSize, UMBARA_EdenExclChunksPerFrame, UMBARA_EdenExclScanPerFrame, UMBARA_EdenExclBatchSize,
 				UMBARA_EdenExclStartTime, UMBARA_EdenExclCx0, UMBARA_EdenExclCy0, UMBARA_EdenExclA, UMBARA_EdenExclB,
 				UMBARA_EdenExclAngle, UMBARA_EdenExclIsRect, true, UMBARA_EdenExclHiddenProps, UMBARA_EdenExclHiddenTerrain
-			] call umbara_trees_fnc_exclusionTick;
+			] call FST_umbara_trees_fnc_exclusionTick;
 			if (_done) then {
 				removeMissionEventHandler ["EachFrame", UMBARA_EdenExclEH];
 				UMBARA_EdenExclEH = nil;
@@ -109,7 +109,7 @@ private _fnGenerate = {
 	} else {
 		[{
 			params ["_args", "_pfhHandle"];
-			private _done = _args call umbara_trees_fnc_exclusionTick;
+			private _done = _args call FST_umbara_trees_fnc_exclusionTick;
 			if (_done) then {[_pfhHandle] call CBA_fnc_removePerFrameHandler;};
 		}, 0, [_logic, _chunkList, _propScanQueue, _actionQueue, _chunkSize, _chunksPerFrame, _scanPerFrame, _batchSize, _startTime, _cx0, _cy0, _a, _b, _angle, _isRect, _isPreview, _previewHiddenProps, _previewHiddenTerrain]] call CBA_fnc_addPerFrameHandler;
 	};

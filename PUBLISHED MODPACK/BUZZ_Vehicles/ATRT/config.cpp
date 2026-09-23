@@ -229,7 +229,7 @@ class CfgWeapons {
         class LinkedItems {
             class LinkedItemsAcc {
                 slot = "PointerSlot";
-                item = "FST_Attachment_Module_Light_Normal_White";
+                item = "FST_Attachment_Light_Beam_White";
             };
         };
 

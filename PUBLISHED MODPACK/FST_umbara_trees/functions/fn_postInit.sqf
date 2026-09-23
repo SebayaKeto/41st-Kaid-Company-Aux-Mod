@@ -9,14 +9,11 @@
 // Prop streaming tick — client-side only. Handle kept global for Debug
 // Console isolation testing: [UMBARA_StreamPFH] call CBA_fnc_removePerFrameHandler;
 if (!isDedicated) then {
-	UMBARA_StreamPFH = [{call umbara_trees_fnc_streamTick;}, 0, []] call CBA_fnc_addPerFrameHandler;
+	UMBARA_StreamPFH = [{call FST_umbara_trees_fnc_streamTick;}, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // Native-tree hide re-broadcast — server-only. Same isolation-test pattern
 // via UMBARA_HidePFH.
-// Perf (2026-09-20): interval + per-tick budget instead of every frame. Both
-// can be overridden from init.sqf before this runs: UMBARA_HideTickInterval
-// (seconds, default 0.1) and UMBARA_HideCandidatesPerTick (default 1500).
 if (isServer) then {
-	UMBARA_HidePFH = [{call umbara_trees_fnc_hideTick;}, missionNamespace getVariable ["UMBARA_HideTickInterval", 0.1], []] call CBA_fnc_addPerFrameHandler;
+	UMBARA_HidePFH = [{call FST_umbara_trees_fnc_hideTick;}, 0, []] call CBA_fnc_addPerFrameHandler;
 };

@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class umbara_trees
+	class FST_umbara_trees
 	{
 		units[] = {"UMBARA_Module_Swap", "UMBARA_Module_Exclusion"};
 		weapons[] = {};
@@ -13,7 +13,7 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class umbara_trees
+	class FST_umbara_trees
 	{
 		class trees
 		{

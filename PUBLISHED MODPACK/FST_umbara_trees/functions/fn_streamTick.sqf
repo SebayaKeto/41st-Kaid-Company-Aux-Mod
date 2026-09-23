@@ -18,12 +18,6 @@ private _midCutoff = missionNamespace getVariable ["UMBARA_Stream_MidCutoff", 25
 private _farCutoff = missionNamespace getVariable ["UMBARA_Stream_FarCutoff", 6000];
 
 private _exclusions = if (isNil "UMBARA_ACTIVE_EXCLUSIONS") then {[]} else {UMBARA_ACTIVE_EXCLUSIONS};
-private _hasExclusions = (count _exclusions) > 0;
-// Squared cutoffs: the per-candidate loop below compares squared distances and
-// only takes a sqrt inside the mid->far fade band (perf, 2026-09-20).
-private _nearSq = _nearCutoff * _nearCutoff;
-private _midSq = _midCutoff * _midCutoff;
-private _farSq = _farCutoff * _farCutoff;
 
 private _pPos = getPosATL player;
 private _px = _pPos select 0;
@@ -106,27 +100,26 @@ while {_count < CANDIDATES_PER_TICK && {_created < PROPS_CREATED_PER_TICK} && {U
 
 	private _dx = _ox - _px;
 	private _dy = _oy - _py;
-	private _distSq = (_dx * _dx) + (_dy * _dy);
+	private _dist = sqrt ((_dx * _dx) + (_dy * _dy));
 
 	private _density = 0;
-	if (_distSq <= _nearSq) then {
+	if (_dist <= _nearCutoff) then {
 		_density = _nearDensity;
 	} else {
-		if (_distSq <= _midSq) then {
+		if (_dist <= _midCutoff) then {
 			_density = _midDensity;
 		} else {
-			if (_distSq <= _farSq) then {
-				private _dist = sqrt _distSq;
+			if (_dist <= _farCutoff) then {
 				_density = _midDensity * (1 - ((_dist - _midCutoff) / (_farCutoff - _midCutoff)));
 			};
 		};
 	};
 
 	private _excluded = false;
-	if (_hasExclusions && {_density > 0}) then {
+	if (_density > 0) then {
 		{
 			_x params ["_ecx0", "_ecy0", "_ea", "_eb", "_eangle", "_eisRect"];
-			if ([_ox, _oy, _ecx0, _ecy0, _ea, _eb, _eangle, _eisRect] call umbara_trees_fnc_pointInArea) exitWith {_excluded = true;};
+			if ([_ox, _oy, _ecx0, _ecy0, _ea, _eb, _eangle, _eisRect] call FST_umbara_trees_fnc_pointInArea) exitWith {_excluded = true;};
 		} forEach _exclusions;
 	};
 
