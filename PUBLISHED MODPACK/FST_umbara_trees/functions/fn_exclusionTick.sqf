@@ -31,7 +31,7 @@ if ((count _chunkList) > 0) then {
 			private _objPos = getPosATL _x;
 			private _ox = _objPos select 0;
 			private _oy = _objPos select 1;
-			if ([_ox, _oy, _cx0, _cy0, _a, _b, _angle, _isRect] call umbara_trees_fnc_pointInArea && {_ox >= _chCx} && {_ox < (_chCx + _chunkSize)} && {_oy >= _chCy} && {_oy < (_chCy + _chunkSize)}) then {
+			if ([_ox, _oy, _cx0, _cy0, _a, _b, _angle, _isRect] call FST_umbara_trees_fnc_pointInArea && {_ox >= _chCx} && {_ox < (_chCx + _chunkSize)} && {_oy >= _chCy} && {_oy < (_chCy + _chunkSize)}) then {
 				_actionQueue pushBack [0, _x];
 			};
 		} forEach _terrainObjs;
@@ -45,7 +45,7 @@ if ((count _chunkList) > 0) then {
 			private _p = _propScanQueue deleteAt (count _propScanQueue - 1);
 			if (!isNull _p) then {
 				private _pPos = getPosATL _p;
-				if ([(_pPos select 0), (_pPos select 1), _cx0, _cy0, _a, _b, _angle, _isRect] call umbara_trees_fnc_pointInArea) then {
+				if ([(_pPos select 0), (_pPos select 1), _cx0, _cy0, _a, _b, _angle, _isRect] call FST_umbara_trees_fnc_pointInArea) then {
 					_actionQueue pushBack [1, _p];
 				};
 			};

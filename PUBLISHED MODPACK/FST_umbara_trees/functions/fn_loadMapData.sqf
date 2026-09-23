@@ -3,7 +3,7 @@
 
 if (!isNil "UMBARA_MapDataCache") exitWith {UMBARA_MapDataCache};
 
-private _path = format ["umbara_trees\data\%1.sqf", toLower worldName];
+private _path = format ["FST_umbara_trees\data\%1.sqf", toLower worldName];
 private _raw = preprocessFileLineNumbers _path;
 
 if (_raw == "") exitWith {UMBARA_MapDataCache = []; UMBARA_MapDataCache};
