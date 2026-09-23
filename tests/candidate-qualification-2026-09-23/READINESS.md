@@ -2,6 +2,8 @@
 
 Status: local test copy prepared; **the full candidate is not cleared for tonight's live operation**. AAT facing/engagement remains inconsistent. The verified Gulanthar repair is included; experimental AAT changes are not.
 
+For the short handover, read `TONIGHT.md`. `Tonight-Rehearsal.zip` packages the complete Aux folder, staged mission, checksum verifier and these notes for transfer to a rehearsal client. Dependencies from the existing server preset are still required. The ZIP is a rehearsal candidate, not a release approval.
+
 The independent local Aux copy is `@Kaid_Aux_Candidate` beside this report. It contains the installed mod plus the incoming Armor, HCSpawn, Combat and Gulanthar candidates. The supplied Gulanthar PBO failed runtime movement tests and was replaced here with the verified repair described below. The training server and its mod staging directory were not changed.
 
 ## Verified intake and build
@@ -63,6 +65,8 @@ Raw RPT logs and process records are preserved under `runs/`. `runtime-results.j
 - Run 11 compared original, experimental feedback steering and disabled assistance. Its experimental rear firing failure is retained. Run 12 is the independent dry-ground pod suite: 9/9, without the unrelated AAT fixture.
 - Run 13 was stopped because the fixture omitted CBA's mission-settings-file flag; its requested setting did not apply. Run 14 corrected that flag and confirmed the disabled setting on all five machines, but the fallback did not pass all firing/facing cases. This is why no disabled-assist deployment preset is recommended.
 - Run 15 tested a mission-only version that separated native Rush/Hunt movement from hull-turn pulses. It passed 27/29 assertions, including its Rush/Hunt cases, but failed unassigned front-facing consistency and unassigned rear firing. It was not promoted. Neither this experiment nor run 11's steering experiment changes the delivered PBOs.
+- Run 16 added target-position, velocity and visibility diagnostics, with four HCs. Its four completed physics-enabled cases all fired, but the unassigned front-target case again had 0/20 acceptable late facing samples. That target moved only 0.013 metres, ruling out large target displacement as the explanation for that case. Two simulation-disabled target cases did not fire; freezing the target changed engagement behavior and is not accepted as an equivalent combat fixture. The run was stopped after 20 recorded assertions (17 passing), before its remaining frozen-target cases; it is a diagnostic, not a completed qualification suite.
+- Run 17 tested a mission-only change to pulse cleanup, avoiding a follow order for an unassigned driver, together with run 15's native task movement. The unassigned frontal case still failed facing, so the experiment was rejected. Two cases completed (7/8 recorded assertions passed) before the run was stopped. It was server-only, and its code was not promoted.
 - Dependency/config warnings exist in these modded-server logs. They are not described as globally clean. Blood-particle warnings also occur on the unmodified external creature, separate from the movement-graph repair.
 - AI targets were used, often invulnerable and explicitly revealed to make fixtures repeatable. These checks do not establish natural detection range, player damage behavior, human network conditions or visual correctness.
 
@@ -79,6 +83,7 @@ Use exactly the same candidate on the test server, all HCs and rehearsal clients
 - Staged mission: `missions/DaaraUmbaraTest2_Candidate.m_36vwm796742s99.pbo`.
 - Rollback: `rollback/Addons/` contains verified copies of the three affected installed PBOs. Their live hashes still match the intake baseline; the new Gulanthar addon remains absent from the live mod.
 - Exact-file manifests, content audits and raw logs are beside this report.
+- `Verify-Candidate.ps1` passed all 64 files and rejected no extras in the delivered folder. It can repeat the read-only check after copying the candidate.
 - Repository branch: `codex/qualify-sept23-candidates`, using an isolated worktree under this task's `work/candidate-repo`. The original repository's `main` checkout was not replaced. Changes are local; nothing was pushed.
 
 All isolated test processes were stopped after testing. The original training server was left running. The isolated runtime now has no mission selected by default, so relaunching it cannot accidentally start an experimental test mission.
