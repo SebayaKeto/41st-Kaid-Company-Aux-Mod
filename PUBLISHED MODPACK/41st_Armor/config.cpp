@@ -8099,11 +8099,22 @@ class CfgWeapons
 	{
 		scope=2;
 		author="House";
-		displayName="[41st] Crewman Helmet Mk2 (Nova)";
+		displayName="[41st] Crewman Helmet Mk2 (Bogu)";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Bogu.paa",
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Bogu.paa"
+		};
+	};
+	class FST_Crewman_Helmet_Mk2_Omen: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="House";
+		displayName="[41st] Crewman Helmet Mk2 (Omen)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Omen.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Omen.paa"
 		};
 	};
 	class FST_Crewman_Helmet_Mk2_Debt: FST_Crewman_Helmet_Mk2
@@ -8984,7 +8995,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Oak.paa",
-			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Oak.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	}; 	
@@ -8996,7 +9007,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Cait.paa",
-			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Cait.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	}; 
@@ -14534,6 +14545,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_House_Dirty.paa"
+		};
+	};
+	class FST_P2_Helmet_Red: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Red]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red.paa"
 		};
 	};
 	class FST_P2_Helmet_Gold: FST_P2_Helmet_Base
@@ -21241,6 +21262,15 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_House_Dirty.paa",
+		};
+	};
+	class FST_NVG_Red: FST_NVG
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Red)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Red.paa",
 		};
 	};
 	class FST_NVG_Coda: FST_NVG
@@ -56507,6 +56537,22 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - House";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_House.paa";
+		};
+		class FST_Clone_Head_Helix: FST_clone_Default_head
+		{
+			author="House";
+			name="Clone Trooper Helix";
+			displayName="[41st] Clone Trooper - Helix";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Helix.paa";
+		};
+		class FST_Clone_Head_Ace: FST_clone_Default_head
+		{
+			author="House";
+			name="Clone Trooper Ace";
+			displayName="[41st] Clone Trooper - Ace";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Ace.paa";
 		};
 		class FST_Clone_Head_Hayes: FST_clone_Default_head
 		{
