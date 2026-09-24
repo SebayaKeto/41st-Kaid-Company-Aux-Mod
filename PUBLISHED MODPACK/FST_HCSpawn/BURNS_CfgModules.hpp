@@ -19,6 +19,7 @@ class CfgVehicles {
     };
     class FST_BURNS_Module_rush: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Rush"; FST_HC_callbackKey="BURNS|Task Rush"; };
     class FST_BURNS_Module_hunt: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Hunt"; FST_HC_callbackKey="BURNS|Task Hunt"; };
+    class FST_BURNS_Module_ambush: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Ambush (BX)"; FST_HC_callbackKey="BURNS|Task Ambush (BX)"; };
     class FST_BURNS_Module_creep: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Creep"; FST_HC_callbackKey="BURNS|Task Creep"; };
     class FST_BURNS_Module_assault: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Assault"; FST_HC_callbackKey="BURNS|Task Assault"; };
     class FST_BURNS_Module_retreat: FST_HC_ModuleBase { scopeCurator=2; category="FST_BURNS_Modules"; displayName="Task Retreat"; FST_HC_callbackKey="BURNS|Task Retreat"; };

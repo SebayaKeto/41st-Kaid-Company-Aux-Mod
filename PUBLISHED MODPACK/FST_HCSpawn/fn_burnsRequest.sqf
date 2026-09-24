@@ -1,10 +1,19 @@
 // Server broker. Resolve ownership at dispatch rather than moving the AI to Zeus.
 params ["_mode",["_groups",[]],["_objects",[]],["_pos",[]],["_radius",150],["_options",[]],["_caller",-1]];
 if (!isServer || {!([_caller,"BURNS order"] call FST_HCSpawn_fnc_isAuthorizedCaller)}) exitWith {false};
-private _allowed=["stop","rush","hunt","creep","assault","retreat","cqb","garrison","camp","defend","patrol","reset","target","artillery_register","artillery_remove","artillery_fire","enable_group","disable_group","enable_unit","disable_unit","radio_on","radio_off","reinforce_on","reinforce_off"];
+if (_mode in ["visibility_check","visibility_refresh"]) exitWith {
+    private _selected=_objects select {isPlayer _x && {!(_x isKindOf "HeadlessClient_F")}};
+    {
+        if (_mode=="visibility_refresh") then {_x hideObjectGlobal false};
+        [_x,_mode=="visibility_refresh",netId _x,typeOf _x] remoteExecCall ["FST_HCSpawn_fnc_burnsVisibility",0];
+    } forEach (_selected select [0,8]);
+    if (_caller>2) then {format ["[BURNS] Visibility %1 requested for %2 selected player(s). Client observations are recorded in RPT logs.",_mode,count _selected] remoteExec ["systemChat",_caller]};
+    count _selected>0
+};
+private _allowed=["stop","rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol","reset","target","artillery_register","artillery_remove","artillery_fire","enable_group","disable_group","enable_unit","disable_unit","radio_on","radio_off","reinforce_on","reinforce_off"];
 if !(_mode in _allowed) exitWith {false};
 if (count _pos<2) exitWith {false};
-if (_mode in ["rush","hunt","creep","assault","retreat","cqb","garrison","camp","defend","patrol","target"] && {!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true])}) exitWith {
+if (_mode in ["rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol","target"] && {!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true])}) exitWith {
     "[BURNS] Order declined: BURNS AI is disabled in addon settings. Existing orders are unchanged." remoteExec ["systemChat",_caller];false
 };
 _groups=+_groups;
@@ -35,7 +44,7 @@ if (_mode=="artillery_fire" && {count _groups==0}) then {_groups=BURNS_Artillery
 if (count _groups==0) exitWith {"[BURNS] Select an AI unit, vehicle or group first." remoteExec ["systemChat",_caller]; false};
 // Resolve target changes per group before scanning. Each movement request gets
 // a revision so Reset/new orders cancel older queued scans and transfer retries.
-private _movement=["rush","hunt","creep","assault","retreat","garrison","camp","defend","cqb","patrol","target"];
+private _movement=["rush","hunt","ambush","creep","assault","retreat","garrison","camp","defend","cqb","patrol","target"];
 private _orders=[];
 {
     private _group=_x;

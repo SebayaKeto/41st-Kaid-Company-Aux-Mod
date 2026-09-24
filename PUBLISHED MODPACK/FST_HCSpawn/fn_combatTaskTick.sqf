@@ -11,7 +11,7 @@ private _held=_group getVariable ["FST_HC_heldBy",-1];
 if (_held!=-1 && {(_group getVariable ["BURNS_manualHeldOwner",-2])!=_held}) exitWith {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
 private _leader = leader _group;
 if (isNull _leader || {!alive _leader} || {!simulationEnabled _leader}) exitWith {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
-if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0) exitWith {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
+
 // This records the owner actually servicing the task even if a valid waypoint
 // needs no new order after a handoff.
 if ((_group getVariable ["FST_HC_taskLastOwner", -1]) != clientOwner) then {
@@ -23,6 +23,9 @@ private _current = currentWaypoint _group;
 // Check this before issuing suppression or movement orders.
 if (_wpIndex >= 0 && {_current != _wpIndex} && {_current < count waypoints _group} && {waypointDescription [_group, _current] != "FST HC combat"}) exitWith {
     [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
+};
+if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0) exitWith {
+    if !([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) then {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
 };
 if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsSpecialTick) exitWith {};
 if !(_leader checkAIFeature "PATH") exitWith {[_group] call FST_HCSpawn_fnc_burnsReleaseAdvance}; // Respect externally scripted holds.
@@ -171,13 +174,14 @@ if (_down && {vehicle _leader==_leader}) then {
     private _body=getPosATL _rushTarget;
     _destination=if (_leader distance2D _body>10) then {_body getPos [8,_body getDir (getPosATL _leader)]} else {getPosATL _leader};
 };
+_destination=[_group,_destination,_mode] call FST_HCSpawn_fnc_burnsVehicleProgress;
 private _last = ([_group,["FST_HC_taskLastOrder", []]] call FST_HCSpawn_fnc_burnsStateGet);
 if (_mode=="creep") then {
     private _combatMode=if (_nearest<80) then {"RED"} else {"GREEN"};
     _group setCombatMode _combatMode;
     if (_wpIndex>=0 && {_wpIndex<count waypoints _group}) then {[_group,_wpIndex] setWaypointCombatMode _combatMode};
 };
-if (count _last > 0 && {(_last distance2D _destination) < 25} && {_wpIndex >= 0} && {_wpIndex < count waypoints _group}) exitWith {
+if (count _last > 0 && {(_last distance2D _destination) < (if ((vehicle _leader) isKindOf "Tank") then {5} else {25})} && {_wpIndex >= 0} && {_wpIndex < count waypoints _group}) exitWith {
     if (_mode in ["rush","hunt","creep","assault"]) then {[_group,_destination] call FST_HCSpawn_fnc_burnsB1Advance};
 };
 if (!local _group) exitWith {};

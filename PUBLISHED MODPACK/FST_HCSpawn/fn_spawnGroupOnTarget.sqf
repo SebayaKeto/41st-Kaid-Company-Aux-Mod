@@ -19,6 +19,7 @@ private _clearOriginal = {
     };
 };
 
+if (_isValidatedZeusClone && {((_originalPayload select 1) findIf {[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit})>=0 || {!isNull (_originalPayload select 2) && {(crew (_originalPayload select 2) findIf {[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit})>=0}}}) exitWith {[false] call _clearOriginal;false};
 // AI cap check -- keep this as an actual function exit, not a nested exitWith.
 private _spawnCountForCap = if (count _unitData > 0) then { count _unitData } else { count _unitClasses };
 private _capBlocked = false;

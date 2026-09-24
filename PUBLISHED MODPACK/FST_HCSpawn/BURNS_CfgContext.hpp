@@ -12,6 +12,10 @@ class ZEN_context_menu_actions {
             displayName="Task Hunt";
             statement="['hunt',_groups,_objects,ASLToATL _position,false] call FST_HCSpawn_fnc_burnsDialog";
         };
+        class ambush {
+            displayName="Task Ambush (BX)";
+            statement="['ambush',_groups,_objects,ASLToATL _position,false] call FST_HCSpawn_fnc_burnsDialog";
+        };
         class creep {
             displayName="Task Creep";
             statement="['creep',_groups,_objects,ASLToATL _position,false] call FST_HCSpawn_fnc_burnsDialog";
@@ -58,6 +62,11 @@ class ZEN_context_menu_actions {
                 displayName = "Artillery Fire Mission";
                 statement = "['artillery_fire',_groups,_objects,ASLToATL _position,true] call FST_HCSpawn_fnc_burnsDialog";
             };
+        };
+        class visibility {
+            displayName="Player Visibility";
+            class inspect {displayName="Record visibility diagnostics";statement="['visibility_check',_groups,_objects,ASLToATL _position] call FST_HCSpawn_fnc_burnsDialog";};
+            class refresh {displayName="Restore selected player visibility";statement="['visibility_refresh',_groups,_objects,ASLToATL _position] call FST_HCSpawn_fnc_burnsDialog";};
         };
         class ai {
             displayName = "AI Settings";

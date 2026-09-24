@@ -1,0 +1,1 @@
+setMissionOptions createHashMapFromArray [["AIThinkOnlyLocal", true]];

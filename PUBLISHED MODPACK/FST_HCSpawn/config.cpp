@@ -5,7 +5,7 @@ class CfgPatches {
         name = "FST HC Spawn System";
         author = "41st Elite Corps";
         url = "";
-        units[] = {"FST_BURNS_Module_rush","FST_BURNS_Module_hunt","FST_BURNS_Module_creep","FST_BURNS_Module_assault","FST_BURNS_Module_retreat","FST_BURNS_Module_cqb","FST_BURNS_Module_garrison","FST_BURNS_Module_camp","FST_BURNS_Module_defend","FST_BURNS_Module_patrol","FST_BURNS_Module_reset","FST_BURNS_Module_target","FST_BURNS_Module_artillery_register","FST_BURNS_Module_artillery_remove","FST_BURNS_Module_artillery_fire","FST_BURNS_Module_enable_unit","FST_BURNS_Module_disable_unit","FST_BURNS_Module_enable_group","FST_BURNS_Module_disable_group","FST_BURNS_Module_radio_on","FST_BURNS_Module_radio_off","FST_BURNS_Module_reinforce_on","FST_BURNS_Module_reinforce_off","FST_BURNS_Module_configure","FST_BURNS_Module_set_radio","FST_HC_Module_b1_fireteam","FST_HC_Module_b1_squad","FST_HC_Module_b1_squad_at","FST_HC_Module_b1_squad_aa","FST_HC_Module_b1_squad_ataa","FST_HC_Module_b1_gat_team","FST_HC_Module_bx_killteam","FST_HC_Module_bx_sniper_team","FST_HC_Module_bx_at_team","FST_HC_Module_bx_aa_team","FST_HC_Module_b2_team","FST_HC_Module_b2_squad","FST_HC_Module_b2_flame_team","FST_HC_Module_fill","FST_HC_Module_frontline","FST_HC_Module_qrf","FST_HC_Module_vehicle","FST_HC_Module_vehicle_transfer","FST_HC_Module_cleanup"};
+        units[] = {"FST_BURNS_Module_rush","FST_BURNS_Module_hunt","FST_BURNS_Module_ambush","FST_BURNS_Module_creep","FST_BURNS_Module_assault","FST_BURNS_Module_retreat","FST_BURNS_Module_cqb","FST_BURNS_Module_garrison","FST_BURNS_Module_camp","FST_BURNS_Module_defend","FST_BURNS_Module_patrol","FST_BURNS_Module_reset","FST_BURNS_Module_target","FST_BURNS_Module_artillery_register","FST_BURNS_Module_artillery_remove","FST_BURNS_Module_artillery_fire","FST_BURNS_Module_enable_unit","FST_BURNS_Module_disable_unit","FST_BURNS_Module_enable_group","FST_BURNS_Module_disable_group","FST_BURNS_Module_radio_on","FST_BURNS_Module_radio_off","FST_BURNS_Module_reinforce_on","FST_BURNS_Module_reinforce_off","FST_BURNS_Module_configure","FST_BURNS_Module_set_radio","FST_HC_Module_b1_fireteam","FST_HC_Module_b1_squad","FST_HC_Module_b1_squad_at","FST_HC_Module_b1_squad_aa","FST_HC_Module_b1_squad_ataa","FST_HC_Module_b1_gat_team","FST_HC_Module_bx_killteam","FST_HC_Module_bx_sniper_team","FST_HC_Module_bx_at_team","FST_HC_Module_bx_aa_team","FST_HC_Module_b2_team","FST_HC_Module_b2_squad","FST_HC_Module_b2_flame_team","FST_HC_Module_fill","FST_HC_Module_frontline","FST_HC_Module_qrf","FST_HC_Module_vehicle","FST_HC_Module_vehicle_transfer","FST_HC_Module_cleanup"};
         weapons[] = {};
         requiredVersion = 2.18;
         requiredAddons[] = {"cba_main", "cba_keybinding", "cba_settings", "A3_Modules_F"};
@@ -94,6 +94,11 @@ class CfgFunctions {
             class burnsAcquirePointFire {};
             class burnsArmorPulseEnd {};
             class burnsArmorAssist {};
+            class burnsReaction {};
+            class burnsVisibility {};
+            class burnsBXTask {};
+            class burnsReleaseBX {};
+            class burnsVehicleProgress {};
             class burnsGulantharSlope {};
             class burnsInitEngagement {};
 

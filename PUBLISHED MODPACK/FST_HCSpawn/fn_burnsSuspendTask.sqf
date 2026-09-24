@@ -2,6 +2,7 @@
 params ["_group"];
 if (isNull _group || {!local _group}) exitWith {};
 [_group] call FST_HCSpawn_fnc_burnsReleaseAdvance;
+[_group] call FST_HCSpawn_fnc_burnsReleaseBX;
 // Station holds also belong to the suspended task. Release only owned,
 // local infantry holds; external PATH locks and protected assets stay untouched.
 if !([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) then {

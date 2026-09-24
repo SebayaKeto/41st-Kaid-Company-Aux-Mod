@@ -106,7 +106,7 @@ if (!_release) then {
         };
     } else {
         // Defenders move between cached stations; never chase out of the AO.
-        if (_unit distance2D _centre > _radius || {_mode=="defend"}) then {_unit doMove _p};
+        if (_unit distance2D _centre > _radius || {_mode=="defend" && {_unit distance2D _p>8} && {isNull assignedTarget _unit}}) then {_unit doMove _p};
     };
 } forEach _slots;
 // Camp's last pair patrols the perimeter using ordinary move commands.

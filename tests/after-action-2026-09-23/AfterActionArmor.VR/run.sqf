@@ -1,0 +1,24 @@
+if(!isServer)exitWith{};sleep 15;
+Q_checks=[];Q_check={params["_name","_pass",["_detail",[]]];Q_checks pushBack[_name,_pass,_detail];diag_log format["[AF_CHECK] %1",[_name,_pass,_detail]]};
+setDate[2035,6,15,12,0];0 setFog 0;0 setOvercast 0;
+{
+ private _case=_x;private _p=[4000,4000,0];
+ private _v=createVehicle["FST_AAT",_p,[],0,"CAN_COLLIDE"];_v setDir(if(_case=="rear")then{180}else{0});createVehicleCrew _v;_v allowDamage false;
+ private _g=group driver _v;_g setVariable["FST_HC_blacklisted",true,true];_g setCombatMode "RED";{_x allowDamage false}forEach crew _v;
+ private _t=createVehicle["FST_Saber",_p vectorAdd[0,180,0],[],0,"NONE"];createVehicleCrew _t;_t allowDamage false;
+ {group _x setVariable["FST_HC_blacklisted",true,true];group _x setVariable["BURNS_exempt",true,true];_x allowDamage false;_x disableAI "ALL"}forEach crew _t;
+ private _blocks=[];
+ if(_case=="obstacle")then{for "_i" from -1 to 1 do{private _w=createVehicle["Land_HBarrierBig_F",_p vectorAdd[_i*6,14,0],[],0,"CAN_COLLIDE"];_w allowDamage false;_blocks pushBack _w}};
+ _v setVariable["Q_shots",0];_v addEventHandler["Fired",{params["_v"];_v setVariable["Q_shots",(_v getVariable["Q_shots",0])+1]}];
+ _g reveal[_t,4];[_g,"rush",getPosATL _t,500]call FST_HCSpawn_fnc_setCombatTask;
+ private _start=getPosATL _v;private _reverse=0;private _visible=0;private _aligned=0;
+ for "_i" from 1 to 45 do{sleep 1;private _angle=abs((((_v getDir _t)-(getDir _v)+540)mod 360)-180);private _los=[_v,"VIEW",_t]checkVisibility[eyePos gunner _v,aimPos _t];if(_los>0.5)then{_visible=_visible+1};if(_angle<55)then{_aligned=_aligned+1};if((velocityModelSpace _v select 1)<-0.5 && {_angle>90})then{_reverse=_reverse+1};if(_i mod 5==0)then{diag_log format["[AF_ARMOR_SAMPLE] %1",[_case,_i,getPosATL _v,_angle,_los,_v getVariable["Q_shots",0],_v getVariable["BURNS_driveDetour",[]]]]}};
+ ["AAT VR fires "+_case,(_v getVariable["Q_shots",0])>0,[_v getVariable["Q_shots",0],_visible,_aligned,_reverse]]call Q_check;
+ ["AAT VR progresses "+_case,_v distance2D _start>10,_v distance2D _start]call Q_check;
+ ["AAT VR faces enemy "+_case,_aligned>10,_aligned]call Q_check;
+ ["AAT VR reaches firing band "+_case,_v distance2D _t<155,_v distance2D _t]call Q_check;
+ [_g,"stop"]call FST_HCSpawn_fnc_setCombatTask;sleep 2;
+ ["AAT VR stop clears pulse "+_case,count(_v getVariable["BURNS_armorPulse",[]])==0]call Q_check;
+ private _tg=group driver _t;{deleteVehicle _x}forEach crew _v;deleteVehicle _v;deleteGroup _g;{deleteVehicle _x}forEach crew _t;deleteVehicle _t;deleteGroup _tg;{deleteVehicle _x}forEach _blocks;sleep 2;
+}forEach["front","rear","obstacle"];
+diag_log format["[AF_DONE] checks=%1 failed=%2",count Q_checks,{!(_x select 1)}count Q_checks];

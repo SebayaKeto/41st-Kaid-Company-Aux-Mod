@@ -4,6 +4,11 @@ if (!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) || {isNul
 if ((units _group findIf {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)}) >= 0 || {side _group == civilian}) exitWith {};
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {};
 private _eligible=[_group] call FST_HCSpawn_fnc_burnsB1Eligible;
+if (!_eligible && {!isNil {_group getVariable "BURNS_originalGroupRole"}} && {(units _group findIf {alive _x && {_x getVariable ["FST_HC_ownsPath",false] || {_x getVariable ["BURNS_ownsPath",false]}}})>=0}) then {
+    private _reaction=units _group apply {[_x,_x skill "spotTime",_x skill "aimingSpeed"]};
+    [_group,true,false] call FST_HCSpawn_fnc_burnsRestoreGroupRole;
+    { _x params ["_u","_spot","_aim"];_u setSkill ["spotTime",_spot];_u setSkill ["aimingSpeed",_aim] } forEach _reaction;
+};
 if (!_eligible && {(units _group findIf {alive _x && {vehicle _x==_x}})<0} && {
     !isNil {_group getVariable "BURNS_originalGroupRole"}
 }) then {[_group,true,false] call FST_HCSpawn_fnc_burnsRestoreGroupRole};

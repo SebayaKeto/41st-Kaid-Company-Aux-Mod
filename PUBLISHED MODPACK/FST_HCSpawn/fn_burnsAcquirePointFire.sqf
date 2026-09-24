@@ -1,6 +1,6 @@
 params ["_group","_contacts"];
 if !(missionNamespace getVariable ["BURNS_RifleAssistEnabled",true]) exitWith {};
-if (!([_group] call FST_HCSpawn_fnc_burnsB1Eligible) || {count (_group getVariable ["BURNS_pointFire",[]])>0}) exitWith {};
+if (!([_group,true] call FST_HCSpawn_fnc_burnsB1Eligible) || {count (_group getVariable ["BURNS_pointFire",[]])>0}) exitWith {};
 private _leader=leader _group;
 private _candidates=[];
 private _activeThreat=false;
@@ -59,10 +59,10 @@ _group setVariable ["BURNS_rifleCursor",_cursor+1];
 private _unit=_units select _cursor;
 private _range=if (_kind=="casualty") then {30} else {if (fog>=0.4 && {missionNamespace getVariable ["BURNS_LowVisibilityAssist",false]}) then {missionNamespace getVariable ["BURNS_VisibleContactRange",125]} else {250}};
 private _min=if (_kind=="casualty") then {4} else {15};
-if (!local _unit || {!alive _unit} || {isNil {_unit getVariable "BURNS_b1Applied"}} || {primaryWeapon _unit!="FST_E5"} || {currentWeapon _unit!="FST_E5"} || {secondaryWeapon _unit!=""} || {_unit distance _target<_min} || {_unit distance _target>_range} || {_unit ammo "FST_E5"<=0} || {abs getForcedSpeed _unit<0.01}) exitWith {};
+if (!local _unit || {!alive _unit} || {isNil {_unit getVariable "BURNS_b1Applied"} && {!(_unit getVariable ["FST_HC_ownsPath",false] || {_unit getVariable ["BURNS_ownsPath",false]})}} || {primaryWeapon _unit!="FST_E5"} || {currentWeapon _unit!="FST_E5"} || {secondaryWeapon _unit!=""} || {_unit distance _target<_min} || {_unit distance _target>_range} || {_unit ammo "FST_E5"<=0} || {abs getForcedSpeed _unit<0.01 && {isNil {_unit getVariable "BURNS_advanceSpeed"}}}) exitWith {};
 if (vehicle _unit!=_unit || {[_unit] call FST_HCSpawn_fnc_burnsIsDown} || {_unit getVariable ["BURNS_exempt",false]} || {
     [_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit
-} || {!(_unit checkAIFeature "PATH")} || {!(_unit checkAIFeature "FIREWEAPON")} || {!(_unit checkAIFeature "WEAPONAIM")}) exitWith {};
+} || {!(_unit checkAIFeature "PATH") && {!(_unit getVariable ["FST_HC_ownsPath",false] || {_unit getVariable ["BURNS_ownsPath",false]})}} || {!(_unit checkAIFeature "FIREWEAPON")} || {!(_unit checkAIFeature "WEAPONAIM")}) exitWith {};
 if (abs ((((_unit getDir _target)-getDir _unit+540) mod 360)-180)>70) exitWith {};
 if (([_unit,"VIEW",_target] checkVisibility [eyePos _unit,aimPos _target])<=0.5 || {([_unit,"FIRE",_target] checkVisibility [eyePos _unit,aimPos _target])<=0.5}) exitWith {};
 private _speed=getForcedSpeed _unit;

@@ -28,6 +28,7 @@ private _clearGroupMarkers = {
     };
 };
 
+if ((_originalObjects findIf {[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit})>=0) then {_accepted=false};
 if (!_accepted) exitWith {
     {
         if (!isNull _x) then {
@@ -71,6 +72,13 @@ if (!isNull _group) then {
 [{
     params ["_group", "_units", "_vehicle"];
 
+    private _check=+_units;
+    if (!isNull _vehicle) then {_check append crew _vehicle};
+    if ((_check findIf {[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit})>=0) exitWith {
+        {if (!isNull _x && {_x getVariable ["FST_HC_originalSuppressed",false]}) then {_x hideObjectGlobal false;_x enableSimulationGlobal true;_x setVariable ["FST_HC_originalSuppressed",nil,true]}} forEach (_check+[_vehicle]);
+        if (!isNull _group) then {_group setVariable ["FST_HC_originalSuppressed",nil]};
+        diag_log "[FST_HCSpawn] Cancelled clone deletion: original acquired a player";
+    };
     if (!isNull _vehicle) then {
         { _x setVariable ["FST_skipSpawnDamage", true]; } forEach crew _vehicle;
         { if (!isNull _x) then { _vehicle deleteVehicleCrew _x; }; } forEach crew _vehicle;

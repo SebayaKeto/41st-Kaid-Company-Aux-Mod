@@ -12,7 +12,7 @@ private _abort=_owner!=clientOwner || {count _lease!=4} || {(_lease select 0)!=_
 } || {vehicle _unit!=_unit} || {[_unit] call FST_HCSpawn_fnc_burnsIsDown} || {
     _unit getVariable ["BURNS_exempt",false]
 } || {currentWeapon _unit!="FST_E5"} || {currentMuzzle _unit!="FST_E5"} || {
-    !(_unit checkAIFeature "PATH") || {!(_unit checkAIFeature "FIREWEAPON")} || {!(_unit checkAIFeature "WEAPONAIM")}
+    !(_unit checkAIFeature "PATH") && {!(_unit getVariable ["FST_HC_ownsPath",false] || {_unit getVariable ["BURNS_ownsPath",false]})} || {!(_unit checkAIFeature "FIREWEAPON")} || {!(_unit checkAIFeature "WEAPONAIM")}
 } || {currentWaypoint _group!=_wp} || {waypointPosition [_group,_wp] distance2D _wpPos>1} || {
     ([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet)!=_revision
 } || {_targetSide in [civilian,sideUnknown,sideLogic]} || {(side _group) getFriend _targetSide>=0.6};
@@ -34,7 +34,7 @@ private _nearEnemy=_unit findNearestEnemy _unit;
 if (!isNull _nearEnemy && {_nearEnemy isKindOf "CAManBase"} && {vehicle _nearEnemy==_nearEnemy} && {
     !([_nearEnemy] call FST_HCSpawn_fnc_burnsIsDown)
 } && {_unit distance _nearEnemy<60}) exitWith {[_group] call FST_HCSpawn_fnc_burnsReleasePointFire};
-if (!isNull _assigned && {_assigned!=_target} && {_assigned isKindOf "CAManBase"} && {
+if (!isNull _assigned && {_assigned!=_target} && {_assigned isKindOf "CAManBase"} && {vehicle _assigned==_assigned} && {
     !([_assigned] call FST_HCSpawn_fnc_burnsIsDown)
 }) exitWith {[_group] call FST_HCSpawn_fnc_burnsReleasePointFire};
 private _point=aimPos _target;

@@ -50,7 +50,7 @@ class CfgWeapons {
     class IDA_RPS6HP;
     class FST_RPS6HP: IDA_RPS6HP {
         class Single: Mode_SemiAuto {
-            minRange=60; minRangeProbab=0.65;
+            minRange=15; minRangeProbab=0.85;
             midRange=200; midRangeProbab=0.95;
             maxRange=600; maxRangeProbab=0.2;
             aiRateOfFire=2; aiRateOfFireDistance=300;

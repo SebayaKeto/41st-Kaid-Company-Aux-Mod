@@ -1,0 +1,9 @@
+{
+  "pbo": "DaaraUmbara_030_AfterAction.m_36vwm796742s99.pbo",
+  "sha256": "a41ad17701a9199acdda3c4d1ab0e12a7dfbe3e2ba58df12ba7c9272dbdacf16",
+  "entries": 23,
+  "allEntriesReadBack": true,
+  "originalDaaraZipSha256": "cb8173cc50240516141e155aee3953c62f6c8eaf28e5250298aca4d92f9bca99",
+  "onlyMissionChange": "KAID_UmbaraV41.sqf: fog density 0.65 / 1.05; altitude decay/base and lighting unchanged",
+  "sourceFormatting": "Removed inherited trailing whitespace from init.sqf; no semantic change after fog test."
+}

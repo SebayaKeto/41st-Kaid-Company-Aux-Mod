@@ -2,7 +2,7 @@
 params ["_mode","_group","_pos",["_radius",150],["_options",[]],["_caller",-1]];
 if (isNull _group || {!local _group} || {(units _group findIf {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)})>=0}) exitWith {false};
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
-if (_mode in ["rush","hunt","creep","assault","retreat","cqb","garrison","camp","defend","patrol","target"] && {!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) || {_group getVariable ["BURNS_exempt",false]}}) exitWith {false};
+if (_mode in ["rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol","target"] && {!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) || {_group getVariable ["BURNS_exempt",false]}}) exitWith {false};
 private _held=_group getVariable ["FST_HC_heldBy",-1];
 if (_held!=-1 && {_caller!=_held || {_caller<3}}) exitWith {false};
 if (_held!=-1) then {_group setVariable ["BURNS_manualHeldOwner",_caller,true]};
@@ -25,6 +25,7 @@ if (_mode=="target") exitWith {
     _group setVariable ["BURNS_taskOptions",(_group getVariable ["BURNS_taskOptions",[false,true,false]]) select [0,3],true];
     [_group,_task select 0,_pos,_task select 2] call FST_HCSpawn_fnc_setCombatTask
 };
+if (_mode=="ambush" && {(units _group findIf {alive _x && {!(_x isKindOf "WBK_LS_BX")}})>=0}) exitWith {false};
 // Native Zeus waypoints cancel our intent without replacing the new order.
 if (_mode=="stop") exitWith {[_group,"stop"] call FST_HCSpawn_fnc_setCombatTask};
 // Cancel only BURNS-owned movement and position holds when replacing a task.
@@ -34,12 +35,13 @@ for "_i" from (count waypoints _group-1) to 0 step -1 do {
 };
 {
     if (([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight") then {continue};
-    if (_x getVariable ["BURNS_ownsPath",false] || {_mode in ["reset","rush","hunt","creep","assault","retreat","cqb","garrison","camp","defend","patrol"] && {_x getVariable ["FST_HC_ownsPath",false] || {!isNil {_x getVariable "FST_HC_assignedPos"}}}}) then {
+    if (_x getVariable ["BURNS_ownsPath",false] || {_mode in ["reset","rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol"] && {_x getVariable ["FST_HC_ownsPath",false] || {!isNil {_x getVariable "FST_HC_assignedPos"}}}}) then {
         _x enableAI "PATH";
         _x setVariable ["BURNS_ownsPath",nil,true];
         _x setVariable ["FST_HC_assignedPos",nil,true];
         _x setVariable ["FST_HC_ownsPath",nil,true];
     };
+    if (!isNil {_x getVariable "BURNS_scanWatch"}) then {_x doWatch objNull;_x setVariable ["BURNS_scanWatch",nil]};
     _x doFollow leader _group;
 } forEach units _group;
 {_group setVariable [_x,nil,true]} forEach ["BURNS_stationSlots","BURNS_cqbRoute","BURNS_cqbIndex","BURNS_cqbDeadline","BURNS_holdReleased"];
@@ -60,7 +62,7 @@ if (_mode=="reset") exitWith {
 if (_mode=="patrol") exitWith {[_group,_pos,_radius] call FST_HCSpawn_fnc_burnsPatrol};
 // WebKnight receives native mission movement only; no garrison, stance or CQB
 // scripts are attached to B2/BX, including when mixed into another squad.
-if (_wbk) exitWith {[_group,"assault",_pos,_radius] call FST_HCSpawn_fnc_setCombatTask};
+// Preserve the requested BX task instead of silently converting it to Assault.
 _group setVariable ["BURNS_taskCaller",_caller,true];
 _group setVariable ["BURNS_taskOptions",_options,true];
 [_group,_mode,_pos,_radius] call FST_HCSpawn_fnc_setCombatTask
