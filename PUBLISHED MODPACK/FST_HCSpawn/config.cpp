@@ -99,6 +99,11 @@ class CfgFunctions {
             class burnsBXTask {};
             class burnsReleaseBX {};
             class burnsVehicleProgress {};
+            class burnsArmorSectionCreate {};
+            class burnsArmorSectionGoal {};
+            class burnsArmorSectionsTick {};
+            class burnsArmorSectionDriver {};
+            class burnsN99Move {};
             class burnsGulantharSlope {};
             class burnsInitEngagement {};
 

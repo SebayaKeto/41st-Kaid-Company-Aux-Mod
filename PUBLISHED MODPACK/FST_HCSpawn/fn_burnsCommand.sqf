@@ -65,4 +65,6 @@ if (_mode=="patrol") exitWith {[_group,_pos,_radius] call FST_HCSpawn_fnc_burnsP
 // Preserve the requested BX task instead of silently converting it to Assault.
 _group setVariable ["BURNS_taskCaller",_caller,true];
 _group setVariable ["BURNS_taskOptions",_options,true];
-[_group,_mode,_pos,_radius] call FST_HCSpawn_fnc_setCombatTask
+private _ok=[_group,_mode,_pos,_radius] call FST_HCSpawn_fnc_setCombatTask;
+if (_ok && {_mode=="assault"} && {(_options param [5,""])!=""}) then {_group setVariable ["BURNS_sectionToken",_options select 5,true];_group setVariable ["FST_HC_taskNext",-1]};
+_ok

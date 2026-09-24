@@ -12,10 +12,12 @@ private _revision=[_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_bur
 private _driveKey=[clientOwner,_revision];
 if (_v isKindOf "FST_N99" && {!((_v getVariable ["BURNS_n99DriveKey",[]]) isEqualTo _driveKey)}) then {
     _v setVariable ["BURNS_n99DriveKey",_driveKey];
-    _driver doMove _destination;
+    [FST_HCSpawn_fnc_burnsN99Move,[_v,_driver,+_destination,_revision,clientOwner],0.5] call CBA_fnc_waitAndExecute;
     diag_log format ["[BURNS_N99_OWNER_MOVE] vehicle=%1 owner=%2 destination=%3",netId _v,clientOwner,_destination];
 };
 if (_v distance2D _destination<25) exitWith {_v setVariable ["BURNS_driveProgress",nil];_v setVariable ["BURNS_driveDetour",nil];_destination};
+private _sectionPlan=_group getVariable ["BURNS_sectionPlan",[]];
+if (count _sectionPlan==4 && {(_group getVariable ["BURNS_sectionToken",""])==(_sectionPlan select 0)} && {time<=(_sectionPlan select 3)}) exitWith {_destination};
 private _detour=_v getVariable ["BURNS_driveDetour",[]];
 if (count _detour==4 && {(_detour select 1) distance2D _destination<25} && {time<(_detour select 2)} && {_revision==(_detour select 3)} && {_v distance2D (_detour select 0)>6}) exitWith {_detour select 0};
 _v setVariable ["BURNS_driveDetour",nil];

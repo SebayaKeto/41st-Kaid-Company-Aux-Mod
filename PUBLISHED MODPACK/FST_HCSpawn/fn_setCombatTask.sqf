@@ -11,6 +11,9 @@ if (_mode=="stop" || {_mode in ["hunt","assault","rush","ambush","creep","retrea
     ([_group,["BURNS_movementRevision",(([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet))+1,true]] call FST_HCSpawn_fnc_burnsStateSet);
 };
 if (_mode == "stop") exitWith {
+{_group setVariable [_x,nil,true]} forEach ["BURNS_sectionToken","BURNS_sectionPlan","BURNS_sectionContact"];
+{[_x] call FST_HCSpawn_fnc_burnsArmorSectionDriver} forEach units _group;
+
     for "_i" from (count waypoints _group-1) to 0 step -1 do {
         if (waypointDescription [_group,_i]=="BURNS patrol") then {deleteWaypoint [_group,_i]};
     };

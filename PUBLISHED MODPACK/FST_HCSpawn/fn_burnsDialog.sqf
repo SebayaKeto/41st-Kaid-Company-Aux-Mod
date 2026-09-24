@@ -7,7 +7,7 @@ _objects=_objects select {!isNull _x};
 _groups=_groups select {!isNull _x && {count units _x>0}};
 if (count _position<2) then {_position=if (count _groups>0) then {getPosATL leader (_groups select 0)} else {[0,0,0]}};
 if (count _groups==0 && {!(_mode in ["artillery_fire","visibility_check","visibility_refresh"])}) exitWith {systemChat "[BURNS] Select an AI squad first."};
-if (_pickDestination && {_mode in ["assault","retreat","target","artillery_fire"]}) exitWith {
+if (_pickDestination && {_mode in ["armor_assault","assault","retreat","target","artillery_fire"]}) exitWith {
     [{
         params ["_mode","_groups","_objects"];
         [_groups apply {leader _x}, {
@@ -41,7 +41,7 @@ if (_mode in ["configure","set_radio"]) exitWith {
         {["BURNS_request",[_x,_groups,_objects,_position,150,[],clientOwner]] call CBA_fnc_serverEvent} forEach _commands;
     },{},[_mode,_groups,_objects,_position]] call zen_dialog_fnc_create;
 };
-private _tasks=["rush","hunt","ambush","creep","assault","retreat","patrol","cqb","garrison","camp","defend"];
+private _tasks=["armor_assault","rush","hunt","ambush","creep","assault","retreat","patrol","cqb","garrison","camp","defend"];
 if (_mode in _tasks) exitWith {
     if (count _groups==0) exitWith {systemChat "[BURNS] Select a squad or place the task module on an AI unit."};
     private _building=_mode in ["cqb","garrison","camp","defend"];

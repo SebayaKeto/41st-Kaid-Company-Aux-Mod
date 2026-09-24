@@ -30,6 +30,10 @@ private _icon="\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     params ["_pos",["_object",objNull]];
     ["creep",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,false] call FST_HCSpawn_fnc_burnsDialog;
 }, _icon] call FST_HCSpawn_fnc_registerNativeModule;
+["BURNS", "Task AAT Section Assault (Test)", {
+    params ["_pos",["_object",objNull]];
+    ["armor_assault",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,true] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call FST_HCSpawn_fnc_registerNativeModule;
 ["BURNS", "Task Assault", {
     params ["_pos",["_object",objNull]];
     ["assault",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,!isNull _object] call FST_HCSpawn_fnc_burnsDialog;

@@ -24,6 +24,8 @@ if (_gunner checkAIFeature "TARGET" && {_gunner checkAIFeature "AUTOTARGET"} && 
     if (assignedTarget _gunner!=_target) then {_gunner doTarget _target};
     _gunner doFire _target;
 };
+private _sectionPlan=_group getVariable ["BURNS_sectionPlan",[]];
+if (count _sectionPlan==4 && {(_group getVariable ["BURNS_sectionToken",""])==(_sectionPlan select 0)} && {time<=(_sectionPlan select 3)}) exitWith {};
 // Give a bounded obstacle detour to native driving without competing hull turns.
 if (count (_v getVariable ["BURNS_driveDetour",[]])>0) exitWith {};
 if (isNull _driver || {!alive _driver} || {!local _driver} || {!canMove _v} || {!(_driver checkAIFeature "PATH")} || {effectiveCommander _v==_driver}) exitWith {};

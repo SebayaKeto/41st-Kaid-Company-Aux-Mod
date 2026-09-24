@@ -1,6 +1,8 @@
 // Keep task intent for a possible later resume; cancel only BURNS movement.
 params ["_group"];
 if (isNull _group || {!local _group}) exitWith {};
+{_group setVariable [_x,nil,true]} forEach ["BURNS_sectionToken","BURNS_sectionPlan","BURNS_sectionContact"];
+{[_x] call FST_HCSpawn_fnc_burnsArmorSectionDriver} forEach units _group;
 [_group] call FST_HCSpawn_fnc_burnsReleaseAdvance;
 [_group] call FST_HCSpawn_fnc_burnsReleaseBX;
 // Station holds also belong to the suspended task. Release only owned,

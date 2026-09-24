@@ -10,7 +10,7 @@ if (_mode in ["visibility_check","visibility_refresh"]) exitWith {
     if (_caller>2) then {format ["[BURNS] Visibility %1 requested for %2 selected player(s). Client observations are recorded in RPT logs.",_mode,count _selected] remoteExec ["systemChat",_caller]};
     count _selected>0
 };
-private _allowed=["stop","rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol","reset","target","artillery_register","artillery_remove","artillery_fire","enable_group","disable_group","enable_unit","disable_unit","radio_on","radio_off","reinforce_on","reinforce_off"];
+private _allowed=["armor_assault","stop","rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol","reset","target","artillery_register","artillery_remove","artillery_fire","enable_group","disable_group","enable_unit","disable_unit","radio_on","radio_off","reinforce_on","reinforce_off"];
 if !(_mode in _allowed) exitWith {false};
 if (count _pos<2) exitWith {false};
 if (_mode in ["rush","hunt","ambush","creep","assault","retreat","cqb","garrison","camp","defend","patrol","target"] && {!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true])}) exitWith {
@@ -21,6 +21,7 @@ _groups=+_groups;
 _groups=_groups select {!isNull _x && {count units _x>0} && {(units _x findIf {([_x] call FST_HCSpawn_fnc_isPlayerControlledUnit)})<0}};
 _groups=_groups select {!([_x] call FST_HCSpawn_fnc_isProtectedVehicleGroup)};
 _groups=_groups select [0,32];
+if (_mode=="armor_assault") exitWith {[_groups,_pos,_caller] call FST_HCSpawn_fnc_burnsArmorSectionCreate};
 _radius=(_radius max 25) min 3000;
 if (_mode in ["reinforce_on","reinforce_off"]) then {
     if (isNil "BURNS_ReinforcementGroups") then {BURNS_ReinforcementGroups=[]};
