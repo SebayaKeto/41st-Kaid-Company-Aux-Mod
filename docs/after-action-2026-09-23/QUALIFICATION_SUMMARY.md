@@ -1,5 +1,7 @@
 # Candidate qualification — September 23
 
+> September 24 correction: run31 and run40 function replacements were rejected by Arma. Their baseline/trial labels are invalid. Read [the correction](../downtime-2026-09-24/COMPARISON_ERRATA.md) and [verified downtime results](../downtime-2026-09-24/REPORT.md). The exact sealed candidate subsequently passed all 48 regression checks.
+
 **Rehearsal candidate, not a fully cleared live release.** The infantry, BX task, configuration, fog and DAARA checks passed. AAT navigation is improved in some cases but remains inconsistent; Preacher's client-specific invisibility is not root-caused. No Workshop update or live-server replacement was performed.
 
 ## Evidence

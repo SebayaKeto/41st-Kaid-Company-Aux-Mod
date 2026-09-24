@@ -1,0 +1,7 @@
+{
+  "purpose": "Test-only fire-order cadence comparison; never deploy",
+  "baseCandidate": "2b151bb32f65c52c3d4b1f4bdbe3a2eb55f37df324ad7452b8f52ab043f70cd5",
+  "labHCSpawnSha256": "424b9cdda25257e6c12b95e40951ffa02b8979681d727830d019801930762a72",
+  "configCompiled": true,
+  "allEntriesReadBack": true
+}

@@ -1,0 +1,189 @@
+// FST_HCSpawn_fnc_transferGroup
+// Server-side. Transfers a single group to the least-loaded HC.
+// Handles garrison detection, loadout preservation, and tracking.
+//
+// Arguments:
+//   0: GROUP
+// Returns: BOOL - true if already on an HC, moved, or accepted for owner-state capture.
+
+if (!isServer) exitWith { false };
+// V28: _force (from the Zeus "Send To Vehicle HC" module) bypasses the vehicle
+// blacklist, never the vehicle safety check.
+params ["_group", ["_force", false], ["_snapshot",[]]];
+
+if (isNull _group) exitWith { false };
+if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
+if (count units _group == 0) exitWith { false };
+if (isPlayer leader _group) exitWith { false };
+if (count FST_HC_Array == 0) exitWith { false };
+if (!_force && {!(_group getVariable ["FST_HC_rehome", false])} && {[_group] call FST_HCSpawn_fnc_isBlacklisted}) exitWith { false };
+// V27: Zeus-held groups are never transferred by any path.
+if ((_group getVariable ["FST_HC_heldBy", -1]) != -1) exitWith { false };
+
+private _leader = leader _group;
+private _units = units _group;
+private _vehicle = vehicle _leader;
+
+// V28: mounted groups go to the vehicle HC, and only when it is safe (stopped,
+// landed, whole crew in this group). Anything else is left for a later sweep.
+private _isVehicleGroup = (_units findIf { vehicle _x != _x }) >= 0;
+private _kind = if (_isVehicleGroup) then { "vehicle" } else { "infantry" };
+
+// Already owned by one of our HCs -- just track it, unless this is a foot
+// group being moved off the vehicle HC (dismounted QRF passengers).
+private _currentOwner = groupOwner _group;
+private _vehicleTarget = ([] call FST_HCSpawn_fnc_getVehicleHC) select 0;
+private _forcedVehicleMove = _force && {_isVehicleGroup} && {_vehicleTarget > 2} && {_currentOwner != _vehicleTarget};
+private _rehome = _group getVariable ["FST_HC_rehome", false];
+_group setVariable ["FST_HC_rehome", nil];
+if (_currentOwner in FST_HC_Ids) then {
+    private _vehIdx = ([] call FST_HCSpawn_fnc_getVehicleHC) select 1;
+    private _onVehicleHC = (_vehIdx >= 0) && {(FST_HC_Ids find _currentOwner) == _vehIdx};
+    if (!(_rehome && {!_isVehicleGroup} && {_onVehicleHC} && {missionNamespace getVariable ["FST_HC_VehicleHCExclusive", true]})) then {
+        _rehome = false;
+    };
+};
+if ((_currentOwner in FST_HC_Ids) && {!_rehome} && {!_forcedVehicleMove}) exitWith {
+    private _idx = FST_HC_Ids find _currentOwner;
+    [_group, _idx, false] call FST_HCSpawn_fnc_trackGroup;
+    true
+};
+
+if (_isVehicleGroup) then {
+    private _check = [_group] call FST_HCSpawn_fnc_isVehicleTransferSafe;
+    if !(_check select 0) then {
+        if (FST_HC_DebugLogging) then {
+            diag_log format ["[FST_HCSpawn] Vehicle group %1 not transferred: %2", _group, _check select 1];
+        };
+        _kind = "";
+    };
+};
+if (_kind == "") exitWith { false };
+if (_rehome && {FST_HC_DebugLogging}) then { diag_log format ["[FST_HCSpawn] Re-homing foot group %1 off the vehicle HC", _group]; };
+
+// Pick target HC.
+private _targetId = [_kind, count _units] call FST_HCSpawn_fnc_getSpawnTarget;
+private _hcIndex = FST_HC_Ids find _targetId;
+if (_hcIndex < 0) exitWith { false };
+if (_targetId == _currentOwner) exitWith {
+    [_group, _hcIndex, false] call FST_HCSpawn_fnc_trackGroup;
+    true
+};
+
+// Workshop's B2/BX loaders start owner-local scripts once at creation. They
+// provide no locality-resume hook. Keep these groups on their original owner;
+// template spawns and Zeus group clones are already born on the target HC.
+// Re-running the loaders after transfer would duplicate their running scripts.
+if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0) exitWith {
+    if !(_group getVariable ["BURNS_wbkTransferWarned",false]) then {
+        _group setVariable ["BURNS_wbkTransferWarned",true];
+        diag_log format ["[BURNS] Retaining WebKnight group %1 on owner %2 to preserve Workshop scripts. Use HCSpawn templates for new B2/BX groups.",_group,_currentOwner];
+    };
+    false
+};
+
+// Capture every unit on the current owner, never infer a squad from its leader.
+if (count _snapshot==0 && {!local _group}) exitWith {
+    [_group,"transfer",[_force,_rehome]] call FST_HCSpawn_fnc_requestTransferState
+};
+if (count _snapshot==0) then {
+    private _serial=(_group getVariable ["FST_HC_stateSerial",0])+1;
+    _group setVariable ["FST_HC_stateSerial",_serial,true];
+    _snapshot=[groupOwner _group,_serial,units _group apply {[_x,_x checkAIFeature "PATH",_x checkAIFeature "MOVE",_x getVariable ["BURNS_ownsPath",false],([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet)]}];
+};
+if ((_snapshot select 0)!=groupOwner _group || {(_snapshot select 1)!=(_group getVariable ["FST_HC_stateSerial",-1])}) exitWith {false};
+private _isGarrisoned=((_snapshot select 2) findIf {!(_x select 1) || {!(_x select 2)}})>=0;
+
+// Save loadouts. Mandatory because locality changes can strip/alter custom gear on some modded units.
+{ _x setVariable ["FST_HC_savedLoadout", getUnitLoadout _x]; } forEach _units;
+
+// Lock crewed vehicle briefly during transfer, then restore whatever lock state
+// Zeus/mission had set (the old code always ended with lock false).
+private _vehicleLocks = [];
+{
+    private _v = vehicle _x;
+    if (_v != _x && {(_vehicleLocks findIf {(_x select 0) == _v}) < 0}) then {
+        _vehicleLocks pushBack [_v, locked _v];
+        _v lock true;
+    };
+} forEach _units;
+
+private _beforeOwner = groupOwner _group;
+private _moved = _group setGroupOwner _targetId;
+private _afterOwner = groupOwner _group;
+
+// setGroupOwner may return false if the engine refuses the locality change.
+// Treat either a true return OR confirmed owner match as success, because some
+// edge cases report false even though ownership has already settled by the check.
+if (!_moved && {_afterOwner != _targetId}) exitWith {
+    {_x params ["_v", "_lock"]; if (!isNull _v) then {_v lock _lock};} forEach _vehicleLocks;
+    FST_HC_TransferFailures = (missionNamespace getVariable ["FST_HC_TransferFailures", 0]) + 1;
+    if (FST_HC_DebugLogging) then {
+        diag_log format ["[FST_HCSpawn] setGroupOwner failed for %1 to owner %2. Before: %3 After: %4", _group, _targetId, _beforeOwner, _afterOwner];
+    };
+    false
+};
+
+FST_HC_TransferSuccesses = (missionNamespace getVariable ["FST_HC_TransferSuccesses", 0]) + 1;
+
+// Dynamic simulation only for mobile groups, and only when opted in.
+// This was the main freeze path: catchUntracked sweeps EVERY untracked AI group
+// (editor-placed, third-party scripts, everything) through here whenever HCs are
+// connected, and this call runs on the server, whose dyn-sim manager globally
+// disables any flagged group with no player inside its activation distance.
+if (!_isGarrisoned && {!(_group getVariable ["FST_HC_keepActive", false])} && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {
+    _group enableDynamicSimulation true;
+};
+
+// Track. This is not a pre-counted HC-created group, so allow trackGroup to add
+// the units into the balancing count immediately.
+[_group, _hcIndex, false] call FST_HCSpawn_fnc_trackGroup;
+
+// Reapply garrison on the machine that now owns the group.
+if (_isGarrisoned) then {
+    ["FST_HC_evt_reapplyGarrison", [_group,_snapshot,_targetId], _targetId] call CBA_fnc_ownerEvent;
+};
+
+// Restore loadouts on the machine that NOW owns the group. Running this on the
+// server (where the units are no longer local) silently fails -- setUnitLoadout
+// is an effects-local command. Send the payload to the target owner; the HC
+// handler waits a beat for locality to settle and only re-applies if gear was stripped.
+private _payload = [];
+{
+    private _lo = _x getVariable ["FST_HC_savedLoadout", []];
+    if (count _lo > 0) then { _payload pushBack [_x, _lo]; };
+} forEach _units;
+if (count _payload > 0) then {
+    ["FST_HC_evt_restoreLoadout", [_payload], _targetId] call CBA_fnc_ownerEvent;
+};
+// The stabilizer is a no-op when the bandaid is off; skip the network event entirely then.
+if (missionNamespace getVariable ["FST_HC_EmergencyDroidBandaidEnabled", false]) then {
+    ["FST_HC_evt_emergencyStabilizeGroupLocal", [_group], _targetId] call CBA_fnc_ownerEvent;
+};
+
+// Restore the vehicle lock after ownership actually settles, not after a fixed
+// half-second. Real HC-to-HC tests take several seconds; unlocking early can
+// expose the engine's dismount-on-transfer behavior.
+{
+    _x params ["_vehicle", "_prevLock"];
+    [
+        {
+            params ["_v", "_l", "_grp", "_owner"];
+            isNull _v || {isNull _grp} || {groupOwner _grp == _owner && {owner _v == _owner} && {({owner _x != _owner} count crew _v) == 0}}
+        },
+        {params ["_v", "_l"]; if (!isNull _v) then {_v lock _l};},
+        [_vehicle, _prevLock, _group, _targetId],
+        30,
+        {
+            params ["_v", "_l", "_grp", "_owner"];
+            if (!isNull _v) then {_v lock _l};
+            diag_log format ["[FST_HCSpawn][WARN] Vehicle transfer did not fully settle within 30s: %1 target %2 groupOwner %3 hullOwner %4",_grp,_owner,groupOwner _grp,owner _v];
+        }
+    ] call CBA_fnc_waitUntilAndExecute;
+} forEach _vehicleLocks;
+
+if (FST_HC_DebugLogging) then {
+    diag_log format ["[FST_HCSpawn] Transferred %1 (%2 units) to HC index %3 owner %4. Before owner: %5", _group, count units _group, _hcIndex, _targetId, _beforeOwner];
+};
+
+true

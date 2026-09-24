@@ -1,0 +1,101 @@
+// FST_HCSpawn_fnc_handleZeusOriginalDecision
+// Server-side. Final authority for hidden Zeus originals during instant clone/replace.
+// _accepted=false restores/clears original. _accepted=true deletes it after a short grace.
+// This must run on the server because hideObjectGlobal / enableSimulationGlobal are server-exec commands.
+
+if (!isServer) exitWith { false };
+
+params ["_originalPayload", ["_accepted", false]];
+if (count _originalPayload != 3) exitWith { false };
+
+_originalPayload params ["_group", "_units", "_vehicle"];
+
+private _originalObjects = [];
+if (!isNull _vehicle) then {
+    _originalObjects pushBackUnique _vehicle;
+    { _originalObjects pushBackUnique _x; } forEach crew _vehicle;
+} else {
+    { _originalObjects pushBackUnique _x; } forEach _units;
+};
+
+private _clearGroupMarkers = {
+    if (!isNull _group) then {
+        if (!isNil {_group getVariable "FST_HC_interceptQueued"}) then {
+            _group setVariable ["FST_HC_interceptQueued", nil, true];
+        };
+        _group setVariable ["FST_HC_pendingTransfer", nil];
+        _group setVariable ["FST_HC_originalSuppressed", nil];
+    };
+};
+
+if ((_originalObjects findIf {[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit})>=0) then {_accepted=false};
+if (!_accepted) exitWith {
+    {
+        if (!isNull _x) then {
+            _x hideObjectGlobal false;
+            _x enableSimulationGlobal true;
+            _x setVariable ["FST_HC_originalSuppressed", nil, true];
+            _x setVariable ["FST_skipSpawnDamage", nil];
+        };
+    } forEach _originalObjects;
+
+    call _clearGroupMarkers;
+    false
+};
+
+// Ignore late accepts after a prior restore/rejection. Without this, an overdue
+// HC/server confirmation could delete a Zeus original that the failsafe already
+// restored. Only accepted clones whose originals are still suppressed may delete.
+private _stillSuppressed = (_originalObjects findIf {
+    !isNull _x && {_x getVariable ["FST_HC_originalSuppressed", false]}
+}) >= 0;
+if (!_stillSuppressed) exitWith {
+    call _clearGroupMarkers;
+    if (missionNamespace getVariable ["FST_HC_DebugLogging", false]) then {
+        diag_log format ["[FST_HCSpawn] Ignored late Zeus clone accept for already-restored original group %1", _group];
+    };
+    false
+};
+
+// Accepted: clear queue state immediately so the server failsafe/catch-all cannot
+// race the 2s delete grace. The group-level suppressed marker stays until the
+// delayed delete so catch-all keeps ignoring the original.
+if (!isNull _group) then {
+    if (!isNil {_group getVariable "FST_HC_interceptQueued"}) then {
+        _group setVariable ["FST_HC_interceptQueued", nil, true];
+    };
+    _group setVariable ["FST_HC_pendingTransfer", nil];
+};
+
+// Keep the old objects hidden/frozen for a brief grace before deleting. This
+// reduces immediate object delete churn while still removing stale Zeus originals.
+[{
+    params ["_group", "_units", "_vehicle"];
+
+    private _check=+_units;
+    if (!isNull _vehicle) then {_check append crew _vehicle};
+    if ((_check findIf {[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit})>=0) exitWith {
+        {if (!isNull _x && {_x getVariable ["FST_HC_originalSuppressed",false]}) then {_x hideObjectGlobal false;_x enableSimulationGlobal true;_x setVariable ["FST_HC_originalSuppressed",nil,true]}} forEach (_check+[_vehicle]);
+        if (!isNull _group) then {_group setVariable ["FST_HC_originalSuppressed",nil]};
+        diag_log "[FST_HCSpawn] Cancelled clone deletion: original acquired a player";
+    };
+    if (!isNull _vehicle) then {
+        { _x setVariable ["FST_skipSpawnDamage", true]; } forEach crew _vehicle;
+        { if (!isNull _x) then { _vehicle deleteVehicleCrew _x; }; } forEach crew _vehicle;
+        if (!isNull _vehicle) then { deleteVehicle _vehicle; };
+    } else {
+        {
+            if (!isNull _x) then {
+                _x setVariable ["FST_skipSpawnDamage", true];
+                deleteVehicle _x;
+            };
+        } forEach _units;
+    };
+
+    if (!isNull _group) then {
+        _group setVariable ["FST_HC_originalSuppressed", nil];
+        _group deleteGroupWhenEmpty true;
+    };
+}, [_group, _units, _vehicle], 2] call CBA_fnc_waitAndExecute;
+
+true
