@@ -1,0 +1,38 @@
+[
+  {
+    "file": "Addons/MEAP_Core.pbo",
+    "bytes": 11842,
+    "sha256": "807ffc54e8d8176beb19d9edca000c70b5f74f8d4e562caea66e7897c5f26047",
+    "upstreamUnchanged": false
+  },
+  {
+    "file": "Addons/MEAP_Economy_Core.pbo",
+    "bytes": 33843,
+    "sha256": "0946c642ad506413a6d23ac4ff83763317086f49dbc6f5ffa70a82cbd02b5a00",
+    "upstreamUnchanged": true
+  },
+  {
+    "file": "Addons/MEAP_SW_Core.pbo",
+    "bytes": 183584356,
+    "sha256": "b7a327985ac61c2de1e819097f91158e19780d55e1b53936e24ba1af1a45b071",
+    "upstreamUnchanged": true
+  },
+  {
+    "file": "Addons/MEAP_SW_Props.pbo",
+    "bytes": 44480965,
+    "sha256": "231c97b170987fc4b5576f5db5e0a68dc87629b07ab638f510dc124cce66d446",
+    "upstreamUnchanged": true
+  },
+  {
+    "file": "Addons/MEAP_SW_Structures.pbo",
+    "bytes": 19018536,
+    "sha256": "8b14eab1258e5d0bfdacc3f32e28bae69cbd928354863549e0423712252d0fcc",
+    "upstreamUnchanged": true
+  },
+  {
+    "file": "Addons/MEAP_Architect_Core.pbo",
+    "bytes": 178911,
+    "sha256": "ef6709dfc3b82c021b84d3641949c8079d6aa3c6dcca06afd28345d109ee25c6",
+    "upstreamUnchanged": false
+  }
+]

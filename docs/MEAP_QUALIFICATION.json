@@ -1,0 +1,245 @@
+{
+  "date": "2026-09-24",
+  "run": "run115-meap",
+  "dedicatedServer": true,
+  "headlessClients": 4,
+  "passed": 44,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "addon MEAP_Core",
+      "passed": true
+    },
+    {
+      "name": "addon MEAP_Economy_Core",
+      "passed": true
+    },
+    {
+      "name": "addon MEAP_SW_Core",
+      "passed": true
+    },
+    {
+      "name": "addon MEAP_SW_Props",
+      "passed": true
+    },
+    {
+      "name": "addon MEAP_SW_Structures",
+      "passed": true
+    },
+    {
+      "name": "addon MEAP_Architect_Core",
+      "passed": true
+    },
+    {
+      "name": "function MEAP_fnc_requestArchitectMode",
+      "passed": true
+    },
+    {
+      "name": "function MEAP_fnc_architectServerAction",
+      "passed": true
+    },
+    {
+      "name": "function MEAP_fnc_openArchitectMode",
+      "passed": true
+    },
+    {
+      "name": "function MEAP_fnc_applySnapTransform",
+      "passed": true
+    },
+    {
+      "name": "construction palette initialized",
+      "passed": true
+    },
+    {
+      "name": "custom construction models resolve",
+      "passed": true
+    },
+    {
+      "name": "remote player proxies available",
+      "passed": true
+    },
+    {
+      "name": "unassigned client denied",
+      "passed": true
+    },
+    {
+      "name": "server recognizes explicit grant",
+      "passed": true
+    },
+    {
+      "name": "production rejects headless sender zero",
+      "passed": true
+    },
+    {
+      "name": "assigned client session accepted",
+      "passed": true
+    },
+    {
+      "name": "production rejects foreign headless close",
+      "passed": true
+    },
+    {
+      "name": "foreign client cannot force close",
+      "passed": true
+    },
+    {
+      "name": "invalid token rejected",
+      "passed": true
+    },
+    {
+      "name": "spoofed owner rejected",
+      "passed": true
+    },
+    {
+      "name": "non-whitelisted class rejected",
+      "passed": true
+    },
+    {
+      "name": "outside radius rejected",
+      "passed": true
+    },
+    {
+      "name": "remote placement accepted",
+      "passed": true
+    },
+    {
+      "name": "placement charged once",
+      "passed": true
+    },
+    {
+      "name": "server owns construction",
+      "passed": true
+    },
+    {
+      "name": "owner edit lock acquired",
+      "passed": true
+    },
+    {
+      "name": "edit moves object",
+      "passed": true
+    },
+    {
+      "name": "undo edit restores position",
+      "passed": true
+    },
+    {
+      "name": "saved blueprint captured",
+      "passed": true
+    },
+    {
+      "name": "delete refunds and removes",
+      "passed": true
+    },
+    {
+      "name": "undo delete restores and recharges",
+      "passed": true
+    },
+    {
+      "name": "draft is globally hidden",
+      "passed": true
+    },
+    {
+      "name": "publish reveals draft without new charge",
+      "passed": true
+    },
+    {
+      "name": "insufficient budget rejected",
+      "passed": true
+    },
+    {
+      "name": "object limit enforced",
+      "passed": true
+    },
+    {
+      "name": "two-piece blueprint placed",
+      "passed": true
+    },
+    {
+      "name": "blueprint charged total cost",
+      "passed": true
+    },
+    {
+      "name": "blueprint preserves spacing",
+      "passed": true
+    },
+    {
+      "name": "unanchored barrier is not advertised as snappable",
+      "passed": true
+    },
+    {
+      "name": "missing anchors rejected without moving object",
+      "passed": true
+    },
+    {
+      "name": "out-of-bounds blueprint rejected atomically",
+      "passed": true
+    },
+    {
+      "name": "revocation closes session",
+      "passed": true
+    },
+    {
+      "name": "revoked session cannot build",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Positive player construction calls use test-only sender-context substitution because Arma reports HC remoteExecutedOwner=0.",
+    "Real HC open and forged-close rejection use the shipped production entry points.",
+    "No graphical camera, ACE menu, player input, JIP visual or client texture acceptance test is possible on this GPU-less host.",
+    "Optional inventory currency and shared FOB funding are not qualified.",
+    "All 11 supplied custom palette entries lack Memory LOD/snap anchors. Positive snapping failed in runs112-114 and is unavailable; final checks verify safe rejection only. Grid placement is the supported build workflow until updated models arrive."
+  ],
+  "addonManifest": [
+    {
+      "file": "Addons/MEAP_Core.pbo",
+      "bytes": 11842,
+      "sha256": "807ffc54e8d8176beb19d9edca000c70b5f74f8d4e562caea66e7897c5f26047",
+      "upstreamUnchanged": false
+    },
+    {
+      "file": "Addons/MEAP_Economy_Core.pbo",
+      "bytes": 33843,
+      "sha256": "0946c642ad506413a6d23ac4ff83763317086f49dbc6f5ffa70a82cbd02b5a00",
+      "upstreamUnchanged": true
+    },
+    {
+      "file": "Addons/MEAP_SW_Core.pbo",
+      "bytes": 183584356,
+      "sha256": "b7a327985ac61c2de1e819097f91158e19780d55e1b53936e24ba1af1a45b071",
+      "upstreamUnchanged": true
+    },
+    {
+      "file": "Addons/MEAP_SW_Props.pbo",
+      "bytes": 44480965,
+      "sha256": "231c97b170987fc4b5576f5db5e0a68dc87629b07ab638f510dc124cce66d446",
+      "upstreamUnchanged": true
+    },
+    {
+      "file": "Addons/MEAP_SW_Structures.pbo",
+      "bytes": 19018536,
+      "sha256": "8b14eab1258e5d0bfdacc3f32e28bae69cbd928354863549e0423712252d0fcc",
+      "upstreamUnchanged": true
+    },
+    {
+      "file": "Addons/MEAP_Architect_Core.pbo",
+      "bytes": 178911,
+      "sha256": "ef6709dfc3b82c021b84d3641949c8079d6aa3c6dcca06afd28345d109ee25c6",
+      "upstreamUnchanged": false
+    }
+  ],
+  "serverRptSHA256": "01de6e351348428072230006781024fcfc629b5b46aac2e84d0499759c4dd191",
+  "modelAnchorEvidence": [
+    " [\"\"MEAP_SW_Props_Common_StoneBarrierOne_Sandstone\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"100\"\",100,1,true],[2,\"\"geometry\"\",1e+13,0,true],[3,\"\"roadway\"\",3e+15,0,true],[4,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Props_Common_StoneBarrierOneTall_Sandstone\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"100\"\",100,1,true],[2,\"\"geometry\"\",1e+13,0,true],[3,\"\"roadway\"\",3e+15,0,true],[4,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Props_Common_StoneBarrierOne_LimeStone\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"100\"\",100,1,true],[2,\"\"geometry\"\",1e+13,0,true],[3,\"\"roadway\"\",3e+15,0,true],[4,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Props_Common_StoneBarrierOneTall_LimeStone\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"100\"\",100,1,true],[2,\"\"geometry\"\",1e+13,0,true],[3,\"\"roadway\"\",3e+15,0,true],[4,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Props_Common_DuracreteBarrierOne_FiringPort\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"geometry\"\",1e+13,0,true],[2,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Props_Common_DuracreteBarrierOne_NoFiringPort\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"geometry\"\",1e+13,0,true],[2,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Props_Common_DuracreteBarrierTwo_NoFiringPort\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"geometry\"\",1e+13,0,true],[2,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Structures_Desert_BP_Floor_ONE\"\",[\"\"camo\"\",\"\"camo1\"\"],[],[[0,\"\"1\"\",1,2,true],[1,\"\"geometry\"\",1e+13,0,true],[2,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Structures_Desert_BP_PillarPristine_ONE\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"geometry\"\",1e+13,0,true],[2,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Structures_RepublicFOBBB_WallJoint\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"50\"\",50,1,true],[2,\"\"geometry\"\",1e+13,0,true],[3,\"\"geometryFire\"\",7e+15,0,true]]]\"",
+    " [\"\"MEAP_SW_Structures_RepublicFOBBB_WallJoint_ConcreteBase\"\",[\"\"camo\"\"],[],[[0,\"\"1\"\",1,1,true],[1,\"\"50\"\",50,0,true],[2,\"\"100\"\",100,0,true],[3,\"\"geometry\"\",1e+13,0,true],[4,\"\"geometryFire\"\",7e+15,0,true]]]\""
+  ]
+}
