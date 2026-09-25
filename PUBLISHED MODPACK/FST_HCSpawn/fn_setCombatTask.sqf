@@ -3,6 +3,7 @@
 params ["_group", ["_mode", "stop"], ["_pos", []], ["_radius", 500]];
 if (isNull _group || {!local _group}) exitWith {false};
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
+{[_x,_mode=="stop"] call FST_HCSpawn_fnc_burnsReleaseBXCharge} forEach units _group;
 [_group] call FST_HCSpawn_fnc_burnsReleaseBX;
 // Clear our temporary aiming before accepting a newer task.
 [_group] call FST_HCSpawn_fnc_burnsReleasePointFire;

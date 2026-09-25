@@ -554,3 +554,6 @@ diag_log "[FST_HCSpawn] preInit complete - V30_5_B1_DEPLOYMENT_PREVIEW_2026-09-2
 
 BURNS_sourceFingerprint="20e5363898734d4e09164508309fd7ef45ebd1e6d84a9747c4b9244dbf326e98";
 diag_log format ["[BURNS_SOURCE] %1",BURNS_sourceFingerprint];
+
+["BURNS_BXRunSpeed","SLIDER",["BX running speed","Ordinary running only. Dodge, attack, injury and external speed effects retain their own timing."],"BURNS",[1,1.3,1.15,2],1] call CBA_fnc_addSetting;
+["BURNS_BXMeleeEnabled","CHECKBOX",["BX aggressive melee","AI BXs close on visible enemies within 12 metres and repeat melee when in reach. Respects hold, stealth and defensive orders."],"BURNS",true,1] call CBA_fnc_addSetting;

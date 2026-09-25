@@ -34,13 +34,22 @@ if !((_group getVariable ["BURNS_bxMode",[]]) isEqualTo [_savedMode select 0,_wa
         // A returning owner can retain its last local DOWN preference even
         // though the intervening owner restored AUTO. Keep the recorded baseline.
         if (count _released==2 && {_original==(_released select 1)}) then {_original=_released select 0};
-        _saved=[_original,_u checkAIFeature "FIREWEAPON",_u checkAIFeature "PATH",_stance];
+        _saved=[_original,_u checkAIFeature "FIREWEAPON",_u checkAIFeature "PATH",""];
     };
-    _saved set [3,_stance];if !((_u getVariable ["BURNS_bxOwned",[]]) isEqualTo _saved) then {_u setVariable ["BURNS_bxOwned",_saved,true]};
+    // Track only stances BURNS actually writes; a dodge pose is external.
+    if !((_u getVariable ["BURNS_bxOwned",[]]) isEqualTo _saved) then {_u setVariable ["BURNS_bxOwned",_saved,true]};
     // Never interrupt WebKnight's committed melee, roll or death animations.
     private _anim=toLower animationState _u;
-    if (_anim in ["bx_droid_kick","bx_droid_sword","bx_droid_roll_1","bx_droid_roll_2"] || {!(_u checkAIFeature "ANIM")}) then {continue};
-    if (unitPos _u!=_stance) then {_u setUnitPos _stance};
+    if (_anim find "bx_droid_"==0 || {!(_u checkAIFeature "ANIM")}) then {continue};
+    // WebKnight holds MIDDLE after its dodge, then restores UP itself.
+    // Standing orders must not cut that recovery short: standing BX hit
+    // reactions are full-body staggers, whereas crouched hits use gestures.
+    private _externalCrouch=(_stance=="UP" && {unitPos _u=="MIDDLE"});
+    if (unitPos _u!=_stance && {!_externalCrouch}) then {
+        _u setUnitPos _stance;
+        _saved set [3,_stance];
+        _u setVariable ["BURNS_bxOwned",_saved,true];
+    };
     if (_saved select 1) then {if (_holdFire) then {_u disableAI "FIREWEAPON"} else {_u enableAI "FIREWEAPON"}};
     private _hold=_mode=="ambush";
     if (_hold) then {
@@ -56,10 +65,14 @@ if !((_group getVariable ["BURNS_bxMode",[]]) isEqualTo [_savedMode select 0,_wa
     if (!isNull _target) then {
         if (assignedTarget _u!=_target) then {_u doTarget _target};
         if (!_holdFire) then {_u doFire _target};
-        if (_mode=="cqb" && {_u distance _target<3} && {time>=(_u getVariable ["BURNS_bxMeleeNext",-1])} && {((_u worldToModel getPosATL _target) select 1)>0} && {([_u,"FIRE",_target] checkVisibility [eyePos _u,aimPos _target])>0.7}) then {
-            _u setVariable ["BURNS_bxMeleeNext",time+3];
-            // Trigger the installed animation's existing hit handler exactly once.
-            [_u,if (handgunWeapon _u!="") then {"bx_droid_sword"} else {"bx_droid_kick"}] remoteExec ["switchMove",0];
+        if (_mode=="cqb") then {
+            if (_u isKindOf "FST_BX" && {missionNamespace getVariable ["BURNS_BXMeleeEnabled",true]}) then {[_u] call FST_HCSpawn_fnc_burnsBXMelee} else {
+                // Preserve the existing task behavior for external BX classes.
+                if (_u distance _target<3 && {time>=(_u getVariable ["BURNS_bxMeleeNext",-1])} && {((_u worldToModel getPosATL _target) select 1)>0} && {([_u,"FIRE",_target] checkVisibility [eyePos _u,aimPos _target])>0.7}) then {
+                    _u setVariable ["BURNS_bxMeleeNext",time+3];
+                    [_u,if (handgunWeapon _u!="") then {"bx_droid_sword"} else {"bx_droid_kick"}] remoteExec ["switchMove",0];
+                };
+            };
         };
     };
 } forEach _units;

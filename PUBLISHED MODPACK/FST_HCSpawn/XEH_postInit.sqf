@@ -5,6 +5,7 @@
 
 [] call FST_HCSpawn_fnc_registerBurnsEvents;
 [] call FST_HCSpawn_fnc_initCombatTasks;
+[] call FST_HCSpawn_fnc_burnsInitBXEnhancements;
 if (hasInterface) then {
     [] call FST_HCSpawn_fnc_registerBurnsModules;
     // Keep native right-click waypoint placement when AI is selected.

@@ -97,6 +97,11 @@ class CfgFunctions {
             class burnsReaction {};
             class burnsVisibility {};
             class burnsBXTask {};
+            class burnsBXMobility {};
+            class burnsBXMelee {};
+            class burnsReleaseBXCharge {};
+            class burnsInitBXEnhancements {};
+
             class burnsReleaseBX {};
             class burnsVehicleProgress {};
             class burnsArmorSectionCreate {};

@@ -1,0 +1,884 @@
+{
+  "done": [
+    [
+      0,
+      2,
+      "guards"
+    ],
+    [
+      0,
+      2,
+      "FST_BX"
+    ],
+    [
+      1,
+      4,
+      "guards"
+    ],
+    [
+      1,
+      4,
+      "FST_BX_Sniper"
+    ],
+    [
+      3,
+      6,
+      "guards"
+    ],
+    [
+      3,
+      6,
+      "FST_BX_AA"
+    ],
+    [
+      2,
+      5,
+      "guards"
+    ],
+    [
+      2,
+      5,
+      "FST_BX_AT"
+    ],
+    [
+      4,
+      7,
+      "guards"
+    ],
+    [
+      4,
+      7,
+      "FST_BX_Rusty"
+    ]
+  ],
+  "passed": 120,
+  "failed": [],
+  "checks": [
+    [
+      0,
+      "solid obstruction prevents melee charge",
+      true,
+      0
+    ],
+    [
+      0,
+      "melee setting disables opportunistic charge",
+      true,
+      []
+    ],
+    [
+      0,
+      "external movement hold is respected",
+      true,
+      []
+    ],
+    [
+      0,
+      "Zeus group hold is respected",
+      true,
+      []
+    ],
+    [
+      0,
+      "manual movement order prevents opportunistic charge",
+      true,
+      []
+    ],
+    [
+      0,
+      "friendly unit cannot become a charge target",
+      true,
+      []
+    ],
+    [
+      0,
+      "native run acquires boost",
+      true,
+      1.15
+    ],
+    [
+      0,
+      "global BURNS disable releases speed",
+      true,
+      1
+    ],
+    [
+      0,
+      "global BURNS reenable resumes boost",
+      true,
+      1.15
+    ],
+    [
+      0,
+      "prone excludes run boost",
+      true,
+      1
+    ],
+    [
+      0,
+      "death releases speed even after WebKnight clears unit handlers",
+      true,
+      [
+        false,
+        1
+      ]
+    ],
+    [
+      0,
+      "deleted BX leaves the bounded owner roster",
+      true,
+      0
+    ],
+    [
+      0,
+      "installed WebKnight dodge triggered",
+      true,
+      [
+        "FST_BX",
+        2,
+        "bx_droid_roll_2"
+      ]
+    ],
+    [
+      0,
+      "normal BURNS scheduler runs CQB",
+      true,
+      [
+        "cqb",
+        [
+          3000,
+          6080,
+          0
+        ],
+        100
+      ]
+    ],
+    [
+      0,
+      "post-dodge crouch remains under WebKnight control",
+      true,
+      [
+        "Middle",
+        "amovpknlmrunsraswrfldf"
+      ]
+    ],
+    [
+      0,
+      "BX moves during native recovery",
+      true,
+      5.01372
+    ],
+    [
+      0,
+      "WebKnight restores UP",
+      true,
+      "Up"
+    ],
+    [
+      0,
+      "stop does not restore a stale dodge crouch",
+      true,
+      "Up"
+    ],
+    [
+      0,
+      "CQB task releases owned state",
+      true,
+      []
+    ],
+    [
+      0,
+      "creep still requests prone",
+      true,
+      "Down"
+    ],
+    [
+      0,
+      "creep releases its actual stance write",
+      true,
+      "Up"
+    ],
+    [
+      0,
+      "ambush still holds position and fire",
+      true,
+      []
+    ],
+    [
+      0,
+      "ambush releases movement fire and stance",
+      true,
+      []
+    ],
+    [
+      0,
+      "near-miss test preserves stock custom health",
+      true,
+      [
+        200,
+        200
+      ]
+    ],
+    [
+      1,
+      "solid obstruction prevents melee charge",
+      true,
+      0
+    ],
+    [
+      1,
+      "melee setting disables opportunistic charge",
+      true,
+      []
+    ],
+    [
+      1,
+      "external movement hold is respected",
+      true,
+      []
+    ],
+    [
+      1,
+      "Zeus group hold is respected",
+      true,
+      []
+    ],
+    [
+      1,
+      "manual movement order prevents opportunistic charge",
+      true,
+      []
+    ],
+    [
+      1,
+      "friendly unit cannot become a charge target",
+      true,
+      []
+    ],
+    [
+      1,
+      "native run acquires boost",
+      true,
+      1.15
+    ],
+    [
+      1,
+      "global BURNS disable releases speed",
+      true,
+      1
+    ],
+    [
+      1,
+      "global BURNS reenable resumes boost",
+      true,
+      1.15
+    ],
+    [
+      1,
+      "prone excludes run boost",
+      true,
+      1
+    ],
+    [
+      1,
+      "death releases speed even after WebKnight clears unit handlers",
+      true,
+      [
+        false,
+        1
+      ]
+    ],
+    [
+      1,
+      "deleted BX leaves the bounded owner roster",
+      true,
+      0
+    ],
+    [
+      1,
+      "installed WebKnight dodge triggered",
+      true,
+      [
+        "FST_BX_Sniper",
+        4,
+        "bx_droid_roll_1"
+      ]
+    ],
+    [
+      1,
+      "normal BURNS scheduler runs CQB",
+      true,
+      [
+        "cqb",
+        [
+          3500,
+          6080,
+          0
+        ],
+        100
+      ]
+    ],
+    [
+      1,
+      "post-dodge crouch remains under WebKnight control",
+      true,
+      [
+        "Middle",
+        "amovpknlmrunsraswrfldf"
+      ]
+    ],
+    [
+      1,
+      "BX moves during native recovery",
+      true,
+      6.01517
+    ],
+    [
+      1,
+      "WebKnight restores UP",
+      true,
+      "Up"
+    ],
+    [
+      1,
+      "stop does not restore a stale dodge crouch",
+      true,
+      "Up"
+    ],
+    [
+      1,
+      "CQB task releases owned state",
+      true,
+      []
+    ],
+    [
+      1,
+      "creep still requests prone",
+      true,
+      "Down"
+    ],
+    [
+      1,
+      "creep releases its actual stance write",
+      true,
+      "Up"
+    ],
+    [
+      1,
+      "ambush still holds position and fire",
+      true,
+      []
+    ],
+    [
+      1,
+      "ambush releases movement fire and stance",
+      true,
+      []
+    ],
+    [
+      1,
+      "near-miss test preserves stock custom health",
+      true,
+      [
+        200,
+        200
+      ]
+    ],
+    [
+      3,
+      "solid obstruction prevents melee charge",
+      true,
+      0
+    ],
+    [
+      3,
+      "melee setting disables opportunistic charge",
+      true,
+      []
+    ],
+    [
+      3,
+      "external movement hold is respected",
+      true,
+      []
+    ],
+    [
+      3,
+      "Zeus group hold is respected",
+      true,
+      []
+    ],
+    [
+      3,
+      "manual movement order prevents opportunistic charge",
+      true,
+      []
+    ],
+    [
+      3,
+      "friendly unit cannot become a charge target",
+      true,
+      []
+    ],
+    [
+      3,
+      "native run acquires boost",
+      true,
+      1.15
+    ],
+    [
+      3,
+      "global BURNS disable releases speed",
+      true,
+      1
+    ],
+    [
+      3,
+      "global BURNS reenable resumes boost",
+      true,
+      1.15
+    ],
+    [
+      3,
+      "prone excludes run boost",
+      true,
+      1
+    ],
+    [
+      3,
+      "death releases speed even after WebKnight clears unit handlers",
+      true,
+      [
+        false,
+        1
+      ]
+    ],
+    [
+      3,
+      "deleted BX leaves the bounded owner roster",
+      true,
+      0
+    ],
+    [
+      3,
+      "installed WebKnight dodge triggered",
+      true,
+      [
+        "FST_BX_AA",
+        6,
+        "bx_droid_roll_2"
+      ]
+    ],
+    [
+      3,
+      "normal BURNS scheduler runs CQB",
+      true,
+      [
+        "cqb",
+        [
+          4500,
+          6080,
+          0
+        ],
+        100
+      ]
+    ],
+    [
+      3,
+      "post-dodge crouch remains under WebKnight control",
+      true,
+      [
+        "Middle",
+        "amovpknlmstpsraswrfldnon"
+      ]
+    ],
+    [
+      3,
+      "BX moves during native recovery",
+      true,
+      1.15238
+    ],
+    [
+      3,
+      "WebKnight restores UP",
+      true,
+      "Up"
+    ],
+    [
+      3,
+      "stop does not restore a stale dodge crouch",
+      true,
+      "Up"
+    ],
+    [
+      3,
+      "CQB task releases owned state",
+      true,
+      []
+    ],
+    [
+      3,
+      "creep still requests prone",
+      true,
+      "Down"
+    ],
+    [
+      3,
+      "creep releases its actual stance write",
+      true,
+      "Up"
+    ],
+    [
+      3,
+      "ambush still holds position and fire",
+      true,
+      []
+    ],
+    [
+      3,
+      "ambush releases movement fire and stance",
+      true,
+      []
+    ],
+    [
+      3,
+      "near-miss test preserves stock custom health",
+      true,
+      [
+        200,
+        200
+      ]
+    ],
+    [
+      2,
+      "solid obstruction prevents melee charge",
+      true,
+      0
+    ],
+    [
+      2,
+      "melee setting disables opportunistic charge",
+      true,
+      []
+    ],
+    [
+      2,
+      "external movement hold is respected",
+      true,
+      []
+    ],
+    [
+      2,
+      "Zeus group hold is respected",
+      true,
+      []
+    ],
+    [
+      2,
+      "manual movement order prevents opportunistic charge",
+      true,
+      []
+    ],
+    [
+      2,
+      "friendly unit cannot become a charge target",
+      true,
+      []
+    ],
+    [
+      2,
+      "native run acquires boost",
+      true,
+      1.15
+    ],
+    [
+      2,
+      "global BURNS disable releases speed",
+      true,
+      1
+    ],
+    [
+      2,
+      "global BURNS reenable resumes boost",
+      true,
+      1.15
+    ],
+    [
+      2,
+      "prone excludes run boost",
+      true,
+      1
+    ],
+    [
+      2,
+      "death releases speed even after WebKnight clears unit handlers",
+      true,
+      [
+        false,
+        1
+      ]
+    ],
+    [
+      2,
+      "deleted BX leaves the bounded owner roster",
+      true,
+      0
+    ],
+    [
+      2,
+      "installed WebKnight dodge triggered",
+      true,
+      [
+        "FST_BX_AT",
+        5,
+        "bx_droid_roll_2"
+      ]
+    ],
+    [
+      2,
+      "normal BURNS scheduler runs CQB",
+      true,
+      [
+        "cqb",
+        [
+          4000,
+          6080,
+          0
+        ],
+        100
+      ]
+    ],
+    [
+      2,
+      "post-dodge crouch remains under WebKnight control",
+      true,
+      [
+        "Middle",
+        "amovpknlmrunsraswrfldf"
+      ]
+    ],
+    [
+      2,
+      "BX moves during native recovery",
+      true,
+      6.01652
+    ],
+    [
+      2,
+      "WebKnight restores UP",
+      true,
+      "Up"
+    ],
+    [
+      2,
+      "stop does not restore a stale dodge crouch",
+      true,
+      "Up"
+    ],
+    [
+      2,
+      "CQB task releases owned state",
+      true,
+      []
+    ],
+    [
+      2,
+      "creep still requests prone",
+      true,
+      "Down"
+    ],
+    [
+      2,
+      "creep releases its actual stance write",
+      true,
+      "Up"
+    ],
+    [
+      2,
+      "ambush still holds position and fire",
+      true,
+      []
+    ],
+    [
+      2,
+      "ambush releases movement fire and stance",
+      true,
+      []
+    ],
+    [
+      2,
+      "near-miss test preserves stock custom health",
+      true,
+      [
+        200,
+        200
+      ]
+    ],
+    [
+      4,
+      "solid obstruction prevents melee charge",
+      true,
+      0
+    ],
+    [
+      4,
+      "melee setting disables opportunistic charge",
+      true,
+      []
+    ],
+    [
+      4,
+      "external movement hold is respected",
+      true,
+      []
+    ],
+    [
+      4,
+      "Zeus group hold is respected",
+      true,
+      []
+    ],
+    [
+      4,
+      "manual movement order prevents opportunistic charge",
+      true,
+      []
+    ],
+    [
+      4,
+      "friendly unit cannot become a charge target",
+      true,
+      []
+    ],
+    [
+      4,
+      "native run acquires boost",
+      true,
+      1.15
+    ],
+    [
+      4,
+      "global BURNS disable releases speed",
+      true,
+      1
+    ],
+    [
+      4,
+      "global BURNS reenable resumes boost",
+      true,
+      1.15
+    ],
+    [
+      4,
+      "prone excludes run boost",
+      true,
+      1
+    ],
+    [
+      4,
+      "death releases speed even after WebKnight clears unit handlers",
+      true,
+      [
+        false,
+        1
+      ]
+    ],
+    [
+      4,
+      "deleted BX leaves the bounded owner roster",
+      true,
+      0
+    ],
+    [
+      4,
+      "installed WebKnight dodge triggered",
+      true,
+      [
+        "FST_BX_Rusty",
+        7,
+        "bx_droid_roll_2"
+      ]
+    ],
+    [
+      4,
+      "normal BURNS scheduler runs CQB",
+      true,
+      [
+        "cqb",
+        [
+          5000,
+          6080,
+          0
+        ],
+        100
+      ]
+    ],
+    [
+      4,
+      "post-dodge crouch remains under WebKnight control",
+      true,
+      [
+        "Middle",
+        "amovpknlmrunsraswrfldf"
+      ]
+    ],
+    [
+      4,
+      "BX moves during native recovery",
+      true,
+      5.77781
+    ],
+    [
+      4,
+      "WebKnight restores UP",
+      true,
+      "Up"
+    ],
+    [
+      4,
+      "stop does not restore a stale dodge crouch",
+      true,
+      "Up"
+    ],
+    [
+      4,
+      "CQB task releases owned state",
+      true,
+      []
+    ],
+    [
+      4,
+      "creep still requests prone",
+      true,
+      "Down"
+    ],
+    [
+      4,
+      "creep releases its actual stance write",
+      true,
+      "Up"
+    ],
+    [
+      4,
+      "ambush still holds position and fire",
+      true,
+      []
+    ],
+    [
+      4,
+      "ambush releases movement fire and stance",
+      true,
+      []
+    ],
+    [
+      4,
+      "near-miss test preserves stock custom health",
+      true,
+      [
+        200,
+        200
+      ]
+    ]
+  ],
+  "errors": []
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-25",
+  "addon": "FST_HCSpawn",
+  "sha256": "dbaa1e1933aca0070a18ce5154c5dc5848da4991398b34839b7801a9436aa6be",
+  "installedWebKnightSHA256": "0e1561094d6797b1622f3e6cba59f56d9d9c6fe49175f9263ecfd44d6790ca24",
+  "changedSource": [
+    "config.cpp",
+    "fn_burnsBXMelee.sqf",
+    "fn_burnsBXMobility.sqf",
+    "fn_burnsBXTask.sqf",
+    "fn_burnsInitBXEnhancements.sqf",
+    "fn_burnsReleaseBXCharge.sqf",
+    "fn_setCombatTask.sqf",
+    "XEH_postInit.sqf",
+    "XEH_preInit.sqf"
+  ],
+  "runtimeChecksPassed": 210,
+  "peerCoefficientObservations": 25,
+  "meanRunningSpeedRatioVersusHuman": 1.1513654673262677,
+  "meleeAttacksPer20SecondFixture": [
+    7,
+    4,
+    7,
+    3,
+    7
+  ],
+  "status": "Tested unsigned candidate; no live server or Workshop deployment"
+}
