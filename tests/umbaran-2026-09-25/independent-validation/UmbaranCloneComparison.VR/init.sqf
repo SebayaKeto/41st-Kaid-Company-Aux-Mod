@@ -1,0 +1,1 @@
+if(isServer)then{[]spawn{sleep 15;FST_HC_Enabled=false;publicVariable "FST_HC_Enabled";FST_HC_SafeModeUntil=time+10000;FST_HC_CombatTasksEnabled=true;[]call compile preprocessFileLineNumbers "comparison.sqf";};};
