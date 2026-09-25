@@ -1,5 +1,7 @@
 # 41st Saber handling rehearsal
 
+> Reverted on 24 September at the user's request. The current addon retains its patch identity for saved-mission compatibility but applies no vehicle overrides. Original torque (6000), turning force (900000), turning fade (0–0.35), and reverse gearing (−0.6) are restored. Standard/Super remain 60 km/h; Recon remains 120 km/h. The rehearsal results below are historical.
+
 The new `FST_Saber_Handling.pbo` tunes the standard, Super and Recon Saber families and their skins. It does not alter the separate Sabre APC or upstream 3AS tanks.
 
 | Setting | Before | Candidate |
