@@ -500,8 +500,7 @@ FST_HC_Templates = createHashMapFromArray [
 
     // --- B2 SUPER BATTLE DROIDS ---
     ["b2_team", [EAST, ["FST_B2_TL","FST_B2","FST_B2_TL","FST_B2"], "B2 Team (4)"]],
-    ["b2_squad", [EAST, ["FST_B2_TL","FST_B2","FST_B2_TL","FST_B2","FST_B2_TL","FST_B2","FST_B2_TL","FST_B2"], "B2 Squad (8)"]],
-    ["b2_flame_team", [EAST, ["FST_B2_TL","FST_B2_Flame","FST_B2_Flame","FST_B2"], "B2 Flame Team (4)"]]
+    ["b2_squad", [EAST, ["FST_B2_TL","FST_B2","FST_B2_TL","FST_B2","FST_B2_TL","FST_B2","FST_B2_TL","FST_B2"], "B2 Squad (8)"]]
 ];
 
 // --- VEHICLE TEMPLATES (V28) ---
@@ -557,3 +556,5 @@ diag_log format ["[BURNS_SOURCE] %1",BURNS_sourceFingerprint];
 
 ["BURNS_BXRunSpeed","SLIDER",["BX running speed","Ordinary running only. Dodge, attack, injury and external speed effects retain their own timing."],"BURNS",[1,1.3,1.15,2],1] call CBA_fnc_addSetting;
 ["BURNS_BXMeleeEnabled","CHECKBOX",["BX aggressive melee","AI BXs close on visible enemies within 12 metres and repeat melee when in reach. Respects hold, stealth and defensive orders."],"BURNS",true,1] call CBA_fnc_addSetting;
+
+["BURNS_B2LineEnabled","CHECKBOX",["B2 combat firing line","Deploy AI 41st B2 groups into a firing line with short coordinated advances against visible known enemies."],"BURNS",true,1] call CBA_fnc_addSetting;

@@ -71,6 +71,10 @@ BURNS_EngagementQueries=0;
                 _g setVariable ["BURNS_climbCursor",_c+1];
             };
         };
+        if ((!isNil {_g getVariable "BURNS_b2Line"} || {_v isKindOf "WBK_LS_B2"}) && {time>=(_g getVariable ["BURNS_b2LineNext",-1])}) then {
+            _g setVariable ["BURNS_b2LineNext",time+1];
+            [_g] call FST_HCSpawn_fnc_burnsB2Line;
+        };
         if !(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) then {continue};
         if (time<(_g getVariable ["BURNS_engagementNext",-1]) || {!([_g] call FST_HCSpawn_fnc_burnsEngagementAllowed)}) then {continue};
         private _armor=_v isKindOf "FST_AAT";

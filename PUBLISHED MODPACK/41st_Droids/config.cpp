@@ -27,7 +27,6 @@ class CfgPatches
 			"FST_BX_Sniper_Tukata",
 			"FST_B2",
 			"FST_B2_TL",
-			"FST_B2_Flame",
 			"FST_U_CIS_Heavy",
 			"FST_U_CIS_Heavy_AT",
 			"FST_U_CIS_Light",
@@ -2459,73 +2458,7 @@ class CfgVehicles
 		};
 		armor=1000;
 	};
-	class FST_B2_Flame: WBK_LS_B2
-	{
-		scope=2;
-		identityTypes[]={};
-		author="Daara";
-		Backpack="";
-		model="\ls\core\addons\characters_droid\uniforms\b2\ls_uniform_droid_b2.p3d";
-		displayName="[41st] B2 Super Battledroid (Flame)";
-		uniformClass="FST_DroidB2";
-		faction="FST_BattleDroids_Faction";
-		editorSubcategory="FST_BattleDroids_Subfaction";
-		hiddenSelections[]=
-		{
-			"camo_arms",
-			"legs",
-			"torso"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Arms_black.paa",
-			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Legs_black.paa",
-			"41st_Droids\Data\Extras\Kaid_Droids\FST_B2_Torso_black.paa"
-		};
-		weapons[]=
-		{
-			"IDA_BTX42",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"IDA_BTX42",
-			"Throw",
-			"Put"
-		};
-		linkedItems[]={};
-		respawnLinkedItems[]={};
-		Items[]={};
-		respawnItems[]={};
-		magazines[]=
-		{
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank"
-		};
-		respawnMagazines[]=
-		{
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank",
-			"IDA_FuelTank"
 
-		};
-	};
 	class FST_CIS_Heavy_Base_F;
 	class FST_JMSLLTE_JinTrooper_armor_F: FST_CIS_Heavy_Base_F
 	{
@@ -3404,7 +3337,6 @@ class CfgVehicles
 		};
   	};
 	class FST_B2_TL: FST_B2 {};
-	class FST_B2_Flame: FST_B2 {};
 };
 class FST_Commando_Jorge;
 class cfgGroups

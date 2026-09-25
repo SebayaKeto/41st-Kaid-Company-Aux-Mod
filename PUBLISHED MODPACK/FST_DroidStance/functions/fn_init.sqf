@@ -27,14 +27,12 @@ FST_DROID_STAND_CLASSES = [
 
     // B2 variants
     "FST_B2",
-    "FST_B2_TL",
-    "FST_B2_Flame"
+    "FST_B2_TL"
 ];
 
 FST_DROID_B2_CLASSES = [
     "FST_B2",
-    "FST_B2_TL",
-    "FST_B2_Flame"
+    "FST_B2_TL"
 ];
 
 FST_DROID_STAND_CLASS_SET = createHashMap;

@@ -1,0 +1,1333 @@
+{
+  "done": [
+    [
+      0,
+      2,
+      2
+    ],
+    [
+      0,
+      2,
+      "guards"
+    ],
+    [
+      4,
+      7,
+      8
+    ],
+    [
+      4,
+      7,
+      "guards"
+    ],
+    [
+      1,
+      5,
+      4
+    ],
+    [
+      1,
+      5,
+      "guards"
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      2,
+      6,
+      "guards"
+    ],
+    [
+      3,
+      4,
+      4
+    ],
+    [
+      3,
+      4,
+      "guards"
+    ]
+  ],
+  "passed": 145,
+  "failed": [],
+  "checks": [
+    [
+      0,
+      "combat deploys native line",
+      true,
+      [
+        "LINE",
+        "YELLOW"
+      ]
+    ],
+    [
+      0,
+      "line spreads across the enemy front",
+      true,
+      [
+        5.39404,
+        0.0913086,
+        [
+          5.39482,
+          5.39482
+        ]
+      ]
+    ],
+    [
+      0,
+      "B2 nearest-neighbour spacing",
+      true,
+      [
+        5.39482,
+        5.39482
+      ]
+    ],
+    [
+      0,
+      "B2 line advances",
+      true,
+      [
+        0.107666,
+        41.9023,
+        0.00143862
+      ]
+    ],
+    [
+      0,
+      "native weapon firing continues",
+      true,
+      [
+        [
+          288,
+          "FST_WristBlaster",
+          13
+        ],
+        [
+          268,
+          "FST_WristBlaster",
+          33
+        ]
+      ]
+    ],
+    [
+      0,
+      "WebKnight health and animation controls preserved",
+      true,
+      []
+    ],
+    [
+      0,
+      "stop restores original group controls",
+      true,
+      [
+        "WEDGE",
+        "RED"
+      ]
+    ],
+    [
+      0,
+      "new patrol clears stop intent and permits combat line",
+      true,
+      []
+    ],
+    [
+      0,
+      "hunt replaces patrol without retaining recursive stop intent",
+      true,
+      []
+    ],
+    [
+      0,
+      "no nearby known contact leaves native formation",
+      true,
+      []
+    ],
+    [
+      0,
+      "known visible enemy starts formation",
+      true,
+      []
+    ],
+    [
+      0,
+      "group exemption restores formation and fire rules",
+      true,
+      []
+    ],
+    [
+      0,
+      "individual exemption releases line",
+      true,
+      []
+    ],
+    [
+      0,
+      "external path hold releases line without re-enabling movement",
+      true,
+      []
+    ],
+    [
+      0,
+      "Zeus hold releases line",
+      true,
+      []
+    ],
+    [
+      0,
+      "global BURNS disable restores group",
+      true,
+      []
+    ],
+    [
+      0,
+      "B2 setting disable restores group",
+      true,
+      []
+    ],
+    [
+      0,
+      "BURNS retreat is not converted into an advance",
+      true,
+      []
+    ],
+    [
+      0,
+      "BURNS advance order permits line",
+      true,
+      []
+    ],
+    [
+      0,
+      "stop prevents immediate automatic restart",
+      true,
+      []
+    ],
+    [
+      0,
+      "manual HOLD waypoint remains in control",
+      true,
+      []
+    ],
+    [
+      0,
+      "mixed non-B2 group is not overridden",
+      true,
+      []
+    ],
+    [
+      0,
+      "Flame B2 vehicle and module classes removed",
+      true,
+      []
+    ],
+    [
+      0,
+      "Flame B2 spawn template removed",
+      true,
+      []
+    ],
+    [
+      0,
+      "normal B2 group resumes after mixed unit removal",
+      true,
+      []
+    ],
+    [
+      0,
+      "native AI features and animation speed are untouched",
+      true,
+      []
+    ],
+    [
+      0,
+      "stock WebKnight health is unchanged",
+      true,
+      [
+        300,
+        300,
+        300,
+        300
+      ]
+    ],
+    [
+      0,
+      "leader casualty safely rebuilds surviving line",
+      true,
+      "[3,true,false,\"LINE\",\"YELLOW\",[\"WEDGE\",\"RED\",359.343,357.001,[[O Alpha 1-5:2,[3006.19,6031.89,0]],[O Alpha 1-5:3,[3011.18,6032.15,0]],[O Alpha 1-5:4,[3001.19,6031.63,0]]],O Alpha 1-5:2,206.099]]"
+    ],
+    [
+      0,
+      "lost contact restores native group controls",
+      true,
+      [
+        "WEDGE",
+        "RED",
+        0
+      ]
+    ],
+    [
+      4,
+      "combat deploys native line",
+      true,
+      [
+        "LINE",
+        "YELLOW"
+      ]
+    ],
+    [
+      4,
+      "line spreads across the enemy front",
+      true,
+      [
+        34.8843,
+        2.93018,
+        [
+          4.57656,
+          4.57656,
+          4.70282,
+          4.70282,
+          4.74816,
+          5.00012,
+          5.45652,
+          5.4923
+        ]
+      ]
+    ],
+    [
+      4,
+      "B2 nearest-neighbour spacing",
+      true,
+      [
+        4.57656,
+        4.57656,
+        4.70282,
+        4.70282,
+        4.74816,
+        5.00012,
+        5.45652,
+        5.4923
+      ]
+    ],
+    [
+      4,
+      "B2 line advances",
+      true,
+      [
+        0.0703125,
+        39.5513,
+        0.00143862
+      ]
+    ],
+    [
+      4,
+      "native weapon firing continues",
+      true,
+      [
+        [
+          269,
+          "FST_WristBlaster",
+          32
+        ],
+        [
+          268,
+          "FST_WristBlaster",
+          33
+        ],
+        [
+          256,
+          "FST_WristBlaster",
+          45
+        ],
+        [
+          250,
+          "FST_WristBlaster",
+          51
+        ],
+        [
+          238,
+          "FST_WristBlaster",
+          63
+        ],
+        [
+          194,
+          "FST_WristBlaster",
+          107
+        ],
+        [
+          230,
+          "FST_WristBlaster",
+          71
+        ],
+        [
+          199,
+          "FST_WristBlaster",
+          102
+        ]
+      ]
+    ],
+    [
+      4,
+      "WebKnight health and animation controls preserved",
+      true,
+      []
+    ],
+    [
+      4,
+      "stop restores original group controls",
+      true,
+      [
+        "WEDGE",
+        "RED"
+      ]
+    ],
+    [
+      4,
+      "new patrol clears stop intent and permits combat line",
+      true,
+      []
+    ],
+    [
+      4,
+      "hunt replaces patrol without retaining recursive stop intent",
+      true,
+      []
+    ],
+    [
+      4,
+      "no nearby known contact leaves native formation",
+      true,
+      []
+    ],
+    [
+      4,
+      "known visible enemy starts formation",
+      true,
+      []
+    ],
+    [
+      4,
+      "group exemption restores formation and fire rules",
+      true,
+      []
+    ],
+    [
+      4,
+      "individual exemption releases line",
+      true,
+      []
+    ],
+    [
+      4,
+      "external path hold releases line without re-enabling movement",
+      true,
+      []
+    ],
+    [
+      4,
+      "Zeus hold releases line",
+      true,
+      []
+    ],
+    [
+      4,
+      "global BURNS disable restores group",
+      true,
+      []
+    ],
+    [
+      4,
+      "B2 setting disable restores group",
+      true,
+      []
+    ],
+    [
+      4,
+      "BURNS retreat is not converted into an advance",
+      true,
+      []
+    ],
+    [
+      4,
+      "BURNS advance order permits line",
+      true,
+      []
+    ],
+    [
+      4,
+      "stop prevents immediate automatic restart",
+      true,
+      []
+    ],
+    [
+      4,
+      "manual HOLD waypoint remains in control",
+      true,
+      []
+    ],
+    [
+      4,
+      "mixed non-B2 group is not overridden",
+      true,
+      []
+    ],
+    [
+      4,
+      "Flame B2 vehicle and module classes removed",
+      true,
+      []
+    ],
+    [
+      4,
+      "Flame B2 spawn template removed",
+      true,
+      []
+    ],
+    [
+      4,
+      "normal B2 group resumes after mixed unit removal",
+      true,
+      []
+    ],
+    [
+      4,
+      "native AI features and animation speed are untouched",
+      true,
+      []
+    ],
+    [
+      4,
+      "stock WebKnight health is unchanged",
+      true,
+      [
+        300,
+        300,
+        300,
+        300
+      ]
+    ],
+    [
+      4,
+      "leader casualty safely rebuilds surviving line",
+      true,
+      "[3,true,false,\"LINE\",\"YELLOW\",[\"WEDGE\",\"RED\",359.337,357.289,[[O Alpha 2-1:2,[5006.19,6019.19,0]],[O Alpha 2-1:3,[5011.19,6019.43,0]],[O Alpha 2-1:4,[5001.2,6018.95,0]]],O Alpha 2-1:2,206.356]]"
+    ],
+    [
+      4,
+      "lost contact restores native group controls",
+      true,
+      [
+        "WEDGE",
+        "RED",
+        0
+      ]
+    ],
+    [
+      1,
+      "combat deploys native line",
+      true,
+      [
+        "LINE",
+        "YELLOW"
+      ]
+    ],
+    [
+      1,
+      "line spreads across the enemy front",
+      true,
+      [
+        15.6399,
+        3.08545,
+        [
+          5.10561,
+          5.10561,
+          5.28443,
+          5.28443
+        ]
+      ]
+    ],
+    [
+      1,
+      "B2 nearest-neighbour spacing",
+      true,
+      [
+        5.10561,
+        5.10561,
+        5.28443,
+        5.28443
+      ]
+    ],
+    [
+      1,
+      "B2 line advances",
+      true,
+      [
+        0.117432,
+        43.3076,
+        0.00143862
+      ]
+    ],
+    [
+      1,
+      "native weapon firing continues",
+      true,
+      [
+        [
+          290,
+          "FST_WristBlaster",
+          11
+        ],
+        [
+          295,
+          "FST_WristBlaster",
+          6
+        ],
+        [
+          281,
+          "FST_WristBlaster",
+          20
+        ],
+        [
+          276,
+          "FST_WristBlaster",
+          25
+        ]
+      ]
+    ],
+    [
+      1,
+      "WebKnight health and animation controls preserved",
+      true,
+      []
+    ],
+    [
+      1,
+      "stop restores original group controls",
+      true,
+      [
+        "WEDGE",
+        "RED"
+      ]
+    ],
+    [
+      1,
+      "new patrol clears stop intent and permits combat line",
+      true,
+      []
+    ],
+    [
+      1,
+      "hunt replaces patrol without retaining recursive stop intent",
+      true,
+      []
+    ],
+    [
+      1,
+      "no nearby known contact leaves native formation",
+      true,
+      []
+    ],
+    [
+      1,
+      "known visible enemy starts formation",
+      true,
+      []
+    ],
+    [
+      1,
+      "group exemption restores formation and fire rules",
+      true,
+      []
+    ],
+    [
+      1,
+      "individual exemption releases line",
+      true,
+      []
+    ],
+    [
+      1,
+      "external path hold releases line without re-enabling movement",
+      true,
+      []
+    ],
+    [
+      1,
+      "Zeus hold releases line",
+      true,
+      []
+    ],
+    [
+      1,
+      "global BURNS disable restores group",
+      true,
+      []
+    ],
+    [
+      1,
+      "B2 setting disable restores group",
+      true,
+      []
+    ],
+    [
+      1,
+      "BURNS retreat is not converted into an advance",
+      true,
+      []
+    ],
+    [
+      1,
+      "BURNS advance order permits line",
+      true,
+      []
+    ],
+    [
+      1,
+      "stop prevents immediate automatic restart",
+      true,
+      []
+    ],
+    [
+      1,
+      "manual HOLD waypoint remains in control",
+      true,
+      []
+    ],
+    [
+      1,
+      "mixed non-B2 group is not overridden",
+      true,
+      []
+    ],
+    [
+      1,
+      "Flame B2 vehicle and module classes removed",
+      true,
+      []
+    ],
+    [
+      1,
+      "Flame B2 spawn template removed",
+      true,
+      []
+    ],
+    [
+      1,
+      "normal B2 group resumes after mixed unit removal",
+      true,
+      []
+    ],
+    [
+      1,
+      "native AI features and animation speed are untouched",
+      true,
+      []
+    ],
+    [
+      1,
+      "stock WebKnight health is unchanged",
+      true,
+      [
+        300,
+        300,
+        300,
+        300
+      ]
+    ],
+    [
+      1,
+      "leader casualty safely rebuilds surviving line",
+      true,
+      "[3,true,false,\"LINE\",\"YELLOW\",[\"WEDGE\",\"RED\",359.383,358.313,[[O Alpha 1-6:2,[3503.75,6022.71,0]],[O Alpha 1-6:3,[3508.75,6022.85,0]],[O Alpha 1-6:4,[3498.75,6022.56,0]]],O Alpha 1-6:2,210.499]]"
+    ],
+    [
+      1,
+      "lost contact restores native group controls",
+      true,
+      [
+        "WEDGE",
+        "RED",
+        0
+      ]
+    ],
+    [
+      2,
+      "combat deploys native line",
+      true,
+      [
+        "LINE",
+        "YELLOW"
+      ]
+    ],
+    [
+      2,
+      "line spreads across the enemy front",
+      true,
+      [
+        34.9307,
+        2.46484,
+        [
+          3.62317,
+          3.62317,
+          4.77151,
+          5.08853,
+          5.08853,
+          5.10761,
+          5.29391,
+          5.29391
+        ]
+      ]
+    ],
+    [
+      2,
+      "B2 nearest-neighbour spacing",
+      true,
+      [
+        3.62317,
+        3.62317,
+        4.77151,
+        5.08853,
+        5.08853,
+        5.10761,
+        5.29391,
+        5.29391
+      ]
+    ],
+    [
+      2,
+      "B2 line advances",
+      true,
+      [
+        -0.0703125,
+        42.5776,
+        0.00143862
+      ]
+    ],
+    [
+      2,
+      "native weapon firing continues",
+      true,
+      [
+        [
+          262,
+          "FST_WristBlaster",
+          39
+        ],
+        [
+          284,
+          "FST_WristBlaster",
+          17
+        ],
+        [
+          285,
+          "FST_WristBlaster",
+          16
+        ],
+        [
+          269,
+          "FST_WristBlaster",
+          32
+        ],
+        [
+          246,
+          "FST_WristBlaster",
+          55
+        ],
+        [
+          198,
+          "FST_WristBlaster",
+          103
+        ],
+        [
+          254,
+          "FST_WristBlaster",
+          47
+        ],
+        [
+          180,
+          "FST_WristBlaster",
+          121
+        ]
+      ]
+    ],
+    [
+      2,
+      "WebKnight health and animation controls preserved",
+      true,
+      []
+    ],
+    [
+      2,
+      "stop restores original group controls",
+      true,
+      [
+        "WEDGE",
+        "RED"
+      ]
+    ],
+    [
+      2,
+      "new patrol clears stop intent and permits combat line",
+      true,
+      []
+    ],
+    [
+      2,
+      "hunt replaces patrol without retaining recursive stop intent",
+      true,
+      []
+    ],
+    [
+      2,
+      "no nearby known contact leaves native formation",
+      true,
+      []
+    ],
+    [
+      2,
+      "known visible enemy starts formation",
+      true,
+      []
+    ],
+    [
+      2,
+      "group exemption restores formation and fire rules",
+      true,
+      []
+    ],
+    [
+      2,
+      "individual exemption releases line",
+      true,
+      []
+    ],
+    [
+      2,
+      "external path hold releases line without re-enabling movement",
+      true,
+      []
+    ],
+    [
+      2,
+      "Zeus hold releases line",
+      true,
+      []
+    ],
+    [
+      2,
+      "global BURNS disable restores group",
+      true,
+      []
+    ],
+    [
+      2,
+      "B2 setting disable restores group",
+      true,
+      []
+    ],
+    [
+      2,
+      "BURNS retreat is not converted into an advance",
+      true,
+      []
+    ],
+    [
+      2,
+      "BURNS advance order permits line",
+      true,
+      []
+    ],
+    [
+      2,
+      "stop prevents immediate automatic restart",
+      true,
+      []
+    ],
+    [
+      2,
+      "manual HOLD waypoint remains in control",
+      true,
+      []
+    ],
+    [
+      2,
+      "mixed non-B2 group is not overridden",
+      true,
+      []
+    ],
+    [
+      2,
+      "Flame B2 vehicle and module classes removed",
+      true,
+      []
+    ],
+    [
+      2,
+      "Flame B2 spawn template removed",
+      true,
+      []
+    ],
+    [
+      2,
+      "normal B2 group resumes after mixed unit removal",
+      true,
+      []
+    ],
+    [
+      2,
+      "native AI features and animation speed are untouched",
+      true,
+      []
+    ],
+    [
+      2,
+      "stock WebKnight health is unchanged",
+      true,
+      [
+        300,
+        300,
+        300,
+        300
+      ]
+    ],
+    [
+      2,
+      "leader casualty safely rebuilds surviving line",
+      true,
+      "[3,true,false,\"LINE\",\"YELLOW\",[\"WEDGE\",\"RED\",359.356,358.08,[[O Alpha 2-1:2,[4004.33,6020.98,0]],[O Alpha 2-1:3,[4009.32,6021.15,0]],[O Alpha 2-1:4,[3999.33,6020.81,0]]],O Alpha 2-1:2,203.932]]"
+    ],
+    [
+      2,
+      "lost contact restores native group controls",
+      true,
+      [
+        "WEDGE",
+        "RED",
+        0
+      ]
+    ],
+    [
+      3,
+      "combat deploys native line",
+      true,
+      [
+        "LINE",
+        "YELLOW"
+      ]
+    ],
+    [
+      3,
+      "line spreads across the enemy front",
+      true,
+      [
+        14.8774,
+        2.55225,
+        [
+          4.49528,
+          4.49528,
+          5.07352,
+          5.07352
+        ]
+      ]
+    ],
+    [
+      3,
+      "B2 nearest-neighbour spacing",
+      true,
+      [
+        4.49528,
+        4.49528,
+        5.07352,
+        5.07352
+      ]
+    ],
+    [
+      3,
+      "B2 line advances",
+      true,
+      [
+        0.116699,
+        43.3389,
+        0.00143862
+      ]
+    ],
+    [
+      3,
+      "native weapon firing continues",
+      true,
+      [
+        [
+          288,
+          "FST_WristBlaster",
+          13
+        ],
+        [
+          288,
+          "FST_WristBlaster",
+          13
+        ],
+        [
+          268,
+          "FST_WristBlaster",
+          33
+        ],
+        [
+          277,
+          "FST_WristBlaster",
+          24
+        ]
+      ]
+    ],
+    [
+      3,
+      "WebKnight health and animation controls preserved",
+      true,
+      []
+    ],
+    [
+      3,
+      "stop restores original group controls",
+      true,
+      [
+        "WEDGE",
+        "RED"
+      ]
+    ],
+    [
+      3,
+      "new patrol clears stop intent and permits combat line",
+      true,
+      []
+    ],
+    [
+      3,
+      "hunt replaces patrol without retaining recursive stop intent",
+      true,
+      []
+    ],
+    [
+      3,
+      "no nearby known contact leaves native formation",
+      true,
+      []
+    ],
+    [
+      3,
+      "known visible enemy starts formation",
+      true,
+      []
+    ],
+    [
+      3,
+      "group exemption restores formation and fire rules",
+      true,
+      []
+    ],
+    [
+      3,
+      "individual exemption releases line",
+      true,
+      []
+    ],
+    [
+      3,
+      "external path hold releases line without re-enabling movement",
+      true,
+      []
+    ],
+    [
+      3,
+      "Zeus hold releases line",
+      true,
+      []
+    ],
+    [
+      3,
+      "global BURNS disable restores group",
+      true,
+      []
+    ],
+    [
+      3,
+      "B2 setting disable restores group",
+      true,
+      []
+    ],
+    [
+      3,
+      "BURNS retreat is not converted into an advance",
+      true,
+      []
+    ],
+    [
+      3,
+      "BURNS advance order permits line",
+      true,
+      []
+    ],
+    [
+      3,
+      "stop prevents immediate automatic restart",
+      true,
+      []
+    ],
+    [
+      3,
+      "manual HOLD waypoint remains in control",
+      true,
+      []
+    ],
+    [
+      3,
+      "mixed non-B2 group is not overridden",
+      true,
+      []
+    ],
+    [
+      3,
+      "Flame B2 vehicle and module classes removed",
+      true,
+      []
+    ],
+    [
+      3,
+      "Flame B2 spawn template removed",
+      true,
+      []
+    ],
+    [
+      3,
+      "normal B2 group resumes after mixed unit removal",
+      true,
+      []
+    ],
+    [
+      3,
+      "native AI features and animation speed are untouched",
+      true,
+      []
+    ],
+    [
+      3,
+      "stock WebKnight health is unchanged",
+      true,
+      [
+        300,
+        300,
+        300,
+        300
+      ]
+    ],
+    [
+      3,
+      "leader casualty safely rebuilds surviving line",
+      true,
+      "[3,true,false,\"LINE\",\"YELLOW\",[\"WEDGE\",\"RED\",359.365,358.565,[[O Alpha 1-6:2,[4503.31,6017.98,0]],[O Alpha 1-6:3,[4508.3,6018.11,0]],[O Alpha 1-6:4,[4498.31,6017.86,0]]],O Alpha 1-6:2,206.447]]"
+    ],
+    [
+      3,
+      "lost contact restores native group controls",
+      true,
+      [
+        "WEDGE",
+        "RED",
+        0
+      ]
+    ]
+  ],
+  "metrics": [
+    {
+      "node": 0,
+      "variant": "baseline",
+      "meanWidth": 5,
+      "meanDepth": 4.75,
+      "medianNearest": 6.896557112066861,
+      "meanUnitsWithin2_5m": 0,
+      "shots": 325
+    },
+    {
+      "node": 0,
+      "variant": "candidate",
+      "meanWidth": 5.244705882352862,
+      "meanDepth": 0.400196078431441,
+      "medianNearest": 5.390751339099092,
+      "meanUnitsWithin2_5m": 0,
+      "shots": 556
+    },
+    {
+      "node": 1,
+      "variant": "baseline",
+      "meanWidth": 8.990000000000236,
+      "meanDepth": 6.509999999999309,
+      "medianNearest": 3.2449355658427845,
+      "meanUnitsWithin2_5m": 2,
+      "shots": 588
+    },
+    {
+      "node": 1,
+      "variant": "candidate",
+      "meanWidth": 15.746862745097918,
+      "meanDepth": 3.760392156862865,
+      "medianNearest": 5.286634089853222,
+      "meanUnitsWithin2_5m": 0,
+      "shots": 1142
+    },
+    {
+      "node": 2,
+      "variant": "baseline",
+      "meanWidth": 13.929999999999836,
+      "meanDepth": 8.25,
+      "medianNearest": 2.1047784721768137,
+      "meanUnitsWithin2_5m": 7,
+      "shots": 997
+    },
+    {
+      "node": 2,
+      "variant": "candidate",
+      "meanWidth": 32.328823529411736,
+      "meanDepth": 6.349803921568666,
+      "medianNearest": 5.004667782811861,
+      "meanUnitsWithin2_5m": 0.19607843137254902,
+      "shots": 1978
+    },
+    {
+      "node": 3,
+      "variant": "baseline",
+      "meanWidth": 8.789999999999964,
+      "meanDepth": 6.1599999999998545,
+      "medianNearest": 3.030396389850563,
+      "meanUnitsWithin2_5m": 2,
+      "shots": 446
+    },
+    {
+      "node": 3,
+      "variant": "candidate",
+      "meanWidth": 15.330392156862752,
+      "meanDepth": 3.8396078431373204,
+      "medianNearest": 5.071735403192936,
+      "meanUnitsWithin2_5m": 0,
+      "shots": 1121
+    },
+    {
+      "node": 4,
+      "variant": "baseline",
+      "meanWidth": 17.187843137254795,
+      "meanDepth": 8.217647058823411,
+      "medianNearest": 2.4540986125253075,
+      "meanUnitsWithin2_5m": 4.96078431372549,
+      "shots": 713
+    },
+    {
+      "node": 4,
+      "variant": "candidate",
+      "meanWidth": 34.25156862745107,
+      "meanDepth": 4.518039215686401,
+      "medianNearest": 4.994597080846478,
+      "meanUnitsWithin2_5m": 0.0392156862745098,
+      "shots": 1904
+    }
+  ],
+  "errors": []
+}

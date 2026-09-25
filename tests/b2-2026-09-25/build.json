@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-25",
+  "sha256": {
+    "FST_HCSpawn": "995e960886ce50db7632b051a68537dcee5f4dc7cd831d814a282c5476dd5bfa",
+    "41st_Droids": "cbadd64e464e10fbf0661e12e766fd4fb8824315304a0cbff1d36ec2fbc28c6d"
+  },
+  "changedSource": [
+    "FST_HCSpawn/BURNS_CfgModules.hpp",
+    "FST_HCSpawn/config.cpp",
+    "FST_HCSpawn/fn_burnsB2Line.sqf",
+    "FST_HCSpawn/fn_burnsInitEngagement.sqf",
+    "FST_HCSpawn/fn_burnsPatrol.sqf",
+    "FST_HCSpawn/fn_burnsReleaseB2Line.sqf",
+    "FST_HCSpawn/fn_getFSTOpforUnitOptions.sqf",
+    "FST_HCSpawn/fn_setCombatTask.sqf",
+    "FST_HCSpawn/XEH_preInit.sqf",
+    "41st_Droids/config.cpp",
+    "FST_DroidStance/functions/fn_init.sqf"
+  ],
+  "runtimeChecksPassed": 145,
+  "installedWebKnightSHA256": "0e1561094d6797b1622f3e6cba59f56d9d9c6fe49175f9263ecfd44d6790ca24",
+  "status": "Tested; no live deployment"
+}

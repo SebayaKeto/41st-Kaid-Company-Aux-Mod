@@ -55,7 +55,6 @@ class CfgVehicles {
     class FST_HC_Module_bx_aa_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="BX Anti-Air Team (2)"; FST_HC_callbackKey="41st Kaid Modules|BX Anti-Air Team (2)"; };
     class FST_HC_Module_b2_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B2 Team (4)"; FST_HC_callbackKey="41st Kaid Modules|B2 Team (4)"; };
     class FST_HC_Module_b2_squad: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B2 Squad (8)"; FST_HC_callbackKey="41st Kaid Modules|B2 Squad (8)"; };
-    class FST_HC_Module_b2_flame_team: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="B2 Flame Team (4)"; FST_HC_callbackKey="41st Kaid Modules|B2 Flame Team (4)"; };
     class FST_HC_Module_fill: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Fill Garrison ---"; FST_HC_callbackKey="41st Kaid Modules|--- Fill Garrison ---"; };
     class FST_HC_Module_frontline: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- Frontline Assault ---"; FST_HC_callbackKey="41st Kaid Modules|--- Frontline Assault ---"; };
     class FST_HC_Module_qrf: FST_HC_ModuleBase { scopeCurator=2; category="FST_Kaid_Modules"; displayName="--- QRF Response ---"; FST_HC_callbackKey="41st Kaid Modules|--- QRF Response ---"; };
