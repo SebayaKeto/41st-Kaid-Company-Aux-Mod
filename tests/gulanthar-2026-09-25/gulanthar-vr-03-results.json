@@ -1,0 +1,911 @@
+{
+  "done": [
+    [
+      0,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      5
+    ]
+  ],
+  "guardsDone": [
+    [
+      0,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      5
+    ]
+  ],
+  "terrainDone": [],
+  "passed": 115,
+  "failed": [],
+  "checks": [
+    [
+      0,
+      "pursuit moves 0",
+      true,
+      [
+        101.637,
+        44,
+        10
+      ]
+    ],
+    [
+      0,
+      "valid movement graph 0",
+      true,
+      []
+    ],
+    [
+      0,
+      "pursuit moves 1",
+      true,
+      [
+        270.837,
+        116,
+        0
+      ]
+    ],
+    [
+      0,
+      "valid movement graph 1",
+      true,
+      []
+    ],
+    [
+      0,
+      "running gait selected",
+      true,
+      []
+    ],
+    [
+      0,
+      "native animation coefficient preserved",
+      true,
+      []
+    ],
+    [
+      0,
+      "group exemption releases gait",
+      true,
+      []
+    ],
+    [
+      0,
+      "path hold preserved",
+      true,
+      []
+    ],
+    [
+      0,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      0,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      0,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      0,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      0,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      0,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      0,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      0,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      0,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      0,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      0,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      0,
+      "native melee still starts",
+      true,
+      54
+    ],
+    [
+      0,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      0,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      0,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      4,
+      "pursuit moves 0",
+      true,
+      [
+        96.6504,
+        44,
+        18
+      ]
+    ],
+    [
+      4,
+      "valid movement graph 0",
+      true,
+      []
+    ],
+    [
+      4,
+      "pursuit moves 1",
+      true,
+      [
+        263.378,
+        114,
+        0
+      ]
+    ],
+    [
+      4,
+      "valid movement graph 1",
+      true,
+      []
+    ],
+    [
+      4,
+      "running gait selected",
+      true,
+      []
+    ],
+    [
+      4,
+      "native animation coefficient preserved",
+      true,
+      []
+    ],
+    [
+      4,
+      "group exemption releases gait",
+      true,
+      []
+    ],
+    [
+      4,
+      "path hold preserved",
+      true,
+      []
+    ],
+    [
+      4,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      4,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      4,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      4,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      4,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      4,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      4,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      4,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      4,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      4,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      4,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      4,
+      "native melee still starts",
+      true,
+      46
+    ],
+    [
+      4,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      4,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      4,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      3,
+      "pursuit moves 1",
+      true,
+      [
+        287.597,
+        120,
+        0
+      ]
+    ],
+    [
+      3,
+      "valid movement graph 1",
+      true,
+      []
+    ],
+    [
+      3,
+      "running gait selected",
+      true,
+      []
+    ],
+    [
+      3,
+      "native animation coefficient preserved",
+      true,
+      []
+    ],
+    [
+      3,
+      "group exemption releases gait",
+      true,
+      []
+    ],
+    [
+      3,
+      "path hold preserved",
+      true,
+      []
+    ],
+    [
+      3,
+      "pursuit moves 0",
+      true,
+      [
+        148.701,
+        66,
+        0
+      ]
+    ],
+    [
+      3,
+      "valid movement graph 0",
+      true,
+      []
+    ],
+    [
+      3,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      3,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      3,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      3,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      3,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      3,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      3,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      3,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      3,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      3,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      3,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      3,
+      "native melee still starts",
+      true,
+      57
+    ],
+    [
+      3,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      3,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      3,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      2,
+      "pursuit moves 0",
+      true,
+      [
+        94.2734,
+        41,
+        22
+      ]
+    ],
+    [
+      2,
+      "valid movement graph 0",
+      true,
+      []
+    ],
+    [
+      2,
+      "pursuit moves 1",
+      true,
+      [
+        287.568,
+        120,
+        0
+      ]
+    ],
+    [
+      2,
+      "valid movement graph 1",
+      true,
+      []
+    ],
+    [
+      2,
+      "running gait selected",
+      true,
+      []
+    ],
+    [
+      2,
+      "native animation coefficient preserved",
+      true,
+      []
+    ],
+    [
+      2,
+      "group exemption releases gait",
+      true,
+      []
+    ],
+    [
+      2,
+      "path hold preserved",
+      true,
+      []
+    ],
+    [
+      2,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      2,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      2,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      2,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      2,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      2,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      2,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      2,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      2,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      2,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      2,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      2,
+      "native melee still starts",
+      true,
+      52
+    ],
+    [
+      2,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      2,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      2,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      1,
+      "pursuit moves 1",
+      true,
+      [
+        287.478,
+        120,
+        0
+      ]
+    ],
+    [
+      1,
+      "valid movement graph 1",
+      true,
+      []
+    ],
+    [
+      1,
+      "running gait selected",
+      true,
+      []
+    ],
+    [
+      1,
+      "native animation coefficient preserved",
+      true,
+      []
+    ],
+    [
+      1,
+      "group exemption releases gait",
+      true,
+      []
+    ],
+    [
+      1,
+      "path hold preserved",
+      true,
+      []
+    ],
+    [
+      1,
+      "pursuit moves 0",
+      true,
+      [
+        89.9678,
+        39,
+        18
+      ]
+    ],
+    [
+      1,
+      "valid movement graph 0",
+      true,
+      []
+    ],
+    [
+      1,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      1,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      1,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      1,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      1,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      1,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      1,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      1,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      1,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      1,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      1,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      1,
+      "native melee still starts",
+      true,
+      54
+    ],
+    [
+      1,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      1,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      1,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ]
+  ],
+  "metrics": [
+    [
+      0,
+      0,
+      "JMSEF_animals_varren_o",
+      101.637,
+      44,
+      10,
+      120
+    ],
+    [
+      0,
+      1,
+      "JMSEF_animals_varren_o",
+      270.837,
+      116,
+      0,
+      120
+    ],
+    [
+      4,
+      0,
+      "JMSEF_animals_var_bers_o",
+      96.6504,
+      44,
+      18,
+      120
+    ],
+    [
+      4,
+      1,
+      "JMSEF_animals_var_bers_o",
+      263.378,
+      114,
+      0,
+      120
+    ],
+    [
+      3,
+      1,
+      "JMSEF_animals_varren_o",
+      287.597,
+      120,
+      0,
+      120
+    ],
+    [
+      3,
+      0,
+      "JMSEF_animals_varren_o",
+      148.701,
+      66,
+      0,
+      120
+    ],
+    [
+      2,
+      0,
+      "JMSEF_animals_var_alpha_o",
+      94.2734,
+      41,
+      22,
+      120
+    ],
+    [
+      2,
+      1,
+      "JMSEF_animals_var_alpha_o",
+      287.568,
+      120,
+      0,
+      120
+    ],
+    [
+      1,
+      1,
+      "JMSEF_animals_var_bers_o",
+      287.478,
+      120,
+      0,
+      120
+    ],
+    [
+      1,
+      0,
+      "JMSEF_animals_var_bers_o",
+      89.9678,
+      39,
+      18,
+      120
+    ]
+  ],
+  "errors": [],
+  "particleDiagnostics": 40,
+  "packDone": []
+}

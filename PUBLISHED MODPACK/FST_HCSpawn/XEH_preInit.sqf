@@ -558,3 +558,5 @@ diag_log format ["[BURNS_SOURCE] %1",BURNS_sourceFingerprint];
 ["BURNS_BXMeleeEnabled","CHECKBOX",["BX aggressive melee","AI BXs close on visible enemies within 12 metres and repeat melee when in reach. Respects hold, stealth and defensive orders."],"BURNS",true,1] call CBA_fnc_addSetting;
 
 ["BURNS_B2LineEnabled","CHECKBOX",["B2 combat firing line","Deploy AI 41st B2 groups into a firing line with short coordinated advances against visible known enemies."],"BURNS",true,1] call CBA_fnc_addSetting;
+
+["BURNS_GulantharRunEnabled","CHECKBOX",["Gulanthar pursuit running","Use a faster sustained running gait during visible pursuit, preserving native attacks and eating."],"BURNS",true,1] call CBA_fnc_addSetting;

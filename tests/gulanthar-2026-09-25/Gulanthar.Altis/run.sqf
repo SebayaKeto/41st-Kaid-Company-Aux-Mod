@@ -1,0 +1,40 @@
+params ["_node"];
+private _check={params["_label","_pass",["_detail",[]]];diag_log format["[GUL_CHECK] %1",[_node,_label,_pass,_detail]]};
+private _class=["JMSEF_animals_varren_o","JMSEF_animals_var_bers_o","JMSEF_animals_var_alpha_o"]select(_node mod 3);
+private _baseline=compile preprocessFileLineNumbers "baseline.sqf";
+{
+ private _variant=_x;
+ private _base=[13000+_node*450,15400,0];
+ private _g=createGroup[east,true];_g setVariable["FST_HC_noTransfer",true,true];
+ private _u=_g createUnit[_class,_base,[],0,"NONE"];_u allowDamage false;_u setDir 0;
+ if(_variant==0)then{_g setVariable["BURNS_exempt",true,true]};
+ private _tg=createGroup[west,true];_tg setVariable["FST_HC_noTransfer",true,true];_tg setVariable["BURNS_exempt",true,true];
+ private _t=_tg createUnit["B_Soldier_F",_base vectorAdd[0,80,0],[],0,"NONE"];_t allowDamage false;_t disableAI "ALL";
+ sleep 5;if(_node!=4)then{_g reveal[_t,4]};
+ private _start=time;private _origin=getPosATL _u;private _samples=[];
+ for "_i" from 1 to 120 do {
+  _t setPosATL((getPosATL _u)vectorAdd[0,80,0]);if(_node!=4)then{_g reveal[_t,4]};
+  if(_variant==0)then{[_u]call _baseline};
+  sleep 0.25;
+  private _row=[time-_start,speed _u,animationState _u,_u getVariable["mode",-1],_u checkAIFeature "ANIM",getPosATL _u,currentCommand _u,getForcedSpeed _u,_u knowsAbout _t];
+  _samples pushBack _row;diag_log format["[GUL_SAMPLE] %1",[_node,_variant,_row]];
+ };
+ private _advance=((getPosATL _u)select 1)-(_origin select 1);
+ private _fast={(_x select 1)>15}count _samples;private _stopped={abs(_x select 1)<1}count _samples;
+ diag_log format["[GUL_METRIC] %1",[_node,_variant,_class,_advance,_fast,_stopped,count _samples]];
+ ["pursuit moves "+str _variant,_advance>40,[_advance,_fast,_stopped]]call _check;
+ ["valid movement graph "+str _variant,(_samples findIf{(_x select 2)in["","<none>"]})<0]call _check;
+ if(_variant==1)then{
+  ["running gait selected",(_samples findIf{(_x select 2)=="burns_gulanthar_run"})>=0]call _check;
+  ["native animation coefficient preserved",getAnimSpeedCoef _u==1]call _check;
+  _g setVariable["BURNS_exempt",true,true];sleep 1;
+  ["group exemption releases gait",!(animationState _u in["burns_gulanthar_run","burns_gulanthar_climb"])]call _check;
+  _g setVariable["BURNS_exempt",false,true];sleep 1;
+  _u disableAI "PATH";sleep 1;
+  ["path hold preserved",!(_u checkAIFeature "PATH") && {!(animationState _u in["burns_gulanthar_run","burns_gulanthar_climb"])}]call _check;
+  _u enableAI "PATH";
+ };
+ deleteVehicle _u;deleteVehicle _t;deleteGroup _g;deleteGroup _tg;sleep 2;
+}forEach(if(_node mod 2==0)then{[0,1]}else{[1,0]});
+diag_log format["[GUL_DONE] %1",[_node,clientOwner]];
+[_node]call compile preprocessFileLineNumbers "guards.sqf";

@@ -1,0 +1,162 @@
+{
+  "done": [],
+  "guardsDone": [],
+  "terrainDone": [
+    [
+      0,
+      2
+    ]
+  ],
+  "passed": 21,
+  "failed": [],
+  "checks": [
+    [
+      0,
+      "uphill advances JMSEF_animals_varren_o",
+      true,
+      [
+        82.8064,
+        3.15197
+      ]
+    ],
+    [
+      0,
+      "uphill valid graph JMSEF_animals_varren_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "climbing gait used JMSEF_animals_varren_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "native coefficient on uphill JMSEF_animals_varren_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "uphill advances JMSEF_animals_var_bers_o",
+      true,
+      [
+        29.3163,
+        58.8396
+      ]
+    ],
+    [
+      0,
+      "uphill valid graph JMSEF_animals_var_bers_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "climbing gait used JMSEF_animals_var_bers_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "native coefficient on uphill JMSEF_animals_var_bers_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "uphill advances JMSEF_animals_var_alpha_o",
+      true,
+      [
+        71.7575,
+        23.7637
+      ]
+    ],
+    [
+      0,
+      "uphill valid graph JMSEF_animals_var_alpha_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "climbing gait used JMSEF_animals_var_alpha_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "native coefficient on uphill JMSEF_animals_var_alpha_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "downhill advances JMSEF_animals_varren_o",
+      true,
+      [
+        75.4842,
+        24.6717
+      ]
+    ],
+    [
+      0,
+      "downhill valid graph JMSEF_animals_varren_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "native coefficient on downhill JMSEF_animals_varren_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "downhill advances JMSEF_animals_var_bers_o",
+      true,
+      [
+        72.4422,
+        15.0799
+      ]
+    ],
+    [
+      0,
+      "downhill valid graph JMSEF_animals_var_bers_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "native coefficient on downhill JMSEF_animals_var_bers_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "downhill advances JMSEF_animals_var_alpha_o",
+      true,
+      [
+        20.4043,
+        68.8166
+      ]
+    ],
+    [
+      0,
+      "downhill valid graph JMSEF_animals_var_alpha_o",
+      true,
+      []
+    ],
+    [
+      0,
+      "native coefficient on downhill JMSEF_animals_var_alpha_o",
+      true,
+      []
+    ]
+  ],
+  "metrics": [],
+  "errors": [],
+  "particleDiagnostics": 0,
+  "packDone": []
+}

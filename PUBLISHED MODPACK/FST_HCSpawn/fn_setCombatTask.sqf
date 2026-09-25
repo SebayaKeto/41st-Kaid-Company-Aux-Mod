@@ -13,6 +13,7 @@ if (_mode=="stop" || {_mode in ["hunt","assault","rush","ambush","creep","retrea
     ([_group,["BURNS_movementRevision",(([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet))+1,true]] call FST_HCSpawn_fnc_burnsStateSet);
 };
 if (_mode == "stop") exitWith {
+    if ((units _group findIf {_x isKindOf "JMSEF_animals_varren_o"})>=0) then {_group setVariable ["BURNS_creatureTaskIntent","stop",true]};
     if ((units _group findIf {_x isKindOf "WBK_LS_B2"})>=0) then {_group setVariable ["BURNS_b2TaskIntent","stop",true]};
 {_group setVariable [_x,nil,true]} forEach ["BURNS_sectionToken","BURNS_sectionPlan","BURNS_sectionContact"];
 {[_x] call FST_HCSpawn_fnc_burnsArmorSectionDriver} forEach units _group;
@@ -79,6 +80,7 @@ if !(_group getVariable ["FST_HC_keepActive", false]) then {
     };
 } forEach units _group;
 [_group,true] call FST_HCSpawn_fnc_burnsSimulation;
+if ((units _group findIf {_x isKindOf "JMSEF_animals_varren_o"})>=0) then {_group setVariable ["BURNS_creatureTaskIntent",_mode,true]};
 if ((units _group findIf {_x isKindOf "WBK_LS_B2"})>=0) then {_group setVariable ["BURNS_b2TaskIntent",_mode,true]};
 // B2/BX receive ordinary mission movement; their combat remains WebKnight's.
 if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0 && {!(_mode in ["ambush","creep","cqb"] && {(units _group findIf {alive _x && {!(_x isKindOf "WBK_LS_BX")}})<0})}) exitWith {

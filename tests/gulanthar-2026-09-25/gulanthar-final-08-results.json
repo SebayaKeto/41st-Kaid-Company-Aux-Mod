@@ -1,0 +1,1115 @@
+{
+  "done": [],
+  "guardsDone": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "terrainDone": [],
+  "passed": 104,
+  "failed": [
+    [
+      0,
+      "catches fleeing human",
+      false,
+      [
+        8.74052,
+        0,
+        -1
+      ]
+    ],
+    [
+      0,
+      "native melee follows natural pursuit",
+      false,
+      [
+        8.74052,
+        0,
+        -1
+      ]
+    ],
+    [
+      2,
+      "catches fleeing human",
+      false,
+      [
+        13.428,
+        0,
+        -1
+      ]
+    ],
+    [
+      2,
+      "native melee follows natural pursuit",
+      false,
+      [
+        13.428,
+        0,
+        -1
+      ]
+    ],
+    [
+      4,
+      "catches fleeing human",
+      false,
+      [
+        13.4247,
+        0,
+        -1
+      ]
+    ],
+    [
+      4,
+      "native melee follows natural pursuit",
+      false,
+      [
+        13.4247,
+        0,
+        -1
+      ]
+    ]
+  ],
+  "checks": [
+    [
+      0,
+      "catches fleeing human",
+      false,
+      [
+        8.74052,
+        0,
+        -1
+      ]
+    ],
+    [
+      0,
+      "native melee follows natural pursuit",
+      false,
+      [
+        8.74052,
+        0,
+        -1
+      ]
+    ],
+    [
+      0,
+      "chase target really runs",
+      true,
+      []
+    ],
+    [
+      0,
+      "eight-creature pack advances",
+      true,
+      [
+        258.989,
+        255.094,
+        258.482,
+        259.716,
+        259.308,
+        260.001,
+        256.283,
+        257.417
+      ]
+    ],
+    [
+      0,
+      "bounded service reaches every pack member",
+      true,
+      [
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      ]
+    ],
+    [
+      0,
+      "pack keeps native animation speed",
+      true,
+      []
+    ],
+    [
+      0,
+      "pack Zeus hold releases all custom gaits",
+      true,
+      []
+    ],
+    [
+      0,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      0,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      0,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      0,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      0,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      0,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      0,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      0,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      0,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      0,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      0,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      0,
+      "native melee still starts",
+      true,
+      51
+    ],
+    [
+      0,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      0,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      0,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      1,
+      "catches fleeing human",
+      true,
+      [
+        3.01907,
+        6,
+        38.451
+      ]
+    ],
+    [
+      1,
+      "native melee follows natural pursuit",
+      true,
+      [
+        3.01907,
+        6,
+        38.451
+      ]
+    ],
+    [
+      1,
+      "chase target really runs",
+      true,
+      []
+    ],
+    [
+      1,
+      "eight-creature pack advances",
+      true,
+      [
+        255.632,
+        260.703,
+        250.481,
+        258.478,
+        256.967,
+        256.265,
+        257.521,
+        261.837
+      ]
+    ],
+    [
+      1,
+      "bounded service reaches every pack member",
+      true,
+      [
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      ]
+    ],
+    [
+      1,
+      "pack keeps native animation speed",
+      true,
+      []
+    ],
+    [
+      1,
+      "pack Zeus hold releases all custom gaits",
+      true,
+      []
+    ],
+    [
+      1,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      1,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      1,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      1,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      1,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      1,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      1,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      1,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      1,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      1,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      1,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      1,
+      "native melee still starts",
+      true,
+      45
+    ],
+    [
+      1,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      1,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      1,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      2,
+      "catches fleeing human",
+      false,
+      [
+        13.428,
+        0,
+        -1
+      ]
+    ],
+    [
+      2,
+      "native melee follows natural pursuit",
+      false,
+      [
+        13.428,
+        0,
+        -1
+      ]
+    ],
+    [
+      2,
+      "chase target really runs",
+      true,
+      []
+    ],
+    [
+      2,
+      "eight-creature pack advances",
+      true,
+      [
+        259.163,
+        257.225,
+        258.28,
+        261.262,
+        173.813,
+        260.421,
+        255.075,
+        258.314
+      ]
+    ],
+    [
+      2,
+      "bounded service reaches every pack member",
+      true,
+      [
+        [
+          100,
+          100,
+          100,
+          100,
+          72,
+          100,
+          100,
+          100
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          100,
+          100,
+          100,
+          100,
+          76,
+          100,
+          100,
+          100
+        ]
+      ]
+    ],
+    [
+      2,
+      "pack keeps native animation speed",
+      true,
+      []
+    ],
+    [
+      2,
+      "pack Zeus hold releases all custom gaits",
+      true,
+      []
+    ],
+    [
+      2,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      2,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      2,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      2,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      2,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      2,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      2,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      2,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      2,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      2,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      2,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      2,
+      "native melee still starts",
+      true,
+      41
+    ],
+    [
+      2,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      2,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      2,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      4,
+      "catches fleeing human",
+      false,
+      [
+        13.4247,
+        0,
+        -1
+      ]
+    ],
+    [
+      4,
+      "native melee follows natural pursuit",
+      false,
+      [
+        13.4247,
+        0,
+        -1
+      ]
+    ],
+    [
+      4,
+      "chase target really runs",
+      true,
+      []
+    ],
+    [
+      4,
+      "eight-creature pack advances",
+      true,
+      [
+        254.397,
+        261.293,
+        258.429,
+        259.158,
+        260.746,
+        259.912,
+        258.417,
+        249.949
+      ]
+    ],
+    [
+      4,
+      "bounded service reaches every pack member",
+      true,
+      [
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      ]
+    ],
+    [
+      4,
+      "pack keeps native animation speed",
+      true,
+      []
+    ],
+    [
+      4,
+      "pack Zeus hold releases all custom gaits",
+      true,
+      []
+    ],
+    [
+      4,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      4,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      4,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      4,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      4,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      4,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      4,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      4,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      4,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      4,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      4,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      4,
+      "native melee still starts",
+      true,
+      43
+    ],
+    [
+      4,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      4,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      4,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ],
+    [
+      3,
+      "catches fleeing human",
+      true,
+      [
+        3.58085,
+        7,
+        50.436
+      ]
+    ],
+    [
+      3,
+      "native melee follows natural pursuit",
+      true,
+      [
+        3.58085,
+        7,
+        50.436
+      ]
+    ],
+    [
+      3,
+      "chase target really runs",
+      true,
+      []
+    ],
+    [
+      3,
+      "eight-creature pack advances",
+      true,
+      [
+        235.662,
+        262.879,
+        255.142,
+        242.872,
+        261.327,
+        257.76,
+        253.865,
+        258.282
+      ]
+    ],
+    [
+      3,
+      "bounded service reaches every pack member",
+      true,
+      [
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ]
+      ]
+    ],
+    [
+      3,
+      "pack keeps native animation speed",
+      true,
+      []
+    ],
+    [
+      3,
+      "pack Zeus hold releases all custom gaits",
+      true,
+      []
+    ],
+    [
+      3,
+      "unit exemption releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      3,
+      "Zeus hold releases",
+      true,
+      [
+        "form939_walk"
+      ]
+    ],
+    [
+      3,
+      "run setting releases",
+      true,
+      []
+    ],
+    [
+      3,
+      "global disable releases",
+      true,
+      []
+    ],
+    [
+      3,
+      "native attack ANIM lock preserved",
+      true,
+      "form939_attack4"
+    ],
+    [
+      3,
+      "eating is not interrupted",
+      true,
+      "form939_eat"
+    ],
+    [
+      3,
+      "manual waypoint releases",
+      true,
+      []
+    ],
+    [
+      3,
+      "retreat releases pursuit assistance",
+      true,
+      []
+    ],
+    [
+      3,
+      "stop prevents pursuit assistance",
+      true,
+      []
+    ],
+    [
+      3,
+      "hunt restores pursuit intent",
+      true,
+      []
+    ],
+    [
+      3,
+      "external forced stop preserved",
+      true,
+      []
+    ],
+    [
+      3,
+      "native melee still starts",
+      true,
+      43
+    ],
+    [
+      3,
+      "attack playback speed unchanged",
+      true,
+      []
+    ],
+    [
+      3,
+      "health unchanged",
+      true,
+      [
+        0.89,
+        0.89
+      ]
+    ],
+    [
+      3,
+      "death animation not replaced",
+      true,
+      "form939_die1"
+    ]
+  ],
+  "metrics": [],
+  "errors": [],
+  "particleDiagnostics": 40,
+  "packDone": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "chaseDone": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "chaseMetrics": [
+    [
+      0,
+      1,
+      8.74052,
+      0,
+      -1,
+      521.222
+    ],
+    [
+      1,
+      1,
+      3.01907,
+      6,
+      38.451,
+      520.565
+    ],
+    [
+      2,
+      1,
+      13.428,
+      0,
+      -1,
+      521.272
+    ],
+    [
+      4,
+      1,
+      13.4247,
+      0,
+      -1,
+      521.118
+    ],
+    [
+      3,
+      1,
+      3.58085,
+      7,
+      50.436,
+      521.589
+    ]
+  ]
+}

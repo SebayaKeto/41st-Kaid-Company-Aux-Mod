@@ -4,6 +4,7 @@ if (isNull _group || {!local _group}) exitWith {false};
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 if (!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) || {_group getVariable ["BURNS_exempt",false]}) exitWith {false};
 [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
+_group setVariable ["BURNS_creatureTaskIntent","",true];
 _group setVariable ["BURNS_b2TaskIntent","",true];
 if !(_group getVariable ["FST_HC_keepActive",false]) then {_group setVariable ["BURNS_ownsKeepActive",true,true]};
 _group setVariable ["FST_HC_keepActive",true,true];

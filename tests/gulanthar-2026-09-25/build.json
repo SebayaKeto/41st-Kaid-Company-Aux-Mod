@@ -1,0 +1,101 @@
+{
+  "sha256": {
+    "FST_HCSpawn": "87842e1ee2144860a7b6da6b77de3501d0908e04f1b1ec859b66c0ea6a4d6c3f",
+    "FST_BURNS_Gulanthar": "b92d3ab440c673774bd7106f3a6a5f96a40ddc922fb8afd5cbd09ab18c9ee4e4"
+  },
+  "changedSource": [
+    "FST_HCSpawn/fn_burnsGulantharSlope.sqf",
+    "FST_HCSpawn/fn_burnsPatrol.sqf",
+    "FST_HCSpawn/fn_setCombatTask.sqf",
+    "FST_HCSpawn/XEH_preInit.sqf",
+    "FST_BURNS_Gulanthar/config.cpp"
+  ],
+  "runtimeChecksPassed": 240,
+  "finalBuildRuntimeChecksPassed": 104,
+  "dependencies": {
+    "dev_mutant_form939.pbo": "249b615c1ef2ed4edffb23baa5093cd6b16e6b1c32c1adf684844d71b3076b0e",
+    "dev_common.pbo": "95343410519295845aed1de109fe88928d13a0194cd751f327a62ad40736ed0b"
+  },
+  "metrics": [
+    {
+      "variant": "previous",
+      "samples": 600,
+      "speed95Kmh": 25.9868,
+      "fastPercent": 39.0,
+      "stoppedPercent": 11.333333333333334,
+      "meanAdvanceM": 106.24592
+    },
+    {
+      "variant": "candidate",
+      "samples": 600,
+      "speed95Kmh": 31.2257,
+      "fastPercent": 98.33333333333333,
+      "stoppedPercent": 0.0,
+      "meanAdvanceM": 279.3716
+    }
+  ],
+  "status": "Tested unsigned candidate; not installed live",
+  "qualificationNote": "Flat speed comparison and natural slope tests used the identical gait configuration with a 12m approach cutoff. Final build changes only that cutoff to 3m and repeats fleeing-human pursuit, pack and command/attack guards on all five owners.",
+  "failedExtendedChaseChecks": [
+    [
+      0,
+      "catches fleeing human",
+      false,
+      [
+        8.74052,
+        0,
+        -1
+      ]
+    ],
+    [
+      0,
+      "native melee follows natural pursuit",
+      false,
+      [
+        8.74052,
+        0,
+        -1
+      ]
+    ],
+    [
+      2,
+      "catches fleeing human",
+      false,
+      [
+        13.428,
+        0,
+        -1
+      ]
+    ],
+    [
+      2,
+      "native melee follows natural pursuit",
+      false,
+      [
+        13.428,
+        0,
+        -1
+      ]
+    ],
+    [
+      4,
+      "catches fleeing human",
+      false,
+      [
+        13.4247,
+        0,
+        -1
+      ]
+    ],
+    [
+      4,
+      "native melee follows natural pursuit",
+      false,
+      [
+        13.4247,
+        0,
+        -1
+      ]
+    ]
+  ]
+}
