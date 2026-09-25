@@ -1,8 +1,9 @@
 class CfgPatches
 {
-	class 41st_CorruptPDF
+	class 41st_UmbaranUnits
 	{
-		requiredAddons[]={"A3_Soft_F"};
+		author="Tooka";
+		requiredAddons[]={"A3_Soft_F","41st_Addon","FST_Weapons","CBA_MAIN","ls_characters_imperial","JMSLLTE_empire_mod","ls_characters_clone_legacy"};
 		units[]=
 		{
 			"FST_UmbaranInf_SL",
@@ -19,7 +20,6 @@ class CfgPatches
 		};
 		weapons[]={};
 	};
-	author="Tooka";
 };
 class CfgFactionClasses
 {
@@ -27,7 +27,7 @@ class CfgFactionClasses
 	{
 		displayName="41st Umbaran Units";
 		priority=1;
-		side=2;
+		side=0;
 		icon="";
 	};
 };
@@ -105,7 +105,7 @@ class CfgWeapons
 			mass=20;
 		};
 	};
-	class ls_imperialVest_isb_heavy_h;
+	class ls_imperialVest_isb_heavy_h {class ItemInfo;};
 	class FST_UmbaranVest_BASE: ls_imperialVest_isb_heavy_h
 	{
 		author="Tooka";
@@ -124,7 +124,7 @@ class CfgWeapons
 			"\ls\core\addons\characters_imperial\vests\tacBelt\data\camo1_isb_co.paa",
 			"\ls\core\addons\characters_imperial\vests\army\data\tacExtras_co.paa"
 		};
-		class ItemInfo: VestItem
+		class ItemInfo: ItemInfo
 		{
 			uniformModel="\ls\core\addons\characters_imperial\vests\army\ls_vest_imperial_army_heavy_h.p3d";
 			hiddenSelections[]=
@@ -247,6 +247,8 @@ class CfgVehicles
 	class FST_bodyGlove;
 	class FST_U_UmbaranBodysuit: FST_bodyGlove
 	{
+		// Armored infantry: tougher than baseline B1s; keep native damage handling.
+		armor=6;
 		author="Tooka";
 		side=0;
 		scope=1;
@@ -501,7 +503,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umsl;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umsl;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umsl;};";
 		};
 	};
 	class FST_UmbaranInf_RTO: FST_U_UmbaranBodysuit
@@ -530,7 +533,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umrto;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umrto;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umrto;};";
 		};
 	};
 	class FST_UmbaranInf_Standard: FST_U_UmbaranBodysuit
@@ -559,7 +563,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umstandard;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umstandard;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umstandard;};";
 		};
 	};
 	class FST_UmbaranInf_Autorifle: FST_U_UmbaranBodysuit
@@ -588,7 +593,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umauto;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umauto;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umauto;};";
 		};
 	};
 	class FST_UmbaranInf_Medic: FST_U_UmbaranBodysuit
@@ -604,7 +610,8 @@ class CfgVehicles
 		author="Tooka";
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
-		role="Rifleman";
+		attendant=1;
+		role="CombatLifeSaver";
 		faction="FST_Umbaran_Faction";
 		editorSubcategory="FST_Umbaran";
 		weapons[]=
@@ -617,7 +624,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_ummedic;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_ummedic;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_ummedic;};";
 		};
 	};
 	class FST_UmbaranInf_Marksman: FST_U_UmbaranBodysuit
@@ -646,7 +654,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_ummm;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_ummm;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_ummm;};";
 		};
 	};
 	class FST_UmbaranInf_EOD: FST_U_UmbaranBodysuit
@@ -662,7 +671,9 @@ class CfgVehicles
 		author="Tooka";
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
-		role="Rifleman";
+		engineer=1;
+		canDeactivateMines=1;
+		role="Sapper";
 		faction="FST_Umbaran_Faction";
 		editorSubcategory="FST_Umbaran";
 		weapons[]=
@@ -675,7 +686,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umeod;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umeod;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umeod;};";
 		};
 	};
 	class FST_UmbaranInf_AT: FST_U_UmbaranBodysuit
@@ -691,7 +703,7 @@ class CfgVehicles
 		author="Tooka";
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
-		role="Rifleman";
+		role="MissileSpecialist";
 		faction="FST_Umbaran_Faction";
 		editorSubcategory="FST_Umbaran";
 		weapons[]=
@@ -704,7 +716,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umat;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umat;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umat;};";
 		};
 	};
 	class FST_UmbaranInf_AA: FST_U_UmbaranBodysuit
@@ -720,7 +733,7 @@ class CfgVehicles
 		author="Tooka";
 		uniformAccessories[]={};
 		nakedUniform="U_BasicBody";
-		role="Rifleman";
+		role="MissileSpecialist";
 		faction="FST_Umbaran_Faction";
 		editorSubcategory="FST_Umbaran";
 		weapons[]=
@@ -733,7 +746,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umaa;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umaa;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umaa;};";
 		};
 	};
 	class FST_UmbaranInf_Comm: FST_U_UmbaranBodysuit
@@ -762,7 +776,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umcommander;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umcommander;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umcommander;};";
 		};
 	};
 	class FST_U_UmbaranBodysuit_SO: FST_bodyGlove
@@ -1021,7 +1036,8 @@ class CfgVehicles
 		magazines[]={};
 		class EventHandlers
 		{
-			init= "(_this select 0) spawn FST_UmbaranRandomizers_fnc_umso;";
+			init= "_this spawn FST_UmbaranRandomizers_fnc_umso;";
+			local= "if (_this select 1) then {[_this select 0] spawn FST_UmbaranRandomizers_fnc_umso;};";
 		};
 	};
 };

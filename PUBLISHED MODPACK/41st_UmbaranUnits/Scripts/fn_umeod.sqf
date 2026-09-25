@@ -1,6 +1,10 @@
 
 params ["_unit"];
 
+// Defer past native createUnit/BIS skill setup. Recheck ownership inside
+// an unscheduled block; a Local event retries if transfer preceded setup.
+sleep 0.05;
+isNil {
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {}; 
 
@@ -8,17 +12,6 @@ if (_unit getVariable ["FST_Initialized", false]) exitWith {};
 _unit setVariable ["FST_Initialized", true, true];
 
 ["FST_applyName", [ _unit, "Umbaran EOD"]] call CBA_fnc_globalEvent;
-
-[_unit] spawn {
-
-params ["_unit"];
-
-if (isNull _unit) exitWith {};
-
-sleep 0.05;
-
-if (isNull _unit) exitWith {};
-if (!local _unit) exitWith {};
 
 private _list_41hddatapad = [
 	"FST_CivData_Normal", 0.5, 
@@ -211,14 +204,22 @@ _unit setUnitLoadout [["FST_Galaar15","","","",["FST_blaster_cell_Green",60],[],
 
 _unit setSkill ['aimingAccuracy',0.5];
 _unit setSkill ['aimingShake',0.6];
-_unit setSkill ['aimingSpeed',0.65];
+_unit setSkill ['aimingSpeed',0.8];
 _unit setSkill ['spotDistance',0.75];
-_unit setSkill ['spotTime',0.7];
+_unit setSkill ['spotTime',0.9];
 _unit setSkill ['courage',0.85];
-_unit setSkill ['commanding',0.5];
-_unit setSkill ['reloadSpeed',0.7];
-_unit setSkill ['general',0.7];
+_unit setSkill ['commanding',0.8];
+_unit setSkill ['reloadSpeed',0.75];
+_unit setSkill ['general',0.8];
 
 ["FST_applyIdentity", [ _unit, "DSA_MindflayerFace_01", "ACE_NoVoice"]] call CBA_fnc_globalEvent;
 
+_unit setUnitTrait ["engineer",true];
+_unit setUnitTrait ["explosiveSpecialist",true];
+
+// Let BURNS apply its human policy after the authored loadout/skills are ready.
+if (!isNil "FST_HCSpawn_fnc_burnsApplyRole") then {
+    _unit setVariable ["BURNS_skillApplied", nil];
+    [group _unit] call FST_HCSpawn_fnc_burnsApplyRole;
+};
 };

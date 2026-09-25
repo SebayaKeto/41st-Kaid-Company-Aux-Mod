@@ -1,6 +1,10 @@
 
 params ["_unit"];
 
+// Defer past native createUnit/BIS skill setup. Recheck ownership inside
+// an unscheduled block; a Local event retries if transfer preceded setup.
+sleep 0.05;
+isNil {
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {}; 
 
@@ -8,17 +12,6 @@ if (_unit getVariable ["FST_Initialized", false]) exitWith {};
 _unit setVariable ["FST_Initialized", true, true];
 
 ["FST_applyName", [ _unit, "Umbaran Special Operative"]] call CBA_fnc_globalEvent;
-
-[_unit] spawn {
-
-params ["_unit"];
-
-if (isNull _unit) exitWith {};
-
-sleep 0.05;
-
-if (isNull _unit) exitWith {};
-if (!local _unit) exitWith {};
 
 private _list_41hddatapad = [
 	"FST_CivData_Normal", 0.3, 
@@ -198,20 +191,25 @@ private _50amount = selectRandomWeighted _50array;
 private _100choice = selectRandomWeighted _100array;
 private _chipchoice = selectRandomWeighted _chiparray;
 
-_unit setUnitLoadout [["FST_Galaar15","","","",["FST_blaster_cell_Green",60],[],""],[],[],["FST_UmbaranBodysuit",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],["JLTS_credits_100", _100choice],["FST_CreditChip", _chipchoice],[ _selectdatapad,1],[ _selectcomm,1],[ _intel0,1],[ _intel1,1],[ _intel2,1]]],["FST_UmbaranVest_SO",[["IDA_BactaBandage", 10],["IDA_BattleStim", 5],["ACE_splint", 4],["ACE_tourniquet", 4],["FST_BreathingGas_Oxygen",1]]],["FST_belt_bag",[["ACE_CableTie",5],["JMSLLTE_dioxis_HandGrenade",2,1],["IDA_grenade_Smoke_Green_mag",3,1],["IDA_grenade_Sonic_mag",3,1],["IDA_grenade_Detonator_mag",2,1],["FST_blaster_cell_Green",15,60],[["WBK_SciFi_Sword_4","","","",[],[],""],1]]],"JMSLLTE_Guav_black_helmet", _selectears,[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","ItemCompass","","OPTRE_NVG_UL"]];
+_unit setUnitLoadout [["FST_Galaar15","","","",["FST_blaster_cell_Green",60],[],""],[],[],["FST_UmbaranBodysuit_SO",[["JLTS_credits_10", _10amount],["JLTS_credits_50", _50amount],["JLTS_credits_100", _100choice],["FST_CreditChip", _chipchoice],[ _selectdatapad,1],[ _selectcomm,1],[ _intel0,1],[ _intel1,1],[ _intel2,1]]],["FST_UmbaranVest_SO",[["IDA_BactaBandage", 10],["IDA_BattleStim", 5],["ACE_splint", 4],["ACE_tourniquet", 4],["FST_BreathingGas_Oxygen",1]]],["FST_belt_bag",[["ACE_CableTie",5],["JMSLLTE_dioxis_HandGrenade",2,1],["IDA_grenade_Smoke_Green_mag",3,1],["IDA_grenade_Sonic_mag",3,1],["IDA_grenade_Detonator_mag",2,1],["FST_blaster_cell_Green",15,60],[["WBK_SciFi_Sword_4","","","",[],[],""],1]]],"JMSLLTE_Guav_black_helmet", _selectears,[],["ItemMap","ItemGPS","ls_radios_hush98_aurebesh","ItemCompass","","OPTRE_NVG_UL"]];
 
 _unit setSkill ['aimingAccuracy',0.95];
 _unit setSkill ['aimingShake',1];
 _unit setSkill ['aimingSpeed',0.9];
 _unit setSkill ['spotDistance',0.9];
-_unit setSkill ['spotTime',1];
+_unit setSkill ['spotTime',1.0];
 _unit setSkill ['courage',1];
 _unit setSkill ['commanding',0.9];
-_unit setSkill ['reloadSpeed',1];
-_unit setSkill ['general',1];
+_unit setSkill ['reloadSpeed',1.0];
+_unit setSkill ['general',1.0];
 
 ["FST_applyIdentity", [ _unit, "DSA_MindflayerFace_01", "ACE_NoVoice"]] call CBA_fnc_globalEvent;
 
 if (local _unit && (leader group _unit) isEqualTo _unit) then {(group _unit) setFormation 'DIAMOND';};
 
+// Let BURNS apply its human policy after the authored loadout/skills are ready.
+if (!isNil "FST_HCSpawn_fnc_burnsApplyRole") then {
+    _unit setVariable ["BURNS_skillApplied", nil];
+    [group _unit] call FST_HCSpawn_fnc_burnsApplyRole;
+};
 };
