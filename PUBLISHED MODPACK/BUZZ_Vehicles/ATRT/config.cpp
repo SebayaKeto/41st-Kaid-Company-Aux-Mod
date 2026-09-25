@@ -30,6 +30,49 @@ class CfgPatches {
 
 
 // -----------------------------------------------------------------------------
+//  LAAT/i COMPATIBILITY TABLE
+//  Classnames accepted by "Load into LAAT/i". Add new reskins here.
+// -----------------------------------------------------------------------------
+class CfgBUZZ_ATRT {
+    laatiClasses[] = {
+        "FST_laati_Turret",
+        "FST_laati_mk2",
+        "FST_laati_mk2Lights",
+        "FST_laati_Turret_Qball",
+        "FST_laati_mk2_Qball",
+        "FST_laati_mk2Lights_Qball",
+        "FST_laati_Turret_Grim",
+        "FST_laati_mk2_Grim",
+        "FST_laati_mk2Lights_Grim",
+        "FST_laati_Turret_Sierra",
+        "FST_laati_mk2_Sierra",
+        "FST_laati_mk2Lights_Sierra",
+        "FST_laati_Turret_Aether",
+        "FST_laati_mk2_Aether",
+        "FST_laati_mk2Lights_Aether",
+        "FST_laati_Turret_Cait",
+        "FST_laati_mk2_Cait",
+        "FST_laati_mk2Lights_Cait",
+        "FST_laati_Turret_Fire",
+        "FST_laati_mk2_Fire",
+        "FST_laati_mk2Lights_Fire",
+        "FST_laati_Turret_Talisman",
+        "FST_laati_mk2_Talisman",
+        "FST_laati_mk2Lights_Talisman",
+        "FST_laati_Turret_Pole",
+        "FST_laati_mk2_Pole",
+        "FST_laati_mk2Lights_Pole",
+        "FST_laati_Turret_Red",
+        "FST_laati_mk2_Red",
+        "FST_laati_mk2Lights_Red",
+        "FST_laati_Turret_Oak",
+        "FST_laati_mk2_Oak",
+        "FST_laati_mk2Lights_Oak"
+    };
+};
+
+
+// -----------------------------------------------------------------------------
 //  SERVER FUNCTIONS
 // -----------------------------------------------------------------------------
 class CfgFunctions {
@@ -156,6 +199,50 @@ class CfgWeapons {
         };
     };
 
+    // AT-RT spotlight — longer-range clone of FST_Attachment_Light_Beam_White.
+    // Built from acc_flashlight directly rather than inherited, since FST's
+    // class isn't resolved yet at this point in load order.
+    class acc_flashlight;
+    class BUZZ_ATRT_Spotlight: acc_flashlight {
+        displayName  = "[41st] AT-RT Spotlight";
+        scope        = 2;
+        scopeArsenal = 2;
+        class Iteminfo {
+            allowedSlots[] = {801, 701, 901};
+            mass           = 4;
+            mountAction    = "MountSide";
+            scope          = 0;
+            type           = 301;
+            unmountAction  = "DismountSide";
+            class Flashlight {
+                ambient[]        = {0.9, 0.81, 0.7};
+                color[]          = {180, 160, 130};
+                coneFadeCoef     = 30;
+                dayLight         = 0;
+                direction        = "flash";
+                flareMaxDistance = 2000;  // was 500 — visible flare glow range
+                flareSize        = 4;
+                innerAngle       = 8;
+                intensity        = 140;
+                irLight          = 0;
+                outerAngle       = 25;
+                position         = "flash dir";
+                scale[]          = {1, 1, 1};
+                size             = 1;
+                useFlare         = 1;
+                volumeShape      = "a3\data_f\VolumeLightFlashlight.p3d";
+                class Attenuation {
+                    constant       = 0.2;
+                    hardLimitEnd   = 2000;  // was 540 — absolute max beam distance
+                    hardLimitStart = 120;   // was 27 — push full brightness out further too
+                    linear         = 0.2;
+                    quadratic      = 0.2;
+                    start          = 20;
+                };
+            };
+        };
+    };
+
     class BUZZ_ATRT_T15: FST_T15 {
         displayName = "[41st] AT-RT Cannon";
         author      = "BEES";
@@ -176,15 +263,21 @@ class CfgWeapons {
                 linkProxy         = "\A3\data_f\proxies\weapon_slots\TOP";
                 compatibleItems[] = {};
             };
+            // PointerSlot whitelist — FST_T15's own list doesn't know about our
+            // custom BUZZ_ATRT_Spotlight, so LinkedItems rejects it ("item does
+            // not match to this weapon!") without this override.
+            class PointerSlot: PointerSlot {
+                compatibleItems[] = {
+                    "BUZZ_ATRT_Spotlight",
+                };
+            };
         };
 
-        // Pre-attached light module. Replaces the former empty linkedItems[] —
-        // that property and class LinkedItems share a name (config names are
-        // case-insensitive), so both can't coexist on one class.
+        // Pre-attached light module (LinkedItems, not linkedItems[] — same name, can't coexist).
         class LinkedItems {
             class LinkedItemsAcc {
                 slot = "PointerSlot";
-                item = "FST_Attachment_Module_Light_Normal_White";
+                item = "BUZZ_ATRT_Spotlight";
             };
         };
 
@@ -310,6 +403,17 @@ class CfgVehicles {
         editorSubcategory = "BUZZ_Vehicles";
         ace_cargo_size    = 1;
 
+        // ACE Dragging — decouples carry/drag from upstream 3AS_Small_Box_9_Black_Prop's mass.
+        ace_dragging_canDrag           = 1;
+        ace_dragging_dragPosition[]    = {0, 1.2, 0};
+        ace_dragging_dragDirection     = 0;
+        ace_dragging_ignoreWeight      = 1;
+
+        ace_dragging_canCarry          = 1;
+        ace_dragging_carryPosition[]   = {0, 1.2, 0};
+        ace_dragging_carryDirection    = 0;
+        ace_dragging_ignoreWeightCarry = 1;
+
         class EventHandlers {
             init = "(_this select 0) call compile preprocessFileLineNumbers '\BUZZ_Vehicles\ATRT\scripts\crate_init.sqf';";
         };
@@ -325,6 +429,14 @@ class CfgVehicles {
         editorCategory    = "BUZZ_Vehicles";
         editorSubcategory = "BUZZ_Vehicles";
         hiddenSelectionsTextures[] = {"BUZZ_Vehicles\ATRT\Data\wyrwulf_supply_large_CO.paa"};
+
+        // Baseline magazine load — guarantees non-empty stock regardless of spawn method.
+        class TransportMagazines {
+            class _BUZZ_ATRT_T15ReserveMag {
+                magazine = "BUZZ_ATRT_T15ReserveMag";
+                count    = 16;
+            };
+        };
 
         class EventHandlers {
             init = "(_this select 0) call compile preprocessFileLineNumbers '\BUZZ_Vehicles\ATRT\scripts\reserve_supply_init.sqf';";

@@ -1,0 +1,30 @@
+// Add an opt-in gait to the existing complete movement graph. A derived
+// movesType does not enumerate inherited states when Arma builds that graph.
+// Existing actions never select this state; the Gulanthar-only helper does.
+class CfgPatches {
+    class FST_BURNS_Gulanthar {
+        name="BURNS Gulanthar climbing gait";
+        requiredVersion=2.18;
+        requiredAddons[]={"FST_HCSpawn","JMSEF_animals_mod","dev_mutant_form939"};
+        units[]={}; weapons[]={};
+    };
+};
+class CfgMovesBasicMutant { class Actions; };
+class CfgMovesForm939: CfgMovesBasicMutant {
+    class States {
+        class form939_walk;
+        class BURNS_gulanthar_climb: form939_walk {
+            speed=1.8;
+            actions="BURNS_gulanthar_climbActions";
+            connectFrom[]={"form939_walk",0.1};
+        };
+    };
+    class Actions: Actions {
+        class form939_actions;
+        class BURNS_gulanthar_climbActions: form939_actions {
+            WalkF="BURNS_gulanthar_climb";
+            SlowF="BURNS_gulanthar_climb";
+            TactF="BURNS_gulanthar_climb";
+        };
+    };
+};

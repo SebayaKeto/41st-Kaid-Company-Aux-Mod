@@ -44,6 +44,7 @@ class CfgFunctions
             class spawnVehicle        { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_spawnVehicle.sqf"; };
             class deploy              { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_deploy.sqf"; };
             class garage              { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_garage.sqf"; };
+            class recallVehicleServer { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_recallVehicleServer.sqf"; };
             class destroyPadCamera    { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_destroyPadCamera.sqf"; };
             class updatePadCamera     { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_updatePadCamera.sqf"; };
             class serverSpawnVehicle  { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_serverSpawnVehicle.sqf"; };

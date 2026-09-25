@@ -164,6 +164,7 @@ FST_ApplyCamoPreset = {
 			[_vestNew] call _swapVest;
 		};
 	};
+	private _curGoggles = goggles _unit; 
 	if (_curGoggles != "") then {
 		private _gogglesNew = "";
 		if (
@@ -318,10 +319,6 @@ FST_fnc_toggleJumppack = {
     call WBK_UpdatePlayerKitOnMenu;
 };
 FST_fnc_gearIndex = {
-    // Perf fix: this is a full CfgWeapons + CfgVehicles + CfgGlasses sweep
-    // (tens of thousands of classes in a SW modpack) and was rebuilt from
-    // scratch on EVERY helmet-overlay open. The result depends only on config
-    // data, which cannot change during a session -- build once, reuse.
     if (!isNil {uiNamespace getVariable "FST_GearIndex"}) exitWith {};
     private _idx = createHashMapFromArray [
         ["uniforms",  []],
@@ -3091,7 +3088,6 @@ private _locker = createVehicle [
 _locker setDir _dir;
 _locker setPosATL _pos;
 
-// Raise object so the bottom of its model sits on the ground
 private _boundingBox = boundingBoxReal _locker;
 private _minZ = (_boundingBox select 0) select 2;
 

@@ -1,0 +1,7 @@
+{
+  "purpose": "Test-only registered variants; never deploy",
+  "baseCandidate": "2b151bb32f65c52c3d4b1f4bdbe3a2eb55f37df324ad7452b8f52ab043f70cd5",
+  "labHCSpawnSha256": "b3912b2a0831dce2e0104fa9063f3a931b1011752d339f35dbac9d43f1864921",
+  "configCompiled": true,
+  "allEntriesReadBack": true
+}

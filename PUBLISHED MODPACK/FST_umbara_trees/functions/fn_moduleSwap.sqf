@@ -78,7 +78,7 @@ private _fnGenerate = {
 	private _cachedData = [];
 	private _useCachedData = false;
 	if (!_isPreview && {!isDedicated}) then {
-		_cachedData = call umbara_trees_fnc_loadMapData;
+		_cachedData = call FST_umbara_trees_fnc_loadMapData;
 		_useCachedData = (count _cachedData) > 0;
 	};
 
@@ -148,7 +148,7 @@ private _fnGenerate = {
 				UMBARA_EdenChunksPerFrame, UMBARA_EdenBatchSize, UMBARA_EdenStartTime,
 				UMBARA_EdenHideNative, UMBARA_EdenReplaceEveryNth, UMBARA_EdenCx0, UMBARA_EdenCy0, UMBARA_EdenA, UMBARA_EdenB,
 				UMBARA_EdenAngle, UMBARA_EdenIsRect, true, UMBARA_EdenPlacedRef, UMBARA_EdenHiddenRef, false, []
-			] call umbara_trees_fnc_swapTick;
+			] call FST_umbara_trees_fnc_swapTick;
 			if (_done) then {
 				removeMissionEventHandler ["EachFrame", UMBARA_EdenEH];
 				UMBARA_EdenEH = nil;
@@ -157,7 +157,7 @@ private _fnGenerate = {
 	} else {
 		[{
 			params ["_args", "_pfhHandle"];
-			private _done = _args call umbara_trees_fnc_swapTick;
+			private _done = _args call FST_umbara_trees_fnc_swapTick;
 			if (_done) then {[_pfhHandle] call CBA_fnc_removePerFrameHandler;};
 		}, 0, [_logic, _chunkList, _queue, _chunkSize, _chunksPerFrame, _batchSize, _startTime, _hideNative, _replaceEveryNth, _cx0, _cy0, _a, _b, _angle, _isRect, _isPreview, _placedRef, _hiddenRef, _useCachedData, _cachedData]] call CBA_fnc_addPerFrameHandler;
 	};

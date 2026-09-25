@@ -2,10 +2,6 @@ if (isNil "FST_CurrentKitCategory") then { FST_CurrentKitCategory = "regular"; }
 
 WBK_fnc_populateKitList = {
     private _display = findDisplay 2000;
-    // Perf fix: this is broadcast to every machine on every kit take. With the
-    // menu closed the display is null and every lb call silently no-ops -- but
-    // the full kit walk with a compile per kit still ran. Nothing to populate,
-    // so exit. (The menu-open path calls this with the display live.)
     if (isNull _display) exitWith {};
     private _listbox = _display displayCtrl 1732;
     lbClear _listbox;

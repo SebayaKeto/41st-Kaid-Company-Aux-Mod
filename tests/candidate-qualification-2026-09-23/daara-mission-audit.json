@@ -1,0 +1,12 @@
+{
+  "originalSHA256": "2f4f1f78a8afe45a398e7dbe0274ce90ebfc222e07d3511608dbe457626d14c5",
+  "candidateSHA256": "98e0275bcfad7c0a5620b4a544300a8e9eff7c50a0e208560b0ea368aba24dbc",
+  "entryCount": 21,
+  "changedEntries": [
+    "cba_settings.sqf"
+  ],
+  "changes": [
+    "force zen_context_menu_overrideWaypoints = false"
+  ],
+  "runtimeStatus": "Mission itself not rehearsed in this task; adviser and all other mission content unchanged. Disabling the entire AAT assist was tested and not accepted as a complete solution, so that experimental override is not included."
+}

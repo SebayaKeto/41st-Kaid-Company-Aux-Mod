@@ -1,0 +1,35 @@
+{
+  "remoteMain": "e309bee543cef57e086c689b4bb7025b9ea1bb35",
+  "addons": [
+    {
+      "addon": "BUZZ_Vehicles",
+      "sha256": "5fcecf35c309692cd1693bd3e6cd63f660729066b536183d71cb2408d7a6aad7",
+      "entries": 32,
+      "prefix": {},
+      "sourceReadback": true,
+      "oldSHA256": "693c39b941b5315f47be86346bcc3e10f7ded07ad201ad6d72efd415dd390c8d"
+    },
+    {
+      "addon": "FST_ShipScripts",
+      "sha256": "64acf620ae283de553bf8f1d7d8e6d7e45b2e31201e879d40b620cc37748b355",
+      "entries": 25,
+      "prefix": {
+        "prefix": "FST_ShipScripts"
+      },
+      "sourceReadback": true,
+      "oldSHA256": "3b24cc63c25914a74e0bf2cf3cff2c42d31fd1d73af08fccaa5028bf255ab123"
+    },
+    {
+      "addon": "FST_umbara_trees",
+      "sha256": "84ec9e607864b60501b6cb27c371cdde187fa2161f4667f8a748f43c8b3f3e9a",
+      "entries": 12,
+      "prefix": {
+        "prefix": "FST_umbara_trees"
+      },
+      "sourceReadback": true,
+      "oldSHA256": "c55fb478a2f7472acacab324be9c22840062cc86a79fa92b70e275bdaa80dabd"
+    }
+  ],
+  "configSyntax": "CfgConvert passed all three configs",
+  "runtime": "Pending combined smoke test; previous candidate tests predate these three addon updates."
+}

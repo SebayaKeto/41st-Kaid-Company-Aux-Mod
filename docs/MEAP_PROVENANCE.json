@@ -1,0 +1,46 @@
+{
+  "author": "Maldova",
+  "archive": "@MEAP (1).rar",
+  "archiveSHA256": "282ec78520acecaa34d6a0926c218c8a5401bfcdffc72309afa8160828206a41",
+  "archiveIntegrityTest": "UnRAR test passed",
+  "included": [
+    {
+      "file": "MEAP_Core.pbo",
+      "originalSHA256": "0b36b77efeeb2b27727418a5d2bae1d35edd659c086a9ed2bbeedb75166df5a9",
+      "modified": true
+    },
+    {
+      "file": "MEAP_Economy_Core.pbo",
+      "originalSHA256": "0946c642ad506413a6d23ac4ff83763317086f49dbc6f5ffa70a82cbd02b5a00",
+      "modified": false
+    },
+    {
+      "file": "MEAP_SW_Core.pbo",
+      "originalSHA256": "b7a327985ac61c2de1e819097f91158e19780d55e1b53936e24ba1af1a45b071",
+      "modified": false
+    },
+    {
+      "file": "MEAP_SW_Props.pbo",
+      "originalSHA256": "231c97b170987fc4b5576f5db5e0a68dc87629b07ab638f510dc124cce66d446",
+      "modified": false
+    },
+    {
+      "file": "MEAP_SW_Structures.pbo",
+      "originalSHA256": "8b14eab1258e5d0bfdacc3f32e28bae69cbd928354863549e0423712252d0fcc",
+      "modified": false
+    },
+    {
+      "file": "MEAP_Architect_Core.pbo",
+      "originalSHA256": "57822b8a4da759ae841de7f0698831238597587c27c38cbbc9fb27b32a4119da",
+      "modified": true
+    }
+  ],
+  "architectChanges": [
+    "Core and Architect snap-anchor selection queries explicitly use Memory LOD",
+    "Filter focus accepts movement keys as text input",
+    "Server-initiated cleanup requires the active session token; updated revocation, death and disconnect callers",
+    "README shortcut mapping corrected to match the shipped handler"
+  ],
+  "configSource": "Core and Architect config.cpp files were decoded from supplied config.bin files with Bohemia CfgConvert; original PBO prefixes are retained",
+  "deployment": "New isolated Aux copy only; running Main and Training unchanged"
+}

@@ -6,13 +6,25 @@ class CfgPatches {
         name="BURNS Native Combat Profiles";
         author="41st Elite Corps";
         requiredVersion=2.18;
-        requiredAddons[]={"FST_HCSpawn","A3_Weapons_F","A3_Weapons_F_Exp_Launchers_RPG7","A3_Weapons_F_Tank_Launchers_MRAWS","FST_EWEB_Mod","41st_Weapons_Vehicle","FST_Ammo","FST_Launchers"};
+        requiredAddons[]={"FST_HCSpawn","A3_Weapons_F","A3_Weapons_F_Exp_Launchers_RPG7","A3_Weapons_F_Tank_Launchers_MRAWS","FST_EWEB_Mod","41st_Weapons_Vehicle","FST_Ammo","FST_Launchers","FST_AAT"};
         units[]={}; weapons[]={};
     };
 };
 class Mode_FullAuto;
 class Mode_SemiAuto;
 class CfgWeapons {
+    class autocannon_Base_F;
+    class FST_AAT_Cannon: autocannon_Base_F {
+        class HP: autocannon_Base_F {
+            class Fire: Mode_SemiAuto {
+                minRange=15;minRangeProbab=0.35;
+                midRange=250;midRangeProbab=0.8;
+                maxRange=1000;maxRangeProbab=0.15;
+                aiRateOfFire=6;aiRateOfFireDispersion=2;aiRateOfFireDistance=500;
+            };
+        };
+    };
+
     class MGun;
     class LMG_RCWS: MGun { aiDispersionCoefX=6; aiDispersionCoefY=4; };
     class HMG_127: LMG_RCWS { aiDispersionCoefX=6; aiDispersionCoefY=4; };
@@ -38,7 +50,7 @@ class CfgWeapons {
     class IDA_RPS6HP;
     class FST_RPS6HP: IDA_RPS6HP {
         class Single: Mode_SemiAuto {
-            minRange=60; minRangeProbab=0.65;
+            minRange=15; minRangeProbab=0.85;
             midRange=200; midRangeProbab=0.95;
             maxRange=600; maxRangeProbab=0.2;
             aiRateOfFire=2; aiRateOfFireDistance=300;
@@ -46,6 +58,11 @@ class CfgWeapons {
     };
 };
 class CfgAmmo {
+    class IDA_Blasterbolt_Power6_VEHICLE;
+    class FST_thermal_shell_HP: IDA_Blasterbolt_Power6_VEHICLE {
+        aiAmmoUsageFlags=960;
+        cost=12;
+    };
     class RocketBase;
     // Native flags: infantry 64, light vehicles 128, aircraft 256, armour 512.
     // No synthetic targets, lock-on guidance, ammunition grants or forced shots.

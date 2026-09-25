@@ -3,6 +3,8 @@
 // Default behavior: BURNS Assault
 
 if (!hasInterface) exitWith {};
+if (missionNamespace getVariable ["FST_HC_modulesRegistered",false]) exitWith {};
+FST_HC_modulesRegistered=true;
 
 private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
 
@@ -22,6 +24,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     private _code = compile format [
         '
         params ["_pos"];
+        _pos=ASLToATL _pos;
         ["%1",
         [
             ["COMBO", "Behavior", [[0,1,2,3,4,5], ["Assault","Hunt","Garrison","Patrol","Static","No Behavior"], 0]]
@@ -40,7 +43,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         _desc, _key
     ];
 
-    ["41st Kaid Modules", _desc, _code, _icon] call zen_custom_modules_fnc_register;
+    ["41st Kaid Modules", _desc, _code, _icon] call FST_HCSpawn_fnc_registerNativeModule;
 
 } forEach FST_HC_Templates;
 
@@ -52,6 +55,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     "--- Fill Garrison ---",
     {
         params ["_pos"];
+        _pos=ASLToATL _pos;
 
         private _replacementOptions = [] call FST_HCSpawn_fnc_getFSTOpforUnitOptions;
         _replacementOptions params ["_replacementValues", "_replacementLabels"];
@@ -81,7 +85,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         ] call zen_dialog_fnc_create;
     },
     _icon
-] call zen_custom_modules_fnc_register;
+] call FST_HCSpawn_fnc_registerNativeModule;
 
 // ============================================================
 // FRONTLINE MODULE
@@ -91,6 +95,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     "--- Frontline Assault ---",
     {
         params ["_pos"];
+        _pos=ASLToATL _pos;
         ["Frontline Assault",
         [
             ["COMBO", "Template", [
@@ -121,7 +126,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         ] call zen_dialog_fnc_create;
     },
     _icon
-] call zen_custom_modules_fnc_register;
+] call FST_HCSpawn_fnc_registerNativeModule;
 
 // ============================================================
 // QRF MODULE
@@ -131,6 +136,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     "--- QRF Response ---",
     {
         params ["_pos"];
+        _pos=ASLToATL _pos;
         ["QRF Response",
         [
             ["COMBO", "Infantry Template", [
@@ -171,7 +177,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         ] call zen_dialog_fnc_create;
     },
     _icon
-] call zen_custom_modules_fnc_register;
+] call FST_HCSpawn_fnc_registerNativeModule;
 
 // ============================================================
 // VEHICLE SPAWN MODULE (V28)
@@ -183,6 +189,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     "--- Vehicle Spawn ---",
     {
         params ["_pos"];
+        _pos=ASLToATL _pos;
         private _keys = keys FST_HC_VehicleTemplates;
         private _labels = _keys apply { (FST_HC_VehicleTemplates get _x) select 2 };
         ["Vehicle Spawn (vehicle HC)",
@@ -221,7 +228,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         ] call zen_dialog_fnc_create;
     },
     _icon
-] call zen_custom_modules_fnc_register;
+] call FST_HCSpawn_fnc_registerNativeModule;
 
 // ============================================================
 // SEND TO VEHICLE HC MODULE (V28)
@@ -241,7 +248,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         systemChat format ["[FST] Requested vehicle HC transfer for %1 group(s).", count _groups];
     },
     _icon
-] call zen_custom_modules_fnc_register;
+] call FST_HCSpawn_fnc_registerNativeModule;
 
 // ============================================================
 // DEAD GROUP CLEANUP MODULE (V27)
@@ -253,6 +260,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     "--- Cleanup Dead Groups ---",
     {
         params ["_pos"];
+        _pos=ASLToATL _pos;
         ["Cleanup Dead Groups",
         [
             ["SLIDER", ["Max Groups To Delete", "Per machine (server and each HC)."], [10, 300, 150, 0]],
@@ -270,110 +278,7 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         ] call zen_dialog_fnc_create;
     },
     _icon
-] call zen_custom_modules_fnc_register;
+] call FST_HCSpawn_fnc_registerNativeModule;
 
-diag_log format ["[FST_HCSpawn] ZEN modules registered: %1 templates + Fill Garrison + Frontline + QRF + Vehicle Spawn + Send To Vehicle HC + Dead Group Cleanup", count FST_HC_Templates];
+diag_log format ["[FST_HCSpawn] Native module callbacks registered: %1 templates + Fill Garrison + Frontline + QRF + Vehicle Spawn + Send To Vehicle HC + Dead Group Cleanup", count FST_HC_Templates];
 
-// BURNS task modules: same handler as the unit/group right-click actions.
-["BURNS", "Task Rush", {
-    params ["_pos",["_object",objNull]];
-    ["rush",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Hunt", {
-    params ["_pos",["_object",objNull]];
-    ["hunt",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Creep", {
-    params ["_pos",["_object",objNull]];
-    ["creep",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Assault", {
-    params ["_pos",["_object",objNull]];
-    ["assault",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Retreat", {
-    params ["_pos",["_object",objNull]];
-    ["retreat",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task CQB", {
-    params ["_pos",["_object",objNull]];
-    ["cqb",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Garrison", {
-    params ["_pos",["_object",objNull]];
-    ["garrison",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Camp", {
-    params ["_pos",["_object",objNull]];
-    ["camp",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Defend", {
-    params ["_pos",["_object",objNull]];
-    ["defend",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Patrol", {
-    params ["_pos",["_object",objNull]];
-    ["patrol",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Task Reset", {
-    params ["_pos",["_object",objNull]];
-    ["reset",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Set Task Target", {
-    params ["_pos",["_object",objNull]];
-    ["target",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Register Artillery", {
-    params ["_pos",["_object",objNull]];
-    ["artillery_register",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Unregister Artillery", {
-    params ["_pos",["_object",objNull]];
-    ["artillery_remove",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Artillery Fire Mission", {
-    params ["_pos",["_object",objNull]];
-    ["artillery_fire",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Enable Unit AI", {
-    params ["_pos",["_object",objNull]];
-    ["enable_unit",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Disable Unit AI", {
-    params ["_pos",["_object",objNull]];
-    ["disable_unit",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Enable Group AI", {
-    params ["_pos",["_object",objNull]];
-    ["enable_group",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Disable Group AI", {
-    params ["_pos",["_object",objNull]];
-    ["disable_group",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Enable Radio", {
-    params ["_pos",["_object",objNull]];
-    ["radio_on",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Disable Radio", {
-    params ["_pos",["_object",objNull]];
-    ["radio_off",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Enable Reinforcement", {
-    params ["_pos",["_object",objNull]];
-    ["reinforce_on",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-["BURNS", "Disable Reinforcement", {
-    params ["_pos",["_object",objNull]];
-    ["reinforce_off",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-
-["BURNS", "Configure Group AI", {
-    params ["_pos",["_object",objNull]];
-    ["configure",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;
-
-["BURNS", "Set Radio", {
-    params ["_pos",["_object",objNull]];
-    ["set_radio",curatorSelected select 1,([_object]+(curatorSelected select 0)),_pos] call FST_HCSpawn_fnc_burnsDialog;
-}, _icon] call zen_custom_modules_fnc_register;

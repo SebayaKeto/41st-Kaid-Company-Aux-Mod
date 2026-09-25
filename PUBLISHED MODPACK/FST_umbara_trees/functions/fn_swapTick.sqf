@@ -45,7 +45,7 @@ if ((count _chunkList) > 0) then {
 				private _pos = _cachedData select _i;
 				private _ox = _pos select 0;
 				private _oy = _pos select 1;
-				if ([_ox, _oy, _cx0, _cy0, _a, _b, _angle, _isRect] call umbara_trees_fnc_pointInArea) then {
+				if ([_ox, _oy, _cx0, _cy0, _a, _b, _angle, _isRect] call FST_umbara_trees_fnc_pointInArea) then {
 					[_ox, _oy] call _fnConsiderProp;
 				};
 			};
@@ -61,7 +61,7 @@ if ((count _chunkList) > 0) then {
 				private _objPos = getPosATL _x;
 				private _ox = _objPos select 0;
 				private _oy = _objPos select 1;
-				if ([_ox, _oy, _cx0, _cy0, _a, _b, _angle, _isRect] call umbara_trees_fnc_pointInArea && {_ox >= _chCx} && {_ox < (_chCx + _chunkSize)} && {_oy >= _chCy} && {_oy < (_chCy + _chunkSize)}) then {
+				if ([_ox, _oy, _cx0, _cy0, _a, _b, _angle, _isRect] call FST_umbara_trees_fnc_pointInArea && {_ox >= _chCx} && {_ox < (_chCx + _chunkSize)} && {_oy >= _chCy} && {_oy < (_chCy + _chunkSize)}) then {
 					// Hide + prop placement are independent decisions
 					if (_hideNative) then {
 						_queue pushBack [0, _x, 0, 0];
