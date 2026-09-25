@@ -4,12 +4,13 @@ Named for Daidalos, the master builder of Greek mythology, MEAP Daidalos is a st
 
 ## Eligibility
 
-A player is eligible when either condition is true:
+A player is eligible when any condition is true:
 
+- The current kit-menu role is Engineer (the Combat Engineer/EOD kit), Combat Engineer, Combat Engineer/EOD, or EOD. This applies to all current, P1 and snow kit categories. Changing to a different kit removes this route to access.
 - ACE is loaded, reports the unit as an advanced engineer (`ACE_IsEngineer >= 2`), and **Allow Advanced Engineers** is enabled.
 - A Zeus attaches **Assign MEAP Daidalos** to the player.
 
-**Revoke MEAP Daidalos** removes the explicit role. Explicit assignments are stored by player UID on the server and restored after respawn. Neither module removes ACE advanced engineer eligibility. ACE is optional: without it, use the Zeus assignment module and the CBA keybind to open Daidalos. FOB deposit and funds actions are added to the standard Arma action menu when ACE is unavailable.
+**Revoke MEAP Daidalos** removes the explicit role. Explicit assignments are stored by player UID on the server and restored after respawn. Neither module removes kit-based or ACE advanced engineer eligibility. Kit-based eligibility follows the current public kit role; reselect the Engineer/EOD kit if a respawn clears that role. ACE is optional: without it, use an eligible kit or the Zeus assignment module and the CBA keybind to open Daidalos. FOB deposit and funds actions are added to the standard Arma action menu when ACE is unavailable.
 
 ## Opening The Camera
 

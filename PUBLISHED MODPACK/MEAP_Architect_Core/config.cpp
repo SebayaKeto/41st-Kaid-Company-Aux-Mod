@@ -117,6 +117,7 @@ class CfgFunctions
 			class initializeArchitectState
 			{
 			};
+			class isArchitectKit {};
 			class isArchitectEligible
 			{
 			};

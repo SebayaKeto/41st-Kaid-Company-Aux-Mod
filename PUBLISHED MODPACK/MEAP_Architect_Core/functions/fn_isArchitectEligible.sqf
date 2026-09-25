@@ -11,4 +11,4 @@ private _key = [_unit] call MEAP_fnc_getArchitectKey;
 private _grants = missionNamespace getVariable ["MEAP_Architect_grants", createHashMap];
 private _hasArchitectGrant = _grants getOrDefault [_key, false];
 
-_isAdvancedEngineer || {_hasArchitectGrant}
+([_unit] call MEAP_fnc_isArchitectKit) || {_isAdvancedEngineer} || {_hasArchitectGrant}

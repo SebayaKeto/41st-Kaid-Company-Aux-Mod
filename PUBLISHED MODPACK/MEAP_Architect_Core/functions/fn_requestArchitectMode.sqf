@@ -14,7 +14,7 @@ if (!alive _unit) exitWith
 };
 if !([_unit] call MEAP_fnc_isArchitectEligible) exitWith
 {
-    ["You must be an ACE advanced engineer or have the MEAP Daidalos role."] remoteExecCall ["MEAP_fnc_architectMessage", _unit];
+    ["Select an Engineer/EOD kit, be an ACE advanced engineer, or have a Zeus-granted Daidalos role."] remoteExecCall ["MEAP_fnc_architectMessage", _unit];
 };
 private _accessSide = missionNamespace getVariable ["MEAP_Architect_accessSide", 0];
 private _unitSide = switch (side group _unit) do

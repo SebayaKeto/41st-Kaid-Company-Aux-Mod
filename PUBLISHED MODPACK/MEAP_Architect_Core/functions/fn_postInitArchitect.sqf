@@ -16,7 +16,8 @@ if (hasInterface && {!isNil "ace_interact_menu_fnc_createAction"} && {!isNil "ac
             };
         },
         {
-            ((missionNamespace getVariable ["MEAP_Architect_allowAdvancedEngineers", true])
+            ([_player] call MEAP_fnc_isArchitectKit)
+            || ((missionNamespace getVariable ["MEAP_Architect_allowAdvancedEngineers", true])
                 && {!isNil "ace_common_fnc_isEngineer"}
                 && {[_player, 2] call ace_common_fnc_isEngineer})
             || {_player getVariable ["MEAP_isArchitect", false]}
