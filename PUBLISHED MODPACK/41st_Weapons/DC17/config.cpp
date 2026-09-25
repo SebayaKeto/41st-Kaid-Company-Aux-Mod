@@ -304,12 +304,14 @@ class CfgWeapons
 				"FST_blaster_cell_low_Red"
 			};
 			reloadAction="";
+			muzzlePos="usti hlavne 1";
+			muzzleEnd="konec hlavne 1";
 		};
 		class Left: Right
 		{
 			displayName="Left Hand";
-			muzzlePos="usti hlavne left";
-			muzzleEnd="konec hlavne left";
+			muzzlePos="usti hlavne 2";
+			muzzleEnd="konec hlavne 2";
 		};
 	};
 	class FST_TwinDC17_Primary: FST_TwinDC17_Secondary

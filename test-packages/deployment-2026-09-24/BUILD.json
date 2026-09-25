@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "0721aa2c1c4760b2c089edcdaf59f559a722a6c1",
+  "remoteMain": "cd4d0dfdd8e5ce6299b436030854212c41cc9d17",
+  "sourceReadback": true,
+  "unchangedArmorEntriesVerified": 1849,
+  "armorOverlay": [
+    "data/helmets/fst_ab_helmet_atlas.paa",
+    "data/helmets/fst_ab_helmet_atlas_dirty.paa",
+    "data/helmets/fst_p2_helmet_cooker_dirty.paa",
+    "data/uniforms/fst_p2_bodylower_cooker_dirty.paa",
+    "data/uniforms/fst_p2_bodyupper_cooker.paa",
+    "data/uniforms/fst_p2_bodyupper_cooker_dirty.paa",
+    "config.cpp"
+  ],
+  "files": 66,
+  "bytes": 5854618885,
+  "priorTestPackageUnchanged": true,
+  "umbaranHitpointOrderCorrected": true
+}

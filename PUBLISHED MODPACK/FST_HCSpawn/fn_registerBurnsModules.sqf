@@ -22,9 +22,17 @@ private _icon="\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
     params ["_pos",["_object",objNull]];
     ["hunt",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,false] call FST_HCSpawn_fnc_burnsDialog;
 }, _icon] call FST_HCSpawn_fnc_registerNativeModule;
+["BURNS", "Task Ambush (BX)", {
+    params ["_pos",["_object",objNull]];
+    ["ambush",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,false] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call FST_HCSpawn_fnc_registerNativeModule;
 ["BURNS", "Task Creep", {
     params ["_pos",["_object",objNull]];
     ["creep",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,false] call FST_HCSpawn_fnc_burnsDialog;
+}, _icon] call FST_HCSpawn_fnc_registerNativeModule;
+["BURNS", "Task AAT Section Assault (Test)", {
+    params ["_pos",["_object",objNull]];
+    ["armor_assault",curatorSelected select 1,([_object]+(curatorSelected select 0)),ASLToATL _pos,true] call FST_HCSpawn_fnc_burnsDialog;
 }, _icon] call FST_HCSpawn_fnc_registerNativeModule;
 ["BURNS", "Task Assault", {
     params ["_pos",["_object",objNull]];

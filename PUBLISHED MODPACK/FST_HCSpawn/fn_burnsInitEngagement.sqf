@@ -42,6 +42,16 @@ BURNS_EngagementQueries=0;
         // testing eligibility. This also handles a task disabled on the new HC.
         {
             private _u=_x;
+            private _section=_u getVariable ["BURNS_sectionDriver",[]];
+            private _localSection=_u getVariable ["BURNS_sectionDriverLocal",[]];
+            if (count _localSection==5 && {(_localSection select 4)==clientOwner}) then {_section=_localSection select [0,4]};
+            if (local _u && {count _section==4} && {
+                time>(_section select 3) || {(_g getVariable ["BURNS_sectionToken",""])!=(_section select 0)} || {
+                    !([_g] call FST_HCSpawn_fnc_burnsEngagementAllowed)
+                } || {driver vehicle _u!=_u} || {!(_u checkAIFeature "PATH")} || {!(_u checkAIFeature "MOVE")} || {
+                    !(missionNamespace getVariable ["BURNS_ArmorSectionsEnabled",true])
+                }
+            }) then {[_u] call FST_HCSpawn_fnc_burnsArmorSectionDriver};
             private _lease=_u getVariable ["BURNS_pointFireLease",[]];
             if (local _u && {count _lease==4} && {(_lease select 0)!=clientOwner || {time>(_lease select 1)}}) then {
                 if (abs getForcedSpeed _u<0.01) then {_u forceSpeed (_lease select 2)};
@@ -65,7 +75,8 @@ BURNS_EngagementQueries=0;
         if (time<(_g getVariable ["BURNS_engagementNext",-1]) || {!([_g] call FST_HCSpawn_fnc_burnsEngagementAllowed)}) then {continue};
         private _armor=_v isKindOf "FST_AAT";
         _g setVariable ["BURNS_engagementNext",time+(if (_armor) then {0.5} else {2})];
-        if (!_armor && {!([_g] call FST_HCSpawn_fnc_burnsB1Eligible)}) then {continue};
+        if (!_armor) then {[_g] call FST_HCSpawn_fnc_burnsReaction};
+        if (!_armor && {!([_g,true] call FST_HCSpawn_fnc_burnsB1Eligible)}) then {continue};
         if (!_armor && {count BURNS_FireJobs>=16 || {count (_g getVariable ["BURNS_pointFire",[]])>0}}) then {continue};
         private _range=if (_armor) then {500} else {250};
         if (fog>=0.4 && {missionNamespace getVariable ["BURNS_LowVisibilityAssist",false]}) then {_range=_range min (missionNamespace getVariable ["BURNS_VisibleContactRange",125])};

@@ -1,0 +1,23 @@
+{
+  "purpose": "Tonight rehearsal candidate; opt-in AAT section assault; failed hill experiment excluded",
+  "configCompiled": true,
+  "allEntriesReadBack": true,
+  "addons": [
+    {
+      "addon": "FST_BURNS_Combat",
+      "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+    },
+    {
+      "addon": "FST_BURNS_Gulanthar",
+      "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+    },
+    {
+      "addon": "FST_HCSpawn",
+      "sha256": "021290fb22f637a2717cd3e42e07a0953977223d854dc777ecec18ae906713ac"
+    },
+    {
+      "addon": "FST_Saber_Handling",
+      "sha256": "554fbe66bf7544baf6db9c407ee6a650367ae0bd37694d254caed94fc237f2e3"
+    }
+  ]
+}

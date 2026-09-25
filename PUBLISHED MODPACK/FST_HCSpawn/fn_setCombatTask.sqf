@@ -3,13 +3,17 @@
 params ["_group", ["_mode", "stop"], ["_pos", []], ["_radius", 500]];
 if (isNull _group || {!local _group}) exitWith {false};
 if ([_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
+[_group] call FST_HCSpawn_fnc_burnsReleaseBX;
 // Clear our temporary aiming before accepting a newer task.
 [_group] call FST_HCSpawn_fnc_burnsReleasePointFire;
 // Used only to prevent a delayed locality restore reviving an older BURNS hold.
-if (_mode=="stop" || {_mode in ["hunt","assault","rush","creep","retreat","garrison","camp","defend","cqb"] && {missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]} && {!(_group getVariable ["BURNS_exempt",false])}}) then {
+if (_mode=="stop" || {_mode in ["hunt","assault","rush","ambush","creep","retreat","garrison","camp","defend","cqb"] && {missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]} && {!(_group getVariable ["BURNS_exempt",false])}}) then {
     ([_group,["BURNS_movementRevision",(([_group,["BURNS_movementRevision",0]] call FST_HCSpawn_fnc_burnsStateGet))+1,true]] call FST_HCSpawn_fnc_burnsStateSet);
 };
 if (_mode == "stop") exitWith {
+{_group setVariable [_x,nil,true]} forEach ["BURNS_sectionToken","BURNS_sectionPlan","BURNS_sectionContact"];
+{[_x] call FST_HCSpawn_fnc_burnsArmorSectionDriver} forEach units _group;
+
     for "_i" from (count waypoints _group-1) to 0 step -1 do {
         if (waypointDescription [_group,_i]=="BURNS patrol") then {deleteWaypoint [_group,_i]};
     };
@@ -49,7 +53,7 @@ if (_mode == "stop") exitWith {
     ([_group,["FST_HC_taskLastOrder", nil, true]] call FST_HCSpawn_fnc_burnsStateSet);
     true
 };
-if !(_mode in ["hunt", "assault", "rush", "creep", "retreat", "garrison", "camp", "defend", "cqb"]) exitWith {false};
+if !(_mode in ["hunt", "assault", "rush", "ambush","ambush", "creep", "retreat", "garrison", "camp", "defend", "cqb"]) exitWith {false};
 if (!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) || {_group getVariable ["BURNS_exempt",false]}) exitWith {false};
 // Public calls can replace tasks too. Release old holds and routes exactly as
 // the Zeus broker does, including when only the task's destination changes.
@@ -58,7 +62,7 @@ if (count (([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet
 };
 {_x setVariable ["BURNS_moveCleanupToken",nil]} forEach units _group;
 if (count _pos < 2) then { _pos = getPosATL leader _group; };
-_radius = (_radius max 50) min 3000;
+_radius = (_radius max 15) min 3000;
 if !(missionNamespace getVariable ["FST_HC_CombatTasksEnabled", true]) exitWith {false};
 if !(_group getVariable ["FST_HC_keepActive", false]) then {
     _group setVariable ["BURNS_ownsKeepActive", true, true];
@@ -73,7 +77,7 @@ if !(_group getVariable ["FST_HC_keepActive", false]) then {
 } forEach units _group;
 [_group,true] call FST_HCSpawn_fnc_burnsSimulation;
 // B2/BX receive ordinary mission movement; their combat remains WebKnight's.
-if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0) exitWith {
+if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0 && {!(_mode in ["ambush","creep","cqb"] && {(units _group findIf {alive _x && {!(_x isKindOf "WBK_LS_BX")}})<0})}) exitWith {
     private _index = ([_group,["FST_HC_taskWaypoint", -1]] call FST_HCSpawn_fnc_burnsStateGet);
     private _wp = if (_index >= 0 && {_index < count waypoints _group} && {waypointDescription [_group,_index] == "FST HC combat"}) then {
         [_group,_index]

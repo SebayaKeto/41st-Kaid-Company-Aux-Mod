@@ -1,0 +1,3400 @@
+[
+  {
+    "run": "run26-after-action",
+    "checks": 25,
+    "passed": 25,
+    "failed": 0,
+    "completed": [
+      "17:25:52 \"[AF_DONE] checks=25 failed=0\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "17:25:01 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "17:25:01 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "17:25:10 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,10080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "17:25:10 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,10080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "17:25:10 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,10080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "17:25:22 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "17:25:22 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "17:25:22 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired at 25",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"AT fired at 25\"\",true,[2,26.204,\"\"FST_E5\"\",46.2123]]\""
+      },
+      {
+        "name": "AT fired at 45",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"AT fired at 45\"\",true,[2,26.025,\"\"FST_E5\"\",57.782]]\""
+      },
+      {
+        "name": "AT fired at 75",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"AT fired at 75\"\",true,[2,26.383,\"\"FST_E5\"\",74.9885]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.00708008,50,4,330.181]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[248,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1007,7000.01,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[425,13]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,13]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.5,7000.01,0.00143909],[4006.99,7000,0.00143909],[4010.51,7000,0.00143909],[4014.02,7000.11,0.00143909],[4017.5,7000.01,0.00143909],[4001.02,6996.85,0.00143909],[4003.5,6995.49,0.00143909],[4006.99,6995.5,0.00143909],[4010.5,6995.51,0.00143909],[4011.46,6998.16,0.00143909],[4017.5,6995.51,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[74,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[1.90134,\"\"bx_droid_sword_post\"\",67.6]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "17:25:52 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[1000.08,13188.7,-0.0907779],[\"\"assault\"\",[1000,13200,0],500]]]\""
+      }
+    ],
+    "metrics": [
+      "17:25:52 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "17:25:52 \"[AF_GARRISON] [true,46.382,50,4,330.181]\""
+    ],
+    "build": null,
+    "fixtureSha256": null
+  },
+  {
+    "run": "run27-after-action",
+    "checks": 43,
+    "passed": 36,
+    "failed": 7,
+    "completed": [
+      "17:34:04 \"[AF_DONE] checks=43 failed=7\""
+    ],
+    "newCodeOrFixtureErrors": [
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:48 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:48   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:48   Error 0 elements provided, 3 expected",
+          "17:31:48 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:49 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:49   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:49   Error 0 elements provided, 3 expected",
+          "17:31:49 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:50 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:50   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:50   Error 0 elements provided, 3 expected",
+          "17:31:50 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:51 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:51   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:51   Error 0 elements provided, 3 expected",
+          "17:31:51 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:52 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:52   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:52   Error 0 elements provided, 3 expected",
+          "17:31:52 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:53 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:53   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:53   Error 0 elements provided, 3 expected",
+          "17:31:53 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:54 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:54   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:54   Error 0 elements provided, 3 expected",
+          "17:31:54 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:55 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:55   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:55   Error 0 elements provided, 3 expected",
+          "17:31:55 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:56 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:56   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:56   Error 0 elements provided, 3 expected",
+          "17:31:56 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:57 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:57   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:57   Error 0 elements provided, 3 expected",
+          "17:31:57 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:58 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:58   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:58   Error 0 elements provided, 3 expected",
+          "17:31:58 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:31:59 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:59   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:31:59   Error 0 elements provided, 3 expected",
+          "17:31:59 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:00 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:00   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:00   Error 0 elements provided, 3 expected",
+          "17:32:00 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:01 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:01   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:01   Error 0 elements provided, 3 expected",
+          "17:32:01 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:02 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:02   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:02   Error 0 elements provided, 3 expected",
+          "17:32:02 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:03 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:03   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:03   Error 0 elements provided, 3 expected",
+          "17:32:03 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:04 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:04   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:04   Error 0 elements provided, 3 expected",
+          "17:32:04 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:05 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:05   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:05   Error 0 elements provided, 3 expected",
+          "17:32:05 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:06 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:06   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:06   Error 0 elements provided, 3 expected",
+          "17:32:06 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:07 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:07   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:07   Error 0 elements provided, 3 expected",
+          "17:32:07 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:08 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:08   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:08   Error 0 elements provided, 3 expected",
+          "17:32:08 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:09 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:09   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:09   Error 0 elements provided, 3 expected",
+          "17:32:09 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:10 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:10   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:10   Error 0 elements provided, 3 expected",
+          "17:32:10 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:11 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:11   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:11   Error 0 elements provided, 3 expected",
+          "17:32:11 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:16 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:16   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:16   Error 0 elements provided, 3 expected",
+          "17:32:16 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:21 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:21   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:21   Error 0 elements provided, 3 expected",
+          "17:32:21 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:26 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:26   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:26   Error 0 elements provided, 3 expected",
+          "17:32:26 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:31 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:31   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:31   Error 0 elements provided, 3 expected",
+          "17:32:31 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:36 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:36   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:36   Error 0 elements provided, 3 expected",
+          "17:32:36 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:41 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:41   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:41   Error 0 elements provided, 3 expected",
+          "17:32:41 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:46 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:46   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:46   Error 0 elements provided, 3 expected",
+          "17:32:46 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:51 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:51   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:51   Error 0 elements provided, 3 expected",
+          "17:32:51 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:32:56 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:56   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:32:56   Error 0 elements provided, 3 expected",
+          "17:32:56 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:01 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:01   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:01   Error 0 elements provided, 3 expected",
+          "17:33:01 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:06 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:06   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:06   Error 0 elements provided, 3 expected",
+          "17:33:06 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:11 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:11   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:11   Error 0 elements provided, 3 expected",
+          "17:33:11 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:16 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:16   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:16   Error 0 elements provided, 3 expected",
+          "17:33:16 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:21 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:21   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:21   Error 0 elements provided, 3 expected",
+          "17:33:21 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:26 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:26   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:26   Error 0 elements provided, 3 expected",
+          "17:33:26 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:31 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:31   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:31   Error 0 elements provided, 3 expected",
+          "17:33:31 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:36 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:36   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:36   Error 0 elements provided, 3 expected",
+          "17:33:36 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:41 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:41   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:41   Error 0 elements provided, 3 expected",
+          "17:33:41 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:46 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:46   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:46   Error 0 elements provided, 3 expected",
+          "17:33:46 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:51 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:51   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:51   Error 0 elements provided, 3 expected",
+          "17:33:51 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:33:56 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:56   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:33:56   Error 0 elements provided, 3 expected",
+          "17:33:56 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:01 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:01   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:01   Error 0 elements provided, 3 expected",
+          "17:34:01 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:06 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:06   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:06   Error 0 elements provided, 3 expected",
+          "17:34:06 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:11 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:11   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:11   Error 0 elements provided, 3 expected",
+          "17:34:11 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:16 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:16   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:16   Error 0 elements provided, 3 expected",
+          "17:34:16 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:21 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:21   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:21   Error 0 elements provided, 3 expected",
+          "17:34:21 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:26 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:26   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:26   Error 0 elements provided, 3 expected",
+          "17:34:26 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:31 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:31   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:31   Error 0 elements provided, 3 expected",
+          "17:34:31 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:36 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:36   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:36   Error 0 elements provided, 3 expected",
+          "17:34:36 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:41 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:41   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:41   Error 0 elements provided, 3 expected",
+          "17:34:41 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      },
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-31-12.rpt",
+        "context": [
+          "17:34:46 Error in expression <\"BURNS_formationGoal\",getPosATL _x])<4} count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:46   Error position: <count _ordered;",
+          "_new=_dest distance2D _d>",
+          "17:34:46   Error 0 elements provided, 3 expected",
+          "17:34:46 File FST_HCSpawn\\fn_burnsB1Advance.sqf..., line 28"
+        ]
+      }
+    ],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "17:31:46 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "17:31:46 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "17:31:55 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,10080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "17:31:55 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,10080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "17:31:55 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,10080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "17:32:07 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "17:32:07 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "17:32:07 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired rockets at 25",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"AT fired rockets at 25\"\",true,[2,26.169,\"\"FST_E5\"\",41.1935]]\""
+      },
+      {
+        "name": "AT fired rockets at 45",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"AT fired rockets at 45\"\",true,[2,26.057,\"\"FST_E5\"\",44.9896]]\""
+      },
+      {
+        "name": "AT fired rockets at 75",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"AT fired rockets at 75\"\",true,[2,26.141,\"\"FST_E5\"\",74.9889]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.00849245,110,4,330.141]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[248,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1006.99,7000,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[363,3]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,3]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.5,7000.01,0.00143909],[4006.99,7000,0.00143909],[4010.5,7000.01,0.00143909],[4014.14,7000.15,0.00143909],[4017.5,7000.01,0.00143909],[3999.7,6999.08,0.00143909],[4004.66,6997.31,0.00143909],[4006.99,6995.5,0.00143909],[4010.5,6995.51,0.00143909],[4013.99,6995.51,0.00143909],[4017.5,6995.51,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[75,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[0.73915,\"\"bx_droid_sword\"\",67.571]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "17:32:37 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[999.967,13191.5,-0.0894871],[\"\"assault\"\",[1000,13200,0],500]]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=false",
+        "pass": true,
+        "line": "17:33:02 \"[AF_CHECK] [\"\"Rifle fires at Saber station=false\"\",true,[13,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup false",
+        "pass": true,
+        "line": "17:33:02 \"[AF_CHECK] [\"\"Rifle assist reset cleanup false\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=true",
+        "pass": true,
+        "line": "17:33:02 \"[AF_CHECK] [\"\"Rifle fires at Saber station=true\"\",true,[15,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Saber fire preserves station",
+        "pass": true,
+        "line": "17:33:02 \"[AF_CHECK] [\"\"Saber fire preserves station\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup true",
+        "pass": true,
+        "line": "17:33:02 \"[AF_CHECK] [\"\"Rifle assist reset cleanup true\"\",true,[]]\""
+      },
+      {
+        "name": "Four HCs joined",
+        "pass": true,
+        "line": "17:33:03 \"[AF_CHECK] [\"\"Four HCs joined\"\",true,[4,5,7,6]]\""
+      },
+      {
+        "name": "HC ambush owns hold 4",
+        "pass": false,
+        "line": "17:33:14 \"[AF_CHECK] [\"\"HC ambush owns hold 4\"\",false,[]]\""
+      },
+      {
+        "name": "HC to server stop releases 4",
+        "pass": true,
+        "line": "17:33:18 \"[AF_CHECK] [\"\"HC to server stop releases 4\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC ambush owns hold 5",
+        "pass": false,
+        "line": "17:33:25 \"[AF_CHECK] [\"\"HC ambush owns hold 5\"\",false,[]]\""
+      },
+      {
+        "name": "HC to server stop releases 5",
+        "pass": false,
+        "line": "17:33:29 \"[AF_CHECK] [\"\"HC to server stop releases 5\"\",false,[\"\"Auto\"\",5]]\""
+      },
+      {
+        "name": "HC ambush owns hold 7",
+        "pass": false,
+        "line": "17:33:36 \"[AF_CHECK] [\"\"HC ambush owns hold 7\"\",false,[]]\""
+      },
+      {
+        "name": "HC to server stop releases 7",
+        "pass": false,
+        "line": "17:33:40 \"[AF_CHECK] [\"\"HC to server stop releases 7\"\",false,[\"\"Auto\"\",7]]\""
+      },
+      {
+        "name": "HC ambush owns hold 6",
+        "pass": true,
+        "line": "17:33:47 \"[AF_CHECK] [\"\"HC ambush owns hold 6\"\",true,[6,true,[\"\"ambush\"\",[15000,15000,0.00143909],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 6",
+        "pass": true,
+        "line": "17:33:51 \"[AF_CHECK] [\"\"HC to server stop releases 6\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "Ambush ignores friendly",
+        "pass": true,
+        "line": "17:33:58 \"[AF_CHECK] [\"\"Ambush ignores friendly\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush wall fixture blocks sight",
+        "pass": false,
+        "line": "17:34:04 \"[AF_CHECK] [\"\"Ambush wall fixture blocks sight\"\",false,1]\""
+      },
+      {
+        "name": "Ambush does not trigger through wall",
+        "pass": false,
+        "line": "17:34:04 \"[AF_CHECK] [\"\"Ambush does not trigger through wall\"\",false,1]\""
+      },
+      {
+        "name": "BX disable releases owned holds",
+        "pass": true,
+        "line": "17:34:04 \"[AF_CHECK] [\"\"BX disable releases owned holds\"\",true,[]]\""
+      }
+    ],
+    "metrics": [
+      "17:32:37 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "17:32:37 \"[AF_GARRISON] [true,22.002,110,4,330.141]\""
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "727c045b8cac292b906cd3bd13878bc61b00b3ffeac39497f65494e7370c6386"
+      }
+    ],
+    "fixtureSha256": "6efe40db887dafa1b391c1f2eb9c89622fb13c93505cdb76eb7df4b3edc10819"
+  },
+  {
+    "run": "run28-after-action",
+    "checks": 44,
+    "passed": 42,
+    "failed": 2,
+    "completed": [
+      "17:39:18 \"[AF_DONE] checks=44 failed=2\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "17:36:35 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "17:36:35 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "17:36:44 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,10080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "17:36:44 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,10080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "17:36:44 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,10080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "17:36:56 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "17:36:56 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "17:36:56 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired rockets at 25",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"AT fired rockets at 25\"\",true,[2,26.164,\"\"FST_E5\"\",24.9892]]\""
+      },
+      {
+        "name": "AT fired rockets at 45",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"AT fired rockets at 45\"\",true,[2,26.248,\"\"FST_E5\"\",44.9894]]\""
+      },
+      {
+        "name": "AT fired rockets at 75",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"AT fired rockets at 75\"\",true,[2,26.08,\"\"FST_E5\"\",74.9902]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.0072465,105,4,331.576]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[243,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1006.99,7000,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[368,13]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,13]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.5,7000.01,0.00143909],[4006.85,7000.14,0.00143909],[4010.5,7000.01,0.00143909],[4014.02,7000.11,0.00143909],[4017.5,7000.01,0.00143909],[4000.28,6997.41,0.00143909],[4003.5,6995.49,0.00143909],[4003.87,6997.38,0.00143909],[4010.5,6995.51,0.00143909],[4014,6995.51,0.00143909],[4017.5,6995.51,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[76,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[0.616509,\"\"amovpercmstpsraswrfldnon\"\",66.681]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "17:37:26 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[999.953,13191.2,-0.0897956],[\"\"assault\"\",[1000,13200,0],500]]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=false",
+        "pass": true,
+        "line": "17:37:51 \"[AF_CHECK] [\"\"Rifle fires at Saber station=false\"\",true,[13,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup false",
+        "pass": true,
+        "line": "17:37:51 \"[AF_CHECK] [\"\"Rifle assist reset cleanup false\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=true",
+        "pass": true,
+        "line": "17:37:51 \"[AF_CHECK] [\"\"Rifle fires at Saber station=true\"\",true,[15,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Saber fire preserves station",
+        "pass": true,
+        "line": "17:37:51 \"[AF_CHECK] [\"\"Saber fire preserves station\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup true",
+        "pass": true,
+        "line": "17:37:51 \"[AF_CHECK] [\"\"Rifle assist reset cleanup true\"\",true,[]]\""
+      },
+      {
+        "name": "Four HCs joined",
+        "pass": true,
+        "line": "17:37:52 \"[AF_CHECK] [\"\"Four HCs joined\"\",true,[6,4,5,7]]\""
+      },
+      {
+        "name": "HC ambush owns hold 6",
+        "pass": true,
+        "line": "17:37:59 \"[AF_CHECK] [\"\"HC ambush owns hold 6\"\",true,[6,true,[\"\"ambush\"\",[15000,15000,0.00143909],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 6",
+        "pass": true,
+        "line": "17:38:01 \"[AF_CHECK] [\"\"HC to server stop releases 6\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC ambush owns hold 4",
+        "pass": true,
+        "line": "17:38:11 \"[AF_CHECK] [\"\"HC ambush owns hold 4\"\",true,[4,true,[\"\"ambush\"\",[15000,15000,0.00143909],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 4",
+        "pass": true,
+        "line": "17:38:13 \"[AF_CHECK] [\"\"HC to server stop releases 4\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC ambush owns hold 5",
+        "pass": true,
+        "line": "17:38:24 \"[AF_CHECK] [\"\"HC ambush owns hold 5\"\",true,[5,true,[\"\"ambush\"\",[14999.9,15000.1,0.00143909],50],\"\"Down\"\",false,false,[\"\"Down\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 5",
+        "pass": true,
+        "line": "17:38:26 \"[AF_CHECK] [\"\"HC to server stop releases 5\"\",true,[\"\"Down\"\",2]]\""
+      },
+      {
+        "name": "HC ambush owns hold 7",
+        "pass": true,
+        "line": "17:38:36 \"[AF_CHECK] [\"\"HC ambush owns hold 7\"\",true,[7,true,[\"\"ambush\"\",[14999.9,15000.1,0.00143909],50],\"\"Down\"\",false,false,[\"\"Down\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 7",
+        "pass": true,
+        "line": "17:38:39 \"[AF_CHECK] [\"\"HC to server stop releases 7\"\",true,[\"\"Down\"\",2]]\""
+      },
+      {
+        "name": "Ambush ignores friendly",
+        "pass": true,
+        "line": "17:38:46 \"[AF_CHECK] [\"\"Ambush ignores friendly\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush wall fixture blocks sight",
+        "pass": false,
+        "line": "17:38:53 \"[AF_CHECK] [\"\"Ambush wall fixture blocks sight\"\",false,1]\""
+      },
+      {
+        "name": "Ambush does not trigger through wall",
+        "pass": false,
+        "line": "17:38:53 \"[AF_CHECK] [\"\"Ambush does not trigger through wall\"\",false,1]\""
+      },
+      {
+        "name": "BX disable releases owned holds",
+        "pass": true,
+        "line": "17:38:53 \"[AF_CHECK] [\"\"BX disable releases owned holds\"\",true,[]]\""
+      },
+      {
+        "name": "N99 owner-handoff Assault moves",
+        "pass": true,
+        "line": "17:39:18 \"[AF_CHECK] [\"\"N99 owner-handoff Assault moves\"\",true,[6,151.567,[999.953,13351.2,-0.0938411]]]\""
+      }
+    ],
+    "metrics": [
+      "17:37:26 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "17:37:26 \"[AF_GARRISON] [true,22.585,105,4,331.576]\""
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "57ba9392b99407504d8c78e34a62099cadbd73d2f0956238d4ed8684bc5faefd"
+      }
+    ],
+    "fixtureSha256": "77d889f4595413d958d91baacfab70e575be5e99b7e42f8d30d128dbca20eaad"
+  },
+  {
+    "run": "run29-mobility",
+    "checks": 1,
+    "passed": 1,
+    "failed": 0,
+    "completed": [],
+    "newCodeOrFixtureErrors": [
+      {
+        "file": "server\\arma3serverprofiling_x64_2026-09-23_17-41-02.rpt",
+        "context": [
+          "17:41:37 Warning Message: No entry 'bin\\config.bin/CfgWeapons/arifle_MX_Base_F/GunClouds.sourceSize'",
+          "17:41:37 Warning Message: '/' is not a value",
+          "17:41:37 Error in expression <0.5;_samples pushBack[abs(((_v getDir _t-getDir _v+540)mod 360)-180),velocityMod>",
+          "17:41:37   Error position: <-getDir _v+540)mod 360)-180),velocityMod>",
+          "17:41:37   Error -: Type Object, expected Number,Array,Not a Number",
+          "17:41:37 File mpmissions\\__cur_mp.Altis\\run.sqf..., line 41"
+        ]
+      }
+    ],
+    "results": [
+      {
+        "name": "clear natural slope found",
+        "pass": true,
+        "line": "17:41:36 \"[MOB_CHECK] [\"\"clear natural slope found\"\",true,[[6500,18700,0],[0.363938,0.931423,0]]]\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "e3b2828370a041fb9c0c1a7b745563d313e0cd1636f2aba8108b743d413b5734"
+      }
+    ],
+    "fixtureSha256": "e4b89f3c59c8b4c60eb1548b2439ea7c31c2e338876ccb233bfd1d1beb9f874e"
+  },
+  {
+    "run": "run30-final-regression",
+    "checks": 48,
+    "passed": 43,
+    "failed": 5,
+    "completed": [
+      "17:45:56 \"[AF_DONE] checks=48 failed=5\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "17:43:03 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "17:43:03 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "17:43:12 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,6080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "17:43:12 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,6080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "17:43:12 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,6080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "17:43:24 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "17:43:24 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "17:43:24 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired rockets at 25",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"AT fired rockets at 25\"\",true,[2,26.124,\"\"FST_E5\"\",24.9902]]\""
+      },
+      {
+        "name": "AT fired rockets at 45",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"AT fired rockets at 45\"\",true,[2,26.069,\"\"FST_E5\"\",44.9892]]\""
+      },
+      {
+        "name": "AT fired rockets at 75",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"AT fired rockets at 75\"\",true,[2,26.347,\"\"FST_E5\"\",74.99]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.00849245,110,4,330.038]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[243,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1006.99,7000,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[359,3]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,3]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.5,7000.01,0.00143909],[4006.99,7000.01,0.00143909],[4010.5,6999.99,0.00143909],[4014,7000.01,0.00143909],[4017.5,7000.01,0.00143909],[4000.76,6998.39,0.00143909],[4003.5,6995.49,0.00143909],[4007,6995.51,0.00143909],[4010.5,6996.04,0.00143909],[4013.99,6995.5,0.00143909],[4017.5,6995.49,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[77,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[2.47001,\"\"amovpercmrunsraswrfldf_ldst\"\",66.789]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "17:43:54 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[999.958,5691.34,-0.0912638],[\"\"assault\"\",[1000,5700,0],500]]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=false",
+        "pass": true,
+        "line": "17:44:19 \"[AF_CHECK] [\"\"Rifle fires at Saber station=false\"\",true,[15,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup false",
+        "pass": true,
+        "line": "17:44:19 \"[AF_CHECK] [\"\"Rifle assist reset cleanup false\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=true",
+        "pass": true,
+        "line": "17:44:19 \"[AF_CHECK] [\"\"Rifle fires at Saber station=true\"\",true,[10,[O Alpha 3-1:1,B Alpha 2-6:3,\"\"armor\"\",115.102,0,1,[0,0,0],-1,2,6],\"\"\"\"]]\""
+      },
+      {
+        "name": "Saber fire preserves station",
+        "pass": true,
+        "line": "17:44:19 \"[AF_CHECK] [\"\"Saber fire preserves station\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup true",
+        "pass": true,
+        "line": "17:44:19 \"[AF_CHECK] [\"\"Rifle assist reset cleanup true\"\",true,[]]\""
+      },
+      {
+        "name": "Four HCs joined",
+        "pass": true,
+        "line": "17:44:20 \"[AF_CHECK] [\"\"Four HCs joined\"\",true,[4,6,7,5]]\""
+      },
+      {
+        "name": "HC ambush owns hold 4",
+        "pass": true,
+        "line": "17:44:35 \"[AF_CHECK] [\"\"HC ambush owns hold 4\"\",true,[4,true,[\"\"ambush\"\",[7500,7500,0.292176],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 4",
+        "pass": true,
+        "line": "17:44:39 \"[AF_CHECK] [\"\"HC to server stop releases 4\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 4",
+        "pass": true,
+        "line": "17:44:39 \"[AF_CHECK] [\"\"HC stop posture restored 4\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 6",
+        "pass": true,
+        "line": "17:44:48 \"[AF_CHECK] [\"\"HC ambush owns hold 6\"\",true,[6,true,[\"\"ambush\"\",[7500,7500,0.408455],50],\"\"Down\"\",false,false,[\"\"Down\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 6",
+        "pass": true,
+        "line": "17:44:52 \"[AF_CHECK] [\"\"HC to server stop releases 6\"\",true,[\"\"Down\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 6",
+        "pass": false,
+        "line": "17:44:52 \"[AF_CHECK] [\"\"HC stop posture restored 6\"\",false,\"\"Down\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 7",
+        "pass": true,
+        "line": "17:45:00 \"[AF_CHECK] [\"\"HC ambush owns hold 7\"\",true,[7,true,[\"\"ambush\"\",[7500,7500,0.463511],50],\"\"Down\"\",false,false,[\"\"Down\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 7",
+        "pass": true,
+        "line": "17:45:04 \"[AF_CHECK] [\"\"HC to server stop releases 7\"\",true,[\"\"Down\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 7",
+        "pass": false,
+        "line": "17:45:04 \"[AF_CHECK] [\"\"HC stop posture restored 7\"\",false,\"\"Down\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 5",
+        "pass": true,
+        "line": "17:45:13 \"[AF_CHECK] [\"\"HC ambush owns hold 5\"\",true,[5,true,[\"\"ambush\"\",[7500,7504.47,0.588295],50],\"\"Down\"\",false,false,[\"\"Down\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 5",
+        "pass": true,
+        "line": "17:45:17 \"[AF_CHECK] [\"\"HC to server stop releases 5\"\",true,[\"\"Down\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 5",
+        "pass": false,
+        "line": "17:45:17 \"[AF_CHECK] [\"\"HC stop posture restored 5\"\",false,\"\"Down\"\"]\""
+      },
+      {
+        "name": "Ambush ignores friendly",
+        "pass": true,
+        "line": "17:45:24 \"[AF_CHECK] [\"\"Ambush ignores friendly\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush wall fixture blocks sight",
+        "pass": true,
+        "line": "17:45:31 \"[AF_CHECK] [\"\"Ambush wall fixture blocks sight\"\",true,0]\""
+      },
+      {
+        "name": "Ambush does not trigger through wall",
+        "pass": false,
+        "line": "17:45:31 \"[AF_CHECK] [\"\"Ambush does not trigger through wall\"\",false,0]\""
+      },
+      {
+        "name": "BX disable releases owned holds",
+        "pass": true,
+        "line": "17:45:31 \"[AF_CHECK] [\"\"BX disable releases owned holds\"\",true,[]]\""
+      },
+      {
+        "name": "N99 owner-handoff Assault moves",
+        "pass": false,
+        "line": "17:45:56 \"[AF_CHECK] [\"\"N99 owner-handoff Assault moves\"\",false,[4,8.1319,[999.958,5851.34,-0.0912638]]]\""
+      }
+    ],
+    "metrics": [
+      "17:43:03 \"[AF_WORLD_SIZE] 8192\"",
+      "17:43:54 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "17:43:54 \"[AF_GARRISON] [true,22.406,110,4,330.038]\"",
+      "17:45:31 \"[AF_OCCLUSION_GEOMETRY] [[6000.02,1999.99,5.00144],[6000,2020,5.00144],[6000.17,2000.34,6.52709],[5999.99,2020,6.32417],[[\"\"Land_CncWall4_F\"\",[5996,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,8],[[-2.68176,-0.520034,-1.84441],[2.6"
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "e3b2828370a041fb9c0c1a7b745563d313e0cd1636f2aba8108b743d413b5734"
+      }
+    ],
+    "fixtureSha256": "4707c2ad5c317bf4624128ab4e41b7bc753134f4c87990461e7c300a2782a886"
+  },
+  {
+    "run": "run31-mobility",
+    "checks": 42,
+    "passed": 38,
+    "failed": 4,
+    "completed": [
+      "17:52:03 \"[MOB_DONE] checks=42 failed=4\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "clear natural slope found",
+        "pass": true,
+        "line": "17:44:47 \"[MOB_CHECK] [\"\"clear natural slope found\"\",true,[[6500,18700,0],[0.363938,0.931423,0]]]\""
+      },
+      {
+        "name": "AAT fires baseline front",
+        "pass": true,
+        "line": "17:45:18 \"[MOB_CHECK] [\"\"AAT fires baseline front\"\",true,11]\""
+      },
+      {
+        "name": "AAT turn cleanup baseline front",
+        "pass": true,
+        "line": "17:45:20 \"[MOB_CHECK] [\"\"AAT turn cleanup baseline front\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires baseline side",
+        "pass": true,
+        "line": "17:45:52 \"[MOB_CHECK] [\"\"AAT fires baseline side\"\",true,3]\""
+      },
+      {
+        "name": "AAT turn cleanup baseline side",
+        "pass": true,
+        "line": "17:45:54 \"[MOB_CHECK] [\"\"AAT turn cleanup baseline side\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires baseline rear",
+        "pass": false,
+        "line": "17:46:27 \"[MOB_CHECK] [\"\"AAT fires baseline rear\"\",false,0]\""
+      },
+      {
+        "name": "AAT turn cleanup baseline rear",
+        "pass": true,
+        "line": "17:46:29 \"[MOB_CHECK] [\"\"AAT turn cleanup baseline rear\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires baseline obstacle",
+        "pass": true,
+        "line": "17:47:01 \"[MOB_CHECK] [\"\"AAT fires baseline obstacle\"\",true,16]\""
+      },
+      {
+        "name": "AAT turn cleanup baseline obstacle",
+        "pass": true,
+        "line": "17:47:03 \"[MOB_CHECK] [\"\"AAT turn cleanup baseline obstacle\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires baseline slope",
+        "pass": false,
+        "line": "17:47:35 \"[MOB_CHECK] [\"\"AAT fires baseline slope\"\",false,0]\""
+      },
+      {
+        "name": "AAT turn cleanup baseline slope",
+        "pass": true,
+        "line": "17:47:37 \"[MOB_CHECK] [\"\"AAT turn cleanup baseline slope\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires candidate front",
+        "pass": true,
+        "line": "17:48:09 \"[MOB_CHECK] [\"\"AAT fires candidate front\"\",true,24]\""
+      },
+      {
+        "name": "AAT turn cleanup candidate front",
+        "pass": true,
+        "line": "17:48:11 \"[MOB_CHECK] [\"\"AAT turn cleanup candidate front\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires candidate side",
+        "pass": true,
+        "line": "17:48:44 \"[MOB_CHECK] [\"\"AAT fires candidate side\"\",true,3]\""
+      },
+      {
+        "name": "AAT turn cleanup candidate side",
+        "pass": true,
+        "line": "17:48:46 \"[MOB_CHECK] [\"\"AAT turn cleanup candidate side\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires candidate rear",
+        "pass": false,
+        "line": "17:49:18 \"[MOB_CHECK] [\"\"AAT fires candidate rear\"\",false,0]\""
+      },
+      {
+        "name": "AAT turn cleanup candidate rear",
+        "pass": true,
+        "line": "17:49:20 \"[MOB_CHECK] [\"\"AAT turn cleanup candidate rear\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires candidate obstacle",
+        "pass": true,
+        "line": "17:49:52 \"[MOB_CHECK] [\"\"AAT fires candidate obstacle\"\",true,19]\""
+      },
+      {
+        "name": "AAT turn cleanup candidate obstacle",
+        "pass": true,
+        "line": "17:49:54 \"[MOB_CHECK] [\"\"AAT turn cleanup candidate obstacle\"\",true,[]]\""
+      },
+      {
+        "name": "AAT fires candidate slope",
+        "pass": false,
+        "line": "17:50:26 \"[MOB_CHECK] [\"\"AAT fires candidate slope\"\",false,0]\""
+      },
+      {
+        "name": "AAT turn cleanup candidate slope",
+        "pass": true,
+        "line": "17:50:28 \"[MOB_CHECK] [\"\"AAT turn cleanup candidate slope\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_varren_o flat",
+        "pass": true,
+        "line": "17:51:01 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_varren_o flat\"\",true,[84.8797,0,[[\"\"form939_idle2\"\",0,1,true,[13000,15400,0.00161934]],[\"\"form939_sprint\"\",17.3105,2,true,[12999.9,15401.6,0.00161362]],[\"\"form939_walk\"\",18.802,2,true,[12999.5,15408.1,0.00165558]],[\"\"form939_walk\"\",11.5103,2,true,[13000,15411.4,0.00162125]],[\"\"form939_sprint\"\",18.8447,2,true,[12999.7,15414,0.00163078]],[\"\"form939_idle\"\",2.0754,2,true,[12999.4,15419.7,0.00165558]],[\"\"form939_idle\"\",17.3582,2,true,[12999.9,15421.2,0.00152779]],[\"\"form939_walk\"\",1.48913,2,true,[13000,15421.9,0.00156593]],[\"\"form939_sprint\"\",2.08357,2,true,[13000,15422.3,0.00157928]],[\"\"form939_sprint\"\",23.9109,2,true,[12999.8,15425.6,0.00162697]],[\"\"form939_sprint\"\",26.0201,2,true,[12999.8,15432.1,0.00172043]],[\"\"form939_sprint\"\",25.9932,2,true,[12999.9,15438.6,0.00158882]],[\"\"form939_sprint\"\",25.176,2,true,[12999.7,15446.6,0.00170517]],[\"\"form939_walk\"\",11.2543,2,true,[13000.7,15452.4,0.0015564]],[\"\"form939_walk\"\",4.42375,2,true,[13001.1,15453.6,0.00164509]],[\"\"fo"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_varren_o flat",
+        "pass": true,
+        "line": "17:51:01 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_varren_o flat\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_var_bers_o flat",
+        "pass": true,
+        "line": "17:51:01 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_var_bers_o flat\"\",true,[85.8203,0,[[\"\"form939_idle2\"\",0,1,true,[13008,15400,0.00174332]],[\"\"form939_sprint\"\",8.67079,2,true,[13008.1,15400.6,0.00168991]],[\"\"form939_walk\"\",24.099,2,true,[13009.2,15407,0.0016861]],[\"\"form939_sprint\"\",18.8119,2,true,[13009.2,15410.7,0.00161743]],[\"\"form939_sprint\"\",25.9594,2,true,[13009.4,15417.7,0.00163841]],[\"\"form939_walk\"\",18.4971,2,true,[13007.9,15424.3,0.00157547]],[\"\"form939_walk\"\",4.42725,2,true,[13008,15426.2,0.00161934]],[\"\"form939_walk\"\",4.40744,2,true,[13007.8,15427.4,0.00156212]],[\"\"form939_walk\"\",4.40353,2,true,[13007.6,15428.6,0.0016613]],[\"\"form939_idle\"\",1.48728,2,true,[13007.5,15429.6,0.00162125]],[\"\"form939_sprint\"\",8.68072,2,true,[13007.4,15430.2,0.00162125]],[\"\"form939_sprint\"\",26.0309,2,true,[13007.4,15436.2,0.00157738]],[\"\"form939_walk\"\",23.9211,2,true,[13006,15443,0.00153732]],[\"\"form939_walk\"\",4.40082,2,true,[13005.5,15445.8,0.00153923]],[\"\"form939_idle\"\",1.47577,2,true,[13005.4,15446.7,0.00153828]],[\"\"for"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_var_bers_o flat",
+        "pass": true,
+        "line": "17:51:01 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_var_bers_o flat\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_var_alpha_o flat",
+        "pass": true,
+        "line": "17:51:01 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_var_alpha_o flat\"\",true,[83.2696,1,[[\"\"form939_idle\"\",0,1,true,[13016,15400,0.00168419]],[\"\"form939_walk\"\",1.48783,2,true,[13015.9,15400,0.00152016]],[\"\"form939_walk\"\",4.37157,2,true,[13015.1,15400.7,0.00165558]],[\"\"form939_idle\"\",0.354289,2,true,[13014.9,15401.5,0.00163651]],[\"\"form939_sprint\"\",0,2,true,[13014.9,15401.6,0.00169945]],[\"\"form939_sprint\"\",17.3483,2,true,[13014.8,15403.7,0.00163269]],[\"\"form939_sprint\"\",23.9384,2,true,[13014.8,15410.1,0.00161743]],[\"\"form939_sprint\"\",26.0204,2,true,[13014.9,15418.1,0.00155258]],[\"\"form939_sprint\"\",26.0229,2,true,[13014.8,15424.6,0.0016346]],[\"\"form939_sprint\"\",26.0171,2,true,[13014.9,15431.1,0.00152016]],[\"\"form939_sprint\"\",26.0184,2,true,[13014.8,15437.6,0.00151634]],[\"\"form939_sprint\"\",17.335,2,true,[13014.8,15442.8,0.00154018]],[\"\"form939_sprint\"\",23.9263,2,true,[13014.9,15449.2,0.00145531]],[\"\"form939_sprint\"\",23.8514,2,true,[13014.5,15455.7,0.00150585]],[\"\"form939_idle\"\",8.61683,2,true,[13014.2,15462.7,0.00149"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_var_alpha_o flat",
+        "pass": true,
+        "line": "17:51:01 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_var_alpha_o flat\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_varren_o uphill",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_varren_o uphill\"\",true,[51.306,0,[[\"\"form939_idle\"\",0,1,true,[6500,18700,0.000961304]],[\"\"form939_idle\"\",0,2,true,[6500,18700,0.000991821]],[\"\"form939_idle\"\",8.47958,2,true,[6500.06,18700.6,0.000915527]],[\"\"form939_idle\"\",0,2,true,[6500.07,18700.7,0.000900269]],[\"\"form939_sprint\"\",8.693,2,true,[6500.1,18701.3,0.000869751]],[\"\"form939_walk\"\",18.7299,2,true,[6501.18,18706.9,0.000762939]],[\"\"burns_gulanthar_climb\"\",7.35023,2,true,[6502.23,18709.4,0.000732422]],[\"\"form939_idle\"\",0.594332,2,true,[6502.64,18710.6,4.57764e-05]],[\"\"form939_walk\"\",2.98933,2,true,[6502.63,18710.8,7.62939e-05]],[\"\"burns_gulanthar_climb\"\",8.01863,2,true,[6502.58,18712.8,0.000640869]],[\"\"form939_idle\"\",0.641446,2,true,[6502.57,18714.2,0.000473022]],[\"\"form939_idle\"\",8.68512,2,true,[6502.75,18714.7,0.000564575]],[\"\"form939_walk\"\",1.40956,2,true,[6503.21,18716.3,0.00062561]],[\"\"burns_gulanthar_climb\"\",7.82132,2,true,[6503.32,18718,0.000274658]],[\"\"form939_sprint\"\",14.0119,2,true,[6503.14,18720"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_varren_o uphill",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_varren_o uphill\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar climb entered JMSEF_animals_varren_o",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar climb entered JMSEF_animals_varren_o\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_var_bers_o uphill",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_var_bers_o uphill\"\",true,[61.7173,1,[[\"\"form939_idle\"\",0,1,true,[6508,18700,7.62939e-05]],[\"\"form939_walk\"\",2.9678,2,true,[6508.26,18700,0.00154114]],[\"\"burns_gulanthar_climb\"\",7.84933,2,true,[6510.04,18700.1,-0.000244141]],[\"\"form939_walk\"\",4.75077,2,true,[6511.87,18700.2,0.0020752]],[\"\"form939_walk\"\",4.39226,2,true,[6513.07,18700.4,0.0014801]],[\"\"burns_gulanthar_climb\"\",8.02911,2,true,[6513.87,18701.3,0.00146484]],[\"\"form939_idle\"\",5.35028,2,true,[6515.21,18702.8,0.0014801]],[\"\"form939_sprint\"\",8.68018,2,true,[6515.78,18703.3,0.00149536]],[\"\"form939_sprint\"\",17.3614,2,true,[6517.9,18705.4,0.00167847]],[\"\"form939_sprint\"\",23.8864,2,true,[6522.39,18709.9,0.00163269]],[\"\"form939_walk\"\",6.07543,2,true,[6525.19,18713.7,0.000747681]],[\"\"burns_gulanthar_climb\"\",8.04635,2,true,[6525.6,18715,0.000778198]],[\"\"burns_gulanthar_climb\"\",7.90187,2,true,[6525.39,18716.5,0.000778198]],[\"\"form939_idle\"\",0.625915,2,true,[6525.1,18717.8,0.000762939]],[\"\"form939_walk\"\",1.41991,2,t"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_var_bers_o uphill",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_var_bers_o uphill\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar climb entered JMSEF_animals_var_bers_o",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar climb entered JMSEF_animals_var_bers_o\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_var_alpha_o uphill",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_var_alpha_o uphill\"\",true,[54.9688,1,[[\"\"form939_idle\"\",0,1,true,[6516,18700,0.000839233]],[\"\"form939_walk\"\",0.35568,1,true,[6516.01,18700,0.0014801]],[\"\"burns_gulanthar_climb\"\",8.03297,2,true,[6516.73,18700.9,0.0014801]],[\"\"burns_gulanthar_climb\"\",7.9726,2,true,[6518.17,18702.6,0.00152588]],[\"\"form939_idle\"\",2.64823,2,true,[6519.54,18703.6,0.00170898]],[\"\"form939_walk\"\",1.48888,2,true,[6519.62,18703.7,0.00169373]],[\"\"burns_gulanthar_climb\"\",8.00515,2,true,[6520.54,18705,0.00169373]],[\"\"form939_idle\"\",5.33042,2,true,[6521.96,18706.4,0.00167847]],[\"\"form939_sprint\"\",2.06383,2,true,[6522.19,18706.6,0.00167847]],[\"\"form939_walk\"\",24.1814,2,true,[6524.78,18711,0.00163269]],[\"\"burns_gulanthar_climb\"\",8.01927,2,true,[6525.82,18714.1,0.000106812]],[\"\"form939_idle\"\",2.64659,2,true,[6526.1,18715.8,0.000778198]],[\"\"form939_idle\"\",0,2,true,[6526.09,18715.9,0.000762939]],[\"\"form939_walk\"\",1.47573,2,true,[6526.12,18716,0.00012207]],[\"\"burns_gulanthar_climb\"\",8.02687,2,true,["
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_var_alpha_o uphill",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_var_alpha_o uphill\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar climb entered JMSEF_animals_var_alpha_o",
+        "pass": true,
+        "line": "17:51:32 \"[MOB_CHECK] [\"\"Gulanthar climb entered JMSEF_animals_var_alpha_o\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_varren_o downhill",
+        "pass": true,
+        "line": "17:52:03 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_varren_o downhill\"\",true,[29.4238,0,[[\"\"form939_idle\"\",0,1,true,[6531.09,18780.5,-9.15527e-05]],[\"\"form939_idle\"\",0,2,true,[6531.09,18780.5,0.00190735]],[\"\"form939_walk\"\",0,2,true,[6531.09,18780.5,0.00228882]],[\"\"form939_idle\"\",0,2,true,[6531.1,18780.4,0.00228882]],[\"\"form939_walk\"\",1.47656,2,true,[6531.1,18780.3,0.00228882]],[\"\"form939_walk\"\",4.25391,2,true,[6531.09,18779,0.00248718]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18777.9,0.00234985]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18776.8,0.00234985]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18775.7,0.00234985]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18774.6,0.00234985]],[\"\"form939_idle\"\",4.25391,2,true,[6531.09,18773.3,0.00172424]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18772.2,0.00236511]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18771.1,0.00238037]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18770,0.00236511]],[\"\"form939_walk\"\",4.46484,2,true,[6531.09,18768.9,0.00236511]],[\"\"form939_walk\"\",4.46"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_varren_o downhill",
+        "pass": true,
+        "line": "17:52:03 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_varren_o downhill\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_var_bers_o downhill",
+        "pass": true,
+        "line": "17:52:03 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_var_bers_o downhill\"\",true,[29.5029,0,[[\"\"form939_idle\"\",0,1,true,[6538.93,18779.2,0.000595093]],[\"\"form939_walk\"\",1.4727,2,true,[6539.04,18779.2,0.00192261]],[\"\"form939_walk\"\",4.33716,2,true,[6539.83,18778.5,0.00238037]],[\"\"form939_walk\"\",2.96457,2,true,[6539.93,18777.6,0.00231934]],[\"\"form939_walk\"\",4.10735,2,true,[6539.69,18776.6,0.00238037]],[\"\"form939_walk\"\",4.45011,2,true,[6539.41,18775.3,0.00233459]],[\"\"form939_walk\"\",4.47315,2,true,[6539.47,18774.2,0.00231934]],[\"\"form939_walk\"\",4.46554,2,true,[6539.51,18773.1,0.00236511]],[\"\"form939_walk\"\",2.98829,2,true,[6539.53,18772.2,0.00230408]],[\"\"form939_walk\"\",4.11328,2,true,[6539.53,18771.1,0.00224304]],[\"\"form939_walk\"\",4.11328,2,true,[6539.53,18770.1,0.00224304]],[\"\"form939_walk\"\",4.46484,2,true,[6539.53,18768.7,0.00224304]],[\"\"form939_walk\"\",4.46484,2,true,[6539.53,18767.6,0.00224304]],[\"\"form939_walk\"\",4.46484,2,true,[6539.53,18766.5,0.00224304]],[\"\"form939_walk\"\",4.46484,2,true,[6539.53,18765.4,0.00228882]"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_var_bers_o downhill",
+        "pass": true,
+        "line": "17:52:03 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_var_bers_o downhill\"\",true,[]]\""
+      },
+      {
+        "name": "Gulanthar moves JMSEF_animals_var_alpha_o downhill",
+        "pass": true,
+        "line": "17:52:03 \"[MOB_CHECK] [\"\"Gulanthar moves JMSEF_animals_var_alpha_o downhill\"\",true,[25.9212,0,[[\"\"form939_idle\"\",0,0,true,[6546.93,18779.2,0.00233459]],[\"\"form939_idle\"\",0,1,true,[6546.93,18779.2,0.00228882]],[\"\"form939_walk\"\",0,2,true,[6546.93,18779.2,0.00230408]],[\"\"form939_idle\"\",0,2,true,[6546.93,18779.2,0.00233459]],[\"\"form939_walk\"\",0.354329,2,true,[6546.93,18779.1,0.00233459]],[\"\"form939_walk\"\",4.43928,2,true,[6546.35,18778.4,0.00160217]],[\"\"form939_walk\"\",4.46918,2,true,[6545.24,18777.6,0.000869751]],[\"\"form939_walk\"\",4.44987,2,true,[6544.39,18776.9,0.00164795]],[\"\"form939_walk\"\",4.46225,2,true,[6543.62,18776.1,0.00143433]],[\"\"form939_idle\"\",1.48535,2,true,[6542.94,18775.4,0.00143433]],[\"\"form939_sprint\"\",8.67587,2,true,[6542.51,18775,0.00143433]],[\"\"form939_idle\"\",2.06408,2,true,[6539.93,18772.3,0.00169373]],[\"\"form939_walk\"\",1.49349,2,true,[6539.89,18772.2,0.00230408]],[\"\"form939_walk\"\",2.98029,2,true,[6539.78,18771.7,0.00234985]],[\"\"form939_walk\"\",1.49992,2,true,[6539.67,18771.2,0.00233459]],[\"\"form939_wa"
+      },
+      {
+        "name": "Gulanthar graph valid JMSEF_animals_var_alpha_o downhill",
+        "pass": true,
+        "line": "17:52:03 \"[MOB_CHECK] [\"\"Gulanthar graph valid JMSEF_animals_var_alpha_o downhill\"\",true,[]]\""
+      }
+    ],
+    "metrics": [
+      "17:45:18 \"[MOB_ARMOR] [\"\"baseline\"\",\"\"front\"\",14.6249,0,0,3,11,[[0.138916,1.79088,[13000,15400.2,-0.0248604],0,[]],[0.307983,3.41694,[13000,15401.6,0.00797272],6,[]],[0.449646,4.63871,[13000,15403.6,-0.0409317],9,[]],[1.08362,4.8141,[13000,15406,-0.0241508],9,[]],[7.40564,4.05856,[13000.1,15408.2,-0.0215416],9,[]],[18.2212,3.53324,[13000.4,15410.3,-0.0175533],9,[]],[34.933,3.17539,[13001,15412,-0.0188789],9,[]],[68.0425,2.87687,[13001.9,15413.3,-0.0182552],9,[]],[111.015,1.55742,[13003.1,15414,-0.0157089],9,[]],[122.311,-0.0174382,[13003.5,15414.2,0.000675201],9,[]],[122.246,-0.0147058,[13003.5,15414.2,0.00370407],9,[]],[122.203,-0.0125221,[13003.5,15414.2,-0.00015831],9,[]],[122.173,-0.0106121,[13003.5,15414.2,-0.00477982],9,[]],[122.151,-0.0088788,[13003.5,15414.2,-0.00807762],9,[]],[122.134,-0.00733159,[13003.5,15414.2,-0.0108566],9,[]],[122.122,0,[13003.5,15414.2,-0.0131931],9,[]],[122.121,0,[13003.5,15414.2,-0.0132923],9,[]],[122.121,0,[13003.5,15414.2,-0.0132923],9,[]],[122.121,0,[13003.5,15414.2,-0.0132923],9",
+      "17:45:52 \"[MOB_ARMOR] [\"\"baseline\"\",\"\"side\"\",5.80134,0,0,3,3,[[84.3521,0.191607,[13000,15400,-0.0208378],0,[]],[51.3291,0.562802,[13000,15400.2,-0.0344467],0,[]],[8.98065,1.0322,[13000.2,15400.5,-0.0262146],0,[]],[21.0872,2.96135,[13001.3,15400.4,0.000749588],0,[]],[11.1338,3.58635,[13002.8,15399.9,-0.0313053],0,[]],[0.790588,3.45421,[13004.5,15399.6,-0.0321369],0,[]],[12.5884,3.46585,[13006.2,15399.6,-0.0283699],1,[]],[49.8229,2.68523,[13007.9,15399.4,-0.0203781],1,[]],[95.6912,1.484,[13009,15398.7,-0.0142307],1,[]],[141.022,0.611617,[13009.4,15397.9,-0.0232735],1,[]],[177.159,1.70086,[13009.3,15397.5,-0.023592],1,[]],[163.254,2.35751,[13008.1,15397.8,-0.0284996],1,[]],[172.455,2.4318,[13006.9,15398.2,-0.0318565],1,[]],[147.013,3.54497,[13005.4,15397.8,-0.0203743],1,[]],[144.232,4.15544,[13003.8,15396.7,-0.039732],1,[]],[147.226,4.69466,[13001.9,15395.3,-0.0318127],1,[]],[149.664,1.08883,[13000.3,15394.3,-0.00589561],1,[]],[149.914,-0.0254727,[13000.3,15394.2,0.0212631],1,[]],[149.906,-0.0231237,[13000.3,15394.2,0.",
+      "17:46:27 \"[MOB_ARMOR] [\"\"baseline\"\",\"\"rear\"\",39.0263,30,0,0,0,[[179.939,-0.00587988,[13000,15400,-0.020256],0,[]],[179.936,0,[13000,15400,-0.0229721],0,[]],[179.936,0,[13000,15400,-0.0229721],0,[]],[179.936,0,[13000,15400,-0.0229721],0,[]],[179.03,0.0973063,[13000,15400,-0.0230446],0,[]],[154.4,0.193419,[13000.1,15400.1,-0.0245647],0,[]],[114.443,0.0858933,[13000.2,15400.3,-0.0274658],0,[]],[73.4685,-0.126123,[13000.2,15400.5,-0.0292854],0,[]],[32.827,-0.305045,[13000.2,15400.6,-0.028883],0,[]],[2.63831,-0.420804,[13000.3,15400.8,-0.028677],0,[]],[0.596252,-0.54447,[13000.3,15401,-0.0354996],0,[]],[35.7403,-0.660805,[13000.5,15401.3,-0.0369034],0,[]],[72.8836,-0.748766,[13000.8,15401.6,-0.0359077],0,[]],[74.4211,-0.99615,[13001.2,15401.8,-0.0329494],0,[]],[40.54,-1.17093,[13001.6,15402.1,-0.0292511],0,[]],[18.8937,-1.30481,[13002,15402.6,-0.03125],0,[]],[40.5278,-1.49875,[13002.4,15403.2,-0.0333176],0,[]],[74.2688,-1.52373,[13003,15403.7,-0.0293941],0,[]],[68.9469,-1.80917,[13003.8,15404,-0.0255604],0,[]],[33.5225,-",
+      "17:47:01 \"[MOB_ARMOR] [\"\"baseline\"\",\"\"obstacle\"\",157.274,12,0,0,16,[[0.0262451,-0.00601224,[13000,15400,-0.0208035],0,[]],[0.0290527,0,[13000,15400,-0.0231171],0,[]],[0.0287476,0,[13000,15400,-0.0231171],0,[]],[0.0287476,0,[13000,15400,-0.0231171],0,[]],[0.354309,0.0599912,[13000,15400,-0.0233421],0,[]],[12.2617,0.150464,[13000,15400,-0.0256023],0,[]],[48.6493,0.633699,[13000,15400.2,-0.0315266],0,[]],[84.7197,2.93694,[13000.7,15400.5,-0.00945473],0,[]],[83.1182,3.74463,[13002.3,15400.6,-0.0379848],0,[]],[78.3195,4.81135,[13004.4,15401,-0.0403461],0,[]],[80.1992,5.75943,[13007,15401.6,-0.0296726],0,[]],[75.4492,6.47229,[13010.2,15402.4,-0.0327435],0,[]],[68.1494,5.65697,[13013,15403.3,-0.0175514],1,[]],[48.7484,5.69137,[13015.6,15404.7,-0.0168343],1,[]],[21.4214,5.03185,[13017.5,15406.8,-0.0113583],1,[]],[2.92273,5.29081,[13018.3,15409.3,0.000757217],2,[]],[7.06531,4.57915,[13018.1,15411.6,0.00236702],7,[]],[5.58307,5.4724,[13017.7,15414.2,-0.0150108],12,[]],[12.5433,6.10238,[13017.8,15417.2,-0.0193844],14,[]],[13.7",
+      "17:47:35 \"[MOB_ARMOR] [\"\"baseline\"\",\"\"slope\"\",89.683,22,0,0,0,[[18.317,-0.194943,[6499.92,18700.1,0.0078125],0,[]],[18.4818,0.000169625,[6499.92,18700.1,0.00933838],0,[]],[18.4772,-0.000863263,[6499.91,18700.1,0.00765991],0,[]],[18.4756,-0.000195128,[6499.91,18700.1,0.00579834],0,[]],[18.6689,1.2396,[6499.9,18700.3,0.0177765],0,[]],[19.8486,2.59513,[6499.92,18701.3,0.0787048],0,[]],[20.7927,2.92421,[6499.93,18702.6,-0.0270996],0,[]],[21.269,3.48368,[6499.94,18704.3,0.0252533],0,[]],[22.647,3.20918,[6499.92,18706.1,0.0514984],0,[]],[23.9321,3.10659,[6499.86,18707.7,0.107269],0,[]],[23.5223,3.14646,[6499.78,18709.3,0.0470581],0,[]],[20.5269,1.39546,[6499.7,18710.1,0.00309753],0,[]],[18.1819,2.30371,[6499.72,18711.1,0.0684052],0,[]],[20.2737,2.24278,[6499.77,18712.3,0.0293427],0,[]],[20.937,2.51152,[6499.79,18713.3,-0.0274506],0,[]],[19.491,3.3594,[6499.81,18714.7,-0.00254822],0,[]],[9.9436,3.55424,[6499.91,18716.5,0.0104218],0,[]],[1.63538,3.34678,[6500.37,18718.1,-0.0137482],0,[]],[5.59741,3.17313,[6501.06,18719.6,-0",
+      "17:48:09 \"[MOB_ARMOR] [\"\"candidate\"\",\"\"front\"\",151.982,0,0,2,24,[[0.0245361,-0.00637127,[13000,15400,-0.0202694],0,[]],[0.0250244,0,[13000,15400,-0.0229511],1,[]],[0.0258789,0,[13000,15400,-0.0229511],1,[]],[0.0264893,0,[13000,15400,-0.0229511],1,[]],[0.161987,0.0461163,[13000,15400,-0.0230942],1,[]],[11.9259,0.120408,[13000,15400,-0.0262451],5,[]],[48.1972,0.608809,[13000,15400.2,-0.0318031],10,[]],[84.8178,2.93235,[13000.7,15400.5,-0.00827599],12,[]],[84.723,3.95253,[13002.3,15400.6,-0.0354195],12,[]],[80.2673,4.87059,[13004.6,15401,-0.0416889],12,[]],[80.7435,5.88286,[13007.3,15401.5,-0.0294189],12,[]],[74.2484,6.50057,[13010.4,15402.2,-0.0342178],12,[]],[65.3838,5.61937,[13013.2,15403.3,-0.0164928],12,[]],[46.2729,5.64383,[13015.7,15404.8,-0.0162182],12,[]],[20.5212,5.0648,[13017.5,15406.9,-0.0117168],12,[]],[2.28448,5.56872,[13018.3,15409.5,-0.00515175],12,[]],[0.136597,4.89806,[13018.1,15412,-0.00183487],16,[]],[6.10156,5.92481,[13018,15414.8,-0.0177422],21,[]],[9.54187,5.57746,[13018.1,15418,-0.0257626],23,[]",
+      "17:48:44 \"[MOB_ARMOR] [\"\"candidate\"\",\"\"side\"\",43.6181,0,0,3,3,[[87.9605,0.0536331,[13000,15400,-0.0208359],0,[]],[61.3282,0.380221,[13000,15400.1,-0.0314426],0,[]],[20.4543,0.724024,[13000.1,15400.3,-0.0278435],0,[]],[17.0052,2.81521,[13000.8,15400.5,-0.00991058],0,[]],[17.9374,3.12743,[13002.2,15400,-0.0293293],0,[]],[7.19617,3.35872,[13003.7,15399.6,-0.0323524],0,[]],[23.3892,3.28297,[13005.4,15399.3,-0.0330791],1,[]],[58.7121,2.53345,[13006.9,15398.8,-0.0212841],1,[]],[105.113,1.35928,[13007.8,15398,-0.0207443],1,[]],[150.39,0.575623,[13008.1,15397.3,-0.0272102],1,[]],[169.283,2.30111,[13007.7,15396.9,-0.0122738],1,[]],[161.728,2.49042,[13006.5,15397.3,-0.040844],1,[]],[174.235,2.42641,[13005.3,15397.8,-0.0421963],1,[]],[146.383,3.49661,[13003.8,15397.4,-0.0231934],1,[]],[142.729,4.44729,[13002.1,15396.2,-0.0381565],1,[]],[145.737,4.96872,[13000.2,15394.7,-0.0279522],1,[]],[147.25,5.48956,[12998,15393.2,-0.0273781],1,[]],[150.345,5.69696,[12995.6,15391.5,-0.0134583],1,[]],[155.612,4.62064,[12993.4,15390.2,-0.0240",
+      "17:49:18 \"[MOB_ARMOR] [\"\"candidate\"\",\"\"rear\"\",41.0488,30,0,0,0,[[178.993,0.052741,[13000,15400,-0.0209923],0,[]],[153.669,0.152914,[13000.1,15400.1,-0.0241566],0,[]],[113.194,0.0458628,[13000.2,15400.3,-0.0273991],0,[]],[72.4847,-0.156348,[13000.2,15400.5,-0.0291786],0,[]],[31.8962,-0.326616,[13000.2,15400.6,-0.0286655],0,[]],[0.620972,-0.277762,[13000.3,15400.7,-0.0300694],0,[]],[8.44946,-0.425063,[13000.4,15400.9,-0.0363255],0,[]],[45.9084,-0.549518,[13000.5,15401.1,-0.035183],0,[]],[80.004,-0.651688,[13000.8,15401.3,-0.0348511],0,[]],[71.3109,-0.905875,[13001.2,15401.5,-0.0333424],0,[]],[34.4625,-1.06327,[13001.6,15401.8,-0.0298138],0,[]],[19.502,-1.33454,[13001.9,15402.3,-0.0312347],0,[]],[45.7527,-1.4921,[13002.3,15402.9,-0.0331116],0,[]],[78.6364,-1.48805,[13002.9,15403.4,-0.0288906],0,[]],[70.7109,-1.75981,[13003.7,15403.7,-0.0270481],0,[]],[36.4169,-1.62559,[13004.5,15404.1,-0.0303154],0,[]],[27.8098,-1.74167,[13005.1,15404.8,-0.0246754],0,[]],[53.3179,-1.80401,[13005.7,15405.5,-0.0320625],0,[]],[72.422,-1.9",
+      "17:49:52 \"[MOB_ARMOR] [\"\"candidate\"\",\"\"obstacle\"\",37.1653,1,0,1,19,[[0.0253906,-0.00641966,[13000,15400,-0.020586],3,[]],[0.0303955,-0.00484273,[13000,15400,-0.0229607],7,[]],[0.0327148,0,[13000,15400,-0.0231113],7,[]],[0.0327148,0,[13000,15400,-0.0231113],7,[]],[0.36084,0.0601064,[13000,15400,-0.023386],7,[]],[20.9794,0.357641,[13000,15400.1,-0.0303059],7,[]],[61.0923,1.11126,[13000.1,15400.3,-0.0311947],7,[]],[87.8063,3.10426,[13001.3,15400.7,-0.00504684],7,[]],[84.9924,4.40495,[13003.2,15400.8,-0.0353565],7,[]],[82.8181,5.31482,[13005.6,15401.1,-0.0412235],7,[]],[80.4889,6.21823,[13008.5,15401.6,-0.0250282],7,[]],[66.7375,6.17586,[13011.8,15402.5,-0.0317402],7,[]],[52.7007,5.67205,[13014.3,15403.8,-0.00692368],8,[]],[31.5406,5.39461,[13016.5,15405.8,-0.00758934],8,[]],[9.98199,5.56513,[13017.7,15408.3,-0.00881767],8,[]],[2.77808,6.11917,[13017.9,15411.3,-0.015667],8,[]],[5.73389,6.69281,[13017.8,15414.7,-0.0140114],8,[]],[8.57043,7.25415,[13017.9,15418.3,-0.0306911],8,[]],[10.571,8.057,[13018.1,15422.3,-0.0128345",
+      "17:50:26 \"[MOB_ARMOR] [\"\"candidate\"\",\"\"slope\"\",89.2676,21,0,0,0,[[18.8787,-0.55807,[6499.93,18700.1,0.00865173],0,[]],[19.6263,-1.03967,[6499.87,18699.9,0.00646973],0,[]],[18.1778,-0.513789,[6499.79,18699.3,-0.00106812],0,[]],[18.3706,1.91793,[6499.78,18699.7,0.0934448],0,[]],[19.0389,2.6424,[6499.83,18700.8,0.0471497],0,[]],[20.0834,3.39911,[6499.87,18702.3,-0.0172119],0,[]],[20.5582,3.68319,[6499.9,18704.1,0.0124512],0,[]],[21.9281,3.58896,[6499.92,18706,0.0510559],0,[]],[23.748,3.34952,[6499.87,18707.9,0.102585],0,[]],[23.5172,3.43881,[6499.78,18709.5,0.038269],0,[]],[22.3392,1.11527,[6499.71,18710.2,0.00112915],0,[]],[19.6325,1.97503,[6499.69,18711.1,0.0897827],0,[]],[19.4924,2.27036,[6499.76,18712.1,0.0383301],0,[]],[20.7034,2.60242,[6499.8,18713.1,-0.0262756],0,[]],[20.2526,3.29041,[6499.82,18714.5,-0.0101624],0,[]],[11.3146,3.71843,[6499.89,18716.2,0.0125427],0,[]],[2.1416,3.40045,[6500.33,18718,-0.00942993],0,[]],[5.72791,3.20336,[6501.05,18719.4,-0.0391846],0,[]],[7.89478,3.20754,[6501.81,18720.8,-0.0428162"
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "e3b2828370a041fb9c0c1a7b745563d313e0cd1636f2aba8108b743d413b5734"
+      }
+    ],
+    "fixtureSha256": "202fecdbe73a9c876274c3205bb90370fafd9a69e6a15bd0226bb667ba07f835"
+  },
+  {
+    "run": "run32-final-regression",
+    "checks": 48,
+    "passed": 47,
+    "failed": 1,
+    "completed": [
+      "17:52:21 \"[AF_DONE] checks=48 failed=1\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "17:49:22 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "17:49:22 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "17:49:31 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,6080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "17:49:31 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,6080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "17:49:31 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,6080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "17:49:43 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "17:49:43 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "17:49:43 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired rockets at 25",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"AT fired rockets at 25\"\",true,[2,25.957,\"\"FST_E5\"\",24.9892]]\""
+      },
+      {
+        "name": "AT fired rockets at 45",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"AT fired rockets at 45\"\",true,[2,26.263,\"\"FST_E5\"\",44.9892]]\""
+      },
+      {
+        "name": "AT fired rockets at 75",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"AT fired rockets at 75\"\",true,[2,26.347,\"\"FST_E5\"\",74.9889]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.00718039,111,4,329.803]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[245,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1006.99,7000,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[548,13]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,13]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.5,7000.01,0.00143909],[4006.99,7000,0.00143909],[4010.51,7000,0.00143909],[4014.02,7000.11,0.00143909],[4015.01,7003.09,0.00143909],[4001.3,6998.07,0.00143909],[4003.5,6999.27,0.00143909],[4005.73,6996.6,0.00143909],[4009.53,6997.15,0.00143909],[4013.04,6997.13,0.00143909],[4013.12,6998.66,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[69,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[2.1872,\"\"bx_droid_sword\"\",68.729]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "17:50:13 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[999.852,5691.63,-0.0921764],[\"\"assault\"\",[1000,5700,0],500]]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=false",
+        "pass": true,
+        "line": "17:50:38 \"[AF_CHECK] [\"\"Rifle fires at Saber station=false\"\",true,[14,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup false",
+        "pass": true,
+        "line": "17:50:38 \"[AF_CHECK] [\"\"Rifle assist reset cleanup false\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=true",
+        "pass": true,
+        "line": "17:50:38 \"[AF_CHECK] [\"\"Rifle fires at Saber station=true\"\",true,[10,[O Alpha 3-1:1,B Alpha 2-6:3,\"\"armor\"\",114.886,0,1,[0,0,0],-1,2,6],\"\"\"\"]]\""
+      },
+      {
+        "name": "Saber fire preserves station",
+        "pass": true,
+        "line": "17:50:38 \"[AF_CHECK] [\"\"Saber fire preserves station\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup true",
+        "pass": true,
+        "line": "17:50:38 \"[AF_CHECK] [\"\"Rifle assist reset cleanup true\"\",true,[]]\""
+      },
+      {
+        "name": "Four HCs joined",
+        "pass": true,
+        "line": "17:50:39 \"[AF_CHECK] [\"\"Four HCs joined\"\",true,[4,5,7,6]]\""
+      },
+      {
+        "name": "HC ambush owns hold 4",
+        "pass": true,
+        "line": "17:50:49 \"[AF_CHECK] [\"\"HC ambush owns hold 4\"\",true,[4,true,[\"\"ambush\"\",[7500,7500,0.104672],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 4",
+        "pass": true,
+        "line": "17:50:53 \"[AF_CHECK] [\"\"HC to server stop releases 4\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 4",
+        "pass": true,
+        "line": "17:50:53 \"[AF_CHECK] [\"\"HC stop posture restored 4\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 5",
+        "pass": true,
+        "line": "17:51:02 \"[AF_CHECK] [\"\"HC ambush owns hold 5\"\",true,[5,true,[\"\"ambush\"\",[7500,7500,0.129896],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 5",
+        "pass": true,
+        "line": "17:51:06 \"[AF_CHECK] [\"\"HC to server stop releases 5\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 5",
+        "pass": true,
+        "line": "17:51:06 \"[AF_CHECK] [\"\"HC stop posture restored 5\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 7",
+        "pass": true,
+        "line": "17:51:15 \"[AF_CHECK] [\"\"HC ambush owns hold 7\"\",true,[7,true,[\"\"ambush\"\",[7500,7500,0.276084],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 7",
+        "pass": true,
+        "line": "17:51:19 \"[AF_CHECK] [\"\"HC to server stop releases 7\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 7",
+        "pass": true,
+        "line": "17:51:19 \"[AF_CHECK] [\"\"HC stop posture restored 7\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 6",
+        "pass": true,
+        "line": "17:51:27 \"[AF_CHECK] [\"\"HC ambush owns hold 6\"\",true,[6,true,[\"\"ambush\"\",[7500,7505,0.425364],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 6",
+        "pass": true,
+        "line": "17:51:31 \"[AF_CHECK] [\"\"HC to server stop releases 6\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 6",
+        "pass": true,
+        "line": "17:51:31 \"[AF_CHECK] [\"\"HC stop posture restored 6\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "Ambush ignores friendly",
+        "pass": true,
+        "line": "17:51:38 \"[AF_CHECK] [\"\"Ambush ignores friendly\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush wall fixture blocks sight",
+        "pass": true,
+        "line": "17:51:46 \"[AF_CHECK] [\"\"Ambush wall fixture blocks sight\"\",true,0]\""
+      },
+      {
+        "name": "Ambush does not trigger through wall",
+        "pass": true,
+        "line": "17:51:46 \"[AF_CHECK] [\"\"Ambush does not trigger through wall\"\",true,0]\""
+      },
+      {
+        "name": "BX disable releases owned holds",
+        "pass": true,
+        "line": "17:51:46 \"[AF_CHECK] [\"\"BX disable releases owned holds\"\",true,[]]\""
+      },
+      {
+        "name": "N99 owner-handoff Assault moves",
+        "pass": false,
+        "line": "17:52:21 \"[AF_CHECK] [\"\"N99 owner-handoff Assault moves\"\",false,[4,0.973145,[999.852,5851.63,-0.0921764]]]\""
+      }
+    ],
+    "metrics": [
+      "17:49:22 \"[AF_WORLD_SIZE] 8192\"",
+      "17:50:13 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "17:50:13 \"[AF_GARRISON] [true,22.011,111,4,329.803]\"",
+      "17:51:46 \"[AF_OCCLUSION_GEOMETRY] [[5999.91,2000.1,5.00144],[6000,2020,5.00144],[6000.07,2000.77,5.39966],[5999.99,2020,6.32417],[[\"\"Land_CncWall4_F\"\",[5996,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68"
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "387c8faed5beb00c6335bbbd95a4ae59c47241899ba0df3ca95d5090b9a146a8"
+      }
+    ],
+    "fixtureSha256": "53c02bd7a149002da61c29b6532e9bd7b42d04fd86f0a7a52316edfe08d25d8a"
+  },
+  {
+    "run": "run33-final-regression",
+    "checks": 48,
+    "passed": 48,
+    "failed": 0,
+    "completed": [
+      "17:57:47 \"[AF_DONE] checks=48 failed=0\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "17:54:45 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "17:54:45 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "17:54:54 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,6080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "17:54:54 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,6080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "17:54:54 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,6080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "17:55:06 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "17:55:06 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "17:55:06 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired rockets at 25",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"AT fired rockets at 25\"\",true,[2,25.976,\"\"FST_E5\"\",24.9904]]\""
+      },
+      {
+        "name": "AT fired rockets at 45",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"AT fired rockets at 45\"\",true,[2,26.309,\"\"FST_E5\"\",44.9908]]\""
+      },
+      {
+        "name": "AT fired rockets at 75",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"AT fired rockets at 75\"\",true,[2,26.171,\"\"FST_E5\"\",74.9896]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.0074132,110,4,331.373]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[250,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1006.99,7000,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[478,3]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,3]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.24,6999.5,0.00143909],[4006.99,7000,0.00143909],[4010.5,6999.99,0.00143909],[4013.88,6999.83,0.00143909],[4017.5,7000.01,0.00143909],[4001,6998.19,0.00143909],[4004.98,7000.65,0.00143909],[4007,6995.51,0.00143909],[4010.5,6995.51,0.00143909],[4014,6995.51,0.00143909],[4017.5,6995.51,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[73,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[22.0803,\"\"amovpercmstpsraswrfldnon_turnl\"\",51.666]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "17:55:36 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[999.93,5691.9,-0.093195],[\"\"assault\"\",[1000,5700,0],500]]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=false",
+        "pass": true,
+        "line": "17:56:01 \"[AF_CHECK] [\"\"Rifle fires at Saber station=false\"\",true,[14,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup false",
+        "pass": true,
+        "line": "17:56:01 \"[AF_CHECK] [\"\"Rifle assist reset cleanup false\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=true",
+        "pass": true,
+        "line": "17:56:01 \"[AF_CHECK] [\"\"Rifle fires at Saber station=true\"\",true,[10,[O Alpha 3-1:1,B Alpha 2-6:3,\"\"armor\"\",113.409,0,1,[0,0,0],2.5,2,6],\"\"\"\"]]\""
+      },
+      {
+        "name": "Saber fire preserves station",
+        "pass": true,
+        "line": "17:56:01 \"[AF_CHECK] [\"\"Saber fire preserves station\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup true",
+        "pass": true,
+        "line": "17:56:01 \"[AF_CHECK] [\"\"Rifle assist reset cleanup true\"\",true,[]]\""
+      },
+      {
+        "name": "Four HCs joined",
+        "pass": true,
+        "line": "17:56:02 \"[AF_CHECK] [\"\"Four HCs joined\"\",true,[4,6,5,7]]\""
+      },
+      {
+        "name": "HC ambush owns hold 4",
+        "pass": true,
+        "line": "17:56:17 \"[AF_CHECK] [\"\"HC ambush owns hold 4\"\",true,[4,true,[\"\"ambush\"\",[7500,7500,0.32562],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 4",
+        "pass": true,
+        "line": "17:56:21 \"[AF_CHECK] [\"\"HC to server stop releases 4\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 4",
+        "pass": true,
+        "line": "17:56:21 \"[AF_CHECK] [\"\"HC stop posture restored 4\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 6",
+        "pass": true,
+        "line": "17:56:29 \"[AF_CHECK] [\"\"HC ambush owns hold 6\"\",true,[6,true,[\"\"ambush\"\",[7500,7500,0.378747],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 6",
+        "pass": true,
+        "line": "17:56:33 \"[AF_CHECK] [\"\"HC to server stop releases 6\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 6",
+        "pass": true,
+        "line": "17:56:33 \"[AF_CHECK] [\"\"HC stop posture restored 6\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 5",
+        "pass": true,
+        "line": "17:56:42 \"[AF_CHECK] [\"\"HC ambush owns hold 5\"\",true,[5,true,[\"\"ambush\"\",[7500,7500,0.395777],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 5",
+        "pass": true,
+        "line": "17:56:46 \"[AF_CHECK] [\"\"HC to server stop releases 5\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 5",
+        "pass": true,
+        "line": "17:56:46 \"[AF_CHECK] [\"\"HC stop posture restored 5\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 7",
+        "pass": true,
+        "line": "17:56:54 \"[AF_CHECK] [\"\"HC ambush owns hold 7\"\",true,[7,true,[\"\"ambush\"\",[7500,7504.54,0.508191],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 7",
+        "pass": true,
+        "line": "17:56:58 \"[AF_CHECK] [\"\"HC to server stop releases 7\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 7",
+        "pass": true,
+        "line": "17:56:58 \"[AF_CHECK] [\"\"HC stop posture restored 7\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "Ambush ignores friendly",
+        "pass": true,
+        "line": "17:57:05 \"[AF_CHECK] [\"\"Ambush ignores friendly\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush wall fixture blocks sight",
+        "pass": true,
+        "line": "17:57:12 \"[AF_CHECK] [\"\"Ambush wall fixture blocks sight\"\",true,0]\""
+      },
+      {
+        "name": "Ambush does not trigger through wall",
+        "pass": true,
+        "line": "17:57:12 \"[AF_CHECK] [\"\"Ambush does not trigger through wall\"\",true,0]\""
+      },
+      {
+        "name": "BX disable releases owned holds",
+        "pass": true,
+        "line": "17:57:12 \"[AF_CHECK] [\"\"BX disable releases owned holds\"\",true,[]]\""
+      },
+      {
+        "name": "N99 owner-handoff Assault moves",
+        "pass": true,
+        "line": "17:57:47 \"[AF_CHECK] [\"\"N99 owner-handoff Assault moves\"\",true,[4,39.8328,[999.93,5851.9,-0.093195]]]\""
+      }
+    ],
+    "metrics": [
+      "17:54:44 \"[AF_WORLD_SIZE] 8192\"",
+      "17:55:36 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "17:55:36 \"[AF_GARRISON] [true,22.513,110,4,331.373]\"",
+      "17:57:12 \"[AF_OCCLUSION_GEOMETRY] [[5999.91,2000.1,5.00144],[6000,2020,5.00144],[6000.07,2000.77,5.39993],[5999.99,2020,6.32417],[[\"\"Land_CncWall4_F\"\",[5996,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68"
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "b46a6a3ca6b3964cacb4c538b1c167b1e6a8a996cb86b832b6459e641447f87a"
+      }
+    ],
+    "fixtureSha256": "53c02bd7a149002da61c29b6532e9bd7b42d04fd86f0a7a52316edfe08d25d8a"
+  },
+  {
+    "run": "run34-daara-combined",
+    "checks": 36,
+    "passed": 36,
+    "failed": 0,
+    "completed": [
+      "17:57:07 \"[POSTOP_TEST] DONE failures=0\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "candidate_version",
+        "pass": true,
+        "line": "17:57:00 \"[POSTOP_TEST] PASS candidate_version\""
+      },
+      {
+        "name": "picker_compiled",
+        "pass": true,
+        "line": "17:57:00 \"[POSTOP_TEST] PASS picker_compiled\""
+      },
+      {
+        "name": "waypoint_override_off",
+        "pass": true,
+        "line": "17:57:00 \"[POSTOP_TEST] PASS waypoint_override_off\""
+      },
+      {
+        "name": "startup_registry_not_ready",
+        "pass": true,
+        "line": "17:57:00 \"[POSTOP_TEST] PASS startup_registry_not_ready\""
+      },
+      {
+        "name": "far_garrison_present",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS far_garrison_present\""
+      },
+      {
+        "name": "far_garrison_not_encounter",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS far_garrison_not_encounter\""
+      },
+      {
+        "name": "nearby_zeus_force_counted",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS nearby_zeus_force_counted\""
+      },
+      {
+        "name": "distant_daara_force_still_counted",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS distant_daara_force_still_counted\""
+      },
+      {
+        "name": "fifteen_field_ready",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS fifteen_field_ready\""
+      },
+      {
+        "name": "safe_position_found",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS safe_position_found\""
+      },
+      {
+        "name": "safe_position_readmitted",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS safe_position_readmitted\""
+      },
+      {
+        "name": "safe_distance_preserved",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS safe_distance_preserved\""
+      },
+      {
+        "name": "base_stays_protected",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS base_stays_protected\""
+      },
+      {
+        "name": "outer_ring_reinforcement_found",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS outer_ring_reinforcement_found\""
+      },
+      {
+        "name": "outer_ring_still_safe",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS outer_ring_still_safe\""
+      },
+      {
+        "name": "protected_briefing",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS protected_briefing\""
+      },
+      {
+        "name": "protected_paused",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS protected_paused\""
+      },
+      {
+        "name": "protected_recover",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS protected_recover\""
+      },
+      {
+        "name": "protected_ended",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS protected_ended\""
+      },
+      {
+        "name": "cooldown_explained",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS cooldown_explained\""
+      },
+      {
+        "name": "engaged_capacity_explained",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS engaged_capacity_explained\""
+      },
+      {
+        "name": "worker_failure_explained",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS worker_failure_explained\""
+      },
+      {
+        "name": "safe_position_failure_explained",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS safe_position_failure_explained\""
+      },
+      {
+        "name": "shadow_proposal_not_executed",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS shadow_proposal_not_executed\""
+      },
+      {
+        "name": "real_workers_available",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS real_workers_available\""
+      },
+      {
+        "name": "planner_dispatched_despite_distant_garrison",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS planner_dispatched_despite_distant_garrison\""
+      },
+      {
+        "name": "dispatch_telemetry",
+        "pass": true,
+        "line": "17:57:01 \"[POSTOP_TEST] PASS dispatch_telemetry\""
+      },
+      {
+        "name": "worker_created_group",
+        "pass": true,
+        "line": "17:57:02 \"[POSTOP_TEST] PASS worker_created_group\""
+      },
+      {
+        "name": "real_hc_ownership",
+        "pass": true,
+        "line": "17:57:02 \"[POSTOP_TEST] PASS real_hc_ownership\""
+      },
+      {
+        "name": "created_twelve",
+        "pass": true,
+        "line": "17:57:02 \"[POSTOP_TEST] PASS created_twelve\""
+      },
+      {
+        "name": "defend_order_acknowledged",
+        "pass": true,
+        "line": "17:57:07 \"[POSTOP_TEST] PASS defend_order_acknowledged\""
+      },
+      {
+        "name": "cumulative_ack_totals",
+        "pass": true,
+        "line": "17:57:07 \"[POSTOP_TEST] PASS cumulative_ack_totals\""
+      },
+      {
+        "name": "mission_capture_recorded",
+        "pass": true,
+        "line": "17:57:07 \"[POSTOP_TEST] PASS mission_capture_recorded\""
+      },
+      {
+        "name": "capture_cancels_admission",
+        "pass": true,
+        "line": "17:57:07 \"[POSTOP_TEST] PASS capture_cancels_admission\""
+      },
+      {
+        "name": "capture_idempotent",
+        "pass": true,
+        "line": "17:57:07 \"[POSTOP_TEST] PASS capture_idempotent\""
+      },
+      {
+        "name": "end_blocks_capture",
+        "pass": true,
+        "line": "17:57:07 \"[POSTOP_TEST] PASS end_blocks_capture\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "b46a6a3ca6b3964cacb4c538b1c167b1e6a8a996cb86b832b6459e641447f87a"
+      }
+    ],
+    "fixtureSha256": "0ab8286b9429991e6ff9a45fee0bfe81fd92aceeafdc04e097a780955f584f5f"
+  },
+  {
+    "run": "run35-armor-focus",
+    "checks": 12,
+    "passed": 12,
+    "failed": 0,
+    "completed": [
+      "18:01:25 \"[AF_DONE] checks=12 failed=0\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AAT VR fires front",
+        "pass": true,
+        "line": "17:59:40 \"[AF_CHECK] [\"\"AAT VR fires front\"\",true,[2,38,18,0]]\""
+      },
+      {
+        "name": "AAT VR progresses front",
+        "pass": true,
+        "line": "17:59:40 \"[AF_CHECK] [\"\"AAT VR progresses front\"\",true,186.891]\""
+      },
+      {
+        "name": "AAT VR faces enemy front",
+        "pass": true,
+        "line": "17:59:40 \"[AF_CHECK] [\"\"AAT VR faces enemy front\"\",true,18]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse front",
+        "pass": true,
+        "line": "17:59:42 \"[AF_CHECK] [\"\"AAT VR stop clears pulse front\"\",true,[]]\""
+      },
+      {
+        "name": "AAT VR fires rear",
+        "pass": true,
+        "line": "18:00:30 \"[AF_CHECK] [\"\"AAT VR fires rear\"\",true,[1,42,43,0]]\""
+      },
+      {
+        "name": "AAT VR progresses rear",
+        "pass": true,
+        "line": "18:00:30 \"[AF_CHECK] [\"\"AAT VR progresses rear\"\",true,12.9709]\""
+      },
+      {
+        "name": "AAT VR faces enemy rear",
+        "pass": true,
+        "line": "18:00:30 \"[AF_CHECK] [\"\"AAT VR faces enemy rear\"\",true,43]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse rear",
+        "pass": true,
+        "line": "18:00:32 \"[AF_CHECK] [\"\"AAT VR stop clears pulse rear\"\",true,[]]\""
+      },
+      {
+        "name": "AAT VR fires obstacle",
+        "pass": true,
+        "line": "18:01:21 \"[AF_CHECK] [\"\"AAT VR fires obstacle\"\",true,[1,35,41,0]]\""
+      },
+      {
+        "name": "AAT VR progresses obstacle",
+        "pass": true,
+        "line": "18:01:21 \"[AF_CHECK] [\"\"AAT VR progresses obstacle\"\",true,26.7147]\""
+      },
+      {
+        "name": "AAT VR faces enemy obstacle",
+        "pass": true,
+        "line": "18:01:21 \"[AF_CHECK] [\"\"AAT VR faces enemy obstacle\"\",true,41]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse obstacle",
+        "pass": true,
+        "line": "18:01:23 \"[AF_CHECK] [\"\"AAT VR stop clears pulse obstacle\"\",true,[]]\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "b46a6a3ca6b3964cacb4c538b1c167b1e6a8a996cb86b832b6459e641447f87a"
+      }
+    ],
+    "fixtureSha256": "1d83c67468f87aa46772dd30a07a30611e29a696a441c70352c56048e7c778bd"
+  },
+  {
+    "run": "run36-visibility",
+    "checks": 3,
+    "passed": 3,
+    "failed": 0,
+    "completed": [
+      "18:00:34 \"[AF_DONE] checks=3 failed=0\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "Fog target remains after weather guard",
+        "pass": true,
+        "line": "18:00:34 \"[AF_CHECK] [\"\"Fog target remains after weather guard\"\",true,[0.619048,0.017,250.79]]\""
+      },
+      {
+        "name": "Fog height and decay preserved",
+        "pass": true,
+        "line": "18:00:34 \"[AF_CHECK] [\"\"Fog height and decay preserved\"\",true,[0.619048,0.017,250.79]]\""
+      },
+      {
+        "name": "Fog gain defaults to five percent",
+        "pass": true,
+        "line": "18:00:34 \"[AF_CHECK] [\"\"Fog gain defaults to five percent\"\",true,[]]\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "b46a6a3ca6b3964cacb4c538b1c167b1e6a8a996cb86b832b6459e641447f87a"
+      }
+    ],
+    "fixtureSha256": "e6698d374a8464e3d5d06420527e9894c96a1e4aeda4be280b00d9910f232e98"
+  },
+  {
+    "run": "run37-armor-recovery",
+    "checks": 0,
+    "passed": 0,
+    "failed": 0,
+    "completed": [],
+    "newCodeOrFixtureErrors": [],
+    "results": [],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "47ecc28a73a855413401e1186bcd24002e0bba849e69a7ab3dfc7597736c948e"
+      }
+    ],
+    "fixtureSha256": "1d83c67468f87aa46772dd30a07a30611e29a696a441c70352c56048e7c778bd"
+  },
+  {
+    "run": "run38-armor-recovery",
+    "checks": 15,
+    "passed": 13,
+    "failed": 2,
+    "completed": [
+      "18:05:11 \"[AF_DONE] checks=15 failed=2\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AAT VR fires front",
+        "pass": true,
+        "line": "18:03:26 \"[AF_CHECK] [\"\"AAT VR fires front\"\",true,[3,30,7,0]]\""
+      },
+      {
+        "name": "AAT VR progresses front",
+        "pass": true,
+        "line": "18:03:26 \"[AF_CHECK] [\"\"AAT VR progresses front\"\",true,59.7314]\""
+      },
+      {
+        "name": "AAT VR faces enemy front",
+        "pass": false,
+        "line": "18:03:26 \"[AF_CHECK] [\"\"AAT VR faces enemy front\"\",false,7]\""
+      },
+      {
+        "name": "AAT VR reaches firing band front",
+        "pass": false,
+        "line": "18:03:26 \"[AF_CHECK] [\"\"AAT VR reaches firing band front\"\",false,239.728]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse front",
+        "pass": true,
+        "line": "18:03:28 \"[AF_CHECK] [\"\"AAT VR stop clears pulse front\"\",true,[]]\""
+      },
+      {
+        "name": "AAT VR fires rear",
+        "pass": true,
+        "line": "18:04:16 \"[AF_CHECK] [\"\"AAT VR fires rear\"\",true,[2,30,37,0]]\""
+      },
+      {
+        "name": "AAT VR progresses rear",
+        "pass": true,
+        "line": "18:04:16 \"[AF_CHECK] [\"\"AAT VR progresses rear\"\",true,45.2563]\""
+      },
+      {
+        "name": "AAT VR faces enemy rear",
+        "pass": true,
+        "line": "18:04:16 \"[AF_CHECK] [\"\"AAT VR faces enemy rear\"\",true,37]\""
+      },
+      {
+        "name": "AAT VR reaches firing band rear",
+        "pass": true,
+        "line": "18:04:16 \"[AF_CHECK] [\"\"AAT VR reaches firing band rear\"\",true,135.123]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse rear",
+        "pass": true,
+        "line": "18:04:18 \"[AF_CHECK] [\"\"AAT VR stop clears pulse rear\"\",true,[]]\""
+      },
+      {
+        "name": "AAT VR fires obstacle",
+        "pass": true,
+        "line": "18:05:07 \"[AF_CHECK] [\"\"AAT VR fires obstacle\"\",true,[2,27,40,0]]\""
+      },
+      {
+        "name": "AAT VR progresses obstacle",
+        "pass": true,
+        "line": "18:05:07 \"[AF_CHECK] [\"\"AAT VR progresses obstacle\"\",true,47.5474]\""
+      },
+      {
+        "name": "AAT VR faces enemy obstacle",
+        "pass": true,
+        "line": "18:05:07 \"[AF_CHECK] [\"\"AAT VR faces enemy obstacle\"\",true,40]\""
+      },
+      {
+        "name": "AAT VR reaches firing band obstacle",
+        "pass": true,
+        "line": "18:05:07 \"[AF_CHECK] [\"\"AAT VR reaches firing band obstacle\"\",true,141.176]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse obstacle",
+        "pass": true,
+        "line": "18:05:09 \"[AF_CHECK] [\"\"AAT VR stop clears pulse obstacle\"\",true,[]]\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "47ecc28a73a855413401e1186bcd24002e0bba849e69a7ab3dfc7597736c948e"
+      }
+    ],
+    "fixtureSha256": "2eccb7dbec76054a7e312f47301d5b6e3eb72db7361c71f6e1054ddd9bdd8810"
+  },
+  {
+    "run": "run39-final-regression",
+    "checks": 48,
+    "passed": 47,
+    "failed": 1,
+    "completed": [
+      "18:05:41 \"[AF_DONE] checks=48 failed=1\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AT range15 loaded",
+        "pass": true,
+        "line": "18:02:39 \"[AF_CHECK] [\"\"AT range15 loaded\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush module registered",
+        "pass": true,
+        "line": "18:02:39 \"[AF_CHECK] [\"\"Ambush module registered\"\",true,[]]\""
+      },
+      {
+        "name": "BX ambush accepted",
+        "pass": true,
+        "line": "18:02:48 \"[AF_CHECK] [\"\"BX ambush accepted\"\",true,[\"\"ambush\"\",[1000,6080,0],50]]\""
+      },
+      {
+        "name": "BX creep accepted",
+        "pass": true,
+        "line": "18:02:48 \"[AF_CHECK] [\"\"BX creep accepted\"\",true,[\"\"creep\"\",[4000,6080,0],50]]\""
+      },
+      {
+        "name": "BX cqb accepted",
+        "pass": true,
+        "line": "18:02:48 \"[AF_CHECK] [\"\"BX cqb accepted\"\",true,[\"\"cqb\"\",[7000,6080,0],50]]\""
+      },
+      {
+        "name": "BX ambush prone requested",
+        "pass": true,
+        "line": "18:03:00 \"[AF_CHECK] [\"\"BX ambush prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"aidlppnemstpsraswrfldnon_ai\"\"]]\""
+      },
+      {
+        "name": "Ambush holds fire",
+        "pass": true,
+        "line": "18:03:00 \"[AF_CHECK] [\"\"Ambush holds fire\"\",true,[]]\""
+      },
+      {
+        "name": "BX creep prone requested",
+        "pass": true,
+        "line": "18:03:00 \"[AF_CHECK] [\"\"BX creep prone requested\"\",true,[\"\"Down\"\",\"\"PRONE\"\",\"\"amovppnemevaslowwrfldf\"\"]]\""
+      },
+      {
+        "name": "AT fired rockets at 25",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"AT fired rockets at 25\"\",true,[2,26.149,\"\"FST_E5\"\",51.3706]]\""
+      },
+      {
+        "name": "AT fired rockets at 45",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"AT fired rockets at 45\"\",true,[2,26.233,\"\"FST_E5\"\",44.9897]]\""
+      },
+      {
+        "name": "AT fired rockets at 75",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"AT fired rockets at 75\"\",true,[2,26.456,\"\"FST_E5\"\",74.9893]]\""
+      },
+      {
+        "name": "Garrison position preserved false",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"Garrison position preserved false\"\",true,[0.00754074,0,0,180]]\""
+      },
+      {
+        "name": "Garrison position preserved true",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"Garrison position preserved true\"\",true,[0.00678781,110,4,329.838]]\""
+      },
+      {
+        "name": "B1 4 shoots in contact",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"B1 4 shoots in contact\"\",true,[250,4]]\""
+      },
+      {
+        "name": "B1 4 bounded formation orders",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"B1 4 bounded formation orders\"\",true,4]\""
+      },
+      {
+        "name": "B1 4 leader stays with firing squad",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"B1 4 leader stays with firing squad\"\",true,[[999.996,7000.01,0.00143909],[[999.996,7000.01,0.00143909],[1003.5,7000.01,0.00143909],[1007,7000.01,0.00143909],[1010.5,7000.01,0.00143909]]]]\""
+      },
+      {
+        "name": "B1 12 shoots in contact",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"B1 12 shoots in contact\"\",true,[375,13]]\""
+      },
+      {
+        "name": "B1 12 bounded formation orders",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"B1 12 bounded formation orders\"\",true,13]\""
+      },
+      {
+        "name": "B1 12 leader stays with firing squad",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"B1 12 leader stays with firing squad\"\",true,[[4000,7000.01,0.00143909],[[4000,7000.01,0.00143909],[4003.5,7000.01,0.00143909],[4007,7000.01,0.00143909],[4010.5,7000.01,0.00143909],[4014,7000.01,0.00143909],[4017.5,7000.01,0.00143909],[4000.39,6997.38,0.00143909],[4003.5,6995.51,0.00143909],[4006.99,6995.49,0.00143909],[4010.5,6995.51,0.00143909],[4014,6995.51,0.00143909],[4017.5,6995.51,0.00143909]]]]\""
+      },
+      {
+        "name": "Ambush opens weapons",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"Ambush opens weapons\"\",true,[67,35.1193]]\""
+      },
+      {
+        "name": "BX ambush stop restores task writes",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"BX ambush stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "BX creep stop restores task writes",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"BX creep stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "CQB reaches melee",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"CQB reaches melee\"\",true,[8.45038,\"\"amovpercmrunsraswrfldf_ldst\"\",63.708]]\""
+      },
+      {
+        "name": "BX cqb stop restores task writes",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"BX cqb stop restores task writes\"\",true,[\"\"Up\"\",\"\"YELLOW\"\"]]\""
+      },
+      {
+        "name": "N99 broker assault moves",
+        "pass": true,
+        "line": "18:03:30 \"[AF_CHECK] [\"\"N99 broker assault moves\"\",true,[[999.953,5691.02,-0.092556],[\"\"assault\"\",[1000,5700,0],500]]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=false",
+        "pass": true,
+        "line": "18:03:55 \"[AF_CHECK] [\"\"Rifle fires at Saber station=false\"\",true,[15,[],\"\"\"\"]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup false",
+        "pass": true,
+        "line": "18:03:55 \"[AF_CHECK] [\"\"Rifle assist reset cleanup false\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle fires at Saber station=true",
+        "pass": true,
+        "line": "18:03:55 \"[AF_CHECK] [\"\"Rifle fires at Saber station=true\"\",true,[9,[O Alpha 3-1:1,B Alpha 2-6:3,\"\"armor\"\",115.862,0,1,[0,0,0],-1,2,6],\"\"\"\"]]\""
+      },
+      {
+        "name": "Saber fire preserves station",
+        "pass": true,
+        "line": "18:03:55 \"[AF_CHECK] [\"\"Saber fire preserves station\"\",true,[]]\""
+      },
+      {
+        "name": "Rifle assist reset cleanup true",
+        "pass": true,
+        "line": "18:03:55 \"[AF_CHECK] [\"\"Rifle assist reset cleanup true\"\",true,[]]\""
+      },
+      {
+        "name": "Four HCs joined",
+        "pass": true,
+        "line": "18:03:56 \"[AF_CHECK] [\"\"Four HCs joined\"\",true,[7,4,5,6]]\""
+      },
+      {
+        "name": "HC ambush owns hold 7",
+        "pass": true,
+        "line": "18:04:11 \"[AF_CHECK] [\"\"HC ambush owns hold 7\"\",true,[7,true,[\"\"ambush\"\",[7500,7500,0.334945],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 7",
+        "pass": true,
+        "line": "18:04:15 \"[AF_CHECK] [\"\"HC to server stop releases 7\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 7",
+        "pass": true,
+        "line": "18:04:15 \"[AF_CHECK] [\"\"HC stop posture restored 7\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 4",
+        "pass": true,
+        "line": "18:04:23 \"[AF_CHECK] [\"\"HC ambush owns hold 4\"\",true,[4,true,[\"\"ambush\"\",[7500,7500,0.422449],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 4",
+        "pass": true,
+        "line": "18:04:27 \"[AF_CHECK] [\"\"HC to server stop releases 4\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 4",
+        "pass": true,
+        "line": "18:04:27 \"[AF_CHECK] [\"\"HC stop posture restored 4\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 5",
+        "pass": true,
+        "line": "18:04:36 \"[AF_CHECK] [\"\"HC ambush owns hold 5\"\",true,[5,true,[\"\"ambush\"\",[7500,7500,0.611488],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 5",
+        "pass": true,
+        "line": "18:04:40 \"[AF_CHECK] [\"\"HC to server stop releases 5\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 5",
+        "pass": true,
+        "line": "18:04:40 \"[AF_CHECK] [\"\"HC stop posture restored 5\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "HC ambush owns hold 6",
+        "pass": true,
+        "line": "18:04:48 \"[AF_CHECK] [\"\"HC ambush owns hold 6\"\",true,[6,true,[\"\"ambush\"\",[7500,7504.47,0.656592],50],\"\"Down\"\",false,false,[\"\"Auto\"\",true,true,\"\"DOWN\"\"]]]\""
+      },
+      {
+        "name": "HC to server stop releases 6",
+        "pass": true,
+        "line": "18:04:52 \"[AF_CHECK] [\"\"HC to server stop releases 6\"\",true,[\"\"Auto\"\",2]]\""
+      },
+      {
+        "name": "HC stop posture restored 6",
+        "pass": true,
+        "line": "18:04:52 \"[AF_CHECK] [\"\"HC stop posture restored 6\"\",true,\"\"Auto\"\"]\""
+      },
+      {
+        "name": "Ambush ignores friendly",
+        "pass": true,
+        "line": "18:04:59 \"[AF_CHECK] [\"\"Ambush ignores friendly\"\",true,[]]\""
+      },
+      {
+        "name": "Ambush wall fixture blocks sight",
+        "pass": true,
+        "line": "18:05:06 \"[AF_CHECK] [\"\"Ambush wall fixture blocks sight\"\",true,0]\""
+      },
+      {
+        "name": "Ambush does not trigger through wall",
+        "pass": true,
+        "line": "18:05:06 \"[AF_CHECK] [\"\"Ambush does not trigger through wall\"\",true,0]\""
+      },
+      {
+        "name": "BX disable releases owned holds",
+        "pass": true,
+        "line": "18:05:06 \"[AF_CHECK] [\"\"BX disable releases owned holds\"\",true,[]]\""
+      },
+      {
+        "name": "N99 owner-handoff Assault moves",
+        "pass": false,
+        "line": "18:05:41 \"[AF_CHECK] [\"\"N99 owner-handoff Assault moves\"\",false,[7,10.1069,[999.953,5851.02,-0.092556]]]\""
+      }
+    ],
+    "metrics": [
+      "18:02:39 \"[AF_WORLD_SIZE] 8192\"",
+      "18:03:30 \"[AF_GARRISON] [false,-1,0,0,180]\"",
+      "18:03:30 \"[AF_GARRISON] [true,22.064,110,4,329.838]\"",
+      "18:05:06 \"[AF_OCCLUSION_GEOMETRY] [[5999.91,2000.1,5.00144],[6000,2020,5.00144],[6000.07,2000.77,5.40062],[5999.99,2020,6.32417],[[\"\"Land_CncWall4_F\"\",[5996,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[5996,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6000,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,6.5],[[-2.68176,-0.520034,-1.84441],[2.68176,0.520034,1.84441],3.29386]],[\"\"Land_CncWall4_F\"\",[6004,2010,8],[[-2.68176,-0.520034,-1.84441],[2.68"
+    ],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "47ecc28a73a855413401e1186bcd24002e0bba849e69a7ab3dfc7597736c948e"
+      }
+    ],
+    "fixtureSha256": "53c02bd7a149002da61c29b6532e9bd7b42d04fd86f0a7a52316edfe08d25d8a"
+  },
+  {
+    "run": "run40-steering-trial",
+    "checks": 15,
+    "passed": 13,
+    "failed": 2,
+    "completed": [
+      "18:08:38 \"[AF_DONE] checks=15 failed=2\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "AAT VR fires front",
+        "pass": true,
+        "line": "18:06:53 \"[AF_CHECK] [\"\"AAT VR fires front\"\",true,[3,33,15,0]]\""
+      },
+      {
+        "name": "AAT VR progresses front",
+        "pass": true,
+        "line": "18:06:53 \"[AF_CHECK] [\"\"AAT VR progresses front\"\",true,55.0502]\""
+      },
+      {
+        "name": "AAT VR faces enemy front",
+        "pass": true,
+        "line": "18:06:53 \"[AF_CHECK] [\"\"AAT VR faces enemy front\"\",true,15]\""
+      },
+      {
+        "name": "AAT VR reaches firing band front",
+        "pass": false,
+        "line": "18:06:53 \"[AF_CHECK] [\"\"AAT VR reaches firing band front\"\",false,234.966]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse front",
+        "pass": true,
+        "line": "18:06:55 \"[AF_CHECK] [\"\"AAT VR stop clears pulse front\"\",true,[]]\""
+      },
+      {
+        "name": "AAT VR fires rear",
+        "pass": true,
+        "line": "18:07:43 \"[AF_CHECK] [\"\"AAT VR fires rear\"\",true,[2,36,37,0]]\""
+      },
+      {
+        "name": "AAT VR progresses rear",
+        "pass": true,
+        "line": "18:07:43 \"[AF_CHECK] [\"\"AAT VR progresses rear\"\",true,45.4473]\""
+      },
+      {
+        "name": "AAT VR faces enemy rear",
+        "pass": true,
+        "line": "18:07:43 \"[AF_CHECK] [\"\"AAT VR faces enemy rear\"\",true,37]\""
+      },
+      {
+        "name": "AAT VR reaches firing band rear",
+        "pass": true,
+        "line": "18:07:43 \"[AF_CHECK] [\"\"AAT VR reaches firing band rear\"\",true,134.972]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse rear",
+        "pass": true,
+        "line": "18:07:45 \"[AF_CHECK] [\"\"AAT VR stop clears pulse rear\"\",true,[]]\""
+      },
+      {
+        "name": "AAT VR fires obstacle",
+        "pass": true,
+        "line": "18:08:34 \"[AF_CHECK] [\"\"AAT VR fires obstacle\"\",true,[2,31,23,0]]\""
+      },
+      {
+        "name": "AAT VR progresses obstacle",
+        "pass": true,
+        "line": "18:08:34 \"[AF_CHECK] [\"\"AAT VR progresses obstacle\"\",true,34.5507]\""
+      },
+      {
+        "name": "AAT VR faces enemy obstacle",
+        "pass": true,
+        "line": "18:08:34 \"[AF_CHECK] [\"\"AAT VR faces enemy obstacle\"\",true,23]\""
+      },
+      {
+        "name": "AAT VR reaches firing band obstacle",
+        "pass": false,
+        "line": "18:08:34 \"[AF_CHECK] [\"\"AAT VR reaches firing band obstacle\"\",false,158.523]\""
+      },
+      {
+        "name": "AAT VR stop clears pulse obstacle",
+        "pass": true,
+        "line": "18:08:36 \"[AF_CHECK] [\"\"AAT VR stop clears pulse obstacle\"\",true,[]]\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "47ecc28a73a855413401e1186bcd24002e0bba849e69a7ab3dfc7597736c948e"
+      }
+    ],
+    "fixtureSha256": "14bc0fa399ad08b0cfcffcc93f721c35b6e588f9ce2397b3c899fc7246530b0a"
+  },
+  {
+    "run": "run41-n99-replacement",
+    "checks": 7,
+    "passed": 7,
+    "failed": 0,
+    "completed": [
+      "18:10:01 \"[AF_DONE] checks=7 failed=0\""
+    ],
+    "newCodeOrFixtureErrors": [],
+    "results": [
+      {
+        "name": "N99 fixture has four HCs",
+        "pass": true,
+        "line": "18:08:16 \"[AF_CHECK] [\"\"N99 fixture has four HCs\"\",true,[4,6,5,7]]\""
+      },
+      {
+        "name": "N99 initial advance 0",
+        "pass": true,
+        "line": "18:08:41 \"[AF_CHECK] [\"\"N99 initial advance 0\"\",true,[999.921,1110.16,-0.0922256]]\""
+      },
+      {
+        "name": "N99 initial advance 1",
+        "pass": true,
+        "line": "18:08:41 \"[AF_CHECK] [\"\"N99 initial advance 1\"\",true,[1999.99,1111.69,-0.0907583]]\""
+      },
+      {
+        "name": "N99 HC transfer replacement moves 0",
+        "pass": true,
+        "line": "18:09:21 \"[AF_CHECK] [\"\"N99 HC transfer replacement moves 0\"\",true,[4,151.673,[999.884,1261.84,0.585797],[\"\"assault\"\",[999.921,1270.16,-0.0922256],500]]]\""
+      },
+      {
+        "name": "N99 HC transfer replacement moves 1",
+        "pass": true,
+        "line": "18:09:21 \"[AF_CHECK] [\"\"N99 HC transfer replacement moves 1\"\",true,[6,147.567,[1999.96,1259.26,0.585786],[\"\"assault\"\",[1999.99,1271.69,-0.0907583],500]]]\""
+      },
+      {
+        "name": "N99 return-server replacement moves 0",
+        "pass": true,
+        "line": "18:10:01 \"[AF_CHECK] [\"\"N99 return-server replacement moves 0\"\",true,[2,149.008,[1000.22,1410.84,-0.0909462],[\"\"assault\"\",[999.884,1421.84,0.585797],500]]]\""
+      },
+      {
+        "name": "N99 return-server replacement moves 1",
+        "pass": true,
+        "line": "18:10:01 \"[AF_CHECK] [\"\"N99 return-server replacement moves 1\"\",true,[2,151.742,[1999.83,1411,-0.0901699],[\"\"assault\"\",[1999.96,1419.26,0.585786],500]]]\""
+      }
+    ],
+    "metrics": [],
+    "build": [
+      {
+        "addon": "FST_BURNS_Combat",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "591e11a23f0169827c38beb43ce59bf259a559b8b683f7fbb7b185cbb8bf0c6a"
+      },
+      {
+        "addon": "FST_BURNS_Gulanthar",
+        "entries": 1,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+      },
+      {
+        "addon": "FST_HCSpawn",
+        "entries": 122,
+        "configCompiled": true,
+        "allEntriesReadBack": true,
+        "sha256": "2b151bb32f65c52c3d4b1f4bdbe3a2eb55f37df324ad7452b8f52ab043f70cd5"
+      }
+    ],
+    "fixtureSha256": "8c051633d265b3d0a0838a0396d18bec876e14afed571b805f7307e4d82f7a6d"
+  }
+]

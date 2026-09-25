@@ -46,6 +46,22 @@ class CfgMusicClasses
 	{
 		displayName="41st - Invasion Of Belarus Tracks";
 	};
+	class FST_Helldivers_Music
+	{
+		displayName="41st - Helldivers Tracks";
+	};
+	class FST_MetalGear_Music
+	{
+		displayName="41st - Metal Gear";
+	};
+	class FST_ACPW_Music
+	{
+		displayName="41st - AC/PW Tracks";
+	};
+	class FST_Ambience_Music
+	{
+		displayName="41st - Umbara Ambience";
+	};
 };
 
 // With Thanks to Splice for all his help.
@@ -177,6 +193,7 @@ class CfgMusic
 		"FST_Souls_Manus",
 		"FST_CigaretteWife",
 		"FST_DragonRisingMenu",
+		"FST_115",
 	
 		
 		//Misc tracks
@@ -283,6 +300,7 @@ class CfgMusic
 		"FST_BiteMe",
 		"FST_HahaYeaDudeThatsSick",
 		"FST_Forever_FullVersion",
+		"FST_Forever_FullVersion_Instrumental",
 		"FST_FightTillImGoodEnough",
 
 		//Invasion of Belarus
@@ -290,6 +308,63 @@ class CfgMusic
 		"FST_TheLastHero",
 		"FST_BloodGroup",
 		"FST_Tachanka",
+		
+		//Helldivers
+		"FST_HD1_Bugs1",
+		"FST_HD1_Bugs2",
+		"FST_HD1_Bugs3",
+		"FST_HD1_Cyborgs1",
+		"FST_HD1_Cyborgs2",
+		"FST_HD1_Cyborgs3",
+		"FST_HD1_Squids1",
+		"FST_HD1_Squids2",
+		"FST_HD1_Squids3",
+
+		//Metal Gear
+		"FST_Encounter",
+		"FST_SnakeEater",
+		"FST_Gekko",
+		"FST_HavenTroopers",
+		"FST_MetalGearSaga",
+		"FST_RulesOfNature",
+		"FST_RulesOfNature_Instrumental",
+		"FST_TheOnlyThingIKnowForReal",
+		"FST_TheOnlyThingIKnowForReal_Instrumental",
+		"FST_DarkSkies_Instrumental",
+		"FST_ImMyOwnMasterNow",
+		"FST_ImMyOwnMasterNow_Instrumental",
+		"FST_AStrangerIRemain",
+		"FST_AStrangerIRemain_Instrumental",
+		"FST_ReturnToAshes_Instrumental",
+		"FST_TheStainsOfTime",
+		"FST_TheStainsOfTime_Instrumental",
+		"FST_RedSun",
+		"FST_RedSun_Instrumental",
+		"FST_ASoulCantBeCut_Instrumental",
+		"FST_CollectiveConsciousness",
+		"FST_CollectiveConsciousness_Instrumental",
+		"FST_ItHasToBeThisWay",
+		"FST_ItHasToBeThisWay_Instrumental",
+		"FST_TheHotWindBlowing",
+		"FST_TheHotWindBlowing_Instrumental",
+		"FST_ShiningLights_EvenInDeath",
+
+		//AC And PW
+		"FST_Everflow",
+
+		//Ambience
+		"FST_ADisturbingMood",
+		"FST_AngelBeats_Abyss",
+		"FST_AngelBeats_Siren",
+		"FST_AbyssalWoods",
+		"FST_Caelid",
+		"FST_LotusOfTheEther",
+		"FST_FearInTheDarkness",
+		"FST_TheFunicularIntro",
+		"FST_TheUncertaintyPrinciple",
+		"FST_ShadowOfTheRepublic",
+		"FST_AChangedMan",
+		"FST_NightWatchAlpha",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -1920,6 +1995,18 @@ class CfgMusic
 		};
 		duration="358";
 	};
+	class FST_115
+	{
+		name="Elena Siegman - 115";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Elena Siegman - 115.ogg",
+			1,
+			1
+		};
+		duration="228";
+	};
 
 	//Films
 	
@@ -2610,7 +2697,7 @@ class CfgMusic
 
 	class FST_DisassemblyRequired
 	{
-		name="Liam Vickers - Disassembly Required";
+		name="Disassembly Required";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2622,7 +2709,7 @@ class CfgMusic
 	};	
 	class FST_DisassemblyRequired_Cynthwave
 	{
-		name="Leslie Mag - Disassembly Required (Cynthwave)";
+		name="Disassembly Required (Cynthwave)";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2646,7 +2733,7 @@ class CfgMusic
 	};
 	class FST_EldritchJXD
 	{
-		name="AJ DiSpirito - Eldritch J XD";
+		name="Eldritch J XD";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2658,7 +2745,7 @@ class CfgMusic
 	};	
 	class FST_TheKnifeDance
 	{
-		name="AJ DiSpirito - The Knife Dance";
+		name="The Knife Dance";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2670,7 +2757,7 @@ class CfgMusic
 	};	
 	class FST_KnifeDance_Cynthwave
 	{
-		name="Faraday Cage - Knife Dance Cynth Metal";
+		name="The Knife Dance Cynth Metal";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2682,7 +2769,7 @@ class CfgMusic
 	};	
 	class FST_98_7
 	{
-		name="AJ DiSpirito - 98.7";
+		name="98.7";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2694,7 +2781,7 @@ class CfgMusic
 	};	
 	class FST_camping_mp3
 	{
-		name="AJ DiSpirito - camping.mp3";
+		name="camping.mp3";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2706,7 +2793,7 @@ class CfgMusic
 	};	
 	class FST_ImConfused
 	{
-		name="AJ DiSpirito - I'm Confused";
+		name="I'm Confused";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2718,7 +2805,7 @@ class CfgMusic
 	};	
 	class FST_SolverUzi
 	{
-		name="AJ DiSpirito - Solver Uzi";
+		name="Solver Uzi";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2730,7 +2817,7 @@ class CfgMusic
 	};	
 	class FST_MagicSchoolBus
 	{
-		name="AJ DiSpirito - Magic School Bus";
+		name="Magic School Bus";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2742,7 +2829,7 @@ class CfgMusic
 	};	
 	class FST_HuggieWuggies
 	{
-		name="AJ DiSpirito - Huggie Wuggies";
+		name="Huggie Wuggies";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2754,7 +2841,7 @@ class CfgMusic
 	};	
 	class FST_ThatsANiceHallwayYouEverSeeAHallwayThatNice
 	{
-		name="AJ DiSpirito - that's a nice hallway, you ever see a hallway that nice?";
+		name="that's a nice hallway, you ever see a hallway that nice?";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2766,7 +2853,7 @@ class CfgMusic
 	};	
 	class FST_HehNothingPersonalKid
 	{
-		name="AJ DiSpirito - Heh, Nothing Personal Kid";
+		name="Heh, Nothing Personal Kid";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2778,7 +2865,7 @@ class CfgMusic
 	};	
 	class FST_EternalDream
 	{
-		name="AJ DiSpirito - Eternal Dream";
+		name="Eternal Dream";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2790,7 +2877,7 @@ class CfgMusic
 	};	
 	class FST_GamerMom
 	{
-		name="AJ DiSpirito - Gamer Mom";
+		name="Gamer Mom";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2802,7 +2889,7 @@ class CfgMusic
 	};	
 	class FST_run
 	{
-		name="AJ DiSpirito - ....run";
+		name="....run";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2814,7 +2901,7 @@ class CfgMusic
 	};	
 	class FST_UrAight
 	{
-		name="AJ DiSpirito - ur aight";
+		name="ur aight";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2826,7 +2913,7 @@ class CfgMusic
 	};	
 	class FST_Nori
 	{
-		name="AJ DiSpirito - Nori";
+		name="Nori";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2838,7 +2925,7 @@ class CfgMusic
 	};	
 	class FST_YoureFreakinGrounded
 	{
-		name="AJ DiSpirito - YOU'RE FREAKIN' GROUNDED";
+		name="YOU'RE FREAKIN' GROUNDED";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2850,7 +2937,7 @@ class CfgMusic
 	};	
 	class FST_HangOut
 	{
-		name="AJ DiSpirito - Hang Out?";
+		name="Hang Out?";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2862,7 +2949,7 @@ class CfgMusic
 	};	
 	class FST_DieMad
 	{
-		name="AJ DiSpirito - Die Mad >:D";
+		name="Die Mad >:D";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2874,7 +2961,7 @@ class CfgMusic
 	};	
 	class FST_IfUALilB
 	{
-		name="AJ DiSpirito - IF U A LIL B-";
+		name="IF U A LIL B-";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2886,7 +2973,7 @@ class CfgMusic
 	};	
 	class FST_FallingWithYou
 	{
-		name="AJ DiSpirito - Falling With You";
+		name="Falling With You";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2898,7 +2985,7 @@ class CfgMusic
 	};	
 	class FST_EternalDestroyer
 	{
-		name="AJ DiSpirito - Eternal DESTROYER";
+		name="Eternal DESTROYER";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2910,7 +2997,7 @@ class CfgMusic
 	};	
 	class FST_UziAndN_TheDroneKillers
 	{
-		name="AJ DiSpirito - Uzi and N: The Drone Killers";
+		name="Uzi and N: The Drone Killers";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2922,7 +3009,7 @@ class CfgMusic
 	};	
 	class FST_BiteMe
 	{
-		name="AJ DiSpirito - BITE ME";
+		name="BITE ME";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2934,7 +3021,7 @@ class CfgMusic
 	};	
 	class FST_HahaYeaDudeThatsSick
 	{
-		name="AJ DiSpirito - haha yea dude, that's sick";
+		name="haha yea dude, that's sick";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2946,7 +3033,7 @@ class CfgMusic
 	};	
 	class FST_Forever_FullVersion
 	{
-		name="AJ DiSpirito - FOREVER (The Full Version)";
+		name="FOREVER - The Full Version";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -2955,10 +3042,24 @@ class CfgMusic
 			1
 		};
 		duration="311";
+
 	};	
+	class FST_Forever_FullVersion_Instrumental
+	{
+		name="FOREVER - The Full Version (Instrumental)";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\FOREVER Full Version Instrumental.ogg",
+			1,
+			1
+		};
+		duration="311";
+
+	};
 	class FST_FightTillImGoodEnough
 	{
-		name="The Living Tombstone - Fight Til' I'm Good Enough";
+		name="Fight Til' I'm Good Enough";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -3018,6 +3119,607 @@ class CfgMusic
 			1
 		};
 		duration="168";
+	};
+
+	//Helldivers
+
+	class FST_HD1_Bugs1
+	{
+		name="HD1 - Bugs (Difficulty 1-4)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Bugs (Difficulty 1-4).ogg",
+			1,
+			1
+		};
+		duration="323";
+	};
+	class FST_HD1_Bugs2
+	{
+		name="HD1 - Bugs (Difficulty 5-8)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Bugs (Difficulty 5-8).ogg",
+			1,
+			1
+		};
+		duration="312";
+	};
+
+	class FST_HD1_Bugs3
+	{
+		name="HD1 - Bugs (Difficulty 9+)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Bugs (Difficulty 9+).ogg",
+			1,
+			1
+		};
+		duration="343";
+	};
+	class FST_HD1_Cyborgs1
+	{
+		name="HD1 - Cyborgs (Difficulty 1-4)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Cyborgs (Difficulty 1-4).ogg",
+			1,
+			1
+		};
+		duration="238";
+	};
+	class FST_HD1_Cyborgs2
+	{
+		name="HD1 - Cyborgs (Difficulty 5-8)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Cyborgs (Difficulty 5-8).ogg",
+			1,
+			1
+		};
+		duration="294";
+	};
+	class FST_HD1_Cyborgs3
+	{
+		name="HD1 - Cyborgs (Difficulty 9+)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Cyborgs (Difficulty 9+).ogg",
+			1,
+			1
+		};
+		duration="392";
+	};
+	class FST_HD1_Squids1
+	{
+		name="HD1 - Illuminate (Difficulty 1-4)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Illuminate (Difficulty 1-4).ogg",
+			1,
+			1
+		};
+		duration="281";
+	};
+	class FST_HD1_Squids2
+	{
+		name="HD1 - Illuminate (Difficulty 5-8)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Illuminate (Difficulty 5-8).ogg",
+			1,
+			1
+		};
+		duration="326";
+	};
+	class FST_HD1_Squids3
+	{
+		name="HD1 - Illuminate (Difficulty 9+)";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\HD1 Illuminate (Difficulty 9+).ogg",
+			1,
+			1
+		};
+		duration="433";
+	};
+
+	//Metal Gear
+
+	class FST_Encounter
+	{
+		name="MGS1 - Encounter";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGS - Encounter.ogg",
+			1,
+			1
+		};
+		duration="150";
+	};
+	class FST_SnakeEater
+	{
+		name="MGS3 - Snake Eater";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGS3 - Snake Eater.ogg",
+			1,
+			1
+		};
+		duration="178";
+	};
+	class FST_Gekko
+	{
+		name="MGS4 - Gekko";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGS4 - Gekko.ogg",
+			1,
+			1
+		};
+		duration="174";
+	};
+	class FST_HavenTroopers
+	{
+		name="MGS4 - Haven Troopers";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGS4 - Haven Trooopers.ogg",
+			1,
+			1
+		};
+		duration="221";
+	};
+	class FST_MetalGearSaga
+	{
+		name="MGS4 - Metal Gear Saga";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGS4 - Metal Gear Saga.ogg",
+			1,
+			1
+		};
+		duration="260";
+	};
+	class FST_RulesOfNature
+	{
+		name="MGR - Rules Of Nature";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Rules Of Nature.ogg",
+			1,
+			1
+		};
+		duration="151";
+	};
+	class FST_RulesOfNature_Instrumental
+	{
+		name="MGR - Rules Of Nature (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Rules Of Nature Instrumental.ogg",
+			1,
+			1
+		};
+		duration="151";
+	};
+	class FST_TheOnlyThingIKnowForReal
+	{
+		name="MGR - The Only Thing I Know For Real";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - The Only Thing I Know For Real.ogg",
+			1,
+			1
+		};
+		duration="147";
+	};
+	class FST_TheOnlyThingIKnowForReal_Instrumental
+	{
+		name="MGR - The Only Thing I Know For Real (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - The Only Thing I Know For Real Instrumental.ogg",
+			1,
+			1
+		};
+		duration="147";
+	};
+	class FST_DarkSkies_Instrumental
+	{
+		name="MGR - Dark Skies (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Dark Skies Instrumental.ogg",
+			1,
+			1
+		};
+		duration="142";
+	};
+	class FST_ImMyOwnMasterNow
+	{
+		name="MGR - I'm My Own Master Now";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - I'm My Own Master Now.ogg",
+			1,
+			1
+		};
+		duration="131";
+	};
+	class FST_ImMyOwnMasterNow_Instrumental
+	{
+		name="MGR - I'm My Own Master Now (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - I'm My Own Master Now Instrumental.ogg",
+			1,
+			1
+		};
+		duration="131";
+	};
+	class FST_AStrangerIRemain
+	{
+		name="MGR - A Stranger I Remain";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - A Stranger I Remain.ogg",
+			1,
+			1
+		};
+		duration="146";
+	};
+	class FST_AStrangerIRemain_Instrumental
+	{
+		name="MGR - A Stranger I Remain (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - A Stranger I Remain Instrumental.ogg",
+			1,
+			1
+		};
+		duration="146";
+	};
+	class FST_ReturnToAshes_Instrumental
+	{
+		name="MGR - Return To Ashes (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Return To Ashes Instrumental.ogg",
+			1,
+			1
+		};
+		duration="136";
+	};
+	class FST_TheStainsOfTime
+	{
+		name="MGR - The Stains Of Time";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - The Stains Of Time.ogg",
+			1,
+			1
+		};
+		duration="131";
+	};
+	class FST_TheStainsOfTime_Instrumental
+	{
+		name="MGR - The Stains Of Time (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - The Stains Of Time Instrumental.ogg",
+			1,
+			1
+		};
+		duration="131";
+	};
+	class FST_RedSun
+	{
+		name="MGR - Red Sun";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Red Sun.ogg",
+			1,
+			1
+		};
+		duration="134";
+	};
+	class FST_RedSun_Instrumental
+	{
+		name="MGR - Red Sun (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Red Sun Instrumental.ogg",
+			1,
+			1
+		};
+		duration="134";
+	};
+	class FST_ASoulCantBeCut_Instrumental
+	{
+		name="MGR - A Soul Can't Be Cut (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - A Soul Can't Be Cut Instrumental.ogg",
+			1,
+			1
+		};
+		duration="140";
+	};
+	class FST_CollectiveConsciousness
+	{
+		name="MGR - Collective Consciousness";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Collective Consciousness.ogg",
+			1,
+			1
+		};
+		duration="159";
+	};
+	class FST_CollectiveConsciousness_Instrumental
+	{
+		name="MGR - Collective Consciousness (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - Collective Consciousness Instrumental.ogg",
+			1,
+			1
+		};
+		duration="159";
+	};
+	class FST_ItHasToBeThisWay
+	{
+		name="MGR - It Has To Be This Way";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - It Has To Be This Way.ogg",
+			1,
+			1
+		};
+		duration="176";
+	};
+	class FST_ItHasToBeThisWay_Instrumental
+	{
+		name="MGR - It Has To Be This Way (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - It Has To Be This Way Instrumental.ogg",
+			1,
+			1
+		};
+		duration="176";
+	};
+	class FST_TheHotWindBlowing
+	{
+		name="MGR - The Hot Wind Blowing";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - The Hot Wind Blowing.ogg",
+			1,
+			1
+		};
+		duration="139";
+	};
+	class FST_TheHotWindBlowing_Instrumental
+	{
+		name="MGR - The Hot Wind Blowing (Instrumental)";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGR - The Hot Wind Blowing Instrumental.ogg",
+			1,
+			1
+		};
+		duration="139";
+	};
+	class FST_ShiningLights_EvenInDeath
+	{
+		name="MGSV - Shining Lights, Even In Death";
+		musicClass="FST_MetalGear_Music";
+		sound[]=
+		{
+			"41st_Music\MetalGearTracks\MGSV - Shining Lights, Even In Death.ogg",
+			1,
+			1
+		};
+		duration="244";
+	};
+
+	//Ace Combat and Project Wingman
+
+	class FST_Everflow
+	{
+		name="AC8 - Everflow";
+		musicClass="FST_ACPW_Music";
+		sound[]=
+		{
+			"41st_Music\ACPWTracks\AC8 - Everflow.ogg",
+			1,
+			1
+		};
+		duration="366";
+	};
+
+	//Ambience
+
+	class FST_ADisturbingMood
+	{
+		name="Lycoris Recoil - A Disturbing Mood";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Lycoris Recoil - A Disturbing Mood.ogg",
+			1,
+			1
+		};
+		duration="130";
+	};
+	class FST_AngelBeats_Abyss
+	{
+		name="Angel Beats - Abyss";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Angel Beats - Abyss.ogg",
+			1,
+			1
+		};
+		duration="197";
+	};
+	class FST_AngelBeats_Siren
+	{
+		name="Angel Beats - Siren";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Angel Beats - Siren.ogg",
+			1,
+			1
+		};
+		duration="114";
+	};
+	class FST_AbyssalWoods
+	{
+		name="Elden Ring - Abyssal Woods";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Elden Ring - Abyssal Woods.ogg",
+			1,
+			1
+		};
+		duration="179";
+	};
+	class FST_Caelid
+	{
+		name="Elden Ring - Caelid";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Elden Ring - Caelid.ogg",
+			1,
+			1
+		};
+		duration="224";
+	};
+	class FST_LotusOfTheEther
+	{
+		name="Lotus Of The Ether";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Lotus Of The Ether.ogg",
+			1,
+			1
+		};
+		duration="177";
+	};
+	class FST_FearInTheDarkness
+	{
+		name="MS Gundam - Fear In The Darkness";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\MS Gundam - Fear In The Darkness.ogg",
+			1,
+			1
+		};
+		duration="148";
+	};
+	class FST_TheFunicularIntro
+	{
+		name="Oddworld Soulstorm - The Funicular Intro";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Oddworld Soulstorm - The Funicular Intro.ogg",
+			1,
+			1
+		};
+		duration="167";
+	};
+	class FST_TheUncertaintyPrinciple
+	{
+		name="Outer Wilds - The Uncertainty Principle";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Outer Wilds - The Uncertainty Principle.ogg",
+			1,
+			1
+		};
+		duration="167";
+	};
+	class FST_ShadowOfTheRepublic
+	{
+		name="Shadow Of The Republic";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Shadow Of The Republic.ogg",
+			1,
+			1
+		};
+		duration="412";
+	};
+	class FST_AChangedMan
+	{
+		name="Dying Light - A Changed Man";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Dying Light - A Changed Man.ogg",
+			1,
+			1
+		};
+		duration="203";
+	};
+	class FST_NightWatchAlpha
+	{
+		name="Night Watch Alpha";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Night Watch Alpha.ogg",
+			1,
+			1
+		};
+		duration="304";
 	};
 };
 

@@ -11,7 +11,7 @@ private _held=_group getVariable ["FST_HC_heldBy",-1];
 if (_held!=-1 && {(_group getVariable ["BURNS_manualHeldOwner",-2])!=_held}) exitWith {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
 private _leader = leader _group;
 if (isNull _leader || {!alive _leader} || {!simulationEnabled _leader}) exitWith {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
-if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"}) >= 0) exitWith {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
+
 // This records the owner actually servicing the task even if a valid waypoint
 // needs no new order after a handoff.
 if ((_group getVariable ["FST_HC_taskLastOwner", -1]) != clientOwner) then {
@@ -23,6 +23,9 @@ private _current = currentWaypoint _group;
 // Check this before issuing suppression or movement orders.
 if (_wpIndex >= 0 && {_current != _wpIndex} && {_current < count waypoints _group} && {waypointDescription [_group, _current] != "FST HC combat"}) exitWith {
     [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
+};
+if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0) exitWith {
+    if !([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) then {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
 };
 if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsSpecialTick) exitWith {};
 if !(_leader checkAIFeature "PATH") exitWith {[_group] call FST_HCSpawn_fnc_burnsReleaseAdvance}; // Respect externally scripted holds.
@@ -125,17 +128,18 @@ if (_mode=="hunt" && {_nearest>100} && {isNull _contact}) then {
 // An AAT approach should finish on our side of the contact,
 // not at the enemy's exact position. This does not control the hull or force fire.
 // Only one local AAT and its mounted crew; mixed groups keep existing behavior.
-if (missionNamespace getVariable ["BURNS_ArmorAssistEnabled",true] && {_mode in ["rush","hunt"]}) then {
+if (missionNamespace getVariable ["BURNS_ArmorAssistEnabled",true] && {_mode in ["rush","hunt","assault"]}) then {
     private _armor=vehicle _leader;
     if (_armor isKindOf "FST_AAT" && {local _armor} && {canMove _armor} && {
         (units _group findIf {alive _x && {vehicle _x!=_armor}})<0
     }) then {
         // Rush normally skips nearTargets. Query native knowledge once on its
         // existing task tick; no new scheduler, world scan or knowledge reveal.
+        private _armorTarget=if (_mode=="assault") then {_contact} else {_rushTarget};
         private _evidence=[];
         {
             _x params ["_pos","_type","_side","_cost","_obj"];
-            if (!isNull _obj && {alive _obj} && {vehicle _obj==vehicle _rushTarget} && {
+            if (!isNull _obj && {alive _obj} && {!isNull _armorTarget && {vehicle _obj==vehicle _armorTarget}} && {
                 !(_side in [civilian,sideUnknown,sideLogic]) && {(side _group) getFriend _side<0.6}
             }) exitWith {_evidence=+_pos};
         } forEach (_leader nearTargets (500 min _radius));
@@ -144,15 +148,15 @@ if (missionNamespace getVariable ["BURNS_ArmorAssistEnabled",true] && {_mode in 
             // Do not manufacture a retreat order when already inside the band.
             // Native combat can still reposition and seek a firing solution.
             private _goal=+_destination;
-            if (_distance>140) then {
-                _goal=_evidence getPos [120,_evidence getDir (getPosATL _armor)];
+            if (_distance>200) then {
+                _goal=_evidence getPos [150,_evidence getDir (getPosATL _armor)];
             } else {
                 private _gunner=gunner _armor;
                 private _angle=abs ((((_armor getDir _evidence)-(getDir _armor)+540) mod 360)-180);
                 // Do not park behind cover or freeze with the rear toward the
                 // threat. This is one obstruction ray, never a detection boost.
                 if (!isNull _gunner && {alive _gunner} && {canFire _armor} && {_angle<50} && {
-                    ([_armor,"FIRE",vehicle _rushTarget] checkVisibility [eyePos _gunner,aimPos (vehicle _rushTarget)])>0.5
+                    ([_armor,"FIRE",vehicle _armorTarget] checkVisibility [eyePos _gunner,aimPos (vehicle _armorTarget)])>0.5
                 }) then {_goal=getPosATL _armor};
             };
             if !(surfaceIsWater _goal) then {_destination=_goal};
@@ -171,13 +175,15 @@ if (_down && {vehicle _leader==_leader}) then {
     private _body=getPosATL _rushTarget;
     _destination=if (_leader distance2D _body>10) then {_body getPos [8,_body getDir (getPosATL _leader)]} else {getPosATL _leader};
 };
+if (_mode=="assault") then {_destination=[_group,_destination,_contact,_contactPos] call FST_HCSpawn_fnc_burnsArmorSectionGoal};
+_destination=[_group,_destination,_mode] call FST_HCSpawn_fnc_burnsVehicleProgress;
 private _last = ([_group,["FST_HC_taskLastOrder", []]] call FST_HCSpawn_fnc_burnsStateGet);
 if (_mode=="creep") then {
     private _combatMode=if (_nearest<80) then {"RED"} else {"GREEN"};
     _group setCombatMode _combatMode;
     if (_wpIndex>=0 && {_wpIndex<count waypoints _group}) then {[_group,_wpIndex] setWaypointCombatMode _combatMode};
 };
-if (count _last > 0 && {(_last distance2D _destination) < 25} && {_wpIndex >= 0} && {_wpIndex < count waypoints _group}) exitWith {
+if (count _last > 0 && {(_last distance2D _destination) < (if ((vehicle _leader) isKindOf "Tank") then {5} else {25})} && {_wpIndex >= 0} && {_wpIndex < count waypoints _group}) exitWith {
     if (_mode in ["rush","hunt","creep","assault"]) then {[_group,_destination] call FST_HCSpawn_fnc_burnsB1Advance};
 };
 if (!local _group) exitWith {};
@@ -194,7 +200,9 @@ _wp setWaypointCompletionRadius (if (_mode == "hunt") then {30} else {15});
 // Infantry pacing must not turn a mounted B1 crew into a slow walking squad.
 _wp setWaypointSpeed (if (vehicle _leader==_leader && {([_leader] call FST_HCSpawn_fnc_burnsRole) == "b1"}) then {"LIMITED"} else {if (_mode == "hunt") then {"NORMAL"} else {"FULL"}});
 _wp setWaypointBehaviour "AWARE";
-_wp setWaypointCombatMode "RED";
+// Explicit AAT/N99 advances retain the ordered approach while firing at will.
+// RED permits independent engagement movement that can override that approach.
+_wp setWaypointCombatMode (if (((vehicle _leader) isKindOf "FST_AAT" || {(vehicle _leader) isKindOf "FST_N99"}) && {_mode in ["assault","rush","hunt"]}) then {"YELLOW"} else {"RED"});
 if (_mode=="creep") then {
     _wp setWaypointSpeed "LIMITED";
     _wp setWaypointCombatMode (if (_nearest<80) then {"RED"} else {"GREEN"});

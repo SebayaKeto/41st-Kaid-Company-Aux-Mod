@@ -1,0 +1,33 @@
+// Tonight's bounded Tactical-only candidate. Settings are rehearsal defaults.
+DI_version = "0.3.0-candidate";
+DI_defaultMode = "shadow";
+DI_tickSeconds = 5;
+DI_maxActiveInfantry = 96;
+DI_globalReadyMultiplier = 2;
+DI_localReadyMultiplier = 2;
+DI_eliteMultiplier = 1.25;
+DI_spawnCooldown = 90;
+DI_objectiveActivationDistance = 1500;
+DI_mapLookaheadDistance = 3500;
+DI_mapMarkerLimit = 64;
+DI_mapPrewarmLimit = 1; // One distant destination; never populate the whole map.
+DI_localForceRadius = 900;
+DI_minSpawnPlayerDistance = 400;
+DI_baseProtectionRadius = 650;
+DI_stepoffDistance = 600;
+DI_stepoffPersistence = 45;
+DI_recoveryReadyFraction = 0.65;
+DI_recoveryPersistence = 60;
+DI_minWorkerFPS = 20;
+DI_b2EveryB1Squads = 3;
+DI_bxLifetimeLimit = 12;
+DI_enableB2 = true;
+DI_enableBX = false; // Needs ambush placement qualification, never use as filler.
+DI_enableAutomaticCompletion = false; // Main-building geometry not yet bound.
+DI_enableAirArmorModules = false; // Explicitly unqualified in this candidate.
+DI_testMode = false;
+
+DI_autoStepMinimum = 8; // Smaller rehearsals require explicit Zeus step-off.
+DI_assemblyPersistence = 60;
+DI_baselineGrace = 120; // Starting roster may grow during departure/JIP grace.
+DI_spawnGrantSeconds = 5;

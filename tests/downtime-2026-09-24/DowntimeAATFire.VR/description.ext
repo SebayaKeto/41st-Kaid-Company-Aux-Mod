@@ -1,0 +1,4 @@
+author="Candidate qualification";
+respawn=3;respawnDelay=2;disabledAI=1;
+class Header {gameType="COOP";minPlayers=1;maxPlayers=8;};
+class CfgRemoteExec {class Functions {mode=2;jip=0;};class Commands {mode=2;jip=0;};};

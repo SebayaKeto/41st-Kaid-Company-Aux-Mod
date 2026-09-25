@@ -362,6 +362,36 @@ class CfgVehicles
 				visual="injury_body";
 				minimalHit=0.009;
 			};
+			class HitLeftArm
+			{
+				armor=1;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.009;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor=1;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.06;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.009;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
 			class HitBody
 			{
 				armor=13;
@@ -409,36 +439,6 @@ class CfgVehicles
 				visual="injury_legs";
 				minimalHit=0.009;
 				depends="0";
-			};
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0;
-				explosionShielding=3;
-				visual="injury_hands";
-				minimalHit=0.009;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.06;
-				explosionShielding=3;
-				visual="injury_legs";
-				minimalHit=0.009;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
 			};
 		};
 		explosionshielding=45;
@@ -882,6 +882,36 @@ class CfgVehicles
 				visual="injury_body";
 				minimalHit=0.009;
 			};
+			class HitLeftArm
+			{
+				armor=1;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0;
+				explosionShielding=3;
+				visual="injury_hands";
+				minimalHit=0.009;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor=1;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.06;
+				explosionShielding=3;
+				visual="injury_legs";
+				minimalHit=0.009;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
 			class HitBody
 			{
 				armor=28;
@@ -929,36 +959,6 @@ class CfgVehicles
 				visual="injury_legs";
 				minimalHit=0.009;
 				depends="0";
-			};
-			class HitLeftArm
-			{
-				armor=1;
-				material=-1;
-				name="hand_l";
-				passThrough=1;
-				radius=0;
-				explosionShielding=3;
-				visual="injury_hands";
-				minimalHit=0.009;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name="hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				material=-1;
-				name="leg_l";
-				passThrough=1;
-				radius=0.06;
-				explosionShielding=3;
-				visual="injury_legs";
-				minimalHit=0.009;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name="leg_r";
 			};
 		};
 		explosionshielding=55;
