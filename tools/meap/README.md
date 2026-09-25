@@ -1,0 +1,9 @@
+# MEAP engineering build and qualification
+
+Run `python tools/meap/build.py --cfgconvert "C:/path/to/CfgConvert.exe"` from this repository. This validates the decoded Core/Architect configs, packs source with the original PBO prefixes, checks every packed file, and atomically replaces their two PBOs in `PUBLISHED MODPACK`. Four other MEAP PBOs are original upstream assets/dependencies; their hashes are in `docs/MEAP_PROVENANCE.json`. Use Install-MEAP.ps1 from the extracted release ZIP, alongside its manifest and Aux-Patch folder.
+
+Run `python tools/meap/prepare_fixture.py` to build `tests/MEAPEngineering.VR.pbo`. Load this mission only in an isolated local dedicated server using the full Aux preset and four headless clients. Search its server RPT for `[MEAP_DONE]`; every `[MEAP_CHECK]` must pass. Generated test PBOs and `sim_*.sqf` must never be added to the published Aux or a public mission rotation.
+
+Arma reports `remoteExecutedOwner=0` for headless clients. The fixture first verifies production rejection of that sender, then exercises copies of the production functions with `_qaSender`. This is server logic coverage, not proof of graphical-client authentication, camera input, ACE UI, visual rendering or JIP visuals. The original production open/action request checks remain in the addon; server-initiated closing now also requires the active session token. A human graphical-client check is required before calling the complete user workflow verified.
+
+The fixture covers placement, edit locks, edits, undo, deletion/refunds, capture, blueprint placement/accounting/bounds, drafts/publishing, limits, grants and revocation. The supplied models have no snap anchors, so it verifies unsupported snapping is rejected without movement and records the missing feature explicitly. Positive snapping is not qualified. Optional inventory-currency and shared-FOB funding are outside the verified default setup.

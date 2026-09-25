@@ -1,10 +1,6 @@
 /*
     FST_fnc_RRR_checkCondition
-    Condition for the repair/rearm/refuel addAction. Re-evaluated by the
-    engine every time the action menu is built, so unlike a cached position
-    this works correctly for a unit no matter when it entered the zone,
-    including immediately after a respawn.
-    params ["_unit"]
+    Shows the service action only to a pilot inside a service zone.
 */
 params ["_unit"];
 

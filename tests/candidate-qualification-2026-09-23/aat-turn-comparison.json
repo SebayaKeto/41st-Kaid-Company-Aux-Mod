@@ -1,0 +1,83 @@
+[
+  {
+    "variant": "original",
+    "bearing": 0.0,
+    "alignedLateSamples": 0.0,
+    "lateSamples": 20.0,
+    "turnPulses": 11.0,
+    "shots": 13.0,
+    "distanceMetres": 3.91234
+  },
+  {
+    "variant": "original",
+    "bearing": 90.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 4.0,
+    "shots": 1.0,
+    "distanceMetres": 0.220012
+  },
+  {
+    "variant": "original",
+    "bearing": 180.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 8.0,
+    "shots": 66.0,
+    "distanceMetres": 0.459915
+  },
+  {
+    "variant": "feedback",
+    "bearing": 0.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 0.0,
+    "shots": 2.0,
+    "distanceMetres": 3.24553
+  },
+  {
+    "variant": "feedback",
+    "bearing": 90.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 4.0,
+    "shots": 14.0,
+    "distanceMetres": 0.280335
+  },
+  {
+    "variant": "feedback",
+    "bearing": 180.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 8.0,
+    "shots": 0.0,
+    "distanceMetres": 0.439252
+  },
+  {
+    "variant": "disabled",
+    "bearing": 0.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 0.0,
+    "shots": 1.0,
+    "distanceMetres": 89.5681
+  },
+  {
+    "variant": "disabled",
+    "bearing": 90.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 0.0,
+    "shots": 43.0,
+    "distanceMetres": 103.364
+  },
+  {
+    "variant": "disabled",
+    "bearing": 180.0,
+    "alignedLateSamples": 20.0,
+    "lateSamples": 20.0,
+    "turnPulses": 0.0,
+    "shots": 1.0,
+    "distanceMetres": 99.2655
+  }
+]

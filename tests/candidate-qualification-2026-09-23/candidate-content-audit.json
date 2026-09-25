@@ -1,0 +1,70 @@
+{
+  "inner_manifests": {
+    "integrated": {
+      "checked": 152,
+      "failures": []
+    },
+    "pods": {
+      "checked": 12,
+      "failures": []
+    }
+  },
+  "source_readback": {
+    "FST_HCSpawn": {
+      "entries": 117,
+      "properties": {
+        "prefix": "FST_HCSpawn"
+      },
+      "failures": []
+    },
+    "FST_BURNS_Combat": {
+      "entries": 1,
+      "properties": {
+        "prefix": "FST_BURNS_Combat"
+      },
+      "failures": []
+    },
+    "FST_BURNS_Gulanthar": {
+      "entries": 1,
+      "properties": {
+        "prefix": "FST_BURNS_Gulanthar"
+      },
+      "failures": []
+    },
+    "Armor/Data/Modules.sqf": {
+      "matches": true
+    },
+    "Armor/Data/PodSafety.sqf": {
+      "matches": true
+    }
+  },
+  "armor_changes": {
+    "unchanged_entries": 1851,
+    "changed_entries": [
+      {
+        "entry": "data/modules.sqf",
+        "change": "modified"
+      },
+      {
+        "entry": "data/podsafety.sqf",
+        "change": "added"
+      }
+    ],
+    "old_properties": {
+      "prefix": "41st_Armor"
+    },
+    "new_properties": {
+      "prefix": "41st_Armor"
+    }
+  },
+  "candidate_copy": {
+    "unchanged": 60,
+    "changed_or_added": [
+      "Addons\\41st_Armor.pbo",
+      "Addons\\FST_BURNS_Combat.pbo",
+      "Addons\\FST_BURNS_Gulanthar.pbo",
+      "Addons\\FST_HCSpawn.pbo"
+    ],
+    "missing": []
+  }
+}

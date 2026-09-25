@@ -1,20 +1,7 @@
 /*
     FST_fnc_initTrigger
-    Registers a trigger as a repair/rearm/refuel zone and makes sure the
-    local player has the service action attached.
-    Call from the trigger's "On Activation" field: [thisTrigger] call FST_fnc_initTrigger;
-
-    The action's visibility condition (FST_fnc_RRR_checkCondition) is checked
-    live against FST_RRR_triggers rather than a cached position, so once a
-    trigger is registered here it stays correct regardless of how many pads
-    exist or whether that trigger's own "On Activation" ever fires again.
-
-    Getting the action back onto a respawned unit still needs something to
-    call FST_fnc_RRR_addAction on the new unit. That's handled two ways so
-    neither one being unreliable can cause the reported "missing after
-    respawn" bug: a CBA PlayerChanged hook (fires immediately on respawn),
-    backed by a slow watcher loop that self-heals within a few seconds even
-    if the event hook never fires for some reason.
+    Registers a trigger as a service zone and keeps the player's action attached.
+    Call from the trigger's On Activation: [thisTrigger] call FST_fnc_initTrigger;
 */
 params ["_trigger"];
 

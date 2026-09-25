@@ -1,0 +1,19 @@
+{
+  "changesSinceIncoming": [
+    {
+      "File": "Addons\\FST_BURNS_Gulanthar.pbo",
+      "Bytes": 1207,
+      "SHA256": "feab7bf6afe769b0e403162121d6d203682aba4bdb7d3dd22540e6ef2353949e"
+    }
+  ],
+  "originalGulantharSHA256": "4902e38c49c2e2d3d7c1d4cb7637d8399501f8c7caaa0bdc85b5fe1f50214c00",
+  "repair": "Keep the existing complete CfgMovesForm939 graph; add opt-in Gulanthar climb state with explicit connection from walking. Preserve Actions inheritance. Remove broken derived movesType assignments.",
+  "sourceReadback": true,
+  "prefix": {
+    "prefix": "FST_BURNS_Gulanthar"
+  },
+  "entries": [
+    "config.cpp"
+  ],
+  "fileCount": 64
+}

@@ -1,4 +1,5 @@
-// All Credit for this Script goes to Viper/MatthewL. Used with Permission. 
+// All Credit for this Script goes to Viper/MatthewL. Used with Permission.
+call compile preprocessFileLineNumbers "\41st_Armor\Data\PodSafety.sqf"; 
 
 ["[41st] Droid Modules", "Munificent QRF Deployment",
     {
@@ -564,16 +565,23 @@ FST_ScifiSupportPlus_fnc_SW_Munificent_QRF = {
         // 4) Drop pods if any
         // -------------------------------------------------
         if (_AmountofLightPods > 0) then {
-            for "_LightPoddropper" from 1 to _AmountofLightPods do {
-                private _randomIndex = floor (random (count _PodArray));
-                private _randomPodLocation = _PodArray select _randomIndex;
-                _PodArray deleteAt _randomIndex;
-
-                private _currentposition = [
-                    (getPosATL _randomPodLocation select 0),
-                    (getPosATL _randomPodLocation select 1),
-                    0
-                ];
+            private _podAvailable=[];
+            private _podRequested=floor ((_AmountofLightPods max 0) min 24);
+            private _podSubmitted=0;
+            for "_LightPoddropper" from 1 to _podRequested do {
+                if (isNull _ReturnShip || {!alive _ReturnShip}) exitWith {
+                    diag_log format ["[FST_POD_ABORT] ship unavailable requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                private _choice=[_PodArray,_podAvailable] call FST_fnc_nextPodAnchor;
+                if (count _choice!=2) exitWith {
+                    diag_log format ["[FST_POD_ABORT] no live anchors requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podAvailable=_choice select 1;
+                private _currentposition=[_choice select 0] call FST_fnc_podGroundASL;
+                if !([_currentposition] call FST_fnc_validPodPosition) exitWith {
+                    diag_log format ["[FST_POD_ABORT] invalid anchor position requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podSubmitted=_podSubmitted+1;
 
                 if (_linger) then {
                     [_currentposition, _dropside, _LightPodSelection, true] call FST_Droid_Dispenser;
@@ -1224,16 +1232,23 @@ FST_ScifiSupportPlus_fnc_SW_Providence_QRF = {
         // 4) Drop pods if any
         // -------------------------------------------------
         if (_AmountofLightPods > 0) then {
-            for "_LightPoddropper" from 1 to _AmountofLightPods do {
-                private _randomIndex = floor (random (count _PodArray));
-                private _randomPodLocation = _PodArray select _randomIndex;
-                _PodArray deleteAt _randomIndex;
-
-                private _currentposition = [
-                    (getPosATL _randomPodLocation select 0),
-                    (getPosATL _randomPodLocation select 1),
-                    0
-                ];
+            private _podAvailable=[];
+            private _podRequested=floor ((_AmountofLightPods max 0) min 24);
+            private _podSubmitted=0;
+            for "_LightPoddropper" from 1 to _podRequested do {
+                if (isNull _ReturnShip || {!alive _ReturnShip}) exitWith {
+                    diag_log format ["[FST_POD_ABORT] ship unavailable requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                private _choice=[_PodArray,_podAvailable] call FST_fnc_nextPodAnchor;
+                if (count _choice!=2) exitWith {
+                    diag_log format ["[FST_POD_ABORT] no live anchors requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podAvailable=_choice select 1;
+                private _currentposition=[_choice select 0] call FST_fnc_podGroundASL;
+                if !([_currentposition] call FST_fnc_validPodPosition) exitWith {
+                    diag_log format ["[FST_POD_ABORT] invalid anchor position requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podSubmitted=_podSubmitted+1;
 
                 if (_linger) then {
                     [_currentposition, _dropside, _LightPodSelection, true] call FST_Droid_Dispenser;
@@ -1831,16 +1846,23 @@ FST_ScifiSupportPlus_fnc_SW_Diamond_QRF = {
         //    select" UI on this module, so the selection is fixed to "Basic").
         // -------------------------------------------------
         if (_AmountofLightPods > 0) then {
-            for "_LightPoddropper" from 1 to _AmountofLightPods do {
-                private _randomIndex = floor (random (count _PodArray));
-                private _randomPodLocation = _PodArray select _randomIndex;
-                _PodArray deleteAt _randomIndex;
-
-                private _currentposition = [
-                    (getPosATL _randomPodLocation select 0),
-                    (getPosATL _randomPodLocation select 1),
-                    0
-                ];
+            private _podAvailable=[];
+            private _podRequested=floor ((_AmountofLightPods max 0) min 24);
+            private _podSubmitted=0;
+            for "_LightPoddropper" from 1 to _podRequested do {
+                if (isNull _ReturnShip || {!alive _ReturnShip}) exitWith {
+                    diag_log format ["[FST_POD_ABORT] ship unavailable requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                private _choice=[_PodArray,_podAvailable] call FST_fnc_nextPodAnchor;
+                if (count _choice!=2) exitWith {
+                    diag_log format ["[FST_POD_ABORT] no live anchors requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podAvailable=_choice select 1;
+                private _currentposition=[_choice select 0] call FST_fnc_podGroundASL;
+                if !([_currentposition] call FST_fnc_validPodPosition) exitWith {
+                    diag_log format ["[FST_POD_ABORT] invalid anchor position requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podSubmitted=_podSubmitted+1;
 
                 if (_linger) then {
                     [_currentposition, _dropside, 0, true] call FST_Droid_Dispenser;
@@ -1931,7 +1953,16 @@ FST_ScifiSupportPlus_fnc_SW_Diamond_QRF = {
 
 
 FST_Droid_Dispenser =  {
-    params ["_position", "_dropside", "_selection", "_linger"];
+    params [["_position",[]], ["_dropside",[]], ["_selection",-1], ["_linger",false]];
+    // Fail before creating any projectile, effect or unit on malformed input.
+    if (!([_position] call FST_fnc_validPodPosition) || {!(_dropside isEqualType [])} || {
+        count _dropside!=1 || {!((_dropside select 0) in [east,west,independent,civilian])}
+    } || {!(_selection isEqualType 0)} || {!finite _selection} || {_selection!=floor _selection} || {
+        _selection<0 || {_selection>5}
+    } || {!(_linger isEqualType true)}) exitWith {
+        diag_log "[FST_POD_REJECT] malformed dispenser position, side, selection or linger";
+        false
+    };
 
     _position = ASLtoATL _position;
 
@@ -2623,17 +2654,17 @@ FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF = {
             _podLocations pushBack _localPos;
         };
 
-        createandAttachParticleSource = {
+        private _fnc_createAndAttachParticleSource = {
             params ["_podobject", "_location"];
-            _modelData = _podobject modelToWorld _location;
-            _particleSource = "#particleSource" createVehicle _modelData;
+            private _modelData = _podobject modelToWorld _location;
+            private _particleSource = "#particleSource" createVehicle _modelData;
             _particleSource attachTo [_podobject, _location];
             _particleSource
         };
 
-        _PodArray = [];
+        private _PodArray = [];
         {
-            _PodArray pushBack ([_ReturnShip, _x] call createandAttachParticleSource);
+            _PodArray pushBack ([_ReturnShip, _x] call _fnc_createAndAttachParticleSource);
         } forEach _podLocations;
 
         [_ReturnShip, _PodArray] spawn {
@@ -2649,16 +2680,23 @@ FST_ScifiSupportPlus_fnc_SW_Providence_Jorge_QRF = {
         };
 
         if (_AmountofLightPods > 0) then {
-            for "_LightPoddropper" from 1 to _AmountofLightPods do {
-                _randomIndex = floor (random (count _PodArray));
-                _randomPodLocation = _PodArray select _randomIndex;
-                _PodArray deleteAt _randomIndex;
-
-                _currentposition = [
-                    (getPosATL _randomPodLocation select 0),
-                    (getPosATL _randomPodLocation select 1),
-                    0
-                ];
+            private _podAvailable=[];
+            private _podRequested=floor ((_AmountofLightPods max 0) min 24);
+            private _podSubmitted=0;
+            for "_LightPoddropper" from 1 to _podRequested do {
+                if (isNull _ReturnShip || {!alive _ReturnShip}) exitWith {
+                    diag_log format ["[FST_POD_ABORT] ship unavailable requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                private _choice=[_PodArray,_podAvailable] call FST_fnc_nextPodAnchor;
+                if (count _choice!=2) exitWith {
+                    diag_log format ["[FST_POD_ABORT] no live anchors requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podAvailable=_choice select 1;
+                private _currentposition=[_choice select 0] call FST_fnc_podGroundASL;
+                if !([_currentposition] call FST_fnc_validPodPosition) exitWith {
+                    diag_log format ["[FST_POD_ABORT] invalid anchor position requested=%1 submitted=%2",_podRequested,_podSubmitted];
+                };
+                _podSubmitted=_podSubmitted+1;
 
                 if (_linger) then {
                     [_currentposition, _dropside, _LightPodSelection, true] call FST_Droid_Dispenser;
