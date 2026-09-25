@@ -193,6 +193,7 @@ class CfgMusic
 		"FST_Souls_Manus",
 		"FST_CigaretteWife",
 		"FST_DragonRisingMenu",
+		"FST_115",
 	
 		
 		//Misc tracks
@@ -299,6 +300,7 @@ class CfgMusic
 		"FST_BiteMe",
 		"FST_HahaYeaDudeThatsSick",
 		"FST_Forever_FullVersion",
+		"FST_Forever_FullVersion_Instrumental",
 		"FST_FightTillImGoodEnough",
 
 		//Invasion of Belarus
@@ -360,6 +362,8 @@ class CfgMusic
 		"FST_FearInTheDarkness",
 		"FST_TheFunicularIntro",
 		"FST_TheUncertaintyPrinciple",
+		"FST_ShadowOfTheRepublic",
+		"FST_AChangedMan",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -1990,6 +1994,18 @@ class CfgMusic
 		};
 		duration="358";
 	};
+	class FST_115
+	{
+		name="Elena Siegman - 115";
+		musicClass="FST_OtherGames";
+		sound[]=
+		{
+			"41st_Music\GameTracks\Elena Siegman - 115.ogg",
+			1,
+			1
+		};
+		duration="228";
+	};
 
 	//Films
 	
@@ -3016,7 +3032,7 @@ class CfgMusic
 	};	
 	class FST_Forever_FullVersion
 	{
-		name="FOREVER (The Full Version)";
+		name="FOREVER - The Full Version";
 		musicClass="FST_MD_Music";
 		sound[]=
 		{
@@ -3025,7 +3041,21 @@ class CfgMusic
 			1
 		};
 		duration="311";
+
 	};	
+	class FST_Forever_FullVersion_Instrumental
+	{
+		name="FOREVER - The Full Version (Instrumental)";
+		musicClass="FST_MD_Music";
+		sound[]=
+		{
+			"41st_Music\MDTracks\FOREVER Full Version Instrumental.ogg",
+			1,
+			1
+		};
+		duration="311";
+
+	};
 	class FST_FightTillImGoodEnough
 	{
 		name="Fight Til' I'm Good Enough";
@@ -3653,6 +3683,30 @@ class CfgMusic
 			1
 		};
 		duration="167";
+	};
+	class FST_ShadowOfTheRepublic
+	{
+		name="Shadow Of The Republic";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Shadow Of The Republic.ogg",
+			1,
+			1
+		};
+		duration="412";
+	};
+	class FST_AChangedMan
+	{
+		name="Dying Light - A Changed Man";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Dying Light - A Changed Man.ogg",
+			1,
+			1
+		};
+		duration="203";
 	};
 };
 
