@@ -199,6 +199,7 @@ class CfgPatches
 			"FST_P2_Squatch_Dirty_V2",
 			"FST_P2_Snowfox",
 			"FST_P2_Remedy",
+			"FST_P2_Remedy_V2",
 			"FST_P2_Mig",
 			"FST_P2_Slow",
 			"FST_P2_Scrib",
@@ -8107,6 +8108,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Bogu.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Overwatch: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="House";
+		displayName="[41st] Crewman Helmet Mk2 (Overwatch)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Overwatch.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Overwatch.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Omen: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -9927,6 +9939,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 	{
 		author="Ruby";
 		displayName="[41st] Airborne Helmet (Remedy)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Remedy_V2: FST_Airborne_Helmet
+	{
+		author="Ruby";
+		displayName="[41st] Airborne Helmet (Remedy/V2)";
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
@@ -18440,6 +18462,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			mass=15;
 		};
 	};
+	class FST_Uniform_Remedy_V2: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Remedy V2]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Remedy_V2";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
 	class FST_Uniform_Slow: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -21805,10 +21841,19 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 	class FST_NVG_Cooker: FST_NVG
 	{
 		author="Vengence";
-		displayName="[41st] NCO Macrobinoculars (Cooker/Dirty)";
+		displayName="[41st] NCO Macrobinoculars (Cooker)";
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Cooker.paa"
+		};
+	};
+	class FST_NVG_Cooker_Dirty: FST_NVG
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Cooker/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Cooker_Dirty.paa"
 		};
 	};
 	class FST_NVG_Valius_dirty: FST_NVG
@@ -46575,6 +46620,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_AB_Helmet_Remedy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Remedy_V2: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-2609 'Remedy V2'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Squatch_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpperRemedyV2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_RemedyV2.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Remedy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Remedy",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
