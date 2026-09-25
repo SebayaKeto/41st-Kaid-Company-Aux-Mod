@@ -1125,7 +1125,7 @@ if (hasInterface) then {
                 (_target getVariable ["BUZZ_hp", 1.0]) < 0.75
                 && !(_target getVariable ["BUZZ_repairing", false])
                 && !((_target getVariable ["rider", objNull]) isEqualTo _player)
-                && ("ToolKit" in items _player)
+                && ((items _player) findAny ["ToolKit", "FST_SmallToolkit", "FST_LargeToolkit"] > -1)
                 && ([_player] call ace_common_fnc_isEngineer)
             },
             {},
