@@ -364,6 +364,7 @@ class CfgMusic
 		"FST_TheUncertaintyPrinciple",
 		"FST_ShadowOfTheRepublic",
 		"FST_AChangedMan",
+		"FST_NightWatchAlpha",
 	};
 	
 	class FST_Totharvis_Moon_1
@@ -3707,6 +3708,18 @@ class CfgMusic
 			1
 		};
 		duration="203";
+	};
+	class FST_NightWatchAlpha
+	{
+		name="Night Watch Alpha";
+		musicClass="FST_Ambience_Music";
+		sound[]=
+		{
+			"41st_Music\AmbienceTracks\Night Watch Alpha.ogg",
+			1,
+			1
+		};
+		duration="304";
 	};
 };
 
