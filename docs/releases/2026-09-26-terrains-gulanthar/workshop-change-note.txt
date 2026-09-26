@@ -1,0 +1,10 @@
+Terrain and Gulanthar update
+
+- Added "41st Umbara - Ground War Highway" (fst_umbara_highway).
+- Added "Umbara - Scar Reach" (fst_umbara_scarreach).
+- Added "41st Umbara - Black Lantern" (fst_umbara_lantern).
+- Gulanthars: removed the eight-creature population cap. They charge acquired targets from up to 600 m (new CBA setting "Gulanthar charge distance"), close in on the target directly, and a failed psychic attack no longer delays the bite.
+- Gulanthars climb hills at a gallop instead of walking (about twice as fast uphill). They no longer freeze for up to 20 seconds when restarting a chase, and they re-engage fleeing targets about three times faster.
+- QRF drop pods: B1 squads are immune to damage for their first 5 seconds after landing, so the pods that land right after them no longer kill them.
+
+All other mod files are unchanged. Let Steam finish the update before joining. Update the server and headless clients before loading any of these maps.

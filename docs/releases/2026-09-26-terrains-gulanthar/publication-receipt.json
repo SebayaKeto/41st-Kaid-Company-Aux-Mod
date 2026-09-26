@@ -1,0 +1,41 @@
+{
+  "workshop_id": "3048946639",
+  "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3048946639",
+  "status": "Published and verified",
+  "published_at_utc": "2026-09-26T17:05:29Z",
+  "verified_at_utc": "2026-09-26T17:05:28Z",
+  "public_api_result": {
+    "result": 1,
+    "time_updated": 1790442329,
+    "file_size": 8086115517
+  },
+  "time_updated": 1790442329,
+  "previous_time_updated": 1790418749,
+  "file_size_bytes": 8086115517,
+  "previous_file_size_bytes": 7007928124,
+  "verified_payload_files": 72,
+  "payload_manifest": "workshop-package-manifest.json",
+  "steam_content_manifest_id": "5663728693729551817",
+  "publisher_method": "PublisherCmd update from the Aux Updater session (tools/release/publish_release.py): full re-hash vs manifest, unchanged-baseline guard, no window",
+  "upload_result": "OK",
+  "upload_log_evidence": [
+    "[2026-09-26 13:03:37] [AppID 107410] Upload starting for workshop item 3048946639 by AppID 107410",
+    "[2026-09-26 13:05:27] [AppID 107410] Uploaded new content ( ManifestID 5663728693729551817 ) for item 3048946639.",
+    "[2026-09-26 13:05:28] [AppID 107410] Upload finished for workshop item 3048946639 : OK"
+  ],
+  "added": [
+    "Addons/fst_umbara_highway.pbo",
+    "Addons/fst_umbara_scarreach.pbo",
+    "Addons/fst_umbara_lantern.pbo"
+  ],
+  "changed": [
+    "Addons/FST_HCSpawn.pbo",
+    "Addons/JMSEF_animals.pbo",
+    "Addons/FST_BURNS_Gulanthar.pbo",
+    "Addons/41st_Armor.pbo"
+  ],
+  "removed": [],
+  "full_raider_pbo_and_model_added_to_github": false,
+  "armor_and_terrain_pbos_added_to_github": false,
+  "live_main_hc_rollout": "pending: Miran updates Main + HCs (FASTER) before loading Highway / Scar Reach / Black Lantern"
+}
