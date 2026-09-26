@@ -1,0 +1,4 @@
+author="Aux Updater (test only)";
+onLoadName="GulHill";
+respawn=3; respawnDelay=5; disabledAI=1;
+class Header {gameType="Coop"; minPlayers=1; maxPlayers=1;};

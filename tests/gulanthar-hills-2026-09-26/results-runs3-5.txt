@@ -1,0 +1,112 @@
+== run 3 (fix v1)
+variant        lane bin cls     t45  reach  jump  re10  return  stallUp stallBack gait  top anims
+fix              0   4 varren  16.6   21.9  25.0   5.1   -1.0      46        72   18  idle:56 walk:17 Brun:16
+fix              1   4 bers    -1.0   -1.0  -1.0  -1.0   -1.0      93         0    3  idle:95 sprint:4 walk:1
+fix              2   4 alpha   25.6   26.8  30.1   8.5   -1.0      57        53   19  idle:60 Brun:13 walk:11
+fix              3  18 varren   9.6   11.3  14.4   5.2   14.3      15        13   16  walk:23 attack6:20 attack4:16
+fix              4  27 varren  19.3   28.3  31.5   3.5   -1.0      36         7   37  walk:40 idle:31 Bclimb:18
+fix              5  18 bers    31.5   39.7  42.9  -1.0   -1.0      57        29   24  idle:58 walk:25 Bclimb:9
+fix              6  27 bers    11.3   13.3  16.4   5.9   18.3      19         8   18  walk:28 Bclimb:24 attack6:18
+fix              7  18 alpha   15.5   24.7  27.8   4.0   12.0      30         0   29  walk:37 idle:19 attack6:15
+fix              8  27 alpha   10.5   12.1  15.2   7.9   28.6      16         4   25  walk:35 Bclimb:31 Brun:17
+fix              9  33 varren  12.4   13.8  16.9   6.2   15.2      14         8   21  walk:29 Bclimb:25 attack6:17
+fix             10  33 bers    13.0   14.7  17.9   4.4   26.8      11         7   28  walk:35 Bclimb:30 attack6:10
+fix             11  33 alpha   13.3   15.2  18.4   8.7   20.7      13         5   29  walk:35 Bclimb:28 attack4:11
+fix_nohelper     0   4 varren  12.0   15.4  18.5   4.3   18.5       5        12    0  sprint:35 walk:23 attack6:16
+fix_nohelper     1   4 bers    13.5   17.0  20.1   6.2   17.1      10         9    0  sprint:36 walk:26 attack4:16
+fix_nohelper     2   4 alpha   12.2   14.1  17.2   5.2   13.3       4         6    0  attack6:32 sprint:30 walk:24
+fix_nohelper     3  18 varren  37.3   47.6  -1.0  -1.0   -1.0       1         0    0  walk:98 attack6:1 attack4:1
+fix_nohelper     4  27 varren  38.9   48.7  -1.0  -1.0   -1.0       3         0    0  walk:97 idle:3
+fix_nohelper     5  18 bers    -1.0   -1.0  -1.0  -1.0   -1.0      43         0    0  walk:54 idle:46
+fix_nohelper     6  27 bers    41.8   -1.0  -1.0  -1.0   -1.0       4         0    0  walk:82 idle:18
+fix_nohelper     7  18 alpha   40.2   -1.0  -1.0  -1.0   -1.0       1         0    0  walk:93 idle:7
+fix_nohelper     8  27 alpha   39.2   49.0  -1.0  -1.0   -1.0       3         0    0  walk:97 idle2:2 idle:1
+fix_nohelper     9  33 varren  -1.0   -1.0  -1.0  -1.0   -1.0      21         0    0  walk:73 idle:27
+fix_nohelper    10  33 bers    -1.0   -1.0  -1.0  -1.0   -1.0      20         0    0  walk:63 idle:37
+fix_nohelper    11  33 alpha   41.3   -1.0  -1.0  -1.0   -1.0       3         0    0  walk:94 idle:4 idle3:2
+fix_loaded       0   4 varren  10.2   15.2  18.4   5.3   13.6      11         6   22  Brun:21 attack6:19 idle:18
+fix_loaded       1   4 bers    30.9   33.8  37.1   8.5   -1.0      60        38   27  idle:52 walk:18 Brun:13
+fix_loaded       2   4 alpha    8.6    9.9  13.1   5.8   11.4       8         9    8  Brun:30 attack6:28 attack4:28
+fix_loaded       3  18 varren   8.9   10.5  13.6   4.3   13.9       8        12   19  walk:28 attack4:19 attack6:18
+fix_loaded       4  27 varren  17.1   21.2  24.5   9.8   -1.0      16         9   37  walk:52 idle:17 Bclimb:15
+fix_loaded       5  18 bers    13.9   16.0  19.1   3.8   10.7      13         0   16  walk:25 attack4:24 attack6:16
+fix_loaded       6  27 bers    10.2   13.9  17.1  -1.0   -1.0      19        73   16  idle:54 Bclimb:23 walk:12
+fix_loaded       7  18 alpha   10.5   14.4  17.6   5.0   12.4      11         2   18  walk:32 attack4:19 attack6:16
+fix_loaded       8  27 alpha   11.8   13.6  16.8  15.2   22.8      14         1   26  walk:37 Bclimb:20 Brun:18
+fix_loaded       9  33 varren  14.2   17.6  20.7   6.0   17.8      21         8   28  walk:34 Bclimb:17 idle:16
+fix_loaded      10  33 bers    22.1   29.3  32.5  12.2   -1.0      28         2   26  walk:40 idle:27 Bclimb:20
+fix_loaded      11  33 alpha   17.4   20.4  23.7  -1.0   -1.0      18        75   21  idle:56 walk:23 Bclimb:14
+
+summary: variant/terrain  lanes-reaching-45m  median t45  median re-engage(10m)  median return  no-return
+  fix            flat  2/3   25.6    8.5   -1.0  2
+  fix            up    9/9   13.0    5.9   18.3  2
+  fix_loaded     flat  3/3   10.2    5.8   13.6  1
+  fix_loaded     up    9/9   13.9    6.0   13.9  4
+  fix_nohelper   flat  3/3   12.2    5.2   17.1  0
+  fix_nohelper   up    6/9   40.2   -1.0   -1.0  0
+
+== run 4 (fix v2)
+variant        lane bin cls     t45  reach  jump  re10  return  stallUp stallBack gait  top anims
+fix2             0   4 varren  11.1   14.9  18.1   5.5   12.4      31         0   11  attack4:29 Brun:24 attack6:21
+fix2             1   4 bers    13.0   17.1  20.1   7.3   17.5      21        24   25  attack4:29 walk:21 idle:19
+fix2             2   4 alpha   13.5   15.1  18.1   7.4   15.4      27        21   12  Brun:29 attack4:28 attack6:21
+fix2             3  18 varren  10.0   11.6  14.6   4.9   13.9      14        12   18  attack4:33 walk:23 attack6:19
+fix2             4  27 varren  15.4   20.4  23.4  21.4   -1.0      13         4   43  walk:57 Bclimb:18 idle:12
+fix2             5  18 bers    15.4   18.9  22.2  20.9   37.6      29         7   42  Brun:31 walk:29 Bclimb:20
+fix2             6  27 bers    11.4   12.7  15.7   4.6   34.8      15        10   32  walk:28 Bclimb:27 attack4:19
+fix2             7  18 alpha   11.6   13.5  16.6   7.1   15.7      26         0   20  attack4:29 walk:23 attack6:16
+fix2             8  27 alpha   11.6   13.5  16.6   8.5   24.4      24         0   24  Bclimb:21 attack4:20 walk:20
+fix2             9  33 varren  15.4   18.1  21.4   6.0   20.6       9         5   25  Bclimb:23 attack4:22 walk:20
+fix2            10  33 bers    13.0   14.9  18.1   6.0   22.5      22        10   30  walk:37 attack6:20 attack4:19
+fix2            11  33 alpha   11.4   13.5  16.6   5.4   15.4      20        11   37  walk:40 Bclimb:30 attack6:11
+fix2_loaded      0   4 varren  12.3   16.2  19.4  17.5   25.7      32        26   29  walk:26 Brun:25 idle:21
+fix2_loaded      1   4 bers    16.5   18.4  21.6   8.2   19.2      22        32   22  attack4:27 idle:23 Brun:21
+fix2_loaded      2   4 alpha   12.5   14.3  17.5   7.2   16.2      30        23   17  attack6:29 Brun:22 attack4:16
+fix2_loaded      3  18 varren  10.7   12.5  15.6  26.1   -1.0      22        40   32  idle:32 Bclimb:27 walk:26
+fix2_loaded      4  27 varren  10.7   12.5  15.6   7.1   15.0      13         9   21  attack4:27 walk:24 attack6:21
+fix2_loaded      5  18 bers    11.2   14.1  17.3   4.3   12.0      19         5   16  attack6:29 attack4:24 walk:18
+fix2_loaded      6  27 bers    10.4   12.3  15.4  -1.0   -1.0      13        25   12  walk:56 idle:23 Bclimb:14
+fix2_loaded      7  18 alpha   13.5   15.6  18.9   5.3   12.2      19        13   20  attack6:26 attack4:22 walk:21
+fix2_loaded      8  27 alpha   22.1   24.2  27.2  15.5   24.1      20         8   36  walk:32 Bclimb:16 idle:16
+fix2_loaded      9  33 varren  13.8   16.5  19.7  27.0   35.7      18        44   33  idle:32 walk:31 Bclimb:14
+fix2_loaded     10  33 bers    14.6   18.4  21.6  16.8   -1.0      15         6   59  walk:49 Bclimb:19 Brun:19
+fix2_loaded     11  33 alpha   11.5   13.3  16.5   5.1   19.9      14         5   20  Bclimb:29 attack6:23 walk:23
+
+summary: variant/terrain  lanes-reaching-45m  median t45  median re-engage(10m)  median return  no-return
+  fix2           flat  3/3   13.0    7.3   15.4  0
+  fix2           up    9/9   11.6    6.0   22.5  1
+  fix2_loaded    flat  3/3   12.5    8.2   19.2  0
+  fix2_loaded    up    9/9   11.5   15.5   19.9  3
+
+== run 5 (candidate)
+variant        lane bin cls     t45  reach  jump  re10  return  stallUp stallBack gait  top anims
+cand             0   4 varren  30.5   32.3  35.6  31.2   -1.0      74        44   84  idle:66 Brun:28 walk:3
+cand             1   4 bers    29.7   31.8  34.9  28.6   -1.0      74        72   90  idle:74 Brun:21 attack6:4
+cand             2   4 alpha    8.2   12.6  15.7   4.1   22.8       4        57   35  idle:27 attack4:25 Brun:20
+cand             3  18 varren  21.1   28.1  31.3   8.2   -1.0       5        46   66  idle:40 Bclimb:30 walk:20
+cand             4  27 varren  23.0   29.5  32.6  28.8   -1.0       6        54   66  idle:42 Bclimb:33 walk:18
+cand             5  18 bers    20.6   25.7  28.9   5.0   11.8       4         2   21  Bclimb:30 walk:20 attack4:19
+cand             6  27 bers    21.1   25.7  28.9  26.6   -1.0       5        82   77  idle:56 Bclimb:32 walk:7
+cand             7  18 alpha   20.0   24.9  28.1  20.7   30.3       7        42   38  Bclimb:35 idle:21 walk:16
+cand             8  27 alpha   22.2   28.7  31.8  20.7   -1.0       5        60   72  idle:48 Bclimb:29 walk:9
+cand             9  33 varren  22.2   26.5  29.7  20.6   -1.0       7        26   35  walk:35 Bclimb:35 idle:21
+cand            10  33 bers    20.0   24.6  27.8  16.6   -1.0       8        21   22  walk:44 Bclimb:35 idle:16
+cand            11  33 alpha   30.3   40.5  43.5  16.5   -1.0       7        17   26  walk:66 Bclimb:16 idle:11
+cand_loaded      0   4 varren  67.8   -1.0  -1.0  -1.0   -1.0      88         0   37  idle:93 Brun:6 sprint:0
+cand_loaded      1   4 bers    12.4   38.5  41.7   4.8   25.0      70        50   30  idle:62 Brun:15 walk:9
+cand_loaded      2   4 alpha    7.1    8.5  11.6   7.3   13.9       0        12    4  attack6:32 attack4:25 Brun:18
+cand_loaded      3  18 varren  18.3   22.9  26.1   5.2   42.2       1        62   23  idle:39 Bclimb:31 walk:19
+cand_loaded      4  27 varren  19.4   23.8  26.9  16.1   28.6       3        15   10  Bclimb:32 walk:30 Brun:15
+cand_loaded      5  18 bers    26.1   34.1  37.2   9.9   15.4      16         9   12  Bclimb:24 walk:23 idle:14
+cand_loaded      6  27 bers    18.9   23.6  26.7   4.7   40.3       3         8    2  walk:54 Bclimb:32 attack4:5
+cand_loaded      7  18 alpha   26.1   30.8  34.1   8.2   19.0      11        10   12  walk:33 Bclimb:25 Brun:12
+cand_loaded      8  27 alpha   34.1   44.3  47.4  -1.0   -1.0      25        70   34  idle:49 walk:28 Bclimb:20
+cand_loaded      9  33 varren  31.7   41.0  44.0  15.0   -1.0      20        17   23  walk:39 idle:28 Bclimb:27
+cand_loaded     10  33 bers    36.2   46.8  49.9  -1.0   -1.0      24        76   32  idle:47 walk:29 Bclimb:20
+cand_loaded     11  33 alpha   33.3   43.5  46.5  -1.0   -1.0       9         7   13  walk:63 Bclimb:18 idle:11
+
+summary: variant/terrain  lanes-reaching-45m  median t45  median re-engage(10m)  median return  no-return
+  cand           flat  3/3   29.7   28.6   22.8  2
+  cand           up    9/9   21.1   20.6   30.3  7
+  cand_loaded    flat  3/3   12.4    7.3   25.0  0
+  cand_loaded    up    9/9   26.1    9.9   28.6  4

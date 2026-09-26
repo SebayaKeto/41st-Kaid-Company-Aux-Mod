@@ -24,12 +24,11 @@ private _reservations=missionNamespace getVariable ["FST_HeavyReservations",crea
         for "_i" from 0 to 1 do {_counts set [_i,(_counts select _i)+((_r select 1) select _i)]};
     };
 } forEach keys _reservations;
-private _limits=[missionNamespace getVariable ["FST_HC_GulantharLimit",8],missionNamespace getVariable ["FST_HC_ATRTLimit",12]];
+// Only AT-RTs have a population cap. Ignore legacy Gulanthar-limit settings.
+private _atrtLimit=missionNamespace getVariable ["FST_HC_ATRTLimit",12];
 private _reason="";
-for "_i" from 0 to 1 do {
-    if ((_requested select _i)>0 && {(_counts select _i)+(_requested select _i)>(_limits select _i)}) then {
-        _reason=format ["%1 limit (%2 existing/reserved + %3 requested; limit %4)",["Gulanthar","AT-RT"] select _i,_counts select _i,_requested select _i,_limits select _i];
-    };
+if ((_requested select 1)>0 && {(_counts select 1)+(_requested select 1)>_atrtLimit}) then {
+    _reason=format ["AT-RT limit (%1 existing/reserved + %2 requested; limit %3)",_counts select 1,_requested select 1,_atrtLimit];
 };
 private _health=missionNamespace getVariable ["FST_HeavyHealth",createHashMap];
 {

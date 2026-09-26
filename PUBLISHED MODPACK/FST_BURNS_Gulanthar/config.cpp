@@ -15,16 +15,23 @@ class CfgMovesForm939: CfgMovesBasicMutant {
         class BURNS_gulanthar_run: form939_sprint {
             speed=3;
             actions="BURNS_gulanthar_runActions";
-            connectFrom[]={"form939_walk",0.1,"form939_sprint",0.1,"form939_idle",0.1,"form939_idle2",0.1,"form939_idle3",0.1};
+            connectFrom[]={"form939_walk",0.1,"form939_sprint",0.1,"form939_idle",0.1,"form939_idle2",0.1,"form939_idle3",0.1,"BURNS_gulanthar_climb",0.1};
         };
-        class BURNS_gulanthar_climb: form939_walk {
-            speed=2.2;
+        // Uphill gait: the gallop animation classed as an ordinary run. CfgSlopeLimits
+        // bans sprinting above ~17 deg, and the native move set's run is a walk.
+        class BURNS_gulanthar_climb: form939_sprint {
+            speed=2.5;
             actions="BURNS_gulanthar_climbActions";
-            connectFrom[]={"form939_walk",0.1};
+            connectFrom[]={"form939_walk",0.1,"form939_sprint",0.1,"form939_idle",0.1,"form939_idle2",0.1,"form939_idle3",0.1,"BURNS_gulanthar_run",0.1};
         };
     };
     class Actions: Actions {
         class form939_actions;
+        // When a slope forces the native sprint down to a run, gallop instead of walking.
+        class form939_sprintactions: form939_actions {
+            SlowF="BURNS_gulanthar_climb";
+            TactF="BURNS_gulanthar_climb";
+        };
         class BURNS_gulanthar_runActions: form939_actions {
             WalkF="BURNS_gulanthar_run";
             SlowF="BURNS_gulanthar_run";
@@ -37,6 +44,9 @@ class CfgMovesForm939: CfgMovesBasicMutant {
             WalkF="BURNS_gulanthar_climb";
             SlowF="BURNS_gulanthar_climb";
             TactF="BURNS_gulanthar_climb";
+            FastF="BURNS_gulanthar_climb";
+            EvasiveForward="BURNS_gulanthar_climb";
+            useFastMove=0;
         };
     };
 };

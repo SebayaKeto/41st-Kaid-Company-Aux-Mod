@@ -3,9 +3,8 @@ FST_HC_SpawnSpacing=missionNamespace getVariable ["FST_HC_SpawnSpacing",0.05];
 // the unit budget remain intact for manual handling; never partially delete one.
 FST_HC_DespawnMaxGroups=missionNamespace getVariable ["FST_HC_DespawnMaxGroups",2];
 FST_HC_DespawnMaxUnits=missionNamespace getVariable ["FST_HC_DespawnMaxUnits",24];
-// Conservative starting limits, configurable by the mission author. These are
-// protective defaults, not a qualified capacity claim for a 140-player server.
-FST_HC_GulantharLimit=missionNamespace getVariable ["FST_HC_GulantharLimit",8];
+// Gulanthars have no population cap. Retain the separate AT-RT limit and
+// owner performance brake; neither is a qualified server capacity claim.
 FST_HC_ATRTLimit=missionNamespace getVariable ["FST_HC_ATRTLimit",12];
 FST_HC_HeavyPauseFPS=missionNamespace getVariable ["FST_HC_HeavyPauseFPS",15];
 FST_HC_HeavyResumeFPS=missionNamespace getVariable ["FST_HC_HeavyResumeFPS",25];

@@ -2019,8 +2019,7 @@ FST_Droid_Dispenser =  {
 
         private _positionATL = _position;
 
-        // Perf fix: was a sleepless per-frame poll for the whole descent. At
-        // 100 m/s a 0.05s sample gives at most ~5m crater-position error.
+        // Perf fix: 0.05 s descent poll (at most ~5 m crater error).
         waitUntil {
             sleep 0.05;
             if (alive _mainprojectile) then {
@@ -2104,14 +2103,15 @@ FST_Droid_Dispenser =  {
             params ["_spawn", "_side", "_listout", "_DroidPodCrater"];
             sleep 0.1;
             private _FloodGroup = [_spawn, _side, _listout] call BIS_fnc_spawnGroup;
+            // Shield the fresh squad from later HE pods; re-enable where local.
+            private _units = units _FloodGroup;
+            {_x allowDamage false} forEach _units;
+            sleep 5;
+            {[[_x], {params ["_u"]; _u allowDamage true}] remoteExec ["spawn", _x]} forEach _units;
         };
 
         if (_linger) then {
-            // Linger logic runs in its own spawn with all variables passed explicitly
-            // via params. Even declared private, locals from the outer spawn are not
-            // visible inside a nested spawn's own scope -- passing them through params
-            // here rebinds them for the lifetime of this separate, potentially
-            // long-running (many sleep/waitUntil cycles) spawn.
+            // Linger runs in its own spawn; outer locals are passed via params. ----------------------------------------------------------------------------------------------------------
             [_craterpos, _spawn, _side, _projectile, _listout] spawn {
                 params ["_craterpos", "_spawn", "_side", "_projectile", "_listout"];
                 sleep 1;

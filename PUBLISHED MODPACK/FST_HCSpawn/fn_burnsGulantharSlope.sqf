@@ -36,16 +36,21 @@ private _dir=getDir _unit;
 private _incline=atan (-((_normal select 0)*sin _dir+(_normal select 1)*cos _dir)/((_normal select 2) max 0.001));
 private _desired="";
 if (_pursuit && {isTouchingGround _unit}) then {
-    if (missionNamespace getVariable ["BURNS_GulantharSlopeEnabled",true] && {_incline> (if (_animation=="burns_gulanthar_climb") then {4} else {9})} && {_incline<33}) then {
+    // The climb gait is a gallop classed as a normal run, so it has no upper slope
+    // limit; it also takes steep descents where the faster run would be dropped.
+    private _climbing=_animation=="burns_gulanthar_climb";
+    if (missionNamespace getVariable ["BURNS_GulantharSlopeEnabled",true] && {
+        _incline>(if (_climbing) then {4} else {9}) || {_incline<(if (_climbing) then {-21} else {-25})}
+    }) then {
         _desired="BURNS_gulanthar_climb";
     } else {
-        if (missionNamespace getVariable ["BURNS_GulantharRunEnabled",true] && {_incline>=-20} && {_incline<=9}) then {_desired="BURNS_gulanthar_run"};
+        if (missionNamespace getVariable ["BURNS_GulantharRunEnabled",true] && {_incline>=-25} && {_incline<=9}) then {_desired="BURNS_gulanthar_run"};
     };
 };
 if (_desired=="") exitWith {if (_ours) then {_unit playMoveNow "form939_walk"};_unit setVariable ["BURNS_creatureProgress",nil]};
 private _progress=_unit getVariable ["BURNS_creatureProgress",[getPosATL _unit,time]];
 if (_unit distance2D (_progress select 0)>1) then {_progress=[getPosATL _unit,time]};
-if (time-(_progress select 1)>1.5 && {abs speed _unit<1}) then {
+if (time-(_progress select 1)>1.5 && {abs speed _unit<1} && {time-(_unit getVariable ["FST_varrenOrderTime",-100])>4}) then {
     // Only the stalled-order recovery acquires a target, using visible knowledge.
     private _enemy=_unit findNearestEnemy _unit;
     if (!isNull _enemy && {alive _enemy} && {!captive _enemy} && {!isObjectHidden _enemy} && {
@@ -62,7 +67,9 @@ _unit setVariable ["BURNS_creatureProgress",_progress];
 // A gait changes how an existing move is performed; it must not create motion
 // while the native controller is intentionally stationary.
 if (currentCommand _unit!="MOVE" || {unitReady _unit} || {getForcedSpeed _unit==0}) exitWith {if (_ours) then {_unit playMoveNow "form939_walk"}};
-if (_animation!=toLower _desired) then {
+// Start from idle natively: forcing a moving gait while the path is still being
+// planned freezes the creature until the stuck handler intervenes (~20 s).
+if (_animation!=toLower _desired && {!(_animation in ["form939_idle","form939_idle2","form939_idle3"])}) then {
     private _moves=getText(configOf _unit >> "moves");
     if (isClass(configFile >> _moves >> "States" >> _desired)) then {
         _unit playMoveNow _desired;

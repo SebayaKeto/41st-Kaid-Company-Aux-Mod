@@ -17,6 +17,8 @@ varren_sound_ambient = [
 ["varren_distance_max", "SLIDER", ["Max Distance", "Max distance to search for enemies."], "Necroplague - Stalker", [0, 10000, 1500], false, {}] call CBA_fnc_addSetting;
 ["varren_distance_hunt", "SLIDER", ["Hunt Distance", "Max distance to hunt for enemies."], "Necroplague - Stalker", [0, 10000, 1400], false, {}] call CBA_fnc_addSetting;
 ["varren_distance_agro", "SLIDER", ["Agro Distance", "Max distance to agro om enemies."], "Necroplague - Stalker", [0, 10000, 100], false, {}] call CBA_fnc_addSetting;
+// A separate setting also upgrades missions that saved the old 100 m agro value.
+["FST_GulantharChargeDistance", "SLIDER", ["Gulanthar charge distance", "Pursue acquired targets at full speed within this distance. Search/hunt range still applies."], "Necroplague - Stalker", [0, 3000, 600, 0], 1, {}] call CBA_fnc_addSetting;
 ["varren_distance_roam", "SLIDER", ["Roam Distance", "Max distance to roam when idle."], "Necroplague - Stalker", [0, 10000, 75], false, {}] call CBA_fnc_addSetting;
 
 ["varren_attack_reachMan", "SLIDER", ["Melee Reach", "How close he has to be to hit a man."], "Necroplague - Stalker", [0, 15, 5], false, {}] call CBA_fnc_addSetting;
