@@ -1,0 +1,568 @@
+{
+  "raider_entries_checked": 79,
+  "entries": [
+    {
+      "path": "config.bin",
+      "bytes": 63495,
+      "source_status": "original source compiles exactly to deployed config; only controller init/registration changed",
+      "rebuilt_matches_deployed": false,
+      "deployed_sha256": "91288f32dfc8feb81b7bdedcb3c7520f126bf2102dbc83ffe14f60ae04665c92"
+    },
+    {
+      "path": "data/icons/fst_vehicles_land_apc_sabreapc_editorpreview.jpg",
+      "bytes": 102288,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "d7519acf779a502bec79a38be84b4f67ddd0c7ca3052d0f4f95fbd341d016117"
+    },
+    {
+      "path": "data/icons/fst_vehicles_land_apc_sabreapc_icon.paa",
+      "bytes": 144614,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "d2eae07862d1a5034e6299f821acc14563e67cbc92b20493ef0e0bec1ca17dc6"
+    },
+    {
+      "path": "data/textures/base/camo.rvmat",
+      "bytes": 1797,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "e56d79f92df2d18893cdc049dff5e0f3b889b47b64cb1bfc3515fb374cdbc87f"
+    },
+    {
+      "path": "data/textures/base/camo1.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "99a0b884844df0684c5344adf9a23cc48649876a0be71fbed38e8ddc22036d16"
+    },
+    {
+      "path": "data/textures/base/camo10.rvmat",
+      "bytes": 1803,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "051684e82413ace9779def6ee3161d9082285e51fb8b8d2418c7100049017bce"
+    },
+    {
+      "path": "data/textures/base/camo10_as.paa",
+      "bytes": 1544453,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "9bc54a36c4720552005cc02db09d990a470e119cdb0d232f954f3394f01c2707"
+    },
+    {
+      "path": "data/textures/base/camo10_co.paa",
+      "bytes": 288612,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "16dbe8c3f06891c61e90036333fdbb735ee404f9e592b38933e890baf1db7384"
+    },
+    {
+      "path": "data/textures/base/camo10_nohq.paa",
+      "bytes": 848531,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "564199c452b72b97d23b76a04df024349f8b638232a4d6d079c3be5a78e7fd81"
+    },
+    {
+      "path": "data/textures/base/camo10_smdi.paa",
+      "bytes": 1705045,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "553fce46e3ea781e1e50cb9f213c1d2593bc8dd6103bbd9b1fabdc198e132ed3"
+    },
+    {
+      "path": "data/textures/base/camo11.rvmat",
+      "bytes": 1803,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "b02f1a60b4f0ae3f650e411b450ba760115a9611b059c7d40d127c893bf1bb26"
+    },
+    {
+      "path": "data/textures/base/camo11_as.paa",
+      "bytes": 1676846,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "32b9be410935462c2ed0a4b39a708bbaef20ab75b49941f970187c585173065f"
+    },
+    {
+      "path": "data/textures/base/camo11_co.paa",
+      "bytes": 1162605,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "9c5925ce82cb17865847596988d30b874f56610f7ce311bd7c62f48c1283e3eb"
+    },
+    {
+      "path": "data/textures/base/camo11_nohq.paa",
+      "bytes": 2514948,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "20305deffa699295fe5db215c9f52ded7325c79f7b32e540e2ccbca07eb476ce"
+    },
+    {
+      "path": "data/textures/base/camo11_smdi.paa",
+      "bytes": 1711024,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "a4ef1cf67e1f20b40aa06c83a280a75c3c96ad904344ea04f3eac760f773a673"
+    },
+    {
+      "path": "data/textures/base/camo1_as.paa",
+      "bytes": 1077451,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "02de22cdb2b3393bd79f44c07aa898c79ecf4452cdf7ea6907a27d4d3549ba0b"
+    },
+    {
+      "path": "data/textures/base/camo1_co.paa",
+      "bytes": 613998,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "2966d522e92aada7923c480404251f9d6a16c0ab9d2be5f26b8df69911483990"
+    },
+    {
+      "path": "data/textures/base/camo1_nohq.paa",
+      "bytes": 1476709,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "1778edd576a6abd7faabf0361058ed9a9f4a78738c8aab87755a1726b2e513c1"
+    },
+    {
+      "path": "data/textures/base/camo1_smdi.paa",
+      "bytes": 1855850,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "c9d4927fb1197a5182728baafd5ee1993f3174e14640f5ee46ac96bd4738122c"
+    },
+    {
+      "path": "data/textures/base/camo2.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "65f8f6eca11db53af00944ff32ab291535016cf7d1888bebf302b0335c71881c"
+    },
+    {
+      "path": "data/textures/base/camo2_as.paa",
+      "bytes": 1766488,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "65dd12068566d53f14710fc0b68de12f86fc0c3f276214c653516b2bbd61aefb"
+    },
+    {
+      "path": "data/textures/base/camo2_co.paa",
+      "bytes": 525407,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "9e46cec5f1c8588387268f828b3aaa69fb41471335bc1d736fe0f5067c09bdd0"
+    },
+    {
+      "path": "data/textures/base/camo2_nohq.paa",
+      "bytes": 1066801,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "cf46cb477576e6e7afee10d7f6b172b4768cd05e1d3fbe90103962ddf05db35f"
+    },
+    {
+      "path": "data/textures/base/camo2_smdi.paa",
+      "bytes": 1992297,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "fe84c32d55ef9684000ab4898b57e31dd298247fc20bdc8dd3d49a1b5aac1e3d"
+    },
+    {
+      "path": "data/textures/base/camo3.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "9b3a6ad7aff54bdab6f6e84e9427af066237672870b80d86be4272158ba1749b"
+    },
+    {
+      "path": "data/textures/base/camo3_as.paa",
+      "bytes": 1183204,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "2c43405cf990b653c177497215ab2ce15a537eff964718860c1287b303d9d3bc"
+    },
+    {
+      "path": "data/textures/base/camo3_co.paa",
+      "bytes": 329363,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "c084b9b1b86b6be9960cdce42593da0595425be1efd8c142937e82642cbc1a82"
+    },
+    {
+      "path": "data/textures/base/camo3_nohq.paa",
+      "bytes": 616320,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "bb43542420bb329d4f7adb6b09b2fd1b990be70610519894b083b888baac3a0f"
+    },
+    {
+      "path": "data/textures/base/camo3_smdi.paa",
+      "bytes": 1726655,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "12179e9e93272072f943692e208eb33edc1341c1b147be1a7669e69b17a74c79"
+    },
+    {
+      "path": "data/textures/base/camo4.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "4745ce0594b55f401224d91d763d1ba91261b3e034100cc33638a4e40e8b6f3d"
+    },
+    {
+      "path": "data/textures/base/camo4_as.paa",
+      "bytes": 1356346,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "365d6ec74e9d818e8091dc965a5d5913c015dbc3768da6f5d1dbdd3589df574f"
+    },
+    {
+      "path": "data/textures/base/camo4_co.paa",
+      "bytes": 342163,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "209774be7f14e7665999faf2bd4b693a98d61ee25eb9d10f297eb75d69fd3a6d"
+    },
+    {
+      "path": "data/textures/base/camo4_nohq.paa",
+      "bytes": 1077819,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "374b36275173a685f1b403bddd2fbbfd71b74668ef93418d223780d224aa84c8"
+    },
+    {
+      "path": "data/textures/base/camo4_smdi.paa",
+      "bytes": 1883219,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "1d185a367cf7ead54dc4fcbd4bd816b20c2f726ee68a8ade6c587c64367574db"
+    },
+    {
+      "path": "data/textures/base/camo5.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "cf41eb149df8d39490a33753c4654d7c044a77307b1a40f25c6622c76fd7be3a"
+    },
+    {
+      "path": "data/textures/base/camo5_as.paa",
+      "bytes": 1853190,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "cfd2dbe6e4cd8201fa504a5e1c6aa6fddabad4c1faad0232b70807527bb08d97"
+    },
+    {
+      "path": "data/textures/base/camo5_co.paa",
+      "bytes": 636551,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "da5bd22ccb5bf736f0d80eb3763ad39d3f60eda91b04d3df366bf44a6fe738a3"
+    },
+    {
+      "path": "data/textures/base/camo5_nohq.paa",
+      "bytes": 1256713,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "6e08bcf7a7e96564d6f3a2c1b767d0109aec46a398b983e3c7b7e26a0478f3b9"
+    },
+    {
+      "path": "data/textures/base/camo5_smdi.paa",
+      "bytes": 1967742,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "c9cc38e53d171f3046edb6263340c5edef66c00db1366cfbbe5455f8416e0836"
+    },
+    {
+      "path": "data/textures/base/camo6.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "06aaa6010b9165dd17549cdd4dcd2fe94eb10827ad15ae600f12f9014a4f0d42"
+    },
+    {
+      "path": "data/textures/base/camo6_as.paa",
+      "bytes": 2063534,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "b5bc0a6866057bb004097b49b08efd29e803d029dbe1358dff40501115d2da1f"
+    },
+    {
+      "path": "data/textures/base/camo6_co.paa",
+      "bytes": 1252418,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "548200b9737d642dfe4ddd3b042aebfdfd11c5c48ca1d17d5872a0abb20b36df"
+    },
+    {
+      "path": "data/textures/base/camo6_nohq.paa",
+      "bytes": 3100085,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "55865d9dc3c6f7a155dd0b51ebb16824bfbfc0674c9b21c291e725bc11568331"
+    },
+    {
+      "path": "data/textures/base/camo6_smdi.paa",
+      "bytes": 1762769,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "bda369ae427e13a03fa184b143f87b46d0470f85fa0aa8291b979a35870b1718"
+    },
+    {
+      "path": "data/textures/base/camo7.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "2e5c429090418e5b876aaecfcdd195f5e49793cc6d47ac72ab06cc3475ffdf27"
+    },
+    {
+      "path": "data/textures/base/camo7_as.paa",
+      "bytes": 1429239,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "b515d3bcbc8ccdc9a686d56a7b9bc3d3fa73f383c4ff85ea990e4af82ff0962f"
+    },
+    {
+      "path": "data/textures/base/camo7_co.paa",
+      "bytes": 213193,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "527a5415265b4dd9148f9aa45f15b668cb04ea20ecba9716e7b63d0a107d067e"
+    },
+    {
+      "path": "data/textures/base/camo7_nohq.paa",
+      "bytes": 1349986,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "f84b205194edc3d7f1cd1187f116dde98af62f0579f9c61954141095f5520144"
+    },
+    {
+      "path": "data/textures/base/camo7_smdi.paa",
+      "bytes": 1907089,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "aadef7cffc66b17806cfe5aa08b7a215ed5edc5d9e99560b2a9d6a1d4a57eae9"
+    },
+    {
+      "path": "data/textures/base/camo8.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "e4152b1f7085a0bc59f2e7dd884188282b44702952cd0dfae460c6db075982b1"
+    },
+    {
+      "path": "data/textures/base/camo8_as.paa",
+      "bytes": 1976529,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "85f819f2ac5dbd7460aa437ef3d793cedcc2434256e405f1914d57b8391e6d72"
+    },
+    {
+      "path": "data/textures/base/camo8_co.paa",
+      "bytes": 1004343,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "3f5c4cad87adf5e26f9e8bcb342c9138d246d8c77d7de26d1b91bd32c4cab44e"
+    },
+    {
+      "path": "data/textures/base/camo8_nohq.paa",
+      "bytes": 1662724,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "0813033ef7da2de3d2a5b5de08e19ce6de28e42224b794c5daf04ab2cd392b52"
+    },
+    {
+      "path": "data/textures/base/camo8_smdi.paa",
+      "bytes": 1651535,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "7e33f720039c73e90b0d30b791bcaac0011bd440676a19687bdb17291cbd2ca3"
+    },
+    {
+      "path": "data/textures/base/camo9.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "62a7bba3e77b76860d327d77fe4c13a6a389fd5774ada1b469e833822553371f"
+    },
+    {
+      "path": "data/textures/base/camo9_as.paa",
+      "bytes": 1603070,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "e329f11b0b85b8d3fe69c0e283902e71425e3bc06e2dddeeafd9f4bdab1bf180"
+    },
+    {
+      "path": "data/textures/base/camo9_co.paa",
+      "bytes": 1461112,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "35cad08001bdc4cf3039deb44d08aa421fac8a1e0224e42313cf8cadf0007156"
+    },
+    {
+      "path": "data/textures/base/camo9_nohq.paa",
+      "bytes": 3011573,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "01234169e93bb57b7404f9d328f28081c70b97635697e7cefe074c3520650668"
+    },
+    {
+      "path": "data/textures/base/camo9_smdi.paa",
+      "bytes": 1830575,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "56ab4521b42a5ec0fcc462128d3ab9751866b9e75b356b29dbae16f0a3e6ac75"
+    },
+    {
+      "path": "data/textures/base/camo_as.paa",
+      "bytes": 1570505,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "535f7ed51d03d86e7be4bf3f2620c4a812fa59efbe2565da0171c05b82f28448"
+    },
+    {
+      "path": "data/textures/base/camo_co.paa",
+      "bytes": 500753,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "bb94e69f34eb327e52992d1bf9b689cc39a9084105329c33cd929d503f101687"
+    },
+    {
+      "path": "data/textures/base/camo_nohq.paa",
+      "bytes": 1428401,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "35fd02296f6ded8a973860d9e49cb9d1975340f16bf41b1305a9dadb2026108d"
+    },
+    {
+      "path": "data/textures/base/camo_smdi.paa",
+      "bytes": 1758933,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "571d7b085bab078ead88d13fce3b5ac2e3d29718e4283795eff13e771fb599f3"
+    },
+    {
+      "path": "data/textures/base/emissive.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "56bbb0945dbed953167986462805aeae2e1437bc1bddfa6c146c08633d0f894f"
+    },
+    {
+      "path": "data/textures/base/emissive_gun.rvmat",
+      "bytes": 1800,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "25ab75fd9b7cb4a63db41b591a76d68637e518fde9294a7df425ca38468cec70"
+    },
+    {
+      "path": "data/textures/commandersgun/dc15h.rvmat",
+      "bytes": 1843,
+      "source_status": "compiled source exactly matches deployed material",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "9ec69840b76b685d328aad1bfd68daf2f43214458ad78b1dbaa6c4a801580039"
+    },
+    {
+      "path": "data/textures/commandersgun/dc15h_as.paa",
+      "bytes": 5032923,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "4df1c92e63f0e4c404ca88061b0cdc9987eed11e864a7cf3664c2ae8c247defd"
+    },
+    {
+      "path": "data/textures/commandersgun/dc15h_co.paa",
+      "bytes": 6098685,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "4530336fcadff0963b02a4db6a6d1ee8fbde8bfda1b2acb6c72cf14ee9022e57"
+    },
+    {
+      "path": "data/textures/commandersgun/dc15h_nohq.paa",
+      "bytes": 7534331,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "e2e30f8a4f1fe8ee236d211a79a04ed59d8ce425a37b0741aa5f698683f75008"
+    },
+    {
+      "path": "data/textures/commandersgun/dc15h_smdi.paa",
+      "bytes": 7747628,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "1ca2054410456920a2763bc41d3184f2cc8bc52bcdfc828e4e99717130958544"
+    },
+    {
+      "path": "fst_vehicles_land_apc_sabreapc_model.p3d",
+      "bytes": 13692864,
+      "source_status": "source model is MLOD; deployed model is ODOL; build equivalence unverified",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "e673aace788ef16e12bd472039f9299ee9fa9015a8966dd96dd7926c6ec54db5"
+    },
+    {
+      "path": "functions/fn_forcesabrewaterhover.sqf",
+      "bytes": 1561,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "2b179e8b163f9134e0f54b405b702bcd6fea198889ef92a4bb08aeeae5504d5d"
+    },
+    {
+      "path": "functions/fn_monitorsabrearmor.sqf",
+      "bytes": 665,
+      "source_status": "intentional controller compatibility wrapper update",
+      "rebuilt_matches_deployed": false,
+      "deployed_sha256": "005bf49d5b00b17d6b2a8a72f5b5f64dfb0ee2bd8806a77730148197a2a29912"
+    },
+    {
+      "path": "functions/fn_showsabrearmorstatus.sqf",
+      "bytes": 703,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "0e0ba6f065b3caebf4f2c4a8b2c1a7b82f1b283aa3a9e153a6a6c139faa18799"
+    },
+    {
+      "path": "functions/fn_showvehiclearmorstatus.sqf",
+      "bytes": 11582,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "4ed2a62aebdab3177d0d48850b0f27f94bf66359d1e764bde6b5bec9579ed15f"
+    },
+    {
+      "path": "sounds/horns_01.ogg",
+      "bytes": 10671,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "de455aebb8878b0e67fed408a886e98a83cca3a0e412bc5e03ccfd19c378f7b1"
+    },
+    {
+      "path": "sounds/horns_02.ogg",
+      "bytes": 11424,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "3c172df2ecaad404e0b992d6fe24ef52a5b5cb27123f99d8834ac9af79fdfd7f"
+    },
+    {
+      "path": "sounds/horns_03.ogg",
+      "bytes": 16441,
+      "source_status": "exact source match",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "e2f9135b8bdfe5c6051ce88201a4cebda3d62dc322cc84de0a5ac7970535ae05"
+    },
+    {
+      "path": "texheaders.bin",
+      "bytes": 11713,
+      "source_status": "generated texture metadata, preserved unchanged",
+      "rebuilt_matches_deployed": true,
+      "deployed_sha256": "3aa682ba26b997b87eb5e9ccf84270abb883897235633484f5a9825711d33149"
+    }
+  ],
+  "new_intentional_entries": [
+    "config.cpp",
+    "functions/fn_initsabre.sqf",
+    "functions/fn_startsabreowner.sqf",
+    "functions/fn_updatesabreowner.sqf"
+  ],
+  "armor_extension_exact_match": true,
+  "sound_entries_checked": 166,
+  "all_sound_entries_match_source_or_compiled_config": true,
+  "model_limitation": "Source MLOD and deployed ODOL cannot be compared by hashes. The rebuilt local Raider PBO preserves the deployed ODOL byte-for-byte. Neither model nor full Raider PBO is uploaded."
+}
