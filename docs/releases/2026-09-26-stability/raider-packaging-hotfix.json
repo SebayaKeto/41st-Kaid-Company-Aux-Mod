@@ -1,0 +1,22 @@
+{
+  "input_sha256": "94ca18c226a496ac1766d77003af77ac611dcfd9da3dbe389c99f9d3a1753496",
+  "output_sha256": "1e55fb3cfe2ece21d58f6242b492e9940d3d9245638d370c2bbf0064baa0d5b5",
+  "input_bytes": 109189928,
+  "output_bytes": 109111123,
+  "removed_entries": [
+    "config.cpp"
+  ],
+  "retained_entries": 82,
+  "all_retained_entry_headers_and_payloads_identical": true,
+  "archive_properties_identical": true,
+  "config_bin_sha256": "e7af8918a2f7aa9071a5599bfed2b373e6171c059025ddfdc041a81d78033a2e",
+  "model_entries": [
+    {
+      "path": "FST_Vehicles_Land_APC_SabreAPC_Model.p3d",
+      "sha256": "e673aace788ef16e12bd472039f9299ee9fa9015a8966dd96dd7926c6ec54db5"
+    }
+  ],
+  "engine_validation": "Isolated Arma 3 2.22.154075 with CBA, JLTS and 3AS passed addon/config loading and reached engine/server initialization. No missing sound include. Separate base-mission, BattlEye and Steam warnings prevent claiming a clean gameplay test.",
+  "engine_rpt_sha256": "7d308c4cbd71839f86dcb81230be9d56f702f4d3ee9b5466e4cf1b6f851d065e",
+  "publication_status": "Prepared; corrective publication pending"
+}

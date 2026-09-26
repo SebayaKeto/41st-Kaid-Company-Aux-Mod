@@ -36,7 +36,7 @@ During downtime, back up deployed addons, distribute matching rebuilt addons to 
 
 ## Complete Workshop package
 
-The final Steam upload payload contains **69 files / 7,008,006,929 bytes**, based on the complete installed aux. Nine audited release archives were overlaid; only five actually differ from that installed baseline: Vehicles, BURNS Combat, HCSpawn, JMSEF animals, and the Raider. All other 64 files are unchanged. Armor and Music are included unchanged in Steam and remain excluded from this Git commit. The armor-extension DLL and current sounds are preserved.
+The original Steam upload payload contained **69 files / 7,008,006,929 bytes**, based on the complete installed aux. Nine audited release archives were overlaid; only five actually differ from that installed baseline: Vehicles, BURNS Combat, HCSpawn, JMSEF animals, and the Raider. All other 64 files are unchanged. Armor and Music are included unchanged in Steam and remain excluded from this Git commit. The armor-extension DLL and current sounds are preserved.
 
 `workshop-package-manifest.json` records every payload hash and the replacement archive hashes. The full Raider PBO is included only in the local Steam payload, never in GitHub. This complete package includes the final Vehicles build and installed Raider sounds and supersedes the earlier five-PBO local selection. `workshop-change-note.txt` is the prepared update note for existing Workshop item [3048946639](https://steamcommunity.com/sharedfiles/filedetails/?id=3048946639).
 
@@ -47,3 +47,9 @@ Package preparation does not establish publication or live deployment. A success
 Published to existing Workshop item [3048946639](https://steamcommunity.com/sharedfiles/filedetails/?id=3048946639) at **2026-09-26T10:15:47Z** using the official Arma 3 Publisher. Steam's upload log reports **OK**. Fresh public API metadata reports **7,008,006,929 bytes**, matching the complete **69-file** payload verified against the release manifest before upload. See `publication-receipt.json` for the timestamp, content manifest ID, and verification evidence.
 
 Armor and Music remain unchanged. The full Raider PBO/model remain excluded from GitHub. This records Workshop publication only; live Main/HC deployment was not performed and remains a separate rollout.
+
+## Raider startup packaging hotfix
+
+The original publication included both root config.cpp and config.bin in the Raider PBO. Arma prioritizes config.cpp, which referenced an unpackaged Sounds header and blocked startup. The corrected package removes only this redundant source entry. All 82 retained PBO entries and headers, the compiled config, deployed ODOL model, sounds, and controller scripts are byte-for-byte unchanged. The Git source config remains available.
+
+The corrected full upload contains 69 files / 7,007,928,124 bytes. See raider-packaging-hotfix.json for hashes and preservation checks. An isolated Arma 3 2.22.154075 probe with CBA, JLTS and 3AS passed addon/config loading and reached engine/server initialization without the missing include. Unrelated base-mission, BattlEye and Steam warnings mean full gameplay and multiplayer validation remain outstanding. Corrective Workshop publication is pending.
