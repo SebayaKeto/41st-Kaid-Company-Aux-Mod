@@ -18,5 +18,5 @@
   ],
   "engine_validation": "Isolated Arma 3 2.22.154075 with CBA, JLTS and 3AS passed addon/config loading and reached engine/server initialization. No missing sound include. Separate base-mission, BattlEye and Steam warnings prevent claiming a clean gameplay test.",
   "engine_rpt_sha256": "7d308c4cbd71839f86dcb81230be9d56f702f4d3ee9b5466e4cf1b6f851d065e",
-  "publication_status": "Prepared; corrective publication pending"
+  "publication_status": "Corrective Workshop publication verified 2026-09-26T10:32:29Z; installed Raider matches corrected payload. See raider-hotfix-publication-receipt.json."
 }

@@ -1,0 +1,13 @@
+{
+  "workshop_id": "3048946639",
+  "published_at_utc": "2026-09-26T10:32:29Z",
+  "time_updated": 1790418749,
+  "file_count": 69,
+  "file_size_bytes": 7007928124,
+  "content_manifest_id": "8352957141521671985",
+  "steam_upload_result": "OK",
+  "installed_raider_sha256": "1e55fb3cfe2ece21d58f6242b492e9940d3d9245638d370c2bbf0064baa0d5b5",
+  "installed_raider_matches_corrected_payload": true,
+  "user_feedback": "Seems to have worked this time!",
+  "validation_scope": "Corrective Workshop upload and local installed Raider verified. User reports success. Full gameplay, multiplayer, and live Main/HC deployment not established."
+}

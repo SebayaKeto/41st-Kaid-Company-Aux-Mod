@@ -409,5 +409,5 @@
   "armor_music_preserved": true,
   "private_keys_included": false,
   "signing": "Changed addon archives are unsigned, matching the installed baseline; the unchanged ARQ signature is retained.",
-  "publication_status": "Corrective Raider packaging update prepared; not yet republished. See raider-packaging-hotfix.json."
+  "publication_status": "Corrective Workshop publication verified 2026-09-26T10:32:29Z; installed Raider matches corrected payload. See raider-hotfix-publication-receipt.json."
 }
