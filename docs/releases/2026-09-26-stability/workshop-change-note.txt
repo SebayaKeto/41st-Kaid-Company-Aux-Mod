@@ -1,0 +1,11 @@
+Main and headless-client stability update
+
+- Reduced redundant script broadcasts and repeated curator updates.
+- Added low-FPS and population admission checks for new heavy spawns, with Zeus notifications.
+- Paced AI creation and cleanup to reduce burst load while protecting players and held groups.
+- Fixed duplicate/locality controller behavior for Gulanthars, AT-RTs, and the TX180 Raider.
+- Improved AAT armor targeting and firing behavior against AT-TEs.
+- Included the pending Droideka turret tracking adjustment.
+- Preserved the current Raider cannon/engine sounds and deployed model assets.
+
+Armor, Music, and unrelated mod assets are unchanged. Update the mod on the server, all headless clients, and clients before restarting together.
