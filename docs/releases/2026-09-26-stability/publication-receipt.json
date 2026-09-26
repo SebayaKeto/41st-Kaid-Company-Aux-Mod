@@ -1,0 +1,20 @@
+{
+  "workshop_id": "3048946639",
+  "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3048946639",
+  "status": "Published and verified",
+  "published_at_utc": "2026-09-26T10:15:47Z",
+  "verified_at_utc": "2026-09-26T10:17:36Z",
+  "public_api_result": 1,
+  "time_updated": 1790417747,
+  "previous_time_updated": 1790379254,
+  "file_size_bytes": 7008006929,
+  "verified_payload_files": 69,
+  "payload_manifest": "workshop-package-manifest.json",
+  "steam_content_manifest_id": "3043848915666040048",
+  "publisher_method": "Official Arma 3 Publisher GUI",
+  "upload_result": "OK",
+  "upload_log_evidence": "[2026-09-26 06:15:45] [AppID 107410] Upload finished for workshop item 3048946639 : OK",
+  "armor_music_unchanged": true,
+  "full_raider_pbo_and_model_added_to_github": false,
+  "live_main_hc_rollout": "Not performed; separate rollout required"
+}

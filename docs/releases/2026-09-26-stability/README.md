@@ -41,3 +41,9 @@ The final Steam upload payload contains **69 files / 7,008,006,929 bytes**, base
 `workshop-package-manifest.json` records every payload hash and the replacement archive hashes. The full Raider PBO is included only in the local Steam payload, never in GitHub. This complete package includes the final Vehicles build and installed Raider sounds and supersedes the earlier five-PBO local selection. `workshop-change-note.txt` is the prepared update note for existing Workshop item [3048946639](https://steamcommunity.com/sharedfiles/filedetails/?id=3048946639).
 
 Package preparation does not establish publication or live deployment. A successful Publisher result and fresh Workshop metadata are required to confirm publication; Main/HC rollout remains separate.
+
+## Verified Workshop publication
+
+Published to existing Workshop item [3048946639](https://steamcommunity.com/sharedfiles/filedetails/?id=3048946639) at **2026-09-26T10:15:47Z** using the official Arma 3 Publisher. Steam's upload log reports **OK**. Fresh public API metadata reports **7,008,006,929 bytes**, matching the complete **69-file** payload verified against the release manifest before upload. See `publication-receipt.json` for the timestamp, content manifest ID, and verification evidence.
+
+Armor and Music remain unchanged. The full Raider PBO/model remain excluded from GitHub. This records Workshop publication only; live Main/HC deployment was not performed and remains a separate rollout.

@@ -409,5 +409,5 @@
   "armor_music_preserved": true,
   "private_keys_included": false,
   "signing": "Changed addon archives are unsigned, matching the installed baseline; the unchanged ARQ signature is retained.",
-  "publication_status": "Prepared package; publication must be verified separately."
+  "publication_status": "Published and verified; see publication-receipt.json. Live Main/HC rollout remains separate."
 }
