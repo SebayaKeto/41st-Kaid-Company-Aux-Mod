@@ -71,6 +71,7 @@ class CfgFunctions {
             class spawnGroupOnTarget {};
             class spawnVehicleOnTarget {};
             class createGroupLocal {};
+            class spawnPace {};
             class setCombatTask {};
             class initCombatTasks {};
             class burnsTaskInterval {};
@@ -160,6 +161,10 @@ class CfgFunctions {
             class debugDraw {};
             class requestDebugSnapshot {};
             class fpsMonitor {};
+            class heavyKind {};
+            class heavyCheck {};
+            class heavyZeus {};
+            class initPerformance {};
             class statusReport {};
             class initExplosionDiag {};
             class initEmergencyDroidBandaid {};

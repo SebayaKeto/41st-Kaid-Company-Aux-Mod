@@ -133,6 +133,13 @@ if (_buildOwner == 2 && {missionNamespace getVariable ["FST_HC_BlockHeavySpawnsW
     diag_log "[FST_HCSpawn] QRF blocked by HC capacity; no server fallback.";
 };
 
+private _heavyClasses=[];
+for "_i" from 1 to _squadCount do {_heavyClasses append _unitClasses};
+if (_vehClass!="") then {_heavyClasses pushBack _vehClass};
+for "_i" from 1 to _escortCount do {_heavyClasses pushBack _escortClass};
+private _heavyDecision=[_heavyClasses,_buildOwner] call FST_HCSpawn_fnc_heavyCheck;
+if !(_heavyDecision select 0) exitWith {format ["[FST] QRF blocked: %1",_heavyDecision select 1] remoteExec ["systemChat",_callerID]};
+_args pushBack (_heavyDecision select 2);
 if (_buildOwner != 2) then {
     // Pre-count the crews + passengers so back-to-back QRFs do not all land on one HC.
     private _hcIndex = FST_HC_Ids find _buildOwner;

@@ -1,9 +1,13 @@
 // FST_HCSpawn_fnc_createGroupLocal
 // Runs on target (HC or server). Creates units, applies behavior, registers.
 
-params ["_side", "_unitClasses", "_pos", "_behavior", "_radius", "_vehData", "_isOnHC", "_targetId", "_hcIndex", ["_unitData", []], ["_sourceOwner", -1], ["_originalPayload", []]];
+if (!canSuspend) exitWith {_this spawn FST_HCSpawn_fnc_createGroupLocal};
+
+params ["_side", "_unitClasses", "_pos", "_behavior", "_radius", "_vehData", "_isOnHC", "_targetId", "_hcIndex", ["_unitData", []], ["_sourceOwner", -1], ["_originalPayload", []], ["_heavyTicket", []]];
 
 private _isZeusClone = (_sourceOwner > 2) && {count _originalPayload == 3};
+private _buildDeadline=time+(if (_isZeusClone) then {4} else {30});
+if (count _heavyTicket==2) then {_buildDeadline=_buildDeadline min (_heavyTicket select 1)};
 private _sendZeusCloneDecision = {
     params ["_accepted"];
     if (_isZeusClone) then {
@@ -13,6 +17,18 @@ private _sendZeusCloneDecision = {
             ["FST_HC_evt_zeusOriginalDecisionServer", [_originalPayload, _accepted]] call CBA_fnc_serverEvent;
         };
     };
+};
+
+// A delayed request must not create heavy units after its reservation expires.
+if (count _heavyTicket==2 && {time>=(_heavyTicket select 1)}) exitWith {
+    [false] call _sendZeusCloneDecision;
+    ["FST_heavyAck",[_heavyTicket,clientOwner,[]]] call CBA_fnc_serverEvent;
+};
+
+private _heavyClasses=if (count _vehData>0) then {[_vehData select 0]} else {if (count _unitData>0) then {_unitData apply {_x select 0}} else {_unitClasses}};
+if ((_heavyClasses findIf {([_x] call FST_HCSpawn_fnc_heavyKind)>=0})>=0 && {_heavyTicket isEqualTo []}) exitWith {
+    [false] call _sendZeusCloneDecision;
+    diag_log "[FST_PERF] Unreserved heavy group rejected";
 };
 
 // Ensure ground-level position
@@ -37,6 +53,7 @@ if (count _vehData > 0) then {
     _vehData params ["_vehType", "_vehPos", ["_vehDir", 0], ["_vehUp", [0,0,1]], ["_flying", false], ["_crewSkill", -1], ["_engineOn", true], ["_combatMode", ""], ["_aiBehaviour", ""], ["_vehTarget", []], ["_tag", ""]];
     private _extended = count _vehData > 4;
 
+    if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {};
     private _veh = if (_flying) then {
         createVehicle [_vehType, _vehPos, [], 0, "FLY"]
     } else {
@@ -83,6 +100,7 @@ if (count _vehData > 0) then {
         {
             _x params ["_class", ["_rel", [0,0,0]], ["_dir", 0], ["_rank", "PRIVATE"], ["_skill", 0.5], ["_unitPos", "AUTO"]];
             private _spawnPos = _pos vectorAdd _rel;
+            if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {};
             private _unit = _group createUnit [_class, _spawnPos, [], 0, "CAN_COLLIDE"];
             if (isNull _unit) then {
                 diag_log format ["[FST_HCSpawn] Unit clone failed: createUnit returned null for %1", _class];
@@ -107,6 +125,7 @@ if (count _vehData > 0) then {
     } else {
         {
             private _offset = [(_pos select 0) + random 10 - 5, (_pos select 1) + random 10 - 5, 0];
+            if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {};
             private _unit = _group createUnit [_x, _offset, [], 0, "NONE"];
             if (isNull _unit) then {
                 diag_log format ["[FST_HCSpawn] Unit spawn failed: createUnit returned null for %1", _x];
@@ -123,6 +142,9 @@ if (count _vehData > 0) then {
 };
 
 _editableObjects append units _group;
+if !(_heavyTicket isEqualTo []) then {
+    ["FST_heavyAck",[_heavyTicket,clientOwner,_editableObjects]] call CBA_fnc_serverEvent;
+};
 [_group] call FST_HCSpawn_fnc_emergencyStabilizeGroup;
 
 private _createdUnitCount = count units _group;

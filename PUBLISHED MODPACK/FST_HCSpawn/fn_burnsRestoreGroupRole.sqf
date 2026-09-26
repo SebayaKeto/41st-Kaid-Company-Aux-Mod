@@ -8,7 +8,7 @@ if (isNull _group || {!local _group} || {[_group] call FST_HCSpawn_fnc_isProtect
 // A group may have gained a WebKnight unit since its B1-only baseline was
 // recorded. Do not apply group-wide behaviour/formation commands to that unit.
 if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0) exitWith {
-    {_group setVariable [_x,nil,true]} forEach ["BURNS_originalGroupRole","BURNS_originalFormation","BURNS_lastRoleFormation","BURNS_lastRoleSpeed","BURNS_b1GroupOwner"];
+    {if (!isNil {_group getVariable _x}) then {_group setVariable [_x,nil,true]}} forEach ["BURNS_originalGroupRole","BURNS_originalFormation","BURNS_lastRoleFormation","BURNS_lastRoleSpeed","BURNS_b1GroupOwner"];
 };
 private _saved=_group getVariable ["BURNS_originalGroupRole",[]];
 if (count _saved==3) then {

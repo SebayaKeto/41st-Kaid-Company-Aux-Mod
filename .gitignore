@@ -1,3 +1,7 @@
 FST_Vehicles/FST_Vehicles_Land/FST_Vehicles_Land_APC/FST_Vehicles_Land_APC_SabreAPC/FST_Vehicles_Land_APC_SabreAPC_Model.p3d
 *.spp
 *.painter_lock
+
+# Full Raider archives remain local; publish source fixes only.
+*[Ss]abreAPC*.pbo
+*[Rr]aider*.pbo

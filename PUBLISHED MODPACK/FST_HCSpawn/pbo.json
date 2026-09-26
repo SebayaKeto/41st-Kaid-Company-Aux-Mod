@@ -1,0 +1,15 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.txt$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "FST_HCSpawn"
+        }
+    ]
+}

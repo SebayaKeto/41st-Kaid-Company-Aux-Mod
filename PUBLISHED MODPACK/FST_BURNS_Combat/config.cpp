@@ -1,6 +1,4 @@
-// Original BURNS combat profiles, designed from native engine settings.
-// No copied LAMBS implementation, FSM, assets or dependencies are included.
-// Separate PBO so these fixed native profiles can be rolled back independently.
+
 class CfgPatches {
     class FST_BURNS_Combat {
         name="BURNS Native Combat Profiles";
@@ -17,10 +15,10 @@ class CfgWeapons {
     class FST_AAT_Cannon: autocannon_Base_F {
         class HP: autocannon_Base_F {
             class Fire: Mode_SemiAuto {
-                minRange=15;minRangeProbab=0.35;
-                midRange=250;midRangeProbab=0.8;
-                maxRange=1000;maxRangeProbab=0.15;
-                aiRateOfFire=6;aiRateOfFireDispersion=2;aiRateOfFireDistance=500;
+                minRange=10;minRangeProbab=0.8;
+                midRange=500;midRangeProbab=0.95;
+                maxRange=1500;maxRangeProbab=0.5;
+                aiRateOfFire=1;aiRateOfFireDispersion=0.25;aiRateOfFireDistance=1000;
             };
         };
     };

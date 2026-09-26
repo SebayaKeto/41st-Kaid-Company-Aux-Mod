@@ -14,7 +14,8 @@ params [
     ["_sourceOwner", -1],
     ["_expectedCount", 0],
     ["_replacementOwner", -1],
-    ["_replacementGroupRef", ""]
+    ["_replacementGroupRef", ""],
+    ["_registered", []]
 ];
 
 private _isZeusCloneConfirm = (_sourceOwner > 2) && {count _originalPayload == 3};
@@ -39,7 +40,18 @@ private _missing = 0;
 } forEach _objectsOrNetIds;
 
 if (count _valid > 0) then {
-    { _x addCuratorEditableObjects [_valid, true]; } forEach allCurators;
+    {
+        private _curator=_x;
+        private _index=_registered findIf {(_x select 0)==_curator};
+        private _known=if (_index<0) then {[]} else {(_registered select _index) select 1};
+        private _delta=_valid-_known;
+        if (count _delta>0) then {
+            _curator addCuratorEditableObjects [_delta,true];
+            FST_HC_EditableWrites=(missionNamespace getVariable ["FST_HC_EditableWrites",0])+1;
+            _known append _delta;
+            if (_index<0) then {_registered pushBack [_curator,_known]} else {_registered set [_index,[_curator,_known]]};
+        };
+    } forEach allCurators;
 };
 
 // For instant clone/replace, do not let the HC approve deletion by itself.
@@ -75,9 +87,9 @@ if (_isZeusCloneConfirm) then {
 
     if (_attempt < 10) exitWith {
         [{
-            params ["_objectsOrNetIds", "_attempt", "_originalPayload", "_sourceOwner", "_expectedCount", "_replacementOwner", "_replacementGroupRef"];
-            [_objectsOrNetIds, _attempt + 1, _originalPayload, _sourceOwner, _expectedCount, _replacementOwner, _replacementGroupRef] call FST_HCSpawn_fnc_addEditableObjects;
-        }, [_objectsOrNetIds, _attempt, _originalPayload, _sourceOwner, _expectedCount, _replacementOwner, _replacementGroupRef], 0.5] call CBA_fnc_waitAndExecute;
+            params ["_objectsOrNetIds", "_attempt", "_originalPayload", "_sourceOwner", "_expectedCount", "_replacementOwner", "_replacementGroupRef", "_registered"];
+            [_objectsOrNetIds, _attempt + 1, _originalPayload, _sourceOwner, _expectedCount, _replacementOwner, _replacementGroupRef, _registered] call FST_HCSpawn_fnc_addEditableObjects;
+        }, [_objectsOrNetIds, _attempt, _originalPayload, _sourceOwner, _expectedCount, _replacementOwner, _replacementGroupRef, _registered], 0.5] call CBA_fnc_waitAndExecute;
     };
 
     [_originalPayload, false] call FST_HCSpawn_fnc_handleZeusOriginalDecision;
@@ -93,9 +105,9 @@ if (_isZeusCloneConfirm) then {
 } else {
     if (_missing > 0 && {_attempt < 10}) then {
         [{
-            params ["_objectsOrNetIds", "_attempt"];
-            [_objectsOrNetIds, _attempt + 1] call FST_HCSpawn_fnc_addEditableObjects;
-        }, [_objectsOrNetIds, _attempt], 0.5] call CBA_fnc_waitAndExecute;
+            params ["_objectsOrNetIds", "_attempt", "_registered"];
+            [_objectsOrNetIds, _attempt + 1, [], -1, 0, -1, "", _registered] call FST_HCSpawn_fnc_addEditableObjects;
+        }, [_objectsOrNetIds, _attempt, _registered], 0.5] call CBA_fnc_waitAndExecute;
     } else {
         if (_missing > 0 && {FST_HC_DebugLogging}) then {
             diag_log format ["[FST_HCSpawn] Editable registration gave up on %1 unresolved object refs after %2 attempts", _missing, _attempt];

@@ -10,9 +10,18 @@
 // Arguments: [_spawnPos, _destination, _side, _unitClasses, _squadCount,
 //             _vehClass, _vehCapacity, _escortClass, _escortCount, _isAir, _callerID]
 
-params ["_spawnPos", "_destination", "_side", "_unitClasses", "_squadCount",
-        "_vehClass", "_vehCapacity", "_escortClass", "_escortCount", "_isAir", "_callerID"];
+if (!canSuspend) exitWith {_this spawn FST_HCSpawn_fnc_qrfBuildLocal};
 
+params ["_spawnPos", "_destination", "_side", "_unitClasses", "_squadCount",
+        "_vehClass", "_vehCapacity", "_escortClass", "_escortCount", "_isAir", "_callerID", ["_heavyTicket",[]]];
+if (count _heavyTicket==2 && {time>=(_heavyTicket select 1)}) exitWith {};
+if (((_unitClasses+[_vehClass,_escortClass]) findIf {([_x] call FST_HCSpawn_fnc_heavyKind)>=0})>=0 && {_heavyTicket isEqualTo []}) exitWith {diag_log "[FST_PERF] Unreserved heavy QRF rejected"};
+// Keep the reservation for its full 30s build window. EntityCreated accounts
+// for actual objects independently; conservative overlap cannot over-admit.
+
+private _buildDeadline=time+30;
+if (count _heavyTicket==2) then {_buildDeadline=_buildDeadline min (_heavyTicket select 1)};
+private _infantryComplete=true;
 private _onHC = !isServer;
 private _myOwner = clientOwner;
 
@@ -73,9 +82,11 @@ private _allInfantry = [];
 private _infantryGroups = [];
 
 for "_i" from 1 to _squadCount do {
+    if (!_infantryComplete) exitWith {};
     private _grp = call _newGroup;
     {
         private _offset = [(_spawnPos select 0) + random 6 - 3, (_spawnPos select 1) + random 6 - 3, 0];
+        if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {_infantryComplete=false};
         private _unit = _grp createUnit [_x, _offset, [], 0, "NONE"];
         if (isNull _unit) then {
             diag_log format ["[FST_HCSpawn] QRF infantry createUnit failed for %1", _x];
@@ -91,8 +102,28 @@ for "_i" from 1 to _squadCount do {
 };
 sleep 0.5;
 [_allInfantry] call _registerEditable;
+// A paced build can expire under contention. Keep completed infantry useful,
+// and never continue into a new transport/escort after the build has expired.
+if (!_infantryComplete || {time>=_buildDeadline}) then {
+    _vehClass="";_escortCount=0;
+    _infantryGroups=_infantryGroups select {count units _x>0};
+    _squadCount=count _infantryGroups;
+    diag_log format ["[FST_PERF] QRF build deadline reached; completed infantry=%1, continuing on foot",count _allInfantry];
+    if (_callerID>2) then {"[FST] QRF build timed out; completed infantry deploy on foot. No further vehicles requested." remoteExec ["systemChat",_callerID]};
+};
 
 // --- ON FOOT ---
+private _deployCompletedInfantry={
+    {
+        if (!isNull _x && {count units _x>0}) then {
+            _x setBehaviourStrong "COMBAT";
+            _x setCombatMode "RED";
+            [_x,"assault",_destination,200] call FST_HCSpawn_fnc_setCombatTask;
+            [_x] call _rebalance;
+        };
+    } forEach _infantryGroups;
+    if (_callerID>2) then {"[FST] QRF transport unavailable or build expired; completed infantry deploy on foot." remoteExec ["systemChat",_callerID]};
+};
 if (_vehClass == "") exitWith {
     private _footConvoyGrp = grpNull;
     if (_escortCount > 0) then {
@@ -101,12 +132,15 @@ if (_vehClass == "") exitWith {
         private _escorts = [];
         for "_e" from 1 to _escortCount do {
             private _escOffset = [(_spawnPos select 0) + 15 * _e, (_spawnPos select 1), 0];
+            if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {};
             private _esc = createVehicle [_escortClass, _escOffset, [], 5, "NONE"];
+            if (isNull _esc) then {continue};
             createVehicleCrew _esc;
             sleep 0.1;  // wait past createVehicleCrew race frame before reading crew
             (crew _esc) joinSilent _footConvoyGrp;
             _escorts pushBack _esc;
         };
+        _escortCount=count _escorts;
         sleep 0.5;
         [_escorts + units _footConvoyGrp] call _registerEditable;
 
@@ -167,7 +201,9 @@ private _vehSpawnPos = if (_isAir) then {
     +_spawnPos
 };
 
+if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {deleteGroup _convoyGrp;call _deployCompletedInfantry};
 private _transport = createVehicle [_vehClass, _vehSpawnPos, [], 0, "NONE"];
+if (isNull _transport) exitWith {deleteGroup _convoyGrp;call _deployCompletedInfantry};
 createVehicleCrew _transport;
 sleep 0.1;  // wait past createVehicleCrew race frame before reading crew
 (crew _transport) joinSilent _convoyGrp;
@@ -184,7 +220,9 @@ for "_e" from 1 to _escortCount do {
         [(_spawnPos select 0) - 15 * _e, (_spawnPos select 1) + 10 * _e, 0]
     };
 
+    if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {};
     private _esc = createVehicle [_escortClass, _escOffset, [], 5, "NONE"];
+    if (isNull _esc) then {continue};
     createVehicleCrew _esc;
     sleep 0.1;  // wait past createVehicleCrew race frame before reading crew
     (crew _esc) joinSilent _convoyGrp;

@@ -1,0 +1,28 @@
+[
+  {
+    "file": "PUBLISHED MODPACK/41st_Vehicles.pbo",
+    "bytes": 680953735,
+    "sha256": "96412f4b6d40f067941f9d972e27f2b0ae95b9d0e59a2b14199ff4779cc6c312"
+  },
+  {
+    "file": "PUBLISHED MODPACK/FST_BURNS_Combat.pbo",
+    "bytes": 3602,
+    "sha256": "00512dd961be8e5b84ee2983a7c28cda80a69387f90a2cc41ca5aa0ff6b47752"
+  },
+  {
+    "file": "PUBLISHED MODPACK/FST_HCSpawn.pbo",
+    "bytes": 588205,
+    "sha256": "aeed37d6607c9c534cfda991896cd06a414a66a8efdc637676a41b6d29b6ca56"
+  },
+  {
+    "file": "PUBLISHED MODPACK/JMSEF_animals.pbo",
+    "bytes": 21091942,
+    "sha256": "19a8baf5593bbbb6ce09f102566d93d9e0d573af19ab8d4945b184b515acaf85"
+  },
+  {
+    "file": "PUBLISHED MODPACK/FST_Sounds.pbo",
+    "bytes": 26977065,
+    "sha256": "5f7e6af5a09768f5ee0c6cfc2b91f9132642e5755a574d51a2eb1dd92c8cb4b7",
+    "origin": "Installed aux sound archive; seven TX180 sound assets synchronized to source"
+  }
+]

@@ -80,6 +80,12 @@ if (!_isOnHC && {missionNamespace getVariable ["FST_HC_BlockHeavySpawnsWithoutHC
     false
 };
 
+private _heavyDecision=[[_vehClass],_targetId] call FST_HCSpawn_fnc_heavyCheck;
+if !(_heavyDecision select 0) exitWith {
+    [format ["[FST] Spawn blocked: %1",_heavyDecision select 1]] call _feedback;
+    false
+};
+private _heavyTicket=_heavyDecision select 2;
 if (_hcIndex >= 0 && {_hcIndex < count FST_HC_UnitCounts}) then {
     FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + _crewEstimate];
 };
@@ -90,7 +96,7 @@ if (_flying && {(_spawnPos select 2) < 50}) then { _spawnPos set [2, 150]; };
 
 // _vehData: [class, pos, dir, vectorUp, flying, skill, engineOn, combatMode, behaviour, target, tag]
 private _vehData = [_vehClass, _spawnPos, _dir, [0,0,1], _flying, _skill, _engineOn, _combatMode, _aiBehaviour, _target, _tag];
-private _args = [_side, [], _spawnPos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, [], _sourceOwner, []];
+private _args = [_side, [], _spawnPos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, [], _sourceOwner, [], _heavyTicket];
 
 if (_isOnHC) then {
     ["FST_HC_evt_createGroupLocal", _args, _targetId] call CBA_fnc_ownerEvent;

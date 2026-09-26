@@ -3,6 +3,7 @@
 // HC: register with server
 // Client: hook Zeus, register keybinds
 
+[] call FST_HCSpawn_fnc_initPerformance;
 [] call FST_HCSpawn_fnc_registerBurnsEvents;
 [] call FST_HCSpawn_fnc_initCombatTasks;
 [] call FST_HCSpawn_fnc_burnsInitBXEnhancements;
@@ -125,7 +126,20 @@ if (hasInterface) then {
         if !(_curator getVariable ["FST_HC_hookedLocal", false]) then {
             _curator addEventHandler ["CuratorGroupPlaced", {
                 params ["_curator", "_group"];
-                [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
+                private _heavy=(units _group) select {([typeOf _x] call FST_HCSpawn_fnc_heavyKind)>=0};
+                if (_heavy isEqualTo []) then {
+                    [_curator, _group] call FST_HCSpawn_fnc_interceptZeusPlace;
+                } else {
+                    ["FST_heavyZeus",[_heavy,clientOwner]] call CBA_fnc_serverEvent;
+                    // Preserve heavy object identity: never clone a live creature
+                    // with a scheduled controller. Catch-all transfers survivors.
+                };
+            }];
+            _curator addEventHandler ["CuratorObjectPlaced", {
+                params ["_curator","_object"];
+                if (([typeOf _object] call FST_HCSpawn_fnc_heavyKind)>=0) then {
+                    ["FST_heavyZeus",[[_object],clientOwner]] call CBA_fnc_serverEvent;
+                };
             }];
             _curator setVariable ["FST_HC_hookedLocal", true];
             if (missionNamespace getVariable ["FST_HC_DebugLogging", false]) then {

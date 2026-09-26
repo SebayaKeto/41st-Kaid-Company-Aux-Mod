@@ -7,23 +7,45 @@ private _driver=driver _v;
 private _gunner=gunner _v;
 if (isNull _gunner || {!local _gunner} || {!alive _gunner} || {_gunner getVariable ["BURNS_exempt",false]}) exitWith {};
 // Inherited on-foot role writes must not disable a newly boarded crew's AI.
+if (!([_group] call FST_HCSpawn_fnc_burnsEngagementAllowed)) exitWith {};
 private _target=objNull;
-private _best=1e12;
+private _seen=[];
+private _ranked=[];
+private _previous=_v getVariable ["BURNS_armorFireTarget",objNull];
 {
     _x params ["_pos","_type","_side","_cost","_object"];
     if (isNull _object || {!alive _object} || {captive _object} || {isObjectHidden _object} || {_side in [civilian,sideUnknown,sideLogic]} || {(side _group) getFriend _side>=0.6}) then {continue};
     private _platform=vehicle _object;
-    if (_platform isKindOf "Air" || {[_object] call FST_HCSpawn_fnc_burnsIsDown}) then {continue};
-    private _d=_v distance2D _pos;
-    if (_d<_best) then {_target=_platform;_best=_d};
+    if (_platform in _seen || {_platform isKindOf "Air"} || {[_object] call FST_HCSpawn_fnc_burnsIsDown}) then {continue};
+    _seen pushBack _platform;
+    private _d=_v distance2D _platform;
+    if (_d>1500) then {continue};
+    private _armor=_platform isKindOf "Tank" || {_platform isKindOf "Wheeled_APC_F"} || {_platform isKindOf "FST_ATTE_Base"};
+    private _score=_d + (if (_armor) then {0} else {if (_platform isKindOf "Man") then {4000} else {2000}});
+    if (_platform==_previous) then {_score=_score-100};
+    _ranked pushBack [_score,_platform];
 } forEach _contacts;
-if (isNull _target) exitWith {};
-private _point=aimPos _target;
-if (([_v,"VIEW",_target] checkVisibility [eyePos _gunner,_point])<=0.5) exitWith {};
-if (_gunner checkAIFeature "TARGET" && {_gunner checkAIFeature "AUTOTARGET"} && {_gunner checkAIFeature "FIREWEAPON"}) then {
-    if (assignedTarget _gunner!=_target) then {_gunner doTarget _target};
-    _gunner doFire _target;
+_ranked sort true;
+// Bound expensive rays. Rotate through blocked candidates so an occluded
+// near contact cannot permanently suppress a visible AT-TE farther away.
+private _cursor=_v getVariable ["BURNS_armorSightCursor",0];
+private _count=count _ranked;
+for "_i" from 1 to (8 min _count) do {
+    private _index=(_cursor+_i-1) mod _count;
+    private _candidate=(_ranked select _index) select 1;
+    if (([_v,"VIEW",_candidate] checkVisibility [eyePos _gunner,aimPos _candidate])>0.5) exitWith {_target=_candidate};
 };
+_v setVariable ["BURNS_armorSightCursor",if (!isNull _target || {_count==0}) then {0} else {(_cursor+8) mod _count}];
+if (isNull _target) exitWith {_v setVariable ["BURNS_armorFireTarget",objNull]};
+if (_gunner checkAIFeature "TARGET" && {_gunner checkAIFeature "AUTOTARGET"} && {_gunner checkAIFeature "FIREWEAPON"}) then {
+    if (assignedTarget _gunner!=_target || {_previous!=_target} || {time>=(_v getVariable ["BURNS_armorFireNext",-1])}) then {
+        _gunner doTarget _target;
+        _gunner doFire _target;
+        _v setVariable ["BURNS_armorFireTarget",_target];
+        _v setVariable ["BURNS_armorFireNext",time+4];
+    };
+};
+
 private _sectionPlan=_group getVariable ["BURNS_sectionPlan",[]];
 if (count _sectionPlan==4 && {(_group getVariable ["BURNS_sectionToken",""])==(_sectionPlan select 0)} && {time<=(_sectionPlan select 3)}) exitWith {};
 // Give a bounded obstacle detour to native driving without competing hull turns.

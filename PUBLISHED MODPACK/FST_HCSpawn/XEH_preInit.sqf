@@ -1,3 +1,14 @@
+FST_HC_SpawnSpacing=missionNamespace getVariable ["FST_HC_SpawnSpacing",0.05];
+// Limit automatic despawn churn per existing cleanup tick. Groups larger than
+// the unit budget remain intact for manual handling; never partially delete one.
+FST_HC_DespawnMaxGroups=missionNamespace getVariable ["FST_HC_DespawnMaxGroups",2];
+FST_HC_DespawnMaxUnits=missionNamespace getVariable ["FST_HC_DespawnMaxUnits",24];
+// Conservative starting limits, configurable by the mission author. These are
+// protective defaults, not a qualified capacity claim for a 140-player server.
+FST_HC_GulantharLimit=missionNamespace getVariable ["FST_HC_GulantharLimit",8];
+FST_HC_ATRTLimit=missionNamespace getVariable ["FST_HC_ATRTLimit",12];
+FST_HC_HeavyPauseFPS=missionNamespace getVariable ["FST_HC_HeavyPauseFPS",15];
+FST_HC_HeavyResumeFPS=missionNamespace getVariable ["FST_HC_HeavyResumeFPS",25];
 // FST_HCSpawn -- preInit
 // CBA settings + defaults + template definitions
 
@@ -174,8 +185,14 @@ missionNamespace setVariable ["FST_HC_BlockFillGarrisonWithoutHC", missionNamesp
 ] call CBA_fnc_addSetting;
 
 [
+    "FST_HC_PauseAllSpawnsLowFPS", "CHECKBOX",
+    ["Pause All Managed AI Spawns on Low FPS", "Reject new managed infantry, vehicle, QRF and garrison requests while Main or their destination HC has sustained low FPS, or health data is missing. Existing AI continue running. Direct third-party and native Zeus placements are not universally blocked. Uses the heavy-spawn pause/recovery thresholds."],
+    ["FST HC Spawn", "Core"], false, true, {}, false
+] call CBA_fnc_addSetting;
+
+[
     "FST_HC_AICap", "SLIDER",
-    ["AI Cap", "Max tracked AI units across all HCs. 0 = no cap. Default 1100 accommodates an 800-1000 AI op plus crew/reservation headroom; it is not a performance guarantee."],
+    ["AI Cap", "Max tracked AI units across all HCs. 0 = no cap. Default 1100 is a legacy bookkeeping ceiling, not safe capacity. Set this from measured Main performance under the intended player load."],
     ["FST HC Spawn", "Core"], [0, 3000, 1100, 0], true, {}, false
 ] call CBA_fnc_addSetting;
 

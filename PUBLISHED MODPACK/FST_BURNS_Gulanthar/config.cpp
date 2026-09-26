@@ -1,6 +1,4 @@
-// Add an opt-in gait to the existing complete movement graph. A derived
-// movesType does not enumerate inherited states when Arma builds that graph.
-// Existing actions never select this state; the Gulanthar-only helper does.
+
 class CfgPatches {
     class FST_BURNS_Gulanthar {
         name="BURNS Gulanthar climbing gait";

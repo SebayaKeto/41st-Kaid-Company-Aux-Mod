@@ -10,13 +10,28 @@
 if (!isServer) exitWith {};
 if (!FST_HC_DespawnEnabled) exitWith {};
 
-// Do not run despawn cleanup while heavy spawn/JIP-sensitive work has just happened.
-// Deleting freshly networked HC-owned groups during/just after Fill Garrison was
-// producing object-not-found churn and desync spikes.
+// Fresh groups have their own server-side protection in trackGroup. A new
+// wave must not postpone cleanup of every old group in the mission.
 if (missionNamespace getVariable ["FST_HC_FillGarrisonActive", false]) exitWith {};
-private _cleanupGrace = missionNamespace getVariable ["FST_HC_CleanupPostSpawnGrace", 60];
-private _lastHeavySpawn = missionNamespace getVariable ["FST_HC_LastHeavySpawnTime", -9999];
-if ((time - _lastHeavySpawn) < _cleanupGrace) exitWith {};
+private _maxGroups=(floor (missionNamespace getVariable ["FST_HC_DespawnMaxGroups",2])) max 0;
+private _maxUnits=(floor (missionNamespace getVariable ["FST_HC_DespawnMaxUnits",24])) max 0;
+if (_maxGroups==0 || {_maxUnits==0}) exitWith {};
+private _deleteUnits=0;
+private _protected={
+    params ["_group"];
+    (_group getVariable ["FST_HC_heldBy",-1])!=-1 ||
+    {_group getVariable ["FST_HC_noDespawn",false]} ||
+    {_group getVariable ["BURNS_exempt",false]} ||
+    {_group getVariable ["FST_HC_pendingTransfer",false]} ||
+    {_group getVariable ["FST_HC_interceptQueued",false]} ||
+    {[_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup} ||
+    {(units _group findIf {
+        _x getVariable ["BURNS_exempt",false] || {
+            private _vehicle=vehicle _x;
+            _vehicle!=_x && {(crew _vehicle findIf {group _x!=_group})>=0}
+        }
+    })>=0}
+};
 
 private _engageRadius = FST_HC_DespawnEngageRadius;
 private _despawnRadius = FST_HC_DespawnRadius;
@@ -48,12 +63,11 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
     if (count _data == 0) then { continue };
 
     if (_onlyManaged && {!(_grp getVariable ["FST_HC_managed", false])}) then { continue };
+    // A hold/protection interrupts the continuous absence timer.
+    if ([_grp] call _protected) then {_grp setVariable ["FST_HC_staleStart",-1];continue};
 
     private _leader = leader _grp;
-    if (isNull _leader) then {
-        _toDelete pushBackUnique _grp;
-        continue;
-    };
+    if (isNull _leader) then {continue};
 
     // Fresh HC-spawned groups need time for object ownership, curator editability,
     // and JIP/network identity to settle before any despawn cleanup is allowed.
@@ -77,7 +91,11 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
                 _grp setVariable ["FST_HC_staleStart", time];
             } else {
                 if ((time - _staleStart) >= _staleTime) then {
-                    _toDelete pushBackUnique _grp;
+                    private _size=count units _grp;
+                    if (count _toDelete<_maxGroups && {_deleteUnits+_size<=_maxUnits}) then {
+                        _toDelete pushBack _grp;
+                        _deleteUnits=_deleteUnits+_size;
+                    };
                 };
             };
         } else {
@@ -87,9 +105,10 @@ private _groundPlayers = ([] call CBA_fnc_players) select {
 } forEach FST_HC_TrackedGroups;
 
 private _cleaned = 0;
+private _deleted=[];
 {
     private _grp = _x;
-    if (isNull _grp) then { continue };
+    if (isNull _grp || {[_grp] call _protected}) then { continue };
 
     private _vehicles = [];
     private _looseUnits = [];
@@ -128,10 +147,11 @@ private _cleaned = 0;
     _grp setVariable ["FST_HC_tracked", nil];
     _grp setVariable ["FST_HC_onHC", nil];
     _cleaned = _cleaned + 1;
+    _deleted pushBack _grp;
 } forEach _toDelete;
 
 if (_cleaned > 0) then {
-    FST_HC_TrackedGroups = FST_HC_TrackedGroups - _toDelete;
+    FST_HC_TrackedGroups = FST_HC_TrackedGroups - _deleted;
     diag_log format ["[FST_HCSpawn] Cleanup: despawned %1 groups", _cleaned];
     [] call FST_HCSpawn_fnc_recountUnits;
 };

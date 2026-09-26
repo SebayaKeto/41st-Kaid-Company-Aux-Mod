@@ -3,9 +3,15 @@
 // position/class assignments. Each unit is placed at its exact buildingPos.
 // After 10 seconds, unsafe/floating units are marked and deleted.
 
-params ["_batch", "_isOnHC", "_targetId", "_hcIndex"];
+if (!canSuspend) exitWith {_this spawn FST_HCSpawn_fnc_fillGarrison};
+
+params ["_batch", "_isOnHC", "_targetId", "_hcIndex", ["_heavyTicket",[]]];
+if (count _heavyTicket==2 && {time>=(_heavyTicket select 1)}) exitWith {};
+if ((_batch findIf {([_x select 1] call FST_HCSpawn_fnc_heavyKind)>=0})>=0 && {_heavyTicket isEqualTo []}) exitWith {diag_log "[FST_PERF] Unreserved heavy fill rejected"};
 
 if (count _batch == 0) exitWith {};
+private _buildDeadline=time+30;
+if (count _heavyTicket==2) then {_buildDeadline=_buildDeadline min (_heavyTicket select 1)};
 
 // Last-second safety filter. requestFillGarrison already filters, but this protects
 // direct event calls and stale/odd building positions on the HC itself.
@@ -36,6 +42,7 @@ _group setVariable ["FST_HC_managed", true, true];
 {
     _x params ["_pos", "_class"];
 
+    if !([_buildDeadline] call FST_HCSpawn_fnc_spawnPace) exitWith {};
     private _unit = _group createUnit [_class, _pos, [], 0, "NONE"];
     if (isNull _unit) then {
         diag_log format ["[FST_HCSpawn] Fill garrison unit failed: createUnit returned null for %1", _class];
@@ -60,6 +67,7 @@ _group setVariable ["FST_HC_managed", true, true];
     if (_forEachIndex == 0) then { _group selectLeader _unit; };
 } forEach _batch;
 
+if !(_heavyTicket isEqualTo []) then {["FST_heavyAck",[_heavyTicket,clientOwner,units _group]] call CBA_fnc_serverEvent};
 if (count units _group == 0) exitWith {
     diag_log format ["[FST_HCSpawn] Fill garrison batch produced zero units from %1 assignments", count _batch];
     if (!isServer) then { ["FST_HC_evt_recountUnits", []] call CBA_fnc_serverEvent; } else { [] call FST_HCSpawn_fnc_recountUnits; };

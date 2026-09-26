@@ -53,7 +53,7 @@ private _maxLag=0;
     private _speed=if (_hold) then {0} else {if (_u==_leader) then {_march} else {(_march+1.5) min 4.5}};
     private _owned=_u getVariable ["BURNS_advanceSpeed",[]];
     if (count _owned==0) then {_owned=[getForcedSpeed _u,_speed]};
-    _u setVariable ["BURNS_advanceController",_group,true];
+    if ((_u getVariable ["BURNS_advanceController",grpNull])!=_group) then {_u setVariable ["BURNS_advanceController",_group,true]};
     if (abs (getForcedSpeed _u-_speed)>0.05) then {_u forceSpeed _speed};
     if !(_owned isEqualTo [_owned select 0,_speed]) then {_owned=[_owned select 0,_speed]};
     if !((_u getVariable ["BURNS_advanceSpeed",[]]) isEqualTo _owned) then {_u setVariable ["BURNS_advanceSpeed",_owned,true]};
@@ -66,5 +66,5 @@ private _maxLag=0;
 private _orders=_ordered apply {[_x,_x getVariable ["BURNS_formationGoal",[]]]};
 if !(_orders isEqualTo (_group getVariable ["BURNS_advanceOrders",[]])) then {_group setVariable ["BURNS_advanceOrders",_orders,true]};
 if (speedMode _group!="NORMAL") then {_group setSpeedMode "NORMAL"};
-_group setVariable ["BURNS_lastRoleSpeed","NORMAL",true];
+if ((_group getVariable ["BURNS_lastRoleSpeed",""])!="NORMAL") then {_group setVariable ["BURNS_lastRoleSpeed","NORMAL",true]};
 true

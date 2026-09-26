@@ -86,7 +86,17 @@ private _keep=[];
             };
         };
     };
-    {if ((_x select 0) in _members) then {(_x select 0) setVariable ["BURNS_sectionPlan",[_token,+(_x select 1),_phase,time+6],true]}} forEach _plans;
+    {
+        _x params ["_g","_goal"];
+        if (_g in _members) then {
+            private _old=_g getVariable ["BURNS_sectionPlan",[]];
+            private _changed=count _old!=4;
+            if (!_changed) then {_changed=(_old select 0)!=_token || {!((_old select 1) isEqualTo _goal)} || {(_old select 2)!=_phase} || {(_old select 3)-time<=3}};
+            // Preserve the six-second lease; refresh halfway through it, and
+            // publish changed plans immediately. Do not renew every planner tick.
+            if (_changed) then {_g setVariable ["BURNS_sectionPlan",[_token,+_goal,_phase,time+6],true]};
+        };
+    } forEach _plans;
     _keep pushBack [_token,_roster,_objective,_axis,_origin,_phase,_plans,_last,_created,_caller];
 } forEach (missionNamespace getVariable ["BURNS_ArmorSections",[]]);
 BURNS_ArmorSections=_keep;

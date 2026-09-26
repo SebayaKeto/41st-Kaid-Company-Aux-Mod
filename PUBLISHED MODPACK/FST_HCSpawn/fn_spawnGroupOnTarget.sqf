@@ -77,6 +77,17 @@ if (_isValidatedZeusClone && {!_isOnHC}) exitWith {
     false
 };
 
+private _heavyClasses=if (count _vehData>0) then {[_vehData select 0]} else {if (count _unitData>0) then {_unitData apply {_x select 0}} else {+_unitClasses}};
+private _originalObjects=if (_isValidatedZeusClone) then {+(_originalPayload select 1)} else {[]};
+private _heavyDecision=[_heavyClasses,_targetId,_originalObjects] call FST_HCSpawn_fnc_heavyCheck;
+if !(_heavyDecision select 0) exitWith {
+    if (_sourceOwner>2) then {format ["[FST] Spawn blocked: %1",_heavyDecision select 1] remoteExec ["systemChat",_sourceOwner]};
+    diag_log format ["[FST_PERF] Spawn blocked: %1",_heavyDecision select 1];
+    [false] call _clearOriginal;
+    false
+};
+private _heavyTicket=_heavyDecision select 2;
+
 // Pre-increment unit counts so the NEXT call to getSpawnTarget
 // sees this HC as loaded. Prevents rapid-fire all going to HC1.
 // Periodic recountUnits corrects any drift from actual tracked groups.
@@ -133,7 +144,7 @@ if (_isValidatedZeusClone) then {
     }, [_originalPayload], 12] call CBA_fnc_waitAndExecute;
 };
 
-private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, _unitData, _sourceOwner, _originalPayload];
+private _args = [_side, _unitClasses, _pos, _behavior, _radius, _vehData, _isOnHC, _targetId, _hcIndex, _unitData, _sourceOwner, _originalPayload, _heavyTicket];
 
 // NOTE (V27): FST_HC_LastHeavySpawnTime is no longer touched here. Every single
 // Zeus placement used to postpone the despawn cleanup by 60s, so under steady

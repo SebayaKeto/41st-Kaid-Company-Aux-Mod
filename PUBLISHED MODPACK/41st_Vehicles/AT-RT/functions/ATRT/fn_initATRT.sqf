@@ -16,6 +16,8 @@
 #define ATRT_BASE_HEALTH 50
 params ["_atrt"];
 if (isNull _atrt) exitWith {};
+if (_atrt getVariable ["FST_ATRT_initLocal", false]) exitWith {};
+_atrt setVariable ["FST_ATRT_initLocal", true];
 
 //_atrt setAnimSpeedCoef 1.5; // Used to increase movement speed //Might be better to set the Speed in the ATRT_Base Config class instead of this. ~Jek
 _atrt disableAI "RADIOPROTOCOL"; // Stops ai from talking/sending messages
@@ -25,6 +27,7 @@ _atrt addEventHandler
     "HandleDamage",
     {
         params ["_atrt", "", "_damage", "", "", "", "", ""];
+        if (!local _atrt || {_atrt getVariable ["FST_ATRT_dying", false]}) exitWith {0};
         private ["_atrtHealth"];
 
         _atrtHealth = _atrt getVariable ["FST_ATRT_Health", ATRT_BASE_HEALTH]; //Sets Variable to ATRT_BASE_HEALTH if Variable not Set
@@ -43,6 +46,7 @@ _atrt addEventHandler
 		//Kill ATRT if health is 0 or less.
         if (_atrtHealth <= 0) then
         {
+            _atrt setVariable ["FST_ATRT_dying", true, true];
             _atrt call FST_fnc_spawnATRTSmoke;
             _atrt call FST_fnc_dismountATRT;
             _atrt setDamage 1;
@@ -82,6 +86,9 @@ _atrt addAction
             private _expression =
             (
                 // Rider Checks
+                isNull _atrt or
+                !alive _atrt or
+                {(_atrt getVariable ["FST_ATRT_rider", objNull]) != _rider} or
                 !alive _rider or
                 lifeState _rider == "INCAPACITATED" or
                 _rider getVariable ["ACE_isUnconscious", false]
@@ -90,7 +97,10 @@ _atrt addAction
             !isNil "_expression" and { _expression };
         };
 
-        _atrt call FST_fnc_dismountATRT;
+        // A manual dismount or new rider must end this old monitor silently.
+        if (!isNull _atrt && {(_atrt getVariable ["FST_ATRT_rider", objNull]) == _rider}) then {
+            _atrt call FST_fnc_dismountATRT;
+        };
     },
     [],
     1.5,

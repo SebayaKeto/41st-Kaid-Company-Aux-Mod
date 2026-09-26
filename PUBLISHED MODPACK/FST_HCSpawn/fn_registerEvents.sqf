@@ -248,7 +248,7 @@ if (isServer) then {
 
 // Fill garrison batch (received by specific HC via ownerEvent)
 ["FST_HC_evt_fillBatch", {
-    _this call FST_HCSpawn_fnc_fillGarrison;
+    _this spawn FST_HCSpawn_fnc_fillGarrison;
 }] call CBA_fnc_addEventHandler;
 
 // Snapshot movement on its actual owner before the server changes locality.

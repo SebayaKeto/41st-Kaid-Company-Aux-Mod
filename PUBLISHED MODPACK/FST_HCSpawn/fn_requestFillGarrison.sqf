@@ -296,11 +296,17 @@ diag_log format ["[FST_HCSpawn] Fill Garrison job %1 started. center=%2 radius=%
             diag_log format ["[FST_HCSpawn][EMERGENCY] Fill Garrison job %1 stopped: no usable HC target (soft cap or none connected) at %2/%3 units. hcCounts=%4", _jobId, _queuedUnits, count _assignments, FST_HC_UnitCounts];
         };
 
+        private _heavyDecision=[_batch apply {_x select 1},_targetId] call FST_HCSpawn_fnc_heavyCheck;
+        if !(_heavyDecision select 0) exitWith {
+            _cancelled=true;
+            format ["[FST] Fill stopped: %1",_heavyDecision select 1] remoteExec ["systemChat",_callerID];
+        };
+        private _heavyTicket=_heavyDecision select 2;
         if (_hcIndex >= 0 && _hcIndex < count FST_HC_UnitCounts) then {
             FST_HC_UnitCounts set [_hcIndex, (FST_HC_UnitCounts select _hcIndex) + count _batch];
         };
 
-        private _args = [_batch, _isOnHC, _targetId, _hcIndex];
+        private _args = [_batch, _isOnHC, _targetId, _hcIndex, _heavyTicket];
         if (_isOnHC) then {
             private _hcId = FST_HC_Ids select _hcIndex;
             ["FST_HC_evt_fillBatch", _args, _hcId] call CBA_fnc_ownerEvent;

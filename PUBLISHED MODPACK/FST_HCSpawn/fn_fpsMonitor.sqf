@@ -25,8 +25,9 @@ if (_oldHandle >= 0) then {
 deleteMarker _markerName;
 
 private _marker = createMarker [_markerName, [worldSize - _spacing, _spacing + (_spacing * _posIndex)]];
-_marker setMarkerType "mil_start";
-_marker setMarkerSize [0.7, 0.7];
+_marker setMarkerTypeLocal "mil_start";
+_marker setMarkerSizeLocal [0.7, 0.7];
+_marker setMarkerText (_label+": collecting performance data");
 
 private _handle = [{
     params ["_args"];
@@ -40,8 +41,12 @@ private _handle = [{
     if (_fps < 20) then { _color = "ColorORANGE"; };
     if (_fps < 10) then { _color = "ColorRED"; };
 
-    _marker setMarkerColor _color;
-    _marker setMarkerText format ["%1: %2 fps | %3 local AI", _label, round (_fps * 10) / 10, _localUnits];
+    private _text=format ["%1: %2 fps | %3 local AI", _label, round (_fps * 10) / 10, _localUnits];
+    if (markerColor _marker!=_color || {markerText _marker!=_text}) then {
+        // One global marker update carries the combined state.
+        _marker setMarkerColorLocal _color;
+        _marker setMarkerText _text;
+    };
 
 }, _interval, [_marker, _label]] call CBA_fnc_addPerFrameHandler;
 missionNamespace setVariable [_handleVar, _handle];

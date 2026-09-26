@@ -21,7 +21,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"dev_common",
+			"dev_common", "cba_main",
 		};
 	};
 };
@@ -145,13 +145,13 @@ class CfgVehicles
 		{
 			class dev_behave
 			{
-				init="[_this#0] spawn dev_fnc_varren_behave";
+				init="[_this#0] call FST_Gulanthar_fnc_start";
 			};
 			class dev_behave_local
 			{
 				// 41st: FST_HCSpawn transfers creature groups to headless clients; the
 				// behaviour loop above stops when locality is lost, so start it again here.
-				local="if (_this#1) then { [_this#0] spawn dev_fnc_varren_behave; };";
+				local="_this call FST_Gulanthar_fnc_start";
 			};
 		};
 	};

@@ -367,6 +367,9 @@ class CfgVehicles
 				maxElev=35;
 				minTurn=-360;
 				maxTurn=360;
+				// Fast target tracking for all static 41st droideka variants.
+				maxHorizontalRotSpeed=4;
+				maxVerticalRotSpeed=2;
 				selectionFireAnim="zasleh";
 				soundServo[]=
 				{

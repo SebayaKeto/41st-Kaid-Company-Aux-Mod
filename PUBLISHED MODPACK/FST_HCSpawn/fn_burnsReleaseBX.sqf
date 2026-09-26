@@ -33,5 +33,5 @@ params ["_group"];
 } forEach units _group;
 private _mode=_group getVariable ["BURNS_bxMode",[]];
 if (count _mode==2 && {combatMode _group==(_mode select 1)}) then {_group setCombatMode (_mode select 0)};
-_group setVariable ["BURNS_bxMode",nil,true];
-_group setVariable ["BURNS_ambushTriggered",nil,true];
+if (!isNil {_group getVariable "BURNS_bxMode"}) then {_group setVariable ["BURNS_bxMode",nil,true]};
+if (!isNil {_group getVariable "BURNS_ambushTriggered"}) then {_group setVariable ["BURNS_ambushTriggered",nil,true]};
