@@ -91,12 +91,20 @@ def index_folder(label, folder, patches, worlds, prefixes, classes):
                 classes.setdefault((root, n.lower()), []).append((src, str(p)))
 
 
+def _drop_local_mods(idx):
+    # '@' folders inside the Arma directory are local mods (dev copies), not vanilla DLC;
+    # they count only when they are in the op mod list, which indexes them under their own name.
+    def keep(src):
+        return not (src[0] if isinstance(src, tuple) else src).startswith('vanilla:@')
+    return tuple({k: [s for s in v if keep(s)] for k, v in d.items() if any(keep(s) for s in v)} for d in idx)
+
+
 def modset_index():
     if CACHE.exists():
-        return pickle.loads(CACHE.read_bytes())
+        return _drop_local_mods(pickle.loads(CACHE.read_bytes()))
     mods = [Path(l.strip().lstrip('\ufeff')) for l in MODLIST.read_text(encoding='utf-8').splitlines() if l.strip()]
     folders = [('vanilla', ARMA / 'Addons')] + [('vanilla:' + d.name, d / 'Addons') for d in ARMA.iterdir()
-                                              if d.is_dir() and (d / 'Addons').is_dir() and not d.name.startswith('!')]
+                                              if d.is_dir() and (d / 'Addons').is_dir() and not d.name.startswith(('!', '@'))]
     folders += [(m.name, m / 'addons') for m in mods if m.name != AUX]
     idx = ({}, {}, {}, {})
     for label, folder in folders:
@@ -190,7 +198,8 @@ def main(argv):
         for path, _, _ in items:
             p = Path(path)
             dst = STAGED / p.name
-            if dst.exists():
+            existed = dst.exists()
+            if existed:
                 # Staged files may be hard links shared with other staging folders, and
                 # copies of read-only frozen sources: unlink removes only this name.
                 os.chmod(dst, stat.S_IREAD | stat.S_IWRITE)
@@ -201,7 +210,12 @@ def main(argv):
             rel = 'Addons/' + p.name
             man['files'] = [e for e in man['files'] if e['file'].lower() != rel.lower()]
             man['files'].append({'file': rel, 'bytes': report[p.name]['bytes'], 'sha256': report[p.name]['sha256'], 'origin': str(p)})
-            if rel not in man['added']:
+            # A file new in this release stays "added" when re-staged; replacing a
+            # file that is already live is a "changed".
+            if existed and rel not in man['added']:
+                if rel not in man['changed']:
+                    man['changed'].append(rel)
+            elif rel not in man['added']:
                 man['added'].append(rel)
         man['file_count'] = len(man['files'])
         man['total_bytes'] = sum(e['bytes'] for e in man['files'])

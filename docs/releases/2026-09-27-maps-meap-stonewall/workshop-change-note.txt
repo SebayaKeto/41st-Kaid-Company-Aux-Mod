@@ -1,0 +1,18 @@
+Blackfen, RapidFire maps (incl. Hollowdeep), Gloamport, Droidworks, Lumen Vale, Black Lantern, Iron Tide and MEAP Daidalos update
+
+- Added "Umbara - Blackfen" (fst_umbara_blackfen).
+- Added MEAP Daidalos engineering tools (MEAP Core, Economy, SW Core, SW Props, SW Structures, Architect). Engineers and EOD open it with ACE Self Interaction > Open Daidalos Mode or Ctrl+Shift+B. No separate @MEAP mod is needed; do not load one alongside the Aux.
+- Added "Umbara - Razorback" (fst_umbara_razorback).
+- Added "Umbara - Fallfire" (fst_umbara_fallfire).
+- Added "Umbara - Gloomreef" (fst_umbara_gloomreef).
+- Updated "41st Umbara - Black Lantern" (V13: new airbase layout).
+- Updated the Iron Tide terrain (kaid_iron_tide, R19).
+- Added "Umbara - Hollowdeep" (fst_umbara_hollowdeep).
+- Added "Umbara - Gloamport" (fst_umbara_gloamport).
+- Added "Umbara - Droidworks" (fst_umbara_droidworks).
+- Added "Umbara - Lumen Vale" (fst_umbara_lumenvale).
+- Added the Black Lantern airbase models addon (fst_blacklantern_kit2), required by the new Black Lantern.
+- Added FST_Stonewall 1.2.4: Zeus modules under "41st Stonewall" (Keep Area, Remove Keep Area, Save Mission) for carrying built Fortify/Daidalos bases into the next mission.
+- Arquitens fix: players no longer die in one hit while an Arquitens exists (ACE medical works again), Zeus-spawned ships no longer launch on uneven ground, and deleting a ship removes its interior.
+
+All other mod files are unchanged. Let Steam finish the update before joining. Update the server and headless clients before loading any of these maps.

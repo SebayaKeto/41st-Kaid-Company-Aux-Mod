@@ -1,0 +1,44 @@
+{
+  "workshop_id": "3048946639",
+  "status": "Published and verified",
+  "published_at_utc": "2026-09-27T20:04:33Z",
+  "verified_at_utc": "2026-09-27T20:04:30Z",
+  "time_updated": 1790539473,
+  "previous_time_updated": 1790442329,
+  "file_size_bytes": 9219395044,
+  "previous_file_size_bytes": 8086115517,
+  "verified_payload_files": 88,
+  "steam_content_manifest_id": "2929933409186581831",
+  "upload_log_evidence": [
+    "[2026-09-27 16:03:12] [AppID 107410] Upload starting for workshop item 3048946639 by AppID 107410",
+    "[2026-09-27 16:04:29] [AppID 107410] Uploaded new content ( ManifestID 2929933409186581831 ) for item 3048946639.",
+    "[2026-09-27 16:04:29] [AppID 107410] Upload finished for workshop item 3048946639 : OK"
+  ],
+  "publisher_method": "PublisherCmd via tools/release/publish_release.py (Aux Updater session), Miran: \"go G\"",
+  "added": [
+    "Addons/fst_umbara_blackfen.pbo",
+    "Addons/MEAP_Core.pbo",
+    "Addons/MEAP_Economy_Core.pbo",
+    "Addons/MEAP_SW_Core.pbo",
+    "Addons/MEAP_SW_Props.pbo",
+    "Addons/MEAP_SW_Structures.pbo",
+    "Addons/MEAP_Architect_Core.pbo",
+    "Addons/fst_umbara_razorback.pbo",
+    "Addons/fst_umbara_fallfire.pbo",
+    "Addons/fst_umbara_gloomreef.pbo",
+    "Addons/fst_umbara_hollowdeep.pbo",
+    "Addons/fst_umbara_gloamport.pbo",
+    "Addons/fst_umbara_droidworks.pbo",
+    "Addons/fst_umbara_lumenvale.pbo",
+    "Addons/fst_blacklantern_kit2.pbo",
+    "Addons/FST_Stonewall.pbo"
+  ],
+  "changed": [
+    "Addons/fst_umbara_lantern.pbo",
+    "Addons/kaid_iron_tide.pbo",
+    "Addons/arq_ships.pbo"
+  ],
+  "removed": [],
+  "not_in_git": "terrain PBOs, 41st_Armor, full Raider archive/model, fst_blacklantern_kit2, arq_ships (source in ArmaMods/src/arq_ships)",
+  "live_main_hc_rollout": "pending: Miran updates Main + every HC; a new mission session is needed for MEAP/Stonewall"
+}
