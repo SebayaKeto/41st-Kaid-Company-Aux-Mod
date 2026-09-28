@@ -25,11 +25,34 @@ private _defaultClasses =
     "Land_CncBarrierMedium_F",
     "Land_Cargo_House_V1_F",
     "Land_Cargo_Patrol_V1_F",
-    "Land_Cargo_Tower_V1_F"
+    "Land_Cargo_Tower_V1_F",
+    // 41st ACE Fortify props (same classes and costs as the missions' acex_fortify registerObjects list).
+    // Exact configName case: Daidalos compares class names case-sensitively (typeOf / in / isEqualTo).
+    "3AS_Shield_C_Prop",
+    "3AS_Shield_3_Prop",
+    "3AS_Shield_5_Prop",
+    "FST_Barricade_SecurityBarrier",
+    "Land_lsb_fob_hBarrierWall_4",
+    "Land_lsb_fob_hBarrier_3",
+    "Land_DragonsTeeth_01_4x2_new_redwhite_F",
+    "Land_lsb_fob_hBarrier_ramp",
+    "FootBridge_0_ACR",
+    "land_optre_bootcamp_bridge",
+    "3AS_Prop_FOB_modular_Wall_Door",
+    "3AS_Prop_FOB_modular_Bunker",
+    "3AS_Prop_FOB_modular_Wall_Bunker",
+    "3AS_Prop_FOB_modular_Wall_Corner_Inversed",
+    "3AS_Prop_FOB_modular_Wall_Corner",
+    "3AS_Prop_FOB_modular_Wall_gate",
+    "3AS_Prop_FOB_modular_Wall_ramp",
+    "3AS_Prop_FOB_modular_Wall_straight",
+    "3AS_Prop_FOB_modular_Wall_straight_Long",
+    "3AS_Prop_FOB_modular_watchTower",
+    "3AS_Prop_FOB_modular_Wall_watchTower"
 ];
 MEAP_Architect_defaultClasses = _defaultClasses;
 MEAP_Architect_defaultClassList = str _defaultClasses;
-private _defaultBuildCosts = "[[""MEAP_SW_Props_Common_StoneBarrierOne_Sandstone"",3],[""MEAP_SW_Props_Common_StoneBarrierOneTall_Sandstone"",3],[""MEAP_SW_Props_Common_StoneBarrierOne_LimeStone"",3],[""MEAP_SW_Props_Common_StoneBarrierOneTall_LimeStone"",3],[""MEAP_SW_Props_Common_DuracreteBarrierOne_FiringPort"",5],[""MEAP_SW_Props_Common_DuracreteBarrierOne_NoFiringPort"",5],[""MEAP_SW_Props_Common_DuracreteBarrierTwo_NoFiringPort"",5],[""MEAP_SW_Structures_Desert_BP_Floor_ONE"",6],[""MEAP_SW_Structures_Desert_BP_PillarPristine_ONE"",8],[""MEAP_SW_Structures_RepublicFOBBB_WallJoint"",8],[""MEAP_SW_Structures_RepublicFOBBB_WallJoint_ConcreteBase"",10],[""Land_BagFence_Long_F"",2],[""Land_BagFence_Round_F"",2],[""Land_BagFence_Short_F"",2],[""Land_HBarrier_3_F"",10],[""Land_HBarrier_5_F"",15],[""Land_CncBarrier_F"",6],[""Land_CncBarrierMedium_F"",8],[""Land_Cargo_House_V1_F"",20],[""Land_Cargo_Patrol_V1_F"",25],[""Land_Cargo_Tower_V1_F"",30]]";
+private _defaultBuildCosts = "[[""MEAP_SW_Props_Common_StoneBarrierOne_Sandstone"",3],[""MEAP_SW_Props_Common_StoneBarrierOneTall_Sandstone"",3],[""MEAP_SW_Props_Common_StoneBarrierOne_LimeStone"",3],[""MEAP_SW_Props_Common_StoneBarrierOneTall_LimeStone"",3],[""MEAP_SW_Props_Common_DuracreteBarrierOne_FiringPort"",5],[""MEAP_SW_Props_Common_DuracreteBarrierOne_NoFiringPort"",5],[""MEAP_SW_Props_Common_DuracreteBarrierTwo_NoFiringPort"",5],[""MEAP_SW_Structures_Desert_BP_Floor_ONE"",6],[""MEAP_SW_Structures_Desert_BP_PillarPristine_ONE"",8],[""MEAP_SW_Structures_RepublicFOBBB_WallJoint"",8],[""MEAP_SW_Structures_RepublicFOBBB_WallJoint_ConcreteBase"",10],[""Land_BagFence_Long_F"",2],[""Land_BagFence_Round_F"",2],[""Land_BagFence_Short_F"",2],[""Land_HBarrier_3_F"",10],[""Land_HBarrier_5_F"",15],[""Land_CncBarrier_F"",6],[""Land_CncBarrierMedium_F"",8],[""Land_Cargo_House_V1_F"",20],[""Land_Cargo_Patrol_V1_F"",25],[""Land_Cargo_Tower_V1_F"",30],[""3AS_Shield_C_Prop"",20],[""3AS_Shield_3_Prop"",6],[""3AS_Shield_5_Prop"",10],[""FST_Barricade_SecurityBarrier"",15],[""Land_lsb_fob_hBarrierWall_4"",30],[""Land_lsb_fob_hBarrier_3"",20],[""Land_DragonsTeeth_01_4x2_new_redwhite_F"",5],[""Land_lsb_fob_hBarrier_ramp"",5],[""FootBridge_0_ACR"",5],[""land_optre_bootcamp_bridge"",5],[""3AS_Prop_FOB_modular_Wall_Door"",1],[""3AS_Prop_FOB_modular_Bunker"",1],[""3AS_Prop_FOB_modular_Wall_Bunker"",1],[""3AS_Prop_FOB_modular_Wall_Corner_Inversed"",1],[""3AS_Prop_FOB_modular_Wall_Corner"",1],[""3AS_Prop_FOB_modular_Wall_gate"",1],[""3AS_Prop_FOB_modular_Wall_ramp"",1],[""3AS_Prop_FOB_modular_Wall_straight"",1],[""3AS_Prop_FOB_modular_Wall_straight_Long"",1],[""3AS_Prop_FOB_modular_watchTower"",1],[""3AS_Prop_FOB_modular_Wall_watchTower"",1]]";
 
 [
     "MEAP_Architect_enabled",

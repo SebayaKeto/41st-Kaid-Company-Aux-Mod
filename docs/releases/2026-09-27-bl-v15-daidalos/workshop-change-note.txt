@@ -1,0 +1,7 @@
+Black Lantern V15 and Daidalos update
+
+- Updated the Black Lantern airbase models addon (fst_blacklantern_kit2): interior lighting, wall screens, light strips and ceiling panels for Black Lantern V15.
+- Daidalos (MEAP): all 41st ACE Fortify props (3AS shields and FOB modular walls, security barrier, LSB H-barriers, dragon's teeth, bridges) can now be built, at their Fortify costs.
+- Daidalos: object costs now apply. Previously every object cost 5.
+
+All other mod files are unchanged. Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

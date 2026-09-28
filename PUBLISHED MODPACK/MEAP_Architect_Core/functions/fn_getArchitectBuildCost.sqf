@@ -4,8 +4,10 @@ private _defaultCost = missionNamespace getVariable ["MEAP_Architect_defaultBuil
 if (_className isEqualTo "") exitWith {_defaultCost};
 
 private _serialized = missionNamespace getVariable ["MEAP_Architect_buildCosts", "[]"];
-private _configuredCosts = [];
-if (isNil {_configuredCosts = parseSimpleArray _serialized} || {!(_configuredCosts isEqualType [])}) exitWith {_defaultCost};
+// An assignment returns nothing, so isNil {_x = ...} was always true and every object cost the default.
+if !(_serialized isEqualType "") exitWith {_defaultCost};
+private _configuredCosts = parseSimpleArray _serialized;
+if (isNil "_configuredCosts" || {!(_configuredCosts isEqualType [])}) exitWith {_defaultCost};
 
 private _cost = _defaultCost;
 {
