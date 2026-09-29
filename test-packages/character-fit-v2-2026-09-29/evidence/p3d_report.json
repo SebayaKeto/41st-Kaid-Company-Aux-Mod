@@ -1,0 +1,216 @@
+{
+  "status": "written and MLOD readback passed",
+  "model": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\src\\ck_character_fit\\ck_uniform.p3d",
+  "lods": [
+    {
+      "resolution": 1.0,
+      "mesh_vertices": 21455,
+      "mesh_triangles": 42060,
+      "total_vertices": 21482,
+      "total_faces": 42069,
+      "proxies": [
+        "proxy:\\A3\\Characters_F\\Proxies\\weapon.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\pistol.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\binoculars.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\launcher.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\flag.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\backpack.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\glasses.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\headgear.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\hmd.001"
+      ],
+      "bone_selections": 57,
+      "viewpilot_head_omitted": false,
+      "material_sections": 13,
+      "bounds_no_proxies": [
+        [
+          -0.7225515842437744,
+          -0.18000128865242004,
+          -1.0178885459899902
+        ],
+        [
+          0.722575843334198,
+          0.15097370743751526,
+          0.8136404752731323
+        ]
+      ]
+    },
+    {
+      "resolution": 2.0,
+      "mesh_vertices": 10885,
+      "mesh_triangles": 21005,
+      "total_vertices": 10912,
+      "total_faces": 21014,
+      "proxies": [
+        "proxy:\\A3\\Characters_F\\Proxies\\weapon.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\pistol.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\binoculars.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\launcher.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\flag.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\backpack.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\glasses.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\headgear.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\hmd.001"
+      ],
+      "bone_selections": 57,
+      "viewpilot_head_omitted": false,
+      "material_sections": 13,
+      "bounds_no_proxies": [
+        [
+          -0.7225686311721802,
+          -0.18000128865242004,
+          -1.0176934003829956
+        ],
+        [
+          0.7225927114486694,
+          0.15192389488220215,
+          0.8142120242118835
+        ]
+      ]
+    },
+    {
+      "resolution": 3.0,
+      "mesh_vertices": 5554,
+      "mesh_triangles": 10451,
+      "total_vertices": 5578,
+      "total_faces": 10459,
+      "proxies": [
+        "proxy:\\A3\\Characters_F\\Proxies\\weapon.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\pistol.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\binoculars.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\launcher.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\flag.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\backpack.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\headgear.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\hmd.001"
+      ],
+      "bone_selections": 57,
+      "viewpilot_head_omitted": false,
+      "material_sections": 13,
+      "bounds_no_proxies": [
+        [
+          -0.7230207920074463,
+          -0.17995326220989227,
+          -1.0177278518676758
+        ],
+        [
+          0.7230451703071594,
+          0.15301688015460968,
+          0.8138588666915894
+        ]
+      ]
+    },
+    {
+      "resolution": 4.0,
+      "mesh_vertices": 2381,
+      "mesh_triangles": 4227,
+      "total_vertices": 2399,
+      "total_faces": 4233,
+      "proxies": [
+        "proxy:\\A3\\Characters_F\\Proxies\\weapon.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\pistol.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\launcher.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\flag.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\backpack.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\headgear.001"
+      ],
+      "bone_selections": 57,
+      "viewpilot_head_omitted": false,
+      "material_sections": 13,
+      "bounds_no_proxies": [
+        [
+          -0.7222695350646973,
+          -0.17972241342067719,
+          -1.018829584121704
+        ],
+        [
+          0.722292959690094,
+          0.1522642970085144,
+          0.8144437074661255
+        ]
+      ]
+    },
+    {
+      "resolution": 1100.0,
+      "mesh_vertices": 20689,
+      "mesh_triangles": 40560,
+      "total_vertices": 20713,
+      "total_faces": 40568,
+      "proxies": [
+        "proxy:\\A3\\Characters_F\\Proxies\\weapon.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\pistol.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\launcher.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\flag.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\backpack.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\hmd.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\binoculars.001",
+        "proxy:\\A3\\Characters_F\\Proxies\\headgear.001"
+      ],
+      "bone_selections": 56,
+      "viewpilot_head_omitted": true,
+      "material_sections": 12,
+      "bounds_no_proxies": [
+        [
+          -0.7225515842437744,
+          -0.18000128865242004,
+          -1.0178885459899902
+        ],
+        [
+          0.722575843334198,
+          0.15097370743751526,
+          0.6040065884590149
+        ]
+      ]
+    },
+    {
+      "resolution": 10000.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 409,
+      "faces": 779
+    },
+    {
+      "resolution": 10010.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 139,
+      "faces": 264
+    },
+    {
+      "resolution": 10000000000000.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 42,
+      "faces": 54
+    },
+    {
+      "resolution": 1000000000000000.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 44,
+      "faces": 4
+    },
+    {
+      "resolution": 2000000000000000.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 1,
+      "faces": 0
+    },
+    {
+      "resolution": 5000000000000000.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 38,
+      "faces": 0
+    },
+    {
+      "resolution": 7000000000000000.0,
+      "source": "BI sample support LOD unchanged except reconstructed face-selection tags",
+      "vertices": 1000,
+      "faces": 1770
+    }
+  ],
+  "sample_unchanged": true,
+  "face_uv_roundtrip_and_uvset_match": true,
+  "unique_named_selections": true,
+  "source_export": "export/lod0..3.npz",
+  "known_status": "Corrected game-fit candidate; final reduced-mesh and runtime validation are recorded separately.",
+  "head": "Existing mannequin embedded in third person, omitted from ViewPilot; head/equipment proxies removed from replacement visual LODs",
+  "support_LODs": "BI sample collision/fire/memory/hitpoints/shadow retained as provisional scaffolding",
+  "materials": "Flat family colors and basic lit test materials; Blender wool and armor wear are not baked."
+}

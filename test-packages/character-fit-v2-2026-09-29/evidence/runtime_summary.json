@@ -1,0 +1,22 @@
+{
+  "verdict": "PASS_58_ASSERTIONS_WITH_VANILLA_CONTROL_WARNING",
+  "candidate_pbo_sha256": "49e727b4c6fa38e31840a30a9739d175ab4dbaf132cb186fbd4162594b2d092c",
+  "candidate_bytes": 3624231,
+  "assertions_passed": 58,
+  "candidate_unchanged": true,
+  "candidate_specific_engine_errors": [],
+  "raw_verdict": "FAIL",
+  "qualified_warning": "10:01:18 Warning Message: You cannot play/edit this mission; it is dependent on downloadable content that has been deleted.\\na3_characters_f",
+  "vanilla_control_warning": [
+    "2:37:08 Warning Message: You cannot play/edit this mission; it is dependent on downloadable content that has been deleted.\\na3_characters_f"
+  ],
+  "candidate_run": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\runtime\\runs\\20260929-100107\\result.json",
+  "control_run": "D:\\CharacterKit\\codex\\studies\\arma_fit_v1\\runtime\\runs\\20260929-023659\\result.json",
+  "exit_code": 0,
+  "server_pid": 22660,
+  "limits": [
+    "Dedicated server confirms model/config/load, animation states and support Memory-LOD skeletal motion. Resolution-LOD selection queries return zero also for vanilla, so visible mesh deformation and rendering are NOT verified.",
+    "The static test has no external clients, no mod compatibility validation, no performance benchmark."
+  ],
+  "note": "Raw FAIL remains unchanged because its strict log scan flags the known startup warning. The vanilla-only control reproduces the same warning without this addon. This qualified result is a runtime assertion pass, not clean-log or rendered mesh proof."
+}

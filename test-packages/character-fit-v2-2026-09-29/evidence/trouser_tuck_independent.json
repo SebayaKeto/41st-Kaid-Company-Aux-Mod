@@ -1,0 +1,4509 @@
+{
+  "source": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\lower\\lower_jointfit_trial.blend",
+  "source_sha256": "7f0d16c5550c5e1bfc27d11039fa399184adb09b09272a29967afd9b4637f00f",
+  "candidate": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\lower\\lower_trousertuck_trial.blend",
+  "candidate_sha256": "4fa031b67fb3837fe29422503b4419a20e11468865f4db36ac8c495f53108acd",
+  "mesh_object_count": 74,
+  "structural_properties_unchanged": true,
+  "changed_objects": [
+    {
+      "name": "cloth_black_leg_underlayer",
+      "changed_vertices": 120,
+      "max_displacement_mm": 5.000005243101277
+    }
+  ],
+  "unchanged_evaluated_triangulation_and_weights": true,
+  "body_reference_closed_edges": true,
+  "body_reference_non_two_sided_edges": 0,
+  "body_reference_method": "Hidden Body C source, original top4 normalized weights, exact official segment mapping, then raw corrected animation matrices. Body source untouched.",
+  "changed_region_faces": 297,
+  "changed_region_sample_count": 417,
+  "poses": [
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000005476176739,
+        "minimum_changed_vertex_clearance_mm": 1.568725798279047,
+        "worst_new_sample": null
+      },
+      "pose": "rest",
+      "max_trouser_displacement_mm": 5.0000046948364885,
+      "max_face_normal_change_deg": 9.050174363301752,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660464651669,
+        1.0342667107538082
+      ],
+      "max_edge_length_change_mm": 2.0161779248467973,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.5780220552015931,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.5780221545137465,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.8277404273987969,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.8277356973849237,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.9997856840491295,
+        "minimum_changed_vertex_clearance_mm": 0.5567129701375961,
+        "worst_new_sample": null
+      },
+      "pose": "standing_rifle",
+      "max_trouser_displacement_mm": 4.999999461505277,
+      "max_face_normal_change_deg": 8.92647407322716,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660452953575,
+        1.0212018095342816
+      ],
+      "max_edge_length_change_mm": 1.9168960945481206,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.311203767365757,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.2473597123465876,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999333061277866,
+        "minimum_changed_vertex_clearance_mm": -14.110727235674858,
+        "worst_new_sample": null
+      },
+      "pose": "kneeling_rifle",
+      "max_trouser_displacement_mm": 4.999996978118139,
+      "max_face_normal_change_deg": 8.719235075966706,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660478104581,
+        1.021201742551355
+      ],
+      "max_edge_length_change_mm": 1.8373207365335458,
+      "baseline_body_crossed_faces": 42,
+      "candidate_body_crossed_faces": 42,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -15.685363854304901,
+        "negative_normal_samples": 29,
+        "max_confirmed_inside_mm": 15.685368329286575,
+        "inside_sample_count": 69
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -15.596696816774084,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 15.596702694892883,
+        "inside_sample_count": 69
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999085329473019,
+        "minimum_changed_vertex_clearance_mm": -0.07072216976666823,
+        "worst_new_sample": null
+      },
+      "pose": "prone_rifle",
+      "max_trouser_displacement_mm": 4.999998031374471,
+      "max_face_normal_change_deg": 9.043948382475792,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660436969109,
+        1.0303482396953476
+      ],
+      "max_edge_length_change_mm": 1.8373209690957655,
+      "baseline_body_crossed_faces": 13,
+      "candidate_body_crossed_faces": 13,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.8303054434100527,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 1.830298569984734,
+        "inside_sample_count": 4
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.8234699062414508,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 1.8234805902466178,
+        "inside_sample_count": 4
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.9669354185461998,
+        "maximum_matched_signed_depth_increase_mm": 4.998721182346344,
+        "minimum_changed_vertex_clearance_mm": -15.588286332786083,
+        "worst_new_sample": 233
+      },
+      "pose": "kneeling_inventory",
+      "max_trouser_displacement_mm": 4.99999902322428,
+      "max_face_normal_change_deg": 8.77364240390487,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660465530995,
+        1.0212017389453745
+      ],
+      "max_edge_length_change_mm": 1.8373213574589196,
+      "baseline_body_crossed_faces": 71,
+      "candidate_body_crossed_faces": 71,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -15.373015263840456,
+        "negative_normal_samples": 44,
+        "max_confirmed_inside_mm": 16.957074403762817,
+        "inside_sample_count": 109
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -15.2178036825843,
+        "negative_normal_samples": 40,
+        "max_confirmed_inside_mm": 16.953328624367714,
+        "inside_sample_count": 110
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000043660402298,
+        "minimum_changed_vertex_clearance_mm": -0.13287832553032786,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_0",
+      "max_trouser_displacement_mm": 5.000030767073002,
+      "max_face_normal_change_deg": 9.325192877989272,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660264871903,
+        1.0212013829879822
+      ],
+      "max_edge_length_change_mm": 1.9062650551399871,
+      "baseline_body_crossed_faces": 14,
+      "candidate_body_crossed_faces": 14,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.94337924612309,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 1.9433860434219241,
+        "inside_sample_count": 6
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.9364395138153876,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 1.9364258041605353,
+        "inside_sample_count": 6
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.28003266197629273,
+        "maximum_matched_signed_depth_increase_mm": 5.000018514692783,
+        "minimum_changed_vertex_clearance_mm": -0.28003266197629273,
+        "worst_new_sample": 57
+      },
+      "pose": "walking_rifle_1",
+      "max_trouser_displacement_mm": 5.000021635178598,
+      "max_face_normal_change_deg": 10.515287882585461,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660093612665,
+        1.0212012588289285
+      ],
+      "max_edge_length_change_mm": 1.9071973217213365,
+      "baseline_body_crossed_faces": 9,
+      "candidate_body_crossed_faces": 9,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.038874873843946,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 3.0388690065592527,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.270068134498762,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 3.270093584433198,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000017583370209,
+        "minimum_changed_vertex_clearance_mm": -2.8069668915122747,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_2",
+      "max_trouser_displacement_mm": 5.000025120546018,
+      "max_face_normal_change_deg": 11.948142339266877,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659949540859,
+        1.021201083017752
+      ],
+      "max_edge_length_change_mm": 1.9091747436976656,
+      "baseline_body_crossed_faces": 6,
+      "candidate_body_crossed_faces": 6,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.91573479134798,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 5.9157079085707664,
+        "inside_sample_count": 5
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -6.146742017192013,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 6.146769970655441,
+        "inside_sample_count": 5
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.11654978879960254,
+        "maximum_matched_signed_depth_increase_mm": 5.00001385807991,
+        "minimum_changed_vertex_clearance_mm": -4.747321363538504,
+        "worst_new_sample": 266
+      },
+      "pose": "walking_rifle_3",
+      "max_trouser_displacement_mm": 5.000020434261247,
+      "max_face_normal_change_deg": 13.014240053918643,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660319900305,
+        1.0212014068525652
+      ],
+      "max_edge_length_change_mm": 1.9065075182811073,
+      "baseline_body_crossed_faces": 23,
+      "candidate_body_crossed_faces": 7,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.192602541936257,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 8.192619308829308,
+        "inside_sample_count": 10
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.43831044606425,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 8.43830406665802,
+        "inside_sample_count": 6
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000004544854164,
+        "minimum_changed_vertex_clearance_mm": -2.709022955968976,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_4",
+      "max_trouser_displacement_mm": 5.000011061539843,
+      "max_face_normal_change_deg": 12.006184057430263,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660105340855,
+        1.0212013584291308
+      ],
+      "max_edge_length_change_mm": 1.880198708892486,
+      "baseline_body_crossed_faces": 6,
+      "candidate_body_crossed_faces": 6,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -6.328341380822403,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 6.328328978270292,
+        "inside_sample_count": 5
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -6.557365841808151,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 6.557383108884096,
+        "inside_sample_count": 5
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000016652047634,
+        "minimum_changed_vertex_clearance_mm": 0.5418741493485868,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_5",
+      "max_trouser_displacement_mm": 5.00001382154295,
+      "max_face_normal_change_deg": 10.290618435174366,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866015420902,
+        1.021201351482488
+      ],
+      "max_edge_length_change_mm": 1.866920482088523,
+      "baseline_body_crossed_faces": 3,
+      "candidate_body_crossed_faces": 3,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.7152370814177234,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.7152281254529953,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.9471306785122353,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.9471577145159245,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999994300305843,
+        "minimum_changed_vertex_clearance_mm": 1.1051386827602983,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_6",
+      "max_trouser_displacement_mm": 5.000008359623115,
+      "max_face_normal_change_deg": 8.929051151463067,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660508073454,
+        1.0212019070768041
+      ],
+      "max_edge_length_change_mm": 1.8723773280519551,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.9521928423439566,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.9521936299279332,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.180665556199921,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 1.180659281089902,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.99996542930603,
+        "minimum_changed_vertex_clearance_mm": 0.9320778190158308,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_7",
+      "max_trouser_displacement_mm": 4.999970830833383,
+      "max_face_normal_change_deg": 8.922927228132005,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660790564376,
+        1.0212022368902882
+      ],
+      "max_edge_length_change_mm": 1.9006126311799445,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.4080643034975336,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.3845871800945512,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999988712370396,
+        "minimum_changed_vertex_clearance_mm": 0.9879906428977847,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_8",
+      "max_trouser_displacement_mm": 5.000003718282181,
+      "max_face_normal_change_deg": 8.924607024352982,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660340280881,
+        1.0212015615446366
+      ],
+      "max_edge_length_change_mm": 1.9359636735764991,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.3709915524991777,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.34841484207492773,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000026896595955,
+        "minimum_changed_vertex_clearance_mm": 1.2585485819727182,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_9",
+      "max_trouser_displacement_mm": 5.00001952072671,
+      "max_face_normal_change_deg": 8.933331215474794,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660101154055,
+        1.0212010395191462
+      ],
+      "max_edge_length_change_mm": 1.9580581439385403,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.7085421647773681,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.6827852807778951,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000011064112186,
+        "minimum_changed_vertex_clearance_mm": 0.9738409426063299,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_10",
+      "max_trouser_displacement_mm": 4.9999917035379475,
+      "max_face_normal_change_deg": 8.922584095523897,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660489473875,
+        1.021201868580581
+      ],
+      "max_edge_length_change_mm": 1.9514571534170329,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.0008264319226375592,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.000827417068194336,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.01831615864111422,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.018308404833078384,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000009201467037,
+        "minimum_changed_vertex_clearance_mm": 0.07535584882134572,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_11",
+      "max_trouser_displacement_mm": 5.0000006513715824,
+      "max_face_normal_change_deg": 8.87745677250341,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660459843483,
+        1.0212017499666393
+      ],
+      "max_edge_length_change_mm": 1.9339056732379858,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 8,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.1529436815925915,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 1.1529683833941817,
+        "inside_sample_count": 4
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -1.1473610508881904,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 1.1473733466118574,
+        "inside_sample_count": 4
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000095814466476,
+        "minimum_changed_vertex_clearance_mm": -0.3330188919790089,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_12",
+      "max_trouser_displacement_mm": 5.000099167691007,
+      "max_face_normal_change_deg": 8.848490786397795,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659380991626,
+        1.0212001084588764
+      ],
+      "max_edge_length_change_mm": 1.917231844627512,
+      "baseline_body_crossed_faces": 21,
+      "candidate_body_crossed_faces": 21,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.873200814105138,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 2.8732079081237316,
+        "inside_sample_count": 10
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.78921975785745,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 2.7892033103853464,
+        "inside_sample_count": 9
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000025033950806,
+        "minimum_changed_vertex_clearance_mm": -0.34961558412760496,
+        "worst_new_sample": null
+      },
+      "pose": "walking_rifle_13",
+      "max_trouser_displacement_mm": 5.000004342305771,
+      "max_face_normal_change_deg": 9.024076226957602,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660310961937,
+        1.0212015837776887
+      ],
+      "max_edge_length_change_mm": 1.9098224422242558,
+      "baseline_body_crossed_faces": 19,
+      "candidate_body_crossed_faces": 19,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.7833280436194396,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 2.783336443826556,
+        "inside_sample_count": 9
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.7087291181370663,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 2.708728890866041,
+        "inside_sample_count": 9
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999984055757523,
+        "minimum_changed_vertex_clearance_mm": -3.727760398760438,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_0",
+      "max_trouser_displacement_mm": 4.999997953459188,
+      "max_face_normal_change_deg": 10.397052303428195,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660301532493,
+        1.021201452633366
+      ],
+      "max_edge_length_change_mm": 1.910064522462708,
+      "baseline_body_crossed_faces": 28,
+      "candidate_body_crossed_faces": 28,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.120031132139617,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 4.1200448758900166,
+        "inside_sample_count": 26
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.351345753566289,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 4.351367242634296,
+        "inside_sample_count": 26
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.99996542930603,
+        "minimum_changed_vertex_clearance_mm": -3.7363588344305754,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_1",
+      "max_trouser_displacement_mm": 4.999993229476977,
+      "max_face_normal_change_deg": 10.371961447603056,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660305799044,
+        1.02120148416245
+      ],
+      "max_edge_length_change_mm": 1.9126260614586235,
+      "baseline_body_crossed_faces": 25,
+      "candidate_body_crossed_faces": 25,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.8197777877802293,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 3.918332513421774,
+        "inside_sample_count": 21
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.048906486105212,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 4.048892762511969,
+        "inside_sample_count": 21
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999994300305843,
+        "minimum_changed_vertex_clearance_mm": -0.4475080640986562,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_2",
+      "max_trouser_displacement_mm": 4.999999838270978,
+      "max_face_normal_change_deg": 10.078167625391464,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660315019608,
+        1.0212015695079177
+      ],
+      "max_edge_length_change_mm": 1.9072773468976623,
+      "baseline_body_crossed_faces": 18,
+      "candidate_body_crossed_faces": 19,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.5567236714286192,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 2.556708874180913,
+        "inside_sample_count": 8
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.804039527437445,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 2.8040134347975254,
+        "inside_sample_count": 8
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.14482293045148253,
+        "maximum_matched_signed_depth_increase_mm": 5.000006407499313,
+        "minimum_changed_vertex_clearance_mm": -0.14482293045148253,
+        "worst_new_sample": 57
+      },
+      "pose": "running_rifle_3",
+      "max_trouser_displacement_mm": 5.000006141015848,
+      "max_face_normal_change_deg": 11.811976352816004,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660341907202,
+        1.02195150397939
+      ],
+      "max_edge_length_change_mm": 1.8909460815201216,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 10,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.071883381891022,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.071861505508423,
+        "inside_sample_count": 2
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.3094863965568635,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 4.309506621211767,
+        "inside_sample_count": 3
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000009201467037,
+        "minimum_changed_vertex_clearance_mm": -4.617711063474417,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_4",
+      "max_trouser_displacement_mm": 4.999990747206875,
+      "max_face_normal_change_deg": 15.188224964285359,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.89486604843304,
+        1.0335439814842462
+      ],
+      "max_edge_length_change_mm": 1.8813875264364759,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.224876850542899,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 5.224878899753094,
+        "inside_sample_count": 3
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.466134945748634,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 5.466158967465162,
+        "inside_sample_count": 3
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999959841370583,
+        "minimum_changed_vertex_clearance_mm": -8.26362706720829,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_5",
+      "max_trouser_displacement_mm": 4.9999889937476665,
+      "max_face_normal_change_deg": 17.547234729112606,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660595095591,
+        1.0298598320184045
+      ],
+      "max_edge_length_change_mm": 1.8825580422496406,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 8,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.985401875438258,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 7.985392585396767,
+        "inside_sample_count": 8
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.263601343286807,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 8.26362706720829,
+        "inside_sample_count": 8
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999982193112373,
+        "minimum_changed_vertex_clearance_mm": -8.086412213742733,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_6",
+      "max_trouser_displacement_mm": 5.000009245848204,
+      "max_face_normal_change_deg": 16.970814355975218,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660340080757,
+        1.022667780735031
+      ],
+      "max_edge_length_change_mm": 1.8804756576590933,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 8,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.971695501362218,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 7.9717133194208145,
+        "inside_sample_count": 7
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.199198475280685,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 8.199188858270645,
+        "inside_sample_count": 7
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.27281290385872126,
+        "maximum_matched_signed_depth_increase_mm": 4.999983124434948,
+        "minimum_changed_vertex_clearance_mm": -4.538367036730051,
+        "worst_new_sample": 264
+      },
+      "pose": "running_rifle_7",
+      "max_trouser_displacement_mm": 4.999994515603925,
+      "max_face_normal_change_deg": 14.235124559097574,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866053311812,
+        1.0238007362248827
+      ],
+      "max_edge_length_change_mm": 1.8715157948366035,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.029232564129944,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 7.029241882264614,
+        "inside_sample_count": 3
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.279342945595117,
+        "negative_normal_samples": 4,
+        "max_confirmed_inside_mm": 7.279325742274523,
+        "inside_sample_count": 4
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999984987080097,
+        "minimum_changed_vertex_clearance_mm": 1.568721723742783,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_8",
+      "max_trouser_displacement_mm": 4.999986681640254,
+      "max_face_normal_change_deg": 10.740667257815003,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660647303172,
+        1.021524497959626
+      ],
+      "max_edge_length_change_mm": 1.8691549212717513,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.3119107084918755,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.311887452378869,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.5511583037982297,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.551163313910365,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999995231628418,
+        "minimum_changed_vertex_clearance_mm": 1.5687324339523911,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_9",
+      "max_trouser_displacement_mm": 5.0000117500677925,
+      "max_face_normal_change_deg": 8.974632885905448,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660280516962,
+        1.021201565811219
+      ],
+      "max_edge_length_change_mm": 1.882944189703459,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.5663192410918004,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.31939060918941536,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999966360628605,
+        "minimum_changed_vertex_clearance_mm": 1.4194755349308252,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_10",
+      "max_trouser_displacement_mm": 5.000000440362208,
+      "max_face_normal_change_deg": 8.94875906775254,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660438838358,
+        1.0212016486231301
+      ],
+      "max_edge_length_change_mm": 1.9115218877752,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.6620865981936715,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.43303716746891835,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999968223273754,
+        "minimum_changed_vertex_clearance_mm": 1.5687240520492196,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_11",
+      "max_trouser_displacement_mm": 4.99998834183907,
+      "max_face_normal_change_deg": 8.993748145923734,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660609281464,
+        1.0212020709291676
+      ],
+      "max_edge_length_change_mm": 1.9075843904690775,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.5103656825126868,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.5103609873913229,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.7445739232438057,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.7445909432135522,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999976605176926,
+        "minimum_changed_vertex_clearance_mm": 0.7050019921734929,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_12",
+      "max_trouser_displacement_mm": 4.999991356790889,
+      "max_face_normal_change_deg": 9.409443580108412,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660535007974,
+        1.0212019309953582
+      ],
+      "max_edge_length_change_mm": 1.9047222038592118,
+      "baseline_body_crossed_faces": 3,
+      "candidate_body_crossed_faces": 3,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.8489848312963915,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.849005162715912,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.0813438700134674,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 3.081352449953556,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000012926757336,
+        "minimum_changed_vertex_clearance_mm": -0.6242832751013339,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_13",
+      "max_trouser_displacement_mm": 5.000001110349283,
+      "max_face_normal_change_deg": 9.632009614894496,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660448472748,
+        1.021201715798328
+      ],
+      "max_edge_length_change_mm": 1.9074025255302676,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.262466677297686,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.262472968548536,
+        "inside_sample_count": 2
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.49084318008377,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.490839783102274,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.33310751314274967,
+        "maximum_matched_signed_depth_increase_mm": 4.999994300305843,
+        "minimum_changed_vertex_clearance_mm": -0.33310751314274967,
+        "worst_new_sample": 103
+      },
+      "pose": "running_rifle_14",
+      "max_trouser_displacement_mm": 5.000001599526597,
+      "max_face_normal_change_deg": 9.546222160693803,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660456083883,
+        1.0212016159638828
+      ],
+      "max_edge_length_change_mm": 1.9206080468339923,
+      "baseline_body_crossed_faces": 4,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.042837009555852,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 4.042823798954487,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.270761978711522,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.270770587027073,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.2277224266435951,
+        "maximum_matched_signed_depth_increase_mm": 4.999987781047821,
+        "minimum_changed_vertex_clearance_mm": -0.2277224266435951,
+        "worst_new_sample": 103
+      },
+      "pose": "running_rifle_15",
+      "max_trouser_displacement_mm": 4.999994381762188,
+      "max_face_normal_change_deg": 9.602746465348059,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660433885367,
+        1.0212019155783514
+      ],
+      "max_edge_length_change_mm": 1.9298737138736533,
+      "baseline_body_crossed_faces": 3,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.837550614594467,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 3.837554482743144,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.066760742221784,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.0667857974767685,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999990575015545,
+        "minimum_changed_vertex_clearance_mm": -1.144745503552258,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_16",
+      "max_trouser_displacement_mm": 4.99999310560951,
+      "max_face_normal_change_deg": 9.825364587149965,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660469269677,
+        1.0212020033022977
+      ],
+      "max_edge_length_change_mm": 1.9202770952970876,
+      "baseline_body_crossed_faces": 9,
+      "candidate_body_crossed_faces": 9,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.597913660278606,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.597906023263931,
+        "inside_sample_count": 2
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.826097998660153,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.826076328754425,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.18561970500741154,
+        "maximum_matched_signed_depth_increase_mm": 5.000019446015358,
+        "minimum_changed_vertex_clearance_mm": -2.0438816864043474,
+        "worst_new_sample": 57
+      },
+      "pose": "running_rifle_17",
+      "max_trouser_displacement_mm": 4.999993357149816,
+      "max_face_normal_change_deg": 10.048194762678438,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660502909818,
+        1.0212019967595205
+      ],
+      "max_edge_length_change_mm": 1.9063063405919816,
+      "baseline_body_crossed_faces": 14,
+      "candidate_body_crossed_faces": 17,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.182158005051363,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 5.18217496573925,
+        "inside_sample_count": 7
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.410223754447773,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 5.41022140532732,
+        "inside_sample_count": 7
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.26159652043133974,
+        "maximum_matched_signed_depth_increase_mm": 5.00000175088644,
+        "minimum_changed_vertex_clearance_mm": -1.8981964094564319,
+        "worst_new_sample": 57
+      },
+      "pose": "running_rifle_18",
+      "max_trouser_displacement_mm": 4.999992567129361,
+      "max_face_normal_change_deg": 10.1826760087404,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660535328737,
+        1.0212019746317396
+      ],
+      "max_edge_length_change_mm": 1.904707888097261,
+      "baseline_body_crossed_faces": 24,
+      "candidate_body_crossed_faces": 25,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.726925217854275,
+        "negative_normal_samples": 11,
+        "max_confirmed_inside_mm": 4.726937972009182,
+        "inside_sample_count": 14
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.958711603248286,
+        "negative_normal_samples": 12,
+        "max_confirmed_inside_mm": 4.9587031826376915,
+        "inside_sample_count": 15
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999986849725246,
+        "minimum_changed_vertex_clearance_mm": -3.7277918308973312,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_19",
+      "max_trouser_displacement_mm": 4.999997953459194,
+      "max_face_normal_change_deg": 10.397052303428195,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660301532483,
+        1.0212014526333648
+      ],
+      "max_edge_length_change_mm": 1.910064315495799,
+      "baseline_body_crossed_faces": 28,
+      "candidate_body_crossed_faces": 28,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.120031620176282,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 4.120045341551304,
+        "inside_sample_count": 26
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.351344941827148,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 4.351366311311722,
+        "inside_sample_count": 26
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999966360628605,
+        "minimum_changed_vertex_clearance_mm": -3.7362936418503523,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_20",
+      "max_trouser_displacement_mm": 4.999993229477013,
+      "max_face_normal_change_deg": 10.371580945938913,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866030579908,
+        1.0212014841624582
+      ],
+      "max_edge_length_change_mm": 1.912623796431312,
+      "baseline_body_crossed_faces": 25,
+      "candidate_body_crossed_faces": 25,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.818828071833439,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 3.918332513421774,
+        "inside_sample_count": 21
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.047962508143566,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 4.047990310937166,
+        "inside_sample_count": 21
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999978467822075,
+        "minimum_changed_vertex_clearance_mm": -0.4474700253922492,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_21",
+      "max_trouser_displacement_mm": 4.999999838270978,
+      "max_face_normal_change_deg": 10.078167625391464,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660315019608,
+        1.0212015695079186
+      ],
+      "max_edge_length_change_mm": 1.907276797502494,
+      "baseline_body_crossed_faces": 18,
+      "candidate_body_crossed_faces": 19,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.5567236714286192,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 2.556708874180913,
+        "inside_sample_count": 8
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.804039527437445,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 2.8040134347975254,
+        "inside_sample_count": 8
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.14482297410722822,
+        "maximum_matched_signed_depth_increase_mm": 5.000020377337933,
+        "minimum_changed_vertex_clearance_mm": -0.14482297410722822,
+        "worst_new_sample": 57
+      },
+      "pose": "running_rifle_22",
+      "max_trouser_displacement_mm": 5.000006141015842,
+      "max_face_normal_change_deg": 11.811976352816004,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660341907202,
+        1.02195150397939
+      ],
+      "max_edge_length_change_mm": 1.8909450604969527,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 10,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.071883381891022,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.071861505508423,
+        "inside_sample_count": 2
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.3094863965568635,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 4.309506621211767,
+        "inside_sample_count": 3
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.0000036135315895,
+        "minimum_changed_vertex_clearance_mm": -4.61976183578372,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_23",
+      "max_trouser_displacement_mm": 4.9999907472068505,
+      "max_face_normal_change_deg": 15.190504465145498,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660484330327,
+        1.0335754584220536
+      ],
+      "max_edge_length_change_mm": 1.8813907610250244,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.223801438672182,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 5.223791114985943,
+        "inside_sample_count": 3
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.4650546872952965,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 5.46507490798831,
+        "inside_sample_count": 3
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999957047402859,
+        "minimum_changed_vertex_clearance_mm": -8.261661976575851,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_24",
+      "max_trouser_displacement_mm": 4.9999889937476665,
+      "max_face_normal_change_deg": 17.543771388711235,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660595095591,
+        1.029825849761795
+      ],
+      "max_edge_length_change_mm": 1.88255355867762,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 8,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.983441925409498,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 7.983429357409477,
+        "inside_sample_count": 8
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.261644043263026,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 8.261661976575851,
+        "inside_sample_count": 8
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999981261789799,
+        "minimum_changed_vertex_clearance_mm": -8.086412213742733,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_25",
+      "max_trouser_displacement_mm": 5.000009245848204,
+      "max_face_normal_change_deg": 16.970814355975218,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660340080757,
+        1.022667780735031
+      ],
+      "max_edge_length_change_mm": 1.8804867987047142,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 8,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.971695501362218,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 7.9717133194208145,
+        "inside_sample_count": 7
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.199198475280685,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 8.199188858270645,
+        "inside_sample_count": 7
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.27281290385872126,
+        "maximum_matched_signed_depth_increase_mm": 4.999971948564053,
+        "minimum_changed_vertex_clearance_mm": -4.538366571068764,
+        "worst_new_sample": 264
+      },
+      "pose": "running_rifle_26",
+      "max_trouser_displacement_mm": 4.999994515603925,
+      "max_face_normal_change_deg": 14.235124559097574,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866053311812,
+        1.0238007362248827
+      ],
+      "max_edge_length_change_mm": 1.8715167992090775,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.029232564129944,
+        "negative_normal_samples": 3,
+        "max_confirmed_inside_mm": 7.029241882264614,
+        "inside_sample_count": 3
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.279342945595117,
+        "negative_normal_samples": 4,
+        "max_confirmed_inside_mm": 7.279325742274523,
+        "inside_sample_count": 4
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999982193112373,
+        "minimum_changed_vertex_clearance_mm": 1.568721723742783,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_27",
+      "max_trouser_displacement_mm": 4.999986681640267,
+      "max_face_normal_change_deg": 10.740667257815003,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660647303138,
+        1.021524497959626
+      ],
+      "max_edge_length_change_mm": 1.8691549212717513,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.3119107084918755,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.311887452378869,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.5511583037982297,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.551163313910365,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999990575015545,
+        "minimum_changed_vertex_clearance_mm": 1.5687174163758755,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_28",
+      "max_trouser_displacement_mm": 5.0000117500677925,
+      "max_face_normal_change_deg": 8.974485810045737,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660280516962,
+        1.0212015658112232
+      ],
+      "max_edge_length_change_mm": 1.8829452945211198,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.5663192410918004,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.31939060918941536,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999966360628605,
+        "minimum_changed_vertex_clearance_mm": 1.4194755349308252,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_29",
+      "max_trouser_displacement_mm": 5.000000440362208,
+      "max_face_normal_change_deg": 8.94875906775254,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660438838358,
+        1.0212016486231301
+      ],
+      "max_edge_length_change_mm": 1.9115218877752,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.6620878261102349,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": 0.4330372765206508,
+        "negative_normal_samples": 0,
+        "max_confirmed_inside_mm": 0.0,
+        "inside_sample_count": 0
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999963566660881,
+        "minimum_changed_vertex_clearance_mm": 1.5687248669564724,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_30",
+      "max_trouser_displacement_mm": 4.99998834183907,
+      "max_face_normal_change_deg": 8.993748145923734,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660609281459,
+        1.0212020709291676
+      ],
+      "max_edge_length_change_mm": 1.9075856099828938,
+      "baseline_body_crossed_faces": 2,
+      "candidate_body_crossed_faces": 2,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.5103656825126868,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.5103609873913229,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -0.7445739232438057,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 0.7445909432135522,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999973811209202,
+        "minimum_changed_vertex_clearance_mm": 0.7050019921734929,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_31",
+      "max_trouser_displacement_mm": 4.999991356790889,
+      "max_face_normal_change_deg": 9.409443580108412,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660535007974,
+        1.0212019309953582
+      ],
+      "max_edge_length_change_mm": 1.9047256607988907,
+      "baseline_body_crossed_faces": 3,
+      "candidate_body_crossed_faces": 3,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -2.848983435651411,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 2.8490039985626936,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.081345114815392,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 3.081353846937418,
+        "inside_sample_count": 1
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000008270144463,
+        "minimum_changed_vertex_clearance_mm": -0.6243468378670514,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_32",
+      "max_trouser_displacement_mm": 5.000001110226486,
+      "max_face_normal_change_deg": 9.632009614894496,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660448472732,
+        1.0212017157983384
+      ],
+      "max_edge_length_change_mm": 1.9073457300846504,
+      "baseline_body_crossed_faces": 5,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.262533659586856,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.262540023773909,
+        "inside_sample_count": 2
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.490856174709335,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.490852821618319,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.33310751314274967,
+        "maximum_matched_signed_depth_increase_mm": 4.999978467822075,
+        "minimum_changed_vertex_clearance_mm": -0.33310751314274967,
+        "worst_new_sample": 103
+      },
+      "pose": "running_rifle_33",
+      "max_trouser_displacement_mm": 5.000001599526597,
+      "max_face_normal_change_deg": 9.546222160693766,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660456083884,
+        1.0212016159638828
+      ],
+      "max_edge_length_change_mm": 1.9206028070917966,
+      "baseline_body_crossed_faces": 4,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.04283700955585,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 4.042823798954487,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.270761978711522,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.270770587027073,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.2277224266435951,
+        "maximum_matched_signed_depth_increase_mm": 4.99998964369297,
+        "minimum_changed_vertex_clearance_mm": -0.2277224266435951,
+        "worst_new_sample": 103
+      },
+      "pose": "running_rifle_34",
+      "max_trouser_displacement_mm": 4.999994381865487,
+      "max_face_normal_change_deg": 9.602746465348059,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660433901257,
+        1.021201915596165
+      ],
+      "max_edge_length_change_mm": 1.9298733562513744,
+      "baseline_body_crossed_faces": 3,
+      "candidate_body_crossed_faces": 5,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -3.837550614594467,
+        "negative_normal_samples": 1,
+        "max_confirmed_inside_mm": 3.837554482743144,
+        "inside_sample_count": 1
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.066760742221784,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.0667857974767685,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999999888241291,
+        "minimum_changed_vertex_clearance_mm": -1.1444846168160439,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_35",
+      "max_trouser_displacement_mm": 4.999993105609518,
+      "max_face_normal_change_deg": 9.825336765477683,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660469269654,
+        1.0212020033022875
+      ],
+      "max_edge_length_change_mm": 1.9202755076203268,
+      "baseline_body_crossed_faces": 9,
+      "candidate_body_crossed_faces": 9,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.5976900086601145,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.597704857587814,
+        "inside_sample_count": 2
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.825875887648335,
+        "negative_normal_samples": 2,
+        "max_confirmed_inside_mm": 4.825877025723457,
+        "inside_sample_count": 2
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.1856117305578664,
+        "maximum_matched_signed_depth_increase_mm": 4.999999888241291,
+        "minimum_changed_vertex_clearance_mm": -2.0438344217836857,
+        "worst_new_sample": 57
+      },
+      "pose": "running_rifle_36",
+      "max_trouser_displacement_mm": 4.9999921324509415,
+      "max_face_normal_change_deg": 10.048197261184185,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660514318274,
+        1.0212020592259268
+      ],
+      "max_edge_length_change_mm": 1.906307199964742,
+      "baseline_body_crossed_faces": 14,
+      "candidate_body_crossed_faces": 17,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.182101646463081,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 5.182124208658934,
+        "inside_sample_count": 7
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -5.410221322659378,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 5.410225130617619,
+        "inside_sample_count": 7
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.2606797206681222,
+        "maximum_matched_signed_depth_increase_mm": 5.000007338821888,
+        "minimum_changed_vertex_clearance_mm": -1.9010539399459958,
+        "worst_new_sample": 57
+      },
+      "pose": "running_rifle_37",
+      "max_trouser_displacement_mm": 4.999992567129361,
+      "max_face_normal_change_deg": 10.182524824819106,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660535328737,
+        1.0212019746317391
+      ],
+      "max_edge_length_change_mm": 1.9046944393272396,
+      "baseline_body_crossed_faces": 24,
+      "candidate_body_crossed_faces": 25,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.728501292585411,
+        "negative_normal_samples": 11,
+        "max_confirmed_inside_mm": 4.7284988686442375,
+        "inside_sample_count": 14
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.960230032195454,
+        "negative_normal_samples": 12,
+        "max_confirmed_inside_mm": 4.960211925208569,
+        "inside_sample_count": 15
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.9999793991446495,
+        "minimum_changed_vertex_clearance_mm": -3.7277918308973312,
+        "worst_new_sample": null
+      },
+      "pose": "running_rifle_38",
+      "max_trouser_displacement_mm": 4.999997953459158,
+      "max_face_normal_change_deg": 10.397280784450446,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660301532463,
+        1.0212014526333706
+      ],
+      "max_edge_length_change_mm": 1.9100350434505393,
+      "baseline_body_crossed_faces": 28,
+      "candidate_body_crossed_faces": 28,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.120456766842589,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 4.1204458102583885,
+        "inside_sample_count": 26
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -4.35182673419783,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 4.351823590695858,
+        "inside_sample_count": 26
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000009201467037,
+        "minimum_changed_vertex_clearance_mm": -11.743112467229366,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_0",
+      "max_trouser_displacement_mm": 5.000007274813997,
+      "max_face_normal_change_deg": 9.132406671454069,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660087561137,
+        1.028020954504487
+      ],
+      "max_edge_length_change_mm": 1.8373292874179077,
+      "baseline_body_crossed_faces": 37,
+      "candidate_body_crossed_faces": 37,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.358322514957207,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.358310468494892,
+        "inside_sample_count": 45
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.74311314165548,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.743112467229366,
+        "inside_sample_count": 45
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000069737434387,
+        "minimum_changed_vertex_clearance_mm": -11.1229307949543,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_1",
+      "max_trouser_displacement_mm": 5.000024617743222,
+      "max_face_normal_change_deg": 9.258382033417284,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.89486607955541,
+        1.0275556914207673
+      ],
+      "max_edge_length_change_mm": 1.8373466479844267,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 35,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.84376814366309,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 11.130765080451965,
+        "inside_sample_count": 39
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.122944755991673,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 11.266625486314297,
+        "inside_sample_count": 39
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999992437660694,
+        "minimum_changed_vertex_clearance_mm": -10.869382880628109,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_2",
+      "max_trouser_displacement_mm": 4.999998423686675,
+      "max_face_normal_change_deg": 9.39070297612222,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660210381697,
+        1.0269961683539865
+      ],
+      "max_edge_length_change_mm": 1.837312709985526,
+      "baseline_body_crossed_faces": 38,
+      "candidate_body_crossed_faces": 38,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.64760465816817,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 11.014848947525024,
+        "inside_sample_count": 36
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.869406681768309,
+        "negative_normal_samples": 29,
+        "max_confirmed_inside_mm": 11.15324068814516,
+        "inside_sample_count": 36
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999982193112373,
+        "minimum_changed_vertex_clearance_mm": -10.692141950130463,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_3",
+      "max_trouser_displacement_mm": 5.000002820105007,
+      "max_face_normal_change_deg": 9.527757486972332,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660064431264,
+        1.026340549016243
+      ],
+      "max_edge_length_change_mm": 1.837312904644596,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.465617220757531,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 10.899383574724197,
+        "inside_sample_count": 26
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.69215957642382,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 11.040511541068554,
+        "inside_sample_count": 26
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000068806111813,
+        "minimum_changed_vertex_clearance_mm": -10.551169514656067,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_4",
+      "max_trouser_displacement_mm": 5.000101640732892,
+      "max_face_normal_change_deg": 9.670995960150044,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661677261063,
+        1.025594678288074
+      ],
+      "max_edge_length_change_mm": 1.8373967801484579,
+      "baseline_body_crossed_faces": 28,
+      "candidate_body_crossed_faces": 27,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.320959303390506,
+        "negative_normal_samples": 19,
+        "max_confirmed_inside_mm": 10.77556423842907,
+        "inside_sample_count": 24
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.551147305794613,
+        "negative_normal_samples": 19,
+        "max_confirmed_inside_mm": 10.919700376689434,
+        "inside_sample_count": 24
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999998956918716,
+        "minimum_changed_vertex_clearance_mm": -10.521317832171917,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_5",
+      "max_trouser_displacement_mm": 5.000035763122966,
+      "max_face_normal_change_deg": 9.801323839365066,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8921736951663395,
+        1.0247688485311028
+      ],
+      "max_edge_length_change_mm": 1.8373486831345618,
+      "baseline_body_crossed_faces": 23,
+      "candidate_body_crossed_faces": 23,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.131877097820295,
+        "negative_normal_samples": 17,
+        "max_confirmed_inside_mm": 10.609831660985947,
+        "inside_sample_count": 22
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.53858595290765,
+        "negative_normal_samples": 17,
+        "max_confirmed_inside_mm": 10.75748447328806,
+        "inside_sample_count": 22
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.99995332211256,
+        "minimum_changed_vertex_clearance_mm": -10.309651494026184,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_6",
+      "max_trouser_displacement_mm": 4.999988057242091,
+      "max_face_normal_change_deg": 9.911646024238003,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8900115840437194,
+        1.023893589370046
+      ],
+      "max_edge_length_change_mm": 1.837293954017119,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.12978980518336,
+        "negative_normal_samples": 15,
+        "max_confirmed_inside_mm": 10.397848673164845,
+        "inside_sample_count": 20
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.540566606181624,
+        "negative_normal_samples": 15,
+        "max_confirmed_inside_mm": 10.54946705698967,
+        "inside_sample_count": 20
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.00000175088644,
+        "minimum_changed_vertex_clearance_mm": -10.106931440532207,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_7",
+      "max_trouser_displacement_mm": 5.000027287955313,
+      "max_face_normal_change_deg": 10.004955812085809,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.889070618349056,
+        1.0230239262624798
+      ],
+      "max_edge_length_change_mm": 1.837343070497318,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.622366977466177,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.197501629590988,
+        "inside_sample_count": 18
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.765011844338385,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.352890938520432,
+        "inside_sample_count": 18
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999944940209389,
+        "minimum_changed_vertex_clearance_mm": -9.991325438022614,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_8",
+      "max_trouser_displacement_mm": 4.99999204075486,
+      "max_face_normal_change_deg": 10.120172437735404,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8894642102110792,
+        1.0222571743728757
+      ],
+      "max_edge_length_change_mm": 1.8372903468743436,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.747366292875247,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.089471936225891,
+        "inside_sample_count": 18
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.895478358137265,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.247563943266869,
+        "inside_sample_count": 18
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000047385692596,
+        "minimum_changed_vertex_clearance_mm": -10.008413344621658,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_9",
+      "max_trouser_displacement_mm": 5.000102175046515,
+      "max_face_normal_change_deg": 10.297539146591665,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8909520682372454,
+        1.0216407358269768
+      ],
+      "max_edge_length_change_mm": 1.8374360470866276,
+      "baseline_body_crossed_faces": 21,
+      "candidate_body_crossed_faces": 21,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.231159709758415,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 10.11762022972107,
+        "inside_sample_count": 19
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.39471663420834,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 10.27696207165718,
+        "inside_sample_count": 19
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000083707273006,
+        "minimum_changed_vertex_clearance_mm": -9.629253298044205,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_10",
+      "max_trouser_displacement_mm": 5.00010361199069,
+      "max_face_normal_change_deg": 10.502069715156003,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8932268554292729,
+        1.021225075869658
+      ],
+      "max_edge_length_change_mm": 1.8374417660115827,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.3820565866161,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 10.265477932989597,
+        "inside_sample_count": 19
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.629255500097337,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 10.424606502056122,
+        "inside_sample_count": 19
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999992437660694,
+        "minimum_changed_vertex_clearance_mm": -8.71958676725626,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_11",
+      "max_trouser_displacement_mm": 5.000014107391272,
+      "max_face_normal_change_deg": 10.684157409278248,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660704777867,
+        1.0212021068577066
+      ],
+      "max_edge_length_change_mm": 1.837342295433586,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.471914302866345,
+        "negative_normal_samples": 15,
+        "max_confirmed_inside_mm": 10.482976213097572,
+        "inside_sample_count": 18
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.719570755671363,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 10.640784166753292,
+        "inside_sample_count": 17
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999940283596516,
+        "minimum_changed_vertex_clearance_mm": -7.792712654918432,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_12",
+      "max_trouser_displacement_mm": 4.999963801987572,
+      "max_face_normal_change_deg": 10.776732064523976,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659222285804,
+        1.0212001863079845
+      ],
+      "max_edge_length_change_mm": 1.8371893151292242,
+      "baseline_body_crossed_faces": 21,
+      "candidate_body_crossed_faces": 21,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.543520613511142,
+        "negative_normal_samples": 15,
+        "max_confirmed_inside_mm": 10.747243650257587,
+        "inside_sample_count": 17
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.792735232612572,
+        "negative_normal_samples": 15,
+        "max_confirmed_inside_mm": 10.90233027935028,
+        "inside_sample_count": 17
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.11747209646273404,
+        "maximum_matched_signed_depth_increase_mm": 5.000014789402485,
+        "minimum_changed_vertex_clearance_mm": -6.9061885587871075,
+        "worst_new_sample": 352
+      },
+      "pose": "crouch_walking_rifle_13",
+      "max_trouser_displacement_mm": 5.000009949986948,
+      "max_face_normal_change_deg": 10.742311947876306,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866060566229,
+        1.0215903976225846
+      ],
+      "max_edge_length_change_mm": 1.837351606481484,
+      "baseline_body_crossed_faces": 20,
+      "candidate_body_crossed_faces": 20,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.489690020395981,
+        "negative_normal_samples": 17,
+        "max_confirmed_inside_mm": 10.489675216376781,
+        "inside_sample_count": 16
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.705657105527036,
+        "negative_normal_samples": 18,
+        "max_confirmed_inside_mm": 10.705634951591492,
+        "inside_sample_count": 17
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000012926757336,
+        "minimum_changed_vertex_clearance_mm": -6.147842854261398,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_14",
+      "max_trouser_displacement_mm": 5.000011807810537,
+      "max_face_normal_change_deg": 10.586762884961416,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660700259171,
+        1.0223297964986513
+      ],
+      "max_edge_length_change_mm": 1.837337601234442,
+      "baseline_body_crossed_faces": 21,
+      "candidate_body_crossed_faces": 21,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.25192969484329,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 10.251901112496853,
+        "inside_sample_count": 13
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.46578463244675,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 10.465768165886402,
+        "inside_sample_count": 13
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000025033950806,
+        "minimum_changed_vertex_clearance_mm": -5.710878875106573,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_15",
+      "max_trouser_displacement_mm": 5.000051197360317,
+      "max_face_normal_change_deg": 10.362367717992521,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661210623144,
+        1.0231896016131696
+      ],
+      "max_edge_length_change_mm": 1.8373784859010214,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.301422480568348,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 10.30142791569233,
+        "inside_sample_count": 12
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.512556212115184,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.512572713196278,
+        "inside_sample_count": 12
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000010132789612,
+        "minimum_changed_vertex_clearance_mm": -5.7377442717552185,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_16",
+      "max_trouser_displacement_mm": 5.00001752214909,
+      "max_face_normal_change_deg": 10.098586527899503,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660729717429,
+        1.0241428781759425
+      ],
+      "max_edge_length_change_mm": 1.8373552592043305,
+      "baseline_body_crossed_faces": 23,
+      "candidate_body_crossed_faces": 23,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.765992834716668,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.765983723104,
+        "inside_sample_count": 13
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.973808895163224,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 10.973833501338959,
+        "inside_sample_count": 13
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 2,
+        "newly_inside_max_mm": 0.1022565265884623,
+        "maximum_matched_signed_depth_increase_mm": 4.999985918402672,
+        "minimum_changed_vertex_clearance_mm": -6.56146602705121,
+        "worst_new_sample": 42
+      },
+      "pose": "crouch_walking_rifle_17",
+      "max_trouser_displacement_mm": 4.999990309270579,
+      "max_face_normal_change_deg": 9.813446409535821,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659623898508,
+        1.0252143078769058
+      ],
+      "max_edge_length_change_mm": 1.8372664393428717,
+      "baseline_body_crossed_faces": 26,
+      "candidate_body_crossed_faces": 26,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.998585348745996,
+        "negative_normal_samples": 16,
+        "max_confirmed_inside_mm": 10.998571291565895,
+        "inside_sample_count": 16
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.178787279178469,
+        "negative_normal_samples": 18,
+        "max_confirmed_inside_mm": 11.178758926689625,
+        "inside_sample_count": 18
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.15936457202769816,
+        "maximum_matched_signed_depth_increase_mm": 4.999999888241291,
+        "minimum_changed_vertex_clearance_mm": -7.637410424649715,
+        "worst_new_sample": 263
+      },
+      "pose": "crouch_walking_rifle_18",
+      "max_trouser_displacement_mm": 4.999994595851656,
+      "max_face_normal_change_deg": 9.505467797146386,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660121148231,
+        1.0263446011231445
+      ],
+      "max_edge_length_change_mm": 1.837299014742156,
+      "baseline_body_crossed_faces": 27,
+      "candidate_body_crossed_faces": 27,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.153064272348265,
+        "negative_normal_samples": 18,
+        "max_confirmed_inside_mm": 11.153067462146282,
+        "inside_sample_count": 18
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.272723421589497,
+        "negative_normal_samples": 19,
+        "max_confirmed_inside_mm": 11.27272192388773,
+        "inside_sample_count": 19
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999996162950993,
+        "minimum_changed_vertex_clearance_mm": -8.84860660880804,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_19",
+      "max_trouser_displacement_mm": 4.999989276232515,
+      "max_face_normal_change_deg": 9.218660931916924,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660033696735,
+        1.0272854940223028
+      ],
+      "max_edge_length_change_mm": 1.8372814011105507,
+      "baseline_body_crossed_faces": 27,
+      "candidate_body_crossed_faces": 27,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.10474147248876,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 11.104741133749485,
+        "inside_sample_count": 20
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.222950548718417,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 11.222952976822853,
+        "inside_sample_count": 20
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999984055757523,
+        "minimum_changed_vertex_clearance_mm": -10.055636055767536,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_20",
+      "max_trouser_displacement_mm": 4.9999797303084685,
+      "max_face_normal_change_deg": 8.993726768643908,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659583598169,
+        1.0278823890078523
+      ],
+      "max_edge_length_change_mm": 1.837238724727075,
+      "baseline_body_crossed_faces": 29,
+      "candidate_body_crossed_faces": 28,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.18053523266643,
+        "negative_normal_samples": 22,
+        "max_confirmed_inside_mm": 11.18053775280714,
+        "inside_sample_count": 22
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.295974791419843,
+        "negative_normal_samples": 22,
+        "max_confirmed_inside_mm": 11.295979842543602,
+        "inside_sample_count": 22
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000017583370209,
+        "minimum_changed_vertex_clearance_mm": -10.980147868394852,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_21",
+      "max_trouser_displacement_mm": 5.000037347124644,
+      "max_face_normal_change_deg": 8.852363183577305,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660986404607,
+        1.0281323729183105
+      ],
+      "max_edge_length_change_mm": 1.8373692574455007,
+      "baseline_body_crossed_faces": 30,
+      "candidate_body_crossed_faces": 30,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.263129787583138,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 11.26312930136919,
+        "inside_sample_count": 23
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.37584777970312,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 11.375844478607178,
+        "inside_sample_count": 23
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000011064112186,
+        "minimum_changed_vertex_clearance_mm": -11.383676901459694,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_22",
+      "max_trouser_displacement_mm": 5.000005588866251,
+      "max_face_normal_change_deg": 8.850711819848359,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660512586409,
+        1.0280833164234129
+      ],
+      "max_edge_length_change_mm": 1.8373439506339864,
+      "baseline_body_crossed_faces": 33,
+      "candidate_body_crossed_faces": 32,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.201816142590676,
+        "negative_normal_samples": 22,
+        "max_confirmed_inside_mm": 11.201821267604828,
+        "inside_sample_count": 26
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.383659324541044,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 11.383676901459694,
+        "inside_sample_count": 25
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000019446015358,
+        "minimum_changed_vertex_clearance_mm": -10.99278125911951,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_23",
+      "max_trouser_displacement_mm": 5.000020995223047,
+      "max_face_normal_change_deg": 8.847935550863372,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866091611314,
+        1.027765151166061
+      ],
+      "max_edge_length_change_mm": 1.837331020649223,
+      "baseline_body_crossed_faces": 34,
+      "candidate_body_crossed_faces": 34,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.878909208367674,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 10.878911241889,
+        "inside_sample_count": 27
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.9927936293435,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 10.99278125911951,
+        "inside_sample_count": 27
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.11133318912470713,
+        "maximum_matched_signed_depth_increase_mm": 5.000023171305656,
+        "minimum_changed_vertex_clearance_mm": -10.024668648838997,
+        "worst_new_sample": 200
+      },
+      "pose": "crouch_walking_rifle_24",
+      "max_trouser_displacement_mm": 4.999989949512186,
+      "max_face_normal_change_deg": 8.846219577234379,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659846244269,
+        1.0272348200568489
+      ],
+      "max_edge_length_change_mm": 1.8372774765958306,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 35,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.26633763372437,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.266331024467945,
+        "inside_sample_count": 30
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.384652892647917,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.384654626250267,
+        "inside_sample_count": 30
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999985918402672,
+        "minimum_changed_vertex_clearance_mm": -8.975034579634666,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_25",
+      "max_trouser_displacement_mm": 4.9999789269086925,
+      "max_face_normal_change_deg": 8.844830189830796,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659575684652,
+        1.0267174128778658
+      ],
+      "max_edge_length_change_mm": 1.8372422740989096,
+      "baseline_body_crossed_faces": 32,
+      "candidate_body_crossed_faces": 32,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.589852753177432,
+        "negative_normal_samples": 29,
+        "max_confirmed_inside_mm": 9.59028396755457,
+        "inside_sample_count": 33
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.713909552055052,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 9.713941253721714,
+        "inside_sample_count": 32
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000011995434761,
+        "minimum_changed_vertex_clearance_mm": -8.339365012943745,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_26",
+      "max_trouser_displacement_mm": 5.000000465893151,
+      "max_face_normal_change_deg": 8.842556706173864,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660206381934,
+        1.0264343475930529
+      ],
+      "max_edge_length_change_mm": 1.8373157179347455,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.138066586428135,
+        "negative_normal_samples": 23,
+        "max_confirmed_inside_mm": 9.142044931650162,
+        "inside_sample_count": 30
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.266268934139003,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 9.268493391573429,
+        "inside_sample_count": 29
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.12636525207199156,
+        "maximum_matched_signed_depth_increase_mm": 5.000011995434761,
+        "minimum_changed_vertex_clearance_mm": -7.754627615213394,
+        "worst_new_sample": 167
+      },
+      "pose": "crouch_walking_rifle_27",
+      "max_trouser_displacement_mm": 4.999997399127422,
+      "max_face_normal_change_deg": 8.841717775429652,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660635958611,
+        1.0262181256312226
+      ],
+      "max_edge_length_change_mm": 1.8373128393879348,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.70676826955523,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 8.716871961951256,
+        "inside_sample_count": 30
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.8391176336121,
+        "negative_normal_samples": 22,
+        "max_confirmed_inside_mm": 8.84623546153307,
+        "inside_sample_count": 31
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000010132789612,
+        "minimum_changed_vertex_clearance_mm": -7.3619806207716465,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_28",
+      "max_trouser_displacement_mm": 5.000001749852093,
+      "max_face_normal_change_deg": 8.842432990612629,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660206583785,
+        1.0261087184642197
+      ],
+      "max_edge_length_change_mm": 1.8373198756978306,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.42671265701984,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 8.44658724963665,
+        "inside_sample_count": 30
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.561749720798248,
+        "negative_normal_samples": 19,
+        "max_confirmed_inside_mm": 8.577277883887291,
+        "inside_sample_count": 29
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000023171305656,
+        "minimum_changed_vertex_clearance_mm": -7.643183693289757,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_29",
+      "max_trouser_displacement_mm": 5.000014276708284,
+      "max_face_normal_change_deg": 8.843885415151785,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660648358635,
+        1.0262734749235145
+      ],
+      "max_edge_length_change_mm": 1.837337263480829,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.569496245036706,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 8.639572188258171,
+        "inside_sample_count": 30
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.646699460925624,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 8.76846257597208,
+        "inside_sample_count": 30
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.0001321360468864,
+        "minimum_changed_vertex_clearance_mm": -8.322655223309994,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_30",
+      "max_trouser_displacement_mm": 5.000130224751045,
+      "max_face_normal_change_deg": 8.84540747652008,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660102946627,
+        1.0265846504298435
+      ],
+      "max_edge_length_change_mm": 1.8373017518043127,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.071031782242457,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 9.106770157814026,
+        "inside_sample_count": 30
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.322651589468187,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 9.23179741948843,
+        "inside_sample_count": 29
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000106059014797,
+        "minimum_changed_vertex_clearance_mm": -8.922018110752106,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_31",
+      "max_trouser_displacement_mm": 5.0000989262884215,
+      "max_face_normal_change_deg": 8.847633556739765,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660616037707,
+        1.0268892082068657
+      ],
+      "max_edge_length_change_mm": 1.837346175701044,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.489667777930109,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 9.502970613539219,
+        "inside_sample_count": 32
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.615745692164149,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 9.625591337680817,
+        "inside_sample_count": 32
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999992437660694,
+        "minimum_changed_vertex_clearance_mm": -9.408035315573215,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_32",
+      "max_trouser_displacement_mm": 4.999987650634209,
+      "max_face_normal_change_deg": 8.850811527990551,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660227814527,
+        1.0271766540091833
+      ],
+      "max_edge_length_change_mm": 1.8373033812141906,
+      "baseline_body_crossed_faces": 32,
+      "candidate_body_crossed_faces": 31,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.168279224924847,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 9.813851676881313,
+        "inside_sample_count": 33
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.408030083514596,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 9.935206733644009,
+        "inside_sample_count": 33
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999990575015545,
+        "minimum_changed_vertex_clearance_mm": -9.770105592906475,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_33",
+      "max_trouser_displacement_mm": 4.999978626177709,
+      "max_face_normal_change_deg": 8.853520601743114,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660061114577,
+        1.0274301179212504
+      ],
+      "max_edge_length_change_mm": 1.837276409058307,
+      "baseline_body_crossed_faces": 32,
+      "candidate_body_crossed_faces": 32,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.035511164470499,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.037967003881931,
+        "inside_sample_count": 31
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.15772761762232,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.158879682421684,
+        "inside_sample_count": 31
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000022239983082,
+        "minimum_changed_vertex_clearance_mm": -10.039801709353924,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_34",
+      "max_trouser_displacement_mm": 5.000036065009527,
+      "max_face_normal_change_deg": 8.854260145987276,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866080967512,
+        1.027638699860567
+      ],
+      "max_edge_length_change_mm": 1.8373574866934959,
+      "baseline_body_crossed_faces": 32,
+      "candidate_body_crossed_faces": 32,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.805392336679837,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.198183357715607,
+        "inside_sample_count": 31
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.039794474520077,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.319353081285954,
+        "inside_sample_count": 31
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.9999775364995,
+        "minimum_changed_vertex_clearance_mm": -10.371641255915165,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_35",
+      "max_trouser_displacement_mm": 4.999987520905174,
+      "max_face_normal_change_deg": 8.84962427177122,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660286575095,
+        1.027862988456799
+      ],
+      "max_edge_length_change_mm": 1.8373159485024875,
+      "baseline_body_crossed_faces": 32,
+      "candidate_body_crossed_faces": 32,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.400335032628185,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.400333441793919,
+        "inside_sample_count": 34
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.520624885031424,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 10.520623065531254,
+        "inside_sample_count": 33
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.00000175088644,
+        "minimum_changed_vertex_clearance_mm": -10.877687484025955,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_36",
+      "max_trouser_displacement_mm": 5.000002522738251,
+      "max_face_normal_change_deg": 8.840179834197816,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660487585596,
+        1.0280866194937675
+      ],
+      "max_edge_length_change_mm": 1.8373113204958775,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 34,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.718686871075322,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 10.718689300119877,
+        "inside_sample_count": 36
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.87768250605668,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 10.877687484025955,
+        "inside_sample_count": 36
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999997094273567,
+        "minimum_changed_vertex_clearance_mm": -11.488137766718864,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_37",
+      "max_trouser_displacement_mm": 4.999997892058335,
+      "max_face_normal_change_deg": 8.828363154521341,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660398334944,
+        1.0282222978950046
+      ],
+      "max_edge_length_change_mm": 1.837330386236808,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.268435177733894,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 11.268439702689648,
+        "inside_sample_count": 39
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.488133449631555,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 11.488137766718864,
+        "inside_sample_count": 37
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999996162950993,
+        "minimum_changed_vertex_clearance_mm": -12.05716747790575,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_38",
+      "max_trouser_displacement_mm": 4.999983143485449,
+      "max_face_normal_change_deg": 8.906453956769663,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659784169851,
+        1.0281870103688755
+      ],
+      "max_edge_length_change_mm": 1.8373040624837487,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.844231794579656,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 11.844228953123093,
+        "inside_sample_count": 42
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.057160006710939,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 12.05716747790575,
+        "inside_sample_count": 42
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000010132789612,
+        "minimum_changed_vertex_clearance_mm": -12.035822495818138,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_39",
+      "max_trouser_displacement_mm": 5.000016031906898,
+      "max_face_normal_change_deg": 9.06202019874702,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660687326678,
+        1.027944918974673
+      ],
+      "max_edge_length_change_mm": 1.8373278137925504,
+      "baseline_body_crossed_faces": 38,
+      "candidate_body_crossed_faces": 39,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.659848568636196,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 11.6598354652524,
+        "inside_sample_count": 44
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.035838098814656,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 12.035822495818138,
+        "inside_sample_count": 44
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000083707273006,
+        "minimum_changed_vertex_clearance_mm": -11.438106186687946,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_40",
+      "max_trouser_displacement_mm": 5.000093447939492,
+      "max_face_normal_change_deg": 9.223805230257772,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661468348535,
+        1.0275101100097477
+      ],
+      "max_edge_length_change_mm": 1.8373858945833974,
+      "baseline_body_crossed_faces": 39,
+      "candidate_body_crossed_faces": 39,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.05386890162933,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 11.524583213031292,
+        "inside_sample_count": 45
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.438116737842536,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 11.65457721799612,
+        "inside_sample_count": 45
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999994300305843,
+        "minimum_changed_vertex_clearance_mm": -10.458153672516346,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_41",
+      "max_trouser_displacement_mm": 5.000001466445886,
+      "max_face_normal_change_deg": 9.400414847021889,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660233087534,
+        1.0269212445877403
+      ],
+      "max_edge_length_change_mm": 1.8373204955603775,
+      "baseline_body_crossed_faces": 37,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.065902238701533,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 11.49420440196991,
+        "inside_sample_count": 44
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.458163941556503,
+        "negative_normal_samples": 25,
+        "max_confirmed_inside_mm": 11.626070365309715,
+        "inside_sample_count": 43
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999983124434948,
+        "minimum_changed_vertex_clearance_mm": -9.32141114026308,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_42",
+      "max_trouser_displacement_mm": 4.99999246161332,
+      "max_face_normal_change_deg": 9.58071217619169,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660353526462,
+        1.026247059856255
+      ],
+      "max_edge_length_change_mm": 1.8373059745914189,
+      "baseline_body_crossed_faces": 35,
+      "candidate_body_crossed_faces": 35,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.922873594066484,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.493254452943802,
+        "inside_sample_count": 36
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.321412580255412,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.626684106886387,
+        "inside_sample_count": 35
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999971017241478,
+        "minimum_changed_vertex_clearance_mm": -8.366387337446213,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_43",
+      "max_trouser_displacement_mm": 4.999981660758493,
+      "max_face_normal_change_deg": 9.771164000108149,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659899768301,
+        1.0255247324074845
+      ],
+      "max_edge_length_change_mm": 1.8372661995796,
+      "baseline_body_crossed_faces": 34,
+      "candidate_body_crossed_faces": 34,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.963748527556496,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 11.464027687907219,
+        "inside_sample_count": 32
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.366362298034277,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 11.599475517868996,
+        "inside_sample_count": 32
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999935626983643,
+        "minimum_changed_vertex_clearance_mm": -7.824712432920933,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_44",
+      "max_trouser_displacement_mm": 4.99997264927461,
+      "max_face_normal_change_deg": 9.95647355974525,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659255845198,
+        1.0247873209709102
+      ],
+      "max_edge_length_change_mm": 1.8372171631774112,
+      "baseline_body_crossed_faces": 28,
+      "candidate_body_crossed_faces": 28,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.598965977378289,
+        "negative_normal_samples": 18,
+        "max_confirmed_inside_mm": 11.36799342930317,
+        "inside_sample_count": 21
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.824731884180674,
+        "negative_normal_samples": 18,
+        "max_confirmed_inside_mm": 11.506274342536926,
+        "inside_sample_count": 21
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.1128175572375767,
+        "maximum_matched_signed_depth_increase_mm": 5.00001385807991,
+        "minimum_changed_vertex_clearance_mm": -7.895834743976593,
+        "worst_new_sample": 40
+      },
+      "pose": "crouch_walking_rifle_45",
+      "max_trouser_displacement_mm": 5.000033753352021,
+      "max_face_normal_change_deg": 10.124692074752614,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866095950901,
+        1.0240717105361532
+      ],
+      "max_edge_length_change_mm": 1.837351170863935,
+      "baseline_body_crossed_faces": 21,
+      "candidate_body_crossed_faces": 21,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.804666272542455,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 11.233869940042496,
+        "inside_sample_count": 15
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.912527326908128,
+        "negative_normal_samples": 14,
+        "max_confirmed_inside_mm": 11.375309899449348,
+        "inside_sample_count": 16
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999954253435135,
+        "minimum_changed_vertex_clearance_mm": -8.127083070576191,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_46",
+      "max_trouser_displacement_mm": 5.000014388994465,
+      "max_face_normal_change_deg": 10.273735912007197,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8938483916211281,
+        1.0233851813004535
+      ],
+      "max_edge_length_change_mm": 1.8373429204320106,
+      "baseline_body_crossed_faces": 14,
+      "candidate_body_crossed_faces": 14,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.886858012930506,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 11.080369353294373,
+        "inside_sample_count": 11
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.127064970538465,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 11.225152760744095,
+        "inside_sample_count": 11
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999889060854912,
+        "minimum_changed_vertex_clearance_mm": -8.410780690610409,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_47",
+      "max_trouser_displacement_mm": 4.999963985353525,
+      "max_face_normal_change_deg": 10.411115119681885,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.893364220000288,
+        1.0226969150700596
+      ],
+      "max_edge_length_change_mm": 1.8371860971746652,
+      "baseline_body_crossed_faces": 9,
+      "candidate_body_crossed_faces": 9,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.167430488019024,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 10.922648943960667,
+        "inside_sample_count": 10
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.410753597657514,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 11.070942506194115,
+        "inside_sample_count": 10
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999987781047821,
+        "minimum_changed_vertex_clearance_mm": -8.633078075945377,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_48",
+      "max_trouser_displacement_mm": 5.000032047378783,
+      "max_face_normal_change_deg": 10.549831664490535,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8939826552995321,
+        1.0219947228938173
+      ],
+      "max_edge_length_change_mm": 1.837362235953887,
+      "baseline_body_crossed_faces": 10,
+      "candidate_body_crossed_faces": 10,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.386602317668734,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 10.785828344523907,
+        "inside_sample_count": 11
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.633085140592744,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 10.937352664768696,
+        "inside_sample_count": 11
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999896511435509,
+        "minimum_changed_vertex_clearance_mm": -8.685123175382614,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_49",
+      "max_trouser_displacement_mm": 4.999979010353047,
+      "max_face_normal_change_deg": 10.70749839243233,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659815062959,
+        1.0213074043301373
+      ],
+      "max_edge_length_change_mm": 1.8372476732303884,
+      "baseline_body_crossed_faces": 10,
+      "candidate_body_crossed_faces": 10,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.435707227370578,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 10.705395601689816,
+        "inside_sample_count": 11
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.685097933605851,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 10.859431698918343,
+        "inside_sample_count": 11
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999890923500061,
+        "minimum_changed_vertex_clearance_mm": -8.287778124213219,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_50",
+      "max_trouser_displacement_mm": 4.999969317748567,
+      "max_face_normal_change_deg": 10.88052258634057,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659169473212,
+        1.0211993677198978
+      ],
+      "max_edge_length_change_mm": 1.837196679582105,
+      "baseline_body_crossed_faces": 10,
+      "candidate_body_crossed_faces": 10,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.035095344750856,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 10.727724991738796,
+        "inside_sample_count": 11
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.287794036048147,
+        "negative_normal_samples": 9,
+        "max_confirmed_inside_mm": 10.882895439863205,
+        "inside_sample_count": 11
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999908618628979,
+        "minimum_changed_vertex_clearance_mm": -7.393586914986372,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_51",
+      "max_trouser_displacement_mm": 4.999984210600815,
+      "max_face_normal_change_deg": 11.023804410636327,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894865988452992,
+        1.021200682558849
+      ],
+      "max_edge_length_change_mm": 1.837261806727223,
+      "baseline_body_crossed_faces": 9,
+      "candidate_body_crossed_faces": 9,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.437652775764821,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 10.437650606036186,
+        "inside_sample_count": 10
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.657541141510055,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 10.657564736902714,
+        "inside_sample_count": 10
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.99998964369297,
+        "minimum_changed_vertex_clearance_mm": -6.22147973626852,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_52",
+      "max_trouser_displacement_mm": 5.000055974902237,
+      "max_face_normal_change_deg": 11.06473423284563,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661169829,
+        1.0212031518418814
+      ],
+      "max_edge_length_change_mm": 1.8374024893879868,
+      "baseline_body_crossed_faces": 8,
+      "candidate_body_crossed_faces": 8,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.511517817671669,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 9.511547163128853,
+        "inside_sample_count": 6
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.730771530569077,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 9.730780497193336,
+        "inside_sample_count": 6
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999936558306217,
+        "minimum_changed_vertex_clearance_mm": -4.875398240983486,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_53",
+      "max_trouser_displacement_mm": 4.999998147547976,
+      "max_face_normal_change_deg": 10.9329805502513,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660436819665,
+        1.0212017391383845
+      ],
+      "max_edge_length_change_mm": 1.837321643180484,
+      "baseline_body_crossed_faces": 11,
+      "candidate_body_crossed_faces": 11,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.653782686839302,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 8.653796277940273,
+        "inside_sample_count": 5
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.871300981328725,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 8.871285244822502,
+        "inside_sample_count": 5
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999993368983269,
+        "minimum_changed_vertex_clearance_mm": -3.53469280526042,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_54",
+      "max_trouser_displacement_mm": 5.000058008044323,
+      "max_face_normal_change_deg": 10.631069246542667,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661260378409,
+        1.021832054586977
+      ],
+      "max_edge_length_change_mm": 1.837398752648354,
+      "baseline_body_crossed_faces": 11,
+      "candidate_body_crossed_faces": 11,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.874363084659844,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 7.874391973018646,
+        "inside_sample_count": 5
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.088999901822278,
+        "negative_normal_samples": 5,
+        "max_confirmed_inside_mm": 8.0889742821455,
+        "inside_sample_count": 5
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000043660402298,
+        "minimum_changed_vertex_clearance_mm": -2.534065628424287,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_55",
+      "max_trouser_displacement_mm": 5.000091019166114,
+      "max_face_normal_change_deg": 10.27554876668616,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661603992133,
+        1.0226524083137847
+      ],
+      "max_edge_length_change_mm": 1.8374538395366304,
+      "baseline_body_crossed_faces": 12,
+      "candidate_body_crossed_faces": 12,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.445120637322493,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 7.44513189420104,
+        "inside_sample_count": 7
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.656293029117938,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 7.656277623027563,
+        "inside_sample_count": 7
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.3680206718854606,
+        "maximum_matched_signed_depth_increase_mm": 4.999911412596703,
+        "minimum_changed_vertex_clearance_mm": -2.3633455857634544,
+        "worst_new_sample": 264
+      },
+      "pose": "crouch_walking_rifle_56",
+      "max_trouser_displacement_mm": 4.999977183305553,
+      "max_face_normal_change_deg": 9.95498055088989,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659659133545,
+        1.0235133447953229
+      ],
+      "max_edge_length_change_mm": 1.8372202978227565,
+      "baseline_body_crossed_faces": 15,
+      "candidate_body_crossed_faces": 15,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.615869459305792,
+        "negative_normal_samples": 6,
+        "max_confirmed_inside_mm": 7.615894544869661,
+        "inside_sample_count": 6
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -7.823915602986444,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 7.823929190635681,
+        "inside_sample_count": 7
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.24111609673127532,
+        "maximum_matched_signed_depth_increase_mm": 5.000032484531403,
+        "minimum_changed_vertex_clearance_mm": -3.0128436628729105,
+        "worst_new_sample": 264
+      },
+      "pose": "crouch_walking_rifle_57",
+      "max_trouser_displacement_mm": 5.0000754350586805,
+      "max_face_normal_change_deg": 9.662382440015197,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661567660813,
+        1.0245065407704372
+      ],
+      "max_edge_length_change_mm": 1.837411378384425,
+      "baseline_body_crossed_faces": 17,
+      "candidate_body_crossed_faces": 19,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.125025530217345,
+        "negative_normal_samples": 7,
+        "max_confirmed_inside_mm": 8.125019259750843,
+        "inside_sample_count": 7
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.298887728406168,
+        "negative_normal_samples": 8,
+        "max_confirmed_inside_mm": 8.298887871205807,
+        "inside_sample_count": 8
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000066012144089,
+        "minimum_changed_vertex_clearance_mm": -3.950077574700117,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_58",
+      "max_trouser_displacement_mm": 5.000096426203527,
+      "max_face_normal_change_deg": 9.353163164522815,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661704175762,
+        1.0255781536089494
+      ],
+      "max_edge_length_change_mm": 1.8374554004119519,
+      "baseline_body_crossed_faces": 21,
+      "candidate_body_crossed_faces": 21,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.281451891962535,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 8.281445130705833,
+        "inside_sample_count": 11
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.45507210811307,
+        "negative_normal_samples": 10,
+        "max_confirmed_inside_mm": 8.455079048871994,
+        "inside_sample_count": 11
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999922588467598,
+        "minimum_changed_vertex_clearance_mm": -5.128735676407814,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_59",
+      "max_trouser_displacement_mm": 4.999988714142538,
+      "max_face_normal_change_deg": 9.052753725114787,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894865998324138,
+        1.026511518068256
+      ],
+      "max_edge_length_change_mm": 1.8372749460383309,
+      "baseline_body_crossed_faces": 20,
+      "candidate_body_crossed_faces": 20,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.675958792639316,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 8.67596548050642,
+        "inside_sample_count": 12
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -8.848901284578874,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 8.848908357322216,
+        "inside_sample_count": 12
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999932833015919,
+        "minimum_changed_vertex_clearance_mm": -6.51543727144599,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_60",
+      "max_trouser_displacement_mm": 4.99999178600456,
+      "max_face_normal_change_deg": 8.856596461303322,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659824209814,
+        1.0271563408731004
+      ],
+      "max_edge_length_change_mm": 1.8372752204801959,
+      "baseline_body_crossed_faces": 22,
+      "candidate_body_crossed_faces": 22,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.266003068054692,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 9.266003966331482,
+        "inside_sample_count": 13
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.402713527684528,
+        "negative_normal_samples": 13,
+        "max_confirmed_inside_mm": 9.40272118896246,
+        "inside_sample_count": 13
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999947734177113,
+        "minimum_changed_vertex_clearance_mm": -8.005453273653984,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_61",
+      "max_trouser_displacement_mm": 4.999996961738317,
+      "max_face_normal_change_deg": 8.852031129358204,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660474347007,
+        1.0275414411601216
+      ],
+      "max_edge_length_change_mm": 1.8373174960818923,
+      "baseline_body_crossed_faces": 26,
+      "candidate_body_crossed_faces": 26,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.67322126938855,
+        "negative_normal_samples": 17,
+        "max_confirmed_inside_mm": 9.67322662472725,
+        "inside_sample_count": 17
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.803523290636756,
+        "negative_normal_samples": 17,
+        "max_confirmed_inside_mm": 9.803532622754574,
+        "inside_sample_count": 17
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000004544854164,
+        "minimum_changed_vertex_clearance_mm": -9.17088333517313,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_62",
+      "max_trouser_displacement_mm": 5.000019646334421,
+      "max_face_normal_change_deg": 8.846543877522057,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660802815124,
+        1.0277293516650572
+      ],
+      "max_edge_length_change_mm": 1.8373488136666574,
+      "baseline_body_crossed_faces": 27,
+      "candidate_body_crossed_faces": 27,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.16844748159384,
+        "negative_normal_samples": 22,
+        "max_confirmed_inside_mm": 10.168451815843582,
+        "inside_sample_count": 23
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.291631996852868,
+        "negative_normal_samples": 22,
+        "max_confirmed_inside_mm": 10.291626676917076,
+        "inside_sample_count": 23
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.11851095769088715,
+        "maximum_matched_signed_depth_increase_mm": 4.999983124434948,
+        "minimum_changed_vertex_clearance_mm": -10.024120099842548,
+        "worst_new_sample": 200
+      },
+      "pose": "crouch_walking_rifle_63",
+      "max_trouser_displacement_mm": 5.00003086418057,
+      "max_face_normal_change_deg": 8.841725572928054,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660862415684,
+        1.0277469990000085
+      ],
+      "max_edge_length_change_mm": 1.8373721037760158,
+      "baseline_body_crossed_faces": 31,
+      "candidate_body_crossed_faces": 30,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.568539301288542,
+        "negative_normal_samples": 20,
+        "max_confirmed_inside_mm": 10.568535886704922,
+        "inside_sample_count": 25
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.685705640314142,
+        "negative_normal_samples": 21,
+        "max_confirmed_inside_mm": 10.68570464849472,
+        "inside_sample_count": 26
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999975673854351,
+        "minimum_changed_vertex_clearance_mm": -10.475090704858303,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_64",
+      "max_trouser_displacement_mm": 5.000019070709895,
+      "max_face_normal_change_deg": 8.838228449667113,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660704457589,
+        1.0275989736475972
+      ],
+      "max_edge_length_change_mm": 1.8373591088316557,
+      "baseline_body_crossed_faces": 38,
+      "candidate_body_crossed_faces": 38,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.752996988963815,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 10.752997361123562,
+        "inside_sample_count": 32
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.866489567296206,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.866488330066204,
+        "inside_sample_count": 31
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000007338821888,
+        "minimum_changed_vertex_clearance_mm": -10.402270592749119,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_65",
+      "max_trouser_displacement_mm": 4.999987931265911,
+      "max_face_normal_change_deg": 8.834607379390158,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659705773733,
+        1.027282104300641
+      ],
+      "max_edge_length_change_mm": 1.8372614874470616,
+      "baseline_body_crossed_faces": 35,
+      "candidate_body_crossed_faces": 35,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.664521539974,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 10.664521716535091,
+        "inside_sample_count": 37
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.777264089505575,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 10.777270421385765,
+        "inside_sample_count": 35
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999920725822449,
+        "minimum_changed_vertex_clearance_mm": -10.142771527171135,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_66",
+      "max_trouser_displacement_mm": 4.999983415327006,
+      "max_face_normal_change_deg": 8.83124616315921,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659985623387,
+        1.0269612110678956
+      ],
+      "max_edge_length_change_mm": 1.837261091078752,
+      "baseline_body_crossed_faces": 34,
+      "candidate_body_crossed_faces": 34,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.494157367317893,
+        "negative_normal_samples": 29,
+        "max_confirmed_inside_mm": 10.494153015315533,
+        "inside_sample_count": 38
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.607378376189603,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 10.607379488646984,
+        "inside_sample_count": 38
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999962635338306,
+        "minimum_changed_vertex_clearance_mm": -10.246400721371174,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_67",
+      "max_trouser_displacement_mm": 5.000003241873923,
+      "max_face_normal_change_deg": 8.828047712147184,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660794174402,
+        1.02689499549454
+      ],
+      "max_edge_length_change_mm": 1.8373142174198351,
+      "baseline_body_crossed_faces": 34,
+      "candidate_body_crossed_faces": 34,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.539373937474716,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 10.539374314248562,
+        "inside_sample_count": 39
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.651907134515106,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 10.651899501681328,
+        "inside_sample_count": 39
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999972879886627,
+        "minimum_changed_vertex_clearance_mm": -10.65627671778202,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_68",
+      "max_trouser_displacement_mm": 5.0000172541648755,
+      "max_face_normal_change_deg": 8.827101143551848,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660564145996,
+        1.027020791833978
+      ],
+      "max_edge_length_change_mm": 1.8373612590322843,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.747466308937183,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.747471824288368,
+        "inside_sample_count": 39
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.858086995528403,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 10.858092457056046,
+        "inside_sample_count": 39
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999944940209389,
+        "minimum_changed_vertex_clearance_mm": -11.33869867771864,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_69",
+      "max_trouser_displacement_mm": 4.999985176416267,
+      "max_face_normal_change_deg": 8.826191854826858,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894866031966507,
+        1.0273988084420769
+      ],
+      "max_edge_length_change_mm": 1.837277760330415,
+      "baseline_body_crossed_faces": 35,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.193448454568966,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 11.193448677659035,
+        "inside_sample_count": 41
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.338693465160762,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 11.33869867771864,
+        "inside_sample_count": 41
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999993368983269,
+        "minimum_changed_vertex_clearance_mm": -11.952482163906097,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_70",
+      "max_trouser_displacement_mm": 5.000020866606974,
+      "max_face_normal_change_deg": 8.824506360416045,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660637683972,
+        1.027801719195103
+      ],
+      "max_edge_length_change_mm": 1.837357736034901,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.751595682436765,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 11.751593090593815,
+        "inside_sample_count": 46
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.9524775889021,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 11.952482163906097,
+        "inside_sample_count": 44
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.0000157207250595,
+        "minimum_changed_vertex_clearance_mm": -12.357529252767563,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_71",
+      "max_trouser_displacement_mm": 5.000028680992748,
+      "max_face_normal_change_deg": 8.823713332846072,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660760842173,
+        1.0281254979524082
+      ],
+      "max_edge_length_change_mm": 1.8373580206585693,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.160812215232447,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 12.160812504589558,
+        "inside_sample_count": 48
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.357534430516152,
+        "negative_normal_samples": 31,
+        "max_confirmed_inside_mm": 12.357529252767563,
+        "inside_sample_count": 48
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999968223273754,
+        "minimum_changed_vertex_clearance_mm": -12.69051805138588,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_72",
+      "max_trouser_displacement_mm": 4.999984171902826,
+      "max_face_normal_change_deg": 8.822981857780846,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659919600697,
+        1.0283962300658427
+      ],
+      "max_edge_length_change_mm": 1.8372839150082414,
+      "baseline_body_crossed_faces": 36,
+      "candidate_body_crossed_faces": 36,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.497208781291816,
+        "negative_normal_samples": 32,
+        "max_confirmed_inside_mm": 12.497206218540668,
+        "inside_sample_count": 50
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.690516282374709,
+        "negative_normal_samples": 31,
+        "max_confirmed_inside_mm": 12.69051805138588,
+        "inside_sample_count": 50
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999984987080097,
+        "minimum_changed_vertex_clearance_mm": -12.841319665312767,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_73",
+      "max_trouser_displacement_mm": 5.000000333020326,
+      "max_face_normal_change_deg": 8.820962002309576,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660511142132,
+        1.0285935497773733
+      ],
+      "max_edge_length_change_mm": 1.8373291558912257,
+      "baseline_body_crossed_faces": 38,
+      "candidate_body_crossed_faces": 38,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.746202731297707,
+        "negative_normal_samples": 32,
+        "max_confirmed_inside_mm": 12.746208347380161,
+        "inside_sample_count": 51
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.955922249408639,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 12.841319665312767,
+        "inside_sample_count": 51
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.9999551847577095,
+        "minimum_changed_vertex_clearance_mm": -12.838193215429783,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_74",
+      "max_trouser_displacement_mm": 4.999978929161052,
+      "max_face_normal_change_deg": 8.816518559179416,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659771059592,
+        1.0287501355795061
+      ],
+      "max_edge_length_change_mm": 1.8372764396538745,
+      "baseline_body_crossed_faces": 38,
+      "candidate_body_crossed_faces": 38,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.803021364110473,
+        "negative_normal_samples": 29,
+        "max_confirmed_inside_mm": 12.757094576954842,
+        "inside_sample_count": 52
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.13704619553164,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 12.838193215429783,
+        "inside_sample_count": 52
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999971017241478,
+        "minimum_changed_vertex_clearance_mm": -12.834872119128704,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_75",
+      "max_trouser_displacement_mm": 4.999975911334123,
+      "max_face_normal_change_deg": 8.809242243567542,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948659478510866,
+        1.028868116001031
+      ],
+      "max_edge_length_change_mm": 1.837275207345196,
+      "baseline_body_crossed_faces": 40,
+      "candidate_body_crossed_faces": 40,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.78347530878462,
+        "negative_normal_samples": 28,
+        "max_confirmed_inside_mm": 12.753681279718876,
+        "inside_sample_count": 54
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.118872420154725,
+        "negative_normal_samples": 27,
+        "max_confirmed_inside_mm": 12.834872119128704,
+        "inside_sample_count": 54
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 1,
+        "newly_inside_max_mm": 0.13058751937933266,
+        "maximum_matched_signed_depth_increase_mm": 4.999993368983269,
+        "minimum_changed_vertex_clearance_mm": -12.831673957407475,
+        "worst_new_sample": 164
+      },
+      "pose": "crouch_walking_rifle_76",
+      "max_trouser_displacement_mm": 4.9999977535016935,
+      "max_face_normal_change_deg": 8.801386170622237,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660225574494,
+        1.0289642126057768
+      ],
+      "max_edge_length_change_mm": 1.8373269054699388,
+      "baseline_body_crossed_faces": 41,
+      "candidate_body_crossed_faces": 41,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.339386323688899,
+        "negative_normal_samples": 32,
+        "max_confirmed_inside_mm": 12.750238180160522,
+        "inside_sample_count": 58
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.979484331472294,
+        "negative_normal_samples": 31,
+        "max_confirmed_inside_mm": 12.831673957407475,
+        "inside_sample_count": 58
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999994300305843,
+        "minimum_changed_vertex_clearance_mm": -12.828662060201168,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_77",
+      "max_trouser_displacement_mm": 4.999984854188406,
+      "max_face_normal_change_deg": 8.796924873202679,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660144483489,
+        1.0289737712793416
+      ],
+      "max_edge_length_change_mm": 1.8372860879300421,
+      "baseline_body_crossed_faces": 41,
+      "candidate_body_crossed_faces": 41,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.949133007467852,
+        "negative_normal_samples": 32,
+        "max_confirmed_inside_mm": 12.746868655085564,
+        "inside_sample_count": 58
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -9.601964715077862,
+        "negative_normal_samples": 31,
+        "max_confirmed_inside_mm": 12.828662060201168,
+        "inside_sample_count": 58
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 4.999957047402859,
+        "minimum_changed_vertex_clearance_mm": -12.827849015593529,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_78",
+      "max_trouser_displacement_mm": 4.999969911422286,
+      "max_face_normal_change_deg": 8.813701367638128,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.894865912474082,
+        1.0288266680305076
+      ],
+      "max_edge_length_change_mm": 1.8372384684594845,
+      "baseline_body_crossed_faces": 40,
+      "candidate_body_crossed_faces": 40,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.200275005181588,
+        "negative_normal_samples": 32,
+        "max_confirmed_inside_mm": 12.745621614158154,
+        "inside_sample_count": 57
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -10.240947962032378,
+        "negative_normal_samples": 31,
+        "max_confirmed_inside_mm": 12.827849015593529,
+        "inside_sample_count": 56
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000051110982895,
+        "minimum_changed_vertex_clearance_mm": -12.77228444814682,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_79",
+      "max_trouser_displacement_mm": 5.000073170747258,
+      "max_face_normal_change_deg": 8.955358316316197,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948661218535644,
+        1.028528729597758
+      ],
+      "max_edge_length_change_mm": 1.8373959296194147,
+      "baseline_body_crossed_faces": 40,
+      "candidate_body_crossed_faces": 40,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.395604483025918,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 12.395622208714485,
+        "inside_sample_count": 54
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -12.772274963965858,
+        "negative_normal_samples": 30,
+        "max_confirmed_inside_mm": 12.77228444814682,
+        "inside_sample_count": 54
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000014789402485,
+        "minimum_changed_vertex_clearance_mm": -11.955908499658108,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_80",
+      "max_trouser_displacement_mm": 5.000011726794151,
+      "max_face_normal_change_deg": 9.093820146540848,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660485258516,
+        1.0281447361115799
+      ],
+      "max_edge_length_change_mm": 1.837351439236988,
+      "baseline_body_crossed_faces": 38,
+      "candidate_body_crossed_faces": 38,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.572654900597426,
+        "negative_normal_samples": 26,
+        "max_confirmed_inside_mm": 11.572664603590965,
+        "inside_sample_count": 47
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.955891530345582,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.955908499658108,
+        "inside_sample_count": 46
+      }
+    },
+    {
+      "matched_body_reference_delta": {
+        "newly_inside_over0p1mm_count": 0,
+        "newly_inside_max_mm": 0.0,
+        "maximum_matched_signed_depth_increase_mm": 5.000016652047634,
+        "minimum_changed_vertex_clearance_mm": -11.743827722966671,
+        "worst_new_sample": null
+      },
+      "pose": "crouch_walking_rifle_81",
+      "max_trouser_displacement_mm": 5.000007274813982,
+      "max_face_normal_change_deg": 9.1311883502191,
+      "faces_rotated_over90": 0,
+      "edge_ratio_min_max": [
+        0.8948660087561183,
+        1.0280199106420052
+      ],
+      "max_edge_length_change_mm": 1.8373292874178173,
+      "baseline_body_crossed_faces": 37,
+      "candidate_body_crossed_faces": 37,
+      "baseline_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.359074422906657,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.359086260199547,
+        "inside_sample_count": 45
+      },
+      "candidate_body_clearance": {
+        "minimum_nearest_normal_signed_mm": -11.743810767817212,
+        "negative_normal_samples": 24,
+        "max_confirmed_inside_mm": 11.743827722966671,
+        "inside_sample_count": 45
+      }
+    }
+  ],
+  "max_trouser_posed_displacement_mm": 5.000130224751045,
+  "max_posed_normal_change_deg": 17.547234729112606,
+  "faces_over90_total": 0,
+  "max_edge_change_mm": 2.0161779248467973,
+  "candidate_unchanged": true,
+  "limit": "Body-reference test is vertices/face centers plus exact triangle crossings in the changed region; nearest-normal signs are local orientation evidence, especially where the animated full body self-intersects. Not an external game render."
+}

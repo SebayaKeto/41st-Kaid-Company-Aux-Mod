@@ -1,0 +1,54 @@
+{
+  "status": "PASS_focused_distance_sanity_with_visual_limitations",
+  "scope": "LOD1 and LOD3 only, rest / official kneeling rifle / zero-based official running raw frame 6. Front, quarter and rear views, 18 views total. Source and exports unchanged.",
+  "method": "Exact final V/F, exact quantized weights applied to raw official deformation matrices. Exported corner normals transformed using same weights. One-sided EEVEE palette shading; reduced on-screen sizes, no near-LOD review or source edits. These are review sizes, not verified engine transition distances.",
+  "result": "No gross clothing collapse, missing limb, exposed hand/finger/cuff hole, large outward spike, or obvious garment breakthrough found at the reviewed reduced screen sizes. Sleeve/hand shapes and main green silhouette remain continuous across all three poses.",
+  "lods": [
+    {
+      "lod": 1,
+      "sha256": "66254deadcf0af2767983906fac5177d7444777c10c0c745974c67e108f8637c",
+      "vertices": 10885,
+      "triangles": 21005,
+      "render_resolution": [
+        400,
+        520
+      ]
+    },
+    {
+      "lod": 3,
+      "sha256": "4db10cea1cdbbc5831c18b567a80b028c30ba3ac05c091c81f76518a922aa42c",
+      "vertices": 2381,
+      "triangles": 4227,
+      "render_resolution": [
+        200,
+        260
+      ]
+    }
+  ],
+  "numeric_checks": {
+    "normalized_exact_254_weights": true,
+    "at_most_four_influences": true,
+    "nonfinite_posed_vertices": 0,
+    "faces_below_1e_12_square_m_across_tested_poses": 0,
+    "finger_region_boundary_edges_rest_abs_x_above_0_60_m": 0
+  },
+  "observations": [
+    "LOD1 keeps continuous shoulders and closed glove silhouettes in these views; the kneeling hand and wrist shapes remain recognizable at 400x520.",
+    "LOD3 shows expected coarse head/armor/finger silhouettes at 200x260. No conspicuous hand or cuff opening was visible.",
+    "LOD3 rear torso has pronounced dark angular shading below the white back plate, strongest in rest. A pure-emission, one-sided diagnostic removes the dark patch while retaining a filled green back silhouette: it is coarse surface/normal shading, not a large missing garment panel. Direct one-sided rear ray identification corroborates green coverage across the broad patch.",
+    "Running raw6 retains a narrow folded central tabard shape. This focused review found no gross rupture at the tested screen sizes; it does not supersede the nearest-LOD cloth contact audit."
+  ],
+  "limitations": [
+    "These are selected static views, not a complete motion sweep of distance LODs.",
+    "Screen sizes are review targets, not verified in-engine LOD transition distances. Actual transitions depend on engine settings and projection.",
+    "Palette materials and exact exported normals were used for readable fit review; this is not validation of final texture baking or in-engine lighting.",
+    "Hidden internal overlaps, subpixel contacts, and microscopic cuff clearance were not exhaustively measured. The numerical open-edge check only covers the outer finger region; visible cuffs were reviewed in renders.",
+    "The coarsest torso shading can visibly pop when switching LODs and should be treated as a later visual LOD refinement, without claiming it is a geometry hole."
+  ],
+  "budget_change_required_for_this_functional_gate": false,
+  "evidence": {
+    "render_manifest": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\validation\\distance_lod_review\\render_manifest.json",
+    "shading_diagnostic": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\validation\\distance_lod_review\\diagnostic_emission_lod3_rest_rear.png",
+    "ray_identity": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\validation\\distance_lod_review\\back_ray_identity.json"
+  }
+}

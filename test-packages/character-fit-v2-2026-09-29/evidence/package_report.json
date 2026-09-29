@@ -1,0 +1,10 @@
+{
+  "status": "compiled and packed",
+  "pbo": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\build\\@CodexCharacterFit\\addons\\ck_character_fit.pbo",
+  "bytes": 3624231,
+  "sha256": "49e727b4c6fa38e31840a30a9739d175ab4dbaf132cb186fbd4162594b2d092c",
+  "binarize_seconds": 11.212475299835205,
+  "compiled_model_signature": "ODOL",
+  "config_bin_bytes": 1153,
+  "fit_status": "Corrected candidate; see final deformation and runtime verification before fit approval."
+}

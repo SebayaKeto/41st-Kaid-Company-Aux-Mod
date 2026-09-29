@@ -1,0 +1,198 @@
+{
+  "package": "Jedi Body C Arma fit V2",
+  "status": "FIT_TEST",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 43,
+      "sha256": "b25bcf5afab6dcc1f49c43a589e1d47e4b3475182d765679b4bfd50324ebd18b"
+    },
+    {
+      "file": "@CodexCharacterFit/addons/ck_character_fit.pbo",
+      "bytes": 3624231,
+      "sha256": "49e727b4c6fa38e31840a30a9739d175ab4dbaf132cb186fbd4162594b2d092c"
+    },
+    {
+      "file": "@CodexCharacterFit/mod.cpp",
+      "bytes": 240,
+      "sha256": "5c8291c903cf2da4429e2d36bcd9a5f6976bba63d06c7d0ada3205180b4b05a3"
+    },
+    {
+      "file": "@CodexCharacterFit/README.md",
+      "bytes": 1654,
+      "sha256": "75e612bce4fe9db1e876486e69f135f3c3021fefc7867d0849162f80b20f4ae0"
+    },
+    {
+      "file": "evidence/distance_lod_review.json",
+      "bytes": 3787,
+      "sha256": "b502c19bf96c23b59e4c0a43a54ec9146774ad55ae9f747965509a147d68b1d3"
+    },
+    {
+      "file": "evidence/export_manifest.json",
+      "bytes": 440524,
+      "sha256": "2722a98f133fdb150bdebdb1165b6eb7c135e57c7b3fdad43f42d14a45a68b43"
+    },
+    {
+      "file": "evidence/final_summary.json",
+      "bytes": 1933,
+      "sha256": "faab207533e480ecc2d466a9b325b940961c17b298f0790d978d349354c7c8a2"
+    },
+    {
+      "file": "evidence/lower_repair_report.md",
+      "bytes": 7003,
+      "sha256": "44370defe5e4c8b495cf02f70f2de3101ef6ab24a4728487631009aea7c4b193"
+    },
+    {
+      "file": "evidence/p3d_report.json",
+      "bytes": 7302,
+      "sha256": "33802f8269374df2cbbd2709f114469737017a4d80530f4f0491976538093c5e"
+    },
+    {
+      "file": "evidence/package_report.json",
+      "bytes": 477,
+      "sha256": "58617e4ecbfa1f58490d02939710d663baaf104846025ae3f49a47e0bc612507"
+    },
+    {
+      "file": "evidence/rear_repair_report.md",
+      "bytes": 3246,
+      "sha256": "0fecb2ad213ff21855ff07ee7c7dd15a2c68dd8eb41de2350b29c03e4e3f45cd"
+    },
+    {
+      "file": "evidence/runtime_summary.json",
+      "bytes": 1572,
+      "sha256": "129f5680b9735dd6d923e66517330321e01bbfc0281f623cea2159824ababd41"
+    },
+    {
+      "file": "evidence/trouser_tuck_independent.json",
+      "bytes": 173405,
+      "sha256": "2a82e739c062a5a88510584d0bbd796b0e19a4d5827dacb596bd6ea35f5a8e93"
+    },
+    {
+      "file": "evidence/upper_export_equality.json",
+      "bytes": 61510,
+      "sha256": "415224dd179603efe58fa5b47f6ee4d77c814dc925309aee8d41e02c6631195c"
+    },
+    {
+      "file": "evidence/visual_review.json",
+      "bytes": 5641,
+      "sha256": "de3d647d6ec569492d15948c711f57e7b05d00197fb4635f6003b7998eca54e8"
+    },
+    {
+      "file": "previews/kneeling_rifle_side.png",
+      "bytes": 888572,
+      "sha256": "f5f86c1930460f5ffa6a22bb1b1ea3cdadccd8c0e5a0eb5eca410cd7992e4ec3"
+    },
+    {
+      "file": "previews/prone_rifle_opposite_rear.png",
+      "bytes": 716082,
+      "sha256": "6d1ed0aac40017099787417580bf860c44620d4e5bbe8df2bd4b20cd87f7021a"
+    },
+    {
+      "file": "previews/rest_quarter.png",
+      "bytes": 846943,
+      "sha256": "179a5fa8fbad27f9aa20d3dad6150270cfaab5eb33838869d5e5e087b30c40b3"
+    },
+    {
+      "file": "previews/running_rifle_raw006_front.png",
+      "bytes": 795066,
+      "sha256": "2913d7ba585e27907cf12bb0da55ef6dd94d444f33d04bf7d6b798407bce5d48"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3679,
+      "sha256": "46b7e0bf108fd5938f0d7e9573aab0d9fd5eabde0afb376ccd890b5f7b7c8cca"
+    },
+    {
+      "file": "source/ck_character_fit/$PBOPREFIX$",
+      "bytes": 16,
+      "sha256": "b40162d07da155e8bae0a0cfa8d1dc9e4cd684091ec32b938aa6f5c584e3f345"
+    },
+    {
+      "file": "source/ck_character_fit/ck_uniform.p3d",
+      "bytes": 36872939,
+      "sha256": "c9acd7a287fb129ce17950a5677451d3d8dbdf6172fedab3d39e0df2736669c7"
+    },
+    {
+      "file": "source/ck_character_fit/config.cpp",
+      "bytes": 1313,
+      "sha256": "60930eecdbe2a428070c1496c7601bb7b3ee3c831d13af1cb753e52dd21b75f5"
+    },
+    {
+      "file": "source/ck_character_fit/data/belt_leather.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/boot_leather.rvmat",
+      "bytes": 764,
+      "sha256": "8314426472269720a3740efc961a4076003c7764f53d74fe0980f8984e4f4b6d"
+    },
+    {
+      "file": "source/ck_character_fit/data/collar.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/dark_cloth.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/gloves.rvmat",
+      "bytes": 764,
+      "sha256": "8314426472269720a3740efc961a4076003c7764f53d74fe0980f8984e4f4b6d"
+    },
+    {
+      "file": "source/ck_character_fit/data/green_cloth.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/green_seam.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/hardware.rvmat",
+      "bytes": 764,
+      "sha256": "8314426472269720a3740efc961a4076003c7764f53d74fe0980f8984e4f4b6d"
+    },
+    {
+      "file": "source/ck_character_fit/data/paint.rvmat",
+      "bytes": 761,
+      "sha256": "74bb40a91bef45fa6cff63148d9bb8e6e91896aee1ad4237e54ff48c26ce8645"
+    },
+    {
+      "file": "source/ck_character_fit/data/polymer.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/rubber.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/skin.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/data/sleeves.rvmat",
+      "bytes": 767,
+      "sha256": "1d0276d98cc4cc95d5b53002fa7058ba8e40048c4dee46972907909eeb908cf1"
+    },
+    {
+      "file": "source/ck_character_fit/model.cfg",
+      "bytes": 5163,
+      "sha256": "0e9e2e4ee4743d3087de3545fe4f5b6738639dda6d4ce6bbed9f9e6118e2e267"
+    },
+    {
+      "file": "source/README.md",
+      "bytes": 908,
+      "sha256": "e60503fdb2d4099c8792186863f18a67be25a4b600e43f32641d293179166863"
+    }
+  ],
+  "production_aux_modified": false,
+  "hash_note": "Hashes describe prepared file bytes. Git text line-ending normalization can alter text-file byte hashes; the PBO and P3D content hashes remain exact."
+}

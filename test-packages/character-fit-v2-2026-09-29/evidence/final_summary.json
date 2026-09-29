@@ -1,0 +1,39 @@
+{
+  "status": "ACCEPTED_FOR_LOCAL_ARMA_FIT_TEST",
+  "source_scene_sha256": "1449c72cd520b5e43255c2c92818179dae39f0f0531f074afb384cc6ab244061",
+  "lod0_sha256": "0e22df56f5f94f45a80225fbca3f317434dee8ae24d41da57009db7aae0458c9",
+  "pbo_sha256": "49e727b4c6fa38e31840a30a9739d175ab4dbaf132cb186fbd4162594b2d092c",
+  "nearest_triangles": 42060,
+  "distance_triangles": [
+    21005,
+    10451,
+    4227
+  ],
+  "source_v8_unchanged": true,
+  "source_topology_changes": "Upper backing/glove repair, paired cloth shell repair and small trouser shape correction; original detailed v8 preserved.",
+  "keypose_cases": 17,
+  "dense_cases": 140,
+  "structural_weights_check": "PASS",
+  "max_influences": 4,
+  "serialized_weights_sum_one": true,
+  "mlod_vertex_face_correspondence": true,
+  "rigid_max_edge_length_drift_mm": 0.01770065651557351,
+  "visual_views_reviewed": 20,
+  "runtime_assertions": 58,
+  "runtime_qualified_verdict": "PASS_58_ASSERTIONS_WITH_VANILLA_CONTROL_WARNING",
+  "limits": [
+    "Actual rendered Arma image",
+    "Weapon-specific hand IK/contact",
+    "Every animation or mod combination",
+    "Production textures, final facial setup, support collision/shadow silhouette"
+  ],
+  "remaining_contacts": [
+    "Concealed waist attachment and side underlap surfaces",
+    "Inner shell grazing and elastic backing folds",
+    "Hidden Body C reference has inherited overlaps; newly introduced sampled overlap from trouser tuck <=0.967mm, with unchanged anatomy"
+  ],
+  "full_raw_deformation_report": "validation/final_dense/report.json",
+  "local_study_root": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2",
+  "distance_lod_review": "validation/distance_lod_review/review_report.json",
+  "distance_lod_limits": "Focused18 views, rest/kneel/run6, LOD1 and LOD3. Farthest LOD back has angular shading; no large opening in diagnostic rays. Actual engine transition distances not tested."
+}

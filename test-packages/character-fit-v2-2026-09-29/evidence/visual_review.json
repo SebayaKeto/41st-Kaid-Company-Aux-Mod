@@ -1,0 +1,148 @@
+{
+  "status": "ACCEPTED_FOR_LOCAL_FIT_TEST_WITH_DOCUMENTED_LIMITATIONS",
+  "reviewed_views": [
+    {
+      "pose": "rest",
+      "frame": 0,
+      "view": "front",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\rest_front.png"
+    },
+    {
+      "pose": "rest",
+      "frame": 0,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\rest_quarter.png"
+    },
+    {
+      "pose": "rest",
+      "frame": 0,
+      "view": "rear",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\rest_rear.png"
+    },
+    {
+      "pose": "standing_rifle",
+      "frame": 2,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\standing_rifle_quarter.png"
+    },
+    {
+      "pose": "standing_rifle",
+      "frame": 2,
+      "view": "rear",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\standing_rifle_rear.png"
+    },
+    {
+      "pose": "kneeling_rifle",
+      "frame": 1,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\kneeling_rifle_quarter.png"
+    },
+    {
+      "pose": "kneeling_rifle",
+      "frame": 1,
+      "view": "side",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\kneeling_rifle_side.png"
+    },
+    {
+      "pose": "kneeling_inventory",
+      "frame": 1,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\kneeling_inventory_quarter.png"
+    },
+    {
+      "pose": "prone_rifle",
+      "frame": 6,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\prone_rifle_quarter.png"
+    },
+    {
+      "pose": "prone_rifle",
+      "frame": 6,
+      "view": "rear",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\prone_rifle_rear.png"
+    },
+    {
+      "pose": "walking_rifle_phase050",
+      "frame": 7,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\walking_rifle_phase050_quarter.png"
+    },
+    {
+      "pose": "running_rifle_phase050",
+      "frame": 20,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\running_rifle_phase050_quarter.png"
+    },
+    {
+      "pose": "crouch_walking_rifle_phase050",
+      "frame": 41,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\crouch_walking_rifle_phase050_quarter.png"
+    },
+    {
+      "pose": "prone_rifle",
+      "frame": 6,
+      "view": "opposite_rear",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\prone_rifle_opposite_rear.png"
+    },
+    {
+      "pose": "standing_rifle",
+      "frame": 2,
+      "view": "opposite_quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\standing_rifle_opposite_quarter.png"
+    },
+    {
+      "pose": "crouch_walking_rifle_phase025",
+      "frame": 21,
+      "view": "rear",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\crouch_walking_rifle_phase025_rear.png"
+    },
+    {
+      "pose": "running_rifle_raw005",
+      "frame": 6,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\running_rifle_raw005_quarter.png"
+    },
+    {
+      "pose": "running_rifle_raw005",
+      "frame": 6,
+      "view": "rear",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\running_rifle_raw005_rear.png"
+    },
+    {
+      "pose": "running_rifle_raw006",
+      "frame": 7,
+      "view": "front",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\running_rifle_raw006_front.png"
+    },
+    {
+      "pose": "running_rifle_raw025",
+      "frame": 26,
+      "view": "quarter",
+      "image": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\render\\running_rifle_raw025_quarter.png"
+    }
+  ],
+  "count": 20,
+  "basis": "Exact exported LOD0 V/F/top-four weights; original Blender materials for readable appearance, single-sided culling enabled; not a claim of game texture bake",
+  "findings": [
+    "Previous exposed front tabard black breakthroughs cleared in the tested kneeling/running views; small smooth trouser tuck retains the continuous front silhouette.",
+    "Shoulder backing and gloves retain coverage; final23 upper parts exactly equal independently reviewed preflight mesh.",
+    "Rear movement clearance retained. Side attachment overlaps and folded/tucked shell contact remain; raw intersection totals are not an exposed-breakthrough verdict.",
+    "Armor remains rigid; lower cloth folds tightly during extreme crouching/inventory. This is a skinned garment approximation, not cloth simulation.",
+    "Standing and moving silhouettes accepted for a local compatibility test; fine cloth shading, resting folds, shoulder spacing and material appearance can still be polished."
+  ],
+  "not_verified": [
+    "Actual rendered Arma image",
+    "Weapon-specific hand IK/contact",
+    "Every animation or mod combination",
+    "Production textures, final facial setup, support collision/shadow silhouette"
+  ],
+  "additional_evidence": [
+    "lower/lower_trousertuck_trial_shell140_quantized_report.json",
+    "validation/rear_trousertuck_review.json",
+    "validation/trouser_tuck_independent_final.json",
+    "upper/preflight_export_review/review_report.json",
+    "upper/preflight_export_review/final_upper_comparison.json",
+    "validation/waist_visibility/report.json"
+  ]
+}

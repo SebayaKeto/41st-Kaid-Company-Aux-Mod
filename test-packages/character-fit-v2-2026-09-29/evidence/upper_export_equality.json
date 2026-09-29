@@ -1,0 +1,1571 @@
+{
+  "status": "PASS",
+  "equal": true,
+  "parts_checked": 23,
+  "parts_changed": 0,
+  "explicitly_excluded_parts": [],
+  "comparison": "Float32 surface attributes, oriented triangles and254-quantized weights by bone name. Global indexing/order and inactive bone columns ignored; cyclic corner starts ignored; reversed winding remains a change.",
+  "parts": [
+    {
+      "name": "Bicep Left",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 236,
+        "triangles": 472,
+        "active_bones": [
+          "LeftArm"
+        ],
+        "bounds": [
+          [
+            0.2276400327682495,
+            -0.002062681596726179,
+            0.27102982997894287
+          ],
+          [
+            0.3873006999492645,
+            0.12406526505947113,
+            0.4348812401294708
+          ]
+        ],
+        "hashes": {
+          "geometry": "4b6ef8dc40ca95f89941dcf9c62279db4e9d39ef826eb4d8b9f55e4b72b2612a",
+          "normals": "807aaad5459a3c5c83c443149d2d3dc02ea139c03ccfc24878c4a922f03a713c",
+          "uvs": "a915827fe4963b5eeb24ee44ecffe8faca7ac7bcf84b647b530f9f9e42b0cbfa",
+          "vertex_colors": "70e2d55825a4b4d3973cd253ff7be143f636930cd0d493acf76a3ff472c474a0",
+          "face_colors": "e41b1d47ce4972c255ae5315a002c56a4194d85cadccd2bd53e37f72d18e4407",
+          "materials": "38dea6fde9377b4acd40df134395051a0d3057f8fce0c4df87ae34f55b70e4c5",
+          "quantized_weights": "3b90bcb0434d90172bffd2ef5fbd151ecaa9ee4abfcc8837bc324a8549abb26f",
+          "combined": "681f255e6129b3e937b855dd202fb6c72a247c09ae4020e44b01c3ac3e4658e4"
+        }
+      },
+      "candidate": {
+        "vertices": 236,
+        "triangles": 472,
+        "active_bones": [
+          "LeftArm"
+        ],
+        "bounds": [
+          [
+            0.2276400327682495,
+            -0.002062681596726179,
+            0.27102982997894287
+          ],
+          [
+            0.3873006999492645,
+            0.12406526505947113,
+            0.4348812401294708
+          ]
+        ],
+        "hashes": {
+          "geometry": "4b6ef8dc40ca95f89941dcf9c62279db4e9d39ef826eb4d8b9f55e4b72b2612a",
+          "normals": "807aaad5459a3c5c83c443149d2d3dc02ea139c03ccfc24878c4a922f03a713c",
+          "uvs": "a915827fe4963b5eeb24ee44ecffe8faca7ac7bcf84b647b530f9f9e42b0cbfa",
+          "vertex_colors": "70e2d55825a4b4d3973cd253ff7be143f636930cd0d493acf76a3ff472c474a0",
+          "face_colors": "e41b1d47ce4972c255ae5315a002c56a4194d85cadccd2bd53e37f72d18e4407",
+          "materials": "38dea6fde9377b4acd40df134395051a0d3057f8fce0c4df87ae34f55b70e4c5",
+          "quantized_weights": "3b90bcb0434d90172bffd2ef5fbd151ecaa9ee4abfcc8837bc324a8549abb26f",
+          "combined": "681f255e6129b3e937b855dd202fb6c72a247c09ae4020e44b01c3ac3e4658e4"
+        }
+      }
+    },
+    {
+      "name": "Bicep Right",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 236,
+        "triangles": 472,
+        "active_bones": [
+          "RightArm"
+        ],
+        "bounds": [
+          [
+            -0.3871557414531708,
+            -0.0018256091279909015,
+            0.27084389328956604
+          ],
+          [
+            -0.22785469889640808,
+            0.12446201592683792,
+            0.4346400797367096
+          ]
+        ],
+        "hashes": {
+          "geometry": "45e114ca76b2678cb542f835cb5ae32538f48c8e8d377b50cdc2d611c38d6dae",
+          "normals": "801fc126f235c710f129ea1e74eb841b8f4f0f350dd1c206751c97425c4402e5",
+          "uvs": "5e2bd462dc9707a6e5458d3449c134299eabecae204a8bab9b623e8b7be5cbe5",
+          "vertex_colors": "15e5e12c5a59253654e8b770c6f3784c19a46dbfa9f325948730c1dc4073ea33",
+          "face_colors": "30b3dfca30d0693ee799b96b4412a95d9ee842620f389a4a711198a454c4447e",
+          "materials": "ee85e9bbfbf783788c1c425c6e2f25da72bb04d4f16afbb6104bbc0db1f9ee22",
+          "quantized_weights": "4e5d9dc20b489b47ea2e95898d4bb3c9df40167bff683aa5e02e8764b6e8f54e",
+          "combined": "98b9cbf5637ad9d27fdbe87635531737bee4f7016b941052b17ad104ecc8b519"
+        }
+      },
+      "candidate": {
+        "vertices": 236,
+        "triangles": 472,
+        "active_bones": [
+          "RightArm"
+        ],
+        "bounds": [
+          [
+            -0.3871557414531708,
+            -0.0018256091279909015,
+            0.27084389328956604
+          ],
+          [
+            -0.22785469889640808,
+            0.12446201592683792,
+            0.4346400797367096
+          ]
+        ],
+        "hashes": {
+          "geometry": "45e114ca76b2678cb542f835cb5ae32538f48c8e8d377b50cdc2d611c38d6dae",
+          "normals": "801fc126f235c710f129ea1e74eb841b8f4f0f350dd1c206751c97425c4402e5",
+          "uvs": "5e2bd462dc9707a6e5458d3449c134299eabecae204a8bab9b623e8b7be5cbe5",
+          "vertex_colors": "15e5e12c5a59253654e8b770c6f3784c19a46dbfa9f325948730c1dc4073ea33",
+          "face_colors": "30b3dfca30d0693ee799b96b4412a95d9ee842620f389a4a711198a454c4447e",
+          "materials": "ee85e9bbfbf783788c1c425c6e2f25da72bb04d4f16afbb6104bbc0db1f9ee22",
+          "quantized_weights": "4e5d9dc20b489b47ea2e95898d4bb3c9df40167bff683aa5e02e8764b6e8f54e",
+          "combined": "98b9cbf5637ad9d27fdbe87635531737bee4f7016b941052b17ad104ecc8b519"
+        }
+      }
+    },
+    {
+      "name": "Chest Back - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.0820985659956932,
+            0.03439720347523689,
+            0.3560689687728882
+          ],
+          [
+            0.08209992200136185,
+            0.15097370743751526,
+            0.5770596265792847
+          ]
+        ],
+        "hashes": {
+          "geometry": "999a8deae53589d5a2c0c24ffcee74e29768ecc65faf942b80342d773befd493",
+          "normals": "cc4951eba5c96c789fe3febf61ad878882f648eb9ad42d963a20b7e3838b96cb",
+          "uvs": "7f561e9730ad762017dfcae63316a6539d45730d7820492a624e269544bf51dd",
+          "vertex_colors": "27c63394b266fc26c3faa8e3af38e4ba70bc13cfae30a9600644982bc3743cf8",
+          "face_colors": "6f037883f089b5bbee9b8af96e8ad52c3b459b36e90ac27caa48fa7dd94097b5",
+          "materials": "25a483037ea5868774d886e5c80205789c5940a0fbcbc7bbbfcc6f51dcaa69f1",
+          "quantized_weights": "c014abdc95a48b266aa113b2a448c19a5af2c42667a9b5ecd6cbb3156cf41399",
+          "combined": "8aa4aa16a4f6d21a79af32449d0ace03cc0f2fc9a6e8bf3997976dd9c1db34ea"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.0820985659956932,
+            0.03439720347523689,
+            0.3560689687728882
+          ],
+          [
+            0.08209992200136185,
+            0.15097370743751526,
+            0.5770596265792847
+          ]
+        ],
+        "hashes": {
+          "geometry": "999a8deae53589d5a2c0c24ffcee74e29768ecc65faf942b80342d773befd493",
+          "normals": "cc4951eba5c96c789fe3febf61ad878882f648eb9ad42d963a20b7e3838b96cb",
+          "uvs": "7f561e9730ad762017dfcae63316a6539d45730d7820492a624e269544bf51dd",
+          "vertex_colors": "27c63394b266fc26c3faa8e3af38e4ba70bc13cfae30a9600644982bc3743cf8",
+          "face_colors": "6f037883f089b5bbee9b8af96e8ad52c3b459b36e90ac27caa48fa7dd94097b5",
+          "materials": "25a483037ea5868774d886e5c80205789c5940a0fbcbc7bbbfcc6f51dcaa69f1",
+          "quantized_weights": "c014abdc95a48b266aa113b2a448c19a5af2c42667a9b5ecd6cbb3156cf41399",
+          "combined": "8aa4aa16a4f6d21a79af32449d0ace03cc0f2fc9a6e8bf3997976dd9c1db34ea"
+        }
+      }
+    },
+    {
+      "name": "Chest Front - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.08212272822856903,
+            -0.1168951466679573,
+            0.39164435863494873
+          ],
+          [
+            0.08212383091449738,
+            0.03443664312362671,
+            0.5723821520805359
+          ]
+        ],
+        "hashes": {
+          "geometry": "43eea985436ed4b0eab05602383cb0d0c1e91b40fae277c66164907c3c353c30",
+          "normals": "87da8e6d1adeeb18372cc05c438d922ad2f63b458310f58ba06163169fc88a7b",
+          "uvs": "6330317019bb918880c191e006e7878e86c0e49c0746867614b1415f66996afc",
+          "vertex_colors": "d4b5c3b6efb4d0d8e17712ac3e67efafb2697b07bf369d90abeac9671cfe2b91",
+          "face_colors": "4602f8dcdc152d78a748d76a20f2ea0fa35db319bf988c912f884f69ab433181",
+          "materials": "d92bc0a066d5bc32c3cd223d2ebd84b59400cd3f9f33eb530a8ddf4cc970ed17",
+          "quantized_weights": "14d0e7722a8fbb191d8dc36a039d327bf3310fa34bc66965d9fe1a76a148f05b",
+          "combined": "5074ec32cafe038d1ef8bdbb62418d9c5dfe8dc5f6f518feef32b46e176c9af8"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.08212272822856903,
+            -0.1168951466679573,
+            0.39164435863494873
+          ],
+          [
+            0.08212383091449738,
+            0.03443664312362671,
+            0.5723821520805359
+          ]
+        ],
+        "hashes": {
+          "geometry": "43eea985436ed4b0eab05602383cb0d0c1e91b40fae277c66164907c3c353c30",
+          "normals": "87da8e6d1adeeb18372cc05c438d922ad2f63b458310f58ba06163169fc88a7b",
+          "uvs": "6330317019bb918880c191e006e7878e86c0e49c0746867614b1415f66996afc",
+          "vertex_colors": "d4b5c3b6efb4d0d8e17712ac3e67efafb2697b07bf369d90abeac9671cfe2b91",
+          "face_colors": "4602f8dcdc152d78a748d76a20f2ea0fa35db319bf988c912f884f69ab433181",
+          "materials": "d92bc0a066d5bc32c3cd223d2ebd84b59400cd3f9f33eb530a8ddf4cc970ed17",
+          "quantized_weights": "14d0e7722a8fbb191d8dc36a039d327bf3310fa34bc66965d9fe1a76a148f05b",
+          "combined": "5074ec32cafe038d1ef8bdbb62418d9c5dfe8dc5f6f518feef32b46e176c9af8"
+        }
+      }
+    },
+    {
+      "name": "Chest Front Left - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            0.06192585080862045,
+            -0.119423046708107,
+            0.3663467764854431
+          ],
+          [
+            0.1261056661605835,
+            0.1491193324327469,
+            0.5749225616455078
+          ]
+        ],
+        "hashes": {
+          "geometry": "840a6cc65fa7468c59e68a95c2b7ad3d9d99ad63fe735eceea79925f359e9333",
+          "normals": "ca7ece777e63e907ea8f7e743d700886d44cdd98b1ca003056bb95a0a7cf960b",
+          "uvs": "856334e458e1f4dbdec88056ba44a53d40ee229a3be7f5ad0e7554f6a4c929bf",
+          "vertex_colors": "ae7c1ed807851a5e8fc7fbecf05f1cb3e7e25e5b68562884ad2bcd020eb5f8e7",
+          "face_colors": "bb04c9fec8f040f58a5edef0b83ed8cb549f66bec0f154ac6c55113c79d7a81f",
+          "materials": "5ae1dcc253e73a6d0d3adcc12b4a07faea99573c37837681d1280bb97c4bffff",
+          "quantized_weights": "6d56f1bc31298f981dfba99f32385e817a463300ee39e9d3a057dde5363caf76",
+          "combined": "a571b0e99ba0d0ff60ddc4ac9d94eb9bd2f1ced4b6eda0d309bb193f353d443d"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            0.06192585080862045,
+            -0.119423046708107,
+            0.3663467764854431
+          ],
+          [
+            0.1261056661605835,
+            0.1491193324327469,
+            0.5749225616455078
+          ]
+        ],
+        "hashes": {
+          "geometry": "840a6cc65fa7468c59e68a95c2b7ad3d9d99ad63fe735eceea79925f359e9333",
+          "normals": "ca7ece777e63e907ea8f7e743d700886d44cdd98b1ca003056bb95a0a7cf960b",
+          "uvs": "856334e458e1f4dbdec88056ba44a53d40ee229a3be7f5ad0e7554f6a4c929bf",
+          "vertex_colors": "ae7c1ed807851a5e8fc7fbecf05f1cb3e7e25e5b68562884ad2bcd020eb5f8e7",
+          "face_colors": "bb04c9fec8f040f58a5edef0b83ed8cb549f66bec0f154ac6c55113c79d7a81f",
+          "materials": "5ae1dcc253e73a6d0d3adcc12b4a07faea99573c37837681d1280bb97c4bffff",
+          "quantized_weights": "6d56f1bc31298f981dfba99f32385e817a463300ee39e9d3a057dde5363caf76",
+          "combined": "a571b0e99ba0d0ff60ddc4ac9d94eb9bd2f1ced4b6eda0d309bb193f353d443d"
+        }
+      }
+    },
+    {
+      "name": "Chest Front Right - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.12609495222568512,
+            -0.11946049332618713,
+            0.3663569986820221
+          ],
+          [
+            -0.06193629652261734,
+            0.14907197654247284,
+            0.5747343897819519
+          ]
+        ],
+        "hashes": {
+          "geometry": "a90607e34c9610d2d791a91e7a676fbc0bf71678d3ace2202cec975ef970ff71",
+          "normals": "150045465dc3b05654e2b591a417f52b16ad5c853183d8ac76f874a58a543c20",
+          "uvs": "cf8a23fc0219841c5f73e57f548a69c015f85b7a2782d410e002ced21b5bafb1",
+          "vertex_colors": "73d0c858673b2e1fcc45ca260759e10e74314918d8638b6d9c529d9b02e0e41e",
+          "face_colors": "1469119aa2e9ff4e82d1366e1f71584a04f74a603c2aff473d2a59d4842d5a6c",
+          "materials": "3e02be92914d07587d782af876948d9bbe612a598b6ee6b52671c5c8d88666a6",
+          "quantized_weights": "95982f381c44824357d216245ffcb0ad211b38a2f2b7a04c03ff226e148937cb",
+          "combined": "627c0b87644dcbed7fec85fece20fbf7e974d7a4dc1fe194d95443651e9209c7"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.12609495222568512,
+            -0.11946049332618713,
+            0.3663569986820221
+          ],
+          [
+            -0.06193629652261734,
+            0.14907197654247284,
+            0.5747343897819519
+          ]
+        ],
+        "hashes": {
+          "geometry": "a90607e34c9610d2d791a91e7a676fbc0bf71678d3ace2202cec975ef970ff71",
+          "normals": "150045465dc3b05654e2b591a417f52b16ad5c853183d8ac76f874a58a543c20",
+          "uvs": "cf8a23fc0219841c5f73e57f548a69c015f85b7a2782d410e002ced21b5bafb1",
+          "vertex_colors": "73d0c858673b2e1fcc45ca260759e10e74314918d8638b6d9c529d9b02e0e41e",
+          "face_colors": "1469119aa2e9ff4e82d1366e1f71584a04f74a603c2aff473d2a59d4842d5a6c",
+          "materials": "3e02be92914d07587d782af876948d9bbe612a598b6ee6b52671c5c8d88666a6",
+          "quantized_weights": "95982f381c44824357d216245ffcb0ad211b38a2f2b7a04c03ff226e148937cb",
+          "combined": "627c0b87644dcbed7fec85fece20fbf7e974d7a4dc1fe194d95443651e9209c7"
+        }
+      }
+    },
+    {
+      "name": "Chest Side Left - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            0.1070944294333458,
+            -0.09551594406366348,
+            0.4211798310279846
+          ],
+          [
+            0.18633508682250977,
+            0.14068154990673065,
+            0.5572461485862732
+          ]
+        ],
+        "hashes": {
+          "geometry": "964f50cf61150f79dac19d93be0b5cb440f5198336d4e887af1a6695cce605bb",
+          "normals": "e6e7d59c694ab3b5a256a73645a97a678c2e1f82eeb8ed2c69a467d8ba827967",
+          "uvs": "1829bf0999c791028ba55da72ce3f205eb08293b162c6c63cda2c2c237f4a0a2",
+          "vertex_colors": "0ac392328ebb23c4fc80c071836e5d5d59c61577744bf060bedc404d67ec841e",
+          "face_colors": "146e1f69fd843b46f4891db97255def8e28e654295ba2f0b0779aa983c2bebd5",
+          "materials": "5f2d283f6cc276aa9ed088330170b65aaffd594f436922af2115d89ff255ebf5",
+          "quantized_weights": "44b46e29853bc4e5d3769e4551fefb540ccff284d6a5ba7b10966e7a98e2afac",
+          "combined": "9116eb1f08ef8bd938741ce44570d256a84a6faec28f1b22d8ce66c38ab6624a"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            0.1070944294333458,
+            -0.09551594406366348,
+            0.4211798310279846
+          ],
+          [
+            0.18633508682250977,
+            0.14068154990673065,
+            0.5572461485862732
+          ]
+        ],
+        "hashes": {
+          "geometry": "964f50cf61150f79dac19d93be0b5cb440f5198336d4e887af1a6695cce605bb",
+          "normals": "e6e7d59c694ab3b5a256a73645a97a678c2e1f82eeb8ed2c69a467d8ba827967",
+          "uvs": "1829bf0999c791028ba55da72ce3f205eb08293b162c6c63cda2c2c237f4a0a2",
+          "vertex_colors": "0ac392328ebb23c4fc80c071836e5d5d59c61577744bf060bedc404d67ec841e",
+          "face_colors": "146e1f69fd843b46f4891db97255def8e28e654295ba2f0b0779aa983c2bebd5",
+          "materials": "5f2d283f6cc276aa9ed088330170b65aaffd594f436922af2115d89ff255ebf5",
+          "quantized_weights": "44b46e29853bc4e5d3769e4551fefb540ccff284d6a5ba7b10966e7a98e2afac",
+          "combined": "9116eb1f08ef8bd938741ce44570d256a84a6faec28f1b22d8ce66c38ab6624a"
+        }
+      }
+    },
+    {
+      "name": "Chest Side Right - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.18610802292823792,
+            -0.09553838521242142,
+            0.4211454689502716
+          ],
+          [
+            -0.10709847509860992,
+            0.14060674607753754,
+            0.5574238300323486
+          ]
+        ],
+        "hashes": {
+          "geometry": "8b43e9cc485544a89a5c34e43d8122846449326ab2238cf845cc0dd9418f9c69",
+          "normals": "cfa3e4c86c9bde7c1a8080a4bbb0e45b81cec45f54f5af0a7bd899d9ca7aa531",
+          "uvs": "fcc16dd5cbffd6b20abdec8ef5b03ddcd008a1ce874a4ba361d8d90f4907e46c",
+          "vertex_colors": "d1bee9ccb4f71d40c25515a0bb17ff5e6798c6238fb3ff6ebe2db48b67aa976c",
+          "face_colors": "76693d78ceb269d4ff0b371e51656718aa04c96d2b7f439eabcf12e4bf1cf297",
+          "materials": "9136d9374a2723b06513846ecc113a9a6218b92f8e19200d13a47caba3f73ff2",
+          "quantized_weights": "c587f4047c320bf5f0e9feccc7b6bd769f01e7c5821c9c551d8cd58e4c4e55db",
+          "combined": "915adcf9a01982a5c1871e2a2a11d731d9497c0f95e985a369ef0ab61fd59509"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.18610802292823792,
+            -0.09553838521242142,
+            0.4211454689502716
+          ],
+          [
+            -0.10709847509860992,
+            0.14060674607753754,
+            0.5574238300323486
+          ]
+        ],
+        "hashes": {
+          "geometry": "8b43e9cc485544a89a5c34e43d8122846449326ab2238cf845cc0dd9418f9c69",
+          "normals": "cfa3e4c86c9bde7c1a8080a4bbb0e45b81cec45f54f5af0a7bd899d9ca7aa531",
+          "uvs": "fcc16dd5cbffd6b20abdec8ef5b03ddcd008a1ce874a4ba361d8d90f4907e46c",
+          "vertex_colors": "d1bee9ccb4f71d40c25515a0bb17ff5e6798c6238fb3ff6ebe2db48b67aa976c",
+          "face_colors": "76693d78ceb269d4ff0b371e51656718aa04c96d2b7f439eabcf12e4bf1cf297",
+          "materials": "9136d9374a2723b06513846ecc113a9a6218b92f8e19200d13a47caba3f73ff2",
+          "quantized_weights": "c587f4047c320bf5f0e9feccc7b6bd769f01e7c5821c9c551d8cd58e4c4e55db",
+          "combined": "915adcf9a01982a5c1871e2a2a11d731d9497c0f95e985a369ef0ab61fd59509"
+        }
+      }
+    },
+    {
+      "name": "Collar Back - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.07903582602739334,
+            0.009456400759518147,
+            0.5658702850341797
+          ],
+          [
+            0.07898379117250443,
+            0.08013159781694412,
+            0.6040065884590149
+          ]
+        ],
+        "hashes": {
+          "geometry": "1cfdf87ad604405f32d7bd8f74f8e0ccb731ee0d6ce6f954f5a6f2d5dccfccb5",
+          "normals": "a9916bc30aed24129becc6cd202556c71ed1628a696a191c55e8aa07e5fc0528",
+          "uvs": "cb5ecb82ce0a987f848268bf3b2c7f3f42cf7477b55a84c4ca7911274c1696f6",
+          "vertex_colors": "7a7ed09be420266e1504e4d6991bceabea3405ca28eec0bc7ca3a982ba0604b4",
+          "face_colors": "b964eadd4f9a2d38ca91744e6ebfa61ab90ea6a74ccdd31af44d7e6af0e18e4f",
+          "materials": "e33f7f7f135d8ce1521c3f39125333d1a662cc24834b2269127379f20b794f7b",
+          "quantized_weights": "71d7ddfa209b0bdf763db84b98635a9a5981b602707ddc838df612ebe5da2c15",
+          "combined": "658578c07aff3da31199de1b36dd3726996edca90e24e0397d6d0fea3c59efde"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.07903582602739334,
+            0.009456400759518147,
+            0.5658702850341797
+          ],
+          [
+            0.07898379117250443,
+            0.08013159781694412,
+            0.6040065884590149
+          ]
+        ],
+        "hashes": {
+          "geometry": "1cfdf87ad604405f32d7bd8f74f8e0ccb731ee0d6ce6f954f5a6f2d5dccfccb5",
+          "normals": "a9916bc30aed24129becc6cd202556c71ed1628a696a191c55e8aa07e5fc0528",
+          "uvs": "cb5ecb82ce0a987f848268bf3b2c7f3f42cf7477b55a84c4ca7911274c1696f6",
+          "vertex_colors": "7a7ed09be420266e1504e4d6991bceabea3405ca28eec0bc7ca3a982ba0604b4",
+          "face_colors": "b964eadd4f9a2d38ca91744e6ebfa61ab90ea6a74ccdd31af44d7e6af0e18e4f",
+          "materials": "e33f7f7f135d8ce1521c3f39125333d1a662cc24834b2269127379f20b794f7b",
+          "quantized_weights": "71d7ddfa209b0bdf763db84b98635a9a5981b602707ddc838df612ebe5da2c15",
+          "combined": "658578c07aff3da31199de1b36dd3726996edca90e24e0397d6d0fea3c59efde"
+        }
+      }
+    },
+    {
+      "name": "Collar Front - Uses .75 Inch Elastic",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.07917038351297379,
+            -0.06480783224105835,
+            0.5191632509231567
+          ],
+          [
+            0.07886575907468796,
+            0.01222109142690897,
+            0.593130350112915
+          ]
+        ],
+        "hashes": {
+          "geometry": "8d0a5926feaf4d2876a597ef8fce7749f4a7259313fa3bd834817dd3270cec8e",
+          "normals": "6763779a3c9fc81f192d1077711d41bc427014eeab2ef99b4ad09c35da1bbee2",
+          "uvs": "916793910ebd9960562b35bafb62b77fc65879be5871d3e24f23b2dfff794697",
+          "vertex_colors": "593e512275fcc1e17a8d3f394e5b26024e2082f7a22e973830ac32125e1898d7",
+          "face_colors": "47fc8635df81ab1a3f5f277e44a8ba160294e9360e70103ce540d949e1f664e5",
+          "materials": "45d4a7a64464673461bf6c475a426e99657cebcf4886f08a13705db89d9022c1",
+          "quantized_weights": "8d79af7fa69d7c2d273430cf88e15b1631b84f4617a5587774cd67a0d102448a",
+          "combined": "a523e9f7e96aa7589002a46801d62737ed0e9387aafc0c45bc6517073e2a1c9e"
+        }
+      },
+      "candidate": {
+        "vertices": 221,
+        "triangles": 438,
+        "active_bones": [
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.07917038351297379,
+            -0.06480783224105835,
+            0.5191632509231567
+          ],
+          [
+            0.07886575907468796,
+            0.01222109142690897,
+            0.593130350112915
+          ]
+        ],
+        "hashes": {
+          "geometry": "8d0a5926feaf4d2876a597ef8fce7749f4a7259313fa3bd834817dd3270cec8e",
+          "normals": "6763779a3c9fc81f192d1077711d41bc427014eeab2ef99b4ad09c35da1bbee2",
+          "uvs": "916793910ebd9960562b35bafb62b77fc65879be5871d3e24f23b2dfff794697",
+          "vertex_colors": "593e512275fcc1e17a8d3f394e5b26024e2082f7a22e973830ac32125e1898d7",
+          "face_colors": "47fc8635df81ab1a3f5f277e44a8ba160294e9360e70103ce540d949e1f664e5",
+          "materials": "45d4a7a64464673461bf6c475a426e99657cebcf4886f08a13705db89d9022c1",
+          "quantized_weights": "8d79af7fa69d7c2d273430cf88e15b1631b84f4617a5587774cd67a0d102448a",
+          "combined": "a523e9f7e96aa7589002a46801d62737ed0e9387aafc0c45bc6517073e2a1c9e"
+        }
+      }
+    },
+    {
+      "name": "Forearm Left Full",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 439,
+        "triangles": 878,
+        "active_bones": [
+          "LeftForeArm"
+        ],
+        "bounds": [
+          [
+            0.2837889790534973,
+            0.02634567953646183,
+            0.05389533191919327
+          ],
+          [
+            0.6050872206687927,
+            0.12233182787895203,
+            0.3812384307384491
+          ]
+        ],
+        "hashes": {
+          "geometry": "a14118a47624aaf2307127cd5d07502dcb3a24bf89da58094bf31ff64c522ab1",
+          "normals": "d97aa072335ca9eb62c073bae8e76e65b9c3e1ffd924a3ae1228946ddf1ea47a",
+          "uvs": "a58d3f3be024e61148873804cf1b7734134c38a04091d8df2d170aecd3ddab29",
+          "vertex_colors": "8ed2d95a484e074d56ea69f83216b0987f663d641471d724caea992fc5f4d8b1",
+          "face_colors": "554dca4cbff324f36d4bcba6e313b1c8efa94d6b951bfce7af96c618782caae3",
+          "materials": "94b7eae32af3c5b0e34859d291444ac17e1138fc10c28a5f70faef82abfb0a73",
+          "quantized_weights": "e2307e7d13f769f85032a38f01e70a6a32afec1b2d57ab524bafc85fff8fda07",
+          "combined": "4b2dc96ed232c4b667f821a8fae6e68cd6a455029d27c2cae1af6c74dc8c23e9"
+        }
+      },
+      "candidate": {
+        "vertices": 439,
+        "triangles": 878,
+        "active_bones": [
+          "LeftForeArm"
+        ],
+        "bounds": [
+          [
+            0.2837889790534973,
+            0.02634567953646183,
+            0.05389533191919327
+          ],
+          [
+            0.6050872206687927,
+            0.12233182787895203,
+            0.3812384307384491
+          ]
+        ],
+        "hashes": {
+          "geometry": "a14118a47624aaf2307127cd5d07502dcb3a24bf89da58094bf31ff64c522ab1",
+          "normals": "d97aa072335ca9eb62c073bae8e76e65b9c3e1ffd924a3ae1228946ddf1ea47a",
+          "uvs": "a58d3f3be024e61148873804cf1b7734134c38a04091d8df2d170aecd3ddab29",
+          "vertex_colors": "8ed2d95a484e074d56ea69f83216b0987f663d641471d724caea992fc5f4d8b1",
+          "face_colors": "554dca4cbff324f36d4bcba6e313b1c8efa94d6b951bfce7af96c618782caae3",
+          "materials": "94b7eae32af3c5b0e34859d291444ac17e1138fc10c28a5f70faef82abfb0a73",
+          "quantized_weights": "e2307e7d13f769f85032a38f01e70a6a32afec1b2d57ab524bafc85fff8fda07",
+          "combined": "4b2dc96ed232c4b667f821a8fae6e68cd6a455029d27c2cae1af6c74dc8c23e9"
+        }
+      }
+    },
+    {
+      "name": "Forearm Right V2",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 439,
+        "triangles": 878,
+        "active_bones": [
+          "RightForeArm"
+        ],
+        "bounds": [
+          [
+            -0.6051477193832397,
+            0.02654048055410385,
+            0.053888656198978424
+          ],
+          [
+            -0.28335684537887573,
+            0.12260493636131287,
+            0.38123568892478943
+          ]
+        ],
+        "hashes": {
+          "geometry": "56940f7cfd41092686bc2f1dbd2d46140cf7beb326f9ba0033dc62556e1777ab",
+          "normals": "a6858e6a2a90fb88fa5e39447983e3b9690ad3ac3eb243388450039c11b8312c",
+          "uvs": "82ef99da445a08b7863980cc65d140efe953f45afc0763863fae943d99a50669",
+          "vertex_colors": "5bbedd3d667b871360feb5191e480a82ebe12e7ce8c182903240f0ca6a650b33",
+          "face_colors": "251b727c13104a5474c6e9457ffa561b822f1533551e0742d6badea2d99a4b6f",
+          "materials": "840026e578cb5388a01461d62619349a6a0abef5b35fb9047f5326d409208769",
+          "quantized_weights": "5273e997278558609b3e0732d785cdb702df37d3e249586b5b99fb6fa68b1d00",
+          "combined": "28cd64b36d08911efd5af546a4ce9321226c9c55d54fc137ad93a64781d0ede7"
+        }
+      },
+      "candidate": {
+        "vertices": 439,
+        "triangles": 878,
+        "active_bones": [
+          "RightForeArm"
+        ],
+        "bounds": [
+          [
+            -0.6051477193832397,
+            0.02654048055410385,
+            0.053888656198978424
+          ],
+          [
+            -0.28335684537887573,
+            0.12260493636131287,
+            0.38123568892478943
+          ]
+        ],
+        "hashes": {
+          "geometry": "56940f7cfd41092686bc2f1dbd2d46140cf7beb326f9ba0033dc62556e1777ab",
+          "normals": "a6858e6a2a90fb88fa5e39447983e3b9690ad3ac3eb243388450039c11b8312c",
+          "uvs": "82ef99da445a08b7863980cc65d140efe953f45afc0763863fae943d99a50669",
+          "vertex_colors": "5bbedd3d667b871360feb5191e480a82ebe12e7ce8c182903240f0ca6a650b33",
+          "face_colors": "251b727c13104a5474c6e9457ffa561b822f1533551e0742d6badea2d99a4b6f",
+          "materials": "840026e578cb5388a01461d62619349a6a0abef5b35fb9047f5326d409208769",
+          "quantized_weights": "5273e997278558609b3e0732d785cdb702df37d3e249586b5b99fb6fa68b1d00",
+          "combined": "28cd64b36d08911efd5af546a4ce9321226c9c55d54fc137ad93a64781d0ede7"
+        }
+      }
+    },
+    {
+      "name": "Hand Left",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 122,
+        "triangles": 240,
+        "active_bones": [
+          "LeftHand"
+        ],
+        "bounds": [
+          [
+            0.6072613000869751,
+            0.04750627279281616,
+            0.01841271109879017
+          ],
+          [
+            0.6588287353515625,
+            0.1123799979686737,
+            0.07626231759786606
+          ]
+        ],
+        "hashes": {
+          "geometry": "8679291e0ddbac41096a6529d62320cb0dd36db9d55335ea805f49d91cc6900b",
+          "normals": "74b8cc30f614c10cb6deadf028859bf80f654083386c2d252eff9a3537c92dfd",
+          "uvs": "12f2a3afa150fde499546cdb9509afc618d1e4942aa4c4bd2bdd6a5d911a85e7",
+          "vertex_colors": "bfb7d15b1e2aa97108b4293766915948c6a4c339e37820ded281c94d41b76fd1",
+          "face_colors": "23d2e737e482219e81b5346d75d5d0b318b04bc01ad4a6ac9c3fd3c59d5c62b1",
+          "materials": "b11cb1cf0a8ec006996d3afe145a883e671f843dd4d86221a91ee7709ad12e88",
+          "quantized_weights": "66762994d7f005d8f578f6c4466f8f030e4b6ee372ea7d6624963128714aab31",
+          "combined": "378a7ffea374cd3805a4625ca68d8237c84afcfb3898670a709cc9f6ea8e106d"
+        }
+      },
+      "candidate": {
+        "vertices": 122,
+        "triangles": 240,
+        "active_bones": [
+          "LeftHand"
+        ],
+        "bounds": [
+          [
+            0.6072613000869751,
+            0.04750627279281616,
+            0.01841271109879017
+          ],
+          [
+            0.6588287353515625,
+            0.1123799979686737,
+            0.07626231759786606
+          ]
+        ],
+        "hashes": {
+          "geometry": "8679291e0ddbac41096a6529d62320cb0dd36db9d55335ea805f49d91cc6900b",
+          "normals": "74b8cc30f614c10cb6deadf028859bf80f654083386c2d252eff9a3537c92dfd",
+          "uvs": "12f2a3afa150fde499546cdb9509afc618d1e4942aa4c4bd2bdd6a5d911a85e7",
+          "vertex_colors": "bfb7d15b1e2aa97108b4293766915948c6a4c339e37820ded281c94d41b76fd1",
+          "face_colors": "23d2e737e482219e81b5346d75d5d0b318b04bc01ad4a6ac9c3fd3c59d5c62b1",
+          "materials": "b11cb1cf0a8ec006996d3afe145a883e671f843dd4d86221a91ee7709ad12e88",
+          "quantized_weights": "66762994d7f005d8f578f6c4466f8f030e4b6ee372ea7d6624963128714aab31",
+          "combined": "378a7ffea374cd3805a4625ca68d8237c84afcfb3898670a709cc9f6ea8e106d"
+        }
+      }
+    },
+    {
+      "name": "Hand Right",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 122,
+        "triangles": 240,
+        "active_bones": [
+          "RightHand"
+        ],
+        "bounds": [
+          [
+            -0.658864438533783,
+            0.04741502180695534,
+            0.01841745898127556
+          ],
+          [
+            -0.6072726249694824,
+            0.11236526072025299,
+            0.07628428936004639
+          ]
+        ],
+        "hashes": {
+          "geometry": "31c781fa69757870726bbffdb366decd823f450320c53338b5fe014f0abeee19",
+          "normals": "6e87a32a44a494dc4e0a28fc9bd302bb8c3349ba58800b21726d69024d5ddb01",
+          "uvs": "4393f457344ce26fb1e1b409565eb2c35de5a89595b0fd7ea7c5eebb83460d24",
+          "vertex_colors": "3d018f60c0f7dc04b7fc4664751cbed1f1f538abe644f396b80813d97edda4b4",
+          "face_colors": "14873f9e9ca5ee3da50e5a3713b8952a20cf83324c2733f333d2b5cb6cf6112d",
+          "materials": "8fc4d2fef469c93e82d7f1336349f9c7ebb2c206cd6aef12dfd828bdea6cafc0",
+          "quantized_weights": "15afeb74ddc4370da8fa820732d790cb2465998b912d61322fdfa708fc217a77",
+          "combined": "d4d72719aa41af94d865e716ebb010037c7199077eb07b85360797f3fbd1068b"
+        }
+      },
+      "candidate": {
+        "vertices": 122,
+        "triangles": 240,
+        "active_bones": [
+          "RightHand"
+        ],
+        "bounds": [
+          [
+            -0.658864438533783,
+            0.04741502180695534,
+            0.01841745898127556
+          ],
+          [
+            -0.6072726249694824,
+            0.11236526072025299,
+            0.07628428936004639
+          ]
+        ],
+        "hashes": {
+          "geometry": "31c781fa69757870726bbffdb366decd823f450320c53338b5fe014f0abeee19",
+          "normals": "6e87a32a44a494dc4e0a28fc9bd302bb8c3349ba58800b21726d69024d5ddb01",
+          "uvs": "4393f457344ce26fb1e1b409565eb2c35de5a89595b0fd7ea7c5eebb83460d24",
+          "vertex_colors": "3d018f60c0f7dc04b7fc4664751cbed1f1f538abe644f396b80813d97edda4b4",
+          "face_colors": "14873f9e9ca5ee3da50e5a3713b8952a20cf83324c2733f333d2b5cb6cf6112d",
+          "materials": "8fc4d2fef469c93e82d7f1336349f9c7ebb2c206cd6aef12dfd828bdea6cafc0",
+          "quantized_weights": "15afeb74ddc4370da8fa820732d790cb2465998b912d61322fdfa708fc217a77",
+          "combined": "d4d72719aa41af94d865e716ebb010037c7199077eb07b85360797f3fbd1068b"
+        }
+      }
+    },
+    {
+      "name": "Shoulder Left",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 289,
+        "triangles": 574,
+        "active_bones": [
+          "LeftArm"
+        ],
+        "bounds": [
+          [
+            0.20966006815433502,
+            -0.005574618466198444,
+            0.4099927544593811
+          ],
+          [
+            0.33959904313087463,
+            0.12058018147945404,
+            0.5533634424209595
+          ]
+        ],
+        "hashes": {
+          "geometry": "f1f311565d9820113cf00f473f5e9872fa11f0df178cb31c75e15872f462ff28",
+          "normals": "3be413c3b16cc931f5df937c1c890e105e2e71ba6e3c36d6ca6366bbcd41bdf5",
+          "uvs": "b4ed8cef17017e2034701dc8ad4d8c13695e4a62305c09dc024bd8272341844a",
+          "vertex_colors": "699543a88ce9c1ecb3abef2ea6fb02d2eaffbec70f341ab731007af0ab78e1eb",
+          "face_colors": "89026c42b9d5db2c96e2d7511d0cac23e063c0f1b467b0e39a528646d4c19ed2",
+          "materials": "018c73bb79d5126794f25b031ae38ea118c93e2b53b7cae8812f401babd65c2e",
+          "quantized_weights": "5f73913dae93991aebaf6151737b80f68533506aa0d20a37689fe57c4ca95604",
+          "combined": "2c98b10ab0ca299a8b6e6280bf9bfb4e16c92448cd705ed25cfd0014d7e4927a"
+        }
+      },
+      "candidate": {
+        "vertices": 289,
+        "triangles": 574,
+        "active_bones": [
+          "LeftArm"
+        ],
+        "bounds": [
+          [
+            0.20966006815433502,
+            -0.005574618466198444,
+            0.4099927544593811
+          ],
+          [
+            0.33959904313087463,
+            0.12058018147945404,
+            0.5533634424209595
+          ]
+        ],
+        "hashes": {
+          "geometry": "f1f311565d9820113cf00f473f5e9872fa11f0df178cb31c75e15872f462ff28",
+          "normals": "3be413c3b16cc931f5df937c1c890e105e2e71ba6e3c36d6ca6366bbcd41bdf5",
+          "uvs": "b4ed8cef17017e2034701dc8ad4d8c13695e4a62305c09dc024bd8272341844a",
+          "vertex_colors": "699543a88ce9c1ecb3abef2ea6fb02d2eaffbec70f341ab731007af0ab78e1eb",
+          "face_colors": "89026c42b9d5db2c96e2d7511d0cac23e063c0f1b467b0e39a528646d4c19ed2",
+          "materials": "018c73bb79d5126794f25b031ae38ea118c93e2b53b7cae8812f401babd65c2e",
+          "quantized_weights": "5f73913dae93991aebaf6151737b80f68533506aa0d20a37689fe57c4ca95604",
+          "combined": "2c98b10ab0ca299a8b6e6280bf9bfb4e16c92448cd705ed25cfd0014d7e4927a"
+        }
+      }
+    },
+    {
+      "name": "Shoulder Right",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 289,
+        "triangles": 574,
+        "active_bones": [
+          "RightArm"
+        ],
+        "bounds": [
+          [
+            -0.33948755264282227,
+            -0.005297819618135691,
+            0.4101414680480957
+          ],
+          [
+            -0.20963206887245178,
+            0.12050988525152206,
+            0.5530542135238647
+          ]
+        ],
+        "hashes": {
+          "geometry": "036c9be5c612d22ccc0777b0031c889ed27dfbe85bead2d90f4980311889eecf",
+          "normals": "2515c7472b158d838150851885de6a62537b796cb57aaf691a9b456401317586",
+          "uvs": "a5e5c917de0d3c41813a26ee68466c3e953f84959b92e1164212eed80968c189",
+          "vertex_colors": "0552f5a312cae5f534e0c14714fb5598d7a20c6cf278c3ccc1a972a2d6566fa8",
+          "face_colors": "4d7fa36d1b52badc483791273f583f6e606913567946984dc23736f2b7e4b714",
+          "materials": "3d94201edfe3829d818f6964d55428e5dd34572bf2602e85a430660085c646a2",
+          "quantized_weights": "c09e50f44f123dde8f12dcebd370329fce6586bd665c8fb5e0458265105fe293",
+          "combined": "97aed63951a5a92268be2df94063aff0d763c02fdf4a892cfaf11cc7922de687"
+        }
+      },
+      "candidate": {
+        "vertices": 289,
+        "triangles": 574,
+        "active_bones": [
+          "RightArm"
+        ],
+        "bounds": [
+          [
+            -0.33948755264282227,
+            -0.005297819618135691,
+            0.4101414680480957
+          ],
+          [
+            -0.20963206887245178,
+            0.12050988525152206,
+            0.5530542135238647
+          ]
+        ],
+        "hashes": {
+          "geometry": "036c9be5c612d22ccc0777b0031c889ed27dfbe85bead2d90f4980311889eecf",
+          "normals": "2515c7472b158d838150851885de6a62537b796cb57aaf691a9b456401317586",
+          "uvs": "a5e5c917de0d3c41813a26ee68466c3e953f84959b92e1164212eed80968c189",
+          "vertex_colors": "0552f5a312cae5f534e0c14714fb5598d7a20c6cf278c3ccc1a972a2d6566fa8",
+          "face_colors": "4d7fa36d1b52badc483791273f583f6e606913567946984dc23736f2b7e4b714",
+          "materials": "3d94201edfe3829d818f6964d55428e5dd34572bf2602e85a430660085c646a2",
+          "quantized_weights": "c09e50f44f123dde8f12dcebd370329fce6586bd665c8fb5e0458265105fe293",
+          "combined": "97aed63951a5a92268be2df94063aff0d763c02fdf4a892cfaf11cc7922de687"
+        }
+      }
+    },
+    {
+      "name": "cloth_black_sleeves_gloves",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 1935,
+        "triangles": 3600,
+        "active_bones": [
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "LeftHandIndex1",
+          "LeftHandIndex2",
+          "LeftHandIndex3",
+          "LeftHandMiddle1",
+          "LeftHandMiddle2",
+          "LeftHandMiddle3",
+          "LeftHandPinky1",
+          "LeftHandPinky2",
+          "LeftHandPinky3",
+          "LeftHandRing1",
+          "LeftHandRing2",
+          "LeftHandRing3",
+          "LeftHandThumb1",
+          "LeftHandThumb2",
+          "LeftHandThumb3",
+          "RightArm",
+          "RightForeArm",
+          "RightHand",
+          "RightHandIndex1",
+          "RightHandIndex2",
+          "RightHandIndex3",
+          "RightHandMiddle1",
+          "RightHandMiddle2",
+          "RightHandMiddle3",
+          "RightHandPinky1",
+          "RightHandPinky2",
+          "RightHandPinky3",
+          "RightHandRing1",
+          "RightHandRing2",
+          "RightHandRing3",
+          "RightHandThumb1",
+          "RightHandThumb2",
+          "RightHandThumb3"
+        ],
+        "bounds": [
+          [
+            -0.7225515842437744,
+            -0.026979591697454453,
+            -0.07262430340051651
+          ],
+          [
+            0.722575843334198,
+            0.12980923056602478,
+            0.44867071509361267
+          ]
+        ],
+        "hashes": {
+          "geometry": "91bb62d4ecb725d48d8d46e6c18986a94834f9a55f7714075cf1e5985005ff1e",
+          "normals": "b9e1f5f58c1c7953d9f1d5f213704c8af3e24f9a88e20432cde154bbc04de708",
+          "uvs": "f347eac8c49233671947ab6152dfd95b7a8e800f5349abcb103b4df51ab30e23",
+          "vertex_colors": "017fb0c8498e1bcc67461d35214002353ba40163b85750eb857cf3f7b85a688d",
+          "face_colors": "ffb324b265a1568898b8056177ec993db2b5384338e2f194eaf011a1b5db6a7e",
+          "materials": "a442bbe06cc7c56ff0ee7f71f54056b26d2b4c2d80991714518e9c0950146a75",
+          "quantized_weights": "0fd8fee33006d8a480c16dbc5f8a58519c09574d24e53297ec28717255e7d6bf",
+          "combined": "f59bdde2a10ed59f5b297acfebe9889048cfc9523d2174835379a30bbd7e0e58"
+        }
+      },
+      "candidate": {
+        "vertices": 1935,
+        "triangles": 3600,
+        "active_bones": [
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "LeftHandIndex1",
+          "LeftHandIndex2",
+          "LeftHandIndex3",
+          "LeftHandMiddle1",
+          "LeftHandMiddle2",
+          "LeftHandMiddle3",
+          "LeftHandPinky1",
+          "LeftHandPinky2",
+          "LeftHandPinky3",
+          "LeftHandRing1",
+          "LeftHandRing2",
+          "LeftHandRing3",
+          "LeftHandThumb1",
+          "LeftHandThumb2",
+          "LeftHandThumb3",
+          "RightArm",
+          "RightForeArm",
+          "RightHand",
+          "RightHandIndex1",
+          "RightHandIndex2",
+          "RightHandIndex3",
+          "RightHandMiddle1",
+          "RightHandMiddle2",
+          "RightHandMiddle3",
+          "RightHandPinky1",
+          "RightHandPinky2",
+          "RightHandPinky3",
+          "RightHandRing1",
+          "RightHandRing2",
+          "RightHandRing3",
+          "RightHandThumb1",
+          "RightHandThumb2",
+          "RightHandThumb3"
+        ],
+        "bounds": [
+          [
+            -0.7225515842437744,
+            -0.026979591697454453,
+            -0.07262430340051651
+          ],
+          [
+            0.722575843334198,
+            0.12980923056602478,
+            0.44867071509361267
+          ]
+        ],
+        "hashes": {
+          "geometry": "91bb62d4ecb725d48d8d46e6c18986a94834f9a55f7714075cf1e5985005ff1e",
+          "normals": "b9e1f5f58c1c7953d9f1d5f213704c8af3e24f9a88e20432cde154bbc04de708",
+          "uvs": "f347eac8c49233671947ab6152dfd95b7a8e800f5349abcb103b4df51ab30e23",
+          "vertex_colors": "017fb0c8498e1bcc67461d35214002353ba40163b85750eb857cf3f7b85a688d",
+          "face_colors": "ffb324b265a1568898b8056177ec993db2b5384338e2f194eaf011a1b5db6a7e",
+          "materials": "a442bbe06cc7c56ff0ee7f71f54056b26d2b4c2d80991714518e9c0950146a75",
+          "quantized_weights": "0fd8fee33006d8a480c16dbc5f8a58519c09574d24e53297ec28717255e7d6bf",
+          "combined": "f59bdde2a10ed59f5b297acfebe9889048cfc9523d2174835379a30bbd7e0e58"
+        }
+      }
+    },
+    {
+      "name": "cloth_fit_v2_black_upper_underlayer",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 1027,
+        "triangles": 1860,
+        "active_bones": [
+          "LeftArm",
+          "LeftShoulder",
+          "RightArm",
+          "RightShoulder",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.2964632511138916,
+            -0.023037781938910484,
+            0.3772035241127014
+          ],
+          [
+            0.2964630722999573,
+            0.11409620195627213,
+            0.5259555578231812
+          ]
+        ],
+        "hashes": {
+          "geometry": "0561b362099f79797241484dfe34800f0c59e84b90bb0543b05004360a9727ff",
+          "normals": "1630cfeca80a63f87e9db53a11a8de587489a4f8181eff406d628db5db867a0b",
+          "uvs": "c4424c50c73cadb38ec526c17848fa643267fc6f70d1005680819005e5ca90b9",
+          "vertex_colors": "7156eaacd09f70c1f955722e21e1765069c09c14bd124cbb5293a4d4ddbd02bf",
+          "face_colors": "69809a98d9bdbfbf0831690d2f5d4cc747562024ba17adfc5fc94d5685536815",
+          "materials": "f348b1dcce7c1d0182220924d9371f9b041d510d34104085d57ebaf3855e4076",
+          "quantized_weights": "b0acf6533014e42075bf035235b7450330901a4596e9a9b95010989ac2aa5d41",
+          "combined": "8d606ac423e590490eb21497cadd655518a2b5434d6aec25ff526a227fce36c4"
+        }
+      },
+      "candidate": {
+        "vertices": 1027,
+        "triangles": 1860,
+        "active_bones": [
+          "LeftArm",
+          "LeftShoulder",
+          "RightArm",
+          "RightShoulder",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.2964632511138916,
+            -0.023037781938910484,
+            0.3772035241127014
+          ],
+          [
+            0.2964630722999573,
+            0.11409620195627213,
+            0.5259555578231812
+          ]
+        ],
+        "hashes": {
+          "geometry": "0561b362099f79797241484dfe34800f0c59e84b90bb0543b05004360a9727ff",
+          "normals": "1630cfeca80a63f87e9db53a11a8de587489a4f8181eff406d628db5db867a0b",
+          "uvs": "c4424c50c73cadb38ec526c17848fa643267fc6f70d1005680819005e5ca90b9",
+          "vertex_colors": "7156eaacd09f70c1f955722e21e1765069c09c14bd124cbb5293a4d4ddbd02bf",
+          "face_colors": "69809a98d9bdbfbf0831690d2f5d4cc747562024ba17adfc5fc94d5685536815",
+          "materials": "f348b1dcce7c1d0182220924d9371f9b041d510d34104085d57ebaf3855e4076",
+          "quantized_weights": "b0acf6533014e42075bf035235b7450330901a4596e9a9b95010989ac2aa5d41",
+          "combined": "8d606ac423e590490eb21497cadd655518a2b5434d6aec25ff526a227fce36c4"
+        }
+      }
+    },
+    {
+      "name": "cloth_v6_tunic_continuous",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 392,
+        "triangles": 780,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.0566183440387249,
+            -0.13818888366222382,
+            0.07500343769788742
+          ],
+          [
+            0.05859742686152458,
+            -0.03362502157688141,
+            0.5592522621154785
+          ]
+        ],
+        "hashes": {
+          "geometry": "07e9515c708d4ebc09d3961e3fa795468a9051897e9f2885a8398944e6278ecb",
+          "normals": "22b626ad28c7d089a3cacefae805dc1ebe6e3fb30f7c078c67fdfdc230fcc94d",
+          "uvs": "3225b55fa4ee5382c7b8a10e5e185db9b97920fda159db30f30fc0135dbfaeb6",
+          "vertex_colors": "d5b6e5282626d35d26b6b42f5b1d5f41c65882bf3b614995b3b9266c621e0283",
+          "face_colors": "845a0dee3b5b20778167117c48a2821dd347cfc35a444a789237f0de875641da",
+          "materials": "548825edfd9b6f73e60f12773c83d58f66ae9555d6b5e412767f60d33a52de5b",
+          "quantized_weights": "91b039ecffebe7c53bb32fb97f6496ba7ce098f04f1a700ea0f977fff47db8e4",
+          "combined": "b1758d9539accffd1f1b6be386d1feeacfaaefa95efd64b6c1e170f694a34982"
+        }
+      },
+      "candidate": {
+        "vertices": 392,
+        "triangles": 780,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.0566183440387249,
+            -0.13818888366222382,
+            0.07500343769788742
+          ],
+          [
+            0.05859742686152458,
+            -0.03362502157688141,
+            0.5592522621154785
+          ]
+        ],
+        "hashes": {
+          "geometry": "07e9515c708d4ebc09d3961e3fa795468a9051897e9f2885a8398944e6278ecb",
+          "normals": "22b626ad28c7d089a3cacefae805dc1ebe6e3fb30f7c078c67fdfdc230fcc94d",
+          "uvs": "3225b55fa4ee5382c7b8a10e5e185db9b97920fda159db30f30fc0135dbfaeb6",
+          "vertex_colors": "d5b6e5282626d35d26b6b42f5b1d5f41c65882bf3b614995b3b9266c621e0283",
+          "face_colors": "845a0dee3b5b20778167117c48a2821dd347cfc35a444a789237f0de875641da",
+          "materials": "548825edfd9b6f73e60f12773c83d58f66ae9555d6b5e412767f60d33a52de5b",
+          "quantized_weights": "91b039ecffebe7c53bb32fb97f6496ba7ce098f04f1a700ea0f977fff47db8e4",
+          "combined": "b1758d9539accffd1f1b6be386d1feeacfaaefa95efd64b6c1e170f694a34982"
+        }
+      }
+    },
+    {
+      "name": "cloth_v7_tunic_facing_left",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 152,
+        "triangles": 300,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            0.037613395601511,
+            -0.15000736713409424,
+            0.07496188580989838
+          ],
+          [
+            0.07444257289171219,
+            -0.018741827458143234,
+            0.5648266673088074
+          ]
+        ],
+        "hashes": {
+          "geometry": "a67f9381eb7b0bb69a661db7c6a396a9366b0890be77aaba39c28c922c59348c",
+          "normals": "6865dc64ea9f262c2967359bf78f7c13786de536ec016ca19e323d911291d5f0",
+          "uvs": "6f2aafc548797015a80b54ded99fdc16ca40e8e4f9b62d047cef50436891be90",
+          "vertex_colors": "d5b7e09a3f3116c12cdfe51a9e50f59eb97e17ec798783d9e0924812462cc289",
+          "face_colors": "686d31469b2881072822bf5e50d15e590671b929948a0067256fb2fb8062a187",
+          "materials": "19ddd0528e13c63f551bc53dc206c9c7ead7696709af21536500cbab9f095053",
+          "quantized_weights": "4273aac4a86456a231651b19a5c889a8711f45009a12bfcefd949d3d988404da",
+          "combined": "9c5b540d3d672c135cc5c1c232820d8fc03bdeecc9244c03bfefc06f1246cb20"
+        }
+      },
+      "candidate": {
+        "vertices": 152,
+        "triangles": 300,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            0.037613395601511,
+            -0.15000736713409424,
+            0.07496188580989838
+          ],
+          [
+            0.07444257289171219,
+            -0.018741827458143234,
+            0.5648266673088074
+          ]
+        ],
+        "hashes": {
+          "geometry": "a67f9381eb7b0bb69a661db7c6a396a9366b0890be77aaba39c28c922c59348c",
+          "normals": "6865dc64ea9f262c2967359bf78f7c13786de536ec016ca19e323d911291d5f0",
+          "uvs": "6f2aafc548797015a80b54ded99fdc16ca40e8e4f9b62d047cef50436891be90",
+          "vertex_colors": "d5b7e09a3f3116c12cdfe51a9e50f59eb97e17ec798783d9e0924812462cc289",
+          "face_colors": "686d31469b2881072822bf5e50d15e590671b929948a0067256fb2fb8062a187",
+          "materials": "19ddd0528e13c63f551bc53dc206c9c7ead7696709af21536500cbab9f095053",
+          "quantized_weights": "4273aac4a86456a231651b19a5c889a8711f45009a12bfcefd949d3d988404da",
+          "combined": "9c5b540d3d672c135cc5c1c232820d8fc03bdeecc9244c03bfefc06f1246cb20"
+        }
+      }
+    },
+    {
+      "name": "cloth_v7_tunic_facing_right",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 152,
+        "triangles": 300,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.07232332229614258,
+            -0.1466844081878662,
+            0.07496238499879837
+          ],
+          [
+            -0.03674256056547165,
+            -0.018740950152277946,
+            0.5647560954093933
+          ]
+        ],
+        "hashes": {
+          "geometry": "d2453396fd817272f364b2b22ed4232e4d8677ab93e7c3d3b2466f2728653e75",
+          "normals": "b4223a8e3220c78b678c2905e87f5e348f4a46245aa2a37e29d644ff39301a99",
+          "uvs": "e87a7a6a79eaec4d6cb562281c0d16e93722ccb67488efedabcc0102bc20cd06",
+          "vertex_colors": "f8104b94dadf22849a1096fd2bd70491d8c45cce85af11feeedfd250766af430",
+          "face_colors": "77301b19c955db55554b030273ae99f022043a52f34afe4f7d20b3ce42755745",
+          "materials": "83bc64e40721f01c763c03d67946f022c10393285f83b7c004f0fbea26c17d45",
+          "quantized_weights": "5962b624f0e4b5264031c330521aa417f9eb57780157ba73b84b052a3341ef84",
+          "combined": "256246119ace6f2490a739d7c4a2ac1a2648a736b84f18c02f96c2178df26453"
+        }
+      },
+      "candidate": {
+        "vertices": 152,
+        "triangles": 300,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.07232332229614258,
+            -0.1466844081878662,
+            0.07496238499879837
+          ],
+          [
+            -0.03674256056547165,
+            -0.018740950152277946,
+            0.5647560954093933
+          ]
+        ],
+        "hashes": {
+          "geometry": "d2453396fd817272f364b2b22ed4232e4d8677ab93e7c3d3b2466f2728653e75",
+          "normals": "b4223a8e3220c78b678c2905e87f5e348f4a46245aa2a37e29d644ff39301a99",
+          "uvs": "e87a7a6a79eaec4d6cb562281c0d16e93722ccb67488efedabcc0102bc20cd06",
+          "vertex_colors": "f8104b94dadf22849a1096fd2bd70491d8c45cce85af11feeedfd250766af430",
+          "face_colors": "77301b19c955db55554b030273ae99f022043a52f34afe4f7d20b3ce42755745",
+          "materials": "83bc64e40721f01c763c03d67946f022c10393285f83b7c004f0fbea26c17d45",
+          "quantized_weights": "5962b624f0e4b5264031c330521aa417f9eb57780157ba73b84b052a3341ef84",
+          "combined": "256246119ace6f2490a739d7c4a2ac1a2648a736b84f18c02f96c2178df26453"
+        }
+      }
+    },
+    {
+      "name": "cloth_v7_tunic_green_left",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 630,
+        "triangles": 1260,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.0007290451321750879,
+            -0.14381319284439087,
+            0.07499808073043823
+          ],
+          [
+            0.21052469313144684,
+            0.1255732774734497,
+            0.5757319927215576
+          ]
+        ],
+        "hashes": {
+          "geometry": "8ae60329dff8985b23d4c5fa828114d7f5c8a6ebc604ad65f652d64aadbd828f",
+          "normals": "4d57fee98f147cfce0f1f95df7636cbcc06803b03b7645cb1eec500eaa950243",
+          "uvs": "b8dfc5d74217cbf1ca2cca8f344d47496449485443a36e2f9bbad651915452bc",
+          "vertex_colors": "37812126bbc55b63a01b0a57be91bc43caa6507fc56bf5d57fe25644c7b1c9d7",
+          "face_colors": "7bbe731be7553def106cb024a1083c535ef99708a1d20c17318bb5a041c01e04",
+          "materials": "b3c4d501a62ec32ee84fb83c139351c46b7d5aa764fa44bed1b9e0617208ae16",
+          "quantized_weights": "b49a89a686011d77002fbb75101806fcd56ef7194bc88623c2066717436a9b48",
+          "combined": "471db743055f19babe79a8043898fcfbf76c6f256b38cce25f596bf52fb692a2"
+        }
+      },
+      "candidate": {
+        "vertices": 630,
+        "triangles": 1260,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.0007290451321750879,
+            -0.14381319284439087,
+            0.07499808073043823
+          ],
+          [
+            0.21052469313144684,
+            0.1255732774734497,
+            0.5757319927215576
+          ]
+        ],
+        "hashes": {
+          "geometry": "8ae60329dff8985b23d4c5fa828114d7f5c8a6ebc604ad65f652d64aadbd828f",
+          "normals": "4d57fee98f147cfce0f1f95df7636cbcc06803b03b7645cb1eec500eaa950243",
+          "uvs": "b8dfc5d74217cbf1ca2cca8f344d47496449485443a36e2f9bbad651915452bc",
+          "vertex_colors": "37812126bbc55b63a01b0a57be91bc43caa6507fc56bf5d57fe25644c7b1c9d7",
+          "face_colors": "7bbe731be7553def106cb024a1083c535ef99708a1d20c17318bb5a041c01e04",
+          "materials": "b3c4d501a62ec32ee84fb83c139351c46b7d5aa764fa44bed1b9e0617208ae16",
+          "quantized_weights": "b49a89a686011d77002fbb75101806fcd56ef7194bc88623c2066717436a9b48",
+          "combined": "471db743055f19babe79a8043898fcfbf76c6f256b38cce25f596bf52fb692a2"
+        }
+      }
+    },
+    {
+      "name": "cloth_v7_tunic_green_right",
+      "match": true,
+      "changed_fields": [],
+      "reference": {
+        "vertices": 630,
+        "triangles": 1260,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.21118013560771942,
+            -0.1398046761751175,
+            0.07492156326770782
+          ],
+          [
+            0.00020146438328083605,
+            0.124850794672966,
+            0.5757231712341309
+          ]
+        ],
+        "hashes": {
+          "geometry": "cbe1a558d04acc8ad8113d8215cc190c078dba1b68aa21436aed42d56f8d913c",
+          "normals": "0c91a0799a539f57b78466a6e589a4b42e185f7a69d56c626bba7de45b74fa8b",
+          "uvs": "50cb751db65c8efc3129fef33f3f9483b6780948f906f699419aa4d9cd2e1a83",
+          "vertex_colors": "78aabe15c080f5200b52c2245845953aadf4aa36a55757f020e1b2b13e2c85d3",
+          "face_colors": "e1401f3e9c19c337f873d772e54eace4eb8f030463b51f70bf4f7e06ad9cac6b",
+          "materials": "f42401bd325f90c1e8f4ddc3b954c401c4779a6ebadc7101493aceda272718e0",
+          "quantized_weights": "62c26eb71142c87c486241d1101c8622cd8d578f76fa6dcbdf1f21669e9427a8",
+          "combined": "a74b8d96a87de252b3424817f3dc292093db3f5f44ff997a230e7c3a3946bcd1"
+        }
+      },
+      "candidate": {
+        "vertices": 630,
+        "triangles": 1260,
+        "active_bones": [
+          "Pelvis",
+          "Spine1",
+          "Spine2",
+          "Spine3"
+        ],
+        "bounds": [
+          [
+            -0.21118013560771942,
+            -0.1398046761751175,
+            0.07492156326770782
+          ],
+          [
+            0.00020146438328083605,
+            0.124850794672966,
+            0.5757231712341309
+          ]
+        ],
+        "hashes": {
+          "geometry": "cbe1a558d04acc8ad8113d8215cc190c078dba1b68aa21436aed42d56f8d913c",
+          "normals": "0c91a0799a539f57b78466a6e589a4b42e185f7a69d56c626bba7de45b74fa8b",
+          "uvs": "50cb751db65c8efc3129fef33f3f9483b6780948f906f699419aa4d9cd2e1a83",
+          "vertex_colors": "78aabe15c080f5200b52c2245845953aadf4aa36a55757f020e1b2b13e2c85d3",
+          "face_colors": "e1401f3e9c19c337f873d772e54eace4eb8f030463b51f70bf4f7e06ad9cac6b",
+          "materials": "f42401bd325f90c1e8f4ddc3b954c401c4779a6ebadc7101493aceda272718e0",
+          "quantized_weights": "62c26eb71142c87c486241d1101c8622cd8d578f76fa6dcbdf1f21669e9427a8",
+          "combined": "a74b8d96a87de252b3424817f3dc292093db3f5f44ff997a230e7c3a3946bcd1"
+        }
+      }
+    }
+  ],
+  "reference_file": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\preflight_export\\lod0.npz",
+  "candidate_file": "D:\\CharacterKit\\codex\\studies\\arma_fit_v2\\export\\lod0.npz",
+  "reference_file_sha256": "2c6d0ff0e47b9207fda0a3adfcad1e441ef47f089da2627057c48681f3aebdc9",
+  "candidate_file_sha256": "0e22df56f5f94f45a80225fbca3f317434dee8ae24d41da57009db7aae0458c9"
+}
