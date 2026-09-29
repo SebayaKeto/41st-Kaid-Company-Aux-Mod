@@ -35,6 +35,7 @@ class CfgPatches
             "FST_OutpostWall_Entrance_Hutt",
             "FST_OutpostWall_Entrance_BlackSun",
             "FST_OutpostWall_Entrance_GAROne",
+            "FST_Outpost_HeavyConcreteWall_02",
             "FST_Outpost_InteriorWallGreeble_1x1x3M",
             "FST_Outpost_InteriorWallGreeble_End",
             "FST_Outpost_InteriorFloorGreeble_1x0_5x5M",
@@ -73,5 +74,6 @@ class CfgVehicles
 	// Keep includes grouped by asset family for maintainability.
     //#include "MediumWalls/MediumWalls.cpp"
     #include "LightWalls/LightWalls.cpp"
+    #include "HeavyWalls/HeavyWalls.cpp"
     #include "InteriorPassages/LightArmoredGreeble/LightArmoredGreeble.cpp"
 };
