@@ -90,6 +90,9 @@ class CfgFunctions {
             class laatiDeployAction  {};   // → BUZZ_fnc_laatiDeployAction,  file fn_laatiDeployAction.sqf
             class orbitalDropServer  {};   // → BUZZ_fnc_orbitalDropServer,  file fn_orbitalDropServer.sqf
             class orbitalDropInit    { postInit = 1; };   // registers the Zeus module (client, needs ZEN)
+            class findControlledAtrt {};   // → BUZZ_fnc_findControlledAtrt, file fn_findControlledAtrt.sqf
+            class forceRelease       {};   // → BUZZ_fnc_forceRelease,       file fn_forceRelease.sqf
+            class releaseWatchdog    { postInit = 1; };   // Ctrl+ESC eject + desync watchdog (client)
         };
     };
 };
@@ -281,6 +284,18 @@ class CfgWeapons {
             };
         };
 
+        // Shot Sound
+        // Read by the Fired EH in init.sqf. One pitch is picked at random per shot.
+        BUZZ_shotSound      = "BUZZ_Vehicles\ATRT\Data\BUZZ_ATRT_Gun.ogg";
+        BUZZ_shotVolume     = 1.25;
+        BUZZ_shotDistance   = 1800;
+        BUZZ_shotPitches[]  = {0.95, 0.97, 0.985, 1.00, 1.015, 1.03, 1.05};   // ±5%
+
+        // Low Cell Sound
+        // The last BUZZ_lowCellShots shots of each power cell use this pool instead.
+        BUZZ_lowCellShots     = 20;
+        BUZZ_lowCellPitches[] = {1.14, 1.17, 1.19, 1.21, 1.23, 1.26};       // +20%, ±5%
+
         modes[] = {"FullAuto"};
 
         class FullAuto: Mode_FullAuto {
@@ -293,14 +308,13 @@ class CfgWeapons {
                 soundClosure[]    = {};
             };
 
+            // Silent on purpose — the shot sound is played by the Fired EH in
+            // init.sqf so it can change pitch when the power cell runs low.
+            // Tune it with the BUZZ_shot* / BUZZ_lowCell* values below.
             class StandardSound: BaseSoundModeType {
                 weaponSoundEffect = "";
-                begin1[] = {"\41st_Weapons\T15\Data\t15v1 2-177.ogg", 1,    1,     1800};
-                begin2[] = {"\41st_Weapons\T15\Data\t15v1 2-177.ogg", 1.25, 1.015, 1800};
-                begin3[] = {"\41st_Weapons\T15\Data\t15v1 2-177.ogg", 1.25, 0.985, 1800};
-                begin4[] = {"\41st_Weapons\T15\Data\t15v1 2-177.ogg", 1.25, 1.010, 1800};
-                begin5[] = {"\41st_Weapons\T15\Data\t15v1 2-177.ogg", 1.25, 0.995, 1800};
-                soundBegin[] = {"begin1",0.20,"begin2",0.20,"begin3",0.20,"begin4",0.20,"begin5",0.20};
+                begin1[] = {"", 0, 1, 0};
+                soundBegin[] = {"begin1", 1};
             };
 
             reloadTime = 0.2;

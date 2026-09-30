@@ -171,56 +171,8 @@ if (hasInterface && player isEqualTo _rider) then {
     _atrt setVariable ["BUZZ_jumpUpEH",   _jumpUpEH];
     _atrt setVariable ["BUZZ_jumpDrawEH", _jumpDrawEH];
 
-    // ── Force eject (ESC) ──────────────────────────────────────────────────────
-    // Unconditional escape hatch — see the matching block in init.sqf's Saddle
-    // Up action for the full rationale. Mirrored here since deploy-mounting
-    // goes through this function instead of Saddle Up.
-    private _ejectEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
-        params ["_d", "_k"];
-        if (_k != 1) exitWith { false };
-        private _a = uiNamespace getVariable ["BUZZ_jumpAtrt", objNull];
-        if (isNull _a) exitWith { false };
-        private _r = _a getVariable ["rider", objNull];
-        if (isNull _r || { !local _r }) exitWith { false };
-
-        [_r, ""] remoteExec ["switchMove", 0];
-        _r setVariable ["ace_unconscious", false, true];
-        _r setUnconscious false;
-        _r enableSimulationGlobal false;
-        detach _r;
-        _r setVelocity [0, 0, 0];
-        if (alive _a) then { _r setPosATL (_a modelToWorld [0.5, -4.0, 0]); };
-        objNull remoteControl driver _a;
-        _r remoteControl _r;
-        _r enableSimulationGlobal true;
-        if (cameraOn != vehicle _r) then { (vehicle _r) switchCamera cameraView; };
-
-        deleteVehicle (_a getVariable ["shield", objNull]);
-        _a setVariable ["rider",  nil, true];
-        _a setVariable ["shield", nil, true];
-
-        private _dn   = _a getVariable ["BUZZ_jumpDnEH",   -1];
-        private _up   = _a getVariable ["BUZZ_jumpUpEH",   -1];
-        private _draw = _a getVariable ["BUZZ_jumpDrawEH", -1];
-        private _esc  = _a getVariable ["BUZZ_ejectEH",    -1];
-        if (_dn   >= 0) then { (findDisplay 46) displayRemoveEventHandler ["KeyDown", _dn]; };
-        if (_up   >= 0) then { (findDisplay 46) displayRemoveEventHandler ["KeyUp",   _up]; };
-        if (_draw >= 0) then { removeMissionEventHandler ["Draw3D", _draw]; };
-        if (_esc  >= 0) then { (findDisplay 46) displayRemoveEventHandler ["KeyDown", _esc]; };
-        _a setVariable ["BUZZ_jumpDnEH",   nil];
-        _a setVariable ["BUZZ_jumpUpEH",   nil];
-        _a setVariable ["BUZZ_jumpDrawEH", nil];
-        _a setVariable ["BUZZ_ejectEH",    nil];
-        uiNamespace setVariable ["BUZZ_jumpAiming", false];
-        uiNamespace setVariable ["BUZZ_jumpAtrt",   objNull];
-        private _ind = uiNamespace getVariable ["BUZZ_jumpInd", objNull];
-        if (!isNull _ind) then { deleteVehicle _ind; };
-        uiNamespace setVariable ["BUZZ_jumpInd", objNull];
-        inGameUISetEventHandler ["Action", ""];
-
-        true
-    }];
-    _atrt setVariable ["BUZZ_ejectEH", _ejectEH];
+    // ── Force eject (Ctrl+ESC) ───────────────────────────────────────────
+    // Installed once per client by fn_releaseWatchdog.sqf, not per mount.
 };
 
 // Auto-eject when rider dies or is incapacitated — mirrors Saddle Up
