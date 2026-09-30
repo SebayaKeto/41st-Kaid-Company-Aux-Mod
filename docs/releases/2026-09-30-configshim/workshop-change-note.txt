@@ -1,0 +1,6 @@
+Config warning hotfix
+
+- New tiny addon KAID_ConfigShim (3.9 KB): gives the empty root CfgVehicles stubs left behind by third-party mods (DBA, AMT, Kobra, IDA) and stray forward declarations a defined body. This stops the config-load "Warning Message" storm (about 15,400 lines down to about 5,500 in a server boot) and the modal "No entry 'bin\config.bin/CfgVehicles/NewTurret.scope'".
+- No class is renamed, removed or changed; all other mod files are unchanged.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
