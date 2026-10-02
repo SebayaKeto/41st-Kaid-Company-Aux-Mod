@@ -56776,6 +56776,14 @@ class CfgFaces
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_House.paa";
 		};
+		class FST_Clone_Head_Zephyr: FST_clone_Default_head
+		{
+			author="House";
+			name="Clone Trooper Zephyr";
+			displayName="[41st] Clone Trooper - Zephyr";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Zephyr.paa";
+		};
 		class FST_Clone_Head_Helix: FST_clone_Default_head
 		{
 			author="House";
