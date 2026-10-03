@@ -289,6 +289,11 @@ class CfgVehicles
 							{
 								componentType="UAVFeedDisplayComponent";
 							};
+							class CrewDisplay
+							{
+								componentType="CrewDisplayComponent";
+								resource="RscCustomInfoCrew";
+							};
 						};
 					};
 					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
@@ -307,6 +312,11 @@ class CfgVehicles
 							class UAVDisplay
 							{
 								componentType="UAVFeedDisplayComponent";
+							};
+							class CrewDisplay
+							{
+								componentType="CrewDisplayComponent";
+								resource="RscCustomInfoCrew";
 							};
 						};
 					};

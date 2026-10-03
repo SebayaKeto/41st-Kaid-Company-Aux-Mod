@@ -9948,12 +9948,12 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 	};
 	class FST_Airborne_Helmet_Remedy_V2: FST_Airborne_Helmet
 	{
-		author="Ruby";
+		author="House";
 		displayName="[41st] Airborne Helmet (Remedy/V2)";
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy.paa",
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy_V2.paa",
 		};
 	};
  	class FST_Airborne_Helmet_Cowboy: FST_Airborne_Helmet
@@ -46647,8 +46647,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"41st_Armor\Data\Uniforms\FST_P2_BodyUpperRemedyV2.Paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_RemedyV2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Remedy_V2.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Remedy_V2.Paa",
 		};
 		weapons[]=
 		{
@@ -56775,6 +56775,14 @@ class CfgFaces
 			displayName="[41st] Clone Trooper - House";
 			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
 			texture="41st_Armor\Data\Faces\FST_Clone_House.paa";
+		};
+		class FST_Clone_Head_Zephyr: FST_clone_Default_head
+		{
+			author="House";
+			name="Clone Trooper Zephyr";
+			displayName="[41st] Clone Trooper - Zephyr";
+			material="ls\core\addons\identities\clones\data\cloneB.rvmat";
+			texture="41st_Armor\Data\Faces\FST_Clone_Zephyr.paa";
 		};
 		class FST_Clone_Head_Helix: FST_clone_Default_head
 		{

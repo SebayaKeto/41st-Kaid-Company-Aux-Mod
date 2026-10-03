@@ -27,7 +27,7 @@ deleteVehicle _crate;
 
 // Spawn AT-RT inside cargo bay, attached to LAAT/i so it rides with it.
 // Hidden until ramp is open. No doMove is pending so AI won't fight the attachment.
-private _group = createGroup WEST;
+private _group = createGroup [WEST, true];   // auto-delete once the walker is removed
 private _atrt  = _group createUnit ["BUZZ_ATRT", getPos _laati, [], 0, "NONE"];
 _atrt setDir ((getDir _laati + 180) % 360);
 _atrt attachTo [_laati, [0, -2.5, 0]];

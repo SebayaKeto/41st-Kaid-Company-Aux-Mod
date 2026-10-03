@@ -1,7 +1,7 @@
 // Called via remoteExecCall ["BUZZ_fnc_unpackServer", 2] from the Unpack action.
 // Runs on the server only. Creates the walker and deletes the transport crate.
 params ["_pos", "_dir", "_hp", "_cell", "_reserves", "_crate", ["_class", "BUZZ_ATRT"]];
-private _group = createGroup WEST;
+private _group = createGroup [WEST, true];   // auto-delete once the walker is removed
 private _atrt  = _group createUnit [_class, ASLToAGL _pos, [], 0, "NONE"];
 _atrt setDir _dir;
 _atrt setPosASL _pos; // force exact ASL position — createUnit snaps man-units to terrain surface
