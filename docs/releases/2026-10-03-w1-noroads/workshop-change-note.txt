@@ -1,6 +1,8 @@
 Geonosis terrain update: roads removed
 
-- Geonosis (fst_geonosis): all roads removed from the terrain; the track/asphalt ground paint stays. Objects, heights and config are unchanged.
+- Geonosis (fst_geonosis): all roads removed, including the painted road surfaces; AI vehicles drive cross-country. Objects, heights and config are unchanged.
 - No other file changes.
 
 Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
+
+RECORD CORRECTION (3 Oct, per Mapmaking 2): the note as published to the Workshop said "the track/asphalt ground paint stays". That was wrong. This is the PAINT variant (7fb082d7); the painted road stripes were removed too. Only faint graded beds remain in hillside cuts (terrain shape). The unpicked fallback was e33e6067. The line above is the corrected text; the live Workshop note was not edited.
