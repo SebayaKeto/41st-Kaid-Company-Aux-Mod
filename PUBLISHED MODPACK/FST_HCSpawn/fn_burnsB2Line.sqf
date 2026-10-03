@@ -50,6 +50,8 @@ if (count _saved==0) then {
     _lead setFormDir _bearing;
     // YELLOW keeps native firing enabled while retaining formation membership.
     _g setCombatMode "YELLOW";
+    // AWARE, not COMBAT: COMBAT behaviour made the line halt to trade fire instead of bounding.
+    _g setBehaviourStrong "AWARE";
     {_x doFollow _lead} forEach (_units-[_lead]);
 };
 if (formation _g!="LINE") then {_g setFormation "LINE"};

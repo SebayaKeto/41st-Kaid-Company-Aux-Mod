@@ -183,6 +183,50 @@ if (missionNamespace getVariable ["BURNS_ArmorAssistEnabled",true] && {_mode in 
         };
     };
 };
+// ADSD long-range skirmisher (Miran 3 Oct): hold ~700 m from a known enemy, back off
+// inside 500 m, and shift 60 m sideways every ~40 s between volleys. AATs still charge.
+if (_mode in ["rush","hunt","assault"] && {(vehicle _leader) isKindOf "FST_Advanced_DSD_Base"} && {local (vehicle _leader)} && {canMove (vehicle _leader)}) then {
+    private _v=vehicle _leader;
+    private _foe=if (!isNull _rushTarget) then {vehicle _rushTarget} else {vehicle _contact};
+    private _fp=if (!isNull _foe) then {getPosATL _foe} else {+_contactPos};
+    if (count _fp>=2) then {
+        private _d=_v distance2D _fp;
+        private _goal=getPosATL _v;
+        if (_d>900 || {_d<500}) then {
+            _goal=_fp getPos [700,_fp getDir (getPosATL _v)];
+        } else {
+            if (time>=(_group getVariable ["BURNS_adsdShift",-1])) then {
+                _group setVariable ["BURNS_adsdShift",time+40];
+                _goal=(getPosATL _v) getPos [60,(_fp getDir (getPosATL _v))+selectRandom [90,-90]];
+            };
+        };
+        if !(surfaceIsWater _goal) then {_destination=_goal};
+        if ((_group getVariable ["BURNS_lastTactic",""])!="adsd-skirmish") then {_group setVariable ["BURNS_lastTactic","adsd-skirmish",true]};
+    };
+};
+// Combined arms (players via Miran, 3 Oct): a foot squad on rush/assault within 300 m of a
+// friendly crewed armored vehicle that is ahead of it toward the goal moves with it, 25 m
+// behind and to one side, instead of overtaking it. Once that armor is within 120 m of
+// the goal the squad assaults directly, so the armor still leads the push.
+if (_mode in ["rush","assault"] && {vehicle _leader==_leader} && {missionNamespace getVariable ["BURNS_CombinedArms",true]}) then {
+    private _armor=objNull;
+    private _best=300;
+    {
+        if (alive _x && {canMove _x} && {!isNull driver _x} && {side group (driver _x)==side _group}) then {
+            private _d=_leader distance2D _x;
+            if (_d<_best) then {_best=_d;_armor=_x};
+        };
+    } forEach (_leader nearEntities [["Tank","Wheeled_APC_F"],300]);
+    if (!isNull _armor) then {
+        private _ad=_armor distance2D _destination;
+        if (_ad<(_leader distance2D _destination) && {_ad>120}) then {
+            if (isNil {_group getVariable "BURNS_caSide"}) then {_group setVariable ["BURNS_caSide",selectRandom [-1,1]]};
+            private _slot=(getPosATL _armor) getPos [25,(_destination getDir (getPosATL _armor))+30*(_group getVariable ["BURNS_caSide",1])];
+            if !(surfaceIsWater _slot) then {_destination=_slot};
+            if ((_group getVariable ["BURNS_lastTactic",""])!="with-armor") then {_group setVariable ["BURNS_lastTactic","with-armor",true]};
+        };
+    };
+};
 // Do not march an entire B1 formation onto a prone casualty. Keep the
 // approach eight metres short; the rifle service assigns a single finisher.
 private _down=_seeking && {[_rushTarget] call FST_HCSpawn_fnc_burnsIsDown};

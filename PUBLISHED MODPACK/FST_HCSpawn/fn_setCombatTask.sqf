@@ -94,6 +94,15 @@ if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"})
     _wp setWaypointDescription "FST HC combat";
     _wp setWaypointType "MOVE";
     _wp setWaypointSpeed "NORMAL";
+    if ((units _group findIf {_x isKindOf "WBK_LS_B2"})>=0 && {_mode in ["assault","rush","hunt"]}) then {
+        // B2s walk in and fire on the move. In COMBAT behaviour they halted and
+        // traded fire at 300 m (~0.2 m/s closing in engine tests, 3 Oct).
+        _wp setWaypointSpeed "FULL";
+        _wp setWaypointBehaviour "AWARE";
+        _wp setWaypointCombatMode "YELLOW";
+        _group setBehaviourStrong "AWARE";
+        _group setCombatMode "YELLOW";
+    };
     _group setCurrentWaypoint _wp;
     ([_group,["FST_HC_taskWaypoint", _wp select 1, true]] call FST_HCSpawn_fnc_burnsStateSet);
     _group setVariable ["FST_HC_keepActive", true, true];

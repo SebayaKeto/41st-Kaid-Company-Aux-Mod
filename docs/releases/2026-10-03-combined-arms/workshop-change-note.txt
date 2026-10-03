@@ -1,0 +1,7 @@
+AI update: combined arms
+
+- Droid infantry on Rush or Assault now move with nearby friendly armor: squads close in behind and beside an advancing tank and push with it instead of walking in alone. AATs still charge.
+- The 41st Advanced Dwarf Spider Droid now fights as a long-range skirmisher: it holds around 700 m from known enemies, backs off if they get closer than 500 m, and shifts position between volleys.
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
