@@ -1,0 +1,6 @@
+Geonosis terrain update: roads removed
+
+- Geonosis (fst_geonosis): all roads removed from the terrain; the track/asphalt ground paint stays. Objects, heights and config are unchanged.
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
