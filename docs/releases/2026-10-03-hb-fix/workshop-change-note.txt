@@ -1,0 +1,10 @@
+Catch-up update: Bees, LaerDar and House changes
+
+- AT-RT (Bees): AT-RT fixes (LAAT-i auto-mount/deploy, unpack, release watchdog) and the new AT-RT gun sound.
+- Kit menu and weapons (LaerDar): Ranger FTL sash fix; DC17 dual-wield fix.
+- Tukata ITT (LaerDar): new ITT crew menu.
+- Armor (House): new Zephyr face; updated Preacher and Sigs faces; Remedy V2 AB helmet and armor path fixes.
+- Cait LAAT (House): updated hull and interior textures.
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
