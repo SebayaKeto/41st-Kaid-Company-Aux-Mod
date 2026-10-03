@@ -608,8 +608,8 @@ class CfgAmmo
 		deflecting = 25;
 		deflectionSlowDown = 0.7;
 		
-		tracerColor = [0.7,0.7,0.5,0.04];
-		tracerColorR = [0.7,0.7,0.5,0.04];
+		tracerColor[] = {0.7,0.7,0.5,0.04};
+		tracerColorR[] = {0.7,0.7,0.5,0.04};
 		smokeColor[] = {1, 1, 1, 0.5};
 		
 		triggerSpeedCoef = 1;

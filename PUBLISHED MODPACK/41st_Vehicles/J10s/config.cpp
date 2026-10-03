@@ -561,7 +561,6 @@ class CfgAmmo
 		tracerScale=1.895;
 		airFriction=-0.00012;
 		effectfly="IDA_BlasterBoltGlow_Red_Fly";
-	};
 		
    class CamShakeExplode
     {
@@ -600,4 +599,5 @@ class CfgAmmo
         hitVirtual="IDA_ImpactEffect";
         default_mat="IDA_ImpactEffect";
     };
+	};
 };

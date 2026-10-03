@@ -13,7 +13,8 @@ class CfgPatches
 			"A3_Characters_F_Proxies",
 			"TCGM_Girls",
 			"ace_medical_engine",
-			"ace_medical_damage"
+			"ace_medical_damage",
+			"ls_props"
 		};
 		units[]=
 		{
@@ -22237,12 +22238,11 @@ class CfgVehicles
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"3AS\3AS_Props\Terminals\data\base_co.paa"
+			"3AS\3AS_Props\Terminals\data\base.rvmat"
 		};
 		editorCategory="FST_Crates";
 		editorSubcategory="FST_Supplies";
 		vehicleClass = "Structures";
-        simulation = "thingx";
 	};
 	class FST_AmmoCrate: Box_NATO_Ammo_F
 	{
@@ -22262,7 +22262,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"3AS\3AS_Props\Crates\Data\Supply_Large_Ammo\Supply_Large_Ammo.rvmat"
+			"3AS\3AS_Props\Crates\Data\Supply_Large\Supply_Large.rvmat"
 		};
 		icon="iconCrateWpns";
 		armor=1000;
@@ -22437,7 +22437,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"3AS\3AS_Props\Crates\Data\Supply_Large_Red\Supply_Large_Red.rvmat"
+			"3AS\3AS_Props\Crates\Data\Supply_Large\Supply_Large.rvmat"
 		};
 		icon="iconCrateWpns";
 		armor=1000;
@@ -22525,7 +22525,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"3AS\3AS_Props\Crates\Data\Supply_Large_Medical\Supply_Large_Medical.rvmat"
+			"3AS\3AS_Props\Crates\Data\Supply_Large\Supply_Large.rvmat"
 		};
 		icon="iconCrateAmmo";
 		class TransportMagazines

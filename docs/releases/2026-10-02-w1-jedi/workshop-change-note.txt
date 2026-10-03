@@ -1,0 +1,8 @@
+Geonosis W1 + Jedi V8, Umbara maps removed
+
+- NEW terrain: Geonosis (fst_geonosis) with the four W1 operation missions, plus the Great Wall (fst_geo_wall), the Core Ship collision shell (fst_geo_coreship) and the Geonosis hive kit (fst_geo_hive).
+- NEW: Jedi Body C - V8 unit and uniform (ck_character_v8).
+- REMOVED: all Umbara terrains and helper addons (Blackfen, Droidworks, Duskfall, Fallfire, Forest01, Ghar Caldera, Gloamport, Gloomreef, Highway, Hollowdeep, Black Lantern, Lumen Vale, Razorback, Scar Reach, Iron Tide and the five Umbaran Wilds/Mountains maps; plus the Umbara tree module, the Black Lantern prop kit and the Umbaran units). Umbara missions no longer load.
+- Config fixes: J10s CamShake classes, Reinsert Terminal, the three 3AS supply crates and the Mortar flare tracer colours now parse cleanly; two optional DBA compat addons (KAID_DBA_AmmoStub_Compat, KAID_DBA_IAD5_Compat) remove the weaponLockSystem startup warning.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
