@@ -1,0 +1,6 @@
+Particle cannon fix
+
+- NEW tiny addon KAID_3AS_ParticleCannon_Fix: the 3AS particle cannon (and the DBA CIS particle cannon based on it) can now aim 30 degrees below level instead of 10, so AI gunners on mesas and walls can engage infantry and vehicles below them.
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
