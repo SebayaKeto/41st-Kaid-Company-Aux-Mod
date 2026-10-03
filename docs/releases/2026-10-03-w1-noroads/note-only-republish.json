@@ -1,0 +1,14 @@
+{
+  "status": "Workshop change note corrected; payload unchanged (same 73 files, same hashes)",
+  "at_local": "2026-10-03 11:01 EDT",
+  "authorised_by": "Miran, in the Aux Updater chat: 'update the workshop note'",
+  "workshop_log": [
+    "[2026-10-03 11:01:15] Upload starting for workshop item 3048946639",
+    "[2026-10-03 11:01:31] Uploaded new content ( ManifestID 921389232914883131 ) for item 3048946639.",
+    "[2026-10-03 11:01:31] Upload finished for workshop item 3048946639 : OK"
+  ],
+  "time_updated": 1791039693,
+  "file_size_bytes": 6539819235,
+  "live_note": "now reads 'all roads removed, including the painted road surfaces' (verified on the Workshop changelog page)",
+  "supersedes_manifest": "513695976372321157"
+}
