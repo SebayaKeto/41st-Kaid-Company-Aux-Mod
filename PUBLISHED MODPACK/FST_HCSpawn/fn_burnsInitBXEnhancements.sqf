@@ -46,4 +46,4 @@ addMissionEventHandler ["EntityDeleted",{
             };
         };
     };
-},0.05] call CBA_fnc_addPerFrameHandler;
+},0.1] call CBA_fnc_addPerFrameHandler; // 10 Hz (was 20 Hz); AnimStateChanged still reacts instantly

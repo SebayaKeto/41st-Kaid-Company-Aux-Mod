@@ -1,5 +1,7 @@
 // Original human-only response to the engine's near-miss event. No world scan.
 params ["_unit",["_distance",0],"_shooter","_instigator","_projectile","_ammo",["_ammoConfig",configNull]];
+// Fires on every near miss: take the 0.35 s throttle before the group/vehicle checks.
+if (isNull _unit || {time < (_unit getVariable ["BURNS_nextSuppressionEvent",-1])}) exitWith {false};
 if (isNull _unit || {!local _unit} || {!alive _unit} || {([_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit)}) exitWith {false};
 if ([group _unit] call FST_HCSpawn_fnc_isProtectedVehicleGroup) exitWith {false};
 if !(missionNamespace getVariable ["BURNS_HumanSuppression",true]) exitWith {false};

@@ -50,6 +50,8 @@ private _any = false;
             _unit setVariable ["BURNS_b1NearbyFireHook",_unit addEventHandler ["FiredNear",{
                 params ["_unit","_firer"];
                 if (!local _unit || {isNull _firer}) exitWith {};
+                // Fires for every shot within ~70 m: take the group's 1 s throttle first.
+                if (time<((group _unit) getVariable ["BURNS_nextDangerEvent",-1])) exitWith {};
                 if (side _firer in [civilian,sideUnknown,sideLogic] || {(side group _unit getFriend side _firer)>=0.6}) exitWith {};
                 [_unit] call FST_HCSpawn_fnc_burnsB1Hit;
             }]];

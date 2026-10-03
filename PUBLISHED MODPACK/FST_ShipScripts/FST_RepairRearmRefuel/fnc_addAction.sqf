@@ -146,7 +146,7 @@ private _newId = _unit addAction [
                             _target setVariable ["VR_RepairActive", false];
                             _running = false;
                         } else {
-                            sleep 0.1;
+                            sleep 0.5; // 2 Hz (was 10 Hz): every tick sends global setHitPointDamage/setFuel; progress is time-based
                         };
                     };
                 };

@@ -36,7 +36,7 @@ PHEN_fnc_IVP_AutoAssign = {
             if (PHEN_IVP_DEBUG_MODE) then {
                 systemChat format ["[IVP DEBUG] BX Droid detected - Setting voice: SWCMDdroidENG for %1 (%2)", _unit, _unitType];
             };
-            [_unit, "SWCMDdroidENG"] remoteExec ['setSpeaker', 0];
+            _unit setSpeaker "SWCMDdroidENG"; // local effect; every machine runs this itself via InitPost (was a global remoteExec from every machine)
         };
         
         // Voice assignment by faction and editor subcategory
@@ -80,7 +80,7 @@ PHEN_fnc_IVP_AutoAssign = {
                 hint format ["[IVP DEBUG] <br/> Assigning voice %1 to %2 <br/> [type: %3, Faction: %4, Subcategory: %5]", 
                     _assignedVoice, _unit, _unitType, _faction, _editorSubcategory];
             };
-            [_unit, _assignedVoice] remoteExec ['setSpeaker', 0]; //Set their new Voice
-            [_unit, "RADIOPROTOCOL"] remoteExec ['enableAI ', 0]; //Ensure we can use the radio protocol to make 'em talk.
+            _unit setSpeaker _assignedVoice; //Set their new Voice (local effect; voice is deterministic per class, every machine applies it itself)
+            if (local _unit) then { _unit enableAI "RADIOPROTOCOL"; }; //Ensure we can use the radio protocol to make 'em talk (only matters where the AI is local).
         };
 };

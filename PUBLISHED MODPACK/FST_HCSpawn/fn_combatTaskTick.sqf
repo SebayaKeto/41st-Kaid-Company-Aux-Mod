@@ -25,7 +25,27 @@ if (_wpIndex >= 0 && {_current != _wpIndex} && {_current < count waypoints _grou
     [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
 };
 if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0) exitWith {
-    if !([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) then {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
+    if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) exitWith {};
+    // B2 squads on assault/rush/hunt: keep driving the task waypoint (full speed, fire on
+    // the move). Suspending here deleted the waypoint every tick, so B2s stood and shot.
+    if (_mode in ["assault","rush","hunt"] && {(units _group findIf {_x isKindOf "WBK_LS_B2"})>=0}) exitWith {
+        private _dest=_objective;
+        if (_mode in ["rush","hunt"]) then {
+            private _t=[_group] call FST_HCSpawn_fnc_burnsRushTarget;
+            if (!isNull _t) then {_dest=getPosATL _t};
+        };
+        private _index=([_group,["FST_HC_taskWaypoint",-1]] call FST_HCSpawn_fnc_burnsStateGet);
+        private _wp=if (_index>=0 && {_index<count waypoints _group} && {waypointDescription [_group,_index]=="FST HC combat"}) then {[_group,_index]} else {_group addWaypoint [_dest,0]};
+        if ((waypointPosition _wp) distance2D _dest>15) then {_wp setWaypointPosition [_dest,0]};
+        _wp setWaypointDescription "FST HC combat";
+        _wp setWaypointType "MOVE";
+        _wp setWaypointSpeed "FULL";
+        _wp setWaypointBehaviour "AWARE";
+        _wp setWaypointCombatMode "YELLOW";
+        if (currentWaypoint _group!=(_wp select 1)) then {_group setCurrentWaypoint _wp};
+        ([_group,["FST_HC_taskWaypoint",_wp select 1,true]] call FST_HCSpawn_fnc_burnsStateSet);
+    };
+    [_group] call FST_HCSpawn_fnc_burnsSuspendTask;
 };
 if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsSpecialTick) exitWith {};
 if !(_leader checkAIFeature "PATH") exitWith {[_group] call FST_HCSpawn_fnc_burnsReleaseAdvance}; // Respect externally scripted holds.

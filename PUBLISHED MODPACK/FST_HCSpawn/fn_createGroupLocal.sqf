@@ -327,6 +327,12 @@ if (count _editableObjects > 0) then {
             private _b1Only=(units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1"})<0;
             [_group, ["assault","rush"] select _b1Only, _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
+        case "rush": {
+            // Zeus squad modules: charge out from the drop point and seek the nearest enemy.
+            _group setBehaviourStrong "COMBAT";
+            _group setCombatMode "RED";
+            [_group, "rush", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
+        };
         case "hunt": {
             _group setBehaviourStrong "COMBAT";
             _group setCombatMode "RED";
@@ -349,7 +355,7 @@ if (count _editableObjects > 0) then {
         };
         case "none": {};
     };
-}, [_group, _behavior, _radius, _pos], if (_behavior=="assault") then {0} else {1}] call CBA_fnc_waitAndExecute;
+}, [_group, _behavior, _radius, _pos], if (_behavior in ["assault","rush"]) then {0} else {1}] call CBA_fnc_waitAndExecute;
 
 // Dynamic simulation only for mobile groups, and only when opted in.
 if ((_behavior in ["patrol", "hunt"]) && {missionNamespace getVariable ["FST_HC_EnableDynamicSimulationSystem", false]}) then {

@@ -115,7 +115,7 @@ BURNS_MaxDueLateness=0;
         };
     };
     FST_HC_CombatMaxTickMs=FST_HC_CombatMaxTickMs max ((diag_tickTime-_started)*1000);
-},0.05,[]] call CBA_fnc_addPerFrameHandler;
+},0.1,[]] call CBA_fnc_addPerFrameHandler; // 10 Hz (was 20 Hz): work is due-time driven, capacity 80 group ticks/s
 [] call FST_HCSpawn_fnc_initVisibility;
 [] call FST_HCSpawn_fnc_initSuppression;
 [] call FST_HCSpawn_fnc_burnsInitEngagement;

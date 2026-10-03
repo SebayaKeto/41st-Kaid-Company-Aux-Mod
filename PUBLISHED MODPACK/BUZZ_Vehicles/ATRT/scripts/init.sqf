@@ -177,7 +177,9 @@ _atrt addEventHandler ["Fired", {
     private _cell     = _prevCell;
     if (_prevCell > 0) then {
         _cell = _prevCell - 1;
-        _unit setVariable ["BUZZ_powerCell", _cell, true];
+        // Exact on the owner every shot; other machines (pack action, new owner after a
+        // locality change) get it every 10 shots and every shot in the last 30.
+        _unit setVariable ["BUZZ_powerCell", _cell, (_cell % 10 == 0) || {_cell <= 30}];
     };
 
     // Shot Sound
@@ -512,6 +514,9 @@ _atrt addEventHandler ["HandleDamage", {
 // ─────────────────────────────────────────────────────────────────────────────
 [_atrt] spawn {
     params ["_atrt"];
+    // addAction is local and only players use scroll actions: skip the forever
+    // re-install loop on the dedicated server and headless clients.
+    if (!hasInterface) exitWith {};
     waitUntil { time > 0 };
 
     private _fnInstall = {

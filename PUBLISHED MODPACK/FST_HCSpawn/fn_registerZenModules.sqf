@@ -27,12 +27,12 @@ private _icon = "\a3\Modules_F_Curator\Data\iconCurator_ca.paa";
         _pos=ASLToATL _pos;
         ["%1",
         [
-            ["COMBO", "Behavior", [[0,1,2,3,4,5], ["Assault","Hunt","Garrison","Patrol","Static","No Behavior"], 0]]
+            ["COMBO", "Behavior", [[0,1,2,3,4,5,6], ["Assault","Rush","Hunt","Garrison","Patrol","Static","No Behavior"], 0]]
         ],
         {
             params ["_values", "_args"];
             _args params ["_pos", "_key"];
-            private _behavior = ["assault","hunt","garrison","patrol","static","none"] select (_values select 0);
+            private _behavior = ["assault","rush","hunt","garrison","patrol","static","none"] select (_values select 0);
             ["FST_HC_evt_quickSpawn", [_pos, _key, _behavior, -1, clientOwner]] call CBA_fnc_serverEvent;
             systemChat ("[FST] Spawning %2 (" + _behavior + ")");
         },

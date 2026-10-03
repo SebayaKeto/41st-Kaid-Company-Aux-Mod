@@ -1,0 +1,11 @@
+Performance update
+
+- Performance: CBA no longer falls back to its slow per-object polling loop on every machine. Two new compat addons (KAID_XEH_Compat_41st / _3P) add CBA event handler support to 518 unit, vehicle and prop classes from the 41st and other mods in the modset.
+- Performance: less network traffic and script load from the HC Spawn AI (B1 danger state broadcast ~15x less often, lighter per-droid event handlers, AI scheduler at 10 Hz).
+- Performance: Immersive Voices no longer broadcasts voice changes for every droid from every machine when a player joins.
+- Performance: unit randomizers (Mandos, Human Division, Corrupt PDF, Nyvar, civilians) no longer broadcast an init flag per unit; AT-RT scroll actions are no longer re-added on the server and headless clients; ship repair/rearm/refuel updates at 2 Hz instead of 10 Hz.
+- AT-RT: power cell count is synced less often (exact for the driver as before).
+- Zeus: the 41st squad spawn modules now have a Rush option.
+- Fix: hacking minigame loops no longer keep running after the dialog closes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -13,7 +13,8 @@ if (isNull _enemy) then {
         _enemy=_knownTarget;
     };
 };
-if (!isNull _enemy && {_leader distance2D _enemy<500} && {time>=(_group getVariable ["BURNS_b1DangerUntil",-1])-19}) then {
+// Renew the public window only in its last 5 s (~1 broadcast per 15 s, was ~1/s).
+if (!isNull _enemy && {_leader distance2D _enemy<500} && {time>=(_group getVariable ["BURNS_b1DangerUntil",-1])-5}) then {
     _group setVariable ["BURNS_b1DangerUntil",time+20,true];
 };
 private _formation=if (time<(_group getVariable ["BURNS_b1DangerUntil",-1])) then {"LINE"} else {"COLUMN"};

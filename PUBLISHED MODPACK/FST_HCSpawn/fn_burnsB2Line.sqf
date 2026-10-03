@@ -55,20 +55,21 @@ if (count _saved==0) then {
 if (formation _g!="LINE") then {_g setFormation "LINE"};
 if (abs((_bearing-(_saved select 3)+540)%360-180)>20) then {_lead setFormDir _bearing;_saved set [3,_bearing]};
 _saved set [6,time];
-private _standOff=45;
+// Push harder (Miran 3 Oct): close to 25 m in 15 m bounds every 4 s (was 45 m / 6 m / 8 s).
+private _standOff=25;
 private _ordered=[_lead]+(_units-[_lead]);
 private _frame=_g getVariable ["BURNS_b2Frame",[]];
 private _orders=_saved select 4;
 private _arrived={_x params ["_u","_goal"];alive _u && {_u distance2D _goal<3}} count _orders;
 private _new=count _frame==0 || {!((_frame select 3) isEqualTo _ordered)};
-if (!_new && {_best>_standOff+8} && {_arrived>=ceil(count _ordered*0.75)} && {time>(_frame select 2)}) then {
+if (!_new && {_best>_standOff+8} && {_arrived>=ceil(count _ordered*0.5)} && {time>(_frame select 2)}) then {
     private _lag=0;
     {private _delta=(getPosATL _lead) vectorDiff getPosATL _x;_lag=_lag max ((_delta select 0)*sin _bearing+(_delta select 1)*cos _bearing)} forEach _units;
-    _new=_lag<8;
+    _new=_lag<12;
 };
 if (_new) then {
-    private _front=_lead getPos [6 min ((_best-_standOff) max 0),_bearing];
-    _frame=[_front,_bearing,time+8,_ordered];
+    private _front=_lead getPos [15 min ((_best-_standOff) max 0),_bearing];
+    _frame=[_front,_bearing,time+4,_ordered];
     _orders=[];
     {
         private _offset=if (_forEachIndex==0) then {0} else {ceil(_forEachIndex/2)*5*([-1,1] select (_forEachIndex mod 2))};
@@ -77,13 +78,13 @@ if (_new) then {
     } forEach _ordered;
     _saved set [4,_orders];
     _g setVariable ["BURNS_b2Frame",_frame,true];
-    _g setVariable ["BURNS_b2BoundNext",time+20];
+    _g setVariable ["BURNS_b2BoundNext",time+10];
 } else {
     // Reissue only unfinished slots after a long timeout, not continuous orders
     // that would interrupt native aiming. Native pathfinding handles obstacles.
     if (time>=(_g getVariable ["BURNS_b2BoundNext",-1])) then {
         {_x params ["_u","_goal"];if (_u distance2D _goal>=3) then {_u doMove _goal}} forEach _orders;
-        _g setVariable ["BURNS_b2BoundNext",time+20];
+        _g setVariable ["BURNS_b2BoundNext",time+10];
     };
 };
 if !((_g getVariable ["BURNS_b2Line",[]]) isEqualTo _saved) then {_g setVariable ["BURNS_b2Line",_saved,true]};

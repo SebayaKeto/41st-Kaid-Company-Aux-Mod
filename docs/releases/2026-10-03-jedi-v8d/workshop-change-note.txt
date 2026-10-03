@@ -1,0 +1,6 @@
+Jedi V8d
+
+- Jedi Body C (V8): updated model: proper shadows, tidier armholes, pauldrons and back skirt adjusted. Same classes and config.
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -32,7 +32,7 @@ class Extended_InitPost_EventHandlers
 	{
 		class IVP_unit_Init
 		{
-			init="_unit = _this select 0; if (local _unit) then { [_unit] spawn PHEN_fnc_IVP_AutoAssign; };";
+			init="[_this select 0] spawn PHEN_fnc_IVP_AutoAssign;";
 		};
 	};
 };

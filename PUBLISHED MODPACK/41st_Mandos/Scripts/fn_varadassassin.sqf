@@ -5,7 +5,7 @@ if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {}; 
 
 if (_unit getVariable ["FST_Initialized", false]) exitWith {};
-_unit setVariable ["FST_Initialized", true, true];
+_unit setVariable ["FST_Initialized", true]; // local guard only (was broadcast + JIP-queued per unit)
 
 ["FST_applyName", [ _unit, "Clan Varad Assassin"]] call CBA_fnc_globalEvent;
 

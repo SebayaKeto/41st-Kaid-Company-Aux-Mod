@@ -557,7 +557,8 @@
     ((_screen select (_xloc * 4 + 1)) select (_yloc * 4 + 3)) ctrlSetBackgroundColor [0.851,0.071,0.071,1];
     ((_screen select (_xloc * 4 + 3)) select (_yloc * 4 + 3)) ctrlSetBackgroundColor [0.851,0.071,0.071,1];
 
-    while {!(_display getVariable ["FST_GameStart",false])} do {sleep 5};
+    while {!isNull _display && {!(_display getVariable ["FST_GameStart",false])}} do {sleep 5}; // ends if the dialog closes
+    if (isNull _display) exitWith {};
     while {(!((_display getVariable ["FST_PlayerDead", false]) or ((_display getVariable ["FST_KeysDeposited", 0]) == 3)) && (_term getVariable ["FST_DeviceInUse",false]))} do
     {
         playSoundUI ["a3\missions_f_oldman\data\sound\beep.ogg",0.05,0.5,true];

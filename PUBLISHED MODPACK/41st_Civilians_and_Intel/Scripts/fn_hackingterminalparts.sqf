@@ -775,7 +775,7 @@
 ["FST_flashWarning", {
     params ["_display","_icon"];
 
-    while {_display getVariable ["FST_FlagErrors",0] == 0} do
+    while {!isNull _display && {_display getVariable ["FST_FlagErrors",0] == 0}} do // ends if the dialog closes (was an endless loop)
     {
         switch (_icon getVariable ["FST_Blinker", true]) do
         {

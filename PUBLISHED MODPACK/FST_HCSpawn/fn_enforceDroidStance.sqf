@@ -11,6 +11,8 @@ private _fixed = 0;
         _x setVariable ["BURNS_stanceHook", true];
         _x addEventHandler ["AnimChanged", {
             params ["_unit"];
+            // Fires on every animation change: leave at once when the stance is already right.
+            if (!local _unit || {toUpper unitPos _unit == "UP" && {stance _unit == "STAND"}}) exitWith {};
             if (!local _unit || {!alive _unit} || {([_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit)} || {vehicle _unit != _unit} || {lifeState _unit == "INCAPACITATED"}) exitWith {};
             if (!(missionNamespace getVariable ["FST_HC_DroidStanceEnabled", true]) || {(group _unit) getVariable ["BURNS_exempt", false]}) exitWith {};
             if (_unit getVariable ["BURNS_exempt",false]) exitWith {};
