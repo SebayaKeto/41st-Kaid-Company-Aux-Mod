@@ -1,7 +1,7 @@
 params ["_group","_contacts"];
 if !(missionNamespace getVariable ["BURNS_ArmorAssistEnabled",true]) exitWith {};
 private _v=vehicle leader _group;
-if (!(_v isKindOf "FST_AAT") || {!local _v} || {!alive _v} || {!canFire _v}) exitWith {};
+if (!(_v isKindOf "FST_AAT" || {_v isKindOf "FST_Advanced_DSD_Base"}) || {!local _v} || {!alive _v} || {!canFire _v}) exitWith {};
 if ((units _group findIf {alive _x && {vehicle _x!=_v}})>=0) exitWith {};
 private _driver=driver _v;
 private _gunner=gunner _v;
@@ -33,8 +33,16 @@ private _count=count _ranked;
 for "_i" from 1 to (8 min _count) do {
     private _index=(_cursor+_i-1) mod _count;
     private _candidate=(_ranked select _index) select 1;
-    if (([_v,"VIEW",_candidate] checkVisibility [eyePos _gunner,aimPos _candidate])>0.5) exitWith {_target=_candidate};
+    // Start the ray 1.5 m toward the contact: from the eye itself the gunner's own body
+    // blocked ~half of it (ADSD read 0.34 at 500 m on open ground, probe 4 Oct).
+    private _eye=eyePos _gunner;
+    _eye=_eye vectorAdd ((vectorNormalized ((aimPos _candidate) vectorDiff _eye)) vectorMultiply 1.5);
+    if (([_v,"VIEW",_candidate] checkVisibility [_eye,aimPos _candidate])>0.5) exitWith {_target=_candidate};
 };
+// Eager fire (Miran 4 Oct): turned-in crews sat at knowsAbout ~1 and gunners hold fire below
+// ~3 (probe: ADSD spotted at 330 m, fired twice, then nothing for 80 s). A contact the crew
+// already perceives AND the gunner has a clear line of sight to counts as identified.
+if (!isNull _target && {(_group knowsAbout _target)<3}) then {_group reveal [_target,3]};
 _v setVariable ["BURNS_armorSightCursor",if (!isNull _target || {_count==0}) then {0} else {(_cursor+8) mod _count}];
 if (isNull _target) exitWith {_v setVariable ["BURNS_armorFireTarget",objNull]};
 if (_gunner checkAIFeature "TARGET" && {_gunner checkAIFeature "AUTOTARGET"} && {_gunner checkAIFeature "FIREWEAPON"}) then {

@@ -12,8 +12,14 @@ class Mode_FullAuto;
 class Mode_SemiAuto;
 class CfgWeapons {
     class autocannon_Base_F;
+    // shotFromTurret (inherited =1 from autocannon_Base_F) fired from the turret's
+    // memoryPointGun: on the ADSD "usti hlavne3" has no "konec hlavne3", on the AAT it sits on
+    // the commander cupola. AI gunners never got a firing solution (ADSD 0 shots, AAT 0-2 a
+    // minute). Probe 4 Oct with =0: ADSD 10-15, AAT 2-5 a minute; shells leave the barrel.
     class FST_AAT_Cannon: autocannon_Base_F {
+        shotFromTurret=0;
         class HP: autocannon_Base_F {
+            shotFromTurret=0;
             class Fire: Mode_SemiAuto {
                 minRange=10;minRangeProbab=0.8;
                 midRange=500;midRangeProbab=0.95;
@@ -60,6 +66,12 @@ class CfgAmmo {
     class FST_thermal_shell_HP: IDA_Blasterbolt_Power6_VEHICLE {
         aiAmmoUsageFlags=960;
         cost=12;
+    };
+    // ADSD cannon shell (ADSD only): long-range skirmish sniper (Miran 3-4 Oct) engages
+    // infantry, vehicles AND armour (stock flags lacked armour 512).
+    class FST_thermal_shell_OP_Red: IDA_Blasterbolt_Power6_VEHICLE {
+        aiAmmoUsageFlags=960;
+        allowAgainstInfantry=1;
     };
     class RocketBase;
     // Native flags: infantry 64, light vehicles 128, aircraft 256, armour 512.

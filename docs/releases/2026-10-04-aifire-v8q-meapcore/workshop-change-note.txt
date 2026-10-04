@@ -1,0 +1,11 @@
+ADSD and AAT guns fixed, ADSD skirmishing, Jedi V8Q, MEAP Core
+
+- Advanced Dwarf Spider Droids now actually fire their main cannon. A config fault meant AI gunners could never line the gun up, so ADSDs sat there without shooting. Tested: 0 shots before, 13-15 a minute now, against infantry, vehicles and tanks.
+- AAT main guns fire for the same reason, and the shell now leaves the barrel instead of the turret top or hull side. The Scorponek turret's shots now come from its gun.
+- AI AAT and ADSD gunners now treat an enemy they can clearly see as identified and keep firing on it, instead of firing a couple of shots and going quiet.
+- ADSDs on Assault/Rush now close in until they actually spot the enemy, then hold at 350-600 m and sidestep between volleys (was 700 m, where they could not see infantry and never fired).
+- Jedi V8Q: closes the shoulder gap seen from behind, calmer walk, and the halberd rest pose holds while walking diagonally.
+- MEAP Core updated (building snap fixes and MEAP branding).
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

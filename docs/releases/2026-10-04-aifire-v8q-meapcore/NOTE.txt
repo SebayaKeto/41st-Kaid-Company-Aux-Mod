@@ -1,0 +1,4 @@
+Published 2026-10-04 18:47 EDT on Miran "Ok push what we have ASAP" (manifest 4184659817279380386).
+Base: D-aattracks. Changed: FST_BURNS_Combat (FST_AAT_Cannon shotFromTurret=0; ADSD shell flags 960), FST_HCSpawn (ADSD skirmish 350-600 m + close-until-seen; AAT/ADSD gunner assist reveal-3 on clear LOS), ck_character_v8 + ck_daara_halberd = Daara V8Q, MEAP_Core = MEAP author loose PBO 4 Oct (bfe97647; contains its own build folder, harmless bloat).
+Held: MEAP_Economy_Core + MEAP_Architect_Core 4 Oct (need missing MEAP_Campaign_Core), Daara V8T, AT-droid variants (none beat stock).
+Tests: D:/AuxUpdater/aatcrew (prof-z1*, prof-i*/hb*, prof-u*, prof-e*/h*/j*/k*/m*).

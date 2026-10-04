@@ -77,7 +77,7 @@ BURNS_EngagementQueries=0;
         };
         if !(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) then {continue};
         if (time<(_g getVariable ["BURNS_engagementNext",-1]) || {!([_g] call FST_HCSpawn_fnc_burnsEngagementAllowed)}) then {continue};
-        private _armor=_v isKindOf "FST_AAT";
+        private _armor=_v isKindOf "FST_AAT" || {_v isKindOf "FST_Advanced_DSD_Base"};
         _g setVariable ["BURNS_engagementNext",time+(if (_armor) then {0.5} else {2})];
         if (!_armor) then {[_g] call FST_HCSpawn_fnc_burnsReaction};
         if (!_armor && {!([_g,true] call FST_HCSpawn_fnc_burnsB1Eligible)}) then {continue};

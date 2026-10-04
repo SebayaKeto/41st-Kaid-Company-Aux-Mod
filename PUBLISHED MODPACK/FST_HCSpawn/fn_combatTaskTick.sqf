@@ -163,8 +163,9 @@ if (missionNamespace getVariable ["BURNS_ArmorAssistEnabled",true] && {_mode in 
         };
     };
 };
-// ADSD long-range skirmisher (Miran 3 Oct): hold ~700 m from a known enemy, back off
-// inside 500 m, and shift 60 m sideways every ~40 s between volleys. AATs still charge.
+// ADSD long-range skirmisher (Miran 3 Oct): hold ~450 m from a known enemy (band 350-600 m),
+// and shift 60 m sideways every ~40 s between volleys. AATs still charge. Was 700 m (500-900):
+// probe 4 Oct, crews never spotted infantry at 700 m, so the ADSD sat there without firing.
 if (_mode in ["rush","hunt","assault"] && {(vehicle _leader) isKindOf "FST_Advanced_DSD_Base"} && {local (vehicle _leader)} && {canMove (vehicle _leader)}) then {
     private _v=vehicle _leader;
     private _foe=if (!isNull _rushTarget) then {vehicle _rushTarget} else {vehicle _contact};
@@ -172,8 +173,12 @@ if (_mode in ["rush","hunt","assault"] && {(vehicle _leader) isKindOf "FST_Advan
     if (count _fp>=2) then {
         private _d=_v distance2D _fp;
         private _goal=getPosATL _v;
-        if (_d>900 || {_d<500}) then {
-            _goal=_fp getPos [700,_fp getDir (getPosATL _v)];
+        // Not actually seen yet (Rush hands over the shared cache position): keep closing (down
+        // to 150 m) until the crew spots it, then fall back into the band and snipe. Probe 4 Oct:
+        // crews only spot infantry that shoot at them (~300 m); parked at 370 m blind = no shots.
+        private _seen=if (!isNull _foe) then {(_group knowsAbout _foe)>=1} else {true};
+        if (_d>600 || {_seen && {_d<350}} || {!_seen && {_d>170}}) then {
+            _goal=_fp getPos [[150,450] select _seen,_fp getDir (getPosATL _v)];
             _group setVariable ["BURNS_adsdShiftGoal",nil];
         } else {
             if (time>=(_group getVariable ["BURNS_adsdShift",-1])) then {
