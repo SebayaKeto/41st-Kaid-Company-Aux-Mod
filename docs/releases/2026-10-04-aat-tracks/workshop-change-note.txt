@@ -1,0 +1,6 @@
+AATs harder to decrew
+
+- AATs no longer get stranded and abandoned by one or two AT hits. Their tracks and engine are now tougher than the hull, so AT teams destroy the tank instead of leaving an empty AAT behind. Tested: an AAT takes 3 RPS-6 or 2 PLX hits to kill, and the crew stays in until it dies. Applies to every 41st AAT variant (King, Light, Looted and the rest).
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

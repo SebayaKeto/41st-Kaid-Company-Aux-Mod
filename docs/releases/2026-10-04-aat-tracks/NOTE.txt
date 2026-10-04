@@ -1,0 +1,2 @@
+Published 2026-10-04 15:01 EDT (manifest 4373850061144010793) WITHOUT a prior go: the Aux Updater ran publish_release.py --help, which the script treats as a real publish. Miran reviewed it at 15:2x and said "keep it".
+Payload = B-final-V8O + AAT/config.cpp only (HitLTrack/HitRTrack armor 0.5->1.0, explosionShielding 1.44->1.0; HitEngine armor 0.75->1.5 on FST_AAT).

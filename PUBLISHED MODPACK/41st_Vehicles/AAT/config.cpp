@@ -86,6 +86,14 @@ class CfgVehicles
 		crew="FST_Droid_B1_OOM";
 		crewVulnerable=0;
 		author="Daara";
+		// Harder to immobilise (Miran 4 Oct): one AT hit broke the tracks/engine and the AI crew
+		// bailed from a live AAT. Tracks and engine now outlast the hull.
+		class HitPoints: HitPoints
+		{
+			class HitLTrack: HitLTrack {armor=1.0;explosionShielding=1.0;};
+			class HitRTrack: HitRTrack {armor=1.0;explosionShielding=1.0;};
+			class HitEngine: HitEngine {armor=1.5;};
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
