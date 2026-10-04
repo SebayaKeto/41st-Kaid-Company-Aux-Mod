@@ -324,7 +324,8 @@ if (count _editableObjects > 0) then {
             _group setCombatMode "RED";
             // B1 Assault spawns must seek an enemy, not MOVE to their own
             // spawn point while waiting for a contact they do not yet know.
-            private _b1Only=(units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1"})<0;
+            // B2 squads seek too (3 Oct HC test: a module "Assault" B2 squad stood at its drop point).
+            private _b1Only=(units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1" && {!(_x isKindOf "WBK_LS_B2")}})<0;
             [_group, ["assault","rush"] select _b1Only, _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
         };
         case "rush": {

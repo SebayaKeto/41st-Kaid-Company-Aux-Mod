@@ -1,0 +1,16 @@
+AI update + Geonosis terrain look
+
+- AATs now team up automatically: AI AATs on Assault that are near each other and heading for the same area form a section, charge in together and finish in a spaced firing line (they still charge as before).
+- B2s always walk (no more running) and keep pushing under fire: they advance in a steady move-and-fire rhythm instead of stopping to trade shots at long range. Zeus waypoints and holds still take priority.
+- B2 squads spawned from the 41st modules on Assault now go and find the enemy instead of standing at the drop point.
+- Fix: droid infantry following nearby armor no longer stall behind a tank that has stopped; they push on once it halts.
+- Fix: the Advanced Dwarf Spider Droid now actually repositions between volleys while sniping from range.
+- Fix: the Zeus "Rush" option searches the full area for targets.
+- Performance: the AT-RT gun sound no longer sends a network message per shot.
+- Geonosis terrain: rock strata on the hills and darker cliffs for a better distant view, and scree slopes can now be dug. Heights and objects are unchanged, so all missions stay valid.
+- Performance: switched off Operation Trebuchet's Elite face-check scripts (they ran on the server, headless clients and every client for nothing).
+- Jedi (Daara): updated model, her own walk/run and a hand-on-hip idle; new halberd shoulder-rest when standing with her staff (blade goes out, comes back on attack or movement).
+- Removed: the Nyvar Uprisers faction (moved to storage).
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

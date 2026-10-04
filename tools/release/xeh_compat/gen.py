@@ -6,7 +6,11 @@ for run in ('x1','x3','x6'):
         if 'XEHP|root|' not in l: continue
         m=re.search(r'\|owner=([^|]*)\|ownerParent=([^|]*)\|ownerSrc=(\[[^|]*\])\|example',l)
         rows[m.group(1)]=(m.group(1),m.group(2),json.loads(m.group(3).replace('""','"')))
-rows=list(rows.values()); print(len(rows))
+rows=list(rows.values())
+# Nyvar Uprisers moved to storage (Miran 4 Oct): drop their classes and dependency
+rows=[r for r in rows if not any(a.lower()=='41st_nyvaruprisers' for a in r[2])]
+assert not any(r[1].lower().startswith('fst_nyvar') for r in rows)
+print(len(rows))
 ours=lambda s: any(re.match(r'(?i)(FST|41st|BUZZ|JMSEF|KAID|MEAP)',a) and not re.match(r'(?i)41st_ODST',a) for a in s)
 groups={'41st':[r for r in rows if ours(r[2])],'3P':[r for r in rows if not ours(r[2])]}
 for g,rs in groups.items():

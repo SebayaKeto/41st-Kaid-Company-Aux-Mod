@@ -44,6 +44,7 @@ if (_radius < 0) then {
         // objective when the group has no known contact.
         case "assault": { 2000 };
         case "hunt":    { 2000 };
+        case "rush":    { 2000 };
         default          { 100 };
     };
 };

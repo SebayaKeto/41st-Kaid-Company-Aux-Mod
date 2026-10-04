@@ -19,7 +19,7 @@ private _keep=[];
         } && {_d checkAIFeature "MOVE"} && {(units _x findIf {alive _x && {vehicle _x!=_v}})<0}
     };
     if (count _members<2) then {
-        {if ((_x getVariable ["BURNS_sectionToken",""])==_token) then {_x setVariable ["BURNS_sectionPlan",nil,true];_x setVariable ["BURNS_sectionToken",nil,true]}} forEach _roster;
+        {if ((_x getVariable ["BURNS_sectionToken",""])==_token) then {_x setVariable ["BURNS_sectionPlan",nil,true];_x setVariable ["BURNS_sectionToken",nil,true]};if (!isNull _x) then {_x setVariable ["BURNS_autoSectionNext",time+300]}} forEach _roster;
         diag_log format ["[BURNS_SECTION_END] %1",_token];continue
     };
     // Never move surviving tanks into new slots because another tank was lost.
@@ -33,11 +33,14 @@ private _keep=[];
     // Native tank movement brakes before the waypoint centre. Accept that band
     // rather than issuing repeated corrections to an already useful firing line.
     private _arrived=count _plans>0 && {(_plans findIf {(_x select 0) in _members && {vehicle leader (_x select 0) distance2D (_x select 1)>30}})<0};
-    private _advance=count _plans==0 || {_deploy} || {_arrived && {time-_last>20}};
+    // Auto sections (caller 2, formed by the server recruiter) keep the AAT charge pace:
+    // 120 m column / 60 m line steps with an 8 s pause. Zeus-ordered sections stay deliberate.
+    private _auto=_caller==2;
+    private _advance=count _plans==0 || {_deploy} || {_arrived && {time-_last>(if (_auto) then {8} else {20})}};
     private _stalled=count _plans>0 && {!_arrived} && {time-_last>60};
     if (_stalled) then {
         // Release cohesion rather than repeatedly reshuffling a blocked section.
-        {if ((_x getVariable ["BURNS_sectionToken",""])==_token) then {_x setVariable ["BURNS_sectionPlan",nil,true];_x setVariable ["BURNS_sectionToken",nil,true]}} forEach _roster;
+        {if ((_x getVariable ["BURNS_sectionToken",""])==_token) then {_x setVariable ["BURNS_sectionPlan",nil,true];_x setVariable ["BURNS_sectionToken",nil,true]};if (!isNull _x) then {_x setVariable ["BURNS_autoSectionNext",time+300]}} forEach _roster;
         if (_caller>2) then {"[BURNS] AAT section could not form on this terrain. Tanks continue their individual Assault orders; choose a clearer approach to regroup." remoteExec ["systemChat",_caller]};
         diag_log format ["[BURNS_SECTION_BLOCKED] %1",_token];continue
     };
@@ -46,7 +49,7 @@ private _keep=[];
         private _progress=_vehicles apply {((getPosATL _x) vectorDiff _origin) vectorDotProduct _forward};
         private _front=selectMax _progress;
         private _remaining=_origin distance2D _objective;
-        private _step=if (_phase=="COLUMN" && {!_deploy}) then {55} else {35};
+        private _step=if (_phase=="COLUMN" && {!_deploy}) then {[55,120] select _auto} else {[35,60] select _auto};
         private _center=_origin getPos [(_front+_step) min _remaining,_axis];
         // Prefer 150 m and close from beyond 200 m. Do not keep walking a line
         // toward a known tank simply because the clicked objective lies beyond it.

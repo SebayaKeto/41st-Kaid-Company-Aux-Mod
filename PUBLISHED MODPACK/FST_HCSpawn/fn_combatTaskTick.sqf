@@ -25,27 +25,7 @@ if (_wpIndex >= 0 && {_current != _wpIndex} && {_current < count waypoints _grou
     [_group,"stop"] call FST_HCSpawn_fnc_setCombatTask;
 };
 if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=0) exitWith {
-    if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) exitWith {};
-    // B2 squads on assault/rush/hunt: keep driving the task waypoint (full speed, fire on
-    // the move). Suspending here deleted the waypoint every tick, so B2s stood and shot.
-    if (_mode in ["assault","rush","hunt"] && {(units _group findIf {_x isKindOf "WBK_LS_B2"})>=0}) exitWith {
-        private _dest=_objective;
-        if (_mode in ["rush","hunt"]) then {
-            private _t=[_group] call FST_HCSpawn_fnc_burnsRushTarget;
-            if (!isNull _t) then {_dest=getPosATL _t};
-        };
-        private _index=([_group,["FST_HC_taskWaypoint",-1]] call FST_HCSpawn_fnc_burnsStateGet);
-        private _wp=if (_index>=0 && {_index<count waypoints _group} && {waypointDescription [_group,_index]=="FST HC combat"}) then {[_group,_index]} else {_group addWaypoint [_dest,0]};
-        if ((waypointPosition _wp) distance2D _dest>15) then {_wp setWaypointPosition [_dest,0]};
-        _wp setWaypointDescription "FST HC combat";
-        _wp setWaypointType "MOVE";
-        _wp setWaypointSpeed "FULL";
-        _wp setWaypointBehaviour "AWARE";
-        _wp setWaypointCombatMode "YELLOW";
-        if (currentWaypoint _group!=(_wp select 1)) then {_group setCurrentWaypoint _wp};
-        ([_group,["FST_HC_taskWaypoint",_wp select 1,true]] call FST_HCSpawn_fnc_burnsStateSet);
-    };
-    [_group] call FST_HCSpawn_fnc_burnsSuspendTask;
+    if !([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) then {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
 };
 if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsSpecialTick) exitWith {};
 if !(_leader checkAIFeature "PATH") exitWith {[_group] call FST_HCSpawn_fnc_burnsReleaseAdvance}; // Respect externally scripted holds.
@@ -194,36 +174,44 @@ if (_mode in ["rush","hunt","assault"] && {(vehicle _leader) isKindOf "FST_Advan
         private _goal=getPosATL _v;
         if (_d>900 || {_d<500}) then {
             _goal=_fp getPos [700,_fp getDir (getPosATL _v)];
+            _group setVariable ["BURNS_adsdShiftGoal",nil];
         } else {
             if (time>=(_group getVariable ["BURNS_adsdShift",-1])) then {
                 _group setVariable ["BURNS_adsdShift",time+40];
-                _goal=(getPosATL _v) getPos [60,(_fp getDir (getPosATL _v))+selectRandom [90,-90]];
+                _group setVariable ["BURNS_adsdShiftGoal",(getPosATL _v) getPos [60,(_fp getDir (getPosATL _v))+selectRandom [90,-90]]];
             };
+            // Keep the sidestep goal until reached; otherwise hold and fire.
+            private _shift=_group getVariable ["BURNS_adsdShiftGoal",[]];
+            if (count _shift>=2 && {_v distance2D _shift>8}) then {_goal=+_shift};
         };
         if !(surfaceIsWater _goal) then {_destination=_goal};
-        if ((_group getVariable ["BURNS_lastTactic",""])!="adsd-skirmish") then {_group setVariable ["BURNS_lastTactic","adsd-skirmish",true]};
+        _group setVariable ["BURNS_caTactic","adsd-skirmish"]; // local diagnostic only (no broadcast)
     };
 };
 // Combined arms (players via Miran, 3 Oct): a foot squad on rush/assault within 300 m of a
-// friendly crewed armored vehicle that is ahead of it toward the goal moves with it, 25 m
-// behind and to one side, instead of overtaking it. Once that armor is within 120 m of
-// the goal the squad assaults directly, so the armor still leads the push.
+// friendly crewed armored vehicle that is ADVANCING ahead of it (its own task is assault/rush
+// and it is moving) follows 25 m behind and to one side instead of overtaking it. It lets go
+// once that armor is within 220 m of the goal (AATs hold ~150 m from contact) or stops.
+_group setVariable ["BURNS_caTactic",nil];
 if (_mode in ["rush","assault"] && {vehicle _leader==_leader} && {missionNamespace getVariable ["BURNS_CombinedArms",true]}) then {
     private _armor=objNull;
     private _best=300;
     {
-        if (alive _x && {canMove _x} && {!isNull driver _x} && {side group (driver _x)==side _group}) then {
+        private _ag=group driver _x;
+        if (alive _x && {canMove _x} && {!isNull driver _x} && {_ag!=_group} && {side _ag==side _group} && {abs speed _x>3} && {
+            (((([_ag,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet)) param [0,""]) in ["assault","rush"])
+        }) then {
             private _d=_leader distance2D _x;
             if (_d<_best) then {_best=_d;_armor=_x};
         };
     } forEach (_leader nearEntities [["Tank","Wheeled_APC_F"],300]);
     if (!isNull _armor) then {
         private _ad=_armor distance2D _destination;
-        if (_ad<(_leader distance2D _destination) && {_ad>120}) then {
+        if (_ad<(_leader distance2D _destination) && {_ad>220}) then {
             if (isNil {_group getVariable "BURNS_caSide"}) then {_group setVariable ["BURNS_caSide",selectRandom [-1,1]]};
             private _slot=(getPosATL _armor) getPos [25,(_destination getDir (getPosATL _armor))+30*(_group getVariable ["BURNS_caSide",1])];
             if !(surfaceIsWater _slot) then {_destination=_slot};
-            if ((_group getVariable ["BURNS_lastTactic",""])!="with-armor") then {_group setVariable ["BURNS_lastTactic","with-armor",true]};
+            _group setVariable ["BURNS_caTactic","with-armor"]; // local diagnostic only (no broadcast)
         };
     };
 };

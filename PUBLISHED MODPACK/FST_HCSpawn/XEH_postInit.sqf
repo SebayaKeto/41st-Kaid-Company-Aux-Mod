@@ -7,6 +7,14 @@
 [] call FST_HCSpawn_fnc_registerBurnsEvents;
 [] call FST_HCSpawn_fnc_initCombatTasks;
 [] call FST_HCSpawn_fnc_burnsInitBXEnhancements;
+// B2s always walk, never run (Miran 3 Oct). Applied where the unit is local, and again
+// whenever it changes owner (HC transfer / Zeus clone).
+["WBK_LS_B2","InitPost",{
+    params ["_u"];
+    if (local _u) then {_u forceWalk true};
+    // New owner: walk, and undo any move-fire state the old owner left on (its rhythm PFH died with it).
+    _u addEventHandler ["Local",{params ["_u","_isLocal"];if (_isLocal) then {_u forceWalk true;if (isNil {group _u getVariable "BURNS_b2MovePFH"}) then {_u enableAI "TARGET";_u enableAI "AUTOTARGET";_u enableAI "AUTOCOMBAT"}}}];
+},true,[],true] call CBA_fnc_addClassEventHandler;
 if (hasInterface) then {
     [] call FST_HCSpawn_fnc_registerBurnsModules;
     // Keep native right-click waypoint placement when AI is selected.

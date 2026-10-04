@@ -15,6 +15,7 @@ if (_mode=="stop" || {_mode in ["hunt","assault","rush","ambush","creep","retrea
 if (_mode == "stop") exitWith {
     if ((units _group findIf {_x isKindOf "JMSEF_animals_varren_o"})>=0) then {_group setVariable ["BURNS_creatureTaskIntent","stop",true]};
     if ((units _group findIf {_x isKindOf "WBK_LS_B2"})>=0) then {_group setVariable ["BURNS_b2TaskIntent","stop",true]};
+    {if (local _x && {_x getVariable ["BURNS_b2AutoCombatOff",false]}) then {_x enableAI "AUTOCOMBAT";_x setVariable ["BURNS_b2AutoCombatOff",nil]}} forEach units _group;
 {_group setVariable [_x,nil,true]} forEach ["BURNS_sectionToken","BURNS_sectionPlan","BURNS_sectionContact"];
 {[_x] call FST_HCSpawn_fnc_burnsArmorSectionDriver} forEach units _group;
 
@@ -97,11 +98,61 @@ if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole) == "webknight"})
     if ((units _group findIf {_x isKindOf "WBK_LS_B2"})>=0 && {_mode in ["assault","rush","hunt"]}) then {
         // B2s walk in and fire on the move. In COMBAT behaviour they halted and
         // traded fire at 300 m (~0.2 m/s closing in engine tests, 3 Oct).
-        _wp setWaypointSpeed "FULL";
+        _wp setWaypointSpeed "NORMAL";
         _wp setWaypointBehaviour "AWARE";
         _wp setWaypointCombatMode "YELLOW";
         _group setBehaviourStrong "AWARE";
         _group setCombatMode "YELLOW";
+        // B2s only (a mixed group's B1/BX/humans keep their own behaviour). Native AUTOCOMBAT flips
+        // the squad back to COMBAT on first contact, which made B2s stop and trade fire.
+        {if (local _x && {_x isKindOf "WBK_LS_B2"}) then {_x disableAI "AUTOCOMBAT";_x forceWalk true;_x setVariable ["BURNS_b2AutoCombatOff",true]}} forEach units _group;
+        // Move-fire rhythm (engine tests 3 Oct: B2s close ~1.3 m/s unopposed but ~0.3 m/s
+        // once they stop to aim). Every 2 s tick: 3 ticks walking with targeting off, then 2
+        // ticks firing. Rush/hunt follow the live rush target. Zeus waypoints/holds win.
+        if (isNil {_group getVariable "BURNS_b2MovePFH"}) then {
+            diag_log format ["[BURNS_B2_RHYTHM_START] %1 mode=%2 owner=%3",_group,_mode,clientOwner];
+            _group setVariable ["BURNS_b2MovePFH",[{
+                params ["_args","_id"];
+                _args params ["_g"];
+                private _b2s=if (isNull _g) then {[]} else {units _g select {alive _x && {_x isKindOf "WBK_LS_B2"}}};
+                private _wpNow=if (isNull _g) then {-1} else {currentWaypoint _g};
+                private _manual=_wpNow>0 && {_wpNow<count waypoints _g} && {!(waypointDescription [_g,_wpNow] in ["FST HC combat","BURNS patrol"])};
+                if (isNull _g || {!local _g} || {count _b2s==0} || {_manual} || {(_g getVariable ["FST_HC_heldBy",-1])!=-1} || {!((_g getVariable ["BURNS_b2TaskIntent",""]) in ["assault","rush","hunt"])}) exitWith {
+                    [_id] call CBA_fnc_removePerFrameHandler;
+                    if (!isNull _g) then {
+                        _g setVariable ["BURNS_b2MovePFH",nil];
+                        // Hand control back: targeting on, and drop the rhythm's last doMove.
+                        {if (local _x && {alive _x}) then {_x enableAI "TARGET";_x enableAI "AUTOTARGET";_x doFollow leader _g}} forEach _b2s;
+                    };
+                };
+                private _n=(_g getVariable ["BURNS_b2Beat",0])+1;
+                _g setVariable ["BURNS_b2Beat",_n];
+                private _fire=(_n mod 5)>=3;
+                private _goal=[];
+                if ((_g getVariable ["BURNS_b2TaskIntent",""]) in ["rush","hunt"]) then {
+                    private _t=[_g] call FST_HCSpawn_fnc_burnsRushTarget;
+                    if (!isNull _t) then {_goal=getPosATL (vehicle _t)};
+                };
+                if (count _goal<2) then {
+                    private _wi=([_g,["FST_HC_taskWaypoint",-1]] call FST_HCSpawn_fnc_burnsStateGet);
+                    if (_wi>=0 && {_wi<count waypoints _g}) then {_goal=waypointPosition [_g,_wi]};
+                };
+                // Close in to about 25 m, then stop the rhythm's walking and let them fight.
+                private _arrived=count _goal<2 || {(leader _g) distance2D _goal<25};
+                if ((missionNamespace getVariable ["BURNS_B2Debug",false]) && {_n mod 5==0}) then {diag_log format ["[BURNS_B2_RHYTHM] %1 intent=%2 goal=%3 leaderDist=%4 arrived=%5",_g,_g getVariable ["BURNS_b2TaskIntent",""],_goal,round ((leader _g) distance2D _goal),_arrived]};
+                {
+                    if (local _x) then {
+                        if (_fire || {_arrived}) then {
+                            if !(_x checkAIFeature "TARGET") then {_x enableAI "TARGET";_x enableAI "AUTOTARGET"};
+                        } else {
+                            if (_x checkAIFeature "TARGET") then {_x disableAI "TARGET";_x disableAI "AUTOTARGET"};
+                            // Re-path only when idle or heading somewhere stale, not every tick.
+                            if (_x distance2D _goal>15 && {unitReady _x || {((expectedDestination _x) select 0) distance2D _goal>20}}) then {_x doMove (_goal getPos [random 12,random 360])};
+                        };
+                    };
+                } forEach _b2s;
+            },2,[_group]] call CBA_fnc_addPerFrameHandler];
+        };
     };
     _group setCurrentWaypoint _wp;
     ([_group,["FST_HC_taskWaypoint", _wp select 1, true]] call FST_HCSpawn_fnc_burnsStateSet);

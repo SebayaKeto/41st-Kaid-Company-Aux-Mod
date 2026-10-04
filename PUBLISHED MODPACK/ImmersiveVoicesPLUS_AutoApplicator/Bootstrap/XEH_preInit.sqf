@@ -17,7 +17,7 @@ PHEN_fnc_IVP_AutoAssign = {
         // Skip players and units that already have custom voices
         if (isPlayer _unit) exitWith {};
         if (gettext((configOf _unit) >> 'moves') != 'CfgmovesMaleSdr') exitWith {};
-        if !((vehicle _unit) isKindOf "CAManBase") exitWith {};  
+        // (vehicle check removed: InitPost already limits this to CAManBase, and a JIP client saw droids in vehicles and skipped them)
         
         // Get the faction they are a part of
         _faction = toLower getText ((configOf _unit) >> 'faction');
@@ -81,6 +81,5 @@ PHEN_fnc_IVP_AutoAssign = {
                     _assignedVoice, _unit, _unitType, _faction, _editorSubcategory];
             };
             _unit setSpeaker _assignedVoice; //Set their new Voice (local effect; voice is deterministic per class, every machine applies it itself)
-            if (local _unit) then { _unit enableAI "RADIOPROTOCOL"; }; //Ensure we can use the radio protocol to make 'em talk (only matters where the AI is local).
         };
 };

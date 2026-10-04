@@ -1,4 +1,4 @@
-// KAID_XEH_Compat_41st: adds CBA Extended Event Handler support to 98 unit/static classes whose own
+// KAID_XEH_Compat_41st: adds CBA Extended Event Handler support to 90 unit/static classes whose own
 // "class EventHandlers {...}" has no CBA_Extended_EventHandlers subclass. Without it CBA logs
 // "Fall back to loop" and polls every unit on every machine. Generated from an engine probe
 // (D:/AuxUpdater/xehcompat); each class keeps its exact parent, so no base class changes.
@@ -11,7 +11,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 2.0;
-		requiredAddons[] = {"41st_Civilians", "41st_CorruptPDF", "41st_Droids", "41st_HumanDiv", "41st_Mandos", "41st_NyvarUprisers", "53rd_CoagField", "BUZZ_ATRT", "FST_ADSD", "FST_Daara_venator", "FST_HCSpawn", "FST_HMP", "FST_Hailfire", "FST_MEC_ZeusModules_Patch", "FST_PKV5MLRSUP", "FST_Static_DF9", "FST_venator", "KAID_Disable_53rd_CoagField", "cba_xeh"};
+		requiredAddons[] = {"41st_Civilians", "41st_CorruptPDF", "41st_Droids", "41st_HumanDiv", "41st_Mandos", "53rd_CoagField", "BUZZ_ATRT", "FST_ADSD", "FST_Daara_venator", "FST_HCSpawn", "FST_HMP", "FST_Hailfire", "FST_MEC_ZeusModules_Patch", "FST_PKV5MLRSUP", "FST_Static_DF9", "FST_venator", "KAID_Disable_53rd_CoagField", "cba_xeh"};
 		skipWhenMissingDependencies = 1;
 	};
 };
@@ -34,8 +34,6 @@ class CfgVehicles
 	class FST_U_CorruptPDFPilot;
 	class FST_U_CorruptPDFTanker;
 	class FST_U_MandoUndersuit;
-	class FST_U_Nyvar_B1;
-	class FST_U_Nyvar_B1_Blue;
 	class Heli_Attack_01_base_F;
 	class Module_F;
 	class NonStrategic;
@@ -638,62 +636,6 @@ class CfgVehicles
 		};
 	};
 	class FST_MandoV_Standard: FST_U_MandoUndersuit
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_B1: FST_U_Nyvar_B1
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_B1_Blue: FST_U_Nyvar_B1_Blue
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_Standard: FST_U_CIS_Light
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_Standard_Fwend: FST_U_CIS_Light
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_Trained: FST_U_CIS_Light
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_Trained_Fwend: FST_U_CIS_Light
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_Weak: FST_U_CIS_Light
-	{
-		class EventHandlers
-		{
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
-	};
-	class FST_Nyvar_Weak_Fwend: FST_U_CIS_Light
 	{
 		class EventHandlers
 		{

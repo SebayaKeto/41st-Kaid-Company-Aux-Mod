@@ -155,6 +155,32 @@ if (isServer) then {
 _atrt addEventHandler ["Fired", {
     params ["_unit", "_weapon", "", "", "", "", "_projectile"];
 
+    // Shot Sound
+    // Replaces the silent config sound. Every machine plays it LOCALLY (the Fired EH is
+    // registered everywhere), so a shot costs no network message. The last
+    // BUZZ_lowCellShots use the higher pitch pool (the cell is broadcast every shot in the
+    // last 30, so remote machines pick the right pool). Skipped while reloading or empty.
+    private _knownCell = _unit getVariable ["BUZZ_powerCell", 300];
+    if (_knownCell > 0 && {!(_unit getVariable ["BUZZ_reloading", false])}) then {
+        private _cfg   = configFile >> "CfgWeapons" >> _weapon;
+        private _sound = getText (_cfg >> "BUZZ_shotSound");
+        if (_sound != "") then {
+            private _pitches = if (_knownCell <= getNumber (_cfg >> "BUZZ_lowCellShots")) then {
+                getArray (_cfg >> "BUZZ_lowCellPitches")
+            } else {
+                getArray (_cfg >> "BUZZ_shotPitches")
+            };
+            playSound3D [
+                _sound, _unit, false,
+                (getPosASL _unit) vectorAdd [0, 0, 2],
+                getNumber (_cfg >> "BUZZ_shotVolume"),
+                selectRandom _pitches,
+                getNumber (_cfg >> "BUZZ_shotDistance"),
+                0, true
+            ];
+        };
+    };
+
     // Locality Guard
     // Only the owning machine counts the shot, otherwise each shot drains 2.
     if (!local _unit) exitWith {};
@@ -180,29 +206,6 @@ _atrt addEventHandler ["Fired", {
         // Exact on the owner every shot; other machines (pack action, new owner after a
         // locality change) get it every 10 shots and every shot in the last 30.
         _unit setVariable ["BUZZ_powerCell", _cell, (_cell % 10 == 0) || {_cell <= 30}];
-    };
-
-    // Shot Sound
-    // Replaces the silent config sound. The last BUZZ_lowCellShots of a cell use the
-    // higher pitch pool. Global, so only the owning machine plays it; skipped for
-    // shots that are blocked because the cell and reserves are empty.
-    if (_prevCell > 0) then {
-        private _cfg   = configFile >> "CfgWeapons" >> _weapon;
-        private _sound = getText (_cfg >> "BUZZ_shotSound");
-        if (_sound != "") then {
-            private _pitches = if (_prevCell <= getNumber (_cfg >> "BUZZ_lowCellShots")) then {
-                getArray (_cfg >> "BUZZ_lowCellPitches")
-            } else {
-                getArray (_cfg >> "BUZZ_shotPitches")
-            };
-            playSound3D [
-                _sound, _unit, false,
-                (getPosASL _unit) vectorAdd [0, 0, 2],
-                getNumber (_cfg >> "BUZZ_shotVolume"),
-                selectRandom _pitches,
-                getNumber (_cfg >> "BUZZ_shotDistance")
-            ];
-        };
     };
 
     if (_cell <= 0) then {

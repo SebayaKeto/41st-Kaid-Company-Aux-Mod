@@ -99,4 +99,45 @@ diag_log "[FST_HCSpawn] Automatic dead-group cleanup disabled; manual cleanup mo
     };
 }, [], 3] call CBA_fnc_waitAndExecute;
 
+// Auto AAT sections (Miran 3 Oct): AI AATs on ASSAULT within 250 m of each other and heading
+// for objectives within 300 m of each other form a 2-3 tank section to that shared objective
+// (column advance, then a spaced firing line; the Zeus "AAT section" planner at charge pace).
+// Rush AATs are left alone (a section would freeze them on a stale point). Groups are not
+// re-recruited for 2 min after forming or 5 min after a section ends; auto sections never
+// take more than 6 of the 8 section slots, so Zeus can always order one.
+[{
+    if !(missionNamespace getVariable ["BURNS_AutoArmorSections",true]) exitWith {};
+    if (!(missionNamespace getVariable ["BURNS_ArmorSectionsEnabled",true]) || {!(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true])}) exitWith {};
+    if (count (missionNamespace getVariable ["BURNS_ArmorSections",[]])>=6) exitWith {};
+    private _free=allGroups select {
+        private _v=vehicle leader _x;
+        _v isKindOf "FST_AAT" && {alive _v} && {canMove _v} && {!isNull driver _v} && {!isPlayer leader _x}
+        && {(_x getVariable ["BURNS_sectionToken",""])==""} && {time>(_x getVariable ["BURNS_autoSectionNext",-1])}
+        && {((([_x,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet) param [0,""])=="assault")}
+        && {(units _x findIf {alive _x && {vehicle _x!=vehicle leader _x}})<0}
+    };
+    while {count _free>=2 && {count (missionNamespace getVariable ["BURNS_ArmorSections",[]])<6}} do {
+        private _a=_free deleteAt 0;
+        private _va=vehicle leader _a;
+        private _goal=+((([_a,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet)) param [1,[]]);
+        if (count _goal<2) then {continue};
+        private _near=_free select {
+            side _x==side _a && {(vehicle leader _x) distance2D _va<250} && {
+                ((([_x,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet)) param [1,[0,0,0]]) distance2D _goal<300
+            }
+        };
+        if (count _near>2) then {_near resize 2};
+        if (count _near>0) then {
+            _free=_free-_near;
+            private _groups=[_a]+_near;
+            {_x setVariable ["BURNS_autoSectionNext",time+120]} forEach _groups;
+            if ((_va distance2D _goal)>200) then {
+                if ([_groups,_goal,2] call FST_HCSpawn_fnc_burnsArmorSectionCreate) then {
+                    diag_log format ["[BURNS_AUTO_SECTION] %1 AATs -> %2",count _groups,_goal];
+                };
+            };
+        };
+    };
+}, 10, []] call CBA_fnc_addPerFrameHandler;
+
 diag_log "[FST_HCSpawn] HC system initialized";
