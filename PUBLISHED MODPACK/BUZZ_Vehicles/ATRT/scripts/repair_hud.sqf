@@ -1,11 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — repair_hud.sqf
-//  Repair-progress overlay — shown on the repairer's screen only.
-//  Plays a looping repair animation on the caller and drives a centred
-//  progress panel until BUZZ_repairing clears (complete, cancelled, or
-//  caller dies).  Partial HP progress is kept in BUZZ_hp by the repair spawn
-//  in init.sqf — this script is display-only.
-//  _this = [_atrt, _caller, _repairTime]
 // =============================================================================
 disableSerialization;
 params ["_atrt", "_caller", "_repairTime"];
@@ -71,10 +65,7 @@ private _cPctW  = _cw * 0.45;
 private _cTimeX = _cx + _cPctW;
 private _cTimeW = _cw * 0.55;
 
-// Post-update ArmA 3 clips glyph tops against the control's own top edge —
-// text now renders anchored toward the bottom of its box instead of centred,
-// so every text (not background/divider) control needs extra room added
-// ABOVE its nominal box, with the bottom edge left where the layout put it.
+// Text top padding
 private _txtPad = safeZoneH * 0.014;
 
 // ─── Create controls ─────────────────────────────────────────────────────────
@@ -158,7 +149,7 @@ _cTime ctrlSetText format ["%1s remaining", round _repairTime];
 private _startTime = _atrt getVariable ["BUZZ_repairStart", time];
 private _lastAnim  = time - 4;
 
-// Escape cancels the repair and consumes the key (no pause menu).
+// Escape cancel
 private _atrtNetId = netId _atrt;
 private _escEH = (findDisplay 46) displayAddEventHandler ["KeyDown", compile format [
     "params ['_d','_k']; if (_k != 1) exitWith {false}; (objectFromNetId '%1') setVariable ['BUZZ_repairing',false,true]; (objectFromNetId '%1') setVariable ['BUZZ_repairer',nil,true]; true",
@@ -178,7 +169,7 @@ while {
     _cPct  ctrlSetText format ["%1%%", round (_progress * 100)];
     _cTime ctrlSetText format ["%1s remaining", _secsLeft];
 
-    // Loop repair animation — re-apply every ~3.5 s (approximate animation length).
+    // Repair animation loop
     if (time - _lastAnim >= 3.5) then {
         _caller switchMove "AinvPknlMstpSlayWrflDnon_medic";
         _lastAnim = time;
@@ -189,7 +180,7 @@ while {
 
 (findDisplay 46) displayRemoveEventHandler ["KeyDown", _escEH];
 
-// Release animation and remove all controls.
+// Cleanup
 _caller switchMove "";
 
 { ctrlDelete _x } forEach [

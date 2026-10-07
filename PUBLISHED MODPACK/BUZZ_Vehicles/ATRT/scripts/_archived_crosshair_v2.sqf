@@ -1,25 +1,5 @@
 // =============================================================================
 //  ARCHIVED — crosshair.sqf v2 (weaponDirection + worldToScreen dynamic tracking)
-//  Replaced by engine cursorAim="gl" on BUZZ_ATRT_T15 (config.cpp).
-//
-//  Why it was abandoned:
-//    eyePos _atrt sits at the rider's head (top of the walker body), offset
-//    from the cannon muzzle.  Projecting 1000 m along weaponDirection from that
-//    point gives a ray that parallels the bullet path but diverges from it at
-//    normal combat ranges, causing the reticle to be visibly above/displaced
-//    from actual impact.  Additionally, weaponDirection tracks the physically-
-//    animated weapon arm which can lag the camera during fast turns, making the
-//    crosshair appear to "drift" away from screen centre.
-//
-//  What replaced it:
-//    Adding `cursorAim = "gl"` to BUZZ_ATRT_T15 in config.cpp lets the engine
-//    draw a dynamic ballistic crosshair exactly as the 41st FST_ATRT_Weapon_Base_F
-//    does.  The engine has accurate access to weapon muzzle position, initSpeed,
-//    and coefGravity, so it positions the reticle precisely where the bolt lands.
-//
-//  To restore: copy this file's content over crosshair.sqf, re-add the execVM
-//  call in init.sqf Saddle Up (after hud.sqf), and re-add BUZZ_crosshairOn sets
-//  (on mount = true, on dismount/eject/death = false).
 // =============================================================================
 
 disableSerialization;

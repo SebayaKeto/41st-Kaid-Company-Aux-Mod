@@ -1,28 +1,17 @@
-// Called via a local `call` from fn_laatiDeployAction.sqf once it has locally
-// detected its own newly-deployed AT-RT (object presence + detach — see the
-// comment there) — this always runs on the deploying player's own machine, so
-// `player` below is always the right person; no cross-machine targeting or
-// broadcast handoff involved.
-// Ejects the player from the LAAT/i and mounts them on the new AT-RT.
-// Replicates the full Saddle Up behaviour including HUD, jump system, mount poll,
-// and auto-eject.
-// params: [_atrt]
+// Auto-mount after LAAT/i deploy
 params ["_atrt"];
 
 if (isNull _atrt) exitWith {};
 
-// Wait for server init to finish (supply box broadcast confirms readiness)
+// Wait for server init
 private _timeout = time + 20;
 waitUntil { !isNull (_atrt getVariable ["supplyBox", objNull]) || time > _timeout || !alive _atrt };
 if (!alive _atrt) exitWith {};
 
-// Bail if another player has already claimed the seat
+// Seat already claimed
 if (!isNil { _atrt getVariable "rider" }) exitWith {};
 
-// Eject from LAAT/i before attaching to AT-RT
-// moveOut is not instant — attaching in the same frame can be overridden when the
-// exit completes a frame later, dropping the player at the LAAT/i instead of on the
-// AT-RT. Wait for the exit to actually finish before attaching.
+// Eject from LAAT/i
 if (vehicle player != player) then {
     moveOut player;
     private _exitTimeout = time + 2;
@@ -49,7 +38,7 @@ _atrt enableStamina false;
 _atrt forceWalk false;
 _atrt setVariable ["ace_unconscious", false, true];
 
-// Mount poll — mirrors Saddle Up
+// Mount poll
 [_atrt] spawn {
     params ["_a"];
     while { !isNull (_a getVariable ["rider", objNull]) && alive _a } do {
@@ -172,10 +161,9 @@ if (hasInterface && player isEqualTo _rider) then {
     _atrt setVariable ["BUZZ_jumpDrawEH", _jumpDrawEH];
 
     // ── Force eject (Ctrl+ESC) ───────────────────────────────────────────
-    // Installed once per client by fn_releaseWatchdog.sqf, not per mount.
 };
 
-// Auto-eject when rider dies or is incapacitated — mirrors Saddle Up
+// Auto-eject
 [_atrt, _rider] spawn {
     params ["_atrt", "_rider"];
     waitUntil {

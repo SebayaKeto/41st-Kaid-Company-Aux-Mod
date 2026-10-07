@@ -1,11 +1,10 @@
-// Called via remoteExecCall ["BUZZ_fnc_packServer", 2] from the Repack action.
-// Runs on the server only. Creates the transport crate and deletes the walker.
+// Pack AT-RT (server)
 params ["_pos", "_dir", "_hp", "_cell", "_reserves", "_atrt"];
-// Rider could have mounted during the 30 s countdown — abort rather than pack a ridden AT-RT.
+// Rider check
 if (!isNull (_atrt getVariable ["rider", objNull])) exitWith {};
 private _crate = createVehicle ["BUZZ_ATRT_TransportCrate", ASLToAGL _pos, [], 0, "NONE"];
 _crate setDir _dir;
-_crate setPosASL _pos; // force exact ASL position — createVehicle may snap to terrain in 3den buildings
+_crate setPosASL _pos;
 _crate setVariable ["BUZZ_packed_hp",       _hp,       true];
 _crate setVariable ["BUZZ_packed_cell",     _cell,     true];
 _crate setVariable ["BUZZ_packed_reserves", _reserves, true];

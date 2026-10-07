@@ -1,24 +1,5 @@
 // =============================================================================
-//  BUZZ AT-RT — debug_fire.sqf  (TEMPORARY DIAGNOSTIC — not wired into config.cpp)
-//
-//  Run this from the debug console (or execVM) WHILE MOUNTED on the AT-RT you
-//  want to test:
-//      [] execVM "\BUZZ_Vehicles\ATRT\scripts\debug_fire.sqf";
-//
-//  Then sprint and press Fire like you did when you saw the slowdown.
-//  Every line is written with diag_log (check the .rpt) AND systemChat
-//  (visible immediately in your chat window). Look for the [BUZZ DEBUG] tag.
-//
-//  What we're trying to learn:
-//    1. Does "weapons _atrt" actually come back empty at the moment you're
-//       testing, or is something re-adding a weapon after spawn?
-//    2. Does our MouseButtonDown handler even see button 0 firing, and is it
-//       the button actually bound to Fire?
-//    3. What animation does the engine switch to the instant you click Fire —
-//       this tells us whether it's even going through AnimChanged at all, or
-//       some other path (e.g. a weapon-raise/lower state machine that doesn't
-//       fire AnimChanged the way we assumed).
-//    4. Exactly when (relative to the above) the speed actually drops.
+//  BUZZ AT-RT — debug_fire.sqf
 // =============================================================================
 
 private _fnLog = {
@@ -27,10 +8,7 @@ private _fnLog = {
     systemChat ("[BUZZ DEBUG] " + _msg);
 };
 
-// This mod mounts riders via remoteControl + attachTo, not moveInDriver, so
-// "vehicle player" never changes and can't be used to detect mounting. Instead
-// check whether "player" itself became the AT-RT (if remoteControl swapped it)
-// or whether "player" is still the original body attachTo'd to one.
+// Mount detection
 private _atrt = objNull;
 if (player isKindOf "FST_ATRT") then {
     _atrt = player;
@@ -46,8 +24,7 @@ if (isNull _atrt) exitWith { ["Not mounted on an AT-RT — Saddle Up first, then
     typeOf _atrt, weapons _atrt, currentWeapon _atrt, primaryWeapon _atrt, handgunWeapon _atrt
 ]] call _fnLog;
 
-// Raw mouse button traffic on the interface display — confirms whether button 0
-// is actually what's bound to Fire, and whether our handler even sees the click.
+// Mouse button log
 (findDisplay 46) displayAddEventHandler ["MouseButtonDown", {
     params ["_d", "_b"];
     [format ["MouseButtonDown button=%1 (debug logger — does NOT consume)", _b]] call
@@ -55,31 +32,27 @@ if (isNull _atrt) exitWith { ["Not mounted on an AT-RT — Saddle Up first, then
     false
 }];
 
-// Every animation transition, with the speed at that instant.
+// Animation change log
 _atrt addEventHandler ["AnimChanged", {
     params ["_unit", "_anim"];
     [format ["AnimChanged -> %1   speed=%2", _anim, speed _unit]] call
         { params ["_msg"]; diag_log text ("[BUZZ DEBUG] " + _msg); systemChat ("[BUZZ DEBUG] " + _msg); };
 }];
 
-// AnimStateChanged is more granular than AnimChanged in some cases — log it too.
+// Animation state log
 _atrt addEventHandler ["AnimStateChanged", {
     params ["_unit", "_anim"];
     [format ["AnimStateChanged -> %1   speed=%2", _anim, speed _unit]] call
         { params ["_msg"]; diag_log text ("[BUZZ DEBUG] " + _msg); systemChat ("[BUZZ DEBUG] " + _msg); };
 }];
 
-// Should never fire with no weapon — if it does, that's the smoking gun.
+// Fired log
 _atrt addEventHandler ["Fired", {
     ["Fired EH triggered (unit fired a shot!)"] call
         { diag_log text "[BUZZ DEBUG] Fired EH triggered (unit fired a shot!)"; systemChat "[BUZZ DEBUG] Fired EH triggered (unit fired a shot!)"; };
 }];
 
-// Continuous speed watch — logs on meaningful change, and once speed collapses
-// to ~0 from a high value it dumps full state every second (damage, ace vars,
-// lifeState, velocity, poll-loop heartbeat age) so we can see exactly what's
-// stuck during a freeze, and whether the "poll while mounted" recovery loop in
-// init.sqf (which sets BUZZ_pollHeartbeat every 0.25s) is still alive.
+// Speed watch
 [_atrt] spawn {
     params ["_a"];
     private _fnLog2 = { params ["_msg"]; diag_log text ("[BUZZ DEBUG] " + _msg); systemChat ("[BUZZ DEBUG] " + _msg); };
@@ -95,8 +68,7 @@ _atrt addEventHandler ["Fired", {
 
         if (_cur > 20) then { _wasHigh = true; };
 
-        // Freeze = was moving fast, now sitting at ~0, and it's been at least
-        // 1s since our last full-state dump (avoid spamming every 0.1s tick).
+        // Freeze detection
         if (_wasHigh && _cur < 0.5 && (time - _frozenLogAt) > 1) then {
             _frozenLogAt = time;
             private _hb  = _a getVariable ["BUZZ_pollHeartbeat", -1];
