@@ -165,7 +165,7 @@ FST_HC_CombatGroups pushBackUnique _group;
 BURNS_ActiveGroups pushBackUnique _group;
 if (_mode in ["rush","hunt","creep"]) then {
     BURNS_Players=allPlayers select {alive _x && {!(_x isKindOf "HeadlessClient_F")}};
-    BURNS_PlayerPositions=BURNS_Players apply {getPosWorld (vehicle _x)};
+    BURNS_PlayerPositions=(BURNS_Players apply {getPosWorld (vehicle _x)})+((BURNS_Players apply {_x getVariable ["BURNS_zeusCam",[]]}) select {count _x==3});
 };
 _group setVariable ["FST_HC_keepActive", true, true];
 _group setVariable ["FST_HC_taskNext", time + random 2];

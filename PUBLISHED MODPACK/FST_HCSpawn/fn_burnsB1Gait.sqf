@@ -12,6 +12,7 @@ if (isNil "BURNS_b1PoseAvailable") then {
 };
 // Shots fired in the pose are steered at their target by BURNS_fnc_drillShot (fn_burnsB1Volley).
 private _cur=_unit getVariable ["BURNS_gait",""];
+if (_cur!=_gait && {missionNamespace getVariable ["BURNS_B1Debug",false]}) then {diag_log format ["[BURNS_DBG] gait %1 %2: '%3' -> '%4'",group _unit,_unit,_cur,_gait]};
 if (_cur!=_gait) then {
     _unit setVariable ["BURNS_gait",if (_gait=="") then {nil} else {_gait}];
     private _coef=if (_gait=="march") then {missionNamespace getVariable ["BURNS_B1MarchAnimSpeed",1.2]} else {1};
@@ -27,17 +28,31 @@ if (_cur!=_gait) then {
 // The pose stays on through the march and its volleys (Miran 9 Oct: "none of them are using his droid march animation";
 // 10 Oct: the drop/raise before each volley looked wrong). Shots fired in it are steered (BURNS_fnc_drillShot).
 if (_gait=="march" && {alive _unit} && {BURNS_b1PoseAvailable}) then {
+    // Riflemen carry the drill-shot handler: posed native rounds are steered and native fire is recorded (below).
+    if (secondaryWeapon _unit=="" && {isNil {_unit getVariable "BURNS_drillShotEH"}}) then {_unit setVariable ["BURNS_drillShotEH",_unit addEventHandler ["Fired",{_this call BURNS_fnc_drillShot}]]};
     private _pose=(missionNamespace getVariable ["BURNS_B1MarchPose",true]) && {vehicle _unit==_unit} && {_unit checkAIFeature "PATH" || {!isNil {_unit getVariable "BURNS_volleyHold"}}} && {
         !(_unit getVariable ["FST_HC_ownsPath",false]) && {!(_unit getVariable ["BURNS_ownsPath",false])}
     } && {primaryWeapon _unit!="" && {secondaryWeapon _unit==""} && {currentWeapon _unit==primaryWeapon _unit}} && {stance _unit=="STAND"} && {
-        // Rifles come up once an enemy is close (BURNS_B1PoseRange, default 150 m): the pose throws shots wide.
-        private _ed=(group _unit) getVariable ["BURNS_enemyDist",[-1,1e9]];
-        private _d=if (time-(_ed select 0)<3) then {_ed select 1} else {private _e=_unit findNearestEnemy _unit; if (isNull _e) then {1e9} else {_unit distance2D _e}};
-        _d>(missionNamespace getVariable ["BURNS_B1PoseRange",150])
+        // A droid firing on its own (drill released: close combat, waiting for the line, far from players) keeps its
+        // rifle up until 8 s after its last native shot (Miran 10 Oct: "walk forward in the vanilla animation jerking a
+        // lot" - native fire broke the pose and the 2 s re-pose put it back, over and over).
+        time>(_unit getVariable ["BURNS_nativeShotAt",-100])+8
+    } && {
+        // Optional close range (BURNS_B1PoseRange, default 0 = off): rifles come up once an enemy is this close and the
+        // pose returns only 50 m outside it.
+        private _r=missionNamespace getVariable ["BURNS_B1PoseRange",0];
+        _r<=0 || {
+            private _ed=(group _unit) getVariable ["BURNS_enemyDist",[-1,1e9]];
+            private _d=if (time-(_ed select 0)<3) then {_ed select 1} else {private _e=_unit findNearestEnemy _unit; if (isNull _e) then {1e9} else {_unit distance2D _e}};
+            if (gestureState _unit=="wbk_droids_b1_idle") then {_d>_r} else {_d>(_r+50)}
+        }
     };
     private _posed=gestureState _unit=="wbk_droids_b1_idle";
     // AT droids never take the pose (probe ad45: re-posing blocked their launcher switch, 0 rockets); re-posing is
     // rate-limited to once per 2 s per droid.
     if (_pose && {!_posed} && {time>(_unit getVariable ["BURNS_poseNext",-1])}) then {_unit playActionNow "WBK_Droids_B1_Idle";_unit setVariable ["BURNS_poseNext",time+2]};
-    if (!_pose && {_posed}) then {_unit playActionNow "WBK_Droid_Disable_Gesture"};
+    if (!_pose && {_posed}) then {
+        if (missionNamespace getVariable ["BURNS_B1Debug",false]) then {diag_log format ["[BURNS_DBG] pose off %1 %2: native shot %3 s ago, stance %4, weapon %5",group _unit,_unit,round (time-(_unit getVariable ["BURNS_nativeShotAt",-100])),stance _unit,currentWeapon _unit]};
+        _unit playActionNow "WBK_Droid_Disable_Gesture";
+    };
 };

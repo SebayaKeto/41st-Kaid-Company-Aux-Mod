@@ -17,6 +17,20 @@
 },true,[],true] call CBA_fnc_addClassEventHandler;
 if (hasInterface) then {
     [] call FST_HCSpawn_fnc_registerBurnsModules;
+    // Zeus camera as an observer (Miran 10 Oct: squads Zeused far from any player body walked in "jerking a lot and not
+    // firing in volleys" - the drill/pace range gate counted player bodies only). Every 2 s while the curator screen is
+    // open the camera position rides on the player object (sent only after it moves 25 m); servers/HCs add it to
+    // BURNS_PlayerPositions (fn_initCombatTasks).
+    [{
+        if (isNull player) exitWith {};
+        if (!isNull (findDisplay 312) && {!isNull curatorCamera}) then {
+            private _p=getPosWorld curatorCamera;
+            private _old=player getVariable ["BURNS_zeusCam",[]];
+            if (count _old!=3 || {_old distance2D _p>25}) then {player setVariable ["BURNS_zeusCam",_p,true]};
+        } else {
+            if (!isNil {player getVariable "BURNS_zeusCam"}) then {player setVariable ["BURNS_zeusCam",nil,true]};
+        };
+    },2] call CBA_fnc_addPerFrameHandler;
     // Keep native right-click waypoint placement when AI is selected.
     // BURNS actions stay registered in ZEN; do not make its menu consume move orders.
     private _enableSquadMenu={

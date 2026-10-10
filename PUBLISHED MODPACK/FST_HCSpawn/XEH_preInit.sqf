@@ -569,15 +569,52 @@ diag_log "[FST_HCSpawn] preInit complete - V30_5_B1_DEPLOYMENT_PREVIEW_2026-09-2
 
 BURNS_sourceFingerprint="20e5363898734d4e09164508309fd7ef45ebd1e6d84a9747c4b9244dbf326e98";
 diag_log format ["[BURNS_SOURCE] %1",BURNS_sourceFingerprint];
+diag_log "[BURNS_BUILD] V49 (Zeus camera observers, native-fire pose rule, B1 debug log)";
+// Drill-shot steering, a Fired handler on drilled and marching B1 riflemen (fn_burnsB1Volley, fn_burnsB1Gait): a scripted
+// drill round (BURNS_aimTarget/BURNS_aimUntil set just before it) or any round fired in the WebKnight march pose goes at
+// its target with a random spread (BURNS_B1AimSpread, sigma degrees, default 0.15).
+BURNS_fnc_drillShot={
+    params ["_u","","","","","","_p"];
+    if (!local _u) exitWith {};
+    // Any round outside the drill's scripted ones is native fire: the march pose waits 8 s after it (fn_burnsB1Gait).
+    private _scripted=diag_tickTime<(_u getVariable ["BURNS_aimUntil",-1]);
+    if (!_scripted && {!(_u getVariable ["BURNS_drilled",false])}) then {_u setVariable ["BURNS_nativeShotAt",time]};
+    if (isNull _p) exitWith {};
+    private _t=objNull;
+    if (_scripted) then {_t=_u getVariable ["BURNS_aimTarget",objNull]} else {
+        if (gestureState _u=="wbk_droids_b1_idle") then {_t=assignedTarget _u; if (isNull _t) then {_t=getAttackTarget _u}};
+    };
+    if (isNull _t || {!alive _t}) exitWith {};
+    private _spd=vectorMagnitude velocity _p;
+    if (_spd<1) exitWith {};
+    private _dir=vectorNormalized ((aimPos _t) vectorDiff (getPosASL _p));
+    private _s=missionNamespace getVariable ["BURNS_B1AimSpread",0.15];
+    private _r=vectorNormalized (_dir vectorCrossProduct [0,0,1]);
+    private _up=_r vectorCrossProduct _dir;
+    private _ex=((random 1)+(random 1)+(random 1)-1.5)*2*_s;
+    private _ey=((random 1)+(random 1)+(random 1)-1.5)*2*_s;
+    _dir=vectorNormalized ((_dir vectorAdd (_r vectorMultiply (tan _ex))) vectorAdd (_up vectorMultiply (tan _ey)));
+    _p setVelocity (_dir vectorMultiply _spd);
+    _p setVectorDir _dir;
+};
+// B1 debug log (BURNS_B1Debug): one line whenever a squad's drill state changes.
+BURNS_fnc_dbgWhy={
+    params ["_group","_why"];
+    if (_why==(_group getVariable ["BURNS_dbgWhy",""])) exitWith {};
+    _group setVariable ["BURNS_dbgWhy",_why];
+    diag_log format ["[BURNS_DBG] drill %1 (%2 alive, leader %3): %4 | observers %5",_group,{alive _x} count units _group,typeOf leader _group,_why,count (missionNamespace getVariable ["BURNS_PlayerPositions",[]])];
+};
 
 ["BURNS_BXRunSpeed","SLIDER",["BX running speed","Ordinary running only. Dodge, attack, injury and external speed effects retain their own timing."],"BURNS",[1,1.3,1.15,2],1] call CBA_fnc_addSetting;
 ["BURNS_BXMeleeEnabled","CHECKBOX",["BX aggressive melee","AI BXs close on visible enemies within 12 metres and repeat melee when in reach. Respects hold, stealth and defensive orders."],"BURNS",true,1] call CBA_fnc_addSetting;
 
 ["BURNS_B1VolleyEnabled","CHECKBOX",["B1 drill volleys","In contact, AI B1 riflemen hold fire while their line walks and fire together in 5-round volleys at one visible enemy every 7-8.5 s. Released within 40 m of an enemy. Off = native fire at will."],"BURNS",true,1] call CBA_fnc_addSetting;
+["BURNS_B1LineSpacing","SLIDER",["B1 line spacing","Metres between droids in an AI B1 assault line. Wider lines lose fewer droids to one grenade."],"BURNS",[2,8,4,1],1] call CBA_fnc_addSetting;
 ["BURNS_B1TrackFormation","CHECKBOX",["B1 line tracks","AI B1 squads in LINE walk parallel tracks at a matched pace, formed on the squad's centre. Off = the older slot bounds."],"BURNS",true,1] call CBA_fnc_addSetting;
 ["BURNS_B1MarchAnimSpeed","SLIDER",["B1 march speed-up","Animation speed of marching AI B1s (assault squads walk). 1 = plain walk 1.4 m/s; 1.2 = ~1.7 m/s. Also speeds their other animations (reloads, aiming) by the same factor."],"BURNS",[1,1.4,1.2,2],1] call CBA_fnc_addSetting;
 ["BURNS_B1MarchPose","CHECKBOX",["B1 march pose","Marching AI B1s carry their rifle in WebKnight's B1 pose (needs the WebKnight Droids mod; its animation only)."],"BURNS",true,1] call CBA_fnc_addSetting;
-["BURNS_B1PoseRange","SLIDER",["B1 march pose range","Marching AI B1s keep the WebKnight pose until an enemy is this close (m), then raise their rifles. Shots fired in the pose are aim-corrected. 0 = keep the pose even up close."],"BURNS",[0,500,150,0],1] call CBA_fnc_addSetting;
+["BURNS_B1PoseRange","SLIDER",["B1 march pose range","Marching AI B1s raise their rifles once an enemy is this close (m) and take the WebKnight pose again 50 m outside it. 0 (default) = keep the pose up close. Droids firing on their own (outside drill volleys) always raise their rifles until 8 s after their last shot."],"BURNS",[0,500,0,0],1] call CBA_fnc_addSetting;
+["BURNS_B1Debug","CHECKBOX",["B1 debug log","Writes each B1 squad's drill state changes (and droid gait/pose changes) to the server and HC logs as [BURNS_DBG] lines. For testing; leave off in ops."],"BURNS",false,1] call CBA_fnc_addSetting;
 ["BURNS_B1DrillRange","SLIDER",["B1 drill range","AI B1 squads use drill volleys and line pace-keeping only within this distance (m) of a player; farther squads fight natively, which is cheaper. 0 = everywhere."],"BURNS",[0,3000,1200,0],1] call CBA_fnc_addSetting;
 ["BURNS_B1HybridFormation","CHECKBOX",["B1 hybrid formation","AI B1 squads on assault/rush/hunt move in the engine's own LINE/COLUMN formation (smooth advance); off (default) = BURNS places every droid in a slot."],"BURNS",false,1] call CBA_fnc_addSetting;
 ["BURNS_B1Regroup","CHECKBOX",["B1 straggler regroup","AI B1 squads cut down to 1-2 droids join the nearest friendly B1 squad on a combat task within 300 m."],"BURNS",true,1] call CBA_fnc_addSetting;

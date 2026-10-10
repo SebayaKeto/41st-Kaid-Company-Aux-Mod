@@ -1,0 +1,14 @@
+Battle droid AI and Daara update
+
+Battle droids (B1)
+- Assault lines spread out: droids keep 4 m apart in a single rank (up to 12), take their places from where they stand instead of crossing each other, and no longer bunch up under one grenade.
+- Squads near a Zeus camera now use drill volleys and keep their line, as squads near players already did.
+- AT droids keep up with their line instead of falling behind.
+- Squads sent at the same objective keep their own lanes, also when they run on different headless clients.
+- New CBA settings under BURNS: B1 line spacing (default 4 m) and B1 debug log (off).
+
+Daara
+- Shoulder seam fix, parade hands closer, softer hips on the unarmed walk and run.
+- Halberd walks and runs toned down, new carry pose, new first left-click swing.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

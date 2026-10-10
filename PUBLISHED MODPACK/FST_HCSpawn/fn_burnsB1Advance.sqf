@@ -28,8 +28,10 @@ if (_taskMode in ["assault","hunt"]) then {
     private _lane=_group getVariable ["BURNS_lane",[]];
     // Recomputed for the first 30 s of an order so squads ordered together all count, then locked.
     if (count _lane!=4 || {!((_lane select 0) isEqualTo _key)} || {time<(_lane select 3)}) then {
-        private _peers=(missionNamespace getVariable ["FST_HC_CombatGroups",[]]) select {
-            local _x && {side _x==side _group} && {
+        // Squads on every machine count (Miran 10 Oct "bunch up ... killed by a single grenade"): module squads are spread
+        // over the HCs, and lanes that saw only same-HC squads let lines from different HCs converge on one objective.
+        private _peers=allGroups select {
+            side _x==side _group && {count units _x>0} && {
                 private _t=[_x,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet;
                 count _t==3 && {(_t select 0) in ["assault","hunt"]} && {((_t select 1) distance2D _destination)<60}
             }
@@ -39,8 +41,25 @@ if (_taskMode in ["assault","hunt"]) then {
         {_c=_c vectorAdd (getPosATL leader _x)} forEach _peers;
         _c=_c vectorMultiply (1/count _peers);
         private _axis=_c getDir _destination;
-        private _rel=_origin vectorDiff _c;
-        private _lat=(((_rel select 0)*cos _axis)-((_rel select 1)*sin _axis)) max -150 min 150;
+        // Sideways place of every squad, then pushed apart left to right so neighbouring lines keep 10 m between them
+        // (line width from the droid count and BURNS_B1LineSpacing), re-centred on the squads' average.
+        private _gapL=missionNamespace getVariable ["BURNS_B1LineSpacing",4];
+        private _lats=[];
+        {
+            private _rel=(getPosATL leader _x) vectorDiff _c;
+            _lats pushBack [((_rel select 0)*cos _axis)-((_rel select 1)*sin _axis),netId _x,((({alive _x} count units _x) min 12)-1) max 0,_forEachIndex];
+        } forEach _peers;
+        _lats sort true;
+        private _adj=[];
+        private _sum=0;
+        {
+            private _l=_x select 0;
+            if (_forEachIndex>0) then {private _p=_adj select (_forEachIndex-1); _l=_l max ((_p select 0)+((_p select 1)+(_x select 2))*_gapL/2+10)};
+            _adj pushBack [_l,_x select 2,_x select 3];
+            _sum=_sum+(_x select 0)-_l;
+        } forEach _lats;
+        private _me=_peers find _group;
+        private _lat=(((_adj select (_adj findIf {(_x select 2)==_me})) select 0)+_sum/(count _adj)) max -150 min 150;
         private _lock=if (count _lane==4 && {(_lane select 0) isEqualTo _key}) then {_lane select 3} else {time+30};
         _lane=[_key,_lat,_axis,_lock];
         _group setVariable ["BURNS_lane",_lane];
@@ -48,6 +67,12 @@ if (_taskMode in ["assault","hunt"]) then {
     };
     _lane params ["","_lat","_axis"];
     if (abs _lat>5) then {_destination=_destination getPos [abs _lat,_axis+([-90,90] select (_lat>0))]};
+};
+// The B1 line is centred on its objective, not on its leader (the leader's place follows where it stood; see the deal
+// below), so neighbouring lanes keep their gap.
+if (_line && {missionNamespace getVariable ["BURNS_B1TrackFormation",true]} && {!(missionNamespace getVariable ["BURNS_B1HybridFormation",false])}) then {
+    private _deal0=_group getVariable ["BURNS_trackDeal",[]];
+    if (count _deal0==4 && {abs (_deal0 select 3)>0.5}) then {_destination=_destination getPos [abs (_deal0 select 3),(_deal0 select 1)+([-90,90] select ((_deal0 select 3)>0))]};
 };
 private _direction=_origin getDir _destination;
 // Hybrid formation (Miran 7 Oct): on assault/rush/hunt the engine's own formation (LINE in contact or on the
@@ -149,8 +174,8 @@ private _spacing=if (_line) then {4.5} else {3.5};
 private _march=missionNamespace getVariable ["BURNS_B1MarchSpeed",2.5];
 private _walkFire=_taskMode in ["assault","rush","hunt"];
 if (!_track) then {
-    _group setVariable ["BURNS_track",nil];_group setVariable ["BURNS_trackGo",nil];
-    {if (!isNil {_x getVariable "BURNS_atCatchUp"}) then {_x enableAI "FIREWEAPON";_x enableAI "AUTOTARGET";_x setVariable ["BURNS_atCatchUp",nil]}} forEach _ordered;
+    _group setVariable ["BURNS_track",nil];_group setVariable ["BURNS_trackGo",nil];_group setVariable ["BURNS_trackDeal",nil];
+    {if (!isNil {_x getVariable "BURNS_atCatchUp"}) then {_x enableAI "FIREWEAPON";_x enableAI "AUTOTARGET";_x enableAI "TARGET";_x setVariable ["BURNS_atCatchUp",nil]}} forEach _ordered;
 };
 if (_track) exitWith {
     // Parallel tracks (Miran 9 Oct review: "still aren't keeping a formation"). Each droid walks its own straight
@@ -167,13 +192,35 @@ if (_track) exitWith {
     private _waiting=_since>=0 && {time-_since<25};
     private _go=_remain>(if (_engaging) then {50} else {15});
     private _toFront=_remain min 40;
-    private _offs=_ordered apply {
-        private _i=_ordered find _x;
-        // One rank, 3 m apart, while the squad has up to 10 droids (single firing line: every droid has a clear shot).
-        private _cols=if (count _ordered<=10) then {count _ordered} else {_columns};
-        private _c=_i mod _cols;
-        [if (_c==0) then {0} else {ceil(_c/2)*3*([-1,1] select (_c mod 2))},floor(_i/_cols)*_spacing]
+    // Places in the line follow where the droids stand (Miran 10 Oct: "when trying to make lines often bunch up and then
+    // all get killed by a single grenade"). Probe lp48: places dealt left/right by roster number sent half the squad
+    // across the leader - up to 7 of 8 droids inside one 5 m circle for ~20 s - and every casualty re-dealt them. Now
+    // the droids are ranked by their sideways position (the front rank by distance forward) and keep that order; the
+    // deal is redone only when the roster changes or, beyond 80 m of the objective, the heading turns more than 30 degrees
+    // (closer in the heading swings; no re-deal churn). One rank up to 12 droids, BURNS_B1LineSpacing apart (default
+    // 4 m); a bigger squad stands in two ranks, the rear rank staggered half a place.
+    private _deal=_group getVariable ["BURNS_trackDeal",[]];
+    if (count _deal!=4 || {!((_deal select 0) isEqualTo _ordered)} || {_remain>80 && {abs (((((_deal select 1)-_direction)+540) mod 360)-180)>30}}) then {
+        private _gap=missionNamespace getVariable ["BURNS_B1LineSpacing",4];
+        private _n=count _ordered;
+        private _cols=if (_n<=12) then {_n} else {ceil (_n/2)};
+        private _keyed=[];
+        {private _d=(getPosATL _x) vectorDiff _lp;_keyed pushBack [_d vectorDotProduct _fwd,_d vectorDotProduct _right,_forEachIndex]} forEach _ordered;
+        private _rest=_keyed select [1,_n];
+        _rest sort false;
+        private _place=_ordered apply {[0,0]};
+        {
+            private _rank=_forEachIndex;
+            private _row=_x apply {[_x select 1,_x select 2]};
+            _row sort true;
+            private _m=count _row;
+            {_place set [_x select 1,[((_forEachIndex-(_m-1)/2)+_rank*0.5)*_gap,_rank*_spacing]]} forEach _row;
+        } forEach ([[_keyed select 0]+(_rest select [0,_cols-1]),_rest select [_cols-1,_n]] select {count _x>0});
+        private _lo=(_place select 0) select 0;
+        _deal=[+_ordered,_direction,_place apply {[(_x select 0)-_lo,_x select 1]},_lo];
+        _group setVariable ["BURNS_trackDeal",_deal];
     };
+    private _offs=_deal select 2;
     // The line forms on its own average position, not on the leader (probe lp28: chasing the leader, the line trailed it
     // in a shallow V, riflemen a median 3 m and p90 9 m behind). AT droids on native control are left out of the average.
     private _alongs=[];

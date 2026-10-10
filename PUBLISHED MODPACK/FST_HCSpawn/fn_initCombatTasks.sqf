@@ -23,7 +23,7 @@ BURNS_MaxDueLateness=0;
         FST_HC_CombatNextScan=time+1;
         BURNS_Players=allPlayers select {alive _x && {!(_x isKindOf "HeadlessClient_F")}};
         BURNS_DownedPlayers=BURNS_Players select {[_x] call FST_HCSpawn_fnc_burnsIsDown};
-        BURNS_PlayerPositions=BURNS_Players apply {getPosWorld (vehicle _x)};
+        BURNS_PlayerPositions=(BURNS_Players apply {getPosWorld (vehicle _x)})+((BURNS_Players apply {_x getVariable ["BURNS_zeusCam",[]]}) select {count _x==3});
         // Cheap membership discovery, no prop scans or per-unit task loops.
         FST_HC_CombatGroups=allGroups select {local _x && {side _x!=civilian} && {count units _x>0} && {(!hasInterface || {isServer}) || {count (([_x,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet))==3}}};
         BURNS_ActiveGroups=FST_HC_CombatGroups select {count (([_x,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet))==3};

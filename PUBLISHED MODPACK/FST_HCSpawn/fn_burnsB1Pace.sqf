@@ -42,8 +42,9 @@ _anchor=_anchor/(_n max 1);
     };
     // AT droid catch-up (Miran 9 Oct: "AT droid sometimes lags behind"; probe lp36: p90 up to 32 m behind). AT droids stay
     // under native control for their launchers, and native AI stops to shoot. One more than 8 m behind its place with no
-    // enemy vehicle to engage stops engaging (FIREWEAPON + AUTOTARGET off) and walks back; within 3 m, or after 15 s, it
-    // fights normally again. With armour about it never holds fire.
+    // enemy vehicle to engage stops engaging (FIREWEAPON + AUTOTARGET + TARGET off) and walks back; within 3 m, or after 15 s,
+    // it fights normally again. With armour about it never holds fire. TARGET too (Miran 10 Oct "fix the AT droid lag";
+    // probe lp50: with only fire off, catching-up AT droids still halted to aim and stood still ~2/3 of the time).
     if (secondaryWeapon _u!="" && {!(_u getVariable ["BURNS_drilled",false])}) then {
         private _since=_u getVariable ["BURNS_atCatchUp",-1];
         private _at=assignedTarget _u;
@@ -53,14 +54,14 @@ _anchor=_anchor/(_n max 1);
         private _armour=(!isNull _at && {alive _at} && {!(_at isKindOf "CAManBase")}) || {_armourNear==1};
         if (_since<0) then {
             if (_along<-8 && {!_armour}) then {
-                _u disableAI "FIREWEAPON"; _u disableAI "AUTOTARGET"; _u doWatch objNull; _u doTarget objNull;
+                _u disableAI "FIREWEAPON"; _u disableAI "AUTOTARGET"; _u disableAI "TARGET"; _u doWatch objNull; _u doTarget objNull;
                 _u setVariable ["BURNS_atCatchUp",time];
                 private _tg=_u getVariable ["BURNS_trackGoal",[]];
                 if (count _tg>=2) then {_u doMove _tg};
             };
         } else {
             if (_along>-3 || {_armour} || {time-_since>15}) then {
-                _u enableAI "FIREWEAPON"; _u enableAI "AUTOTARGET";
+                _u enableAI "FIREWEAPON"; _u enableAI "AUTOTARGET"; _u enableAI "TARGET";
                 _u setVariable ["BURNS_atCatchUp",nil];
             };
         };

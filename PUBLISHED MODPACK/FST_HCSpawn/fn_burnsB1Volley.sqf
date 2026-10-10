@@ -5,6 +5,7 @@
 // visible enemy and fires together in five timed rounds. Firing is enabled only inside that volley window.
 // AT droids stay under native control (rockets). Owner-local; the drilled mark is the only broadcast (on change).
 params ["_group"];
+private _dbg=missionNamespace getVariable ["BURNS_B1Debug",false];
 private _drillOn=time<(_group getVariable ["BURNS_drillUntil",-1]);
 // Release: drilled droids may aim and fire on their own again as soon as drill control lapses.
 if (!_drillOn) then {
@@ -18,9 +19,17 @@ if (!_drillOn) then {
     } forEach units _group;
 };
 if !(missionNamespace getVariable ["BURNS_B1VolleyEnabled",true]) exitWith {};
-if !([_group,true] call FST_HCSpawn_fnc_burnsB1Eligible) exitWith {};
+if !([_group,true] call FST_HCSpawn_fnc_burnsB1Eligible) exitWith {
+    if (_dbg && {([leader _group] call FST_HCSpawn_fnc_burnsRole)=="b1"}) then {
+        private _u=units _group select {alive _x};
+        [_group,format ["not eligible: held %1, not local %2, in vehicle %3, PATH off %4, not B1 %5, exempt %6",
+            _group getVariable ["FST_HC_heldBy",-1],{!local _x} count _u,{vehicle _x!=_x} count _u,
+            {!(_x checkAIFeature "PATH") && {isNil {_x getVariable "BURNS_volleyHold"}}} count _u,
+            {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1"} count _u,{_x getVariable ["BURNS_exempt",false]} count _u]] call BURNS_fnc_dbgWhy;
+    };
+};
 private _mode=([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet) param [0,""];
-if !(_mode in ["assault","rush","hunt"]) exitWith {};
+if !(_mode in ["assault","rush","hunt"]) exitWith {if (_dbg) then {[_group,"no drill task ("+_mode+")"] call BURNS_fnc_dbgWhy}};
 private _leader=leader _group;
 // Fire at will (Miran 9 Oct: "non volley fire is better than no fire"): drill control is released at once in close
 // combat (an enemy within 40 m), while the squad is not advancing (waiting for the battle line or at its objective,
@@ -36,6 +45,7 @@ private _far=_range>0 && {((missionNamespace getVariable ["BURNS_PlayerPositions
 private _stale=_drillOn && {time-((_group getVariable ["BURNS_drillSince",time]) max (_group getVariable ["BURNS_lastVolley",-1]))>12};
 if (_stale) then {_group setVariable ["BURNS_drillBlock",time+15]};
 if (_close || {_holding} || {_far} || {_stale} || {time<(_group getVariable ["BURNS_drillBlock",-1])}) exitWith {
+    if (_dbg) then {[_group,"released: "+(if (_close) then {"enemy within 40 m"} else {if (_holding) then {"holding"} else {if (_far) then {"far from players"} else {if (_stale) then {"no volley for 12 s"} else {"blocked after stale"}}}})] call BURNS_fnc_dbgWhy};
     _group setVariable ["BURNS_drillUntil",-1];
     _group setVariable ["BURNS_drillSince",nil];
     {
@@ -63,7 +73,7 @@ private _best=450;
         ([_leader,"VIEW",_p] checkVisibility [_eye,aimPos _p])>0.5
     }) then {_best=_d;_target=_p};
 } forEach (_leader nearTargets 450);
-if (isNull _target) exitWith {};
+if (isNull _target) exitWith {if (_dbg) then {[_group,"no visible target"] call BURNS_fnc_dbgWhy}};
 // Drill members: B1 riflemen on foot (no launcher; probes lp27/V31: drilled AT droids froze or drifted 50-116 m).
 // The lease runs 8 s past the last sighting.
 private _drill=(units _group) select {
@@ -71,37 +81,17 @@ private _drill=(units _group) select {
         primaryWeapon _x!="" && {secondaryWeapon _x==""} && {([_x] call FST_HCSpawn_fnc_burnsRole)=="b1"}
     }
 };
-if (count _drill<3) exitWith {};
+if (count _drill<3) exitWith {if (_dbg) then {[_group,"under 3 riflemen"] call BURNS_fnc_dbgWhy}};
 // Drill-shot steering: a scripted drill round (BURNS_aimTarget/BURNS_aimUntil set just before it) or any round fired in the
 // WebKnight march pose goes at its target with a random spread (BURNS_B1AimSpread, sigma degrees, default 0.15: ~28%
 // on a standing man at 200 m, about like aimed native fire). Probe ap1 at 200 m: posed 0/20 hits, steered at the target
 // 20/20, unposed 5/20. The pose throws the muzzle ~0.4 degrees off, and walking droids do not aim at all.
-if (isNil "BURNS_fnc_drillShot") then {
-    BURNS_fnc_drillShot={
-        params ["_u","","","","","","_p"];
-        if (!local _u || {isNull _p}) exitWith {};
-        private _t=objNull;
-        if (diag_tickTime<(_u getVariable ["BURNS_aimUntil",-1])) then {_t=_u getVariable ["BURNS_aimTarget",objNull]} else {
-            if (gestureState _u=="wbk_droids_b1_idle") then {_t=assignedTarget _u};
-        };
-        if (isNull _t || {!alive _t}) exitWith {};
-        private _spd=vectorMagnitude velocity _p;
-        if (_spd<1) exitWith {};
-        private _dir=vectorNormalized ((aimPos _t) vectorDiff (getPosASL _p));
-        private _s=missionNamespace getVariable ["BURNS_B1AimSpread",0.15];
-        private _r=vectorNormalized (_dir vectorCrossProduct [0,0,1]);
-        private _up=_r vectorCrossProduct _dir;
-        private _ex=((random 1)+(random 1)+(random 1)-1.5)*2*_s;
-        private _ey=((random 1)+(random 1)+(random 1)-1.5)*2*_s;
-        _dir=vectorNormalized ((_dir vectorAdd (_r vectorMultiply (tan _ex))) vectorAdd (_up vectorMultiply (tan _ey)));
-        _p setVelocity (_dir vectorMultiply _spd);
-        _p setVectorDir _dir;
-    };
-};
+// BURNS_fnc_drillShot is defined in XEH_preInit (every machine); fn_burnsB1Gait also puts it on marching riflemen.
 {if (isNil {_x getVariable "BURNS_drillShotEH"}) then {_x setVariable ["BURNS_drillShotEH",_x addEventHandler ["Fired",{_this call BURNS_fnc_drillShot}]]}} forEach _drill;
 if (!_drillOn) then {_group setVariable ["BURNS_drillSince",time]};
 _group setVariable ["BURNS_drillUntil",time+8];
 _group setVariable ["BURNS_drillTarget",_target];
+if (_dbg) then {[_group,"drilling"] call BURNS_fnc_dbgWhy};
 {
     // No native aiming either (probe lp47: 68% of the remaining stops were droids told to walk but halted to aim at a
     // target they could not shoot). Drill shots need no AI aim: they are steered (BURNS_fnc_drillShot).
