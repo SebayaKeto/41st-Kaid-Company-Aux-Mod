@@ -1,0 +1,5 @@
+Published 2026-10-10 12:46 EDT on Miran's go in the Aux Updater chat: "push it with bolts, push everything all the githuib, daara, your stuff all of it" (manifest 5851748372696229786, time_updated 1791650812, 82 files / 6,715,705,744 B).
+Base: live N-daara-v9c (manifest 2229783304758650637). Package: Downloads/Steam-aux-release-20261010-P8-everything (build scripts D:/AuxUpdater/aatcrew/make_p*.py).
+Added: fst_geonosis_lantern (Omnibus W2), 41st_Hungergames (GitHub b4911cf8 + requiredAddons fix), 41st_DC15 (DC-15 session release A 6b0c908b), 41st_Bolts (DC-15 session 968fe727).
+Changed: fst_geonosis + fst_geo_hive (Omnibus W2), ck_daara_halberd + ck_daara_moves (Project Daara V9J), BUZZ_Vehicles (GitHub f1bf7804 AT-RT), 41st_Armor (GitHub 46f6fe07 armour, real LFS textures), FST_HCSpawn (Aux Updater droid AI V48, commit 38986a4d).
+Not engine-tested on this PC before publishing (Miran had paused Arma launches): Daara V9J, GitHub items, droid AI V48 as a whole build (its parts were tested: aatcrew prof-lp47/48, ad48, af48, gp45, cost46n). W2 and DC-15A/Bolts were engine-tested in their own sessions.

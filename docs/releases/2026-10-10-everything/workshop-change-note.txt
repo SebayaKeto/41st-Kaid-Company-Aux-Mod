@@ -1,0 +1,40 @@
+Geonosis W2, Daara, AT-RT, armour, Hunger Games, DC-15A, blaster bolts, droid AI
+
+Geonosis
+- Geonosis terrain update (d23 c7): ground heights for this weekend's W2 ops.
+- New: Geonosis temple caves kit for the Progate Temple op.
+- Geonosis hive kit: 10 new hive pieces (burrows, Spire ramps) for the W2 ops.
+
+Daara
+- Her halberd attacks are rebuilt: a three-hit standing combo, a running attack and a jump attack.
+- Smoother attack timing; the dodge roll no longer swings the staff through her.
+- Restyled block and deflect animations.
+- Her own Force power animations (push, pull, wave, cryo/pyro, heal).
+- Her attack and block animations are pre-loaded at mission start, so the first swing doesn't hitch.
+
+AT-RT
+- AT-RT script updates (LAAT/i deploy and load, orbital drop, pack/unpack, HUD).
+
+Armour
+- New: Archon AB helmet, Sphinx jumppack, Jax armour.
+- Updated: Rumble Dirty V2 helmet and armour, Trenny upper (clean and dirty), Kate V2 armour (clean and dirty).
+
+Hunger Games (Zeus minigame)
+- New Zeus modules under [41st] Object Minigames to start a Hunger Games match and spawn loot crates, plus loot spawner and start point objects and Hunger Games vests and bags.
+
+DC-15A
+- Our own DC-15A model and finish, with an ammo counter, muzzle flash and new holo sight. Handling, damage, sounds and magazines are unchanged.
+
+Blaster bolts
+- Our own blaster bolt look for 41st weapons: new bolt models, in-flight glow and impacts. Damage is unchanged.
+
+Battle droid AI
+- B1 squads on assault now march in tight single-rank lines, carrying their rifles in the classic B1 pose, and keep advancing under fire.
+- The line fires rolling volleys on the move, with aimed shots in between, instead of a constant trickle.
+- Squads cut down to one or two droids join the nearest friendly squad; AT droids keep up with their line and still use their launchers on vehicles.
+- Garrisoned and defending droids are unchanged. Squads far from players fight the old way, so large battles cost no more than before.
+- New CBA settings under BURNS: drill volleys, line tracks, march speed-up, march pose, pose range and drill range.
+
+No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

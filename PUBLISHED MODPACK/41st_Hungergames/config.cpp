@@ -2,6 +2,9 @@ class CfgPatches
 {
 	class 41st_Hungergames
 	{
+		// Load after the addons whose classes these items inherit (FST_Vest_Base, FST_Clone_Backpack, FST_belt_bag in
+		// 41st_Armor; FST_CIS_Officer_Legbag, FST_CIS_Marksman_Satchel in 41st_HumanDiv) and CBA (events).
+		requiredAddons[]={"41st_Addon","41st_HumanDiv","cba_main"};
 		units[]=
 		{
 			"FST_HungerGamesLootSpawner",
