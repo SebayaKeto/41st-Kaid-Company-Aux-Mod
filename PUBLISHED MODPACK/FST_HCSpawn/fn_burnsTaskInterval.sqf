@@ -5,6 +5,8 @@ params ["_group", ["_playerPositions", []]];
 private _mode=([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet) param [0,""];
 if (_mode in ["ambush","creep","cqb"] && {(leader _group) isKindOf "WBK_LS_BX"}) exitWith {1};
 if ((vehicle leader _group) isKindOf "Tank" && {_mode in ["assault","rush","hunt"]}) exitWith {2};
+// B1 squads in contact keep their line with a 2 s formation service (Miran 6 Oct review: "still devolves into a mess").
+if (_mode in ["assault","rush","hunt"] && {vehicle leader _group==leader _group} && {time<(_group getVariable ["BURNS_b1DangerUntil",-1])}) exitWith {2};
 // Explicit rush/cohesion gets bounded frequent service on its owner.
 if (((([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet)) param [0,""])=="rush" || {(_group getVariable ["BURNS_b1GroupOwner",-1])==clientOwner}) exitWith {5};
 private _base = (missionNamespace getVariable ["FST_HC_CombatTaskInterval", 15]) max 5;

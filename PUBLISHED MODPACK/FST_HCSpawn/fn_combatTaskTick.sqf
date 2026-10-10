@@ -17,6 +17,32 @@ if (isNull _leader || {!alive _leader} || {!simulationEnabled _leader}) exitWith
 if ((_group getVariable ["FST_HC_taskLastOwner", -1]) != clientOwner) then {
     _group setVariable ["FST_HC_taskLastOwner", clientOwner, true];
 };
+// Straggler regroup (Miran 6 Oct): a B1 squad cut down to 1-2 droids joins the nearest friendly
+// B1 squad on a combat task (3+ alive, 12 max after joining, within 300 m) instead of wandering
+// on alone. Held/Zeus/player groups never qualify (burnsB1Eligible + the checks above).
+private _merged=false;
+if (missionNamespace getVariable ["BURNS_B1Regroup",true] && {time>=(_group getVariable ["BURNS_regroupNext",-1])}) then {
+    _group setVariable ["BURNS_regroupNext",time+10];
+    private _alive=units _group select {alive _x};
+    if (count _alive>0 && {count _alive<=2} && {[_group] call FST_HCSpawn_fnc_burnsB1Eligible}) then {
+        private _best=grpNull;
+        private _bestD=300;
+        {
+            if (_x==_group || {!local _x} || {side _x!=side _group}) then {continue};
+            private _n={alive _x} count units _x;
+            if (_n<3 || {_n+count _alive>12}) then {continue};
+            private _d=(leader _x) distance2D _leader;
+            if (_d<_bestD && {count (([_x,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet))==3} && {[_x] call FST_HCSpawn_fnc_burnsB1Eligible}) then {_bestD=_d;_best=_x};
+        } forEach (missionNamespace getVariable ["FST_HC_CombatGroups",[]]);
+        if (!isNull _best) then {
+            {[_x,true,_group] call FST_HCSpawn_fnc_burnsReleaseAdvanceUnit} forEach _alive;
+            _alive joinSilent _best;
+            _merged=true;
+            BURNS_B1Regroups=(missionNamespace getVariable ["BURNS_B1Regroups",0])+1;
+        };
+    };
+};
+if (_merged) exitWith {};
 _task params ["_mode", "_objective", "_radius"];
 private _wpIndex = ([_group,["FST_HC_taskWaypoint", -1]] call FST_HCSpawn_fnc_burnsStateGet);
 private _current = currentWaypoint _group;
@@ -28,7 +54,7 @@ if ((units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)=="webknight"})>=
     if !([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsBXTask) then {[_group] call FST_HCSpawn_fnc_burnsSuspendTask};
 };
 if ([_group,_mode,_objective,_radius] call FST_HCSpawn_fnc_burnsSpecialTick) exitWith {};
-if !(_leader checkAIFeature "PATH") exitWith {[_group] call FST_HCSpawn_fnc_burnsReleaseAdvance}; // Respect externally scripted holds.
+if (!(_leader checkAIFeature "PATH") && {isNil {_leader getVariable "BURNS_volleyHold"}}) exitWith {[_group] call FST_HCSpawn_fnc_burnsReleaseAdvance}; // Respect externally scripted holds (not a drill volley halt: probe af35).
 // Rush has no clicked destination or objective-radius leash. Acquisition
 // uses a shared owner-local unit cache; it never scans terrain/props or reveals
 // targets to the native firing AI.
@@ -240,6 +266,8 @@ if (_mode=="creep") then {
     _group setCombatMode _combatMode;
     if (_wpIndex>=0 && {_wpIndex<count waypoints _group}) then {[_group,_wpIndex] setWaypointCombatMode _combatMode};
 };
+// B1 foot squads on assault/rush/hunt keep YELLOW even on an already-active waypoint (see below).
+if (_mode in ["assault","rush","hunt"] && {vehicle _leader==_leader} && {([_leader] call FST_HCSpawn_fnc_burnsRole)=="b1"} && {combatMode _group=="RED"}) then {_group setCombatMode "YELLOW"};
 if (count _last > 0 && {(_last distance2D _destination) < (if ((vehicle _leader) isKindOf "Tank") then {5} else {25})} && {_wpIndex >= 0} && {_wpIndex < count waypoints _group}) exitWith {
     if (_mode in ["rush","hunt","creep","assault"]) then {[_group,_destination] call FST_HCSpawn_fnc_burnsB1Advance};
 };
@@ -259,7 +287,12 @@ _wp setWaypointSpeed (if (vehicle _leader==_leader && {([_leader] call FST_HCSpa
 _wp setWaypointBehaviour "AWARE";
 // Explicit AAT/N99 advances retain the ordered approach while firing at will.
 // RED permits independent engagement movement that can override that approach.
-_wp setWaypointCombatMode (if (((vehicle _leader) isKindOf "FST_AAT" || {(vehicle _leader) isKindOf "FST_N99"}) && {_mode in ["assault","rush","hunt"]}) then {"YELLOW"} else {"RED"});
+// B1 foot squads also hold YELLOW (fire at will, keep formation). Probe 6 Oct: under RED the native
+// leader handed out individual ATTACK orders (58/77 out-of-slot samples) that overrode BURNS slots,
+// so lines dissolved and stragglers stopped 20-100 m off their places.
+_wp setWaypointCombatMode (if ((((vehicle _leader) isKindOf "FST_AAT" || {(vehicle _leader) isKindOf "FST_N99"}) && {_mode in ["assault","rush","hunt"]}) || {
+    vehicle _leader==_leader && {([_leader] call FST_HCSpawn_fnc_burnsRole)=="b1"} && {_mode in ["assault","rush","hunt"]}
+}) then {"YELLOW"} else {"RED"});
 if (_mode=="creep") then {
     _wp setWaypointSpeed "LIMITED";
     _wp setWaypointCombatMode (if (_nearest<80) then {"RED"} else {"GREEN"});

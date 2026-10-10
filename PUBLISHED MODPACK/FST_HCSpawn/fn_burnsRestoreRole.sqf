@@ -1,5 +1,6 @@
 // Restore only values that still match this role's last write.
 params ["_unit",["_releaseStation",true]];
+if (local _unit) then {[_unit,""] call FST_HCSpawn_fnc_burnsB1Gait};
 if (isNull _unit || {!local _unit} || {([_unit] call FST_HCSpawn_fnc_isPlayerControlledUnit)} || {([_unit] call FST_HCSpawn_fnc_burnsRole)=="webknight"} || {[group _unit] call FST_HCSpawn_fnc_isProtectedVehicleGroup}) exitWith {};
 if (_releaseStation && {vehicle _unit==_unit} && {_unit getVariable ["BURNS_ownsPath",false]}) then {
     _unit enableAI "PATH";

@@ -75,12 +75,17 @@ BURNS_EngagementQueries=0;
             _g setVariable ["BURNS_b2LineNext",time+1];
             [_g] call FST_HCSpawn_fnc_burnsB2Line;
         };
+        if (!isNil {_g getVariable "BURNS_track"}) then {[_g] call FST_HCSpawn_fnc_burnsB1Pace};
         if !(missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true]) then {continue};
         if (time<(_g getVariable ["BURNS_engagementNext",-1]) || {!([_g] call FST_HCSpawn_fnc_burnsEngagementAllowed)}) then {continue};
         private _armor=_v isKindOf "FST_AAT" || {_v isKindOf "FST_Advanced_DSD_Base"};
         _g setVariable ["BURNS_engagementNext",time+(if (_armor) then {0.5} else {2})];
-        if (!_armor) then {[_g] call FST_HCSpawn_fnc_burnsReaction};
-        if (!_armor && {!([_g,true] call FST_HCSpawn_fnc_burnsB1Eligible)}) then {continue};
+        // B1 squads under drill fire control (fn_burnsB1Volley) fire only in volleys: no reaction shots, no point fire.
+        if (!_armor) then {
+            [_g] call FST_HCSpawn_fnc_burnsB1Volley;
+            if (time>=(_g getVariable ["BURNS_drillUntil",-1])) then {[_g] call FST_HCSpawn_fnc_burnsReaction};
+        };
+        if (!_armor && {time<(_g getVariable ["BURNS_drillUntil",-1]) || {!([_g,true] call FST_HCSpawn_fnc_burnsB1Eligible)}}) then {continue};
         if (!_armor && {count BURNS_FireJobs>=16 || {count (_g getVariable ["BURNS_pointFire",[]])>0}}) then {continue};
         private _range=if (_armor) then {1500} else {250};
         if (!_armor && {fog>=0.4} && {missionNamespace getVariable ["BURNS_LowVisibilityAssist",false]}) then {_range=_range min (missionNamespace getVariable ["BURNS_VisibleContactRange",125])};

@@ -15,4 +15,5 @@ if (_cancelMove && {count _goal>0} && {alive _unit} && {!([_unit] call FST_HCSpa
     [FST_HCSpawn_fnc_burnsCancelAdvanceMove,[_unit,+_goal,_token],0.1] call CBA_fnc_waitAndExecute;
 };
 _unit setVariable ["BURNS_formationGoal",nil];
+if (!isNil {_unit getVariable "BURNS_atCatchUp"}) then {_unit enableAI "FIREWEAPON";_unit enableAI "AUTOTARGET";_unit setVariable ["BURNS_atCatchUp",nil]};
 if (!isNil {_unit getVariable "BURNS_advanceController"}) then {_unit setVariable ["BURNS_advanceController",nil,true]};

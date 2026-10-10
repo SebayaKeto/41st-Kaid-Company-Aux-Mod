@@ -116,6 +116,9 @@ class CfgFunctions {
             class burnsInitEngagement {};
 
             class burnsB1Advance {};
+            class burnsB1Volley {};
+            class burnsB1Pace {};
+            class burnsB1Gait {};
             class burnsB1Formation {};
             class burnsB1Eligible {};
             class burnsB1Hit {};

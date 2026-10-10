@@ -573,6 +573,14 @@ diag_log format ["[BURNS_SOURCE] %1",BURNS_sourceFingerprint];
 ["BURNS_BXRunSpeed","SLIDER",["BX running speed","Ordinary running only. Dodge, attack, injury and external speed effects retain their own timing."],"BURNS",[1,1.3,1.15,2],1] call CBA_fnc_addSetting;
 ["BURNS_BXMeleeEnabled","CHECKBOX",["BX aggressive melee","AI BXs close on visible enemies within 12 metres and repeat melee when in reach. Respects hold, stealth and defensive orders."],"BURNS",true,1] call CBA_fnc_addSetting;
 
+["BURNS_B1VolleyEnabled","CHECKBOX",["B1 drill volleys","In contact, AI B1 riflemen hold fire while their line walks and fire together in 5-round volleys at one visible enemy every 7-8.5 s. Released within 40 m of an enemy. Off = native fire at will."],"BURNS",true,1] call CBA_fnc_addSetting;
+["BURNS_B1TrackFormation","CHECKBOX",["B1 line tracks","AI B1 squads in LINE walk parallel tracks at a matched pace, formed on the squad's centre. Off = the older slot bounds."],"BURNS",true,1] call CBA_fnc_addSetting;
+["BURNS_B1MarchAnimSpeed","SLIDER",["B1 march speed-up","Animation speed of marching AI B1s (assault squads walk). 1 = plain walk 1.4 m/s; 1.2 = ~1.7 m/s. Also speeds their other animations (reloads, aiming) by the same factor."],"BURNS",[1,1.4,1.2,2],1] call CBA_fnc_addSetting;
+["BURNS_B1MarchPose","CHECKBOX",["B1 march pose","Marching AI B1s carry their rifle in WebKnight's B1 pose (needs the WebKnight Droids mod; its animation only)."],"BURNS",true,1] call CBA_fnc_addSetting;
+["BURNS_B1PoseRange","SLIDER",["B1 march pose range","Marching AI B1s keep the WebKnight pose until an enemy is this close (m), then raise their rifles. Shots fired in the pose are aim-corrected. 0 = keep the pose even up close."],"BURNS",[0,500,150,0],1] call CBA_fnc_addSetting;
+["BURNS_B1DrillRange","SLIDER",["B1 drill range","AI B1 squads use drill volleys and line pace-keeping only within this distance (m) of a player; farther squads fight natively, which is cheaper. 0 = everywhere."],"BURNS",[0,3000,1200,0],1] call CBA_fnc_addSetting;
+["BURNS_B1HybridFormation","CHECKBOX",["B1 hybrid formation","AI B1 squads on assault/rush/hunt move in the engine's own LINE/COLUMN formation (smooth advance); off (default) = BURNS places every droid in a slot."],"BURNS",false,1] call CBA_fnc_addSetting;
+["BURNS_B1Regroup","CHECKBOX",["B1 straggler regroup","AI B1 squads cut down to 1-2 droids join the nearest friendly B1 squad on a combat task within 300 m."],"BURNS",true,1] call CBA_fnc_addSetting;
 ["BURNS_B2LineEnabled","CHECKBOX",["B2 combat firing line","Deploy AI 41st B2 groups into a firing line with short coordinated advances against visible known enemies."],"BURNS",true,1] call CBA_fnc_addSetting;
 
 ["BURNS_GulantharRunEnabled","CHECKBOX",["Gulanthar pursuit running","Use a faster sustained running gait during visible pursuit, preserving native attacks and eating."],"BURNS",true,1] call CBA_fnc_addSetting;

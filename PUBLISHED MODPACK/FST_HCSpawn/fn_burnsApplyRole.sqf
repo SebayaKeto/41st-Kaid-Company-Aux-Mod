@@ -17,6 +17,7 @@ if (!_eligible && {(units _group findIf {alive _x && {vehicle _x==_x}})<0} && {
 if !(missionNamespace getVariable ["FST_HC_DroidStanceEnabled",true]) then {
     [_group,true,false] call FST_HCSpawn_fnc_burnsRestoreGroupRole;
 };
+private _gaitTask=([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet) param [0,""];
 private _b1Only = true;
 private _any = false;
 {
@@ -36,6 +37,7 @@ private _any = false;
         private _fireHook=_unit getVariable ["BURNS_b1NearbyFireHook",-1];
         if (_fireHook>=0) then {_unit removeEventHandler ["FiredNear",_fireHook];_unit setVariable ["BURNS_b1NearbyFireHook",nil]};
         [_unit] call FST_HCSpawn_fnc_burnsReleaseAdvanceUnit;
+        [_unit,""] call FST_HCSpawn_fnc_burnsB1Gait;
         continue;
     };
     if (isNil {_unit getVariable "BURNS_originalRole"}) then {
@@ -76,8 +78,14 @@ private _any = false;
                 _roleChanged=true;
                 _unit setVariable ["BURNS_b1Applied", _signature];
             };
+            // Gait: assault squads march (walking, WebKnight B1 pose; Miran 9 Oct "lets keep it to just assault for now"),
+            // rush/retreat run, everything else keeps the plain gait. Garrisoned or stationed droids never march (the pose
+            // can't shoot over walls).
+            private _station=_unit getVariable ["FST_HC_ownsPath",false] || {_unit getVariable ["BURNS_ownsPath",false]} || {!(_unit checkAIFeature "PATH") && {isNil {_unit getVariable "BURNS_volleyHold"}}};
+            [_unit,if (_station) then {""} else {if (_gaitTask=="assault") then {"march"} else {if (_gaitTask in ["rush","retreat"]) then {"run"} else {""}}}] call FST_HCSpawn_fnc_burnsB1Gait;
         } else {
             _unit setVariable ["BURNS_b1Applied", nil];
+            [_unit,""] call FST_HCSpawn_fnc_burnsB1Gait;
         };
     } else {
         if !(_unit getVariable ["BURNS_suppressionHook",false]) then {

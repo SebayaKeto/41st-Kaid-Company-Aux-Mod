@@ -17,7 +17,11 @@ if (isNull _enemy) then {
 if (!isNull _enemy && {_leader distance2D _enemy<500} && {time>=(_group getVariable ["BURNS_b1DangerUntil",-1])-5}) then {
     _group setVariable ["BURNS_b1DangerUntil",time+20,true];
 };
-private _formation=if (time<(_group getVariable ["BURNS_b1DangerUntil",-1])) then {"LINE"} else {"COLUMN"};
+// Assault/hunt squads form their line on the approach, within 600 m of the objective (Miran 7 Oct:
+// "the deploy is still messy"), instead of shuffling from column to line under fire.
+private _task=[_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet;
+private _approach=count _task==3 && {(_task select 0) in ["assault","hunt"]} && {(_leader distance2D (_task select 1))<600};
+private _formation=if (_approach || {time<(_group getVariable ["BURNS_b1DangerUntil",-1])}) then {"LINE"} else {"COLUMN"};
 // Shared transition intent survives HC handoff; publish only on transition.
 private _previous=_group getVariable ["BURNS_advanceFormation",""];
 if (_previous!=_formation) then {
