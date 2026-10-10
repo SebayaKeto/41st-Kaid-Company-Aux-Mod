@@ -1,11 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — 41st Elite Corps Walker
-//
-//  DEPENDENCIES:
-//    - 3AS mod       (provides 3AS_ATRT.p3d model, 3AS_9999Rnd_ATRT_Mag ammo,
-//                     3AS_ATRT_Collision class)
-//    - FST_ATRT mod  (provides FST_ATRT vehicle base + FST_ATRT_Weapon_F)
-//    - FST_T15_AT    (provides FST_T15 weapon base)
 // =============================================================================
 
 
@@ -31,43 +25,17 @@ class CfgPatches {
 
 // -----------------------------------------------------------------------------
 //  LAAT/i COMPATIBILITY TABLE
-//  Classnames accepted by "Load into LAAT/i". Add new reskins here.
 // -----------------------------------------------------------------------------
 class CfgBUZZ_ATRT {
-    laatiClasses[] = {
-        "FST_laati_Turret",
-        "FST_laati_mk2",
-        "FST_laati_mk2Lights",
-        "FST_laati_Turret_Qball",
-        "FST_laati_mk2_Qball",
-        "FST_laati_mk2Lights_Qball",
-        "FST_laati_Turret_Grim",
-        "FST_laati_mk2_Grim",
-        "FST_laati_mk2Lights_Grim",
-        "FST_laati_Turret_Sierra",
-        "FST_laati_mk2_Sierra",
-        "FST_laati_mk2Lights_Sierra",
-        "FST_laati_Turret_Aether",
-        "FST_laati_mk2_Aether",
-        "FST_laati_mk2Lights_Aether",
-        "FST_laati_Turret_Cait",
-        "FST_laati_mk2_Cait",
-        "FST_laati_mk2Lights_Cait",
-        "FST_laati_Turret_Fire",
-        "FST_laati_mk2_Fire",
-        "FST_laati_mk2Lights_Fire",
-        "FST_laati_Turret_Talisman",
-        "FST_laati_mk2_Talisman",
-        "FST_laati_mk2Lights_Talisman",
-        "FST_laati_Turret_Pole",
-        "FST_laati_mk2_Pole",
-        "FST_laati_mk2Lights_Pole",
-        "FST_laati_Turret_Red",
-        "FST_laati_mk2_Red",
-        "FST_laati_mk2Lights_Red",
-        "FST_laati_Turret_Oak",
-        "FST_laati_mk2_Oak",
-        "FST_laati_mk2Lights_Oak"
+    laatiClasses[] = {"FST_laat_Base"};
+};
+
+// Deploy AT-RT action install
+class Extended_Init_EventHandlers {
+    class FST_laat_Base {
+        class BUZZ_ATRT {
+            init = "if (hasInterface) then { _this call BUZZ_fnc_laatiInstallDeploy; };";
+        };
     };
 };
 
@@ -79,20 +47,20 @@ class CfgFunctions {
     class BUZZ {
         class ATRT {
             file = "\BUZZ_Vehicles\ATRT\scripts";
-            class packServer        {};   // → BUZZ_fnc_packServer,        file fn_packServer.sqf
-            class unpackServer      {};   // → BUZZ_fnc_unpackServer,      file fn_unpackServer.sqf
-            class resyncBoxServer    {};   // → BUZZ_fnc_resyncBoxServer,    file fn_resyncBoxServer.sqf
-            class laatiLoadServer    {};   // → BUZZ_fnc_laatiLoadServer,    file fn_laatiLoadServer.sqf
-            class laatiLoadAnim      {};   // → BUZZ_fnc_laatiLoadAnim,      file fn_laatiLoadAnim.sqf
-            class laatiDeployServer  {};   // → BUZZ_fnc_laatiDeployServer,  file fn_laatiDeployServer.sqf
-            class laatiAutoMount     {};   // → BUZZ_fnc_laatiAutoMount,     file fn_laatiAutoMount.sqf
-            class laatiInstallDeploy {};   // → BUZZ_fnc_laatiInstallDeploy, file fn_laatiInstallDeploy.sqf
-            class laatiDeployAction  {};   // → BUZZ_fnc_laatiDeployAction,  file fn_laatiDeployAction.sqf
-            class orbitalDropServer  {};   // → BUZZ_fnc_orbitalDropServer,  file fn_orbitalDropServer.sqf
-            class orbitalDropInit    { postInit = 1; };   // registers the Zeus module (client, needs ZEN)
-            class findControlledAtrt {};   // → BUZZ_fnc_findControlledAtrt, file fn_findControlledAtrt.sqf
-            class forceRelease       {};   // → BUZZ_fnc_forceRelease,       file fn_forceRelease.sqf
-            class releaseWatchdog    { postInit = 1; };   // Ctrl+ESC eject + desync watchdog (client)
+            class packServer        {};
+            class unpackServer      {};
+            class resyncBoxServer    {};
+            class laatiLoadServer    {};
+            class laatiLoadAnim      {};
+            class laatiDeployServer  {};
+            class laatiAutoMount     {};
+            class laatiInstallDeploy {};
+            class laatiDeployAction  {};
+            class orbitalDropServer  {};
+            class orbitalDropInit    { postInit = 1; };
+            class findControlledAtrt {};
+            class forceRelease       {};
+            class releaseWatchdog    { postInit = 1; };
         };
     };
 };
@@ -145,7 +113,6 @@ class CfgFactionClasses {
 
 // -----------------------------------------------------------------------------
 //  EDITOR CATEGORY + SUBCATEGORY
-//  Explicit editorCategory required
 // -----------------------------------------------------------------------------
 class CfgEditorCategories {
     class BUZZ_Vehicles {
@@ -202,9 +169,7 @@ class CfgWeapons {
         };
     };
 
-    // AT-RT spotlight — longer-range clone of FST_Attachment_Light_Beam_White.
-    // Built from acc_flashlight directly rather than inherited, since FST's
-    // class isn't resolved yet at this point in load order.
+    // AT-RT spotlight
     class acc_flashlight;
     class BUZZ_ATRT_Spotlight: acc_flashlight {
         displayName  = "[41st] AT-RT Spotlight";
@@ -223,7 +188,7 @@ class CfgWeapons {
                 coneFadeCoef     = 30;
                 dayLight         = 0;
                 direction        = "flash";
-                flareMaxDistance = 2000;  // was 500 — visible flare glow range
+                flareMaxDistance = 2000;
                 flareSize        = 4;
                 innerAngle       = 8;
                 intensity        = 140;
@@ -236,8 +201,8 @@ class CfgWeapons {
                 volumeShape      = "a3\data_f\VolumeLightFlashlight.p3d";
                 class Attenuation {
                     constant       = 0.2;
-                    hardLimitEnd   = 2000;  // was 540 — absolute max beam distance
-                    hardLimitStart = 120;   // was 27 — push full brightness out further too
+                    hardLimitEnd   = 2000;
+                    hardLimitStart = 120;
                     linear         = 0.2;
                     quadratic      = 0.2;
                     start          = 20;
@@ -266,9 +231,7 @@ class CfgWeapons {
                 linkProxy         = "\A3\data_f\proxies\weapon_slots\TOP";
                 compatibleItems[] = {};
             };
-            // PointerSlot whitelist — FST_T15's own list doesn't know about our
-            // custom BUZZ_ATRT_Spotlight, so LinkedItems rejects it ("item does
-            // not match to this weapon!") without this override.
+            // PointerSlot whitelist
             class PointerSlot: PointerSlot {
                 compatibleItems[] = {
                     "BUZZ_ATRT_Spotlight",
@@ -276,7 +239,7 @@ class CfgWeapons {
             };
         };
 
-        // Pre-attached light module (LinkedItems, not linkedItems[] — same name, can't coexist).
+        // Pre-attached light module
         class LinkedItems {
             class LinkedItemsAcc {
                 slot = "PointerSlot";
@@ -285,14 +248,12 @@ class CfgWeapons {
         };
 
         // Shot Sound
-        // Read by the Fired EH in init.sqf. One pitch is picked at random per shot.
         BUZZ_shotSound      = "BUZZ_Vehicles\ATRT\Data\BUZZ_ATRT_Gun.ogg";
         BUZZ_shotVolume     = 1.25;
         BUZZ_shotDistance   = 1800;
         BUZZ_shotPitches[]  = {0.95, 0.97, 0.985, 1.00, 1.015, 1.03, 1.05};   // ±5%
 
         // Low Cell Sound
-        // The last BUZZ_lowCellShots shots of each power cell use this pool instead.
         BUZZ_lowCellShots     = 20;
         BUZZ_lowCellPitches[] = {1.14, 1.17, 1.19, 1.21, 1.23, 1.26};       // +20%, ±5%
 
@@ -308,9 +269,7 @@ class CfgWeapons {
                 soundClosure[]    = {};
             };
 
-            // Silent on purpose — the shot sound is played by the Fired EH in
-            // init.sqf so it can change pitch when the power cell runs low.
-            // Tune it with the BUZZ_shot* / BUZZ_lowCell* values below.
+            // Silent fire sound
             class StandardSound: BaseSoundModeType {
                 weaponSoundEffect = "";
                 begin1[] = {"", 0, 1, 0};
@@ -417,7 +376,7 @@ class CfgVehicles {
         editorSubcategory = "BUZZ_Vehicles";
         ace_cargo_size    = 1;
 
-        // ACE Dragging — decouples carry/drag from upstream 3AS_Small_Box_9_Black_Prop's mass.
+        // ACE Dragging
         ace_dragging_canDrag           = 1;
         ace_dragging_dragPosition[]    = {0, 1.2, 0};
         ace_dragging_dragDirection     = 0;
@@ -444,7 +403,7 @@ class CfgVehicles {
         editorSubcategory = "BUZZ_Vehicles";
         hiddenSelectionsTextures[] = {"BUZZ_Vehicles\ATRT\Data\wyrwulf_supply_large_CO.paa"};
 
-        // Baseline magazine load — guarantees non-empty stock regardless of spawn method.
+        // Baseline magazine load
         class TransportMagazines {
             class _BUZZ_ATRT_T15ReserveMag {
                 magazine = "BUZZ_ATRT_T15ReserveMag";

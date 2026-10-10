@@ -1,7 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — crate_init.sqf
-//  Called via CfgVehicles EventHandlers { init } on every machine.
-//  Registers the Unpack AT-RT scroll-wheel action.
 // =============================================================================
 private _crate = _this;
 

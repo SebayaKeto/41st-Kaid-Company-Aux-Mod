@@ -1,20 +1,9 @@
 // =============================================================================
 //  ARCHIVED — crosshair.sqf v1 (static screen-centre reticle)
-//  Replaced by crosshair.sqf v2 which uses weaponDirection + worldToScreen
-//  to dynamically track actual weapon aim rather than sitting at a fixed
-//  screen-centre position.
-//
-//  To restore: copy this file's content over crosshair.sqf.
 // =============================================================================
 
 // =============================================================================
 //  BUZZ AT-RT — crosshair.sqf
-//  Star Wars corner-bracket targeting reticle at screen centre.
-//  For a man-class unit the weapon converges to the aim point = screen centre,
-//  so static screen-centre is exactly where bullets land — and it correctly
-//  tracks terrain because screen centre is always on whatever you look at.
-//  Works during alt-look.  Toggled by BUZZ_crosshairOn (Toggle Crosshair).
-//  _this = [_atrt, _rider]
 // =============================================================================
 disableSerialization;
 params ["_atrt", "_rider"];
@@ -29,17 +18,6 @@ private _col = [0.35, 0.85, 1.00, 0.92]; // Republic cyan-blue
 private _off = [-1, -1, 0.001, 0.001];   // off-screen hiding position
 
 // ── Geometry ──────────────────────────────────────────────────────────────────
-// Layout:
-//   ─┐   ┌─
-//     │   │
-//         ·
-//     │   │
-//   ─┘   └─
-//
-// _cg   = gap from screen centre to the inner corner of each bracket
-// _armH = horizontal arm length (extends outward from corner)
-// _armV = vertical arm length (extends inward toward dot from corner)
-// V bars overlap H bars by _thkH*0.5 at the join so the corner looks flush.
 
 private _cg   = safeZoneW * 0.007;
 private _armH = safeZoneW * 0.009;
@@ -80,8 +58,7 @@ private _dot = _disp ctrlCreate ["RscText", -1];
 
 private _all = [_hTL, _vTL, _hTR, _vTR, _hBL, _vBL, _hBR, _vBR, _dot];
 
-// Set colour (queued), then commit each control at its target position so the
-// colour and position are applied together.  Then move everything off-screen.
+// Colour and position commit
 { _x ctrlSetText ""; _x ctrlSetBackgroundColor _col } forEach _all;
 
 _hTL ctrlSetPosition _posHTL; _hTL ctrlCommit 0;

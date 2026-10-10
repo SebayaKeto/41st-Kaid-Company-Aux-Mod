@@ -1,14 +1,10 @@
-// Called on every machine to install the Deploy AT-RT action on a LAAT/i.
-// Triggered once per LAAT/i lifetime from fn_laatiLoadServer after the first AT-RT is loaded
-// (broadcast is JIP-persistent, so late joiners get it installed locally too).
-// params: [_laati]
+// Install Deploy AT-RT action
 params ["_l"];
 
-// The LAAT/i is a foreign (FST) vehicle, not ours — FST's own postInit scripts may
-// re-stamp its actions at any time after mission load, same threat documented in
-// init.sqf for the AT-RT's own actions. Re-install periodically so "Deploy AT-RT"
-// stays available even if FST's re-stamp runs after ours. Track the returned action
-// ID and remove it before re-adding so this doesn't pile up duplicate menu entries.
+if (_l getVariable ["BUZZ_deployInstalledLocal", false]) exitWith {};
+_l setVariable ["BUZZ_deployInstalledLocal", true];
+
+// Periodic re-install
 [_l] spawn {
     params ["_l"];
     waitUntil { time > 0 };
@@ -24,7 +20,8 @@ params ["_l"];
             true,
             true,
             "",
-            "player in crew _this",
+            // Action condition
+            "(_this in crew _target) && {(((_target getVariable ['ace_cargo_loaded', []]) findIf {_x isEqualType objNull && {_x isKindOf 'BUZZ_ATRT_TransportCrate'}}) > -1) || {((_target getVariable ['BUZZ_laatiCrates', []]) findIf {(_x getVariable ['BUZZ_laatiStowed', objNull]) isEqualTo _target}) > -1}}",
             6,
             false,
             "",

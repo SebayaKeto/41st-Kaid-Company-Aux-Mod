@@ -1,7 +1,4 @@
-// Server only — runs the AT-RT loading animation so all clients see it.
-// BUZZ_packing on the AT-RT is the shared signal: client HUD watches it,
-// ESC on the client sets it false (broadcast), server exits the animation.
-// params: [_atrt, _laati, _hp, _cell, _reserves, _skipAnim]
+// LAAT/i loading animation (server)
 params ["_atrt", "_laati", "_hp", "_cell", "_reserves", "_skipAnim"];
 
 [_atrt, _laati, _hp, _cell, _reserves, _skipAnim] spawn {
@@ -9,7 +6,7 @@ params ["_atrt", "_laati", "_hp", "_cell", "_reserves", "_skipAnim"];
     private _overallStart = time;
 
     if (_skipAnim) then {
-        // ── Ramp already in use: hold until HUD countdown ends or ESC ─────────
+        // ── Ramp already in use ───────────────────────────────────────────────
         waitUntil {
             !alive _atrt ||
             !(_atrt getVariable ["BUZZ_packing", false]) ||
@@ -21,18 +18,16 @@ params ["_atrt", "_laati", "_hp", "_cell", "_reserves", "_skipAnim"];
             [_hp, _cell, _reserves, _atrt, _laati] call BUZZ_fnc_laatiLoadServer;
         };
     } else {
-        // ── Full animation: ramp open → walk → slide in → hide → ramp close ──
+        // ── Full animation ───────────────────────────────────────────────────
         _laati setVariable ["BUZZ_animating", true, true];
 
-        // Open ramp (animPeriod = 2 s).
+        // Open ramp
         _laati animateSource ["ramp", 1, true];
 
-        // Phase 1: AT-RT walks to ramp entrance.
-        // Timeout raised to 4 s and unitReady added so the walk completes even
-        // when the AT-RT is parked further away (e.g. after a full deploy walk).
+        // Phase 1: walk to ramp
         _atrt allowDamage false;
         _atrt doMove (_laati modelToWorldVisual [0, -9.5, 0]);
-        sleep 0.1;  // let doMove propagate to AI queue before unitReady is checked
+        sleep 0.1;
         private _walkStart = time;
         waitUntil {
             !(_atrt getVariable ["BUZZ_packing", false]) ||
@@ -48,7 +43,7 @@ params ["_atrt", "_laati", "_hp", "_cell", "_reserves", "_skipAnim"];
             _atrt setVariable ["BUZZ_packing", false, true];
         };
 
-        // Phase 2: attach and slide into cargo bay over ~3 s.
+        // Phase 2: slide into cargo bay
         _atrt disableAI "ALL";
         private _startOff = [0, -7.5, -1.5];
         private _endOff   = [0, -2.5,  0.0];
@@ -74,16 +69,16 @@ params ["_atrt", "_laati", "_hp", "_cell", "_reserves", "_skipAnim"];
             _atrt setVariable ["BUZZ_packing", false, true];
         };
 
-        // AT-RT is inside — hide it and close the ramp.
+        // Hide and close ramp
         _atrt hideObjectGlobal true;
         _laati animateSource ["ramp", 0, true];
         _laati setVariable ["BUZZ_animating", false, true];
 
-        // Wait out any remaining HUD countdown time (animation takes ~4.2 s of the 5 s).
+        // Countdown remainder
         private _remaining = 5 - (time - _overallStart);
         if (_remaining > 0) then { sleep _remaining; };
 
-        // Signal client HUD to close, then hand off to pack function.
+        // HUD close and pack
         _atrt setVariable ["BUZZ_packing", false, true];
         [_hp, _cell, _reserves, _atrt, _laati] call BUZZ_fnc_laatiLoadServer;
     };

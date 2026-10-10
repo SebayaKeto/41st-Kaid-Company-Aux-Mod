@@ -1,21 +1,16 @@
 // =============================================================================
 //  BUZZ AT-RT — init.sqf
-//  Init EH from config.cpp — runs on every machine. Replaces the 3AS parent
-//  EventHandlers, so this is the AT-RT's only source of actions.
 // =============================================================================
 
 private _atrt = _this;
 
 // Damage Immunity
-// Blocks standard damage. setDamage still lands — see the poll and HandleDamage EH.
 _atrt allowDamage false;
 
 // Group Cleanup
-// Deletes the AI group once the walker is gone (Zeus/editor-placed walkers).
 if (local group _atrt) then { (group _atrt) deleteGroupWhenEmpty true; };
 
 // Knockdown Recovery
-// Cancels "ainv" knockdown anims while ridden. Registered everywhere so it follows locality.
 _atrt addEventHandler ["AnimChanged", {
     params ["_unit", "_anim"];
     if (isNil { _unit getVariable "rider" }) exitWith {};
@@ -28,21 +23,17 @@ _atrt addEventHandler ["AnimChanged", {
 }];
 
 // Careless Behaviour
-// Stops the AI going prone or freezing mid-animation when explosions land nearby.
 _atrt setBehaviour "CARELESS";
 
 // Map & GPS
-// Backup for config linkedItems[], so the rider has map/GPS while remote-controlling.
 _atrt linkItem "ItemMap";
 _atrt linkItem "ItemGPS";
 
 // Movement Speed
-// Run and sprint multipliers.
 _atrt setVariable ["runSpeedScale",    1.40];
 _atrt setVariable ["sprintSpeedScale", 2.33];
 
 // Client Effects
-// Disco mode watcher. Aim-following spotlight (light.sqf) is disabled — uncomment to re-enable.
 if (hasInterface) then {
     // [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\light.sqf";
     [_atrt] execVM "\BUZZ_Vehicles\ATRT\scripts\disco.sqf";
@@ -52,12 +43,9 @@ if (hasInterface) then {
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  SERVER SETUP  (server only)
-//  Supply box, power cell, ammo, revive-on-kill and the damage poll.
 // ─────────────────────────────────────────────────────────────────────────────
 if (isServer) then {
     // Supply Box
-    // Hidden ammo crate attached to the walker. Deferred one tick so the walker
-    // settles first — attaching instantly left the box at world origin.
     [_atrt] spawn {
         params ["_atrt"];
         sleep 0;
@@ -80,7 +68,6 @@ if (isServer) then {
         _atrt setVariable ["supplyBox", _box, true];
 
         // Supply Box Resync
-        // Re-sends attach, variable and cargo after 2 s for clients that missed them.
         [_atrt, _box] spawn {
             params ["_a", "_box"];
             sleep 2;
@@ -96,12 +83,10 @@ if (isServer) then {
     };
 
     // Power Cell & Night Vision
-    // Full 300-shot cell and the invisible NVG item.
     _atrt setVariable ["BUZZ_powerCell", 300, true];
     _atrt linkItem "FST_NVG_Invisible";
 
     // Ammo Top-Up
-    // Re-applies the 99999 count once weapons load. Skipped if unarmed (Ammo Bearer).
     [_atrt] spawn {
         params ["_a"];
         waitUntil { time > 0 };
@@ -109,17 +94,14 @@ if (isServer) then {
     };
 
     // Killed Handler
-    // Lets scripted deaths play out; revives the walker after any other kill.
     _atrt addEventHandler ["Killed", {
         params ["_atrt"];
         if (_atrt getVariable ["BUZZ_dying", false]) then {
             // Intended Death
-            // Our own death sequence — clean up the box and shield, don't revive.
             deleteVehicle (_atrt getVariable ["supplyBox", objNull]);
             deleteVehicle (_atrt getVariable ["shield",    objNull]);
         } else {
             // External Kill
-            // 3AS or engine death — reset damage and clear prone/unconscious state.
             _atrt setDamage 0;
             _atrt allowDamage false;
             _atrt setVariable ["ace_unconscious", false, true];
@@ -130,12 +112,10 @@ if (isServer) then {
     }];
 
     // Health
-    // Custom HP pool; ACE medical disabled on the walker.
     _atrt setVariable ["BUZZ_hp", 1.0, true];
     _atrt setVariable ["ace_medical_enabled", false, true];
 
     // Damage Poll
-    // Resets any setDamage (e.g. ACE's setDamage 1) every 0.1 s, before 3AS death particles start.
     [_atrt] spawn {
         params ["_a"];
         while { alive _a } do {
@@ -150,7 +130,6 @@ if (isServer) then {
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  FIRED EH  (all machines)
-//  Power cell drain and reloads. Registered everywhere so it follows locality.
 // ─────────────────────────────────────────────────────────────────────────────
 _atrt addEventHandler ["Fired", {
     params ["_unit", "_weapon", "", "", "", "", "_projectile"];
@@ -182,7 +161,6 @@ _atrt addEventHandler ["Fired", {
     };
 
     // Locality Guard
-    // Only the owning machine counts the shot, otherwise each shot drains 2.
     if (!local _unit) exitWith {};
 
     // if (asin ((_unit weaponDirection _weapon) select 2) < -15) exitWith {
@@ -191,21 +169,37 @@ _atrt addEventHandler ["Fired", {
     // };
 
     // Reload Lockout
-    // Cancels shots fired during the 5 s reload.
     if (_unit getVariable ["BUZZ_reloading", false]) exitWith {
         deleteVehicle _projectile;
         _unit setAmmo [_weapon, (_unit ammo _weapon) + 1];
     };
 
     // Power Cell Drain
-    // One charge per shot; at empty, swap in a reserve from the supply box or block fire.
     private _prevCell = _unit getVariable ["BUZZ_powerCell", 300];
     private _cell     = _prevCell;
     if (_prevCell > 0) then {
         _cell = _prevCell - 1;
-        // Exact on the owner every shot; other machines (pack action, new owner after a
-        // locality change) get it every 10 shots and every shot in the last 30.
         _unit setVariable ["BUZZ_powerCell", _cell, (_cell % 10 == 0) || {_cell <= 30}];
+    };
+
+    // Shot Sound
+    if (_prevCell > 0) then {
+        private _cfg   = configFile >> "CfgWeapons" >> _weapon;
+        private _sound = getText (_cfg >> "BUZZ_shotSound");
+        if (_sound != "") then {
+            private _pitches = if (_prevCell <= getNumber (_cfg >> "BUZZ_lowCellShots")) then {
+                getArray (_cfg >> "BUZZ_lowCellPitches")
+            } else {
+                getArray (_cfg >> "BUZZ_shotPitches")
+            };
+            playSound3D [
+                _sound, _unit, false,
+                (getPosASL _unit) vectorAdd [0, 0, 2],
+                getNumber (_cfg >> "BUZZ_shotVolume"),
+                selectRandom _pitches,
+                getNumber (_cfg >> "BUZZ_shotDistance")
+            ];
+        };
     };
 
     if (_cell <= 0) then {
@@ -244,8 +238,6 @@ _atrt addEventHandler ["Fired", {
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  ANIM OVERRIDE  (all machines)
-//  Keeps the walker running when it fires on the move, instead of dropping
-//  to a walk/stop animation.
 // ─────────────────────────────────────────────────────────────────────────────
 _atrt addEventHandler ["AnimChanged", {
     params ["_unit", "_anim"];
@@ -259,8 +251,6 @@ _atrt addEventHandler ["AnimChanged", {
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  DAMAGE HANDLER  (all machines)
-//  Converts hits into the custom BUZZ_hp pool. Always returns 0 so Arma's own
-//  damage never builds up. Registered everywhere so it follows locality.
 // ─────────────────────────────────────────────────────────────────────────────
 _atrt addEventHandler ["HandleDamage", {
     params ["_unit", "_selection", "_damage", "_source", "_projectile"];
@@ -268,11 +258,9 @@ _atrt addEventHandler ["HandleDamage", {
     if (_unit getVariable ["BUZZ_dying", false]) exitWith { 0 };
 
     // Immunity Refresh
-    // 3AS scripts can turn damage back on — re-disable it on every hit.
     _unit allowDamage false;
 
     // Own-Weapon Splash
-    // No HP cost; brief recovery so the blast impulse can't leave the walker stuck.
     if (!isNull _source && _source isEqualTo _unit) exitWith {
         [_unit] spawn {
             params ["_u"];
@@ -288,7 +276,6 @@ _atrt addEventHandler ["HandleDamage", {
         0
     };
     // Physics Hits
-    // Collisions and hard jump landings — no HP cost, same recovery as above.
     if (_projectile == "" && isNull _source) exitWith {
         [_unit] spawn {
             params ["_u"];
@@ -305,7 +292,6 @@ _atrt addEventHandler ["HandleDamage", {
     };
 
     // Hit Classification
-    // Explosive = indirectHit > 5. Heavy = indirectHit or hit > 100 (rockets, not GLs).
     private _ammoCfg       = configFile >> "CfgAmmo" >> _projectile;
     private _indirect      = getNumber (_ammoCfg >> "indirectHit");
     private _hit           = getNumber (_ammoCfg >> "hit");
@@ -314,20 +300,17 @@ _atrt addEventHandler ["HandleDamage", {
     private _isHeavyExplosive = _isExplosive && (_indirect > 100 || _hit > 100);
 
     // Clear Unconscious
-    // The walker should never stay ACE-unconscious.
     if (_unit getVariable ["ace_unconscious", false]) then {
         _unit setVariable ["ace_unconscious", false, true];
         _unit setUnconscious false;
     };
 
     // Hit Throttle
-    // 200 ms between hits; explosives lock out 2.5 s so ACE frag counts as one hit.
     private _lastHit = _unit getVariable ["BUZZ_lastHit", -1.0];
     if (time - _lastHit < 0.200) exitWith { 0 };
     _unit setVariable ["BUZZ_lastHit", if (_isExplosive) then { time + 2.5 } else { time }];
 
     // Stagger Recovery
-    // 0.5 s after an explosion (once ACE has reacted), cancel the stagger so the walker can move.
     if (_isExplosive) then {
         [_unit] spawn {
             params ["_u"];
@@ -338,18 +321,12 @@ _atrt addEventHandler ["HandleDamage", {
                 _u setUnitPos "UP";
                 [_u, ""] remoteExec ["switchMove", 0];
                 // Physics Unfreeze
-                // Re-applying allowDamage clears the frozen state left by the blast impulse.
                 _u allowDamage false;
             };
         };
     };
 
     // HP Cost per Hit
-    // Tune durability here:
-    //   small arms         0.04  → ~25 hits to kill
-    //   heavy calibre      0.10  → ~10 hits to kill
-    //   light explosive    0.32  →  ~4 GL direct impacts to kill
-    //   heavy explosive    0.80  →  two rockets to kill
     private _hpDelta =
         if     (_isHeavyExplosive) then { 0.80  }
         else { if (_isExplosive)   then { 0.32  }
@@ -357,7 +334,6 @@ _atrt addEventHandler ["HandleDamage", {
         else                            { 0.04 }}};
 
     // HP Update
-    // Broadcast at most 10 times a second, or immediately on death.
     private _hp = ((_unit getVariable ["BUZZ_hp", 1.0]) - _hpDelta) max 0;
     _unit setVariable ["BUZZ_hp", _hp];
 
@@ -368,7 +344,6 @@ _atrt addEventHandler ["HandleDamage", {
     };
 
     // Death Sequence
-    // Grabs the box/shield/rider now (a dead unit returns objNull), then ejects the rider and kills the walker.
     if (_hp <= 0) then {
         _unit setVariable ["BUZZ_dying", true, true];
         private _dyingBox    = _unit getVariable ["supplyBox", objNull];
@@ -385,13 +360,8 @@ _atrt addEventHandler ["HandleDamage", {
                 _u setVariable ["shield", nil, true];
 
                 // Rider Release
-                // Hands control back to the rider BEFORE setDamage 1 — releasing a dead
-                // walker is unreliable and locks the camera. Runs locally if possible,
-                // otherwise remoteExecs to the rider (0.5 s head start).
 
                 // ACE Stuck-Camera Watcher
-                // For 30 s, re-releases the rider if ACE restores control of the walker
-                // after they wake up.
                 private _fnAceWatch = {
                     params ["_a", "_r"];
                     private _timeout = time + 30;
@@ -401,10 +371,8 @@ _atrt addEventHandler ["HandleDamage", {
                         !_stuck || !alive _r || time > _timeout
                     };
                     // Already Resolved
-                    // Rider died or control is back to normal.
                     if (!alive _r || !(vehicle _r isEqualTo _a || cameraOn isEqualTo _a)) exitWith {};
                     // Forced Release
-                    // Still stuck — hand control back to the rider.
                     _r setVariable ["ace_unconscious", false, true];
                     _r setUnconscious false;
                     objNull remoteControl _a;
@@ -512,8 +480,6 @@ _atrt addEventHandler ["HandleDamage", {
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  ACTIONS
-//  Scroll-menu actions. Re-installed at 0 s, 5 s, 15 s, then every 60 s so they
-//  replace the FST/3AS actions that the parent mod keeps re-adding.
 // ─────────────────────────────────────────────────────────────────────────────
 [_atrt] spawn {
     params ["_atrt"];
@@ -528,7 +494,6 @@ _atrt addEventHandler ["HandleDamage", {
 
 
 // ── SADDLE UP (Drive) ─────────────────────────────────────────────────────────
-// Mounts the player and gives them control of the walker, HUD, jump and eject.
 _v addAction [
     "Saddle Up",
     {
@@ -547,7 +512,6 @@ _v addAction [
         _atrt setVariable ["shield", _shield, true];
 
         // Take Control
-        // Release the player's own body, then remote-control the walker.
         objNull remoteControl driver _rider;
         player remoteControl _atrt;
 
@@ -558,11 +522,9 @@ _v addAction [
         _atrt setVariable ["ace_unconscious", false, true];
 
         // Auto Light
-        // Spotlight on when mounting in the dark (no effect while light.sqf is disabled).
         _atrt setVariable ["BUZZ_lightOn", sunOrMoon < 0.5, true];
 
         // Mounted Poll
-        // Every 0.25 s while ridden: clear stagger/unconscious states and prevent prone.
         [_atrt] spawn {
             params ["_a"];
             private _stuckAnimTicks = 0;
@@ -574,7 +536,6 @@ _v addAction [
                 _a setUnitPos "UP";
                 _a allowDamage false;
                 // Blast Recovery
-                // Clears blast knockouts within 0.25 s.
                 _a setUnconscious false;
                 if (behaviour _a != "CARELESS") then { _a setBehaviour "CARELESS"; };
                 if (_a getVariable ["ace_unconscious", false]) then {
@@ -583,8 +544,6 @@ _v addAction [
                 };
 
                 // Stuck Animation Fix
-                // Hard collisions can freeze the walker with an empty animation state.
-                // Tries switchMove first, then toggles simulation if still stuck a tick later.
                 if ((animationState _a) == "") then {
                     _stuckAnimTicks = _stuckAnimTicks + 1;
                     if (_stuckAnimTicks >= 2) then {
@@ -607,8 +566,6 @@ _v addAction [
             [_atrt, _rider] execVM "\BUZZ_Vehicles\ATRT\scripts\hud.sqf";
 
             // ── Variable jump system ──────────────────────────────────────────
-            // Hold V to aim (arc preview), release to jump. 21 m/s horizontal,
-            // 13.5 m/s vertical, 15° minimum angle, 15 s cooldown.
             uiNamespace setVariable ["BUZZ_jumpAiming", false];
             uiNamespace setVariable ["BUZZ_jumpAtrt",   _atrt];
 
@@ -644,7 +601,6 @@ _v addAction [
                 private _dir    = _camFwd vectorDiff _camPos;
 
                 // Launch Angle Clamp
-                // Raises vertical speed if the real launch angle is under 15°.
                 private _vel  = [(_dir select 0) * 21, (_dir select 1) * 21, (_dir select 2) * 13.5];
                 private _velH = sqrt ((_vel select 0)^2 + (_vel select 1)^2);
                 if (_velH < 0.001) then {
@@ -670,7 +626,6 @@ _v addAction [
                 private _dir    = _camFwd vectorDiff _camPos;
 
                 // Arc Preview
-                // Same 15° clamp as the launch, so the drawn arc matches the real jump.
                 private _ind    = uiNamespace getVariable ["BUZZ_jumpInd", objNull];
                 private _simPos = getPosASL _a;
                 private _simVel = [(_dir select 0) * 21, (_dir select 1) * 21, (_dir select 2) * 13.5];
@@ -693,7 +648,6 @@ _v addAction [
                         if (!isNull _ind) then { _ind setPosASL _simPos; };
                     };
                     // Arc Drawing
-                    // Line between steps plus a dot at each step.
                     drawLine3D [ASLToAGL _prev, ASLToAGL _simPos, [0.65, 0.95, 1.00, 0.45]];
                     drawIcon3D [
                         "\A3\ui_f\data\map\markers\military\circle_CA.paa",
@@ -710,11 +664,9 @@ _v addAction [
             _atrt setVariable ["BUZZ_jumpDrawEH", _jumpDrawEH];
 
             // ── Force eject (Ctrl+ESC) ───────────────────────────────────────────
-            // Installed once per client by fn_releaseWatchdog.sqf, not per mount.
         };
 
         // Auto-Eject
-        // Dismounts the rider if they die or go unconscious, or the walker dies.
         [_atrt, _rider] spawn {
             params ["_atrt", "_rider"];
 
@@ -727,10 +679,8 @@ _v addAction [
             };
 
             // Already Dismounted
-            // Rider left on their own — nothing to do.
             if (isNull (_atrt getVariable ["rider", objNull])) exitWith {};
             // Walker Died
-            // Give the death sequence 1 s to release the rider itself, to avoid double cleanup.
             if (!alive _atrt) then {
                 private _dt = time + 1.0;
                 waitUntil { isNull (_atrt getVariable ["rider", objNull]) || time > _dt };
@@ -740,7 +690,6 @@ _v addAction [
             [_rider, ""] remoteExec ["switchMove", 0];
             detach _rider;
             // Safe Reposition
-            // Only move the rider if the walker still exists, otherwise they'd land at map origin.
             if (alive _atrt && alive _rider) then { _rider setPos (_atrt modelToWorld [0, -4.0, 0]); };
             objNull remoteControl driver _atrt;
             _rider remoteControl _rider;
@@ -785,7 +734,6 @@ _v addAction [
 
 
 // ── BUCK OFF (Dismount) ───────────────────────────────────────────────────────
-// Dismounts the rider behind the walker and removes the jump/eject handlers.
 _v addAction [
     "Buck Off",
     {
@@ -841,7 +789,6 @@ _v addAction [
 
 
 // ── REPACK AT-RT ──────────────────────────────────────────────────────────────
-// 10 s pack into a transport crate, keeping HP, power cell and reserves.
 _v addAction [
     "Repack AT-RT",
     {
@@ -899,13 +846,11 @@ _v addAction [
 
 
 // ── OPEN INVENTORY ────────────────────────────────────────────────────────────
-// Opens the supply box gear screen.
 _v addAction [
     "Open ATRT Inventory",
     {
         params ["_atrt", "_caller"];
         // Box Resync
-        // Asks the server to re-send the box and cargo, in case this client missed them.
         [_atrt] remoteExecCall ["BUZZ_fnc_resyncBoxServer", 2];
         [_atrt, _caller] spawn {
             params ["_atrt", "_caller"];
@@ -914,7 +859,6 @@ _v addAction [
             private _box = _atrt getVariable ["supplyBox", objNull];
             if (isNull _box) exitWith { hint "Inventory not available yet — try again in a moment."; };
             // Cargo Wait
-            // Gives the resynced cargo time to arrive, so the box doesn't open empty.
             sleep 0.3;
             _caller action ["gear", _box];
         };
@@ -933,7 +877,6 @@ _v addAction [
 
 
 // ── LOAD INTO LAAT/i ──────────────────────────────────────────────────────────
-// Walks the walker into a nearby LAAT/i and stows it (see fn_laatiLoad*.sqf).
 _v addAction [
     "Load into LAAT/i",
     "\BUZZ_Vehicles\ATRT\scripts\fn_laatiLoadAction.sqf",
@@ -958,7 +901,6 @@ _v addAction [
     sleep 10;
     [_atrt] call _fnInstall;
     // Periodic Re-Install
-    // Every 60 s, in case 3AS re-adds its own actions late.
     while { alive _atrt } do {
         sleep 60;
         [_atrt] call _fnInstall;
@@ -967,7 +909,6 @@ _v addAction [
 
 
 // ── ACE REPAIR INTERACTION ─────────────────────────────────────────────────────
-// Engineer repair (and cancel) via ACE interaction. Not affected by removeAllActions.
 if (hasInterface) then {
     [_atrt] spawn {
         params ["_atrt"];
@@ -1027,7 +968,7 @@ if (hasInterface) then {
                 (_target getVariable ["BUZZ_hp", 1.0]) < 0.75
                 && !(_target getVariable ["BUZZ_repairing", false])
                 && !((_target getVariable ["rider", objNull]) isEqualTo _player)
-                && ((items _player) findAny ["ToolKit", "FST_SmallToolkit", "FST_LargeToolkit"] > -1)
+                && (((items _player) findIf { _x isKindOf ["ToolKit", configFile >> "CfgWeapons"] }) > -1)
                 && ([_player] call ace_common_fnc_isEngineer)
             },
             {},

@@ -1,6 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — fn_orbitalDropInit.sqf
-//  postInit. Registers the Zeus module "[BUZZ] AT-RT Orbital Drop" (needs ZEN).
 // =============================================================================
 if (!hasInterface) exitWith {};
 

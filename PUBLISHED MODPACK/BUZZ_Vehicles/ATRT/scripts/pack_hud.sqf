@@ -1,13 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — pack_hud.sqf
-//  Progress overlay for AT-RT packing and unpacking operations.
-//  Same layout as repair_hud.sqf. ESC cancels by clearing BUZZ_packing on the
-//  subject. No partial progress — the operation either completes or is aborted.
-//  _this = [subject, caller, duration, title]
-//    subject  = AT-RT (repack) or crate (unpack) — carries BUZZ_packing flag
-//    caller   = player performing the operation
-//    duration = seconds (30 pack / 20 unpack)
-//    title    = header text shown on the panel
 // =============================================================================
 disableSerialization;
 params ["_subject", "_caller", "_duration", "_title", ["_varName", "BUZZ_packing"]];
@@ -73,10 +65,7 @@ private _cPctW  = _cw * 0.45;
 private _cTimeX = _cx + _cPctW;
 private _cTimeW = _cw * 0.55;
 
-// Post-update ArmA 3 clips glyph tops against the control's own top edge —
-// text now renders anchored toward the bottom of its box instead of centred,
-// so every text (not background/divider) control needs extra room added
-// ABOVE its nominal box, with the bottom edge left where the layout put it.
+// Text top padding
 private _txtPad = safeZoneH * 0.014;
 
 // ─── Create controls ─────────────────────────────────────────────────────────
@@ -156,7 +145,7 @@ _cHint ctrlSetText "PRESS ESC TO CANCEL";
 _cPct  ctrlSetText "0%";
 _cTime ctrlSetText format ["%1s remaining", round _duration];
 
-// ─── Escape key cancels — bake subject NetId into handler so it's accessible ──
+// ─── Escape key cancel ────────────────────────────────────────────────────────
 private _subjNetId = netId _subject;
 private _escEH = (findDisplay 46) displayAddEventHandler ["KeyDown", compile format [
     "params ['_d','_k']; if (_k != 1) exitWith {false}; (objectFromNetId '%1') setVariable ['%2',false,true]; true",

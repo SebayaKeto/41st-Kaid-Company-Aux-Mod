@@ -1,11 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — reserve_supply_init.sqf
-//  Called via class EventHandlers { init = "..."; } in config.cpp.
-//  Standalone placeable prop holding 9x BUZZ_ATRT_T15ReserveMag for any AT-RT rider
-//  to draw reserve ammo from. Unlike the AT-RT itself (a Man-class unit with no
-//  native cargo hold, hence the attached invisible box in ATRT\scripts\init.sqf),
-//  this crate's base class already has a working cargo inventory, so the
-//  magazines just live directly in it — open with the default Gear interaction.
 // =============================================================================
 
 private _prop = _this;
@@ -17,9 +11,7 @@ if (isServer) then {
     clearBackpackCargoGlobal _prop;
     _prop addMagazineCargoGlobal ["BUZZ_ATRT_T15ReserveMag", 16];
 
-    // Re-broadcast after a delay in case a client still missed the cargo
-    // broadcast above — same JIP-safety concern documented throughout this
-    // addon (see ATRT\scripts\init.sqf and fn_resyncBoxServer.sqf).
+    // Cargo re-broadcast
     [_prop] spawn {
         params ["_p"];
         sleep 2;

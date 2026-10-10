@@ -1,9 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — hud.sqf
-//  Horizontal two-row layout: header HP bar + three-column stat strip.
-//  Top-right placement, overlaying the default ArmA 3 HUD.
-//  Retains L-bracket corners and cascading scan lines from previous design.
-//  _this = [_atrt, _rider]
 // =============================================================================
 
 disableSerialization;
@@ -43,13 +39,12 @@ private _py  = safeZoneY + safeZoneH * 0.007;
 private _px2 = _px + _pw;
 
 // ─── Row heights ──────────────────────────────────────────────────────────────
-// RULE: control height >= 2× font height (ArmA 3 descender clipping).
-private _hAcct = safeZoneH * 0.0025; // top/bottom accent lines     (no text)
-private _hHdr  = safeZoneH * 0.0540; // header row                  font 0.0240 (ratio 2.25×)
-private _hDiv  = safeZoneH * 0.0012; // horizontal divider          (no text)
-private _hLbl  = safeZoneH * 0.0280; // SPEED / AMMO / JUMP labels  font 0.0130 (ratio 2.15×)
-private _hVal  = safeZoneH * 0.0600; // large numeric values        font 0.0280 (ratio 2.14×)
-private _hUnit = safeZoneH * 0.0210; // km/h / Reserves sub-labels  font 0.0105 (ratio 2.00×)
+private _hAcct = safeZoneH * 0.0025;
+private _hHdr  = safeZoneH * 0.0540;
+private _hDiv  = safeZoneH * 0.0012;
+private _hLbl  = safeZoneH * 0.0280;
+private _hVal  = safeZoneH * 0.0600;
+private _hUnit = safeZoneH * 0.0210;
 
 private _fHdr  = safeZoneH * 0.0240;
 private _fLbl  = safeZoneH * 0.0130;
@@ -72,20 +67,13 @@ private _yAT   = _py;
 private _yHdr  = _yAT   + _hAcct + _padO;
 private _yDivH = _yHdr  + _hHdr  + _padI;
 private _yLbl  = _yDivH + _hDiv + _padI;
-// Position each row so its text starts _colGap below the previous row's text.
-// Controls overlap positionally but all have transparent backgrounds — no visual issue.
-// Formula: next_text_top = curr_text_bottom + _colGap
-//          _yNext = _yCurr + (_hCurr + _fCurr) * 0.5 + _colGap - (_hNext - _fNext) * 0.5
+// Row text positions
 private _colGap = safeZoneH * 0.005;
 
-// Post-update ArmA 3 clips glyph tops against the control's own top edge —
-// text now renders anchored toward the bottom of its box instead of centred,
-// so every text (not background/divider) control needs extra room added
-// ABOVE its nominal box, with the bottom edge left where the layout put it.
+// Text top padding
 private _txtPad = safeZoneH * 0.014;
 private _yVal  = _yLbl + (_hLbl + _fLbl) * 0.5 + _colGap - (_hVal - _fVal) * 0.5;
-// Value row's actual (bottom-anchored) text sits _txtPad lower than this
-// centred-text formula assumes — added directly here so Unit doesn't overlap it.
+// Value row offset
 private _yUnit = _yVal + (_hVal + _fVal) * 0.5 + _colGap - (_hUnit - _fUnit) * 0.5 + _txtPad;
 private _yAB   = _yUnit + _hUnit + _padO;
 private _ph    = (_yAB  + _hAcct) - _py;
@@ -99,7 +87,6 @@ private _s4Spd = 0.035 + random 0.085; private _s4Pha = random 1.0; private _s4H
 private _s5Spd = 0.035 + random 0.085; private _s5Pha = random 1.0; private _s5H = safeZoneH * (0.0012 + random 0.0038);
 
 // ─── Header layout — "AT-RT UNIT" block + HP fill area ────────────────────────
-// Title block occupies left 24% of panel; HP bar fills the remaining 76%.
 private _titleW = _pw * 0.240;
 private _hpX   = _px  + _titleW;
 private _hpW   = _pw  - _titleW;
@@ -111,7 +98,7 @@ private _col1X = _px;
 private _col2X = _col1X + _colW + _divW;
 private _col3X = _col2X + _colW + _divW;
 
-// Height of the entire stats strip (from divider bottom to bottom accent top).
+// Stats strip height
 private _statH = _yAB - (_yDivH + _hDiv);
 
 // ─── Supply box reference ─────────────────────────────────────────────────────
@@ -142,7 +129,7 @@ private _cBR_V  = _disp ctrlCreate ["RscText", -1];
 private _cAT = _disp ctrlCreate ["RscText", -1];
 private _cAB = _disp ctrlCreate ["RscText", -1];
 
-// Header text — created after fills so they render above the HP fill.
+// Header text
 private _cTitle  = _disp ctrlCreate ["RscText", -1]; // "AT-RT UNIT"
 private _cHpLbl  = _disp ctrlCreate ["RscText", -1]; // "HULL INTEGRITY"
 private _cPct    = _disp ctrlCreate ["RscText", -1]; // "100%"
@@ -156,16 +143,16 @@ private _cSpdLbl  = _disp ctrlCreate ["RscText", -1];
 private _cAmmoLbl = _disp ctrlCreate ["RscText", -1];
 private _cJmpLbl  = _disp ctrlCreate ["RscText", -1];
 
-// Stat column values (large, middle row)
+// Stat column values
 private _cSpd  = _disp ctrlCreate ["RscText", -1];
 private _cAmmo = _disp ctrlCreate ["RscText", -1];
 private _cJmp  = _disp ctrlCreate ["RscText", -1];
 
-// Stat column units (small, bottom row) — JUMP has no sub-label.
+// Stat column units
 private _cSpdU  = _disp ctrlCreate ["RscText", -1];
 private _cAmmoU = _disp ctrlCreate ["RscText", -1];
 
-// Scan lines — created last so they render above all static elements.
+// Scan lines
 private _cScan1 = _disp ctrlCreate ["RscText", -1];
 private _cScan2 = _disp ctrlCreate ["RscText", -1];
 private _cScan3 = _disp ctrlCreate ["RscText", -1];
@@ -192,12 +179,11 @@ _cBR_V     ctrlSetPosition [_px2 - _crnTW,      _py + _ph - _crnH,   _crnTW,    
 _cAT       ctrlSetPosition [_px,                _yAT,                _pw,               _hAcct      ]; _cAT       ctrlCommit 0;
 _cAB       ctrlSetPosition [_px,                _yAB,                _pw,               _hAcct      ]; _cAB       ctrlCommit 0;
 
-// Title text — left-aligned with inner horizontal margin. Y/H padded per
-// _txtPad above (see comment) — bottom edge unchanged, room added above.
+// Title text
 _cTitle    ctrlSetPosition [_px + _padX,          _yHdr  - _txtPad,   _titleW - _padX,   _hHdr  + _txtPad]; _cTitle    ctrlCommit 0;
-// HP label — left-aligned just inside the fill area.
+// HP label
 _cHpLbl    ctrlSetPosition [_hpX + _padX,         _yHdr  - _txtPad,   _hpW * 0.60,       _hHdr  + _txtPad]; _cHpLbl    ctrlCommit 0;
-// Percentage — narrow control anchored to the right edge so left-aligned text sits flush right.
+// Percentage
 private _pctW = safeZoneW * 0.044;
 _cPct      ctrlSetPosition [_px2 - _pctW - _padX, _yHdr  - _txtPad,   _pctW,             _hHdr  + _txtPad]; _cPct      ctrlCommit 0;
 
@@ -215,7 +201,7 @@ _cJmp      ctrlSetPosition [_col3X,             _yVal  - _txtPad,    _colW,     
 _cSpdU     ctrlSetPosition [_col1X,             _yUnit - _txtPad,    _colW,             _hUnit + _txtPad]; _cSpdU     ctrlCommit 0;
 _cAmmoU    ctrlSetPosition [_col2X,             _yUnit - _txtPad,    _colW,             _hUnit + _txtPad]; _cAmmoU    ctrlCommit 0;
 
-// Scan lines: initial positions spread by randomised phase.
+// Scan line start positions
 _cScan1 ctrlSetPosition [_px, _yDivH + _s1Pha * _scanRange, _pw, _s1H]; _cScan1 ctrlCommit 0;
 _cScan2 ctrlSetPosition [_px, _yDivH + _s2Pha * _scanRange, _pw, _s2H]; _cScan2 ctrlCommit 0;
 _cScan3 ctrlSetPosition [_px, _yDivH + _s3Pha * _scanRange, _pw, _s3H]; _cScan3 ctrlCommit 0;
@@ -292,12 +278,12 @@ _cAmmoU   ctrlSetText "x0 Reserves";
 while { player isEqualTo (_atrt getVariable ["rider", objNull]) && alive _atrt } do {
     private _health = _atrt getVariable ["BUZZ_hp", 1.0];
 
-    // HP fill — shrinks from right as HP drops.
+    // HP fill
     private _fillW = (_hpW * _health) max 0.001;
     _cHpFil ctrlSetPosition [_hpX, _yHdr, _fillW, _hHdr];
     _cHpFil ctrlCommit 0;
 
-    // HP bar and percentage color — four tiers, critical flashes at ~3 Hz.
+    // HP color
     private _fillCol =
         if     (_health >= 0.75) then { _colGreen  }
         else { if (_health >= 0.50) then { _colYellow }
@@ -312,12 +298,10 @@ while { player isEqualTo (_atrt getVariable ["rider", objNull]) && alive _atrt }
     private _kph = round (speed _atrt);
     _cSpd ctrlSetText (str _kph);
 
-    // Sprint speed boost via setAnimSpeedCoef — correct lever for 3AS-based walkers.
-    // Walk stays at coef 1.0 (~13 km/h); sprint scaled to ~55 km/h.
-    // Threshold 22 sits between walk (~13) and base sprint (~33) to detect the gait.
+    // Sprint speed boost
     _atrt setAnimSpeedCoef (if (_kph > 22) then { 1.667 } else { 1.0 });
 
-    // Ammo — power cell counter + reserve magazine count from supply box.
+    // Ammo
     private _rounds = _atrt getVariable ["BUZZ_powerCell", 0];
     private _c = if (!isNull _box) then { getMagazineCargo _box } else { [[], []] };
     private _i = (_c select 0) find "BUZZ_ATRT_T15ReserveMag";
@@ -343,7 +327,7 @@ while { player isEqualTo (_atrt getVariable ["rider", objNull]) && alive _atrt }
         _cJmp ctrlSetText (str _cdLeft + "s");
     };
 
-    // Scan lines — randomised speed and phase so they never bunch.
+    // Scan lines
     _cScan1 ctrlSetPosition [_px, _yDivH + ((time * _s1Spd + _s1Pha) mod 1.0) * _scanRange, _pw, _s1H]; _cScan1 ctrlCommit 0;
     _cScan2 ctrlSetPosition [_px, _yDivH + ((time * _s2Spd + _s2Pha) mod 1.0) * _scanRange, _pw, _s2H]; _cScan2 ctrlCommit 0;
     _cScan3 ctrlSetPosition [_px, _yDivH + ((time * _s3Spd + _s3Pha) mod 1.0) * _scanRange, _pw, _s3H]; _cScan3 ctrlCommit 0;
@@ -353,7 +337,7 @@ while { player isEqualTo (_atrt getVariable ["rider", objNull]) && alive _atrt }
     sleep 0.1;
 };
 
-_atrt setAnimSpeedCoef 1.0; // reset on dismount so next rider starts clean.
+_atrt setAnimSpeedCoef 1.0;
 
 // ─── Cleanup ─────────────────────────────────────────────────────────────────
 { ctrlDelete _x } forEach [

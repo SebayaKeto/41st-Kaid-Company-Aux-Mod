@@ -1,19 +1,5 @@
 // =============================================================================
 //  BUZZ AT-RT — fn_orbitalDropServer.sqf
-//  Server-side. Drops 1-8 BUZZ_ATRT_TransportCrate objects on parachutes.
-//
-//  Params:
-//    0: ARRAY  - module position (ASL)
-//    1: NUMBER - crate count (clamped 1-8)
-//    2: NUMBER - drop height in metres (clamped 500-3000, default 1000)
-//    3: NUMBER - parachute deploy height in metres (clamped 100-1000, default 100)
-//
-//  Each crate:
-//    - lands at a random point within 50m of the module, >= 7m from other crates
-//    - spawns at the drop height (500-3000m) and free-falls at 50m/s
-//    - deploys a parachute at the chute height (100-1000m) and decelerates to 5m/s
-//    - on touchdown the parachute is deleted and green smoke marks the crate
-//  Crates are released 1s apart.
 // =============================================================================
 if (!isServer) exitWith {};
 
@@ -33,7 +19,7 @@ private _minGap       = 7;
 _count       = ((round _count) max 1) min 8;
 _dropHeight  = (_dropHeight max 500) min 3000;
 _chuteHeight = (_chuteHeight max 100) min 1000;
-// Chute must open below the release point
+// Chute height clamp
 _chuteHeight = _chuteHeight min (_dropHeight - 50);
 private _center = ASLtoATL _centerASL;
 
@@ -57,7 +43,6 @@ for "_i" from 1 to _count do {
 // -----------------------------------------------------------------------------
 //  Release the crates, staggered
 // -----------------------------------------------------------------------------
-// remoteExecCall runs this unscheduled, so the stagger loop needs its own scheduled scope
 [_landings, _dropHeight, _chuteHeight, _fallSpeed, _landSpeed, _chuteDecel] spawn {
 params ["_landings", "_dropHeight", "_chuteHeight", "_fallSpeed", "_landSpeed", "_chuteDecel"];
 {
@@ -70,11 +55,11 @@ params ["_landings", "_dropHeight", "_chuteHeight", "_fallSpeed", "_landSpeed", 
         _crate setVectorDirAndUp [[sin _dir, cos _dir, 0], [0, 0, 1]];
         _crate setVelocity [0, 0, -_fallSpeed];
 
-        // Let Zeus see and edit the crate
+        // Zeus editable
         { _x addCuratorEditableObjects [[_crate], true]; } forEach allCurators;
 
         private _chute   = objNull;
-        private _phase   = 0;   // 0 = free fall, 1 = under canopy, 2 = touchdown
+        private _phase   = 0;   // fall phase
         private _vz      = -_fallSpeed;
         private _last    = time;
 
@@ -104,7 +89,7 @@ params ["_landings", "_dropHeight", "_chuteHeight", "_fallSpeed", "_landSpeed", 
 
         if (isNull _crate) exitWith { deleteVehicle _chute; };
 
-        // Touchdown: release the crate, drop the canopy
+        // Touchdown
         detach _crate;
         _crate setVelocity [0, 0, -1];
         deleteVehicle _chute;
