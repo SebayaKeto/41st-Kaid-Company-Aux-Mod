@@ -1,0 +1,10 @@
+Daara update
+
+- New halberd carry and idles: lead carry, two-hand guard and shoulder rest.
+- Her own block system: footwork guard, five block reactions on a deflect, and blocking on the move.
+- New attack flow using the double-blade attack set.
+- White-hot sparks on a deflect.
+- Parade rest and tabard fixes.
+- No other file changes.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -1,0 +1,5 @@
+Published 2026-10-10 00:12 EDT on Miran's go in the Aux Updater chat: "push V9C" (manifest 2229783304758650637, time_updated 1791605551, 78 files / 6,549,870,949 B).
+Base: L2-aifire-v8q-meapcore. Changed: ck_character_v8 + ck_daara_halberd; added ck_daara_moves = Project Daara V9C (D:/CharacterKit/claude_v8/shipped/V9C_approved_20261009, MD5 973b4c65 / cc8b5b17 / 23007b07). Relayed: Miran 9 Oct 23:50 in the Project Daara chat, "send it to aux updater".
+Supersedes the held Daara V8U and V8T (never shipped).
+Checks: publish_release --check ready; engine D:/AuxUpdater/aatcrew/prof-av9c (moves=CfgMovesDaara, 6480 states, Jedi walk/run, 0 script errors, preload 2.58 s) and D:/AuxUpdater/perf/hc-v9chc (server + 4 HCs: errors identical to the V8U baseline, preload 2.6-3.0 s).
+Not included: the B1 droid AI work in progress (FST_HCSpawn working copy, uncommitted).
