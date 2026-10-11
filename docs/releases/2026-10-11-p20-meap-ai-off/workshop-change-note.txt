@@ -1,0 +1,5 @@
+MEAP AI hotfix
+
+- MEAP's automatic AI director is switched off. It was re-ordering mission AI near players every 10 seconds. AI behaviour stays with the 41st's own AI (BURNS). Everything else in MEAP is unchanged.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -1,0 +1,6 @@
+Published 2026-10-11 12:22 EDT on Miran's go in the Aux Updater chat ("Get it in, leave out the test fixture no excuses and you own MEAP now"; "push P19 when ready") (manifest 1495921659711236321, 99 files / 7,178,556,860 B).
+Base: live P17. Package: Downloads/Steam-aux-release-20261011-P19-dc15s-meap (scripts D:/AuxUpdater/aatcrew/make_p18.py + make_p19.py).
+- 41st_DC15: DC-15S release (DC-15 Project; Miran "yes S"), ec3c0b52; not tracked in this repo.
+- MEAP (Miran's archives addons.rar / MEAP_V1-2.rar of 11 Oct; the Aux Updater owns MEAP from now on): 6 updated (Core, Architect_Core, Economy_Core, SW_Core, SW_Props, SW_Structures), 17 new (AI_Core/_Modules, Campaign_Core, Effects_Core, Equipment_Core, Lighting_Core/_Modules, Objectives_Core/_Modules, Operations_Core, SW_Droids/_Effects/_Grenades/_Vehicles, Zeus_Core/_Modules, trellis_core). Left out: wallRepairFixtures.pbo (test fixture) and all *.bisign. MEAP PBOs are not yet synced into this repo.
+- DEFECT found after publish: MEAP_AI_Modules auto-starts its AI director (CfgFunctions startDirector postInit = 1) and re-steers every server-local AI group near players every 10 s. Fixed 6 min later in P20.
+Engine-tested: P18 boot; P19 single server + 4 HCs (0 MEAP script errors, 0 missing addons, BURNS squads armed on HCs); --check ready.

@@ -1,0 +1,5 @@
+Published 2026-10-11 12:28 EDT on Miran's go in the Aux Updater chat: "push P20 when ready" (manifest 2547810272814398821, 99 files / 7,178,556,739 B). First attempt at 12:26 failed before upload (Steam Web API read timeout in publish_release.py details()); retried.
+Base: live P19. Package: Downloads/Steam-aux-release-20261011-P20-meap-ai-off (script D:/AuxUpdater/aatcrew/make_p20.py).
+- MEAP_AI_Modules: functions\fn_startDirector.sqf replaced by a stub (no director; logs "[MEAP_AI] director disabled in the 41st Aux: BURNS (FST_HCSpawn) owns AI"). Miran: "Can we just kill MEAP's AI handling and subsume it?". The addon stays because MEAP_Operations_Core requires it. Original: D:/AuxUpdater/meap_ai_off/fn_startDirector.orig.sqf.
+- Pending (not shipped): MEAP <-> BURNS integration of the Eden AI modules (subagent build D:/AuxUpdater/meap_burns, engine test after the op).
+Engine-tested: single-server boot shows the stub line, 0 errors, 0 missing addons; --check ready.

@@ -1,0 +1,7 @@
+DC-15S and MEAP update
+
+- New DC-15S blaster on the 41st's own model (normal and fried versions). The DC-15S UGL is unchanged.
+- MEAP framework update: updated Core, Architect, Economy and Star Wars content, plus new MEAP modules (AI, Campaign, Operations,
+  Objectives, Equipment, Lighting, Effects, Zeus) and new Star Wars droids, grenades, effects and vehicles.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
