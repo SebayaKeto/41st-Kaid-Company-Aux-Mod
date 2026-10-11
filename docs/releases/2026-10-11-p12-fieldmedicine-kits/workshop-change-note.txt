@@ -1,0 +1,15 @@
+Field medicine
+
+New medical items (work with ACE bandaging)
+- Kolto Wrap: everyday wrap for scrapes and cuts. Weak on deep wounds, and wounds reopen more often.
+- Coagulant Foam: seals deep bleeders (avulsions, punctures, velocity wounds) and rarely reopens. Medics only by default.
+- Synthflesh Sheet: for blaster burns and wide surface wounds.
+- Field Medicine Crate: 60 Kolto, 30 Synthflesh, 30 Foam, 40 Bacta, 10 tourniquets.
+
+Changes
+- Bacta Bandage is now best on surface wounds and burns and weaker on deep wounds. Reopening is unchanged.
+- Kit Menu: riflemen carry 12 Kolto, 4 Synthflesh and 6 Bacta instead of 20 Bacta. Medics carry 40 Bacta, 15 Foam, 10 Synthflesh and 10 Kolto instead of 80 Bacta. Kits are lighter.
+- CBA settings: who may use Bacta (default anyone) and Coagulant Foam (default medics).
+- Bandages never change how much damage it takes to go down.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -1,0 +1,5 @@
+Published 2026-10-11 01:08 EDT on Miran's go in the Aux Updater chat: "push P12 when ready" (manifest 5873355406821896301, time_updated 1791695329, 84 files / 6,718,691,332 B).
+Base: live P11E (manifest 8906790774757173848). Package: Downloads/Steam-aux-release-20261011-P12-fieldmedicine-kits (build script D:/AuxUpdater/aatcrew/make_p12.py).
+Added: FST_FieldMedicine 1.0.0 (Catboy Medical; Kolto Wrap, Coagulant Foam, Synthflesh Sheet, crate, IDA Bacta effectiveness rebalance; Miran "Build it", "Do all of it").
+Changed: 41st_KitMenu kits/Current_Kits.sqf, P1_Kits.sqf, Snow_Kits.sqf (Catboy Medical patches): 55/53/54 rifleman-type kits Bacta 20 -> Kolto 12 + Synthflesh 4 + Bacta 6; 7 medic kits per file Bacta 80 -> Bacta 40 + Foam 15 + Synthflesh 10 + Kolto 10.
+Engine-tested on this PC: AuxFieldMedCheck (prof-fm12: items, actions, tables, crate contents, ground items, CBA defaults, Bacta values; every kit item class exists; 0 fails, 0 script errors); P12 boot single server + 4 HCs identical to P11E; publish_release.py --check ready. Not tested here: the client medical menu UI.
