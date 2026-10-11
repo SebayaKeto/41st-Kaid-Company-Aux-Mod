@@ -1,0 +1,7 @@
+Published 2026-10-11 13:04 EDT on Miran's go in the Aux Updater chat: "push P23" (manifest 3557682571743815809, 82 files / 7,179,640,878 B).
+Base: live P22. Package: Downloads/Steam-aux-release-20261011-P23-meap-rollback (D:/AuxUpdater/aatcrew/make_p23.py).
+OP-BLOCKING DEFECT fixed: the MEAP update (P19) renamed every MEAP_SW_Structures class (6) and every MEAP_SW_Props class (26). Mission "Geonosis W2: Ray Shield Fortress" looped on "No entry 'bin\config.bin/CfgVehicles.MEAP_SW_Structures_Desert_BP_Floor_ONE'" at RS start (~13:00).
+- MEAP back to the P17 files (MEAP_Core, Architect_Core, Economy_Core, SW_Core, SW_Props, SW_Structures); the 17 MEAP addons added in P19 removed (incl. MEAP_AI_* and the director stub of P20).
+- Everything else = P22 (DC-15 Codex finishes + UGLs, hive shadow fix, B2 wounds, Daara V9P, c7 terrain, droid AI V52).
+Not boot-tested before publishing (op waiting); this MEAP set booted clean in P10-P18. --check ready.
+LESSON: MEAP updates must be checked for removed/renamed CfgVehicles classes against the live build AND against the classes used by current missions before shipping.

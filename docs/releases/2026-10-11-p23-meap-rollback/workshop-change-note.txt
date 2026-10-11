@@ -1,0 +1,6 @@
+MEAP rolled back
+
+- The MEAP update from earlier today is rolled back: it renamed MEAP structure and prop objects, so existing missions could not load. MEAP is back to the version the missions were built with.
+- Everything else from today stays (DC-15 finishes and grenade launchers, Geonosis hives, blaster wounds, Daara).
+
+Let Steam finish the update, restart the server and headless clients, then start the mission.
