@@ -1,0 +1,4 @@
+Published 2026-10-11 11:47 EDT on Miran's go in the Aux Updater chat: "push P17 when ready" (manifest 2168094561806638170, time_updated 1791733661, 82 files / 7,137,608,252 B).
+Base: live P16C (manifest 1339883873953915270). Package: Downloads/Steam-aux-release-20261011-P17-daara-v9p (build script D:/AuxUpdater/aatcrew/make_p17.py).
+Changed: ck_character_v8 = Project Daara V9P (md5 843a7cd200d1473f9797209c1d27d4dd): new ck_uniform.p3d (straight glove/sleeve border at both wrists); the 8 .rtm are BMTR again. Live V9O (P16C) had shipped them raw (RTM_0101 / RTM_MDAT, ~8x larger); V9P's idle / wlk_df / run_df / hip_turnl / hip_turnr are byte-identical to V9N, only the 3 parade files differ (intended). Project Daara told.
+Engine-tested on this PC: P17 single server + 4 HCs (6 rounds) identical to P16C; publish_release.py --check ready.

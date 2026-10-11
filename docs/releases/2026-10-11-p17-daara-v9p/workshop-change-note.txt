@@ -1,0 +1,6 @@
+Daara update
+
+- The glove and sleeve now meet in one clean line at both wrists.
+- Her animations load in the normal compiled form again (smaller download).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
