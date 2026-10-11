@@ -1,0 +1,15 @@
+Medic kit fix and new medic tools
+
+Fix
+- Medic kits no longer overflow the medic backpacks: medics get all their splints and tourniquets again (Bacta in the medic backpack 40 -> 20; Coagulant Foam covers deep wounds).
+
+New medic tools (Addon Options > "41st Medic Ops", each can be switched off)
+- Cardio-stim: a 5 second defibrillator shock instead of CPR.
+- Adrenal Stim: a field revive that lasts 90 seconds, then the patient crashes unless properly treated.
+- Clone Transfusion: anyone can give 500 ml of blood.
+
+Kit Menu
+- Medics carry 1 Cardio-stim and 4 Adrenal Stims.
+- Troopers carry 8 Kolto, 3 Synthflesh and 2 Bacta (was 12 / 4 / 6).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -53,3 +53,21 @@
     ["Internal bleeding chance (%)", "Chance a heavy torso hit (0.3+) on a player starts hidden internal bleeding: a slow blood loss that bacta does not fix. Found by checking vitals or with a Medscanner; a medic seals it (torso, Coagulant Foam or cauterizer). 0 = off."],
     ["41st Medic Ops", "Internal bleeding"], [0, 100, 25, 0], 1
 ] call CBA_fnc_addSetting;
+
+[
+    "FST_medOps_cardioStimOn", "CHECKBOX",
+    ["Cardio-stim (defibrillator)", "Medic-only 5 s shock for cardiac arrest (same success rule as CPR), 20 s recharge."],
+    ["41st Medic Ops", "Medic tools"], true, 1
+] call CBA_fnc_addSetting;
+
+[
+    "FST_medOps_joltOn", "CHECKBOX",
+    ["Adrenal jolt", "Medic-only injector: an unconscious trooper is up for 90 s, then crashes unless stabilised."],
+    ["41st Medic Ops", "Medic tools"], true, 1
+] call CBA_fnc_addSetting;
+
+[
+    "FST_medOps_transfusionOn", "CHECKBOX",
+    ["Clone transfusion", "Any trooper can give 500 ml of their own blood to another clone (needs 5.5 L+)."],
+    ["41st Medic Ops", "Medic tools"], true, 1
+] call CBA_fnc_addSetting;

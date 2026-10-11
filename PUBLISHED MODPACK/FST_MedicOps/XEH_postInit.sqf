@@ -28,6 +28,10 @@ if (isServer) then {
     params ["_patient"];
     if (!local _patient || {!(missionNamespace getVariable ["FST_medOps_report", true])}) exitWith {};
     private _medic = _patient getVariable ["ace_medical_CPR_provider", objNull];
+    if (isNull _medic) then {   // Cardio-stim shocks carry their medic separately (last 10 s)
+        (_patient getVariable ["FST_medOps_lastStimBy", [objNull, -100]]) params ["_stimBy", "_at"];
+        if (CBA_missionTime - _at < 10) then { _medic = _stimBy; };
+    };
     if (isNull _medic || {!isPlayer _medic} || {_medic == _patient}) exitWith {};
     ["FST_medOps_stat", [getPlayerUID _medic, name _medic, ["revive"], getPlayerUID _patient]] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addEventHandler;
@@ -59,6 +63,28 @@ FST_medOps_mists = [];
 // --- every machine: internal bleeding (start on heavy torso hits; drain local units every 2 s)
 ["ace_medical_woundReceived", { _this call FST_medOps_fnc_internalWound }] call CBA_fnc_addEventHandler;
 [{ [] call FST_medOps_fnc_internalTick }, 2] call CBA_fnc_addPerFrameHandler;
+
+// --- every machine: medic tools (adrenal jolt on the patient's machine, transfused blood, shock effects)
+["FST_medOps_jolt", { _this call FST_medOps_fnc_joltLocal }] call CBA_fnc_addEventHandler;
+[{ [] call FST_medOps_fnc_joltTick }, 2] call CBA_fnc_addPerFrameHandler;
+["ace_medical_treatment_fullHealLocalMod", {   // bacta: the patient is fully treated, so no crash
+    params ["_patient"];
+    if ((_patient getVariable ["FST_medOps_jolt", -1]) > 0) then { _patient setVariable ["FST_medOps_jolt", -1, true]; };
+}] call CBA_fnc_addEventHandler;
+["FST_medOps_addBlood", {
+    params ["_patient", "_litres"];
+    if (!local _patient) exitWith {};
+    _patient setVariable ["ace_medical_bloodVolume", ((_patient getVariable ["ace_medical_bloodVolume", 6]) + _litres) min 6, true];
+}] call CBA_fnc_addEventHandler;
+["FST_medOps_stimFx", {
+    params ["_patient", "_medic"];
+    if (!hasInterface) exitWith {};
+    if (player == _medic) then { titleText ["<t color='#7fe0ff' size='1.6'>CLEAR!</t>", "PLAIN", 0.25, true, true]; };
+    if (player == _patient) then {
+        addCamShake [12, 0.8, 30];
+        titleCut ["", "WHITE IN", 0.6];
+    };
+}] call CBA_fnc_addEventHandler;
 
 // --- player machines: call/cancel actions, beacon housekeeping, medic HUD, treatment stats, report display
 if (hasInterface) then {

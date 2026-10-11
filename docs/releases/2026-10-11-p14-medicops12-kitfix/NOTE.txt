@@ -1,0 +1,5 @@
+Published 2026-10-11 02:04 EDT on Miran's go in the Aux Updater chat: "push P14 when ready" (manifest 4362060097097503149, time_updated 1791698685, 85 files / 6,718,872,555 B).
+Base: live P13 (manifest 34197758090674305). Package: Downloads/Steam-aux-release-20261011-P14-medicops12-kitfix (build script D:/AuxUpdater/aatcrew/make_p14.py).
+Fixes the P13 defect: the 3 medic backpack types (250 load; 13 medic kits) overflowed and medics lost 2 splints + all 6 tourniquets. Medic Bacta 40 -> 20; fit test kf14: 106 kit containers, 0 overflowing, medic packs 98.8%.
+Changed: FST_MedicOps 1.1.0 -> 1.2.0 (Catboy Medical: Cardio-stim, Adrenal Stim, Clone Transfusion; their engine test 40/40); 41st_KitMenu kits (Current/P1/Snow; Catboy Medical patches d7c471a8 / cb6fbb20 / d12ea83d): medic Bacta 40 -> 20 + CardioStim 1 + AdrenalStim 4; trooper kits Kolto 12 -> 8, Synthflesh 4 -> 3, Bacta 6 -> 2.
+Engine-tested on this PC: AuxKitFit (kf14, new fill-in-kit-order test), AuxMedicOpsCheck (mo14, 0 fails), P14 boot single server + 4 HCs identical to P13; publish_release.py --check ready. Not tested here: HUD, action menus, shock/jolt screen effects (need a player client).

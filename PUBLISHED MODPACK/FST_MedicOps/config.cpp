@@ -11,10 +11,10 @@ class CfgPatches {
         author = "41st Elite Corps";
         url = "";
         units[] = {"FST_MedicResupplyCrate"};
-        weapons[] = {"FST_BactaCartridge", "FST_Medscanner"};
+        weapons[] = {"FST_BactaCartridge", "FST_Medscanner", "FST_CardioStim", "FST_AdrenalStim"};
         requiredVersion = 2.18;
         requiredAddons[] = {"cba_main", "cba_settings", "ace_medical", "ace_medical_treatment", "ace_interact_menu", "A3_Weapons_F", "FST_Medical"};
-        version = "1.1.0";
+        version = "1.2.0";
         magazines[] = {"FST_BactaMist"};
         ammo[] = {"FST_BactaMist_Ammo"};
     };
@@ -53,6 +53,44 @@ class ACE_medical_treatment_actions {
         items[] = {"IDA_Cauterizer"};
         consumeItem = 0;
         treatmentTime = 14;
+    };
+    // 8. Cardio-stim: medic-only 5 s shock for cardiac arrest (ACE's CPR success rule), 20 s recharge.
+    class FST_CardioStimShock: FST_SealInternal {
+        displayName = "Cardio-stim: Shock";
+        displayNameProgress = "Charging... CLEAR!";
+        icon = "\FST_MedicOps\ui\cardioStim_ca.paa";
+        items[] = {"FST_CardioStim"};
+        consumeItem = 0;
+        condition = "(missionNamespace getVariable ['FST_medOps_cardioStimOn', true]) && {_patient getVariable ['ace_medical_inCardiacArrest', false]} && {(_medic getVariable ['FST_medOps_stimReady', -1]) < CBA_missionTime}";
+        treatmentTime = 5;
+        callbackSuccess = "FST_medOps_fnc_cardioStim";
+    };
+    // 9. Adrenal jolt: medic-only injector; unconscious (not in arrest, blood >= 3.8 L) -> up for 90 s, then crash
+    //    unless stabilised. Once per patient per 10 minutes.
+    class FST_AdrenalJolt: FST_SealInternal {
+        displayName = "Adrenal Jolt";
+        displayNameProgress = "Injecting adrenal stim...";
+        icon = "\FST_MedicOps\ui\adrenalStim_ca.paa";
+        items[] = {"FST_AdrenalStim"};
+        consumeItem = 1;
+        allowedSelections[] = {"Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        condition = "(missionNamespace getVariable ['FST_medOps_joltOn', true]) && {_patient getVariable ['ACE_isUnconscious', false]} && {!(_patient getVariable ['ace_medical_inCardiacArrest', false])} && {(_patient getVariable ['ace_medical_bloodVolume', 6]) >= 3.8} && {(_patient getVariable ['FST_medOps_joltNext', -1]) < CBA_missionTime}";
+        treatmentTime = 3;
+        callbackSuccess = "FST_medOps_fnc_adrenalJolt";
+    };
+    // 10. Clone transfusion: any trooper gives 500 ml of their own blood (one blood type for every clone).
+    class FST_CloneTransfusion: FST_SealInternal {
+        displayName = "Clone Transfusion (give 500 ml)";
+        displayNameProgress = "Transfusing your blood...";
+        icon = "\FST_MedicOps\ui\cloneTransfusion_ca.paa";
+        items[] = {};
+        consumeItem = 0;
+        medicRequired = 0;
+        allowSelfTreatment = 0;
+        allowedSelections[] = {"LeftArm", "RightArm"};
+        condition = "(missionNamespace getVariable ['FST_medOps_transfusionOn', true]) && {_medic != _patient} && {(_medic getVariable ['ace_medical_bloodVolume', 6]) >= 5.5} && {!(_medic getVariable ['ACE_isUnconscious', false])} && {(_patient getVariable ['ace_medical_bloodVolume', 6]) < 5.9} && {(side group _medic) isEqualTo (side group _patient)}";
+        treatmentTime = 12;
+        callbackSuccess = "FST_medOps_fnc_cloneTransfusion";
     };
 };
 
@@ -123,6 +161,30 @@ class CfgWeapons {
             mass = 3;
         };
     };
+    class FST_CardioStim: ACE_ItemCore {
+        scope = 2;
+        author = "41st Elite Corps";
+        displayName = "Cardio-stim";
+        picture = "\FST_MedicOps\ui\cardioStim_ca.paa";
+        model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
+        descriptionShort = "Medic's defibrillator. Torso action on a patient in cardiac arrest: 5 s shock. Recharges in 20 s.";
+        ACE_isMedicalItem = 1;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 6;
+        };
+    };
+    class FST_AdrenalStim: ACE_ItemCore {
+        scope = 2;
+        author = "41st Elite Corps";
+        displayName = "Adrenal Stim";
+        picture = "\FST_MedicOps\ui\adrenalStim_ca.paa";
+        model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
+        descriptionShort = "Medic's one-use injector. Gets an unconscious trooper up for about 90 s. Patch them up before it wears off or they crash.";
+        ACE_isMedicalItem = 1;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0.5;
+        };
+    };
     class GrenadeLauncher;
     class Throw: GrenadeLauncher {
         muzzles[] += {"FST_BactaMistMuzzle"};
@@ -152,6 +214,11 @@ class CfgFunctions {
             class internalTick {};
             class sealInternal {};
             class medscan {};
+            class cardioStim {};
+            class adrenalJolt {};
+            class joltLocal {};
+            class joltTick {};
+            class cloneTransfusion {};
         };
     };
 };
