@@ -1,0 +1,8 @@
+Published 2026-10-11 10:42 EDT on Miran's go in the Aux Updater chat: "push P15T" (manifest 3804737978939101547, time_updated 1791729776, 82 files / 7,136,752,414 B).
+Base: live P14 (manifest 4362060097097503149). Package: Downloads/Steam-aux-release-20261011-P15T-medical-pulled-c7tex (scripts D:/AuxUpdater/aatcrew/make_p15.py + make_p15t.py).
+Medical pulled (Miran: "Pull the medical and kit update for now" -> "All of tonight's medical" -> "Keep them staged"):
+- removed: FST_FieldMedicine, FST_MedicOps, FST_ZeusMedical. Their sources stay in PUBLISHED MODPACK (staged, NOT shipped); the shipped PBOs stay staged in Downloads/Steam-aux-release-20261011-P14-medicops12-kitfix.
+- 41st_KitMenu kits and FST_IDA_ACE_Compat (v2) back to P10/P11E (repo files restored from 4488c09e).
+- kept: droid AI V52, Daara V9N, config fixes (E-5 sound, Westar/E-11P/EE-3/swamp speeder), 41st_Armor HitPelvis fix.
+Geonosis c7tex terrain (Omnibus D:/Geonosis/c7_stage/C7_READY.md; relayed "Push anyway", go typed here "push P15T"): fst_geonosis.pbo 3e6f7065 -> d7641374 (+418 MB); only the 1024 S_*_lco.paa satellite tiles differ, WRP and config.bin byte-identical (checked). Rollback = 3e6f7065 (in P15 staging).
+Engine-tested on this PC: kit fit kf15 (0 of 106 overflow, medic 99.6%); P15 boot single server + 4 HCs (no medical addons loaded); P15T single-server boot identical to P15; publish_release.py --check ready for both.

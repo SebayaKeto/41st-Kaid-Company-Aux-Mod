@@ -1,0 +1,12 @@
+Medical changes pulled for now; sharper Geonosis ground textures
+
+The medical update from 10-11 Oct is removed while we rework it:
+- Removed: field medicine items (Kolto Wrap, Coagulant Foam, Synthflesh Sheet, crates), Medic Ops (beacons, medic HUD, Medscanner, Bacta Mist, stims, internal bleeding) and the Zeus medical modules.
+- Kit Menu loadouts are back to what they were before (riflemen 20 Bacta, medics 80 Bacta).
+- Blaster wounds and the Bacta Bandage are back to how they worked before.
+
+Everything else from the last updates stays: battle droid lines, Daara, the Westar-35 pistol, E-11P, EE-3, swamp speeders and the E-5 reload sound.
+
+Geonosis: sharper satellite ground textures (larger download, about 418 MB). Terrain heights and objects are unchanged.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
