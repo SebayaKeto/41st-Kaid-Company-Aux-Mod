@@ -1,0 +1,3 @@
+Published 2026-10-11 on Miran's go in the Aux Updater chat: "push P22 when ready". Base: live P21B (745238807588551329). Package: Downloads/Steam-aux-release-20261011-P22-dc15-codex (D:/AuxUpdater/aatcrew/make_p22.py).
+- 41st_DC15: DC-15 Project Codex finishes (22daf664; A dc15a_gpt_p2, S dc15s_gpt_p3; relayed Miran "Codex P2 for the A ... Codex P3 for the S ... Send to Aux Updater immediately"). +10 texture/rvmat files, config.bin changed, no .p3d changed. Not tracked in this repo.
+Engine-tested: single-server boot clean (no missing DC-15 textures); --check ready. Not looked at in game on this exact PBO (DC-15 Project: Miran saw the finishes on dev classes).

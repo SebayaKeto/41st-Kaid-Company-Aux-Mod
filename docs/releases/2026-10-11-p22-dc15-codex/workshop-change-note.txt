@@ -1,0 +1,5 @@
+DC-15 finishes
+
+- New finishes on the DC-15A and DC-15S (and their fried and grenade-launcher versions).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
