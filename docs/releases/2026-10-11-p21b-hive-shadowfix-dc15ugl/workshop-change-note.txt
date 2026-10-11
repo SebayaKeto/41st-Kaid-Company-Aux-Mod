@@ -1,0 +1,6 @@
+Geonosis hive performance fix, DC-15 grenade launchers
+
+- DC-15A and DC-15S grenade-launcher versions on the 41st's own models, with their own arsenal icons.
+- The Geonosis hive buildings get simple shadow models (about 11 times fewer shadow triangles). They look the same, with better frame rates around the hives.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

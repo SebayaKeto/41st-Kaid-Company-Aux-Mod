@@ -1,0 +1,5 @@
+Published 2026-10-11 12:38 EDT on Miran's go in the Aux Updater chat: "push P21B when ready" (manifest 745238807588551329, 99 files / 7,199,665,871 B).
+Base: live P20. Package: Downloads/Steam-aux-release-20261011-P21B-hive-shadowfix-dc15ugl (scripts D:/AuxUpdater/aatcrew/make_p21.py + make_p21b.py).
+- fst_geo_hive: Omnibus shadow fix (01e36fef; explicit shadow LOD on all 36 hive models; checked: same prefix/file list, only the 36 .p3d differ). Relayed Miran "Push now (Recommended)".
+- 41st_DC15: DC-15 Project UGL release (11b569fc; FST_DC15A_ugl / FST_DC15S_UGL on own models + icons; A and S models unchanged). Relayed Miran "Ship the UGLs". Not tracked in this repo.
+Engine-tested: P21 / P21B single-server boots clean; Kit Menu DC-15 check (prof-dk21b): FST_DC15A / _ugl / S / S_UGL resolve to the new models with magazines, every DC-15-family kit loadout (6 combos, 143 kit entries) builds with its attachments and magazine, 0 fails; --check ready.
