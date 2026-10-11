@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class FST_A280
+	class FST_Weapons_EE3
 	{
 		requiredAddons[]=
 		{

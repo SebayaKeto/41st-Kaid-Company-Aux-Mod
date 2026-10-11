@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class FST_Weapons_Lego
+	class FST_Weapons_Westar35Pistol
 	{
 		requiredAddons[]=
 		{

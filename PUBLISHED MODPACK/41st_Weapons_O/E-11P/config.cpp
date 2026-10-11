@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class FST_Verpine
+	class FST_Weapons_E11P
 	{
 		requiredAddons[]=
 		{

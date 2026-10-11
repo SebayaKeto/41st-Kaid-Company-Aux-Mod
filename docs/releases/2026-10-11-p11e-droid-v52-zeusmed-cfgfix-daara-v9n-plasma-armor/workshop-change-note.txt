@@ -1,0 +1,20 @@
+Zeus medical tools, recovered weapons and vehicles, droid lanes
+
+New: Zeus medical tools (ZEN, "41st Medical")
+- Wound Casualty, Set Blood Volume, Set Pain, Casualty Scenario (5 presets), Cardiac Arrest (players), Plot Armor, Spawn Wounded Trooper.
+- Nothing changes unless a Zeus uses a module. CBA settings: FST_zeusMed_enabled (on), FST_zeusMed_spawnClass.
+
+Back in the game (these configs never loaded before)
+- Westar-35 pistol and its pistol lights, E-11P blaster pistol, EE-3 blaster carbine, ISP swamp speeders (4 versions).
+
+Fixes
+- E-5 rifles (and the B1s carrying them) play a reload sound again instead of logging a missing file.
+- Battle droid squads sent at the same objective move into their own lanes quickly, so neighbouring lines no longer overlap.
+- Blaster (plasma) hits cause more and more varied wounds: nearly every hit wounds, light hits mostly as grazes that need a bandage. Overall durability is unchanged.
+- Clone armour no longer logs hitpoint compile errors on every spawn (no gameplay change).
+
+Daara
+- New parade rest and parade turns, rounder elbows, a one-piece shoulder undersuit.
+- After an unarmed turn she walks off at once, like a normal soldier.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class 3AS_ISP
+	class FST_SwampSpeeder
 	{
 		requiredAddons[]=
 		{

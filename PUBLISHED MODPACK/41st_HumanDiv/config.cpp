@@ -960,7 +960,7 @@ class CfgWeapons
 		reloadAction="";
 		reloadMagazineSound[]=
 		{
-			"\Indecisive_Armoury_Sounds\blaster_reload_3.ogg",
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
 			1.5,
 			1,
 			100

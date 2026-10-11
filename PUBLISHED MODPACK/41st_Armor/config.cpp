@@ -29112,7 +29112,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -29455,7 +29455,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -29765,7 +29765,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -30070,7 +30070,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -30437,7 +30437,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -30804,7 +30804,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -31171,7 +31171,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -32606,7 +32606,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{
@@ -33497,7 +33497,7 @@ class CfgVehicles
 				explosionShielding=1;
 				visual="injury_body";
 				minimalHit=0.0099999998;
-				depends="";
+				depends="0";
 			};
 			class HitAbdomen: HitPelvis
 			{

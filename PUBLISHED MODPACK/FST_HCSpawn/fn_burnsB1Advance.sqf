@@ -75,6 +75,25 @@ if (_line && {missionNamespace getVariable ["BURNS_B1TrackFormation",true]} && {
     if (count _deal0==4 && {abs (_deal0 select 3)>0.5}) then {_destination=_destination getPos [abs (_deal0 select 3),(_deal0 select 1)+([-90,90] select ((_deal0 select 3)>0))]};
 };
 private _direction=_origin getDir _destination;
+// Lane convergence (probe hlt51: four module squads 40 m apart with 44 m wide lines walked straight at lane objectives
+// 400 m away, so the outer squads slid sideways a few metres a minute and neighbouring lines overlapped 28% of the time).
+// Beyond 80 m the squad aims at its lane line 3x its sideways error ahead (at least 40 m): at most ~18 degrees off the
+// lane axis, in its lane within ~60 m, and under the 30 degree re-deal threshold so the line keeps its places.
+if (_taskMode in ["assault","hunt"]) then {
+    private _laneC=_group getVariable ["BURNS_lane",[]];
+    if (count _laneC==4) then {
+        private _ax=_laneC select 2;
+        private _af=[sin _ax,cos _ax,0];
+        private _ar=[cos _ax,-(sin _ax),0];
+        private _rel=_origin vectorDiff _destination;
+        private _toGo=-(_rel vectorDotProduct _af);
+        private _err=_rel vectorDotProduct _ar;
+        if (_toGo>80 && {abs _err>3}) then {
+            private _ahead=(((abs _err)*3) max 40) min (_toGo-40);
+            _direction=_origin getDir (_destination vectorAdd (_af vectorMultiply (_ahead-_toGo)));
+        };
+    };
+};
 // Hybrid formation (Miran 7 Oct): on assault/rush/hunt the engine's own formation (LINE in contact or on the
 // approach, COLUMN on the march) moves the squad: the leader walks straight at its lane objective and the
 // droids follow in formation. Per-droid slot orders made the line stop-start (~0.5 m/s in contact). BURNS
