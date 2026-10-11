@@ -1,0 +1,14 @@
+Medic Ops
+
+New for medics (every part can be switched off under Addon Options > "41st Medic Ops")
+- Casualty beacons: downed players call a medic automatically. Anyone can Call Medic / Cancel Medic Call from the ACE self menu.
+- Medic HUD: medics see casualty markers with severity, name and distance (500 m), plus map markers and chat alerts.
+- Medscanner: scan a casualty (or yourself) for vitals, wounds per body part with the right item to use, and internal bleeding.
+- Bacta Mist grenade: a teal cloud that, for 30 s, eases pain and slows bleeding by about 30% for anyone within 6 m. It does not heal.
+- Internal bleeding: a heavy torso hit on a player may (25% chance) cause a hidden slow bleed that bacta does not stop. A medic seals it with Coagulant Foam or a Cauterizer.
+- Medic report and "Medic of the Op": patients, treatments, revives and more; Zeus can show it with the 41st Medical > Medic Report module.
+- Optional bacta charges (off by default): bacta tanks can be set to use charges, refilled with Bacta Cartridges. Medic Resupply Crate added.
+
+Kit Menu: every medic kit gets a Medscanner and 2 Bacta Mist grenades.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
