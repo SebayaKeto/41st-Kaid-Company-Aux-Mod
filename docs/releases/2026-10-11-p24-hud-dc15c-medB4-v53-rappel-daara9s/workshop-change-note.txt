@@ -1,0 +1,12 @@
+Vehicle HUD fix, DC-15C, medical tweak, droid volleys, rappel lag, Daara, AT-RT sound, honeycomb walls
+
+- LAAT, LAAT/C and Saber pilots keep their radar and ammo count (fixes the HUD loss from Sunday's op).
+- B1 droids find targets better: more and bigger volleys, fewer squads standing still in contact.
+- AT-RT: the gun is quieter (shot volume reduced by about 25%).
+- Geonosis honeycomb walls: rounds no longer pass through the rounded ends of the wall.
+- Medical: blaster hits that only graze hurt less (back to the old pain level), and bigger blaster wounds bleed a little more (about 10%). Wound counts and knock-downs are unchanged.
+- DC-15: the DC-15C and DC-15C UGL get their own models, the DC-15A and DC-15S get new paint, and the grenade launcher sights have range marks.
+- Daara: pauldrons no longer clip through her arms when walking, running, sprinting, idling or turning, her runs now use the normal rifle-run legs and pace, and her tunic no longer crumples at the armpit.
+- Rappelling: much less lag while people rappel (the rope sounds and animations no longer run once per connected machine).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

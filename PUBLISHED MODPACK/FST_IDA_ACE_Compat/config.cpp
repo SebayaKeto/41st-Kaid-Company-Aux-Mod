@@ -47,6 +47,12 @@ class ACE_Medical_Injuries
             // damageMultiplier 0.05) that need bandaging but barely count toward knock-down / death. ACE splits a hit's
             // damage across its wounds, so wound count alone does not add trauma. Bleeding ~1.3-2x v2, far below ACE's
             // blood-loss knock-out rate.
+            // v4 (11 Oct 2026), after the first op on B2. Platoon/SL feedback: "Felt more pain knocks" and
+            // "Bleeding increase a smidge, like 5% or maybe 10% ... but doesn't kill those with smaller wounds".
+            // Pain knocks are off on Main (painUnconsciousChance 0) and B2 did not raise damage knock-downs (model), but
+            // light hits carried 1.7x v2 pain: grazes (Abrasion) pain x0.25 -> light-hit pain back to v2. Big wounds
+            // (Laceration/Puncture/Avulsion/Velocity) bleed x1.1 -> +8-11% bleeding on medium/heavy hits; grazes
+            // (Abrasion/Cut) bleed x0.7. Trauma, wound count, types and knock-downs unchanged from v3.
             thresholds[] =
             {
                 {20, 10},
@@ -86,6 +92,7 @@ class ACE_Medical_Injuries
                     {0.1, 0.2},
                     {0, 0}
                 };
+                bleedingMultiplier = 1.1;
             };
             class PunctureWound
             {
@@ -96,6 +103,7 @@ class ACE_Medical_Injuries
                     {0.1, 0.1},
                     {0, 0}
                 };
+                bleedingMultiplier = 1.1;
             };
             class Avulsion
             {
@@ -107,6 +115,7 @@ class ACE_Medical_Injuries
                     {0.1, 0.05},
                     {0, 0}
                 };
+                bleedingMultiplier = 1.1;
             };
             class VelocityWound
             {
@@ -118,6 +127,7 @@ class ACE_Medical_Injuries
                     {0, 0}
                 };
                 sizeMultiplier = 0.85;
+                bleedingMultiplier = 1.1;
             };
             // grazes: common on light hits, trivial trauma (damageMultiplier), still need a bandage
             class Abrasion
@@ -129,6 +139,8 @@ class ACE_Medical_Injuries
                     {0, 4.0}
                 };
                 damageMultiplier = 0.05;
+                painMultiplier = 0.25;
+                bleedingMultiplier = 0.7;
             };
             class Cut
             {
@@ -139,6 +151,7 @@ class ACE_Medical_Injuries
                     {0, 3.2}
                 };
                 damageMultiplier = 0.05;
+                bleedingMultiplier = 0.7;
             };
             class Contusion
             {
