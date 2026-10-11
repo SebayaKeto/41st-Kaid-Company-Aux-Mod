@@ -1,5 +1,5 @@
 /*
-    FST IDA ACE Medical Compatibility Patch v2
+    FST IDA ACE Medical Compatibility Patch v3 (plasma wound mix B2, 10 Oct 2026)
 
     Purpose:
     - Temporary aux-side patch while IDA is being phased out.
@@ -22,7 +22,7 @@ class CfgPatches
     class FST_IDA_ACE_Compat
     {
         author = "41st / FST";
-        name = "FST IDA ACE Medical Compatibility v2";
+        name = "FST IDA ACE Medical Compatibility v3";
         requiredVersion = 0.1;
         requiredAddons[] =
         {
@@ -41,14 +41,19 @@ class ACE_Medical_Injuries
     {
         class plasma
         {
-            // Similar wound counts to ACE bullet, but with a small low-end
-            // no-wound chance so armor/near-misses do not create endless bruises.
+            // v3 (10 Oct 2026). Command: "more wounds, more often, more variety"; Miran: "we dont really want to
+            // change overall durability". Profile B2: nearly every hit wounds (1-2 wounds, 8 wound types), but trauma per
+            // hit stays as v2 (+-11% in the ACE model, engine-verified): light hits mostly make grazes (Abrasion / Cut with
+            // damageMultiplier 0.05) that need bandaging but barely count toward knock-down / death. ACE splits a hit's
+            // damage across its wounds, so wound count alone does not add trauma. Bleeding ~1.3-2x v2, far below ACE's
+            // blood-loss knock-out rate.
             thresholds[] =
             {
                 {20, 10},
-                {4.5, 2},
-                {2, 1},
-                {0.35, 1},
+                {4.5, 4},
+                {2, 3},
+                {1.0, 2},
+                {0.1, 1},
                 {0, 0}
             };
             selectionSpecific = 1;
@@ -60,18 +65,37 @@ class ACE_Medical_Injuries
                 ace_medical_damage = "ace_medical_damage_fnc_woundsHandlerBase";
             };
 
-            // Plasma should feel like hot penetrating energy, not mostly blunt trauma.
             class ThermalBurn
             {
                 weighting[] =
                 {
-                    {2.0, 4.0},
-                    {0.35, 2.5},
-                    {0.05, 1.0},
-                    {0, 0.5}
+                    {2.0, 3.0},
+                    {0.35, 1.6},
+                    {0.15, 1.0},
+                    {0, 0.3}
                 };
                 sizeMultiplier = 1.15;
                 painMultiplier = 1.0;
+            };
+            class Laceration
+            {
+                weighting[] =
+                {
+                    {1.0, 0.6},
+                    {0.25, 0.6},
+                    {0.1, 0.2},
+                    {0, 0}
+                };
+            };
+            class PunctureWound
+            {
+                weighting[] =
+                {
+                    {1.0, 0.6},
+                    {0.25, 0.45},
+                    {0.1, 0.1},
+                    {0, 0}
+                };
             };
             class Avulsion
             {
@@ -79,7 +103,8 @@ class ACE_Medical_Injuries
                 {
                     {2.0, 1.4},
                     {0.75, 0.8},
-                    {0.25, 0.25},
+                    {0.25, 0.35},
+                    {0.1, 0.05},
                     {0, 0}
                 };
             };
@@ -89,10 +114,31 @@ class ACE_Medical_Injuries
                 {
                     {1.5, 0.9},
                     {0.5, 0.45},
-                    {0.15, 0.15},
+                    {0.15, 0.2},
                     {0, 0}
                 };
                 sizeMultiplier = 0.85;
+            };
+            // grazes: common on light hits, trivial trauma (damageMultiplier), still need a bandage
+            class Abrasion
+            {
+                weighting[] =
+                {
+                    {0.25, 0},
+                    {0.15, 1.5},
+                    {0, 4.0}
+                };
+                damageMultiplier = 0.05;
+            };
+            class Cut
+            {
+                weighting[] =
+                {
+                    {0.25, 0},
+                    {0.15, 1.2},
+                    {0, 3.2}
+                };
+                damageMultiplier = 0.05;
             };
             class Contusion
             {

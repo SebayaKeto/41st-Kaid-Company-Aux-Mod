@@ -1,0 +1,7 @@
+New blaster wound model, DC-15A fix, Daara update
+
+- Blaster (plasma) hits cause more and more varied wounds: nearly every hit wounds, light hits mostly as grazes that need a bandage. Overall durability is unchanged. The Bacta Bandage works as before, and kits are unchanged.
+- DC-15A: the hole in the rifle model (you could see the sky through it) is closed.
+- Daara: parade rest and parade turns - the pauldron no longer cuts into the chest.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

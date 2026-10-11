@@ -1,0 +1,7 @@
+Published 2026-10-11 11:25 EDT on Miran's go in the Aux Updater chat: "push P16C when ready" (manifest 1339883873953915270, time_updated 1791732346, 82 files / 7,142,388,394 B).
+Base: live P15T (manifest 3804737978939101547). Package: Downloads/Steam-aux-release-20261011-P16C-daara-v9o-b2-dc15fix (scripts D:/AuxUpdater/aatcrew/make_p16.py, make_p16b.py, make_p16c.py).
+Changed:
+- FST_IDA_ACE_Compat back to v3 (plasma wound mix B2, PBO 3b96016b as shipped P11E-P14). Catboy Medical relaying Miran: "the platoons want the new damage/wound model but not all the new medical items and such yet, plus a bacta bandage that hasnt been nerfed". FieldMedicine / MedicOps / ZeusMedical stay out; kits stay P10 (Bacta 20 / 80, IDA Bacta values).
+- ck_character_v8: Project Daara V9O (parade rest / turns; note: idle, wlk_df, run_df, hip_turnl/r .rtm also differ from V9N; model unchanged).
+- 41st_DC15: DC-15 Project DC-15A hole hotfix (fcf47f54; only rifles\dc15a.p3d differs; Miran in their chat "yes do the hole hotfix"). Not tracked in this repo.
+Engine-tested on this PC: P16 / P16B / P16C single-server boots identical to P15T; P16B server + 4 HCs full 6 rounds; publish_release.py --check ready. Platoon one-pager: D:/ACEMedical/aux_handoff/41st_Blaster_Wounds_for_Platoons.png (Catboy Medical).
