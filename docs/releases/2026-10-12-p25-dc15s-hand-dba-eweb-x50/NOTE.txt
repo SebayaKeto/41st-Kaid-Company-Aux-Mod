@@ -1,0 +1,12 @@
+Published 2026-10-12 19:24 EDT on Miran's go in the Aux Updater chat: "push P25 after the check passes" (manifest 2342679157565833824, 85 files / 7,189,460,657 B).
+Base: live P24. Package: Downloads/Steam-aux-release-20261012-P25-dc15s-hand-dba-eweb-x50 (D:/AuxUpdater/aatcrew/make_p25.py).
+Changed:
+- 41st_DC15 (dfd22025, DC-15 Project): DC-15S UGL left-hand grip (FST_DC15S_UGL handAnim[] + anims/dc15s_ugl_hand_g4.rtm). No class changes. DC-15's in-game check passed 12 Oct 00:22-00:29.
+Added (Mapmaking Omnibus brief research/dba_fix/BRIEF_AUX_DBA_OVERRIDE.md; Miran: "DBA wont help us we have to fix the issue ourselves", "Add a real x50"):
+- KAID_DBA_EWEB_Compat (367f8444): 101st_EWEB_base DestructionEffects/SmokeSmall position[]={0,0,0} -> "destructionEffect" (memory point present in eweb.p3d, as the sibling Sound effect). Fixes "'position/' is not a value".
+- KAID_DBA_DC15S_x50_Compat (283c86bf): defines DBA_68x51_FMJ_x50_mag (loaded by DBA clone units, ammo box, IFVs; never defined by DBA) as a real 50-round DC-15S magazine
+  (inherits DBA_65x39_FMJ_x50_mag: the clones carry DBA_DC15S_base, which takes 6.5x39 x50). Appended to magazines[] of DBA_DC15S_base, DBA_DC15sGL, DBA_DC15S_Secondary_Base, DBA_TC15S, DBA_DC15SSHD (originals kept).
+  Additions only; no DBA file edited; both skipWhenMissingDependencies=1.
+Tests: full-modset single server (D:/AuxUpdater/dbafix/make_dbacheck.py, aatcrew/prof-dbP25) vs the P24 boot: E-Web warning 1 -> 0, x50 "No entry"/"scope=private" 32 -> 0, startup warnings 7819 -> 5587, none new at startup.
+  Spawned DBA clone: 4 spare + 1 loaded x50 (50 rounds); all 5 weapons accept it; E-Web destroys. --check ready.
+Not covered: destroyed E-Web smoke position looked at in a client.

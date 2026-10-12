@@ -1,0 +1,7 @@
+DC-15S grenade launcher grip, DBA E-Web and DBA clone magazine fixes
+
+- DC-15S with grenade launcher: the left hand now holds the weapon properly.
+- DBA E-Web: fixes a config error that showed a warning at startup; its smoke now comes from the right spot on the gun when it is destroyed.
+- DBA clone troopers: their missing 50-round DC-15S magazines now exist, so they spawn with full ammo (also fixes a startup warning).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
