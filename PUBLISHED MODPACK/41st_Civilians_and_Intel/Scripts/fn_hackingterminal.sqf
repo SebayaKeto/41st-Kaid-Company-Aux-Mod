@@ -6626,7 +6626,9 @@ _button1900 ctrlAddEventHandler
 					] call CBA_fnc_progressBar;
 				};
 			},
-			[_term, _user]
+			[_term, _user],
+			false,
+			false
 		] call CBA_fnc_progressBar;
 	}
 ];
@@ -6803,7 +6805,9 @@ _button1901 ctrlAddEventHandler
 					] call CBA_fnc_progressBar;
 				};
 			},
-			[_term, _user]
+			[_term, _user],
+			false,
+			false
 		] call CBA_fnc_progressBar;
 	}
 ];
@@ -7012,7 +7016,9 @@ _button1902 ctrlAddEventHandler
 					] call CBA_fnc_progressBar;
 				};
 			},
-			[_term, _user]
+			[_term, _user],
+			false,
+			false
 		] call CBA_fnc_progressBar;
 	}
 ];
