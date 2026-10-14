@@ -413,7 +413,20 @@
             params ["_control", "_button"];
             private _hackingdata = _control getVariable "FST_HackingData";
             _hackingdata params ["_term", "_user", "_clicked", "_total"];
-            if ((_clicked getVariable ["FST_RevealedButton", false]) or (_term getVariable ["FST_DeviceAccessed", false]) or (_term getVariable ["FST_DeviceLocked", false]) or (_term getVariable ["FST_DeviceBroken", false])) exitWith {};
+            if ((_term getVariable ["FST_DeviceAccessed", false]) or (_term getVariable ["FST_DeviceLocked", false]) or (_term getVariable ["FST_DeviceBroken", false])) exitWith {};
+            if ((_clicked getVariable ["FST_RevealedButton", false]) && !((_clicked getVariable ["FST_SetAsMine", false]) or (_clicked getVariable ["FST_SetAsAccess", false]))) exitWith
+            {
+                private _relations = _clicked getVariable ["FST_ButtonRelations", [20,20,20]];
+                private _totals = _clicked getVariable ["FST_HintTotal", [0,0]];
+                private _goods = 0;
+                private _bads = 0;
+                {
+                    if ((((findDisplay 6970) displayCtrl _x) getVariable ["FST_SetAsAccess", false]) && (((findDisplay 6970) displayCtrl _x) getVariable ["FST_RevealedButton", false])) then { _goods = _goods + 1;};
+                    if ((((findDisplay 6970) displayCtrl _x) getVariable ["FST_SetAsMine", false]) && (((findDisplay 6970) displayCtrl _x) getVariable ["FST_RevealedButton", false])) then { _bads = _bads + 1;};
+                } forEach _relations;
+                if (((_totals select 0) == _goods) && ((_totals select 1) == _bads)) then {["FST_revealButtons", [_clicked]] call CBA_fnc_localEvent;};
+            };
+            if (_clicked getVariable ["FST_RevealedButton", false]) exitWith {};
             if (_button == 1) exitWith
             {
                 if (_clicked getVariable ["FST_SetAsMine", false]) then
@@ -775,7 +788,7 @@
 ["FST_flashWarning", {
     params ["_display","_icon"];
 
-    while {!isNull _display && {_display getVariable ["FST_FlagErrors",0] == 0}} do // ends if the dialog closes (was an endless loop)
+    while {_display getVariable ["FST_FlagErrors",0] == 0} do
     {
         switch (_icon getVariable ["FST_Blinker", true]) do
         {

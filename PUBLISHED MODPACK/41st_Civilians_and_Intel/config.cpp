@@ -1977,6 +1977,155 @@ class FST_DigitalScreenHack
 		};
 	};
 };
+class FST_HotwireButton: RscButton
+{
+	idc = 1900;
+	x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+	y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+	w = 1 * GUI_GRID_CENTER_W;
+	h = 1 * GUI_GRID_CENTER_H;
+	colorBackground[] = {0,0,0,0};
+	colorFocused[] = {1,1,1,0.1};
+	colorBackgroundActive[] = {1,1,1,0.1};
+	colorDisabled[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,0};
+	colorShadow[] = {0,0,0,0};
+	borderSize = 0;
+	text = "";
+};
+class FST_HotwireDoorDisplay
+{
+    idd=6966;
+	movingEnable=false;
+	enableSimulation=true;
+    class ControlsBackground
+	{
+		class FST_HotwireWiresBackground: RscPicture
+		{
+			idc = 1800;
+			text = "\41st_Civilians_and_Intel\Data\SpoolContainer.paa";
+			x = -1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 7 * GUI_GRID_CENTER_W;
+			h = 27 * GUI_GRID_CENTER_H;
+		};
+		class FST_HotwireVoltmeterBackground: RscPicture
+		{
+			idc = 1801;
+			text = "\41st_Civilians_and_Intel\Data\VoltmeterImage.paa";
+			x = 31 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 12 * GUI_GRID_CENTER_W;
+			h = 24 * GUI_GRID_CENTER_H;
+		};
+		class FST_HotwireFusesBackground: RscText
+		{
+			idc = 1802;
+			x = 7.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 3.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 21 * GUI_GRID_CENTER_W;
+			h = 21 * GUI_GRID_CENTER_H;
+			colorBackground[] = {0.408,0.408,0.408,1};
+		};
+	};
+	class Controls
+	{
+		class FST_WireDivide: RscPicture
+		{
+			idc = 1895;
+			text = "\41st_Civilians_and_Intel\Data\RedSpoolUse.paa";
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireSubtract: RscPicture
+		{
+			idc = 1896;
+			text = "\41st_Civilians_and_Intel\Data\BlueSpool.paa";
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 7 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireAdd: RscPicture
+		{
+			idc = 1897;
+			text = "\41st_Civilians_and_Intel\Data\GreenSpool.paa";
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireMultiply: RscPicture
+		{
+			idc = 1898;
+			text = "\41st_Civilians_and_Intel\Data\YellowSpool.paa";
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 17 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireExponent: RscPicture
+		{
+			idc = 1899;
+			text = "\41st_Civilians_and_Intel\Data\OrangeSpool.paa";
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireDivideButton: FST_HotwireButton
+		{
+			idc = 1900;
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireSubtractButton: FST_HotwireButton
+		{
+			idc = 1901;
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 7 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireAddButton: FST_HotwireButton
+		{
+			idc = 1902;
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireMultiplyButton: FST_HotwireButton
+		{
+			idc = 1903;
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 17 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_WireExponentButton: FST_HotwireButton
+		{
+			idc = 1904;
+			x = 0 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 5 * GUI_GRID_CENTER_H;
+		};
+		class FST_VoltSwitch: RscPicture
+		{
+			idc = 1905;
+			text = "\41st_Civilians_and_Intel\Data\VoltSwitch.paa";
+			x = 33.8 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 12.4 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 3 * GUI_GRID_CENTER_W;
+			h = 3 * GUI_GRID_CENTER_H;
+		};
+	};
+};
 class CfgFunctions
 {
 	class FST_CivilRandomizers
@@ -1989,9 +2138,11 @@ class CfgFunctions
 			class servercounting {postInit=1;};
 			class hackingterminalparts {postInit=1;};
 			class hackdoorpanelparts {postInit=1;};
+			class hotwiredoorpanelparts {postInit=1;};
 			class registerminigamemodules {postInit=1;};
 			class createscreen {};
 			class hackdoorpanel {};
+			class hotwiredoorpanel {};
 			class hackingterminal {};
 			class testingbuttons {};
 			class deposit {};
@@ -2109,6 +2260,11 @@ class CfgWeapons
 		displayName="[41st] Vest Pockets";
 		descriptionShort="More pockets for you to search on the NPC.";
 	};
+	class WeaponSlotsInfo;
+	class CowsSlot;
+	class MuzzleSlot;
+	class PointerSlot;
+	class UnderBarrelSlot;
 	class 3AS_RepublicDatapadPistol;
 	class FST_Hacking_Datapad: 3AS_RepublicDatapadPistol
 	{
@@ -2128,6 +2284,32 @@ class CfgWeapons
 			"FST_HackDatacard_Troll"
 		};
 		magazineWell[]={};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 5;
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[]={};
+				iconPosition[]={0,0.44999999};
+				iconScale=0.2;
+			};
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
 	};
 	class InventoryWeapon_Base_F;
 	class FST_CivData_Normal: ItemCore
@@ -9494,7 +9676,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_regularcivil;};";
+			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_regularcivil;";
 		};
 	};
 	class FST_Civilian_Poor: C_man_1
@@ -9520,7 +9702,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_poorcivil;};";
+			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_poorcivil;";
 		};
 	};
 	class FST_Civilian_Wealthy: C_man_1
@@ -9546,7 +9728,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_wealthycivil;};";
+			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_wealthycivil;";
 		};
 	};
 	class FST_Civilian_Spacer: C_man_1
@@ -9572,7 +9754,7 @@ class CfgVehicles
 		backpack="";
 		class EventHandlers
 		{
-			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_spacercivil;};";
+			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_spacercivil;";
 		};
 	};
 	class FST_U_CIS_Prisoner: C_man_1
@@ -9643,7 +9825,7 @@ class CfgVehicles
 		identityTypes[]={};
 		class EventHandlers
 		{
-			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_prisonercivil;};";
+			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_prisonercivil;";
 		};
 	};
 	class FST_CIS_Clone_Prisoner: FST_U_CIS_Prisoner
@@ -9661,7 +9843,7 @@ class CfgVehicles
 		identityTypes[]={};
 		class EventHandlers
 		{
-			init="if (local (_this select 0)) then {(_this select 0) spawn FST_CivilRandomizers_fnc_prisonerclone;};";
+			init= "(_this select 0) spawn FST_CivilRandomizers_fnc_prisonerclone;";
 		};
 	};
 };

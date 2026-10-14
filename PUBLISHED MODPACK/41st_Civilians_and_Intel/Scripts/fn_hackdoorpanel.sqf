@@ -138,7 +138,7 @@ _button1900 ctrlAddEventHandler
 			_display displayCtrl 1905
 		];
         _display setVariable ["FST_ScreenUnready", true];
-        [_display, 60, 48, 0.41] spawn FST_CivilRandomizers_fnc_createscreen;
+        [_display, 60, 48, 0.41, 4999, [0,0,0,1], "RscText", "FST_ScreenGrid"] spawn FST_CivilRandomizers_fnc_createscreen;
         [
             {
                 params ["_display"];

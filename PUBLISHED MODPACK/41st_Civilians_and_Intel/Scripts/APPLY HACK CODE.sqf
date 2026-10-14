@@ -6,6 +6,7 @@ _this setVariable ["FST_DeviceHacked",false,true];
 _this setVariable ["FST_DeviceBroken",true,true];
 
 [_this,['Hack Door', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackdoorpanel;}, nil,6,true,true,"","",3]] remoteExec ["addAction", 0, true];
+[_this,['Hotwire Door', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hotwiredoorpanel;}, nil,6,true,true,"","",3]] remoteExec ["addAction", 0, true];
 
 [_this,['Hack Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","!(_target getVariable ['FST_DeviceBroken', false])",3]] remoteExec ["addAction", 0, true];
 [_this,['Repair Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","_target getVariable ['FST_DeviceBroken', false]",3]] remoteExec ["addAction", 0, true];
@@ -15,6 +16,7 @@ _this setVariable ["FST_DeviceBroken",true,true];
 [_target,['Repair Device', {[_this select 0, _this select 1, _this select 2] call FST_CivilRandomizers_fnc_hackingterminal;}, nil,6,true,true,"","_target getVariable ['FST_DeviceBroken', false]",3]] remoteExec ["addAction", 0, true];
 
 [_this,['Reset Hack State', {[_this select 0, _this select 1] call FST_CivilRandomizers_fnc_testingbuttons;}, nil,5,true,true,"","true",3]] remoteExec ["addAction", 0, true];
+
 
 /* #Xodyqy
 $[
