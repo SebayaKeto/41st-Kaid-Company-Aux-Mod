@@ -5,7 +5,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.0;
-        requiredAddons[] = {"A3_Functions_F"};
+        requiredAddons[] = {"A3_Functions_F", "cba_main"};
     };
 };
 
@@ -20,6 +20,7 @@ class CfgFunctions
             class RRR_addAction  { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_addAction.sqf"; };
             class RRR_checkCondition { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_checkCondition.sqf"; };
             class RRR_isInZone   { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_isInZone.sqf"; };
+            class RRR_postInit   { file = "FST_ShipScripts\FST_RepairRearmRefuel\fnc_postInit.sqf"; };
         };
 
         class TractorBeam
@@ -49,6 +50,14 @@ class CfgFunctions
             class updatePadCamera     { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_updatePadCamera.sqf"; };
             class serverSpawnVehicle  { file = "FST_ShipScripts\FST_VehicleSpawner\fnc_serverSpawnVehicle.sqf"; };
         };
+    };
+};
+
+class Extended_PostInit_EventHandlers
+{
+    class FST_ShipScripts
+    {
+        clientInit = "call FST_fnc_RRR_postInit";
     };
 };
 

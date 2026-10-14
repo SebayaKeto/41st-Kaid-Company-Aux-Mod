@@ -66,7 +66,7 @@ private _newId = _unit addAction [
             while {_running} do {
                 private _inZone = [getPosATL _vehicle] call FST_fnc_RRR_isInZone;
 
-                if (!_inZone || !((driver _vehicle) == _pilot)) then {
+                if (!alive _pilot || {!alive _vehicle} || {!_inZone} || {!((driver _vehicle) == _pilot)}) then {
                     if (player == _pilot) then { hintSilent ""; };
                     _target setVariable ["VR_RepairActive", false];
                     _running = false;
@@ -146,7 +146,7 @@ private _newId = _unit addAction [
                             _target setVariable ["VR_RepairActive", false];
                             _running = false;
                         } else {
-                            sleep 0.5; // 2 Hz (was 10 Hz): every tick sends global setHitPointDamage/setFuel; progress is time-based
+                            sleep 0.1;
                         };
                     };
                 };
