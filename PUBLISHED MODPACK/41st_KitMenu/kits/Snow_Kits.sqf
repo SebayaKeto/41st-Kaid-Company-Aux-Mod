@@ -1769,7 +1769,8 @@ if (isNull _box) exitWith {
         ["WBK_HeadLampItem_Double",1],
         ["ACE_Flashlight_XL50",1],
         ["ACE_IR_Strobe_Item",1],
-        ["ACE_CableTie",2]
+        ["ACE_CableTie",2],
+        ["ACE_Flashlight_MX991",1]
     ]],
     ["FST_Vest_Base",[
         ["FST_blaster_cell_High_Blue",12,40],
@@ -1806,7 +1807,8 @@ if (isNull _box) exitWith {
         ["WBK_HeadLampItem_Double",1],
         ["ACE_Flashlight_XL50",1],
         ["ACE_IR_Strobe_Item",1],
-        ["ACE_CableTie",2]
+        ["ACE_CableTie",2],
+        ["ACE_Flashlight_MX991",1]
     ]],
     ["FST_Vest_Base",[
         ["FST_blaster_cell_High_Blue",12,40],
@@ -1847,7 +1849,8 @@ if (isNull _box) exitWith {
         ["WBK_HeadLampItem_Double",1],
         ["ACE_Flashlight_XL50",1],
         ["ACE_IR_Strobe_Item",1],
-        ["ACE_CableTie",2]
+        ["ACE_CableTie",2],
+        ["ACE_Flashlight_MX991",1]
     ]],
     ["FST_Vest_Base",[
         ["FST_grenade_Detonator_mag",3,1],
@@ -1889,7 +1892,8 @@ if (isNull _box) exitWith {
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
         ["ACE_FortifyToken", 50],
-        ["FST_grenade_Penetrator_mag",3,1]
+        ["FST_grenade_Penetrator_mag",3,1],
+        ["ACE_Flashlight_MX991",1]
     ]],
     ["FST_Vest_Base",[
         ["FST_blaster_cell_High_Blue",12,40],
@@ -1932,7 +1936,8 @@ if (isNull _box) exitWith {
         ["WBK_HeadLampItem_Double",1],
         ["ACE_Flashlight_XL50",1],
         ["ACE_IR_Strobe_Item",1],
-        ["ACE_CableTie",2]
+        ["ACE_CableTie",2],
+        ["ACE_Flashlight_MX991",1]
     ]],
     ["FST_Vest_Base",[
         ["ACE_plasmaIV_500",4],
@@ -1987,7 +1992,8 @@ if (isNull _box) exitWith {
             ["ACE_HuntIR_monitor",1],
             ["FST_SmokeBlue_LauncherGrenade",1,1],
             ["FST_SmokeGreen_LauncherGrenade",1,1],
-            ["FST_SmokeRed_LauncherGrenade",1,1]
+            ["FST_SmokeRed_LauncherGrenade",1,1],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_Base",[
             ["FST_grenade_Detonator_mag",3,1],
@@ -2032,7 +2038,8 @@ if (isNull _box) exitWith {
             ["WBK_HeadLampItem_Double",1],
             ["ACE_Flashlight_XL50",1],
             ["ACE_IR_Strobe_Item",1],
-            ["ACE_CableTie",2]
+            ["ACE_CableTie",2],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_Base",[
             ["FST_grenade_Detonator_mag",3,1],
@@ -2072,7 +2079,8 @@ if (isNull _box) exitWith {
             ["WBK_HeadLampItem_Double",1],
             ["ACE_Flashlight_XL50",1],
             ["ACE_IR_Strobe_Item",1],
-            ["ACE_CableTie",2]
+            ["ACE_CableTie",2],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_Base",[
             ["IDA_grenade_Smoke_mag",3,1],
@@ -2119,7 +2127,8 @@ if (isNull _box) exitWith {
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
             ["FST_blaster_cell_low_Blue",6,30],
-            ["Ace_SpraypaintGreen",1]
+            ["Ace_SpraypaintGreen",1],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_NCO_Kama_Woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2163,7 +2172,8 @@ if (isNull _box) exitWith {
             ["ItemAndroid",1],
             ["IDA_grenade_Smoke_Purple_mag",2,1],
             [["FST_Hacking_Datapad","","","",[],[],""],1],
-            ["FST_HackDatacard_Empty",15]
+            ["FST_HackDatacard_Empty",15],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_Base",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2209,7 +2219,8 @@ if (isNull _box) exitWith {
             ["WBK_HeadLampItem_Double",1],
             ["ACE_Flashlight_XL50",1],
             ["ACE_IR_Strobe_Item",1],
-            ["ACE_CableTie",2]
+            ["ACE_CableTie",2],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_Base",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2258,7 +2269,8 @@ if (isNull _box) exitWith {
             [["IDA_Clone_Knife","","","",[],[],""],1],
             ["FST_blaster_cell_low_Blue",6,30],
             [["FST_Hacking_Datapad","","","",[],[],""],1],
-            ["FST_HackDatacard_Empty",15]
+            ["FST_HackDatacard_Empty",15],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_NCO_Kama_Woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2308,7 +2320,8 @@ if (isNull _box) exitWith {
             ["ItemcTab",1],
             ["IDA_grenade_Smoke_Purple_mag",2,1],
             [["IDA_Clone_Knife","","","",[],[],""],1],
-            ["FST_blaster_cell_low_Blue",6,30]
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_Vest_NCO_Kama_Woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2359,7 +2372,8 @@ if (isNull _box) exitWith {
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
             ["FST_blaster_cell_low_Blue",6,30],
-            ["Ace_SpraypaintGreen",1]
+            ["Ace_SpraypaintGreen",1],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_pauldron_kama_Woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
@@ -2402,7 +2416,8 @@ if (isNull _box) exitWith {
             ["ACE_CableTie",2],
             [["IDA_Clone_Knife","","","",[],[],""],1],
             ["FST_blaster_cell_low_Blue",6,30],
-            ["Ace_SpraypaintGreen",1]
+            ["Ace_SpraypaintGreen",1],
+            ["ACE_Flashlight_MX991",1]
         ]],
         ["FST_pauldron_kama_reversed_woodland",[
             ["FST_blaster_cell_High_Blue",12,40],
