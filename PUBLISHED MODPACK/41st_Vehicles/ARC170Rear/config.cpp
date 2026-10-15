@@ -116,7 +116,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class NewTurret;
 	class 3as_arc_170_blue: 3as_arc_170_base
 	{
 		class Components;

@@ -17,6 +17,21 @@
 },true,[],true] call CBA_fnc_addClassEventHandler;
 if (hasInterface) then {
     [] call FST_HCSpawn_fnc_registerBurnsModules;
+    // ACE UI re-apply (Miran 11 Oct RS op: LAAT / LAAT-C / Saber pilots lost the radar and the current-mag ammo count). ACE UI sets its
+    // elements only when a HUD display loads, and treats the player as on foot while CBA_fnc_canUseWeapon is true; the get-in animation can
+    // still count as on foot at that moment and nothing re-applies once the seat animation takes over. Re-run ACE's own steps 1, 3 and 6 s
+    // after every vehicle / seat change. Kill switch: missionNamespace FST_aceUiReapply = false.
+    if (isClass (configFile >> "CfgPatches" >> "ace_ui")) then {
+        FST_HCSpawn_fnc_aceUiReapply = {
+            if (!(missionNamespace getVariable ["FST_aceUiReapply", true]) || {isNil "ace_ui_configCache"} || {isNil "ace_ui_fnc_setAdvancedElement"}) exitWith {};
+            private _force = !(missionNamespace getVariable ["ace_ui_allowSelectiveUI", true]);
+            { [_x, missionNamespace getVariable [format ["ace_ui_%1", _x], true], false, _force] call ace_ui_fnc_setAdvancedElement } forEach (keys ace_ui_configCache);
+            [false] call ace_ui_fnc_setElements;
+        };
+        private _reapply = { [] spawn { { sleep _x; call FST_HCSpawn_fnc_aceUiReapply } forEach [1, 2, 3] } };
+        ["vehicle", _reapply] call CBA_fnc_addPlayerEventHandler;
+        ["turret", _reapply] call CBA_fnc_addPlayerEventHandler;
+    };
     // Zeus camera as an observer (Miran 10 Oct: squads Zeused far from any player body walked in "jerking a lot and not
     // firing in volleys" - the drill/pace range gate counted player bodies only). Every 2 s while the curator screen is
     // open the camera position rides on the player object (sent only after it moves 25 m); servers/HCs add it to
@@ -49,8 +64,67 @@ if (hasInterface) then {
 // was retired and folded into this addon), so it also has to run in
 // singleplayer / editor preview, where the rest of the HC system stays off.
 // The function filters on local/alive/side/class itself.
+// V54 B2 guard (Miran 12 Oct: "BURNS should never allow B2s to go prone"). Runs on EVERY machine: server, HCs and clients
+// (Zeus-placed AI stay local to the Zeus client until transferred). B2 prone sources: WebKnight's B1/BX grenade warning sets every
+// man within 15 m to "DOWN" for 7 s; B2 classes WebKnight does not load sit at unitPos AUTO and the engine drops them prone.
+// Spawn/transfer: CBA class EH InitPost + Local. Each frame: the local B2 list goes back to "UP" before a prone animation starts.
+// Backstops: AnimChanged hook + the keeper below. Kill switch: FST_HC_B2NoProne = false. BX commandos are not B2: untouched.
+if (isNil "BURNS_fnc_isB2") then {
+    BURNS_fnc_isB2 = {
+        params ["_u"];
+        if (isNull _u || {!(_u isKindOf "CAManBase")}) exitWith {false};
+        private _cache = missionNamespace getVariable "BURNS_b2Cache";
+        if (isNil "_cache") then {_cache = createHashMap; missionNamespace setVariable ["BURNS_b2Cache", _cache]};
+        private _class = typeOf _u;
+        private _r = _cache getOrDefault [_class, 0];
+        if (_r isEqualType true) exitWith {_r};
+        _r = _u isKindOf "WBK_LS_B2_Baseclass";
+        private _cfg = configOf _u;
+        while {!_r && {isClass _cfg}} do {
+            if ((((toLowerANSI configName _cfg) splitString "_") findIf {(_x find "b2") == 0}) >= 0) then {_r = true};
+            _cfg = inheritsFrom _cfg;
+        };
+        _cache set [_class, _r];
+        _r
+    };
+    BURNS_fnc_b2Up = {
+        params ["_u"];
+        if (!local _u || {!alive _u} || {vehicle _u != _u} || {lifeState _u == "INCAPACITATED"} || {isPlayer _u}) exitWith {false};
+        if (toUpper unitPos _u == "UP") exitWith {false};
+        _u setUnitPos "UP";
+        _u setUnitPosWeak "UP";
+        true
+    };
+    BURNS_fnc_b2Track = {
+        params ["_u"];
+        if (!(missionNamespace getVariable ["FST_HC_B2NoProne", true]) || {!local _u} || {!([_u] call BURNS_fnc_isB2)}) exitWith {};
+        [_u] call BURNS_fnc_b2Up;
+        private _list = missionNamespace getVariable ["BURNS_b2Local", []];
+        if !(_u in _list) then {_list pushBack _u; missionNamespace setVariable ["BURNS_b2Local", _list]};
+    };
+};
+if !(missionNamespace getVariable ["BURNS_b2GuardStarted", false]) then {
+    missionNamespace setVariable ["BURNS_b2GuardStarted", true];
+    ["CAManBase", "InitPost", {[_this select 0] call BURNS_fnc_b2Track}, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["CAManBase", "Local", {params ["_u", "_isLocal"]; if (_isLocal) then {[_u] call BURNS_fnc_b2Track}}] call CBA_fnc_addClassEventHandler;
+    [{
+        if !(missionNamespace getVariable ["FST_HC_B2NoProne", true]) exitWith {};
+        {
+            if (toUpper unitPos _x != "UP") then {[_x] call BURNS_fnc_b2Up};
+        } forEach (missionNamespace getVariable ["BURNS_b2Local", []]);
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
+};
+
 private _startStanceKeeper = {
-    if (hasInterface && {!isServer}) exitWith {};
+    // Clients run only the B2 pass (their Zeus-local AI); B1 upkeep stays on the server and HCs.
+    if (hasInterface && {!isServer}) exitWith {
+        if !(missionNamespace getVariable ["BURNS_stanceKeeperStarted", false]) then {
+            missionNamespace setVariable ["BURNS_stanceKeeperStarted", true];
+            [{
+                [true] call FST_HCSpawn_fnc_enforceDroidStance;
+            }, missionNamespace getVariable ["FST_HC_DroidStanceInterval", 10], []] call CBA_fnc_addPerFrameHandler;
+        };
+    };
     if !(missionNamespace getVariable ["BURNS_stanceKeeperStarted", false]) then {
         missionNamespace setVariable ["BURNS_stanceKeeperStarted", true];
         [{

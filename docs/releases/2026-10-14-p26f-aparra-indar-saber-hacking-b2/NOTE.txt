@@ -1,0 +1,15 @@
+Release P26f - published 14 Oct 2026 21:21 EDT on Miran's go ("go P26f"). Workshop 3048946639, ManifestID 3157562274122335226,
+time_updated 1792027267, 89 files / 7,692,298,996 B. Staging: Downloads/Steam-aux-release-20261014-P26f-aparra-indar.
+
+Base = P25R (13 Oct, ManifestID 2151430008499543779, not separately recorded here) = P25 with 41st_DC15 back to P24 e6c365e4
+(DC-15S UGL hand fix pulled after join crashes on the training server).
+
+Changes vs P25R:
+- FST_HCSpawn fbf6a813: droid AI V54, B2s never go prone (source synced here: XEH_postInit, fn_enforceDroidStance, fn_burnsB1Volley).
+- 41st_Vehicles 6fb5e979: stray root "class NewTurret;" removed from ARC170 + ARC170Rear config.cpp (main-menu NewTurret.scope box).
+- NEW FST_Saber_Handling f5ea76e3: 24 Sep Saber tune re-applied (torque 7200, tankTurnForce 1.2M / 0.2-0.65, reverse R2 -2.4, speeds unchanged).
+- 41st_Civilians_and_Intel a26b56d1, 41st_KitMenu b3e01f78, FST_ShipScripts aac8b6b6: GitHub commits a083ad74..a56d759d (merge 9e137f7a),
+  built as live PBO + changed entries.
+- NEW terrains: fst_appalachia ba883987 + fst_app_autumn 2c4ec636 (Aparra 8f), fst_indar 5a7d1d48 (via make_variant/stage_terrain: 0 problems).
+
+Checks: publish_release.py --check PASSED. Kit fit, boot and Saber engine tests SKIPPED on Miran's call ("Skip the tests").

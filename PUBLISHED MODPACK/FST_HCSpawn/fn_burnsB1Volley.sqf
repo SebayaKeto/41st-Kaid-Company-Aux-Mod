@@ -22,10 +22,14 @@ if !(missionNamespace getVariable ["BURNS_B1VolleyEnabled",true]) exitWith {};
 if !([_group,true] call FST_HCSpawn_fnc_burnsB1Eligible) exitWith {
     if (_dbg && {([leader _group] call FST_HCSpawn_fnc_burnsRole)=="b1"}) then {
         private _u=units _group select {alive _x};
-        [_group,format ["not eligible: held %1, not local %2, in vehicle %3, PATH off %4, not B1 %5, exempt %6",
+        // V53: every reason fn_burnsB1Eligible checks (11 Oct op: 591 HC lines read "not eligible" with all six old reasons 0)
+        [_group,format ["not eligible: held %1, not local %2, in vehicle %3, PATH off %4, not B1 %5, exempt %6, sim off %7, incap %8, player %9, protected %10, tasks %11, stance %12, grp exempt %13",
             _group getVariable ["FST_HC_heldBy",-1],{!local _x} count _u,{vehicle _x!=_x} count _u,
             {!(_x checkAIFeature "PATH") && {isNil {_x getVariable "BURNS_volleyHold"}}} count _u,
-            {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1"} count _u,{_x getVariable ["BURNS_exempt",false]} count _u]] call BURNS_fnc_dbgWhy;
+            {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1"} count _u,{_x getVariable ["BURNS_exempt",false]} count _u,
+            {!simulationEnabled _x} count _u,{lifeState _x=="INCAPACITATED"} count _u,{[_x] call FST_HCSpawn_fnc_isPlayerControlledUnit} count _u,
+            [_group] call FST_HCSpawn_fnc_isProtectedVehicleGroup,missionNamespace getVariable ["FST_HC_CombatTasksEnabled",true],
+            missionNamespace getVariable ["FST_HC_DroidStanceEnabled",true],_group getVariable ["BURNS_exempt",false]]] call BURNS_fnc_dbgWhy;
     };
 };
 private _mode=([_group,["FST_HC_combatTask",[]]] call FST_HCSpawn_fnc_burnsStateGet) param [0,""];
@@ -57,22 +61,38 @@ if (_close || {_holding} || {_far} || {_stale} || {time<(_group getVariable ["BU
         };
     } forEach units _group;
 };
-// Target: nearest perceived enemy the leader can see, 20-450 m (native B1s open fire from ~380 m, probe lp17). The sight ray starts 1.5 m toward the target so
-// the leader's own body does not block it (probe 6 Oct: ~300 false "no target").
+// Target: nearest perceived enemy 20-450 m (native B1s open fire from ~380 m, probe lp17). The sight ray starts 1.5 m toward the target so the
+// viewer's own body does not block it (probe 6 Oct: ~300 false "no target").
+// V53 (Miran 11 Oct op: module squads on HCs "not much volley fire"; probe hls51: squads knew the targets their riflemen were already shooting
+// at only 0.86-0.92): squad knowledge >= 0.5 (was 1), and the leader OR the rifleman engaging that target may be the one who sees it; if the
+// leader's scan finds nothing, a rifleman's own assigned target that he can see is used.
 private _target=objNull;
 private _best=450;
+private _seeFrom={
+    params ["_u","_p"];
+    private _eye=eyePos _u;
+    _eye=_eye vectorAdd ((vectorNormalized ((aimPos _p) vectorDiff _eye)) vectorMultiply 1.5);
+    ([_u,"VIEW",_p] checkVisibility [_eye,aimPos _p])>0.5
+};
+private _engaging=(units _group) select {alive _x && {local _x} && {!isNull assignedTarget _x}};
 {
     _x params ["_pos","","_side","","_obj"];
     if (isNull _obj || {!alive _obj} || {captive _obj} || {isObjectHidden _obj} || {_side in [civilian,sideUnknown,sideLogic]} || {(side _group) getFriend _side>=0.6}) then {continue};
     private _p=vehicle _obj;
     if (_p isKindOf "Air" || {[_obj] call FST_HCSpawn_fnc_burnsIsDown}) then {continue};
     private _d=_leader distance2D _p;
-    if (_d<_best && {_d>20} && {_group knowsAbout _p>=1} && {
-        private _eye=eyePos _leader;
-        _eye=_eye vectorAdd ((vectorNormalized ((aimPos _p) vectorDiff _eye)) vectorMultiply 1.5);
-        ([_leader,"VIEW",_p] checkVisibility [_eye,aimPos _p])>0.5
+    if (_d<_best && {_d>20} && {_group knowsAbout _p>=0.5} && {
+        ([_leader,_p] call _seeFrom) || {(_engaging findIf {(vehicle assignedTarget _x)==_p && {[_x,_p] call _seeFrom}})>=0}
     }) then {_best=_d;_target=_p};
 } forEach (_leader nearTargets 450);
+if (isNull _target) then {
+    {
+        private _p=vehicle (assignedTarget _x);
+        if (alive _p && {!(_p isKindOf "Air")} && {(side _group) getFriend (side group _p)<0.6} && {!([_p] call FST_HCSpawn_fnc_burnsIsDown)} && {
+            (_leader distance2D _p)>20 && {(_leader distance2D _p)<450}
+        } && {[_x,_p] call _seeFrom}) exitWith {_target=_p};
+    } forEach _engaging;
+};
 if (isNull _target) exitWith {if (_dbg) then {[_group,"no visible target"] call BURNS_fnc_dbgWhy}};
 // Drill members: B1 riflemen on foot (no launcher; probes lp27/V31: drilled AT droids froze or drifted 50-116 m).
 // The lease runs 8 s past the last sighting.

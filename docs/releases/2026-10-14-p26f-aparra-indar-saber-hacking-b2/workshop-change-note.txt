@@ -1,0 +1,11 @@
+Saber handling, hacking + hotwiring, kit updates, repair pad fix, B2s stay standing
+
+- Saber tanks (standard, Super, Recon and all skins): 20% more engine torque, much quicker turning (90-degree turn ~3 s instead of ~5 s) and far stronger reverse. Top speeds unchanged (60 km/h, Recon 120 km/h).
+- Hacking datapad is smaller, and there's a new hotwiring minigame for door panels.
+- Kits: RTOs get a hacking tablet and 15 empty datacards; P1 and Snow kits get hacking devices and intel chips; Rangers get a fulton (current and Snow kits).
+- Ship repair/rearm/refuel: the [Initiate Repairs] action now stays on you after respawn or switching units.
+- B2 super battle droids now always stay on their feet: no more B2s lying down after a B1 shouts "grenade", in combat, or after Zeus placement. Commando droids still crouch and creep as before.
+- Fixes the "No entry ... NewTurret.scope" error box in the main menu.
+- New maps: Aparra (with its autumn set) and Indar, the two 16x16 terrains for this weekend's ops.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
