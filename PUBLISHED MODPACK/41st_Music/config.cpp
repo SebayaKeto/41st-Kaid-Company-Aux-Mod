@@ -542,6 +542,18 @@ class CfgMusic
 		};
 		duration="132";
 	};
+	class FST_KeepABlasterByYourSide
+	{
+		name="Keep a Blaster By Your Side";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Keep_A_Blaster_By_Your_Side.ogg",
+			1,
+			1
+		};
+		duration="124";
+	};
 	
 	
 	
