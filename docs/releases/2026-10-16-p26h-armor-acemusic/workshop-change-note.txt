@@ -1,0 +1,7 @@
+New armour and Ace Combat music
+
+- Armour: Cloaker and Strider Clean updated; new Astral armour, Cloaker jump pack, and Strider Dirty armour + P2 helmet.
+- Music: 20 new Ace Combat 8 tracks; all Ace Combat tracks are now together under one Zeus music category ("AC").
+- The two Helldivers 2 tracks moved to the Helldivers music category.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

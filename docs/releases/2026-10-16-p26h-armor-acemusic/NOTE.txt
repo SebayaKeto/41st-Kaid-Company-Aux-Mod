@@ -1,0 +1,4 @@
+Release P26h - published 16 Oct 2026 12:55 EDT on Miran's go ("go P26h"). Workshop 3048946639, ManifestID 8854132250268010270,
+time_updated 1792169708, 89 files / 7,803,031,758 B. Staging: Downloads/Steam-aux-release-20261016-P26h-armor-acemusic (aatcrew/make_p26h.py).
+= P26g (3106077438704609622) + 41st_Armor 94f909ea (CT-2225House c1333a4f) + 41st_Music bc41f7cf (RazaVuzamai 2674e555 + 2f12e388, plus e09ca1a7:
+Helldivers 2 .ogg moved to HelldiversTracks to match config). PBOs rebuilt from the live ones (D:/AuxUpdater/p26h/rebuild.py). Not tested in game.
