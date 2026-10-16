@@ -1,0 +1,5 @@
+New 501st clone units
+
+- New Zeus/Eden units: 501st clones (trooper, autorifle, marksman, AT, CQB, RTO, medic, EOD, tanker, SL, FTL, commander) under "Other Clone Units", with randomised gear.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
