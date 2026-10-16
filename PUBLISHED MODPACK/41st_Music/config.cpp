@@ -54,13 +54,13 @@ class CfgMusicClasses
 	{
 		displayName="41st - Metal Gear";
 	};
-	class FST_ACPW_Music
+	class FST_AC_Music
 	{
-		displayName="41st - AC/PW Tracks";
+		displayName="41st - AC Tracks";
 	};
 	class FST_Ambience_Music
 	{
-		displayName="41st - Umbara Ambience";
+		displayName="41st - Ambience";
 	};
 };
 
@@ -106,8 +106,6 @@ class CfgMusic
 		"FST_Destiny_UntoldLegends",
 		"FST_TFFOC_MainTheme",
 		"FST_WT_WaltzoftheTornado",		
-		"FST_HelldiversTheme",
-		"FST_HelldiversExtraction",
 		"FST_SeekingtheLight",
 		"FST_ForsakenGunslinger",
 		"FST_DarktideWarpTraveller",
@@ -135,22 +133,6 @@ class CfgMusic
 		"FST_Destiny_TheWarmindRemix",
 		"FST_Destiny_DreadfulHarmony",
 		"FST_Destiny_UnswornUnlovedErased",
-		"FST_Ace_Blockade",
-		"FST_Ace_InvisibleFleet",
-		"FST_Ace_Prelude",
-		"FST_Ace_Silent",
-		"FST_Ace_Tango",
-		"FST_Ace_LiberationOfGracemeria",
-		"FST_Ace_Daredevil",
-		"FST_Ace_Zero",
-		"FST_Ace_AneaLanding",
-		"FST_Ace_SiegeOnSilvat",
-		"FST_Ace_SanlomaAssault",
-		"FST_Ace_DeadSea",
-		"FST_Ace_RagnoFortress",
-		"FST_Ace_FiresOfLiberation",
-		"FST_Ace_Malebolge",
-		"FST_Ace_CityLights",
 		"FST_HanSolo",
 		"FST_Archangel",
 		"FST_DeusEx_TheNothing",
@@ -319,6 +301,8 @@ class CfgMusic
 		"FST_HD1_Squids1",
 		"FST_HD1_Squids2",
 		"FST_HD1_Squids3",
+		"FST_HelldiversTheme",
+		"FST_HelldiversExtraction",
 
 		//Metal Gear
 		"FST_Encounter",
@@ -349,8 +333,43 @@ class CfgMusic
 		"FST_TheHotWindBlowing_Instrumental",
 		"FST_ShiningLights_EvenInDeath",
 
-		//AC And PW
+		//AC
 		"FST_Everflow",
+		"FST_AThousandPointsOfLight",
+		"FST_Celaeno",
+		"FST_DeathRattle",
+		"FST_GaffedCard",
+		"FST_HortusRegisAlti_GameVer",
+		"FST_LongShot",
+		"FST_LurkingInTheShadows",
+		"FST_MoonlightAndShadows",
+		"FST_MyBlueSkyHome",
+		"FST_Nightmare",
+		"FST_RetakingOfTheveII",
+		"FST_Shadow22",
+		"FST_Shadows",
+		"FST_SongOfWingsRA",
+		"FST_The1stLandBattleship",
+		"FST_The2ndLandBattleship",
+		"FST_The3rdLandBattleship",
+		"FST_TimesAreChangingII",
+		"FST_TonitrusSpear",
+		"FST_Ace_Blockade",
+		"FST_Ace_InvisibleFleet",
+		"FST_Ace_Prelude",
+		"FST_Ace_Silent",
+		"FST_Ace_Tango",
+		"FST_Ace_LiberationOfGracemeria",
+		"FST_Ace_Daredevil",
+		"FST_Ace_Zero",
+		"FST_Ace_AneaLanding",
+		"FST_Ace_SiegeOnSilvat",
+		"FST_Ace_SanlomaAssault",
+		"FST_Ace_DeadSea",
+		"FST_Ace_RagnoFortress",
+		"FST_Ace_FiresOfLiberation",
+		"FST_Ace_Malebolge",
+		"FST_Ace_CityLights",
 
 		//Ambience
 		"FST_ADisturbingMood",
@@ -1155,198 +1174,6 @@ class CfgMusic
 		};
 		duration="189";
 	};
-	class FST_Ace_InvisibleFleet
-	{
-		name="(Ace Combat 04) Invincible Fleet";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_InvisibleFleet.ogg",
-			1,
-			1
-		};
-		duration="229";
-	};
-	class FST_Ace_Prelude
-	{
-		name="(Ace Combat 04) Prelude";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_Prelude.ogg",
-			1,
-			1
-		};
-		duration="143";
-	};
-	class FST_Ace_Silent
-	{
-		name="(Ace Combat 04) Silent";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_Silent.ogg",
-			1,
-			1
-		};
-		duration="49";
-	};
-	class FST_Ace_Blockade
-	{
-		name="(Ace Combat 04) Blockade";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_Blockade.ogg",
-			1,
-			1
-		};
-		duration="289";
-	};
-	class FST_Ace_Tango
-	{
-		name="(Ace Combat 04) Tango Line";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_Tango.ogg",
-			1,
-			1
-		};
-		duration="124";
-	};
-	class FST_Ace_LiberationOfGracemeria
-	{
-		name="(Ace Combat 6) The Liberation of Gracemeria";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_THELIBERATIONOFGRACEMERIA.ogg",
-			1,
-			1
-		};
-		duration="438";
-	};
-	class FST_Ace_Daredevil
-	{
-		name="(Ace Combat 7) Daredevil";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_DAREDEVIL.ogg",
-			1,
-			1
-		};
-		duration="321";
-	};
-	class FST_Ace_Zero
-	{
-		name="(Ace Combat Zero) Zero";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_ZERO.ogg",
-			1,
-			1
-		};
-		duration="309";
-	};
-	class FST_Ace_AneaLanding
-	{
-		name="(Ace Combat 6) Anea Landing";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_ANEALANDING.ogg",
-			1,
-			1
-		};
-		duration="259";
-	};
-	class FST_Ace_SiegeOnSilvat
-	{
-		name="(Ace Combat 6) Siege on Silvat";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_SIEGEONSILVAT.ogg",
-			1,
-			1
-		};
-		duration="307";
-	};
-	class FST_Ace_SanlomaAssault
-	{
-		name="(Ace Combat 6) San Loma Assault";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_SANLOMAASSAULT.ogg",
-			1,
-			1
-		};
-		duration="266";
-	};
-	class FST_Ace_DeadSea
-	{
-		name="(Ace Combat 6) The Dead Sea";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_THEDEADSEA.ogg",
-			1,
-			1
-		};
-		duration="286";
-	};
-	class FST_Ace_RagnoFortress
-	{
-		name="(Ace Combat 6) Ragno Fortress";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_RAGNOFORTRESS.ogg",
-			1,
-			1
-		};
-		duration="369";
-	};
-	class FST_Ace_FiresOfLiberation
-	{
-		name="(Ace Combat 6) Fires of Liberation";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_FIRESOFLIBERATION.ogg",
-			1,
-			1
-		};
-		duration="143";
-	};
-	class FST_Ace_Malebolge
-	{
-		name="(Ace Combat 6) Malebolge";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_MALEBOLGE.ogg",
-			1,
-			1
-		};
-		duration="228";
-	};
-	class FST_Ace_CityLights
-	{
-		name="(Ace Combat 6) City Lights";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Ace_CITYLIGHTS.ogg",
-			1,
-			1
-		};
-		duration="223";
-	};
 	class FST_Halo_ThroughTheTrees
 	{
 		name="(Halo Infinite) Through The Trees";
@@ -1406,30 +1233,6 @@ class CfgMusic
 			1
 		};
 		duration="293";
-	};
-	class FST_HelldiversTheme
-	{
-		name="(Helldivers 2) Main Theme";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Helldivers-2-Main-Theme.ogg",
-			1,
-			1
-		};
-		duration="217";
-	};
-	class FST_HelldiversExtraction
-	{
-		name="(Helldivers 2) Extraction Theme";
-		musicClass="FST_OtherGames";
-		sound[]=
-		{
-			"41st_Music\GameTracks\Helldivers-2-ExtractionMission-Completion-Theme.ogg",
-			1,
-			1
-		};
-		duration="301";
 	};
 	class FST_SeekingtheLight
 	{
@@ -3232,6 +3035,31 @@ class CfgMusic
 		};
 		duration="433";
 	};
+	class FST_HelldiversTheme
+	{
+		name="(Helldivers 2) Main Theme";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\Helldivers-2-Main-Theme.ogg",
+			1,
+			1
+		};
+		duration="217";
+	};
+	class FST_HelldiversExtraction
+	{
+		name="(Helldivers 2) Extraction Theme";
+		musicClass="FST_Helldivers_Music";
+		sound[]=
+		{
+			"41st_Music\HelldiversTracks\Helldivers-2-ExtractionMission-Completion-Theme.ogg",
+			1,
+			1
+		};
+		duration="301";
+	};
+
 
 	//Metal Gear
 
@@ -3560,20 +3388,442 @@ class CfgMusic
 		duration="244";
 	};
 
-	//Ace Combat and Project Wingman
+	//Ace Combat
 
 	class FST_Everflow
 	{
-		name="AC8 - Everflow";
-		musicClass="FST_ACPW_Music";
+		name="(Ace Combat 8) - Everflow";
+		musicClass="FST_AC_Music";
 		sound[]=
 		{
-			"41st_Music\ACPWTracks\AC8 - Everflow.ogg",
+			"41st_Music\ACTracks\AC8 - Everflow.ogg",
 			1,
 			1
 		};
 		duration="366";
 	};
+	class FST_AThousandPointsOfLight
+	{
+		name="(Ace Combat 8) - A Thousand Points Of Light";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - A Thousand Points Of Light.ogg",
+			1,
+			1
+		};
+		duration="271";
+	};
+	class FST_Celaeno
+	{
+		name="(Ace Combat 8) - Celaeno";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Celaeno.ogg",
+			1,
+			1
+		};
+		duration="330";
+	};
+	class FST_DeathRattle
+	{
+		name="(Ace Combat 8) - Death Rattle";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Death Rattle.ogg",
+			1,
+			1
+		};
+		duration="264";
+	};
+	class FST_GaffedCard
+	{
+		name="(Ace Combat 8) - Gaffed Card";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Gaffed Card.ogg",
+			1,
+			1
+		};
+		duration="226";
+	};
+	class FST_HortusRegisAlti_GameVer
+	{
+		name="(Ace Combat 8) - Hortus Regis Alti (Game Version)";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Hortus Regis Alti (Game Version).ogg",
+			1,
+			1
+		};
+		duration="465";
+	};
+	class FST_LongShot
+	{
+		name="(Ace Combat 8) - Long Shot";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Long Shot.ogg",
+			1,
+			1
+		};
+		duration="214";
+	};
+	class FST_LurkingInTheShadows
+	{
+		name="(Ace Combat 8) - Lurking In The Shadows";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Lurking In The Shadows.ogg",
+			1,
+			1
+		};
+		duration="224";
+	};
+	class FST_MoonlightAndShadows
+	{
+		name="(Ace Combat 8) - Moonlight And Shadows";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Moonlight And Shadows.ogg",
+			1,
+			1
+		};
+		duration="270";
+	};
+	class FST_MyBlueSkyHome
+	{
+		name="(Ace Combat 8) - My Blue Sky Home";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - My Blue Sky Home.ogg",
+			1,
+			1
+		};
+		duration="532";
+	};
+	class FST_Nightmare
+	{
+		name="(Ace Combat 8) - Nightmare";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Nightmare.ogg",
+			1,
+			1
+		};
+		duration="247";
+	};
+	class FST_RetakingOfTheveII
+	{
+		name="(Ace Combat 8) - Retaking Of Theve II";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Retaking Of Theve II.ogg",
+			1,
+			1
+		};
+		duration="321";
+	};
+	class FST_Shadow22
+	{
+		name="(Ace Combat 8) - Shadow 22";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Shadow 22.ogg",
+			1,
+			1
+		};
+		duration="204";
+	};
+	class FST_Shadows
+	{
+		name="(Ace Combat 8) - Shadows";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Shadows.ogg",
+			1,
+			1
+		};
+		duration="156";
+	};
+	class FST_SongOfWingsRA
+	{
+		name="(Ace Combat 8) - Song Of Wings (Rise Above)";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Song Of Wings (Rise Above).ogg",
+			1,
+			1
+		};
+		duration="495";
+	};
+	class FST_The1stLandBattleship
+	{
+		name="(Ace Combat 8) - The 1st Land Battleship";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - The 1st Land Battleship.ogg",
+			1,
+			1
+		};
+		duration="256";
+	};
+	class FST_The2ndLandBattleship
+	{
+		name="(Ace Combat 8) - The 2nd Land Battleship";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - The 2nd Land Battleship.ogg",
+			1,
+			1
+		};
+		duration="275";
+	};
+	class FST_The3rdLandBattleship
+	{
+		name="(Ace Combat 8) - The 3rd Land Battleship";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - The 3rd Land Battleship.ogg",
+			1,
+			1
+		};
+		duration="360";
+	};
+	class FST_TimesAreChangingII
+	{
+		name="(Ace Combat 8) - Times Are Changing II";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Times Are Changing II.ogg",
+			1,
+			1
+		};
+		duration="517";
+	};
+	class FST_TonitrusSpear
+	{
+		name="(Ace Combat 8) - Tonitrus Spear";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Tonitrus Spear.ogg",
+			1,
+			1
+		};
+		duration="154";
+	};
+	class FST_Ace_InvisibleFleet
+	{
+		name="(Ace Combat 04) - Invincible Fleet";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_InvisibleFleet.ogg",
+			1,
+			1
+		};
+		duration="229";
+	};
+	class FST_Ace_Prelude
+	{
+		name="(Ace Combat 04) - Prelude";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_Prelude.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Ace_Silent
+	{
+		name="(Ace Combat 04) - Silent";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_Silent.ogg",
+			1,
+			1
+		};
+		duration="49";
+	};
+	class FST_Ace_Blockade
+	{
+		name="(Ace Combat 04) - Blockade";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_Blockade.ogg",
+			1,
+			1
+		};
+		duration="289";
+	};
+	class FST_Ace_Tango
+	{
+		name="(Ace Combat 04) - Tango Line";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_Tango.ogg",
+			1,
+			1
+		};
+		duration="124";
+	};
+	class FST_Ace_LiberationOfGracemeria
+	{
+		name="(Ace Combat 6) - The Liberation of Gracemeria";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_THELIBERATIONOFGRACEMERIA.ogg",
+			1,
+			1
+		};
+		duration="438";
+	};
+	class FST_Ace_Daredevil
+	{
+		name="(Ace Combat 7) - Daredevil";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_DAREDEVIL.ogg",
+			1,
+			1
+		};
+		duration="321";
+	};
+	class FST_Ace_Zero
+	{
+		name="(Ace Combat Zero) - Zero";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_ZERO.ogg",
+			1,
+			1
+		};
+		duration="309";
+	};
+	class FST_Ace_AneaLanding
+	{
+		name="(Ace Combat 6) - Anea Landing";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_ANEALANDING.ogg",
+			1,
+			1
+		};
+		duration="259";
+	};
+	class FST_Ace_SiegeOnSilvat
+	{
+		name="(Ace Combat 6) - Siege on Silvat";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_SIEGEONSILVAT.ogg",
+			1,
+			1
+		};
+		duration="307";
+	};
+	class FST_Ace_SanlomaAssault
+	{
+		name="(Ace Combat 6) - San Loma Assault";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_SANLOMAASSAULT.ogg",
+			1,
+			1
+		};
+		duration="266";
+	};
+	class FST_Ace_DeadSea
+	{
+		name="(Ace Combat 6) - The Dead Sea";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_THEDEADSEA.ogg",
+			1,
+			1
+		};
+		duration="286";
+	};
+	class FST_Ace_RagnoFortress
+	{
+		name="(Ace Combat 6) - Ragno Fortress";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_RAGNOFORTRESS.ogg",
+			1,
+			1
+		};
+		duration="369";
+	};
+	class FST_Ace_FiresOfLiberation
+	{
+		name="(Ace Combat 6) - Fires of Liberation";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_FIRESOFLIBERATION.ogg",
+			1,
+			1
+		};
+		duration="143";
+	};
+	class FST_Ace_Malebolge
+	{
+		name="(Ace Combat 6) - Malebolge";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_MALEBOLGE.ogg",
+			1,
+			1
+		};
+		duration="228";
+	};
+	class FST_Ace_CityLights
+	{
+		name="(Ace Combat 6) - City Lights";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\Ace_CITYLIGHTS.ogg",
+			1,
+			1
+		};
+		duration="223";
+	};
+
+
 
 	//Ambience
 
