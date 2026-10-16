@@ -1,0 +1,7 @@
+Release P26j - published 16 Oct 2026 14:39 EDT on Miran's go ("Push to Steam once it and the Bees stuff is ready"). Workshop 3048946639,
+ManifestID 8997368186775791167, time_updated 1792175976, 91 files / 7,805,101,036 B. Staging: Downloads/Steam-aux-release-20261016-P26j-lowcell-blastersong-final.
+= P26i (4384416276535717925) + NEW BUZZ_LowCell 30794977 (Bees d314f9c2; shipped as config.bin + functions, prefix BUZZ_LowMagGunSound\BUZZ_LowCell)
++ 41st_Music 19294459 (a7e288c9: Keep a Blaster By Your Side, FST_KeepABlasterByYourSide, 41st Mission Tracks).
+Checks: CfgConvert OK; DC-15A/C/S modes use plain StandardSound/soundBegin (no soundsets) and same mode parents; stage_terrain's only "problem" was
+FST_DC15AS not found = indexer reads root configs only (FST_DC15AS lives in 41st_Weapons DC-15AS/config.cpp, as live 41st_DC15 already requires). Not tested in game.
+Note: LowCell plays each DC-15 shot via playSound3D (global, one network message per shot).

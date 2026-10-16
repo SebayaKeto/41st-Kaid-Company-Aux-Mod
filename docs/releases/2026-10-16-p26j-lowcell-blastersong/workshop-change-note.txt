@@ -1,0 +1,6 @@
+Low-cell blaster sound + new mission track
+
+- DC-15A, DC-15C and DC-15S: shots now vary slightly in pitch, and pitch up noticeably when your cell is nearly empty (last 20%), so you can hear when to reload.
+- Music: new 41st Mission Track "Keep a Blaster By Your Side".
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
