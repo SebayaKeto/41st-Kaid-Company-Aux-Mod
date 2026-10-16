@@ -1,0 +1,6 @@
+Map update: Aparra and Sarrak (final builds for this weekend)
+
+- Aparra: updated terrain (final build for Friday RANGER and Saturday's ops).
+- Sarrak: updated terrain for Sunday's ops.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

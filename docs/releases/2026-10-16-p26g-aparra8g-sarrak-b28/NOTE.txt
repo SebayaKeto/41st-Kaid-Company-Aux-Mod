@@ -1,0 +1,4 @@
+Release P26g - published 16 Oct 2026 12:44 EDT on Miran's go typed in the Aux Updater chat ("go P26g"). Workshop 3048946639,
+ManifestID 3106077438704609622, time_updated 1792169059, 89 files / 7,692,369,031 B. Staging: Downloads/Steam-aux-release-20261016-P26g-aparra8g-sarrak.
+= live P26f (3157562274122335226) + Aparra 8g fst_appalachia 6af50676 (287,794,533 B) + Sarrak b28 fst_indar 5af94ab7 (188,072,054 B). Player delta ~476 MB.
+stage_terrain: 0 problems/warnings for both. --check PASSED 12:15. Publisher printed a Steam pipe assert on exit after "Upload finished : OK"; public API confirms.
