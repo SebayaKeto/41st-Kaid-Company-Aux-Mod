@@ -339,11 +339,13 @@ class CfgMusic
 		"FST_Celaeno",
 		"FST_DeathRattle",
 		"FST_GaffedCard",
+		"FST_HortusRegisAlti_GameVer",
 		"FST_LongShot",
 		"FST_LurkingInTheShadows",
 		"FST_MoonlightAndShadows",
 		"FST_MyBlueSkyHome",
 		"FST_Nightmare",
+		"FST_RetakingOfTheveII",
 		"FST_Shadow22",
 		"FST_Shadows",
 		"FST_SongOfWingsRA",
@@ -3448,6 +3450,18 @@ class CfgMusic
 		};
 		duration="226";
 	};
+	class FST_HortusRegisAlti_GameVer
+	{
+		name="(Ace Combat 8) - Hortus Regis Alti (Game Version)";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Hortus Regis Alti (Game Version).ogg",
+			1,
+			1
+		};
+		duration="465";
+	};
 	class FST_LongShot
 	{
 		name="(Ace Combat 8) - Long Shot";
@@ -3507,6 +3521,18 @@ class CfgMusic
 			1
 		};
 		duration="247";
+	};
+	class FST_RetakingOfTheveII
+	{
+		name="(Ace Combat 8) - Retaking Of Theve II";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Retaking Of Theve II.ogg",
+			1,
+			1
+		};
+		duration="321";
 	};
 	class FST_Shadow22
 	{
