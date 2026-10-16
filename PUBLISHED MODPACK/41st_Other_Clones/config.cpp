@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class 41st_Other_Clones
 	{
-		requiredAddons[]={};
+		requiredAddons[]={"41st_Addon","JLTS_characters_CloneArmor"};
 		units[]=
 		{
 
