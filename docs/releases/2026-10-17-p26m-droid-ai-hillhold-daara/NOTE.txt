@@ -1,0 +1,14 @@
+P26m - published 17 Oct 2026 18:08 EDT on Miran's go ("Push P26m"). Workshop 3048946639, ManifestID 2963338421313161864, time_updated 1792274914,
+91 files / 7,805,122,366 B. Base: P26j (1792175976 / 8997368186775791167). Staging: Downloads/Steam-aux-release-20261017-P26m-v55h-hillhold-drillfix-daara.
+
+Changed:
+- Addons/FST_HCSpawn.pbo -> V55h (sha256 d55222d7...); source = PUBLISHED MODPACK/FST_HCSpawn (8 scripts in this commit):
+  B1 line: blocked droids leave the anchor and file along the leader trail; median anchor; squad detour when the leader stalls;
+  road march on assault (CBA "B1 road march"); stale air/sky targets dropped; drill only riflemen who see the target and can volley
+  (17 Oct Sat-1 op log: 46-droid Bravo 2-2 drilled silent); vehicle hill hold for AI tanks/wheeled APCs (CBA "Vehicle hill hold").
+- Addons/ck_character_v8.pbo (sha256 e2d4dd3e...): displayName "Daara" on CK_U_CharacterV8_Jedi / CK_CharacterV8_Jedi (strings only,
+  no class rename; Miran via Omnibus). Binarized-only addon, no source in this repo; edit kept at D:/AuxUpdater/daara_rename.
+
+Tests (D:/AuxUpdater/aatcrew, perf): rock/road/forest/Aparra-bases/flank probes vs P26j; hill test on Stratis (vanilla Slammer control)
+and with HC-owned AATs: 15 deg roll-back 76-114 m (P26j) -> 0.5-0.7 m; server + 4 HC boot errors identical to P26j.
+Rollback ready: Downloads/Steam-aux-ROLLBACK-to-P26j-from-P26m (--check passed 18:08) - publish only on Miran's go.

@@ -290,3 +290,43 @@ if (hasInterface) then {
         }, {}, [0x3E, [true, false, false]]
     ] call CBA_fnc_addKeybind;
 };
+
+// Hill hold (Miran 17 Oct, Aparra: "AATs still suck on hills and just keep sliding back down especially when moving off from a stop").
+// Probe hvS2 on vanilla Stratis: a vanilla Slammer pulling away on 14.6 deg grass rolled back freely (2.5 m/s2, 62 km/h in 7 s) and never
+// recovered; 12.8 deg was fine. The AI releases the brake before it has drive, and once rolling back the auto gearbox does not pull it out.
+// Every 0.5 s on each machine: a local AI-driven tank or wheeled APC, nose up more than ~7 deg, rolling backwards 0.6-12 m/s while its
+// destination lies ahead, gets a per-frame hold for up to 6 s that removes the backward part of its velocity, until it moves forward
+// over 2.5 m/s or levels out. CBA setting "Vehicle hill hold".
+if (isNil "BURNS_hillHoldPFH") then {
+    BURNS_hillHoldPFH = [{
+        if !(missionNamespace getVariable ["BURNS_HillHold", true]) exitWith {};
+        {
+            private _v = _x;
+            if (local _v && {alive _v} && {_v isKindOf "Tank" || {_v isKindOf "Wheeled_APC_F"}} && {(_v getVariable ["BURNS_hillHoldUntil", -1]) < time}) then {
+                private _d = driver _v;
+                if (!isNull _d && {alive _d} && {!isPlayer _d}) then {
+                    private _f = vectorDir _v;
+                    private _vel = velocity _v;
+                    private _back = -(_vel vectorDotProduct _f);
+                    if ((_f select 2) > 0.12 && {_back > 0.6} && {_back < 12}) then {
+                        private _dp = (expectedDestination _d) param [0, []];
+                        private _f2 = [_f select 0, _f select 1, 0];
+                        private _ahead = count _dp < 2 || {(([(_dp select 0) - ((getPosATL _v) select 0), (_dp select 1) - ((getPosATL _v) select 1), 0]) vectorDotProduct _f2) > 0};
+                        if (_ahead) then {
+                            _v setVariable ["BURNS_hillHoldUntil", time + 6];
+                            if (missionNamespace getVariable ["BURNS_B1Debug", false]) then {diag_log format ["[BURNS_DBG] hill hold %1 (%2): rolling back %3 m/s, nose up %4 deg", _v, typeOf _v, round (_back * 10) / 10, round (asin ((_f select 2) min 1))]};
+                            [{
+                                params ["_v", "_id"];
+                                _v = _v select 0;
+                                if (isNull _v || {!alive _v} || {!local _v} || {time > (_v getVariable ["BURNS_hillHoldUntil", -1])}) exitWith {[_id] call CBA_fnc_removePerFrameHandler};
+                                private _f = vectorDir _v; private _vel = velocity _v; private _fs = _vel vectorDotProduct _f;
+                                if (_fs > 2.5 || {(_f select 2) < 0.08}) exitWith {_v setVariable ["BURNS_hillHoldUntil", time]; [_id] call CBA_fnc_removePerFrameHandler};
+                                if (_fs < 0) then {_v setVelocity (_vel vectorDiff (_f vectorMultiply _fs))};
+                            }, 0, [_v]] call CBA_fnc_addPerFrameHandler;
+                        };
+                    };
+                };
+            };
+        } forEach vehicles;
+    }, 0.5, []] call CBA_fnc_addPerFrameHandler;
+};

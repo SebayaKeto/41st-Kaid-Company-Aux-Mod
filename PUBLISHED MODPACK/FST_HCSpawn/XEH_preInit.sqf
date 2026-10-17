@@ -610,6 +610,8 @@ BURNS_fnc_dbgWhy={
 
 ["BURNS_B1VolleyEnabled","CHECKBOX",["B1 drill volleys","In contact, AI B1 riflemen hold fire while their line walks and fire together in 5-round volleys at one visible enemy every 7-8.5 s. Released within 40 m of an enemy. Off = native fire at will."],"BURNS",true,1] call CBA_fnc_addSetting;
 ["BURNS_B1LineSpacing","SLIDER",["B1 line spacing","Metres between droids in an AI B1 assault line. Wider lines lose fewer droids to one grenade."],"BURNS",[2,8,4,1],1] call CBA_fnc_addSetting;
+["BURNS_HillHold","CHECKBOX",["Vehicle hill hold","AI-driven tanks and wheeled APCs facing uphill stop rolling backwards while they pull away (up to 6 s), instead of freewheeling down the slope."],"BURNS",true,1] call CBA_fnc_addSetting;
+["BURNS_B1RoadMarch","CHECKBOX",["B1 road march","AI B1 assault squads standing on a road that leads toward their objective follow it in a column, and deploy into line where the road turns away, 100 m from the objective or with an enemy within 100 m."],"BURNS",true,1] call CBA_fnc_addSetting;
 ["BURNS_B1TrackFormation","CHECKBOX",["B1 line tracks","AI B1 squads in LINE walk parallel tracks at a matched pace, formed on the squad's centre. Off = the older slot bounds."],"BURNS",true,1] call CBA_fnc_addSetting;
 ["BURNS_B1MarchAnimSpeed","SLIDER",["B1 march speed-up","Animation speed of marching AI B1s (assault squads walk). 1 = plain walk 1.4 m/s; 1.2 = ~1.7 m/s. Also speeds their other animations (reloads, aiming) by the same factor."],"BURNS",[1,1.4,1.2,2],1] call CBA_fnc_addSetting;
 ["BURNS_B1MarchPose","CHECKBOX",["B1 march pose","Marching AI B1s carry their rifle in WebKnight's B1 pose (needs the WebKnight Droids mod; its animation only)."],"BURNS",true,1] call CBA_fnc_addSetting;

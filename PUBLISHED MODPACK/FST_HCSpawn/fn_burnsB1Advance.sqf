@@ -94,6 +94,36 @@ if (_taskMode in ["assault","hunt"]) then {
         };
     };
 };
+// Road march (Miran 17 Oct: "Can we give droids on a road preference for staying on the road?"). The road from the leader is
+// followed up to 120 m on toward the objective (at each junction the branch nearest the objective). If that stretch closes on the
+// objective by at least 30% of its length (15% to stay on a road already being marched), the squad follows the road: the leader heads
+// for the road point 40 m on, the droids in pairs on its trail. A 50 m look-ahead (probe rdV55c) dropped the road at every bend of a
+// winding road. The squad deploys into line where the road turns away, within 100 m of the objective or with an enemy within 100 m
+// (back on the road beyond 120 m). A squad still in COLUMN (far out, no contact) heads for the road point instead of the straight
+// bearing. CBA setting "B1 road march".
+private _roadPt=[];
+if ((missionNamespace getVariable ["BURNS_B1RoadMarch",true]) && {_taskMode=="assault"} && {(_origin distance2D _destination)>100}) then {
+    private _was=_group getVariable ["BURNS_roadMarch",false];
+    private _ne=_leader findNearestEnemy _leader; private _ed=if (isNull _ne) then {1e9} else {_leader distance2D _ne};
+    if (_ed>(if (_was) then {100} else {120})) then {
+        private _r=roadAt _origin;
+        if (isNull _r) then {private _rs=(_origin nearRoads (if (_was) then {15} else {8})) select {!((getRoadInfo _x) param [2,false])}; if (count _rs>0) then {_r=_rs select 0}};
+        if (!isNull _r && {!((getRoadInfo _r) param [2,false])}) then {
+            private _cur=_r; private _seen=[_r]; private _len=0; private _goalPt=[];
+            for "_i" from 1 to 60 do {
+                private _next=(roadsConnectedTo _cur) select {!(_x in _seen) && {!((getRoadInfo _x) param [2,false])}};
+                if (count _next==0 || {_len>=120}) exitWith {};
+                private _best=_next select 0; private _bd=1e9;
+                {private _d=_x distance2D _destination; if (_d<_bd) then {_bd=_d;_best=_x}} forEach _next;
+                _len=_len+(_cur distance2D _best); _seen pushBack _best; _cur=_best;
+                if (count _goalPt==0 && {_len>=40}) then {_goalPt=getPosATL _cur};
+            };
+            if (count _goalPt==0) then {_goalPt=getPosATL _cur};
+            if (_len>=30 && {((_origin distance2D _destination)-(_cur distance2D _destination))>=(if (_was) then {0.15} else {0.3})*_len}) then {_roadPt=[_goalPt select 0,_goalPt select 1,0]};
+        };
+    };
+};
+if (!_line && {count _roadPt>=2}) then {_direction=_origin getDir _roadPt};
 // Hybrid formation (Miran 7 Oct): on assault/rush/hunt the engine's own formation (LINE in contact or on the
 // approach, COLUMN on the march) moves the squad: the leader walks straight at its lane objective and the
 // droids follow in formation. Per-droid slot orders made the line stop-start (~0.5 m/s in contact). BURNS
@@ -193,7 +223,7 @@ private _spacing=if (_line) then {4.5} else {3.5};
 private _march=missionNamespace getVariable ["BURNS_B1MarchSpeed",2.5];
 private _walkFire=_taskMode in ["assault","rush","hunt"];
 if (!_track) then {
-    _group setVariable ["BURNS_track",nil];_group setVariable ["BURNS_trackGo",nil];_group setVariable ["BURNS_trackDeal",nil];
+    _group setVariable ["BURNS_track",nil];_group setVariable ["BURNS_trackGo",nil];_group setVariable ["BURNS_trackDeal",nil];_group setVariable ["BURNS_leaderTrail",nil];{_group setVariable [_x,nil]} forEach ["BURNS_roadMarch","BURNS_detourStart","BURNS_detourUntil","BURNS_detourCount","BURNS_detourMove","BURNS_leaderProg","BURNS_trackDetour"];
     {if (!isNil {_x getVariable "BURNS_atCatchUp"}) then {_x enableAI "FIREWEAPON";_x enableAI "AUTOTARGET";_x enableAI "TARGET";_x setVariable ["BURNS_atCatchUp",nil]}} forEach _ordered;
 };
 if (_track) exitWith {
@@ -240,17 +270,117 @@ if (_track) exitWith {
         _group setVariable ["BURNS_trackDeal",_deal];
     };
     private _offs=_deal select 2;
-    // The line forms on its own average position, not on the leader (probe lp28: chasing the leader, the line trailed it
-    // in a shallow V, riflemen a median 3 m and p90 9 m behind). AT droids on native control are left out of the average.
+    // Terrain splits (Miran 17 Oct, Aparra: "bunching up on the road here, and then not advancing because some of their droids are
+    // split up due to terrain"). A droid whose place lay in or behind a rock wall walked into it and stood still, and the line formed
+    // on the squad's average, so a few stuck droids pulled the line back and the whole squad stopped. Now a droid ordered to move
+    // (forced speed >=1) that has moved under 2 m in 8 s while >6 m from its track point is "blocked": it leaves the line's anchor
+    // and files along the leader's own trail (reachable: the leader walked it), 4 m apart, for 20 s per strike (max 60), then tries
+    // its place again. Strikes clear once it reaches its place. Leader trail: a point every 3 m, last 12.
+    private _dbg=missionNamespace getVariable ["BURNS_B1Debug",false];
+    private _trail=_group getVariable ["BURNS_leaderTrail",[]];
+    if (count _trail>0 && {((_trail select (count _trail-1)) distance2D _lp)>40}) then {_trail=[]};
+    if (count _trail==0 || {((_trail select (count _trail-1)) distance2D _lp)>3}) then {
+        _trail pushBack [_lp select 0,_lp select 1,0];
+        if (count _trail>12) then {_trail deleteAt 0};
+        _group setVariable ["BURNS_leaderTrail",_trail];
+    };
+    // Squad stall -> detour (Miran 17 Oct, Aparra: "These two squads got stuck for a bit here, rather than going down the road they
+    // just kept trying to go around on terrain"). The line steers every droid, the leader too, at a point up to 40 m ahead on the
+    // straight bearing, so a rock band across that bearing stops the whole squad and the 2 s re-orders keep it probing the same way.
+    // A leader ordered to move that has closed under 6 m on its objective in 12 s puts the squad on a detour: the leader gets one
+    // long move to the objective (the engine plans the whole route round) and every droid files along its trail, 4 m apart; then
+    // the line forms again. 30 s, then 60 s, 90 s on repeat stalls within 2 min.
+    private _road=_go && {count _roadPt>=2};
+    if (_road!=(_group getVariable ["BURNS_roadMarch",false])) then {
+        private _dbg=missionNamespace getVariable ["BURNS_B1Debug",false];
+        _group setVariable ["BURNS_roadMarch",_road];
+        if (_dbg) then {diag_log format ["[BURNS_DBG] road march %1: %2, %3 m to go",_group,["off","on"] select _road,round _remain]};
+    };
+    // A detour lasts until the leader has closed 25 m on the objective since it began (probe rk2V55b: a 30 s detour ended still
+    // beside the wall and the line walked back into it), at most 2 min.
+    private _dStart=_group getVariable ["BURNS_detourStart",[]];
+    if (_go && {!_road} && {count _dStart==2} && {time>=(_group getVariable ["BURNS_detourUntil",-1])} && {time-(_dStart select 0)<120} && {((_dStart select 1)-_remain)<25}) then {
+        _group setVariable ["BURNS_detourUntil",time+4];
+    };
+    private _detour=_go && {!_road} && {time<(_group getVariable ["BURNS_detourUntil",-1])};
+    private _lprog=_group getVariable ["BURNS_leaderProg",[]];
+    private _lfs=getForcedSpeed _leader;
+    if (_detour || {_road} || {!_go} || {_waiting} || {time<(_leader getVariable ["BURNS_volleyHold",-1])} || {_lfs>=0 && {_lfs<1}} || {count _lprog!=2}) then {
+        _group setVariable ["BURNS_leaderProg",[time,_remain]];
+    } else {
+        if (time-(_lprog select 0)>=12) then {
+            if (((_lprog select 1)-_remain)<6) then {
+                private _dc=_group getVariable ["BURNS_detourCount",[0,-1e9]];
+                private _k=if (time-(_dc select 1)>120) then {1} else {((_dc select 0)+1) min 3};
+                _group setVariable ["BURNS_detourCount",[_k,time]];
+                _group setVariable ["BURNS_detourUntil",time+30*_k];
+                _group setVariable ["BURNS_detourMove",nil];
+                _group setVariable ["BURNS_detourStart",[time,_remain]];
+                _detour=true;
+                if (_dbg) then {diag_log format ["[BURNS_DBG] detour %1: closed %2 m in %3 s, %4 m to go, for %5 s",_group,round ((_lprog select 1)-_remain),round (time-(_lprog select 0)),round _remain,30*_k]};
+            };
+            _group setVariable ["BURNS_leaderProg",[time,_remain]];
+        };
+    };
+    // Files: on a detour or a road march every droid follows the leader's trail.
+    private _file=_detour || _road;
+    private _blocked=_ordered apply {false};
+    {
+        if (_forEachIndex==0) then {continue};
+        private _u=_x;
+        private _p=getPosATL _u;
+        private _prog=_u getVariable ["BURNS_lineProg",[]];
+        private _lease=_u getVariable ["BURNS_pointFireLease",[]];
+        private _fs=getForcedSpeed _u;
+        private _idle=_file || {time<(_u getVariable ["BURNS_volleyHold",-1])} || {count _lease==4 && {time<(_lease select 1)}} || {_fs>=0 && {_fs<1}} || {vehicle _u!=_u};
+        if (_idle || {count _prog!=2}) then {_u setVariable ["BURNS_lineProg",[time,_p]]} else {
+            if (time-(_prog select 0)>=8) then {
+                private _tg=_u getVariable ["BURNS_trackGoal",[]];
+                if ((_p distance2D (_prog select 1))<2 && {count _tg>=2} && {(_u distance2D _tg)>6}) then {
+                    private _k=(_u getVariable ["BURNS_lineStrikes",0])+1;
+                    _u setVariable ["BURNS_lineStrikes",_k];
+                    _u setVariable ["BURNS_lineBlocked",time+((20*_k) min 60)];
+                    if (_dbg) then {diag_log format ["[BURNS_DBG] blocked %1 %2: moved %3 m in %4 s, %5 m from track point, strike %6",_group,_u,round ((_p distance2D (_prog select 1))*10)/10,round (time-(_prog select 0)),round (_u distance2D _tg),_k]};
+                };
+                _u setVariable ["BURNS_lineProg",[time,_p]];
+            };
+        };
+        _blocked set [_forEachIndex,_file || {time<(_u getVariable ["BURNS_lineBlocked",-1])}];
+    } forEach _ordered;
+    // The line forms on its own position, not on the leader (probe lp28: chasing the leader, the line trailed it in a shallow V,
+    // riflemen a median 3 m and p90 9 m behind). AT droids on native control and blocked droids are left out, and the anchor is the
+    // median (lower middle), not the mean, so a few droids caught on terrain can't hold the whole line back.
     private _alongs=[];
-    {if (_x==_leader || {secondaryWeapon _x==""}) then {_alongs pushBack ((((getPosATL _x) vectorDiff _lp) vectorDotProduct _fwd)+((_offs select _forEachIndex) select 1))}} forEach _ordered;
-    private _anchor=0;
-    {_anchor=_anchor+_x} forEach _alongs;
-    _anchor=_anchor/((count _alongs) max 1);
+    {if (!(_blocked select _forEachIndex) && {_x==_leader || {secondaryWeapon _x==""}}) then {_alongs pushBack ((((getPosATL _x) vectorDiff _lp) vectorDotProduct _fwd)+((_offs select _forEachIndex) select 1))}} forEach _ordered;
+    _alongs sort true;
+    private _anchor=if (count _alongs==0) then {0} else {_alongs select floor (((count _alongs)-1)/2)};
     private _ideals=_offs apply {_lp vectorAdd (_right vectorMultiply (_x select 0)) vectorAdd (_fwd vectorMultiply (_anchor-(_x select 1)))};
+    // Blocked droids: a point on the leader's trail 6 m + 4 m per blocked droid behind the leader, alternating 1.5 m left/right.
+    private _nb=0;
+    {
+        if !(_blocked select _forEachIndex) then {continue};
+        private _u=_x;
+        if (!_file && {((_ideals select _forEachIndex) distance2D _u)<5}) then {
+            _u setVariable ["BURNS_lineBlocked",nil];_blocked set [_forEachIndex,false];
+            if (_dbg) then {diag_log format ["[BURNS_DBG] unblocked %1 %2: back at its place",_group,_u]};
+            continue;
+        };
+        private _back=if (_road) then {6+3*floor (_nb/2)} else {6+4*_nb};
+        private _acc=0; private _prev=_lp; private _pt=+_lp;
+        for "_i" from (count _trail-1) to 0 step -1 do {
+            private _q=_trail select _i;
+            _acc=_acc+(_prev distance2D _q); _pt=_q; _prev=_q;
+            if (_acc>=_back) exitWith {};
+        };
+        if (_acc<_back) then {_pt=_pt vectorAdd (_fwd vectorMultiply (_acc-_back))};
+        _pt=_pt vectorAdd (_right vectorMultiply ([-1.5,1.5] select (_nb mod 2))*(if (_road) then {4/3} else {1}));
+        _ideals set [_forEachIndex,[_pt select 0,_pt select 1,0]];
+        _nb=_nb+1;
+    } forEach _ordered;
     // The leader eases off while its line lags (75th percentile >6 m behind its places) and waits beyond 12 m;
     // one straggler (e.g. an AT droid on native control) no longer stops the squad.
-    private _leadSpeed=if (_go) then {if (_waiting) then {_march*0.4} else {_march}} else {0};
+    private _leadSpeed=if (_go) then {if (_waiting && {!_file}) then {_march*0.4} else {_march}} else {0};
+    _group setVariable ["BURNS_trackDetour",_file];
     // fn_burnsB1Pace re-matches follower speeds every ~0.5 s between these orders.
     _group setVariable ["BURNS_track",[time,_fwd,_right,_leadSpeed,+_ordered,_offs]];
     _group setVariable ["BURNS_trackGo",_go];
@@ -261,9 +391,15 @@ if (_track) exitWith {
         private _ideal=_ideals select _forEachIndex;
         _ideal set [2,0];
         if (surfaceIsWater _ideal) then {continue};
+        private _blk=_blocked select _forEachIndex;
+        if (!_blk && {(_u distance2D _ideal)<3}) then {_u setVariable ["BURNS_lineStrikes",nil]};
         private _along=((getPosATL _u) vectorDiff _ideal) vectorDotProduct _fwd;
-        private _goal=if (_go) then {_ideal vectorAdd (_fwd vectorMultiply _toFront)} else {+_ideal};
+        private _goal=if (_go && {!_blk}) then {_ideal vectorAdd (_fwd vectorMultiply _toFront)} else {+_ideal};
         _goal set [2,0];
+        // Detour leader: one move order to the objective itself, re-sent only if the objective moves or the leader stops.
+        // Road-march leader: the road point ~50 m ahead, re-sent as it moves on 10 m.
+        private _dLead=_file && {_u==_leader};
+        if (_dLead) then {_ideal=if (_road) then {+_roadPt} else {[_destination select 0,_destination select 1,0]};_goal=+_ideal};
         private _target=assignedTarget _u;
         if (isNull _target) then {_target=_contact};
         private _inSlot=_u distance2D _ideal<3;
@@ -272,11 +408,16 @@ if (_track) exitWith {
         private _hold=_hasShot && {!_walkFire};
         // Every droid, the leader included, keeps its place in the line: behind it a droid closes at up to +1.5 m/s,
         // ahead of it it eases off and stops 3 m ahead, so nobody walks out in front while the line volleys or waits.
-        private _speed=if (_hold) then {0} else {
-            if (_along>0) then {_leadSpeed*((1-_along/3) max 0)} else {
-                if (_leadSpeed<0.1) then {if (_u distance2D _ideal<1.5) then {0} else {((-_along*0.5) max 0.8) min 2.5}} else {(_leadSpeed+((-_along*0.5) min 1.5)) min 4.5}
+        // A blocked droid jogs to its trail point (at least 2 m/s) and then keeps the leader's pace.
+        private _speed=if (_dLead) then {_leadSpeed} else {if (_hold) then {0} else {
+            if (_blk) then {
+                if ((_u distance2D _ideal)>3) then {((_leadSpeed+1.5) max 2) min 4.5} else {_leadSpeed}
+            } else {
+                if (_along>0) then {_leadSpeed*((1-_along/3) max 0)} else {
+                    if (_leadSpeed<0.1) then {if (_u distance2D _ideal<1.5) then {0} else {((-_along*0.5) max 0.8) min 2.5}} else {(_leadSpeed+((-_along*0.5) min 1.5)) min 4.5}
+                }
             }
-        };
+        }};
         private _owned=_u getVariable ["BURNS_advanceSpeed",[]];
         if (count _owned==0) then {_owned=[getForcedSpeed _u,_speed]};
         if ((_u getVariable ["BURNS_advanceController",grpNull])!=_group) then {_u setVariable ["BURNS_advanceController",_group,true]};
@@ -286,7 +427,8 @@ if (_track) exitWith {
         _u setVariable ["BURNS_formationGoal",_ideal];
         // A new track order only when the droid nears its current track point or its track moved sideways.
         private _last=_u getVariable ["BURNS_trackGoal",[]];
-        private _reorder=count _last<2 || {time>(_u getVariable ["BURNS_trackAt",-1])+20} || {_u distance2D _last<8 && {_go}} || {abs (((_goal vectorDiff _last) vectorDotProduct _right))>3} || {!_go && {_last distance2D _goal>3}};
+        private _reorder=count _last<2 || {time>(_u getVariable ["BURNS_trackAt",-1])+20} || {_u distance2D _last<8 && {_go}} || {abs (((_goal vectorDiff _last) vectorDotProduct _right))>3} || {!_go && {_last distance2D _goal>3}} || {_blk && {_last distance2D _goal>4}};
+        if (_dLead) then {_reorder=count _last<2 || {_last distance2D _goal>(if (_road) then {10} else {15})} || {unitReady _u}};
         if ((!_hasShot || {_walkFire}) && {_reorder}) then {
             _u doMove _goal;_u setVariable ["BURNS_moveCleanupToken",nil];_u setVariable ["BURNS_trackGoal",_goal];_u setVariable ["BURNS_trackAt",time];
             _u setVariable ["BURNS_formationOrderCount",(_u getVariable ["BURNS_formationOrderCount",0])+1];

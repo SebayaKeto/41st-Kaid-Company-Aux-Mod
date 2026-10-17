@@ -26,6 +26,25 @@ private _any = false;
     _any = true;
     private _role = [_unit] call FST_HCSpawn_fnc_burnsRole;
     if (_role != "b1") then {_b1Only = false};
+    // Stale air targets (Miran 17 Oct: "B1s are continually shooting at the sky where a LAAT once was even 5+ minutes later"). Drill
+    // control keeps TARGET and AUTOTARGET off for long spells, so the engine never retires an old target, and rounds fired natively
+    // (steered in the march pose) went at an aircraft long gone. A B1 whose target is an aircraft it has not seen for 8 s, or one
+    // over 800 m away, drops it (doTarget/doWatch cleared, target forgotten); it re-acquires it if it sees it again.
+    if (_role == "b1") then {
+        private _at = assignedTarget _unit;
+        if (isNull _at) then {_at = getAttackTarget _unit};
+        // Also any target last seen high in the air (a passenger or door gunner of an aircraft): its remembered position stays
+        // in the sky (targetKnowledge position is ASL; probe as3 logged ground targets at terrain height).
+        private _tk = if (isNull _at) then {[]} else {_unit targetKnowledge _at};
+        private _kp = _tk param [6, []];
+        if (!isNull _at && {(vehicle _at) isKindOf "Air" || {count _kp == 3 && {((_kp select 2) - getTerrainHeightASL _kp) > 15}}}) then {
+            private _seen = _tk param [2, -1e9];
+            if (time - _seen > 8 || {(_unit distance _at) > 800}) then {
+                _unit doWatch objNull; _unit doTarget objNull; _unit forgetTarget _at;
+                if (missionNamespace getVariable ["BURNS_B1Debug", false]) then {diag_log format ["[BURNS_DBG] stale air target %1 %2: %3, last seen %4 s ago, %5 m", group _unit, _unit, typeOf _at, round (time - _seen), round (_unit distance _at)]};
+            };
+        };
+    };
     // Workshop initializes B2/BX via inherited class handlers. Re-running its
     // loaders here would stack event handlers and long-running animation loops.
     if (_role == "webknight" || {_role == "other"}) then {continue};

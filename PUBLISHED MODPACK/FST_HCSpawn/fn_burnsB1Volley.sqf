@@ -102,6 +102,42 @@ private _drill=(units _group) select {
     }
 };
 if (count _drill<3) exitWith {if (_dbg) then {[_group,"under 3 riflemen"] call BURNS_fnc_dbgWhy}};
+// Only riflemen who can see the drill target are drilled (Miran 17 Oct, Aparra: "A lot of the droids here were just standing around
+// instead of firing" - a squad in a treeline). A drilled droid has its own fire off and fires only at the drill target, so in woods
+// most of the squad stood silent while the few with a view volleyed. The rest are released to fire on their own at what they see.
+private _sees=_drill select {[_x,_target] call _seeFrom};
+{
+    if (local _x && {_x getVariable ["BURNS_drilled",false]}) then {
+        if !(_x checkAIFeature "FIREWEAPON") then {_x enableAI "FIREWEAPON"}; _x enableAI "TARGET"; _x enableAI "AUTOTARGET";
+        if (!isNil {_x getVariable "BURNS_volleyHold"}) then {_x enableAI "PATH";_x setVariable ["BURNS_volleyHold",nil]};
+        _x setVariable ["BURNS_drilled",nil,true];
+        _x setVariable ["BURNS_volleyFiring",nil];
+    };
+} forEach (_drill-_sees);
+if (_dbg && {count _sees<count _drill}) then {diag_log format ["[BURNS_DBG] drill %1: %2 of %3 riflemen see the target; the rest fire on their own",_group,count _sees,count _drill]};
+_drill=_sees;
+// ...and only those who could take part in a volley: within 40 m of the leader and facing within 60 degrees of the target (the
+// shooter test below). Op log 17 Oct (Aparra Sat-1, Bravo 2-2, 46 droids): the whole squad was drilled - own fire off - while
+// too few faced the target to volley, so it stood silent until the 12 s stale release, fired on its own for 15 s, and was drilled
+// again (12:37:10 drilling, 12:37:23 "no volley for 12 s"). Droids that cannot volley now keep firing on their own.
+private _able=_drill select {
+    currentWeapon _x==primaryWeapon _x && {_x ammo (primaryWeapon _x)>0} && {_x distance2D _leader<40} && {
+        abs ((((_x getDir _target)-getDir _x+540) mod 360)-180)<60
+    }
+};
+{
+    if (local _x && {_x getVariable ["BURNS_drilled",false]}) then {
+        if !(_x checkAIFeature "FIREWEAPON") then {_x enableAI "FIREWEAPON"}; _x enableAI "TARGET"; _x enableAI "AUTOTARGET";
+        if (!isNil {_x getVariable "BURNS_volleyHold"}) then {_x enableAI "PATH";_x setVariable ["BURNS_volleyHold",nil]};
+        _x setVariable ["BURNS_drilled",nil,true];
+        _x setVariable ["BURNS_volleyFiring",nil];
+    };
+} forEach (_drill-_able);
+_drill=_able;
+if (count _drill<3) exitWith {
+    if (_dbg) then {[_group,"under 3 riflemen can volley the target"] call BURNS_fnc_dbgWhy};
+    _group setVariable ["BURNS_drillUntil",-1];
+};
 // Drill-shot steering: a scripted drill round (BURNS_aimTarget/BURNS_aimUntil set just before it) or any round fired in the
 // WebKnight march pose goes at its target with a random spread (BURNS_B1AimSpread, sigma degrees, default 0.15: ~28%
 // on a standing man at 200 m, about like aimed native fire). Probe ap1 at 200 m: posed 0/20 hits, steered at the target

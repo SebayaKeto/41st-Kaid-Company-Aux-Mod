@@ -19,9 +19,11 @@ private _enemy=_leader findNearestEnemy _leader;
 _group setVariable ["BURNS_enemyDist",[time,if (isNull _enemy) then {1e9} else {_leader distance2D _enemy}]];
 private _armourNear=-1;
 private _lp=getPosATL _leader;
-private _anchor=0; private _n=0;
-{if (alive _x && {_x==_leader || {secondaryWeapon _x==""}}) then {_anchor=_anchor+((((getPosATL _x) vectorDiff _lp) vectorDotProduct _fwd)+((_offs select _forEachIndex) select 1));_n=_n+1}} forEach _ordered;
-_anchor=_anchor/(_n max 1);
+// Same anchor as fn_burnsB1Advance: the median (lower middle) of the riflemen and leader, blocked droids left out (Miran 17 Oct).
+private _alongs=[];
+{if (alive _x && {_x==_leader || {secondaryWeapon _x==""}} && {time>=(_x getVariable ["BURNS_lineBlocked",-1])}) then {_alongs pushBack ((((getPosATL _x) vectorDiff _lp) vectorDotProduct _fwd)+((_offs select _forEachIndex) select 1))}} forEach _ordered;
+_alongs sort true;
+private _anchor=if (count _alongs==0) then {0} else {_alongs select floor (((count _alongs)-1)/2)};
 {
     private _u=_x;
     if (!alive _u || {!local _u} || {time<(_u getVariable ["BURNS_volleyHold",-1])}) then {continue};
@@ -30,9 +32,17 @@ _anchor=_anchor/(_n max 1);
     (_offs select _forEachIndex) params ["_o","_b"];
     private _ideal=_lp vectorAdd (_right vectorMultiply _o) vectorAdd (_fwd vectorMultiply (_anchor-_b));
     private _along=((getPosATL _u) vectorDiff _ideal) vectorDotProduct _fwd;
-    private _speed=if (_along>0) then {_lead*((1-_along/3) max 0)} else {
-        if (_lead<0.1) then {if (_u distance2D _ideal<1.5) then {0} else {((-_along*0.5) max 0.8) min 2.5}} else {(_lead+((-_along*0.5) min 1.5)) min 4.5}
-    };
+    // A blocked droid (fn_burnsB1Advance), or any droid while the squad is on a detour, heads for its point on the leader's trail:
+    // jog there, then the leader's pace. A detour leader walks at the lead pace.
+    private _det=_group getVariable ["BURNS_trackDetour",false];
+    if (_det && {_u==_leader}) then {_along=0};
+    private _trailPt=if (_u!=_leader && {_det || {time<(_u getVariable ["BURNS_lineBlocked",-1])}}) then {_u getVariable ["BURNS_formationGoal",[]]} else {[]};
+    if (count _trailPt>=2) then {_along=-(_u distance2D _trailPt)};
+    private _speed=if (_det && {_u==_leader}) then {_lead} else {if (count _trailPt>=2) then {if (_along<-3) then {((_lead+1.5) max 2) min 4.5} else {_lead}} else {
+        if (_along>0) then {_lead*((1-_along/3) max 0)} else {
+            if (_lead<0.1) then {if (_u distance2D _ideal<1.5) then {0} else {((-_along*0.5) max 0.8) min 2.5}} else {(_lead+((-_along*0.5) min 1.5)) min 4.5}
+        }
+    }};
     if (abs (getForcedSpeed _u-_speed)>0.1) then {_u forceSpeed _speed};
     // Marching droids walk in step; one more than 4 m behind its place may jog back (walks again within 2 m).
     if ((_u getVariable ["BURNS_gait",""])=="march") then {

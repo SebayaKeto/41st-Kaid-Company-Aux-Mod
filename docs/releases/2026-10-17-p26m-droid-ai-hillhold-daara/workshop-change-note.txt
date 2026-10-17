@@ -1,0 +1,12 @@
+Droid AI and tank hill fixes
+
+- Tanks and APCs (AI-driven): no more rolling back down hills when they pull away from a stop.
+- B1 squads on Assault: droids caught on rocks or walls no longer stop the whole line; they file along behind their leader and rejoin.
+- B1 squads that get stuck in front of an obstacle now find a way round it.
+- B1 squads on a road that leads to their objective now follow the road, and deploy into line near the objective or when enemies are close.
+- B1s no longer stand silent waiting for a volley that never comes: droids that cannot join the volley keep firing.
+- B1s no longer keep shooting at the sky where an aircraft used to be.
+- The Jedi body uniform is now called "Daara" in the arsenal (same item; saved loadouts keep working).
+- New BURNS CBA settings to switch these off: "B1 road march" and "Vehicle hill hold".
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
