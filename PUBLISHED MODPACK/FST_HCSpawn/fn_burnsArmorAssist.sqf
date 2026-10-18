@@ -76,6 +76,10 @@ if ((_turn select 2)>=3) exitWith {
     if (_driver!=leader _group) then {_driver doFollow leader _group};
 };
 _v setVariable ["BURNS_turnProgress",_turn];
+// V55o (Miran 18 Oct: "BURNS Task Rush AATs stop and hesitate a lot when they need to turn"): pivot pulses stop the tank, and AATs slowed
+// under 12 km/h at every bend, so a contact off to the side stopped them at each turn. No pulses while the tank is moving along its task
+// route more than 60 m from its waypoint; the turret fights on the move. Pulses still turn a stationary or arriving tank.
+if (_mode in ["rush","hunt","assault"] && {abs speed _v>3} && {_wp<count waypoints _group} && {_v distance2D _wpPos>60}) exitWith {};
 if (abs _angle<55 || {time<(_v getVariable ["BURNS_armorTurnNext",-1])}) exitWith {};
 if (count (_v getVariable ["BURNS_armorPulse",[]])>0) exitWith {};
 if (abs speed _v>12) exitWith {

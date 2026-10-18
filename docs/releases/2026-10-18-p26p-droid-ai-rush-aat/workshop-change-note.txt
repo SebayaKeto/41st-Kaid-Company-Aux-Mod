@@ -1,0 +1,9 @@
+Droid AI update (small download, under 1 MB)
+
+- Tanks on Rush no longer chase passing gunships: AATs keep going for troops on the ground instead of aiming waypoints into the sky.
+- Rush now looks for enemies up to 1 km from where it is placed (was 500 m).
+- Rush tanks spread out across their approach instead of all taking the same path, and stop less often to turn.
+- B1 squads get round rocks and walls better and reach objectives along roads more reliably.
+- Squads from the 41st spawn modules on Assault now head for the nearest players.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

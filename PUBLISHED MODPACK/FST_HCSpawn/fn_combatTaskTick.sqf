@@ -95,6 +95,7 @@ if (!_seeking && {_mode in ["rush","hunt","creep"]} && {(_group getVariable ["BU
 };
 if (_seeking) then {
     _destination=getPosATL (vehicle _rushTarget);
+    _destination set [2,0];   // V55p: a rush leg is always on the ground, never at a target's height
     _nearest=_leader distance2D _destination;
     // A perceived contact may be the occupied vehicle or another crew member.
     // Compare their current platforms, retaining only evidence for this target.
@@ -258,7 +259,63 @@ if (_down && {vehicle _leader==_leader}) then {
     private _body=getPosATL _rushTarget;
     _destination=if (_leader distance2D _body>10) then {_body getPos [8,_body getDir (getPosATL _leader)]} else {getPosATL _leader};
 };
+// Tank spread (V55o; Miran 18 Oct: AATs on Rush "often end up all trying to take the same path and clumping up"): every rush tank drove at
+// the same target position. Friendly AI tanks within 350 m are ranked by netId (stable each tick) and each heads for its own point beside
+// the destination, 45 m apart across the approach, while still more than 80 m out.
+private _sv=vehicle _leader;
+// V55t (AR test 18 Oct: on Assault the spread pulled AATs off the road, road share 50-67% -> 25-35%): Rush and Hunt only.
+if (_mode in ["rush","hunt"] && {_sv!=_leader} && {_sv isKindOf "Tank"} && {local _sv} && {(_sv distance2D _destination)>80}) then {
+    private _mates=(_sv nearEntities [["Tank"],350]) select {alive _x && {!isNull driver _x} && {!isPlayer driver _x} && {side group driver _x==side _group}};
+    if (count _mates>1) then {
+        // V55s (sk test 18 Oct: at SW two AATs given sides by netId crossed paths and jammed 9 m apart for 10 min): each tank takes its
+        // side by where it is now across one shared approach axis (destination -> the tanks' centre), so no two paths cross.
+        private _c=[0,0,0]; {_c=_c vectorAdd getPosATL _x} forEach _mates; _c=_c vectorMultiply (1/count _mates);
+        private _ax=_destination getDir _c;
+        private _rt=[sin (_ax+90),cos (_ax+90),0];
+        _mates=[_mates,[],{((getPosATL _x) vectorDiff _destination) vectorDotProduct _rt},"ASCEND"] call BIS_fnc_sortBy;
+        private _off=((_mates find _sv)-((count _mates)-1)/2)*45;
+        if (abs _off>1) then {
+            private _q=_destination getPos [abs _off,_ax+([90,-90] select (_off<0))];
+            if !(surfaceIsWater _q) then {_destination=[_q select 0,_q select 1,0]};
+        };
+    };
+};
 if (_mode=="assault") then {_destination=[_group,_destination,_contact,_contactPos] call FST_HCSpawn_fnc_burnsArmorSectionGoal};
+// Vehicle road march (V55n; Miran 18 Oct, Sarrak-1: "The AATs are trying and getting stuck trying to go up the hill on the red line instead
+// of following the road"). Section column legs and single-tank waypoints ran straight at the objective in AWARE, so a road bending round a
+// hill was ignored. A tank or wheeled APC on a road (12 m) whose road, followed up to 150 m on toward the objective, closes on it by 30% of
+// that length (15% to keep going) heads for the road point 80 m on instead - while the objective is over 250 m away, no enemy is within
+// 300 m and its section is not deployed in LINE. Vehicle recovery below still wins. CBA setting "B1 road march" switches it off too.
+private _veh=vehicle _leader;
+private _vRoad=[];
+if ((missionNamespace getVariable ["BURNS_B1RoadMarch",true]) && {_mode in ["assault","rush","hunt"]} && {_veh!=_leader} && {_veh isKindOf "Tank" || {_veh isKindOf "Wheeled_APC_F"}} && {local _veh} && {canMove _veh} && {
+    ((_group getVariable ["BURNS_sectionPlan",[]]) param [2,""])!="LINE"
+} && {(_veh distance2D _objective)>250}) then {
+    private _ne=_leader findNearestEnemy _veh;
+    if (isNull _ne || {(_veh distance2D _ne)>300}) then {
+        private _vp=getPosATL _veh;
+        private _was=_group getVariable ["BURNS_vehRoad",false];
+        private _rs=(_vp nearRoads 12) select {!((getRoadInfo _x) param [2,false])};
+        if (count _rs>0) then {
+            private _cur=_rs select 0; private _seen=[_cur]; private _len=0; private _gp=[];
+            for "_i" from 1 to 60 do {
+                private _next=(roadsConnectedTo _cur) select {!(_x in _seen) && {!((getRoadInfo _x) param [2,false])}};
+                if (count _next==0 || {_len>=150}) exitWith {};
+                private _best=_next select 0; private _bd=1e9;
+                {private _d=_x distance2D _objective; if (_d<_bd) then {_bd=_d;_best=_x}} forEach _next;
+                _len=_len+(_cur distance2D _best); _seen pushBack _best; _cur=_best;
+                if (count _gp==0 && {_len>=80}) then {_gp=getPosATL _cur};
+            };
+            if (count _gp==0) then {_gp=getPosATL _cur};
+            if (_len>=40 && {((_vp distance2D _objective)-(_cur distance2D _objective))>=(if (_was) then {0.15} else {0.3})*_len}) then {_vRoad=[_gp select 0,_gp select 1,0]};
+        };
+    };
+};
+if ((count _vRoad==3)!=(_group getVariable ["BURNS_vehRoad",false])) then {
+    _group setVariable ["BURNS_vehRoad",count _vRoad==3];
+    if (missionNamespace getVariable ["BURNS_B1Debug",false]) then {diag_log format ["[BURNS_DBG] vehicle road march %1 (%2): %3, %4 m to go",_group,typeOf _veh,["off","on"] select (count _vRoad==3),round (_veh distance2D _objective)]};
+};
+if (count _vRoad==3) then {_destination=_vRoad};
 _destination=[_group,_destination,_mode] call FST_HCSpawn_fnc_burnsVehicleProgress;
 private _last = ([_group,["FST_HC_taskLastOrder", []]] call FST_HCSpawn_fnc_burnsStateGet);
 if (_mode=="creep") then {

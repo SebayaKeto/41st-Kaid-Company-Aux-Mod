@@ -32,6 +32,8 @@ missionNamespace setVariable ["FST_HC_DroidCorpseQueue", []];
     if !([_unit] call FST_HCSpawn_fnc_isDroidUnit) exitWith {};
 
     _unit setVariable ["FST_HC_CorpseDeathTime", diag_tickTime, false];
+    // V55q: the weapons it carried as it died, so the delete pass can take its dropped holder too.
+    _unit setVariable ["FST_HC_CorpseWeapons", weapons _unit, false];
 
     private _queue = missionNamespace getVariable ["FST_HC_DroidCorpseQueue", []];
     _queue pushBackUnique _unit;
@@ -70,6 +72,19 @@ missionNamespace setVariable ["FST_HC_DroidCorpseQueue", []];
 
         if (_age >= _deleteDelay && {_deleted < _maxDelete}) then {
             _x setVariable ["FST_skipSpawnDamage", true];
+            // V55q (Omnibus for Miran, Sarrak-1 fps): each death also dropped a weapon holder that nothing removed, so in long fights
+            // they piled up. A holder within 4 m of the body is deleted with it only when every weapon in it is one this droid carried
+            // (taken at death, plus its config loadout): a player's dropped DC-15 beside the body stays. Runs where the droid was local.
+            // Setting FST_HC_DroidCorpseHolderCleanup (default on).
+            if (missionNamespace getVariable ["FST_HC_DroidCorpseHolderCleanup", true]) then {
+                private _own = ((_x getVariable ["FST_HC_CorpseWeapons", []]) + getArray (configOf _x >> "weapons")) - ["Throw", "Put"];
+                if (_own isNotEqualTo []) then {
+                    {
+                        private _w = weaponCargo _x;
+                        if (_w isNotEqualTo [] && {(_w findIf {!(_x in _own)}) < 0}) then {deleteVehicle _x};
+                    } forEach (nearestObjects [_x, ["GroundWeaponHolder", "WeaponHolderSimulated"], 4]);
+                };
+            };
             deleteVehicle _x;
             _deleted = _deleted + 1;
         } else {

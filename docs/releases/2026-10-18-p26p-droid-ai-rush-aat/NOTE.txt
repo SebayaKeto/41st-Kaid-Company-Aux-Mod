@@ -1,0 +1,17 @@
+P26p - published 18 Oct 2026 17:26 EDT on Miran's go ("go P26p"). Workshop 3048946639, ManifestID 3736819154857061961,
+time_updated 1792358809, 93 files / 7,805,279,102 B. Base: P26o (1792336675 / 4284925968477546160). Staging: Downloads/Steam-aux-release-20261018-P26p-v55t-rush-aat.
+(First publish attempt 17:23 exited 2 before upload: workshop-change-note.txt was missing from staging. Nothing changed on the Workshop.)
+
+Changed (source in this commit, PUBLISHED MODPACK/FST_HCSpawn):
+- Addons/FST_HCSpawn.pbo (sha256 5d80bde3...) = BURNS V55t:
+  - fn_burnsRushTarget: people aboard an airborne aircraft are not Rush targets; Rush seeks at least 1 km round its task.
+  - fn_burnsDialog: Zeus Rush task radius 1000 (was 500).
+  - fn_combatTaskTick: rush destination on the ground; Rush/Hunt AI tanks within 350 m take sides 45 m apart across one shared approach axis,
+    ranked by current position; vehicle road march for tanks/wheeled APCs on assault/rush/hunt (no enemy within 300 m, objective > 250 m).
+  - fn_burnsArmorAssist: no pivot pulses while a rush/hunt/assault tank is moving (> 3 m/s) toward a waypoint more than 60 m on.
+  - fn_burnsB1Advance: flank detours after a failed detour (+-70 / +-140 deg round the objective).
+  - fn_createGroupLocal: B1-only module Assault spawns assault the nearest hostile player within 2 km (Rush if none).
+  - fn_initDroidCorpseCleanup: a body's own dropped weapon holders within 4 m go with it (test: droids keep the gun on the body, so normally nothing to do).
+Tests 18 Oct (live P26o baseline): Rush LAAT overflight 8/8 sky waypoints -> 0; pulses 16 -> 0; B1 rock/road regressions better; vanilla same;
+Sarrak counterattack B1/B2 = live; Crossmarket B1 stall NOT fixed (3/4 runs); SW AAT on Assault stopped short in 3/3 runs vs 1/1 arrival on live (open).
+Rollback ready: Downloads/Steam-aux-ROLLBACK-to-P26o-from-P26p (--check passed) - publish only on Miran's go.

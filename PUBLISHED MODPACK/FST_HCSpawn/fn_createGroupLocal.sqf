@@ -326,7 +326,23 @@ if (count _editableObjects > 0) then {
             // spawn point while waiting for a contact they do not yet know.
             // B2 squads seek too (3 Oct HC test: a module "Assault" B2 squad stood at its drop point).
             private _b1Only=(units _group findIf {([_x] call FST_HCSpawn_fnc_burnsRole)!="b1" && {!(_x isKindOf "WBK_LS_B2")}})<0;
-            [_group, ["assault","rush"] select _b1Only, _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
+            // V55m (Miran 18 Oct: "B1s spawned with the 41st FST_HCSpawn modules arent executing BURNS code right, like they dont do the
+            // animation or formation for Task Assault"): an Assault module B1 squad was given RUSH (run gait, column until contact, no march
+            // pose). It now gets a real assault on the nearest hostile player within 2 km of the drop point (march pose, line, volleys);
+            // only with no player in range does it fall back to rush and seek.
+            private _goal=[];
+            if (_b1Only) then {
+                private _best=2000;
+                {
+                    private _d=_x distance2D _pos;
+                    if (_d<_best && {alive _x} && {!(_x isKindOf "HeadlessClient_F")} && {(side _group) getFriend (side group _x)<0.6}) then {_best=_d;_goal=getPosATL (vehicle _x)};
+                } forEach allPlayers;
+            };
+            if (_b1Only && {count _goal==0}) then {
+                [_group, "rush", _pos, _radius] call FST_HCSpawn_fnc_setCombatTask;
+            } else {
+                [_group, "assault", if (count _goal==3) then {_goal} else {_pos}, _radius] call FST_HCSpawn_fnc_setCombatTask;
+            };
         };
         case "rush": {
             // Zeus squad modules: charge out from the drop point and seek the nearest enemy.

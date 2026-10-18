@@ -223,7 +223,7 @@ private _spacing=if (_line) then {4.5} else {3.5};
 private _march=missionNamespace getVariable ["BURNS_B1MarchSpeed",2.5];
 private _walkFire=_taskMode in ["assault","rush","hunt"];
 if (!_track) then {
-    _group setVariable ["BURNS_track",nil];_group setVariable ["BURNS_trackGo",nil];_group setVariable ["BURNS_trackDeal",nil];_group setVariable ["BURNS_leaderTrail",nil];{_group setVariable [_x,nil]} forEach ["BURNS_roadMarch","BURNS_detourStart","BURNS_detourUntil","BURNS_detourCount","BURNS_detourMove","BURNS_leaderProg","BURNS_trackDetour"];
+    _group setVariable ["BURNS_track",nil];_group setVariable ["BURNS_trackGo",nil];_group setVariable ["BURNS_trackDeal",nil];_group setVariable ["BURNS_leaderTrail",nil];{_group setVariable [_x,nil]} forEach ["BURNS_detourGoal","BURNS_detourFails","BURNS_roadMarch","BURNS_detourStart","BURNS_detourUntil","BURNS_detourCount","BURNS_detourMove","BURNS_leaderProg","BURNS_trackDetour"];
     {if (!isNil {_x getVariable "BURNS_atCatchUp"}) then {_x enableAI "FIREWEAPON";_x enableAI "AUTOTARGET";_x enableAI "TARGET";_x setVariable ["BURNS_atCatchUp",nil]}} forEach _ordered;
 };
 if (_track) exitWith {
@@ -303,6 +303,13 @@ if (_track) exitWith {
         _group setVariable ["BURNS_detourUntil",time+4];
     };
     private _detour=_go && {!_road} && {time<(_group getVariable ["BURNS_detourUntil",-1])};
+    // A flank detour ends when the leader reaches its flank point (then the line tries again from there).
+    private _dGoal=_group getVariable ["BURNS_detourGoal",[]];
+    if (_detour && {count _dGoal==3} && {(_lp distance2D _dGoal)<20}) then {
+        _group setVariable ["BURNS_detourUntil",time]; _group setVariable ["BURNS_detourGoal",[]]; _detour=false;
+        if (_dbg) then {diag_log format ["[BURNS_DBG] detour %1: reached flank point, %2 m to go",_group,round _remain]};
+    };
+    if (!_detour && {count _dGoal==3}) then {_group setVariable ["BURNS_detourGoal",[]]};
     private _lprog=_group getVariable ["BURNS_leaderProg",[]];
     private _lfs=getForcedSpeed _leader;
     if (_detour || {_road} || {!_go} || {_waiting} || {time<(_leader getVariable ["BURNS_volleyHold",-1])} || {_lfs>=0 && {_lfs<1}} || {count _lprog!=2}) then {
@@ -315,9 +322,25 @@ if (_track) exitWith {
                 _group setVariable ["BURNS_detourCount",[_k,time]];
                 _group setVariable ["BURNS_detourUntil",time+30*_k];
                 _group setVariable ["BURNS_detourMove",nil];
+                // Flank detours (V55l; Sarrak probe sk1, Crossmarket: road march led a B1 squad to a CIS wall gate closed at mission start,
+                // 249 m out; five detours straight at the objective each closed 0 m, the engine kept planning through the gate, while B2s and
+                // AATs got in through gaps in the wall). If the previous detour gained under 10 m, this one heads for a point beside the
+                // objective, rotated 70 deg round it from the leader (then -70, +140, -140 on further failures), so the squad works round the
+                // outside of a wall or obstacle until it finds a way in.
+                private _ds0=_group getVariable ["BURNS_detourStart",[]];
+                private _fails=_group getVariable ["BURNS_detourFails",0];
+                _fails=if (count _ds0==2 && {((_ds0 select 1)-_remain)<10}) then {_fails+1} else {0};
+                _group setVariable ["BURNS_detourFails",_fails];
+                private _fg=[];
+                if (_fails>0) then {
+                    _fg=_destination getPos [((_remain max 60) min 250),(_destination getDir _lp)+([70,-70,140,-140] select ((_fails-1) mod 4))];
+                    _fg=[_fg select 0,_fg select 1,0];
+                    if (surfaceIsWater _fg) then {_fg=[]};
+                };
+                _group setVariable ["BURNS_detourGoal",_fg];
                 _group setVariable ["BURNS_detourStart",[time,_remain]];
                 _detour=true;
-                if (_dbg) then {diag_log format ["[BURNS_DBG] detour %1: closed %2 m in %3 s, %4 m to go, for %5 s",_group,round ((_lprog select 1)-_remain),round (time-(_lprog select 0)),round _remain,30*_k]};
+                if (_dbg) then {diag_log format ["[BURNS_DBG] detour %1: closed %2 m in %3 s, %4 m to go, for %5 s%6",_group,round ((_lprog select 1)-_remain),round (time-(_lprog select 0)),round _remain,30*_k,if (count _fg==3) then {format [", flank %1 (failed detours %2)",[round (_fg select 0),round (_fg select 1)],_fails]} else {""}]};
             };
             _group setVariable ["BURNS_leaderProg",[time,_remain]];
         };
@@ -399,7 +422,7 @@ if (_track) exitWith {
         // Detour leader: one move order to the objective itself, re-sent only if the objective moves or the leader stops.
         // Road-march leader: the road point ~50 m ahead, re-sent as it moves on 10 m.
         private _dLead=_file && {_u==_leader};
-        if (_dLead) then {_ideal=if (_road) then {+_roadPt} else {[_destination select 0,_destination select 1,0]};_goal=+_ideal};
+        if (_dLead) then {_ideal=if (_road) then {+_roadPt} else {private _dg=_group getVariable ["BURNS_detourGoal",[]]; if (count _dg==3) then {+_dg} else {[_destination select 0,_destination select 1,0]}};_goal=+_ideal};
         private _target=assignedTarget _u;
         if (isNull _target) then {_target=_contact};
         private _inSlot=_u distance2D _ideal<3;

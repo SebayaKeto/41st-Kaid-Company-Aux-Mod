@@ -45,7 +45,8 @@ private _tasks=["armor_assault","rush","hunt","ambush","creep","assault","retrea
 if (_mode in _tasks) exitWith {
     if (count _groups==0) exitWith {systemChat "[BURNS] Select a squad or place the task module on an AI unit."};
     private _building=_mode in ["cqb","garrison","camp","defend"];
-    private _radius=if (_mode=="ambush") then {50} else {if (_building) then {100} else {500}};
+    // V55r (Miran 18 Oct, Sarrak-1: AATs on Rush sat still, the Juggernaut was beyond 500 m): Rush seeks enemies within 1 km of the task.
+    private _radius=if (_mode=="ambush") then {50} else {if (_building) then {100} else {if (_mode=="rush") then {1000} else {500}}};
     private _options=[false,true,_mode in ["rush","hunt","creep"]];
     ["BURNS_request",[_mode,_groups,_objects,_position,_radius,_options,clientOwner]] call CBA_fnc_serverEvent;
 };
