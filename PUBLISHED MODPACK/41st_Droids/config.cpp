@@ -352,6 +352,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[41st] Tactical Battledroid";
 		JLTS_isDroid=1;
+		FST_stunnable=1;   // 41st_Ammo fn_onHit: JLTS stun rounds work on this droid (Miran 17 Oct)
 		ls_isDroid=1;
         JLTS_hasEMPProtection=0;
 		hiddenSelections[]=

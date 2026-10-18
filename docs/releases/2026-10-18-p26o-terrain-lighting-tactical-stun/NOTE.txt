@@ -1,0 +1,12 @@
+P26o - published 18 Oct 2026 11:17 EDT on Miran's go ("go P26o (lighting + stun fix)"). Workshop 3048946639, ManifestID 4284925968477546160,
+time_updated 1792336675, 93 files / 7,805,268,603 B. Base: P26m (1792274914 / 2963338421313161864). Staging: Downloads/Steam-aux-release-20261018-P26o-lighting-stun.
+
+Added (Mapmaking Omnibus lighting root cause, unchanged bytes; config-only; source D:/Codex/Mapmaking_Omnibus/research/lighting_patch, not in this repo):
+- Addons/fst_lighting_patch_app.pbo (sha256 6ed9438b...): fst_appalachia latitude -35.7 + own Weather/LightingNew. requiredAddons A3_Map_Stratis, fst_appalachia.
+- Addons/fst_lighting_patch_indar.pbo (sha256 ba728e28...): fst_indar own Weather/LightingNew. requiredAddons A3_Map_Stratis, fst_indar.
+  Boot check: no requires-addon error; Lighting9 apertureStandard reads 30 (patch) not 25 (vanilla Stratis) on both terrains.
+Changed (tactical droid stun fix; source in this commit):
+- Addons/41st_Droids.pbo (487d2b3c...): FST_U_CIS_TS (T-series FST_CIS_TS_F) FST_stunnable=1.
+- Addons/41st_Ammo.pbo (2e307f86...): fn_onHit routes JLTS stun hits on FST_stunnable uniforms to new FST_fnc_onHitStunDroid,
+  remoteExecCall'd to the droid's owner; timer on diag_tickTime. HC probe: TS droid stunned 5 s then up, B1 immune, human stunned (JLTS).
+Rollback ready: Downloads/Steam-aux-ROLLBACK-to-P26m-from-P26o (--check passed) - publish only on Miran's go.

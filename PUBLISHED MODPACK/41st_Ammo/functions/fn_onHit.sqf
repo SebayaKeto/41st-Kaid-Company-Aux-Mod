@@ -38,4 +38,17 @@ if (isNil "_flags") then {
 };
 
 if (_flags select 0) then {[_target,_shooter,_ammoUsed,getPosATL _projectile] spawn FST_fnc_onHitEMP};
-if (_flags select 1) then {[_target,_shooter,_ammoUsed] call JLTS_fnc_onHitStun};
+// Stun on tactical droids (Miran 17 Oct: "Stun rounds need to work on tactical droids but not other droids"). JLTS_fnc_onHitStun
+// refuses every uniform with JLTS_isDroid = 1. A uniform with FST_stunnable = 1 (41st_Droids: FST_U_CIS_TS, the T-series tactical
+// droid) is stunned by FST_fnc_onHitStunDroid instead, run where the droid is local (droids usually live on an HC; allowDamage and
+// ACE unconsciousness must run there). Every other droid still goes to JLTS and stays immune. The duration comes from the shooter's
+// magazine, as in JLTS.
+if (_flags select 1) then {
+	if (getNumber (configFile >> "CfgWeapons" >> uniform _target >> "FST_stunnable") == 1) then {
+		if (_target != _shooter && {!(_target getVariable ["JLTS_isStunned",false])}) then {
+			[_target, getNumber (configFile >> "CfgMagazines" >> currentMagazine _shooter >> "JLTS_stunDuration")] remoteExecCall ["FST_fnc_onHitStunDroid", _target];
+		};
+	} else {
+		[_target,_shooter,_ammoUsed] call JLTS_fnc_onHitStun;
+	};
+};

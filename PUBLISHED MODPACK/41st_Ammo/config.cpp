@@ -29,6 +29,7 @@ class CfgFunctions
 
 			class onHit {};
 			class onHitEMP {};
+			class onHitStunDroid {};
 		};
 
 		class ImpactFX

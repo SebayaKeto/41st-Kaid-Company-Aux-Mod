@@ -1,0 +1,6 @@
+Terrain lighting fix for Aparra and Sarrak
+
+- Aparra and Sarrak now have their own daylight and night lighting built into the terrain, so days and nights look right without mission scripts.
+- Stun rounds now knock out T-series tactical droids, like they do CIS humans. Other droids (B1s, B2s and the rest) are still immune.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
