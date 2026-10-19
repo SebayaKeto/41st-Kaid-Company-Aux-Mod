@@ -102,10 +102,13 @@ if (_taskMode in ["assault","hunt"]) then {
 // (back on the road beyond 120 m). A squad still in COLUMN (far out, no contact) heads for the road point instead of the straight
 // bearing. CBA setting "B1 road march".
 private _roadPt=[];
-if ((missionNamespace getVariable ["BURNS_B1RoadMarch",true]) && {_taskMode=="assault"} && {(_origin distance2D _destination)>100}) then {
+if ((missionNamespace getVariable ["BURNS_B1RoadMarch",true]) && {_taskMode=="assault"} && {(_origin distance2D _destination)>100} && {time>=(_group getVariable ["BURNS_roadOffUntil",-1])}) then {
     private _was=_group getVariable ["BURNS_roadMarch",false];
     private _ne=_leader findNearestEnemy _leader; private _ed=if (isNull _ne) then {1e9} else {_leader distance2D _ne};
-    if (_ed>(if (_was) then {100} else {120})) then {
+    // V55v (Miran 18 Oct, Sarrak-2: "The back ranks also hesitated while the front engaged"): players on a base wall 150-250 m off kept
+    // the squad in road file under fire. The road march also ends while the leader sees an enemy within 250 m, so the line deploys.
+    private _seenE=!isNull _ne && {_ed<250} && {([_leader,"FIRE",vehicle _ne] checkVisibility [eyePos _leader,aimPos vehicle _ne])>0.5};
+    if (_ed>(if (_was) then {100} else {120}) && {!_seenE}) then {
         private _r=roadAt _origin;
         if (isNull _r) then {private _rs=(_origin nearRoads (if (_was) then {15} else {8})) select {!((getRoadInfo _x) param [2,false])}; if (count _rs>0) then {_r=_rs select 0}};
         if (!isNull _r && {!((getRoadInfo _r) param [2,false])}) then {
@@ -296,6 +299,24 @@ if (_track) exitWith {
         _group setVariable ["BURNS_roadMarch",_road];
         if (_dbg) then {diag_log format ["[BURNS_DBG] road march %1: %2, %3 m to go",_group,["off","on"] select _road,round _remain]};
     };
+    // Road-march stall (V55u; Sarrak probes sk1/skS/skT, Crossmarket: the road led a B1 squad to a CIS wall gate closed at mission start,
+    // 240 m out, and it stood there all run). The stall check below skipped road marches, so no detour ever fired. A road-marching
+    // leader that has moved under 5 m in 15 s (not waiting, not in a volley) drops the road for 2 min and starts a detour at once;
+    // repeat stalls escalate to the flank detours.
+    if (_road && {!_waiting} && {time>=(_leader getVariable ["BURNS_volleyHold",-1])} && {time>=(_group getVariable ["BURNS_fileWait",-1])}) then {
+        private _rp=_group getVariable ["BURNS_roadProg",[]];
+        if (count _rp!=2) then {_group setVariable ["BURNS_roadProg",[time,+_lp]]} else {
+            if (time-(_rp select 0)>=15) then {
+                if ((_lp distance2D (_rp select 1))<5) then {
+                    _group setVariable ["BURNS_roadOffUntil",time+120];
+                    _road=false; _group setVariable ["BURNS_roadMarch",false];
+                    _group setVariable ["BURNS_leaderProg",[time-12,_remain]];
+                    if (missionNamespace getVariable ["BURNS_B1Debug",false]) then {diag_log format ["[BURNS_DBG] road march %1: stalled (moved under 5 m in 15 s), off for 120 s, %2 m to go",_group,round _remain]};
+                };
+                _group setVariable ["BURNS_roadProg",[time,+_lp]];
+            };
+        };
+    } else {_group setVariable ["BURNS_roadProg",nil]};
     // A detour lasts until the leader has closed 25 m on the objective since it began (probe rk2V55b: a 30 s detour ended still
     // beside the wall and the line walked back into it), at most 2 min.
     private _dStart=_group getVariable ["BURNS_detourStart",[]];
@@ -402,7 +423,17 @@ if (_track) exitWith {
     } forEach _ordered;
     // The leader eases off while its line lags (75th percentile >6 m behind its places) and waits beyond 12 m;
     // one straggler (e.g. an AT droid on native control) no longer stops the squad.
-    private _leadSpeed=if (_go) then {if (_waiting && {!_file}) then {_march*0.4} else {_march}} else {0};
+    // V55v (Miran 18 Oct, Sarrak-2: "B1s module spawned into BURNS Assault the leader is pulling ahead of them"): on a road march or detour the
+    // leader walked at full pace and never waited, so the file fell 50-80 m behind. Now it eases to 40% while the 75th-percentile droid is over
+    // 12 m from its trail point and stops beyond 25 m (BURNS_fileWait tells the road-stall check it is waiting, not stuck).
+    // V55w (AF forest test 19 Oct: waiting on detours too left forest squads 25-40 m further back, half the shots): road march only.
+    private _fileLag=0;
+    if (_road) then {
+        private _lags=[]; {if (_x!=_leader && {alive _x}) then {_lags pushBack (_x distance2D (_ideals select _forEachIndex))}} forEach _ordered;
+        _lags sort true; if (count _lags>0) then {_fileLag=_lags select floor (((count _lags)-1)*0.75)};
+    };
+    if (_fileLag>12) then {_group setVariable ["BURNS_fileWait",time+3]};
+    private _leadSpeed=if (_go) then {if (_waiting && {!_file}) then {_march*0.4} else {if (_fileLag>25) then {0} else {if (_fileLag>12) then {_march*0.4} else {_march}}}} else {0};
     _group setVariable ["BURNS_trackDetour",_file];
     // fn_burnsB1Pace re-matches follower speeds every ~0.5 s between these orders.
     _group setVariable ["BURNS_track",[time,_fwd,_right,_leadSpeed,+_ordered,_offs]];

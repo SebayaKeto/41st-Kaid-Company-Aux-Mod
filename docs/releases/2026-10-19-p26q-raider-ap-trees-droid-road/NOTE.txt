@@ -1,0 +1,16 @@
+P26q - published 19 Oct 2026 01:05 EDT on Miran's go ("go P26q"). Workshop 3048946639, ManifestID 5040545468514033993,
+time_updated 1792386344, 93 files / 7,805,302,741 B. Base: P26p (1792358809 / 3736819154857061961). Staging: Downloads/Steam-aux-release-20261019-P26q-final.
+
+Changed:
+- Addons/FST_HCSpawn.pbo (sha256 e1e7e1d6...) = BURNS V55w (source in this commit, PUBLISHED MODPACK/FST_HCSpawn/fn_burnsB1Advance.sqf):
+  road-march stall (leader < 5 m in 15 s) drops the road for 120 s and detours; road-march leader eases to 40% / stops while its file lags 12 / 25 m;
+  road march also ends while the leader sees an enemy within 250 m.
+- Addons/FST_Vehicles_Land_APC_SabreAPC.pbo (6cfced58...): Raider (TX-180) MainTurret + FST_VW_Sabre_30mm_AP_Cannon + 3x FST_VW_120Rnd_30mm_AP_Bolts;
+  LockDetectionSystem "1 + 2 + 4 + 8", incomingMissileDetectionSystem 16 (were unset -> no lock/missile warnings). config.bin patched from the live bin
+  (CfgConvert round-trip identical); source FST_Vehicles/.../FST_Vehicles_Land_APC_SabreAPC/config.cpp in this commit.
+- Addons/fst_app_autumn.pbo (881007f4..., sha1 c38fed19): Aparra autumn crowns (acer/carpinus/populus) Fire geometry = View with crown material,
+  penetrability 1000 (tree-firegeo session, Omnibus brief; engine RUN2: rounds through a full crown 0-4 % vs 41-100 %). Not built from this repo.
+Tests 18-19 Oct (live P26p baseline): Raider AP kills an empty AAT in 14-15 hits on both builds (AAT hull 0.1 change dropped - no effect); HE 150 hits = AAT
+alive, turret/gun dead. Sarrak counterattack: Crossmarket B1 arrived (stalled 240 m in 3/4 earlier runs). Road/rock within noise. Aparra forest: trees
+load clean, AI fire = live; V55v (leader also waited on detours) cut forest fire -> V55w road only.
+Rollback ready: Downloads/Steam-aux-ROLLBACK-to-P26p-from-P26q (--check passed) - publish only on Miran's go.

@@ -1525,8 +1525,8 @@ class CfgVehicles
 				gunEnd[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
 				memoryPointGun[] = {"LeftGunnerTurret_Muzzle","RightGunnerTurret_Muzzle"};
 				memoryPointGunDir[] = {"LeftGunnerTurret_Muzzle_Dir","RightGunnerTurret_Muzzle_Dir"};
-				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_LG_MissileLauncher"};
-				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_4Rnd_SabreAPC_LG_Missiles"};
+				weapons[] = {"FST_VW_Sabre_30mm_Cannon","FST_VW_Sabre_30mm_AP_Cannon","FST_VW_Sabre_LG_MissileLauncher"};
+				magazines[] = {"FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_HE_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_120Rnd_30mm_AP_Bolts","FST_VW_4Rnd_SabreAPC_LG_Missiles"}; // AP cannon + 3 AP mags: Miran 18 Oct, Raiders could not kill AATs
 				turretInfoType = "RscWeaponRangeZeroing";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000};
 				selectionFireAnim = "zasleh2";
@@ -2111,6 +2111,10 @@ class CfgVehicles
 	{
 		// Prevent explosive splash damage from transferring to occupants.
 		crewExplosionProtection=1;
+		// Lock and incoming-missile warnings (Miran 18 Oct, Sarrak-2: "Raiders arent getting a warning when HMPs with ATGMs lock onto them").
+		// Nothing in the chain (FST_Vehicle_Land_Base -> Tank_F) set these, so the engine default 0 meant no warning. Vanilla tank values.
+		LockDetectionSystem="1 + 2 + 4 + 8";
+		incomingMissileDetectionSystem=16;
 		ace_cargo_space=90;
 		ace_cargo_hasCargo=1;
 		differentialType="all_limited";

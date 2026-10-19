@@ -1,0 +1,8 @@
+Aux update: droid AI, Raider and Aparra trees
+
+- Raider (TX-180): new 30 mm AP cannon with 3 AP magazines (switch weapons to use it). AP kills an AAT in about 15 hits; HE only knocks out its guns.
+- Raider: you now get a warning when something locks on to you or fires a missile at you.
+- B1 squads on a road march keep together (the leader waits for his squad), leave the road and form a line when they come under fire, and find a way round a closed gate instead of standing at it.
+- Aparra: the autumn tree crowns (maple, hornbeam, poplar) now stop rifle rounds instead of letting them pass through.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
