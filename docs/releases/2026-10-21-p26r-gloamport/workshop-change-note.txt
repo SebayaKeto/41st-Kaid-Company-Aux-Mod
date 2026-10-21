@@ -1,0 +1,5 @@
+Gloamport is back
+
+- The Umbara map Gloamport (fst_umbara_gloamport) is back in the Aux for tonight's event.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

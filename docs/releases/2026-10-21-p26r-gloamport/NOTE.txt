@@ -1,0 +1,8 @@
+P26r - published 21 Oct 2026 18:47 EDT on Miran's go ("go P26r"), for the Gloamport fun event. Workshop 3048946639, ManifestID 7392037090406948479,
+time_updated 1792622852, 94 files / 7,866,654,398 B. Base: P26q (1792386344 / 5040545468514033993). Staging: Downloads/Steam-aux-release-20261021-P26r-gloamport.
+
+Added: Addons/fst_umbara_gloamport.pbo (sha256 9af81df6...), from FINISHED MISSIONS/Aux Mod PBOs - the same PBO shipped 27-30 Sep and removed 2 Oct with
+all Umbara maps (W1 + Jedi release). Terrain needs 3AS, Gliese and Miranda, OPTRE, JM's (all in the 41st modset); Gloamport_Op mission addons likewise.
+Boot check: Gloamport_Op test copy on P26r loaded on fst_umbara_gloamport, 0 requires-addon errors.
+Not in this release (staged for the next one): 41st_HumanDiv / 41st_Mandos HitBody fix (sources modified in the working tree, not in this commit).
+Rollback ready: Downloads/Steam-aux-ROLLBACK-to-P26q-from-P26r (--check passed) - publish only on Miran's go.
