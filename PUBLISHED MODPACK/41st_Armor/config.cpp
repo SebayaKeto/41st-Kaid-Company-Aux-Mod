@@ -201,6 +201,7 @@ class CfgPatches
 			"FST_P2_Snowfox",
 			"FST_P2_Remedy",
 			"FST_P2_Remedy_V2",
+			"FST_P2_Remedy_Dirty_V2",
 			"FST_P2_Mig",
 			"FST_P2_Slow",
 			"FST_P2_Scrib",
@@ -364,6 +365,7 @@ class CfgPatches
 			"FST_P2_Smiley",
 			"FST_P2_Hotshot",
 			"FST_P2_Monk",
+			"FST_P2_Gode",
 			"FST_P2_Prime",
 			"FST_P2_Evox",
 			"FST_P2_Evox_Dirty",
@@ -378,6 +380,7 @@ class CfgPatches
 			"FST_P2_Zephyr",
 			"FST_P2_Zephyr_Dirty",
 			"FST_P2_Red",
+			"FST_P2_Debt",
 			"FST_P2_Riley",
 			"FST_P2_Riley_Dirty",
 			"FST_P2_Riley_V2",
@@ -395,6 +398,7 @@ class CfgPatches
 			"FST_P2_Plop",
 			"FST_P2_Plop_Dirty",
 			"FST_P2_Bees",
+			"FST_P2_Bees_Dirty",
 			"FST_P2_Dilham",
 			"FST_P2_Dilham_Dirty",
 			"FST_P2_Kare",
@@ -8101,6 +8105,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Nova.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Magma: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="House";
+		displayName="[41st] Crewman Helmet Mk2 (Magma)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Magma.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Magma.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Bogu: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -9959,6 +9974,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy_V2.paa",
 		};
 	};
+	class FST_Airborne_Helmet_Remedy_V2_Drity: FST_Airborne_Helmet
+	{
+		author="House";
+		displayName="[41st] Airborne Helmet (Remedy/V2/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Remedy_V2_Dirty.paa",
+		};
+	};
  	class FST_Airborne_Helmet_Cowboy: FST_Airborne_Helmet
 	{
 		author="Daara";
@@ -9967,6 +9992,26 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Cowboy.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Engie: FST_Airborne_Helmet
+	{
+		author="House";
+		displayName="[41st] Airborne Helmet (Engie)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Engie.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Umbra: FST_Airborne_Helmet
+	{
+		author="House";
+		displayName="[41st] Airborne Helmet (Umbra)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Umbra.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Tokarev: FST_Airborne_Helmet
@@ -14614,6 +14659,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red.paa"
 		};
 	};
+	class FST_P2_Helmet_Ordo: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Ordo]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Ordo.paa"
+		};
+	};
 	class FST_P2_Helmet_Gold: FST_P2_Helmet_Base
 	{
 		author="House";
@@ -16017,6 +16072,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			mass=15;
 		};
 	};
+	class FST_Uniform_Gode: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Gode]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Gode";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Prime: JLTS_CloneArmor
 	{
 		author="Daara";
@@ -17406,6 +17475,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			mass=15;
 		};
 	};
+	class FST_Uniform_Bees_Dirty: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Bees/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Bees_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Dilham: JLTS_CloneArmor
 	{
 		author="Gold";
@@ -18509,6 +18592,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Remedy_V2";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Remedy_V2_Dirty: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Remedy V2/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Remedy_V2_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -20477,6 +20574,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
             mass=15;
         };
     };
+	class FST_Uniform_Debt: JLTS_CloneArmor
+    {
+        author="House";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Debt]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Debt";
+            uniformType="Neopren";
+            containerClass="Supply180";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Ryx: JLTS_CloneArmor
     {
         author="Adler";
@@ -21398,6 +21509,15 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Red.paa",
+		};
+	};
+	class FST_NVG_Ordo: FST_NVG
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Ordo)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Ordo.paa",
 		};
 	};
 	class FST_NVG_Coda: FST_NVG
@@ -28083,6 +28203,180 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Cloaker.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Zombie: FST_Backpack_Jumppack
+	{
+		author="House";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Zombie)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Zombie.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Remedy: FST_Backpack_Jumppack
+	{
+		author="House";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Remedy)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Remedy.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Remedy_Dirty: FST_Backpack_Jumppack
+	{
+		author="House";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Remedy/Dirty)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Remedy_Dirty.paa"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -36826,6 +37120,116 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Gode: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-0009 'Gode'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Debt";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Gode.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Gode.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Gode",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Gode",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Debt: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-2813 'Debt'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Debt";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Debt.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Debt.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Debt",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Debt",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Prime: FST_Trooper_P2_DC15S
 	{
 		author="Daara";
@@ -42572,6 +42976,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Bees_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-8335 'Bees/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Bees_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Bees_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Bees_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Bees",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Bees",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Plop: FST_Trooper_P2_DC15S
 	{
 		author="Gold";
@@ -46911,6 +47370,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Remedy",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Remedy_V2_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-2609 'Remedy V2/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Squatch_V2";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Remedy_V2_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Remedy_V2_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Remedy_V2_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Remedy_V2_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
