@@ -2323,7 +2323,7 @@ class CfgVehicles
 				explosionShielding=6;
 				visual="injury_body";
 				minimalHit=0;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest max HitLeftArm max HitRightArm max HitLeftLeg max HitRightLeg";
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
@@ -2746,7 +2746,7 @@ class CfgVehicles
 				explosionShielding=6;
 				visual="injury_body";
 				minimalHit=0;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest max HitLeftArm max HitRightArm max HitLeftLeg max HitRightLeg";
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
