@@ -1,0 +1,4 @@
+Release P26u - published 24 Oct 2026 10:45 EDT on Miran's go ("go P26u"). Workshop 3048946639, ManifestID 5551798680928166508,
+time_updated 1792853146, 94 files / 7,888,363,423 B. Staging: Downloads/Steam-aux-release-20261024-P26u-armor-hitbody (aatcrew/make_p26u.py).
+= P26t (8230866236922893118, Zenoc pulled) + 41st_Armor e15fdf4a (CT-2225House 4aa8615d, 7c5a8baa, 4807c58a) + HitBody fix 41st_HumanDiv be56fbbd / 41st_Mandos c52a307a (a4d34439).
+No Zenoc. Not tested in game.

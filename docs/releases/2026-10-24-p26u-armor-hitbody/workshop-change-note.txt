@@ -1,0 +1,6 @@
+New and updated armour, HitBody error fix
+
+- Armour (CT-2225House): new Engie and Umbra AB helmets, Bees Armor Dirty, Ordo P2 helmet and NVGs, Debt and Gode armour, Zombie jump pack, Remedy AB v2 helmet/armour/jump pack (dirty), Magma Mk2 crewman. Updated Corpse P1 pilot helmet, Salt, Hayes and Magma armour, camo BARC helmets, and ranger scrolls (Airman, Evox, Mixer, Ordo, Perceval, Preacher, Sly, Sigs).
+- Human Division and Mandalorian units: fixes the "Error compiling ... hitbody" config errors in the server log.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
