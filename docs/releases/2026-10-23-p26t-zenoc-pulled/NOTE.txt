@@ -1,0 +1,4 @@
+Release P26t - published 23 Oct 2026 21:20 EDT on Miran's go ("We need to pull Zenoc out of the aux mod for now, push ASAP").
+Workshop 3048946639, ManifestID 8230866236922893118, time_updated 1792804842, 94 files / 7,866,654,398 B.
+= P26s (2534990382296006756) minus Addons/fst_zenoc_halloween.pbo; payload byte-identical to P26r (7392037090406948479).
+Staging: Downloads/Steam-aux-release-20261023-P26t-zenoc-pulled (hard links of P26s). To restore Zenoc: republish the P26s folder (needs Miran's go).

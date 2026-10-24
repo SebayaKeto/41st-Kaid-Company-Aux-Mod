@@ -1,0 +1,5 @@
+Zenoc Halloween map removed (for now)
+
+- The Zenoc Halloween test map is out of the mod for now. [CYTECH] Core Assets is no longer needed for this mod.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
