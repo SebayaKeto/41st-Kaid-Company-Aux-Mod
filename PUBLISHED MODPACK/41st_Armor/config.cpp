@@ -8823,7 +8823,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_P1_Pilot_Helmet_Qball.paa",
-			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\lifesupport_co.paa",
+			"41st_Armor\data\LifeSupport\FST_LifeSupport_Qball.paa",
 			"ls\core\addons\characters_clone_legacy\helmets\phase1Pilot\data\visor_co.paa"
 		};
 	};
@@ -14657,6 +14657,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red.paa"
+		};
+	};
+	class FST_P2_Helmet_Qball: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Qball]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Qball.paa"
 		};
 	};
 	class FST_P2_Helmet_Ordo: FST_P2_Helmet_Base
@@ -22242,6 +22252,15 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_Visor_Shockcap.paa",
+		};
+	};
+	class FST_Visor_QBall: FST_Visor
+	{
+		author="House";
+		displayName="[41st] Officer Visor (Qball)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_Visor_Qball.paa",
 		};
 	};
 	class FST_Visor_Annex: FST_Visor
