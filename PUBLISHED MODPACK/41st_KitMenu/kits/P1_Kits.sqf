@@ -1045,6 +1045,7 @@ if (isNull _box) exitWith {
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             ["ACE_DefusalKit",1],
+            ["MineDetector",1],
             ["ItemcTab",1]
         ]],
         ["FST_Vest_Base",[
@@ -1138,6 +1139,7 @@ if (isNull _box) exitWith {
                 ["ACE_Flashlight_XL50",1],
                 ["ACE_IR_Strobe_Item",1],
                 ["ACE_CableTie",2],
+                ["MineDetector",1],
                 ["ItemAndroid",1]
             ]
         ],

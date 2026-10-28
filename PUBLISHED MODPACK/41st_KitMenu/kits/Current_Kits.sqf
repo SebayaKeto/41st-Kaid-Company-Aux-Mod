@@ -1090,6 +1090,7 @@ if (isNull _box) exitWith {
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             ["ACE_DefusalKit",1],
+            ["MineDetector",1],
             ["ItemcTab",1],
             [["IDA_Clone_Knife","","","",[],[],""],1],
             ["FST_blaster_cell_low_Blue",6,30]
@@ -1187,6 +1188,7 @@ if (isNull _box) exitWith {
                 ["ACE_Flashlight_XL50",1],
                 ["ACE_IR_Strobe_Item",1],
                 ["ACE_CableTie",2],
+                ["MineDetector",1],
                 ["ItemAndroid",1],
                 [["IDA_Clone_Knife","","","",[],[],""],1]
             ]
