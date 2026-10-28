@@ -46,9 +46,6 @@ private _kits = _allKitsForBox select {
         private _VAR_CondtitionToMeet  = _x select 3;
         private _VAR_FunctionToSpawn   = _x select 4;
         private _cond   = _VAR_CondtitionToMeet;
-        // Perf fix: conditions are static strings but were re-compiled for every
-        // kit on every populate (~80 compiles per update). Cache compiled code
-        // keyed by the condition string -- identical conditions dedupe too.
         private _condCache = missionNamespace getVariable "FST_KitCondCache";
         if (isNil "_condCache") then {
             _condCache = createHashMap;
@@ -92,7 +89,4 @@ FST_ToggleKitCategory = {
     FST_CurrentKitCategory = _order select (((_idx + 1) mod count _order));
     call WBK_fnc_populateKitList;
 };
-
-// Perf fix: only repopulate when this machine actually has the kit menu open.
-// (WBK_fnc_populateKitList also self-guards; this just documents intent.)
 if (!isNull (findDisplay 2000)) then { call WBK_fnc_populateKitList; };

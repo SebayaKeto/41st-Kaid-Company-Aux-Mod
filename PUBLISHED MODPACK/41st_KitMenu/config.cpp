@@ -247,9 +247,6 @@ class WBK_KITArsenalAlike
 {
 	idd = 2000;
 	movingenable = false;
-	// Perf fix: was execVM of the raw file (re-read + re-compile on every menu
-	// open). The same script is already precompiled at preInit as
-	// FST_KitMenuUpdateKits -- call that instead.
 	onLoad = "[] spawn {call FST_KitMenuUpdateKits;};";
 	class controls
 	{

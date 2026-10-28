@@ -1090,7 +1090,6 @@ if (isNull _box) exitWith {
             ["ACE_IR_Strobe_Item",1],
             ["ACE_CableTie",2],
             ["ACE_DefusalKit",1],
-            ["MineDetector",1],
             ["ItemcTab",1],
             [["IDA_Clone_Knife","","","",[],[],""],1],
             ["FST_blaster_cell_low_Blue",6,30]
@@ -1188,7 +1187,6 @@ if (isNull _box) exitWith {
                 ["ACE_Flashlight_XL50",1],
                 ["ACE_IR_Strobe_Item",1],
                 ["ACE_CableTie",2],
-                ["MineDetector",1],
                 ["ItemAndroid",1],
                 [["IDA_Clone_Knife","","","",[],[],""],1]
             ]
@@ -2478,4 +2476,198 @@ if (isNull _box) exitWith {
     "true",
     {},
     "ranger"
+] spawn Wbk_AddKit;
+
+[
+    _box, 
+    "AT-RT Squad Leader", 
+    [
+        ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
+        [],
+        ["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],
+        ["FST_Trooper_Uniform",[
+            ["itemAndroid",1],
+            ["IDA_BactaBandage",20],
+            ["IDA_BattleStim",2],
+            ["ACE_splint",4],
+            ["ACE_tourniquet",5],
+            ["ACE_EntrenchingTool",1],
+            ["WBK_HeadLampItem_Double",1],
+            ["ACE_Flashlight_XL50",1],
+            ["ACE_IR_Strobe_Item",1],
+            ["ACE_CableTie",2],
+            [["IDA_Clone_Knife","","","",[],[],""],1],
+            ["FST_blaster_cell_low_Blue",6,30],
+            ["Ace_SpraypaintGreen",1]
+        ]],
+        ["FST_Vest_NCO_Kama",[
+            ["FST_blaster_cell_High_Blue",12,40],
+            ["FST_grenade_Detonator_mag",3,1],
+            ["IDA_grenade_Smoke_mag",3,1],
+            ["IDA_grenade_Smoke_Blue_mag",1,1],
+            ["ls_grenade_chemlightGreen_magazine",1,1],
+            ["IDA_grenade_Smoke_Purple_mag",1,1]
+        ]],
+        ["FST_Backpack_Antenna",[["FST_LargeToolkit",1]]],
+        "FST_P2_Helmet",
+        "", 
+        ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
+    ], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DC15A_ugl","FST_DC15C_UGL","FST_DC15S_UGL","FST_DP23","FST_RPS6_Disposable","FST_DC17","FST_TwinDC17_Secondary","FST_Vest_NCO_Kama","FST_Vest_NCO_Kama_Veteran","FST_NVG","FST_Westar_M5","FST_Westar_M5_UGL"], 
+    "true",
+    {},
+    "regular"
+] spawn Wbk_AddKit;
+
+[
+    _box, 
+    "AT-RT Operator", 
+    [
+        ["FST_DC15S","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_Blue",60],[],""], 
+        [], 
+        [],
+        [
+            "FST_Trooper_Uniform",
+            [
+                ["FST_LargeToolkit",1],
+                ["IDA_BactaBandage",20],
+                ["IDA_BattleStim",2],
+                ["ACE_splint",4],
+                ["ACE_tourniquet",5],
+                ["ACE_EntrenchingTool",1],
+                ["WBK_HeadLampItem_Double",1],
+                ["ACE_Flashlight_XL50",1],
+                ["ACE_IR_Strobe_Item",1],
+                ["ACE_CableTie",2],
+                ["ACE_microDAGR",1],
+                [["IDA_Clone_Knife","","","",[],[],""],1]
+            ]
+        ],
+        [
+            "FST_Vest_Base",
+            [
+                ["FST_grenade_Detonator_mag",3,1],
+                ["IDA_grenade_Smoke_mag",3,1],
+                ["IDA_grenade_Smoke_Blue_mag",1,1],
+                ["ls_grenade_chemlightGreen_magazine",1,1],
+                ["IDA_grenade_Smoke_Purple_mag",1,1],
+                ["FST_blaster_cell_Blue",16,60]
+            ]
+        ],
+        [],
+        "FST_P2_Helmet", 
+        "", 
+        ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
+    ], 
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DP23","FST_Vest_Base","FST_RPS6_Disposable","FST_Westar_M5","FST_DC15L_F","FST_DC15A_ugl","FST_DC15C_UGL","FST_NVG","FST_DC15S_UGL","FST_Westar_M5_UGL","FST_DC15LE","FST_RPS6HP","FST_T15","FST_RPS6_SR","FST_Vest_NCO","FST_Vest_NCO_Veteran"],
+    "true", 
+    {}, 
+    "regular"
+] spawn Wbk_AddKit;
+
+[
+    _box,
+    "AT-RT Medic",
+    [
+        ["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],
+        [],
+        [],
+        [
+            "FST_Trooper_Uniform",
+            [
+                ["IDA_BactaBandage",20],
+                ["IDA_BattleStim",2],
+                ["ACE_splint",4],
+                ["ACE_tourniquet",5],
+                ["ACE_EntrenchingTool",1],
+                ["WBK_HeadLampItem_Double",1],
+                ["ACE_Flashlight_XL50",1],
+                ["ACE_IR_Strobe_Item",1],
+                ["ACE_CableTie",2],
+                ["ACE_microDAGR",1],
+                [["IDA_Clone_Knife","","","",[],[],""],1]
+            ]
+        ],
+        [
+            "FST_Vest_Base",
+            [
+                ["ACE_plasmaIV_500",4],
+                ["FST_blaster_cell_High_Blue",12,40],
+                ["FST_grenade_Detonator_mag",3,1],
+                ["IDA_grenade_Smoke_mag",3,1],
+                ["IDA_grenade_Smoke_Blue_mag",1,1],
+                ["ls_grenade_chemlightGreen_magazine",1,1],
+                ["IDA_grenade_Smoke_Purple_mag",1,1]
+            ]
+        ],
+        [
+            "FST_Backpack_Medic",
+            [
+                ["FST_Bacta_Tank",1],
+                ["ACE_adenosine",6],
+                ["IDA_BactaBandage",80],
+                ["IDA_BattleStim",15],
+                ["IDA_Cauterizer",1],
+                ["ACE_plasmaIV",6],
+                ["ACE_plasmaIV_500",8],
+                ["ACE_splint",6],
+                ["ACE_tourniquet",6],
+                ["FST_LargeToolkit",1]
+            ]
+        ],
+        "FST_P2_Helmet",
+        "",
+        ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],
+        ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
+    ],
+    ["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_DP23","FST_NVG"],
+    "true",
+    {},
+    "regular"
+] spawn Wbk_AddKit;
+
+[
+    _box, 
+    "AT-RT Engineer", 
+    [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],["IDA_Clone_Knife","","","",[],[],""],["FST_Trooper_Uniform",[
+        ["IDA_BactaBandage",20],
+        ["IDA_BattleStim",2],
+        ["ACE_splint",4],
+        ["ACE_tourniquet",5],
+        ["ACE_EntrenchingTool",1],
+        ["WBK_HeadLampItem_Double",1],
+        ["ACE_Flashlight_XL50",1],
+        ["ACE_IR_Strobe_Item",1],
+        ["ACE_CableTie",2],
+        ["ACE_Fortify",1],
+        ["ACE_FortifyToken", 50],
+        ["FST_grenade_Penetrator_mag",3,1]
+    ]],
+    ["FST_Vest_Base",[
+        ["FST_blaster_cell_High_Blue",12,40],
+        ["FST_grenade_Detonator_mag",3,1],
+        ["IDA_grenade_Smoke_mag",3,1],
+        ["IDA_grenade_Smoke_Blue_mag",1,1],
+        ["ls_grenade_chemlightGreen_magazine",1,1],
+        ["IDA_grenade_Smoke_Purple_mag",1,1]
+    ]],
+    ["FST_Clone_backpack_EOD",[
+        ["FST_LargeToolkit",1],
+        ["ACE_M26_Clacker",1],
+        ["ACE_DefusalKit",1],
+        ["MineDetector",1],
+        ["DBA_ImploderBlock_Mag",2,1],
+        ["IDA_explosive_Detpack_mag",5,1]
+    ]],
+    "FST_P2_Helmet", 
+    "", 
+    ["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""], 
+    ["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch",""]
+], 
+["FST_DC15A","FST_DC15S","FST_DC15C_F","FST_RPS6_Disposable","FST_NVG","FST_DP23","FST_Westar_M5"], 
+"true",
+{},
+"regular"
 ] spawn Wbk_AddKit;

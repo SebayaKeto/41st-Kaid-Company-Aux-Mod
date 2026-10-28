@@ -486,6 +486,18 @@ FST_fnc_selectHelmet = {
 FST_fnc_filterHelmets = {
     [] call FST_fnc_refreshGearList;
 };
+FST_fnc_ensureATRTToolkit = {
+    params ["_unit"];
+    if (isNull _unit) exitWith {};
+    private _kitName = _unit getVariable ["WBK_Kit_Name", ""];
+    if !(_kitName in ["AT-RT Squad Leader", "AT-RT Operator", "AT-RT Medic", "AT-RT Engineer"]) exitWith {};
+    if ([_unit, "FST_LargeToolkit"] call BIS_fnc_hasItem) exitWith {};
+    private _toolkit = "FST_LargeToolkit";
+    if (_unit canAddItemToUniform _toolkit) exitWith { _unit addItemToUniform _toolkit; };
+    if (_unit canAddItemToVest _toolkit) exitWith { _unit addItemToVest _toolkit; };
+    if (_unit canAddItemToBackpack _toolkit) exitWith { _unit addItemToBackpack _toolkit; };
+};
+
 Wbk_AssignAditionalGear = {
 private _typeOfKit = player getVariable ["WBK_Kit_Name", ""];
 params ["_control", "_index"];
@@ -493,6 +505,20 @@ private ["_lbData", "_itemClass", "_itemCount"];
 _lbData = call compile (lbData [ctrlIDC _control, _index]);
 _item = _lbData select 0;
 private _isCQB = (count _lbData > 1) && {(_lbData select 1) == "CQB_MAGIC"};
+private _atrtFTLVests = [
+    "FST_Vest_NCO", "FST_Vest_NCO_Veteran", "FST_Vest_NCO_Woodland",
+    "FST_vest_gm_FTL"
+];
+private _atrtSLVests = [
+    "FST_Vest_NCO_Kama", "FST_Vest_NCO_Kama_Veteran", "FST_vest_gm_SL"
+];
+if (
+    (_typeOfKit in ["AT-RT Medic", "AT-RT Engineer"] && {_item in (_atrtFTLVests + _atrtSLVests)}) ||
+    (_typeOfKit isEqualTo "AT-RT Operator" && {_item in _atrtSLVests})
+) exitWith {
+    playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+    systemChat "[41st] This AT-RT role cannot select that sash.";
+};
 if ((missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger") then {
     private _camo = missionNamespace getVariable ["FST_LastCamoPreset","Woodland"];
     switch (true) do {
@@ -798,8 +824,7 @@ switch true do {
 			if (_item == "FST_Vest_NCO_Kama_Veteran" && !([player, "itemAndroid"] call BIS_fnc_hasItem)) then {
 				player addItem "itemAndroid";
 			};
-
-			if (
+			if ((
 				_item == "FST_Vest_NCO" ||
 				_item == "FST_Vest_NCO_Woodland" ||
 				_item == "FST_CloneVestAirborneNCO" ||
@@ -811,7 +836,7 @@ switch true do {
 				_item == "FST_Vest_HeavyBag_Veteran" ||
 				_item == "FST_Vest_NCO_Kama" ||
 				_item == "FST_Vest_NCO_Kama_Veteran"
-			) then {
+			)) then {
 				if (handgunWeapon player == _knife) then {
 					player removeWeapon _knife;
 
@@ -839,10 +864,10 @@ switch true do {
 				};
 			};
 
-			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
+			if (_item == "FST_Vest_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(_typeOfKit find "AT-RT ") != 0} && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
 				player removeItem "itemAndroid";
 			};
-			if (_item == "FST_Vest_GM_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
+			if (_item == "FST_Vest_GM_Base" && [player, "itemAndroid"] call BIS_fnc_hasItem && !(_typeOfKit in ["Crewman", "Crewman Medic"]) && {(_typeOfKit find "AT-RT ") != 0} && {(player getVariable ["WBK_Kit_Category",""]) != "ranger"}) then {
 				player removeItem "itemAndroid";
 			};
 
@@ -876,6 +901,34 @@ switch true do {
 					player addWeapon _knife;
 				};
 			};
+            if (_typeOfKit in ["AT-RT Squad Leader", "AT-RT Operator"]) then {
+                private _isFTLSash = _item in [
+                    "FST_Vest_NCO", "FST_Vest_NCO_Veteran", "FST_Vest_NCO_Woodland",
+                    "FST_vest_gm_FTL"
+                ];
+                if (_isFTLSash) then {
+                    player setVariable ["FST_ATRT_FTL", true, true];
+                    while {"ACE_microDAGR" in items player} do {
+                        player removeItem "ACE_microDAGR";
+                    };
+                    if !([player, "itemAndroid"] call BIS_fnc_hasItem) then {
+                        player addItem "itemAndroid";
+                    };
+                } else {
+                    private _isSquadLeader = _typeOfKit isEqualTo "AT-RT Squad Leader";
+                    player setVariable ["FST_ATRT_FTL", _isSquadLeader, true];
+                    if (!_isSquadLeader) then {
+                        while {"itemAndroid" in items player} do {
+                            player removeItem "itemAndroid";
+                        };
+                        if (_typeOfKit in ["AT-RT Operator", "AT-RT Medic"]) then {
+                            if !([player, "ACE_microDAGR"] call BIS_fnc_hasItem) then {
+                                player addItem "ACE_microDAGR";
+                            };
+                        };
+                    };
+                };
+            };
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 605): {
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
@@ -904,6 +957,13 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 	};
 	removeBackpack player;
 	player addBackpack _equipClass;
+    if (
+        _typeOfKit in ["AT-RT Squad Leader", "AT-RT Operator", "AT-RT Medic", "AT-RT Engineer"] &&
+        {!([player, "FST_LargeToolkit"] call BIS_fnc_hasItem)} &&
+        {player canAddItemToBackpack "FST_LargeToolkit"}
+    ) then {
+        player addItemToBackpack "FST_LargeToolkit";
+    };
     private _grenadeClass = "FST_grenade_Detonator_mag";
     private _grenadesCurrent = { _x == _grenadeClass } count magazines player;
 		private _rawData = lbData [ctrlIDC _control, _index];
@@ -2010,6 +2070,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			player addItem _item;
 		};
    };
+[player] call FST_fnc_ensureATRTToolkit;
 call WBK_UpdatePlayerKitOnMenu;
 };
 
@@ -2250,6 +2311,7 @@ if (_glassesToSet != "" && {goggles player != _glassesToSet}) then {
 };
 
 player setVariable ["WBK_Kit_Name",_typeOfKit,true];
+player setVariable ["FST_ATRT_FTL", _typeOfKit isEqualTo "AT-RT Squad Leader", true];
 [player,_kit,_typeOfKit,_aditionalGear] spawn _codeExecute;
 player setVariable ["BIS_fnc_setUnitInsignia_class", nil];
 [player, _insignia] call BIS_fnc_setUnitInsignia;
@@ -2283,6 +2345,21 @@ switch (_typeOfKit) do {
 		player setUnitTrait ["engineer", true];
 		player setUnitTrait ["explosiveSpecialist", true];
 	};
+    case "AT-RT Squad Leader": {
+        player setUnitTrait ["Medic", true];
+        player setUnitTrait ["engineer", true];
+    };
+    case "AT-RT Operator": {
+        player setUnitTrait ["engineer", true];
+    };
+    case "AT-RT Medic": {
+        player setUnitTrait ["Medic", true];
+        player setUnitTrait ["engineer", true];
+    };
+    case "AT-RT Engineer": {
+        player setUnitTrait ["engineer", true];
+        player setUnitTrait ["explosiveSpecialist", true];
+    };
 	case "Pilot": {
 		player setUnitTrait ["Medic", true];
 		player setUnitTrait ["engineer", true];
@@ -2300,6 +2377,7 @@ switch (_typeOfKit) do {
 	};
 	default {};
 };
+[player] call FST_fnc_ensureATRTToolkit;
 call WBK_UpdatePlayerKitOnMenu;
 player remoteExecCall ['FST_KitMenuUpdateKits',0];
 (player getVariable "WBK_ClassHud") ctrlSetStructuredText parseText format["<t size='1.5' align='center' font='PuristaSemibold'>%1</t>", player getVariable "WBK_Kit_Name"];
@@ -2325,6 +2403,9 @@ if (count _aditionalGear > 0) then {
 			case ((getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 302 || getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 301 || getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 201 || getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 101)): {
 				_attachments pushBack _x;
 			};
+            case (_x isEqualTo "FST_NVG"): {
+                _equipment pushBack _x;
+            };
 			case ((getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 605) || (getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 801) || (getNumber(configFile >> "CfgWeapons" >> _x >> 'ItemInfo' >> 'type' ) isEqualTo 701)): {
 				_equipment pushBack _x;
 			};
@@ -2524,6 +2605,7 @@ if (count _aditionalGear > 0) then {
 			"Rifleman","Ammo Bearer","Engineer","Medic","Grenadier","Close Quarters Combatant",
 			"Squad Leader","RTO","Anti Tank","Squad Leader ","Ammo Bearer ","Emplaced Weapon",
 			"Pilot","Crew Chief","Crewman","Howler","Platoon RTO","Platoon Medic",
+            "AT-RT Squad Leader","AT-RT Operator","AT-RT Medic","AT-RT Engineer",
 			"Platoon Sergeant","Platoon Commander","Crewman Medic","Platoon RTO (UAV)"
 		];
 		private _canShowStuns = _typeOfKit in _allowedKits;
@@ -2764,6 +2846,44 @@ if (_typeOfKit == "Squad Leader ") then {
         _listBox_AditionalStuff lbSetPictureColor [_index, [1, 1, 1, 1]];
     } forEach _backpacks;
 };
+if (_typeOfKit in ["AT-RT Operator", "AT-RT Squad Leader"]) then {
+    private _backpacks = [
+        ["FST_Clone_Backpack_Invisible_15L", "10x DC15L Battery"],
+        ["FST_Clone_Backpack_Invisible_RPS", "3x RPS6 + 1x HE Rocket"],
+        ["FST_Clone_Backpack_Invisible_RPS", "2x RPS6 SR Rockets"],
+        ["FST_Clone_Backpack_Invisible_STD", "Standard Ammo + 3x Detonators"],
+        ["FST_Clone_Backpack_Invisible_RifleAT", "2x LP Coil + 4x T15 Coil"]
+    ];
+    if (_typeOfKit isEqualTo "AT-RT Squad Leader") then {
+        _backpacks pushBack ["FST_Clone_Backpack_Invisible_Z6", "7x Z6 Battery"];
+        _backpacks pushBack ["FST_Clone_Backpack_Invisible_PLX", "3x PLX Rockets"];
+    };
+
+    private _listBox = (findDisplay 2000) displayCtrl 1731;
+    private _indexSpacer = _listBox lbAdd " ";
+    _listBox lbSetData [_indexSpacer, "['any']"];
+    private _indexHeader = _listBox lbAdd " AMMO BACKPACKS";
+    _listBox lbSetPicture [_indexHeader, "a3\ui_f\data\GUI\Cfg\Hints\Gear_ca.paa"];
+    _listBox lbSetData [_indexHeader, "['any']"];
+
+    {
+        _x params ["_class", "_desc"];
+        private _text = switch (_desc) do {
+            case "10x DC15L Battery": { "DC15L Pack" };
+            case "3x RPS6 + 1x HE Rocket": { "RPS6 Pack" };
+            case "2x RPS6 SR Rockets": { "RPS6 SR Pack" };
+            case "Standard Ammo + 3x Detonators": { "Standard Ammo Pack" };
+            case "2x LP Coil + 4x T15 Coil": { "Rifle AT Pack" };
+            case "7x Z6 Battery": { "Z6 Pack" };
+            case "3x PLX Rockets": { "PLX Pack" };
+            default { _desc };
+        };
+        private _index = _listBox lbAdd _text;
+        _listBox lbSetPicture [_index, getText (configFile >> "CfgVehicles" >> _class >> "picture")];
+        _listBox lbSetData [_index, format ["['%1','%2']", _class, _desc]];
+        _listBox lbSetPictureColor [_index, [1, 1, 1, 1]];
+    } forEach _backpacks;
+};
 private _roleClean = toLower (trim _typeOfKit);
 private _selectedKitRole = switch (_roleClean) do {
     case "engineer":           { "eod" };
@@ -2941,15 +3061,13 @@ Wbk_AddKit = {
         ["_code", {}, [{}]],
         ["_category", "regular", [""]]
     ];
-
     if (isNull _obj) exitWith {};
-
     _category = toLower _category;
-
+	private _additionalGear = +_text;
     private _kitToTransfer = [
         _nameOfKit,
         _fullKit,
-        _text,
+        _additionalGear,
         _condition,
         _code,
         _category
