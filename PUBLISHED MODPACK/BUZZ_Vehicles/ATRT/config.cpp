@@ -249,7 +249,7 @@ class CfgWeapons {
 
         // Shot Sound
         BUZZ_shotSound      = "BUZZ_Vehicles\ATRT\Data\BUZZ_ATRT_Gun.ogg";
-        BUZZ_shotVolume     = 1;
+        BUZZ_shotVolume     = 0.75;
         BUZZ_shotDistance   = 1800;
         BUZZ_shotPitches[]  = {0.95, 0.97, 0.985, 1.00, 1.015, 1.03, 1.05};   // ±5%
 
