@@ -14659,6 +14659,36 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red.paa"
 		};
 	};
+	class FST_P2_Helmet_Bigmike: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Bigmike]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Bigmike.paa"
+		};
+	};
+	class FST_P2_Helmet_Snorlax: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Snorlax]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Snorlax.paa"
+		};
+	};
+	class FST_P2_Helmet_Wheeze: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Wheeze]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Wheeze.paa"
+		};
+	};
 	class FST_P2_Helmet_Qball: FST_P2_Helmet_Base
 	{
 		author="House";
@@ -47352,7 +47382,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Squatch_V2";
+		uniformclass="FST_Uniform_Remedy_V2";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
@@ -47407,7 +47437,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Squatch_V2";
+		uniformclass="FST_Uniform_Remedy_V2_Dirty";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
