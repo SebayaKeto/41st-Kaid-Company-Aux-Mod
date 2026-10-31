@@ -1,0 +1,5 @@
+Aparra trees: beech, oak and birch
+
+- Aparra: beech, oak and birch crowns now stop rifle rounds like maple, hornbeam and poplar.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -1,0 +1,16 @@
+Release P26v-full - PUBLISHED 24 Oct 2026 18:06 EDT on Miran's go ("go P26v-full"). ManifestID 3798944629488011625, time_updated 1792879595,
+94 files / 7,886,253,920 B, Published and verified. Rollback = republish Downloads/Steam-aux-release-20261024-P26u-armor-hitbody (needs a fresh variant/manifest base; on Miran's go only).
+(Staged 17:41.)
+Alternative to P26v-trees (docs/releases/2026-10-24-p26v-trees = the fallback). Scope from the Omnibus 17:2x, relaying Miran's pick "Go, with fallback"
+(Sat-2 on the new Twinfork terrain). Staging: Downloads/Steam-aux-release-20261024-P26v-full (D:/AuxUpdater/aatcrew/make_p26v_full.py),
+94 files / 7,886,253,920 B. --check PASSED 21:41Z (Workshop still P26u 1792853146). Base: P26u (ManifestID 5551798680928166508).
+
+Changed:
+- Addons/fst_app_autumn.pbo -> sha1 d30d55ca (= P26v-trees; see that NOTE: beech/oak/birch crown Fire Geometry, Compmaker engine PASS).
+- Addons/fst_appalachia.pbo 6af50676.. (287,794,533 B) -> d735784c1502988621382636a42ed6dfb1d695052bb111616053fb7a6debf7ed (285,669,208 B)
+  from D:/Appalachia/output_look_ct1p5g/@FST_Appalachia/addons: Twinfork rebuilt with kerbs, sidewalks, paved streets; new forest clearings.
+  No .bisign (none in any earlier fst_appalachia release). stage_terrain.py integration check: prefix z\fst\addons\fst_appalachia, world and
+  CfgPatches fst_appalachia; the only flag is world fst_appalachia also defined by fst_lighting_patch_app.pbo = intended (P26o lighting patch,
+  requiredAddons fst_appalachia), and the same flag shows for the live terrain. Map build: owner/Omnibus test it; integration checks only here.
+  (The source folder also holds an older fst_app_autumn.pbo 26,252,091 B - NOT used; P26v ships candidate C.)
+The other 92 files are byte-identical to P26u (full sha256 re-hash of both folders vs both manifests).

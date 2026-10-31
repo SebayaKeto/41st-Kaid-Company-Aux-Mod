@@ -1,0 +1,6 @@
+Aparra: trees and Twinfork
+
+- Aparra: beech, oak and birch crowns now stop rifle rounds like maple, hornbeam and poplar.
+- Aparra: Twinfork rebuilt with kerbs, sidewalks and paved streets; new forest clearings.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

@@ -1,0 +1,8 @@
+AT-RT kits, new helmets, Sabre missile damage
+
+- Kits: new AT-RT Squad Leader, Operator, Medic and Engineer kits; RTO hacking chips fixed.
+- Armour (CT-2225House): new Qball P2 helmet, officer visor and life support; new Bigmike, Snorlax and Wheeze P2 helmets; updated Bogu crewman helmet; Remedy unit fixed.
+- Sabre APC: guided missile damage set to 1200 direct, 80 indirect.
+- AT-RT: shot volume lowered by 25%.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

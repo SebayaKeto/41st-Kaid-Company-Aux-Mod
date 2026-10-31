@@ -1,0 +1,18 @@
+{
+  "status": "Published and verified",
+  "started_at_utc": "2026-10-24T22:05:51Z",
+  "publisher_exit_code": 0,
+  "workshop_log": [
+    "[2026-10-24 18:06:03] [AppID 107410] Upload starting for workshop item 3048946639 by AppID 107410",
+    "[2026-10-24 18:06:34] [AppID 107410] Uploaded new content ( ManifestID 3798944629488011625 ) for item 3048946639.",
+    "[2026-10-24 18:06:34] [AppID 107410] Upload finished for workshop item 3048946639 : OK",
+    "[2026-10-24 18:06:34] [AppID 107410] Detected workshop change (latest from server) : changed cached item 3048946639, new manifest 3798944629488011625"
+  ],
+  "content_manifest_id": "3798944629488011625",
+  "time_updated": 1792879595,
+  "published_at_utc": "2026-10-24T22:06:35Z",
+  "file_size_bytes": 7886253920,
+  "expected_file_size_bytes": 7886253920,
+  "file_count": 94,
+  "verified_at_utc": "2026-10-24T22:06:35Z"
+}

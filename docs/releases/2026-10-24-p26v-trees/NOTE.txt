@@ -1,0 +1,12 @@
+Release P26v-trees - staged 24 Oct 2026 17:21 EDT, NEVER PUBLISHED (fallback; Miran chose P26v-full, see 2026-10-24-p26v-full).
+Staging: Downloads/Steam-aux-release-20261024-P26v-trees (D:/AuxUpdater/aatcrew/make_p26v.py), 94 files / 7,888,379,245 B. --check PASSED 21:21Z
+(Workshop still P26u: time_updated 1792853146). Base: P26u (ManifestID 5551798680928166508, 7,888,363,423 B).
+
+Changed (only file):
+- Addons/fst_app_autumn.pbo 881007f4.. (sha1 c38fed19, P26q) -> 99eaa429.. (sha1 d30d55cae4c7530009ecd2722863413bcf0ee169, 26,267,913 B),
+  from D:/AppalachiaAutumnTrees/out_firegeo_C: the P26q crown Fire Geometry fix (View-geometry crown copy, crown_fire.rvmat, penetrability 1000)
+  extended to t_fagus2s_aut, t_quercus3s_aut, t_betula2s_aut. Reason: players reported droids shooting through Aparra trees (24 Oct).
+  Engine test PASS (Compmaker): D:/AppalachiaAutumnTrees/test/results/firegeoC_result_20261024-161034.txt (B1/player bolts and 5.56/7.62 through
+  the crowns 0-4 %, unpatched controls 7-72 %). Not built from this repo. No .bisign (same as P26q; the Aux ships unsigned).
+Integration: same prefix fst\app_autumn, same 38 entries; changed entries = the 3 p3d + license.txt (24 Oct credit line). The other 93 files are
+byte-identical to P26u (full sha256 re-hash of both folders vs both manifests).
