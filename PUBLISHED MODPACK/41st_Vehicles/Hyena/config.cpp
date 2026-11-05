@@ -167,12 +167,13 @@ class CfgVehicles
 		icon="3AS\3as_Vulture\data\ui\Vulture_top_ca.paa";
 		hiddenselections[]=
 		{
-			"camo1"
+			"camo"
 		};
 		hiddenselectionstextures[]=
 		{
-			"3as\3as_vulture\data\VultureDroid_CO.paa"
+			"41st_Vehicles\Hyena\Data\FST_HyenaBomber.paa"
 		};
+			textureList[]={};
 		mapSize=20.5;
 		geardowntime=2;
 		gearuptime=2;
@@ -994,7 +995,6 @@ class CfgVehicles
 		{
 		};
 		animationList[]={};
-		textureList[]={};
 		class Reflectors
 		{
 			class Gear_Front_light_1

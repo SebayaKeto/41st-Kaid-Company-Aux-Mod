@@ -73,6 +73,11 @@ class CfgVehicles
 			"FST_Rapture_12Rnd_AGM_Missile",
 			"240Rnd_CMFlare_Chaff_Magazine"
 		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\Vulture\Data\FST_EliteVulture.paa",
+		};
+			textureList[]={};
 		author="Daara";
 		armor=100;
 		armorStructural=8; //Was 5
@@ -153,6 +158,11 @@ class CfgVehicles
 			"FST_Rapture_12Rnd_AGM_Missile",
 			"240Rnd_CMFlare_Chaff_Magazine"
 		};
+		hiddenselectionstextures[]=
+		{
+			"41st_Vehicles\Hyena\Data\FST_HyenaBomber.paa",
+		};
+			textureList[]={};
 		author="Daara";
 		// armor=100;
 		// armorStructural=5;
