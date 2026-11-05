@@ -354,6 +354,7 @@ class CfgMusic
 		"FST_The3rdLandBattleship",
 		"FST_TimesAreChangingII",
 		"FST_TonitrusSpear",
+		"FST_Frostwave",
 		"FST_Ace_Blockade",
 		"FST_Ace_InvisibleFleet",
 		"FST_Ace_Prelude",
@@ -3637,6 +3638,18 @@ class CfgMusic
 		sound[]=
 		{
 			"41st_Music\ACTracks\AC8 - Tonitrus Spear.ogg",
+			1,
+			1
+		};
+		duration="154";
+	};
+	class FST_Frostwave
+	{
+		name="(Ace Combat 8) - Frostwave";
+		musicClass="FST_AC_Music";
+		sound[]=
+		{
+			"41st_Music\ACTracks\AC8 - Frostwave.ogg",
 			1,
 			1
 		};
