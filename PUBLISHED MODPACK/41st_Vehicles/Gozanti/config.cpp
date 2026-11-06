@@ -106,6 +106,21 @@
                 "240Rnd_CMFlare_Chaff_Magazine",
                 "240Rnd_CMFlare_Chaff_Magazine",
             };
+            hiddenselections[] = 
+            {   
+                "camo","camo1","camo2","camo3","camo4","camo5","camo6"
+            };
+            hiddenselectionstextures[]=
+		    {
+			    "41st_Vehicles\Gozanti\Data\FST_Gozanti_Camo_co.paa",
+                "3AS\3AS_Imperial_Air\Gozanti\data\Gozanti_Int_co.paa",
+                "41st_Vehicles\Gozanti\Data\FST_Gozanti_Camo2_co.paa",
+                "3AS\3AS_Imperial_Air\Gozanti\data\Camo3_co.paa",
+                "3AS\3AS_Imperial_Air\Gozanti\data\Camo4_co.paa",
+                "3AS\3AS_Imperial_Air\Gozanti\data\Camo5_co.paa",
+                "3AS\3AS_Imperial_Air\Gozanti\data\Camo6_co.paa"
+		    };
+			textureList[]={};
             class Turrets: Turrets {
                 class MainTurret: MainTurret {
                     minElev = -10;
