@@ -2399,7 +2399,7 @@ if (isNull _box) exitWith {
                 ["ACE_Flashlight_XL50",1],
                 ["ACE_IR_Strobe_Item",1],
                 ["ACE_CableTie",2],
-                ["ACE_microDAGR",1]
+                ["ItemMicroDAGR",1]
             ]
         ],
         [
@@ -2444,7 +2444,7 @@ if (isNull _box) exitWith {
                 ["ACE_Flashlight_XL50",1],
                 ["ACE_IR_Strobe_Item",1],
                 ["ACE_CableTie",2],
-                ["ACE_microDAGR",1]
+                ["ItemMicroDAGR",1]
             ]
         ],
         [
@@ -2500,7 +2500,8 @@ if (isNull _box) exitWith {
         ["ACE_CableTie",2],
         ["ACE_Fortify",1],
         ["ACE_FortifyToken", 50],
-        ["FST_grenade_Penetrator_mag",3,1]
+        ["FST_grenade_Penetrator_mag",3,1],
+        ["ItemMicroDAGR",1]
     ]],
     ["FST_Vest_Base",[
         ["FST_blaster_cell_High_Blue",12,40],

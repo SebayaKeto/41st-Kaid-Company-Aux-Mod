@@ -901,34 +901,40 @@ switch true do {
 					player addWeapon _knife;
 				};
 			};
-            if (_typeOfKit in ["AT-RT Squad Leader", "AT-RT Operator"]) then {
-                private _isFTLSash = _item in [
-                    "FST_Vest_NCO", "FST_Vest_NCO_Veteran", "FST_Vest_NCO_Woodland",
-                    "FST_vest_gm_FTL"
-                ];
-                if (_isFTLSash) then {
-                    player setVariable ["FST_ATRT_FTL", true, true];
-                    while {"ACE_microDAGR" in items player} do {
-                        player removeItem "ACE_microDAGR";
-                    };
-                    if !([player, "itemAndroid"] call BIS_fnc_hasItem) then {
-                        player addItem "itemAndroid";
-                    };
-                } else {
-                    private _isSquadLeader = _typeOfKit isEqualTo "AT-RT Squad Leader";
-                    player setVariable ["FST_ATRT_FTL", _isSquadLeader, true];
-                    if (!_isSquadLeader) then {
-                        while {"itemAndroid" in items player} do {
-                            player removeItem "itemAndroid";
-                        };
-                        if (_typeOfKit in ["AT-RT Operator", "AT-RT Medic"]) then {
-                            if !([player, "ACE_microDAGR"] call BIS_fnc_hasItem) then {
-                                player addItem "ACE_microDAGR";
-                            };
-                        };
-                    };
-                };
-            };
+			if (_typeOfKit in ["AT-RT Squad Leader", "AT-RT Operator"]) then {
+				private _isFTLSash = _item in [
+					"FST_Vest_NCO",
+					"FST_Vest_NCO_Veteran",
+					"FST_Vest_NCO_Woodland",
+					"FST_vest_gm_FTL"
+				];
+				private _isSquadLeader = _typeOfKit isEqualTo "AT-RT Squad Leader";
+				if (_isFTLSash) then {
+					player setVariable ["FST_ATRT_FTL", true, true];
+					while {"ItemMicroDAGR" in items player} do {
+						player removeItem "ItemMicroDAGR";
+					};
+					if !([player, "itemAndroid"] call BIS_fnc_hasItem) then {
+						player addItem "itemAndroid";
+					};
+				} else {
+					player setVariable ["FST_ATRT_FTL", _isSquadLeader, true];
+					if ((goggles player) in [
+						"FST_FTL_Face",
+						"FST_FTL_Veteran_Face",
+						"FST_FTL_Woodland_Face",
+						"FST_vest_gm_FTL_Face"
+					]) then {
+						removeGoggles player;
+					};
+					if (!_isSquadLeader) then {
+						player removeItem "itemAndroid";
+						if !([player, "ItemMicroDAGR"] call BIS_fnc_hasItem) then {
+							player addItem "ItemMicroDAGR";
+						};
+					};
+				};
+			};
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 605): {
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
@@ -1400,6 +1406,24 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 			player addWeapon _item;
 			player selectWeapon _item;
 			private _uglWeapons = ["FST_Westar_M5_UGL", "FST_DC15A_ugl", "FST_DC15S_UGL","FST_DC15C_UGL"];
+			if (
+				(player getVariable ["WBK_Kit_Name", ""]) isEqualTo "AT-RT Operator"
+				&& {(primaryWeapon player) in _uglWeapons}
+				&& {backpack player isEqualTo ""}
+			) then {
+				private _bpClass = if (
+					uniform player isEqualTo "FST_Uniform_GM_Plastic"
+				) then {
+					"FST_Backpack_GM_Base"
+				} else {
+					"FST_belt_bag_GRN"
+				};
+
+				if (isClass (configFile >> "CfgVehicles" >> _bpClass)) then {
+					player addBackpack _bpClass;
+					player setVariable ["FST_ATRT_AutoUGLBackpack", _bpClass];
+				};
+			};
 			if !((primaryWeapon player) in _uglWeapons) then {
 				if ([player, "ACE_HuntIR_monitor"] call BIS_fnc_hasItem) then {
 					player removeItem "ACE_HuntIR_monitor";
@@ -1598,6 +1622,22 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 					};
 				};
 				case "FST_DP23": {
+				if (
+					(player getVariable ["WBK_Kit_Name", ""]) isEqualTo "AT-RT Operator"
+					&& {backpack player isEqualTo ""}
+				) then {
+					private _dp23Backpack = if (
+						uniform player isEqualTo "FST_Uniform_GM_Plastic"
+					) then {
+						"FST_Backpack_GM_Base"
+					} else {
+						"FST_belt_bag_CQB"
+					};
+
+					if (isClass (configFile >> "CfgVehicles" >> _dp23Backpack)) then {
+						player addBackpack _dp23Backpack;
+					};
+				};
 					private _slugMag = "FST_thermal_slug_mag_Blue";
 					private _scatterCell = "FST_blaster_scatter_cell_DP23_Blue";
 					player addPrimaryWeaponItem "FST_blaster_scatter_cell_DP23_Blue";
@@ -1620,7 +1660,7 @@ case (isClass (configFile >> "CfgVehicles" >> _item)): {
 						[_scatterCell, 16],
 						[_slugMag, 4]
 					];
-					if ((player getVariable ["WBK_Kit_Name", ""]) in ["Close Quarters Combatant", "Squad Leader", "Squad Leader "]) then {
+					if ((player getVariable ["WBK_Kit_Name", ""]) in ["Close Quarters Combatant", "Squad Leader", "Squad Leader ", "AT-RT Operator"]) then {
 						{
 							private _grenade = _x;
 							player removeMagazines _grenade;
