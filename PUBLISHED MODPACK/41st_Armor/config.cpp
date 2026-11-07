@@ -163,6 +163,7 @@ class CfgPatches
 			"FST_P2_Cutlass_Dirty",
 			"FST_P2_Derp",
 			"FST_P2_Jan",
+			"FST_P2_Mask",
 			"FST_P2_Five",
 			"FST_P2_Overwatch",
 			"FST_P2_Tooka",
@@ -16071,7 +16072,21 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			mass=15;
 		};
 	};
-		class FST_Uniform_Smiley: JLTS_CloneArmor
+	class FST_Uniform_Mask: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Mask]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Mask";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Smiley: JLTS_CloneArmor
 	{
 		author="House";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
@@ -37069,6 +37084,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Souls",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Mask: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-1101 'Mask'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Mask";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Maska.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Maska.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Maska",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Maska",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
