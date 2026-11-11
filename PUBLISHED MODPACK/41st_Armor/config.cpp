@@ -34733,7 +34733,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Sanval.paa",
-			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower_Sanval.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
 		weapons[]=
@@ -34789,7 +34789,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Hydra.paa",
-			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower_Hydra.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
 		weapons[]=
@@ -34845,7 +34845,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Uvak.paa",
-			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower_Uvak.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
 		weapons[]=
@@ -34901,7 +34901,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Uniforms\FST_GM_BodyUpper_Howler.paa",
-			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower.paa",
+			"\41st_Armor\Data\Uniforms\FST_GM_BodyLower_Howler.paa",
 			"\41st_Armor\Data\Uniforms\FST_GM_Undersuit.paa"
 		};
 		weapons[]=
