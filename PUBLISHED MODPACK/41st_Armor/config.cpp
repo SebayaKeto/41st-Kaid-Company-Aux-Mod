@@ -382,6 +382,7 @@ class CfgPatches
 			"FST_P2_Zephyr",
 			"FST_P2_Zephyr_Dirty",
 			"FST_P2_Red",
+			"FST_P2_Zombie",
 			"FST_P2_Debt",
 			"FST_P2_Riley",
 			"FST_P2_Riley_Dirty",
@@ -14661,6 +14662,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red.paa"
 		};
 	};
+	class FST_P2_Helmet_Gaunt: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Gaunt]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Gaunt.paa"
+		};
+	};
 	class FST_P2_Helmet_Bigmike: FST_P2_Helmet_Base
 	{
 		author="House";
@@ -20658,6 +20669,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
             mass=15;
         };
     };
+	class FST_Uniform_Zombie: JLTS_CloneArmor
+    {
+        author="House";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Zombie]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Zombie";
+            uniformType="Neopren";
+            containerClass="Supply180";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Ryx: JLTS_CloneArmor
     {
         author="Adler";
@@ -21579,6 +21604,15 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Red.paa",
+		};
+	};
+	class FST_NVG_Souls: FST_NVG
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Souls)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Souls.paa",
 		};
 	};
 	class FST_NVG_Ordo: FST_NVG
@@ -37377,7 +37411,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Debt";
+		uniformclass="FST_Uniform_Gode";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
@@ -37469,6 +37503,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Debt",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Zombie: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-2912 'Zombie'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Zombie";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Zombie.paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Zombie.paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Zombie",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Zombie",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
