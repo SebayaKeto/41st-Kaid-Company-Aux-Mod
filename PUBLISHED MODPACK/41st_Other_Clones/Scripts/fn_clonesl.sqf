@@ -13,6 +13,14 @@ switch (_group) do
 	{
 		["FST_applyName", [ _unit, "501st Clone Squad Leader"]] call CBA_fnc_globalEvent;
 	};
+	case 104:
+	{
+		["FST_applyName", [ _unit, "104th Clone Squad Leader"]] call CBA_fnc_globalEvent;
+	};
+	case 327:
+	{
+		["FST_applyName", [ _unit, "327th Clone Squad Leader"]] call CBA_fnc_globalEvent;
+	};
 };
 
 [_unit, _group] spawn {
@@ -216,6 +224,14 @@ switch (_group) do
 	case 501:
 	{
 		_unit setUnitLoadout [["FST_DC15C_F","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_501_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_NCO_SL",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Backpack_Antenna",[["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_High_Blue",10,40],[["IDA_Clone_Knife","","","",[],[],""],1]]],"FST_P2_Helmet_501","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+	};
+	case 104:
+	{
+		_unit setUnitLoadout [["FST_DC15C_F","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_104_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_NCO_SL",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Backpack_Antenna",[["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_High_Blue",10,40],[["IDA_Clone_Knife","","","",[],[],""],1]]],"FST_P2_Helmet_104","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+	};
+	case 327:
+	{
+		_unit setUnitLoadout [["FST_DC15C_F","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_NCO_SL",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Backpack_Antenna",[["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_High_Blue",10,40],[["IDA_Clone_Knife","","","",[],[],""],1]]],"FST_P2_Helmet_327","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
 	};
 };
 

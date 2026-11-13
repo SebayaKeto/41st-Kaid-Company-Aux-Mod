@@ -13,6 +13,14 @@ switch (_group) do
 	{
 		["FST_applyName", [ _unit, "501st Clone Autorifleman"]] call CBA_fnc_globalEvent;
 	};
+	case 104:
+	{
+		["FST_applyName", [ _unit, "104th Clone Autorifleman"]] call CBA_fnc_globalEvent;
+	};
+	case 327:
+	{
+		["FST_applyName", [ _unit, "327th Clone Autorifleman"]] call CBA_fnc_globalEvent;
+	};
 };
 
 [_unit, _group] spawn {
@@ -226,6 +234,34 @@ switch (_group) do
 			case 1:
 			{
 				_unit setUnitLoadout [["FST_Z6","","","",["FST_blaster_battery_Blue",300],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_501_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_belt_bag",[["FST_blaster_battery_Blue",5,300]]],"FST_P2_Helmet_501","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+			};
+		};
+	};
+	case 104:
+	{
+		switch (_type) do
+		{
+			case 0:
+			{
+				_unit setUnitLoadout [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_104_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_belt_bag",[["FST_blaster_battery_DC15L_Blue",10,120]]],"FST_P2_Helmet_104","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+			};
+			case 1:
+			{
+				_unit setUnitLoadout [["FST_Z6","","","",["FST_blaster_battery_Blue",300],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_104_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_belt_bag",[["FST_blaster_battery_Blue",5,300]]],"FST_P2_Helmet_104","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+			};
+		};
+	};
+	case 327:
+	{
+		switch (_type) do
+		{
+			case 0:
+			{
+				_unit setUnitLoadout [["FST_DC15L_F","","","FST_Optic_DC15L",["FST_blaster_battery_DC15L_Blue",120],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_belt_bag",[["FST_blaster_battery_DC15L_Blue",10,120]]],"FST_P2_Helmet_327","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+			};
+			case 1:
+			{
+				_unit setUnitLoadout [["FST_Z6","","","",["FST_blaster_battery_Blue",300],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_belt_bag",[["FST_blaster_battery_Blue",5,300]]],"FST_P2_Helmet_327","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
 			};
 		};
 	};

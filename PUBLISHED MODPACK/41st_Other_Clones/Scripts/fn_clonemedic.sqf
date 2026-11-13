@@ -13,6 +13,14 @@ switch (_group) do
 	{
 		["FST_applyName", [ _unit, "501st Clone Medic"]] call CBA_fnc_globalEvent;
 	};
+	case 104:
+	{
+		["FST_applyName", [ _unit, "104th Clone Medic"]] call CBA_fnc_globalEvent;
+	};
+	case 327:
+	{
+		["FST_applyName", [ _unit, "327th Clone Medic"]] call CBA_fnc_globalEvent;
+	};
 };
 
 [_unit, _group] spawn {
@@ -217,6 +225,14 @@ switch (_group) do
 	case 501:
 	{
 		_unit setUnitLoadout [["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_501_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["FST_blaster_scatter_cell_DP23_Blue",10,8],["FST_thermal_slug_mag_Blue",4,3],[["IDA_Clone_Knife","","","",[],[],""],1]]],["FST_Clone_Backpack_Plain_Medic",[["IDA_BactaBandage",40],["IDA_BattleStim",5],["ACE_splint",4],["ACE_tourniquet",4],["FST_Bacta_Tank",1],["ACE_bloodIV_500",2],["ACE_bloodIV",1],["ACE_plasmaIV",1],["ACE_plasmaIV_500",2],["IDA_Cauterizer",1],["ACE_adenosine",2]]],"FST_P2_Helmet_501","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+	};
+	case 104:
+	{
+		_unit setUnitLoadout [["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_104_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["FST_blaster_scatter_cell_DP23_Blue",10,8],["FST_thermal_slug_mag_Blue",4,3],[["IDA_Clone_Knife","","","",[],[],""],1]]],["FST_Clone_Backpack_Plain_Medic",[["IDA_BactaBandage",40],["IDA_BattleStim",5],["ACE_splint",4],["ACE_tourniquet",4],["FST_Bacta_Tank",1],["ACE_bloodIV_500",2],["ACE_bloodIV",1],["ACE_plasmaIV",1],["ACE_plasmaIV_500",2],["IDA_Cauterizer",1],["ACE_adenosine",2]]],"FST_P2_Helmet_104","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+	};
+	case 327:
+	{
+		_unit setUnitLoadout [["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["FST_blaster_scatter_cell_DP23_Blue",10,8],["FST_thermal_slug_mag_Blue",4,3],[["IDA_Clone_Knife","","","",[],[],""],1]]],["FST_Clone_Backpack_Plain_Medic",[["IDA_BactaBandage",40],["IDA_BattleStim",5],["ACE_splint",4],["ACE_tourniquet",4],["FST_Bacta_Tank",1],["ACE_bloodIV_500",2],["ACE_bloodIV",1],["ACE_plasmaIV",1],["ACE_plasmaIV_500",2],["IDA_Cauterizer",1],["ACE_adenosine",2]]],"FST_P2_Helmet_327","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
 	};
 };
 
