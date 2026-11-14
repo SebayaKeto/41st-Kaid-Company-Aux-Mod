@@ -21,6 +21,10 @@ switch (_group) do
 	{
 		["FST_applyName", [ _unit, "327th Clone Close Combat Trooper"]] call CBA_fnc_globalEvent;
 	};
+	case 69:
+	{
+		["FST_applyName", [ _unit, "69th Clone Close Combat Trooper"]] call CBA_fnc_globalEvent;
+	};
 };
 
 [_unit, _group] spawn {
@@ -232,6 +236,10 @@ switch (_group) do
 	case 327:
 	{
 		_unit setUnitLoadout [["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2],["FST_blaster_scatter_cell_DP23_Blue",10,8],["FST_thermal_slug_mag_Blue",4,3]]],["FST_belt_bag_CQB",[["IDA_grenade_Sonic_mag",3,1],["FST_grenade_emp_mag",3,1],["FST_grenade_Detonator_mag",3,1]]],"FST_P2_Helmet_327","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+	};
+	case 69:
+	{
+		_unit setUnitLoadout [["FST_DP23","","","",["FST_blaster_scatter_cell_DP23_Blue",8],[],""],[],["IDA_VibroKnife","","","",[],[],""],["FST_69_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_Vest_Base",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2],["FST_blaster_scatter_cell_DP23_Blue",10,8],["FST_thermal_slug_mag_Blue",4,3]]],["FST_belt_bag_CQB",[["IDA_grenade_Sonic_mag",3,1],["FST_grenade_emp_mag",3,1],["FST_grenade_Detonator_mag",3,1]]],"FST_P2_Helmet_69","FST_69_Ears",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
 	};
 };
 

@@ -41,7 +41,19 @@ class CfgPatches
 			"FST_OC_Tanker_327",
 			"FST_OC_SL_327",
 			"FST_OC_FTL_327",
-			"FST_OC_Commander_327"
+			"FST_OC_Commander_327",
+			"FST_OC_Trooper_69",
+			"FST_OC_Auto_69",
+			"FST_OC_Mark_69",
+			"FST_OC_AT_69",
+			"FST_OC_CQB_69",
+			"FST_OC_RTO_69",
+			"FST_OC_Medic_69",
+			"FST_OC_EOD_69",
+			"FST_OC_Tanker_69",
+			"FST_OC_SL_69",
+			"FST_OC_FTL_69",
+			"FST_OC_Commander_69"
 
 		};
 		weapons[]={};
@@ -74,6 +86,21 @@ class CfgFunctions
 			class clonemedic {};
 			class cloneeod {};
 			class clonetank {};
+		};
+	};
+};
+class CfgGlasses
+{
+	class OPTRE_CatEars_P;
+	class FST_69_Ears: OPTRE_CatEars_P
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] Armor Cat Ears [69th]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Other_Clones\Data\FST_CatEars_co.paa",
+			"OPTRE_Misc\Objects\data\CatEars_Pink_co.paa"
 		};
 	};
 };
@@ -185,7 +212,7 @@ class CfgWeapons
 		{
 			"41st_Other_Clones\Data\FST_P2_Helmet_69th.paa"
 		};
-	};
+	}; 
 	class FST_P2_Helmet_501_RTO: FST_P2_Helmet_Base
 	{
 		author="Tooka";
@@ -598,7 +625,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Other_Clones\Data\FST_P2_BodyUpper_69th.paa",
-			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Tooka.Paa"
+			"41st_Other_Clones\Data\FST_P2_BodyLower_69th.paa"
 		};
 		weapons[]={};
 		respawnWeapons[]={};
@@ -1410,6 +1437,274 @@ class CfgVehicles
 			init= "[(_this select 0),327] spawn FST_OCRandomizers_fnc_clonecommander;";
 		};
 	};
+	class FST_OC_Trooper_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Trooper";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonetrooper;";
+		};
+	};
+	class FST_OC_Auto_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Autorifleman";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_cloneauto;";
+		};
+	};
+	class FST_OC_Mark_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Marksman";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonemark;";
+		};
+	};
+	class FST_OC_AT_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Antitank";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_cloneat;";
+		};
+	};
+	class FST_OC_CQB_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Close Combat Trooper";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonecqb;";
+		};
+	};
+	class FST_OC_RTO_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Radio Operator";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonerto;";
+		};
+	};
+	class FST_OC_Medic_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Medic";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonemedic;";
+		};
+		attendant=1;
+	};
+	class FST_OC_EOD_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Combat Engineer";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_cloneeod;";
+		};
+		engineer=1;
+		canDecativateMines=1;
+	};
+	class FST_OC_Tanker_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Tanker";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonetank;";
+		};
+		engineer=1;
+	};
+	class FST_OC_FTL_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Fire Team Lead";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_cloneftl;";
+		};
+	};
+	class FST_OC_SL_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Squad Lead";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonesl;";
+		};
+	};
+	class FST_OC_Commander_69: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 69th Clone Commander";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_69_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),69] spawn FST_OCRandomizers_fnc_clonecommander;";
+		};
+	};
 };
 class cfgGroups
 {
@@ -2000,6 +2295,199 @@ class cfgGroups
 					{
 						side=1;
 						vehicle="FST_OC_Tanker_327";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+				};
+				class FST_S_69_Squad
+				{
+					name="[41st] 69th Clone Squad";
+					faction="FST_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_OC_SL_69";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_OC_RTO_69";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_OC_FTL_69";
+						rank="CORPORAL";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_OC_FTL_69";
+						rank="CORPORAL";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_OC_Auto_69";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_OC_Auto_69";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_OC_Mark_69";
+						rank="PRIVATE";
+						position[]={1,-6,0};
+					};
+					class Unit7
+					{
+						side=1;
+						vehicle="FST_OC_CQB_69";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit8
+					{
+						side=1;
+						vehicle="FST_OC_AT_69";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit9
+					{
+						side=1;
+						vehicle="FST_OC_EOD_69";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit10
+					{
+						side=1;
+						vehicle="FST_OC_Trooper_69";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit11
+					{
+						side=1;
+						vehicle="FST_OC_Trooper_69";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit12
+					{
+						side=1;
+						vehicle="FST_OC_Medic_69";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+					class Unit13
+					{
+						side=1;
+						vehicle="FST_OC_Medic_69";
+						rank="PRIVATE";
+						position[]={0,-6,0};
+					};
+				};
+				class FST_S_69_Fireteam
+				{
+					name="[41st] 69th Clone Fireteam";
+					faction="FST_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_OC_FTL_69";
+						rank="CORPORAL";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_OC_Trooper_69";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_OC_Auto_69";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_OC_AT_69";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_OC_CQB_69";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_OC_EOD_69";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_OC_Medic_69";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_69_Tankers
+				{
+					name="[41st] 69th Vehicle Crew";
+					faction="FST_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_69";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_69";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_69";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_69";
 						rank="PRIVATE";
 						position[]={1,-1,0};
 					};

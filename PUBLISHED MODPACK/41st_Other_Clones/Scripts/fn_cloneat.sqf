@@ -21,6 +21,10 @@ switch (_group) do
 	{
 		["FST_applyName", [ _unit, "327th Clone Antitank"]] call CBA_fnc_globalEvent;
 	};
+	case 69:
+	{
+		["FST_applyName", [ _unit, "69th Clone Antitank"]] call CBA_fnc_globalEvent;
+	};
 };
 
 [_unit, _group] spawn {
@@ -262,6 +266,20 @@ switch (_group) do
 			case 1:
 			{
 				_unit setUnitLoadout [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],["FST_RPS6HP","","","",["FST_RPS6_rocket",1],[],""],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Clone_Backpack_Plain",[["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_High_Blue",10,40],[["IDA_Clone_Knife","","","",[],[],""],1],["FST_RPS6_rocket",2,1],["FST_RPS6_rocket_HE",1,1]]],"FST_P2_Helmet_327","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+			};
+		};
+	};
+	case 69:
+	{
+		switch (_type) do
+		{
+			case 0:
+			{
+				_unit setUnitLoadout [["FST_DC15S","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_Blue",60],[],""],["FST_RPS6HP","","","",["FST_RPS6_rocket",1],[],""],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_69_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Clone_Backpack_Plain",[["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_Blue",10,60],[["IDA_Clone_Knife","","","",[],[],""],1],["FST_RPS6_rocket",2,1],["FST_RPS6_rocket_HE",1,1]]],"FST_P2_Helmet_69","FST_69_Ears",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+			};
+			case 1:
+			{
+				_unit setUnitLoadout [["FST_DC15A","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_High_Blue",40],[],""],["FST_RPS6HP","","","",["FST_RPS6_rocket",1],[],""],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_69_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Clone_Backpack_Plain",[["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_High_Blue",10,40],[["IDA_Clone_Knife","","","",[],[],""],1],["FST_RPS6_rocket",2,1],["FST_RPS6_rocket_HE",1,1]]],"FST_P2_Helmet_69","FST_69_Ears",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
 			};
 		};
 	};
