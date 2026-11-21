@@ -71,7 +71,7 @@ private _kits = _allKitsForBox select {
     {
         private _ctrl = _display displayCtrl _x;
         if (!isNull _ctrl) then {
-            _ctrl ctrlShow (FST_CurrentKitCategory isEqualTo "ranger");
+            _ctrl ctrlShow ((FST_CurrentKitCategory isEqualTo "ranger") && {!(_kitBox getVariable ["FST_RadiationKits", false])});
         };
     } forEach [1610,1611,1612,1613,1614,2610,2611,2612,2613,2614];
     private _jpBtn = _display displayCtrl 1615;

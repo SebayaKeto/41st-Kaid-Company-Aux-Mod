@@ -38,7 +38,8 @@ class CfgPatches
 		{
 			"FST_Module_SpawnKitLocker_Current",
 			"FST_Module_SpawnKitLocker_Snow",
-			"FST_Module_SpawnKitLocker_P1"
+			"FST_Module_SpawnKitLocker_P1",
+			"FST_Module_SpawnKitLocker_Radiation"
 		};
 
 		weapons[] = {};
@@ -709,6 +710,14 @@ class CfgVehicles
 		scopeCurator = 2;
 		displayName = "Spawn P1 Kit Locker";
 		FST_KitSet = "p1";
+	};
+
+	class FST_Module_SpawnKitLocker_Radiation: FST_Module_SpawnKitLocker_Base
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Spawn Radiation Kit Locker";
+		FST_KitSet = "radiation";
 	};
 };
 class Extended_PreInit_EventHandlers

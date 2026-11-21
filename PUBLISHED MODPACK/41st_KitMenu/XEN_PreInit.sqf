@@ -22,6 +22,10 @@ systemChat "Object already have a kit menu";
 };
 };
 FST_ApplyCamoPreset = {
+	// Radiation kit lockers: rangers are locked to Woodland, so no camo swaps.
+	if ((missionNamespace getVariable ["WBK_GlobalKitBoxRn", objNull]) getVariable ["FST_RadiationKits", false]) exitWith {
+		playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+	};
 	if (
 		(missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger"
 		&& {(uniform player) isEqualTo "FST_Uniform_P1_41st"}
@@ -473,7 +477,13 @@ FST_fnc_selectHelmet = {
         _type = 302;
     };
     switch (_type) do {
-        case 605: { removeHeadgear player; player addHeadgear _gearClass; };
+        case 605: {
+            if (player getVariable ["FST_RadiationKitActive", false]) exitWith {
+                playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+                hintSilent "Radiation kits use a fixed protective helmet.";
+            };
+            removeHeadgear player; player addHeadgear _gearClass;
+        };
         case 801: { private _it = uniformItems player;  removeUniform player;  player forceAddUniform _gearClass; { player addItemToUniform _x; } forEach _it; };
         case 701: { private _it = vestItems player;     removeVest player;     player addVest _gearClass;         { player addItemToVest _x;    } forEach _it; };
         case 302: { private _it = backpackItems player; removeBackpack player; player addBackpack _gearClass;     { player addItemToBackpack _x;} forEach _it; };
@@ -937,6 +947,9 @@ switch true do {
 			};
 		};
 		case (getNumber(configFile >> "CfgWeapons" >> _item >> 'ItemInfo' >> 'type' ) isEqualTo 605): {
+			if (player getVariable ["FST_RadiationKitActive", false]) exitWith {
+				playSoundUI ["41st_KitMenu\sounds\select_cantTake.ogg", 0.4, 1];
+			};
 		    playSoundUI [selectRandom ["41st_KitMenu\sounds\select_helmet_1.ogg","41st_KitMenu\sounds\select_helmet_2.ogg"], 0.85, 1];
 			removeHeadgear player;
 			player addHeadgear _item;
@@ -2130,6 +2143,13 @@ _codeExecute = _lbData select 3;
 _insignia = [player] call BIS_fnc_getUnitInsignia;
 playSoundUI ["41st_KitMenu\sounds\select_default.ogg", 0.3, 1];
 player setUnitLoadout _kit;
+// Radiation kit lockers mark themselves with FST_RadiationKits (see kits\Radiation_Kits.sqf).
+private _isRadiationKit = (missionNamespace getVariable ["WBK_GlobalKitBoxRn", objNull]) getVariable ["FST_RadiationKits", false];
+player setVariable ["FST_RadiationKitActive", _isRadiationKit, true];
+if (_isRadiationKit) then {
+	// Rangers on radiation kits are Woodland only; keeps camo-dependent gear swaps on Woodland.
+	missionNamespace setVariable ["FST_LastCamoPreset", "Woodland"];
+};
 private _uniformToSet = "";
 private _headgearToSet = "";
 private _vestToSet = "";
@@ -2314,6 +2334,7 @@ if (_uniformToSet != "" && { (uniform player) == "FST_Trooper_Uniform" }) then {
     { player addItemToUniform _x; } forEach _uniformItems;
 };
 
+if (_isRadiationKit) then { _headgearToSet = ""; };
 if (_headgearToSet != "" && { headgear player != _headgearToSet }) then {
     removeHeadgear player;
     player addHeadgear _headgearToSet;
@@ -2939,14 +2960,16 @@ private _bpClass     = ((_kit param [5, ["",[]]]) param [0, ""]);
 private _isAirborne  = (
     (_helmetClass != "" && {(toLower _helmetClass) find "airborne" > -1}) ||
     (_helmetClass isEqualTo "FST_Airborne_Helmet") ||
-    (_bpClass     != "" && {_bpClass find "FST_Backpack_Jumppack" == 0})
+    (_bpClass     != "" && {_bpClass find "FST_Backpack_Jumppack" == 0}) ||
+    ((player getVariable ["WBK_Kit_Category",""]) isEqualTo "airborne")
 );
 private _selectedKitType = if (_isAirborne) then {"airborne"} else {
     if ((missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger") then {"ranger"} else {""}
 };
-[player, _selectedKitRole, _selectedKitType] execVM "\41st_KitMenu\FST_autoCustoms.sqf";
+[player, _selectedKitRole, _selectedKitType, _isRadiationKit] execVM "\41st_KitMenu\FST_autoCustoms.sqf";
 private _lastCamo = missionNamespace getVariable ["FST_LastCamoPreset",""];
 if (
+    !_isRadiationKit &&
     _lastCamo != "" &&
     {(player getVariable ["WBK_Kit_Category",""]) isEqualTo "ranger"}
 ) then {
@@ -3184,6 +3207,9 @@ FST_fnc_loadKitFile = {
         };
         case "current": {
             "\41st_KitMenu\kits\Current_Kits.sqf"
+        };
+        case "radiation": {
+            "\41st_KitMenu\kits\Radiation_Kits.sqf"
         };
         default {
             "\41st_KitMenu\kits\Current_Kits.sqf"

@@ -1,4 +1,4 @@
-params [["_unit", player], ["_roleName", ""], ["_kitTag", ""]];
+params [["_unit", player], ["_roleName", ""], ["_kitTag", ""], ["_lockHelmet", false]];
 if ((uniform _unit) isEqualTo "FST_Uniform_GM_Plastic") exitWith {};
 if ((uniform _unit) isEqualTo "FST_Uniform_P1_41st") exitWith {};
 if !(_roleName isEqualType "") then { _roleName = "" };
@@ -52,6 +52,8 @@ switch (_rank) do {
     case "ARC-":  { _allowHelmet = true; _allowArmor = true; _allowVest = true; _allowBack = true; _allowNVG = true; };
 };
 private _skipCustoms = (_kitTagLower isEqualTo "ranger");
+// Radiation kits keep their issued protective helmet: no custom helmet prompt or saved helmet.
+if (_lockHelmet isEqualTo true) then { _allowHelmet = false; };
 
 missionNamespace setVariable ["FST_fnc_confirmCustomVariant", {
     disableSerialization;

@@ -218,6 +218,7 @@ class CfgMusic
 		"FST_NightCoreDeuschland",
 		"FST_InvocationarrayFeralStrain",
 		"FST_RedAlert3Soviet",
+		"FST_All_Star",
 
 		//Mission Tracks
 		"FST_WhiteChristmas",
@@ -2308,6 +2309,18 @@ class CfgMusic
 			1
 		};
 		duration="164";
+	};
+						class FST_All_Star
+	{
+		name="Smash Mouth - All Star";
+		musicClass="FST_Misc";
+		sound[]=
+		{
+			"41st_Music\MiscTracks\All_Star.ogg",
+			1,
+			1
+		};
+		duration="236";
 	};
 	
 

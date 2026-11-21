@@ -668,6 +668,7 @@ class CfgWeapons
 	class ls_cloneHelmet_scout;
 	class ls_gar_phase1Pilot_helmet;
 	class ls_cloneHelmet_atrtDriver;
+	class 3AS_H_CloneEnvironmental_F;
 	/////////////////////////
 	//////////VESTS/////////
 	////////////////////////
@@ -5743,6 +5744,83 @@ class CfgWeapons
 		hiddenSelectionsMaterials[]=
 		{
 			"41st_Armor\Data\Other\Camos\Clone_Helmet_P2.rvmat"
+		};
+	};
+	//////////////Environmental Helmets//////////////
+	class FST_Environmental_Helmet: 3AS_H_CloneEnvironmental_F
+	{
+		author="Daara";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[41st] Environmental Helmet";
+		model="\3AS\3AS_Republic_Characters\Headgear\3AS_Clonetrooper_Environmental_Helmet.p3d";
+		ace_hearing_protection=1;
+		ace_hearing_lowerVolume=0;
+		hiddenSelections[]=
+		{
+			"Helmet",
+			"Visor"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet.rvmat",
+			"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet_Visor.rvmat"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Helmets\FST_Env_Helmet_Trooper.paa",
+			"\41st_Armor\Data\Helmets\FST_Env_Helmet_Trooper.paa"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Republic_Characters\Headgear\3AS_Clonetrooper_Environmental_Helmet.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"Helmet",
+				"Visor"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
+		};
+	};
+	class FST_Environmental_Helmet_NCO: FST_Environmental_Helmet
+	{
+		author="Daara";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[41st] Environmental NCO Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Helmets\FST_Env_Helmet_NCO.paa",
+			"\41st_Armor\Data\Helmets\FST_Env_Helmet_NCO.paa"
+		};
+	};
+	class FST_Environmental_Helmet_Woodland: FST_Environmental_Helmet
+	{
+		author="Daara";
+		scope=2;
+		scopeArsenal=2;
+		displayName="[41st] Environmental Helmet [Woodland]";
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Helmets\FST_Env_Helmet_Woodland.paa",
+			"\41st_Armor\Data\Helmets\FST_Env_Helmet_Woodland.paa"
 		};
 	};
 	class FST_Pilot_P1_Helmet: ls_gar_phase1Pilot_helmet
