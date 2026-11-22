@@ -244,6 +244,8 @@ class CfgMusic
 		"FST_Rakghoul",
 		"FST_UnityInBattle",
 		"FST_Order66",
+		"FST_SuddraTheme",
+		"FST_SuddraTheme2",
 		
 		//KPOP Demon Hunters
 		"FST_Golden",
@@ -555,6 +557,30 @@ class CfgMusic
 			1
 		};
 		duration="124";
+	};
+	class FST_SuddraTheme
+	{
+		name="Suddra Theme";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Suddra_Theme.ogg",
+			1,
+			1
+		};
+		duration="118";
+	};
+	class FST_SuddraTheme2
+	{
+		name="Suddra Theme 2";
+		musicClass="FST_Mission_Music";
+		sound[]=
+		{
+			"41st_Music\MissionTracks\Suddra_Theme_2.ogg",
+			1,
+			1
+		};
+		duration="168";
 	};
 	
 	

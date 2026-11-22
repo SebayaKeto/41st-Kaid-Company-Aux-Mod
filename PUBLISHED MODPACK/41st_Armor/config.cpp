@@ -37476,7 +37476,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Maska",
+			"FST_Airborne_Helmet_Mask",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37486,7 +37486,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Maska",
+			"FST_Airborne_Helmet_Mask",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37751,7 +37751,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Gode",
+			"FST_Airborne_Helmet_Gode",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37761,7 +37761,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Gode",
+			"FST_Airborne_Helmet_Gode",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37861,7 +37861,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Zombie",
+			"FST_Airborne_Helmet_Zombie",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37871,7 +37871,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Zombie",
+			"FST_Airborne_Helmet_Zombie",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37916,7 +37916,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Prime",
+			"FST_Airborne_Helmet_Prime",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -37926,7 +37926,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Prime",
+			"FST_Airborne_Helmet_Prime",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -43251,7 +43251,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Comedian";
+		uniformclass="FST_Uniform_Comedian_Dirty";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
@@ -43387,7 +43387,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Ordo_Dirty",
+			"FST_Airborne_Helmet_Ordo_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -43397,7 +43397,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Ordo_Dirty",
+			"FST_Airborne_Helmet_Ordo_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -44489,7 +44489,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Sin",
+			"FST_Airborne_Helmet_Sin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -44499,7 +44499,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Sin",
+			"FST_Airborne_Helmet_Sin",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -45952,7 +45952,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Overwatch";
+		uniformclass="FST_Uniform_Overwatch_Dirty";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
@@ -45978,7 +45978,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_P2_Helmet_Overwatch_Dirty",
+			"FST_Crewman_Helmet_Mk2_Overwatch_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -45988,7 +45988,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_P2_Helmet_Overwatch_Dirty",
+			"FST_Crewman_Helmet_Mk2_Overwatch_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -48119,7 +48119,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Remedy",
+			"FST_Airborne_Helmet_Remedy",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -48129,7 +48129,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Remedy",
+			"FST_Airborne_Helmet_Remedy",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -48229,7 +48229,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Remedy_V2_Dirty",
+			"FST_Airborne_Helmet_Remedy_V2_Drity",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -48239,7 +48239,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Remedy_V2_Dirty",
+			"FST_Airborne_Helmet_Remedy_V2_Drity",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -48614,7 +48614,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"FST_AB_Helmet_Blue",
+			"FST_Airborne_Helmet_Blue",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -48624,7 +48624,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"FST_AB_Helmet_Blue",
+			"FST_Airborne_Helmet_Blue",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -55545,7 +55545,7 @@ class CfgVehicles
 		role="Rifleman";
 		faction="FST_Faction";
 		editorSubcategory="FST_Customs_Subfaction";
-		uniformclass="FST_Uniform_Red";
+		uniformclass="FST_Uniform_Red_Dirty";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 		hiddenSelections[]=
 		{
