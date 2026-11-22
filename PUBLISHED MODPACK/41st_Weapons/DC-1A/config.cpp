@@ -29,7 +29,8 @@ class UnderBarrelSlot_rail;
 class CowsSlot_Rail;
 class CfgWeapons
 {
-	class Rifle_Base_F
+	class Rifle;
+	class Rifle_Base_F: Rifle
 	{
 		class WeaponSlotsInfo;
 		class GunParticles;

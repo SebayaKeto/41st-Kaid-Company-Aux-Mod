@@ -1,0 +1,5 @@
+Weapon config fixes
+
+- Weapons: fixed the remaining config conflicts on rifles and the [41st] light attachments.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
