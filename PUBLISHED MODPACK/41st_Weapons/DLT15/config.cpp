@@ -35,7 +35,8 @@ class UnderBarrelSlot;
 class CfgWeapons
 {
 	class JLTS_stun_muzzle;
-	class Rifle_Base_F
+	class Rifle;
+	class Rifle_Base_F: Rifle
 	{
 		class WeaponSlotsInfo;
 		class GunParticles;

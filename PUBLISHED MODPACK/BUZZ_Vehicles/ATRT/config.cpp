@@ -163,8 +163,9 @@ class CfgWeapons {
 
     // Cargo capacity patch
     class ItemCore;
+    class UniformItem;
     class FST_ATRT_Base: ItemCore {
-        class ItemInfo {
+        class ItemInfo: UniformItem {
             containerClass = "Supply100";
         };
     };

@@ -1789,12 +1789,33 @@ class CfgWeapons
 		JLTS_isFried=1;
 	};
     class acc_flashlight;
-    class FST_Attachment_Light_Normal_White: acc_flashlight
+	class FST_Base_Flashlight: acc_flashlight
+	{
+		scope = 0; // Base class, not to be used directly
+		class Iteminfo
+		{
+			allowedSlots[] = {801,701,901};
+			mass = 4;
+			mountAction = "MountSide";
+			type = 301;
+			unmountAction = "DismountSide";
+			class Flashlight
+			{
+				ambient[] = {0.9,0.81,0.7};
+				color[] = {180,160,130};
+				dayLight = 0;
+				direction = "flash";
+				useFlare = 1;
+				volumeShape = "a3\\data_f\\VolumeLightFlashlight.p3d";
+			};
+		};
+	};
+    class FST_Attachment_Light_Normal_White: FST_Base_Flashlight
     {
         displayName = "[41st] Light (Normal)";
         scope=2;
         scopeArsenal = 2;
-        class Iteminfo
+        class Iteminfo: Iteminfo
         {
             allowedSlots[] = {801,701,901};
             mass = 4;
@@ -1802,7 +1823,7 @@ class CfgWeapons
             scope = 0;
             type = 301;
             unmountAction = "DismountSide";
-            class Flashlight
+            class Flashlight: Flashlight
             {
                 ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
                 ACE_Flashlight_Colour = "white";
@@ -1836,12 +1857,12 @@ class CfgWeapons
         };
     };
 
-    class FST_Attachment_Light_Beam_White: acc_flashlight
+    class FST_Attachment_Light_Beam_White: FST_Base_Flashlight
     {
         displayName = "[41st] Light (Beam)";
         scope=2;
         scopeArsenal = 2;
-        class Iteminfo
+        class Iteminfo: Iteminfo
         {
             allowedSlots[] = {801,701,901};
             mass = 4;
@@ -1849,7 +1870,7 @@ class CfgWeapons
             scope = 0;
             type = 301;
             unmountAction = "DismountSide";
-            class Flashlight
+            class Flashlight: Flashlight
             {
                 ambient[] = {0.9,0.81,0.7};
                 color[] = {180,160,130};
@@ -1879,7 +1900,7 @@ class CfgWeapons
             };
         };
     };
-	class FST_Attachment_Module_Light_Normal_White: acc_flashlight
+	class FST_Attachment_Module_Light_Normal_White: FST_Base_Flashlight
     {
         displayName = "[41st] Light (Normal/Beam)";
         scope=2;
@@ -1887,7 +1908,7 @@ class CfgWeapons
         MRT_switchItemHintText = "White Light";
         MRT_SwitchItemNextClass = "FST_Attachment_Module_Light_Beam_White";
         MRT_SwitchItemPrevClass = "FST_Attachment_Module_Light_Beam_White";
-        class Iteminfo
+        class Iteminfo: Iteminfo
         {
             allowedSlots[] = {801,701,901};
             mass = 4;
@@ -1895,7 +1916,7 @@ class CfgWeapons
             scope = 0;
             type = 301;
             unmountAction = "DismountSide";
-            class Flashlight
+            class Flashlight: Flashlight
             {
                 ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
                 ACE_Flashlight_Colour = "white";
@@ -1928,7 +1949,7 @@ class CfgWeapons
             };
         };
     };
-    class FST_Attachment_Module_Light_Beam_White: acc_flashlight
+    class FST_Attachment_Module_Light_Beam_White: FST_Base_Flashlight
     {
         displayName = "[41st] Light/Laser Module";
         scope=1;
@@ -1936,7 +1957,7 @@ class CfgWeapons
         MRT_switchItemHintText = "Beam White Light";
         MRT_SwitchItemNextClass = "FST_Attachment_Module_Light_Normal_White";
         MRT_SwitchItemPrevClass = "FST_Attachment_Module_Light_Normal_White";
-        class Iteminfo
+        class Iteminfo: Iteminfo
         {
             allowedSlots[] = {801,701,901};
             mass = 4;
@@ -1944,7 +1965,7 @@ class CfgWeapons
             scope = 0;
             type = 301;
             unmountAction = "DismountSide";
-            class Flashlight
+            class Flashlight: Flashlight
             {
                 ambient[] = {0.9,0.81,0.7};
                 color[] = {180,160,130};

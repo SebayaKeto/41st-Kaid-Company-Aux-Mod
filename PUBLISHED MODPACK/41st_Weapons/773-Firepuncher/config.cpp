@@ -29,7 +29,8 @@ class CfgWeapons
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
 	class WeaponSlotsInfo;
-	class arifle_MX_Base_F
+	class Rifle_Base_F;
+	class arifle_MX_Base_F: Rifle_Base_F
 	{
 		class WeaponSlotsInfo;
 		class GunParticles;

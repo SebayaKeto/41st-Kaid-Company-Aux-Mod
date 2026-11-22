@@ -1,0 +1,6 @@
+Config fixes
+
+- Weapons: fixed config conflicts on several rifles and the [41st] light attachments so they keep their proper base settings.
+- Vehicles: fixed config conflicts on the LAAT cargo, AT-RT and vehicle missiles so they keep their proper base settings.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

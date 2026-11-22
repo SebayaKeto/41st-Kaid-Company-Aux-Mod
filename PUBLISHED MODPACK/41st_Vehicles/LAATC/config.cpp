@@ -74,7 +74,8 @@ class ls_impulsor_base;
 class CfgVehicles
 {
 	class Wreck_base_F;
-	class Helicopter
+	class Air;
+	class Helicopter: Air
 	{
 	};
 	class Helicopter_Base_F: Helicopter
