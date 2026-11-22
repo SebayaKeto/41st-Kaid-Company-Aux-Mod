@@ -9,7 +9,8 @@ class CfgPatches
 			"3AS_Main",
 			"3AS_VehicleWeapons",
 			"3AS_APC_Jug",
-			"3AS_Animations"
+			"3AS_Animations",
+			"3AS_Rebel_Armor_PX10"
 		};
 		units[] = { "FST_PX10_Tukata", "FST_PX10_CIS", "FST_PX10_Gray", "FST_PX10_PDF" };
 		weapons[] = {};
@@ -18,9 +19,25 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class 3AS_PX10_Base_F
+	class LandVehicle;
+	class Tank: LandVehicle
+	{
+		class HitPoints;
+	};
+	class Tank_F: Tank
+	{
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitLTrack;
+			class HitRTrack;
+		};
+	};
+	class 3AS_PX10_Base_F: Tank_F
     {
-        class HitPoints
+        class HitPoints: HitPoints
         {
             class HitHull;
             class HitFuel;

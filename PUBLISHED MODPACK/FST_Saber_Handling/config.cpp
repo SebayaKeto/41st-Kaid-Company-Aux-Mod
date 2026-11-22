@@ -1,3 +1,4 @@
+// 21 Nov: base declared with its 3AS parent Tank_F (Miran "Yes, stage the fix").
 // Saber handling (24 Sep rehearsal tune) RE-APPLIED 14 Oct on Miran's request. Keep existing forward speed limits.
 class CfgPatches {
  class FST_Saber_Handling {
@@ -7,7 +8,8 @@ class CfgPatches {
  };
 };
 class CfgVehicles {
- class 3AS_Saber_01_Base {class complexGearbox;};
+ class Tank_F;
+ class 3AS_Saber_01_Base: Tank_F {class complexGearbox;}; // keep 3AS parent (was blanking Tank_F->'', 21 Nov)
  class FST_Saber: 3AS_Saber_01_Base {
   maxSpeed=60;
   peakTorque=7200;

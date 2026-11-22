@@ -1,0 +1,17 @@
+{
+  "status": "Published and verified",
+  "started_at_utc": "2026-11-13T00:29:37Z",
+  "publisher_exit_code": 0,
+  "workshop_log": [
+    "[2026-11-12 19:29:52] [AppID 107410] Upload starting for workshop item 3048946639 by AppID 107410",
+    "[2026-11-12 19:30:45] [AppID 107410] Uploaded new content ( ManifestID 2708147363340149725 ) for item 3048946639.",
+    "[2026-11-12 19:30:46] [AppID 107410] Upload finished for workshop item 3048946639 : OK"
+  ],
+  "content_manifest_id": "2708147363340149725",
+  "time_updated": 1794529846,
+  "published_at_utc": "2026-11-13T00:30:46Z",
+  "file_size_bytes": 8083631302,
+  "expected_file_size_bytes": 8083631302,
+  "file_count": 96,
+  "verified_at_utc": "2026-11-13T00:30:47Z"
+}

@@ -1,0 +1,5 @@
+Mine detector fix
+
+- Mine detector: mines your side already knows about (for example Zeus-placed mines when ACE Zeus "Reveal Mines" is on) now show full size on the detector panel instead of a tiny dot (new KAID_MineDetector_Fix, client-side UI config only).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

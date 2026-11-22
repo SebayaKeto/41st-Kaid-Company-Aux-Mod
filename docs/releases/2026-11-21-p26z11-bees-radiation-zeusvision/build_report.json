@@ -1,0 +1,44 @@
+{
+ "41st_KitMenu": {
+  "out": "D:\\AuxUpdater\\p26z11\\out\\41st_KitMenu.pbo",
+  "bytes": 1753789,
+  "sha256": "ca27659f1ea4a51df6bdc4be04b761c68e7339995fb1dff5b045af7d5022cce9",
+  "entries": 45,
+  "replaced": 4,
+  "added": 1,
+  "removed": 0
+ },
+ "41st_Music": {
+  "out": "D:\\AuxUpdater\\p26z11\\out\\41st_Music.pbo",
+  "bytes": 1258680486,
+  "sha256": "1a94023ad066e04d8778e120c6413196591be51aa1e37d10512f9fae90a3d217",
+  "entries": 303,
+  "replaced": 1,
+  "added": 1,
+  "removed": 0
+ },
+ "41st_Armor": {
+  "out": "D:\\AuxUpdater\\p26z11\\out\\41st_Armor.pbo",
+  "bytes": 2286347074,
+  "sha256": "d3f2b8729a9d3a1ca9d4d2ede894c81ccaddfac0eb399c763cf1cc31d55f29c6",
+  "entries": 1917,
+  "replaced": 1,
+  "added": 3,
+  "removed": 0,
+  "config": "merged live+parent+head, crlf=True"
+ },
+ "BUZZ_Radiation": {
+  "out": "D:\\AuxUpdater\\p26z11\\out\\BUZZ_Radiation.pbo",
+  "prefix": "BUZZ_Radiation",
+  "entries": 48,
+  "bytes": 774254,
+  "sha256": "a645c8ef954fd7deb1f835198de0ca4265c320f0ca97ca2c819b75125e45a13e"
+ },
+ "BUZZ_ZeusVision": {
+  "out": "D:\\AuxUpdater\\p26z11\\out\\BUZZ_ZeusVision.pbo",
+  "prefix": "BUZZ_ZeusVision",
+  "entries": 12,
+  "bytes": 19552,
+  "sha256": "2ed59f5e1aeaa95d96212925494fd4076b653dced96dd42e142667630647f041"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "fst_suddra.pbo": {
+  "sha256": "44e6b75c66ec69768502c5206e6ff517c7538a7dca8e9b8ab816039d7af7112c",
+  "bytes": 283049305,
+  "prefix": "z\\fst\\addons\\fst_suddra",
+  "worlds": [
+   "Stratis",
+   "fst_suddra"
+  ],
+  "patches": [
+   "fst_suddra"
+  ],
+  "problems": [
+   "world Stratis also in ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo', '463939057 | ace_weather.pbo']",
+   "cfgworlds class Stratis conflicts with our ['staged Aux | fst_geonosis.pbo'] (load-order dependent)"
+  ],
+  "warnings": [
+   "cfgworlds class Stratis re-defines ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo'] differently - NEW global side effect"
+  ],
+  "notes": []
+ }
+}

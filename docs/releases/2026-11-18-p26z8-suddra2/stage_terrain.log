@@ -1,0 +1,50 @@
+{
+ "fst_suddra.pbo": {
+  "sha256": "7aecefdd3b908cdcb51e98cf8c2e94b93dacaa6e57a7e80acfaab8ed01215753",
+  "bytes": 283048138,
+  "prefix": "z\\fst\\addons\\fst_suddra",
+  "worlds": [
+   "Stratis",
+   "fst_suddra"
+  ],
+  "patches": [
+   "fst_suddra"
+  ],
+  "problems": [
+   "world Stratis also in ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo', '463939057 | ace_weather.pbo']",
+   "cfgworlds class Stratis conflicts with our ['staged Aux | fst_geonosis.pbo'] (load-order dependent)"
+  ],
+  "warnings": [
+   "cfgworlds class Stratis re-defines ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo'] differently - already live, identical in ['staged Aux | fst_ember_caldera.pbo']"
+  ],
+  "notes": []
+ },
+ "fst_suddra_reed.pbo": {
+  "sha256": "2528a44de0dd1d05a4222867fc9b9a920977a0b3538cc880bbc04693e6523e19",
+  "bytes": 223526,
+  "prefix": "z\\fst\\addons\\fst_suddra_reed",
+  "worlds": [],
+  "patches": [
+   "fst_suddra_reed"
+  ],
+  "problems": [],
+  "warnings": [],
+  "notes": [
+   "no .wrp (not a terrain?)"
+  ]
+ },
+ "fst_sud_rpine.pbo": {
+  "sha256": "e0563c0766c9a4a1682aa41efce65f7afa508775175a505fd3255e9a57d17aba",
+  "bytes": 7231705,
+  "prefix": "z\\fst\\addons\\fst_sud_rpine",
+  "worlds": [],
+  "patches": [
+   "fst_sud_rpine"
+  ],
+  "problems": [],
+  "warnings": [],
+  "notes": [
+   "no .wrp (not a terrain?)"
+  ]
+ }
+}

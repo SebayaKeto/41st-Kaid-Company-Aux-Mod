@@ -1,0 +1,7 @@
+Aparra terrain update and droid targeting hygiene
+
+- Aparra: terrain updated for Saturday's operation.
+- Aparra: autumn trees now block droid sight (and rounds) through more of their leaf mass and trunks.
+- Droids: drop targets they have not seen for a while, and no longer steer shots at targets they cannot see.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

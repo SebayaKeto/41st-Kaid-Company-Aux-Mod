@@ -1,0 +1,71 @@
+{
+ "fst_suddra.pbo": {
+  "sha256": "4e5cb14e68e9b199e8624b6823e46cd7ac4f635def19a26b6824aa1368a1794a",
+  "bytes": 283094169,
+  "prefix": "z\\fst\\addons\\fst_suddra",
+  "worlds": [
+   "Stratis",
+   "fst_suddra"
+  ],
+  "patches": [
+   "fst_suddra"
+  ],
+  "problems": [
+   "world Stratis also in ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo', '463939057 | ace_weather.pbo']",
+   "cfgworlds class Stratis conflicts with our ['staged Aux | fst_geonosis.pbo'] (load-order dependent)"
+  ],
+  "warnings": [
+   "cfgworlds class Stratis re-defines ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo'] differently - NEW global side effect"
+  ],
+  "notes": []
+ },
+ "fst_suddra_reed.pbo": {
+  "sha256": "245bdd11071ab44c07e6632b77558902528247231d4484b7c799066a2931d091",
+  "bytes": 223526,
+  "prefix": "z\\fst\\addons\\fst_suddra_reed",
+  "worlds": [],
+  "patches": [
+   "fst_suddra_reed"
+  ],
+  "problems": [],
+  "warnings": [],
+  "notes": [
+   "no .wrp (not a terrain?)"
+  ]
+ },
+ "fst_sud_rpine.pbo": {
+  "sha256": "eaea53ab7db95ebf7da54dc533c5d2837f9c2e29e4495a1e1944fb2d546c784a",
+  "bytes": 7231705,
+  "prefix": "z\\fst\\addons\\fst_sud_rpine",
+  "worlds": [],
+  "patches": [
+   "fst_sud_rpine"
+  ],
+  "problems": [],
+  "warnings": [],
+  "notes": [
+   "no .wrp (not a terrain?)"
+  ]
+ },
+ "fst_ember_caldera.pbo": {
+  "sha256": "711e5584a91ada664ad01355812acb1744ae5dd297290bbec54fdd067ee27992",
+  "bytes": 174932207,
+  "prefix": "z\\fst\\addons\\fst_ember_caldera",
+  "worlds": [
+   "Stratis",
+   "fst_ember_caldera"
+  ],
+  "patches": [
+   "fst_ember_caldera"
+  ],
+  "problems": [
+   "world Stratis also in ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo', '463939057 | ace_weather.pbo']",
+   "cfgworlds class Stratis conflicts with our ['staged Aux | fst_geonosis.pbo'] (load-order dependent)"
+  ],
+  "warnings": [
+   "cfgworlds class Stratis re-defines ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo'] differently - NEW global side effect"
+  ],
+  "notes": []
+ }
+}
+exit=0

@@ -1,0 +1,6 @@
+Armor and clone unit update
+
+- New armor: Zombie (P2 armor and unit), Gaunt P2 helmet, Souls NVGs and updated Souls armor; Gode and Chimmy squad cold assault armor fixes.
+- New clone units: 104th, 327th and 69th.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

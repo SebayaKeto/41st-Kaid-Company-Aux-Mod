@@ -1,0 +1,9 @@
+Radiation, Zeus Vision and kit update
+
+- New: radiation zones for Zeus and mission makers (radiation, safe and decontamination zones), with Iodine Tablets, Radiation Detection Device and Radiation Flush IV, plus a radiation medical crate.
+- New: radiation kits and a Spawn Radiation Kit Locker module.
+- New: environmental helmets (Trooper, NCO, Woodland).
+- New: Zeus Vision. In Zeus, right-click > Show Trooper Details to tag nearby troopers with their kit and ammo.
+- New music: All Star (Misc).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

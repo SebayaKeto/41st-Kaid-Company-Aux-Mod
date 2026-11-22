@@ -1,0 +1,5 @@
+PX-10 fix
+
+- PX-10: fixed a config conflict so it keeps its full tank settings and damage zones.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

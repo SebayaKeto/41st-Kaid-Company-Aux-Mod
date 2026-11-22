@@ -1,0 +1,5 @@
+Suddra and Thirra fixes
+
+- Suddra and Thirra: fixes very low frame rates in the editor and corrects the map date and weather settings.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

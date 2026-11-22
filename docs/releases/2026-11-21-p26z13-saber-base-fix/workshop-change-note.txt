@@ -1,0 +1,5 @@
+Saber fix
+
+- Saber tanks: fixed a config conflict so the Saber keeps its full tank settings.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

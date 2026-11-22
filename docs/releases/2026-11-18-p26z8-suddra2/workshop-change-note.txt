@@ -1,0 +1,5 @@
+Suddra terrain update
+
+- Suddra: fixes flooded ground at two operation sites.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

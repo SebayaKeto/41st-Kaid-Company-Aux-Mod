@@ -1,0 +1,22 @@
+{
+ "fst_ember_caldera.pbo": {
+  "sha256": "8776da75115031ad020d7f5104e5a80fd36da0340f401b7e09365d5868ffe984",
+  "bytes": 174933374,
+  "prefix": "z\\fst\\addons\\fst_ember_caldera",
+  "worlds": [
+   "Stratis",
+   "fst_ember_caldera"
+  ],
+  "patches": [
+   "fst_ember_caldera"
+  ],
+  "problems": [
+   "world Stratis also in ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo', '463939057 | ace_weather.pbo']",
+   "cfgworlds class Stratis conflicts with our ['staged Aux | fst_geonosis.pbo'] (load-order dependent)"
+  ],
+  "warnings": [
+   "cfgworlds class Stratis re-defines ['vanilla | map_stratis.pbo', '2058554822 | 3AS_Main.pbo'] differently - already live, identical in ['staged Aux | fst_suddra.pbo']"
+  ],
+  "notes": []
+ }
+}

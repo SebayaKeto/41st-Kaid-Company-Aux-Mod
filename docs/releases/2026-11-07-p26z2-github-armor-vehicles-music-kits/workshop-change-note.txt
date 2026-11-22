@@ -1,0 +1,8 @@
+New armor, textures, music and kit menu update
+
+- Armor: Sevens armor, Mask armor, Persuade jump pack; Rumble P2 helmet V2 (clean/dirty) and Corpse armor updated.
+- Vehicles: Elite Vulture texture, Hyena texture on the Hyena Bomber and CAS Vulture, Fynock Gozanti base textures.
+- Music: AC8 - Frostwave.
+- Kit menu: kit menu and kit list updates (LaerDar).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

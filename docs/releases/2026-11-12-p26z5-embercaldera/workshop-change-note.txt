@@ -1,0 +1,5 @@
+New terrain: Ember Caldera
+
+- Adds the Ember Caldera islands terrain for this weekend's operations.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

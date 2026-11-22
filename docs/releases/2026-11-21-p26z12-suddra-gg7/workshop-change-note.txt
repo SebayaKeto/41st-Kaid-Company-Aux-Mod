@@ -1,0 +1,5 @@
+Suddra lighting update
+
+- Suddra: moodier weather and lighting (overcast, rain and low fog).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

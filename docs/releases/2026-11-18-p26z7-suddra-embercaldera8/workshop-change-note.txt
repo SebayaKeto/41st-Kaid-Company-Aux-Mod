@@ -1,0 +1,6 @@
+New terrain: Suddra; Ember Caldera update
+
+- Adds the Suddra swamp terrain.
+- Ember Caldera: terrain updated for this weekend's operations.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
