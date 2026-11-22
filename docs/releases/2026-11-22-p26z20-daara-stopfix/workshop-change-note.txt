@@ -1,0 +1,5 @@
+Daara stop fix
+
+- Daara: stopping from a walk or run no longer briefly drops into the standard standing pose.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

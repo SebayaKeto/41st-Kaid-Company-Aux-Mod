@@ -1,0 +1,7 @@
+Suddra music, new armor sets, 327th Environmental Troopers
+
+- Music: added Suddra Theme and Suddra Theme 2 to 41st - Mission Tracks.
+- Armor: added Party P2 helmet, Draco jump pack and Comedian, Ordo, Overwatch and Red dirty armor, helmets and NVGs; updated Rick and Pole.
+- Other Clones: added 327th Environmental Troopers.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
