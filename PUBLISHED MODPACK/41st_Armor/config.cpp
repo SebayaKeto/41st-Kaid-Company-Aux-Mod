@@ -166,6 +166,7 @@ class CfgPatches
 			"FST_P2_Mask",
 			"FST_P2_Five",
 			"FST_P2_Overwatch",
+			"FST_P2_Overwatch_Dirty",
 			"FST_P2_Tooka",
 			"FST_P2_Mox",
 			"FST_P2_Mox_Dirty",
@@ -382,6 +383,7 @@ class CfgPatches
 			"FST_P2_Zephyr",
 			"FST_P2_Zephyr_Dirty",
 			"FST_P2_Red",
+			"FST_P2_Red_Dirty",
 			"FST_P2_Zombie",
 			"FST_P2_Debt",
 			"FST_P2_Riley",
@@ -406,7 +408,9 @@ class CfgPatches
 			"FST_P2_Dilham_Dirty",
 			"FST_P2_Kare",
 			"FST_P2_Comedian",
+			"FST_P2_Comedian_Dirty",
 			"FST_P2_Ordo",
+			"FST_P2_Ordo_Dirty",
 			"FST_P2_Apollon",
 			"FST_P2_Vex",
 			"FST_P2_Cait",
@@ -8219,6 +8223,17 @@ class CfgWeapons
 			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Overwatch.paa"
 		};
 	};
+	class FST_Crewman_Helmet_Mk2_Overwatch_Dirty: FST_Crewman_Helmet_Mk2
+	{
+		scope=2;
+		author="House";
+		displayName="[41st] Crewman Helmet Mk2 (Overwatch/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Overwatch_Dirty.paa",
+			"41st_Armor\Data\Helmets\FST_Crewman_Helmet_Mk2_Overwatch_Dirty.paa"
+		};
+	};
 	class FST_Crewman_Helmet_Mk2_Omen: FST_Crewman_Helmet_Mk2
 	{
 		scope=2;
@@ -10671,6 +10686,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\data\Helmets\FST_AB_Helmet_Ordo.paa",
+		};
+	};
+	class FST_Airborne_Helmet_Ordo_Dirty: FST_Airborne_Helmet
+	{
+		author="House";
+		displayName="[41st] Airborne Helmet (Ordo/Dirty)";
+		scope=2;
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\data\Helmets\FST_AB_Helmet_Ordo_Dirty.paa",
 		};
 	};
 	class FST_Airborne_Helmet_Kodiak: FST_Airborne_Helmet
@@ -13798,6 +13823,16 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Comedian.paa",
 		};
 	};
+	class FST_P2_Helmet_Comedian_Dirty: FST_P2_Helmet_Base
+	{
+		author="Steel";
+		scope=2; 
+		displayName="[41st] P2 Helmet [Comedian/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Comedian_Dirty.paa",
+		};
+	};
 	class FST_P2_Helmet_Nerd: FST_P2_Helmet_Base
 	{
 		author="Steel";
@@ -14738,6 +14773,26 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red.paa"
+		};
+	};
+	class FST_P2_Helmet_Red_Dirty: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Red/Dirty]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Red_Dirty.paa"
+		};
+	};
+	class FST_P2_Helmet_Party: FST_P2_Helmet_Base
+	{
+		author="House";
+		scope=2;
+		displayName="[41st] P2 Helmet [Party]";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Helmets\FST_P2_Helmet_Party.paa"
 		};
 	};
 	class FST_P2_Helmet_Gaunt: FST_P2_Helmet_Base
@@ -17704,6 +17759,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 			mass=15;
 		};
 	};
+	class FST_Uniform_Comedian_Dirty: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Comedian/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Comedian_Dirty";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
 	class FST_Uniform_Ordo: JLTS_CloneArmor
 	{
 		author="Steel";
@@ -17713,6 +17782,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Ordo";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	};
+	class FST_Uniform_Ordo_Dirty: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Ordo/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Ordo_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -18429,6 +18512,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		{
 			uniformModel="";
 			uniformClass="FST_P2_Overwatch";
+			uniformType="Neopren";
+			containerClass="Supply180";
+			mass=15;
+		};
+	}; 
+	class FST_Uniform_Overwatch_Dirty: JLTS_CloneArmor
+	{
+		author="House";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		displayName="[41st] P2 Armor [Overwatch/Dirty]";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="";
+			uniformClass="FST_P2_Overwatch_Dirty";
 			uniformType="Neopren";
 			containerClass="Supply180";
 			mass=15;
@@ -20733,6 +20830,20 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
             mass=15;
         };
     };
+		class FST_Uniform_Red_Dirty: JLTS_CloneArmor
+    {
+        author="House";
+        picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+        displayName="[41st] P2 Armor [Red/Dirty]";
+        class ItemInfo: UniformItem
+        {
+            uniformModel="";
+            uniformClass="FST_P2_Red_Dirty";
+            uniformType="Neopren";
+            containerClass="Supply180";
+            mass=15;
+        };
+    };
 	class FST_Uniform_Debt: JLTS_CloneArmor
     {
         author="House";
@@ -21682,6 +21793,15 @@ class FST_BARC_Helmet_Evox: FST_BARC_Helmet
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Armor\Data\Equipment\FST_NVG_Red.paa",
+		};
+	};
+	class FST_NVG_Red_Dirty: FST_NVG
+	{
+		author="House";
+		displayName="[41st] NCO Macrobinoculars (Red/Dirty)";
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Equipment\FST_NVG_Red_Dirty.paa",
 		};
 	};
 	class FST_NVG_Souls: FST_NVG
@@ -27631,6 +27751,122 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ordo.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Ordo_Dirty: FST_Backpack_Jumppack
+	{
+		author="House";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Ordo/Dirty)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Ordo_Dirty.paa"
+		};
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=50000;
+		tf_hasLRradio=1;
+		JLTS_isJumppack=0;
+		FST_jumppack_is_jumppack=1;
+		FST_jumppack_spam_delay=1;
+		FST_jumppack_energy_capacity=100;
+		FST_jumppack_recharge=7.6;
+		FST_jumppack_jump_effect_script="";
+		FST_jumppack_effect_points[]=
+		{
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		FST_jumppack_sound_ignite[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Start.ogg"
+		};
+		FST_jumppack_sound_land[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21End.ogg"
+		};
+		FST_jumppack_sound_idle[]=
+		{
+			"FST_JumpPack\jumppack\Sounds\cdv21Idle.ogg"
+		};
+		FST_jumppack_jump_types[]=
+		{
+			{
+				"Short Jump",
+				{12,2,100,0,1,0}
+			}
+		};
+		class TransportItems{};
+	};
+	class FST_Backpack_Jumppack_Draco: FST_Backpack_Jumppack
+	{
+		author="House";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		maximumload=340;
+		displayName="[41st] Jump Pack (Draco)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneJumppackMC.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\41st_Armor\Data\Equipment\FST_AB_Jumppack_Draco.paa"
 		};
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
@@ -43005,6 +43241,61 @@ class CfgVehicles
 			"JLTS_clone_comlink"
 		};
 	};
+	class FST_P2_Comedian_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-8792 'Comedian/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Comedian";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Comedian_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Comedian_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Comedian_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Comedian_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
 	class FST_P2_Ordo: FST_Trooper_P2_DC15S
 	{
 		author="Steel";
@@ -43052,6 +43343,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Ordo",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Ordo_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-4473 'Ordo/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Ordo_Dirty";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Ordo_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Ordo_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_AB_Helmet_Ordo_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_AB_Helmet_Ordo_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -45588,6 +45934,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Overwatch",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Overwatch_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-0151 'Overwatch/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Overwatch";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Overwatch_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Overwatch_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Overwatch_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Overwatch_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
@@ -55126,6 +55527,61 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"FST_P2_Helmet_Red",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+	};
+	class FST_P2_Red_Dirty: FST_Trooper_P2_DC15S
+	{
+		author="House";
+		displayName="[41st] CT-1284 'Red/Dirty'";
+		scope=2;
+		Backpack="";
+		side=1;
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_Customs_Subfaction";
+		uniformclass="FST_Uniform_Red";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Armor\Data\Uniforms\FST_P2_BodyUpper_Red_Dirty.Paa",
+			"41st_Armor\Data\Uniforms\FST_P2_BodyLower_Red_Dirty.Paa",
+		};
+		weapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_CloneBinocular",
+			"Throw",
+			"Put"
+		};
+		linkedItems[]=
+		{
+			"FST_P2_Helmet_Red_Dirty",
+			"FST_base_Vest",
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_clone_comlink"
+		};
+		respawnLinkedItems[]=
+		{
+			"FST_P2_Helmet_Red_Dirty",
 			"FST_base_Vest",
 			"ItemMap",
 			"ItemGPS",
