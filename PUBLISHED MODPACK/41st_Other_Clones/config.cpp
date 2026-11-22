@@ -42,6 +42,18 @@ class CfgPatches
 			"FST_OC_SL_327",
 			"FST_OC_FTL_327",
 			"FST_OC_Commander_327",
+			"FST_OC_Trooper_327_E",
+			"FST_OC_Auto_327_E",
+			"FST_OC_Mark_327_E",
+			"FST_OC_AT_327_E",
+			"FST_OC_CQB_327_E",
+			"FST_OC_RTO_327_E",
+			"FST_OC_Medic_327_E",
+			"FST_OC_EOD_327_E",
+			"FST_OC_Tanker_327_E",
+			"FST_OC_SL_327_E",
+			"FST_OC_FTL_327_E",
+			"FST_OC_Commander_327_E",
 			"FST_OC_Trooper_69",
 			"FST_OC_Auto_69",
 			"FST_OC_Mark_69",
@@ -436,6 +448,54 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"41st_Other_Clones\Data\FST_327thTrooper_tankerhelmet_co.paa"
+		};
+	};
+	class FST_P2_Helmet_327_Enviro: FST_P2_Helmet_Base
+	{
+		author="Tooka";
+		scope=1;
+		displayName="[41st] P2 Enviromental Helmet [327th]";
+		hiddenSelections[] = 
+		{
+			"Helmet",
+			"Visor"
+		};
+		hiddenSelectionsMaterials[] = 
+		{
+			"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet.rvmat",
+			"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet_Visor.rvmat"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"41st_Other_Clones\Data\FST_Env_Helmet_327.paa",
+			"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet_CO.paa"
+		};
+		class Iteminfo: HeadgearItem
+		{
+			uniformModel="\3AS\3AS_Republic_Characters\Headgear\3AS_Clonetrooper_Environmental_Helmet.p3d";
+			mass=15;
+			hiddenselections[]=
+			{
+				"Helmet",
+				"Visor"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointname="HitHead";
+					armor=6;
+					PassThrough=0.08975;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=6;
+					PassThrough=0.08975;
+				};
+			};
 		};
 	};
 	class FST_P2_Helmet_501_ARF: FST_P2_Helmet_Base
@@ -1437,6 +1497,274 @@ class CfgVehicles
 			init= "[(_this select 0),327] spawn FST_OCRandomizers_fnc_clonecommander;";
 		};
 	};
+	class FST_OC_Trooper_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Trooper";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonetrooper;";
+		};
+	};
+	class FST_OC_Auto_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Autorifleman";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_cloneauto;";
+		};
+	};
+	class FST_OC_Mark_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Marksman";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonemark;";
+		};
+	};
+	class FST_OC_AT_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Antitank";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_cloneat;";
+		};
+	};
+	class FST_OC_CQB_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Close Combat Trooper";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonecqb;";
+		};
+	};
+	class FST_OC_RTO_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Radio Operator";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonerto;";
+		};
+	};
+	class FST_OC_Medic_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Medic";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonemedic;";
+		};
+		attendant=1;
+	};
+	class FST_OC_EOD_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Combat Engineer";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_cloneeod;";
+		};
+		engineer=1;
+		canDecativateMines=1;
+	};
+	class FST_OC_Tanker_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Tanker";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonetank;";
+		};
+		engineer=1;
+	};
+	class FST_OC_FTL_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Fire Team Lead";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_cloneftl;";
+		};
+	};
+	class FST_OC_SL_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Squad Lead";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonesl;";
+		};
+	};
+	class FST_OC_Commander_327_E: FST_bodyGlove
+	{
+		scope=2;
+		scopeCurator=2;
+        side=1;
+		displayName="[41st] 327th Clone Commander";
+		author="Tooka";
+		uniformAccessories[]={};
+		nakedUniform="FST_Uniform_Bodyglove";
+		uniformClass="FST_327_Uniform";
+		role="Rifleman";
+		faction="FST_Faction";
+		editorSubcategory="FST_OtherClones";
+		weapons[]={};
+		Items[]={};
+		linkedItems[]={};
+		magazines[]={};
+		class EventHandlers
+		{
+			init= "[(_this select 0),3272] spawn FST_OCRandomizers_fnc_clonecommander;";
+		};
+	};
 	class FST_OC_Trooper_69: FST_bodyGlove
 	{
 		scope=2;
@@ -2295,6 +2623,199 @@ class cfgGroups
 					{
 						side=1;
 						vehicle="FST_OC_Tanker_327";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+				};
+				class FST_S_327E_Squad
+				{
+					name="[41st] 327th Clone Squad [Enviromental]";
+					faction="FST_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_OC_SL_327_E";
+						rank="SERGEANT";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_OC_RTO_327_E";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_OC_FTL_327_E";
+						rank="CORPORAL";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_OC_FTL_327_E";
+						rank="CORPORAL";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_OC_Auto_327_E";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_OC_Auto_327_E";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_OC_Mark_327_E";
+						rank="PRIVATE";
+						position[]={1,-6,0};
+					};
+					class Unit7
+					{
+						side=1;
+						vehicle="FST_OC_CQB_327_E";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit8
+					{
+						side=1;
+						vehicle="FST_OC_AT_327_E";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit9
+					{
+						side=1;
+						vehicle="FST_OC_EOD_327_E";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+					class Unit10
+					{
+						side=1;
+						vehicle="FST_OC_Trooper_327_E";
+						rank="PRIVATE";
+						position[]={0,-3,0};
+					};
+					class Unit11
+					{
+						side=1;
+						vehicle="FST_OC_Trooper_327_E";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit12
+					{
+						side=1;
+						vehicle="FST_OC_Medic_327_E";
+						rank="PRIVATE";
+						position[]={0,-5,0};
+					};
+					class Unit13
+					{
+						side=1;
+						vehicle="FST_OC_Medic_327_E";
+						rank="PRIVATE";
+						position[]={0,-6,0};
+					};
+				};
+				class FST_S_327E_Fireteam
+				{
+					name="[41st] 327th Clone Fireteam [Enviromental]";
+					faction="FST_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_OC_FTL_327_E";
+						rank="CORPORAL";
+						position[]={1,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_OC_Trooper_327_E";
+						rank="PRIVATE";
+						position[]={1,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_OC_Auto_327_E";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_OC_AT_327_E";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="FST_OC_CQB_327_E";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="FST_OC_EOD_327_E";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="FST_OC_Medic_327_E";
+						rank="PRIVATE";
+						position[]={0,-2,0};
+					};
+				};
+				class FST_S_327E_Tankers
+				{
+					name="[41st] 327th Vehicle Crew [Enviromental]";
+					faction="FST_Faction";
+					side=1;
+					class Unit0
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_327_E";
+						rank="PRIVATE";
+						position[]={0,-0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_327_E";
+						rank="PRIVATE";
+						position[]={0,-1,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_327_E";
+						rank="PRIVATE";
+						position[]={1,-0,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="FST_OC_Tanker_327_E";
 						rank="PRIVATE";
 						position[]={1,-1,0};
 					};

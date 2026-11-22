@@ -17,6 +17,7 @@ switch (_group) do
 	{
 		["FST_applyName", [ _unit, "104th Clone Tanker"]] call CBA_fnc_globalEvent;
 	};
+	case 3272;
 	case 327:
 	{
 		["FST_applyName", [ _unit, "327th Clone Tanker"]] call CBA_fnc_globalEvent;
@@ -236,6 +237,10 @@ switch (_group) do
 	case 327:
 	{
 		_unit setUnitLoadout [["FST_DC15S","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_Blue",60],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Backpack_Antenna",[["FST_LargeToolkit",1],["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_Blue",10,60],[["IDA_Clone_Knife","","","",[],[],""],1]]],"FST_P2_Helmet_327_Tank","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
+	};
+	case 3272:
+	{
+		_unit setUnitLoadout [["FST_DC15S","","","FST_Attachment_Optic_Holo_DC15",["FST_blaster_cell_Blue",60],[],""],[],["FST_DC17","","","",["FST_blaster_cell_low_Blue",30],[],""],["FST_327_Uniform",[[_datapad0,1],[_datapad1,_chance0],[_intel0,1],[_intel1,1],[_intel2,1],["WBK_HeadLampItem_Narrow",1],["ACE_EntrenchingTool",1],["ACE_Chemlight_HiGreen",1,1]]],["FST_vest_holster",[["IDA_BactaBandage",10],["IDA_BattleStim",2],["ACE_splint",2],["ACE_tourniquet",2]]],["FST_Backpack_Antenna",[["FST_LargeToolkit",1],["FST_blaster_cell_low_Blue",10,30],["FST_blaster_cell_Blue",10,60],[["IDA_Clone_Knife","","","",[],[],""],1]]],"FST_P2_Helmet_327_Enviro","",["FST_Electrobinoculars","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","FST_clone_comlink","ItemCompass","ItemWatch","FST_NVG_Invisible"]];
 	};
 	case 69:
 	{
