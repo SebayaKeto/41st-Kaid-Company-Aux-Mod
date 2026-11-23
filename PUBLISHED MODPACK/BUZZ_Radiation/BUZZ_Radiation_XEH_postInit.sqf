@@ -43,11 +43,39 @@ if (hasInterface) then {
 
 // 3D sounds (detector clicks, coughs) for nearby players. CBA events instead of remoteExec,
 // so servers with a CfgRemoteExec whitelist don't block them.
+// The sound plays from a local invisible helper attached to the player, not from the unit itself:
+// say3D on a unit goes through its voice, which is silent for units set to "NoVoice" (common in
+// unit modsets) and is cut off when the unit speaks.
 ["BUZZ_Radiation_say3D", {
     params ["_source", "_class", "_range", ["_pitch", 1]];
-    if (isNull _source) exitWith {};
-    _source say3D [_class, _range, _pitch];
+    if (isNull _source || {!hasInterface}) exitWith {};
+    private _host = vehicle _source;
+    private _emitter = "Land_HelipadEmpty_F" createVehicleLocal [0, 0, 0];
+    _emitter attachTo [_host, if (_host == _source) then {[0, 0, 1.5]} else {[0, 0, 1]}];
+    _emitter say3D [_class, _range, _pitch];
+    [{deleteVehicle _this}, _emitter, 8] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
+
+// Zeus-placed zones (Zeus Enhanced module "BUZZ Radiation > Radiation Zone").
+// Every machine (and JIP) registers the zone; the server makes it editable for all Zeuses.
+["BUZZ_Radiation_zeusZoneAdd", {
+    params ["_obj", "_tier", "_radius"];
+    if (isNull _obj) exitWith {};
+    _obj setVariable ["BUZZ_Radiation_radius", _radius];
+    [_obj, _tier, [[getPosATL _obj, _radius, _radius, 0, false, -1]]] call BUZZ_Radiation_fnc_addZone;
+}] call CBA_fnc_addEventHandler;
+if (isServer) then {
+    ["BUZZ_Radiation_zeusZoneCreated", {
+        params ["_obj", "_tier", "_radius"];
+        if (isNull _obj) exitWith {};
+        {_x addCuratorEditableObjects [[_obj], false]} forEach allCurators;
+        private _jip = ["BUZZ_Radiation_zeusZoneAdd", [_obj, _tier, _radius]] call CBA_fnc_globalEventJIP;
+        [_jip, _obj] call CBA_fnc_removeGlobalEventJIP; // JIP entry dies with the zone object
+    }] call CBA_fnc_addEventHandler;
+};
+if (hasInterface && {isClass (configFile >> "CfgPatches" >> "zen_custom_modules")}) then {
+    ["BUZZ Radiation", "Radiation Zone", {_this call BUZZ_Radiation_fnc_zeusZone}, "\BUZZ_Radiation\data\BUZZ_Radiation_monitor_ca.paa"] call zen_custom_modules_fnc_register;
+};
 
 // setDose from another machine lands here, where the unit is local.
 ["BUZZ_Radiation_setDoseLocal", {_this call BUZZ_Radiation_fnc_setDose}] call CBA_fnc_addEventHandler;

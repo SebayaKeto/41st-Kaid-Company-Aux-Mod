@@ -1,4 +1,5 @@
-params [["_unit", player], ["_roleName", ""], ["_kitTag", ""], ["_lockHelmet", false]];
+params [["_unit", player], ["_roleName", ""], ["_kitTag", ""], ["_lockHelmet", false], ["_radNameHelmet", ""]];
+if !(_radNameHelmet isEqualType "") then { _radNameHelmet = "" };
 if ((uniform _unit) isEqualTo "FST_Uniform_GM_Plastic") exitWith {};
 if ((uniform _unit) isEqualTo "FST_Uniform_P1_41st") exitWith {};
 if !(_roleName isEqualType "") then { _roleName = "" };
@@ -18,7 +19,9 @@ private _playerName    = (_playerNameRaw splitString """") joinString "";
 _playerName            = trim _playerName;
 diag_log format ["[FST autoCustoms] Parsed name='%1' -> rank=%2, callsign=%3", _nameFull, _rank, _playerName];
 private _pnameLower = toLower _playerName;
-if (_pnameLower in ["merrik","annex","cardinal","sigs"]) exitWith {};
+private _isNamedPlayer = _pnameLower in ["merrik","annex","cardinal","sigs"];
+// Named players skip customs, except on radiation kits where they still get the protected helmet choice below.
+if (_isNamedPlayer && {!(_lockHelmet isEqualTo true)}) exitWith {};
 private _mem = _unit getVariable ["FST_CustomSel", createHashMap];
 private _allowHelmet = false;
 private _allowArmor  = false;
@@ -175,6 +178,52 @@ private _filterByNameBoundary = {
     } forEach _classes;
     _out
 };
+// ---- Radiation kits: own protected helmet or the issued one ------------------
+// Offers the player's own helmets (classname contains _<Callsign>, e.g. FST_P2_ARC_Helmet_Dilham,
+// FST_P2_Helmet_Merrik_V2) plus their rank/name helmet, but only ones on the BUZZ Radiation
+// "Protective helmets" setting (BUZZ_Radiation_gearHelmets), read live so it follows the server's list.
+if ((_lockHelmet isEqualTo true) && {!_skipCustoms}) then {
+    private _protRaw = missionNamespace getVariable ["BUZZ_Radiation_gearHelmets", ""];
+    if !(_protRaw isEqualType "") then { _protRaw = "" };
+    private _protected = (_protRaw splitString (", ;""'[]" + toString [9, 10, 13])) apply { toLower _x };
+    private _kitHelmet = headgear _unit;
+    private _candidates = [];
+    if (_radNameHelmet != "") then { _candidates pushBack _radNameHelmet; };
+    if (_pnameLower != "" && { !(_pnameLower in ["dirty","v2","v3","mk2","helmet","base"]) }) then {
+        private _tag = "_" + _pnameLower;
+        {
+            private _pos = _x find _tag;
+            if (_pos > -1) then {
+                private _after = _x select [_pos + count _tag, 1];
+                if (_after isEqualTo "" || { _after isEqualTo "_" }) then { _candidates pushBack _x; };
+            };
+        } forEach _protected;
+    };
+    private _options = [];
+    {
+        private _cfg = configFile >> "CfgWeapons" >> _x;
+        if (isClass _cfg && { (toLower _x) in _protected } && { (toLower configName _cfg) != (toLower _kitHelmet) }) then {
+            _options pushBackUnique (configName _cfg);
+        };
+    } forEach _candidates;
+    if (_options isNotEqualTo []) then {
+        _options sort true;
+        _options = [_kitHelmet] + _options;
+        // Put last radiation pick first so it is preselected.
+        private _last = _mem getOrDefault ["radHelmet", ""];
+        if (_last in _options) then { _options = [_last] + (_options - [_last]); };
+        private _chosen = ["Select a helmet (radiation protected)", _options] call _openVariantSelector;
+        if (_chosen != "") then {
+            _mem set ["radHelmet", _chosen];
+            _unit setVariable ["FST_CustomSel", _mem, true];
+            if (_chosen != headgear _unit) then {
+                removeHeadgear _unit;
+                _unit addHeadgear _chosen;
+            };
+        };
+    };
+};
+if (_isNamedPlayer) exitWith {};
 private _restoreUniformItems  = { params ["_unit","_items"]; { _unit addItemToUniform  _x; } forEach _items; };
 private _restoreVestItems     = { params ["_unit","_items"]; { _unit addItemToVest     _x; } forEach _items; };
 private _restoreBackpackItems = { params ["_unit","_items"]; { _unit addItemToBackpack _x; } forEach _items; };

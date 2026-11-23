@@ -25,6 +25,7 @@ class CfgFunctions {
             class updateRadar { file = "\BUZZ_Radiation\functions\BUZZ_Radiation_fnc_updateRadar.sqf"; };
             class checkDose { file = "\BUZZ_Radiation\functions\BUZZ_Radiation_fnc_checkDose.sqf"; };
             class medicalMenuEntry { file = "\BUZZ_Radiation\functions\BUZZ_Radiation_fnc_medicalMenuEntry.sqf"; };
+            class zeusZone { file = "\BUZZ_Radiation\functions\BUZZ_Radiation_fnc_zeusZone.sqf"; };
         };
     };
 };
