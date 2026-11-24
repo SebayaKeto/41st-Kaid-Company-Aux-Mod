@@ -2334,7 +2334,9 @@ if (_uniformToSet != "" && { (uniform player) == "FST_Trooper_Uniform" }) then {
     { player addItemToUniform _x; } forEach _uniformItems;
 };
 
-if (_isRadiationKit) then { _headgearToSet = ""; };
+// Radiation kits: the rank/name helmet is only offered (in FST_autoCustoms.sqf) if on the radiation protection list.
+private _radNameHelmet = "";
+if (_isRadiationKit) then { _radNameHelmet = _headgearToSet; _headgearToSet = ""; };
 if (_headgearToSet != "" && { headgear player != _headgearToSet }) then {
     removeHeadgear player;
     player addHeadgear _headgearToSet;
@@ -2966,7 +2968,7 @@ private _isAirborne  = (
 private _selectedKitType = if (_isAirborne) then {"airborne"} else {
     if ((missionNamespace getVariable ["FST_CurrentKitCategory","regular"]) isEqualTo "ranger") then {"ranger"} else {""}
 };
-[player, _selectedKitRole, _selectedKitType, _isRadiationKit] execVM "\41st_KitMenu\FST_autoCustoms.sqf";
+[player, _selectedKitRole, _selectedKitType, _isRadiationKit, _radNameHelmet] execVM "\41st_KitMenu\FST_autoCustoms.sqf";
 private _lastCamo = missionNamespace getVariable ["FST_LastCamoPreset",""];
 if (
     !_isRadiationKit &&

@@ -15,6 +15,12 @@ private _active = BUZZ_Radiation_zones select {
 
 BUZZ_Radiation_activeZones = _active;
 
+// Zeus-placed zones follow their object if Zeus moves it.
+{
+    private _r = _x getVariable "BUZZ_Radiation_radius";
+    if (!isNil "_r") then {_x setVariable ["BUZZ_Radiation_areas", [[getPosATL _x, _r, _r, 0, false, -1]]]};
+} forEach BUZZ_Radiation_zones;
+
 private _units = if (BUZZ_Radiation_affectAI) then {
     allUnits select {local _x}
 } else {
