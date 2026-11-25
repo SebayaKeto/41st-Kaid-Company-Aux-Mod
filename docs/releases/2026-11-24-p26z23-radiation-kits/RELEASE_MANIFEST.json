@@ -1,0 +1,736 @@
+{
+  "workshop_id": "3048946639",
+  "prepared_at": "2026-11-24 Aux Updater (live P26z22 + Bees 6764d96a radiation + kit fixes)",
+  "base_release": "Steam-aux-release-20261124-P26z22-halloween",
+  "base_time_updated": 1795577423,
+  "base_file_size": 8659344866,
+  "base_content_manifest_id": "8098004868618132953",
+  "added": [],
+  "changed": [
+    "Addons/41st_KitMenu.pbo",
+    "Addons/BUZZ_Radiation.pbo"
+  ],
+  "removed": [],
+  "file_count": 119,
+  "total_bytes": 8659351731,
+  "publication_status": "staged variant of Steam-aux-release-20261124-P26z22-halloween; NOT published",
+  "files": [
+    {
+      "file": "Addons/41st_Ammo.pbo",
+      "bytes": 560341,
+      "sha256": "460aa7ba65c1b5f361b35575c29e03ea8be0b2a29544a3b949b46a31bcfa826a",
+      "origin": "Aux-own warning fix: FST_smoke_Impact SoundSetExplosion {\"\"} -> {}"
+    },
+    {
+      "file": "Addons/41st_Armor.pbo",
+      "bytes": 2308166818,
+      "sha256": "69189af4c9decbdf53f882ff48871bce2a43e938fb2688fac836e663014f9f02",
+      "origin": "live P26z20 41st_Armor (47ee62dc) + House 0ccaa04e Fixed Pole Face: only Data/Faces/FST_Clone_Pole.paa replaced (D:/AuxUpdater/armor21/make_armor21.py; was staged alone as P26z21)"
+    },
+    {
+      "file": "Addons/41st_BaseCustoms.pbo",
+      "bytes": 3150,
+      "sha256": "e99ae1a7079450a982393a0d007a1974d986a5547fa70fb9cb4bbaa7cb07266a",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Bolts.pbo",
+      "bytes": 107192,
+      "sha256": "968fe727960cd6f8e5a73c25035545643141fd290e7269d547700885ecfef985",
+      "origin": "DC-15 session 41st_Bolts re-forward (D:/DC15/staging/41st_Bolts)"
+    },
+    {
+      "file": "Addons/41st_Civilians_and_Intel.pbo",
+      "bytes": 7742427,
+      "sha256": "a26b56d18d2e1d99fa46c82ff122311261273243e24b36e17e2db9065a08714b",
+      "origin": "Hacking datapad smaller + hotwiring minigame (Cute-catboy a083ad74)"
+    },
+    {
+      "file": "Addons/41st_CorruptPDF.pbo",
+      "bytes": 173067,
+      "sha256": "950518bdab940c4794cff0057479fc5d19129a7b0f7a2fefadbaf3f6b9e35f4d",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:/AuxUpdater/perf/out (live PBO + edited repo entries)"
+    },
+    {
+      "file": "Addons/41st_DC15.pbo",
+      "bytes": 59865765,
+      "sha256": "e6c365e4916af86d75ee0d98bf020da18b51ea6172ff4c6231842b0cf61eb3f3",
+      "origin": "DC-15 back to P24 (e6c365e4): DC-15S UGL hand fix pulled for crash triage"
+    },
+    {
+      "file": "Addons/41st_Droids.pbo",
+      "bytes": 44256283,
+      "sha256": "487d2b3cbaa0edf4d4e071870f20ff304f0cc78b08f4d2fe48c9713ea8cae0cb",
+      "origin": "41st_Droids: FST_U_CIS_TS (T-series tactical droid) FST_stunnable=1"
+    },
+    {
+      "file": "Addons/41st_Engineer.pbo",
+      "bytes": 141121,
+      "sha256": "84bbad7f1b68767595bb22bdc4780ffc53f5e82f2c0d6a0798cc3152e72880a2",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Flags.pbo",
+      "bytes": 1448953,
+      "sha256": "cc4b286513abdf152cd123c1a999ee8e03efcc94467af7b6988496d18495ea4a",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Hawkbat.pbo",
+      "bytes": 2823640,
+      "sha256": "ea0cd8e018b25dab7a2ec23a290a2bb074df4430fb869305ac9b4812341c4b0f",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_HumanDiv.pbo",
+      "bytes": 294466,
+      "sha256": "be56fbbd251601522e90d51c400110fababacb540423440e58756085edc18c4c",
+      "origin": "HitBody depends fix (a4d34439)"
+    },
+    {
+      "file": "Addons/41st_Hungergames.pbo",
+      "bytes": 78032,
+      "sha256": "688cf70c66e8433c0c7346ba9ab03df07239aeee0539d9000f9a7d614b1cb4d1",
+      "origin": "GitHub origin/main b4911cf8 (Tooka) + requiredAddons added by Aux Updater on Miran \"fix hunger games for tooka\""
+    },
+    {
+      "file": "Addons/41st_KitMenu.pbo",
+      "bytes": 1756677,
+      "sha256": "a0e64f2660872daf3769342c67e13f0c8fd68303f97bd319bbadb646d44c1c53",
+      "origin": "Bees 6764d96a: radiation kits offer the player's own radiation-protected helmet (ARCs, Merrik and other named players); FST_autoCustoms.sqf + XEN_PreInit.sqf only"
+    },
+    {
+      "file": "Addons/41st_Lightsaber.pbo",
+      "bytes": 34003339,
+      "sha256": "1b55656e6d2b61421b48e0b2f1e42b209e15b3c52666e840a7c50d853d19554b",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Mandos.pbo",
+      "bytes": 460187,
+      "sha256": "c52a307a53139540a705eb89941f71fb26ac88e5f6b820c1260f1529c637f03b",
+      "origin": "HitBody depends fix (a4d34439)"
+    },
+    {
+      "file": "Addons/41st_Medical.pbo",
+      "bytes": 1599,
+      "sha256": "bb20ab0d7f93946cca564ee1406dd890a58c76cd8418375beefa685342368d2a",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Menu.pbo",
+      "bytes": 242200485,
+      "sha256": "c8d45f2a5258111b88c0ddd1df313a03400cc85cdef8c1f08a51005b33c07581",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Music.pbo",
+      "bytes": 1272726706,
+      "sha256": "389d1212b07fd2a19e107117d03b8a4e548a01ed055e367d1b3529460d460e26",
+      "origin": "live P26z16 41st_Music + config.cpp (FST_SuddraTheme, FST_SuddraTheme2) + MissionTracks Suddra_Theme.ogg, Suddra_Theme_2.ogg; D:/AuxUpdater/music18/make_music18.py"
+    },
+    {
+      "file": "Addons/41st_Other_Clones.pbo",
+      "bytes": 16096856,
+      "sha256": "9060ecaca1b1bfbf311ff88671abca0a381f9403ef7d46dc1d4c4a471305ee6f",
+      "origin": "live + Tooka a1875ee2 327th Environmental Troopers (12 units, groups, P2 327 Enviro helmet, 12 loadout scripts); live requiredAddons kept"
+    },
+    {
+      "file": "Addons/41st_Props.pbo",
+      "bytes": 66125903,
+      "sha256": "e8c31b66aa1135b2c7df2f64993f1b44f19e9d6dd314f1421a7f75e3131cf552",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Radio.pbo",
+      "bytes": 8461373,
+      "sha256": "131cc5f35434f10df737b3a1ce77e4cbfeb2976acb01b10396f9dbc37780a77a",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Trenches.pbo",
+      "bytes": 1042,
+      "sha256": "e7491fa37398f49ba6903f766f01c621cc38b75c3e13d556292a9a776c36d179",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Tukata.pbo",
+      "bytes": 1877583,
+      "sha256": "cad3679c7bbbfa13884d8d3f5e12df83aac56627988dbfb11f7c0ce77f22c052",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/41st_Vehicles.pbo",
+      "bytes": 687150352,
+      "sha256": "b9f039bcba6b20e587ae7cb568fd48835add1e8b18cf8b1d9daa5ac61255d89c",
+      "origin": "Aux-own warning fix: FST_Heavy_laser_Cannon scope=1 (vehicle cannon had no scope)"
+    },
+    {
+      "file": "Addons/41st_Weapons.pbo",
+      "bytes": 19763214,
+      "sha256": "c5a2431938b6e8fe040a7633144f98adf3403fa260f7a0f69754bc4686196df2",
+      "origin": "Aux-own warning fix: dropped attachment names no mod defines (3AS_optic_holo_DC15S, FST_Knife, 41st_bayonet) from compatibleItems in DC-15AS, DC17, SPA-K12, Westar, Z6"
+    },
+    {
+      "file": "Addons/41st_Weapons_O.pbo",
+      "bytes": 145138,
+      "sha256": "0b0db5d44aadf02f6231a42b86c77a307aafd5986acf2cbc789af77ca1ddfd54",
+      "origin": "Aux Updater config fix (D:/AuxUpdater/cfgfix/make_cfgfix.py; engine check prof-cf11b 0 fails): E-11P / EE-3 CfgPatches renamed"
+    },
+    {
+      "file": "Addons/arq_ships.pbo",
+      "bytes": 151035,
+      "sha256": "e56c7c686d501be90ba05f426ee37c4d322ecad1dd9478e292448bab2ae8473d",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: C:\\Users\\Miran\\OneDrive\\Documents\\Desktop\\41st RND\\@41st Elite Corps Kaid Co Aux Mod\\Addons\\arq_ships.pbo"
+    },
+    {
+      "file": "Addons/arq_ships.pbo.ARQ_Miran.bisign",
+      "bytes": 562,
+      "sha256": "a3adb7f0f5dae5631c5a2476cff23dbc6d0c013b318233b9718d61ed69079f3d",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/BUZZ_LowCell.pbo",
+      "bytes": 15306,
+      "sha256": "307949773947081638872c67cfae861e647e9830974b68a86047af87cc88f012",
+      "origin": "BUZZ Low Cell: DC-15A/C/S shots pitch up when the cell is nearly empty (Bees d314f9c2)"
+    },
+    {
+      "file": "Addons/BUZZ_Radiation.pbo",
+      "bytes": 778231,
+      "sha256": "6086a81ce32ecc6940a01ca4217e7a8018b758de7ab42feae40e83e16aa3168f",
+      "origin": "Bees 6764d96a: Zeus Enhanced \"Radiation Zone\" module (new fnc_zeusZone), Geiger/cough sounds from a local helper object, radiation medical crate lists the full medical contents; 4 entries changed + 1 added"
+    },
+    {
+      "file": "Addons/BUZZ_Vehicles.pbo",
+      "bytes": 12442558,
+      "sha256": "6347c6564b9fc5ed28a4702dece73202fd76d8cefdb6072d06a89a18c2154db3",
+      "origin": "live BUZZ_Vehicles with atrt/config.cpp only replaced (FST_ATRT_Base ItemInfo: UniformItem); D:/AuxUpdater/blankfix/src"
+    },
+    {
+      "file": "Addons/BUZZ_ZeusVision.pbo",
+      "bytes": 19552,
+      "sha256": "2ed59f5e1aeaa95d96212925494fd4076b653dced96dd42e142667630647f041",
+      "origin": "NEW d136640a: Zeus trooper detail tags (right-click > Show Trooper Details)"
+    },
+    {
+      "file": "Addons/CG_Armor.pbo",
+      "bytes": 18166037,
+      "sha256": "0b949efce08ffb90f2ed3f2d0ad70432337b288d6cde6cdcc57cf22c5e35219b",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/ck_character_v8.pbo",
+      "bytes": 97674462,
+      "sha256": "728147be9b98e8dc49d36f204b1f296fe66b2b83cda080474e8873849e7f6bbf",
+      "origin": "live P26m ck_character_v8 (md5 b210eb81) with config.bin only replaced: CK_Daara_Stp cost 0.06 -> 0.04 in CK_Daara_WlkDf/Dfl/Dfr/Dl/Dr/Db/Dbl/Dbr + RunDf (Project Daara stop fix, incoming/daara_stopfix_20261122)"
+    },
+    {
+      "file": "Addons/ck_daara_halberd.pbo",
+      "bytes": 13385865,
+      "sha256": "42df200518301cf874b7ff12de07c19bfcbe02cd17ccb30aa977e4e317863e67",
+      "origin": "Project Daara V9N (unchanged from V9J/V9L/V9M)"
+    },
+    {
+      "file": "Addons/ck_daara_moves.pbo",
+      "bytes": 15679001,
+      "sha256": "415b3be938da9f4c26e5d9285a2f032ca9716c86b0e71b4a7458bc513a70606a",
+      "origin": "Project Daara V9R (halberd loco clips; runs on rifle-run legs and speeds)"
+    },
+    {
+      "file": "Addons/Didnt_Update_Aux_Mod_Reeeeee.pbo",
+      "bytes": 396,
+      "sha256": "50d3ae309f9fb8a6185a5b3dc0363b61fdf96d90f50804fed361ba1a3b47121f",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/FST.pbo",
+      "bytes": 147384200,
+      "sha256": "64c4daab13aec604ff384516b1932b1455426c18e75cefd14f617f08aaa0ac55",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/fst_app_autumn.pbo",
+      "bytes": 26376014,
+      "sha256": "fd532f8e671d6f255cfe3fe3e11706d2f0ab29c5c6a5e53663e8b49687e3f9c4",
+      "origin": "Aparra autumn trees V2 (sha1 cf71f942): extra View geometry pieces inside the leaf mass / bark (AI cannot see through), same pieces added to Fire; live crown fire fix kept"
+    },
+    {
+      "file": "Addons/fst_appalachia.pbo",
+      "bytes": 285604557,
+      "sha256": "b81af5a316dd55547e6787b8b73fb0e5c5f39d4f5074e432944042f9c726c88b",
+      "origin": "Aparra terrain v8b2 (WRP b48e33f0099fe152 = v8 + 3 vertices behind the 132.6 rear panel foot + 20 Tukata cut vertices); D:/Appalachia/output_v8b2"
+    },
+    {
+      "file": "Addons/FST_BURNS_Combat.pbo",
+      "bytes": 4332,
+      "sha256": "e2e1037ee04eacf32449d733c8f7640334082d31950aaa47d93f3f971d08dde2",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: aatcrew build_p1 (repo working copy, 4 Oct)"
+    },
+    {
+      "file": "Addons/FST_BURNS_Gulanthar.pbo",
+      "bytes": 2206,
+      "sha256": "f16bd0c22b704eb2857e9f50ce080d5ebaf07e64dc674383fe692efa915429d7",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/FST_Common.pbo",
+      "bytes": 241350717,
+      "sha256": "8d464c088c6fb2507f8434dd030f7aa830a4a03a94b3c41e8eb033122e002963",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/FST_Core.pbo",
+      "bytes": 963781,
+      "sha256": "9efd2887a6b69e4a87590160e0417995c5129ebb798c3fe30041d1e364e77a0a",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/fst_ember_caldera.pbo",
+      "bytes": 174933374,
+      "sha256": "8776da75115031ad020d7f5104e5a80fd36da0340f401b7e09365d5868ffe984",
+      "origin": "Ember Caldera (Thirra) terrain build 9c FINAL (config.bin swap of b8: startDate 21/6/2035 + ACE weather keys, seasons corrected, 9b float-tag fix); C:/IslandsA/output_whole9c"
+    },
+    {
+      "file": "Addons/fst_geo_coreship.pbo",
+      "bytes": 40657403,
+      "sha256": "f231fe336473dae4f40487b1496fc656d86b9f856c24c364ad08b9325962577a",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:\\GeoCoreShip\\@GeoCoreShip\\addons\\fst_geo_coreship.pbo"
+    },
+    {
+      "file": "Addons/fst_geo_hive.pbo",
+      "bytes": 94634706,
+      "sha256": "46478b853f0535c924b640b76f381fcbd0afb5e0f3243cc0143c4fda1c26f846",
+      "origin": "Honeycomb wall fire fix (Mapmaking Omnibus, 11 Oct)"
+    },
+    {
+      "file": "Addons/fst_geo_wall.pbo",
+      "bytes": 80540742,
+      "sha256": "12ccf1a4ba9836092aea79e0ee41851604951783abc697e729870ff012ed3774",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:\\GeonosisWall\\@GeoWall\\addons\\fst_geo_wall.pbo"
+    },
+    {
+      "file": "Addons/fst_geonosis.pbo",
+      "bytes": 753418628,
+      "sha256": "d7641374415bb624fe8cb75eaa2c4039490711dc186794ae81a337d36e5b8c8c",
+      "origin": "Omnibus Geonosis c7tex (satellite tiles 1 m/px; WRP 72c31808 unchanged); Miran \"Push anyway\" (relayed)"
+    },
+    {
+      "file": "Addons/fst_geonosis_lantern.pbo",
+      "bytes": 149912292,
+      "sha256": "f67caa520a95af6eba4faac8c37f552e2541a7d151f4fa56c89620484479eb5e",
+      "origin": "D:/GeonosisLantern/w2c/@GeonosisLantern/addons/fst_geonosis_lantern.pbo (Airbase PT kit w2c)"
+    },
+    {
+      "file": "Addons/FST_HCSpawn.pbo",
+      "bytes": 712313,
+      "sha256": "f0b6dc52763211a714a133e1396fc104a899f97bf0ed132ad444453bf8af7e2c",
+      "origin": "FST_HCSpawn V49-foliage1 rev2 (BURNS hygiene: drops stale targets, no steered rounds without sight; no measured reduction in blind fire or hits)"
+    },
+    {
+      "file": "Addons/FST_IDA_ACE_Compat.pbo",
+      "bytes": 8228,
+      "sha256": "de95e7f46e838b094d44b60c83a435282c69245dfb60dedda1e9d7444d8ea676",
+      "origin": "Catboy Medical wound tweak B4 (plasma: graze pain x0.25, big-wound bleeding x1.1, graze/cut bleeding x0.7)"
+    },
+    {
+      "file": "Addons/fst_indar.pbo",
+      "bytes": 188072054,
+      "sha256": "5af94ab78c73da9b0ed4044b9e2bf5da964c4ee36fe151066026439e15364e67",
+      "origin": "D:\\Indar\\output\\@FST_Indar\\addons\\fst_indar.pbo"
+    },
+    {
+      "file": "Addons/FST_JumpPack.pbo",
+      "bytes": 258479,
+      "sha256": "00d3045b5f02e607a638bd7525003c8a4beefb7119e43ebabcd8e49fb056c5f7",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/fst_lighting_patch_app.pbo",
+      "bytes": 71003,
+      "sha256": "6ed9438b1943744ab1efffb7ffc4dd3dab09862255974c526cf4e82fb316fbd8",
+      "origin": "Aparra (fst_appalachia) lighting: latitude -35.7 + own LightingNew (Omnibus lighting root cause; Miran approved in live look)"
+    },
+    {
+      "file": "Addons/fst_lighting_patch_indar.pbo",
+      "bytes": 70980,
+      "sha256": "ba728e28a8642d6e3e40a29ca2d9cc2d42065f6709df1492ae200f07082b56b6",
+      "origin": "Sarrak (fst_indar) lighting: own LightingNew (Omnibus lighting root cause; Miran approved in live look)"
+    },
+    {
+      "file": "Addons/FST_MEC.pbo",
+      "bytes": 25030017,
+      "sha256": "a3ac229b306382a86fc0d4d54d5c944471eab9804af8070664d27546790f0562",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/FST_Saber_Handling.pbo",
+      "bytes": 1173,
+      "sha256": "c6917270c419ba734c9badbde6c485f64b9fba8315328ea4af4e21289556a7f1",
+      "origin": "Saber handling tune (24 Sep / 14 Oct) with 3AS_Saber_01_Base: Tank_F declared (no longer blanks the 3AS parent); D:/AuxUpdater/saberhandling/src2"
+    },
+    {
+      "file": "Addons/FST_SabreArmorExtension.dll",
+      "bytes": 23040,
+      "sha256": "5590dbfc51711e51559bb57ba94a68a2a3cde25b8ea2b8bc1b6f16e12dfd69d3",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/FST_ShipScripts.pbo",
+      "bytes": 67672,
+      "sha256": "aac8b6b6408b51172cdb6eb7ec5e7b5bda82959485c3f79b81839d334a4d44f8",
+      "origin": "Repair/Rearm/Refuel action fixes (Bees 61fef446)"
+    },
+    {
+      "file": "Addons/FST_Sounds.pbo",
+      "bytes": 26977065,
+      "sha256": "5f7e6af5a09768f5ee0c6cfc2b91f9132642e5755a574d51a2eb1dd92c8cb4b7",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/FST_Stonewall.pbo",
+      "bytes": 29009,
+      "sha256": "69fa0a88b51f5b19b038f9b240a63f8f57c57b159f0396623a54f738d246f6b9",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:\\Stonewall\\handoff\\FST_Stonewall_1.2.4_1512\\FST_Stonewall.pbo"
+    },
+    {
+      "file": "Addons/fst_sud_rpine.pbo",
+      "bytes": 7231705,
+      "sha256": "e0563c0766c9a4a1682aa41efce65f7afa508775175a505fd3255e9a57d17aba",
+      "origin": "Suddra build 2 pine asset PBO; C:/Suddra/terrain/output_b2"
+    },
+    {
+      "file": "Addons/fst_suddra.pbo",
+      "bytes": 283049305,
+      "sha256": "76a0ff28ec69256fb0ff82f379bc9c27dfa70d0bf9d43a1cbd667c78d82eee3e",
+      "origin": "Suddra terrain gg7 moody lighting (config.bin swap of build 3 44e6b75c: overcast, rain, low fog, mist EV); C:/Suddra/terrain/output_cand_gg7"
+    },
+    {
+      "file": "Addons/fst_suddra_reed.pbo",
+      "bytes": 223526,
+      "sha256": "2528a44de0dd1d05a4222867fc9b9a920977a0b3538cc880bbc04693e6523e19",
+      "origin": "Suddra build 2 reed asset PBO; C:/Suddra/terrain/output_b2"
+    },
+    {
+      "file": "Addons/FST_Trenches.pbo",
+      "bytes": 69559812,
+      "sha256": "eba63fda463325ff88bff2157fb7c368fe555f30e78ee7f8c35a4dd9422b90a3",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/fst_umbara_gloamport.pbo",
+      "bytes": 61351657,
+      "sha256": "9af81df674e351031301a0093ceadf33e2dafb0498ac26931bcd7f2ebad242a4",
+      "origin": "Umbara Gloamport terrain (fst_umbara_gloamport), re-added for the 21 Oct fun event; identical to the 27 Sep release"
+    },
+    {
+      "file": "Addons/FST_Vehicles_Land_APC_SabreAPC.pbo",
+      "bytes": 109111312,
+      "sha256": "6cfced585de8c4ec0caf80c715bacae1c307ed5aaf6df68843c36537afbb964e",
+      "origin": "Raider (TX-180): + FST_VW_Sabre_30mm_AP_Cannon + 3 AP mags; LockDetectionSystem 1+2+4+8, incomingMissileDetectionSystem 16 (config.bin patch)"
+    },
+    {
+      "file": "Addons/FST_Vehicles_Weapons.pbo",
+      "bytes": 26339,
+      "sha256": "e5210ad62a37ef98d2a5a68e14cd9c41f94e797dde77d5d23097753bdb458146",
+      "origin": "live FST_Vehicles_Weapons with config.bin re-binarized (missiles_titan: MissileLauncher; unmodified round-trip byte-identical); D:/AuxUpdater/blankfix/src"
+    },
+    {
+      "file": "Addons/ImmersiveVoicesPLUS_AutoApplicator.pbo",
+      "bytes": 10207,
+      "sha256": "0b0f3147e5fe333f32b978bbf855746aa3d206f69505ebbc408f40811fa5c685",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:/AuxUpdater/perf/out_rev (adversarial-review fixes)"
+    },
+    {
+      "file": "Addons/JMSEF_animals.pbo",
+      "bytes": 21094465,
+      "sha256": "bb02de51e38f6df5f2630e47a73f5017f3337418bd25ac645a1c9a984d64fc79",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/KAID_3AS_ParticleCannon_Fix.pbo",
+      "bytes": 1095,
+      "sha256": "fe4179626176fd4b8e93e181bb19d33eb27d14e1215a320c015471727c606d35",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:/AuxUpdater/pcannon/@KAID_PCFix (card CARD_KAID_3AS_ParticleCannon_Fix.md)"
+    },
+    {
+      "file": "Addons/KAID_AUR_RemoteExec_Fix.pbo",
+      "bytes": 35308,
+      "sha256": "62413184d7056928d497d92524ca728f5d99a86ce885176f36dee01c00f9ba84",
+      "origin": "Rappel lag fix: AUR remoteExec target 0 -> 2 (session Rappelling performance lag, 11 Oct)"
+    },
+    {
+      "file": "Addons/KAID_ConfigShim.pbo",
+      "bytes": 3883,
+      "sha256": "e4069f7b7e9b29e4615a3f5f51a9205ac5452b54b42e513fdd71183d7708867d",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:\\AuxUpdater\\nt\\build\\KAID_ConfigShim_v5.pbo"
+    },
+    {
+      "file": "Addons/KAID_DBA_AmmoStub_Compat.pbo",
+      "bytes": 882,
+      "sha256": "84afb2d1bc0afb9e990f63bbd76f3c4162435169a7e651f253ead143b9350a2c",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:\\AuxUpdater\\cfgfix\\out\\KAID_DBA_AmmoStub_Compat.pbo"
+    },
+    {
+      "file": "Addons/KAID_DBA_DC15S_x50_Compat.pbo",
+      "bytes": 2088,
+      "sha256": "283c86bff40b1f7c399ad1f72d71d1d8bdde5e5dd64019b814fcfa06413c77de",
+      "origin": "Real 50-round DBA_68x51_FMJ_x50_mag for DBA DC-15S clones (missing-class warning)"
+    },
+    {
+      "file": "Addons/KAID_DBA_EWEB_Compat.pbo",
+      "bytes": 977,
+      "sha256": "367f844408b4d23a760f2646cdd3228e211e4f12d803954f88f82ae71513a856",
+      "origin": "DBA E-Web destruction smoke position fix (warning \"position/ is not a value\")"
+    },
+    {
+      "file": "Addons/KAID_DBA_IAD5_Compat.pbo",
+      "bytes": 889,
+      "sha256": "056a5cef39a5b296bfe4d0bd4b09b8372089cb985c52bdcde302f57a0504b892",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:\\AuxUpdater\\cfgfix\\out\\KAID_DBA_IAD5_Compat.pbo"
+    },
+    {
+      "file": "Addons/KAID_Disable_53rd_CoagField_v2.pbo",
+      "bytes": 3986,
+      "sha256": "3caeab028bbbea8f1cb6770005f6388d3f96014754c2302563449d1ae74954de",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/KAID_MineDetector_Fix.pbo",
+      "bytes": 964,
+      "sha256": "f3fd064176a3c2635e3d6a4ab7021c9ac72eaae2cb2ddf7e629a40a46094b21a",
+      "origin": "D:\\AuxUpdater\\minedetector\\@KAID_MineDetector_Fix\\addons\\KAID_MineDetector_Fix.pbo"
+    },
+    {
+      "file": "Addons/KAID_OPTRE_EliteFaceCheck_Off.pbo",
+      "bytes": 1079,
+      "sha256": "df5047a05e2fa4592bcefaf9dd36834393cf6bd630f73c1bd4357ce7ba65e282",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: D:/AuxUpdater/optre (OPTRE FC Elite face check off)"
+    },
+    {
+      "file": "Addons/KAID_XEH_Compat_3P.pbo",
+      "bytes": 77431,
+      "sha256": "437a7a9025aa634023bf6dfb1086dddf88908ba9a04bcc8aab8bf366e98fdc26",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: xehcompat gen_nonyvar (Nyvar classes dropped)"
+    },
+    {
+      "file": "Addons/KAID_XEH_Compat_41st.pbo",
+      "bytes": 16510,
+      "sha256": "e9b27c8ff647ab564c5771ef9e4239b79073b4a61e1a53ebb2c495ce17508dc8",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: xehcompat gen_nonyvar (Nyvar classes dropped)"
+    },
+    {
+      "file": "Addons/kat_dependency_dummies.pbo",
+      "bytes": 1294,
+      "sha256": "cd130cdc9bc6eb17d0ea875370a17bca9f6ecddc2808816eb8b4fb690cb6a9f5",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/LightWalls.pbo",
+      "bytes": 276293782,
+      "sha256": "0707e1c3dbe72290fa9aec015f115f8dd5f697f4f2c3b4208343f45ee3f08a5b",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/MEAP_Architect_Core.pbo",
+      "bytes": 181843,
+      "sha256": "7fd2c068623ca493cf62fcd28f080d5a3a20d2a981a440e0416bfb64313ae367",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: C:\\Users\\Miran\\Downloads\\AuxUpdater-build\\MEAP_Architect_Core.pbo"
+    },
+    {
+      "file": "Addons/MEAP_Core.pbo",
+      "bytes": 1205063,
+      "sha256": "bfe976478388ce4b823ff53efa6d7982d8c018cf834a757536d7b59fb1ae98e9",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: aatcrew build_p1 (repo working copy, 4 Oct)"
+    },
+    {
+      "file": "Addons/MEAP_Economy_Core.pbo",
+      "bytes": 33843,
+      "sha256": "0946c642ad506413a6d23ac4ff83763317086f49dbc6f5ffa70a82cbd02b5a00",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: C:\\Users\\Miran\\OneDrive\\Documents\\GitHub\\41st-Kaid-Company-Aux-Mod\\41st-Kaid-Company-Aux-Mod\\PUBLISHED MODPACK\\MEAP_Economy_Core.pbo"
+    },
+    {
+      "file": "Addons/MEAP_SW_Core.pbo",
+      "bytes": 183584356,
+      "sha256": "b7a327985ac61c2de1e819097f91158e19780d55e1b53936e24ba1af1a45b071",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: C:\\Users\\Miran\\OneDrive\\Documents\\GitHub\\41st-Kaid-Company-Aux-Mod\\41st-Kaid-Company-Aux-Mod\\PUBLISHED MODPACK\\MEAP_SW_Core.pbo"
+    },
+    {
+      "file": "Addons/MEAP_SW_Props.pbo",
+      "bytes": 44480965,
+      "sha256": "231c97b170987fc4b5576f5db5e0a68dc87629b07ab638f510dc124cce66d446",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: C:\\Users\\Miran\\OneDrive\\Documents\\GitHub\\41st-Kaid-Company-Aux-Mod\\41st-Kaid-Company-Aux-Mod\\PUBLISHED MODPACK\\MEAP_SW_Props.pbo"
+    },
+    {
+      "file": "Addons/MEAP_SW_Structures.pbo",
+      "bytes": 19018536,
+      "sha256": "8b14eab1258e5d0bfdacc3f32e28bae69cbd928354863549e0423712252d0fcc",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: C:\\Users\\Miran\\OneDrive\\Documents\\GitHub\\41st-Kaid-Company-Aux-Mod\\41st-Kaid-Company-Aux-Mod\\PUBLISHED MODPACK\\MEAP_SW_Structures.pbo"
+    },
+    {
+      "file": "Addons/Officer Uniform.pbo",
+      "bytes": 55417892,
+      "sha256": "949e991b52470b2988a5eb59f6a9756b2f6ec9692c9d3b51101c207c6b5186e9",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/RepublicStandardUnits.pbo",
+      "bytes": 43485951,
+      "sha256": "b93222347c7305378cf6f2a52cd1731de6a8f18ef5cc4d346529be5ee914f353",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/SW_cTab.pbo",
+      "bytes": 14227755,
+      "sha256": "885f5fedaa1ec4d65f0466482dbac4f3a796e425c35b3b7e99759d70ecff4479",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/SWCMDDROIDVOICE.pbo",
+      "bytes": 40119879,
+      "sha256": "d0c332d641e7ea5829d2a7d7d79e5b005e75f39bd16f4a2b5bd48f662082986f",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/SWDROIDVOICE.pbo",
+      "bytes": 36318985,
+      "sha256": "d3eaa986309e1989497c4c1629188ebd44122a9010ab9db91b236b92f56c1239",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "FST_SabreArmorExtension_x64.dll",
+      "bytes": 23040,
+      "sha256": "5590dbfc51711e51559bb57ba94a68a2a3cde25b8ea2b8bc1b6f16e12dfd69d3",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "logo.paa",
+      "bytes": 86743,
+      "sha256": "9abeb7cf1c39580f644e0ff114fb4a8dfb08bbd1bf252347883a77ec3e2a3c44",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "meta.cpp",
+      "bytes": 120,
+      "sha256": "b2372d896b8dbdfc3396442239b4c72f333088a528e949b468d4e7a5220e6348",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "mod.cpp",
+      "bytes": 123,
+      "sha256": "38e1c40b6c19b2fd8c5c0c26a12d3dcdd9e7f94e5c0386891a6f5b17289abc4e",
+      "origin": "live W2 base Steam-aux-release-20261009-N-daara-v9c (copied, re-hashed); was: live 2026-09-26 13:05 EDT release (hard link)"
+    },
+    {
+      "file": "Addons/KAID_3AS_SoundSet_Compat.pbo",
+      "bytes": 1181,
+      "sha256": "c3da64ff39de1007dc8d278f26031c92f472483d6aa51cd948b8c6794da57612",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_3AS_SoundSet_Compat"
+    },
+    {
+      "file": "Addons/KAID_DBA_BattleRifleTransport_Compat.pbo",
+      "bytes": 1700,
+      "sha256": "2c2c5654c086211713fad51a179575b75406c63c65ca8d2f1e30ddfb537dccc4",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_DBA_BattleRifleTransport_Compat"
+    },
+    {
+      "file": "Addons/KAID_DBA_FighterPicture_Compat.pbo",
+      "bytes": 1323,
+      "sha256": "7e23dcb418b771ce92a9fa3b689e64e7eb886380a691336757c953eb8f8188f4",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_DBA_FighterPicture_Compat"
+    },
+    {
+      "file": "Addons/KAID_DBA_SoundSet_Compat.pbo",
+      "bytes": 1529,
+      "sha256": "56c422f2403b3deb6232acc4d7cbb7b5df862a221492db5c9b995f57dc3c68c2",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_DBA_SoundSet_Compat"
+    },
+    {
+      "file": "Addons/KAID_DBA_VehicleAmmo_Compat.pbo",
+      "bytes": 2022,
+      "sha256": "6d22a33117a4a5caf982e9c3a5d49df0555d1272a0f34b31c0b75fb13d79d71b",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_DBA_VehicleAmmo_Compat"
+    },
+    {
+      "file": "Addons/KAID_HeliBase_HitTransmission_Compat.pbo",
+      "bytes": 1663,
+      "sha256": "912cd54789bf6def2197f0257fe2727efcaeaa07704ba3d584cd531625168d6e",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_HeliBase_HitTransmission_Compat"
+    },
+    {
+      "file": "Addons/KAID_IDA_AutoCannonProfile_Compat.pbo",
+      "bytes": 990,
+      "sha256": "b34adf1ce8ba0a039ef04e2274284e6b9735defa34b202535c41f51cd3ab5acf",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_IDA_AutoCannonProfile_Compat"
+    },
+    {
+      "file": "Addons/KAID_IDA_SoundSet_Compat.pbo",
+      "bytes": 1005,
+      "sha256": "3b5c4363d518053c8b1d3ffaf3219c34ba2467bac698e443b058b374a921473b",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_IDA_SoundSet_Compat"
+    },
+    {
+      "file": "Addons/KAID_KKA3_DireActions_Compat.pbo",
+      "bytes": 2234,
+      "sha256": "351e693d73b2c4039d17c815a7d3eea13560d2ad96288a87517b045f3d043f08",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_KKA3_DireActions_Compat"
+    },
+    {
+      "file": "Addons/KAID_LS_FletchProfile_Compat.pbo",
+      "bytes": 960,
+      "sha256": "3ef20500739b23d7856bf8306915a15ef214b4a490a7cceb44c497c490040a2f",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_LS_FletchProfile_Compat"
+    },
+    {
+      "file": "Addons/KAID_OPTRE_FC_SoundSet_Compat.pbo",
+      "bytes": 1713,
+      "sha256": "43de2e07fed261bac3d3345e7511df419ad1670c2eeef11092b6c004da830286",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_OPTRE_FC_SoundSet_Compat"
+    },
+    {
+      "file": "Addons/KAID_TankF_CargoTurret_Compat.pbo",
+      "bytes": 9040,
+      "sha256": "fd70279a5fc41950d3244882db8b67f61604b1e6a274d7df89217e10b9a0e1ce",
+      "origin": "click-fix compat (Omnibus compat_src 23 Nov, research/unattended_boot_fix_20261123): KAID_TankF_CargoTurret_Compat"
+    },
+    {
+      "file": "Addons/KAID_DBA_RocketSoundEntry_Compat.pbo",
+      "bytes": 6787,
+      "sha256": "b257e23d92aee923ff574bbf884d5fb5863896152f06cfe24d3eedd46ea36fb3",
+      "origin": "click-fix compat (rocket-box agent 23 Nov, compat_src folder 13; delete + re-add DBA rocket sound entries as arrays): KAID_DBA_RocketSoundEntry_Compat"
+    },
+    {
+      "file": "Addons/KAID_DBA_TankRCWSOptics_Compat.pbo",
+      "bytes": 2062,
+      "sha256": "2141e4e424506cacc64f22107fd882cd8baa8f6e061105504e30b3db7102e189",
+      "origin": "click-fix optics compat (Aux Updater 23 Nov, clickfix/src3; vanilla optics values): KAID_DBA_TankRCWSOptics_Compat"
+    },
+    {
+      "file": "Addons/KAID_StaticMG_ViewOptics_Compat.pbo",
+      "bytes": 2124,
+      "sha256": "fa52443a1d925ee9b731b3576fbc7f083ce0ca5cf5e99df5f824c0c41770e512",
+      "origin": "click-fix optics compat (Aux Updater 23 Nov, clickfix/src3; vanilla optics values): KAID_StaticMG_ViewOptics_Compat"
+    },
+    {
+      "file": "Addons/KAID_WBK_Leaper1ShadowTex_Compat.pbo",
+      "bytes": 2191811,
+      "sha256": "18fece6f6895d426868b719909fcb21c177ce3c273fb8ea40e349540e2a9e7e1",
+      "origin": "WBK Leaper fix 24 Nov: supplies zombie3\\addons\\data\\wd_cripple_01_d.paa (byte copy of WBK special_Infected\\textures\\leaper_1_CO.paa; credit WebKnight / Big Red)"
+    },
+    {
+      "file": "Addons/KAID_WBK_Leaper2ShadowTex_Compat.pbo",
+      "bytes": 2155957,
+      "sha256": "ecce59d0a4bf99007e1320036c7819fa972670dc3e60cba627e1f23fa32468a7",
+      "origin": "WBK Leaper fix 24 Nov: supplies zombiebh\\addons\\data\\wd_cripple_02_d.paa (byte copy of WBK special_Infected\\textures\\leaper_2_CO.paa; credit WebKnight / Big Red)"
+    },
+    {
+      "file": "Addons/fst_zenoc_halloween.pbo",
+      "bytes": 216835341,
+      "sha256": "2becbd80ece01c7dee2f8ab191d163e276071326949f7f13af0d87d63a2659dc",
+      "origin": "Zenoc Halloween terrain w14m (w14l + hall-floor z-fight fix; D:/Halloween/OP_READY_WED25NOV.md, delivery DLV4); needs Cytech Core Assets 2764686098 loaded separately"
+    }
+  ],
+  "external_required_mods": [
+    "[CYTECH] Core Assets And Functions (Workshop 2764686098) - loaded separately by players and the server, NOT in the Aux"
+  ]
+}

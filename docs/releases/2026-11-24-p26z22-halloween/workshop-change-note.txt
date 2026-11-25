@@ -1,0 +1,10 @@
+Halloween update
+
+- Added: the Zenoc Halloween map for Wednesday's op (needs [CYTECH] Core Assets And Functions loaded).
+- Fixed: the error boxes on game launch (DBA, ACE Extension, OPTRE, IDA, LS, 3AS).
+- Fixed: the error boxes after a mission starts (helicopters, tank and static gun sights, Leaper zombies).
+- Fixed: missing attachment errors on the DC-15A, DC-17, SPA-K12, Westar and Z6.
+- Fixed: the Pole face.
+- Updated: tank passenger seats work on more vehicles.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

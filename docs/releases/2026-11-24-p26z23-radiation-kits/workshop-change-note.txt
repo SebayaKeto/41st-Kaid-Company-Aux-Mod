@@ -1,0 +1,8 @@
+Radiation and kit fixes
+
+- Added: Zeus can place radiation zones (Zeus Enhanced module "BUZZ Radiation > Radiation Zone").
+- Updated: the radiation medical crate now holds the full medical crate contents plus the radiation gear.
+- Updated: ARCs, Merrik and other named players can pick their own radiation-protected helmet on radiation kits.
+- Fixed: Geiger counter and cough sounds should now play for nearby players (needs a multiplayer test).
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.

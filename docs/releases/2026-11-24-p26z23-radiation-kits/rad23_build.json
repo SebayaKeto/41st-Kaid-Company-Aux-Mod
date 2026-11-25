@@ -1,0 +1,65 @@
+{
+  "commit": "6764d96ac40977a3cda76bef981e75fc64eac5dd",
+  "pbos": {
+    "41st_KitMenu": {
+      "live_sha256": "ca27659f1ea4a51df6bdc4be04b761c68e7339995fb1dff5b045af7d5022cce9",
+      "new_sha256": "a0e64f2660872daf3769342c67e13f0c8fd68303f97bd319bbadb646d44c1c53",
+      "new_bytes": 1756677,
+      "entries": 45,
+      "identical": 43,
+      "changed_or_added": {
+        "FST_autoCustoms.sqf": {
+          "live_sha256": "06099148289c769847e03f599993071d20ef75afacabd9222a2746c76ccb1be4",
+          "new_sha256": "3d02e271c0992c1151a1a08526134424eea2abd0efb7d86e2628f5c576ebe7fa",
+          "crlf": true
+        },
+        "XEN_PreInit.sqf": {
+          "live_sha256": "2e67b6e78a24b2b539f9760a935611a574696f8a540e75c6734a83c07dbf71a8",
+          "new_sha256": "6460d888af8d808799d6ebfa92da97d2d9cd31b0efcb3721d67c67a8189040d3",
+          "crlf": true
+        }
+      },
+      "configs_checked": [
+        "config.cpp"
+      ]
+    },
+    "BUZZ_Radiation": {
+      "live_sha256": "a645c8ef954fd7deb1f835198de0ca4265c320f0ca97ca2c819b75125e45a13e",
+      "new_sha256": "6086a81ce32ecc6940a01ca4217e7a8018b758de7ab42feae40e83e16aa3168f",
+      "new_bytes": 778231,
+      "entries": 49,
+      "identical": 44,
+      "changed_or_added": {
+        "BUZZ_Radiation_CfgFunctions.hpp": {
+          "live_sha256": "bf9f988caeec8a98de7de605177bfb72a5778beb45977001cbe5fa581ec98bfa",
+          "new_sha256": "ffad3a4c796ba5ec5d129ceae527d856ca052107f51048377bf1b90a1fa60470",
+          "crlf": true
+        },
+        "BUZZ_Radiation_XEH_postInit.sqf": {
+          "live_sha256": "3ee670687f508f2e90a7c1abd30f3495be9e11bfe9eae81ce13fb722bc73ec37",
+          "new_sha256": "f4c095916859979a91138805141a28cde62b5efffbe9adc1fe0b012e1cdef89f",
+          "crlf": true
+        },
+        "compat_41st/config.cpp": {
+          "live_sha256": "765ad45529b7b68bbb8f7b9560a3099addde72f357b68ee85aad1117283830da",
+          "new_sha256": "ab1c0c8098b2e1072d4537329ba14f6f9969e9380ca8af2cb5a0029054a0d5dc",
+          "crlf": true
+        },
+        "functions/BUZZ_Radiation_fnc_tick.sqf": {
+          "live_sha256": "b4e3d2f2db1786b2d9eef20fa49bd70e1600cfb3b3ec8b85c0b9fffc6f7210d5",
+          "new_sha256": "dab3197e49bd572f4e80f737ca36448041f5b6535f28f0e416591d98649e7596",
+          "crlf": true
+        },
+        "functions/BUZZ_Radiation_fnc_zeusZone.sqf": {
+          "added": true,
+          "new_sha256": "831a28652d7cf45260f1b8fa895089b1411482863057164848101769143fa4b1"
+        }
+      },
+      "configs_checked": [
+        "compat_41st/config.cpp",
+        "compat_fst/config.cpp",
+        "config.cpp"
+      ]
+    }
+  }
+}
