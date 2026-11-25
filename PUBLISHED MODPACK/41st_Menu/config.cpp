@@ -138,10 +138,10 @@ class RscTitles
 	{
 		class Controls
 		{
-			class Background      { colorBackground[] = {0,0,0,1}; };
-			class BackgroundLeft  { colorBackground[] = {0,0,0,1}; };
-			class BackgroundRight { colorBackground[] = {0,0,0,1}; };
-			class Picture         { text = "#(argb,8,8,3)color(0,0,0,1)"; };
+			class Background: RscText            { colorBackground[] = {0,0,0,1}; };
+			class BackgroundLeft: Background      { colorBackground[] = {0,0,0,1}; };
+			class BackgroundRight: Background     { colorBackground[] = {0,0,0,1}; };
+			class Picture: RscPicture             { text = "#(argb,8,8,3)color(0,0,0,1)"; };
 		};
 	};
 };
@@ -282,10 +282,6 @@ class RscDisplayMain: RscStandardDisplay
 			x="0.5 + 2 *   2 *  (pixelW * pixelGrid * 2)";
 		};
 		delete LogoApex;
-		class News
-		{
-			x="2.5";
-		};
 		class Logo: RscActivePicture
 		{
 			text="41st_Menu\mainmenu.vr\images\logo.paa";
