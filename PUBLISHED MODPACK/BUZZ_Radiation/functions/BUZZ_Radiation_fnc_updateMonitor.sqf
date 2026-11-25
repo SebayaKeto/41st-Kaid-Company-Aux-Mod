@@ -1,13 +1,10 @@
-/*
- * Refreshes the text rows of every open Radiation Monitor panel (once per second).
- * The direction ring is refreshed separately by BUZZ_Radiation_fnc_updateRadar.
- */
+// Refreshes the text rows of every open Radiation Monitor panel
 params [["_hasDevice", false]];
 private _displays = (uiNamespace getVariable ["BUZZ_Radiation_monitorDisplays", []]) select {!isNull _x};
 uiNamespace setVariable ["BUZZ_Radiation_monitorDisplays", _displays];
 if (_displays isEqualTo []) exitWith {};
 
-// Vanilla HUD colours (Options > Game > Colors), same as the GPS / mine detector panels.
+// Vanilla HUD colours
 private _text = [
     profileNamespace getVariable ["IGUI_TEXT_RGB_R", 1],
     profileNamespace getVariable ["IGUI_TEXT_RGB_G", 1],

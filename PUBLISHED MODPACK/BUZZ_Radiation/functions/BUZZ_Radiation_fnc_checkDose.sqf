@@ -1,6 +1,4 @@
-/*
- * ACE "Scan For Radiation" callback (runs on the medic's machine).
- */
+// ACE "Scan For Radiation" callback
 params ["_medic", "_patient"];
 private _dose = _patient getVariable ["BUZZ_Radiation_dose", 0];
 private _treatLeft = (_patient getVariable ["BUZZ_Radiation_treatedUntil", -1]) - CBA_missionTime;

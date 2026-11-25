@@ -1,7 +1,4 @@
-/*
- * Sets a unit's absorbed dose (0-100). Works from any machine.
- * Example (cure): [player, 0] call BUZZ_Radiation_fnc_setDose;
- */
+// Sets a unit's absorbed dose
 params [["_unit", objNull, [objNull]], ["_dose", 0, [0]], ["_sickRate", -1, [0]]];
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith {["BUZZ_Radiation_setDoseLocal", [_unit, _dose, _sickRate], _unit] call CBA_fnc_targetEvent};

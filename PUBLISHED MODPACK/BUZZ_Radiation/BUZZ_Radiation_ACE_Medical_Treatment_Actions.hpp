@@ -1,5 +1,4 @@
-// Custom ACE treatments. Morphine and CheckPulse are stock ACE actions; we inherit
-// animations, sounds and selections from them and only swap item, selection and callback.
+// Custom ACE treatments
 class ACE_Medical_Treatment_Actions {
     class Morphine;
     class SalineIV;
@@ -25,13 +24,12 @@ class ACE_Medical_Treatment_Actions {
         treatmentTime = 3;
         medicRequired = 0;
         allowSelfTreatment = 1;
-        // Only someone carrying a detection device (Addon Options > BUZZ_Radiation) can scan.
+        // Scan for radiation
         condition = "[_this select 0, BUZZ_Radiation_monitorList] call BUZZ_Radiation_fnc_hasItem";
         callbackSuccess = "BUZZ_Radiation_fnc_checkDose";
     };
 
-    // Radiation Flush IV: stock ACE IV animation, icon and arm/leg selections.
-    // Time, medic level, location and self-use come from Addon Options > BUZZ_Radiation > 5. Treatment.
+    // Radiation Flush IV
     class BUZZ_Radiation_FlushIV: SalineIV {
         displayName = "Give Radiation Flush IV";
         displayNameProgress = "Administering radiation flush...";

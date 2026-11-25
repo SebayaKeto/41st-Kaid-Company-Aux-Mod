@@ -1,6 +1,4 @@
-// Radiation Monitor side panel resources (CustomDisplayComponent, see
-// BUZZ_Radiation_CfgVehicles_infoPanel.hpp). Defined at config root, like vanilla
-// RscCustomInfoMiniMap. Written out longhand: no multi-line macros.
+// Radiation Monitor side panel resources
 class RscText;
 class RscPicture;
 class RscProgress;
@@ -10,9 +8,7 @@ class RscIGUIValue;
 class RscCustomInfoBUZZ_Radiation_MonitorLeft {
     idd = 31501;
     onLoad = "_this call BUZZ_Radiation_fnc_monitorOnLoad";
-    // Like the vanilla RscCustomInfo* panels, positions are RELATIVE to the side-panel slot.
-    // Styling comes from the vanilla IGUI classes (RscIGUIText / RscIGUIValue), so it follows
-    // the player's HUD colour settings like the GPS and mine detector panels.
+    // Panel layout
     class controls {
         class Background: RscText {
             idc = 1000;
@@ -30,7 +26,7 @@ class RscCustomInfoBUZZ_Radiation_MonitorLeft {
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "RADIATION";
         };
-        // Dark disc behind the direction ring, and the view cone (drawn under the dots).
+        // Dark disc behind the direction ring
         class RingDisc: RscPicture {
             idc = 2100;
             x = "0";
@@ -723,9 +719,7 @@ class RscCustomInfoBUZZ_Radiation_MonitorLeft {
 class RscCustomInfoBUZZ_Radiation_MonitorRight {
     idd = 31502;
     onLoad = "_this call BUZZ_Radiation_fnc_monitorOnLoad";
-    // Like the vanilla RscCustomInfo* panels, positions are RELATIVE to the side-panel slot.
-    // Styling comes from the vanilla IGUI classes (RscIGUIText / RscIGUIValue), so it follows
-    // the player's HUD colour settings like the GPS and mine detector panels.
+    // Panel layout
     class controls {
         class Background: RscText {
             idc = 1000;
@@ -743,7 +737,7 @@ class RscCustomInfoBUZZ_Radiation_MonitorRight {
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "RADIATION";
         };
-        // Dark disc behind the direction ring, and the view cone (drawn under the dots).
+        // Dark disc behind the direction ring
         class RingDisc: RscPicture {
             idc = 2100;
             x = "0";

@@ -1,7 +1,4 @@
-/*
- * Protective gear worn: 0 = none, 1 = helmet OR armour, 2 = helmet AND armour.
- * If only one list is filled in (Addon Options), that piece alone counts as full.
- */
+// Protective gear worn
 params ["_unit"];
 private _helmets = missionNamespace getVariable ["BUZZ_Radiation_helmetList", []];
 private _vests = missionNamespace getVariable ["BUZZ_Radiation_vestList", []];

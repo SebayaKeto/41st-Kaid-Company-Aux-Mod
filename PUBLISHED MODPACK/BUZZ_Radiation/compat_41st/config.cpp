@@ -1,5 +1,4 @@
-// Radiation medical crate for the 41st modpack: the [41st] Medical Crate's contents plus radiation
-// gear, on the green 3AS large supply crate. Skipped automatically if 41st_Armor isn't loaded.
+// Radiation medical crate for the 41st modpack
 class CfgPatches {
     class BUZZ_Radiation_Compat_41st {
         name = "BUZZ_Radiation 41st Crates";
@@ -20,8 +19,7 @@ class CfgVehicles {
         model = "3as\3as_props\crates\models\supply_Large.p3d";
         hiddenSelections[] = {"camo1"};
         hiddenSelectionsTextures[] = {"3AS\3AS_Props\Crates\Data\Supply_Large_Green\Supply_Large_green_co.paa"};
-        // Written out in full: the game doesn't fill a crate from inherited item entries.
-        // Keep the first nine lines in step with FST_MedicalCrate (41st_Armor).
+        // Crate contents
         class TransportItems {
             class _xx_IDA_BactaBandage { name = "IDA_BactaBandage"; count = 200; };
             class _xx_ACE_PlasmaIV { name = "ACE_PlasmaIV"; count = 20; };

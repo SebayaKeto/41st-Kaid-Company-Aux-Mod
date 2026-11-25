@@ -1,8 +1,4 @@
-/*
- * Zeus module (Zeus Enhanced): place a circular radiation zone where the module is dropped.
- * Opens a dialog for the zone type and radius. The zone is an invisible helipad that Zeus can
- * move (the zone follows it) or delete (the zone is removed for everyone, JIP included).
- */
+// Zeus module
 params ["_posASL", "_attached"];
 [
     "Radiation Zone",

@@ -1,6 +1,4 @@
-/*
- * onLoad of the Radiation Monitor info panel.
- */
+// onLoad of the Radiation Monitor info panel
 params ["_display"];
 private _list = (uiNamespace getVariable ["BUZZ_Radiation_monitorDisplays", []]) select {!isNull _x};
 _list pushBackUnique _display;

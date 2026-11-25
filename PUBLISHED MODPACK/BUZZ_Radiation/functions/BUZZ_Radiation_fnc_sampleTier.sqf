@@ -1,7 +1,4 @@
-/*
- * Radiation tier at a position from the active zones on this machine.
- * Returns -1 (none, or inside a safe zone), 0, 1 or 2, or 3 inside a decontamination zone.
- */
+// Radiation tier at a position from the active zones on this machine
 params ["_pos"];
 private _tier = -1;
 private _shielded = false;

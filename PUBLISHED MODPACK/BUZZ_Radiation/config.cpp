@@ -1,4 +1,3 @@
-
 class CfgPatches {
     class BUZZ_Radiation_main {
         name = "BUZZ_Radiation";
@@ -29,8 +28,7 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-// Root-level vanilla side panel lists. Adding the Radiation Monitor here puts it in every
-// vehicle whose panels inherit the default list (vanilla vehicles and most mods), and on foot.
+// Root-level vanilla side panel lists
 class DefaultVehicleSystemsDisplayManagerLeft {
     class Components {
         class BUZZ_Radiation_MonitorDisplay {

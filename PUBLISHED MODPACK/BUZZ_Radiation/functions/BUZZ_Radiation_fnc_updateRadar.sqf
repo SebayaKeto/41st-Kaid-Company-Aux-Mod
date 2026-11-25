@@ -1,9 +1,4 @@
-/*
- * Direction ring of the Radiation Monitor panel, like the mine detector / radar panels.
- * Four rings of 16 dots (10, 20, 30 and 40 m) around the wearer; the top of the ring is where
- * the player is looking. Each dot shows the radiation tier sampled in that direction and
- * flickers slightly, like a live sensor.
- */
+// Direction ring of the Radiation Monitor panel
 private _displays = (uiNamespace getVariable ["BUZZ_Radiation_monitorDisplays", []]) select {!isNull _x};
 if (_displays isEqualTo []) exitWith {};
 
@@ -11,7 +6,7 @@ private _hasDevice = alive player && {!isNull objectParent player || {[player, B
 
 private _gw = ((safezoneW / safezoneH) min 1.2) / 40;
 private _gh = ((safezoneW / safezoneH) min 1.2) / 1.2 / 25;
-// Horizontal stretch so the ring is a circle on any aspect ratio.
+// Aspect ratio correction
 private _res = getResolution;
 private _xScale = (safezoneW / safezoneH) / ((_res select 0) / (_res select 1));
 
@@ -29,11 +24,11 @@ if (_hasDevice) then {
 };
 
 private _colours = [
-    [1, 1, 1, 0.15],      // none
-    [0.9, 0.8, 0.2, 1],   // background
-    [0.85, 0.5, 0, 1],    // dangerous
-    [0.85, 0.1, 0.1, 1],  // lethal
-    [0.2, 0.85, 0.3, 1]   // decontamination
+    [1, 1, 1, 0.15],
+    [0.9, 0.8, 0.2, 1],
+    [0.85, 0.5, 0, 1],
+    [0.85, 0.1, 0.1, 1],
+    [0.2, 0.85, 0.3, 1]
 ];
 
 {
@@ -44,7 +39,7 @@ private _colours = [
     private _dotH = 0.32 * _gh;
     private _dotW = _dotH * _xScale;
 
-    // Backing disc (covers both rings) and the view cone pointing up, where the wearer is looking.
+    // Backing disc
     private _discR = 2.85 * _gh;
     private _disc = _d displayCtrl 2100;
     _disc ctrlSetPosition [_cx - _discR * _xScale, _cy - _discR, 2 * _discR * _xScale, 2 * _discR];
@@ -62,7 +57,7 @@ private _colours = [
     for "_i" from 0 to 64 do {
         private _ctrl = _d displayCtrl (2000 + _i);
         if (_i == 64) then {
-            // centre marker: the wearer
+            // Centre marker
             _ctrl ctrlSetPosition [_cx - _dotW / 2, _cy - _dotH / 2, _dotW, _dotH];
             _ctrl ctrlSetTextColor [1, 1, 1, [0.15, 0.9] select _hasDevice];
         } else {
