@@ -1,0 +1,11 @@
+{
+  "KAID_QoL": {
+    "pbo_bytes": 6605,
+    "pbo_sha256": "94202eccc96ba9e30fa78c69c88d4847abbf02e81560b857e5c06a883780ff85",
+    "entries": [
+      "XEH_postInitClient.sqf",
+      "ace\\config.cpp",
+      "config.cpp"
+    ]
+  }
+}

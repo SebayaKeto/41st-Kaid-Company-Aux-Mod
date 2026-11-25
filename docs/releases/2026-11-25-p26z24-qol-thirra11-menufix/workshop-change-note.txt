@@ -1,0 +1,8 @@
+Thirra update + built-in quality of life
+
+- Updated: Thirra terrain (new build).
+- Fixed: broken main menu background elements.
+- Added: no stamina, no weapon sway, and a pilot ETA + fuel panel are now part of the Aux.
+- After this update you can remove these mods from your preset: Remove stamina, Remove stamina - ACE 3, No Weapon Sway, More Aircraft Displays.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
