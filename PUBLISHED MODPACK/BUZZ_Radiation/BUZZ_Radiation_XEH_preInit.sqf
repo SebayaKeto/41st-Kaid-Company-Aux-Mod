@@ -58,6 +58,7 @@ BUZZ_Radiation_parseList = {
 ["BUZZ_Radiation_flushMedic", "LIST", ["Flush IV: who can give it", "Medical training needed to give a Radiation Flush IV."], [CAT, "5. Treatment"], [[0, 1, 2], ["Anyone", "Medics", "Doctors"], 1], 1] call CBA_fnc_addSetting;
 ["BUZZ_Radiation_flushLocation", "LIST", ["Flush IV: where it can be given", "Restrict the flush to medical vehicles and/or medical facilities."], [CAT, "5. Treatment"], [[0, 1, 2, 3], ["Anywhere", "Medical vehicles", "Medical facilities", "Medical vehicles and facilities"], 0], 1] call CBA_fnc_addSetting;
 ["BUZZ_Radiation_flushSelf", "LIST", ["Flush IV: self-treatment", "Whether someone can give the flush to themselves."], [CAT, "5. Treatment"], [[0, 1, 2], ["No", "Yes", "Doctors only"], 1], 1] call CBA_fnc_addSetting;
+["BUZZ_Radiation_pakMaxDose", "SLIDER", ["PAK / Bacta Tank: max radiation dose (%)", "A Personal Aid Kit or Bacta Tank can only be used on a patient whose radiation dose is below this. 100 = no limit."], [CAT, "5. Treatment"], [0, 100, 25, 0], 1] call CBA_fnc_addSetting;
 
 // 6. Detection
 ["BUZZ_Radiation_monitorItems", "EDITBOX", ["Detection device items", "Items that power the side-panel Radiation Monitor and the ACE 'Scan For Radiation' action. Leave empty to give everyone a monitor."], [CAT, "6. Detection"], "BUZZ_Radiation_Monitor", 1, {BUZZ_Radiation_monitorList = [_this] call BUZZ_Radiation_parseList}] call CBA_fnc_addSetting;

@@ -16,6 +16,12 @@ class ACE_Medical_Treatment_Actions {
         litter[] = {};
     };
 
+    // PAK needs low radiation
+    class BasicBandage;
+    class PersonalAidKit: BasicBandage {
+        condition = "(_patient call ace_medical_status_fnc_isInStableCondition) && {(_patient getVariable ['BUZZ_Radiation_dose', 0]) < (missionNamespace getVariable ['BUZZ_Radiation_pakMaxDose', 25])}";
+    };
+
     class CheckPulse;
     class BUZZ_Radiation_CheckDose: CheckPulse {
         displayName = "Scan For Radiation";
