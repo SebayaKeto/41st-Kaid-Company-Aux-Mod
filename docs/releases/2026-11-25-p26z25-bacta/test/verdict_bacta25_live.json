@@ -1,0 +1,45 @@
+{
+ "client_rpt": "C:\\Users\\Miran\\AppData\\Local\\Arma 3\\arma3_x64_2026-11-26_09-42-16.rpt",
+ "probe_done": true,
+ "client_boot": {
+  "run": "C:\\ReviewSessions\\P26z25Live-20261126-094119",
+  "result": "JOINED on attempt 1",
+  "attempts": [
+   {
+    "n": 1,
+    "pid": 2636,
+    "state": "joined",
+    "client_rpt": "C:\\Users\\Miran\\AppData\\Local\\Arma 3\\arma3_x64_2026-11-26_09-42-16.rpt",
+    "secs": 90
+   }
+  ],
+  "log": [
+   "09:42:16 attempt 1 launched client pid 2636 | client pid 2636: connecting to 127.0.0.1:4593. A 'No entry ...NewTurret.scope' box is harmless.",
+   "09:42:51 attempt 1 state joined C:\\Users\\Miran\\AppData\\Local\\Arma 3\\arma3_x64_2026-11-26_09-42-16.rpt",
+   "09:42:51 RESULT JOINED on attempt 1"
+  ],
+  "exit": 0
+ },
+ "bactaprobe": [
+  "BACTAPROBE cfg condition=alive _patient && {(_patient getVariable ['ace_medical_woundBleeding', 0]) == 0} && {speed _medic < 1} | locations isText=false num=0 | medicRequired=ace_medical_treatment_medicPAK | callback=ace_medical_treatment_fnc_fullHeal | src=[\"FST_Medical\"]",
+  "BACTAPROBE settings locationPAK=3 medicPAK=1 consumePAK=0 allowSelfPAK=0 holsterRequired=0 PAK condition=_patient call ace_medical_status_fnc_isInStableCondition",
+  "BACTAPROBE kit bacta_in_inventory=3 hasItem=true isMedic=true",
+  "BACTAPROBE case1 bleeding | alive=true uncon=true bleeding=0.0862764 stableVitals=true isInStable=false hr=93.128 blood=5.96436 medicSpeed=0 dist=1.20229 | bacta canTreat=false (want false) | PAK canTreat=false",
+  "BACTAPROBE case2 bandaged | alive=true uncon=true bleeding=0 stableVitals=true isInStable=false hr=94.0843 blood=5.96392 medicSpeed=0 dist=1.20218 | bacta canTreat=true (want true) | PAK canTreat=false",
+  "BACTAPROBE treatment started=true healTime=10",
+  "BACTAPROBE after | alive=true uncon=false bleeding=0 stableVitals=true isInStable=true hr=79.747 blood=6 medicSpeed=0 dist=1.09662 | secs=13 | bacta items 3 -> 3 | wounds 2 -> 0",
+  "BACTAPROBE case3 awake | alive=true uncon=false bleeding=0 stableVitals=true isInStable=true hr=95.699 blood=6 medicSpeed=0 dist=1.49364 | bacta canTreat=true (want true) | PAK canTreat=false",
+  "BACTAPROBE case3after started=true | alive=true uncon=false bleeding=0 stableVitals=true isInStable=true hr=79.6637 blood=6 medicSpeed=0 dist=1.50599 | secs=13 | wounds 1 -> 0",
+  "BACTAPROBE done"
+ ],
+ "bad_lines": [],
+ "winshots": "D:\\AuxUpdater\\bacta25\\winshot_bacta_live",
+ "case1_ok": true,
+ "case2_ok": true,
+ "treatment_started": true,
+ "full_heal": true,
+ "case3_ok": true,
+ "case3_heal": true,
+ "warnings_after_start": 0,
+ "PASS": true
+}

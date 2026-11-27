@@ -1,0 +1,5 @@
+Bacta Tank fix
+
+- Fixed: Apply Bacta now works on downed (unconscious) patients once all bleeding is bandaged, anywhere.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
