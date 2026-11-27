@@ -1,16 +1,12 @@
-/*
- * Advances one local unit's dose by _dt seconds.
- * Dose runs 0-100; 100 kills.
- */
+// Advances one local unit's dose by _dt seconds
 params ["_unit", "_exposure", "_dt"];
 _exposure params ["_tier", "_safe", "_decon"];
 
-// Decontamination tents (Contact DLC prop, Addon Options > 5. Treatment): standing inside one
-// shields you and slowly clears dose. Only the exact classnames in the setting count.
+// Decontamination tents
 private _inTent = BUZZ_Radiation_tentRate > 0 && {BUZZ_Radiation_tentList isNotEqualTo []} && {
     (nearestObjects [_unit, BUZZ_Radiation_tentList, 10]) findIf {
         private _tent = _x;
-        // Exact classnames only (no other tent colours or variants).
+        // Tent footprint check
         (toLower typeOf _tent) in BUZZ_Radiation_tentList && {
         (boundingBoxReal _tent) params ["_p1", "_p2"];
         private _centre = _tent modelToWorld ((_p1 vectorAdd _p2) vectorMultiply 0.5);
@@ -25,7 +21,7 @@ private _treated = CBA_missionTime < (_unit getVariable ["BUZZ_Radiation_treated
 private _gear = [_unit] call BUZZ_Radiation_fnc_gearLevel;
 _unit setVariable ["BUZZ_Radiation_gear", _gear];
 
-// In a vehicle (any seat: driver, gunner, commander, passenger, FFV) or standing/riding on one.
+// Vehicle shielding
 private _inVehicle = !isNull objectParent _unit || {
     private _hits = lineIntersectsSurfaces [getPosASL _unit vectorAdd [0, 0, 0.3], getPosASL _unit vectorAdd [0, 0, -1.2], _unit, objNull, true, 1, "GEOM", "FIRE"];
     _hits isNotEqualTo [] && {
@@ -33,10 +29,10 @@ private _inVehicle = !isNull objectParent _unit || {
         !isNull _obj && {_obj isKindOf "AllVehicles"} && {!(_obj isKindOf "Man")}
     }
 };
-// Optional (off by default): a vehicle also stops existing sickness from getting worse.
+// Vehicle pause option
 private _vehiclePause = _inVehicle && {BUZZ_Radiation_vehiclePausesSickness};
 
-// Safe and decontamination zones block all radiation, whatever overlaps them.
+// Shielding
 if (_safe || _decon || _inTent) then {_tier = -1};
 
 private _exposureRate = 0;
@@ -67,9 +63,9 @@ if (_exposureRate > 0) then {
         case (_treated): {
             _dose = _dose - (100 / (60 * BUZZ_Radiation_iodineClearMinutes)) * _dt;
         };
-        case (_vehiclePause): {}; // paused while protected by a vehicle
+        case (_vehiclePause): {};
         case (_dose >= BUZZ_Radiation_sickThreshold && {_sickRate > 0}): {
-            // Untreated poisoning keeps working after leaving the zone.
+            // Dose change
             _dose = _dose + _sickRate * BUZZ_Radiation_progressOutside * _dt;
         };
         default {
@@ -78,8 +74,7 @@ if (_exposureRate > 0) then {
     };
 };
 
-// Radiation Flush IV: a rapid and a slow phase run side by side from the moment it is given.
-// It works inside zones too, where it fights the incoming exposure.
+// Radiation Flush IV
 private _flush = _unit getVariable ["BUZZ_Radiation_flush", []];
 if (_flush isNotEqualTo []) then {
     _flush params ["_start", "_fastAmount", "_fastTime", "_slowAmount", "_slowTime"];
@@ -96,7 +91,7 @@ if (_dose <= 0) then {_sickRate = 0};
 _unit setVariable ["BUZZ_Radiation_sickRate", _sickRate];
 _unit setVariable ["BUZZ_Radiation_dose", _dose];
 
-// Share the dose with other machines (medic scans) in 2% steps to keep traffic low.
+// Publish dose
 private _pub = _unit getVariable ["BUZZ_Radiation_dosePub", 0];
 if (abs (_dose - _pub) >= 2 || {_dose == 0 && {_pub != 0}} || {_dose >= 100}) then {
     _unit setVariable ["BUZZ_Radiation_dose", _dose, true];
@@ -106,15 +101,14 @@ if (abs (_dose - _pub) >= 2 || {_dose == 0 && {_pub != 0}} || {_dose >= 100}) th
 
 if (_dose >= 100) exitWith {[_unit] call BUZZ_Radiation_fnc_kill};
 
-// Coughing (Addon Options > BUZZ_Radiation > 8. Coughing): the player's own warning sign.
-// Gets more frequent as the dose rises; a 3D sound that people nearby hear too.
+// Coughing
 if (BUZZ_Radiation_cough && {_dose > BUZZ_Radiation_coughDose} && {BUZZ_Radiation_coughDose < 100}
     && {!(_unit getVariable ["ACE_isUnconscious", false])} && {lifeState _unit != "INCAPACITATED"}
     && {CBA_missionTime - (_unit getVariable ["BUZZ_Radiation_lastCough", -100]) > 5}) then {
     private _interval = linearConversion [BUZZ_Radiation_coughDose, 100, _dose, BUZZ_Radiation_coughInterval, BUZZ_Radiation_coughInterval / 4, true];
     if (random 1 < _dt / _interval) then {
         _unit setVariable ["BUZZ_Radiation_lastCough", CBA_missionTime];
-        // The cougher hears it at full volume (2D); nearby players get a 3D copy.
+        // Cough sound
         private _cls = format ["BUZZ_Radiation_cough_%1", floor random 3];
         private _pitch = 0.9 + random 0.2;
         if (_unit == player) then {playSoundUI [_cls, BUZZ_Radiation_coughVolume, _pitch]};
@@ -123,10 +117,9 @@ if (BUZZ_Radiation_cough && {_dose > BUZZ_Radiation_coughDose} && {BUZZ_Radiatio
     };
 };
 
-// ACE symptoms (Addon Options > BUZZ_Radiation > 2. ACE Symptoms).
+// ACE symptoms
 if (BUZZ_Radiation_symptoms && {!isNil "ace_medical_fnc_adjustPainLevel"}) then {
-    // Pain: from the pain threshold, rising from moderate to severe as the dose climbs.
-    // It is topped up every second because ACE pain wears off by itself.
+    // Pain
     if (_dose >= BUZZ_Radiation_painDose && {BUZZ_Radiation_painDose < 100}) then {
         private _target = linearConversion [BUZZ_Radiation_painDose, 100, _dose, 0.3, 0.8, true];
         private _pain = _unit getVariable ["ace_medical_pain", 0];
@@ -135,10 +128,10 @@ if (BUZZ_Radiation_symptoms && {!isNil "ace_medical_fnc_adjustPainLevel"}) then 
         };
     };
 
-    // Fractures: one as soon as the threshold is crossed, then occasionally another limb.
+    // Fractures
     if (_dose >= BUZZ_Radiation_fractureDose && {BUZZ_Radiation_fractureDose < 100}) then {
         private _fractures = +(_unit getVariable ["ace_medical_fractures", [0, 0, 0, 0, 0, 0]]);
-        private _intact = [2, 3, 4, 5] select {(_fractures select _x) == 0}; // arms and legs
+        private _intact = [2, 3, 4, 5] select {(_fractures select _x) == 0};
         private _first = !(_unit getVariable ["BUZZ_Radiation_fractured", false]);
         if (_intact isNotEqualTo [] && {_first || {random 1 < _dt / BUZZ_Radiation_fractureInterval}}) then {
             private _part = selectRandom _intact;
@@ -152,7 +145,7 @@ if (BUZZ_Radiation_symptoms && {!isNil "ace_medical_fnc_adjustPainLevel"}) then 
         _unit setVariable ["BUZZ_Radiation_fractured", false];
     };
 
-    // Bleeding: wounds open, one straight away, then every bleedInterval seconds on average.
+    // Bleeding
     if (_dose >= BUZZ_Radiation_bleedDose && {BUZZ_Radiation_bleedDose < 100}) then {
         private _first = !(_unit getVariable ["BUZZ_Radiation_bleeding", false]);
         if (_first || {random 1 < _dt / BUZZ_Radiation_bleedInterval}) then {
@@ -163,7 +156,7 @@ if (BUZZ_Radiation_symptoms && {!isNil "ace_medical_fnc_adjustPainLevel"}) then 
         _unit setVariable ["BUZZ_Radiation_bleeding", false];
     };
 
-    // Blackouts.
+    // Blackouts
     if (_dose >= BUZZ_Radiation_blackoutDose && {BUZZ_Radiation_blackoutDose < 100}
         && {random 1 < _dt / BUZZ_Radiation_blackoutInterval} && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
         [_unit, true, 8 + random 12, true] call ace_medical_fnc_setUnconscious;

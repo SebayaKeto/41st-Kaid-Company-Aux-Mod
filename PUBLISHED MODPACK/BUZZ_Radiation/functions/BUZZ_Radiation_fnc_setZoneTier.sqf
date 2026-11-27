@@ -1,8 +1,4 @@
-/*
- * Changes a zone's tier mid-mission ("BACKGROUND", "DANGEROUS", "LETHAL", "SAFE", "DECON" or -2..2).
- * For an Eden module the change is sent to every machine (and JIP).
- * Example: [rad_reactor, "LETHAL"] call BUZZ_Radiation_fnc_setZoneTier;
- */
+// Changes a zone's tier mid-mission
 params [["_zone", objNull, [objNull]], ["_tier", 1, [0, ""]]];
 if (isNull _zone) exitWith {};
 if (_tier isEqualType "") then {

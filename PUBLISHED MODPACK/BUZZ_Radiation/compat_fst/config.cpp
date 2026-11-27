@@ -1,5 +1,4 @@
-// Generated: adds the Radiation Monitor side panel to modded vehicles whose
-// panel lists are defined from scratch. Skipped automatically if any mod is missing.
+// FST vehicle side panel patch
 class CfgPatches {
     class BUZZ_Radiation_Compat_FST {
         name = "BUZZ_Radiation FST Vehicle Panels";

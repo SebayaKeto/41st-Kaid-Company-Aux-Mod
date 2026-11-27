@@ -1,12 +1,10 @@
-/*
- * Main loop, once per second on every machine.
- */
+// Main loop
 if (!(missionNamespace getVariable ["BUZZ_Radiation_enabled", true])) exitWith {};
 
 private _now = CBA_missionTime;
 private _dt = _now - (missionNamespace getVariable ["BUZZ_Radiation_lastTick", _now]);
 BUZZ_Radiation_lastTick = _now;
-if (_dt <= 0 || {_dt > 5}) exitWith {}; // first tick, or game was paused
+if (_dt <= 0 || {_dt > 5}) exitWith {};
 
 BUZZ_Radiation_zones = BUZZ_Radiation_zones select {!isNull _x};
 private _active = BUZZ_Radiation_zones select {
@@ -15,7 +13,7 @@ private _active = BUZZ_Radiation_zones select {
 
 BUZZ_Radiation_activeZones = _active;
 
-// Zeus-placed zones follow their object if Zeus moves it.
+// Zeus zones follow their object
 {
     private _r = _x getVariable "BUZZ_Radiation_radius";
     if (!isNil "_r") then {_x setVariable ["BUZZ_Radiation_areas", [[getPosATL _x, _r, _r, 0, false, -1]]]};
@@ -27,10 +25,7 @@ private _units = if (BUZZ_Radiation_affectAI) then {
     allPlayers select {local _x && {alive _x} && {!(_x isKindOf "HeadlessClient_F")}}
 };
 
-// Never touch units that can't take damage (allowDamage false), a player while they're in the
-// Zeus interface or remote-controlling a unit (their own body included), or the unit being
-// remote-controlled. Their dose is frozen, so radiation can never kill them.
-// Zeus players who are playing on the ground (interface closed) are affected as normal.
+// Skip protected units
 private _inZeus = hasInterface && {
     !isNull findDisplay 312 || {!isNull (missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", objNull])}
 };

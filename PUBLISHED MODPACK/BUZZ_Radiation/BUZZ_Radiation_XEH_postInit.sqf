@@ -1,16 +1,13 @@
-// Radiation - runtime
-// One loop per machine handles the units local to it (players on their own client;
-// AI on the server / headless client when "Affect AI" is on).
+// BUZZ_Radiation post-init
 [{call BUZZ_Radiation_fnc_tick}, 1] call CBA_fnc_addPerFrameHandler;
 
-// Iodine is given on the medic's machine; apply it where the patient is local.
+// Iodine treatment
 ["BUZZ_Radiation_iodineLocal", {
     params ["_unit"];
     _unit setVariable ["BUZZ_Radiation_treatedUntil", CBA_missionTime + 60 * BUZZ_Radiation_iodineDuration, true];
 }] call CBA_fnc_addEventHandler;
 
-// Radiation Flush IV is given on the medic's machine; start it where the patient is local.
-// A new flush replaces one still running (its unused part is lost), so flushes do not stack.
+// Radiation Flush IV treatment
 ["BUZZ_Radiation_flushLocal", {
     params ["_unit"];
     private _mult = [1, BUZZ_Radiation_flushFatalEffect] select ((_unit getVariable ["BUZZ_Radiation_dose", 0]) > BUZZ_Radiation_menuFatal);
@@ -24,28 +21,23 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-// ACE full heal (e.g. Personal Aid Kit / Zeus heal) also clears radiation.
+// ACE full heal
 ["ace_medical_treatment_fullHealLocalMod", {
     params ["_unit"];
     [_unit, 0] call BUZZ_Radiation_fnc_setDose;
 }] call CBA_fnc_addEventHandler;
 
-
-// Radiation Monitor direction ring, refreshed 5 times a second while a panel is open.
+// Radiation Monitor direction ring
 if (hasInterface) then {
     [{call BUZZ_Radiation_fnc_updateRadar}, 0.2] call CBA_fnc_addPerFrameHandler;
 };
 
-// "Radiation Sickness" line in the ACE medical menu overview (detection device holders only).
+// ACE medical menu entry
 if (hasInterface) then {
     ["ace_medical_gui_updateInjuryListGeneral", {_this call BUZZ_Radiation_fnc_medicalMenuEntry}] call CBA_fnc_addEventHandler;
 };
 
-// 3D sounds (detector clicks, coughs) for nearby players. CBA events instead of remoteExec,
-// so servers with a CfgRemoteExec whitelist don't block them.
-// The sound plays from a local invisible helper attached to the player, not from the unit itself:
-// say3D on a unit goes through its voice, which is silent for units set to "NoVoice" (common in
-// unit modsets) and is cut off when the unit speaks.
+// 3D sounds
 ["BUZZ_Radiation_say3D", {
     params ["_source", "_class", "_range", ["_pitch", 1]];
     if (isNull _source || {!hasInterface}) exitWith {};
@@ -56,8 +48,7 @@ if (hasInterface) then {
     [{deleteVehicle _this}, _emitter, 8] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
-// Zeus-placed zones (Zeus Enhanced module "BUZZ Radiation > Radiation Zone").
-// Every machine (and JIP) registers the zone; the server makes it editable for all Zeuses.
+// Zeus-placed zones
 ["BUZZ_Radiation_zeusZoneAdd", {
     params ["_obj", "_tier", "_radius"];
     if (isNull _obj) exitWith {};
@@ -70,42 +61,33 @@ if (isServer) then {
         if (isNull _obj) exitWith {};
         {_x addCuratorEditableObjects [[_obj], false]} forEach allCurators;
         private _jip = ["BUZZ_Radiation_zeusZoneAdd", [_obj, _tier, _radius]] call CBA_fnc_globalEventJIP;
-        [_jip, _obj] call CBA_fnc_removeGlobalEventJIP; // JIP entry dies with the zone object
+        [_jip, _obj] call CBA_fnc_removeGlobalEventJIP;
     }] call CBA_fnc_addEventHandler;
 };
 if (hasInterface && {isClass (configFile >> "CfgPatches" >> "zen_custom_modules")}) then {
     ["BUZZ Radiation", "Radiation Zone", {_this call BUZZ_Radiation_fnc_zeusZone}, "\BUZZ_Radiation\data\BUZZ_Radiation_monitor_ca.paa"] call zen_custom_modules_fnc_register;
 };
 
-// setDose from another machine lands here, where the unit is local.
+// Reset on respawn
+["CAManBase", "Respawn", {
+    params ["_unit"];
+    if (!local _unit) exitWith {};
+    {
+        if ("buzz_radiation_" in toLower _x) then {_unit setVariable [_x, nil, true]};
+    } forEach allVariables _unit;
+    [_unit, 0] call BUZZ_Radiation_fnc_setDose;
+}] call CBA_fnc_addClassEventHandler;
+
+// Remote setDose
 ["BUZZ_Radiation_setDoseLocal", {_this call BUZZ_Radiation_fnc_setDose}] call CBA_fnc_addEventHandler;
 
-// Disconnecting must not cure radiation: the server keeps a leaving player's dose by UID
-// and hands it back when they rejoin. Dying still resets it (a respawned unit starts clean).
-if (isServer) then {
-    BUZZ_Radiation_savedDoses = createHashMap;
-    addMissionEventHandler ["HandleDisconnect", {
-        params ["_unit", "", "_uid"];
-        if (alive _unit && {_uid != ""}) then {
-            private _dose = _unit getVariable ["BUZZ_Radiation_dose", 0];
-            if (_dose > 0) then {
-                BUZZ_Radiation_savedDoses set [_uid, [_dose, _unit getVariable ["BUZZ_Radiation_sickRate", 0]]];
-            };
-        };
-        false
-    }];
-    ["BUZZ_Radiation_requestDose", {
-        params ["_unit", "_uid"];
-        private _saved = BUZZ_Radiation_savedDoses getOrDefault [_uid, []];
-        if (_saved isEqualTo []) exitWith {};
-        BUZZ_Radiation_savedDoses deleteAt _uid;
-        _saved params ["_dose", "_sickRate"];
-        [_unit, _dose, _sickRate] call BUZZ_Radiation_fnc_setDose;
-    }] call CBA_fnc_addEventHandler;
-};
+// Reset on join
 if (hasInterface && {isMultiplayer}) then {
-    [{!isNull player && {getPlayerUID player != ""}}, {
-        ["BUZZ_Radiation_requestDose", [player, getPlayerUID player]] call CBA_fnc_serverEvent;
+    [{!isNull player}, {
+        {
+            if ("buzz_radiation_" in toLower _x) then {player setVariable [_x, nil, true]};
+        } forEach allVariables player;
+        [player, 0] call BUZZ_Radiation_fnc_setDose;
     }] call CBA_fnc_waitUntilAndExecute;
 };
 

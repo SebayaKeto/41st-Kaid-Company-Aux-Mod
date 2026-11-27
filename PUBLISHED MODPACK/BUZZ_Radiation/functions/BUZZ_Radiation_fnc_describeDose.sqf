@@ -1,6 +1,4 @@
-/*
- * [dose] -> [label, html colour, RGBA colour]
- */
+// Dose label and colour
 params [["_dose", 0]];
 switch (true) do {
     case (_dose < 1):  {["CLEAN",    "#59ffd9", [0.35, 1, 0.85, 1]]};

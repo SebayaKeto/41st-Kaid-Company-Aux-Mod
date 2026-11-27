@@ -15,9 +15,6 @@ class CfgVehicles {
         };
     };
 
-    // ------------------------------------------------------------------
-    // Radiation Zone: Background / Dangerous / Lethal
-    // ------------------------------------------------------------------
     class BUZZ_Radiation_ModuleZone: Module_F {
         scope = 2;
         displayName = "Radiation Zone";
@@ -27,12 +24,12 @@ class CfgVehicles {
         category = "BUZZ_Radiation_Modules";
         function = "BUZZ_Radiation_fnc_moduleZone";
         functionPriority = 1;
-        isGlobal = 2;          // runs on every machine, including JIP
+        isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
         is3DEN = 0;
 
-        // Draw and resize the zone directly in Eden (ellipse or rectangle).
+        // Draw and resize the zone directly in Eden
         canSetArea = 1;
         canSetAreaShape = 1;
         canSetAreaHeight = 1;
@@ -79,9 +76,6 @@ class CfgVehicles {
         };
     };
 
-    // ------------------------------------------------------------------
-    // Safe Zone: blocks all radiation, including Background
-    // ------------------------------------------------------------------
     class BUZZ_Radiation_ModuleSafeZone: BUZZ_Radiation_ModuleZone {
         displayName = "Radiation Safe Zone";
         icon = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa";
@@ -103,9 +97,6 @@ class CfgVehicles {
         };
     };
 
-    // ------------------------------------------------------------------
-    // Decontamination Zone: blocks radiation and clears dose
-    // ------------------------------------------------------------------
     class BUZZ_Radiation_ModuleDeconZone: BUZZ_Radiation_ModuleSafeZone {
         displayName = "Radiation Decontamination Zone";
         icon = "\a3\ui_f\data\igui\cfg\simpletasks\types\heal_ca.paa";

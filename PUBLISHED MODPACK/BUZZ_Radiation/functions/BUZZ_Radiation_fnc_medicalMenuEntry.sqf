@@ -1,13 +1,8 @@
-/*
- * ACE medical menu overview additions. Runs on the viewer's machine from the
- * ace_medical_gui_updateInjuryListGeneral event.
- *  - "Receiving Radiation Flush [m:ss]" in the IV line (everyone sees it).
- *  - "Radiation Sickness: <level>" after Pain (detection device holders only).
- */
+// ACE medical menu overview additions
 params ["_ctrl", "_target", "_selectionN", "_entries"];
 if (!BUZZ_Radiation_enabled) exitWith {};
 
-// Flush IV: replace "No IV", or sit just before the pain line after any real IVs.
+// Flush IV
 private _flush = _target getVariable ["BUZZ_Radiation_flush", []];
 if (_flush isNotEqualTo []) then {
     _flush params ["_start", "", "_fastTime", "", "_slowTime"];
@@ -26,7 +21,7 @@ if (_flush isNotEqualTo []) then {
     };
 };
 
-// Radiation Sickness level.
+// Radiation Sickness level
 if (!BUZZ_Radiation_medicalMenu) exitWith {};
 if !([ACE_player, BUZZ_Radiation_monitorList] call BUZZ_Radiation_fnc_hasItem) exitWith {};
 

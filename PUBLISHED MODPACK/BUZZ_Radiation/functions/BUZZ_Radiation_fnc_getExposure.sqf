@@ -1,7 +1,4 @@
-/*
- * Which active zones contain the unit.
- * Returns [highest radiation tier (-1 = none), inSafeZone, inDeconZone]
- */
+// Which active zones contain the unit
 params ["_unit", "_zones"];
 private _tier = -1;
 private _safe = false;
