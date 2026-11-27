@@ -1,0 +1,23 @@
+{
+ "b13_sha": "6671c7152345502d79484762f307d6c9d16e1afbd0ecfab43d8915a82cbe1278",
+ "b13_bytes": 174834990,
+ "b11_sha": "8edc766a1a029e686925677f87e73e24ef3f193c6a11096a54efa808c83133c1",
+ "b11_bytes": 174827773,
+ "props_b13": "[(b'prefix', b'z\\\\fst\\\\addons\\\\fst_ember_caldera')]",
+ "props_equal_b11": true,
+ "rebuild_byte_equal": true,
+ "entries_b13": 1476,
+ "entries_b11": 1476,
+ "same_entry_names": true,
+ "changed_entries": 218,
+ "config_bin_count": 1,
+ "config_bin_equal_b11": true,
+ "config_checks": [
+  {
+   "entry": "config.bin",
+   "cfgconvert_rc": 0,
+   "dupscope_rc": 0,
+   "dupscope_out": "duplicates: 0"
+  }
+ ]
+}

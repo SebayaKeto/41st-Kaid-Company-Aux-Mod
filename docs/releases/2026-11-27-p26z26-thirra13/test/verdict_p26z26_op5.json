@@ -1,0 +1,30 @@
+{
+ "client_rpt": "C:\\Users\\Miran\\AppData\\Local\\Arma 3\\arma3_x64_2026-11-27_04-33-00.rpt",
+ "in_mission": true,
+ "client_boot": {
+  "run": "C:\\ReviewSessions\\P26z26Op5-20261127-043121",
+  "result": "JOINED on attempt 1",
+  "attempts": [
+   {
+    "n": 1,
+    "pid": 33712,
+    "state": "joined",
+    "client_rpt": "C:\\Users\\Miran\\AppData\\Local\\Arma 3\\arma3_x64_2026-11-27_04-33-00.rpt",
+    "secs": 142
+   }
+  ],
+  "log": [
+   "04:33:00 attempt 1 launched client pid 33712 | client pid 33712: connecting to 127.0.0.1:4593. A 'No entry ...NewTurret.scope' box is harmless.",
+   "04:33:46 attempt 1 state joined C:\\Users\\Miran\\AppData\\Local\\Arma 3\\arma3_x64_2026-11-27_04-33-00.rpt",
+   "04:33:46 RESULT JOINED on attempt 1"
+  ],
+  "exit": 0
+ },
+ "winshots": "D:\\AuxUpdater\\p26z26\\winshot_op5",
+ "rpt_lines": 4302,
+ "error_lines": 413,
+ "script_errors_after_start": 4,
+ "warning_boxes": 0,
+ "aux_error_lines": [],
+ "PASS": false
+}

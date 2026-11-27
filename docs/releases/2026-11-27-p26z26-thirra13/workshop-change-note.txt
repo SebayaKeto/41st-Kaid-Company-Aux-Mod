@@ -1,0 +1,6 @@
+Thirra update
+
+- Updated: Kastro town rebuilt with real streets (op 5).
+- Fixed: terrain pits on the crater ridge filled.
+
+Let Steam finish the update before joining. Update the server and headless clients, then start a new mission.
