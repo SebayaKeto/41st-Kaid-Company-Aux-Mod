@@ -2,6 +2,14 @@
 params ["_unit", "_exposure", "_dt"];
 _exposure params ["_tier", "_safe", "_decon"];
 
+// Fresh body check
+if !((_unit getVariable ["BUZZ_Radiation_body", objNull]) isEqualTo _unit) then {
+    {
+        if ("buzz_radiation_" in toLower _x) then {_unit setVariable [_x, nil, true]};
+    } forEach allVariables _unit;
+    _unit setVariable ["BUZZ_Radiation_body", _unit, true];
+};
+
 // Decontamination tents
 private _inTent = BUZZ_Radiation_tentRate > 0 && {BUZZ_Radiation_tentList isNotEqualTo []} && {
     (nearestObjects [_unit, BUZZ_Radiation_tentList, 10]) findIf {

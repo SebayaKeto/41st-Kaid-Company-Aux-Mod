@@ -78,6 +78,14 @@ if (hasInterface && {isClass (configFile >> "CfgPatches" >> "zen_custom_modules"
     [_unit, 0] call BUZZ_Radiation_fnc_setDose;
 }] call CBA_fnc_addClassEventHandler;
 
+// Clear dose on death
+["CAManBase", "Killed", {
+    params ["_unit"];
+    if (!local _unit) exitWith {};
+    _unit setVariable ["BUZZ_Radiation_flush", nil, true];
+    [_unit, 0] call BUZZ_Radiation_fnc_setDose;
+}] call CBA_fnc_addClassEventHandler;
+
 // Remote setDose
 ["BUZZ_Radiation_setDoseLocal", {_this call BUZZ_Radiation_fnc_setDose}] call CBA_fnc_addEventHandler;
 
